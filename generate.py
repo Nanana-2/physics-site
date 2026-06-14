@@ -118,4 +118,4 @@ response = client.models.generate_content(
 with open(target_file_path, "w", encoding="utf-8") as f:
     f.write(response.text)
 
-print(f"🎉 成功！ 新しい問題が {target_file_path} に保存されました！")
+print(f"成功！ 新しい問題が {target_file_path} に保存されました！")
