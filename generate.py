@@ -1,16 +1,15 @@
-import google.generativeai as genai
+from google import genai
 import os
 import yaml
 
 # ==========================================
 # 1. APIキーの設定（※絶対にGitHubに公開しないこと！）
 # ==========================================
-API_KEY = "新しく取得したAPIキーをここに貼る"
-genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-3.5-flash')
+API_KEY = "AQ.Ab8RN6Lqhw4mFufp_NMLioSRhQN-CrE-GKI9r-gqaPdOOQkEkQ"
+client = genai.Client(api_key=API_KEY)
 
 # ==========================================
-# 2. 管理する分野のリスト（ここを増やすだけで全分野対応）
+# 2. 管理する分野のリスト
 # ==========================================
 SUBJECTS = [
     {
@@ -18,14 +17,7 @@ SUBJECTS = [
         "yaml_key": "mechanics",
         "output_dir": "docs/mechanics",
         "subject_name": "力学（解析力学含む）"
-    },
-    {
-        "yaml_file": "curriculum_em.yaml",
-        "yaml_key": "electromagnetism",
-        "output_dir": "docs/electromagnetism",
-        "subject_name": "電磁気学"
-    },
-    # 熱力学などを作ったら、ここにブロックを追加するだけでOK
+    }
 ]
 
 # ==========================================
@@ -37,14 +29,12 @@ target_subject_name = ""
 target_file_path = ""
 
 for subject in SUBJECTS:
-    # その分野のYAMLファイルがまだ存在しなければスキップ
     if not os.path.exists(subject["yaml_file"]):
         continue 
 
     with open(subject["yaml_file"], "r", encoding="utf-8") as f:
         curriculum = yaml.safe_load(f)
 
-    # 保存先フォルダが無ければ作る
     os.makedirs(subject["output_dir"], exist_ok=True)
 
     for section in curriculum[subject["yaml_key"]]:
@@ -52,21 +42,19 @@ for subject in SUBJECTS:
             file_name = f"{prob['id']}.md"
             file_path = os.path.join(subject["output_dir"], file_name)
             
-            # ファイルがまだ存在しない場合、これを今回の生成ターゲットにする
             if not os.path.exists(file_path):
                 target_problem = prob
                 target_theme = section["theme"]
                 target_subject_name = subject["subject_name"]
                 target_file_path = file_path
-                break # 1つ見つけたら探索終了
+                break
                 
         if target_problem:
-            break # 外側のループも抜ける
+            break
             
     if target_problem:
-        break # 分野のループも抜ける
+        break
 
-# すべての問題が完成している場合
 if not target_problem:
     print("✨ すべての分野でカリキュラム内の問題が生成済みです！")
     exit()
@@ -120,12 +108,14 @@ tags:
 """
 
 # ==========================================
-# 5. 問題の自動生成と保存
+# 5. 問題の自動生成と保存（最新SDKでの書き方）
 # ==========================================
-response = model.generate_content(prompt)
-generated_text = response.text
+response = client.models.generate_content(
+    model='gemini-3.5-flash',
+    contents=prompt,
+)
 
 with open(target_file_path, "w", encoding="utf-8") as f:
-    f.write(generated_text)
+    f.write(response.text)
 
-print(f"成功！ 新しい問題が {target_file_path} に保存されました！")
+print(f"🎉 成功！ 新しい問題が {target_file_path} に保存されました！")
