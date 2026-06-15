@@ -18,3 +18,11 @@ plugins:
   - search
   - awesome-pages
   - tags              # ★これを入れると、サイト上に綺麗なタグが自動表示されます
+
+
+# mkdocs.yml の一番下に追加
+nav:
+  - 力学:
+    - 第1章:
+      - mechanics/01/01_010.md
+      - mechanics/01/01_020.md
