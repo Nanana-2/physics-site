@@ -3,6 +3,7 @@ theme:
   name: material
   features:
     - content.code.copy # コードをコピーするボタンを付ける（おまけ）
+    - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
 
 markdown_extensions:
   - meta              # ★これがないとFrontmatter（メタデータ）を認識しません
