@@ -41,14 +41,30 @@ for subject in SUBJECTS:
     with open(subject["yaml_file"], "r", encoding="utf-8") as f:
         curriculum = yaml.safe_load(f)
 
+    # 主フォルダ（例: docs/mechanics）は事前に作成
     os.makedirs(subject["output_dir"], exist_ok=True)
 
     for section in curriculum[subject["yaml_key"]]:
         for prob in section["problems"]:
+            # --- ★ここから変更：章ごとのサブフォルダパスを生成 ---
+            # IDが "01_010" なら "01" を取得
+            chapter_id = prob['id'].split('_')[0] 
+            chapter_dir = os.path.join(subject["output_dir"], chapter_id)
+            
             file_name = f"{prob['id']}.md"
-            file_path = os.path.join(subject["output_dir"], file_name)
+            file_path = os.path.join(chapter_dir, file_name)
             
             if not os.path.exists(file_path):
+                # まだ章のフォルダがない場合は作成し、.pages も自動生成する
+                if not os.path.exists(chapter_dir):
+                    os.makedirs(chapter_dir, exist_ok=True)
+                    
+                    # awesome-pages用の設定ファイルを作り、サイドバーの表示名を「テーマ名」にする
+                    pages_path = os.path.join(chapter_dir, ".pages")
+                    with open(pages_path, "w", encoding="utf-8") as pf:
+                        pf.write(f"title: {section['theme']}\n")
+                # --- ★ここまで変更 ---
+                
                 target_problem = prob
                 target_theme = section["theme"]
                 target_subject_name = subject["subject_name"]
@@ -65,8 +81,6 @@ if not target_problem:
     print("✨ すべての分野でカリキュラム内の問題が生成済みです！")
     exit()
 
-print(f"🔍 未作成の問題を発見しました: [{target_subject_name}] {target_problem['id']}: {target_problem['title']}")
-print("Geminiが指定された条件で問題を執筆中です...（数秒〜十数秒かかります）")
 
 # ==========================================
 # 4. AIへの指示（プロンプトの構築）
