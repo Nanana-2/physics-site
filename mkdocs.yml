@@ -1,8 +1,11 @@
 site_name: 物理問題集（テスト）
 theme:
   name: material
+  features:
+    - content.code.copy # コードをコピーするボタンを付ける（おまけ）
 
 markdown_extensions:
+  - meta              # ★これがないとFrontmatter（メタデータ）を認識しません
   - pymdownx.arithmatex:
       generic: true
 
@@ -13,3 +16,4 @@ extra_javascript:
 plugins:
   - search
   - awesome-pages
+  - tags              # ★これを入れると、サイト上に綺麗なタグが自動表示されます
