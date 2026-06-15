@@ -5,7 +5,7 @@
 
 ---
 
-##　収録問題
+## 収録問題
 
 左側のサイドメニュー，または以下のリンクから各分野の問題へアクセスできます。
 
@@ -23,8 +23,8 @@
 ## 運営者情報・SNS
 
 
-* **Twitter (X):** [あなたのアカウント名](https://twitter.com/nanana_UTM1)
-* **note:** [あなたのnoteタイトル](https://note.com/john_doenote)
+* **Twitter (X):** [ななな２](https://twitter.com/nanana_UTM1)
+* **note:** [ななな２](https://note.com/john_doenote)
 
 
 ---
