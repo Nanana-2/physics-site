@@ -48,7 +48,7 @@ for subject in SUBJECTS:
         for prob in section["problems"]:
             # --- ★ここから変更：章ごとのサブフォルダパスを生成 ---
             # IDが "01_010" なら "01" を取得
-            chapter_id = prob['id'].split('_')[0] 
+            chapter_id = f"ch_{prob['id'].split('_')[0]}" 
             chapter_dir = os.path.join(subject["output_dir"], chapter_id)
             
             file_name = f"{prob['id']}.md"
