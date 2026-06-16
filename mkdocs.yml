@@ -1,6 +1,9 @@
 site_name: 大学物理の問題集
 theme:
   name: material
+  font:
+    text: Noto Sans JP  # 👈 サイト全体の文字を Noto Sans JP に！
+    code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
   features:
     - content.code.copy # コードをコピーするボタンを付ける（おまけ）
     - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
