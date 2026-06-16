@@ -35,23 +35,38 @@
 
 /* H2（## から始まる見出し）: 背景色付きのリボン風 */
 .md-typeset h2 {
-  background-color: var(--md-code-bg-color); /* 薄い背景色 */
-  border-left: 6px solid var(--md-typeset-a-color); /* 左側のアクセント線 */
-  padding: 10px 14px; /* 上下左右の余白 */
-  border-radius: 4px; /* 角をほんのり丸く */
-  margin-top: 2.5rem;
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
 }
 
 /* ==========================================
    4. ページタイトル（# に相当するH1）のデザイン
    ========================================== */
 .md-typeset h1 {
-  font-weight: 800;        /* 文字を力強く太めに */
-  padding-bottom: 12px;    /* 文字と線の間の余白 */
-  border-bottom: 4px solid transparent; /* デフォルトの線を消す */
-  
-  /* 左から右へ、テーマカラーから透明に消えていくグラデーション線 */
-  border-image: linear-gradient(to right, var(--md-typeset-a-color) 0%, transparent 80%) 1;
-  
-  margin-bottom: 2rem;     /* タイトルの下の文章との間隔 */
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+
+
+
+
+.md-typeset h3 {
+  color: #505050;/*文字色*/
+  padding: 0.5em;/*文字周りの余白*/
+  display: inline-block;/*おまじない*/
+  line-height: 1.3;/*行高*/
+  background: #dbebf8;/*背景色*/
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+}
+
+.md-typeset h3:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
 }
