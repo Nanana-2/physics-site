@@ -26,3 +26,18 @@
 .md-typeset a:hover {
   border-bottom-style: solid;
 }
+
+
+
+/* ==========================================
+   3. 見出し（H2）のカスタムデザイン（パターンB）
+   ========================================== */
+
+/* H2（## から始まる見出し）: 背景色付きのリボン風 */
+.md-typeset h2 {
+  background-color: var(--md-code-bg-color); /* 薄い背景色 */
+  border-left: 6px solid var(--md-typeset-a-color); /* 左側のアクセント線 */
+  padding: 10px 14px; /* 上下左右の余白 */
+  border-radius: 4px; /* 角をほんのり丸く */
+  margin-top: 2.5rem;
+}
