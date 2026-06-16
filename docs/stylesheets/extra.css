@@ -46,9 +46,7 @@
    4. ページタイトル（# に相当するH1）のデザイン
    ========================================== */
 .md-typeset h1 {
-  font-size: 2.2rem;       /* タイトルの文字を少し大きく */
   font-weight: 800;        /* 文字を力強く太めに */
-  letter-spacing: -0.02em; /* 文字の間隔を少し詰めて今風に */
   padding-bottom: 12px;    /* 文字と線の間の余白 */
   border-bottom: 4px solid transparent; /* デフォルトの線を消す */
   
