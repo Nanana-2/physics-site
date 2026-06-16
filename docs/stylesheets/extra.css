@@ -1,0 +1,28 @@
+/* ==========================================
+   1. スマホでの数式はみ出し・レイアウト崩れ対策
+   ========================================== */
+.mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto; /* はみ出したら横スクロール可能に */
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* ==========================================
+   2. サイト全体の見た目をちょっとオシャレにする（おまけ）
+   ========================================== */
+/* コードブロックや数式全体の角を少し丸めて今風にする */
+.md-typeset pre code, 
+.mjx-container {
+  border-radius: 8px;
+}
+
+/* リンクの下線をオシャレにする */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--md-typeset-a-color);
+  transition: all 0.3s;
+}
+.md-typeset a:hover {
+  border-bottom-style: solid;
+}

@@ -20,3 +20,5 @@ plugins:
   - tags              # ★これを入れると、サイト上に綺麗なタグが自動表示されます
 
 
+extra_css:
+  - stylesheets/extra.css
