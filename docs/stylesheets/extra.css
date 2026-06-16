@@ -40,6 +40,7 @@
 }
 
 .md-typeset h2:after {
+  font-weight: 550;
   position: absolute;
   content: " ";
   display: block;
@@ -52,10 +53,11 @@
    4. ページタイトル（# に相当するH1）のデザイン
    ========================================== */
 .md-typeset h1 {
+  font-weight: 700; 
   padding: 0.25em 0.5em;/*上下 左右の余白*/
   color: #494949;/*文字色*/
   background: transparent;/*背景透明に*/
-  border-left: solid 5px #7db4e6;/*左線*/
+  border-left: solid 5px #3a52ca;/*左線*/
 }
 
 
@@ -64,5 +66,5 @@
   padding: 0.25em 0.5em;/*上下 左右の余白*/
   color: #494949;/*文字色*/
   background: transparent;/*背景透明に*/
-  border-left: solid 5px #7db4e6;/*左線*/
+  border-left: solid 5px #3a52ca;/*左線*/
 }
