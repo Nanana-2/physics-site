@@ -6,7 +6,7 @@ theme:
     code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
   features:
     - content.code.copy # コードをコピーするボタンを付ける（おまけ）
-    - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
+    # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
 
 markdown_extensions:
   - meta
