@@ -101,17 +101,18 @@
 }
 
 /* ==========================================
-   8. 左サイドバーの背景色を薄グレーに設定（修正版）
+   8. 左サイドバーの背景色を薄グレーに設定（完全版）
    ========================================== */
-/* 画面幅が広いとき（PC表示）だけ適用 */
 @media screen and (min-width: 76.25em) {
-  /* メインのナビゲーション（左側）の背景色 */
+  /* 外側のエリア全体に色を付ける */
   .md-sidebar--primary {
-    background-color: #f8f9fa; /* 薄いグレー */
+    background-color: #f8f9fa; 
   }
 
-  /* 念のため、サイドバー内のリンクの背景も透明にして、全体をグレーに馴染ませる */
-  .md-nav {
-    background-color: transparent !important;
+  /* メニューリストの背景色を明示的に「親要素の色（グレー）を継承」させる */
+  .md-nav,
+  .md-nav--primary,
+  .md-nav__list {
+    background-color: #f8f9fa !important;
   }
 }
