@@ -68,3 +68,34 @@
   background: transparent;/*背景透明に*/
   border-left: solid 5px #3a52ca;/*左線*/
 }
+
+
+
+/* ==========================================
+   7. サイドバー（ナビゲーション）のデザインカスタム
+   ========================================== */
+
+/* マウスを乗せた（ホバーした）ときのメニュー背景を丸く、薄い色にする */
+.md-nav__link:hover {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-typeset-a-color) !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* いま見ているアクティブなページの文字を太くして目立たせる */
+.md-nav__link--active {
+  font-weight: bold;
+  color: var(--md-typeset-a-color) !important;
+}
+
+/* サイドバーの各項目の間隔を少し広げて、窮屈感をなくす */
+.md-nav__item {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+/* フォルダを開閉する矢印（＞）のアイコンに少しアニメーションをつける */
+.md-nav__icon {
+  transition: transform 0.25s ease;
+}
