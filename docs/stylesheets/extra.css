@@ -99,3 +99,19 @@
 .md-nav__icon {
   transition: transform 0.25s ease;
 }
+
+/* ==========================================
+   8. 左サイドバーの背景色を薄グレーに設定（修正版）
+   ========================================== */
+/* 画面幅が広いとき（PC表示）だけ適用 */
+@media screen and (min-width: 76.25em) {
+  /* メインのナビゲーション（左側）の背景色 */
+  .md-sidebar--primary {
+    background-color: #f8f9fa; /* 薄いグレー */
+  }
+
+  /* 念のため、サイドバー内のリンクの背景も透明にして、全体をグレーに馴染ませる */
+  .md-nav {
+    background-color: transparent !important;
+  }
+}
