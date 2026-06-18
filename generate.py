@@ -23,6 +23,12 @@ SUBJECTS = [
         "yaml_key": "mechanics",
         "output_dir": "docs/mechanics",
         "subject_name": "力学（解析力学含む）"
+    },
+    {
+        "yaml_file": "curriculum_statistical_mechanics.yaml",
+        "yaml_key": "statistical_mechanics",
+        "output_dir": "docs/statistical_mechanics",
+        "subject_name": "統計力学"
     }
 ]
 
