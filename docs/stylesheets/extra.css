@@ -101,24 +101,22 @@
 }
 
 /* ==========================================
-   8. 左サイドバーの背景色を薄グレーに設定（インデント復活・完全修正版）
+   8. 左サイドバーの背景色を薄グレーに設定（システム調和版）
    ========================================== */
 @media screen and (min-width: 76.25em) {
-  /* ① タイトルとメニューを「すべて内包する大元の箱」だけをグレーに染める */
-  /* システムの固定枠ではなく、この1つの箱だけを塗るため、上部に変な空白が出ません */
-  .md-nav--primary {
-    background-color: #f8f9fa !important;
-    border-radius: 6px; /* 角をほんのり丸くして綺麗なカード風にする */
-    overflow: hidden;
+  
+  /* ① サイドバーの枠内だけで、テーマが使う「ベースの背景色」を薄グレーに塗り替える */
+  /* これにより、テーマ本来のアニメーションや固定（sticky）機能を一切壊さず、色が統一されます */
+  .md-sidebar--primary {
+    --md-default-bg-color: #edf0f3 !important; 
   }
 
-  /* ② タイトルやリストの背景を「透明」にして、ベースのグレーを綺麗に透かす */
-  /* ※ padding（インデント）や margin には一切触れないため、階層構造が100%元通りに直ります */
+  /* ② 前回の透明化の設定などが残って衝突するのを防ぐため、背景色を変数に統一 */
   .md-sidebar--primary .md-nav,
   .md-sidebar--primary .md-nav__title,
   .md-sidebar--primary .md-nav__list {
-    background-color: transparent !important;
-    box-shadow: none !important;
+    background-color: var(--md-default-bg-color) !important;
+    box-shadow: none !important; /* 境界線の変な影を完全消去 */
   }
 }
 
