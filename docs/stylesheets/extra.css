@@ -116,3 +116,52 @@
     background-color: #f8f9fa !important;
   }
 }
+
+
+/* ==========================================
+   10. 記事エリアの可読性（読みやすさ）向上
+   ========================================== */
+.md-content__inner {
+  /* 1行の最大幅を適度に制限して、目が泳ぐのを防ぐ（標準より少し狭めてゆったりに） */
+  max-width: 44rem; 
+  /* 左右に程よい余白を持たせる */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* 行間を少し広げて、ギチギチ感を解消する */
+  line-height: 1.75;
+}
+
+/* 段落（文章）ごとのスキマを広げて、呼吸できる空間を作る */
+.md-typeset p {
+  margin-bottom: 1.2rem;
+}
+
+/* リスト（箇条書きや(1)(2)(3)の設問など）の間隔も少し広げる */
+.md-typeset ol li, 
+.md-typeset ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* 数式ブロックの上下にしっかり余白を確保する */
+.mjx-container[display="true"] {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+
+/* ==========================================
+   11. Noto Sans JP 用の微調整
+   ========================================== */
+body, input {
+  /* 文字の境界線を滑らかにして、フォントをクッキリ綺麗に見せる */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 見出し（H1〜H3）を少しスマートで上品な太さにする */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 500; /* デフォルトのガッツリ太い文字から、少し洗練された太さに */
+  color: #333333;
+}
