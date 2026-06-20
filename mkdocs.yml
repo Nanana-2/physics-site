@@ -7,7 +7,6 @@ theme:
   features:
     - content.code.copy 
     - navigation.footer # コードをコピーするボタンを付ける（おまけ）
-    - navigation.tabs
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
 
 markdown_extensions:
