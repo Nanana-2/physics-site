@@ -184,3 +184,48 @@ body, input {
   font-weight: 500; /* デフォルトのガッツリ太い文字から、少し洗練された太さに */
   color: #333333;
 }
+
+
+
+/* ==========================================
+   12. スマホ版サイドバー（ドロワー）の崩れ修正 ＆ デザイン統一
+   ========================================== */
+@media screen and (max-width: 76.24em) {
+  
+  /* ①【最重要：崩れ修正】ロゴと文字の重なりを解消する */
+  /* タイトルエリアをflexbox（横並び）にして、ロゴと文字の間に適切な隙間（gap）を確保します */
+  .md-nav--primary > .md-nav__title {
+    display: flex !important;
+    align-items: center !important; /* ロゴと文字の上下中央を揃える */
+    gap: 1.0rem !important;        /* ロゴと文字の間に物理的な隙間を作る（これで重なりが解消されます） */
+    padding-left: 1.0rem !important; /* 左右の余白を適切に確保する */
+    padding-right: 1.0rem !important;
+  }
+
+  /* ロゴアイコン自体が大きすぎる場合は、少し小さくして文字とのバランスを取る */
+  .md-nav--primary > .md-nav__title .md-logo img,
+  .md-nav--primary > .md-nav__title .md-logo svg {
+    height: 1.6rem !important; /* ロゴの高さを調整（文字サイズに合わせる） */
+    width: auto !important;
+  }
+
+  /* ※以降の色設定は、ロゴや文字を見やすくするために前回のものを維持します */
+
+  /* ② メニュー全体の背景色をPC版と同じ薄グレーに設定 */
+  .md-nav--primary {
+    background-color: #edf0f3 !important; 
+  }
+
+  /* ③ 上部の「青い帯（デフォルト設定）」を透明にし、文字色をダークグレーにする */
+  .md-nav--primary > .md-nav__title {
+    background-color: transparent !important;
+    color: #494949 !important; /* 文字色をダークグレーに */
+    box-shadow: none !important; /* 下の影（境界線）を消す */
+  }
+
+  /* ④ ロゴアイコンとフォルダ開閉アイコンの色を、文字色に合わせてダークグレーにする */
+  .md-nav--primary > .md-nav__title .md-logo,
+  .md-nav--primary > .md-nav__title .md-nav__icon {
+    color: #494949 !important;
+  }
+}
