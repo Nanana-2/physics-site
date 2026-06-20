@@ -107,7 +107,7 @@
   
   /* 🎨 ① ここでサイドバーの色を変えられます！好きなカラーコードに書き換えてください */
   .md-sidebar--primary {
-    --md-default-bg-color: #edf0f3 !important; 
+    --md-default-bg-color: #f5f5f0 !important; 
   }
 
   /* ② 一番外側の板に丸みを持たせる ＆ 背景色を適用 */
