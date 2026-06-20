@@ -125,8 +125,8 @@
    ========================================== */
 /* 大元のタイトル部分だけを狙い撃ちして、上下にゆとりを持たせる */
 .md-sidebar--primary .md-nav--primary > .md-nav__title {
-  padding-top: 1 rem !important;    /* 上の余白（好みに合わせて調整） */
-  padding-bottom: 1 rem !important; /* 下の余白（好みに合わせて調整） */
+  padding-top: 1rem !important;    /* 上の余白（好みに合わせて調整） */
+  padding-bottom: 1rem !important; /* 下の余白（好みに合わせて調整） */
 }
 
 
