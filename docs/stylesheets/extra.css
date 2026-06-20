@@ -5,7 +5,7 @@
   max-width: 100%;
   overflow-x: auto; /* はみ出したら横スクロール可能に */
   overflow-y: hidden;
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
 }
 
 /* ==========================================
@@ -101,22 +101,24 @@
 }
 
 /* ==========================================
-   8. 左サイドバーの背景色を薄グレーに設定（完全版）
+   8. 左サイドバーの背景色を薄グレーに設定（完成版）
    ========================================== */
 @media screen and (min-width: 76.25em) {
-  /* 外側のエリア全体に色を付ける */
-  .md-sidebar--primary {
-    background-color: #f8f9fa; 
-  }
-
-  /* メニューリストの背景色を明示的に「親要素の色（グレー）を継承」させる */
-  .md-nav,
-  .md-nav--primary,
-  .md-nav__list {
+  /* ① サイドバーの土台（一番下敷きになるエリア）をすべてグレーに塗りつぶす */
+  .md-sidebar--primary,
+  .md-sidebar--primary .md-sidebar__scrollwrap,
+  .md-sidebar--primary .md-sidebar__inner {
     background-color: #f8f9fa !important;
   }
-}
 
+  /* ② 上に乗っているタイトルやリストの背景を「透明」にし、下敷きのグレーを透けさせる */
+  .md-nav,
+  .md-nav--primary,
+  .md-nav__list,
+  .md-nav__title {
+    background-color: transparent !important;
+  }
+}
 
 /* ==========================================
    10. 記事エリアの可読性（読みやすさ）向上
