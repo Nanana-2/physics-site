@@ -101,25 +101,30 @@
 }
 
 /* ==========================================
-   8. 左サイドバーの背景色を薄グレーに設定（システム調和版）
+   8. 左サイドバーの背景色と角丸設定
    ========================================== */
 @media screen and (min-width: 76.25em) {
   
-  /* ① サイドバーの枠内だけで、テーマが使う「ベースの背景色」を薄グレーに塗り替える */
-  /* これにより、テーマ本来のアニメーションや固定（sticky）機能を一切壊さず、色が統一されます */
+  /* 🎨 ① ここでサイドバーの色を変えられます！好きなカラーコードに書き換えてください */
   .md-sidebar--primary {
-    --md-default-bg-color: #eff2f2 !important; 
+    --md-default-bg-color: #edf0f3 !important; 
   }
 
-  /* ② 前回の透明化の設定などが残って衝突するのを防ぐため、背景色を変数に統一 */
-  .md-sidebar--primary .md-nav,
+  /* ② 一番外側の板に丸みを持たせる ＆ 背景色を適用 */
+  .md-sidebar--primary .md-nav {
+    background-color: var(--md-default-bg-color) !important;
+    border-radius: 12px !important; /* ✨ ここで角の丸みを調整（数字を大きくするほど丸くなります） */
+    overflow: hidden; /* 角丸からはみ出た部分を綺麗に隠す */
+    box-shadow: none !important; 
+  }
+
+  /* ③ 中のタイトルやリストは透明にして、大元の色を透かす */
   .md-sidebar--primary .md-nav__title,
   .md-sidebar--primary .md-nav__list {
-    background-color: var(--md-default-bg-color) !important;
-    box-shadow: none !important; /* 境界線の変な影を完全消去 */
+    background-color: transparent !important;
+    box-shadow: none !important;
   }
 }
-
 /* ==========================================
    9. サイドバーメインタイトル（大学物理の問題集）の余白調整
    ========================================== */
