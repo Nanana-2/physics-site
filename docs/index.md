@@ -12,14 +12,15 @@
 
 左側のサイドメニュー，または以下のリンクから各分野の問題へアクセスできます。
 
-::: grid
+<div class="grid cards" markdown>
+
 -   :fontawesome-solid-atom:{ .lg .middle } __力学__
 
     ---
 
-    質点の運動方程式から、剛体の回帰、振動、そして解析力学（ラグランジアン）までを網羅。
-    
-    [:octicons-arrow-right-24: 力学の問題一覧](mechanics/01/01_010.md)
+    質点の運動方程式から、剛体の回転、振動、そして解析力学（ラグランジアン）までを網羅。
+
+    [:octicons-arrow-right-24: 力学の問題一覧へ](mechanics/01/01_010.md)
 
 -   :fontawesome-solid-chart-line:{ .lg .middle } __統計力学__
 
@@ -27,8 +28,9 @@
 
     ミクロな状態数からマクロな熱力学量を導く。分配関数、カノニカル分布の計算に慣れましょう。
 
-    [:octicons-arrow-right-24: 統計力学の問題一覧](stastical_mechanics/01/01_010.md)
-:::
+    [:octicons-arrow-right-24: 統計力学の問題一覧へ](stastical_mechanics/01/01_010.md)
+
+</div>
 
 <!---
 
