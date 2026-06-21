@@ -37,6 +37,7 @@
 .md-typeset h2 {
   border-bottom: solid 3px #cce4ff;
   position: relative;
+  padding-bottom: 6px !important;
 }
 
 .md-typeset h2:after {
