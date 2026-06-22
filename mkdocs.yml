@@ -55,7 +55,8 @@ extra_javascript:
 plugins:
   - search
   - awesome-pages
-  - tags:                # ✨ コロン(:)を付けて、設定を下に書く
+  - tags:
+      tags_file: tags.md                # ✨ コロン(:)を付けて、設定を下に書く
                   
 
 
