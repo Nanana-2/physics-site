@@ -1,0 +1,213 @@
+/* ==========================================
+   1. スマホでの数式はみ出し・レイアウト崩れ対策
+   ========================================== */
+.mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1.5rem 0;
+}
+
+/* ==========================================
+   2. サイト全体の見た目をちょっとオシャレにする
+   ========================================== */
+.md-typeset pre code, 
+.mjx-container {
+  border-radius: 8px;
+}
+
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--md-typeset-a-color);
+  transition: all 0.3s;
+}
+.md-typeset a:hover {
+  border-bottom-style: solid;
+}
+
+/* ==========================================
+   3. 見出し（H2）のカスタムデザイン
+   ========================================= */
+.md-typeset h2 {
+  position: relative;
+  padding-bottom: 7px !important;
+}
+
+/* ☀️ ライトモード時のH2の下線（薄い青） */
+[data-md-color-scheme="default"] .md-typeset h2 {
+  border-bottom: solid 3px #cce4ff;
+}
+/* 🌙 ダークモード時のH2の下線（少し沈んだ青） */
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-bottom: solid 3px #1e293b;
+}
+
+.md-typeset h2:after {
+  font-weight: 550;
+  position: absolute;
+  content: " ";
+  display: block;
+  bottom: -3px;
+  width: 20%;
+}
+/* ☀️ ライトモード時のリボン（鮮やかな青） */
+[data-md-color-scheme="default"] .md-typeset h2:after {
+  border-bottom: solid 3px #5472cd;
+}
+/* 🌙 ダークモード時のリボン（ネオン系の映える青） */
+[data-md-color-scheme="slate"] .md-typeset h2:after {
+  border-bottom: solid 3px #3878f8;
+}
+
+/* ==========================================
+   4. ページタイトル（H1, H3）のデザイン
+   ========================================== */
+.md-typeset h1,
+.md-typeset h3 {
+  font-weight: 500; 
+  padding: 0.25em 0.5em;
+  background: transparent;
+}
+
+/* ☀️ ライトモード時の左線と文字色 */
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h3 {
+  color: #333333 !important;
+  border-left: solid 5px #3a52ca;
+}
+/* 🌙 ダークモード時の左線と文字色 */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: #f8fafcf1 !important; /* 暗闇で見やすい白 */
+  border-left: solid 5px #3878f8; /* 暗闇で映える鮮やかな青 */
+}
+
+/* ==========================================
+   7. サイドバー（ナビゲーション）のデザインカスタム
+   ========================================== */
+.md-nav__link:hover {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-typeset-a-color) !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.md-nav__link--active {
+  font-weight: bold;
+  color: var(--md-typeset-a-color) !important;
+}
+
+.md-nav__item {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+.md-nav__icon {
+  transition: transform 0.25s ease;
+}
+
+/* ==========================================
+   8. 左サイドバーの背景色と角丸設定（PC版）
+   ========================================== */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    --md-sidebar-bg: var(--md-code-bg-color); 
+  }
+
+  .md-sidebar--primary .md-nav {
+    background-color: var(--md-sidebar-bg) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: none !important; 
+  }
+
+  .md-sidebar--primary .md-nav__title,
+  .md-sidebar--primary .md-nav__list {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==========================================
+   9. サイドバーメインタイトルの余白調整
+   ========================================== */
+.md-sidebar--primary .md-nav--primary > .md-nav__title {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* ==========================================
+   10. 記事エリアの可読性向上
+   ========================================== */
+.md-content__inner {
+  max-width: 44rem; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  line-height: 1.75;
+}
+
+.md-typeset p {
+  margin-bottom: 1.2rem;
+}
+
+.md-typeset ol li, 
+.md-typeset ul li {
+  margin-bottom: 0.5rem;
+}
+
+.mjx-container[display="true"] {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ==========================================
+   11. Noto Sans JP 用の微調整
+   ========================================== */
+body, input {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.md-typeset h2 {
+  font-weight: 500;
+  /* ☀️ 通常時の文字色 */
+  color: #333333;
+}
+/* 🌙 ダークモード時のH2文字色 */
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: #f8fafc;
+}
+
+/* ==========================================
+   12. スマホ版サイドバー（ドロワー）の崩れ修正 ＆ デザイン統一
+   ========================================== */
+@media screen and (max-width: 76.24em) {
+  .md-nav--primary > .md-nav__title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.0rem !important;
+    padding-left: 1.0rem !important;
+    padding-right: 1.0rem !important;
+  }
+
+  .md-nav--primary > .md-nav__title .md-logo img,
+  .md-nav--primary > .md-nav__title .md-logo svg {
+    height: 1.6rem !important;
+    width: auto !important;
+  }
+
+  .md-nav--primary {
+    background-color: var(--md-code-bg-color) !important; 
+  }
+
+  .md-nav--primary > .md-nav__title {
+    background-color: transparent !important;
+    color: var(--md-typeset-color) !important;
+    box-shadow: none !important;
+  }
+
+  .md-nav--primary > .md-nav__title .md-logo,
+  .md-nav--primary > .md-nav__title .md-nav__icon {
+    color: var(--md-typeset-color) !important;
+  }
+}
