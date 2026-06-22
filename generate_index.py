@@ -39,7 +39,7 @@ for base_dir in TARGET_DIRS:
         # --- ✨ 【ここまで改良】 ---
             
         # グリッドのカード（章ごと）の始まり
-        content += f"-   __{chapter_title}__\n"
+        content += f"-   __{chapter_title}__\n\n"
         content += "    ---\n\n"
         
         for md_file in md_files:

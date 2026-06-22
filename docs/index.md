@@ -59,7 +59,16 @@
 
     運動方程式，剛体の回転，振動，解析力学など
 
-    [:octicons-arrow-right-24: 力学の問題一覧へ](mechanics/01/01_010.md)
+    [力学の問題一覧へ](mechanics/index.md)
+
+-   __量子力学__
+
+    ---
+
+    古典統計から量子統計，非平衡統計力学の基本や開放量子系まで
+
+    [統計力学の問題一覧へ](quantum_mechanics/index.md)
+
 
 -   __統計力学__
 
@@ -67,7 +76,7 @@
 
     古典統計から量子統計，非平衡統計力学の基本や開放量子系まで
 
-    [:octicons-arrow-right-24: 統計力学の問題一覧へ](statistical_mechanics/01/01_010.md)
+    [統計力学の問題一覧へ](statistical_mechanics/index.md)
 
 </div>
 
