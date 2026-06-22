@@ -25,15 +25,21 @@ SUBJECTS = [
         "subject_name": "力学（解析力学含む）"
     },
     {
-        "yaml_file": "curriculum_statistical_mechanics.yaml",
-        "yaml_key": "statistical_mechanics",
-        "output_dir": "docs/statistical_mechanics",
-        "subject_name": "統計力学"
-    }
+        "yaml_file": "curriculum_quantum_mechanics.yaml",
+        "yaml_key": "quantum_mechanics",
+        "output_dir": "docs/quantum_mechanics",
+        "subject_name": "量子力学"
+    },
+    #{
+    #    "yaml_file": "curriculum_statistical_mechanics.yaml",
+    #    "yaml_key": "statistical_mechanics",
+    #    "output_dir": "docs/statistical_mechanics",
+    #    "subject_name": "統計力学"
+    #}
 ]
 
 # ==========================================
-# 3. 全分野を横断して未作成の「空席」を探す
+# 3. 全分野を横断して未作成の問題を探す
 # ==========================================
 target_problem = None
 target_theme = ""
@@ -80,11 +86,11 @@ for subject in SUBJECTS:
         break
 
 if not target_problem:
-    print("✨ すべての分野でカリキュラム内の問題が生成済みです！")
+    print("すべての分野でカリキュラム内の問題が生成済みです")
     exit()
 
 # ==========================================
-# 4. AIへの指示（プロンプトの構築）
+# 4. AIへの指示
 # ==========================================
 prompt = f"""
 以下の条件に従って，大学生向けの物理の問題と解説を作成してください。
@@ -139,10 +145,17 @@ tags:
 
 ## 解説
 （各小問の解答と、それが意味する物理的な解釈を詳細に記述）
+
+### (1) ...
+（解答と解説）
+
+### (2) ...
+（解答と解説）
+
 """
 
 # ==========================================
-# 5. 問題の自動生成と保存（最新SDKでの書き方）
+# 5. 問題の自動生成と保存
 # ==========================================
 response = client.models.generate_content(
     model='gemini-3.5-flash',

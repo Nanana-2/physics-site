@@ -2,9 +2,11 @@ name: Auto Generate Physics Problem
 
 on:
   schedule:
-    # 毎日日本時間の午前3時（UTCの18時）に実行
-    - cron: '0 18 * * *'
-  workflow_dispatch: # GitHubの画面から手動で実行するためのボタン
+    # 毎日 日本時間 04:00〜06:55 の間、5分に1回実行
+    # UTCでは前日の19:00〜21:55
+    - cron: '*/5 19-21 * * *'
+  workflow_dispatch:
+
 
 jobs:
   build-and-deploy:
