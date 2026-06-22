@@ -53,7 +53,7 @@
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-atom:{ .lg .middle } __力学__
+-   __力学__
 
     ---
 
@@ -61,7 +61,7 @@
 
     [:octicons-arrow-right-24: 力学の問題一覧へ](mechanics/01/01_010.md)
 
--   :fontawesome-solid-chart-line:{ .lg .middle } __統計力学__
+-   __統計力学__
 
     ---
 
