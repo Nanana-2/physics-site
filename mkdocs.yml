@@ -34,7 +34,8 @@ extra_javascript:
 plugins:
   - search
   - awesome-pages
-  - tags              # ★これを入れると、サイト上に綺麗なタグが自動表示されます
+  - tags:                # ✨ コロン(:)を付けて、設定を下に書く
+      tags_file: tags.md              # ★これを入れると、サイト上に綺麗なタグが自動表示されます
 
 
 extra_css:
