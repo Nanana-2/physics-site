@@ -9,6 +9,18 @@ for base_dir in TARGET_DIRS:
     if not os.path.exists(docs_base_path):
         continue
 
+    display_title = base_dir.capitalize()  
+    pages_path = os.path.join(docs_base_path, ".pages")
+    
+    if os.path.exists(pages_path):
+        with open(pages_path, "r", encoding="utf-8") as f:
+            for line in f:
+                match = re.search(r"title:\s*(.+)", line)
+                if match:
+                    display_title = match.group(1).strip().strip('"').strip("'")
+                    break    
+
+
     # 新しく書き出す index.md の中身のベース
     content = f"# {base_dir.capitalize()} の問題一覧\n\n"
     content += "この単元に収録されている演習問題の一覧です。フォルダと.pagesファイルから自動生成されています。\n\n"
@@ -24,7 +36,7 @@ for base_dir in TARGET_DIRS:
         if not md_files:
             continue
             
-        # --- ✨ 【ここから改良】 .pages ファイルからタイトルを取得する ---
+        # ---  【ここから改良】 .pages ファイルからタイトルを取得する ---
         chapter_title = f"{subdir} 章"  # .pagesが無いか、titleが無い場合のフォールバック
         pages_file_path = os.path.join(subdir_path, ".pages")
         
@@ -36,7 +48,7 @@ for base_dir in TARGET_DIRS:
                     if match:
                         chapter_title = match.group(1).strip()
                         break
-        # --- ✨ 【ここまで改良】 ---
+        # ---  【ここまで改良】 ---
             
         # グリッドのカード（章ごと）の始まり
         content += f"-   __{chapter_title}__\n\n"
