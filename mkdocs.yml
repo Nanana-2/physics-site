@@ -9,6 +9,27 @@ theme:
     - navigation.footer # コードをコピーするボタンを付ける（おまけ）
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
 
+
+palette:
+    # 1つ目の設定：ライトモード
+    - media: "(prefers-color-scheme: light)" # ユーザーの端末がライトモードの時
+      scheme: default
+      primary: teal        # サイトのメインカラー（お好みで変更可能）
+      accent: teal         # リンクなどのアクセントカラー
+      toggle:
+        icon: material/weather-sunny # スイッチのアイコン（太陽）
+        name: ダークモードに切り替え
+
+    # 2つ目の設定：ダークモード
+    - media: "(prefers-color-scheme: dark)"  # ユーザーの端末がダークモードの時
+      scheme: slate        # ダークモード用の黒基調テーマ
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night # スイッチのアイコン（月）
+        name: ライトモードに切り替え
+
+
 markdown_extensions:
   - meta
   - admonition
