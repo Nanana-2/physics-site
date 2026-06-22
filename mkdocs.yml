@@ -10,7 +10,7 @@ theme:
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
 
 
-palette:
+  palette:
     # 1つ目の設定：ライトモード
     - media: "(prefers-color-scheme: light)" # ユーザーの端末がライトモードの時
       scheme: default
@@ -56,7 +56,7 @@ plugins:
   - search
   - awesome-pages
   - tags:                # ✨ コロン(:)を付けて、設定を下に書く
-      tags_file: tags.md              # ★これを入れると、サイト上に綺麗なタグが自動表示されます
+                  
 
 
 extra_css:
