@@ -3,21 +3,19 @@
    ========================================== */
 .mjx-container[display="true"] {
   max-width: 100%;
-  overflow-x: auto; /* はみ出したら横スクロール可能に */
+  overflow-x: auto;
   overflow-y: hidden;
   padding: 1.5rem 0;
 }
 
 /* ==========================================
-   2. サイト全体の見た目をちょっとオシャレにする（おまけ）
+   2. サイト全体の見た目をちょっとオシャレにする
    ========================================== */
-/* コードブロックや数式全体の角を少し丸めて今風にする */
 .md-typeset pre code, 
 .mjx-container {
   border-radius: 8px;
 }
 
-/* リンクの下線をオシャレにする */
 .md-typeset a {
   text-decoration: none;
   border-bottom: 1px dashed var(--md-typeset-a-color);
@@ -27,15 +25,11 @@
   border-bottom-style: solid;
 }
 
-
-
 /* ==========================================
-   3. 見出し（H2）のカスタムデザイン（パターンB）
-   ========================================== */
-
-/* H2（## から始まる見出し）: 背景色付きのリボン風 */
+   3. 見出し（H2）のカスタムデザイン
+   ========================================= */
 .md-typeset h2 {
-  border-bottom: solid 3px #cce4ff;
+  border-bottom: solid 3px var(--md-accent-color--transparent);
   position: relative;
   padding-bottom: 6px !important;
 }
@@ -45,38 +39,26 @@
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 3px #5472cd;
+  border-bottom: solid 3px var(--md-accent-color);
   bottom: -3px;
   width: 20%;
 }
 
 /* ==========================================
-   4. ページタイトル（# に相当するH1）のデザイン
+   4. ページタイトル（H1, H3）のデザイン
    ========================================== */
-.md-typeset h1 {
-  font-weight: 700; 
-  padding: 0.25em 0.5em;/*上下 左右の余白*/
-  color: #494949;/*文字色*/
-  background: transparent;/*背景透明に*/
-  border-left: solid 5px #3a52ca;/*左線*/
-}
-
-
-
+.md-typeset h1,
 .md-typeset h3 {
-  padding: 0.25em 0.5em;/*上下 左右の余白*/
-  color: #494949;/*文字色*/
-  background: transparent;/*背景透明に*/
-  border-left: solid 5px #3a52ca;/*左線*/
+  font-weight: 700; 
+  padding: 0.25em 0.5em;
+  color: var(--md-typeset-color) !important; /* ✨ モード連動の文字色に */
+  background: transparent;
+  border-left: solid 5px var(--md-accent-color); /* ✨ 線の色も自動連動 */
 }
-
-
 
 /* ==========================================
    7. サイドバー（ナビゲーション）のデザインカスタム
    ========================================== */
-
-/* マウスを乗せた（ホバーした）ときのメニュー背景を丸く、薄い色にする */
 .md-nav__link:hover {
   background-color: var(--md-code-bg-color);
   color: var(--md-typeset-a-color) !important;
@@ -84,149 +66,119 @@
   transition: all 0.2s ease;
 }
 
-/* いま見ているアクティブなページの文字を太くして目立たせる */
 .md-nav__link--active {
   font-weight: bold;
   color: var(--md-typeset-a-color) !important;
 }
 
-/* サイドバーの各項目の間隔を少し広げて、窮屈感をなくす */
 .md-nav__item {
   padding-top: 0.15rem;
   padding-bottom: 0.15rem;
 }
 
-/* フォルダを開閉する矢印（＞）のアイコンに少しアニメーションをつける */
 .md-nav__icon {
   transition: transform 0.25s ease;
 }
 
 /* ==========================================
-   8. 左サイドバーの背景色と角丸設定
+   8. 左サイドバーの背景色と角丸設定（PC版）
    ========================================== */
 @media screen and (min-width: 76.25em) {
-  
-  /* 🎨 ① ここでサイドバーの色を変えられます！好きなカラーコードに書き換えてください */
   .md-sidebar--primary {
-    --md-default-bg-color: #f5f5f0 !important; 
+    --md-sidebar-bg: var(--md-code-bg-color); 
   }
 
-  /* ② 一番外側の板に丸みを持たせる ＆ 背景色を適用 */
   .md-sidebar--primary .md-nav {
-    background-color: var(--md-default-bg-color) !important;
-    border-radius: 12px !important; /* ✨ ここで角の丸みを調整（数字を大きくするほど丸くなります） */
-    overflow: hidden; /* 角丸からはみ出た部分を綺麗に隠す */
+    background-color: var(--md-sidebar-bg) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
     box-shadow: none !important; 
   }
 
-  /* ③ 中のタイトルやリストは透明にして、大元の色を透かす */
   .md-sidebar--primary .md-nav__title,
   .md-sidebar--primary .md-nav__list {
     background-color: transparent !important;
     box-shadow: none !important;
   }
 }
+
 /* ==========================================
-   9. サイドバーメインタイトル（大学物理の問題集）の余白調整
+   9. サイドバーメインタイトルの余白調整
    ========================================== */
-/* 大元のタイトル部分だけを狙い撃ちして、上下にゆとりを持たせる */
 .md-sidebar--primary .md-nav--primary > .md-nav__title {
-  padding-top: 0.5rem !important;    /* 上の余白（好みに合わせて調整） */
-  padding-bottom: 0.5rem !important; /* 下の余白（好みに合わせて調整） */
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
-
-
-
 /* ==========================================
-   10. 記事エリアの可読性（読みやすさ）向上
+   10. 記事エリアの可読性向上
    ========================================== */
 .md-content__inner {
-  /* 1行の最大幅を適度に制限して、目が泳ぐのを防ぐ（標準より少し狭めてゆったりに） */
   max-width: 44rem; 
-  /* 左右に程よい余白を持たせる */
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  /* 行間を少し広げて、ギチギチ感を解消する */
   line-height: 1.75;
 }
 
-/* 段落（文章）ごとのスキマを広げて、呼吸できる空間を作る */
 .md-typeset p {
   margin-bottom: 1.2rem;
 }
 
-/* リスト（箇条書きや(1)(2)(3)の設問など）の間隔も少し広げる */
 .md-typeset ol li, 
 .md-typeset ul li {
   margin-bottom: 0.5rem;
 }
 
-/* 数式ブロックの上下にしっかり余白を確保する */
 .mjx-container[display="true"] {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
 }
 
-
 /* ==========================================
    11. Noto Sans JP 用の微調整
    ========================================== */
 body, input {
-  /* 文字の境界線を滑らかにして、フォントをクッキリ綺麗に見せる */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 見出し（H1〜H3）を少しスマートで上品な太さにする */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
-  font-weight: 500; /* デフォルトのガッツリ太い文字から、少し洗練された太さに */
-  color: #333333;
+  font-weight: 500;
+  color: var(--md-typeset-color) !important; /* ✨ 確実に文字色を連動 */
 }
-
-
 
 /* ==========================================
    12. スマホ版サイドバー（ドロワー）の崩れ修正 ＆ デザイン統一
    ========================================== */
 @media screen and (max-width: 76.24em) {
-  
-  /* ①【最重要：崩れ修正】ロゴと文字の重なりを解消する */
-  /* タイトルエリアをflexbox（横並び）にして、ロゴと文字の間に適切な隙間（gap）を確保します */
   .md-nav--primary > .md-nav__title {
     display: flex !important;
-    align-items: center !important; /* ロゴと文字の上下中央を揃える */
-    gap: 1.0rem !important;        /* ロゴと文字の間に物理的な隙間を作る（これで重なりが解消されます） */
-    padding-left: 1.0rem !important; /* 左右の余白を適切に確保する */
+    align-items: center !important;
+    gap: 1.0rem !important;
+    padding-left: 1.0rem !important;
     padding-right: 1.0rem !important;
   }
 
-  /* ロゴアイコン自体が大きすぎる場合は、少し小さくして文字とのバランスを取る */
   .md-nav--primary > .md-nav__title .md-logo img,
   .md-nav--primary > .md-nav__title .md-logo svg {
-    height: 1.6rem !important; /* ロゴの高さを調整（文字サイズに合わせる） */
+    height: 1.6rem !important;
     width: auto !important;
   }
 
-  /* ※以降の色設定は、ロゴや文字を見やすくするために前回のものを維持します */
-
-  /* ② メニュー全体の背景色をPC版と同じ薄グレーに設定 */
   .md-nav--primary {
-    background-color: #edf0f3 !important; 
+    background-color: var(--md-code-bg-color) !important; /* ✨ モード連動 */
   }
 
-  /* ③ 上部の「青い帯（デフォルト設定）」を透明にし、文字色をダークグレーにする */
   .md-nav--primary > .md-nav__title {
     background-color: transparent !important;
-    color: #494949 !important; /* 文字色をダークグレーに */
-    box-shadow: none !important; /* 下の影（境界線）を消す */
+    color: var(--md-typeset-color) !important;
+    box-shadow: none !important;
   }
 
-  /* ④ ロゴアイコンとフォルダ開閉アイコンの色を、文字色に合わせてダークグレーにする */
   .md-nav--primary > .md-nav__title .md-logo,
   .md-nav--primary > .md-nav__title .md-nav__icon {
-    color: #494949 !important;
+    color: var(--md-typeset-color) !important;
   }
 }
