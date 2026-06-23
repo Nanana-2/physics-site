@@ -40,4 +40,4 @@ jobs:
           git diff --quiet && git diff --staged --quiet || (git commit -m "自動生成: 新しい物理の問題を追加" && git pull --rebase origin main && git push)
 
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        run: mkdocs gh-deploy 
