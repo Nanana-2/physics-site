@@ -7778,55 +7778,55 @@ J = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \psi \
 <h3 id="1">(1)</h3>
 <p>それぞれの領域における時間独立シュレーディンガー方程式を立てて整理します。</p>
 <ul>
-<li>
-<p><strong>領域 I（ <span class="arithmatex">\(x &lt; 0\)</span> ）</strong>
-  ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。
-  $$
-  -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{I}}}{dx^2} = E \psi_{\text{I}} \implies \frac{d^2 \psi_{\text{I}}}{dx^2} = -\frac{2mE}{\hbar^2} \psi_{\text{I}}
-  $$
-  与えられた解の形と見比べることで， <span class="arithmatex">\(k_1\)</span> の表式が得られます。
-  $$
-  k_1 = \sqrt{\frac{2mE}{\hbar^2}}
-  $$</p>
-</li>
-<li>
-<p><strong>領域 II（ <span class="arithmatex">\(x \ge 0\)</span> ）</strong>
-  ポテンシャルは <span class="arithmatex">\(V(x) = V_0\)</span> です。
-  $$
-  -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} + V_0 \psi_{\text{II}} = E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} = -\frac{2m(E - V_0)}{\hbar^2} \psi_{\text{II}}
-  $$
-  <span class="arithmatex">\(E &gt; V_0\)</span> であるため，根号の中身は正となります。これにより <span class="arithmatex">\(k_2\)</span> の表式が得られます。
-  $$
-  k_2 = \sqrt{\frac{2m(E - V_0)}{\hbar^2}}
-  $$</p>
-</li>
+<li><strong>領域 I（ <span class="arithmatex">\(x &lt; 0\)</span> ）</strong>
+  ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
+<div class="arithmatex">\[
+  -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{I}}}{dx^2} = E \psi_{\text{I}} \implies \frac{d^2 \psi_{\text{I}}}{dx^2} = -\frac{2mE}{\hbar^2} \psi_{\text{I}}
+\]</div>
+<p>与えられた解の形と見比べることで， <span class="arithmatex">\(k_1\)</span> の表式が得られます。</p>
+<div class="arithmatex">\[
+  k_1 = \sqrt{\frac{2mE}{\hbar^2}}
+\]</div>
+<ul>
+<li><strong>領域 II（ <span class="arithmatex">\(x \ge 0\)</span> ）</strong>
+  ポテンシャルは <span class="arithmatex">\(V(x) = V_0\)</span> です。</li>
+</ul>
+<div class="arithmatex">\[
+  -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} + V_0 \psi_{\text{II}} = E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} = -\frac{2m(E - V_0)}{\hbar^2} \psi_{\text{II}}
+\]</div>
+<p><span class="arithmatex">\(E &gt; V_0\)</span> であるため，根号の中身は正となります。これにより <span class="arithmatex">\(k_2\)</span> の表式が得られます。</p>
+<div class="arithmatex">\[
+  k_2 = \sqrt{\frac{2m(E - V_0)}{\hbar^2}}
+\]</div>
 <h3 id="2">(2)</h3>
 <p>境界 <span class="arithmatex">\(x = 0\)</span> における接続条件を適用します。各領域の微分は <span class="arithmatex">\(\frac{d\psi_{\text{I}}}{dx} = ik_1 A e^{ik_1 x} - ik_1 B e^{-ik_1 x}\)</span> ， <span class="arithmatex">\(\frac{d\psi_{\text{II}}}{dx} = ik_2 C e^{ik_2 x}\)</span> です。</p>
 <ul>
-<li><strong>波動関数の連続性</strong>
-  $$
-  A + B = C \quad \cdots \text{①}
-  $$</li>
-<li><strong>微分の連続性</strong>
-  $$
-  ik_1 A - ik_1 B = ik_2 C \implies k_1(A - B) = k_2 C \quad \cdots \text{②}
-  $$</li>
+<li><strong>波動関数の連続性</strong></li>
 </ul>
-<p>①式を②式に代入して <span class="arithmatex">\(C\)</span> を消去し， <span class="arithmatex">\(B\)</span> について整理します。
-$$
+<div class="arithmatex">\[
+  A + B = C \quad \cdots \text{①}
+\]</div>
+<ul>
+<li><strong>微分の連続性</strong></li>
+</ul>
+<div class="arithmatex">\[
+  ik_1 A - ik_1 B = ik_2 C \implies k_1(A - B) = k_2 C \quad \cdots \text{②}
+\]</div>
+<p>①式を②式に代入して <span class="arithmatex">\(C\)</span> を消去し， <span class="arithmatex">\(B\)</span> について整理します。</p>
+<div class="arithmatex">\[
 k_1 A - k_1 B = k_2(A + B) \implies (k_1 - k_2)A = (k_1 + k_2)B
-$$
-$$
+\]</div>
+<div class="arithmatex">\[
 B = \frac{k_1 - k_2}{k_1 + k_2} A
-$$</p>
-<p>この <span class="arithmatex">\(B\)</span> の結果を①式に代入して <span class="arithmatex">\(C\)</span> について整理します。
-$$
+\]</div>
+<p>この <span class="arithmatex">\(B\)</span> の結果を①式に代入して <span class="arithmatex">\(C\)</span> について整理します。</p>
+<div class="arithmatex">\[
 C = A + \frac{k_1 - k_2}{k_1 + k_2} A = \frac{(k_1 + k_2) + (k_1 - k_2)}{k_1 + k_2} A
-$$
-$$
+\]</div>
+<div class="arithmatex">\[
 C = \frac{2k_1}{k_1 + k_2} A
-$$</p>
+\]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた定義式に各波動関数を代入して確率流密度を計算します。</p>
 <ul>

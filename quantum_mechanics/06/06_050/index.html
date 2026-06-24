@@ -7759,7 +7759,11 @@
 <p>ふたつのシステムにおいて，それぞれの角運動量を <span class="arithmatex">\(\boldsymbol{J}_1\)</span> と <span class="arithmatex">\(\boldsymbol{J}_2\)</span> とし，全角運動量を <span class="arithmatex">\(\boldsymbol{J} = \boldsymbol{J}_1 + \boldsymbol{J}_2\)</span> とする。それぞれの角運動量の大きさを指定する量子数を <span class="arithmatex">\(j_1 = \frac{1}{2}\)</span> ， <span class="arithmatex">\(j_2 = \frac{1}{2}\)</span> とする。それぞれの <span class="arithmatex">\(z\)</span> 成分量子数は <span class="arithmatex">\(m_1 = \pm\frac{1}{2}\)</span> ， <span class="arithmatex">\(m_2 = \pm\frac{1}{2}\)</span> の値をとる。</p>
 <p>個々の成分が確定した直積基底を <span class="arithmatex">\(|m_1, m_2\rangle\)</span> と表し，全角運動量の同時固有状態を <span class="arithmatex">\(|J, M\rangle\)</span> と表す。全角運動量の大きさがとり得る範囲は <span class="arithmatex">\(|j_1 - j_2| \le J \le j_1 + j_2\)</span> であり， <span class="arithmatex">\(z\)</span> 成分量子数の間には <span class="arithmatex">\(M = m_1 + m_2\)</span> の関係が成り立つ。以下の問いに答えよ。</p>
 <p>(1) 全角運動量量子数 <span class="arithmatex">\(J\)</span> がとり得るふたつの値を示せ。また，それぞれの <span class="arithmatex">\(J\)</span> の値に対して， <span class="arithmatex">\(z\)</span> 成分量子数 <span class="arithmatex">\(M\)</span> がとり得る値をすべて挙げよ。</p>
-<p>(2) <span class="arithmatex">\(M\)</span> の最大値に対応する全角運動量の状態は，直積基底の最大値の組み合わせと一対一で対応し， <span class="arithmatex">\(|1, 1\rangle = |+\frac{1}{2}, +\frac{1}{2}\rangle\)</span> と表される。この状態の両辺に全消滅演算子 <span class="arithmatex">\(\hat{J}_- = \hat{J}_{1-} + \hat{J}_{2-}\)</span> を作用させることで，状態 <span class="arithmatex">\(|1, 0\rangle\)</span> を直積基底の重ね合わせとして表せ。ただし，演算子の作用規則は <span class="arithmatex">\(\hat{J}_- |J, M\rangle = \sqrt{J(J+1) - M(M-1)}\hbar |J, M-1\rangle\)</span> とする。</p>
+<p>(2) <span class="arithmatex">\(M\)</span> の最大値に対応する全角運動量の状態は，直積基底の最大値の組み合わせと一対一で対応し， <span class="arithmatex">\(|1, 1\rangle = |+\frac{1}{2}, +\frac{1}{2}\rangle\)</span> と表される。この状態の両辺に全消滅演算子 <span class="arithmatex">\(\hat{J}_- = \hat{J}_{1-} + \hat{J}_{2-}\)</span> を作用させることで，状態 <span class="arithmatex">\(|1, 0\rangle\)</span> を直積基底の重ね合わせとして表せ。ただし，演算子の作用規則は </p>
+<div class="arithmatex">\[
+\hat{J}_- |J, M\rangle = \sqrt{J(J+1) - M(M-1)}\hbar |J, M-1\rangle
+\]</div>
+<p>とする。</p>
 <p>(3) 状態 <span class="arithmatex">\(|0, 0\rangle\)</span> は， <span class="arithmatex">\(M = m_1 + m_2 = 0\)</span> となる直積基底の組み合わせから構成され，かつ (2) で求めた状態 <span class="arithmatex">\(|1, 0\rangle\)</span> と互いに直交する。この条件と規格化条件から，状態 <span class="arithmatex">\(|0, 0\rangle\)</span> の具体的な展開式を求めよ。ただし， <span class="arithmatex">\(|+\frac{1}{2}, -\frac{1}{2}\rangle\)</span> の係数は正の実数とせよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -7788,10 +7792,10 @@
 <ul>
 <li><strong>右辺の計算</strong></li>
 </ul>
-<p>全消滅演算子はそれぞれの空間に独立に作用するため， <span class="arithmatex">\(\hat{J}_- = \hat{J}_{1-} + \hat{J}_{2-}\)</span> を分配します。
-$$
-  (\hat{J}<em 2-="2-">{1-} + \hat{J}</em>}) |+\frac{1}{2}, +\frac{1}{2}\rangle = \left( \hat{J<em 2-="2-">{1-} |+\frac{1}{2}\rangle \right) |+\frac{1}{2}\rangle + |+\frac{1}{2}\rangle \left( \hat{J}</em>\rangle \right)
-$$} |+\frac{1}{2</p>
+<p>全消滅演算子はそれぞれの空間に独立に作用するため， <span class="arithmatex">\(\hat{J}_- = \hat{J}_{1-} + \hat{J}_{2-}\)</span> を分配します。</p>
+<div class="arithmatex">\[
+  (\hat{J}_{1-} + \hat{J}_{2-}) |+\frac{1}{2}, +\frac{1}{2}\rangle = \left( \hat{J}_{1-} |+\frac{1}{2}\rangle \right) |+\frac{1}{2}\rangle + |+\frac{1}{2}\rangle \left( \hat{J}_{2-} |+\frac{1}{2}\rangle \right)
+\]</div>
 <p>それぞれの成分において <span class="arithmatex">\(j = \frac{1}{2}, m = \frac{1}{2}\)</span> を作用規則に代入すると，係数は <span class="arithmatex">\(\sqrt{\frac{1}{2}(\frac{1}{2}+1) - \frac{1}{2}(\frac{1}{2}-1)} = \sqrt{\frac{3}{4} + \frac{1}{4}} = 1\)</span> となります。</p>
 <div class="arithmatex">\[
   = |-\frac{1}{2}, +\frac{1}{2}\rangle + |+\frac{1}{2}, -\frac{1}{2}\rangle

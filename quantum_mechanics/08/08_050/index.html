@@ -7756,20 +7756,20 @@
 <h1 id="_1">水素原子の隠れた対称性と縮退の計算</h1>
 <h2 id="_2">問題</h2>
 <p>水素原子のエネルギー準位は主量子数 <span class="arithmatex">\(n\)</span> のみによって決定され，軌道角運動量量子数 <span class="arithmatex">\(l\)</span> が異なる状態の間にも完全な縮退が存在する。この異常縮退は，空間の回転対称性に加え，クーロン場特有の保存量であるルンゲ・レンツベクトルが存在することに起因する。ここでは，ルンゲ・レンツ演算子と角運動量演算子の交換関係から状態間の遷移を具体的に計算し， <span class="arithmatex">\(n=2\)</span> における縮退の仕組みを解析する。</p>
-<p>水素原子のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とし，軌道角運動量演算子を <span class="arithmatex">\(\hat{\mathbf{L}}\)</span> とする。ハミルトニアンが負のエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つ束縛状態の空間において，修正されたルンゲ・レンツ演算子 <span class="arithmatex">\(\hat{\mathbf{M}}\)</span> を導入する。これらはハミルトニアンと可換であり，さらに角運動量演算子との間に以下の交換関係を満たす。</p>
+<p>水素原子のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とし，軌道角運動量演算子を <span class="arithmatex">\(\hat{\boldsymbol{L}}\)</span> とする。ハミルトニアンが負のエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つ束縛状態の空間において，修正されたルンゲ・レンツ演算子 <span class="arithmatex">\(\hat{\boldsymbol{M}}\)</span> を導入する。これらはハミルトニアンと可換であり，さらに角運動量演算子との間に以下の交換関係を満たす。</p>
 <div class="arithmatex">\[
 [\hat{L}_i, \, \hat{M}_j] = i\hbar \sum_{k} \epsilon_{ijk} \hat{M}_k
 \]</div>
 <div class="arithmatex">\[
 [\hat{M}_i, \, \hat{M}_j] = i\hbar \left( -\frac{2E}{m} \right) \sum_{k} \epsilon_{ijk} \hat{L}_k
 \]</div>
-<p>ここで <span class="arithmatex">\(\epsilon_{ijk}\)</span> は完全反対称テンソルである。定数係数を整理するため，新しく演算子 <span class="arithmatex">\(\hat{\mathbf{K}} = \sqrt{-\frac{m}{2E}}\hat{\mathbf{M}}\)</span> を定義すると，交換関係は以下のように整理される。</p>
+<p>ここで <span class="arithmatex">\(\epsilon_{ijk}\)</span> は完全反対称テンソルである。定数係数を整理するため，新しく演算子 <span class="arithmatex">\(\hat{\boldsymbol{K}} = \sqrt{-\frac{m}{2E}}\hat{\boldsymbol{M}}\)</span> を定義すると，交換関係は以下のように整理される。</p>
 <div class="arithmatex">\[
 [\hat{L}_x, \, \hat{K}_y] = i\hbar \hat{K}_z, \quad [\hat{K}_x, \, \hat{K}_y] = i\hbar \hat{L}_z
 \]</div>
 <p>主量子数 <span class="arithmatex">\(n=2\)</span> のエネルギー準位に属する4つの状態は，軌道角運動量の基底 <span class="arithmatex">\(|l, m\rangle\)</span> を用いて <span class="arithmatex">\(|0, 0\rangle\)</span> ， <span class="arithmatex">\(|1, 1\rangle\)</span> ， <span class="arithmatex">\(|1, 0\rangle\)</span> ， <span class="arithmatex">\(|1, -1\rangle\)</span> と表される。これらはすべて共通のエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つ。以下の問いに答えよ。</p>
 <p>(1) 演算子 <span class="arithmatex">\(\hat{K}_z\)</span> を用いた交換関係 <span class="arithmatex">\([\hat{L}_z, \, \hat{K}_z]\)</span> の値を計算せよ。また，この結果に基づき，状態 <span class="arithmatex">\(|1, 0\rangle\)</span> に <span class="arithmatex">\(\hat{K}_z\)</span> を作用させて得られる新しい状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> の <span class="arithmatex">\(\hat{L}_z\)</span> に対する固有値を求めよ。</p>
-<p>(2) 演算子のパリティ対称性から， <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> は <span class="arithmatex">\(l=0\)</span> の状態と結びつく。 <span class="arithmatex">\(\hat{\mathbf{L}}^2\)</span> と <span class="arithmatex">\(\hat{\mathbf{K}}\)</span> の交換関係から導かれる以下の具体的な行列要素の関係式を考える。</p>
+<p>(2) 演算子のパリティ対称性から， <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> は <span class="arithmatex">\(l=0\)</span> の状態と結びつく。 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> と <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> の交換関係から導かれる以下の具体的な行列要素の関係式を考える。</p>
 <div class="arithmatex">\[
 \langle 0, 0 | \hat{K}_z | 1, 0 \rangle = \alpha
 \]</div>
@@ -7788,7 +7788,7 @@
 \]</div>
 <p>したがって，新しい状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> もまた， <span class="arithmatex">\(\hat{L}_z\)</span> に対する固有値が 0 となる固有状態であることが求まります。</p>
 <h3 id="2">(2)</h3>
-<p>ルンゲ・レンツ演算子およびそれから誘導される演算子 <span class="arithmatex">\(\hat{\mathbf{K}}\)</span> は，物理的にエルミート演算子（自己共役演算子）です。したがって， <span class="arithmatex">\(\hat{K}_z^\dagger = \hat{K}_z\)</span> が成り立ちます。</p>
+<p>ルンゲ・レンツ演算子およびそれから誘導される演算子 <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> は，物理的にエルミート演算子（自己共役演算子）です。したがって， <span class="arithmatex">\(\hat{K}_z^\dagger = \hat{K}_z\)</span> が成り立ちます。</p>
 <p>行列要素の複素共役の定義を適用します。</p>
 <div class="arithmatex">\[
 \langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \langle 0, 0 | \hat{K}_z^\dagger | 1, 0 \rangle^* = \langle 0, 0 | \hat{K}_z | 1, 0 \rangle^*

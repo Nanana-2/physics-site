@@ -7760,34 +7760,34 @@
 <div class="arithmatex">\[
 \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(r) \right] \psi(r, \theta, \phi) = E \psi(r, \theta, \phi)
 \]</div>
-<p>球座標系におけるラプラシアン <span class="arithmatex">\(\nabla^2\)</span> は，動径方向の微分項と，軌道角運動量演算子の2乗 <span class="arithmatex">\(\hat{\mathbf{L}}^2\)</span> を用いて以下のように表される。</p>
+<p>球座標系におけるラプラシアン <span class="arithmatex">\(\nabla^2\)</span> は，動径方向の微分項と，軌道角運動量演算子の2乗 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> を用いて以下のように表される。</p>
 <div class="arithmatex">\[
-\nabla^2 = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) - \frac{\hat{\mathbf{L}}^2}{\hbar^2 r^2}
+\nabla^2 = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) - \frac{\hat{\boldsymbol{L}}^2}{\hbar^2 r^2}
 \]</div>
-<p>角度部分の演算子 <span class="arithmatex">\(\hat{\mathbf{L}}^2\)</span> の固有状態を球面調和関数 <span class="arithmatex">\(Y_{l,m}(\theta, \phi)\)</span> とし，その固有値方程式を以下のように置く。</p>
+<p>角度部分の演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> の固有状態を球面調和関数 <span class="arithmatex">\(Y_{l,m}(\theta, \phi)\)</span> とし，その固有値方程式を以下のように置く。</p>
 <div class="arithmatex">\[
-\hat{\mathbf{L}}^2 Y_{l,m}(\theta, \phi) = l(l+1)\hbar^2 Y_{l,m}(\theta, \phi)
+\hat{\boldsymbol{L}}^2 Y_{l,m}(\theta, \phi) = l(l+1)\hbar^2 Y_{l,m}(\theta, \phi)
 \]</div>
 <p>全体の波動関数を，動径関数 <span class="arithmatex">\(R(r)\)</span> と球面調和関数の積 <span class="arithmatex">\(\psi(r, \theta, \phi) = R(r) Y_{l,m}(\theta, \phi)\)</span> として変数分離を試みる。以下の問いに答えよ。</p>
 <p>(1) 波動関数の積の形式をシュレーディンガー方程式に代入し，ラプラシアンの演算子表示を用いて展開せよ。</p>
-<p>(2) 角度部分の演算子 <span class="arithmatex">\(\hat{\mathbf{L}}^2\)</span> を球面調和関数に作用させて固有値に置き換え，方程式全体から角度依存性を消去せよ。</p>
+<p>(2) 角度部分の演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> を球面調和関数に作用させて固有値に置き換え，方程式全体から角度依存性を消去せよ。</p>
 <p>(3) 方程式の両辺に適切な因数を掛け算することにより，動径関数 <span class="arithmatex">\(R(r)\)</span> のみが満たすべき微分方程式を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>提示されたラプラシアンの展開式をシュレーディンガー方程式の左辺に代入します。</p>
 <div class="arithmatex">\[
--\frac{\hbar^2}{2m} \left[ \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) - \frac{\hat{\mathbf{L}}^2}{\hbar^2 r^2} \right] \psi(r, \theta, \phi) + V(r) \psi(r, \theta, \phi) = E \psi(r, \theta, \phi)
+-\frac{\hbar^2}{2m} \left[ \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) - \frac{\hat{\boldsymbol{L}}^2}{\hbar^2 r^2} \right] \psi(r, \theta, \phi) + V(r) \psi(r, \theta, \phi) = E \psi(r, \theta, \phi)
 \]</div>
-<p>ここに波動関数の仮定 <span class="arithmatex">\(\psi(r, \theta, \phi) = R(r) Y_{l,m}(\theta, \phi)\)</span> を代入します。動径方向の微分演算は <span class="arithmatex">\(R(r)\)</span> にのみ作用し，角度方向の演算子 <span class="arithmatex">\(\hat{\mathbf{L}}^2\)</span> は <span class="arithmatex">\(Y_{l,m}(\theta, \phi)\)</span> にのみ作用します。</p>
+<p>ここに波動関数の仮定 <span class="arithmatex">\(\psi(r, \theta, \phi) = R(r) Y_{l,m}(\theta, \phi)\)</span> を代入します。動径方向の微分演算は <span class="arithmatex">\(R(r)\)</span> にのみ作用し，角度方向の演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> は <span class="arithmatex">\(Y_{l,m}(\theta, \phi)\)</span> にのみ作用します。</p>
 <div class="arithmatex">\[
--\frac{\hbar^2}{2m} \left[ \frac{Y_{l,m}(\theta, \phi)}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) - \frac{R(r)}{\hbar^2 r^2} \hat{\mathbf{L}}^2 Y_{l,m}(\theta, \phi) \right] + V(r) R(r) Y_{l,m}(\theta, \phi) = E R(r) Y_{l,m}(\theta, \phi)
+-\frac{\hbar^2}{2m} \left[ \frac{Y_{l,m}(\theta, \phi)}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) - \frac{R(r)}{\hbar^2 r^2} \hat{\boldsymbol{L}}^2 Y_{l,m}(\theta, \phi) \right] + V(r) R(r) Y_{l,m}(\theta, \phi) = E R(r) Y_{l,m}(\theta, \phi)
 \]</div>
 <p>これが波動関数を展開した式です。</p>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた式の第2項にある <span class="arithmatex">\(\hat{\mathbf{L}}^2 Y_{l,m}(\theta, \phi)\)</span> の部分に対し，与えられた固有値方程式を適用します。</p>
+<p>(1) で得られた式の第2項にある <span class="arithmatex">\(\hat{\boldsymbol{L}}^2 Y_{l,m}(\theta, \phi)\)</span> の部分に対し，与えられた固有値方程式を適用します。</p>
 <div class="arithmatex">\[
-\hat{\mathbf{L}}^2 Y_{l,m}(\theta, \phi) = l(l+1)\hbar^2 Y_{l,m}(\theta, \phi)
+\hat{\boldsymbol{L}}^2 Y_{l,m}(\theta, \phi) = l(l+1)\hbar^2 Y_{l,m}(\theta, \phi)
 \]</div>
 <p>この固有値を式に戻します。</p>
 <div class="arithmatex">\[
