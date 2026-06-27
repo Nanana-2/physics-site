@@ -171,7 +171,7 @@ electromagnetism:
         setup: '磁性体の磁化ベクトル $\mathbf{M}$ を導入し、束縛体積電流密度 $\mathbf{j}_b=\nabla\times\mathbf{M}$ および束縛表面電流密度 $\mathbf{K}_b=\mathbf{M}\times\mathbf{n}$ を導出する問題'
 
       - id: "05_020"
-        title: "磁場 $\mathbf{H}$ と自由電流"
+        title: '磁場 $\mathbf{H}$ と自由電流'
         difficulty: "標準"
         setup: '磁場 $\mathbf{H}$ を $\mathbf{B}=\mu_0(\mathbf{H}+\mathbf{M})$ によって導入し、自由電流に対するアンペールの法則 $\nabla\times\mathbf{H}=\mathbf{j}_f$ を用いて磁性体中の磁場を求める問題'
 
