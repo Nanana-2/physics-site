@@ -12,8 +12,8 @@ if not API_KEY:
 client = genai.Client(api_key=API_KEY)
 
 SUBJECTS = [
-    {"yaml_file": "curriculum_mechanics.yaml", "yaml_key": "mechanics", "output_dir": "docs/mechanics", "subject_name": "力学（解析力学含む）"},
-    {"yaml_file": "curriculum_quantum_mechanics.yaml", "yaml_key": "quantum_mechanics", "output_dir": "docs/quantum_mechanics", "subject_name": "量子力学"}
+    {"yaml_file": "curriculum_mechanics.yaml", "yaml_key": "mechanics", "output_dir": "docs/01mechanics", "subject_name": "力学（解析力学含む）"},
+    {"yaml_file": "curriculum_quantum_mechanics.yaml", "yaml_key": "quantum_mechanics", "output_dir": "docs/04quantum_mechanics", "subject_name": "量子力学"}
 ]
 
 target_problem, target_theme, target_subject_name, target_file_path = None, "", "", ""

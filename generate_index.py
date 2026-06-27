@@ -1,8 +1,14 @@
 import os
 import re
 
-# 対象とする単元フォルダ
-TARGET_DIRS = ["mechanics", "statistical_mechanics", "quantum_mechanics"]
+# 対象とする単元フォルダ（先頭の番号がサイト内での表示順）
+TARGET_DIRS = [
+    "01mechanics",
+    "02electromagnetism",
+    "03thermodynamics",
+    "04quantum_mechanics",
+    "05statistical_mechanics",
+]
 
 for base_dir in TARGET_DIRS:
     docs_base_path = os.path.join("docs", base_dir)

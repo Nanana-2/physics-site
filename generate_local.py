@@ -27,13 +27,13 @@ SUBJECTS = [
     {
         "yaml_file": "curriculum_mechanics.yaml",
         "yaml_key": "mechanics",
-        "output_dir": "docs/mechanics",
+        "output_dir": "docs/01mechanics",
         "subject_name": "力学（解析力学含む）"
     },
     {
         "yaml_file": "curriculum_quantum_mechanics.yaml",
         "yaml_key": "quantum_mechanics",
-        "output_dir": "docs/quantum_mechanics",
+        "output_dir": "docs/04quantum_mechanics",
         "subject_name": "量子力学"
     }
 ]

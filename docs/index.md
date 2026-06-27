@@ -59,7 +59,23 @@
 
     運動方程式，剛体の回転，振動，解析力学など
 
-    [力学の問題一覧へ](mechanics/index.md)
+    [力学の問題一覧へ](01mechanics/index.md)
+
+-   __電磁気学__
+
+    ---
+
+    静電場・静磁場から電磁誘導，マクスウェル方程式，電磁波まで
+
+    [電磁気学の問題一覧へ](02electromagnetism/index.md)
+
+-   __熱力学__
+
+    ---
+
+    熱力学の法則，状態変化，熱力学関数，相転移など
+
+    [熱力学の問題一覧へ](03thermodynamics/index.md)
 
 -   __量子力学__
 
@@ -67,7 +83,7 @@
 
     シュレディンガー方程式やブラケットの取り扱いから束縛問題・散乱問題，電磁場の量子化や場の量子論の入口まで
 
-    [量子力学の問題一覧へ](quantum_mechanics/index.md)
+    [量子力学の問題一覧へ](04quantum_mechanics/index.md)
 
 
 -   __統計力学__
@@ -76,7 +92,7 @@
 
     古典統計から量子統計，非平衡統計力学の基本や開放量子系まで
 
-    [統計力学の問題一覧へ](statistical_mechanics/index.md)
+    [統計力学の問題一覧へ](05statistical_mechanics/index.md)
 
 </div>
 
@@ -84,12 +100,12 @@
 
 
 
-* **[力学・解析力学](mechanics/01/01_010.md)**
+* **[力学・解析力学](01mechanics/01/01_010.md)**
     * 運動方程式，単振動，中心力場，剛体の運動，ラグランジュ・ハミルトン形式など
 * **電磁気学**（※順次追加予定）
 * **熱力学**（※順次追加予定）
 * **量子力学**（※順次追加予定）
-* **[統計力学](stastical_mechanics/01/01_010.md)**
+* **[統計力学](05statistical_mechanics/01/01_010.md)**
 
  
 -->
@@ -103,5 +119,4 @@
 
 * **Twitter (X)：** [ななな２](https://twitter.com/nanana_UTM1)
 * **note：** [ななな２](https://note.com/john_doenote)
-
 
