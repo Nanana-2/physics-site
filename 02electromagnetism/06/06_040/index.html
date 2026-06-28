@@ -11359,14 +11359,15 @@ LI\frac{dI}{dt}
 <p>なので，目的のエネルギー収支が得られます。</p>
 <p>遮断直後の磁気エネルギーは <span class="arithmatex">\(U_L(0)=LI_\infty^2/2\)</span> です。抵抗で発生する全熱量は，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 W_R
-=\int_0^\infty RI_{\mathrm{off}}(t)^2\,dt
-\]</div>
-<div class="arithmatex">\[
-W_R
-=RI_\infty^2
-\int_0^\infty e^{-2t/\tau}\,dt
-=RI_\infty^2\frac{\tau}{2}
+&amp;=\int_0^\infty RI_{\mathrm{off}}(t)^2\,dt \\
+&amp;=RI_\infty^2
+\int_0^\infty e^{-2t/\tau}\,dt \\
+&amp;=RI_\infty^2
+\left[-\frac{\tau}{2}e^{-2t/\tau}\right]_0^\infty \\
+&amp;=RI_\infty^2\frac{\tau}{2}.
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\tau=L/R\)</span> より，</p>
 <div class="arithmatex">\[

@@ -11335,9 +11335,17 @@ E(r)2\pi rL=\frac{\lambda L}{\varepsilon_0}
 \]</div>
 <p><strong>二平面間の電位差</strong></p>
 <p>正の平面と負の平面の電位をそれぞれ <span class="arithmatex">\(V_+\)</span>，<span class="arithmatex">\(V_-\)</span> とします。二平面間では電場が一定なので，</p>
+<p>積分経路を <span class="arithmatex">\(+x\)</span> 方向にとると <span class="arithmatex">\(d\boldsymbol{l}=dx\,\boldsymbol{e}_x\)</span> であり，板間では <span class="arithmatex">\(\boldsymbol{E}=(\sigma/\varepsilon_0)\boldsymbol{e}_x\)</span> です。したがって，</p>
 <div class="arithmatex">\[
-V_--V_+=-\int_{-d/2}^{d/2}\boldsymbol{E}\cdot d\boldsymbol{l}
-=-\frac{\sigma d}{\varepsilon_0}
+\begin{aligned}
+V_--V_+
+&amp;=-\int_{-d/2}^{d/2}\boldsymbol{E}\cdot d\boldsymbol{l} \\
+&amp;=-\int_{-d/2}^{d/2}
+\frac{\sigma}{\varepsilon_0}\,dx \\
+&amp;=-\frac{\sigma}{\varepsilon_0}
+\left[x\right]_{-d/2}^{d/2} \\
+&amp;=-\frac{\sigma d}{\varepsilon_0}.
+\end{aligned}
 \]</div>
 <p>したがって，</p>
 <div class="arithmatex">\[
@@ -11347,15 +11355,18 @@ V_+-V_-=\frac{\sigma d}{\varepsilon_0}
 <p><strong>線電荷の電位</strong></p>
 <p>線電荷から外向きに電場が生じるため，二点間の電位差は，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \phi(r)-\phi(r_0)
-=-\int_{r_0}^{r}\frac{\lambda}{2\pi\varepsilon_0r'}\,dr'
+&amp;=-\int_{r_0}^{r}\frac{\lambda}{2\pi\varepsilon_0r'}\,dr' \\
+&amp;=-\frac{\lambda}{2\pi\varepsilon_0}
+\left[\log r'\right]_{r_0}^{r} \\
+&amp;=-\frac{\lambda}{2\pi\varepsilon_0}
+\log\frac{r}{r_0} \\
+&amp;=\frac{\lambda}{2\pi\varepsilon_0}
+\log\frac{r_0}{r}.
+\end{aligned}
 \]</div>
-<p>です。積分すると，</p>
-<div class="arithmatex">\[
-\phi(r)
-=-\frac{\lambda}{2\pi\varepsilon_0}\log\frac{r}{r_0}
-=\frac{\lambda}{2\pi\varepsilon_0}\log\frac{r_0}{r}
-\]</div>
+<p>基準として <span class="arithmatex">\(\phi(r_0)=0\)</span> を選べば，左辺は <span class="arithmatex">\(\phi(r)\)</span> になります。</p>
 <p>となります。<span class="arithmatex">\(r\to\infty\)</span> で対数は発散するため，有限な全電荷の場合のように <span class="arithmatex">\(\phi(\infty)=0\)</span> とはできません。これは無限長線電荷の全電荷が無限大であるという理想化に由来します。ただし二つの有限な位置の電位差は常に有限で，物理的に意味をもちます。</p>
 
 

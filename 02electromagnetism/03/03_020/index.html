@@ -11358,10 +11358,16 @@ E(r)4\pi r^2=\frac{-4\pi\alpha r^3}{\varepsilon_0}
 <h3 id="3">(3)</h3>
 <p>球外では電場がゼロなので <span class="arithmatex">\(\phi_{\mathrm{out}}=0\)</span> です。球内では，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \phi(r)-\phi(R)
-=-\int_R^r\left(-\frac{\alpha r'}{\varepsilon_0}\right)dr'
+&amp;=-\int_R^r
+\left(-\frac{\alpha r'}{\varepsilon_0}\right)dr' \\
+&amp;=\frac{\alpha}{\varepsilon_0}
+\left[\frac{r'^2}{2}\right]_R^r \\
+&amp;=\frac{\alpha}{2\varepsilon_0}(r^2-R^2).
+\end{aligned}
 \]</div>
-<p>より，</p>
+<p><span class="arithmatex">\(\phi(R)=0\)</span> なので，</p>
 <div class="arithmatex">\[
 \phi_{\mathrm{in}}(r)
 =\frac{\alpha}{2\varepsilon_0}(r^2-R^2)

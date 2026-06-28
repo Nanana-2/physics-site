@@ -11364,24 +11364,83 @@ d\boldsymbol{B}
 <p>無限直線電流では，軸の周りのどの方位角も等価です。また軸方向へ観測点を移しても状況は変わりません。この円筒対称性から，合成磁場は直線電流を中心とする円の接線方向だけを向きます。</p>
 <p>円形電流の中心軸上では，円周上の互いに反対側にある二つの電流要素を組にできます。二つの微小磁場の軸に垂直な成分は逆向きで打ち消し合い，軸方向成分は同じ向きに加わります。したがって合成磁場は <span class="arithmatex">\(z\)</span> 成分だけをもちます。この対称性の確認によって，後の積分で不要な成分を最初から除けます。</p>
 <h3 id="2">(2)</h3>
-<p>観測点を <span class="arithmatex">\((\rho,0,0)\)</span>，電流要素を <span class="arithmatex">\((0,0,z')\)</span> にとります。対称性より磁場は方位角方向です。方位角成分を積分すると，</p>
+<p>観測点を <span class="arithmatex">\((\rho,0,0)\)</span>，電流要素を <span class="arithmatex">\((0,0,z')\)</span> にとります。この点では <span class="arithmatex">\(\boldsymbol{e}_\varphi=\boldsymbol{e}_y\)</span> です。線素と電流要素から観測点へ向かうベクトルは，</p>
 <div class="arithmatex">\[
-B_\varphi
-=\frac{\mu_0I}{4\pi}
-\int_{-\infty}^{\infty}
-\frac{\rho\,dz'}{(\rho^2+z'^2)^{3/2}}
+d\boldsymbol{l}'=dz'\boldsymbol{e}_z,
+\qquad
+\boldsymbol{r}-\boldsymbol{r}'
+=\rho\boldsymbol{e}_x-z'\boldsymbol{e}_z
 \]</div>
-<p>積分値は <span class="arithmatex">\(2/\rho\)</span> なので，</p>
+<p>なので，外積は，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+d\boldsymbol{l}'\times
+(\boldsymbol{r}-\boldsymbol{r}')
+&amp;=dz'\boldsymbol{e}_z\times
+(\rho\boldsymbol{e}_x-z'\boldsymbol{e}_z) \\
+&amp;=\rho\,dz'\boldsymbol{e}_y
+=\rho\,dz'\boldsymbol{e}_\varphi.
+\end{aligned}
+\]</div>
+<p>したがって，方位角成分は，</p>
+<p>ここで <span class="arithmatex">\(z'=\rho\tan\theta\)</span> と置くと，<span class="arithmatex">\(dz'=\rho\sec^2\theta\,d\theta\)</span> であり，<span class="arithmatex">\(z'=\pm\infty\)</span> は <span class="arithmatex">\(\theta=\pm\pi/2\)</span> に対応します。よって，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+B_\varphi
+&amp;=\frac{\mu_0I}{4\pi}
+\int_{-\infty}^{\infty}
+\frac{\rho\,dz'}{(\rho^2+z'^2)^{3/2}} \\
+&amp;=\frac{\mu_0I}{4\pi}
+\int_{-\pi/2}^{\pi/2}
+\frac{\rho^2\sec^2\theta}
+{\rho^3\sec^3\theta}\,d\theta \\
+&amp;=\frac{\mu_0I}{4\pi\rho}
+\int_{-\pi/2}^{\pi/2}\cos\theta\,d\theta \\
+&amp;=\frac{\mu_0I}{4\pi\rho}
+[\sin\theta]_{-\pi/2}^{\pi/2} \\
+&amp;=\frac{\mu_0I}{2\pi\rho}.
+\end{aligned}
+\]</div>
+<p>したがって，</p>
 <div class="arithmatex">\[
 \boldsymbol{B}(\rho)
 =\frac{\mu_0I}{2\pi\rho}\boldsymbol{e}_\varphi
 \]</div>
 <p>となります。向きは右ねじの法則で決まります。</p>
 <h3 id="3">(3)</h3>
-<p>円周上の各要素が作る磁場の軸に垂直な成分は打ち消し合います。軸方向成分だけを積分すると，</p>
+<p>円電流を <span class="arithmatex">\(\varphi\)</span> でパラメータ表示すると，</p>
 <div class="arithmatex">\[
+\boldsymbol{r}'
+=R\cos\varphi\boldsymbol{e}_x
++R\sin\varphi\boldsymbol{e}_y,
+\qquad
+d\boldsymbol{l}'
+=R(-\sin\varphi\boldsymbol{e}_x
++\cos\varphi\boldsymbol{e}_y)d\varphi
+\]</div>
+<p>です。軸上の観測点 <span class="arithmatex">\(\boldsymbol{r}=z\boldsymbol{e}_z\)</span> に対して外積を計算すると，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+d\boldsymbol{l}'\times
+(\boldsymbol{r}-\boldsymbol{r}')
+={}&amp;Rz(\cos\varphi\boldsymbol{e}_x
++\sin\varphi\boldsymbol{e}_y)d\varphi \\
+&amp;+R^2\boldsymbol{e}_z\,d\varphi.
+\end{aligned}
+\]</div>
+<p>第一項は <span class="arithmatex">\(\varphi=0\)</span> から <span class="arithmatex">\(2\pi\)</span> まで積分するとゼロになり，軸方向成分だけが残ります。また <span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|=\sqrt{R^2+z^2}\)</span> は円周上で一定です。したがって，</p>
+<div class="arithmatex">\[
+\begin{aligned}
 \boldsymbol{B}(0,0,z)
-=\frac{\mu_0IR^2}{2(R^2+z^2)^{3/2}}\boldsymbol{e}_z
+&amp;=\frac{\mu_0I}{4\pi}
+\int_0^{2\pi}
+\frac{R^2\boldsymbol{e}_z\,d\varphi}
+{(R^2+z^2)^{3/2}} \\
+&amp;=\frac{\mu_0IR^2}{4\pi(R^2+z^2)^{3/2}}
+[\varphi]_0^{2\pi}\boldsymbol{e}_z \\
+&amp;=\frac{\mu_0IR^2}{2(R^2+z^2)^{3/2}}
+\boldsymbol{e}_z.
+\end{aligned}
 \]</div>
 <p>です。中心では，</p>
 <div class="arithmatex">\[

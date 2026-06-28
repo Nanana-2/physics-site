@@ -11332,8 +11332,15 @@ D(r)2\pi rL=\lambda L
 <h3 id="2">(2)</h3>
 <p>内側導体の方が高い電位をもちます。電位差は，</p>
 <div class="arithmatex">\[
-V=\int_a^b E(r)\,dr
-=\frac{\lambda}{2\pi\varepsilon}\log\frac{b}{a}
+\begin{aligned}
+V
+&amp;=\int_a^b E(r)\,dr \\
+&amp;=\frac{\lambda}{2\pi\varepsilon}
+\int_a^b\frac{dr}{r} \\
+&amp;=\frac{\lambda}{2\pi\varepsilon}
+[\log r]_a^b \\
+&amp;=\frac{\lambda}{2\pi\varepsilon}\log\frac{b}{a}.
+\end{aligned}
 \]</div>
 <p>です。長さ <span class="arithmatex">\(L\)</span> の部分の電荷は <span class="arithmatex">\(Q=\lambda L\)</span> なので，単位長さ当たりの静電容量は，</p>
 <div class="arithmatex">\[

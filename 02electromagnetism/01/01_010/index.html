@@ -11315,10 +11315,17 @@
 <p><span class="arithmatex">\(q&gt;0\)</span> なら外向き，<span class="arithmatex">\(q&lt;0\)</span> なら内向きです。</p>
 <p><strong>電位の導出</strong></p>
 <p>球対称性より電位は <span class="arithmatex">\(r\)</span> だけの関数です。したがって <span class="arithmatex">\(E_r=-d\phi/dr\)</span> を積分します。</p>
+<p>積分変数を <span class="arithmatex">\(r'\)</span> とし，<span class="arithmatex">\(\int r'^{-2}dr'=-r'^{-1}\)</span> を用いると，</p>
 <div class="arithmatex">\[
-\phi(r)-\phi(\infty)=-\int_{\infty}^{r}\frac{q}{4\pi\varepsilon_0 r'^2}\,dr'
+\begin{aligned}
+\phi(r)-\phi(\infty)
+&amp;=-\int_{\infty}^{r}\frac{q}{4\pi\varepsilon_0 r'^2}\,dr' \\
+&amp;=-\frac{q}{4\pi\varepsilon_0}
+\left[-\frac{1}{r'}\right]_{\infty}^{r} \\
+&amp;=\frac{q}{4\pi\varepsilon_0 r}.
+\end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\phi(\infty)=0\)</span> を用いると，</p>
+<p><span class="arithmatex">\(\phi(\infty)=0\)</span> を用いたので，</p>
 <div class="arithmatex">\[
 \phi(r)=\frac{q}{4\pi\varepsilon_0 r}
 \]</div>

@@ -11325,17 +11325,17 @@ V=V_{\mathrm{in}}-V_{\mathrm{out}}
 \]</div>
 <p>です。電場は内側から外側へ向き，その向きへ進むと電位は低下します。定義した正の電位差は，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 V_{\mathrm{sph}}
-=V_{\mathrm{in}}-V_{\mathrm{out}}
-=\int_a^bE_{\mathrm{sph}}(r)\,dr
-\]</div>
-<p>です。積分すると，</p>
-<div class="arithmatex">\[
-V_{\mathrm{sph}}
-=\frac{Q}{4\pi\varepsilon_0}
-\int_a^b\frac{dr}{r^2}
-=\frac{Q}{4\pi\varepsilon_0}
-\left(\frac{1}{a}-\frac{1}{b}\right)
+&amp;=V_{\mathrm{in}}-V_{\mathrm{out}} \\
+&amp;=\int_a^bE_{\mathrm{sph}}(r)\,dr \\
+&amp;=\frac{Q}{4\pi\varepsilon_0}
+\int_a^b r^{-2}\,dr \\
+&amp;=\frac{Q}{4\pi\varepsilon_0}
+\left[-\frac{1}{r}\right]_a^b \\
+&amp;=\frac{Q}{4\pi\varepsilon_0}
+\left(\frac{1}{a}-\frac{1}{b}\right).
+\end{aligned}
 \]</div>
 <p>となります。よって，</p>
 <div class="arithmatex">\[
@@ -11363,16 +11363,16 @@ E_{\mathrm{cyl}}(r)2\pi rL
 \]</div>
 <p>です。内側と外側の電位差は，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 V_{\mathrm{cyl}}
-=\int_a^bE_{\mathrm{cyl}}(r)\,dr
-=\frac{Q}{2\pi\varepsilon_0L}
-\int_a^b\frac{dr}{r}
-\]</div>
-<p>なので，</p>
-<div class="arithmatex">\[
-V_{\mathrm{cyl}}
-=\frac{Q}{2\pi\varepsilon_0L}
-\log\frac{b}{a}
+&amp;=\int_a^bE_{\mathrm{cyl}}(r)\,dr \\
+&amp;=\frac{Q}{2\pi\varepsilon_0L}
+\int_a^b\frac{dr}{r} \\
+&amp;=\frac{Q}{2\pi\varepsilon_0L}
+[\log r]_a^b \\
+&amp;=\frac{Q}{2\pi\varepsilon_0L}
+\log\frac{b}{a}.
+\end{aligned}
 \]</div>
 <p>となります。よって全静電容量は，</p>
 <div class="arithmatex">\[
@@ -11387,22 +11387,23 @@ C_{\mathrm{cyl}}
 <p>となります。端効果を無視したため，容量は長さ <span class="arithmatex">\(L\)</span> に比例します。</p>
 <h3 id="3">(3)</h3>
 <p>同心球コンデンサーでは体積要素が <span class="arithmatex">\(dV=4\pi r^2dr\)</span> です。電場が存在する <span class="arithmatex">\(a&lt;r&lt;b\)</span> だけを積分します。</p>
+<p>球殻の体積要素まで含めて整理すると，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 U_{\mathrm{sph}}
-=\int_a^b
+&amp;=\int_a^b
 \frac{\varepsilon_0}{2}
 \left(
 \frac{Q}{4\pi\varepsilon_0r^2}
 \right)^2
-4\pi r^2\,dr
-\]</div>
-<p>定数を整理すると，</p>
-<div class="arithmatex">\[
-U_{\mathrm{sph}}
-=\frac{Q^2}{8\pi\varepsilon_0}
-\int_a^b\frac{dr}{r^2}
-=\frac{Q^2}{8\pi\varepsilon_0}
-\left(\frac{1}{a}-\frac{1}{b}\right)
+4\pi r^2\,dr \\
+&amp;=\frac{Q^2}{8\pi\varepsilon_0}
+\int_a^b r^{-2}\,dr \\
+&amp;=\frac{Q^2}{8\pi\varepsilon_0}
+\left[-\frac{1}{r}\right]_a^b \\
+&amp;=\frac{Q^2}{8\pi\varepsilon_0}
+\left(\frac{1}{a}-\frac{1}{b}\right).
+\end{aligned}
 \]</div>
 <p>です。(1) の容量を用いると，</p>
 <div class="arithmatex">\[
@@ -11411,21 +11412,21 @@ U_{\mathrm{sph}}=\frac{Q^2}{2C_{\mathrm{sph}}}
 <p>となります。</p>
 <p>同軸円筒コンデンサーの円筒殻状の体積要素は <span class="arithmatex">\(dV=2\pi rL\,dr\)</span> です。</p>
 <div class="arithmatex">\[
+\begin{aligned}
 U_{\mathrm{cyl}}
-=\int_a^b
+&amp;=\int_a^b
 \frac{\varepsilon_0}{2}
 \left(
 \frac{Q}{2\pi\varepsilon_0Lr}
 \right)^2
-2\pi rL\,dr
-\]</div>
-<p>したがって，</p>
-<div class="arithmatex">\[
-U_{\mathrm{cyl}}
-=\frac{Q^2}{4\pi\varepsilon_0L}
-\int_a^b\frac{dr}{r}
-=\frac{Q^2}{4\pi\varepsilon_0L}
-\log\frac{b}{a}
+2\pi rL\,dr \\
+&amp;=\frac{Q^2}{4\pi\varepsilon_0L}
+\int_a^b\frac{dr}{r} \\
+&amp;=\frac{Q^2}{4\pi\varepsilon_0L}
+[\log r]_a^b \\
+&amp;=\frac{Q^2}{4\pi\varepsilon_0L}
+\log\frac{b}{a}.
+\end{aligned}
 \]</div>
 <p>です。(2) の容量を用いれば，</p>
 <div class="arithmatex">\[

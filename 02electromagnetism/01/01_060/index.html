@@ -11342,9 +11342,17 @@
 <div class="arithmatex">\[
 \frac{d^2\phi}{dx^2}=-\frac{\rho_0}{\varepsilon_0}
 \]</div>
-<p>です。2回積分すると，</p>
+<p>です。一度目の積分では <span class="arithmatex">\(d\phi/dx\)</span> を，二度目の積分では <span class="arithmatex">\(\phi\)</span> を求めます。</p>
 <div class="arithmatex">\[
-\phi(x)=-\frac{\rho_0x^2}{2\varepsilon_0}+C_1x+C_2
+\begin{aligned}
+\frac{d\phi}{dx}
+&amp;=\int-\frac{\rho_0}{\varepsilon_0}\,dx
+=-\frac{\rho_0}{\varepsilon_0}x+C_1, \\
+\phi(x)
+&amp;=\int
+\left(-\frac{\rho_0}{\varepsilon_0}x+C_1\right)dx \\
+&amp;=-\frac{\rho_0x^2}{2\varepsilon_0}+C_1x+C_2.
+\end{aligned}
 \]</div>
 <p>となります。対称性より <span class="arithmatex">\(d\phi/dx=0\)</span> が <span class="arithmatex">\(x=0\)</span> で成り立つため <span class="arithmatex">\(C_1=0\)</span> です。また，<span class="arithmatex">\(\phi(0)=0\)</span> より <span class="arithmatex">\(C_2=0\)</span> です。したがって，</p>
 <div class="arithmatex">\[
@@ -11389,17 +11397,24 @@ E(x)=\frac{1}{\varepsilon_0}
 \]</div>
 <p>となります。偶関数の電荷分布に対して，この電場は奇関数です。さらに <span class="arithmatex">\(E=-d\phi/dx\)</span> と <span class="arithmatex">\(\phi(0)=0\)</span> を用いると，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \phi(x)
-=-\int_0^xE(s)\,ds
-=-\frac{1}{\varepsilon_0}
-\int_0^x ds\int_0^s\rho(x')\,dx'
+&amp;=-\int_0^xE(s)\,ds \\
+&amp;=-\frac{1}{\varepsilon_0}
+\int_0^x ds\int_0^s\rho(x')\,dx'.
+\end{aligned}
 \]</div>
-<p>です。積分順序を交換すれば，</p>
+<p><span class="arithmatex">\(x&gt;0\)</span> では積分領域が <span class="arithmatex">\(0\le x'\le s\le x\)</span> です。先に <span class="arithmatex">\(s\)</span> で積分する順序へ交換すると <span class="arithmatex">\(0\le x'\le x\)</span>，<span class="arithmatex">\(x'\le s\le x\)</span> となるので，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \phi(x)
-=-\frac{1}{\varepsilon_0}
+&amp;=-\frac{1}{\varepsilon_0}
+\int_0^x\rho(x')
+\left(\int_{x'}^x ds\right)dx' \\
+&amp;=-\frac{1}{\varepsilon_0}
 \int_0^x(x-x')\rho(x')\,dx',
-\qquad x&gt;0
+\qquad x&gt;0.
+\end{aligned}
 \]</div>
 <p>とも書けます。<span class="arithmatex">\(\rho(x)=\rho_0\)</span> を代入すると，(2) の <span class="arithmatex">\(-\rho_0x^2/(2\varepsilon_0)\)</span> が再現されます。</p>
 

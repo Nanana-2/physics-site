@@ -11351,10 +11351,18 @@ p=\boldsymbol{j}\cdot\boldsymbol{E}
 =\frac{\sigma V}{L}\boldsymbol{e}_x
 \]</div>
 <p>となります。断面内で一様なので，全電流は，</p>
+<p>断面の法線を <span class="arithmatex">\(\boldsymbol{e}_x\)</span> とすれば
+<span class="arithmatex">\(d\boldsymbol{S}=\boldsymbol{e}_x\,dS\)</span> です。したがって，</p>
 <div class="arithmatex">\[
-I=\int_S\boldsymbol{j}\cdot d\boldsymbol{S}
-=jS
-=\frac{\sigma S}{L}V
+\begin{aligned}
+I
+&amp;=\int_S\boldsymbol{j}\cdot d\boldsymbol{S} \\
+&amp;=\int_S
+\frac{\sigma V}{L}
+\boldsymbol{e}_x\cdot\boldsymbol{e}_x\,dS \\
+&amp;=\frac{\sigma V}{L}\int_SdS \\
+&amp;=\frac{\sigma S}{L}V.
+\end{aligned}
 \]</div>
 <p>です。これを <span class="arithmatex">\(V=RI\)</span> の形へ整理すると，</p>
 <div class="arithmatex">\[

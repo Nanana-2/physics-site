@@ -11323,14 +11323,19 @@ E_z(\rho,0)
 <p>です。</p>
 <p><strong>誘導電荷の総量</strong></p>
 <p>面積要素は <span class="arithmatex">\(dS=2\pi\rho\,d\rho\)</span> です。</p>
+<p><span class="arithmatex">\(u=\rho^2+a^2\)</span> と置くと <span class="arithmatex">\(du=2\rho\,d\rho\)</span> であり，積分範囲は <span class="arithmatex">\(u=a^2\)</span> から <span class="arithmatex">\(\infty\)</span> へ変わります。したがって，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 Q_{\mathrm{ind}}
-=\int_0^\infty\sigma_s(\rho)2\pi\rho\,d\rho
-=-qa\int_0^\infty\frac{\rho\,d\rho}{(\rho^2+a^2)^{3/2}}
-\]</div>
-<p>積分値は <span class="arithmatex">\(1/a\)</span> なので，</p>
-<div class="arithmatex">\[
-Q_{\mathrm{ind}}=-q
+&amp;=\int_0^\infty\sigma_s(\rho)2\pi\rho\,d\rho \\
+&amp;=-qa\int_0^\infty
+\frac{\rho\,d\rho}{(\rho^2+a^2)^{3/2}} \\
+&amp;=-\frac{qa}{2}\int_{a^2}^{\infty}u^{-3/2}\,du \\
+&amp;=-\frac{qa}{2}
+\left[-2u^{-1/2}\right]_{a^2}^{\infty} \\
+&amp;=-qa\left(0+\frac{1}{a}\right) \\
+&amp;=-q.
+\end{aligned}
 \]</div>
 <p>となります。</p>
 <h3 id="3">(3)</h3>
@@ -11344,9 +11349,13 @@ Q_{\mathrm{ind}}=-q
 <p><strong>力から求める仕事</strong></p>
 <p>高さ <span class="arithmatex">\(z\)</span> での力を用いると，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 W_{\mathrm{ext}}
-=\int_\infty^a\frac{q^2}{16\pi\varepsilon_0z^2}\,dz
-=-\frac{q^2}{16\pi\varepsilon_0a}
+&amp;=\int_\infty^a\frac{q^2}{16\pi\varepsilon_0z^2}\,dz \\
+&amp;=\frac{q^2}{16\pi\varepsilon_0}
+\left[-\frac{1}{z}\right]_{\infty}^{a} \\
+&amp;=-\frac{q^2}{16\pi\varepsilon_0a}.
+\end{aligned}
 \]</div>
 <p>です。鏡像電荷が実電荷位置に作る電位は <span class="arithmatex">\(-q/(8\pi\varepsilon_0a)\)</span> なので，</p>
 <div class="arithmatex">\[

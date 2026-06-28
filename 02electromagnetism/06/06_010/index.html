@@ -11330,15 +11330,24 @@ I(t)=-\frac{N\alpha S}{R}
 \]</div>
 <p>で一定です。したがって，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 Q_{\mathrm{tr}}
-=\int_0^TI(t)\,dt
-=-\frac{N\alpha ST}{R}
+&amp;=\int_0^TI(t)\,dt \\
+&amp;=-\frac{N\alpha S}{R}\int_0^Tdt \\
+&amp;=-\frac{N\alpha S}{R}[t]_0^T \\
+&amp;=-\frac{N\alpha ST}{R}.
+\end{aligned}
 \]</div>
 <p>です。ジュール熱は，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 W_R
-=\int_0^TI^2R\,dt
-=\frac{N^2\alpha^2S^2}{R}T
+&amp;=\int_0^TI^2R\,dt \\
+&amp;=\int_0^T
+\left(\frac{N^2\alpha^2S^2}{R^2}\right)R\,dt \\
+&amp;=\frac{N^2\alpha^2S^2}{R}[t]_0^T \\
+&amp;=\frac{N^2\alpha^2S^2}{R}T.
+\end{aligned}
 \]</div>
 <p>となります。熱は電流の向きによらないため <span class="arithmatex">\(\alpha^2\)</span> に比例します。</p>
 <h3 id="3">(3)</h3>
@@ -11348,14 +11357,15 @@ I(t)=-\frac{N}{R}\frac{d\Phi_B}{dt}
 \]</div>
 <p>です。時間積分すると，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 Q_{\mathrm{tr}}
-=-\frac{N}{R}
-\int_{t_i}^{t_f}\frac{d\Phi_B}{dt}\,dt
-\]</div>
-<div class="arithmatex">\[
-Q_{\mathrm{tr}}
-=-\frac{N}{R}
-\left(\Phi_{B,f}-\Phi_{B,i}\right)
+&amp;=-\frac{N}{R}
+\int_{t_i}^{t_f}\frac{d\Phi_B}{dt}\,dt \\
+&amp;=-\frac{N}{R}
+[\Phi_B(t)]_{t_i}^{t_f} \\
+&amp;=-\frac{N}{R}
+\left(\Phi_{B,f}-\Phi_{B,i}\right).
+\end{aligned}
 \]</div>
 <p>となります。初期磁場と最終磁場が一様なら，</p>
 <div class="arithmatex">\[

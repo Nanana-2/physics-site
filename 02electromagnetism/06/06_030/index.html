@@ -11311,9 +11311,26 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p><span class="arithmatex">\(r&lt;R\)</span> では円形経路が囲む面全体に磁場があります。</p>
+<p><span class="arithmatex">\(r&lt;R\)</span> では円形経路が囲む面全体に磁場があります。面積要素を <span class="arithmatex">\(dS=2\pi s\,ds\)</span> として磁束を計算すると，</p>
 <div class="arithmatex">\[
-E_\varphi(r,t)2\pi r
+\begin{aligned}
+\Phi_B(r,t)
+&amp;=\int_0^rB(t)2\pi s\,ds \\
+&amp;=2\pi B(t)\left[\frac{s^2}{2}\right]_0^r \\
+&amp;=B(t)\pi r^2.
+\end{aligned}
+\]</div>
+<p>円周上では <span class="arithmatex">\(\boldsymbol{E}=E_\varphi\boldsymbol{e}_\varphi\)</span>，<span class="arithmatex">\(d\boldsymbol{l}=r\,d\varphi\boldsymbol{e}_\varphi\)</span> なので，ファラデーの法則の左辺も，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
+&amp;=\int_0^{2\pi}E_\varphi r\,d\varphi \\
+&amp;=2\pi rE_\varphi.
+\end{aligned}
+\]</div>
+<p>したがって，</p>
+<div class="arithmatex">\[
+2\pi rE_\varphi(r,t)
 =-\frac{d}{dt}\left[B(t)\pi r^2\right]
 \]</div>
 <p>したがって，</p>
@@ -11324,9 +11341,18 @@ E_\varphi(r,t)
 \]</div>
 <p>です。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(r&gt;R\)</span> では磁場が存在する面積は <span class="arithmatex">\(\pi R^2\)</span> だけです。</p>
+<p><span class="arithmatex">\(r&gt;R\)</span> では磁場が存在する面積は <span class="arithmatex">\(\pi R^2\)</span> だけです。<span class="arithmatex">\(R&lt;s&lt;r\)</span> の部分では <span class="arithmatex">\(B=0\)</span> なので，</p>
 <div class="arithmatex">\[
-E_\varphi(r,t)2\pi r
+\begin{aligned}
+\Phi_B(r,t)
+&amp;=\int_0^RB(t)2\pi s\,ds
++\int_R^r0\cdot2\pi s\,ds \\
+&amp;=B(t)\pi R^2.
+\end{aligned}
+\]</div>
+<p>よって，</p>
+<div class="arithmatex">\[
+2\pi rE_\varphi(r,t)
 =-\frac{d}{dt}\left[B(t)\pi R^2\right]
 \]</div>
 <p>よって，</p>

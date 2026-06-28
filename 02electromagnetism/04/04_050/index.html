@@ -11353,7 +11353,18 @@ m=I\pi R^2
 <div class="arithmatex">\[
 \boldsymbol{\tau}=\boldsymbol{m}\times\boldsymbol{B}
 \]</div>
-<p>となります。<span class="arithmatex">\(\tau=-dU/d\theta\)</span> を積分すると，</p>
+<p>となります。トルクの大きさは <span class="arithmatex">\(\tau=-mB\sin\theta\)</span> なので，<span class="arithmatex">\(\tau=-dU/d\theta\)</span> より，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac{dU}{d\theta}
+&amp;=mB\sin\theta, \\
+U(\theta)-U(\pi/2)
+&amp;=mB\int_{\pi/2}^{\theta}\sin\theta'\,d\theta' \\
+&amp;=mB[-\cos\theta']_{\pi/2}^{\theta} \\
+&amp;=-mB\cos\theta.
+\end{aligned}
+\]</div>
+<p>基準を <span class="arithmatex">\(U(\pi/2)=0\)</span> と選んだので，</p>
 <div class="arithmatex">\[
 U=-mB\cos\theta
 =-\boldsymbol{m}\cdot\boldsymbol{B}

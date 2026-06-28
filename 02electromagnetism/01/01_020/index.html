@@ -11361,14 +11361,20 @@ d\boldsymbol{E}
 <p>なので，両成分は消えます。これは円環上の各電荷要素に対して，中心軸を挟んだ反対側に横成分を打ち消す電荷要素が存在することに対応します。</p>
 <p><span class="arithmatex">\(z\)</span> 成分は円環上のすべての電荷要素について同符号です。したがって，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 E_z
-=\frac{1}{4\pi\varepsilon_0}
+&amp;=\frac{1}{4\pi\varepsilon_0}
 \frac{z}{(R^2+z^2)^{3/2}}
-\int_0^{2\pi}\frac{Q}{2\pi}\,d\varphi
+\int_0^{2\pi}\frac{Q}{2\pi}\,d\varphi \\
+&amp;=\frac{1}{4\pi\varepsilon_0}
+\frac{z}{(R^2+z^2)^{3/2}}
+\frac{Q}{2\pi}[\varphi]_0^{2\pi} \\
+&amp;=\frac{Qz}{4\pi\varepsilon_0(R^2+z^2)^{3/2}}.
+\end{aligned}
 \]</div>
-<p>となり，積分を実行すると，</p>
+<p>したがって，ベクトルとしては，</p>
 <div class="arithmatex">\[
-\boldsymbol{E}_{\mathrm{ring}}(z)
+\boldsymbol{E}_{\mathrm{ring}}(z)=E_z\boldsymbol{e}_z
 =\frac{Qz}{4\pi\varepsilon_0(R^2+z^2)^{3/2}}
 \boldsymbol{e}_z
 \]</div>
@@ -11389,24 +11395,21 @@ dE_z
 2\pi\sigma s\,ds
 \]</div>
 <p>です。<span class="arithmatex">\(s=0\)</span> から <span class="arithmatex">\(R\)</span> まで積分して，</p>
+<p>を得ます。<span class="arithmatex">\(u=s^2+z^2\)</span> とおけば <span class="arithmatex">\(du=2s\,ds\)</span> です。積分範囲も <span class="arithmatex">\(s=0,R\)</span> に対して <span class="arithmatex">\(u=z^2,R^2+z^2\)</span> と変わるので，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 E_z
-=\frac{\sigma z}{2\varepsilon_0}
-\int_0^R\frac{s\,ds}{(s^2+z^2)^{3/2}}
-\]</div>
-<p>を得ます。<span class="arithmatex">\(u=s^2+z^2\)</span> とおけば <span class="arithmatex">\(du=2s\,ds\)</span> なので，</p>
-<div class="arithmatex">\[
-\int\frac{s\,ds}{(s^2+z^2)^{3/2}}
-=-\frac{1}{\sqrt{s^2+z^2}}
-\]</div>
-<p>です。端点を代入すると，</p>
-<div class="arithmatex">\[
-E_z
-=\frac{\sigma z}{2\varepsilon_0}
+&amp;=\frac{\sigma z}{2\varepsilon_0}
+\int_0^R\frac{s\,ds}{(s^2+z^2)^{3/2}} \\
+&amp;=\frac{\sigma z}{4\varepsilon_0}
+\int_{z^2}^{R^2+z^2}u^{-3/2}\,du \\
+&amp;=\frac{\sigma z}{4\varepsilon_0}
+\left[-2u^{-1/2}\right]_{z^2}^{R^2+z^2} \\
+&amp;=\frac{\sigma z}{2\varepsilon_0}
 \left(
-\frac{1}{z}
--\frac{1}{\sqrt{R^2+z^2}}
-\right)
+\frac{1}{z}-\frac{1}{\sqrt{R^2+z^2}}
+\right).
+\end{aligned}
 \]</div>
 <p>となります。<span class="arithmatex">\(z&gt;0\)</span> を用いて整理すれば，</p>
 <div class="arithmatex">\[
@@ -11424,27 +11427,21 @@ d\phi
 \frac{2\pi\sigma s\,ds}{\sqrt{s^2+z^2}}
 \]</div>
 <p>です。したがって，</p>
+<p>となります。ここでも <span class="arithmatex">\(u=s^2+z^2\)</span>，<span class="arithmatex">\(du=2s\,ds\)</span> と置くと，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \phi(z)
-=\frac{\sigma}{2\varepsilon_0}
-\int_0^R\frac{s\,ds}{\sqrt{s^2+z^2}}
+&amp;=\frac{\sigma}{2\varepsilon_0}
+\int_0^R\frac{s\,ds}{\sqrt{s^2+z^2}} \\
+&amp;=\frac{\sigma}{4\varepsilon_0}
+\int_{z^2}^{R^2+z^2}u^{-1/2}\,du \\
+&amp;=\frac{\sigma}{2\varepsilon_0}
+\left[\sqrt{u}\right]_{z^2}^{R^2+z^2} \\
+&amp;=\frac{\sigma}{2\varepsilon_0}
+\left(\sqrt{R^2+z^2}-z\right).
+\end{aligned}
 \]</div>
-<p>となります。積分すると，</p>
-<div class="arithmatex">\[
-\phi(z)
-=\frac{\sigma}{2\varepsilon_0}
-\left[
-\sqrt{s^2+z^2}
-\right]_0^R
-\]</div>
-<p>です。<span class="arithmatex">\(z&gt;0\)</span> では <span class="arithmatex">\(\sqrt{z^2}=z\)</span> なので，</p>
-<div class="arithmatex">\[
-\phi(z)
-=\frac{\sigma}{2\varepsilon_0}
-\left(
-\sqrt{R^2+z^2}-z
-\right)
-\]</div>
+<p>最後の行では <span class="arithmatex">\(z&gt;0\)</span> より <span class="arithmatex">\(\sqrt{z^2}=z\)</span> を用いました。</p>
 <p>を得ます。<span class="arithmatex">\(z\to\infty\)</span> でこの電位はゼロへ近づきます。微分すると，</p>
 <div class="arithmatex">\[
 -\frac{d\phi}{dz}

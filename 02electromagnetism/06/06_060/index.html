@@ -11337,19 +11337,21 @@ p(r)=\sigma E_\varphi(r)^2
 =\frac{\sigma\beta^2r^2}{4}
 \]</div>
 <p>です。円柱全体で積分すると，</p>
+<p>半径 <span class="arithmatex">\(r\)</span>，厚さ <span class="arithmatex">\(dr\)</span> の円筒殻の体積要素は
+<span class="arithmatex">\(dV=2\pi r\ell\,dr\)</span> です。したがって，</p>
 <div class="arithmatex">\[
-P=\int_0^R
-\frac{\sigma\beta^2r^2}{4}
-2\pi r\ell\,dr
-\]</div>
-<div class="arithmatex">\[
+\begin{aligned}
 P
-=\frac{\pi\sigma\beta^2\ell}{2}
-\int_0^Rr^3\,dr
-\]</div>
-<p>したがって，</p>
-<div class="arithmatex">\[
-P=\frac{\pi\sigma\beta^2\ell R^4}{8}
+&amp;=\int_0^R p(r)\,dV \\
+&amp;=\int_0^R
+\frac{\sigma\beta^2r^2}{4}
+2\pi r\ell\,dr \\
+&amp;=\frac{\pi\sigma\beta^2\ell}{2}
+\int_0^Rr^3\,dr \\
+&amp;=\frac{\pi\sigma\beta^2\ell}{2}
+\left[\frac{r^4}{4}\right]_0^R \\
+&amp;=\frac{\pi\sigma\beta^2\ell R^4}{8}.
+\end{aligned}
 \]</div>
 <p>となります。</p>
 <h3 id="3">(3)</h3>

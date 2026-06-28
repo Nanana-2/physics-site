@@ -11322,7 +11322,14 @@
 \]</div>
 <p>です。<span class="arithmatex">\(E_r=-d\phi/dr\)</span> を無限遠から積分すると，</p>
 <div class="arithmatex">\[
-\phi(r)=\frac{q}{4\pi\varepsilon r}
+\begin{aligned}
+\phi(r)-\phi(\infty)
+&amp;=-\int_\infty^r
+\frac{q}{4\pi\varepsilon r'^2}\,dr' \\
+&amp;=-\frac{q}{4\pi\varepsilon}
+\left[-\frac{1}{r'}\right]_\infty^r \\
+&amp;=\frac{q}{4\pi\varepsilon r}.
+\end{aligned}
 \]</div>
 <p>となります。比誘電率を <span class="arithmatex">\(\varepsilon_r=\varepsilon/\varepsilon_0\)</span> とすると，電場と電位は真空中の <span class="arithmatex">\(1/\varepsilon_r\)</span> 倍です。</p>
 <h3 id="2">(2)</h3>
@@ -11335,10 +11342,15 @@
 <h3 id="3">(3)</h3>
 <p>外力はクーロン力と逆向きなので，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 W_{\mathrm{ext}}
-=-\int_{r_1}^{r_2}\frac{qq'}{4\pi\varepsilon r^2}\,dr
-=\frac{qq'}{4\pi\varepsilon}
-\left(\frac{1}{r_2}-\frac{1}{r_1}\right)
+&amp;=-\int_{r_1}^{r_2}
+\frac{qq'}{4\pi\varepsilon r^2}\,dr \\
+&amp;=-\frac{qq'}{4\pi\varepsilon}
+\left[-\frac{1}{r}\right]_{r_1}^{r_2} \\
+&amp;=\frac{qq'}{4\pi\varepsilon}
+\left(\frac{1}{r_2}-\frac{1}{r_1}\right).
+\end{aligned}
 \]</div>
 <p>です。基準を無限遠に選べば相互作用エネルギーは <span class="arithmatex">\(U(r)=qq'/(4\pi\varepsilon r)\)</span> となります。</p>
 

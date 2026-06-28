@@ -11323,24 +11323,23 @@ Q_V(t)=\int_V\rho(\boldsymbol{r},t)\,dV
 I_{\mathrm{out}}=\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 \]</div>
 <p>です。外へ正電荷が流れ出れば体積内の電荷は減るため，両者には負号が付きます。</p>
+<p>これを発散定理まで一続きに変形すると，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \frac{d}{dt}\int_V\rho\,dV
-=-\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
-\]</div>
-<p>これが電荷保存則の積分形です。体積 <span class="arithmatex">\(V\)</span> は空間に固定されているので，左辺の時間微分を積分の内側へ移せます。さらに右辺へ発散定理を適用すると，</p>
-<div class="arithmatex">\[
+&amp;=-\oint_S\boldsymbol{j}\cdot d\boldsymbol{S} \\
 \int_V\frac{\partial\rho}{\partial t}\,dV
-=-\int_V\nabla\cdot\boldsymbol{j}\,dV
-\]</div>
-<p>となります。すべての項を左辺へ移せば，</p>
-<div class="arithmatex">\[
+&amp;=-\int_V\nabla\cdot\boldsymbol{j}\,dV \\
 \int_V
 \left(
 \frac{\partial\rho}{\partial t}
 +\nabla\cdot\boldsymbol{j}
-\right)dV=0
+\right)dV
+&amp;=0.
+\end{aligned}
 \]</div>
-<p>です。この関係は任意の形と大きさの体積 <span class="arithmatex">\(V\)</span> で成立するため，被積分関数そのものがゼロでなければなりません。</p>
+<p>第一行が電荷保存則の積分形です。体積 <span class="arithmatex">\(V\)</span> は空間に固定されているので，第二行では左辺の時間微分を積分の内側へ移し，右辺へ発散定理を適用しました。</p>
+<p>この関係は任意の形と大きさの体積 <span class="arithmatex">\(V\)</span> で成立するため，被積分関数そのものがゼロでなければなりません。</p>
 <div class="arithmatex">\[
 \frac{\partial\rho}{\partial t}
 +\nabla\cdot\boldsymbol{j}=0
@@ -11369,11 +11368,22 @@ I_{\mathrm{out}}=\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 \left(r^2j_r\right)
 =\frac{\rho(t)}{\tau}
 \]</div>
-<p>です。<span class="arithmatex">\(r\)</span> について積分して，</p>
+<p>です。中心から半径 <span class="arithmatex">\(r\)</span> まで積分すると，</p>
 <div class="arithmatex">\[
-r^2j_r=\frac{\rho(t)}{\tau}\frac{r^3}{3}+C
+\begin{aligned}
+\int_0^r
+\frac{\partial}{\partial r'}
+\left(r'^2j_r(r',t)\right)dr'
+&amp;=\frac{\rho(t)}{\tau}\int_0^r r'^2\,dr' \\
+r^2j_r(r,t)-\lim_{r'\to0}r'^2j_r(r',t)
+&amp;=\frac{\rho(t)}{\tau}
+\left[\frac{r'^3}{3}\right]_0^r \\
+r^2j_r(r,t)
+&amp;=\frac{\rho(t)r^3}{3\tau}.
+\end{aligned}
 \]</div>
-<p>を得ます。中心で電流密度が有限であるためには <span class="arithmatex">\(C=0\)</span> でなければなりません。したがって，</p>
+<p>最後の行では，中心で <span class="arithmatex">\(j_r\)</span> が有限なら <span class="arithmatex">\(r'^2j_r\to0\)</span> となることを用いました。これは不定積分で現れる積分定数を <span class="arithmatex">\(C=0\)</span> と決めることに相当します。</p>
+<p>したがって，</p>
 <div class="arithmatex">\[
 \boldsymbol{j}(r,t)
 =\frac{\rho_0r}{3\tau}e^{-t/\tau}\boldsymbol{e}_r,

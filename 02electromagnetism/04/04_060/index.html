@@ -11378,11 +11378,22 @@ q\left(\boldsymbol{E}
 v_x=v_0\cos\omega_ct,\qquad
 v_y=-v_0\sin\omega_ct
 \]</div>
-<p>となります。積分すると，</p>
+<p>となります。初期位置 <span class="arithmatex">\(x(0)=y(0)=0\)</span> を用いて速度を時間積分すると，</p>
 <div class="arithmatex">\[
-x(t)=\frac{v_0}{\omega_c}\sin\omega_ct,
-\qquad
-y(t)=\frac{v_0}{\omega_c}(\cos\omega_ct-1)
+\begin{aligned}
+x(t)
+&amp;=\int_0^t v_x(t')\,dt'
+=v_0\int_0^t\cos\omega_ct'\,dt' \\
+&amp;=\frac{v_0}{\omega_c}
+[\sin\omega_ct']_0^t
+=\frac{v_0}{\omega_c}\sin\omega_ct, \\
+y(t)
+&amp;=\int_0^t v_y(t')\,dt'
+=-v_0\int_0^t\sin\omega_ct'\,dt' \\
+&amp;=\frac{v_0}{\omega_c}
+[\cos\omega_ct']_0^t \\
+&amp;=\frac{v_0}{\omega_c}(\cos\omega_ct-1).
+\end{aligned}
 \]</div>
 <p>です。したがって中心は <span class="arithmatex">\((0,-v_0/\omega_c)\)</span>，半径は <span class="arithmatex">\(v_0/\omega_c\)</span> です。</p>
 
