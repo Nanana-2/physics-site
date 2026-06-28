@@ -31,6 +31,12 @@ SUBJECTS = [
         "subject_name": "力学（解析力学含む）"
     },
     {
+        "yaml_file": "curriculum_thermodynamics.yaml",
+        "yaml_key": "thermodynamics",
+        "output_dir": "docs/03thermodynamics",
+        "subject_name": "熱力学"
+    },
+    {
         "yaml_file": "curriculum_quantum_mechanics.yaml",
         "yaml_key": "quantum_mechanics",
         "output_dir": "docs/04quantum_mechanics",
