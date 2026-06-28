@@ -33,7 +33,7 @@ electromagnetism:
       - id: "01_060"
         title: "ポアソン方程式とラプラス方程式"
         difficulty: "発展"
-        setup: '静電ポテンシャル $\phi$ と電場 $\mathbf{E}=-\nabla\phi$ の関係から、ポアソン方程式 $\nabla^2\phi=-\rho/\varepsilon_0$ を導出し、電荷のない領域ではラプラス方程式が成り立つことを示す問題'
+        setup: 'ポアソン方程式とラプラス方程式を既知の式として問題文中に与え、電荷が存在する領域と存在しない領域で方程式を使い分け、対称条件と境界条件から電位および電場を一意に決定する問題'
 
       - id: "01_070"
         title: "静電場の境界条件"
@@ -93,12 +93,12 @@ electromagnetism:
       - id: "03_020"
         title: "分極ベクトルと束縛電荷"
         difficulty: "標準"
-        setup: '誘電体の分極ベクトル $\mathbf{P}$ を導入し、束縛体積電荷密度 $\rho_b=-\nabla\cdot\mathbf{P}$ および束縛表面電荷密度 $\sigma_b=\mathbf{P}\cdot\mathbf{n}$ を用いて分極が作る電場を解析する問題'
+        setup: '誘電体の分極ベクトル $\boldsymbol{P}$ を導入し、束縛体積電荷密度 $\rho_b=-\nabla\cdot\boldsymbol{P}$ および束縛表面電荷密度 $\sigma_b=\boldsymbol{P}\cdot\boldsymbol{n}$ を用いて分極が作る電場を解析する問題'
 
       - id: "03_030"
         title: "電束密度と誘電体中のガウスの法則"
         difficulty: "標準"
-        setup: '電束密度 $\mathbf{D}=\varepsilon_0\mathbf{E}+\mathbf{P}$ を導入し、自由電荷に対するガウスの法則 $\nabla\cdot\mathbf{D}=\rho_f$ を用いて誘電体中の電場を求める問題'
+        setup: '電束密度 $\boldsymbol{D}=\varepsilon_0\boldsymbol{E}+\boldsymbol{P}$ を導入し、自由電荷に対するガウスの法則 $\nabla\cdot\boldsymbol{D}=\rho_f$ を用いて誘電体中の電場を求める問題'
 
       - id: "03_040"
         title: "誘電体を挿入したコンデンサー"
@@ -128,17 +128,17 @@ electromagnetism:
       - id: "04_010"
         title: "電流密度と連続の式"
         difficulty: "基本"
-        setup: '電荷密度 $\rho$ と電流密度 $\mathbf{j}$ の関係を考え、微小体積における電荷保存則から連続の式 $\partial\rho/\partial t+\nabla\cdot\mathbf{j}=0$ を導出する問題'
+        setup: '電荷密度 $\rho$ と電流密度 $\boldsymbol{j}$ の関係を考え、微小体積における電荷保存則から連続の式 $\partial\rho/\partial t+\nabla\cdot\boldsymbol{j}=0$ を導出する問題'
 
       - id: "04_020"
         title: "局所的なオームの法則とジュール熱"
         difficulty: "基本"
-        setup: '導体内部の電場 $\mathbf{E}$ と電流密度 $\mathbf{j}$ の関係 $\mathbf{j}=\sigma\mathbf{E}$ を用いて電流分布を求め、単位体積あたりのジュール熱の発生率を導出する問題'
+        setup: '自由電子のドルーデ模型と緩和時間を問題文中に与え、定常ドリフト速度から局所的なオームの法則と電気伝導率を導出したうえで、導体の抵抗とジュール熱を計算する問題'
 
       - id: "04_030"
         title: "ビオ・サバールの法則"
         difficulty: "基本"
-        setup: '定常電流が作る磁場をビオ・サバールの法則から求め、無限直線電流や円形電流が作る磁場の代表的な計算を行う問題'
+        setup: '定常電流密度が作るベクトルポテンシャルを問題文中に与え、その回転からビオ・サバールの法則を導出したうえで、無限直線電流や円形電流が作る磁場を計算する問題'
 
       - id: "04_040"
         title: "アンペールの法則の適用"
@@ -158,7 +158,7 @@ electromagnetism:
       - id: "04_070"
         title: "ベクトルポテンシャルとゲージ変換"
         difficulty: "発展"
-        setup: '磁場をベクトルポテンシャル $\mathbf{B}=\nabla\times\mathbf{A}$ によって表し、ゲージ変換の自由度やクーロンゲージの意味を理解し、簡単な電流分布に対するベクトルポテンシャルを求める問題'
+        setup: '磁場をベクトルポテンシャル $\boldsymbol{B}=\nabla\times\boldsymbol{A}$ によって表し、ゲージ変換の自由度やクーロンゲージの意味を理解し、簡単な電流分布に対するベクトルポテンシャルを求める問題'
 
   # ==========================================
   # 第5章：磁性体
@@ -168,17 +168,17 @@ electromagnetism:
       - id: "05_010"
         title: "磁化ベクトルと磁化電流"
         difficulty: "標準"
-        setup: '磁性体の磁化ベクトル $\mathbf{M}$ を導入し、束縛体積電流密度 $\mathbf{j}_b=\nabla\times\mathbf{M}$ および束縛表面電流密度 $\mathbf{K}_b=\mathbf{M}\times\mathbf{n}$ を導出する問題'
+        setup: '磁性体の磁化ベクトル $\boldsymbol{M}$ を導入し、束縛体積電流密度 $\boldsymbol{j}_b=\nabla\times\boldsymbol{M}$ および束縛表面電流密度 $\boldsymbol{K}_b=\boldsymbol{M}\times\boldsymbol{n}$ を導出する問題'
 
       - id: "05_020"
-        title: '磁場 $\mathbf{H}$ と自由電流'
+        title: '磁場 $\boldsymbol{H}$ と自由電流'
         difficulty: "標準"
-        setup: '磁場 $\mathbf{H}$ を $\mathbf{B}=\mu_0(\mathbf{H}+\mathbf{M})$ によって導入し、自由電流に対するアンペールの法則 $\nabla\times\mathbf{H}=\mathbf{j}_f$ を用いて磁性体中の磁場を求める問題'
+        setup: '磁場 $\boldsymbol{H}$ を $\boldsymbol{B}=\mu_0(\boldsymbol{H}+\boldsymbol{M})$ によって導入し、自由電流に対するアンペールの法則 $\nabla\times\boldsymbol{H}=\boldsymbol{j}_f$ を用いて磁性体中の磁場を求める問題'
 
       - id: "05_030"
         title: "線形磁性体中の磁場"
         difficulty: "標準"
-        setup: '線形等方磁性体における構成関係 $\mathbf{B}=\mu\mathbf{H}$ を用いて、ソレノイドやトロイド内部に磁性体を挿入した場合の磁場や磁束密度を求める問題'
+        setup: '線形等方磁性体における構成関係 $\boldsymbol{B}=\mu\boldsymbol{H}$ を用いて、ソレノイドやトロイド内部に磁性体を挿入した場合の磁場や磁束密度を求める問題'
 
       - id: "05_040"
         title: "磁性体境界面での境界条件"
