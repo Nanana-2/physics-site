@@ -3693,6 +3693,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_070/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子放射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -11782,7 +11810,7 @@
 \]</div>
 <p>を導け。複素平面波を代入し，<span class="arithmatex">\(k^2=\mu\varepsilon\omega^2+i\mu\sigma\omega\)</span> を示せ。</p>
 <p>(2) 良導体条件 <span class="arithmatex">\(\sigma\gg\varepsilon\omega\)</span> のもとで <span class="arithmatex">\(k\)</span> を求めよ。<span class="arithmatex">\(k_r\)</span> と <span class="arithmatex">\(\alpha\)</span> が等しくなることを示し，表皮深さを <span class="arithmatex">\(\delta=1/\alpha\)</span> と定義して求めよ。</p>
-<p>(3) 実際の電場を実数表示し，振幅が深さ <span class="arithmatex">\(z\)</span> とともにどのように減衰するか示せ。深さ <span class="arithmatex">\(z=delta\)</span> と <span class="arithmatex">\(z=3\delta\)</span> における振幅比を求め，周波数を4倍にしたときの表皮深さの変化を示せ。</p>
+<p>(3) 実際の電場を実数表示し，振幅が深さ <span class="arithmatex">\(z\)</span> とともにどのように減衰するか示せ。深さ <span class="arithmatex">\(z=\delta\)</span> と <span class="arithmatex">\(z=3\delta\)</span> における振幅比を求め，周波数を4倍にしたときの表皮深さの変化を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -11796,7 +11824,32 @@
 -\mu\varepsilon\frac{\partial^2\boldsymbol{E}}{\partial t^2}.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> とベクトル恒等式を用いると左辺は <span class="arithmatex">\(-\nabla^2\boldsymbol{E}\)</span> です。負号を消して整理すれば，問題文の方程式を得ます。</p>
+<p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> とベクトル恒等式を用いて，左辺を実際に変形します。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\nabla\times(\nabla\times\boldsymbol{E})
+&amp;=\nabla(\nabla\cdot\boldsymbol{E})
+-\nabla^2\boldsymbol{E} \\
+&amp;=\nabla 0-\nabla^2\boldsymbol{E} \\
+&amp;=-\nabla^2\boldsymbol{E}.
+\end{aligned}
+\]</div>
+<p>この結果と直前に求めた右辺を等置すると，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+-\nabla^2\boldsymbol{E}
+&amp;=-\mu\sigma\frac{\partial\boldsymbol{E}}{\partial t}
+-\mu\varepsilon
+\frac{\partial^2\boldsymbol{E}}{\partial t^2}, \\
+\nabla^2\boldsymbol{E}
+-\mu\varepsilon
+\frac{\partial^2\boldsymbol{E}}{\partial t^2}
+-\mu\sigma
+\frac{\partial\boldsymbol{E}}{\partial t}
+&amp;=0.
+\end{aligned}
+\]</div>
+<p>第一項は空間的な変化，第二項は波としての時間変化，第三項は伝導電流による減衰を表します。</p>
 <p>複素平面波では <span class="arithmatex">\(\partial^2/\partial z^2\to-k^2\)</span>，<span class="arithmatex">\(\partial/\partial t\to-i\omega\)</span>，<span class="arithmatex">\(\partial^2/\partial t^2\to-\omega^2\)</span> です。したがって，</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -11845,7 +11898,7 @@ e^{i(kz-\omega t)}
 \]</div>
 <p>です。また <span class="arithmatex">\(\delta\propto\omega^{-1/2}\)</span> なので，周波数を4倍にすると，</p>
 <div class="arithmatex">\[
-\delta'=rac{\delta}{\sqrt{4}}=\frac{\delta}{2}
+\delta'=\frac{\delta}{\sqrt{4}}=\frac{\delta}{2}
 \]</div>
 <p>となり，高周波ほど導体表面の浅い領域に電流が集中します。</p>
 

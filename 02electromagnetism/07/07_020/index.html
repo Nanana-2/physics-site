@@ -3693,6 +3693,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_070/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子放射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -11785,20 +11813,60 @@
 \frac{\partial\boldsymbol{E}}{\partial t}
 \end{aligned}
 \]</div>
-<p>です。ガウスの定理とストークスの定理を用いると，積分形は，</p>
+<p>です。ここから各式を積分形へ変換します。閉曲面 <span class="arithmatex">\(S\)</span> が囲む体積を <span class="arithmatex">\(V\)</span> とします。</p>
+<p><strong>電場に対するガウスの法則</strong></p>
+<p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> を体積 <span class="arithmatex">\(V\)</span> で積分し，ガウスの定理を左辺へ適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}&amp;=0, \\
-\oint_S\boldsymbol{B}\cdot d\boldsymbol{S}&amp;=0, \\
-\oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
-&amp;=-\frac{d}{dt}\int_{S_C}\boldsymbol{B}\cdot d\boldsymbol{S}, \\
-\oint_C\boldsymbol{B}\cdot d\boldsymbol{l}
-&amp;=\mu_0\varepsilon_0\frac{d}{dt}
-\int_{S_C}\boldsymbol{E}\cdot d\boldsymbol{S}
+\int_V\nabla\cdot\boldsymbol{E}\,dV
+&amp;=\int_V0\,dV \\
+\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}
+&amp;=0.
 \end{aligned}
 \]</div>
-<p>となります。</p>
-<p>最初の二式にはガウスの定理，後の二式にはストークスの定理を適用しています。したがって，微分形は各点での局所的な関係，積分形は有限な面や経路を通じた場の関係を表しています。</p>
+<p>第一行の体積積分を，第二行では閉曲面を貫く電束へ変換しました。</p>
+<p><strong>磁場に対するガウスの法則</strong></p>
+<p>同じ手順を <span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> に適用すると，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\int_V\nabla\cdot\boldsymbol{B}\,dV
+&amp;=\int_V0\,dV \\
+\oint_S\boldsymbol{B}\cdot d\boldsymbol{S}
+&amp;=0
+\end{aligned}
+\]</div>
+<p>となります。任意の閉曲面へ入る磁束と出る磁束の総和はゼロです。</p>
+<p><strong>ファラデーの法則</strong></p>
+<p><span class="arithmatex">\(C\)</span> を縁にもつ空間に固定された面を <span class="arithmatex">\(S_C\)</span> とします。微分形を面積分し，左辺へストークスの定理を適用します。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\int_{S_C}
+(\nabla\times\boldsymbol{E})\cdot d\boldsymbol{S}
+&amp;=-\int_{S_C}
+\frac{\partial\boldsymbol{B}}{\partial t}
+\cdot d\boldsymbol{S} \\
+\oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
+&amp;=-\frac{d}{dt}
+\int_{S_C}\boldsymbol{B}\cdot d\boldsymbol{S}.
+\end{aligned}
+\]</div>
+<p>面 <span class="arithmatex">\(S_C\)</span> が時間変化しないため，右辺では時間微分を面積分の外へ出せます。面の法線と周回方向は右ねじの関係にとります。</p>
+<p><strong>アンペール・マクスウェルの法則</strong></p>
+<p>最後の微分形も同じ面で積分します。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\int_{S_C}
+(\nabla\times\boldsymbol{B})\cdot d\boldsymbol{S}
+&amp;=\mu_0\varepsilon_0
+\int_{S_C}
+\frac{\partial\boldsymbol{E}}{\partial t}
+\cdot d\boldsymbol{S} \\
+\oint_C\boldsymbol{B}\cdot d\boldsymbol{l}
+&amp;=\mu_0\varepsilon_0\frac{d}{dt}
+\int_{S_C}\boldsymbol{E}\cdot d\boldsymbol{S}.
+\end{aligned}
+\]</div>
+<p>したがって，微分形は各点での局所的な関係，積分形は有限な面や経路を通じた場の関係を表しています。</p>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> は，考えている領域に電荷がなく，電気力線の始点や終点がないことを表します。<span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> は磁気単極子がなく，磁力線が途中で始まったり終わったりせず閉じることを表します。</p>
 <p>ファラデーの法則は，時間変化する磁束が周回する電場を作ることを表します。負号は，誘導電場が磁束変化を妨げる向きに作用するレンツの法則に対応します。</p>
