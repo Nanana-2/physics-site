@@ -11778,11 +11778,11 @@
 <p>を用いてよい。</p>
 <p>(1) 全電荷 <span class="arithmatex">\(Q\)</span>，電気双極子モーメント <span class="arithmatex">\(\boldsymbol{p}\)</span>，四重極モーメント <span class="arithmatex">\(Q_{ij}\)</span> を，</p>
 <div class="arithmatex">\[
-Q=\int\rho,dV',
+Q=\int\rho\,dV',
 \qquad
-\boldsymbol{p}=\int\rho\boldsymbol{r}',dV',
+\boldsymbol{p}=\int\rho\boldsymbol{r}'\,dV',
 \qquad
-Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij}),dV'
+Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij})\,dV'
 \]</div>
 <p>と定義する。遠方電位を <span class="arithmatex">\(r^{-3}\)</span> の項までこれらで表せ。</p>
 <p>(2) <span class="arithmatex">\(z=+a\)</span> と <span class="arithmatex">\(z=-a\)</span> にそれぞれ電荷 <span class="arithmatex">\(+q\)</span>，原点に電荷 <span class="arithmatex">\(-2q\)</span> を置く。この分布の <span class="arithmatex">\(Q\)</span> と <span class="arithmatex">\(\boldsymbol{p}\)</span> を求め，最初に残る多重極が何か示せ。極角を <span class="arithmatex">\(\theta\)</span> として遠方電位を求めよ。</p>
@@ -11790,6 +11790,7 @@ Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij}),dV'
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
+<p>多重極展開では，観測点に関する <span class="arithmatex">\(1/r\)</span> のべきと，電荷分布だけで決まる積分とを分離します。展開式の各項へ <span class="arithmatex">\(\rho\,dV'\)</span> を掛けて積分すると，順に <span class="arithmatex">\(Q\)</span>，<span class="arithmatex">\(\boldsymbol{p}\)</span>，<span class="arithmatex">\(Q_{ij}\)</span> が現れます。</p>
 <p>電位の積分へ展開式を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -11807,7 +11808,9 @@ Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij}),dV'
 \end{aligned}
 \]</div>
 <p>順に単極子，双極子，四重極の寄与です。低い次数のモーメントがゼロでなければ，遠方ではその項が支配的になります。</p>
+<p>四重極項では，<span class="arithmatex">\(3(\boldsymbol{n}\cdot\boldsymbol{r}')^2-r'^2\)</span> を成分表示すると <span class="arithmatex">\((3x_i'x_j'-r'^2\delta_{ij})n_in_j\)</span> となります。このため二つの添字について和をとる形が現れます。</p>
 <h3 id="2">(2)</h3>
+<p>まず低次のモーメントを調べます。原点の電荷は全電荷には寄与しますが，位置ベクトルがゼロなので双極子以上のモーメントには寄与しません。<span class="arithmatex">\(z=\pm a\)</span> の二電荷は対称なので，双極子項が打ち消し合います。</p>
 <p>全電荷と双極子モーメントは，</p>
 <div class="arithmatex">\[
 \begin{aligned}

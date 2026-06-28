@@ -11785,6 +11785,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
+<p>変数分離では，<span class="arithmatex">\(x\)</span> だけの関数と <span class="arithmatex">\(y\)</span> だけの関数の和がすべての <span class="arithmatex">\(x,y\)</span> でゼロになるため，それぞれを同じ定数に等置します。<span class="arithmatex">\(x=0,a\)</span> でゼロとなる正弦関数を得るため，<span class="arithmatex">\(X''/X\)</span> 側の分離定数を負の値 <span class="arithmatex">\(-k^2\)</span> に選びます。</p>
 <p>積の形をラプラス方程式へ代入すると，</p>
 <div class="arithmatex">\[
 X''(x)Y(y)+X(x)Y''(y)=0
@@ -11808,6 +11809,7 @@ X_n(x)=\sin\frac{n\pi x}{a},
 \]</div>
 <p>です。</p>
 <h3 id="2">(2)</h3>
+<p><span class="arithmatex">\(x\)</span> 方向の境界条件を満たす解は，各固有関数を重ね合わせたフーリエ正弦級数になります。次に <span class="arithmatex">\(y=0\)</span> の条件で双曲線余弦の項を除き，最後に <span class="arithmatex">\(y=b\)</span> の境界値と係数を比較します。</p>
 <p><span class="arithmatex">\(Y\)</span> の一般解は <span class="arithmatex">\(Y=A\sinh ky+B\cosh ky\)</span> です。<span class="arithmatex">\(y=0\)</span> で電位がゼロなので <span class="arithmatex">\(B=0\)</span> です。したがって一般には，</p>
 <div class="arithmatex">\[
 \phi(x,y)=\sum_{n=1}^{\infty}A_n
@@ -11826,7 +11828,9 @@ A_1\sinh\frac{\pi b}{a}=V_0,
 \sin\frac{\pi x}{a}
 \]</div>
 <p>を得ます。すべての境界値を満たすラプラス方程式の解は一意です。</p>
+<p>この問題では上辺の電位が最初から <span class="arithmatex">\(n=1\)</span> の正弦関数になっているため，一つのモードだけで解が完成します。一般の境界関数なら，直交関係を用いて複数の <span class="arithmatex">\(A_n\)</span> を求めます。</p>
 <h3 id="3">(3)</h3>
+<p>電場は電位の負の勾配です。まず領域内の電位を偏微分し，その後で <span class="arithmatex">\(y=b\)</span> を代入します。表面電荷密度では，導体から領域内へ向く法線を使うため，<span class="arithmatex">\(E_y\)</span> にもう一つ負号が付くことに注意します。</p>
 <p>偏微分を実行すると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
