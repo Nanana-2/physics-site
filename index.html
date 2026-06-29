@@ -207,25 +207,31 @@
     <style>
       .md-hero {
         position: relative;
-        /* 深みのあるグラデーション背景 */
-        background: linear-gradient(135deg, #1e293b, #0f172a); /* 落ち着いたダークネイビー系（テーマに合わせて調整可） */
+        /* ✨ 変更1：テックネイビーを廃止。重厚で暖かみのあるダークグレー（#1a1d21系）へ */
+        background-color: #1a1d21;
+        /* 少しだけ茶系を入れたグラデーションで、冷たさを消す */
+        background-image: radial-gradient(circle at center, #23272d 0%, #1a1d21 100%);
         color: #ffffff;
-        padding: 3.5rem 1rem; /* スマホ用のコンパクトな余白 */
+        padding: 3.5rem 1rem;
         text-align: center;
         overflow: hidden;
       }
 
-      /* ✨ 物足りなさを消す：数式・理系サイトに完璧にマッチするグリッド背景 */
+      /* ✨ 変更2：方眼グリッドを廃止。「黒板の数式スケッチ」のような質感へ */
       .md-hero::before {
         content: "";
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
+        /* うっすらと、黒板のチョークの跡のような、あるいは数式が複雑に重なったようなテクスチャ（SVGまたは画像） */
+        /* ここではCSSで、ランダムな複雑な模様をうっすら重ねることで代用 */
         background-image: 
-          linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-        background-size: 20px 20px; /* 方眼紙のようなグリッド */
-        mask-image: radial-gradient(ellipse at center, black, transparent 80%);
-        -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+          repeating-radial-gradient(circle at 0 0, transparent 0, #1a1d21 40px),
+          repeating-linear-gradient(#1e2227 1px, transparent 1px, transparent 60px),
+          repeating-linear-gradient(90deg, #1e2227 1px, transparent 1px, transparent 60px);
+        background-size: cover;
+        opacity: 0.15; /* かなり薄くして、質感だけを残す */
+        mask-image: radial-gradient(ellipse at center, black, transparent 90%);
+        -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 90%);
         pointer-events: none;
       }
 
@@ -236,51 +242,53 @@
         margin: 0 auto;
       }
 
-      /* 📱 スマホで文字が切れないための「可変文字サイズ（clamp）」 */
+      /* ✨ 変更3：文字のダサい「デカさ」を修正。わずかに小さく、行間を広く */
       .md-hero h1 {
         color: #ffffff;
         font-weight: 800;
-        /* 画面幅に応じて 1.8rem(スマホ) 〜 2.8rem(PC) まで滑らかに自動調節 */
-        font-size: clamp(1.8rem, 5vw, 2.8rem); 
-        line-height: 1.3;
-        letter-spacing: -0.01em;
+        /* clampの最大値を少し下げて（2.8 -> 2.5）、威圧感を消す */
+        font-size: clamp(1.8rem, 5vw, 2.5rem); 
+        line-height: 1.25; /* 少し詰めて、アカデミックなタイトルの塊感を作る */
+        letter-spacing: -0.015em;
         margin-bottom: 1rem;
-        word-break: keep-all; /* 単語の途中での不自然な改行を防ぐ */
+        word-break: keep-all;
         overflow-wrap: break-word;
       }
 
       .md-hero p {
-        /* 画面幅に応じて 0.95rem(スマホ) 〜 1.15rem(PC) に自動調節 */
-        font-size: clamp(0.95rem, 3vw, 1.15rem);
-        line-height: 1.6;
-        margin-bottom: 2rem;
-        opacity: 0.8;
-        font-weight: 300;
-        letter-spacing: 0.02em;
+        font-size: clamp(1.0rem, 3vw, 1.1rem); /* 1.15からわずかに縮小 */
+        line-height: 1.65; /* 行間をわずかに広くして、読みやすく */
+        margin-bottom: 2.5rem;
+        opacity: 0.75; /* 少し薄くして、重厚感を出す */
+        font-weight: 400; /* 細すぎたのを少し戻す（300 -> 400） */
+        letter-spacing: 0.01em;
       }
 
+      /* ✨ 変更4：ボタン色をアクセントカラーへ（ピンク寄りの赤：#e91e63など） */
       .md-hero .md-button--primary {
-        background-color: #ffffff;
-        color: #0f172a; /* 背景の濃い色に合わせる */
+        /* このサイトのアクセントカラー（例: #ec407a / #e91e63など）を指定 */
+        background-color: #ec407a; 
+        color: #ffffff;
         border: none;
-        font-weight: 600;
+        font-weight: 700; /* 文字を力強く */
         font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-        padding: 0.7rem 2rem;
+        padding: 0.8rem 2.5rem; /* ぷっくり感は維持 */
         border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        /* 影をアクセントカラーの色に寄せて、より馴染ませる */
+        box-shadow: 0 4px 15px rgba(236, 64, 122, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
       }
 
       .md-hero .md-button--primary:hover {
-        background-color: #ffffffb6;
+        /* ホバー時は少しだけ明るくするか、濃くする */
+        background-color: #f06292;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 20px rgba(236, 64, 122, 0.5);
       }
 
-      /* 🖥️ PC（画面が広い時）だけ、さらに高級感を出すために余白を広げる */
       @media screen and (min-width: 60em) {
         .md-hero {
-          padding: 5.5rem 1.5rem; /* PCではドカンと広く */
+          padding: 5.5rem 1.5rem;
         }
       }
     </style>
