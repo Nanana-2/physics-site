@@ -8,7 +8,9 @@ theme:
     - content.code.copy 
     - navigation.footer # コードをコピーするボタンを付ける（おまけ）
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
-
+  analytics:
+    provider: google
+    property: G-FDK0HJQRC9  # ここにあなたの測定IDを入れる
 
   palette:
     - media: "(prefers-color-scheme: light)"
