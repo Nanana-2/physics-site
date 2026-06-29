@@ -15,88 +15,79 @@
     <style>
       .md-hero {
         position: relative;
-        /* ✨ 変更1：テックネイビーを廃止。重厚で暖かみのあるダークグレー（#1a1d21系）へ */
-        background-color: #1a1d21;
-        /* 少しだけ茶系を入れたグラデーションで、冷たさを消す */
-        background-image: radial-gradient(circle at center, #23272d 0%, #1a1d21 100%);
+        /* ✨ 解決1：サイトの青に100%馴染む、洗練されたディープブルーのグラデーション */
+        background: linear-gradient(180deg, var(--md-primary-fg-color) 0%, #1e3a8a 100%);
         color: #ffffff;
-        padding: 3.5rem 1rem;
+        padding: 4rem 1.5rem 6rem; /* ⬇️下の波のスペースのために、下部の余白を広く */
         text-align: center;
         overflow: hidden;
       }
 
-      /* ✨ 変更2：方眼グリッドを廃止。「黒板の数式スケッチ」のような質感へ */
-      .md-hero::before {
+      /* ✨ 解決2：AI感を破壊する「なだらかな曲線の波（SVG）」を配置 */
+      .md-hero::after {
         content: "";
         position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        /* うっすらと、黒板のチョークの跡のような、あるいは数式が複雑に重なったようなテクスチャ（SVGまたは画像） */
-        /* ここではCSSで、ランダムな複雑な模様をうっすら重ねることで代用 */
-        background-image: 
-          repeating-radial-gradient(circle at 0 0, transparent 0, #1a1d21 40px),
-          repeating-linear-gradient(#1e2227 1px, transparent 1px, transparent 60px),
-          repeating-linear-gradient(90deg, #1e2227 1px, transparent 1px, transparent 60px);
-        background-size: cover;
-        opacity: 0.15; /* かなり薄くして、質感だけを残す */
-        mask-image: radial-gradient(ellipse at center, black, transparent 90%);
-        -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 90%);
-        pointer-events: none;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px; /* 波の高さ */
+        background-color: var(--md-background-color, #ffffff); /* サイトのメイン背景白と自動で合流 */
+        /* 美しい曲線を1行のコードで表現（SVGマスク） */
+        clip-path: ellipse(60% 100% at 50% 100%);
       }
 
       .md-hero__inner {
         position: relative;
         z-index: 1;
-        max-width: 42rem;
+        max-width: 40rem;
         margin: 0 auto;
       }
 
-      /* ✨ 変更3：文字のダサい「デカさ」を修正。わずかに小さく、行間を広く */
       .md-hero h1 {
         color: #ffffff;
         font-weight: 800;
-        /* clampの最大値を少し下げて（2.8 -> 2.5）、威圧感を消す */
-        font-size: clamp(1.8rem, 5vw, 2.5rem); 
-        line-height: 1.25; /* 少し詰めて、アカデミックなタイトルの塊感を作る */
-        letter-spacing: -0.015em;
-        margin-bottom: 1rem;
+        font-size: clamp(1.8rem, 4.5vw, 2.4rem); /* 威圧感を無くすため、ほんの少しマイルドなサイズに */
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.8rem;
         word-break: keep-all;
         overflow-wrap: break-word;
       }
 
       .md-hero p {
-        font-size: clamp(1.0rem, 3vw, 1.1rem); /* 1.15からわずかに縮小 */
-        line-height: 1.65; /* 行間をわずかに広くして、読みやすく */
-        margin-bottom: 2.5rem;
-        opacity: 0.75; /* 少し薄くして、重厚感を出す */
-        font-weight: 400; /* 細すぎたのを少し戻す（300 -> 400） */
-        letter-spacing: 0.01em;
+        font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+        line-height: 1.6;
+        margin-bottom: 2.2rem;
+        opacity: 0.85; /* 文字の白を少しだけ柔らかく */
+        font-weight: 400;
+        letter-spacing: 0.02em;
       }
 
-      /* ✨ 変更4：ボタン色をアクセントカラーへ（ピンク寄りの赤：#e91e63など） */
+      /* ✨ 絶賛していただいたボタン：ピンク寄りの赤をより洗練 */
       .md-hero .md-button--primary {
-        /* このサイトのアクセントカラー（例: #ec407a / #e91e63など）を指定 */
         background-color: #ec407a; 
         color: #ffffff;
         border: none;
-        font-weight: 700; /* 文字を力強く */
+        font-weight: 700;
         font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-        padding: 0.8rem 2.5rem; /* ぷっくり感は維持 */
+        padding: 0.8rem 2.2rem;
         border-radius: 50px;
-        /* 影をアクセントカラーの色に寄せて、より馴染ませる */
-        box-shadow: 0 4px 15px rgba(236, 64, 122, 0.3);
-        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        box-shadow: 0 4px 15px rgba(236, 64, 122, 0.4);
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
       }
 
       .md-hero .md-button--primary:hover {
-        /* ホバー時は少しだけ明るくするか、濃くする */
         background-color: #f06292;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(236, 64, 122, 0.5);
+        transform: translateY(-3px) scale(1.02); /* ぷにっと浮き出るような気持ちいいエフェクト */
+        box-shadow: 0 8px 25px rgba(236, 64, 122, 0.6);
       }
 
       @media screen and (min-width: 60em) {
         .md-hero {
-          padding: 5.5rem 1.5rem;
+          padding: 6rem 1.5rem 8rem; /* PCではさらにダイナミックに */
+        }
+        .md-hero::after {
+          height: 60px; /* PCでは波を少し深く */
         }
       }
     </style>
