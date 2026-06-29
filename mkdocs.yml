@@ -1,6 +1,7 @@
 site_name: 物理の見取り図
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Noto Sans JP  # 👈 サイト全体の文字を Noto Sans JP に！
     code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
