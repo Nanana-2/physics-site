@@ -14,49 +14,82 @@
 
     <style>
       .md-hero {
-        /* 深みのあるスタイリッシュなグラデーションと、ほんのりザラついたモダンな質感 */
-        background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
-        color: var(--md-primary-bg-color);
-        padding: 5rem 1.5rem; /* 上下の余白を広げて呼吸感（高級感）を出す */
+        position: relative;
+        /* 深みのあるグラデーション背景 */
+        background: linear-gradient(135deg, #1e293b, #0f172a); /* 落ち着いたダークネイビー系（テーマに合わせて調整可） */
+        color: #ffffff;
+        padding: 3.5rem 1rem; /* スマホ用のコンパクトな余白 */
         text-align: center;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        overflow: hidden;
       }
+
+      /* ✨ 物足りなさを消す：数式・理系サイトに完璧にマッチするグリッド背景 */
+      .md-hero::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: 
+          linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 20px 20px; /* 方眼紙のようなグリッド */
+        mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+        -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+        pointer-events: none;
+      }
+
       .md-hero__inner {
-        max-width: 42rem; /* 横幅をあえて少し狭めて、論文のように美しい中央配置に */
+        position: relative;
+        z-index: 1;
+        max-width: 42rem;
         margin: 0 auto;
       }
+
+      /* 📱 スマホで文字が切れないための「可変文字サイズ（clamp）」 */
       .md-hero h1 {
         color: #ffffff;
-        font-weight: 800; /* ガツンと太くして海外のテックサイト風に */
-        font-size: 2.8rem; /* 文字を思い切り大きく */
-        line-height: 1.2;
-        letter-spacing: -0.02em; /* 文字の間隔を少し詰めてスタイリッシュに */
+        font-weight: 800;
+        /* 画面幅に応じて 1.8rem(スマホ) 〜 2.8rem(PC) まで滑らかに自動調節 */
+        font-size: clamp(1.8rem, 5vw, 2.8rem); 
+        line-height: 1.3;
+        letter-spacing: -0.01em;
         margin-bottom: 1rem;
+        word-break: keep-all; /* 単語の途中での不自然な改行を防ぐ */
+        overflow-wrap: break-word;
       }
+
       .md-hero p {
-        font-size: 1.15rem; /* 少しだけ大きく */
+        /* 画面幅に応じて 0.95rem(スマホ) 〜 1.15rem(PC) に自動調節 */
+        font-size: clamp(0.95rem, 3vw, 1.15rem);
         line-height: 1.6;
-        margin-bottom: 2.5rem; /* ボタンとの間隔をしっかり空ける */
-        opacity: 0.85;
-        font-weight: 300; /* 説明文はあえて少し細めにしてメリハリをつける */
-        letter-spacing: 0.03em;
+        margin-bottom: 2rem;
+        opacity: 0.8;
+        font-weight: 300;
+        letter-spacing: 0.02em;
       }
+
       .md-hero .md-button--primary {
         background-color: #ffffff;
-        color: var(--md-primary-fg-color);
+        color: #0f172a; /* 背景の濃い色に合わせる */
         border: none;
         font-weight: 600;
-        font-size: 0.95rem;
-        padding: 0.8rem 2.5rem; /* ボタンをぷっくりと大きめにする */
-        border-radius: 50px; /* 完全に丸いカプセル型にして今っぽさを出す */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* ほんのり上品な影をつけて浮かせる */
-        transition: transform 0.2s ease, box-shadow 0.2s ease; /* 動いた時のアニメーション */
+        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        padding: 0.7rem 2rem;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
-      /* ボタンにマウスを乗せた時の美しいエフェクト */
+
       .md-hero .md-button--primary:hover {
-        background-color: #ffffff97;
-        transform: translateY(-2px); /* ほんの少し上に浮き上がる */
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* 影を強くする */
+        background-color: #ffffffb6;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* 🖥️ PC（画面が広い時）だけ、さらに高級感を出すために余白を広げる */
+      @media screen and (min-width: 60em) {
+        .md-hero {
+          padding: 5.5rem 1.5rem; /* PCではドカンと広く */
+        }
       }
     </style>
   {% endif %}
