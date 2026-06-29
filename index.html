@@ -198,41 +198,57 @@
   
     <div class="md-hero">
       <div class="md-hero__inner md-grid">
-        <h1>大学物理の演習アーカイブ</h1>
-        <p>AIとともに構築する、問題集。力学から量子力学まで網羅。</p>
-        <a href="mechanics/" class="md-button md-button--primary">問題を解いてみる</a>
+        <h1>大学物理の演習問題アーカイブ</h1>
+        <p>院試における重要トピックを問題形式で網羅しよう</p>
+        <a href="tags/" class="md-button md-button--primary">問題一覧を覗いてみる</a>
       </div>
     </div>
 
     <style>
       .md-hero {
+        /* 深みのあるスタイリッシュなグラデーションと、ほんのりザラついたモダンな質感 */
         background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
         color: var(--md-primary-bg-color);
-        padding: 3.5rem 1rem;
+        padding: 5rem 1.5rem; /* 上下の余白を広げて呼吸感（高級感）を出す */
         text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .md-hero__inner {
+        max-width: 42rem; /* 横幅をあえて少し狭めて、論文のように美しい中央配置に */
+        margin: 0 auto;
       }
       .md-hero h1 {
-        color: white;
-        font-weight: 700;
-        font-size: 2.5rem;
-        margin: 0 0 0.5rem;
+        color: #ffffff;
+        font-weight: 800; /* ガツンと太くして海外のテックサイト風に */
+        font-size: 2.8rem; /* 文字を思い切り大きく */
+        line-height: 1.2;
+        letter-spacing: -0.02em; /* 文字の間隔を少し詰めてスタイリッシュに */
+        margin-bottom: 1rem;
       }
       .md-hero p {
-        font-size: 1.1rem;
-        max-width: 35rem;
-        margin: 0 auto 1.5rem;
-        opacity: 0.9;
+        font-size: 1.15rem; /* 少しだけ大きく */
+        line-height: 1.6;
+        margin-bottom: 2.5rem; /* ボタンとの間隔をしっかり空ける */
+        opacity: 0.85;
+        font-weight: 300; /* 説明文はあえて少し細めにしてメリハリをつける */
+        letter-spacing: 0.03em;
       }
       .md-hero .md-button--primary {
-        background-color: white;
+        background-color: #ffffff;
         color: var(--md-primary-fg-color);
-        border-color: white;
-        font-weight: bold;
-        padding: 0.5rem 2rem;
+        border: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.8rem 2.5rem; /* ボタンをぷっくりと大きめにする */
+        border-radius: 50px; /* 完全に丸いカプセル型にして今っぽさを出す */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* ほんのり上品な影をつけて浮かせる */
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* 動いた時のアニメーション */
       }
+      /* ボタンにマウスを乗せた時の美しいエフェクト */
       .md-hero .md-button--primary:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        border-color: rgba(255, 255, 255, 0.9);
+        background-color: #ffffff97;
+        transform: translateY(-2px); /* ほんの少し上に浮き上がる */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* 影を強くする */
       }
     </style>
   
