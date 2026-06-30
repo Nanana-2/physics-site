@@ -21,7 +21,7 @@
     
     
       
-        <title>大学物理の問題集</title>
+        <title>ホーム - 大学物理の問題集</title>
       
     
     
@@ -200,16 +200,23 @@
   <div class="md-hero__inner">
     
     <div class="hero-text-block">
+      <p class="hero-kicker">大学物理・院試演習</p>
       <h1>
         <span>大学物理の</span>
         <span>演習問題アーカイブ</span>
       </h1>
-      <p>院試で扱われる重要トピックを問題形式で網羅しよう</p>
-      <a href="tags/" class="md-button md-button--primary">問題をみる</a>
-    </div>
+      <p class="hero-description">力学から統計力学まで、学部物理の重要トピックを300問以上の演習でたどる。</p>
 
-    <div class="hero-image-block">
-      <img src="assets/images/desktop-computer.png" alt="Desktop PC Illustration">
+      <div class="hero-actions">
+        <a href="tags/" class="md-button md-button--primary">難易度から探す</a>
+        <a href="#fields" class="md-button hero-button-secondary">分野から選ぶ</a>
+      </div>
+
+      <ul class="hero-stats" aria-label="収録内容">
+        <li><strong>300+</strong><span>演習問題</span></li>
+        <li><strong>5</strong><span>分野</span></li>
+        <li><strong>3</strong><span>難易度</span></li>
+      </ul>
     </div>
 
   </div>
@@ -218,61 +225,62 @@
       /* ヒーローセクション全体 */
       .md-hero {
         background-color: var(--md-default-bg-color);
-        padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+        padding: clamp(3rem, 7vw, 5.5rem) 1.5rem;
         border-bottom: 1px solid var(--md-default-fg-color--lightest);
       }
 
-      /* 左右2分割を制御するメインコンテナ */
+      /* 本文幅に合わせたメインコンテナ */
       .md-hero__inner {
         max-width: 64rem;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.9fr);
-        align-items: center;
-        gap: clamp(2rem, 5vw, 4rem);
       }
 
-      /* 左ブロック（テキスト） */
+      /* ヒーローのテキスト */
       .hero-text-block {
+        max-width: 48rem;
         text-align: left;
         padding-left: clamp(0.5rem, 2vw, 2rem);
       }
 
-      /* 右ブロック（画像） */
-      .hero-image-block {
-        text-align: center;
+      .md-hero .hero-kicker {
+        margin: 0 0 0.8rem;
+        color: #d83b72;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
       }
 
-      /* 画像のサイズ調整 */
-      .hero-image-block img {
-        max-width: 100%;
-        height: auto;
-        max-height: 250px;
-      }
-
-      /* タイトルの文字デザイン（黒〜濃いグレー） */
+      /* タイトル */
       .md-hero h1 {
         color: var(--md-typeset-color);
         font-weight: 500;
-        font-size: clamp(1.5rem, 2.7vw, 2rem);
-        line-height: 1.35;
-        margin-bottom: 0.8rem;
-        letter-spacing: -0.01em;
+        font-size: clamp(2rem, 4.5vw, 3.2rem);
+        line-height: 1.25;
+        margin: 0 0 1.2rem;
+        letter-spacing: -0.025em;
       }
 
       .md-hero h1 span {
         display: block;
       }
 
-      /* 説明文の文字デザイン */
-      .md-hero p {
+      /* 説明文 */
+      .md-hero .hero-description {
+        max-width: 38rem;
+        margin: 0;
         color: var(--md-default-fg-color--light);
-        font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-        line-height: 1.6;
-        margin-bottom: 2rem;
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        line-height: 1.8;
       }
 
-      /* 控えめなアクセントのボタン */
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+
+      /* ボタン */
       .md-hero .md-button--primary {
         background-color: #d83b72;
         color: #ffffff;
@@ -289,23 +297,69 @@
         background-color: #bd2f62;
       }
 
+      .md-hero .hero-button-secondary {
+        color: var(--md-default-fg-color);
+        border-color: var(--md-default-fg-color--lighter);
+        border-radius: 3px;
+      }
+
+      .md-hero .hero-button-secondary:hover {
+        color: #d83b72;
+        border-color: #d83b72;
+      }
+
+      /* 収録内容 */
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem 2.5rem;
+        margin: 2.5rem 0 0;
+        padding: 1.4rem 0 0;
+        border-top: 1px solid var(--md-default-fg-color--lightest);
+        list-style: none;
+      }
+
+      .hero-stats li {
+        display: flex;
+        align-items: baseline;
+        gap: 0.45rem;
+        margin: 0;
+      }
+
+      .hero-stats strong {
+        color: var(--md-typeset-color);
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .hero-stats span {
+        color: var(--md-default-fg-color--light);
+        font-size: 0.78rem;
+      }
+
       /* スマホ用のレスポンシブ対応 */
       @media screen and (max-width: 45em) {
         .md-hero {
           padding: 2.5rem 1rem;
         }
-        .md-hero__inner {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-        .hero-text-block, .hero-image-block {
-          text-align: center;
-        }
         .hero-text-block {
           padding-left: 0;
         }
-        .hero-image-block img {
-          max-height: 220px;
+        .md-hero h1 {
+          font-size: clamp(1.8rem, 9vw, 2.5rem);
+        }
+        .hero-stats {
+          gap: 1rem 1.5rem;
+        }
+      }
+
+      @media screen and (max-width: 30em) {
+        .hero-actions {
+          display: grid;
+        }
+        .hero-actions .md-button {
+          width: 100%;
+          text-align: center;
         }
       }
     </style>
@@ -356,8 +410,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -400,8 +452,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -410,7 +460,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         このサイトは何者？
@@ -421,7 +471,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         重要な約束と想定される使い方
@@ -432,10 +482,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        収録されている問題と難易度目安
+        分野から選ぶ
       
     </span>
   </a>
@@ -13268,8 +13318,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -13278,7 +13326,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         このサイトは何者？
@@ -13289,7 +13337,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         重要な約束と想定される使い方
@@ -13300,10 +13348,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        収録されている問題と難易度目安
+        分野から選ぶ
       
     </span>
   </a>
@@ -13338,8 +13386,9 @@
 
 
 
-<h1 id="_1">ホーム</h1>
-<h2 id="_2">このサイトは何者？</h2>
+  <h1>ホーム</h1>
+
+<h2 id="_1">このサイトは何者？</h2>
 <p>ご覧いただきありがとうございます！本サイトは<strong>大学定期試験〜大学院入試レベルの物理の問題とその解説をまとめた問題集</strong>です。</p>
 <p>スマートフォンやタブレットからの閲覧にも対応しててとっても便利……なはず？ですがパソコンで見ることを推奨します。式が長いので。</p>
 <hr />
@@ -13349,12 +13398,12 @@
 <p>院試を控えている方にとっては対策の目安に，現在進行形で大学物理を学んでいる方には「この分野にはどんな話題があるのか」を体系的に知る見取り図になれば嬉しいです。</p>
 <p>……などと適当言ってますけど，<strong>実態はAIと遊んでみようの思い付きで作ったものです。</strong>遊んでいたら楽しくなって院試にはまず出ない内容まで紛れ込んでいるのもご愛嬌！そんなこともあります。</p>
 <p><strong>ただし原則として自分自身が学部の時に知っていたこと以上の話題は入れない</strong>ようにしています。ですので「一学生が学部の間に学ぶこと」のサンプルケースとして見ていただければ幸いです。</p>
-<h2 id="_3">重要な約束と想定される使い方</h2>
+<h2 id="_2">重要な約束と想定される使い方</h2>
 <p>このサイトで一番重要なこと，それは<strong>「このサイトの問題・解説の殆どはAIが作ったもので，それを見て確かめているのはただの院生」</strong>ということです。あまりに大事なので<strong>このページだけは純度100％自分の手で書いています。</strong></p>
 <p>ですのでこのサイトにおける内容の信憑性は<strong>「ないよりはマシ」</strong>というのが一番表現として正確です。<strong>責任は，取れません！</strong></p>
 <p>もちろん作る側としては（ざっくり）見てはいますし扱っている問題のレベルも精々学部の域を出ないので，致命的な間違いはそこまでないと踏んでいますが，あくまで「世の中にはこういう話があるんだな」と眺めてもらう程度の距離感で使ってもらうことを想定しています。</p>
 <p>もし間違いだったり気になる点があればXのDMにでも（優しく）送っていただけますと目を通す，かも。</p>
-<h2 id="_4">収録されている問題と難易度目安</h2>
+<h2 id="fields">分野から選ぶ</h2>
 <p>主に大学物理の中でも<strong>物性物理を学ぶ上で基礎となる分野</strong>（力学・電磁気学・熱力学・量子力学・統計力学・物性物理）について，<strong>三段階の難易度のタグ付け</strong>（基本・標準・発展）がされています。目安としては</p>
 <ul>
 <li><strong>基本</strong>…定期試験に出てくる程度</li>
@@ -13422,6 +13471,9 @@
 
 
 
+
+  
+  
 
 
 
