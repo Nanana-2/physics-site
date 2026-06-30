@@ -200,7 +200,6 @@
   <div class="md-hero__inner">
     
     <div class="hero-text-block">
-      <p class="hero-kicker">大学物理・院試演習</p>
       <h1>
         <span>大学物理の</span>
         <span>演習問題アーカイブ</span>
@@ -209,7 +208,7 @@
 
       <div class="hero-actions">
         <a href="tags/" class="md-button md-button--primary">難易度から探す</a>
-        <a href="#fields" class="md-button hero-button-secondary">分野から選ぶ</a>
+        <a href="#fields" class="md-button hero-button-secondary">分野から選ぶ ↓</a>
       </div>
 
       <ul class="hero-stats" aria-label="収録内容">
@@ -225,8 +224,21 @@
       /* ヒーローセクション全体 */
       .md-hero {
         background-color: var(--md-default-bg-color);
-        padding: clamp(3rem, 7vw, 5.5rem) 1.5rem;
+        padding: clamp(2.25rem, 5vw, 3.75rem) 1.5rem;
         border-bottom: 1px solid var(--md-default-fg-color--lightest);
+      }
+
+      /* title メタデータ由来の自動見出しはホームでは表示しない */
+      .md-content__inner > h1:first-child {
+        display: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      #fields {
+        scroll-margin-top: 4rem;
       }
 
       /* 本文幅に合わせたメインコンテナ */
@@ -237,31 +249,26 @@
 
       /* ヒーローのテキスト */
       .hero-text-block {
-        max-width: 48rem;
+        max-width: 44rem;
         text-align: left;
         padding-left: clamp(0.5rem, 2vw, 2rem);
       }
 
-      .md-hero .hero-kicker {
-        margin: 0 0 0.8rem;
-        color: #d83b72;
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-      }
-
       /* タイトル */
       .md-hero h1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 0.35em;
         color: var(--md-typeset-color);
         font-weight: 500;
-        font-size: clamp(2rem, 4.5vw, 3.2rem);
-        line-height: 1.25;
-        margin: 0 0 1.2rem;
-        letter-spacing: -0.025em;
+        font-size: clamp(1.55rem, 3vw, 2.25rem);
+        line-height: 1.35;
+        margin: 0 0 1rem;
+        letter-spacing: -0.015em;
       }
 
       .md-hero h1 span {
-        display: block;
+        white-space: nowrap;
       }
 
       /* 説明文 */
@@ -277,45 +284,50 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
-        margin-top: 2rem;
+        margin-top: 1.6rem;
       }
 
       /* ボタン */
-      .md-hero .md-button--primary {
-        background-color: #d83b72;
-        color: #ffffff;
-        border: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        padding: 0.75rem 2rem;
-        border-radius: 3px;
+      .md-hero .hero-actions .md-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.65rem 1.4rem;
+        border: 1px solid var(--md-default-fg-color--lighter);
+        border-radius: 4px;
         box-shadow: none;
-        transition: background-color 0.2s ease;
+        font-size: 0.82rem;
+        font-weight: 600;
       }
 
-      .md-hero .md-button--primary:hover {
-        background-color: #bd2f62;
+      .md-hero .hero-actions .md-button--primary {
+        background-color: var(--md-primary-fg-color);
+        color: #ffffff;
+        border-color: var(--md-primary-fg-color);
       }
 
-      .md-hero .hero-button-secondary {
+      .md-hero .hero-actions .md-button--primary:hover {
+        opacity: 0.88;
+      }
+
+      .md-hero .hero-actions .hero-button-secondary {
+        background-color: transparent;
         color: var(--md-default-fg-color);
         border-color: var(--md-default-fg-color--lighter);
-        border-radius: 3px;
       }
 
-      .md-hero .hero-button-secondary:hover {
-        color: #d83b72;
-        border-color: #d83b72;
+      .md-hero .hero-actions .hero-button-secondary:hover {
+        color: var(--md-primary-fg-color);
+        border-color: var(--md-primary-fg-color);
       }
 
       /* 収録内容 */
       .hero-stats {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.5rem 2.5rem;
-        margin: 2.5rem 0 0;
-        padding: 1.4rem 0 0;
-        border-top: 1px solid var(--md-default-fg-color--lightest);
+        gap: 0.8rem 1.8rem;
+        margin: 1.5rem 0 0;
+        padding: 0;
         list-style: none;
       }
 
@@ -328,7 +340,7 @@
 
       .hero-stats strong {
         color: var(--md-typeset-color);
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-weight: 600;
       }
 
@@ -346,7 +358,7 @@
           padding-left: 0;
         }
         .md-hero h1 {
-          font-size: clamp(1.8rem, 9vw, 2.5rem);
+          font-size: clamp(1.5rem, 7vw, 2rem);
         }
         .hero-stats {
           gap: 1rem 1.5rem;
@@ -360,6 +372,12 @@
         .hero-actions .md-button {
           width: 100%;
           text-align: center;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
         }
       }
     </style>
