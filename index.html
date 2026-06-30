@@ -212,19 +212,18 @@
   </div>
 </div>
     <style>
-      /* ヒーローセクション全体 */
+      /* ヒーローセクション全体の背景（白） */
       .md-hero {
-        /* 💡 改善1：ヘッダーの青から白へ、ほんのり滑らかに繋がる超微細なグラデーション */
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, #ffffff 100%);
         background-color: #ffffff;
-        padding: 4rem 2rem; /* 上下の余白を少しだけ広げてゆったりさせる */
+        padding: 3rem 1.5rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
 
-      /* 左右2分割を制御するコンテナ */
+      /* 左右2分割を制御するメインコンテナ */
       .md-hero__inner {
         max-width: 64rem;
         margin: 0 auto;
+        /* テーブルレイアウトで左右に並べる（WeasyPrint/MkDocs互換） */
         display: table;
         width: 100%;
       }
@@ -233,88 +232,84 @@
       .hero-text-block {
         display: table-cell;
         vertical-align: middle;
-        width: 52%; /* 💡 文字エリアをわずかに広げて改行の余裕を持たせる */
+        width: 50%;
         text-align: left;
-        padding-right: 3rem; /* 画像とのスキマをしっかり取る */
+        padding-left: 2rem;
+        padding-right: 3rem;
       }
 
       /* 右ブロック（画像） */
       .hero-image-block {
         display: table-cell;
         vertical-align: middle;
-        width: 48%;
+        width: 50%;
         text-align: center;
       }
 
+      /* 画像のサイズ調整 */
       .hero-image-block img {
         max-width: 100%;
         height: auto;
-        max-height: 300px;
+        max-height: 320px; /* 画像が大きくなりすぎないようにセーブ */
       }
 
-      /* 💡 改善2：タイトルの文字の詰まり具合と改行の制御 */
+      /* タイトルの文字デザイン（黒〜濃いグレー） */
       .md-hero h1 {
         color: #1e293b;
-        font-weight: 800; /* より力強く引き締まった太さに */
-        font-size: clamp(1.8rem, 3.8vw, 2.3rem); /* デカすぎず小さすぎない絶妙なサイズ */
-        line-height: 1.35;
-        letter-spacing: -0.03em; /* 👈 文字の間隔をわずかに詰めて「ロゴ」のような締まりを出す */
-        margin-bottom: 1rem;
-        
-        /* ⬇️ これが超重要！「アーカイブ」が途中で絶対に千切れないようにする魔法 */
-        display: inline-block;
-        word-break: keep-all; 
-        overflow-wrap: break-word;
+        font-weight: 500;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        letter-spacing: -0.01em;
       }
 
-      /* 説明文 */
+      /* 説明文の文字デザイン */
       .md-hero p {
-        color: #475569; /* ほんの少しだけ濃くして読みやすく */
-        font-size: clamp(0.95rem, 2.2vw, 1.05rem);
-        line-height: 1.65;
-        margin-bottom: 2.2rem;
-        letter-spacing: 0.02em;
+        color: #64748b;
+        font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+        line-height: 1.6;
+        margin-bottom: 2rem;
       }
 
-      /* 四角いボタン */
+      /* ✨ ご希望の四角いボタン（アクセントのピンク赤） */
       .md-hero .md-button--primary {
-        background-color: #4043ec67; 
+        background-color: #ec407a; 
         color: #ffffff;
         border: none;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 0.9rem;
-        padding: 0.75rem 2.2rem;
-        border-radius: 6px; 
-        box-shadow: 0 4px 14px rgba(236, 64, 122, 0.25);
+        padding: 0.75rem 2rem;
+        border-radius: 6px; /* カプセルではなく、シュッとした四角い角丸 */
+        box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2);
         transition: all 0.2s ease;
-        letter-spacing: 0.05em;
       }
 
       .md-hero .md-button--primary:hover {
-        background-color: #6962f03e;
+        background-color: #f06291c8;
         transform: translateY(-1px);
-        box-shadow: 0 6px 18px rgba(236, 64, 122, 0.35);
+        box-shadow: 0 6px 15px rgba(236, 64, 122, 0.3);
       }
 
-      /* スマホ用のレスポンシブ対応 */
+      /* 📱 解決：スマホ用のレスポンシブ対応（画面幅が狭いとき） */
       @media screen and (max-width: 45em) {
         .md-hero {
-          padding: 3rem 1.5rem;
+          padding: 2.5rem 1rem;
         }
         .md-hero__inner {
-          display: block;
+          display: block; /* テーブル表示を解除して縦並びに */
         }
         .hero-text-block, .hero-image-block {
           display: block;
           width: 100%;
-          text-align: center;
+          text-align: center; /* スマホでは中央揃えが綺麗 */
+          padding-left: 0;
           padding-right: 0;
         }
         .hero-image-block {
-          margin-top: 3rem;
+          margin-top: 2.5rem; /* 文字と画像の間に少しスキマを空ける */
         }
         .hero-image-block img {
-          max-height: 240px;
+          max-height: 260px; /* スマホでは画像を少し小ぶりに */
         }
       }
     </style>
