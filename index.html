@@ -196,90 +196,118 @@
     
   
   
-    <div class="md-hero">
-      <div class="md-hero__inner md-grid">
-        <h1>大学物理の演習問題アーカイブ</h1>
-        <p>院試における重要トピックを問題形式で網羅しよう</p>
-        <a href="tags/" class="md-button md-button--primary">問題一覧を覗いてみる</a>
-      </div>
+<div class="md-hero">
+  <div class="md-hero__inner">
+    
+    <div class="hero-text-block">
+      <h1>大学物理の演習問題アーカイブ</h1>
+      <p>院試における重要トピックを問題形式で網羅しよう</p>
+      <a href="tags/" class="md-button md-button--primary">問題をみる</a>
     </div>
 
+    <div class="hero-image-block">
+      <img src="../assets/images/desktop-computer.png" alt="Desktop PC Illustration">
+    </div>
+
+  </div>
+</div>
     <style>
+      /* ヒーローセクション全体の背景（白） */
       .md-hero {
-        position: relative;
-        /* ✨ 解決1：サイトの青に100%馴染む、洗練されたディープブルーのグラデーション */
-        background: linear-gradient(180deg, var(--md-primary-fg-color) 0%, #1e3a8a 100%);
-        color: #ffffff;
-        padding: 4rem 1.5rem 6rem; /* ⬇️下の波のスペースのために、下部の余白を広く */
-        text-align: center;
-        overflow: hidden;
+        background-color: #ffffff;
+        padding: 3rem 1.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
 
-      /* ✨ 解決2：AI感を破壊する「なだらかな曲線の波（SVG）」を配置 */
-      .md-hero::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 40px; /* 波の高さ */
-        background-color: var(--md-background-color, #ffffff); /* サイトのメイン背景白と自動で合流 */
-        /* 美しい曲線を1行のコードで表現（SVGマスク） */
-        clip-path: ellipse(60% 100% at 50% 100%);
-      }
-
+      /* 左右2分割を制御するメインコンテナ */
       .md-hero__inner {
-        position: relative;
-        z-index: 1;
-        max-width: 40rem;
+        max-width: 64rem;
         margin: 0 auto;
+        /* テーブルレイアウトで左右に並べる（WeasyPrint/MkDocs互換） */
+        display: table;
+        width: 100%;
       }
 
+      /* 左ブロック（テキスト） */
+      .hero-text-block {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        text-align: left;
+        padding-right: 2rem;
+      }
+
+      /* 右ブロック（画像） */
+      .hero-image-block {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        text-align: center;
+      }
+
+      /* 画像のサイズ調整 */
+      .hero-image-block img {
+        max-width: 100%;
+        height: auto;
+        max-height: 320px; /* 画像が大きくなりすぎないようにセーブ */
+      }
+
+      /* タイトルの文字デザイン（黒〜濃いグレー） */
       .md-hero h1 {
-        color: #ffffff;
-        font-weight: 800;
-        font-size: clamp(1.8rem, 4.5vw, 2.4rem); /* 威圧感を無くすため、ほんの少しマイルドなサイズに */
-        line-height: 1.3;
-        letter-spacing: -0.01em;
+        color: #1e293b;
+        font-weight: 700;
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        line-height: 1.4;
         margin-bottom: 0.8rem;
-        word-break: keep-all;
-        overflow-wrap: break-word;
+        letter-spacing: -0.01em;
       }
 
+      /* 説明文の文字デザイン */
       .md-hero p {
-        font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+        color: #64748b;
+        font-size: clamp(0.95rem, 2.5vw, 1.05rem);
         line-height: 1.6;
-        margin-bottom: 2.2rem;
-        opacity: 0.85; /* 文字の白を少しだけ柔らかく */
-        font-weight: 400;
-        letter-spacing: 0.02em;
+        margin-bottom: 2rem;
       }
 
-      /* ✨ 絶賛していただいたボタン：ピンク寄りの赤をより洗練 */
+      /* ✨ ご希望の四角いボタン（アクセントのピンク赤） */
       .md-hero .md-button--primary {
         background-color: #ec407a; 
         color: #ffffff;
         border: none;
-        font-weight: 700;
-        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-        padding: 0.8rem 2.2rem;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(236, 64, 122, 0.4);
-        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.75rem 2rem;
+        border-radius: 6px; /* カプセルではなく、シュッとした四角い角丸 */
+        box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2);
+        transition: all 0.2s ease;
       }
 
       .md-hero .md-button--primary:hover {
-        background-color: #f06292;
-        transform: translateY(-3px) scale(1.02); /* ぷにっと浮き出るような気持ちいいエフェクト */
-        box-shadow: 0 8px 25px rgba(236, 64, 122, 0.6);
+        background-color: #f06291c8;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 15px rgba(236, 64, 122, 0.3);
       }
 
-      @media screen and (min-width: 60em) {
+      /* 📱 解決：スマホ用のレスポンシブ対応（画面幅が狭いとき） */
+      @media screen and (max-width: 45em) {
         .md-hero {
-          padding: 6rem 1.5rem 8rem; /* PCではさらにダイナミックに */
+          padding: 2.5rem 1rem;
         }
-        .md-hero::after {
-          height: 60px; /* PCでは波を少し深く */
+        .md-hero__inner {
+          display: block; /* テーブル表示を解除して縦並びに */
+        }
+        .hero-text-block, .hero-image-block {
+          display: block;
+          width: 100%;
+          text-align: center; /* スマホでは中央揃えが綺麗 */
+          padding-right: 0;
+        }
+        .hero-image-block {
+          margin-top: 2.5rem; /* 文字と画像の間に少しスキマを空ける */
+        }
+        .hero-image-block img {
+          max-height: 260px; /* スマホでは画像を少し小ぶりに */
         }
       }
     </style>
