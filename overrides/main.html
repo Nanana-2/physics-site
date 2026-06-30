@@ -8,8 +8,11 @@
   <div class="md-hero__inner">
     
     <div class="hero-text-block">
-      <h1>大学物理の演習問題アーカイブ</h1>
-      <p>院試における重要トピックを問題形式で網羅しよう！</p>
+      <h1>
+        <span>大学物理の演習問題</span>
+        <span>アーカイブ</span>
+      </h1>
+      <p>院試で扱われる重要トピックを、演習問題を通して学ぶ。</p>
       <a href="tags/" class="md-button md-button--primary">問題をみる</a>
     </div>
 
@@ -20,37 +23,31 @@
   </div>
 </div>
     <style>
-      /* ヒーローセクション全体の背景（白） */
+      /* ヒーローセクション全体 */
       .md-hero {
-        background-color: #ffffff;
-        padding: 3rem 1.5rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        background-color: var(--md-default-bg-color);
+        padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+        border-bottom: 1px solid var(--md-default-fg-color--lightest);
       }
 
       /* 左右2分割を制御するメインコンテナ */
       .md-hero__inner {
         max-width: 64rem;
         margin: 0 auto;
-        /* テーブルレイアウトで左右に並べる（WeasyPrint/MkDocs互換） */
-        display: table;
-        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.9fr);
+        align-items: center;
+        gap: clamp(2rem, 5vw, 4rem);
       }
 
       /* 左ブロック（テキスト） */
       .hero-text-block {
-        display: table-cell;
-        vertical-align: middle;
-        width: 50%;
         text-align: left;
-        padding-left: 2rem;
-        padding-right: 3rem;
+        padding-left: clamp(0.5rem, 2vw, 2rem);
       }
 
       /* 右ブロック（画像） */
       .hero-image-block {
-        display: table-cell;
-        vertical-align: middle;
-        width: 50%;
         text-align: center;
       }
 
@@ -58,66 +55,65 @@
       .hero-image-block img {
         max-width: 100%;
         height: auto;
-        max-height: 320px; /* 画像が大きくなりすぎないようにセーブ */
+        max-height: 250px;
       }
 
       /* タイトルの文字デザイン（黒〜濃いグレー） */
       .md-hero h1 {
-        color: #1e293b;
+        color: var(--md-typeset-color);
         font-weight: 500;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        line-height: 1.4;
+        font-size: clamp(1.5rem, 2.7vw, 2rem);
+        line-height: 1.35;
         margin-bottom: 0.8rem;
         letter-spacing: -0.01em;
       }
 
+      .md-hero h1 span {
+        display: block;
+      }
+
       /* 説明文の文字デザイン */
       .md-hero p {
-        color: #64748b;
+        color: var(--md-default-fg-color--light);
         font-size: clamp(0.95rem, 2.5vw, 1.05rem);
         line-height: 1.6;
         margin-bottom: 2rem;
       }
 
-      /* ✨ ご希望の四角いボタン（アクセントのピンク赤） */
+      /* 控えめなアクセントのボタン */
       .md-hero .md-button--primary {
-        background-color: #ec407a; 
+        background-color: #d83b72;
         color: #ffffff;
         border: none;
         font-weight: 600;
         font-size: 0.9rem;
         padding: 0.75rem 2rem;
-        border-radius: 6px; /* カプセルではなく、シュッとした四角い角丸 */
-        box-shadow: 0 4px 12px rgba(236, 64, 122, 0.2);
-        transition: all 0.2s ease;
+        border-radius: 3px;
+        box-shadow: none;
+        transition: background-color 0.2s ease;
       }
 
       .md-hero .md-button--primary:hover {
-        background-color: #f06291c8;
-        transform: translateY(-1px);
-        box-shadow: 0 6px 15px rgba(236, 64, 122, 0.3);
+        background-color: #bd2f62;
       }
 
-      /* 📱 解決：スマホ用のレスポンシブ対応（画面幅が狭いとき） */
+      /* スマホ用のレスポンシブ対応 */
       @media screen and (max-width: 45em) {
         .md-hero {
           padding: 2.5rem 1rem;
         }
         .md-hero__inner {
-          display: block; /* テーブル表示を解除して縦並びに */
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
         .hero-text-block, .hero-image-block {
-          display: block;
-          width: 100%;
-          text-align: center; /* スマホでは中央揃えが綺麗 */
-          padding-left: 0;
-          padding-right: 0;
+          text-align: center;
         }
-        .hero-image-block {
-          margin-top: 2.5rem; /* 文字と画像の間に少しスキマを空ける */
+        .hero-text-block {
+          padding-left: 0;
         }
         .hero-image-block img {
-          max-height: 260px; /* スマホでは画像を少し小ぶりに */
+          max-height: 220px;
         }
       }
     </style>
