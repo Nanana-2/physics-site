@@ -48,7 +48,7 @@ title: ホーム
 
 です。左側のサイドメニュー，または以下のリンクから各分野の問題へアクセスできます。
 
-<div class="grid cards" markdown>
+<div class="grid cards subject-grid" markdown>
 
 -   __力学__
 

@@ -9,14 +9,14 @@
     
     <div class="hero-text-block">
       <h1>
-        <span>大学物理の</span>
+        <span>大学物理</span>
         <span>演習問題アーカイブ</span>
       </h1>
       <p class="hero-description">力学から統計力学まで、学部物理の重要トピックを300問以上の演習でたどる。</p>
 
       <div class="hero-actions">
-        <a href="{{ 'tags/' | url }}" class="md-button md-button--primary">難易度から探す</a>
-        <a href="#fields" class="md-button hero-button-secondary">分野から選ぶ ↓</a>
+        <a href="#fields" class="md-button hero-button-primary">分野から選ぶ ↓</a>
+        <a href="{{ 'tags/' | url }}" class="md-button hero-button-secondary">難易度から探す</a>
       </div>
 
       <ul class="hero-stats" aria-label="収録内容">
@@ -39,6 +39,10 @@
       /* title メタデータ由来の自動見出しはホームでは表示しない */
       .md-content__inner > h1:first-child {
         display: none;
+      }
+
+      .md-content__inner > h1:first-child + h2 {
+        margin-top: 0;
       }
 
       html {
@@ -108,14 +112,14 @@
         font-weight: 600;
       }
 
-      .md-hero .hero-actions .md-button--primary {
-        background-color: var(--md-primary-fg-color);
-        color: #ffffff;
-        border-color: var(--md-primary-fg-color);
+      .md-hero .hero-actions .hero-button-primary {
+        background-color: var(--md-default-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-default-fg-color);
       }
 
-      .md-hero .hero-actions .md-button--primary:hover {
-        opacity: 0.88;
+      .md-hero .hero-actions .hero-button-primary:hover {
+        opacity: 0.82;
       }
 
       .md-hero .hero-actions .hero-button-secondary {
@@ -125,8 +129,40 @@
       }
 
       .md-hero .hero-actions .hero-button-secondary:hover {
-        color: var(--md-primary-fg-color);
-        border-color: var(--md-primary-fg-color);
+        color: var(--md-default-fg-color);
+        border-color: var(--md-default-fg-color);
+      }
+
+      /* ホームの分野カード */
+      .md-typeset .grid.cards.subject-grid > ul {
+        gap: 0.9rem;
+      }
+
+      .md-typeset .grid.cards.subject-grid > ul > li {
+        padding: 1.1rem 1.2rem;
+        border: 1px solid var(--md-default-fg-color--lightest);
+        border-radius: 6px;
+        box-shadow: none;
+        transition: border-color 0.18s ease, transform 0.18s ease;
+      }
+
+      .md-typeset .grid.cards.subject-grid > ul > li:hover {
+        border-color: var(--md-default-fg-color--lighter);
+        transform: translateY(-2px);
+      }
+
+      .md-typeset .grid.cards.subject-grid > ul > li > p:first-child {
+        margin-top: 0;
+        font-size: 1.02rem;
+      }
+
+      .md-typeset .grid.cards.subject-grid hr {
+        margin: 0.7rem 0;
+        border-color: var(--md-default-fg-color--lightest);
+      }
+
+      .md-typeset .grid.cards.subject-grid a::after {
+        content: " →";
       }
 
       /* 収録内容 */
@@ -186,6 +222,9 @@
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
+        }
+        .md-typeset .grid.cards.subject-grid > ul > li {
+          transition: none;
         }
       }
     </style>
