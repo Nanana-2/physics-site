@@ -9,21 +9,14 @@
     
     <div class="hero-text-block">
       <h1>
-        <span>大学物理</span>
-        <span>演習問題アーカイブ</span>
+        物理の問題がたくさん！
       </h1>
-      <p class="hero-description">力学から統計力学まで、学部物理の重要トピックを300問以上の演習でたどる。</p>
+      <p class="hero-description">力学から統計力学まで学部物理の重要問題をまとめました</p>
 
       <div class="hero-actions">
-        <a href="#fields" class="md-button hero-button-primary">分野から選ぶ ↓</a>
-        <a href="{{ 'tags/' | url }}" class="md-button hero-button-secondary">難易度から探す</a>
+        <a href="#fields" class="md-button hero-button-primary">分野ごとにみる ↓</a>
+        <a href="{{ 'tags/' | url }}" class="md-button hero-button-secondary">難易度ごとの一覧へ</a>
       </div>
-
-      <ul class="hero-stats" aria-label="収録内容">
-        <li><strong>300+</strong><span>演習問題</span></li>
-        <li><strong>5</strong><span>分野</span></li>
-        <li><strong>3</strong><span>難易度</span></li>
-      </ul>
     </div>
 
   </div>
@@ -32,7 +25,7 @@
       /* ヒーローセクション全体 */
       .md-hero {
         background-color: var(--md-default-bg-color);
-        padding: clamp(2.25rem, 5vw, 3.75rem) 1.5rem;
+        padding: clamp(1.8rem, 4vw, 3rem) 1.5rem;
         border-bottom: 1px solid var(--md-default-fg-color--lightest);
       }
 
@@ -96,7 +89,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
-        margin-top: 1.6rem;
+        margin-top: 1.35rem;
       }
 
       /* ボタン */
@@ -165,47 +158,16 @@
         content: " →";
       }
 
-      /* 収録内容 */
-      .hero-stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem 1.8rem;
-        margin: 1.5rem 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .hero-stats li {
-        display: flex;
-        align-items: baseline;
-        gap: 0.45rem;
-        margin: 0;
-      }
-
-      .hero-stats strong {
-        color: var(--md-typeset-color);
-        font-size: 1rem;
-        font-weight: 600;
-      }
-
-      .hero-stats span {
-        color: var(--md-default-fg-color--light);
-        font-size: 0.78rem;
-      }
-
       /* スマホ用のレスポンシブ対応 */
       @media screen and (max-width: 45em) {
         .md-hero {
-          padding: 2.5rem 1rem;
+          padding: 2rem 1rem;
         }
         .hero-text-block {
           padding-left: 0;
         }
         .md-hero h1 {
           font-size: clamp(1.5rem, 7vw, 2rem);
-        }
-        .hero-stats {
-          gap: 1rem 1.5rem;
         }
       }
 
