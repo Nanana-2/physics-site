@@ -211,6 +211,10 @@
       </div>
     </div>
 
+    <div class="hero-image-block" aria-hidden="true">
+      <img src="assets/images/undraw_road-to-knowledge_ufma.png" alt="">
+    </div>
+
   </div>
 </div>
     <style>
@@ -242,13 +246,25 @@
       .md-hero__inner {
         max-width: 64rem;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1.7fr) minmax(14rem, 0.8fr);
+        align-items: center;
+        gap: clamp(2rem, 5vw, 4rem);
       }
 
       /* ヒーローのテキスト */
       .hero-text-block {
-        max-width: 44rem;
+        min-width: 0;
         text-align: left;
         padding-left: clamp(0.5rem, 2vw, 2rem);
+      }
+
+      .hero-image-block img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
       }
 
       /* タイトル */
@@ -257,8 +273,8 @@
         flex-wrap: wrap;
         gap: 0 0.35em;
         color: var(--md-typeset-color);
-        font-weight: 500;
-        font-size: clamp(1.55rem, 3vw, 2.25rem);
+        font-weight: 700;
+        font-size: clamp(1.4rem, 2.5vw, 1.9rem);
         line-height: 1.35;
         margin: 0 0 1rem;
         letter-spacing: -0.015em;
@@ -272,8 +288,9 @@
       .md-hero .hero-description {
         max-width: 38rem;
         margin: 0;
-        color: var(--md-default-fg-color--light);
+        color: var(--md-typeset-color);
         font-size: clamp(0.95rem, 2vw, 1.05rem);
+        font-weight: 700;
         line-height: 1.8;
       }
 
@@ -358,8 +375,14 @@
         .hero-text-block {
           padding-left: 0;
         }
+        .md-hero__inner {
+          grid-template-columns: 1fr;
+        }
+        .hero-image-block {
+          display: none;
+        }
         .md-hero h1 {
-          font-size: clamp(1.5rem, 7vw, 2rem);
+          font-size: clamp(1.35rem, 6.5vw, 1.8rem);
         }
       }
 
