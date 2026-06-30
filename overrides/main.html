@@ -63,8 +63,8 @@
       .md-hero h1 {
         color: var(--md-typeset-color);
         font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 1.25rem;
+        line-height: 1.4;
         margin: 0 0 0.65rem;
         letter-spacing: 0;
       }
@@ -95,7 +95,7 @@
         border: 1px solid var(--md-default-fg-color--lighter);
         border-radius: 4px;
         box-shadow: none;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         font-weight: 600;
       }
 
@@ -118,38 +118,6 @@
       .md-hero .hero-actions .hero-button-secondary:hover {
         color: var(--md-default-fg-color);
         border-color: var(--md-default-fg-color);
-      }
-
-      /* ホームの分野カード */
-      .md-typeset .grid.cards.subject-grid > ul {
-        gap: 0.9rem;
-      }
-
-      .md-typeset .grid.cards.subject-grid > ul > li {
-        padding: 1.1rem 1.2rem;
-        border: 1px solid var(--md-default-fg-color--lightest);
-        border-radius: 6px;
-        box-shadow: none;
-        transition: border-color 0.18s ease, transform 0.18s ease;
-      }
-
-      .md-typeset .grid.cards.subject-grid > ul > li:hover {
-        border-color: var(--md-default-fg-color--lighter);
-        transform: translateY(-2px);
-      }
-
-      .md-typeset .grid.cards.subject-grid > ul > li > p:first-child {
-        margin-top: 0;
-        font-size: 1.02rem;
-      }
-
-      .md-typeset .grid.cards.subject-grid hr {
-        margin: 0.7rem 0;
-        border-color: var(--md-default-fg-color--lightest);
-      }
-
-      .md-typeset .grid.cards.subject-grid a::after {
-        content: " →";
       }
 
       /* スマホ用のレスポンシブ対応 */
@@ -175,9 +143,6 @@
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
-        }
-        .md-typeset .grid.cards.subject-grid > ul > li {
-          transition: none;
         }
       }
     </style>
