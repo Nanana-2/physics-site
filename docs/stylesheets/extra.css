@@ -211,3 +211,129 @@ body, input {
     color: var(--md-typeset-color) !important;
   }
 }
+
+/* ==========================================
+   13. 教科書一覧・書籍カード
+   ========================================== */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.book-card {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1.2rem;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-default-fg-color--lighter);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.book-cover {
+  float: left;
+  width: 28%;
+  text-align: center;
+}
+
+.book-cover img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  float: right;
+  width: 68%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.book-card::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.book-info h3 {
+  margin: 0.4rem 0 0.6rem !important;
+  color: var(--md-typeset-color) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+.book-info p {
+  margin-bottom: 1rem !important;
+  color: var(--md-default-fg-color--light) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+}
+
+.book-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.tag-recommend {
+  color: #ef4444;
+  background-color: #fee2e2;
+}
+
+.tag-hard {
+  color: #475569;
+  background-color: #f1f5f9;
+}
+
+.book-btn {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  color: #ffffff !important;
+  background-color: #3b5998;
+  border-radius: 4px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background-color 0.2s;
+}
+
+.book-btn:hover {
+  background-color: #2d4373;
+}
+
+@media screen and (max-width: 45em) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .book-cover {
+    float: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .book-cover img {
+    max-height: 140px;
+  }
+
+  .book-info {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
