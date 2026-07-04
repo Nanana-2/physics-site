@@ -334,6 +334,6 @@ body, input {
   .book-info {
     float: none;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }
