@@ -2,19 +2,23 @@
    0. サイト全体の基準色
    ========================================== */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #243b5a;
-  --md-primary-fg-color--light: #38577d;
-  --md-primary-fg-color--dark: #182b44;
+  --md-primary-fg-color: #171d3b;
+  --md-primary-fg-color--light: #2b345f;
+  --md-primary-fg-color--dark: #0e1329;
   --md-accent-fg-color: #5472cd;
-  --md-typeset-a-color: #365f91;
+  --md-typeset-a-color: #334d86;
+  --site-heading-accent: #303a78;
+  --site-heading-soft: #d9dcef;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #1c314d;
-  --md-primary-fg-color--light: #345477;
-  --md-primary-fg-color--dark: #122238;
+  --md-primary-fg-color: #11162f;
+  --md-primary-fg-color--light: #283156;
+  --md-primary-fg-color--dark: #090d20;
   --md-accent-fg-color: #6f93e8;
   --md-typeset-a-color: #82a7df;
+  --site-heading-accent: #7d8bd1;
+  --site-heading-soft: #2b3152;
 }
 
 /* ==========================================
@@ -54,11 +58,11 @@
 
 /* ☀️ ライトモード時のH2の下線（薄い青） */
 [data-md-color-scheme="default"] .md-typeset h2 {
-  border-bottom: solid 3px #cce4ff;
+  border-bottom: solid 3px var(--site-heading-soft);
 }
 /* 🌙 ダークモード時のH2の下線（少し沈んだ青） */
 [data-md-color-scheme="slate"] .md-typeset h2 {
-  border-bottom: solid 3px #1e293b;
+  border-bottom: solid 3px var(--site-heading-soft);
 }
 
 .md-typeset h2:after {
@@ -71,11 +75,11 @@
 }
 /* ☀️ ライトモード時のリボン（鮮やかな青） */
 [data-md-color-scheme="default"] .md-typeset h2:after {
-  border-bottom: solid 3px #5472cd;
+  border-bottom: solid 3px var(--site-heading-accent);
 }
 /* 🌙 ダークモード時のリボン（ネオン系の映える青） */
 [data-md-color-scheme="slate"] .md-typeset h2:after {
-  border-bottom: solid 3px #3878f8;
+  border-bottom: solid 3px var(--site-heading-accent);
 }
 
 /* ==========================================
@@ -92,13 +96,13 @@
 [data-md-color-scheme="default"] .md-typeset h1,
 [data-md-color-scheme="default"] .md-typeset h3 {
   color: #333333 !important;
-  border-left: solid 5px #3a52ca;
+  border-left: solid 5px var(--site-heading-accent);
 }
 /* 🌙 ダークモード時の左線と文字色 */
 [data-md-color-scheme="slate"] .md-typeset h1,
 [data-md-color-scheme="slate"] .md-typeset h3 {
   color: #f8fafcf1 !important; /* 暗闇で見やすい白 */
-  border-left: solid 5px #3878f8; /* 暗闇で映える鮮やかな青 */
+  border-left: solid 5px var(--site-heading-accent);
 }
 
 /* ==========================================
