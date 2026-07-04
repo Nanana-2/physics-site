@@ -186,8 +186,9 @@
       Amazonでみる
     </a>
   </div>
+</div>
 
-  <div class="book-card">
+<div class="book-card">
   <div class="book-cover">
     <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
   </div>
@@ -199,8 +200,9 @@
       Amazonでみる
     </a>
   </div>
+</div>
 
-  <div class="book-card">
+<div class="book-card">
   <div class="book-cover">
     <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
   </div>
@@ -211,8 +213,9 @@
       Amazonでみる
     </a>
   </div>
+</div>
 
-  <div class="book-card">
+<div class="book-card">
   <div class="book-cover">
     <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
   </div>
@@ -224,9 +227,9 @@
       Amazonでみる
     </a>
   </div>
+</div>
 
-
-  <div class="book-card">
+<div class="book-card">
   <div class="book-cover">
     <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
   </div>
@@ -238,13 +241,9 @@
       Amazonでみる
     </a>
   </div>
-
-
 </div>
 
 </div>
-
-
 
 ## 統計力学
 
