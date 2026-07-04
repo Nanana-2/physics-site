@@ -1,4 +1,23 @@
 /* ==========================================
+   0. サイト全体の基準色
+   ========================================== */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #243b5a;
+  --md-primary-fg-color--light: #38577d;
+  --md-primary-fg-color--dark: #182b44;
+  --md-accent-fg-color: #5472cd;
+  --md-typeset-a-color: #365f91;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1c314d;
+  --md-primary-fg-color--light: #345477;
+  --md-primary-fg-color--dark: #122238;
+  --md-accent-fg-color: #6f93e8;
+  --md-typeset-a-color: #82a7df;
+}
+
+/* ==========================================
    1. スマホでの数式はみ出し・レイアウト崩れ対策
    ========================================== */
 .mjx-container[display="true"] {
@@ -301,7 +320,7 @@ body, input {
   display: inline-block;
   padding: 0.4rem 1.2rem;
   color: #ffffff !important;
-  background-color: #3b5998;
+  background-color: var(--md-primary-fg-color);
   border-radius: 4px;
   font-size: 0.8rem !important;
   font-weight: 600;
@@ -310,7 +329,7 @@ body, input {
 }
 
 .book-btn:hover {
-  background-color: #2d4373;
+  background-color: var(--md-primary-fg-color--dark);
 }
 
 @media screen and (max-width: 45em) {
