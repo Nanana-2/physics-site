@@ -21,6 +21,20 @@
   --site-heading-soft: #2b3152;
 }
 
+.header-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-home-link:hover {
+  color: inherit;
+}
+
+.header-home-link:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: -2px;
+}
+
 /* ==========================================
    1. スマホでの数式はみ出し・レイアウト崩れ対策
    ========================================== */
