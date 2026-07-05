@@ -14564,7 +14564,7 @@
 
 <h1 id="_1">クローニッヒ・ペニー模型とエネルギーバンド</h1>
 <h2 id="_2">問題</h2>
-<p>原子が規則正しく配列した結晶では，粒子が受けるポテンシャルは空間的な周期性を持つ。周期ポテンシャル中の電子の波動関数が満たす条件はブロッホの定理で与えられる。ここでは，周期ポテンシャルを単純化したクローニッヒ・ペニー模型を扱い，境界条件とブロッホの定理から許容帯と禁制帯が生じることを示す。</p>
+<p>原子が規則正しく配列した結晶では，粒子が受けるポテンシャルは空間的な周期性を持つ。周期ポテンシャル中の電子の波動関数が満たす条件はブロッホの定理で与えられる。</p>
 <p>周期 <span class="arithmatex">\(L = a + b\)</span> を持つ一次元の周期ポテンシャル <span class="arithmatex">\(V(x) = V(x + L)\)</span> を以下のように設定する。</p>
 <div class="arithmatex">\[
 V(x) = \begin{cases} 0 &amp; (0 &lt; x &lt; a) \\ V_0 &amp; (-b &lt; x &lt; 0) \end{cases}
@@ -14581,20 +14581,20 @@ V(x) = \begin{cases} 0 &amp; (0 &lt; x &lt; a) \\ V_0 &amp; (-b &lt; x &lt; 0) \
 <div class="arithmatex">\[
 P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(kL)
 \]</div>
-<p>(4) 結晶波数 <span class="arithmatex">\(k\)</span> は実数であるため，(3) の右辺は <span class="arithmatex">\(|\cos(kL)| \le 1\)</span> を満たす。この制限から，電子がとり得ないエネルギー領域であるバンドギャップが生じる理由を説明せよ。</p>
+<p>(4) 結晶波数 <span class="arithmatex">\(k\)</span> は実数であるため，(3) の右辺は <span class="arithmatex">\(|\cos(kL)| \le 1\)</span> を満たす。この制限から，許容帯と禁制帯が生じる理由を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>各領域における時間に依存しないシュレーディンガー方程式から，定数を定めます。</p>
 <ul>
-<li><strong>領域 I（ <span class="arithmatex">\(0 &lt; x &lt; a\)</span> ）</strong>
+<li><strong>領域 I：<span class="arithmatex">\(0 &lt; x &lt; a\)</span></strong>
   ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
   -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{I}}}{dx^2} = E \psi_{\text{I}} \implies \alpha = \sqrt{\frac{2mE}{\hbar^2}}
 \]</div>
 <ul>
-<li><strong>領域 II（ <span class="arithmatex">\(-b &lt; x &lt; 0\)</span> ）</strong>
+<li><strong>領域 II：<span class="arithmatex">\(-b &lt; x &lt; 0\)</span></strong>
   ポテンシャルは <span class="arithmatex">\(V(x) = V_0\)</span> であり， <span class="arithmatex">\(E &lt; V_0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
@@ -14612,7 +14612,7 @@ P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(kL)
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(x = a\)</span> における連続性</strong>
-  本来の接続相手は右隣の周期の左端（ <span class="arithmatex">\(x = a\)</span> から <span class="arithmatex">\(x = a+b\)</span> の領域）ですが，ブロッホの定理 <span class="arithmatex">\(\psi(x + L) = e^{ikL}\psi(x)\)</span> を利用します。
+  本来の接続相手は，<span class="arithmatex">\(x = a\)</span> から <span class="arithmatex">\(x = a+b\)</span> までの右隣の周期ですが，ブロッホの定理 <span class="arithmatex">\(\psi(x + L) = e^{ikL}\psi(x)\)</span> を利用します。
   ポテンシャルの周期性から， <span class="arithmatex">\(x = a\)</span> における波動関数の値 <span class="arithmatex">\(\psi(a)\)</span> は，1周期左にずらした位置 <span class="arithmatex">\(x = a - L = a - (a + b) = -b\)</span> における領域 II の値 <span class="arithmatex">\(\psi_{\text{II}}(-b)\)</span> に位相因子を掛けたものに等しくなります。</li>
 </ul>
 <div class="arithmatex">\[
@@ -14621,7 +14621,7 @@ P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(kL)
 <p>$$
   \psi_{\text{I}}'(a) = e^{ikL} \psi_{\text{II}}'(-b)
 $$
-  具体的な形を代入すると，以下のようになります。</p>
+  形を代入すると，以下のようになります。</p>
 <div class="arithmatex">\[
   A e^{i\alpha a} + B e^{-i\alpha a} = e^{ikL} \left( C e^{-\beta b} + D e^{\beta b} \right)
 \]</div>
@@ -14629,12 +14629,12 @@ $$
   i\alpha \left( A e^{i\alpha a} - B e^{-i\alpha a} \right) = \beta e^{ikL} \left( C e^{-\beta b} - D e^{\beta b} \right)
 \]</div>
 <h3 id="3">(3)</h3>
-<p>デルタ関数極限（ <span class="arithmatex">\(b \to 0, V_0 \to \infty\)</span> ）の近似を適用します。
+<p>デルタ関数極限 <span class="arithmatex">\(b \to 0, V_0 \to \infty\)</span> の近似を適用します。
 この極限では <span class="arithmatex">\(E \ll V_0\)</span> となるため， <span class="arithmatex">\(\beta\)</span> の定義式は以下のように近似されます。</p>
 <div class="arithmatex">\[
 \beta = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}} \approx \sqrt{\frac{2mV_0}{\hbar^2}}
 \]</div>
-<p>これより， <span class="arithmatex">\(b \to 0\)</span> に伴って <span class="arithmatex">\(\beta b \to 0\)</span> となります。双曲線関数のマクローリン展開（ <span class="arithmatex">\(\sinh x \approx x, \cosh x \approx 1\)</span> ）を適用します。</p>
+<p>これより， <span class="arithmatex">\(b \to 0\)</span> に伴って <span class="arithmatex">\(\beta b \to 0\)</span> となります。双曲線関数のマクローリン展開 <span class="arithmatex">\(\sinh x \approx x, \cosh x \approx 1\)</span> を適用します。</p>
 <div class="arithmatex">\[
 \sinh(\beta b) \approx \beta b, \quad \cosh(\beta b) \approx 1
 \]</div>
@@ -14657,8 +14657,8 @@ P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(kL)
 <h3 id="4">(4)</h3>
 <p>(3) で得られた式の左辺を <span class="arithmatex">\(\alpha a\)</span> の関数としてグラフに描くと，減衰する振動曲線になります。
 この曲線の値が，右辺の取り得る範囲である <span class="arithmatex">\([-1, 1]\)</span> を超えてしまう領域が周期的に発生します。</p>
-<p>左辺の値が 1 より大きい，または <span class="arithmatex">\(-1\)</span> より小さい <span class="arithmatex">\(\alpha a\)</span> の範囲（すなわちエネルギー <span class="arithmatex">\(E\)</span> の範囲）では，等式を満たす実数の結晶波数 <span class="arithmatex">\(k\)</span> が存在しなくなります。これは波動関数が結晶内を伝播できずに減衰することを意味し，電子の存在が許されない<strong>禁制帯（バンドギャップ）</strong>となります。</p>
-<p>逆に，左辺の値が <span class="arithmatex">\([-1, 1]\)</span> に収まるエネルギー領域は，電子が自由に結晶内を動き回ることができる<strong>許容帯（エネルギーバンド）</strong>となります。これにより，孤立した原子が持つ不連続な準位が，規則正しく並ぶことで幅を持ったバンドへと変化する様子が数学的に示されました。</p>
+<p>左辺の値が 1 より大きい，または <span class="arithmatex">\(-1\)</span> より小さいエネルギー範囲では，等式を満たす実数の結晶波数 <span class="arithmatex">\(k\)</span> が存在しません。これは波動関数が結晶内を伝播できずに減衰することを意味し，電子の存在が許されない<strong>禁制帯</strong>となります。</p>
+<p>一方，左辺の値が <span class="arithmatex">\([-1, 1]\)</span> に収まるエネルギー領域は，電子の伝播が可能な<strong>許容帯</strong>となります。</p>
 
 
 

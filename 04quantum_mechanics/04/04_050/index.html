@@ -14558,7 +14558,7 @@ p(x) = \sqrt{2m[V(x) - E]}
 <div class="arithmatex">\[
 T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx \right]
 \]</div>
-<p>(3) この近似式を，高さが一定で幅が <span class="arithmatex">\(a\)</span> の矩形ポテンシャル障壁に適用する。<span class="arithmatex">\(x_1 = 0, x_2 = a, V(x) = V_0\)</span> として透過確率の指数部分を計算し，前問で求めた接続条件による近似結果の指数因子 <span class="arithmatex">\(e^{-2\kappa a}\)</span> と一致することを確認せよ。</p>
+<p>(3) この近似式を，高さが一定で幅が <span class="arithmatex">\(a\)</span> の矩形ポテンシャル障壁に適用する。<span class="arithmatex">\(x_1 = 0, x_2 = a, V(x) = V_0\)</span> として透過確率の指数因子を求めよ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14580,7 +14580,7 @@ T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx
 <div class="arithmatex">\[
 \frac{\hbar}{2m} \frac{d^2 \Phi}{dx^2} + \frac{1}{2m} \left( \frac{d\Phi}{dx} \right)^2 = V(x) - E
 \]</div>
-<p>ポテンシャルの変化が極めて緩やかであるという半古典的極限（ <span class="arithmatex">\(\hbar \to 0\)</span> ）を考え， <span class="arithmatex">\(\hbar\)</span> に比例する第1項を無視する近似を行います。</p>
+<p>ポテンシャルの変化が非常に緩やかであるという半古典的極限 <span class="arithmatex">\(\hbar \to 0\)</span> を考え， <span class="arithmatex">\(\hbar\)</span> に比例する第1項を無視する近似を行います。</p>
 <div class="arithmatex">\[
 \frac{1}{2m} \left( \frac{d\Phi}{dx} \right)^2 \approx V(x) - E \implies \left( \frac{d\Phi}{dx} \right)^2 \approx 2m[V(x) - E] = p(x)^2
 \]</div>
@@ -14597,7 +14597,7 @@ T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx
 <div class="arithmatex">\[
 \frac{\psi(x_2)}{\psi(x_1)} \approx \exp\left[ -\frac{1}{\hbar} \int_{x_1}^{x_2} p(x) dx \right]
 \]</div>
-<p>トンネル確率（透過係数） <span class="arithmatex">\(T\)</span> は，確率流密度の比（振幅の絶対値の2乗）に比例するため，この比の2乗として評価されます。</p>
+<p>透過係数 <span class="arithmatex">\(T\)</span> は確率流密度の比，すなわち振幅の絶対値の2乗の比から評価されます。</p>
 <div class="arithmatex">\[
 T \approx \left| \frac{\psi(x_2)}{\psi(x_1)} \right|^2 \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} p(x) dx \right]
 \]</div>
@@ -14606,7 +14606,7 @@ T \approx \left| \frac{\psi(x_2)}{\psi(x_1)} \right|^2 \approx \exp\left[ -\frac
 T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx \right]
 \]</div>
 <h3 id="3">(3)</h3>
-<p>与えられた矩形ポテンシャル障壁の条件（ <span class="arithmatex">\(x_1 = 0, x_2 = a, V(x) = V_0\)</span> ）を (2) の式に適用します。被積分関数が位置 <span class="arithmatex">\(x\)</span> に依存しない定数となるため，積分計算が単純な掛け算になります。</p>
+<p>与えられた矩形ポテンシャル障壁の条件 <span class="arithmatex">\(x_1 = 0, x_2 = a, V(x) = V_0\)</span> を (2) の式に適用します。被積分関数が位置 <span class="arithmatex">\(x\)</span> に依存しない定数となるため，積分計算が単純な掛け算になります。</p>
 <div class="arithmatex">\[
 \int_{0}^{a} \sqrt{2m(V_0 - E)} \, dx = \sqrt{2m(V_0 - E)} \int_{0}^{a} dx = \sqrt{2m(V_0 - E)} \cdot a
 \]</div>
@@ -14622,7 +14622,7 @@ T \approx \exp\left[ -\frac{2}{\hbar} \sqrt{2m(V_0 - E)} \cdot a \right]
 <div class="arithmatex">\[
 T \approx \exp( -2\kappa a ) = e^{-2\kappa a}
 \]</div>
-<p>この結果は，前問において境界条件を直接解いて得られた，厚い障壁に対する透過確率の主要な減少因子と完全に一致します。これにより，WKB近似が滑らかな障壁だけでなく，矩形障壁の極限においても正しい依存性を与えることが確認されました。</p>
+<p>この結果は，前問において境界条件を直接解いて得られた，厚い障壁に対する透過確率の主要な減少因子と一致します。これにより，WKB近似が滑らかな障壁だけでなく，矩形障壁の極限においても正しい依存性を与えることが確認されました。</p>
 
 
 

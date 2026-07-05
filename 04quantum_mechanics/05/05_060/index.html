@@ -14542,10 +14542,10 @@
 
 <h1 id="_1">数状態と演算子の作用</h1>
 <h2 id="_2">問題</h2>
-<p>生成演算子 <span class="arithmatex">\(\hat{a}^\dagger\)</span> と消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> は，数状態の量子数を1つだけ上下させる。これらの演算子を数状態 <span class="arithmatex">\(|n\rangle\)</span> に作用させたときの規格化係数を，演算子の交換関係から導出する。</p>
+<p>生成演算子 <span class="arithmatex">\(\hat{a}^\dagger\)</span> と消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> は，数状態の量子数を1つだけ上下させる。</p>
 <p>ハミルトニアンの固有状態を <span class="arithmatex">\(|n\rangle\)</span> とし，数演算子 <span class="arithmatex">\(\hat{N} = \hat{a}^\dagger \hat{a}\)</span> に対する固有値方程式を <span class="arithmatex">\(\hat{N}|n\rangle = n|n\rangle\)</span> とする。状態ベクトルは規格化されており， <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> を満たす。また，演算子の交換関係は <span class="arithmatex">\([\hat{a}, \hat{a}^\dagger] = 1\)</span> である。以下の問いに答えよ。</p>
 <p>(1) 交換関係から導かれる関係式 <span class="arithmatex">\(\hat{N}\hat{a} = \hat{a}(\hat{N}-1)\)</span> を用いて，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> もまた数演算子 <span class="arithmatex">\(\hat{N}\)</span> の固有状態であることを示し，その固有値を求めよ。同様に， <span class="arithmatex">\(\hat{N}\hat{a}^\dagger = \hat{a}^\dagger(\hat{N}+1)\)</span> を用いて，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> の固有値を求めよ。</p>
-<p>(2) 消滅演算子を作用させた状態を <span class="arithmatex">\(\hat{a}|n\rangle = c_n |n-1\rangle\)</span> と置く。この状態ベクトルのノルムの2乗 <span class="arithmatex">\(\left( \hat{a}|n\rangle \right)^\dagger \left( \hat{a}|n\rangle \right)\)</span> を，数演算子 <span class="arithmatex">\(\hat{N}\)</span> の期待値に帰着させて計算し，正の実数として規格化係数 <span class="arithmatex">\(c_n\)</span> を求めよ。</p>
+<p>(2) 消滅演算子を作用させた状態を <span class="arithmatex">\(\hat{a}|n\rangle = c_n |n-1\rangle\)</span> と置く。この状態ベクトルのノルムの2乗 <span class="arithmatex">\(\left( \hat{a}|n\rangle \right)^\dagger \left( \hat{a}|n\rangle \right)\)</span> を，数演算子 <span class="arithmatex">\(\hat{N}\)</span> の期待値に書き換えて計算し，正の実数として規格化係数 <span class="arithmatex">\(c_n\)</span> を求めよ。</p>
 <p>(3) 生成演算子を作用させた状態を <span class="arithmatex">\(\hat{a}^\dagger|n\rangle = d_n |n+1\rangle\)</span> と置く。同様に内積 <span class="arithmatex">\(\left( \hat{a}^\dagger|n\rangle \right)^\dagger \left( \hat{a}^\dagger|n\rangle \right)\)</span> を計算し，交換関係を用いて数演算子の形に整理することで，正の実数としての規格化係数 <span class="arithmatex">\(d_n\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14558,7 +14558,7 @@
 <div class="arithmatex">\[
 \hat{a}(\hat{N}|n\rangle - |n\rangle) = \hat{a}(n|n\rangle - |n\rangle) = \hat{a}(n-1)|n\rangle
 \]</div>
-<p><span class="arithmatex">\(n-1\)</span> は単なる数値（固有値）であるため，演算子の前に出すことができます。</p>
+<p><span class="arithmatex">\(n-1\)</span> は固有値であるため，演算子の前に出すことができます。</p>
 <div class="arithmatex">\[
 \hat{N} \left( \hat{a}|n\rangle \right) = (n-1) \left( \hat{a}|n\rangle \right)
 \]</div>
@@ -14573,7 +14573,7 @@
 <div class="arithmatex">\[
 \left( \hat{a}|n\rangle \right)^\dagger \left( \hat{a}|n\rangle \right) = \langle n| \hat{a}^\dagger \hat{a} |n\rangle
 \]</div>
-<p>ここで，演算子の組み合わせは数演算子の定義そのもの（ <span class="arithmatex">\(\hat{a}^\dagger \hat{a} = \hat{N}\)</span> ）です。</p>
+<p>ここで，演算子の組み合わせは数演算子の定義そのもの <span class="arithmatex">\(\hat{a}^\dagger \hat{a} = \hat{N}\)</span> です。</p>
 <div class="arithmatex">\[
 \langle n| \hat{a}^\dagger \hat{a} |n\rangle = \langle n| \hat{N} |n\rangle
 \]</div>

@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">アルファ崩壊のトンネル模型</h1>
 <h2 id="_2">問題</h2>
-<p>不安定な重原子核がアルファ粒子を放出して別の原子核に変化する現象をアルファ崩壊と呼ぶ。原子核の内部にあるアルファ粒子は，強い引力である核力によるポテンシャルの井戸に閉じ込められている。同時に，原子核の外側では，残された原子核との間に働く静電反発力による高いポテンシャルの壁に囲まれている。古典力学では粒子はこの壁を越えられないが，量子力学のトンネル効果によって壁を透過して外へ飛び出すことができる。この現象をガモフのトンネル模型に基づいて解析する。</p>
+<p>不安定な重原子核がアルファ粒子を放出して別の原子核に変化する現象をアルファ崩壊と呼ぶ。原子核内のアルファ粒子は核力によるポテンシャル井戸に閉じ込められているが，トンネル効果によって外側のクーロン障壁を透過できる。</p>
 <p>原子番号 <span class="arithmatex">\(Z\)</span> の原子核から，質量 <span class="arithmatex">\(m\)</span>，電荷 <span class="arithmatex">\(2e\)</span> のアルファ粒子が放出される状況を考える。アルファ粒子が受ける一次元的な有効ポテンシャル <span class="arithmatex">\(V(r)\)</span> を，中心からの距離 <span class="arithmatex">\(r\)</span> の関数として以下のようにモデル化する。</p>
 <div class="arithmatex">\[
 V(x) = \begin{cases} -V_0 &amp; (0 \le r &lt; R) \\ \frac{2(Z-2)e^2}{4\pi\varepsilon_0 r} &amp; (r \ge R) \end{cases}
@@ -14552,13 +14552,13 @@ V(x) = \begin{cases} -V_0 &amp; (0 \le r &lt; R) \\ \frac{2(Z-2)e^2}{4\pi\vareps
 <div class="arithmatex">\[
 T \approx \exp\left[ -\frac{2}{\hbar} \int \sqrt{2m[V(r) - E]} \, dr \right]
 \]</div>
-<p>を用いて，このクーロン障壁を通り抜ける透過確率を <span class="arithmatex">\(T \approx \exp(-2G)\)</span> と表すとき，ガモフ因子 <span class="arithmatex">\(G\)</span> の積分形式を具体的なポテンシャルの形を代入して示せ。</p>
+<p>を用いる。透過確率を <span class="arithmatex">\(T \approx \exp(-2G)\)</span> と表すとき，このクーロン障壁に対するガモフ因子 <span class="arithmatex">\(G\)</span> の積分形式を示せ。</p>
 <p>(2) 変数変換 <span class="arithmatex">\(r = r_c \cos^2\theta\)</span> を用いることで，以下の定積分を実行せよ。</p>
 <div class="arithmatex">\[
 \int_{R}^{r_c} \sqrt{\frac{1}{r} - \frac{1}{r_c}} \, dr = \sqrt{r_c} \left[ \arccos\sqrt{\frac{R}{r_c}} - \sqrt{\frac{R}{r_c} \left(1 - \frac{R}{r_c}\right)} \right]
 \]</div>
 <p>原子核半径に比べて脱出点が十分に遠い <span class="arithmatex">\(\frac{R}{r_c} \ll 1\)</span> という近似のもとで， 括弧の中身を <span class="arithmatex">\(\frac{\pi}{2} - 2\sqrt{\frac{R}{r_c}}\)</span> と評価できる。これを用いて， <span class="arithmatex">\(G\)</span> を <span class="arithmatex">\(E, R, Z\)</span> などの定数で表せ。</p>
-<p>(3) アルファ粒子の単位時間あたりの崩壊確率 <span class="arithmatex">\(\lambda\)</span> は，粒子が核内で壁に衝突する頻度 <span class="arithmatex">\(\nu\)</span> と透過確率 <span class="arithmatex">\(T\)</span> の積 <span class="arithmatex">\(\lambda = \nu T\)</span> として表される。これより，崩壊確率の対数 <span class="arithmatex">\(\ln\lambda\)</span> が，放出されるアルファ粒子のエネルギーの逆数の平方根 <span class="arithmatex">\(1/\sqrt{E}\)</span> に対して線形の関係にあるというガイガー・ヌッタルの法則が導かれることを説明せよ。</p>
+<p>(3) アルファ粒子の単位時間あたりの崩壊確率 <span class="arithmatex">\(\lambda\)</span> は，粒子が核内で壁に衝突する頻度 <span class="arithmatex">\(\nu\)</span> と透過確率 <span class="arithmatex">\(T\)</span> の積 <span class="arithmatex">\(\lambda = \nu T\)</span> で表される。<span class="arithmatex">\(\ln\lambda\)</span> を <span class="arithmatex">\(1/\sqrt{E}\)</span> の一次式として表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14604,7 +14604,7 @@ G \approx \frac{\pi e^2 (Z-2)}{4\pi\varepsilon_0 \hbar} \sqrt{\frac{2m}{E}} - \f
 <div class="arithmatex">\[
 \ln \lambda = \ln \nu - 2G
 \]</div>
-<p>ここで (2) で求めた <span class="arithmatex">\(G\)</span> の具体的な依存性を代入します。エネルギー <span class="arithmatex">\(E\)</span> に依存する部分と，依存しない残りの定数部分に分離して整理します。</p>
+<p>ここで (2) で求めた <span class="arithmatex">\(G\)</span> の依存性を代入します。エネルギー <span class="arithmatex">\(E\)</span> に依存する部分と，依存しない残りの定数部分に分離して整理します。</p>
 <div class="arithmatex">\[
 \ln \lambda = -\left[ \frac{2\pi e^2 (Z-2)}{4\pi\varepsilon_0 \hbar} \sqrt{2m} \right] \frac{1}{\sqrt{E}} + \left[ \ln \nu + \frac{8}{\hbar} \sqrt{\frac{2m e^2 (Z-2) R}{4\pi\varepsilon_0}} \right]
 \]</div>
@@ -14612,7 +14612,7 @@ G \approx \frac{\pi e^2 (Z-2)}{4\pi\varepsilon_0 \hbar} \sqrt{\frac{2m}{E}} - \f
 <div class="arithmatex">\[
 \ln \lambda = -\frac{A}{\sqrt{E}} + B
 \]</div>
-<p>この関係式は，実験的に発見されていた，アルファ粒子のエネルギーが高いほどその原子核の寿命が極めて短くなるというガイガー・ヌッタルの法則の形そのものです。量子力学のトンネル効果を用いることで，指数関数に埋め込まれたエネルギー依存性が理論的に導かれ，実験事実が微視的に解明されました。</p>
+<p>この関係式は，実験的に発見されていた，アルファ粒子のエネルギーが高いほどその原子核の寿命が非常に短くなるというガイガー・ヌッタルの法則の形そのものです。量子力学のトンネル効果を用いることで，指数関数に埋め込まれたエネルギー依存性が理論的に導かれ，実験事実が微視的に解明されました。</p>
 
 
 

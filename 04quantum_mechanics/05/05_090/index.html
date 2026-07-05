@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">コヒーレント状態</h1>
 <h2 id="_2">問題</h2>
-<p>通常の数状態 <span class="arithmatex">\(|n\rangle\)</span> はエネルギーが確定している一方で，位置や運動量の期待値は時間的に変化せず静止しており，古典的な振り子の運動とは大きく異なる。古典的な調和振動子の運動を量子力学の枠組みで最も良く再現する状態がコヒーレント状態である。ここでは，消滅演算子の固有状態としてこの状態を定義し，その性質を調べる。</p>
+<p>消滅演算子の固有状態をコヒーレント状態と呼ぶ。</p>
 <p>消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> の固有値を複素数 <span class="arithmatex">\(\alpha\)</span> とし，対応するコヒーレント状態を <span class="arithmatex">\(|\alpha\rangle\)</span> とする。この状態は以下の固有値方程式を満たす。</p>
 <div class="arithmatex">\[
 \hat{a}|\alpha\rangle = \alpha|\alpha\rangle
@@ -14565,7 +14565,7 @@
 <p>固有値方程式 <span class="arithmatex">\(\hat{a}|\alpha\rangle = \alpha|\alpha\rangle\)</span> の両辺に，展開式を代入します。</p>
 <ul>
 <li><strong>左辺の計算</strong>
-  消滅演算子を各項に作用させます。基底状態に作用した項（ <span class="arithmatex">\(n=0\)</span> ）は 0 になるため，和の始まりが <span class="arithmatex">\(n=1\)</span> に変わります。</li>
+  消滅演算子を各項に作用させます。基底状態に作用した項 <span class="arithmatex">\(n=0\)</span> は 0 になるため，和の始まりが <span class="arithmatex">\(n=1\)</span> に変わります。</li>
 </ul>
 <div class="arithmatex">\[
   \hat{a}|\alpha\rangle = \sum_{n=0}^{\infty} c_n \hat{a}|n\rangle = \sum_{n=1}^{\infty} c_n \sqrt{n}|n-1\rangle
@@ -14596,7 +14596,7 @@ c_{n+1} \sqrt{n+1} = \alpha c_n \implies c_{n+1} = \frac{\alpha}{\sqrt{n+1}} c_n
 c_n = \frac{\alpha^n}{\sqrt{n!}} c_0
 \]</div>
 <h3 id="2">(2)</h3>
-<p>規格化条件 <span class="arithmatex">\(\langle \alpha|\alpha\rangle = 1\)</span> を計算します。状態ベクトルのブラ <span class="arithmatex">\(\langle \alpha|\)</span> を作るとき，係数は複素共役をとる必要があります。また，異なる数状態の間は直交（ <span class="arithmatex">\(\langle m|n\rangle = \delta_{mn}\)</span> ）します。</p>
+<p>規格化条件 <span class="arithmatex">\(\langle \alpha|\alpha\rangle = 1\)</span> を計算します。状態ベクトルのブラ <span class="arithmatex">\(\langle \alpha|\)</span> を作るとき，係数は複素共役をとる必要があります。また，異なる数状態の間には直交関係 <span class="arithmatex">\(\langle m|n\rangle = \delta_{mn}\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
 \langle \alpha|\alpha\rangle = \sum_{m=0}^{\infty} \sum_{n=0}^{\infty} c_m^* c_n \langle m|n\rangle = \sum_{n=0}^{\infty} |c_n|^2 = 1
 \]</div>
@@ -14612,7 +14612,7 @@ c_n = \frac{\alpha^n}{\sqrt{n!}} c_0
 <div class="arithmatex">\[
 c_0 = e^{-\frac{1}{2}|\alpha|^2}
 \]</div>
-<p>これをもとの展開式に戻すことで，コヒーレント状態の数状態による具体的な重ね合わせの形が得られます。</p>
+<p>これをもとの展開式に戻すことで，コヒーレント状態の数状態による重ね合わせの形が得られます。</p>
 <div class="arithmatex">\[
 |\alpha\rangle = e^{-\frac{1}{2}|\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} |n\rangle
 \]</div>
@@ -14621,7 +14621,7 @@ c_0 = e^{-\frac{1}{2}|\alpha|^2}
 <div class="arithmatex">\[
 |\alpha(t)\rangle = e^{-\frac{1}{2}|\alpha_0|^2} \sum_{n=0}^{\infty} \frac{\alpha_0^n}{\sqrt{n!}} e^{-i \omega \left(n + \frac{1}{2}\right) t} |n\rangle
 \]</div>
-<p>時間の指数関数を， <span class="arithmatex">\(n\)</span> に依存する部分と，共通の定数部分（ <span class="arithmatex">\(n=0\)</span> の成分）に分割します。</p>
+<p>時間の指数関数を， <span class="arithmatex">\(n\)</span> に依存する部分と，<span class="arithmatex">\(n=0\)</span> に対応する共通部分に分けます。</p>
 <div class="arithmatex">\[
 |\alpha(t)\rangle = e^{-i\frac{\omega t}{2}} \left[ e^{-\frac{1}{2}|\alpha_0|^2} \sum_{n=0}^{\infty} \frac{\alpha_0^n}{\sqrt{n!}} (e^{-i\omega t})^n |n\rangle \right]
 \]</div>
@@ -14629,7 +14629,7 @@ c_0 = e^{-\frac{1}{2}|\alpha|^2}
 <div class="arithmatex">\[
 \alpha_0^n (e^{-i\omega t})^n = (\alpha_0 e^{-i\omega t})^n
 \]</div>
-<p>ここで，新しく時間変化する複素数として <span class="arithmatex">\(\alpha(t) = \alpha_0 e^{-i\omega t}\)</span> を定義します。この絶対値の2乗は元の値から変化しません（ <span class="arithmatex">\(|\alpha(t)|^2 = |\alpha_0|^2\)</span> ）。これを用いて全体の式を書き換えます。</p>
+<p>ここで，時間変化する複素数 <span class="arithmatex">\(\alpha(t) = \alpha_0 e^{-i\omega t}\)</span> を定義します。その絶対値の2乗は <span class="arithmatex">\(|\alpha(t)|^2 = |\alpha_0|^2\)</span> であり，時間に依存しません。これを用いて全体の式を書き換えます。</p>
 <div class="arithmatex">\[
 |\alpha(t)\rangle \sim e^{-\frac{1}{2}|\alpha(t)|^2} \sum_{n=0}^{\infty} \frac{\alpha(t)^n}{\sqrt{n!}} |n\rangle
 \]</div>

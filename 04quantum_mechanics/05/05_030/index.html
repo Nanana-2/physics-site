@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">エルミート多項式と固有関数</h1>
 <h2 id="_2">問題</h2>
-<p>調和振動子のシュレーディンガー方程式を一般の量子数 <span class="arithmatex">\(n\)</span> に対して解くため，波動関数をガウス型関数と未知関数 <span class="arithmatex">\(H_n(\xi)\)</span> の積で表し，べき級数法を適用する。遠方での収束条件から級数が有限次数で打ち切られる条件を求め，任意の量子数 <span class="arithmatex">\(n\)</span> に対するエネルギー固有値と波動関数の一般形を導出する。</p>
 <p>無次元化された調和振動子のシュレーディンガー方程式は以下の通りである。</p>
 <div class="arithmatex">\[
 \frac{d^2\psi}{d\xi^2} + (\lambda - \xi^2)\psi = 0
@@ -14605,7 +14604,7 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <div class="arithmatex">\[
 \frac{c_{m+2}}{c_m} \approx \frac{2m}{m^2} = \frac{2}{m}
 \]</div>
-<p>これは，関数 <span class="arithmatex">\(e^{\xi^2} = \sum \frac{1}{k!} \xi^{2k}\)</span> の隣り合う係数の比（ <span class="arithmatex">\(\frac{1}{(k+1)!} / \frac{1}{k!} = \frac{1}{k+1} \approx \frac{2}{2k}\)</span> ）と同じ漸近的挙動を示します。</p>
+<p>これは，関数 <span class="arithmatex">\(e^{\xi^2} = \sum \frac{1}{k!} \xi^{2k}\)</span> の隣り合う係数の比 <span class="arithmatex">\(\frac{1}{(k+1)!} / \frac{1}{k!} = \frac{1}{k+1} \approx \frac{2}{2k}\)</span> と同じ漸近的挙動を示します。</p>
 <p>したがって，級数が無限に続くと <span class="arithmatex">\(H(\xi) \sim e^{\xi^2}\)</span> のように振る舞います。</p>
 <p>これを波動関数の仮定式に戻すと，以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14616,7 +14615,7 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <div class="arithmatex">\[
 2n + 1 - \lambda = 0 \implies \lambda = 2n + 1 \quad (n = 0, 1, 2, \dots)
 \]</div>
-<p>このとき <span class="arithmatex">\(H(\xi)\)</span> は <span class="arithmatex">\(n\)</span> 次の多項式（エルミート多項式 <span class="arithmatex">\(H_n(\xi)\)</span> ）となり，遠方でガウス因子の効果により波動関数は 0 に収束します。</p>
+<p>このとき <span class="arithmatex">\(H(\xi)\)</span> は <span class="arithmatex">\(n\)</span> 次のエルミート多項式 <span class="arithmatex">\(H_n(\xi)\)</span> となり，遠方ではガウス因子によって波動関数が 0 に収束します。</p>
 <p>最後に，無次元エネルギーの定義式 <span class="arithmatex">\(2E / \hbar\omega = \lambda\)</span> にこの結果を代入して実際のエネルギーを計算します。</p>
 <div class="arithmatex">\[
 \frac{2E_n}{\hbar\omega} = 2n + 1 \implies E_n = \left(n + \frac{1}{2}\right)\hbar\omega

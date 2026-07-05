@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">球面調和関数</h1>
 <h2 id="_2">問題</h2>
-<p>3次元空間の球面座標系における軌道角運動量演算子は，角度成分である極角 <span class="arithmatex">\(\theta\)</span> と方位角 <span class="arithmatex">\(\phi\)</span> の微分演算子として表される。この演算子の同時固有関数は球面調和関数 <span class="arithmatex">\(Y_l^m(\theta, \phi)\)</span> と呼ばれ，全空間の角度成分に関する広がりを表す。ここでは，球面調和関数の直交関係の仕組みを整理し，低い次数における具体的な関数の形を扱う。</p>
+<p>球面座標系における軌道角運動量演算子の同時固有関数を，球面調和関数 <span class="arithmatex">\(Y_l^m(\theta, \phi)\)</span> と呼ぶ。</p>
 <p>球面調和関数 <span class="arithmatex">\(Y_l^m(\theta, \phi)\)</span> は，全角運動量量子数 <span class="arithmatex">\(l\)</span> と <span class="arithmatex">\(z\)</span> 成分量子数 <span class="arithmatex">\(m\)</span> によって指定される関数であり，以下の同時固有値方程式を満たす。</p>
 <div class="arithmatex">\[
 \hat{L}^2 Y_l^m(\theta, \phi) = l(l+1)\hbar^2 Y_l^m(\theta, \phi)
@@ -14557,7 +14557,7 @@
 <p>以下の問いに答えよ。</p>
 <p>(1) 最も低い次数の固有関数は <span class="arithmatex">\(Y_0^0(\theta, \phi) = N_0\)</span> という定数で表される。正規直交関係において <span class="arithmatex">\(l=l'=0\)</span> ， <span class="arithmatex">\(m=m'=0\)</span> と置くことで，この関数が規格化条件を満たすための正の実数定数 <span class="arithmatex">\(N_0\)</span> の値を求めよ。</p>
 <p>(2) <span class="arithmatex">\(l=1\)</span> の状態のうち， <span class="arithmatex">\(m=0\)</span> に対応する関数は <span class="arithmatex">\(Y_1^0(\theta, \phi) = N_1 \cos\theta\)</span> である。これが規格化条件を満たすための正の実数定数 <span class="arithmatex">\(N_1\)</span> の値を求めよ。</p>
-<p>(3) (1) で求めた <span class="arithmatex">\(Y_0^0(\theta, \phi)\)</span> と (2) で求めた <span class="arithmatex">\(Y_1^0(\theta, \phi)\)</span> の積を球面上で積分し，これらふたつの関数が互いに直交していることを計算によって確かめよ。</p>
+<p>(3) (1) で求めた <span class="arithmatex">\(Y_0^0(\theta, \phi)\)</span> と (2) で求めた <span class="arithmatex">\(Y_1^0(\theta, \phi)\)</span> の内積が 0 になることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14565,7 +14565,7 @@
 <div class="arithmatex">\[
 \int_{0}^{2\pi} d\phi \int_{0}^{\pi} \sin\theta d\theta \, N_0^* N_0 = 1
 \]</div>
-<p><span class="arithmatex">\(N_0\)</span> は定数であるため積分の外へ出すことができます。被積分関数が 1 となり，積分は <span class="arithmatex">\(\theta\)</span> 成分と <span class="arithmatex">\(\phi\)</span> 成分に完全に分離されます。</p>
+<p><span class="arithmatex">\(N_0\)</span> は定数であるため積分の外へ出すことができます。被積分関数が 1 となり，積分は <span class="arithmatex">\(\theta\)</span> 成分と <span class="arithmatex">\(\phi\)</span> 成分に分離されます。</p>
 <div class="arithmatex">\[
 |N_0|^2 \left( \int_{0}^{2\pi} d\phi \right) \left( \int_{0}^{\pi} \sin\theta d\theta \right) = 1
 \]</div>
@@ -14614,7 +14614,7 @@ N_1 = \sqrt{\frac{3}{4\pi}}
 \]</div>
 <p>これにより，関数は <span class="arithmatex">\(Y_1^0(\theta, \phi) = \sqrt{\frac{3}{4\pi}} \cos\theta\)</span> と定まります。</p>
 <h3 id="3">(3)</h3>
-<p>ふたつの関数の直交性を確認するため，内積の積分を計算します。求めた具体的な形を代入します。</p>
+<p>ふたつの関数の内積に，求めた関数を代入します。</p>
 <div class="arithmatex">\[
 \int_{0}^{2\pi} d\phi \int_{0}^{\pi} \sin\theta d\theta \, \left( \frac{1}{\sqrt{4\pi}} \right) \left( \sqrt{\frac{3}{4\pi}} \cos\theta \right)
 \]</div>
@@ -14630,7 +14630,7 @@ N_1 = \sqrt{\frac{3}{4\pi}}
 <div class="arithmatex">\[
 \int_{0}^{2\pi} d\phi \int_{0}^{\pi} \sin\theta d\theta \, [Y_0^0]^* Y_1^0 = 0
 \]</div>
-<p>量子数（この場合は全角運動量量子数 <span class="arithmatex">\(l\)</span> ）が異なる球面調和関数同士は，球面上での積分によって互いに打ち消し合い，正しく直交していることが確認できました。</p>
+<p>全角運動量量子数 <span class="arithmatex">\(l\)</span> が異なる球面調和関数同士は，球面上の内積が 0 となり，互いに直交することが確かめられました。</p>
 
 
 

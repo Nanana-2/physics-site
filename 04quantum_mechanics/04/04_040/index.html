@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">確率流密度と透過係数</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学における確率流密度は，粒子の存在確率の空間的な流れの強さと方向を表す量であり，古典力学における流体の質量流束や電磁気学における電流密度に対応する。空間的に変化するポテンシャルに粒子が入射する散乱問題において，系の確率保存則は反射係数と透過係数の和が 1 になるという関係式として現れる。ここでは，具体的な波動関数を用いて確率流密度を計算し，この保存則を確認する。</p>
+<p>量子力学における確率流密度は，粒子の存在確率の空間的な流れの強さと方向を表す量であり，古典力学における流体の質量流束や電磁気学における電流密度に対応する。空間的に変化するポテンシャルに粒子が入射する散乱問題では，確率保存則は反射係数と透過係数の和が 1 になるという関係式として現れる。</p>
 <p>一次元の確率流密度 <span class="arithmatex">\(J(x, t)\)</span> は，波動関数 <span class="arithmatex">\(\Psi(x, t)\)</span> を用いて以下のように定義される。</p>
 <div class="arithmatex">\[
 J(x, t) = \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \frac{\partial \Psi^*}{\partial x} \Psi \right)
@@ -14556,12 +14556,12 @@ J(x, t) = \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \fr
 \psi_{\text{II}}(x) = C e^{ik_2 x}
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 定常状態の波動関数 <span class="arithmatex">\(\Psi(x, t) = \psi(x) e^{-iEt/\hbar}\)</span> を定義式に代入することにより，定常状態における確率流密度 <span class="arithmatex">\(J(x)\)</span> は時間に依存せず，空間成分 <span class="arithmatex">\(\psi(x)\)</span> のみを用いて以下のように表せることを示せ。</p>
+<p>(1) 定常状態の波動関数 <span class="arithmatex">\(\Psi(x, t) = \psi(x) e^{-iEt/\hbar}\)</span> を定義式に代入し，確率流密度 <span class="arithmatex">\(J(x)\)</span> が時間に依存せず，以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 J(x) = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \psi \right)
 \]</div>
 <p>(2) 領域 I の波動関数 <span class="arithmatex">\(\psi_{\text{I}}(x)\)</span> から確率流密度 <span class="arithmatex">\(J_{\text{I}}\)</span> を計算せよ。</p>
-<p>この結果が，入射波による流れ <span class="arithmatex">\(J_{\text{in}}\)</span> と反射波による流れ <span class="arithmatex">\(J_{\text{ref}}\)</span> の差として <span class="arithmatex">\(J_{\text{I}} = J_{\text{in}} - |J_{\text{ref}}|\)</span> の形に分離できることを示し， <span class="arithmatex">\(J_{\text{in}}\)</span> と <span class="arithmatex">\(J_{\text{ref}}\)</span> の具体的な表式を答えよ。</p>
+<p>これを <span class="arithmatex">\(J_{\text{I}} = J_{\text{in}} - |J_{\text{ref}}|\)</span> と分け， <span class="arithmatex">\(J_{\text{in}}\)</span> と <span class="arithmatex">\(J_{\text{ref}}\)</span> を求めよ。</p>
 <p>(3) 領域 II の波動関数 <span class="arithmatex">\(\psi_{\text{II}}(x)\)</span> から透過波の確率流密度 <span class="arithmatex">\(J_{\text{trans}} = J_{\text{II}}\)</span> を計算せよ。また，時間依存シュレーディンガー方程式から導かれる連続の式 </p>
 <div class="arithmatex">\[
 \frac{\partial \rho}{\partial t} + \frac{\partial J}{\partial x} = 0,\quad \rho = |\Psi|^2
@@ -14603,7 +14603,7 @@ J(x) = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \ps
 <div class="arithmatex">\[
 = -ik_1 |A|^2 - ik_1 A^* B e^{-2ik_1 x} + ik_1 B^* A e^{2ik_1 x} + ik_1 |B|^2
 \]</div>
-<p>これらの引き算を行います。位置に依存する交差項（ <span class="arithmatex">\(e^{\pm 2ik_1 x}\)</span> の項）は共通の符号を持っているため，引き算によって完全に相殺されます。</p>
+<p>これらの差をとると，位置に依存する交差項 <span class="arithmatex">\(e^{\pm 2ik_1 x}\)</span> は相殺されます。</p>
 <div class="arithmatex">\[
 \psi_{\text{I}}^* \frac{d\psi_{\text{I}}}{dx} - \frac{d\psi_{\text{I}}^*}{dx} \psi_{\text{I}} = \left( ik_1 |A|^2 - ik_1 |B|^2 \right) - \left( -ik_1 |A|^2 + ik_1 |B|^2 \right) = 2ik_1 |A|^2 - 2ik_1 |B|^2
 \]</div>
