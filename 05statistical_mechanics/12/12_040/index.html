@@ -14542,18 +14542,18 @@
 
 <h1 id="_1">密度行列のユニタリー時間発展</h1>
 <h2 id="_2">問題</h2>
-<p>孤立した量子系の状態ベクトルの時間発展はシュレーディンガー方程式によって記述される。これに対し，純粋状態や混合状態を統一的に扱う密度行列の時間発展は，フォン・ノイマン方程式と呼ばれる微分方程式によって記述される。</p>
+<p>孤立した量子系の状態ベクトルの時間発展はシュレーディンガー方程式によって表される。これに対し，純粋状態や混合状態を統一的に扱う密度行列の時間発展は，フォン・ノイマン方程式と呼ばれる微分方程式によって表される。</p>
 <p>系のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。確率 <span class="arithmatex">\(p_k\)</span> で実現する各量子状態 <span class="arithmatex">\(|\psi_k(t)\rangle\)</span> は，以下のシュレーディンガー方程式に従って時間発展する。</p>
 <div class="arithmatex">\[
 i\hbar \frac{d}{dt}|\psi_k(t)\rangle = \hat{H}|\psi_k(t)\rangle
 \]</div>
 <p>系の密度行列が <span class="arithmatex">\(\rho(t) = \sum_k p_k |\psi_k(t)\rangle \langle\psi_k(t)|\)</span> で定義されるとき，以下の問いに答えよ。ただし，出現確率 <span class="arithmatex">\(p_k\)</span> は時間的に変化しない定数とする。</p>
-<p>(1) 各状態ベクトルのブラ（共役ベクトル） <span class="arithmatex">\(\langle\psi_k(t)|\)</span> が満たす時間発展方程式を，ハミルトニアンのエルミート性 <span class="arithmatex">\(\hat{H}^\dagger = \hat{H}\)</span> を用いて導出せよ。</p>
-<p>(2) 積の微分公式を適用して密度行列の時間微分 <span class="arithmatex">\(\frac{d\rho(t)}{dt}\)</span> を計算せよ。そこにシュレーディンガー方程式および (1) の結果を代入することにより，密度行列の時間発展を記述する以下のフォン・ノイマン方程式を導出せよ。</p>
+<p>(1) 各状態ベクトルのブラ <span class="arithmatex">\(\langle\psi_k(t)|\)</span> が満たす時間発展方程式を，ハミルトニアンのエルミート性 <span class="arithmatex">\(\hat{H}^\dagger = \hat{H}\)</span> を用いて導出せよ。</p>
+<p>(2) 積の微分公式を適用して密度行列の時間微分 <span class="arithmatex">\(\frac{d\rho(t)}{dt}\)</span> を計算せよ。そこにシュレーディンガー方程式および (1) の結果を代入することにより，密度行列の時間発展を表す以下のフォン・ノイマン方程式を導出せよ。</p>
 <div class="arithmatex">\[
 i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]
 \]</div>
-<p>ただし， <span class="arithmatex">\([\hat{X}, \hat{Y}] = \hat{X}\hat{Y} - \hat{Y}\hat{X}\)</span> は交換子（交換関係）を表す。</p>
+<p>ただし， <span class="arithmatex">\([\hat{X}, \hat{Y}] = \hat{X}\hat{Y} - \hat{Y}\hat{X}\)</span> は交換子を表す。</p>
 <p>(3) 時刻 <span class="arithmatex">\(t=0\)</span> における密度行列を <span class="arithmatex">\(\rho(0)\)</span> とする。フォン・ノイマン方程式の形式的な解が，ユニタリー時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = \exp\left(-\frac{i\hat{H}t}{\hbar}\right)\)</span> を用いて以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 \rho(t) = \hat{U}(t) \rho(0) \hat{U}^\dagger(t)
@@ -14561,7 +14561,7 @@ i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>状態ベクトルに対するシュレーディンガー方程式全体のエルミート共役（随伴）をとります。複素共役の規則 <span class="arithmatex">\((i\hbar)^* = -i\hbar\)</span> および，演算子とベクトルの反転規則 <span class="arithmatex">\((\hat{A}|b\rangle)^\dagger = \langle b|\hat{A}^\dagger\)</span> を適用します。</p>
+<p>状態ベクトルに対するシュレーディンガー方程式全体のエルミート共役をとります。複素共役の規則 <span class="arithmatex">\((i\hbar)^* = -i\hbar\)</span> および，演算子とベクトルの反転規則 <span class="arithmatex">\((\hat{A}|b\rangle)^\dagger = \langle b|\hat{A}^\dagger\)</span> を適用します。</p>
 <div class="arithmatex">\[
 \left( i\hbar \frac{d}{dt}|\psi_k(t)\rangle \right)^\dagger = (\hat{H}|\psi_k(t)\rangle)^\dagger
 \]</div>
@@ -14611,7 +14611,7 @@ i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]
 <div class="arithmatex">\[
 i\hbar \frac{d\rho(t)}{dt} = \left[ i\hbar \frac{d\hat{U}(t)}{dt} \right] \rho(0) \hat{U}^\dagger(t) + \hat{U}(t) \rho(0) \left[ i\hbar \frac{d\hat{U}^\dagger(t)}{dt} \right]
 \]</div>
-<p>ここに上記の微分結果を代入します。ハミルトニアンと時間発展演算子は互いに交換する（ <span class="arithmatex">\(\hat{H}\hat{U} = \hat{U}\hat{H}\)</span> ）性質を用います。</p>
+<p>ここに上記の微分結果を代入します。ハミルトニアンと時間発展演算子は互いに交換する <span class="arithmatex">\(\hat{H}\hat{U} = \hat{U}\hat{H}\)</span> 性質を用います。</p>
 <div class="arithmatex">\[
 i\hbar \frac{d\rho(t)}{dt} = \hat{H}\hat{U}(t) \rho(0) \hat{U}^\dagger(t) - \hat{U}(t) \rho(0) \hat{U}^\dagger(t)\hat{H}
 \]</div>
@@ -14619,7 +14619,7 @@ i\hbar \frac{d\rho(t)}{dt} = \hat{H}\hat{U}(t) \rho(0) \hat{U}^\dagger(t) - \hat
 <div class="arithmatex">\[
 i\hbar \frac{d\rho(t)}{dt} = \hat{H}\rho(t) - \rho(t)\hat{H} = [\hat{H}, \rho(t)]
 \]</div>
-<p>微分方程式を満たすことが確認できました。また， <span class="arithmatex">\(t=0\)</span> を代入すると <span class="arithmatex">\(\hat{U}(0) = I\)</span> となり初期条件も満たします。したがって，密度行列の時間発展はハミルトニアンによるユニタリー変換として記述されることが示されました。</p>
+<p>微分方程式を満たすことが確認できました。また， <span class="arithmatex">\(t=0\)</span> を代入すると <span class="arithmatex">\(\hat{U}(0) = I\)</span> となり初期条件も満たします。したがって，密度行列の時間発展はハミルトニアンによるユニタリー変換として表されることが示されました。</p>
 
 
 

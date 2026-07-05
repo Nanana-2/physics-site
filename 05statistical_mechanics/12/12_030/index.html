@@ -14543,17 +14543,17 @@
 <h1 id="_1">部分系の密度行列</h1>
 <h2 id="_2">問題</h2>
 <p>2つの独立した部分系Aと部分系Bが結合した合成系を考える。合成系全体が純粋状態であっても，部分系Bに興味がなく部分系Aだけを観測する場合，部分系Bの自由度を足し合わせた縮約密度行列を用いる必要がある。ここでは，合成系の量子もつれと部分系の状態の関係を計算によって理解する。</p>
-<p>部分系Aの基底を <span class="arithmatex">\(|0\rangle_A, |1\rangle_A\)</span> ，部分系Bの基底を <span class="arithmatex">\(|0\rangle_B, |1\rangle_B\)</span> とする。これらはそれぞれ正規直交系をなす。合成系全体の純粋状態として，以下の最大量子もつれ状態（ベル状態）を対象とする。</p>
+<p>部分系Aの基底を <span class="arithmatex">\(|0\rangle_A, |1\rangle_A\)</span> ，部分系Bの基底を <span class="arithmatex">\(|0\rangle_B, |1\rangle_B\)</span> とする。これらはそれぞれ正規直交系をなす。合成系全体の純粋状態として，以下の最大量子もつれ状態を対象とする。</p>
 <div class="arithmatex">\[
 |\Psi\rangle = \frac{1}{\sqrt{2}} \left( |0\rangle_A |0\rangle_B + |1\rangle_A |1\rangle_B \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 合成系全体の密度行列 <span class="arithmatex">\(\rho = |\Psi\rangle\langle\Psi|\)</span> を，基底のテンソル積を用いて具体的に展開せよ。</p>
-<p>(2) 部分系Aのみの統計的性質を記述するため，合成系の密度行列 <span class="arithmatex">\(\rho\)</span> から部分系Bの基底に関する対角和をとる操作（部分トレース）を行い，部分系Aの縮約密度行列 <span class="arithmatex">\(\rho_A = \mathrm{Tr}_B(\rho)\)</span> を求めよ。ただし，部分トレースの演算は以下の定義に従うものとする。</p>
+<p>(2) 部分系Aのみの統計的性質を表すため，合成系の密度行列 <span class="arithmatex">\(\rho\)</span> から部分系Bの基底に関する対角和をとる操作を行い，部分系Aの縮約密度行列 <span class="arithmatex">\(\rho_A = \mathrm{Tr}_B(\rho)\)</span> を求めよ。ただし，部分トレースの演算は以下の定義に従うものとする。</p>
 <div class="arithmatex">\[
 \mathrm{Tr}_B(|a\rangle_A |b\rangle_B \, \langle c|_A \langle d|_B) = |a\rangle_A \langle c|_A \cdot \langle d|_B |b\rangle_B
 \]</div>
-<p>(3) (2) で得られた縮約密度行列 <span class="arithmatex">\(\rho_A\)</span> について，2乗のトレース <span class="arithmatex">\(\mathrm{Tr}(\rho_A^2)\)</span> を計算せよ。この結果に基づき，合成系全体としては純粋状態であるにもかかわらず，部分系Aだけを孤立して見ると混合状態として記述される理由を物理的に説明せよ。</p>
+<p>(3) (2) で得られた縮約密度行列 <span class="arithmatex">\(\rho_A\)</span> について，2乗のトレース <span class="arithmatex">\(\mathrm{Tr}(\rho_A^2)\)</span> を計算せよ。この結果に基づき，合成系全体としては純粋状態であるにもかかわらず，部分系Aだけを孤立して見ると混合状態として表される理由を物理的に説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14614,9 +14614,9 @@
 \]</div>
 <p>値が 1 よりも厳密に小さいため，部分系Aは混合状態にあります。</p>
 <p><strong>物理的な理由の説明</strong></p>
-<p>元の合成系全体の量子状態 <span class="arithmatex">\(|\Psi\rangle\)</span> は，部分系Aと部分系Bの状態が独立な積の形に分離できない強力な量子相関（量子もつれ）を持っています。</p>
-<p>この状況において，部分系Bを一切観測せずに無視するということは，部分系Bが持っていた相関の情報をすべて破棄することを意味します。部分系Aの観測者は，系Bとの量子もつれを通じてA側に流れ込んでいた位相情報（コヒーレンス）にアクセスできなくなります。</p>
-<p>その結果，量子力学的な波の干渉効果が完全に消失し，あたかも確率 <span class="arithmatex">\(1/2\)</span> ずつで状態 0 と状態 1 が混ざり合っているかのような古典的な情報不足の混合状態（最大混合状態）として観測されることになります。</p>
+<p>元の合成系全体の量子状態 <span class="arithmatex">\(|\Psi\rangle\)</span> は，部分系Aと部分系Bの状態が独立な積の形に分離できない量子相関を持っています。</p>
+<p>この状況において，部分系Bを観測せずに無視するということは，部分系Bが持っていた相関の情報をすべて破棄することを意味します。部分系Aの観測者は，系Bとの量子もつれを通じてA側に流れ込んでいた位相情報にアクセスできなくなります。</p>
+<p>その結果，量子力学的な波の干渉効果が消失し，あたかも確率 <span class="arithmatex">\(1/2\)</span> ずつで状態 0 と状態 1 が混ざり合っているかのような古典的な情報不足の混合状態として観測されることになります。</p>
 
 
 

@@ -14542,36 +14542,67 @@
 
 <h1 id="_1">相転移と秩序変数</h1>
 <h2 id="_2">問題</h2>
-<p>物質の温度や圧力などの外部条件を変化させたとき，そのマクロな性質が不連続に変形する現象を相転移と呼ぶ。相転移を境にして，系の内部構造にどのような秩序が生じているかを定量的に測定するための物理量を秩序変数と定義する。</p>
-<p>秩序変数は，高温の乱雑な相（無秩序相）では一様にゼロとなり，低温の整列した相（秩序相）ではゼロでない有限の値を持つように定義されるのが一般的である。以下の問いに答えよ。</p>
-<p>(1) 磁性体（強磁性体）における常磁性相から強磁性相への相転移を考える。この相転移において，外部磁場がゼロのときに秩序変数として採用されるべきマクロな熱力学量を記述せよ。また，その量が無秩序相と秩序相においてそれぞれどのような値をとるか説明せよ。</p>
-<p>(2) 流体における液体と気体の相転移を考える。この系における秩序変数は，液体の密度を <span class="arithmatex">\(\rho_L\)</span>，気体の密度を <span class="arithmatex">\(\rho_G\)</span> とするとき，その密度差 <span class="arithmatex">\(\phi = \rho_L - \rho_G\)</span> として定義される。
-気液臨界温度 <span class="arithmatex">\(T_c\)</span> よりも高い温度領域（ <span class="arithmatex">\(T &gt; T_c\)</span> ）と，低い温度領域（ <span class="arithmatex">\(T &lt; T_c\)</span> ）において，この密度差 <span class="arithmatex">\(\phi\)</span> がそれぞれどのような挙動を示すか，物質の状態変化と関連付けて説明せよ。</p>
-<p>(3) 秩序変数がゼロから有限の値へ変化する現象は，統計力学においてはハミルトニアン（系を支配するエネルギーの規則）が持っていた対称性が自発的に失われる現象として解釈される。
-(1) で挙げた磁性体を例にとり，外部磁場がない状態におけるスピンの反転対称性（すべてのスピンの向きを同時に逆転させてもエネルギーが変わらない性質）が，低温の秩序相においてどのように破れているか，その仕組みを記述せよ。</p>
+<p><span class="arithmatex">\(N\)</span> 個のイジングスピン <span class="arithmatex">\(s_i=\pm1\)</span> からなる磁性体を考え，1スピンあたりの磁化を</p>
+<div class="arithmatex">\[
+m=\frac{1}{N}\sum_{i=1}^N s_i
+\]</div>
+<p>と定義する。外部磁場はゼロとする。以下の問いに答えよ。</p>
+<p>(1) 上向きスピンと下向きスピンの個数をそれぞれ <span class="arithmatex">\(N_+\)</span>，<span class="arithmatex">\(N_-\)</span> とする。<span class="arithmatex">\(m\)</span> を <span class="arithmatex">\(N_+\)</span>，<span class="arithmatex">\(N_-\)</span>，<span class="arithmatex">\(N\)</span> を用いて表せ。また，すべてのスピンを反転する変換 <span class="arithmatex">\(s_i\to-s_i\)</span> によって <span class="arithmatex">\(m\)</span> がどのように変化するか求めよ。</p>
+<p>(2) 高温相では <span class="arithmatex">\(N_+=N_-=N/2\)</span> であり，低温相では</p>
+<div class="arithmatex">\[
+N_+=\frac{1+m_0}{2}N,\qquad
+N_-=\frac{1-m_0}{2}N
+\]</div>
+<p>であるとする。それぞれの相における <span class="arithmatex">\(m\)</span> を求め，低温相では反転対称性を持つ2つの状態が存在することを示せ。</p>
+<p>(3) 気液転移の秩序変数を液体と気体の密度差 <span class="arithmatex">\(\phi=\rho_L-\rho_G\)</span> とする。臨界温度近傍で</p>
+<div class="arithmatex">\[
+\phi(T)=
+\begin{cases}
+A(T_c-T)^\beta &amp; (T&lt;T_c)\\
+0 &amp; (T\ge T_c)
+\end{cases}
+\]</div>
+<p>と表されるとする。ここで <span class="arithmatex">\(A&gt;0\)</span>，<span class="arithmatex">\(\beta&gt;0\)</span> である。<span class="arithmatex">\(T\to T_c-0\)</span> における <span class="arithmatex">\(\phi\)</span> の極限を求めよ。また <span class="arithmatex">\(0&lt;\beta&lt;1\)</span> のとき，<span class="arithmatex">\(d\phi/dT\)</span> の極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>強磁性体の相転移において，外部磁場がゼロのときの秩序変数として選ばれるのは，系全体の単位体積あたりの自発磁化 <span class="arithmatex">\(M\)</span> です。</p>
-<ul>
-<li><strong>高温の無秩序相（常磁性相）</strong>
-  熱運動が優勢であるため，各原子のスピンの向きはバラバラにランダムな方向を向いています。これらを全体で平均すると互いに相殺し合うため，自発磁化は <span class="arithmatex">\(M = 0\)</span> になります。</li>
-<li><strong>低温の秩序相（強磁性相）</strong>
-  スピン同士を同じ向きに揃えようとする相互作用が熱運動に打ち勝つため，外部から磁場をかけなくてもスピンが特定の方向へ一斉に整列し始めます。その結果，マクロな自発磁化が <span class="arithmatex">\(M \neq 0\)</span> の有限の値として現れます。</li>
-</ul>
+<p>上向きスピンは <span class="arithmatex">\(+1\)</span>，下向きスピンは <span class="arithmatex">\(-1\)</span> の寄与を持つため</p>
+<div class="arithmatex">\[
+m=\frac{N_+-N_-}{N}
+\]</div>
+<p>です。すべてのスピンを反転すると <span class="arithmatex">\(N_+\)</span> と <span class="arithmatex">\(N_-\)</span> が入れ替わるので</p>
+<div class="arithmatex">\[
+m\to\frac{N_--N_+}{N}=-m
+\]</div>
+<p>となります。外部磁場がないイジング模型のハミルトニアンはこの変換に対して不変です。</p>
 <h3 id="2">(2)</h3>
-<p>気液転移における秩序変数 <span class="arithmatex">\(\phi = \rho_L - \rho_G\)</span> の挙動は以下の通りです。</p>
-<ul>
-<li><strong>臨界温度より高い領域（ <span class="arithmatex">\(T &gt; T_c\)</span> ）</strong>
-  この領域では液体と気体の区別自体が消失しており，系は超臨界流体と呼ばれる一様な単一の相となっています。どこを境界としても密度に差は生じないため，秩序変数は <span class="arithmatex">\(\phi = 0\)</span> となります。</li>
-<li><strong>臨界温度より低い領域（ <span class="arithmatex">\(T &lt; T_c\)</span> ）</strong>
-  温度を下げて臨界点を超えると，系は密度の大きい相（液体）と，密度の小さい相（気体）の2つの相に分離します。明確な密度の不連続性が生じるため，密度差は <span class="arithmatex">\(\phi &gt; 0\)</span> の有限の値を持ち，温度が下がるほどその差は広がっていきます。</li>
-</ul>
+<p>高温相では</p>
+<div class="arithmatex">\[
+m=\frac{N/2-N/2}{N}=0
+\]</div>
+<p>となります。低温相では</p>
+<div class="arithmatex">\[
+m=\frac{1}{N}\left[
+\frac{1+m_0}{2}N-rac{1-m_0}{2}N
+\right]=m_0
+\]</div>
+<p>です。すべてのスピンを反転した状態では <span class="arithmatex">\(m=-m_0\)</span> となります。ハミルトニアンは反転対称でも，低温の平衡状態は <span class="arithmatex">\(m=m_0\)</span> または <span class="arithmatex">\(m=-m_0\)</span> の一方をとります。これが自発的対称性の破れです。</p>
 <h3 id="3">(3)</h3>
-<p>外部磁場がないイジング模型などのハミルトニアンは，すべてのスピンの正負を一斉に入れ替えても全体のエネルギーが変化しないという，空間的な反転対称性を備えています。</p>
-<p>高温状態では，系はこの対称性を反映して，上向きのスピンが多い状態と下向きのスピンが多い状態を完全に等しい確率で一様に巡るため，マクロな平均としての磁化はゼロに保たれます。</p>
-<p>しかし，臨界温度以下の低温に冷却すると，系はエネルギーをより低く安定化させるために，上向きに揃った状態か，あるいは下向きに揃った状態の，いずれか一方の集団状態を自発的に選択してその中に留まるようになります。</p>
-<p>数学的なエネルギーの規則（ハミルトニアン）自体は上下の向きを区別していないにもかかわらず，系が実際に実現するマクロな熱平衡状態がどちらか一方の向きに偏ることで，上下の反転対称性が自発的に失われます。この現象を<strong>自発的対称性の破れ</strong>と呼び，無秩序な状態からマクロな秩序変数が湧き出す統計力学的な基本構造となっています。</p>
+<p><span class="arithmatex">\(\beta&gt;0\)</span> であるため</p>
+<div class="arithmatex">\[
+\lim_{T\to T_c-0}\phi(T)
+=A\lim_{T\to T_c-0}(T_c-T)^\beta=0
+\]</div>
+<p>となります。したがって，気体と液体の密度差は臨界温度で連続的にゼロへ近づきます。</p>
+<p><span class="arithmatex">\(T&lt;T_c\)</span> における微分は</p>
+<div class="arithmatex">\[
+\frac{d\phi}{dT}=-A\beta(T_c-T)^{\beta-1}
+\]</div>
+<p>です。<span class="arithmatex">\(0&lt;\beta&lt;1\)</span> ならば</p>
+<div class="arithmatex">\[
+\lim_{T\to T_c-0}\frac{d\phi}{dT}=-\infty
+\]</div>
+<p>となり，秩序変数は連続でもその温度微分は発散します。</p>
 
 
 

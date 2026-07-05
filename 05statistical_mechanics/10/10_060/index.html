@@ -14543,12 +14543,12 @@
 <h1 id="2">2元合金の相転移</h1>
 <h2 id="_1">問題</h2>
 <p>イジング模型の平均場理論は，磁性体だけでなく，2種類の金属元素からなる2元合金の原子配列における規則不規則相転移の解析にも応用できる。ここでは，ブラッグ・ウィリアムズ近似を用いた合金の統計力学的な模型を考える。</p>
-<p>A元素の原子とB元素の原子がそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつ含まれる，全原子数 <span class="arithmatex">\(N\)</span> の等原子比二元合金を対象とする。この結晶格子は，互いに入り込んだ同数の格子点を持つ2つの副格子（ <span class="arithmatex">\(\alpha\)</span> 副格子および <span class="arithmatex">\(\beta\)</span> 副格子）に等分できるものとする。</p>
-<p>完全に規則化した状態では，A原子はすべて <span class="arithmatex">\(\alpha\)</span> 副格子に配置され，B原子はすべて <span class="arithmatex">\(\beta\)</span> 副格子に配置される。熱運動が存在する有限温度においては，原子の配置に乱れが生じる。そこで，配置の規則正しさを表す秩序変数として，規則度 <span class="arithmatex">\(X\)</span> を以下のように定義する。</p>
+<p>A元素の原子とB元素の原子がそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつ含まれる，全原子数 <span class="arithmatex">\(N\)</span> の等原子比二元合金を対象とする。この結晶格子は，互いに入り込んだ同数の格子点を持つ2つの副格子に等分できるものとする。</p>
+<p>規則化した状態では，A原子はすべて <span class="arithmatex">\(\alpha\)</span> 副格子に配置され，B原子はすべて <span class="arithmatex">\(\beta\)</span> 副格子に配置される。熱運動が存在する有限温度においては，原子の配置に乱れが生じる。そこで，配置の規則正しさを表す秩序変数として，規則度 <span class="arithmatex">\(X\)</span> を以下のように定義する。</p>
 <div class="arithmatex">\[
 X = \frac{2 N_{A\alpha}}{N} - 1
 \]</div>
-<p>ここで <span class="arithmatex">\(N_{A\alpha}\)</span> は <span class="arithmatex">\(\alpha\)</span> 副格子上に存在するA原子の個数である。完全に規則化した状態では <span class="arithmatex">\(X = 1\)</span> となり，完全にランダムに混ざり合った不規則状態では <span class="arithmatex">\(X = 0\)</span> となる。1つの原子のまわりにある最近接の格子点数（配位数）を <span class="arithmatex">\(z\)</span> とし，最近接の原子対（A-A対，B-B対，A-B対）の結合エネルギーをそれぞれ <span class="arithmatex">\(v_{AA}, v_{BB}, v_{AB}\)</span> とする。以下の問いに答えよ。</p>
+<p>ここで <span class="arithmatex">\(N_{A\alpha}\)</span> は <span class="arithmatex">\(\alpha\)</span> 副格子上に存在するA原子の個数である。規則化した状態では <span class="arithmatex">\(X = 1\)</span> となり，ランダムに混ざり合った不規則状態では <span class="arithmatex">\(X = 0\)</span> となる。1つの原子のまわりにある最近接の格子点数を <span class="arithmatex">\(z\)</span> とし，最近接の原子対の結合エネルギーをそれぞれ <span class="arithmatex">\(v_{AA}, v_{BB}, v_{AB}\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 規則度 <span class="arithmatex">\(X\)</span> を用いて， <span class="arithmatex">\(\alpha\)</span> 副格子上のA原子の数 <span class="arithmatex">\(N_{A\alpha}\)</span>，B原子の数 <span class="arithmatex">\(N_{B\alpha}\)</span>，および <span class="arithmatex">\(\beta\)</span> 副格子上のA原子の数 <span class="arithmatex">\(N_{A\beta}\)</span>，B原子の数 <span class="arithmatex">\(N_{B\beta}\)</span> をそれぞれ <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(X\)</span> の式で表せ。また，これらの原子を各副格子に配置するときの状態数 <span class="arithmatex">\(W\)</span> から，ボルツマンの公式 <span class="arithmatex">\(S = k_B \log W\)</span> とスターリングの近似公式 <span class="arithmatex">\(\log n! \simeq n \log n - n\)</span> を用いて，配置のエントロピー <span class="arithmatex">\(S\)</span> を <span class="arithmatex">\(N, k_B, X\)</span> を用いた式として導出せよ。</p>
 <p>(2) 各副格子上の原子がそれぞれ一様に分布していると仮定する。このとき，全空間に存在する最近接原子対の総数は <span class="arithmatex">\(zN/2\)</span> であり，A-A対，B-B対，A-B対の数が規則度 <span class="arithmatex">\(X\)</span> の関数としてそれぞれ求まる。これらを利用して，合金全体の内部エネルギー <span class="arithmatex">\(U\)</span> が以下のように表されることを示せ。ただし， <span class="arithmatex">\(U_0\)</span> は <span class="arithmatex">\(X\)</span> に依存しない定数項であり， <span class="arithmatex">\(v = v_{AB} - \frac{1}{2}(v_{AA} + v_{BB}) &gt; 0\)</span> である。</p>
 <div class="arithmatex">\[
@@ -14558,7 +14558,7 @@ U = U_0 - \frac{z N v}{2} X^2
 <div class="arithmatex">\[
 X = \tanh\left( \frac{z v X}{2 k_B T} \right)
 \]</div>
-<p>また，この方程式に基づき，温度が十分高い不規則相（ <span class="arithmatex">\(X = 0\)</span> ）から規則相（ <span class="arithmatex">\(X &gt; 0\)</span> ）へと相転移が起こる臨界温度（規則不規則転移温度） <span class="arithmatex">\(T_c\)</span> の式を <span class="arithmatex">\(z, v, k_B\)</span> を用いて表せ。</p>
+<p>また，この方程式に基づき，温度が十分高い不規則相 <span class="arithmatex">\(X = 0\)</span> から規則相 <span class="arithmatex">\(X &gt; 0\)</span> へと相転移が起こる臨界温度 <span class="arithmatex">\(T_c\)</span> の式を <span class="arithmatex">\(z, v, k_B\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14566,7 +14566,7 @@ X = \tanh\left( \frac{z v X}{2 k_B T} \right)
 <div class="arithmatex">\[
 N_{A\alpha} = \frac{N}{4} (1 + X)
 \]</div>
-<p><span class="arithmatex">\(\alpha\)</span> 副格子の残りの座席はB原子が占めるため，以下のようになります。</p>
+<p><span class="arithmatex">\(\alpha\)</span> 副格子の残りの格子点はB原子が占めるため，以下のようになります。</p>
 <div class="arithmatex">\[
 N_{B\alpha} = \frac{N}{2} - N_{A\alpha} = \frac{N}{4} (1 - X)
 \]</div>

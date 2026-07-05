@@ -14542,22 +14542,22 @@
 
 <h1 id="_1">キュリー温度と自発磁化</h1>
 <h2 id="_2">問題</h2>
-<p>外部磁場がない状態（ <span class="arithmatex">\(B = 0\)</span> ）におけるイジング模型の平均場方程式を考える。</p>
+<p>外部磁場がない状態 <span class="arithmatex">\(B = 0\)</span> におけるイジング模型の平均場方程式を考える。</p>
 <div class="arithmatex">\[
 m = \tanh(\beta z J m)
 \]</div>
-<p>ここで，転移温度（キュリー温度）が <span class="arithmatex">\(T_c = \frac{z J}{k_B}\)</span> で与えられることから，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて方程式の内部を <span class="arithmatex">\(\beta z J = \frac{T_c}{T}\)</span> と書き換えることができる。したがって，自発磁化 <span class="arithmatex">\(m\)</span> が満たすべき関係式は温度の比を用いて以下のように表される。</p>
+<p>ここで，転移温度が <span class="arithmatex">\(T_c = \frac{z J}{k_B}\)</span> で与えられることから，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて方程式の内部を <span class="arithmatex">\(\beta z J = \frac{T_c}{T}\)</span> と書き換えることができる。したがって，自発磁化 <span class="arithmatex">\(m\)</span> が満たすべき関係式は温度の比を用いて以下のように表される。</p>
 <div class="arithmatex">\[
 m = \tanh\left( \frac{T_c}{T} m \right)
 \]</div>
-<p>キュリー温度の直下（ <span class="arithmatex">\(T &lt; T_c\)</span> かつ <span class="arithmatex">\(T_c - T \ll T_c\)</span> ）における自発磁化 <span class="arithmatex">\(m\)</span> の具体的な温度依存性を調べるため，以下の問いに答えよ。</p>
-<p>(1) 双曲線関数 <span class="arithmatex">\(\tanh(x)\)</span> のマクローリン展開は，3次の項まで考慮すると <span class="arithmatex">\(\tanh(x) \simeq x - \frac{1}{3}x^3\)</span> と近似できる。自発磁化 <span class="arithmatex">\(m\)</span> が十分に小さいとして，平均場方程式の右辺にこの展開式を適用した近似方程式を記述せよ。</p>
+<p>キュリー温度の直下における自発磁化 <span class="arithmatex">\(m\)</span> の具体的な温度依存性を調べるため，以下の問いに答えよ。</p>
+<p>(1) 双曲線関数 <span class="arithmatex">\(\tanh(x)\)</span> のマクローリン展開は，3次の項まで考慮すると <span class="arithmatex">\(\tanh(x) \simeq x - \frac{1}{3}x^3\)</span> と近似できる。自発磁化 <span class="arithmatex">\(m\)</span> が十分に小さいとして，平均場方程式の右辺にこの展開式を適用した近似方程式を述べよ。</p>
 <p>(2) (1) で得られた近似方程式から，無秩序相に対応する解 <span class="arithmatex">\(m = 0\)</span> を除外することにより， <span class="arithmatex">\(m^2\)</span> についての方程式へ変形せよ。さらに，温度の無次元差 <span class="arithmatex">\(\epsilon = \frac{T_c - T}{T_c}\)</span> を導入し， <span class="arithmatex">\(T \simeq T_c\)</span> の近くで <span class="arithmatex">\(\frac{T_c}{T} \simeq 1\)</span> などの近似を適切に行うことで， <span class="arithmatex">\(m^2\)</span> を <span class="arithmatex">\(\epsilon\)</span> の一次式として簡潔に表せ。</p>
 <p>(3) (2) の結果から，キュリー温度の直下における自発磁化 <span class="arithmatex">\(m\)</span> が，温度変化に対して以下のべき乗規則に従うことを示せ。</p>
 <div class="arithmatex">\[
 m \propto (T_c - T)^\beta
 \]</div>
-<p>このとき，平均場理論における自発磁化の<strong>臨界指数</strong> <span class="arithmatex">\(\beta\)</span> の具体的な値を求めよ。また，絶対零度（ <span class="arithmatex">\(T \to 0\)</span> ）の極限において，元の平均場方程式から得られる自発磁化 <span class="arithmatex">\(m\)</span> の値が何に収束するかを記述せよ。</p>
+<p>このとき，平均場理論における自発磁化の<strong>臨界指数</strong> <span class="arithmatex">\(\beta\)</span> の具体的な値を求めよ。また，絶対零度 <span class="arithmatex">\(T \to 0\)</span> の極限において，元の平均場方程式から得られる自発磁化 <span class="arithmatex">\(m\)</span> の値が何に収束するかを述べよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14567,7 +14567,7 @@ m \simeq \left( \frac{T_c}{T} m \right) - \frac{1}{3} \left( \frac{T_c}{T} m \ri
 \]</div>
 <p>これが，転移点近傍で磁化が小さいときに成り立つ近似方程式です。</p>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた式の両辺を <span class="arithmatex">\(m\)</span> （ <span class="arithmatex">\(\neq 0\)</span> ）で割ることで，無秩序解以外の枝を抽出します。</p>
+<p>(1) で得られた式の両辺を <span class="arithmatex">\(m\)</span> <span class="arithmatex">\(\neq 0\)</span> で割ることで，無秩序解以外の枝を抽出します。</p>
 <div class="arithmatex">\[
 1 = \frac{T_c}{T} - \frac{1}{3} \left( \frac{T_c}{T} \right)^3 m^2
 \]</div>
@@ -14579,7 +14579,7 @@ m \simeq \left( \frac{T_c}{T} m \right) - \frac{1}{3} \left( \frac{T_c}{T} m \ri
 <div class="arithmatex">\[
 m^2 = 3 \left( \frac{T}{T_c} \right)^2 \epsilon
 \]</div>
-<p>いま，転移温度のすぐ下の領域（ <span class="arithmatex">\(T \simeq T_c\)</span> ）を考えているため，前方の係数部分の温度比は $ \frac{T}{T_c} \simeq 1$ と近似できます。これを適用すると， <span class="arithmatex">\(m^2\)</span> と <span class="arithmatex">\(\epsilon\)</span> の間に以下の簡潔な線形関係が得られます。</p>
+<p>いま，転移温度のすぐ下の領域 <span class="arithmatex">\(T \simeq T_c\)</span> を考えているため，前方の係数部分の温度比は $ \frac{T}{T_c} \simeq 1$ と近似できます。これを適用すると， <span class="arithmatex">\(m^2\)</span> と <span class="arithmatex">\(\epsilon\)</span> の間に以下の簡潔な線形関係が得られます。</p>
 <div class="arithmatex">\[
 m^2 \simeq 3 \epsilon
 \]</div>
@@ -14592,9 +14592,9 @@ m \simeq \sqrt{3} \epsilon^{1/2} = \sqrt{3} \left( \frac{T_c - T}{T_c} \right)^{
 <div class="arithmatex">\[
 \beta = \frac{1}{2} = 0.5
 \]</div>
-<p>この値は，相互作用の詳細や格子の形状（配位数 <span class="arithmatex">\(z\)</span> ）に依存しない普遍的な定数であり，平均場近似が持つ幾何学的な特徴を反映しています。実際の二次元イジング模型の厳密解では <span class="arithmatex">\(\beta = \frac{1}{8} = 0.125\)</span> ，三次元イジング模型の精密な計算では <span class="arithmatex">\(\beta \simeq 0.326\)</span> となるため，平均場理論の <span class="arithmatex">\(\beta = 0.5\)</span> という見積もりは，現実よりも秩序がやや急激に立ち上がる味付けの近似になっていることを意味します。</p>
+<p>この値は，相互作用の詳細や格子の形状に依存しない定数であり，平均場近似が持つ特徴を反映しています。実際の二次元イジング模型の厳密解では <span class="arithmatex">\(\beta = \frac{1}{8} = 0.125\)</span> ，三次元イジング模型の精密な計算では <span class="arithmatex">\(\beta \simeq 0.326\)</span> となるため，平均場理論の <span class="arithmatex">\(\beta = 0.5\)</span> という見積もりは，現実よりも秩序がやや急激に立ち上がる近似になっていることを意味します。</p>
 <p><strong>絶対零度極限での振る舞い</strong></p>
-<p>一方で，温度を絶対零度へ近づける極限（ <span class="arithmatex">\(T \to 0\)</span> ）を考えます。このとき，温度比は <span class="arithmatex">\(\frac{T_c}{T} \to \infty\)</span> となります。</p>
+<p>一方で，温度を絶対零度へ近づける極限 <span class="arithmatex">\(T \to 0\)</span> を考えます。このとき，温度比は <span class="arithmatex">\(\frac{T_c}{T} \to \infty\)</span> となります。</p>
 <p>元の平均場方程式 <span class="arithmatex">\(m = \tanh\left( \frac{T_c}{T} m \right)\)</span> において，解 <span class="arithmatex">\(m &gt; 0\)</span> であるとすると， <span class="arithmatex">\(\tanh\)</span> の内部の変数はプラスの無限大に発散します。</p>
 <div class="arithmatex">\[
 \lim_{T \to 0} \tanh\left( \frac{T_c}{T} m \right) = 1
@@ -14603,7 +14603,7 @@ m \simeq \sqrt{3} \epsilon^{1/2} = \sqrt{3} \left( \frac{T_c - T}{T_c} \right)^{
 <div class="arithmatex">\[
 m = 1
 \]</div>
-<p>物理的には，熱運動による揺らぎの妨害が完全に消失する絶対零度においては，系に含まれるすべてのスピンが1つの方向へ完全に揃いきった最大秩序状態（に達することを表しています。</p>
+<p>物理的には，絶対零度では，すべてのスピンが同じ向きに揃い，<span class="arithmatex">\(m=1\)</span> となることを表しています。</p>
 
 
 

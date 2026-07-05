@@ -14542,23 +14542,23 @@
 
 <h1 id="_1">密度行列の性質</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学において，系の状態が単一の状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> で完全に指定できる場合を純粋状態と呼ぶ。しかし，マクロな熱力学系のように，環境との熱的なやり取りによって系が確率的に異なる量子状態をとる場合，単一の状態ベクトルでは記述できず，統計的な不確定性を取り入れた混合状態として扱う必要がある。</p>
-<p>ある系において，規格化された量子状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> （ <span class="arithmatex">\(\langle\psi_i|\psi_i\rangle = 1\)</span> ）が，それぞれ古典的な確率 <span class="arithmatex">\(p_i\)</span> で実現している統計的集団を考える。ただし，全確率の保存則 <span class="arithmatex">\(\sum_i p_i = 1\)</span> （ <span class="arithmatex">\(0 \le p_i \le 1\)</span> ）を満たすものとする。</p>
-<p>この混合状態を統一的に記述するため，以下の<strong>密度行列</strong>（密度演算子） <span class="arithmatex">\(\rho\)</span> を導入する。</p>
+<p>量子力学において，系の状態が単一の状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> で指定できる場合を純粋状態と呼ぶ。しかし，マクロな熱力学系のように，環境との熱的なやり取りによって系が確率的に異なる量子状態をとる場合，単一の状態ベクトルでは表現できず，統計的な不確定性を取り入れた混合状態として扱う必要がある。</p>
+<p>ある系において，規格化された量子状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> <span class="arithmatex">\(\langle\psi_i|\psi_i\rangle = 1\)</span> が，それぞれ古典的な確率 <span class="arithmatex">\(p_i\)</span> で実現している統計的集団を考える。ただし，全確率の保存則 <span class="arithmatex">\(\sum_i p_i = 1\)</span> <span class="arithmatex">\(0 \le p_i \le 1\)</span> を満たすものとする。</p>
+<p>この混合状態を統一的に表すため，以下の<strong>密度行列</strong> <span class="arithmatex">\(\rho\)</span> を導入する。</p>
 <div class="arithmatex">\[
 \rho = \sum_i p_i |\psi_i\rangle \langle\psi_i|
 \]</div>
 <p>任意の物理量に対応するエルミート演算子を <span class="arithmatex">\(\hat{A}\)</span> とするとき，以下の問いに答えよ。</p>
-<p>(1) 状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> における物理量の量子力学的な期待値は <span class="arithmatex">\(\langle\psi_i|\hat{A}|\psi_i\rangle\)</span> と表される。この系全体の統計的な平均値 <span class="arithmatex">\(\langle\hat{A}\rangle\)</span> は，各状態での量子力学的期待値にそれぞれの出現確率を掛けた和として与えられる。この平均値 <span class="arithmatex">\(\langle\hat{A}\rangle\)</span> が，密度行列 <span class="arithmatex">\(\rho\)</span> を用いて以下のトレース（演算子の対角和）の形で表現できることを具体的に導出せよ。</p>
+<p>(1) 状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> における物理量の量子力学的な期待値は <span class="arithmatex">\(\langle\psi_i|\hat{A}|\psi_i\rangle\)</span> と表される。この系全体の統計的な平均値 <span class="arithmatex">\(\langle\hat{A}\rangle\)</span> は，各状態での量子力学的期待値にそれぞれの出現確率を掛けた和として与えられる。この平均値 <span class="arithmatex">\(\langle\hat{A}\rangle\)</span> が，密度行列 <span class="arithmatex">\(\rho\)</span> を用いて以下のトレースの形で表現できることを具体的に導出せよ。</p>
 <div class="arithmatex">\[
 \langle\hat{A}\rangle = \mathrm{Tr}(\rho \hat{A})
 \]</div>
-<p>(2) 密度行列 <span class="arithmatex">\(\rho\)</span> が必ず満たすべき普遍的な性質を調べる。</p>
+<p>(2) 密度行列 <span class="arithmatex">\(\rho\)</span> が必ず満たすべき一般的な性質を調べる。</p>
 <ul>
-<li>密度行列のトレースが常に 1 になること（ <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> ）を，確率の保存則を用いて示せ。</li>
-<li>密度行列がエルミート演算子であること（ <span class="arithmatex">\(\rho^\dagger = \rho\)</span> ）を，定義式から示せ。</li>
+<li>密度行列のトレースが常に 1 になること <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> を，確率の保存則を用いて示せ。</li>
+<li>密度行列がエルミート演算子であること <span class="arithmatex">\(\rho^\dagger = \rho\)</span> を，定義式から示せ。</li>
 </ul>
-<p>(3) 状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> が互いに直交する完全正規直交系 <span class="arithmatex">\(\{|n\rangle\}\)</span> である場合を考える。このとき，密度行列の行列表現における対角成分 <span class="arithmatex">\(\rho_{nn} = \langle n|\rho|n\rangle\)</span> および，非対角成分 <span class="arithmatex">\(\rho_{nm} = \langle n|\rho|m\rangle\)</span> （ <span class="arithmatex">\(n \neq m\)</span> ）が持つ物理的な意味をそれぞれ記述せよ。</p>
+<p>(3) 状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> が互いに直交する完全正規直交系 <span class="arithmatex">\(\{|n\rangle\}\)</span> である場合を考える。このとき，密度行列の行列表現における対角成分 <span class="arithmatex">\(\rho_{nn} = \langle n|\rho|n\rangle\)</span> および，非対角成分 <span class="arithmatex">\(\rho_{nm} = \langle n|\rho|m\rangle\)</span> <span class="arithmatex">\(n \neq m\)</span> が持つ物理的な意味をそれぞれ述べよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14570,7 +14570,7 @@
 <div class="arithmatex">\[
 \langle\hat{A}\rangle = \sum_i p_i \mathrm{Tr}(|\psi_i\rangle\langle\psi_i|\hat{A})
 \]</div>
-<p>トレースの線形性（和のトレースはトレースの和）を用いて，定数である確率 <span class="arithmatex">\(p_i\)</span> とともに入れ物を1つのトレースにまとめます。</p>
+<p>トレースの線形性を用いて，定数である確率 <span class="arithmatex">\(p_i\)</span> とともに入れ物を1つのトレースにまとめます。</p>
 <div class="arithmatex">\[
 \langle\hat{A}\rangle = \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle\langle\psi_i|\hat{A} \right) = \mathrm{Tr}\left( \left[ \sum_i p_i |\psi_i\rangle\langle\psi_i| \right] \hat{A} \right)
 \]</div>
@@ -14580,7 +14580,7 @@
 \]</div>
 <h3 id="2">(2)</h3>
 <ul>
-<li><strong>トレースの性質（ <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> ）の導出</strong>
+<li><strong>トレースの性質 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> の導出</strong>
   密度行列の定義式全体のトレースをとります。</li>
 </ul>
 <p>$$
@@ -14593,7 +14593,7 @@
 <p>全確率の保存則 <span class="arithmatex">\(\sum_i p_i = 1\)</span> より， <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> が満たされます。</p>
 <ul>
 <li><strong>エルミート性の導出</strong>
-  密度行列の随伴演算子（エルミート共役）を計算します。積の共役の規則 <span class="arithmatex">\((|a\rangle\langle b|)^\dagger = |b\rangle\langle a|\)</span> を適用します。確率は実数（ <span class="arithmatex">\(p_i^* = p_i\)</span> ）です。</li>
+  密度行列の随伴演算子を計算します。積の共役の規則 <span class="arithmatex">\((|a\rangle\langle b|)^\dagger = |b\rangle\langle a|\)</span> を適用します。確率は実数 <span class="arithmatex">\(p_i^* = p_i\)</span> です。</li>
 </ul>
 <p>$$
   \rho^\dagger = \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right)^\dagger = \sum_i p_i (|\psi_i\rangle \langle\psi_i|)^\dagger = \sum_i p_i |\psi_i\rangle \langle\psi_i| = \rho
@@ -14607,14 +14607,14 @@
 <p>$$
   \rho_{nn} = \langle n| \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) |n\rangle = \sum_i p_i |\langle n|\psi_i\rangle|^2
   $$</p>
-<p><span class="arithmatex">\(|\langle n|\psi_i\rangle|^2\)</span> は状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> にある系において状態 <span class="arithmatex">\(|n\rangle\)</span> が観測される量子力学的な確率です。これに出現確率 <span class="arithmatex">\(p_i\)</span> を掛けて全状態について足し合わせているため， <span class="arithmatex">\(\rho_{nn}\)</span> は<strong>系全体において状態 <span class="arithmatex">\(|n\rangle\)</span> が見出されるマクロな存在確率（占有数）</strong>を表します。</p>
+<p><span class="arithmatex">\(|\langle n|\psi_i\rangle|^2\)</span> は状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> にある系において状態 <span class="arithmatex">\(|n\rangle\)</span> が観測される量子力学的な確率です。これに出現確率 <span class="arithmatex">\(p_i\)</span> を掛けて全状態について足し合わせているため， <span class="arithmatex">\(\rho_{nn}\)</span> は<strong>系全体において状態 <span class="arithmatex">\(|n\rangle\)</span> が見出されるマクロな存在確率</strong>を表します。</p>
 <ul>
-<li><strong>非対角成分 <span class="arithmatex">\(\rho_{nm}\)</span> （ <span class="arithmatex">\(n \neq m\)</span> ）の物理的意味</strong></li>
+<li><strong>非対角成分 <span class="arithmatex">\(\rho_{nm}\)</span> <span class="arithmatex">\(n \neq m\)</span> の物理的意味</strong></li>
 </ul>
 <p>$$
   \rho_{nm} = \sum_i p_i \langle n|\psi_i\rangle \langle\psi_i|m\rangle
   $$</p>
-<p>これは，状態 <span class="arithmatex">\(|n\rangle\)</span> と状態 <span class="arithmatex">\(|m\rangle\)</span> の間の量子力学的な位相の相関（干渉効果）を表しており，<strong>量子コヒーレンス（可干渉性）</strong>と呼ばれます。純粋状態では各状態の位相が揃っているため非対角成分が残りますが，古典的な確率でランダムに混ざり合った混合状態（熱平衡状態など）では，位相の相殺（位相緩和）が起こるため，非対角成分はゼロに近づいていきます。</p>
+<p>これは，状態 <span class="arithmatex">\(|n\rangle\)</span> と状態 <span class="arithmatex">\(|m\rangle\)</span> の間の量子力学的な位相の相関を表しており，<strong>量子コヒーレンス</strong>と呼ばれます。純粋状態では各状態の位相が揃っているため非対角成分が残りますが，古典的な確率でランダムに混ざり合った混合状態では，位相の相殺が起こるため，非対角成分はゼロに近づいていきます。</p>
 
 
 

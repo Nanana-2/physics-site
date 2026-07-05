@@ -14542,13 +14542,13 @@
 
 <h1 id="_1">熱平衡状態の密度行列</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の大きな熱浴とエネルギーをやり取りして熱平衡状態に達した孤立していない量子系は，量子統計力学においてカノニカル分布をなす。このときの系の状態は，ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> と逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて，以下のカノニカル密度行列によって記述される。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の大きな熱浴とエネルギーをやり取りして熱平衡状態に達した孤立していない量子系は，量子統計力学においてカノニカル分布をなす。このときの系の状態は，ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> と逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて，以下のカノニカル密度行列によって表される。</p>
 <div class="arithmatex">\[
 \rho = \frac{1}{Z} \exp(-\beta \hat{H})
 \]</div>
 <p>ここで <span class="arithmatex">\(Z\)</span> は確率の総和を 1 に規格化するための分配関数である。以下の問いに答えよ。</p>
-<p>(1) 密度行列が必ず満たすべき規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> を用いることで，量子統計力学における分配関数 <span class="arithmatex">\(Z\)</span> がハミルトニアンの関数としてどのように定義されるか，トレースの記号を用いて記述せよ。また，ハミルトニアンの固有状態（エネルギー量子状態）を <span class="arithmatex">\(|n\rangle\)</span> ，対応するエネルギー固有値を <span class="arithmatex">\(E_n\)</span> とするとき，固有基底を用いた具体的な和の形式で <span class="arithmatex">\(Z\)</span> を書き下せ。</p>
-<p>(2) 系のマクロな内部エネルギー（平均エネルギー） <span class="arithmatex">\(U\)</span> は，ハミルトニアンの統計的平均値 <span class="arithmatex">\(U = \langle\hat{H}\rangle = \mathrm{Tr}(\rho \hat{H})\)</span> として与えられる。この <span class="arithmatex">\(U\)</span> が，分配関数 <span class="arithmatex">\(Z\)</span> の <span class="arithmatex">\(\beta\)</span> 微分を用いて以下の熱力学の関係式で表現できることを具体的に導出せよ。</p>
+<p>(1) 密度行列が必ず満たすべき規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> を用いることで，量子統計力学における分配関数 <span class="arithmatex">\(Z\)</span> がハミルトニアンの関数としてどのように定義されるか，トレースの記号を用いて述べよ。また，ハミルトニアンの固有状態を <span class="arithmatex">\(|n\rangle\)</span> ，対応するエネルギー固有値を <span class="arithmatex">\(E_n\)</span> とするとき，固有基底を用いた具体的な和の形式で <span class="arithmatex">\(Z\)</span> を書き下せ。</p>
+<p>(2) 系のマクロな内部エネルギー <span class="arithmatex">\(U\)</span> は，ハミルトニアンの統計的平均値 <span class="arithmatex">\(U = \langle\hat{H}\rangle = \mathrm{Tr}(\rho \hat{H})\)</span> として与えられる。この <span class="arithmatex">\(U\)</span> が，分配関数 <span class="arithmatex">\(Z\)</span> の <span class="arithmatex">\(\beta\)</span> 微分を用いて以下の熱力学の関係式で表現できることを具体的に導出せよ。</p>
 <div class="arithmatex">\[
 U = - \frac{\partial \ln Z}{\partial \beta}
 \]</div>
@@ -14584,11 +14584,11 @@ Z = \sum_n \exp(-\beta E_n)
 <div class="arithmatex">\[
 \frac{\partial Z}{\partial \beta} = - \mathrm{Tr}\big( \hat{H} \exp(-\beta \hat{H}) \big)
 \]</div>
-<p>ここで，内部エネルギーの定義式 <span class="arithmatex">\(U = \mathrm{Tr}(\rho \hat{H})\)</span> に具体的な密度行列の形を代入してみます。トレースの巡回対称性（ <span class="arithmatex">\(\mathrm{Tr}(\hat{X}\hat{Y}) = \mathrm{Tr}(\hat{Y}\hat{X})\)</span> ）より，演算子の並び順を入れ替えることができます。</p>
+<p>ここで，内部エネルギーの定義式 <span class="arithmatex">\(U = \mathrm{Tr}(\rho \hat{H})\)</span> に具体的な密度行列の形を代入してみます。トレースの巡回対称性 <span class="arithmatex">\(\mathrm{Tr}(\hat{X}\hat{Y}) = \mathrm{Tr}(\hat{Y}\hat{X})\)</span> より，演算子の並び順を入れ替えることができます。</p>
 <div class="arithmatex">\[
 U = \mathrm{Tr}\left( \frac{1}{Z} \exp(-\beta \hat{H}) \hat{H} \right) = \frac{1}{Z} \mathrm{Tr}\big( \hat{H} \exp(-\beta \hat{H}) \big)
 \]</div>
-<p>この分子にあるトレースの塊は，先ほどの <span class="arithmatex">\(\beta\)</span> 微分の結果である <span class="arithmatex">\(-\frac{\partial Z}{\partial \beta}\)</span> と完全に一致しています。したがって，以下のように書き換わります。</p>
+<p>この分子にあるトレース項は，先ほどの <span class="arithmatex">\(\beta\)</span> 微分の結果である <span class="arithmatex">\(-\frac{\partial Z}{\partial \beta}\)</span> と一致しています。したがって，以下のように書き換わります。</p>
 <div class="arithmatex">\[
 U = \frac{1}{Z} \left( - \frac{\partial Z}{\partial \beta} \right) = - \frac{1}{Z} \frac{\partial Z}{\partial \beta}
 \]</div>
@@ -14609,7 +14609,7 @@ S = -k_B \mathrm{Tr}\big( \rho [ -\beta \hat{H} - \ln Z \cdot \hat{I} ] \big)
 <div class="arithmatex">\[
 S = k_B \beta \mathrm{Tr}(\rho \hat{H}) + k_B \ln Z \mathrm{Tr}(\rho)
 \]</div>
-<p>ここで，それぞれのトレースの塊に既知の物理的性質を適用します。</p>
+<p>ここで，それぞれのトレース項に既知の物理的性質を適用します。</p>
 <ul>
 <li>第1項のトレース：内部エネルギーの定義より <span class="arithmatex">\(\mathrm{Tr}(\rho \hat{H}) = U\)</span></li>
 <li>第2項のトレース：規格化条件より <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span></li>

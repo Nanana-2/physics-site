@@ -14542,26 +14542,26 @@
 
 <h1 id="_1">ボルツマン方程式とマクロ保存則</h1>
 <h2 id="_2">問題</h2>
-<p>ボルツマン方程式は微視的な分布関数の時間発展を記述するが，分布関数に適切な物理量を掛けて運動量空間全体で積分することにより，流体力学における質量や運動量のマクロな保存則を具体的に導出することができる。</p>
-<p>外力が働かない（ <span class="arithmatex">\(\boldsymbol{F} = 0\)</span> ）3次元空間における一粒子分布関数 <span class="arithmatex">\(f(\boldsymbol{r}, \boldsymbol{p}, t)\)</span> のボルツマン方程式を考える。粒子の質量を <span class="arithmatex">\(m\)</span> とすると，方程式は以下の通りである。</p>
+<p>ボルツマン方程式は微視的な分布関数の時間発展を表すが，分布関数に適切な物理量を掛けて運動量空間全体で積分することにより，流体力学における質量や運動量のマクロな保存則を具体的に導出することができる。</p>
+<p>外力が働かない <span class="arithmatex">\(\boldsymbol{F} = 0\)</span>3次元空間における一粒子分布関数 <span class="arithmatex">\(f(\boldsymbol{r}, \boldsymbol{p}, t)\)</span> のボルツマン方程式を考える。粒子の質量を <span class="arithmatex">\(m\)</span> とすると，方程式は以下の通りである。</p>
 <div class="arithmatex">\[
 \frac{\partial f}{\partial t} + \frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} f = \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}}
 \]</div>
-<p>ここで，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> におけるマクロな数密度 <span class="arithmatex">\(n(\boldsymbol{r}, t)\)</span> および，数密度と局所平均速度 <span class="arithmatex">\(\boldsymbol{u}(\boldsymbol{r}, t)\)</span> の積である粒子流束密度 <span class="arithmatex">\(n\boldsymbol{u}\)</span> は，分布関数の運動量積分（ <span class="arithmatex">\(d^3p = dp_x dp_y dp_z\)</span> ）を用いてそれぞれ以下のように定義される。</p>
+<p>ここで，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> におけるマクロな数密度 <span class="arithmatex">\(n(\boldsymbol{r}, t)\)</span> および，数密度と局所平均速度 <span class="arithmatex">\(\boldsymbol{u}(\boldsymbol{r}, t)\)</span> の積である粒子流束密度 <span class="arithmatex">\(n\boldsymbol{u}\)</span> は，分布関数の運動量積分 <span class="arithmatex">\(d^3p = dp_x dp_y dp_z\)</span> を用いてそれぞれ以下のように定義される。</p>
 <div class="arithmatex">\[
 n(\boldsymbol{r}, t) = \int f(\boldsymbol{r}, \boldsymbol{p}, t) d^3p
 \]</div>
 <div class="arithmatex">\[
 n(\boldsymbol{r}, t)\boldsymbol{u}(\boldsymbol{r}, t) = \int \frac{\boldsymbol{p}}{m} f(\boldsymbol{r}, \boldsymbol{p}, t) d^3p
 \]</div>
-<p>粒子同士の衝突の前後で全体の粒子総数は変化しないため，衝突項の運動量積分は厳密にゼロ（ <span class="arithmatex">\(\int \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} d^3p = 0\)</span> ）となる。以下の問いに答えよ。</p>
-<p>(1) ボルツマン方程式の両辺を運動量空間全体で積分（ <span class="arithmatex">\(\int d^3p\)</span> ）せよ。微分の順序交換が成り立つとして，マクロな数密度 <span class="arithmatex">\(n\)</span> および平均速度 <span class="arithmatex">\(\boldsymbol{u}\)</span> の時間発展を記述する連続の式（不変流体の質量保存則に対応）を具体的に導出せよ。</p>
-<p>(2) 次に，ボルツマン方程式の両辺に運動量成分 <span class="arithmatex">\(p_i\)</span> （ <span class="arithmatex">\(i = x, y, z\)</span> ）を掛けた上で，運動量空間全体で積分（ <span class="arithmatex">\(\int p_i d^3p\)</span> ）する。衝突前後で運動量の総和も保存されるため， <span class="arithmatex">\(\int p_i \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} d^3p = 0\)</span> である。この計算から，マクロな運動量密度の時間変化に関する以下の運動量保存則の基礎式を導出せよ。</p>
+<p>粒子同士の衝突の前後で全体の粒子総数は変化しないため，衝突項の運動量積分は厳密にゼロ <span class="arithmatex">\(\int \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} d^3p = 0\)</span> となる。以下の問いに答えよ。</p>
+<p>(1) ボルツマン方程式の両辺を運動量空間全体で積分 <span class="arithmatex">\(\int d^3p\)</span> せよ。微分の順序交換が成り立つとして，マクロな数密度 <span class="arithmatex">\(n\)</span> および平均速度 <span class="arithmatex">\(\boldsymbol{u}\)</span> の時間発展を表す連続の式を具体的に導出せよ。</p>
+<p>(2) 次に，ボルツマン方程式の両辺に運動量成分 <span class="arithmatex">\(p_i\)</span> <span class="arithmatex">\(i = x, y, z\)</span> を掛けた上で，運動量空間全体で積分 <span class="arithmatex">\(\int p_i d^3p\)</span> する。衝突前後で運動量の総和も保存されるため， <span class="arithmatex">\(\int p_i \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} d^3p = 0\)</span> である。この計算から，マクロな運動量密度の時間変化に関する以下の運動量保存則の基礎式を導出せよ。</p>
 <div class="arithmatex">\[
 \frac{\partial}{\partial t} (m n u_i) + \sum_{j} \frac{\partial}{\partial x_j} \Pi_{ij} = 0
 \]</div>
-<p>ただし， <span class="arithmatex">\(\Pi_{ij} = \int \frac{p_i p_j}{m} f d^3p\)</span> は運動量流束テンソル（または応力テンソルに関連する量）である。</p>
-<p>(3) 粒子が局所平衡状態（マックスウェル・ボルツマン分布 <span class="arithmatex">\(f_0\)</span> ）に十分近いとき，(2) のテンソル成分はマクロな理想気体の圧力 <span class="arithmatex">\(P\)</span> を用いて <span class="arithmatex">\(\Pi_{ij} = m n u_i u_j + P \delta_{ij}\)</span> （ <span class="arithmatex">\(\delta_{ij}\)</span> はクロネッカーのデルタ）と評価できる。これを (2) の式に代入し，流体力学におけるオイラー方程式の成分表示を導出せよ。</p>
+<p>ただし， <span class="arithmatex">\(\Pi_{ij} = \int \frac{p_i p_j}{m} f d^3p\)</span> は運動量流束テンソルである。</p>
+<p>(3) 粒子が局所平衡状態に十分近いとき，(2) のテンソル成分はマクロな理想気体の圧力 <span class="arithmatex">\(P\)</span> を用いて <span class="arithmatex">\(\Pi_{ij} = m n u_i u_j + P \delta_{ij}\)</span> と評価できる。これを (2) の式に代入し，流体力学におけるオイラー方程式の成分表示を導出せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14592,7 +14592,7 @@ n(\boldsymbol{r}, t)\boldsymbol{u}(\boldsymbol{r}, t) = \int \frac{\boldsymbol{p
 <div class="arithmatex">\[
 \int p_i \frac{\partial f}{\partial t} d^3p = \frac{\partial}{\partial t} \int p_i f d^3p = \frac{\partial}{\partial t} (m n u_i)
 \]</div>
-<p>左辺第2項の内積の形を成分表示（ <span class="arithmatex">\(\frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} = \sum_j \frac{p_j}{m} \frac{\partial}{\partial x_j}\)</span> ）に展開し，微分を積分の外へ出します。</p>
+<p>左辺第2項の内積の形を成分表示 <span class="arithmatex">\(\frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} = \sum_j \frac{p_j}{m} \frac{\partial}{\partial x_j}\)</span> に展開し，微分を積分の外へ出します。</p>
 <div class="arithmatex">\[
 \int p_i \left( \sum_j \frac{p_j}{m} \frac{\partial f}{\partial x_j} \right) d^3p = \sum_j \frac{\partial}{\partial x_j} \int \frac{p_i p_j}{m} f d^3p
 \]</div>
@@ -14625,7 +14625,7 @@ m u_i \left\{ \frac{\partial n}{\partial t} + \sum_j \frac{\partial}{\partial x_
 <div class="arithmatex">\[
 m n \left( \frac{\partial u_i}{\partial t} + \sum_j u_j \frac{\partial u_i}{\partial x_j} \right) = - \frac{\partial P}{\partial x_i}
 \]</div>
-<p>両辺をマクロな質量密度 <span class="arithmatex">\(\rho = m n\)</span> で割ることで，完全流体の運動を記述するオイラー方程式の成分表示が具体的に導出されます。</p>
+<p>両辺をマクロな質量密度 <span class="arithmatex">\(\rho = m n\)</span> で割ることで，完全流体の運動を表すオイラー方程式の成分表示が具体的に導出されます。</p>
 <div class="arithmatex">\[
 \frac{\partial u_i}{\partial t} + \sum_j u_j \frac{\partial u_i}{\partial x_j} = - \frac{1}{\rho} \frac{\partial P}{\partial x_i}
 \]</div>

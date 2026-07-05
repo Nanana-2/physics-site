@@ -14542,19 +14542,19 @@
 
 <h1 id="_1">二準位系の密度行列</h1>
 <h2 id="_2">問題</h2>
-<p>任意のスピン <span class="arithmatex">\(1/2\)</span> 系や量子ビットに代表される二準位量子系は，その密度行列を3次元の幾何学的な球（ブロッホ球）の内部，あるいは表面の点として美しく表現することができる。ここでは，熱平衡状態がこの幾何学的な球の中でどのような一点に対応するかを具体的に計算する。</p>
-<p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が，エネルギー固有値 <span class="arithmatex">\(\pm \epsilon\)</span> （ <span class="arithmatex">\(\epsilon &gt; 0\)</span> ）を電子の持つパウリ行列 <span class="arithmatex">\(\sigma_z\)</span> を用いて以下のように表される二準位系を考える。</p>
+<p>任意のスピン <span class="arithmatex">\(1/2\)</span> 系や量子ビットに代表される二準位量子系は，その密度行列を3次元のブロッホ球の内部，あるいは表面の点として表現することができる。ここでは，熱平衡状態がこのブロッホ球の中でどのような一点に対応するかを具体的に計算する。</p>
+<p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が，エネルギー固有値 <span class="arithmatex">\(\pm \epsilon\)</span> <span class="arithmatex">\(\epsilon &gt; 0\)</span> を電子の持つパウリ行列 <span class="arithmatex">\(\sigma_z\)</span> を用いて以下のように表される二準位系を考える。</p>
 <div class="arithmatex">\[
 \hat{H} = \epsilon \sigma_z = \begin{pmatrix} \epsilon &amp; 0 \\ 0 &amp; -\epsilon \end{pmatrix}
 \]</div>
-<p>この系が逆温度 <span class="arithmatex">\(\beta\)</span> の熱浴と接して熱平衡状態（カノニカル分布）にあるとき，密度行列は <span class="arithmatex">\(\rho = \frac{1}{Z} \exp(-\beta \hat{H})\)</span> となる。また，スピン <span class="arithmatex">\(1/2\)</span> 系の任意の密度行列は，ブロッホベクトル <span class="arithmatex">\(\boldsymbol{P} = (P_x, P_y, P_z)\)</span> を用いて以下のように一意に展開できる。</p>
+<p>この系が逆温度 <span class="arithmatex">\(\beta\)</span> の熱浴と接して熱平衡状態にあるとき，密度行列は <span class="arithmatex">\(\rho = \frac{1}{Z} \exp(-\beta \hat{H})\)</span> となる。また，スピン <span class="arithmatex">\(1/2\)</span> 系の任意の密度行列は，ブロッホベクトル <span class="arithmatex">\(\boldsymbol{P} = (P_x, P_y, P_z)\)</span> を用いて以下のように一意に展開できる。</p>
 <div class="arithmatex">\[
 \rho = \frac{1}{2} (I + \boldsymbol{P} \cdot \boldsymbol{\sigma}) = \frac{1}{2} \begin{pmatrix} 1 + P_z &amp; P_x - i P_y \\ P_x + i P_y &amp; 1 - P_z \end{pmatrix}
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) このハミルトニアンに対する分配関数 <span class="arithmatex">\(Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big)\)</span> を具体的に計算し，双曲線関数（ハイパボリックコサイン <span class="arithmatex">\(\cosh\)</span> ）を用いて表せ。</p>
+<p>(1) このハミルトニアンに対する分配関数 <span class="arithmatex">\(Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big)\)</span> を具体的に計算し，双曲線関数を用いて表せ。</p>
 <p>(2) この熱平衡状態におけるカノニカル密度行列 <span class="arithmatex">\(\rho\)</span> の各成分を2行2列の行列形式で具体的に書き下せ。</p>
-<p>(3) (2) で得られた熱平衡状態の行列と，ブロッホベクトル表現の行列を比較することにより，熱平衡状態に対応するブロッホベクトルの各成分 <span class="arithmatex">\(P_x, P_y, P_z\)</span> をそれぞれ求めよ。また，温度が絶対零度に向かう極限（ <span class="arithmatex">\(\beta \to \infty\)</span> ）と，無限に高くなる極限（ <span class="arithmatex">\(\beta \to 0\)</span> ）において，このベクトルがブロッホ球内のどのような位置に落ち着くか説明せよ。</p>
+<p>(3) (2) で得られた熱平衡状態の行列と，ブロッホベクトル表現の行列を比較することにより，熱平衡状態に対応するブロッホベクトルの各成分 <span class="arithmatex">\(P_x, P_y, P_z\)</span> をそれぞれ求めよ。また，温度が絶対零度に向かう極限 <span class="arithmatex">\(\beta \to \infty\)</span> と，無限に高くなる極限 <span class="arithmatex">\(\beta \to 0\)</span> において，このベクトルがブロッホ球内のどのような位置に落ち着くか説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14575,9 +14575,9 @@ Z = 2 \cdot \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} = 2 \cosh(\be
 <div class="arithmatex">\[
 \rho = \frac{1}{2 \cosh(\beta \epsilon)} \begin{pmatrix} \exp(-\beta \epsilon) &amp; 0 \\ 0 &amp; \exp(\beta \epsilon) \end{pmatrix} = \begin{pmatrix} \frac{\exp(-\beta \epsilon)}{2 \cosh(\beta \epsilon)} &amp; 0 \\ 0 &amp; \frac{\exp(\beta \epsilon)}{2 \cosh(\beta \epsilon)} \end{pmatrix}
 \]</div>
-<p>これが求める熱平衡状態の具体的な行列表現です。エネルギーの固有基底をそのまま用いているため，非対角成分（量子コヒーレンス）はすべてゼロの対角行列となります。</p>
+<p>これが求める熱平衡状態の具体的な行列表現です。エネルギーの固有基底をそのまま用いているため，非対角成分はすべてゼロの対角行列となります。</p>
 <h3 id="3">(3)</h3>
-<p>(2) で求めた熱平衡状態の密度行列と，ブロッホベクトルを用いた普遍的な表現の行列の各成分を直接比較します。</p>
+<p>(2) で求めた熱平衡状態の密度行列と，ブロッホベクトルを用いた一般的な表現の行列の各成分を直接比較します。</p>
 <div class="arithmatex">\[
 \frac{1}{2} \begin{pmatrix} 1 + P_z &amp; P_x - i P_y \\ P_x + i P_y &amp; 1 - P_z \end{pmatrix} = \begin{pmatrix} \frac{\exp(-\beta \epsilon)}{2 \cosh(\beta \epsilon)} &amp; 0 \\ 0 &amp; \frac{\exp(\beta \epsilon)}{2 \cosh(\beta \epsilon)} \end{pmatrix}
 \]</div>
@@ -14607,23 +14607,23 @@ Z = 2 \cdot \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} = 2 \cosh(\be
   P_z = \frac{\frac{\exp(-\beta \epsilon) - \exp(\beta \epsilon)}{2}}{\cosh(\beta \epsilon)} = \frac{-\sinh(\beta \epsilon)}{\cosh(\beta \epsilon)} = -\tanh(\beta \epsilon)
   $$</p>
 <p>求める熱平衡状態のブロッホベクトルは <span class="arithmatex">\(\boldsymbol{P} = (0, 0, -\tanh(\beta \epsilon))\)</span> です。</p>
-<p><strong>幾何学的な位置の極限変化についての記述</strong></p>
+<p><strong>温度極限におけるブロッホベクトル</strong></p>
 <ul>
-<li><strong>絶対零度極限（ <span class="arithmatex">\(\beta \to \infty\)</span> ）のとき</strong></li>
+<li><strong>絶対零度極限 <span class="arithmatex">\(\beta \to \infty\)</span> のとき</strong></li>
 </ul>
 <p>ハイパボリックタンジェントの極限は <span class="arithmatex">\(\lim_{x \to \infty} \tanh x = 1\)</span> となるため，ベクトルの成分は以下のようになります。</p>
 <p>$$
   \boldsymbol{P} \to (0, 0, -1)
   $$</p>
-<p>ベクトルの大きさは <span class="arithmatex">\(|\boldsymbol{P}| = 1\)</span> となり，ブロッホ球の<strong>最下端の表面（南極点）</strong>に到達します。これは系が最もエネルギーの低い基底状態（純粋状態）に完全に落ち込んだ状態を意味します。</p>
+<p>ベクトルの大きさは <span class="arithmatex">\(|\boldsymbol{P}| = 1\)</span> となり，ブロッホ球の<strong>最下端の表面</strong>に到達します。これは系が最もエネルギーの低い基底状態に移った状態を意味します。</p>
 <ul>
-<li><strong>無限高熱極限（ <span class="arithmatex">\(\beta \to 0\)</span> ）のとき</strong></li>
+<li><strong>無限高熱極限 <span class="arithmatex">\(\beta \to 0\)</span> のとき</strong></li>
 </ul>
 <p><span class="arithmatex">\(\tanh 0 = 0\)</span> であるため，ベクトルの成分は以下のようになります。</p>
 <p>$$
   \boldsymbol{P} \to (0, 0, 0)
   $$</p>
-<p>ベクトルの大きさは <span class="arithmatex">\(|\boldsymbol{P}| = 0\)</span> となり，ブロッホ球の<strong>真中心（原点）</strong>に位置します。これはすべての量子状態が完全に等しい確率でランダムに混ざり合い，位相情報も完全に失われた最大混合状態に対応します。</p>
+<p>ベクトルの大きさは <span class="arithmatex">\(|\boldsymbol{P}| = 0\)</span> となり，ブロッホ球の<strong>真中心</strong>に位置します。これはすべての量子状態が等しい確率でランダムに混ざり合い，位相情報を持たない最大混合状態に対応します。</p>
 
 
 

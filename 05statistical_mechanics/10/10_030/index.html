@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">一次元イジング模型</h1>
 <h2 id="_2">問題</h2>
-<p>格子点上に配置されたスピンの協同現象を記述する最も単純な模型として，直線上に <span class="arithmatex">\(N\)</span> 個のスピンが並んだ一次元イジング模型を考える。各格子点 <span class="arithmatex">\(i\)</span> のスピン変数は <span class="arithmatex">\(s_i = 1\)</span> または <span class="arithmatex">\(s_i = -1\)</span> のいずれかの値をとる。</p>
+<p>格子点上に配置されたスピンの協同現象を表す最も単純な模型として，直線上に <span class="arithmatex">\(N\)</span> 個のスピンが並んだ一次元イジング模型を考える。各格子点 <span class="arithmatex">\(i\)</span> のスピン変数は <span class="arithmatex">\(s_i = 1\)</span> または <span class="arithmatex">\(s_i = -1\)</span> のいずれかの値をとる。</p>
 <p>隣り合うスピン間にのみ強磁性的相互作用 <span class="arithmatex">\(J &gt; 0\)</span> が働き，外部磁場 <span class="arithmatex">\(B\)</span> が一様に印加されているとき，周期境界条件 <span class="arithmatex">\(s_{N+1} = s_1\)</span> を課した系のハミルトニアンは以下のように与えられる。</p>
 <div class="arithmatex">\[
 H = -J \sum_{i=1}^N s_i s_{i+1} - B \sum_{i=1}^N s_i
@@ -14552,7 +14552,7 @@ H = -J \sum_{i=1}^N s_i s_{i+1} - B \sum_{i=1}^N s_i
 <div class="arithmatex">\[
 Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} P(s_1, s_2) P(s_2, s_3) \dots P(s_N, s_1)
 \]</div>
-<p>行列要素 <span class="arithmatex">\(P(s_i, s_{i+1}) = \exp\left[ \beta J s_i s_{i+1} + \frac{\beta B}{2} (s_i + s_{i+1}) \right]\)</span> を定義するとき，スピンの取り得る状態の組を <span class="arithmatex">\(s_i = 1, -1\)</span> の順として，2行2列の転送行列 <span class="arithmatex">\(P\)</span> の具体的な全成分を記述せよ。</p>
+<p>行列要素 <span class="arithmatex">\(P(s_i, s_{i+1}) = \exp\left[ \beta J s_i s_{i+1} + \frac{\beta B}{2} (s_i + s_{i+1}) \right]\)</span> を定義するとき，スピンの取り得る状態の組を <span class="arithmatex">\(s_i = 1, -1\)</span> の順として，2行2列の転送行列 <span class="arithmatex">\(P\)</span> の具体的な全成分を述べよ。</p>
 <p>(2) 分配関数 <span class="arithmatex">\(Z\)</span> が転送行列の積のトレースを用いて <span class="arithmatex">\(Z = \mathrm{Tr}(P^N)\)</span> と表されることを利用する。転送行列 <span class="arithmatex">\(P\)</span> の2つの固有値 <span class="arithmatex">\(\lambda_+, \lambda_-\)</span> を <span class="arithmatex">\(\beta, J, B\)</span> を用いて求め，系全体の分配関数 <span class="arithmatex">\(Z\)</span> の式を固有値を用いて表せ。</p>
 <p>(3) 粒子数 <span class="arithmatex">\(N\)</span> が無限大に大きい熱力学的極限において，1スピンあたりの自由エネルギー <span class="arithmatex">\(f = \lim_{N \to \infty} \left( -\frac{1}{\beta N} \log Z \right)\)</span> は2つの固有値の大きい方のみで決定される。外部磁場がない状態 <span class="arithmatex">\(B = 0\)</span> における自由エネルギー <span class="arithmatex">\(f\)</span> を求めよ。また，有限温度 <span class="arithmatex">\(T &gt; 0\)</span> において，この系では自発磁化が現れず，相転移が起こらないことを自由エネルギーの磁場微分，あるいは固有値の挙動から説明せよ。</p>
 <hr />
@@ -14637,7 +14637,7 @@ M = -\frac{\partial f}{\partial B} = k_B T \frac{1}{\lambda_+} \frac{\partial \l
 \]</div>
 <p>外部磁場を無限に小さくしていったときに残る自発磁化がゼロであるため，有限温度ではスピンが自発的に揃う長距離秩序は形成されません。</p>
 <p>物理的には，一次元という低い次元性においては，スピンの並びを1箇所反転させて無秩序な境界を作るために必要なエネルギーが，相互作用 <span class="arithmatex">\(J\)</span> だけの有限な値で済むのに対し，反転する位置の選び方によるエントロピーの得が大きくなるためです。</p>
-<p>温度がわずかでも高くなると，エネルギーの損よりもエントロピーの得が上回り，秩序が熱運動によって完全に破壊されます。これが，一次元理想イジング模型において有限温度で相転移が禁止される理由です。</p>
+<p>温度がわずかでも高くなると，エネルギーの損よりもエントロピーの得が上回り，秩序が熱運動によって失われされます。これが，一次元理想イジング模型において有限温度で相転移が禁止される理由です。</p>
 
 
 

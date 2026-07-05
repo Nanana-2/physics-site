@@ -14542,8 +14542,8 @@
 
 <h1 id="12">密度行列の基本：スピン1/2系</h1>
 <h2 id="_1">問題</h2>
-<p>密度行列の判定法（ <span class="arithmatex">\(\mathrm{Tr}(\rho^2) = 1\)</span> ならば純粋状態， <span class="arithmatex">\(\mathrm{Tr}(\rho^2) &lt; 1\)</span> ならば混合状態）を，最も単純な量子系であるスピン <span class="arithmatex">\(1/2\)</span> 系（2準位系）を舞台にして具体的に計算し，理解を深める。</p>
-<p>量子化軸（ <span class="arithmatex">\(z\)</span> 軸）上向きのスピン状態を <span class="arithmatex">\(|+\rangle\)</span> ，下向きのスピン状態を <span class="arithmatex">\(|-\rangle\)</span> とする。これらは正規直交系（ <span class="arithmatex">\(\langle +|+\rangle = \langle -|-\rangle = 1, \langle +|-\rangle = 0\)</span> ）をなす。この2つの基底を用いて構成された，以下の2つの異なる量子統計集団（状態A，状態B）を考える。</p>
+<p>密度行列の判定法を，最も単純な量子系であるスピン <span class="arithmatex">\(1/2\)</span> 系を舞台にして具体的に計算し，理解を深める。</p>
+<p>量子化軸上向きのスピン状態を <span class="arithmatex">\(|+\rangle\)</span> ，下向きのスピン状態を <span class="arithmatex">\(|-\rangle\)</span> とする。これらは正規直交系 <span class="arithmatex">\(\langle +|+\rangle = \langle -|-\rangle = 1, \langle +|-\rangle = 0\)</span> をなす。この2つの基底を用いて構成された，以下の2つの異なる量子統計集団を考える。</p>
 <ul>
 <li><strong>状態A</strong>：確率 <span class="arithmatex">\(1/2\)</span> で <span class="arithmatex">\(|+\rangle\)</span> をとり，確率 <span class="arithmatex">\(1/2\)</span> で <span class="arithmatex">\(|-\rangle\)</span> をとる古典的な確率混合状態。</li>
 <li><strong>状態B</strong>：2つの状態の量子力学的な重ね合わせによって作られた単一のパウリ <span class="arithmatex">\(x\)</span> 上向き状態 </li>
@@ -14552,13 +14552,13 @@
   |+x\rangle = \frac{1}{\sqrt{2}}(|+\rangle + |-\rangle)
   $$</p>
 <p>それぞれの状態の密度行列を <span class="arithmatex">\(\rho_A, \rho_B\)</span> とするとき，以下の問いに答えよ。</p>
-<p>(1) 状態Aおよび状態Bの密度行列 <span class="arithmatex">\(\rho_A, \rho_B\)</span> を，基底 <span class="arithmatex">\(\{|+\rangle, |-\rangle\}\)</span> を用いた行列の成分表示（2行2列の行列）形式でそれぞれ具体的に書き下せ。</p>
+<p>(1) 状態Aおよび状態Bの密度行列 <span class="arithmatex">\(\rho_A, \rho_B\)</span> を，基底 <span class="arithmatex">\(\{|+\rangle, |-\rangle\}\)</span> を用いた行列の成分表示形式でそれぞれ具体的に書き下せ。</p>
 <p>(2) 状態Aおよび状態Bのそれぞれについて，密度行列の2乗 <span class="arithmatex">\(\rho^2\)</span> を計算し，その対角和 <span class="arithmatex">\(\mathrm{Tr}(\rho^2)\)</span> の値を求めよ。この結果から，どちらが純粋状態であり，どちらが混合状態であるかを判定せよ。</p>
-<p>(3) スピン <span class="arithmatex">\(1/2\)</span> 系の任意の密度行列は，単位行列 <span class="arithmatex">\(I\)</span> とパウリ行列 <span class="arithmatex">\(\boldsymbol{\sigma} = (\sigma_x, \sigma_y, \sigma_z)\)</span> の線形結合を用いて，実数ベクトル <span class="arithmatex">\(\boldsymbol{P} = (P_x, P_y, P_z)\)</span> により以下のように表現できる（ブロッホベクトル表現）。</p>
+<p>(3) スピン <span class="arithmatex">\(1/2\)</span> 系の任意の密度行列は，単位行列 <span class="arithmatex">\(I\)</span> とパウリ行列 <span class="arithmatex">\(\boldsymbol{\sigma} = (\sigma_x, \sigma_y, \sigma_z)\)</span> の線形結合を用いて，実数ベクトル <span class="arithmatex">\(\boldsymbol{P} = (P_x, P_y, P_z)\)</span> により以下のように表現できる。</p>
 <div class="arithmatex">\[
 \rho = \frac{1}{2} (I + \boldsymbol{P} \cdot \boldsymbol{\sigma}) = \frac{1}{2} \begin{pmatrix} 1 + P_z &amp; P_x - i P_y \\ P_x + i P_y &amp; 1 - P_z \end{pmatrix}
 \]</div>
-<p>このとき， <span class="arithmatex">\(\mathrm{Tr}(\rho^2)\)</span> をブロッホベクトルの大きさ <span class="arithmatex">\(|\boldsymbol{P}|^2 = P_x^2 + P_y^2 + P_z^2\)</span> を用いて表せ。また，純粋状態と混合状態において，ベクトル <span class="arithmatex">\(\boldsymbol{P}\)</span> が描く幾何学的な領域（ブロッホ球）の条件をそれぞれ記述せよ。</p>
+<p>このとき， <span class="arithmatex">\(\mathrm{Tr}(\rho^2)\)</span> をブロッホベクトルの大きさ <span class="arithmatex">\(|\boldsymbol{P}|^2 = P_x^2 + P_y^2 + P_z^2\)</span> を用いて表せ。また，純粋状態と混合状態において，ベクトル <span class="arithmatex">\(\boldsymbol{P}\)</span> が描くブロッホ球内の領域の条件をそれぞれ述べよ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14569,7 +14569,7 @@
 <div class="arithmatex">\[
   \rho_A = \frac{1}{2}|+\rangle\langle+| + \frac{1}{2}|-\rangle\langle-|
 \]</div>
-<p>これを行列表示すると，対角成分のみが残り，非対角成分（量子コヒーレンス）はゼロになります。</p>
+<p>これを行列表示すると，対角成分のみが残り，非対角成分はゼロになります。</p>
 <div class="arithmatex">\[
   \rho_A = \frac{1}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
 \]</div>
@@ -14608,7 +14608,7 @@
   \mathrm{Tr}(\rho_B^2) = \frac{1}{2} + \frac{1}{2} = 1
 \]</div>
 <p>値がちょうど 1 になるため，<strong>状態Bは純粋状態</strong>であると判定されます。</p>
-<p>状態Aと状態Bは，どちらも上向きと下向きが <span class="arithmatex">\(1/2\)</span> ずつの割合で観測される点では一見似ていますが，状態Bには位相情報（コヒーレンス）が非対角成分として完全に保存されているため，純粋状態としての性質を維持しています。</p>
+<p>状態Aと状態Bは，どちらも上向きと下向きが <span class="arithmatex">\(1/2\)</span> ずつの割合で観測される点では一見似ていますが，状態Bには位相情報が非対角成分として保存されているため，純粋状態としての性質を維持しています。</p>
 <h3 id="3">(3)</h3>
 <p>与えられたブロッホベクトル表現の行列 <span class="arithmatex">\(\rho\)</span> の2乗を直接計算します。</p>
 <div class="arithmatex">\[
@@ -14637,7 +14637,7 @@
 <div class="arithmatex">\[
   \frac{1}{2} (1 + |\boldsymbol{P}|^2) = 1 \implies 1 + |\boldsymbol{P}|^2 = 2 \implies |\boldsymbol{P}|^2 = 1 \implies |\boldsymbol{P}| = 1
 \]</div>
-<p>幾何学的には，純粋状態はブロッホ球の<strong>最表面（球面上の点）</strong>に対応します。（状態Bは <span class="arithmatex">\(\boldsymbol{P}=(1,0,0)\)</span> であり，球面上の点です）</p>
+<p>ブロッホ球上では，純粋状態はブロッホ球の<strong>最表面</strong>に対応します。</p>
 <ul>
 <li><strong>混合状態のとき</strong>
   <span class="arithmatex">\(\mathrm{Tr}(\rho^2) &lt; 1\)</span> が条件です。</li>
@@ -14645,7 +14645,7 @@
 <div class="arithmatex">\[
   \frac{1}{2} (1 + |\boldsymbol{P}|^2) &lt; 1 \implies 1 + |\boldsymbol{P}|^2 &lt; 2 \implies |\boldsymbol{P}|^2 &lt; 1 \implies |\boldsymbol{P}| &lt; 1
 \]</div>
-<p>幾何学的には，混合状態はブロッホ球の<strong>内部（球内の点）</strong>に対応します。（状態Aは <span class="arithmatex">\(\boldsymbol{P}=(0,0,0)\)</span> であり，球の中心点に対応する最も無秩序な混合状態です）</p>
+<p>ブロッホ球上では，混合状態はブロッホ球の<strong>内部</strong>に対応します。</p>
 
 
 

@@ -14542,60 +14542,97 @@
 
 <h1 id="_1">一次相転移と二次相転移</h1>
 <h2 id="_2">問題</h2>
-<p>相転移は，熱力学関数である自由エネルギーの微分がどのような不連続性を示すかによって，エーレンフェストの分類に基づき幾何学的に分類される。現代の統計力学では，主に一次相転移と二次相転移（連続相転移）の2つに大別される。</p>
-<p>系のヘルムホルツの自由エネルギーを <span class="arithmatex">\(F(T, V)\)</span> ，あるいは Gibbs の自由エネルギーを <span class="arithmatex">\(G(T, P)\)</span> とする。これら熱力学量のエントロピー <span class="arithmatex">\(S\)</span> ，体積 <span class="arithmatex">\(V\)</span> ，定圧熱容量 <span class="arithmatex">\(C_P\)</span> などの微分関係を考慮して，以下の問いに答えよ。</p>
-<p>(1) <strong>一次相転移</strong>の定義を，自由エネルギーの温度 <span class="arithmatex">\(T\)</span> または圧力 <span class="arithmatex">\(P\)</span> に対する1階微分の性質に注目して記述せよ。また，一次相転移において相転移が進行している最中に，マクロに観測される熱力学的な特徴（潜熱や体積変化の有無）について説明せよ。</p>
-<p>(2) <strong>二次相転移</strong>の定義を，自由エネルギーの1階微分および2階微分の性質に注目して記述せよ。また，一次相転移とは異なり，二次相転移の相転移点において潜熱が発生しない理由を，エントロピーの挙動と関連付けて説明せよ。</p>
-<p>(3) 横軸に温度 <span class="arithmatex">\(T\)</span> をとり，縦軸に自由エネルギー <span class="arithmatex">\(F\)</span>，エントロピー <span class="arithmatex">\(S = -\frac{\partial F}{\partial T}\)</span>，定積熱容量 <span class="arithmatex">\(C_V = -T \frac{\partial^2 F}{\partial T^2}\)</span> をとる。一次相転移と二次相転移のそれぞれの場合において，これらの関数が相転移温度 <span class="arithmatex">\(T_c\)</span> の前後で描く定性的なグラフの形状（連続性や不連続性，発散の有無）を文章で詳しく対比せよ。</p>
+<p>体積一定の系が温度 <span class="arithmatex">\(T_c\)</span> で相転移する場合を考える。ヘルムホルツの自由エネルギーを <span class="arithmatex">\(F(T)\)</span> とし，</p>
+<div class="arithmatex">\[
+S=-\frac{\partial F}{\partial T},\qquad
+C_V=-T\frac{\partial^2F}{\partial T^2}
+\]</div>
+<p>を用いる。以下の問いに答えよ。</p>
+<p>(1) 転移点の両側にある相をA，Bとし，<span class="arithmatex">\(F_A(T_c)=F_B(T_c)\)</span> であるとする。転移点におけるエントロピー差を</p>
+<div class="arithmatex">\[
+\Delta S=S_B(T_c)-S_A(T_c)
+\]</div>
+<p>と定義する。<span class="arithmatex">\(\Delta S\ne0\)</span> のとき自由エネルギーの1階微分が不連続であることを示し，転移に伴う潜熱 <span class="arithmatex">\(L\)</span> を求めよ。</p>
+<p>(2) <span class="arithmatex">\(\Delta S=0\)</span> である一方，<span class="arithmatex">\(C_{V,A}(T_c)\ne C_{V,B}(T_c)\)</span> であるとする。このとき自由エネルギーとその1階微分は連続であるが，2階微分は不連続であることを示せ。また，潜熱が生じないことを示せ。</p>
+<p>(3) <span class="arithmatex">\(t=T-T_c\)</span> とおく。次の2つの自由エネルギーについて，<span class="arithmatex">\(S\)</span> と <span class="arithmatex">\(C_V\)</span> を <span class="arithmatex">\(T_c\)</span> の両側で求め，相転移を一次または二次に分類せよ。ただし <span class="arithmatex">\(A&gt;0\)</span>，<span class="arithmatex">\(B&gt;0\)</span> とする。</p>
+<div class="arithmatex">\[
+F_1(T)=F_0-S_0t+A|t|
+\]</div>
+<div class="arithmatex">\[
+F_2(T)=
+\begin{cases}
+F_0-S_0t-Bt^2 &amp; (t&lt;0)\\
+F_0-S_0t &amp; (t\ge0)
+\end{cases}
+\]</div>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>一次相転移とは，自由エネルギーの温度 <span class="arithmatex">\(T\)</span> または圧力 <span class="arithmatex">\(P\)</span> に関する <strong>1階微分が相転移点で不連続にジャンプする</strong> 相転移のことです。</p>
-<p>熱力学の関係式より，Gibbs の自由エネルギー <span class="arithmatex">\(G\)</span> の1階微分は以下の物理量に対応します。</p>
+<p>エントロピーの定義より</p>
 <div class="arithmatex">\[
-\left( \frac{\partial G}{\partial T} \right)_P = -S, \quad \left( \frac{\partial G}{\partial P} \right)_T = V
+\left.\frac{\partial F_B}{\partial T}\right|_{T_c}
+-\left.\frac{\partial F_A}{\partial T}\right|_{T_c}
+=-\Delta S
 \]</div>
-<p>1階微分が不連続であるため，相転移点を境にしてエントロピー <span class="arithmatex">\(S\)</span> と体積 <span class="arithmatex">\(V\)</span> が不連続に変化します。</p>
-<ul>
-<li><strong>潜熱の発生</strong>
-  エントロピーに不連続な差 <span class="arithmatex">\(\Delta S = S_{\mathrm{high}} - S_{\mathrm{low}}\)</span> が存在するため，相を転移させるために外部からエネルギーを供給，または放出する必要があります。これが吸熱・発熱現象としての <strong>潜熱</strong>（ <span class="arithmatex">\(Q = T_c \Delta S\)</span> ）をもたらします。</li>
-<li><strong>体積の不連続変化</strong>
-  体積 <span class="arithmatex">\(V\)</span> も不連続にジャンプするため，例えば水から水蒸気への転移のように，同じ温度・圧力でありながらドラスティックに密度が変化する現象が観測されます。</li>
-</ul>
+<p>です。したがって <span class="arithmatex">\(\Delta S\ne0\)</span> ならば，<span class="arithmatex">\(F\)</span> は連続でもその1階微分は不連続です。このような転移を一次相転移と呼びます。転移に伴う潜熱は</p>
+<div class="arithmatex">\[
+L=T_c\Delta S
+\]</div>
+<p>となります。符号は相転移の向きに依存し，<span class="arithmatex">\(|L|\)</span> が吸収または放出される熱量を表します。</p>
 <h3 id="2">(2)</h3>
-<p>二次相転移とは，自由エネルギーの <strong>1階微分は相転移点で連続であるが，2階微分が不連続になる，または発散する</strong> 相転移のことです。</p>
-<p>1階微分であるエントロピー <span class="arithmatex">\(S\)</span> や体積 <span class="arithmatex">\(V\)</span> は，相転移点において途切れることなく滑らかに連続して変化します。そのため，転移の前後でエントロピーの不連続な段差（ <span class="arithmatex">\(\Delta S = 0\)</span> ）が存在しません。</p>
-<p>潜熱の式 <span class="arithmatex">\(Q = T_c \Delta S\)</span> にこれをあてはめると <span class="arithmatex">\(Q = 0\)</span> となるため，二次相転移では相が切り替わる瞬間に <strong>潜熱が一切発生しない</strong> という特徴を持ちます。</p>
-<p>一方で，自由エネルギーの2階微分に対応する応答関数（定圧熱容量 <span class="arithmatex">\(C_P = -T \frac{\partial^2 G}{\partial T^2}\)</span> ，等温圧縮率 <span class="arithmatex">\(\kappa_T = -\frac{1}{V}\frac{\partial^2 G}{\partial P^2}\)</span> ，等温磁化率など）が，相転移点において尖点（不連続な折れ曲がり）を見せるか，あるいは無限大へと発散する挙動を示します。</p>
+<p><span class="arithmatex">\(\Delta S=0\)</span> より</p>
+<div class="arithmatex">\[
+\left.\frac{\partial F_B}{\partial T}\right|_{T_c}
+=\left.\frac{\partial F_A}{\partial T}\right|_{T_c}
+\]</div>
+<p>となるため，<span class="arithmatex">\(F\)</span> とその1階微分は連続です。一方，熱容量の差は</p>
+<div class="arithmatex">\[
+C_{V,B}(T_c)-C_{V,A}(T_c)
+=-T_c\left[
+\left.\frac{\partial^2F_B}{\partial T^2}\right|_{T_c}
+-\left.\frac{\partial^2F_A}{\partial T^2}\right|_{T_c}
+\right]
+\]</div>
+<p>と表されます。熱容量が不連続ならば，<span class="arithmatex">\(F\)</span> の2階微分も不連続です。このような転移を二次相転移と呼びます。また</p>
+<div class="arithmatex">\[
+L=T_c\Delta S=0
+\]</div>
+<p>より，潜熱は生じません。</p>
 <h3 id="3">(3)</h3>
-<p>一次相転移と二次相転移における各熱力学関数の温度依存性の違いは以下のように整理されます。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">物理量</th>
-<th style="text-align: left;">一次相転移の挙動</th>
-<th style="text-align: left;">二次相転移の挙動</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>自由エネルギー <span class="arithmatex">\(F\)</span></strong></td>
-<td style="text-align: left;">転移点 <span class="arithmatex">\(T_c\)</span> で値自体は結ばれる（連続）が，折れ曲がりが生じる（<strong>傾きが不連続</strong>）。</td>
-<td style="text-align: left;">転移点 <span class="arithmatex">\(T_c\)</span> で滑らかに結ばれる（<strong>値も傾きも連続</strong>）。</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>エントロピー <span class="arithmatex">\(S\)</span></strong> <br> (1階微分)</td>
-<td style="text-align: left;">転移点 <span class="arithmatex">\(T_c\)</span> において，垂直な段差を持って上下に <strong>不連続にジャンプする</strong>。</td>
-<td style="text-align: left;">転移点 <span class="arithmatex">\(T_c\)</span> で値は繋がっている（連続）が，そこでグラフが急に折れ曲がる。</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>定積熱容量 <span class="arithmatex">\(C_V\)</span></strong> <br> (2階微分)</td>
-<td style="text-align: left;">転移点 <span class="arithmatex">\(T_c\)</span> をまたぐときに異なる値へジャンプするか，転移の最中（潜熱吸収中）に <strong>デルタ関数的な無限大のピーク</strong> を持つ。</td>
-<td style="text-align: left;">転移点 <span class="arithmatex">\(T_c\)</span> に向かって <strong>尖って不連続に跳ね上がる</strong> か，あるいは <span class="arithmatex">\(T_c\)</span> の瞬間に <strong>無限大へと滑らかに発散する</strong>（ <span class="arithmatex">\(\lambda\)</span> 型の発散など）。</td>
-</tr>
-</tbody>
-</table>
-<p>このように，自由エネルギーの何階の導関数から不連続性が表れるかによって，マクロな熱の出入りや応答関数の振る舞いが幾何学的に決定されます。</p>
+<p><span class="arithmatex">\(F_1\)</span> は</p>
+<div class="arithmatex">\[
+F_1=
+\begin{cases}
+F_0-S_0t-At &amp; (t&lt;0)\\
+F_0-S_0t+At &amp; (t&gt;0)
+\end{cases}
+\]</div>
+<p>と書けます。したがって</p>
+<div class="arithmatex">\[
+S=
+\begin{cases}
+S_0+A &amp; (t&lt;0)\\
+S_0-A &amp; (t&gt;0)
+\end{cases}
+\]</div>
+<p>となり，転移点でエントロピーが <span class="arithmatex">\(2A\)</span> だけ不連続に変化します。よって <span class="arithmatex">\(F_1\)</span> は一次相転移を表し，潜熱の大きさは <span class="arithmatex">\(2AT_c\)</span> です。</p>
+<p><span class="arithmatex">\(F_2\)</span> については</p>
+<div class="arithmatex">\[
+S=
+\begin{cases}
+S_0+2Bt &amp; (t&lt;0)\\
+S_0 &amp; (t&gt;0)
+\end{cases}
+\]</div>
+<p>となり，<span class="arithmatex">\(T=T_c\)</span> で連続です。一方，熱容量は</p>
+<div class="arithmatex">\[
+C_V=
+\begin{cases}
+2BT &amp; (t&lt;0)\\
+0 &amp; (t&gt;0)
+\end{cases}
+\]</div>
+<p>です。したがって <span class="arithmatex">\(F_2\)</span> は熱容量が <span class="arithmatex">\(2BT_c\)</span> だけ不連続に変化する二次相転移を表します。</p>
 
 
 

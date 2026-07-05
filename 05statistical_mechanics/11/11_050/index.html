@@ -14542,19 +14542,19 @@
 
 <h1 id="_1">ブラウン運動とランジュバン方程式</h1>
 <h2 id="_2">問題</h2>
-<p>溶媒中に浮遊する微小な粒子（ブラウン粒子）の不規則な熱運動を力学的に記述するため，ランジュバンは，粒子が受ける力をマクロな粘性抵抗力と，周囲の溶媒分子との衝突によるミクロなランダム力の2つに分離した運動方程式を提案した。</p>
-<p>質量 <span class="arithmatex">\(m\)</span> ，位置 <span class="arithmatex">\(x(t)\)</span> ，速度 <span class="arithmatex">\(v(t) = \frac{dx(t)}{dt}\)</span> の一次元ブラウン粒子を考える。流体から受ける摩擦係数を <span class="arithmatex">\(\gamma\)</span> ，ランダム力を <span class="arithmatex">\(R(t)\)</span> とするとき，この粒子の運動方程式（ランジュバン方程式）は以下のように与えられる。</p>
+<p>溶媒中に浮遊する微小な粒子の不規則な熱運動を力学的に表すため，ランジュバンは，粒子が受ける力をマクロな粘性抵抗力と，周囲の溶媒分子との衝突によるミクロなランダム力の2つに分離した運動方程式を提案した。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> ，位置 <span class="arithmatex">\(x(t)\)</span> ，速度 <span class="arithmatex">\(v(t) = \frac{dx(t)}{dt}\)</span> の一次元ブラウン粒子を考える。流体から受ける摩擦係数を <span class="arithmatex">\(\gamma\)</span> ，ランダム力を <span class="arithmatex">\(R(t)\)</span> とするとき，この粒子の運動方程式は以下のように与えられる。</p>
 <div class="arithmatex">\[
 m \frac{dv(t)}{dt} = -\gamma v(t) + R(t)
 \]</div>
-<p>ランダム力 <span class="arithmatex">\(R(t)\)</span> は，時間平均するとゼロであり（ <span class="arithmatex">\(\langle R(t) \rangle = 0\)</span> ），異なる時刻間の相関は極めて短い時間でのみ存在するという仮定から，ホワイトノイズとして以下の性質を満たすものとする。</p>
+<p>ランダム力 <span class="arithmatex">\(R(t)\)</span> は，時間平均するとゼロであり <span class="arithmatex">\(\langle R(t) \rangle = 0\)</span>，異なる時刻間の相関は非常に短い時間でのみ存在するという仮定から，ホワイトノイズとして以下の性質を満たすものとする。</p>
 <div class="arithmatex">\[
 \langle R(t) R(t') \rangle = 2 \gamma k_B T \delta(t - t')
 \]</div>
 <p>ここで <span class="arithmatex">\(\delta(t)\)</span> はデルタ関数， <span class="arithmatex">\(T\)</span> は流体の絶対温度である。以下の問いに答えよ。</p>
 <p>(1) 時刻 <span class="arithmatex">\(t=0\)</span> における粒子の速度を <span class="arithmatex">\(v(0)\)</span> とし，定数変化法などを用いてランジュバン方程式を解くことにより，任意の時刻 <span class="arithmatex">\(t\)</span> における速度 <span class="arithmatex">\(v(t)\)</span> の式を <span class="arithmatex">\(v(0), m, \gamma\)</span> および <span class="arithmatex">\(R(t)\)</span> の積分項を用いて表せ。</p>
-<p>(2) (1) の解を利用して，速度の熱平均の2乗 <span class="arithmatex">\(\langle v(t)^2 \rangle\)</span> を計算せよ。ただし，初期速度とランダム力に相関はないもの（ <span class="arithmatex">\(\langle v(0) R(t) \rangle = 0\)</span> ）とし，十分時間が経過した極限（ <span class="arithmatex">\(t \to \infty\)</span> ）において，この結果が熱力学のエネルギー等配分則 <span class="arithmatex">\(\frac{1}{2}m \langle v^2 \rangle = \frac{1}{2}k_B T\)</span> と一致することを確認せよ。</p>
-<p>(3) 粒子の位置の平均二乗変位 <span class="arithmatex">\(\langle x(t)^2 \rangle\)</span> を計算するため，ランジュバン方程式の両辺に位置 <span class="arithmatex">\(x\)</span> を掛け， <span class="arithmatex">\(x \frac{dv}{dt} = \frac{d}{dt}(xv) - v^2\)</span> などの関係式を用いて変形する。初期位置を <span class="arithmatex">\(x(0)=0\)</span> とし，十分時間が経過した長時間極限（ <span class="arithmatex">\(t \gg m/\gamma\)</span> ）において，平均二乗変位が時間に比例する挙動（ <span class="arithmatex">\(\langle x(t)^2 \rangle \simeq 2 D t\)</span> ）を示すことを導出し，拡散係数 <span class="arithmatex">\(D\)</span> が摩擦係数 <span class="arithmatex">\(\gamma\)</span> と絶対温度 <span class="arithmatex">\(T\)</span> を用いてどのように表されるか（アインシュタインの関係式）を示せ。</p>
+<p>(2) (1) の解を利用して，速度の熱平均の2乗 <span class="arithmatex">\(\langle v(t)^2 \rangle\)</span> を計算せよ。ただし，初期速度とランダム力に相関はないもの <span class="arithmatex">\(\langle v(0) R(t) \rangle = 0\)</span> とし，十分時間が経過した極限 <span class="arithmatex">\(t \to \infty\)</span> において，この結果が熱力学のエネルギー等配分則 <span class="arithmatex">\(\frac{1}{2}m \langle v^2 \rangle = \frac{1}{2}k_B T\)</span> と一致することを確認せよ。</p>
+<p>(3) 粒子の位置の平均二乗変位 <span class="arithmatex">\(\langle x(t)^2 \rangle\)</span> を計算するため，ランジュバン方程式の両辺に位置 <span class="arithmatex">\(x\)</span> を掛け， <span class="arithmatex">\(x \frac{dv}{dt} = \frac{d}{dt}(xv) - v^2\)</span> などの関係式を用いて変形する。初期位置を <span class="arithmatex">\(x(0)=0\)</span> とし，十分時間が経過した長時間極限 <span class="arithmatex">\(t \gg m/\gamma\)</span> において，平均二乗変位が時間に比例する挙動 <span class="arithmatex">\(\langle x(t)^2 \rangle \simeq 2 D t\)</span> を示すことを導出し，拡散係数 <span class="arithmatex">\(D\)</span> が摩擦係数 <span class="arithmatex">\(\gamma\)</span> と絶対温度 <span class="arithmatex">\(T\)</span> を用いてどのように表されるかを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14575,11 +14575,11 @@ v(t) \exp\left(\frac{\gamma}{m}t\right) - v(0) = \frac{1}{m} \int_0^t R(s) \exp\
 v(t) = v(0) \exp\left(-\frac{\gamma}{m}t\right) + \frac{1}{m} \int_0^t R(s) \exp\left( -\frac{\gamma}{m}(t - s) \right) ds
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた <span class="arithmatex">\(v(t)\)</span> の式を2乗し，全体の熱平均（アンサンブル平均）をとります。</p>
+<p>(1) で得られた <span class="arithmatex">\(v(t)\)</span> の式を2乗し，全体の熱平均をとります。</p>
 <div class="arithmatex">\[
 \langle v(t)^2 \rangle = \left\langle \left[ v(0) e^{-\frac{\gamma}{m}t} + \frac{1}{m} \int_0^t R(s) e^{-\frac{\gamma}{m}(t - s)} ds \right]^2 \right\rangle
 \]</div>
-<p>展開すると， <span class="arithmatex">\(v(0)^2\)</span> の項，交差項，および <span class="arithmatex">\(R(s)\)</span> の二重積分の項の3つに分かれます。初期速度とランダム力に相関がない性質（ <span class="arithmatex">\(\langle v(0)R(s) \rangle = 0\)</span> ）より，中央の交差項の平均値はゼロとなって消去されます。</p>
+<p>展開すると， <span class="arithmatex">\(v(0)^2\)</span> の項，交差項，および <span class="arithmatex">\(R(s)\)</span> の二重積分の項の3つに分かれます。初期速度とランダム力に相関がない性質 <span class="arithmatex">\(\langle v(0)R(s) \rangle = 0\)</span> より，中央の交差項の平均値はゼロとなって消去されます。</p>
 <div class="arithmatex">\[
 \langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{1}{m^2} \int_0^t ds \int_0^t ds' \, \langle R(s) R(s') \rangle e^{-\frac{\gamma}{m}(t - s)} e^{-\frac{\gamma}{m}(t - s')}
 \]</div>
@@ -14595,7 +14595,7 @@ v(t) = v(0) \exp\left(-\frac{\gamma}{m}t\right) + \frac{1}{m} \int_0^t R(s) \exp
 <div class="arithmatex">\[
 \langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{k_B T}{m} \left( 1 - e^{-\frac{2\gamma}{m}t} \right)
 \]</div>
-<p>ここで十分時間が経過した長時間極限（ <span class="arithmatex">\(t \to \infty\)</span> ）をとると，負の指数関数項はすべてゼロに向かって減衰します。</p>
+<p>ここで十分時間が経過した長時間極限 <span class="arithmatex">\(t \to \infty\)</span> をとると，負の指数関数項はすべてゼロに向かって減衰します。</p>
 <div class="arithmatex">\[
 \lim_{t \to \infty} \langle v(t)^2 \rangle = \frac{k_B T}{m}
 \]</div>
@@ -14613,7 +14613,7 @@ m \frac{d}{dt}(xv) - m v^2 = -\frac{\gamma}{2} \frac{d}{dt}(x^2) + x R(t)
 <div class="arithmatex">\[
 m \frac{d}{dt}\langle xv \rangle - k_B T = -\frac{\gamma}{2} \frac{d}{dt}\langle x^2 \rangle
 \]</div>
-<p>ここで，粒子が受ける流体抵抗が支配的になる長時間極限（ <span class="arithmatex">\(t \gg m/\gamma\)</span> ）を考えます。このスケールでは，粒子の速度変化の慣性項（左辺第1項の微分）の寄与が無視できるようになります。</p>
+<p>ここで，粒子が受ける流体抵抗が支配的になる長時間極限 <span class="arithmatex">\(t \gg m/\gamma\)</span> を考えます。このスケールでは，粒子の速度変化の慣性項の寄与が無視できるようになります。</p>
 <div class="arithmatex">\[
 - k_B T \simeq -\frac{\gamma}{2} \frac{d}{dt}\langle x^2 \rangle \implies \frac{d}{dt}\langle x^2 \rangle \simeq \frac{2 k_B T}{\gamma}
 \]</div>
@@ -14625,7 +14625,7 @@ m \frac{d}{dt}\langle xv \rangle - k_B T = -\frac{\gamma}{2} \frac{d}{dt}\langle
 <div class="arithmatex">\[
 2 D t = \left( \frac{2 k_B T}{\gamma} \right) t
 \]</div>
-<p>これにより，物質の拡散のしやすさ（拡散係数 <span class="arithmatex">\(D\)</span> ）と，運動するときの引きずられにくさ（摩擦係数 <span class="arithmatex">\(\gamma\)</span> ）が，熱運動の媒介によって結びついていることを示すアインシュタインの関係式が導出されます。</p>
+<p>これにより，物質の拡散のしやすさと，運動するときの引きずられにくさが，熱運動の媒介によって結びついていることを示すアインシュタインの関係式が導出されます。</p>
 <div class="arithmatex">\[
 D = \frac{k_B T}{\gamma}
 \]</div>

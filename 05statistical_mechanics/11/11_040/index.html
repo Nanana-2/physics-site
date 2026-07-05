@@ -14542,16 +14542,16 @@
 
 <h1 id="_1">拡散方程式</h1>
 <h2 id="_2">問題</h2>
-<p>コップに落としたインクの滴が自然に広がっていくような，物質の濃度が空間的に不均一な状態から一様な状態へと向かう輸送現象は，拡散方程式によって記述される。ここでは，三次元への拡張を見据えつつ，空間的に一方向（ <span class="arithmatex">\(x\)</span> 方向）のみに濃度変化がある一次元の拡散系を考える。</p>
-<p>位置 <span class="arithmatex">\(x\)</span> ，時刻 <span class="arithmatex">\(t\)</span> における粒子の数密度（濃度）を <span class="arithmatex">\(n(x, t)\)</span> ，単位時間あたりに単位面積を通過する正味の粒子流量（粒子流束）を <span class="arithmatex">\(J(x, t)\)</span> とする。以下の問いに答えよ。</p>
-<p>(1) 粒子が途中で消滅したり，新しく湧き出したりしないという条件（粒子数保存則）を考える。区間 <span class="arithmatex">\([x, x + \Delta x]\)</span> の微小領域に存在する粒子数の時間変化が，この区間の両端（ <span class="arithmatex">\(x\)</span> および <span class="arithmatex">\(x + \Delta x\)</span> ）をまたいで出入りする粒子の流量の差に等しいという関係から，密度の時間微分 <span class="arithmatex">\(\frac{\partial n}{\partial t}\)</span> と流束の空間微分 <span class="arithmatex">\(\frac{\partial J}{\partial x}\)</span> が満たすべき連続の式を導出せよ。</p>
-<p>(2) 粒子は一般に，濃度が高い領域から低い領域へと向かって流れる。流束 <span class="arithmatex">\(J\)</span> が濃度の空間傾き（グラディエント）に比例するという，以下の<strong>フィックの第一法則</strong>を導入する。</p>
+<p>コップに落としたインクの滴が自然に広がっていくような，物質の濃度が空間的に不均一な状態から一様な状態へと向かう輸送現象は，拡散方程式によって表される。ここでは，三次元への拡張を見据えつつ，空間的に一方向のみに濃度変化がある一次元の拡散系を考える。</p>
+<p>位置 <span class="arithmatex">\(x\)</span> ，時刻 <span class="arithmatex">\(t\)</span> における粒子の数密度を <span class="arithmatex">\(n(x, t)\)</span> ，単位時間あたりに単位面積を通過する正味の粒子流量を <span class="arithmatex">\(J(x, t)\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) 粒子が途中で消滅したり，新しく生成されたりしないという条件を考える。区間 <span class="arithmatex">\([x, x + \Delta x]\)</span> の微小領域に存在する粒子数の時間変化が，この区間の両端をまたいで出入りする粒子の流量の差に等しいという関係から，密度の時間微分 <span class="arithmatex">\(\frac{\partial n}{\partial t}\)</span> と流束の空間微分 <span class="arithmatex">\(\frac{\partial J}{\partial x}\)</span> が満たすべき連続の式を導出せよ。</p>
+<p>(2) 粒子は一般に，濃度が高い領域から低い領域へと向かって流れる。流束 <span class="arithmatex">\(J\)</span> が濃度の空間傾きに比例するという，以下の<strong>フィックの第一法則</strong>を導入する。</p>
 <div class="arithmatex">\[
 J = -D \frac{\partial n}{\partial x}
 \]</div>
-<p>ここで <span class="arithmatex">\(D &gt; 0\)</span> は拡散係数である。このフィックの法則を (1) で導出した連続の式に代入することにより，濃度 <span class="arithmatex">\(n(x, t)\)</span> が満たすべき<strong>拡散方程式</strong>（フィックの第二法則）を導出せよ。</p>
+<p>ここで <span class="arithmatex">\(D &gt; 0\)</span> は拡散係数である。このフィックの法則を (1) で導出した連続の式に代入することにより，濃度 <span class="arithmatex">\(n(x, t)\)</span> が満たすべき<strong>拡散方程式</strong>を導出せよ。</p>
 <p>(3) 粒子総数が <span class="arithmatex">\(N\)</span> 個のインクの滴を，時刻 <span class="arithmatex">\(t=0\)</span> に原点 <span class="arithmatex">\(x=0\)</span> へ局所的に集中させて静かに落とした状況を考える。このときの初期条件は，デルタ関数を用いて <span class="arithmatex">\(n(x, 0) = N \delta(x)\)</span> と表される。</p>
-<p>十分に時間が経過した時刻 <span class="arithmatex">\(t\)</span> における濃度分布の解 <span class="arithmatex">\(n(x, t)\)</span> を記述せよ。また，その解が示す空間的な形状の特徴について，位置 <span class="arithmatex">\(x\)</span> に対する関数の種類を明記して説明せよ。</p>
+<p>十分に時間が経過した時刻 <span class="arithmatex">\(t\)</span> における濃度分布の解 <span class="arithmatex">\(n(x, t)\)</span> を述べよ。また，その解が示す空間的な形状の特徴について，位置 <span class="arithmatex">\(x\)</span> に対する関数の種類を明記して説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14559,7 +14559,7 @@ J = -D \frac{\partial n}{\partial x}
 <div class="arithmatex">\[
 \frac{\partial}{\partial t} \Big( n(x, t) A \Delta x \Big) = A \Delta x \frac{\partial n(x, t)}{\partial t}
 \]</div>
-<p>この時間変化は，位置 <span class="arithmatex">\(x\)</span> から単位時間あたりに流れ込む粒子数 <span class="arithmatex">\(J(x, t) A\)</span> と，位置 <span class="arithmatex">\(x + \Delta x\)</span> から流れ出る粒子数 <span class="arithmatex">\(J(x + \Delta x, t) A\)</span> の差（正味の流入量）に厳密に一致しなければなりません。</p>
+<p>この時間変化は，位置 <span class="arithmatex">\(x\)</span> から単位時間あたりに流れ込む粒子数 <span class="arithmatex">\(J(x, t) A\)</span> と，位置 <span class="arithmatex">\(x + \Delta x\)</span> から流れ出る粒子数 <span class="arithmatex">\(J(x + \Delta x, t) A\)</span> の差に厳密に一致しなければなりません。</p>
 <div class="arithmatex">\[
 A \Delta x \frac{\partial n(x, t)}{\partial t} = J(x, t) A - J(x + \Delta x, t) A
 \]</div>
@@ -14567,7 +14567,7 @@ A \Delta x \frac{\partial n(x, t)}{\partial t} = J(x, t) A - J(x + \Delta x, t) 
 <div class="arithmatex">\[
 \frac{\partial n(x, t)}{\partial t} = - \frac{J(x + \Delta x, t) - J(x, t)}{\Delta x}
 \]</div>
-<p>ここで，空間の刻み幅を無限に小さくする極限（ <span class="arithmatex">\(\Delta x \to 0\)</span> ）をとることで，右辺の分数が微分の定義式そのものになります。これにより，求める連続の式が導出されます。</p>
+<p>ここで，空間の刻み幅を無限に小さくする極限 <span class="arithmatex">\(\Delta x \to 0\)</span> をとることで，右辺の分数が微分の定義式そのものになります。これにより，求める連続の式が導出されます。</p>
 <div class="arithmatex">\[
 \frac{\partial n}{\partial t} = - \frac{\partial J}{\partial x} \quad \implies \quad \frac{\partial n}{\partial t} + \frac{\partial J}{\partial x} = 0
 \]</div>
@@ -14576,12 +14576,12 @@ A \Delta x \frac{\partial n(x, t)}{\partial t} = J(x, t) A - J(x + \Delta x, t) 
 <div class="arithmatex">\[
 \frac{\partial n}{\partial t} = - \frac{\partial}{\partial x} \left( -D \frac{\partial n}{\partial x} \right)
 \]</div>
-<p>拡散係数 <span class="arithmatex">\(D\)</span> が空間的に一様（位置 <span class="arithmatex">\(x\)</span> に依存しない定数）であるとすると， <span class="arithmatex">\(D\)</span> を微分の外へ括り出すことができます。マイナス記号同士が相殺されるため，濃度に関する2階偏微分方程式である拡散方程式が導かれます。</p>
+<p>拡散係数 <span class="arithmatex">\(D\)</span> が空間的に一様であるとすると， <span class="arithmatex">\(D\)</span> を微分の外へ括り出すことができます。マイナス記号同士が相殺されるため，濃度に関する2階偏微分方程式である拡散方程式が導かれます。</p>
 <div class="arithmatex">\[
 \frac{\partial n}{\partial t} = D \frac{\partial^2 n}{\partial x^2}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>与えられた局所的な初期条件 <span class="arithmatex">\(n(x, 0) = N \delta(x)\)</span> のもとで，拡散方程式を満たす数学的な解（基本解）は以下の通りです。</p>
+<p>与えられた局所的な初期条件 <span class="arithmatex">\(n(x, 0) = N \delta(x)\)</span> のもとで，拡散方程式を満たす数学的な解は以下の通りです。</p>
 <div class="arithmatex">\[
 n(x, t) = \frac{N}{\sqrt{4\pi D t}} \exp\left( -\frac{x^2}{4D t} \right)
 \]</div>
@@ -14589,9 +14589,9 @@ n(x, t) = \frac{N}{\sqrt{4\pi D t}} \exp\left( -\frac{x^2}{4D t} \right)
 <p>この解の数式から，濃度分布の空間プロファイルには以下の明確な特徴が存在します。</p>
 <ul>
 <li><strong>関数の種類</strong>
-  位置 <span class="arithmatex">\(x\)</span> に関する依存性は <span class="arithmatex">\(\exp(-x^2 / \sigma^2)\)</span> の形を含んでいるため，空間的には原点 <span class="arithmatex">\(x = 0\)</span> を中心として左右に対称な<strong>ガウス分布（正規分布）</strong>の形状を描きます。</li>
+  位置 <span class="arithmatex">\(x\)</span> に関する依存性は <span class="arithmatex">\(\exp(-x^2 / \sigma^2)\)</span> の形を含んでいるため，空間的には原点 <span class="arithmatex">\(x = 0\)</span> を中心として左右に対称な<strong>ガウス分布</strong>の形状を描きます。</li>
 <li><strong>形状の時間変化</strong>
-  時間の経過（ <span class="arithmatex">\(t\)</span> の増加）に伴って，指数の分母にある幅のスケール <span class="arithmatex">\(\sqrt{4Dt}\)</span> が大きくなっていくため，分布の横幅は徐々に広がっていきます。それと同時に，全空間での積分値（総粒子数 <span class="arithmatex">\(N\)</span> ）を一定に保つ必要があるため，原点における中央のピークの高さ <span class="arithmatex">\(\frac{N}{\sqrt{4\pi D t}}\)</span> は時間の経過とともに平坦に押し潰されていきます。</li>
+  時間の経過に伴って，指数の分母にある幅のスケール <span class="arithmatex">\(\sqrt{4Dt}\)</span> が大きくなっていくため，分布の横幅は徐々に広がっていきます。それと同時に，全空間での積分値を一定に保つ必要があるため，原点における中央のピークの高さ <span class="arithmatex">\(\frac{N}{\sqrt{4\pi D t}}\)</span> は時間の経過とともに平坦に低下します。</li>
 </ul>
 <p>これは，熱運動によるランダムな移動の積み重ねによって，最初は1箇所に集まっていた粒子が，空間全体へと滑らかに，かつ均一に広がっていくマクロな拡散プロセスの実態を数学的に表現しています。</p>
 
