@@ -14542,8 +14542,7 @@
 
 <h1 id="_1">熱力学第二法則と情報</h1>
 <h2 id="_2">問題</h2>
-<p>時間発展にともなうマクロなエントロピーの増大現象は，微視的な状態に関する情報が観測不可能な自由度へと分散し，追跡できなくなるプロセスとして解釈できる。ここでは，全系がユニタリー時間発展に従う状況を考え，相対エントロピーの性質からエントロピー生成の不等式を計算によって導出する。</p>
-<p>対象とする量子系（密度行列 <span class="arithmatex">\(\rho\)</span> ）と，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> の熱浴（密度行列 <span class="arithmatex">\(\rho_{\mathrm{B}}\)</span> ）が結合した全系を考える。初期時刻 <span class="arithmatex">\(t=0\)</span> において，系と熱浴は相関を持たず，熱浴は熱平衡状態にあるとする。すなわち，全系の初期密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(0)\)</span> は以下の直積状態で与えられる。</p>
+<p>対象とする量子系と，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> の熱浴が結合した全系を考える。初期時刻 <span class="arithmatex">\(t=0\)</span> において，系と熱浴は相関を持たず，熱浴は熱平衡状態にあるとする。すなわち，全系の初期密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(0)\)</span> は以下の直積状態で与えられる。</p>
 <div class="arithmatex">\[
 \rho_{\mathrm{tot}}(0) = \rho(0) \otimes \rho_{\mathrm{eq, B}}
 \]</div>
@@ -14551,11 +14550,11 @@
 <p>全系は，相互作用を含む全ハミルトニアンのもとでユニタリー時間発展演算子 <span class="arithmatex">\(\hat{U}(t)\)</span> により変化する。時刻 <span class="arithmatex">\(t\)</span> における全系の状態は <span class="arithmatex">\(\rho_{\mathrm{tot}}(t) = \hat{U}(t) \rho_{\mathrm{tot}}(0) \hat{U}^\dagger(t)\)</span> であり，このとき対象系の状態は部分トレースをとることで <span class="arithmatex">\(\rho(t) = \mathrm{Tr}_{\mathrm{B}}[\rho_{\mathrm{tot}}(t)]\)</span> と求まる。同様に，熱浴の状態は <span class="arithmatex">\(\rho_{\mathrm{B}}(t) = \mathrm{Tr}_{\mathrm{sys}}[\rho_{\mathrm{tot}}(t)]\)</span> となる。</p>
 <p>以下の問いに答えよ。</p>
 <p>(1) フォン・ノイマンエントロピーの加法性により，初期状態における全系のエントロピーは <span class="arithmatex">\(S\big(\rho_{\mathrm{tot}}(0)\big) = S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big)\)</span> と表される。ユニタリー時間発展において全系のエントロピーは変化しない性質 <span class="arithmatex">\(S\big(\rho_{\mathrm{tot}}(t)\big) = S\big(\rho_{\mathrm{tot}}(0)\big)\)</span> を用いて，時刻 <span class="arithmatex">\(t\)</span> における全系のエントロピーの式を示せ。</p>
-<p>(2) 時刻 <span class="arithmatex">\(t\)</span> において，全系の実際の密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(t)\)</span> と，各部分系を切り離した直積状態 <span class="arithmatex">\(\rho_{\mathrm{tot}}'(t) = \rho(t) \otimes \rho_{\mathrm{eq, B}}\)</span> の間の量子相対エントロピー <span class="arithmatex">\(D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho_{\mathrm{tot}}'(t)\big)\)</span> を考える。相対エントロピーの定義式を展開し，(1) の結果を代入して整理せよ。これにより，この相対エントロピーが以下の各エントロピーの差の形式に書き換わることを導出せよ。</p>
+<p>(2) <span class="arithmatex">\(\rho_{\mathrm{tot}}'(t)=\rho(t)\otimes\rho_{\mathrm{eq,B}}\)</span> とする。<span class="arithmatex">\(D\big(\rho_{\mathrm{tot}}(t)\|\rho_{\mathrm{tot}}'(t)\big)\)</span> を各部分系のエントロピーで表せ。</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = S\big(\rho(t)\big) - S\big(\rho(0)\big) + \beta \left( \mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}\big(\rho_{\mathrm{eq, B}}\big(\hat{H}_{\mathrm{B}}\big) \right)
+D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = S\big(\rho(t)\big) - S\big(\rho(0)\big) + \beta \left[ \mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}\big(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}\big) \right]
 \]</div>
-<p>(3) 熱浴のエネルギー変化量を <span class="arithmatex">\(\Delta E_{\mathrm{B}} = \mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}\big(\rho_{\mathrm{eq, B}}\big(\hat{H}_{\mathrm{B}}\big)\)</span> と定義し，系が熱浴から吸収した熱量を <span class="arithmatex">\(Q = -\Delta E_{\mathrm{B}}\)</span> とする。また，対象系のエントロピー変化量を <span class="arithmatex">\(\Delta S = S\big(\rho(t)\big) - S\big(\rho(0)\big)\)</span> とする。量子相対エントロピーが常に 0 以上になる数学的性質（ <span class="arithmatex">\(D \ge 0\)</span> ）を (2) の結果に適用することで， <span class="arithmatex">\(\Delta S\)</span> と <span class="arithmatex">\(Q/T\)</span> の間に成り立つ不等式を導け。</p>
+<p>(3) <span class="arithmatex">\(\Delta E_{\mathrm{B}}=\mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big)-\mathrm{Tr}\big(\rho_{\mathrm{eq,B}}\hat{H}_{\mathrm{B}}\big)\)</span>，<span class="arithmatex">\(Q=-\Delta E_{\mathrm{B}}\)</span>，<span class="arithmatex">\(\Delta S=S\big(\rho(t)\big)-S\big(\rho(0)\big)\)</span> とする。<span class="arithmatex">\(D\ge0\)</span> から <span class="arithmatex">\(\Delta S\)</span> と <span class="arithmatex">\(Q/T\)</span> の不等式を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14589,7 +14588,7 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 <div class="arithmatex">\[
 \ln\big(\rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \ln\rho(t) \otimes \hat{I}_{\mathrm{B}} + \hat{I}_{\mathrm{sys}} \otimes \ln\rho_{\mathrm{eq, B}}
 \]</div>
-<p>これを第2項のトレースに代入し，各部分系への部分トレースの操作（ <span class="arithmatex">\(\mathrm{Tr} = \mathrm{Tr}_{\mathrm{sys}}\mathrm{Tr}_{\mathrm{B}}\)</span> ）を実行します。</p>
+<p>これを第2項のトレースに代入し，各部分系への部分トレースの操作 <span class="arithmatex">\(\mathrm{Tr} = \mathrm{Tr}_{\mathrm{sys}}\mathrm{Tr}_{\mathrm{B}}\)</span> を実行します。</p>
 <div class="arithmatex">\[
 -\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \ln\rho(t) \otimes \hat{I}_{\mathrm{B}} ] \right) = -\mathrm{Tr}_{\mathrm{sys}}\left( \mathrm{Tr}_{\mathrm{B}}[\rho_{\mathrm{tot}}(t)] \ln\rho(t) \right) = -\mathrm{Tr}_{\mathrm{sys}}\left( \rho(t) \ln\rho(t) \right) = \frac{1}{k_B} S\big(\rho(t)\big)
 \]</div>
@@ -14618,7 +14617,7 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 <div class="arithmatex">\[
 D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{\Delta S}{k_B} - \frac{Q}{k_B T}
 \]</div>
-<p>量子相対エントロピーは数学的に常に 0 以上（ <span class="arithmatex">\(D \ge 0\)</span> ）の値をとるため，以下の不等式が成り立ちます。</p>
+<p>量子相対エントロピーは数学的に常に 0 以上 <span class="arithmatex">\(D \ge 0\)</span> の値をとるため，以下の不等式が成り立ちます。</p>
 <div class="arithmatex">\[
 \frac{\Delta S}{k_B} - \frac{Q}{k_B T} \ge 0
 \]</div>
@@ -14627,7 +14626,7 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 \Delta S \ge \frac{Q}{T}
 \]</div>
 <p>この数式は，マクロ熱力学において熱平衡から外れた変化が起きる際のエントロピー変化を規定するクラウジウスの不等式そのものです。</p>
-<p>全系のユニタリー性を保ったまま，部分系を切り離したことによる情報の相関（相対エントロピー）を計算することで，熱力学第二法則の不等式が導かれることが示されました。</p>
+<p>全系のユニタリー性を保ったまま，部分系を切り離したことによる情報の相関を計算することで，熱力学第二法則の不等式が導かれることが示されました。</p>
 
 
 

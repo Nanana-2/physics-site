@@ -14542,9 +14542,7 @@
 
 <h1 id="_1">位相空間表示とウィグナー関数</h1>
 <h2 id="_2">問題</h2>
-<p>古典統計力学では，位置 <span class="arithmatex">\(x\)</span> と運動量 <span class="arithmatex">\(p\)</span> を座標軸とする位相空間上の確率分布関数 <span class="arithmatex">\(\rho(x, p)\)</span> を用いて系の状態を表す。しかし，量子力学では正準交換関係 <span class="arithmatex">\([ \hat{x}, \hat{p} ] = i\hbar\)</span> に起因する不確定性原理が存在するため，位置と運動量を同時に確定させることができない。そのため，特定の点 <span class="arithmatex">\(x, p\)</span> における同時存在確率を厳密に定義することは不可能である。</p>
-<p>この制約下で古典統計力学との対応を議論するために提案されたのが，ウィグナー分布関数に代表される擬似確率分布関数 <span class="arithmatex">\(W(x, p)\)</span> である。 <span class="arithmatex">\(W(x, p)\)</span> は局所的には負の値をとることがあるものの，全空間で積分を施すことで，実際の位置や運動量の測定確率を正しく与えるように設計されている。</p>
-<p>具体例として，最も不確定性が小さい状態である以下のガウス型波束（最小波束）を考える。</p>
+<p>次のガウス型波束を考える。</p>
 <div class="arithmatex">\[
 \psi(x) = \left( \frac{1}{2\pi \sigma^2} \right)^{1/4} \exp\left( -\frac{x^2}{4\sigma^2} \right)
 \]</div>
@@ -14553,9 +14551,9 @@
 W(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi^*\left(x + \frac{y}{2}\right) \psi\left(x - \frac{y}{2}\right) \exp\left( -\frac{ipy}{\hbar} \right) dy
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 与えられた波動関数 <span class="arithmatex">\(\psi(x)\)</span> を用いて，位置の存在確率密度 <span class="arithmatex">\(P(x) = |\psi(x)|^2\)</span> を求めよ。また，ガウス積分の公式 <span class="arithmatex">\(\int_{-\infty}^{\infty} \exp(-ax^2) dx = \sqrt{\frac{\pi}{a}}\)</span> （ <span class="arithmatex">\(a &gt; 0\)</span> ）を利用して，全空間で積分した値 <span class="arithmatex">\(\int_{-\infty}^{\infty} P(x) dx\)</span> が 1 に規格化されていることを計算して確かめよ。</p>
-<p>(2) この状態のウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> の定義式に対して，具体的な <span class="arithmatex">\(\psi(x)\)</span> の形を代入せよ。被積分関数の中身を <span class="arithmatex">\(y\)</span> について平方完成し，ガウス積分を実行することによって， <span class="arithmatex">\(W(x, p)\)</span> の具体的な関数形を導出せよ。</p>
-<p>(3) (2) で得られた <span class="arithmatex">\(W(x, p)\)</span> について，運動量 <span class="arithmatex">\(p\)</span> に関して全空間で積分（ <span class="arithmatex">\(\int_{-\infty}^{\infty} W(x, p) dp\)</span> ）を行え。この積分結果が，(1) で求めた位置の存在確率密度 <span class="arithmatex">\(P(x)\)</span> と一致することを計算によって示せ。</p>
+<p>(1) <span class="arithmatex">\(P(x)=|\psi(x)|^2\)</span> を求め，<span class="arithmatex">\(\int_{-\infty}^{\infty}P(x)dx=1\)</span> を示せ。</p>
+<p>(2) この状態のウィグナー分布関数 <span class="arithmatex">\(W(x,p)\)</span> を求めよ。</p>
+<p>(3) <span class="arithmatex">\(W(x,p)\)</span> を <span class="arithmatex">\(p\)</span> について積分し，<span class="arithmatex">\(P(x)\)</span> と一致することを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14585,17 +14583,17 @@ W(x, p) = \frac{1}{\pi\hbar \sqrt{2\pi \sigma^2}} \int_{-\infty}^{\infty} \exp\l
 <div class="arithmatex">\[
 W(x, p) = \frac{\exp\left( -\frac{x^2}{2\sigma^2} - \frac{2\sigma^2 p^2}{\hbar^2} \right)}{\pi\hbar \sqrt{2\pi \sigma^2}} \int_{-\infty}^{\infty} \exp\left( -\frac{1}{8\sigma^2} \left( y + \frac{4i\sigma^2 p}{\hbar} \right)^2 \right) dy
 \]</div>
-<p>積分変数をシフトしても積分範囲は変わらないため，ガウス積分の公式（ <span class="arithmatex">\(a = \frac{1}{8\sigma^2}\)</span> ）がそのまま適用できます。積分の値は <span class="arithmatex">\(\sqrt{8\pi \sigma^2} = 2\sqrt{2\pi \sigma^2}\)</span> となります。</p>
+<p>積分変数をシフトしても積分範囲は変わらないため，ガウス積分の公式 <span class="arithmatex">\(a = \frac{1}{8\sigma^2}\)</span> がそのまま適用できます。積分の値は <span class="arithmatex">\(\sqrt{8\pi \sigma^2} = 2\sqrt{2\pi \sigma^2}\)</span> となります。</p>
 <div class="arithmatex">\[
 W(x, p) = \frac{\exp\left( -\frac{x^2}{2\sigma^2} - \frac{2\sigma^2 p^2}{\hbar^2} \right)}{\pi\hbar \sqrt{2\pi \sigma^2}} \cdot 2\sqrt{2\pi \sigma^2} = \frac{2}{\pi\hbar} \exp\left( -\frac{x^2}{2\sigma^2} - \frac{2\sigma^2 p^2}{\hbar^2} \right)
 \]</div>
-<p>これが最小波束に対するウィグナー分布関数の具体的な関数形です。位置 <span class="arithmatex">\(x\)</span> と運動量 <span class="arithmatex">\(p\)</span> の双方について，原点を中心とする2次元のガウス分布の形状をとることがわかります。</p>
+<p>これが最小波束に対するウィグナー分布関数の関数形です。位置 <span class="arithmatex">\(x\)</span> と運動量 <span class="arithmatex">\(p\)</span> の双方について，原点を中心とする2次元のガウス分布の形状をとることがわかります。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた <span class="arithmatex">\(W(x, p)\)</span> を運動量 <span class="arithmatex">\(p\)</span> について積分します。変数 <span class="arithmatex">\(x\)</span> の項を積分の外へ括り出します。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} W(x, p) dp = \frac{2}{\pi\hbar} \exp\left( -\frac{x^2}{2\sigma^2} \right) \int_{-\infty}^{\infty} \exp\left( -\frac{2\sigma^2 p^2}{\hbar^2} \right) dp
 \]</div>
-<p>運動量に関する積分にガウス積分の公式（ <span class="arithmatex">\(a = \frac{2\sigma^2}{\hbar^2}\)</span> ）を適用します。積分の値は <span class="arithmatex">\(\sqrt{\frac{\pi\hbar^2}{2\sigma^2}} = \frac{\hbar}{\sigma}\sqrt{\frac{\pi}{2}}\)</span> となります。</p>
+<p>運動量に関する積分にガウス積分の公式 <span class="arithmatex">\(a = \frac{2\sigma^2}{\hbar^2}\)</span> を適用します。積分の値は <span class="arithmatex">\(\sqrt{\frac{\pi\hbar^2}{2\sigma^2}} = \frac{\hbar}{\sigma}\sqrt{\frac{\pi}{2}}\)</span> となります。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} W(x, p) dp = \frac{2}{\pi\hbar} \exp\left( -\frac{x^2}{2\sigma^2} \right) \cdot \frac{\hbar}{\sigma}\sqrt{\frac{\pi}{2}}
 \]</div>
@@ -14607,7 +14605,7 @@ W(x, p) = \frac{\exp\left( -\frac{x^2}{2\sigma^2} - \frac{2\sigma^2 p^2}{\hbar^2
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} W(x, p) dp = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left( -\frac{x^2}{2\sigma^2} \right)
 \]</div>
-<p>この結果は，(1) で計算した実際の位置の存在確率密度 <span class="arithmatex">\(P(x)\)</span> と完全に一致します。これにより，位相空間表示された関数から運動量の自由度を積分によって削ぎ落とすと，測定にかかる正しい周辺確率が再現されることが計算の上でも確かめられました。</p>
+<p>この結果は，(1) で計算した実際の位置の存在確率密度 <span class="arithmatex">\(P(x)\)</span> と一致します。これにより，位相空間表示された関数から運動量の自由度を積分によって削ぎ落とすと，測定にかかる正しい周辺確率が再現されることが計算の上でも確かめられました。</p>
 
 
 

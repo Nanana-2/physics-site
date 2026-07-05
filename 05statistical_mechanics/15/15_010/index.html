@@ -14542,22 +14542,22 @@
 
 <h1 id="_1">密度行列のエントロピー</h1>
 <h2 id="_2">問題</h2>
-<p>量子統計力学において，系の乱雑さや情報の欠落度合いを表すマクロな不変量は，フォン・ノイマンエントロピーとして定義される。このエントロピーは，状態の不確定性が存在しない純粋状態において最小値を取り，複数の状態が確率的に混ざり合った混合状態において正の値をとり，全状態が等確率で混ざり合った最大混合状態において最大値をとる。</p>
 <p>密度行列を <span class="arithmatex">\(\rho\)</span> とするとき，フォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> は以下の数式で定義される。</p>
 <div class="arithmatex">\[
 S = -k_B \mathrm{Tr}(\rho \ln \rho)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 密度行列 <span class="arithmatex">\(\rho\)</span> の固有値方程式を <span class="arithmatex">\(\rho|n\rangle = p_n|n\rangle\)</span> とする。状態の直交性およびトレースの定義式を用いることで，フォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> が，固有値である確率分布 <span class="arithmatex">\(p_n\)</span> を用いた以下のシャノンエントロピーの形式で展開できることを示せ。</p>
+<p>(1) <span class="arithmatex">\(\rho|n\rangle=p_n|n\rangle\)</span> とする。フォン・ノイマンエントロピーが</p>
 <div class="arithmatex">\[
 S = -k_B \sum_n p_n \ln p_n
 \]</div>
-<p>(2) 系が単一の量子状態 <span class="arithmatex">\(|\psi\rangle\)</span> のみで完全に指定される純粋状態にあるとする。このときの密度行列 <span class="arithmatex">\(\rho = |\psi\rangle\langle\psi|\)</span> の固有値をすべて求めよ。また，その固有値の性質を (1) の展開式に適用することで，純粋状態におけるフォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> の値が 0 になることを導出せよ。ただし，必要であれば極限の公式 <span class="arithmatex">\(\lim_{x \to 0} x \ln x = 0\)</span> を利用せよ。</p>
+<p>と表されることを示せ。</p>
+<p>(2) 純粋状態 <span class="arithmatex">\(\rho=|\psi\rangle\langle\psi|\)</span> の固有値を求め，<span class="arithmatex">\(S=0\)</span> を示せ。</p>
 <p>(3) 2準位量子系において，密度行列が以下の最大混合状態にあるとする。</p>
 <div class="arithmatex">\[
 \rho = \begin{pmatrix} \frac{1}{2} &amp; 0 \\ 0 &amp; \frac{1}{2} \end{pmatrix}
 \]</div>
-<p>この状態におけるフォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> を具体的に計算せよ。また，同様の <span class="arithmatex">\(d\)</span> 次元量子系における最大混合状態の密度行列（対角成分がすべて <span class="arithmatex">\(\frac{1}{d}\)</span> の対角行列）についてエントロピーを求め，状態の次元数 <span class="arithmatex">\(d\)</span> とエントロピーの増大関係を明らかにせよ。</p>
+<p>この状態の <span class="arithmatex">\(S\)</span> を求めよ。また，<span class="arithmatex">\(d\)</span> 次元の最大混合状態について <span class="arithmatex">\(S\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14583,7 +14583,7 @@ S = -k_B \sum_n p_n \ln p_n \langle n|n\rangle = -k_B \sum_n p_n \ln p_n
 <div class="arithmatex">\[
 \rho |\psi\rangle = 1 \cdot |\psi\rangle
 \]</div>
-<p>したがって，状態 <span class="arithmatex">\(|\psi\rangle\)</span> に対応する固有値は <span class="arithmatex">\(1\)</span> です。密度行列のトレース（固有値の総和）は常に 1 でなければならないため，この状態に直交する他のすべての独立な状態に対する固有値はすべて <span class="arithmatex">\(0\)</span> と決定されます。</p>
+<p>したがって，状態 <span class="arithmatex">\(|\psi\rangle\)</span> に対応する固有値は <span class="arithmatex">\(1\)</span> です。密度行列のトレースは常に 1 でなければならないため，この状態に直交する他のすべての独立な状態に対する固有値はすべて <span class="arithmatex">\(0\)</span> と決定されます。</p>
 <p>すなわち，純粋状態の固有値分布は以下の通りです。</p>
 <div class="arithmatex">\[
 p_1 = 1, \quad p_2 = p_3 = \dots = 0
@@ -14596,7 +14596,7 @@ S = -k_B \Big( 1 \cdot \ln 1 + 0 \cdot \ln 0 + 0 \cdot \ln 0 + \dots \Big)
 <div class="arithmatex">\[
 S = -k_B \Big( 0 + 0 + \dots \Big) = 0
 \]</div>
-<p>量子状態が完全に判明しており，情報の欠落や統計的なゆらぎが一切存在しない純粋状態では，フォン・ノイマンエントロピーが厳密に 0 になることが示されました。</p>
+<p>量子状態が判明しており，情報の欠落や統計的なゆらぎが存在しない純粋状態では，フォン・ノイマンエントロピーが厳密に 0 になることが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>与えられた2準位系の最大混合状態の密度行列は対角化されているため，その対角成分がそのまま固有値となります。固有値分布は以下の通りです。</p>
 <div class="arithmatex">\[
@@ -14614,7 +14614,7 @@ p_n = \frac{1}{d} \quad (\text{ただし } n = 1, 2, \dots, d)
 <div class="arithmatex">\[
 S = -k_B \sum_{n=1}^{d} \frac{1}{d} \ln \frac{1}{d} = -k_B \cdot d \left( \frac{1}{d} \ln \frac{1}{d} \right) = -k_B \ln \frac{1}{d} = k_B \ln d
 \]</div>
-<p>一般の最大混合状態におけるフォン・ノイマンエントロピーは <span class="arithmatex">\(S = k_B \ln d\)</span> となります。この数式から，取り得る量子状態の次元数（選択肢の数） <span class="arithmatex">\(d\)</span> が大きくなればなるほど，系の状態に関する不確定性が対数関数的に増大し，エントロピーの値が大きくなる関係性が得られます。</p>
+<p>一般の最大混合状態におけるフォン・ノイマンエントロピーは <span class="arithmatex">\(S = k_B \ln d\)</span> となります。この数式から，取り得る量子状態の次元数 <span class="arithmatex">\(d\)</span> が大きくなればなるほど，系の状態に関する不確定性が対数関数的に増大し，エントロピーの値が大きくなる関係性が得られます。</p>
 
 
 

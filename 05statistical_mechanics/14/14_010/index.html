@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">生成消滅演算子と数状態</h1>
 <h2 id="_2">問題</h2>
-<p>1次元調和振動子の問題は，位置 <span class="arithmatex">\(\hat{x}\)</span> と運動量 <span class="arithmatex">\(\hat{p}\)</span> の微分方程式として解くだけでなく，生成演算子 <span class="arithmatex">\(\hat{a}^\dagger\)</span> と消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> を用いることで，代数的にすべてのエネルギー固有状態（数状態）を構成することができる。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子のハミルトニアンは以下のように与えられる。</p>
 <div class="arithmatex">\[
 \hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2\hat{x}^2
@@ -14552,12 +14551,12 @@
 \hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i}{m\omega}\hat{p} \right), \quad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i}{m\omega}\hat{p} \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 定義式と正準交換関係を直接用いて，生成演算子と消滅演算子の間に成り立つ交換関係 <span class="arithmatex">\([ \hat{a}, \hat{a}^\dagger ] = \hat{a}\hat{a}^\dagger - \hat{a}^\dagger\hat{a}\)</span> を計算せよ。また，ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> がこれらの演算子を用いて以下の対角化された形式で表現できることを示せ。</p>
+<p>(1) <span class="arithmatex">\([\hat{a},\hat{a}^\dagger]\)</span> を計算し，ハミルトニアンが次の形に表されることを示せ。</p>
 <div class="arithmatex">\[
 \hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right)
 \]</div>
-<p>(2) 数演算子 <span class="arithmatex">\(\hat{N} = \hat{a}^\dagger\hat{a}\)</span> を定義する。固有値方程式 <span class="arithmatex">\(\hat{N}|n\rangle = n|n\rangle\)</span> を満たす規格化された固有状態（数状態） <span class="arithmatex">\(|n\rangle\)</span> に対し，交換関係を利用して <span class="arithmatex">\(\hat{N} \big( \hat{a}^\dagger|n\rangle \big)\)</span> および <span class="arithmatex">\(\hat{N} \big( \hat{a}|n\rangle \big)\)</span> をそれぞれ計算せよ。これにより， <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> が固有値 <span class="arithmatex">\(n+1\)</span> に対応する固有状態であり， <span class="arithmatex">\(\hat{a}|n\rangle\)</span> が固有値 <span class="arithmatex">\(n-1\)</span> に対応する固有状態であることを確かめよ。</p>
-<p>(3) 固有値 <span class="arithmatex">\(n\)</span> の下限に対応する基底状態（真空状態） <span class="arithmatex">\(|0\rangle\)</span> は，これ以上エネルギーを下げられない条件 <span class="arithmatex">\(\hat{a}|0\rangle = 0\)</span> によって定義される。この数状態 <span class="arithmatex">\(|n\rangle\)</span> が，基底状態 <span class="arithmatex">\(|0\rangle\)</span> に生成演算子を繰り返し作用させることで以下のように一般的に構成できることを，数学的帰納法または規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> の計算から導出せよ。</p>
+<p>(2) <span class="arithmatex">\(\hat{N}=\hat{a}^\dagger\hat{a}\)</span>，<span class="arithmatex">\(\hat{N}|n\rangle=n|n\rangle\)</span> とする。<span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> と <span class="arithmatex">\(\hat{a}|n\rangle\)</span> が数演算子の固有状態であることを示し，それぞれの固有値を求めよ。</p>
+<p>(3) 固有値 <span class="arithmatex">\(n\)</span> の下限に対応する基底状態 <span class="arithmatex">\(|0\rangle\)</span> は，これ以上エネルギーを下げられない条件 <span class="arithmatex">\(\hat{a}|0\rangle = 0\)</span> によって定義される。この数状態 <span class="arithmatex">\(|n\rangle\)</span> が，基底状態 <span class="arithmatex">\(|0\rangle\)</span> に生成演算子を繰り返し作用させることで以下のように一般的に構成できることを，数学的帰納法または規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> の計算から導出せよ。</p>
 <div class="arithmatex">\[
 |n\rangle = \frac{(\hat{a}^\dagger)^n}{\sqrt{n!}} |0\rangle
 \]</div>
@@ -14568,7 +14567,7 @@
 <div class="arithmatex">\[
 [ \hat{a}, \hat{a}^\dagger ] = \frac{m\omega}{2\hbar} \left[ \hat{x} + \frac{i}{m\omega}\hat{p}, \, \hat{x} - \frac{i}{m\omega}\hat{p} \right]
 \]</div>
-<p>交換子の線形性 <span class="arithmatex">\([ \hat{A}+\hat{B}, \hat{C}+\hat{D} ] = [ \hat{A},\hat{C} ] + [ \hat{A},\hat{D} ] + [ \hat{B},\hat{C} ] + [ \hat{B},\hat{D} ]\)</span> を適用します。自分自身との交換子はゼロ（ <span class="arithmatex">\([ \hat{x},\hat{x} ] = 0, [ \hat{p},\hat{p} ] = 0\)</span> ）です。</p>
+<p>交換子の線形性 <span class="arithmatex">\([ \hat{A}+\hat{B}, \hat{C}+\hat{D} ] = [ \hat{A},\hat{C} ] + [ \hat{A},\hat{D} ] + [ \hat{B},\hat{C} ] + [ \hat{B},\hat{D} ]\)</span> を適用します。自分自身との交換子はゼロ <span class="arithmatex">\([ \hat{x},\hat{x} ] = 0, [ \hat{p},\hat{p} ] = 0\)</span> です。</p>
 <div class="arithmatex">\[
 [ \hat{a}, \hat{a}^\dagger ] = \frac{m\omega}{2\hbar} \left( -\frac{i}{m\omega}[ \hat{x}, \hat{p} ] + \frac{i}{m\omega}[ \hat{p}, \hat{x} ] \right)
 \]</div>

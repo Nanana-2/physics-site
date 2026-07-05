@@ -14542,17 +14542,16 @@
 
 <h1 id="_1">ウィグナー分布の非古典性</h1>
 <h2 id="_2">問題</h2>
-<p>量子状態の位相空間表示であるウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> は，実関数であり全空間で積分すると 1 に規格化される。しかし，古典統計力学の確率分布関数とは異なり，位相空間の局所的な領域で負の値（負値性）をとり得るという性質を持つ。この負の値は，不確定性原理に阻まれて単独で測定することはできないが，状態が古典論では説明できない量子力学的な干渉効果（非古典性）を持っていることを示す重要な指標となる。</p>
 <p>波動関数 <span class="arithmatex">\(\psi(x)\)</span> に対するウィグナー分布関数の定義式は以下の通りである。</p>
 <div class="arithmatex">\[
 W(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi^*\left(x + \frac{y}{2}\right) \psi\left(x - \frac{y}{2}\right) \exp\left( -\frac{ipy}{\hbar} \right) dy
 \]</div>
-<p>具体的な対象として，原点から位置 <span class="arithmatex">\(+x_0\)</span> および <span class="arithmatex">\(-x_0\)</span> （ <span class="arithmatex">\(x_0 &gt; 0\)</span> ）だけ離れた2つのガウス型波束が，同位相で量子力学的に重ね合わされた以下の状態を考える。</p>
+<p>対象として，原点から位置 <span class="arithmatex">\(+x_0\)</span> および <span class="arithmatex">\(-x_0\)</span> <span class="arithmatex">\(x_0 &gt; 0\)</span> だけ離れた2つのガウス型波束が，同位相で量子力学的に重ね合わされた以下の状態を考える。</p>
 <div class="arithmatex">\[
 \psi(x) = N \left[ \exp\left( -\frac{(x - x_0)^2}{4\sigma^2} \right) + \exp\left( -\frac{(x + x_0)^2}{4\sigma^2} \right) \right]
 \]</div>
-<p>ただし， <span class="arithmatex">\(N\)</span> は規格化定数であり，2つの波束の重なりは十分小さい（ <span class="arithmatex">\(x_0 \gg \sigma\)</span> ）とする。以下の問いに答えよ。</p>
-<p>(1) 任意の波動関数 <span class="arithmatex">\(\psi(x)\)</span> に対して，定義式から <span class="arithmatex">\(W(x, p)^* = W(x, p)\)</span> が常に成り立つこと，すなわちウィグナー分布関数が必ず実数型関数になることを複素共役の計算によって示せ。</p>
+<p>ただし， <span class="arithmatex">\(N\)</span> は規格化定数であり，2つの波束の重なりは十分小さい <span class="arithmatex">\(x_0 \gg \sigma\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) 定義式から <span class="arithmatex">\(W(x,p)^*=W(x,p)\)</span> を示せ。</p>
 <p>(2) 与えられた重ね合わせ状態 <span class="arithmatex">\(\psi(x)\)</span> を定義式に代入して積分を実行すると， <span class="arithmatex">\(W(x, p)\)</span> は以下の3つの項の和として求まる。</p>
 <div class="arithmatex">\[
 W(x, p) = W_{\mathrm{left}}(x, p) + W_{\mathrm{right}}(x, p) + W_{\mathrm{int}}(x, p)
@@ -14562,8 +14561,8 @@ W(x, p) = W_{\mathrm{left}}(x, p) + W_{\mathrm{right}}(x, p) + W_{\mathrm{int}}(
 <div class="arithmatex">\[
 W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \int_{-\infty}^{\infty} \left[ \exp\left( -\frac{(x + y/2 - x_0)^2 + (x - y/2 + x_0)^2}{4\sigma^2} \right) + \exp\left( -\frac{(x + y/2 + x_0)^2 + (x - y/2 - x_0)^2}{4\sigma^2} \right) \right] \exp\left( -\frac{ipy}{\hbar} \right) dy
 \]</div>
-<p>この干渉項 <span class="arithmatex">\(W_{\mathrm{int}}(x, p)\)</span> の積分を実行し，位置 <span class="arithmatex">\(x\)</span> のガウス関数と運動量 <span class="arithmatex">\(p\)</span> の余弦関数（ <span class="arithmatex">\(\cos\)</span> ）の積を含む具体的な関数形を導出せよ。</p>
-<p>(3) (2) で導出した全体の <span class="arithmatex">\(W(x, p)\)</span> について，位相空間の原点 <span class="arithmatex">\((x, p) = (0, 0)\)</span> における値を評価せよ。 <span class="arithmatex">\(x_0 \gg \sigma\)</span> の仮定のもとで，この位置における値が負になることを示し，量子干渉が位相空間のプロファイルに与える影響を説明せよ。</p>
+<p>この干渉項 <span class="arithmatex">\(W_{\mathrm{int}}(x, p)\)</span> の積分を実行し，位置 <span class="arithmatex">\(x\)</span> のガウス関数と運動量 <span class="arithmatex">\(p\)</span> の余弦関数 <span class="arithmatex">\(\cos\)</span> の積を含む関数形を導出せよ。</p>
+<p>(3) <span class="arithmatex">\(W(0,0)\)</span> を求め，<span class="arithmatex">\(x_0\gg\sigma\)</span> で負になることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14579,7 +14578,7 @@ W(x, p) * = \frac{1}{\pi\hbar} \int_{\infty}^{-\infty} \psi\left(x - \frac{u}{2}
 <div class="arithmatex">\[
 W(x, p) * = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi^*\left(x + \frac{u}{2}\right) \psi\left(x - \frac{u}{2}\right) \exp\left( -\frac{ipu}{\hbar} \right) du
 \]</div>
-<p>積分のダミー変数を <span class="arithmatex">\(u\)</span> から <span class="arithmatex">\(y\)</span> に書き直すと，これは元の <span class="arithmatex">\(W(x, p)\)</span> の定義式と完全に一致します。したがって， <span class="arithmatex">\(W(x, p)^* = W(x, p)\)</span> が成り立ち，ウィグナー分布関数は位相空間の全域で必ず実数値ををとることが示されました。</p>
+<p>積分のダミー変数を <span class="arithmatex">\(u\)</span> から <span class="arithmatex">\(y\)</span> に書き直すと，これは元の <span class="arithmatex">\(W(x, p)\)</span> の定義式と一致します。したがって， <span class="arithmatex">\(W(x, p)^* = W(x, p)\)</span> が成り立ち，ウィグナー分布関数は位相空間の全域で必ず実数値ををとることが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>干渉項 <span class="arithmatex">\(W_{\mathrm{int}}(x, p)\)</span> の被積分関数にある2つの大括弧の指数部分を展開してまとめます。
 * 第1項の分子： </p>
@@ -14597,7 +14596,7 @@ W(x, p) * = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi^*\left(x + \frac{u}{
 W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \exp\left( -\frac{2x^2 + 2x_0^2}{4\sigma^2} \right) \left[ \exp\left( \frac{4xx_0}{4\sigma^2} \right) + \exp\left( -\frac{4xx_0}{4\sigma^2} \right) \right] \int_{-\infty}^{\infty} \exp\left( -\frac{y^2}{8\sigma^2} \right) \exp\left( -\frac{ipy}{\hbar} \right) dy
 \]</div>
 <p>括弧の内部は双曲線関数を用いて <span class="arithmatex">\(2 \cosh\left( \frac{xx_0}{\sigma^2} \right)\)</span> とまとめられます。</p>
-<p>残った <span class="arithmatex">\(y\)</span> に関する積分は，基本問題（13_01）で行ったものと全く同じガウス積分（ <span class="arithmatex">\(a = \frac{1}{8\sigma^2}\)</span> ）の平方完成の形をしています。積分の実行結果は <span class="arithmatex">\(2\sqrt{2\pi\sigma^2} \exp\left( -\frac{2\sigma^2 p^2}{\hbar^2} \right)\)</span> となります。</p>
+<p>残った <span class="arithmatex">\(y\)</span> に関する積分は，基本問題で行ったものと全く同じガウス積分 <span class="arithmatex">\(a = \frac{1}{8\sigma^2}\)</span> の平方完成の形をしています。積分の実行結果は <span class="arithmatex">\(2\sqrt{2\pi\sigma^2} \exp\left( -\frac{2\sigma^2 p^2}{\hbar^2} \right)\)</span> となります。</p>
 <p>これらをすべて掛け合わせて整理します。</p>
 <div class="arithmatex">\[
 W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \exp\left( -\frac{x^2 + x_0^2}{2\sigma^2} \right) \cdot 2 \cosh\left( \frac{xx_0}{\sigma^2} \right) \cdot 2\sqrt{2\pi\sigma^2} \exp\left( -\frac{2\sigma^2 p^2}{\hbar^2} \right)
@@ -14605,7 +14604,7 @@ W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \exp\left( -\frac{x^2 + x_0^2}{2\s
 <div class="arithmatex">\[
 W_{\mathrm{int}}(x, p) = \frac{4N^2 \sqrt{2\pi\sigma^2}}{\pi\hbar} \cosh\left( \frac{xx_0}{\sigma^2} \right) \exp\left( -\frac{x^2 + x_0^2}{2\sigma^2} - \frac{2\sigma^2 p^2}{\hbar^2} \right)
 \]</div>
-<p>これが求める干渉項の具体的な関数形です。</p>
+<p>これが求める干渉項の関数形です。</p>
 <h3 id="3">(3)</h3>
 <p>全体のウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> の原点 <span class="arithmatex">\((0, 0)\)</span> における値を計算します。</p>
 <p>まず，単一の波束に対応する古典的な項 <span class="arithmatex">\(W_{\mathrm{left}}\)</span> と <span class="arithmatex">\(W_{\mathrm{right}}\)</span> は，それぞれ <span class="arithmatex">\(\pm x_0\)</span> に中心を持つガウス分布であるため，原点での値は以下のようになります。</p>
@@ -14620,9 +14619,9 @@ W_{\mathrm{int}}(0, 0) = \frac{4N^2 \sqrt{2\pi\sigma^2}}{\pi\hbar} \cdot 1 \cdot
 <div class="arithmatex">\[
 W(0, 0) = \frac{2N^2 \sqrt{2\pi\sigma^2}}{\pi\hbar} \exp\left( -\frac{x_0^2}{2\sigma^2} \right) \Big[ 1 + 1 + 2 \Big] = \frac{8N^2 \sqrt{2\pi\sigma^2}}{\pi\hbar} \exp\left( -\frac{x_0^2}{2\sigma^2} \right)
 \]</div>
-<p>ここで，本来の波動関数が同位相ではなく<strong>逆位相</strong>の重ね合わせであった場合を想定すると，干渉項の符号が反転するため，大括弧の内部は <span class="arithmatex">\([1 + 1 - 2] = 0\)</span> になります。さらに，一般の重ね合わせを精密に解くと，干渉項は運動量 <span class="arithmatex">\(p\)</span> の変化に伴って <span class="arithmatex">\(\cos\left(\frac{2x_0 p}{\hbar}\right)\)</span> のように激しく振動する成分を持ちます。</p>
+<p>ここで，本来の波動関数が同位相ではなく<strong>逆位相</strong>の重ね合わせであった場合を想定すると，干渉項の符号が反転するため，大括弧の内部は <span class="arithmatex">\([1 + 1 - 2] = 0\)</span> になります。さらに，一般の重ね合わせを精密に解くと，干渉項は運動量 <span class="arithmatex">\(p\)</span> の変化に伴って <span class="arithmatex">\(\cos\left(\frac{2x_0 p}{\hbar}\right)\)</span> のように振動する成分を持ちます。</p>
 <p>特に運動量が特定の条件を満たす領域では，干渉項の負のピークの絶対値が古典的な2つの山の裾野を大きく上回ります。これにより，全体のウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> は位相空間の中央領域において明確な負の谷を形成することになります。</p>
-<p>この負値性は，古典統計力学における確率の概念（一貫して 0 以上）を決して適用できない，量子力学的な波の可干渉性が作り出した純粋な非古典的状態の証拠として位置づけられます。</p>
+<p>この負値性は，古典統計力学における確率の概念を決して適用できない，量子力学的な波の可干渉性が作り出した純粋な非古典的状態の証拠として位置づけられます。</p>
 
 
 

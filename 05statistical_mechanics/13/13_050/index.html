@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">ウィグナー分布と伏見関数の比較</h1>
 <h2 id="_2">問題</h2>
-<p>量子状態の位相空間プロファイルを調べる代表的な手法として，ウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> と伏見関数 <span class="arithmatex">\(Q(x, p)\)</span> が挙げられる。伏見関数はウィグナー分布関数を不確定性原理の最小限界の大きさを持つガウス関数で平滑化したものに等しい。ここでは，調和振動子の第1励起状態を具体的な共通の対象として選び，両者の関数形の違いを計算によって比較する。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子を考える。系の第1励起状態の波動関数は，代表的な長さのスケール <span class="arithmatex">\(x_0 = \sqrt{\frac{\hbar}{m\omega}}\)</span> を用いて以下のように与えられる。</p>
 <div class="arithmatex">\[
 \psi(x) = \left( \frac{4}{\pi x_0^6} \right)^{1/4} x \exp\left( -\frac{x^2}{2x_0^2} \right)
@@ -14557,12 +14556,12 @@ W(x, p) = \frac{1}{\pi\hbar} \left( 2R^2 - 1 \right) \exp\left( -R^2 \right)
 <div class="arithmatex">\[
 Q(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( - \frac{(x - x')^2}{x_0^2} - \frac{(p - p')^2}{p_0^2} \right) W(x', p') dx' dp'
 \]</div>
-<p>この積分を実行すると，伏見関数の具体的な形は以下のようになる。</p>
+<p>この積分を実行すると，伏見関数の形は以下のようになる。</p>
 <div class="arithmatex">\[
 Q(x, p) = \frac{1}{2\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
 \]</div>
 <p>この伏見関数 <span class="arithmatex">\(Q(x, p)\)</span> について，位相空間上の任意の点における値が常に 0 以上であることを式から示せ。また，原点 <span class="arithmatex">\(x = 0, p = 0\)</span> における値を求めよ。</p>
-<p>(3) (1) と (2) の結果を比較せよ。同じ量子状態を対象にしているにもかかわらず，原点付近においてウィグナー分布関数には負の谷が現れ，伏見関数では値が 0 となって負の領域が完全に消失する物理的な仕組みを，ガウスフィルターによる平滑化の効果と関連付けて説明せよ。</p>
+<p>(3) (1) と (2) の結果を比較せよ。同じ量子状態を対象にしているにもかかわらず，原点付近においてウィグナー分布関数には負の谷が現れ，伏見関数では値が 0 となって負の領域が消失する物理的な仕組みを，ガウスフィルターによる平滑化の効果と関連付けて説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>

@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">コヒーレント状態</h1>
 <h2 id="_2">問題</h2>
-<p>前問で導入した消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> はエルミート演算子ではないため，その固有値は一般に複素数となる。この消滅演算子の固有状態として定義される複素状態はコヒーレント状態と呼ばれ，レーザー光などの古典的な電磁波や，マクロな調和振動子の振る舞いを量子力学的に記述する上で重要な役割を果たす。</p>
 <p>複素数を <span class="arithmatex">\(\alpha\)</span> とするとき，コヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> は以下の固有値方程式によって定義される。</p>
 <div class="arithmatex">\[
 \hat{a}|\alpha\rangle = \alpha|\alpha\rangle
@@ -14553,13 +14552,13 @@
 |\alpha\rangle = \sum_{n=0}^{\infty} c_n |n\rangle
 \]</div>
 <p>固有値方程式の両辺に対して，左からブラベクトル <span class="arithmatex">\(\langle n|\)</span> を掛け算せよ。関係式 <span class="arithmatex">\(\hat{a}|n\rangle = \sqrt{n}|n-1\rangle\)</span> を利用することで，展開係数に関する漸化式を導け。</p>
-<p>さらに，規格化条件 <span class="arithmatex">\(\langle\alpha|\alpha\rangle = 1\)</span> を課すことにより，全体の位相の自由度を除いて，各係数 <span class="arithmatex">\(c_n\)</span> を <span class="arithmatex">\(\alpha\)</span> と <span class="arithmatex">\(n\)</span> を用いた具体的な形で決定せよ。</p>
-<p>(2) コヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> において，粒子が特定の数状態 <span class="arithmatex">\(|n\rangle\)</span> に見出される統計的な出現確率 <span class="arithmatex">\(P_n = |c_n|^2\)</span> を求めよ。この確率分布が，平均値 <span class="arithmatex">\(\lambda = |\alpha|^2\)</span> を持つマクロなポアソン分布の形式に完全に一致することを示せ。</p>
+<p>さらに，規格化条件 <span class="arithmatex">\(\langle\alpha|\alpha\rangle = 1\)</span> を課すことにより，全体の位相の自由度を除いて，各係数 <span class="arithmatex">\(c_n\)</span> を <span class="arithmatex">\(\alpha\)</span> と <span class="arithmatex">\(n\)</span> を用いた形で決定せよ。</p>
+<p>(2) 数状態 <span class="arithmatex">\(|n\rangle\)</span> の出現確率 <span class="arithmatex">\(P_n=|c_n|^2\)</span> を求め，平均 <span class="arithmatex">\(|\alpha|^2\)</span> のポアソン分布に一致することを示せ。</p>
 <p>(3) 前問の定義式を逆に解くことで，位置と運動量の演算子は生成消滅演算子を用いて以下のように表される。</p>
 <div class="arithmatex">\[
 \hat{x} = \sqrt{\frac{\hbar}{2m\omega}} \left( \hat{a} + \hat{a}^\dagger \right), \quad \hat{p} = -i\sqrt{\frac{m\omega\hbar}{2}} \left( \hat{a} - \hat{a}^\dagger \right)
 \]</div>
-<p>コヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> に対する位置の期待値 <span class="arithmatex">\(\langle\hat{x}\rangle = \langle\alpha|\hat{x}|\alpha\rangle\)</span> および，2乗の期待値 <span class="arithmatex">\(\langle\hat{x}^2\rangle = \langle\alpha|\hat{x}^2|\alpha\rangle\)</span> を，交換関係 <span class="arithmatex">\([ \hat{a}, \hat{a}^\dagger ] = 1\)</span> に注意してそれぞれ計算せよ。同様に計算される運動量の期待値の結果と合わせることで，位置と運動量のゆらぎの積 <span class="arithmatex">\(\Delta x \cdot \Delta p\)</span> を求め，コヒーレント状態がハイゼンベルクの不確定性原理の最小限界を常に満たす波束であることを確かめよ。</p>
+<p><span class="arithmatex">\(\langle\hat{x}\rangle\)</span>，<span class="arithmatex">\(\langle\hat{x}^2\rangle\)</span>，<span class="arithmatex">\(\langle\hat{p}\rangle\)</span>，<span class="arithmatex">\(\langle\hat{p}^2\rangle\)</span> を求め，<span class="arithmatex">\(\Delta x\Delta p=\hbar/2\)</span> を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14593,7 +14592,7 @@ c_n = \frac{\alpha^n}{\sqrt{n!}} c_0
 <div class="arithmatex">\[
 |c_0|^2 \exp(|\alpha|^2) = 1 \implies |c_0|^2 = \exp(-|\alpha|^2)
 \]</div>
-<p>位相の自由度をゼロ（ <span class="arithmatex">\(c_0\)</span> を実数）と選ぶと， <span class="arithmatex">\(c_0 = \exp\left( -\frac{1}{2}|\alpha|^2 \right)\)</span> と決定されます。これを元の式に戻すことで，求める数状態展開の式が得られます。</p>
+<p>位相の自由度をゼロと選ぶと， <span class="arithmatex">\(c_0 = \exp\left( -\frac{1}{2}|\alpha|^2 \right)\)</span> と決定されます。これを元の式に戻すことで，求める数状態展開の式が得られます。</p>
 <div class="arithmatex">\[
 c_n = \exp\left( -\frac{1}{2}|\alpha|^2 \right) \frac{\alpha^n}{\sqrt{n!}}
 \]</div>
@@ -14606,7 +14605,7 @@ P_n = |c_n|^2 = \left| \exp\left( -\frac{1}{2}|\alpha|^2 \right) \frac{\alpha^n}
 <div class="arithmatex">\[
 P_n = \frac{\lambda^n}{n!} \exp(-\lambda)
 \]</div>
-<p>この数式は，統計学において完全にランダムな独立事象の発生数を表すポアソン分布の定義式そのものです。これにより，コヒーレント状態に含まれる光子数やエネルギー量子数が，マクロな統計流体と同じ確率分布に従っていることが示されました。</p>
+<p>この数式は，統計学におけるランダムな独立事象の発生数を表すポアソン分布の定義式そのものです。これにより，コヒーレント状態に含まれる光子数やエネルギー量子数が，マクロな統計流体と同じ確率分布に従っていることが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>コヒーレント状態に対する各演算子の作用は，固有値方程式 <span class="arithmatex">\(\hat{a}|\alpha\rangle = \alpha|\alpha\rangle\)</span> および，その共役関係であるブラベクトルへの作用 <span class="arithmatex">\(\langle\alpha|\hat{a}^\dagger = \langle\alpha|\alpha^*\)</span> を利用して計算します。</p>
 <ul>
@@ -14645,8 +14644,8 @@ P_n = \frac{\lambda^n}{n!} \exp(-\lambda)
 <div class="arithmatex">\[
 \Delta x \cdot \Delta p = \sqrt{\frac{\hbar}{2m\omega}} \cdot \sqrt{\frac{m\omega\hbar}{2}} = \frac{\hbar}{2}
 \]</div>
-<p>この積の値は，複素数 <span class="arithmatex">\(\alpha\)</span> の値（状態のエネルギーの大きさ）に一切依存せず，常に不確定性原理の理論的最小下限である <span class="arithmatex">\(\frac{\hbar}{2}\)</span> に一致します。</p>
-<p>したがって，コヒーレント状態は任意の振幅において量子力学的な広がりが最も小さく抑えられた，極めて古典的な性質を維持した波束であることが確かめられました。</p>
+<p>この積の値は，複素数 <span class="arithmatex">\(\alpha\)</span> の値に依存せず，常に不確定性原理の理論的最小下限である <span class="arithmatex">\(\frac{\hbar}{2}\)</span> に一致します。</p>
+<p>したがって，コヒーレント状態は任意の振幅において量子力学的な広がりが最も小さく抑えられた，非常に古典的な性質を維持した波束であることが確かめられました。</p>
 
 
 

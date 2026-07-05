@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">相互情報量</h1>
 <h2 id="_2">問題</h2>
-<p>2つの確率変数の間に存在する統計的な依存関係や相関の強さを測るための基本的な指標として，相互情報量が用いられる。この量は，一方の確率変数を知ることで，もう一方の確率変数に関して得られる情報量を表しており，通信理論や統計力学における非平衡システムの解析において広く利用されている。</p>
 <p>2つの離散確率変数を <span class="arithmatex">\(X, Y\)</span> とし，それぞれの取り得る状態を <span class="arithmatex">\(x_i \, (i=1, \dots, n)\)</span> , <span class="arithmatex">\(y_j \, (j=1, \dots, m)\)</span> とする。 <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> の結合確率分布を <span class="arithmatex">\(P(x_i, y_j)\)</span> とし，それぞれの周辺確率分布を以下のように定義する。</p>
 <div class="arithmatex">\[
 P_X(x_i) = \sum_{j=1}^{m} P(x_i, y_j), \quad P_Y(y_j) = \sum_{i=1}^{n} P(x_i, y_j)
@@ -14552,11 +14551,12 @@ P_X(x_i) = \sum_{j=1}^{m} P(x_i, y_j), \quad P_Y(y_j) = \sum_{i=1}^{n} P(x_i, y_
 I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln\left( \frac{P(x_i, y_j)}{P_X(x_i) P_Y(y_j)} \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 2つの確率変数 <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> が互いに統計的独立であるとする。このとき，結合確率分布 <span class="arithmatex">\(P(x_i, y_j)\)</span> と周辺確率分布 <span class="arithmatex">\(P_X(x_i), P_Y(y_j)\)</span> の間に成り立つ関係式を示せ。また，その関係式を定義式に代入することにより，独立な場合の相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> の値が 0 になることを導出せよ。</p>
-<p>(2) 相互情報量の定義式における対数部分を分割して展開せよ。周辺確率分布の定義（結合確率の和）に注意して各項の総和を整理することにより，相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> が，それぞれの周辺分布に関するシャノンエントロピー <span class="arithmatex">\(H(X)\)</span> , <span class="arithmatex">\(H(Y)\)</span> および，結合分布に関する結合エントロピー <span class="arithmatex">\(H(X, Y) = -\sum_{i,j} P(x_i, y_j) \ln P(x_i, y_j)\)</span> を用いて以下の形式で表されることを示せ。</p>
+<p>(1) <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> が独立なとき <span class="arithmatex">\(I(X;Y)=0\)</span> を示せ。</p>
+<p>(2) 相互情報量が</p>
 <div class="arithmatex">\[
 I(X; Y) = H(X) + H(Y) - H(X, Y)
 \]</div>
+<p>と表されることを示せ。</p>
 <p>(3) 2つの2値確率変数 <span class="arithmatex">\(X, Y \in \{0, 1\}\)</span> の結合確率分布が以下の表で与えられているとする。</p>
 <table>
 <thead>
@@ -14579,7 +14579,7 @@ I(X; Y) = H(X) + H(Y) - H(X, Y)
 </tr>
 </tbody>
 </table>
-<p>この系の周辺確率分布 <span class="arithmatex">\(P_X(x_i)\)</span> および <span class="arithmatex">\(P_Y(y_j)\)</span> をそれぞれ求めよ。また，このときの相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> を具体的に計算し，(1) の独立な場合と対比してどのような状態に対応しているか説明せよ。</p>
+<p>この系の周辺確率分布 <span class="arithmatex">\(P_X(x_i)\)</span> および <span class="arithmatex">\(P_Y(y_j)\)</span> をそれぞれ求めよ。また，このときの相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> を計算し，(1) の独立な場合と対比してどのような状態に対応しているか説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14671,7 +14671,7 @@ H(X, Y) = -\left( \frac{1}{2} \ln \frac{1}{2} + 0 + 0 + \frac{1}{2} \ln \frac{1}
 I(X; Y) = \ln 2 + \ln 2 - \ln 2 = \ln 2
 \]</div>
 <p><strong>状態の説明</strong></p>
-<p>独立な場合（ <span class="arithmatex">\(I=0\)</span> ）とは対照的に，今回の相互情報量は周辺エントロピーの最大値に等しい <span class="arithmatex">\(\ln 2\)</span> となりました。これは， <span class="arithmatex">\(X=0\)</span> のときには必ず <span class="arithmatex">\(Y=0\)</span> となり， <span class="arithmatex">\(X=1\)</span> のときには必ず <span class="arithmatex">\(Y=1\)</span> となるような，2つの変数の間に完全な相関（一方が決まればもう一方の不確定性が完全にゼロになる関係）が存在する状態に対応しています。</p>
+<p>独立な場合 <span class="arithmatex">\(I=0\)</span> とは対照的に，今回の相互情報量は周辺エントロピーの最大値に等しい <span class="arithmatex">\(\ln 2\)</span> となりました。これは， <span class="arithmatex">\(X=0\)</span> のときには必ず <span class="arithmatex">\(Y=0\)</span> となり， <span class="arithmatex">\(X=1\)</span> のときには必ず <span class="arithmatex">\(Y=1\)</span> となるような，2つの変数の間に完全な相関が存在する状態に対応しています。</p>
 
 
 

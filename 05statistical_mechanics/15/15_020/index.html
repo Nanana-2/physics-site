@@ -14542,9 +14542,8 @@
 
 <h1 id="_1">熱平衡状態とエントロピー最大化</h1>
 <h2 id="_2">問題</h2>
-<p>カノニカル分布の密度行列は，孤立系が熱平衡に達したとき，得られている部分的なマクロ情報のもとで不確定性（エントロピー）が最大になるという情報理論的な要請から導出することができる。このアプローチはマックスウェルの関係式などの熱力学的な物理量に対して，客観的な統計的基礎を与える。</p>
 <p>ハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とし，対応するエネルギー固有状態を <span class="arithmatex">\(|n\rangle\)</span> ，エネルギー固有値を <span class="arithmatex">\(E_n\)</span> とする。系全体のエネルギー期待値 <span class="arithmatex">\(\langle E \rangle\)</span> が一定値 <span class="arithmatex">\(U\)</span> に固定されているという束縛条件のもとで，密度行列 <span class="arithmatex">\(\rho\)</span> のフォン・ノイマンエントロピーを最大化する問題を考える。</p>
-<p>確率の保存（規格化条件）およびエネルギー期待値の束縛条件は，固有値（出現確率） <span class="arithmatex">\(p_n\)</span> を用いて以下のように課される。</p>
+<p>確率の保存およびエネルギー期待値の束縛条件は，固有値 <span class="arithmatex">\(p_n\)</span> を用いて以下のように課される。</p>
 <div class="arithmatex">\[
 \sum_n p_n = 1, \quad \sum_n p_n E_n = U
 \]</div>
@@ -14553,12 +14552,12 @@
 I(\{p_n\}, \alpha, \beta) = -\sum_n p_n \ln p_n - \alpha \left( \sum_n p_n - 1 \right) - \beta \left( \sum_n p_n E_n - U \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 目的関数 <span class="arithmatex">\(I\)</span> を特定の確率成分 <span class="arithmatex">\(p_k\)</span> について偏微分し，極値条件 <span class="arithmatex">\(\frac{\partial I}{\partial p_k} = 0\)</span> を満たす方程式を導出せよ。これにより，確率 <span class="arithmatex">\(p_k\)</span> が <span class="arithmatex">\(\alpha, \beta, E_k\)</span> を用いて以下の形式で表されることを示せ。</p>
+<p>(1) <span class="arithmatex">\(\frac{\partial I}{\partial p_k}=0\)</span> から <span class="arithmatex">\(p_k\)</span> を求めよ。</p>
 <div class="arithmatex">\[
 p_k = \exp(-1 - \alpha) \exp(-\beta E_k)
 \]</div>
-<p>(2) 規格化条件 <span class="arithmatex">\(\sum_n p_n = 1\)</span> を適用することにより，定数因子 <span class="arithmatex">\(\exp(-1 - \alpha)\)</span> を消去し，確率 <span class="arithmatex">\(p_k\)</span> を状態和（分配関数） <span class="arithmatex">\(Z = \sum_n \exp(-\beta E_n)\)</span> を用いたカノニカル分布の形式に書き換えよ。また，これに対応する対角化された密度行列 <span class="arithmatex">\(\rho\)</span> を，演算子 <span class="arithmatex">\(\hat{H}\)</span> と <span class="arithmatex">\(Z\)</span> を用いた指数関数の形式で表せ。</p>
-<p>(3) 導出された最大エントロピー <span class="arithmatex">\(S = -k_B \sum_n p_n \ln p_n\)</span> の式に，(2) で得られた <span class="arithmatex">\(p_n\)</span> の具体的な関数形を代入して整理せよ。これにより，エントロピー <span class="arithmatex">\(S\)</span> が内部エネルギー <span class="arithmatex">\(U\)</span> および自由エネルギー <span class="arithmatex">\(F = -k_B T \ln Z\)</span>（ただし <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> ）を用いて，以下の熱力学的な関係式を満足することを示せ。</p>
+<p>(2) 規格化条件から <span class="arithmatex">\(p_k\)</span> を分配関数 <span class="arithmatex">\(Z=\sum_n e^{-\beta E_n}\)</span> で表せ。また，密度行列 <span class="arithmatex">\(\rho\)</span> を <span class="arithmatex">\(\hat{H}\)</span> と <span class="arithmatex">\(Z\)</span> で表せ。</p>
+<p>(3) (2) の結果から，<span class="arithmatex">\(F=-k_BT\ln Z\)</span> が次の関係を満たすことを示せ。</p>
 <div class="arithmatex">\[
 F = U - TS
 \]</div>
@@ -14583,7 +14582,7 @@ F = U - TS
 <div class="arithmatex">\[
 \ln p_k = -1 - \alpha - \beta E_k
 \]</div>
-<p>両辺の指数（ネイピア数 <span class="arithmatex">\(\exp\)</span> ）をとることで，求める確率の表現が導かれます。</p>
+<p>両辺の指数をとることで，求める確率の表現が導かれます。</p>
 <div class="arithmatex">\[
 p_k = \exp(-1 - \alpha - \beta E_k) = \exp(-1 - \alpha) \exp(-\beta E_k)
 \]</div>
@@ -14592,7 +14591,7 @@ p_k = \exp(-1 - \alpha - \beta E_k) = \exp(-1 - \alpha) \exp(-\beta E_k)
 <div class="arithmatex">\[
 \sum_n p_n = \sum_n \exp(-1 - \alpha) \exp(-\beta E_n) = \exp(-1 - \alpha) \sum_n \exp(-\beta E_n) = 1
 \]</div>
-<p>ここで，状態和（分配関数）を <span class="arithmatex">\(Z = \sum_n \exp(-\beta E_n)\)</span> と定義すると，定数因子の値が以下のように決定されます。</p>
+<p>ここで，状態和を <span class="arithmatex">\(Z = \sum_n \exp(-\beta E_n)\)</span> と定義すると，定数因子の値が以下のように決定されます。</p>
 <div class="arithmatex">\[
 \exp(-1 - \alpha) \cdot Z = 1 \implies \exp(-1 - \alpha) = \frac{1}{Z}
 \]</div>
@@ -14629,7 +14628,7 @@ TS = U + k_B T \ln Z
 <div class="arithmatex">\[
 TS = U - F
 \]</div>
-<p>この式を <span class="arithmatex">\(F\)</span> について解くように移項することで，マクロ熱力学における基本関係式（ルジャンドル変換の形）が完全に導出されます。</p>
+<p>この式を <span class="arithmatex">\(F\)</span> について解くように移項することで，マクロ熱力学における基本関係式が導出されます。</p>
 <div class="arithmatex">\[
 F = U - TS
 \]</div>

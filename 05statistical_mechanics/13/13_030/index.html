@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">ウィグナー分布の時間発展</h1>
 <h2 id="_2">問題</h2>
-<p>孤立した量子系の密度行列 <span class="arithmatex">\(\rho\)</span> の時間発展はフォン・ノイマン方程式によって記述される。この方程式を位相空間表示に変換することにより，ウィグナー分布関数 <span class="arithmatex">\(W(x, p, t)\)</span> の時間発展を支配する方程式が導かれる。この方程式は，プランク定数をゼロに近づける極限において，古典統計力学のリウヴィル方程式に一致する。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> の粒子が1次元の外力ポテンシャル <span class="arithmatex">\(V(x)\)</span> のもとで運動する系を考える。この系のハミルトニアンは以下のように与えられる。</p>
 <div class="arithmatex">\[
 \hat{H} = \frac{\hat{p}^2}{2m} + V(\hat{x})
@@ -14559,7 +14558,7 @@ i\hbar \frac{\partial \rho}{\partial t} = [\hat{H}, \rho]
 <div class="arithmatex">\[
 W(x, p, t) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \rho\left(x + \frac{y}{2}, x - \frac{y}{2}, t\right) \exp\left( -\frac{ipy}{\hbar} \right) dy
 \]</div>
-<p>(2) の結果の両辺に <span class="arithmatex">\(\exp\left( -\frac{ipy}{\hbar} \right)\)</span> を掛けて <span class="arithmatex">\(y\)</span> で積分せよ。ポテンシャル項を <span class="arithmatex">\(y\)</span> のべき級数に展開して積分を実行することにより， <span class="arithmatex">\(W(x, p, t)\)</span> の時間発展方程式を導出せよ。また， <span class="arithmatex">\(\hbar \to 0\)</span> の古典極限において，得られた式が以下のリウヴィル方程式に一致することを示せ。</p>
+<p>(2) の結果を <span class="arithmatex">\(y\)</span> についてフーリエ変換し，<span class="arithmatex">\(W(x,p,t)\)</span> の時間発展方程式を導出せよ。また，<span class="arithmatex">\(\hbar\to0\)</span> で次のリウヴィル方程式に一致することを示せ。</p>
 <div class="arithmatex">\[
 \frac{\partial W}{\partial t} + \frac{p}{m} \frac{\partial W}{\partial x} - \frac{\partial V}{\partial x} \frac{\partial W}{\partial p} = 0
 \]</div>
@@ -14620,7 +14619,7 @@ V\left(x + \frac{y}{2}\right) - V\left(x - \frac{y}{2}\right) = 2 \sum_{n:奇数
 <div class="arithmatex">\[
 \frac{\partial W}{\partial t} + \frac{p}{m} \frac{\partial W}{\partial x} - \frac{\partial V}{\partial x} \frac{\partial W}{\partial p} - \sum_{n=3,5,\dots} \frac{(-1)^{\frac{n-1}{2}}}{n!} \left(\frac{\hbar}{2}\right)^{n-1} \frac{\partial^n V}{\partial x^n} \frac{\partial^n W}{\partial p^n} = 0
 \]</div>
-<p>この式において <span class="arithmatex">\(\hbar \to 0\)</span> の極限をとると， <span class="arithmatex">\(\hbar\)</span> を含む総和の項（量子補正項）がすべてゼロになります。残った項を整理すると，古典統計力学において位相空間の確率流の保存を表すリウヴィル方程式に完全に一致します。</p>
+<p>この式において <span class="arithmatex">\(\hbar \to 0\)</span> の極限をとると， <span class="arithmatex">\(\hbar\)</span> を含む総和の項がすべてゼロになります。残った項を整理すると，古典統計力学において位相空間の確率流の保存を表すリウヴィル方程式に一致します。</p>
 
 
 

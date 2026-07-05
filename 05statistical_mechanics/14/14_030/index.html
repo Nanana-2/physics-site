@@ -14542,16 +14542,15 @@
 
 <h1 id="_1">コヒーレント状態の時間発展</h1>
 <h2 id="_2">問題</h2>
-<p>調和振動子のハミルトニアンのもとで，初期状態として用意されたコヒーレント状態がどのように時間発展するかを計算する。数状態展開の時間変化を追うことにより，時間が経過しても波束の形状が崩れることなく，複素平面上を古典的な粒子と同じ周期で回転することを示す。</p>
-<p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子のハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> に対するエネルギー固有状態（数状態）を <span class="arithmatex">\(|n\rangle\)</span> とすると，対応するエネルギー固有値は <span class="arithmatex">\(E_n = \hbar\omega \left( n + \frac{1}{2} \right)\)</span> である。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子のハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> に対するエネルギー固有状態を <span class="arithmatex">\(|n\rangle\)</span> とすると，対応するエネルギー固有値は <span class="arithmatex">\(E_n = \hbar\omega \left( n + \frac{1}{2} \right)\)</span> である。</p>
 <p>時刻 <span class="arithmatex">\(t = 0\)</span> において，系が以下のコヒーレント状態 <span class="arithmatex">\(|\alpha_0\rangle\)</span> にあるとする。</p>
 <div class="arithmatex">\[
 |\psi(0)\rangle = |\alpha_0\rangle = \exp\left( -\frac{1}{2}|\alpha_0|^2 \right) \sum_{n=0}^{\infty} \frac{\alpha_0^n}{\sqrt{n!}} |n\rangle
 \]</div>
 <p>ただし， <span class="arithmatex">\(\alpha_0\)</span> は初期の複素振幅を表す定数である。以下の問いに答えよ。</p>
 <p>(1) シュレーディンガー方程式に基づく時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = \exp\left( -\frac{i\hat{H}t}{\hbar} \right)\)</span> を初期状態 <span class="arithmatex">\(|\psi(0)\rangle\)</span> に作用させ，時刻 <span class="arithmatex">\(t\)</span> における状態ベクトル <span class="arithmatex">\(|\psi(t)\rangle = \hat{U}(t)|\psi(0)\rangle\)</span> の数状態展開を求めよ。</p>
-<p>(2) (1) で得られた状態ベクトルの式全体の共通因子を整理することにより，時刻 <span class="arithmatex">\(t\)</span> における状態が，時間依存する新しい複素振幅 <span class="arithmatex">\(\alpha(t)\)</span> を持ったコヒーレント状態 <span class="arithmatex">\(|\alpha(t)\rangle\)</span> の形式に書き直せることを示せ。また，この複素振幅 <span class="arithmatex">\(\alpha(t)\)</span> の時間発展則を具体的な式で表せ。</p>
-<p>(3) (2) で求めた複素振幅 <span class="arithmatex">\(\alpha(t)\)</span> を，実部と虚部に分解して複素平面（位相空間）上にプロットすることを考える。初期値を <span class="arithmatex">\(\alpha_0 = \frac{x_0}{\sqrt{2}\sigma} + i\frac{p_0}{\sqrt{2}\tau}\)</span> とするとき，時間経過にともなう位相空間上の軌跡がどのような運動に対応するかを，調和振動子の古典的な力学運動の周期と関連付けて説明せよ。</p>
+<p>(2) <span class="arithmatex">\(|\psi(t)\rangle\)</span> がコヒーレント状態であることを示し，<span class="arithmatex">\(\alpha(t)\)</span> を求めよ。</p>
+<p>(3) <span class="arithmatex">\(\alpha_0 = \frac{x_0}{\sqrt{2}\sigma} + i\frac{p_0}{\sqrt{2}\tau}\)</span> とする。位相空間上の軌跡とその周期を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14592,18 +14591,18 @@
 <div class="arithmatex">\[
 |\psi(t)\rangle = \exp\left( -\frac{i\omega t}{2} \right) |\alpha(t)\rangle
 \]</div>
-<p>全体の位相因子は物理的な測定確率に影響を与えないため，調和振動子ハミルトニアンのもとで時間発展したコヒーレント状態は，その波束の形状や最小不確定性を完全に維持したまま，固有値が <span class="arithmatex">\(\alpha(t) = \alpha_0 \exp(-i\omega t)\)</span> に従って変化するコヒーレント状態であり続けることが示されました。</p>
+<p>全体の位相因子は物理的な測定確率に影響を与えないため，調和振動子ハミルトニアンのもとで時間発展したコヒーレント状態は，その波束の形状や最小不確定性を維持したまま，固有値が <span class="arithmatex">\(\alpha(t) = \alpha_0 \exp(-i\omega t)\)</span> に従って変化するコヒーレント状態であり続けることが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で導出した複素振幅の時間発展則の挙動を解析します。</p>
 <div class="arithmatex">\[
 \alpha(t) = \alpha_0 \exp(-i\omega t)
 \]</div>
 <p>複素平面において，複素数に <span class="arithmatex">\(\exp(-i\omega t)\)</span> を掛け算する操作は，原点を中心とする時計回りの回転運動を表します。絶対値の大きさ <span class="arithmatex">\(|\alpha(t)| = |\alpha_0|\)</span> は時間を通じて一定であるため，軌跡は半径 <span class="arithmatex">\(|\alpha_0|\)</span> の正円を描きます。</p>
-<p>この回転の角振動数は，ハミルトニアンに設定されている古典的な調和振動子の角振動数 <span class="arithmatex">\(\omega\)</span> と完全に一致しています。したがって，位相空間の軌跡が一転してもとの位置に戻ってくる周期 <span class="arithmatex">\(T\)</span> は，以下のように求まります。</p>
+<p>この回転の角振動数は，ハミルトニアンに設定されている古典的な調和振動子の角振動数 <span class="arithmatex">\(\omega\)</span> と一致しています。したがって，位相空間の軌跡が一転してもとの位置に戻ってくる周期 <span class="arithmatex">\(T\)</span> は，以下のように求まります。</p>
 <div class="arithmatex">\[
 T = \frac{2\pi}{\omega}
 \]</div>
-<p>これは古典力学における調和振動子の振動周期と同一です。量子力学的な波束でありながら，位置の期待値や運動量の期待値が，形状を崩さないまま位相空間上を古典粒子と完全に同じ周期で調和振動（円運動）していることに対応します。</p>
+<p>これは古典力学における調和振動子の振動周期と同一です。量子力学的な波束でありながら，位置の期待値や運動量の期待値が，形状を崩さないまま位相空間上を古典粒子と同じ周期で調和振動していることに対応します。</p>
 
 
 

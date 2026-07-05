@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">スクイーズド状態</h1>
 <h2 id="_2">問題</h2>
-<p>コヒーレント状態は位置と運動量のゆらぎが等しく，ハイゼンベルクの不確定性関係の最小限界を満たす状態であった。これに対し，最小不確定性の条件を維持したまま，一方の物理量のゆらぎをさらに減少させ，もう一方のゆらぎを増大させた量子状態をスクイーズド状態と呼ぶ。この状態は，量子測定における精密測定や量子情報技術において重要な役割を果たす。</p>
 <p>基底状態を <span class="arithmatex">\(|0\rangle\)</span> とし，実数のスクイージングパラメータを <span class="arithmatex">\(r\)</span> とする。位置 <span class="arithmatex">\(\hat{x}\)</span> と運動量 <span class="arithmatex">\(\hat{p}\)</span> のゆらぎを制御するため，以下のスクイージング演算子 <span class="arithmatex">\(\hat{S}(r)\)</span> を導入する。</p>
 <div class="arithmatex">\[
 \hat{S}(r) = \exp\left( \frac{r}{2} \left( \hat{a}^2 - (\hat{a}^\dagger)^2 \right) \right)
@@ -14557,7 +14556,7 @@
 \]</div>
 <p>この関係式と基底状態の性質 <span class="arithmatex">\(\hat{a}|0\rangle = 0\)</span> を用いて，スクイーズド真空状態 <span class="arithmatex">\(|\xi\rangle\)</span> に対する消滅演算子の期待値 <span class="arithmatex">\(\langle\xi|\hat{a}|\xi\rangle\)</span> および，積の期待値 <span class="arithmatex">\(\langle\xi|\hat{a}^2|\xi\rangle\)</span> , <span class="arithmatex">\(\langle\xi|\hat{a}^\dagger\hat{a}|\xi\rangle\)</span> をそれぞれ計算せよ。</p>
 <p>(2) 位置の演算子 <span class="arithmatex">\(\hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dagger)\)</span> と運動量の演算子 <span class="arithmatex">\(\hat{p} = -i\sqrt{\frac{m\omega\hbar}{2}}(\hat{a} - \hat{a}^\dagger)\)</span> について，状態 <span class="arithmatex">\(|\xi\rangle\)</span> におけるそれぞれの期待値 <span class="arithmatex">\(\langle\hat{x}\rangle\)</span> , <span class="arithmatex">\(\langle\hat{p}\rangle\)</span> および，ゆらぎの2乗 <span class="arithmatex">\((\Delta x)^2\)</span> , <span class="arithmatex">\((\Delta p)^2\)</span> を求めよ。</p>
-<p>(3) (2) で得られたゆらぎの積 <span class="arithmatex">\(\Delta x \cdot \Delta p\)</span> を計算し，この状態が不確定性関係の最小限界をどのように満たしているか記述せよ。また，パラメータ <span class="arithmatex">\(r &gt; 0\)</span> のとき，コヒーレント状態のゆらぎのプロファイルとどのような違いが生じるかを物理的に説明せよ。</p>
+<p>(3) <span class="arithmatex">\(\Delta x\Delta p\)</span> を求めよ。また，<span class="arithmatex">\(r&gt;0\)</span> のときの <span class="arithmatex">\(\Delta x\)</span> と <span class="arithmatex">\(\Delta p\)</span> をコヒーレント状態と比較せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14610,7 +14609,7 @@
 <div class="arithmatex">\[
   \hat{x}^2 = \frac{\hbar}{2m\omega} \left( \hat{a}^2 + (\hat{a}^\dagger)^2 + 2\hat{a}^\dagger\hat{a} + 1 \right)
 \]</div>
-<p>これに (1) で得られた各期待値を代入します。 <span class="arithmatex">\(\langle\xi|(\hat{a}^\dagger)^2|\xi\rangle\)</span> は <span class="arithmatex">\(\langle\xi|\hat{a}^2|\xi\rangle\)</span> の複素共役（実数なので同値）です。</p>
+<p>これに (1) で得られた各期待値を代入します。 <span class="arithmatex">\(\langle\xi|(\hat{a}^\dagger)^2|\xi\rangle\)</span> は <span class="arithmatex">\(\langle\xi|\hat{a}^2|\xi\rangle\)</span> の複素共役です。</p>
 <div class="arithmatex">\[
   \langle\hat{x}^2\rangle = \frac{\hbar}{2m\omega} \left( -2\cosh r \sinh r + 2\sinh^2 r + 1 \right)
 \]</div>
@@ -14633,10 +14632,10 @@
 <div class="arithmatex">\[
 \Delta x \cdot \Delta p = \sqrt{\frac{\hbar}{2m\omega} \exp(-2r)} \cdot \sqrt{\frac{m\omega\hbar}{2} \exp(2r)} = \frac{\hbar}{2} \sqrt{\exp(-2r) \cdot \exp(2r)} = \frac{\hbar}{2}
 \]</div>
-<p>ゆらぎの積はパラメータ <span class="arithmatex">\(r\)</span> の値に関わらず常に <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，ハイゼンベルクの不確定性関係の理論的最小限界を完全に満たしています。</p>
+<p>ゆらぎの積はパラメータ <span class="arithmatex">\(r\)</span> の値に関わらず常に <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，ハイゼンベルクの不確定性関係の理論的最小限界を満たしています。</p>
 <p><strong>コヒーレント状態との違いの説明</strong></p>
-<p>コヒーレント状態（ <span class="arithmatex">\(r=0\)</span> のとき）では，位置と運動量の相対的なゆらぎのバランスが等方的であり，位相空間上で均一な正円の広がりを持っていた。</p>
-<p>これに対し， <span class="arithmatex">\(r &gt; 0\)</span> のスクイーズド状態では，位置のゆらぎが <span class="arithmatex">\(\exp(-r)\)</span> 倍に縮小（スクイーズ）される。その代償として，不確定性関係の最小下限を維持するために，運動量のゆらぎが <span class="arithmatex">\(\exp(r)\)</span> 倍に拡大される。このように，全体の量子ノイズの総量を最小に保ったまま，特定の測定対象の精度だけを不確定性の限界を超えて引き上げられる点が，等方的なノイズを持つコヒーレント状態との決定的な物理的違いである。</p>
+<p>コヒーレント状態では，位置と運動量の相対的なゆらぎのバランスが等方的であり，位相空間上で均一な正円の広がりを持っていた。</p>
+<p>これに対し， <span class="arithmatex">\(r &gt; 0\)</span> のスクイーズド状態では，位置のゆらぎが <span class="arithmatex">\(\exp(-r)\)</span> 倍に縮小される。その代償として，不確定性関係の最小下限を維持するために，運動量のゆらぎが <span class="arithmatex">\(\exp(r)\)</span> 倍に拡大される。このように，全体の量子ノイズの総量を最小に保ったまま，特定の測定対象の精度だけを不確定性の限界を超えて引き上げられる点が，等方的なノイズを持つコヒーレント状態との物理的違いである。</p>
 
 
 

@@ -14542,17 +14542,16 @@
 
 <h1 id="_1">マクスウェルの悪魔</h1>
 <h2 id="_2">問題</h2>
-<p>マクスウェルの悪魔は，分子の動きを観測して選別することで，外部から仕事を加えることなく微視的な熱平衡状態から温度差を生み出し，熱力学第二法則を破るように見える思考実験である。この矛盾は，悪魔が「測定によって情報を取得し，それをメモリに記憶し，最後に初期化する」という一連の情報処理プロセス全体を熱力学の体系に組み込むことで解消される。</p>
-<p>中央に微小な扉（シャッター）を持つ隔壁で左右の領域（AとB）に二分された，体積 <span class="arithmatex">\(V\)</span> の断熱容器を考える。容器内には，温度 <span class="arithmatex">\(T\)</span> （逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> ）の熱浴と平衡状態にある1個の理想気体分子が閉じ込められている。</p>
+<p>中央に微小な扉を持つ隔壁で左右の領域に二分された，体積 <span class="arithmatex">\(V\)</span> の断熱容器を考える。容器内には，温度 <span class="arithmatex">\(T\)</span> の熱浴と平衡状態にある1個の理想気体分子が閉じ込められている。</p>
 <p>悪魔は分子の運動を観測し，分子が領域Aにいるか領域Bにいるかを判別して，以下のフィードバック制御を行う。</p>
 <ul>
-<li>分子が領域Aにいることを検知した場合，扉を閉め，右側の領域Bからピストンを等温準静的に中央まで押し込んで，分子を領域A（体積 <span class="arithmatex">\(V/2\)</span> ）に閉じ込める。</li>
-<li>分子が領域Bにいることを検知した場合，扉を閉め，左側の領域Aからピストンを等温準静的に中央まで押し込んで，分子を領域B（体積 <span class="arithmatex">\(V/2\)</span> ）に閉じ込める。</li>
+<li>分子が領域Aにいることを検知した場合，扉を閉め，右側の領域Bからピストンを等温準静的に中央まで押し込んで，分子を領域Aに閉じ込める。</li>
+<li>分子が領域Bにいることを検知した場合，扉を閉め，左側の領域Aからピストンを等温準静的に中央まで押し込んで，分子を領域Bに閉じ込める。</li>
 </ul>
 <p>以下の問いに答えよ。</p>
-<p>(1) 観測を行う前の初期状態において，1分子が容器全体の体積 <span class="arithmatex">\(V\)</span> を自由に運動しているときのシャノンエントロピー <span class="arithmatex">\(S_{\mathrm{init}}\)</span> を求めよ。また，悪魔が分子の位置を完全に測定し，分子がどちらの領域にいるかを特定した直後の，分子単体に関するエントロピー <span class="arithmatex">\(S_{\mathrm{meas}}\)</span> の値を計算せよ。</p>
-<p>(2) 悪魔がフィードバック制御を実行した際，分子が外部からされる仕事 <span class="arithmatex">\(W\)</span> ，および分子が外部（熱浴）へ放出する熱量 <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> をそれぞれ計算せよ。</p>
-<p>(3) 悪魔が取得した1ビットの測定データを自身のメモリに保持したままである場合，全系のトータルのエントロピー変化 <span class="arithmatex">\(\Delta S_{\mathrm{tot}}\)</span> はいくらになるか。さらに，悪魔が次の測定を行うためにメモリのデータを完全に消去する段階まで考慮したとき，ランダウアーの原理 <span class="arithmatex">\(Q_{\mathrm{erase}} \ge k_B T \ln 2\)</span> と熱力学第二法則がどのように整合するかを説明せよ。</p>
+<p>(1) 測定前後における分子のシャノンエントロピー <span class="arithmatex">\(S_{\mathrm{init}}\)</span>，<span class="arithmatex">\(S_{\mathrm{meas}}\)</span> を求めよ。</p>
+<p>(2) フィードバック制御に必要な仕事 <span class="arithmatex">\(W\)</span> と，熱浴へ放出される熱量 <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> を求めよ。</p>
+<p>(3) 測定情報をメモリに保持したときの全系のエントロピー変化を求めよ。さらに，<span class="arithmatex">\(Q_{\mathrm{erase}}\ge k_BT\ln2\)</span> を用いて，メモリ消去まで含むエントロピー変化を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14560,17 +14559,17 @@
 <div class="arithmatex">\[
 S_{\mathrm{init}} = -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = k_B \ln 2
 \]</div>
-<p>悪魔が測定を行い，分子が特定の領域（例えば領域A）にいることを特定した直後は，分子の存在確率がその領域において 1 ，もう一方において 0 へと確定します。不確定性が消滅するため，測定後の分子のエントロピーはゼロになります。</p>
+<p>悪魔が測定を行い，分子が特定の領域にいることを特定した直後は，分子の存在確率がその領域において 1 ，もう一方において 0 へと確定します。不確定性が消滅するため，測定後の分子のエントロピーはゼロになります。</p>
 <div class="arithmatex">\[
 S_{\mathrm{meas}} = -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) = 0
 \]</div>
 <p>測定という行為によって，分子単体のエントロピーが <span class="arithmatex">\(k_B \ln 2\)</span> だけ減少したことがわかります。</p>
 <h3 id="2">(2)</h3>
-<p>悪魔は，分子がいない側の空の領域からピストンを中央まで等温準静的に押し込みます。このとき，ピストンが移動する空間は真空（分子が存在しない領域）であるため，分子から受ける抵抗力（気体圧）は一切ありません。したがって，ピストンを動かすために外部から加えられるマクロな仕事 <span class="arithmatex">\(W\)</span> はゼロです。</p>
+<p>悪魔は，分子がいない側の空の領域からピストンを中央まで等温準静的に押し込みます。このとき，ピストンが移動する空間は真空であるため，分子から受ける抵抗力は一切ありません。したがって，ピストンを動かすために外部から加えられるマクロな仕事 <span class="arithmatex">\(W\)</span> はゼロです。</p>
 <div class="arithmatex">\[
 W = 0
 \]</div>
-<p>分子は体積 <span class="arithmatex">\(V\)</span> から体積 <span class="arithmatex">\(V/2\)</span> へと等温縮小された状態になります。1分子の等温変化における内部エネルギー変化は <span class="arithmatex">\(\Delta U = 0\)</span> であるため，熱力学第一法則 <span class="arithmatex">\(\Delta U = W_{\mathrm{on}} - Q_{\mathrm{out}}\)</span>（分子がされる仕事 <span class="arithmatex">\(W_{\mathrm{on}}\)</span> はピストンが気体を押した仕事に相当し，今回は分子がいる領域を直接圧縮していないため <span class="arithmatex">\(W_{\mathrm{on}} = 0\)</span> ）より，このシリンダー操作単体において熱浴へ放出される熱量 <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> もゼロとなります。</p>
+<p>分子は体積 <span class="arithmatex">\(V\)</span> から体積 <span class="arithmatex">\(V/2\)</span> へと等温縮小された状態になります。1分子の等温変化における内部エネルギー変化は <span class="arithmatex">\(\Delta U = 0\)</span> であるため，熱力学第一法則 <span class="arithmatex">\(\Delta U = W_{\mathrm{on}} - Q_{\mathrm{out}}\)</span> より，このシリンダー操作単体において熱浴へ放出される熱量 <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> もゼロとなります。</p>
 <div class="arithmatex">\[
 Q_{\mathrm{out}} = 0
 \]</div>
@@ -14579,14 +14578,14 @@ Q_{\mathrm{out}} = 0
 <ul>
 <li><strong>分子のエントロピー変化</strong>: 体積が <span class="arithmatex">\(V/2\)</span> に固定されたため， <span class="arithmatex">\(0 - k_B \ln 2 = -k_B \ln 2\)</span></li>
 <li><strong>熱浴のエントロピー変化</strong>: 放熱がないため， <span class="arithmatex">\(\frac{Q_{\mathrm{out}}}{T} = 0\)</span></li>
-<li><strong>悪魔のメモリのエントロピー変化</strong>: 分子の位置（AかBか）という1ビットの情報が不確定状態から確定状態として書き込まれたため，メモリ内の状態変化にともない <span class="arithmatex">\(+k_B \ln 2\)</span> の情報エントロピーが新たに発生します。</li>
+<li><strong>悪魔のメモリのエントロピー変化</strong>: 分子の位置という1ビットの情報が不確定状態から確定状態として書き込まれたため，メモリ内の状態変化にともない <span class="arithmatex">\(+k_B \ln 2\)</span> の情報エントロピーが新たに発生します。</li>
 </ul>
 <p>これら3つの要素の総和をとることで，全系のトータルのエントロピー変化 <span class="arithmatex">\(\Delta S_{\mathrm{tot}}\)</span> が求まります。</p>
 <div class="arithmatex">\[
 \Delta S_{\mathrm{tot}} = (-k_B \ln 2) + 0 + (+k_B \ln 2) = 0
 \]</div>
 <p>この段階では全系のエントロピーは減少しておらず，熱力学第二法則を破っていません。</p>
-<p>しかし，悪魔がサイクルを繰り返して持続的に動作するためには，蓄積された1ビットのデータを消去してメモリを初期状態（未知の状態）に戻す必要があります。ランドアワーの原理により，1ビットの情報を完全に消去する際には，最低でも以下の熱量が外部環境（熱浴）へと放出されます。</p>
+<p>しかし，悪魔がサイクルを繰り返して持続的に動作するためには，蓄積された1ビットのデータを消去してメモリを初期状態に戻す必要があります。ランドアワーの原理により，1ビットの情報を消去する際には，最低でも以下の熱量が外部環境へと放出されます。</p>
 <div class="arithmatex">\[
 Q_{\mathrm{erase}} \ge k_B T \ln 2
 \]</div>
@@ -14595,7 +14594,7 @@ Q_{\mathrm{erase}} \ge k_B T \ln 2
 <div class="arithmatex">\[
 \Delta S_{\mathrm{cycle}} = \Delta S_{\mathrm{tot}} + \Delta S_{\mathrm{bath}} \ge 0 + k_B \ln 2 &gt; 0
 \]</div>
-<p>悪魔が分子から抽出した情報（負のエントロピー）を利用して系をマクロに制御しても，蓄積した情報を廃棄する最終段階で，必ずそれ以上の熱エントロピーが熱浴側に排出される仕組みになっています。これにより，情報処理の全プロセスを考慮に含めると，マクスウェルの悪魔の動作は熱力学第二法則（全系エントロピーの非減少性）と完全に整合することが示されました。</p>
+<p>悪魔が分子から抽出した情報を利用して系をマクロに制御しても，蓄積した情報を廃棄する最終段階で，必ずそれ以上の熱エントロピーが熱浴側に排出される仕組みになっています。これにより，情報処理の全プロセスを考慮に含めると，マクスウェルの悪魔の動作は熱力学第二法則と整合することが示されました。</p>
 
 
 

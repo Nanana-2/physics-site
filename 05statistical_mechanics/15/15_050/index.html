@@ -14542,8 +14542,7 @@
 
 <h1 id="_1">シャノンエントロピー</h1>
 <h2 id="_2">問題</h2>
-<p>情報理論において，ある離散確率変数の不確定性や平均情報量を測る基本的な指標としてシャノンエントロピーが用いられる。この量は，事象の生じる確率が低い（驚きが大きい）ほど高い情報量を持つという直感的な性質から定義され，量子統計力学におけるエントロピーの数学的な基礎となる。</p>
-<p>起こり得るすべての事象の数を <span class="arithmatex">\(n\)</span> とし，各事象 <span class="arithmatex">\(i\)</span> の発生確率を <span class="arithmatex">\(p_i\)</span> （ただし <span class="arithmatex">\(0 \le p_i \le 1\)</span> ）とする。この確率分布が満たす規格化条件は以下の通りである。</p>
+<p>起こり得るすべての事象の数を <span class="arithmatex">\(n\)</span> とし，各事象 <span class="arithmatex">\(i\)</span> の発生確率を <span class="arithmatex">\(p_i\)</span> とする。この確率分布が満たす規格化条件は以下の通りである。</p>
 <div class="arithmatex">\[
 \sum_{i=1}^{n} p_i = 1
 \]</div>
@@ -14552,11 +14551,11 @@
 H = -\sum_{i=1}^{n} p_i \ln p_i
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) <span class="arithmatex">\(n=2\)</span> の場合（コイン投げのような2値の系）を考える。1つの事象の確率を <span class="arithmatex">\(p_1 = p\)</span> （ <span class="arithmatex">\(0 \le p \le 1\)</span> ）と置くことで，もう一方の確率は <span class="arithmatex">\(p_2 = 1-p\)</span> と表される。このときのシャノンエントロピー <span class="arithmatex">\(H(p)\)</span> を <span class="arithmatex">\(p\)</span> の関数として式で表せ。また，この関数 <span class="arithmatex">\(H(p)\)</span> を <span class="arithmatex">\(p\)</span> について微分し，エントロピーが最大値をとる確率 <span class="arithmatex">\(p\)</span> の値を求めよ。</p>
-<p>(2) 一般の <span class="arithmatex">\(n\)</span> 個の事象を持つ系において，1つの事象だけが確実に発生する状態，すなわち特定の1つの成分が <span class="arithmatex">\(p_k = 1\)</span> であり，それ以外のすべての成分が <span class="arithmatex">\(p_i = 0\)</span> （ <span class="arithmatex">\(i \neq k\)</span> ）であるとする。このときのシャノンエントロピー <span class="arithmatex">\(H\)</span> の値を計算せよ。ただし，必要であれば極限の公式 <span class="arithmatex">\(\lim_{x \to 0} x \ln x = 0\)</span> を利用せよ。</p>
+<p>(1) <span class="arithmatex">\(p_1=p\)</span>，<span class="arithmatex">\(p_2=1-p\)</span> とする。<span class="arithmatex">\(H(p)\)</span> と，<span class="arithmatex">\(H\)</span> が最大となる <span class="arithmatex">\(p\)</span> を求めよ。</p>
+<p>(2) <span class="arithmatex">\(p_k=1\)</span>，<span class="arithmatex">\(p_i=0\)</span> <span class="arithmatex">\(i\ne k\)</span> のとき，<span class="arithmatex">\(H\)</span> を求めよ。</p>
 <p>(3) 凸関数の性質に関する数学的関係式として，以下のイェンセンの不等式が知られている。</p>
 <p>関数 <span class="arithmatex">\(f(x)\)</span> が上に凸であるとき，確率の重み <span class="arithmatex">\(p_i\)</span> を用いた平均値について <span class="arithmatex">\(f\left(\sum_i p_i x_i\right) \ge \sum_i p_i f(x_i)\)</span> が成り立つ。</p>
-<p>関数 <span class="arithmatex">\(f(x) = -x \ln x\)</span> の二階微分を調べることで，これが <span class="arithmatex">\(x &gt; 0\)</span> で上に凸であることを確かめよ。さらに，各事象の変数として <span class="arithmatex">\(x_i = \frac{1}{n p_i}\)</span> を代入してこの不等式を適用することにより，シャノンエントロピー <span class="arithmatex">\(H\)</span> がとり得る最大値が <span class="arithmatex">\(\ln n\)</span> であることを導け。</p>
+<p>イェンセンの不等式を用いて <span class="arithmatex">\(H\le\ln n\)</span> を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14589,7 +14588,7 @@ H = -\left( 0 \cdot \ln 0 + \dots + 1 \cdot \ln 1 + \dots + 0 \cdot \ln 0 \right
 <div class="arithmatex">\[
 H = -(0 + \dots + 1 \cdot 0 + \dots + 0) = 0
 \]</div>
-<p>結果が特定の状態に完全に見出されるような，不確定性が一切存在しない確率分布においては，シャノンエントロピーの値が 0 になることが示されました。</p>
+<p>結果が特定の状態に必ず見出されるような，不確定性が存在しない確率分布においては，シャノンエントロピーの値が 0 になることが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>関数 <span class="arithmatex">\(f(x) = -x \ln x\)</span> の一階微分と二階微分を順に計算します。</p>
 <div class="arithmatex">\[
@@ -14598,7 +14597,7 @@ f'(x) = -\ln x - 1
 <div class="arithmatex">\[
 f''(x) = -\frac{1}{x}
 \]</div>
-<p>変数 <span class="arithmatex">\(x\)</span> は確率変数の定義域より <span class="arithmatex">\(x &gt; 0\)</span> であるため，二階微分の値は常に負（ <span class="arithmatex">\(f''(x) &lt; 0\)</span> ）となります。二階微分が負であることは，関数 <span class="arithmatex">\(f(x)\)</span> がその領域において上に凸であることを意味します。</p>
+<p>変数 <span class="arithmatex">\(x\)</span> は確率変数の定義域より <span class="arithmatex">\(x &gt; 0\)</span> であるため，二階微分の値は常に負 <span class="arithmatex">\(f''(x) &lt; 0\)</span> となります。二階微分が負であることは，関数 <span class="arithmatex">\(f(x)\)</span> がその領域において上に凸であることを意味します。</p>
 <p>次に，イェンセンの不等式 <span class="arithmatex">\(f\left(\sum_{i=1}^{n} p_i x_i\right) \ge \sum_{i=1}^{n} p_i f(x_i)\)</span> に対して，指定された変数 <span class="arithmatex">\(x_i = \frac{1}{n p_i}\)</span> を代入します。</p>
 <p>まず，不等式の左辺の括弧の内部を計算します。</p>
 <div class="arithmatex">\[
@@ -14618,7 +14617,7 @@ f''(x) = -\frac{1}{x}
 <div class="arithmatex">\[
 H = \sum_{i=1}^{n} p_i \left( -\ln p_i \right)
 \]</div>
-<p>ここで，もう1つの凸関数の性質である単一の対数関数 <span class="arithmatex">\(g(x) = -\ln x\)</span> （二階微分 <span class="arithmatex">\(g''(x) = \frac{1}{x^2} &gt; 0\)</span> より下に凸）に注目し，これに対するイェンセンの不等式 <span class="arithmatex">\(\sum_i p_i g(x_i) \ge g\left(\sum_i p_i x_i\right)\)</span> を適用します。変数として <span class="arithmatex">\(x_i = \frac{1}{p_i}\)</span> を代入します。</p>
+<p>ここで，もう1つの凸関数の性質である単一の対数関数 <span class="arithmatex">\(g(x) = -\ln x\)</span> に注目し，これに対するイェンセンの不等式 <span class="arithmatex">\(\sum_i p_i g(x_i) \ge g\left(\sum_i p_i x_i\right)\)</span> を適用します。変数として <span class="arithmatex">\(x_i = \frac{1}{p_i}\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \sum_{i=1}^{n} p_i \left( -\ln \frac{1}{p_i} \right) = \sum_{i=1}^{n} p_i \ln p_i = -H
 \]</div>

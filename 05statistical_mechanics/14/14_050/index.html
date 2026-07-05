@@ -14542,8 +14542,7 @@
 
 <h1 id="_1">スクイーズド状態のウィグナー分布</h1>
 <h2 id="_2">問題</h2>
-<p>スクイーズド真空状態 <span class="arithmatex">\(|\xi\rangle\)</span> は，位置のゆらぎが減少し，運動量のゆらぎが増大した最小不確定性状態である。この状態を位相空間上に写像したウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> を計算し，その等高線プロファイルがコヒーレント状態のような正円ではなく，特定の方向に引き伸ばされた楕円状のガウス分布になることを確認する。</p>
-<p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子において，無次元化された位置座標 <span class="arithmatex">\(X = \frac{x}{x_0}\)</span> （ただし <span class="arithmatex">\(x_0 = \sqrt{\frac{\hbar}{m\omega}}\)</span> ）および，無次元化された運動量座標 <span class="arithmatex">\(P = \frac{p}{p_0}\)</span> （ただし <span class="arithmatex">\(p_0 = \sqrt{m\omega\hbar}\)</span> ）を導入する。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子において，無次元化された位置座標 <span class="arithmatex">\(X = \frac{x}{x_0}\)</span> および，無次元化された運動量座標 <span class="arithmatex">\(P = \frac{p}{p_0}\)</span> を導入する。</p>
 <p>スクイージングパラメータを <span class="arithmatex">\(r\)</span> とするとき，スクイーズド真空状態 <span class="arithmatex">\(|\xi\rangle\)</span> の位置表示の波動関数 <span class="arithmatex">\(\psi_\xi(X)\)</span> は，以下のガウス型波束で与えられる。</p>
 <div class="arithmatex">\[
 \psi_\xi(X) = \left( \frac{\exp(2r)}{\pi} \right)^{1/4} \exp\left( -\frac{1}{2} \exp(2r) X^2 \right)
@@ -14553,9 +14552,9 @@
 W(X, P) = \frac{1}{\pi} \int_{-\infty}^{\infty} \psi_\xi^*\left(X + \frac{Y}{2}\right) \psi_\xi\left(X - \frac{Y}{2}\right) \exp\left( -i2PY \right) dy
 \]</div>
 <p>ただし， <span class="arithmatex">\(Y\)</span> も無次元化された相対座標である。以下の問いに答えよ。</p>
-<p>(1) 具体的な波動関数 <span class="arithmatex">\(\psi_\xi(X)\)</span> の形を定義式に代入せよ。被積分関数の指数部分にある <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> の項を展開して整理し，積分を実行する直前の式を示せ。</p>
-<p>(2) 被積分関数を <span class="arithmatex">\(Y\)</span> について平方完成し，ガウス積分の公式 <span class="arithmatex">\(\int_{-\infty}^{\infty} \exp(-aY^2) dY = \sqrt{\frac{\pi}{a}}\)</span> （ <span class="arithmatex">\(a &gt; 0\)</span> ）を適用して積分を実行せよ。これにより， <span class="arithmatex">\(W(X, P)\)</span> の具体的な関数形を導出せよ。</p>
-<p>(3) (2) で得られた <span class="arithmatex">\(W(X, P)\)</span> の等高線（ <span class="arithmatex">\(W(X, P) = \text{定数}\)</span> となる位相空間上の軌跡）が満たす代数方程式を求めよ。 パラメータ <span class="arithmatex">\(r &gt; 0\)</span> のとき，この等高線がどのような幾何学的形状をとるか，コヒーレント状態の形状（ <span class="arithmatex">\(r=0\)</span> ）と比較してその長軸と短軸の関係性を明らかにせよ。</p>
+<p>(1) 波動関数 <span class="arithmatex">\(\psi_\xi(X)\)</span> を定義式に代入し，<span class="arithmatex">\(Y\)</span> の積分を実行する直前の式まで整理せよ。</p>
+<p>(2) <span class="arithmatex">\(Y\)</span> の積分を実行し，<span class="arithmatex">\(W(X,P)\)</span> を求めよ。</p>
+<p>(3) <span class="arithmatex">\(W(X,P)\)</span> の等高線を求め，<span class="arithmatex">\(r=0\)</span> と <span class="arithmatex">\(r&gt;0\)</span> で形状を比較せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14603,8 +14602,8 @@ W(X, P) = \frac{2}{\pi} \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right)
 \]</div>
 <p>この数式は，2次元平面における楕円の方程式そのものです。</p>
 <p><strong>コヒーレント状態との形状比較</strong></p>
-<p><span class="arithmatex">\(r=0\)</span> のコヒーレント状態（あるいは真の真空状態）においては，方程式が <span class="arithmatex">\(X^2 + 4P^2 = C\)</span> となり，等高線は位相空間上で縦横の広がりが等方的な正円（変数を適切にスケールした空間における円）を描きます。</p>
-<p>これに対し， <span class="arithmatex">\(r &gt; 0\)</span> のスクイーズド状態では， <span class="arithmatex">\(X\)</span> 方向の分母が <span class="arithmatex">\(\exp(-r)\)</span> 倍に縮小し， <span class="arithmatex">\(P\)</span> 方向の分母が <span class="arithmatex">\(\exp(r)\)</span> 倍に拡大します。これにより，等高線の形状は位置 <span class="arithmatex">\(X\)</span> 軸方向に押しつぶされ，運動量 <span class="arithmatex">\(P\)</span> 軸方向に長く引き伸ばされた楕円形へと変形します。楕円の短軸は位置方向（半径 <span class="arithmatex">\(\sqrt{C}\exp(-r)\)</span> ），長軸は運動量方向（半径 <span class="arithmatex">\(\frac{\sqrt{C}}{2}\exp(r)\)</span> ）に対応しており，不確定性のバランスが特定の軸方向に偏っている構造が，位相空間上のプロファイルの変化として現れます。</p>
+<p><span class="arithmatex">\(r=0\)</span> のコヒーレント状態においては，方程式が <span class="arithmatex">\(X^2 + 4P^2 = C\)</span> となり，等高線は位相空間上で縦横の広がりが等方的な正円を描きます。</p>
+<p>これに対し， <span class="arithmatex">\(r &gt; 0\)</span> のスクイーズド状態では， <span class="arithmatex">\(X\)</span> 方向の分母が <span class="arithmatex">\(\exp(-r)\)</span> 倍に縮小し， <span class="arithmatex">\(P\)</span> 方向の分母が <span class="arithmatex">\(\exp(r)\)</span> 倍に拡大します。これにより，等高線の形状は位置 <span class="arithmatex">\(X\)</span> 軸方向に押しつぶされ，運動量 <span class="arithmatex">\(P\)</span> 軸方向に長く引き伸ばされた楕円形へと変形します。楕円の短軸は位置方向，長軸は運動量方向に対応しており，不確定性のバランスが特定の軸方向に偏っている構造が，位相空間上のプロファイルの変化として現れます。</p>
 
 
 
