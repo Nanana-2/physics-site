@@ -23,7 +23,7 @@
     
     
       
-        <title>ゾンマーフェルト展開と電子比熱 - 大学物理の問題集</title>
+        <title>ゾンマーフェルト展開と電子熱容量 - 大学物理の問題集</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ゾンマーフェルト展開と電子比熱
+              ゾンマーフェルト展開と電子熱容量
             
           </span>
         </div>
@@ -12177,7 +12177,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12195,7 +12195,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12583,7 +12583,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12611,7 +12611,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14540,9 +14540,9 @@
 
 
 
-<h1 id="_1">ゾンマーフェルト展開と電子比熱</h1>
+<h1 id="_1">ゾンマーフェルト展開と電子熱容量</h1>
 <h2 id="_2">問題</h2>
-<p>フェルミ温度よりも十分に低い低温 <span class="arithmatex">\(T \ll T_F\)</span> の極限において，状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> などの滑らかな関数 <span class="arithmatex">\(H(\epsilon)\)</span> とフェルミ・ディラック分布関数 <span class="arithmatex">\(f(\epsilon)\)</span> の積の積分は，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の近傍でのテイラー展開を用いることで以下のように近似して計算できる。この強力な近似手法を<strong>ゾンマーフェルト展開</strong>と呼ぶ。</p>
+<p>フェルミ温度よりも十分に低い低温 <span class="arithmatex">\(T \ll T_F\)</span> の極限において，状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> などの滑らかな関数 <span class="arithmatex">\(H(\epsilon)\)</span> とフェルミ・ディラック分布関数 <span class="arithmatex">\(f(\epsilon)\)</span> の積の積分は，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の近傍でのテイラー展開を用いることで以下のように近似して計算できる。この近似手法を<strong>ゾンマーフェルト展開</strong>と呼ぶ。</p>
 <div class="arithmatex">\[
 \int_0^\infty H(\epsilon) f(\epsilon) d\epsilon \simeq \int_0^\mu H(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 H'(\mu)
 \]</div>
@@ -14557,7 +14557,7 @@ $$ </p>
 U = \int_0^\infty \epsilon D(\epsilon) f(\epsilon) d\epsilon
 \]</div>
 <p>にゾンマーフェルト展開を適用し，低温における <span class="arithmatex">\(U\)</span> を温度 <span class="arithmatex">\(T\)</span> の関数として導出せよ。展開式の第1項の積分を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\epsilon_F\)</span> の区間と <span class="arithmatex">\(\epsilon_F\)</span> から <span class="arithmatex">\(\mu\)</span> の区間に分割し，前問と同様の近似および絶対零度の内部エネルギー <span class="arithmatex">\(U(0) = \int_0^{\epsilon_F} \epsilon D(\epsilon) d\epsilon\)</span> を用いて整理せよ。</p>
-<p>(3) 前問の結果を温度 <span class="arithmatex">\(T\)</span> で微分することで，低温におけるフェルミ気体の定積比熱 <span class="arithmatex">\(C_V\)</span> を求めよ。また，その温度依存性が古典理想気体の比熱とどのように異なるか数式を基に説明せよ。</p>
+<p>(3) 前問の結果を温度 <span class="arithmatex">\(T\)</span> で微分することで，低温におけるフェルミ気体の定積熱容量 <span class="arithmatex">\(C_V\)</span> を求めよ。また，その温度依存性が古典理想気体の熱容量とどのように異なるか数式を基に説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14590,7 +14590,7 @@ U \simeq \int_0^\mu \epsilon D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 \
 <div class="arithmatex">\[
 \int_0^\mu \epsilon D(\epsilon) d\epsilon = \int_0^{\epsilon_F} \epsilon D(\epsilon) d\epsilon + \int_{\epsilon_F}^\mu \epsilon D(\epsilon) d\epsilon
 \]</div>
-<p>右辺の最初の項は絶対零度における内部エネルギー <span class="arithmatex">\(U(0)\)</span> です。次の項は区間幅が極めて狭いため，被積分関数を <span class="arithmatex">\(\epsilon_F D(\epsilon_F)\)</span> の一定値とみなして近似します。</p>
+<p>右辺の最初の項は絶対零度における内部エネルギー <span class="arithmatex">\(U(0)\)</span> です。次の項は区間幅が非常に狭いため，被積分関数を <span class="arithmatex">\(\epsilon_F D(\epsilon_F)\)</span> の一定値とみなして近似します。</p>
 <div class="arithmatex">\[
 \int_0^\mu \epsilon D(\epsilon) d\epsilon \simeq U(0) + \epsilon_F D(\epsilon_F)(\mu - \epsilon_F)
 \]</div>
@@ -14602,7 +14602,7 @@ U \simeq \int_0^\mu \epsilon D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 \
 <div class="arithmatex">\[
 \frac{d}{d\epsilon} \left[ \epsilon D(\epsilon) \right]_{\epsilon=\mu} \simeq D(\epsilon_F) + \epsilon_F D'(\epsilon_F)
 \]</div>
-<p>これら二つの結果を元の <span class="arithmatex">\(U\)</span> の式に足し合わせます。すると，符号が逆になっている <span class="arithmatex">\(\epsilon_F D'(\epsilon_F)\)</span> の項が完全に相殺されます。</p>
+<p>これら二つの結果を元の <span class="arithmatex">\(U\)</span> の式に足し合わせます。すると，符号が逆になっている <span class="arithmatex">\(\epsilon_F D'(\epsilon_F)\)</span> の項が相殺されます。</p>
 <div class="arithmatex">\[
 U \simeq U(0) - \frac{\pi^2}{6} k_B^2 T^2 \epsilon_F D'(\epsilon_F) + \frac{\pi^2}{6} k_B^2 T^2 \left( D(\epsilon_F) + \epsilon_F D'(\epsilon_F) \right)
 \]</div>
@@ -14610,12 +14610,12 @@ U \simeq U(0) - \frac{\pi^2}{6} k_B^2 T^2 \epsilon_F D'(\epsilon_F) + \frac{\pi^
 U(T) \simeq U(0) + \frac{\pi^2}{6} k_B^2 T^2 D(\epsilon_F)
 \]</div>
 <h3 id="3">(3)</h3>
-<p>定積比熱 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U(T)\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分することで得られます。絶対零度のエネルギー <span class="arithmatex">\(U(0)\)</span> は定数であるため微分すると消去され，<span class="arithmatex">\(T^2\)</span> の微分から <span class="arithmatex">\(2T\)</span> が現れます。</p>
+<p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U(T)\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分することで得られます。絶対零度のエネルギー <span class="arithmatex">\(U(0)\)</span> は定数であるため微分すると消去され，<span class="arithmatex">\(T^2\)</span> の微分から <span class="arithmatex">\(2T\)</span> が現れます。</p>
 <div class="arithmatex">\[
 C_V = \frac{\partial U}{\partial T} = \frac{\pi^2}{6} k_B^2 D(\epsilon_F) \cdot 2T = \frac{\pi^2}{3} k_B^2 D(\epsilon_F) T
 \]</div>
-<p>状態密度 <span class="arithmatex">\(D(\epsilon_F)\)</span> は温度に依存しない定数項であるため，低温におけるフェルミ気体の電子比熱は<strong>絶対温度 <span class="arithmatex">\(T\)</span> に比例</strong>して直線的に減少していくことがわかります。</p>
-<p>古典理想気体では定積比熱が温度によらず一定値をとりますが，フェルミ気体ではパウリの排他原理により，フェルミ面近傍のわずかな電子だけしか熱エネルギーを受け取れないため，系全体としてのエネルギー吸収能力が劇的に制限されます。温度がゼロに近づくにつれて熱励起できる電子の数もゼロに近づくため，比熱が温度に比例して <span class="arithmatex">\(0\)</span> へと向かい，熱力学第三法則の要請を満たしています。</p>
+<p>状態密度 <span class="arithmatex">\(D(\epsilon_F)\)</span> は温度に依存しない定数項であるため，低温におけるフェルミ気体の電子熱容量は<strong>絶対温度 <span class="arithmatex">\(T\)</span> に比例</strong>して直線的に減少していくことがわかります。</p>
+<p>古典理想気体では定積熱容量が温度によらず一定値をとりますが，フェルミ気体ではパウリの排他原理により，フェルミ面近傍のわずかな電子だけしか熱エネルギーを受け取れないため，系全体としてのエネルギー吸収能力が大きく制限されます。温度がゼロに近づくにつれて熱励起できる電子の数もゼロに近づくため，熱容量が温度に比例して <span class="arithmatex">\(0\)</span> へと向かい，熱力学第三法則の要請を満たしています。</p>
 
 
 

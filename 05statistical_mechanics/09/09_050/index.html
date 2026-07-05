@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12473,7 +12473,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12501,7 +12501,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14547,28 +14547,28 @@
 <div class="arithmatex">\[
 G(\boldsymbol{r}_1, \boldsymbol{r}_2) = \langle s(\boldsymbol{r}_1) s(\boldsymbol{r}_2) \rangle - \langle s(\boldsymbol{r}_1) \rangle \langle s(\boldsymbol{r}_2) \rangle = \langle s(\boldsymbol{r}_1) s(\boldsymbol{r}_2) \rangle
 \]</div>
-<p>系が空間並進対称性を持つとき，相関関数は2点間の距離 <span class="arithmatex">\(r = |\boldsymbol{r}_1 - \boldsymbol{r}_2|\)</span> のみに依存するため， <span class="arithmatex">\(G(r)\)</span> と書くことができる。相転移点（臨界点）以外の通常の高温相において，この相関関数は長距離で指数関数的に減衰することが知られている。</p>
+<p>系が空間並進対称性を持つとき，相関関数は2点間の距離 <span class="arithmatex">\(r = |\boldsymbol{r}_1 - \boldsymbol{r}_2|\)</span> のみに依存するため， <span class="arithmatex">\(G(r)\)</span> と書くことができる。相転移点である臨界点以外の通常の高温相において，この相関関数は長距離で指数関数的に減衰することが知られている。</p>
 <div class="arithmatex">\[
 G(r) \propto \frac{1}{r} \exp\left( -\frac{r}{\xi} \right)
 \]</div>
 <p>ここで現れる代表的な長さのスケール <span class="arithmatex">\(\xi\)</span> を<strong>相関長</strong>と呼ぶ。以下の問いに答えよ。</p>
-<p>(1) 2点間の距離 <span class="arithmatex">\(r\)</span> が相関長 <span class="arithmatex">\(\xi\)</span> に比べて十分に遠い領域（ <span class="arithmatex">\(r \gg \xi\)</span> ）において，相関関数 <span class="arithmatex">\(G(r)\)</span> はどのような値に近づくか。また，その数学的結果がスピン同士の確率論的な関係性についてどのような物理的状態を意味しているか，確率の独立性の観点から記述せよ。</p>
-<p>(2) 系全体の等温磁化率 <span class="arithmatex">\(\chi_T\)</span> は，すべてのスピン対の相関関数の空間積分（全空間での足し合わせ）に比例し，以下の関係が成り立つ。</p>
+<p>(1) 2点間の距離 <span class="arithmatex">\(r\)</span> が相関長 <span class="arithmatex">\(\xi\)</span> に比べて十分に遠い領域<span class="arithmatex">\(r \gg \xi\)</span>において，相関関数 <span class="arithmatex">\(G(r)\)</span> はどのような値に近づくか。また，その数学的結果がスピン同士の確率論的な関係性についてどのような物理的状態を意味しているか，確率の独立性の観点から表せ。</p>
+<p>(2) 系全体の等温磁化率 <span class="arithmatex">\(\chi_T\)</span> は，すべてのスピン対の相関関数の空間積分に比例し，以下の関係が成り立つ。</p>
 <div class="arithmatex">\[
 \chi_T \propto \int_0^\infty G(r) \cdot 4\pi r^2 dr
 \]</div>
-<p>通常の高温相における相関関数の形 <span class="arithmatex">\(G(r) = \frac{A}{r} \exp\left( -\frac{r}{\xi} \right)\)</span> （ <span class="arithmatex">\(A\)</span> は正の定数）をこの式に代入して積分を実行し，等温磁化率 <span class="arithmatex">\(\chi_T\)</span> が相関長 <span class="arithmatex">\(\xi\)</span> を用いてどのように表されるか導出せよ。ただし，定積分公式 <span class="arithmatex">\(\int_0^\infty x e^{-ax} dx = \frac{1}{a^2}\)</span> を用いてよい。</p>
-<p>(3) 系の温度を下げていき，強磁性相転移の臨界温度 <span class="arithmatex">\(T_c\)</span> に近づけると，マクロな応答関数である等温磁化率が無限大に発散する（ <span class="arithmatex">\(\chi_T \to \infty\)</span> ）。(2) の結果に基づき，臨界点近傍において相関長 <span class="arithmatex">\(\xi\)</span> がどのような挙動を示すべきか述べよ。また，臨界点（ <span class="arithmatex">\(T = T_c\)</span> ）そのものにおいては，相関関数 <span class="arithmatex">\(G(r)\)</span> の指数減衰の形が崩れ，べき乗減衰（ <span class="arithmatex">\(G(r) \propto \frac{1}{r^{1+\eta}}\)</span> ）へと変化する。この変化が意味する系の微視的なパターンの特徴を説明せよ。</p>
+<p>通常の高温相における相関関数の形 <span class="arithmatex">\(G(r) = \frac{A}{r} \exp\left( -\frac{r}{\xi} \right)\)</span> 。ここで <span class="arithmatex">\(A\)</span> は正の定数であるをこの式に代入して積分を実行し，等温磁化率 <span class="arithmatex">\(\chi_T\)</span> が相関長 <span class="arithmatex">\(\xi\)</span> を用いてどのように表されるか導出せよ。ただし，定積分公式 <span class="arithmatex">\(\int_0^\infty x e^{-ax} dx = \frac{1}{a^2}\)</span> を用いてよい。</p>
+<p>(3) 系の温度を下げていき，強磁性相転移の臨界温度 <span class="arithmatex">\(T_c\)</span> に近づけると，マクロな応答関数である等温磁化率が無限大に発散する<span class="arithmatex">\(\chi_T \to \infty\)</span>。(2) の結果に基づき，臨界点近傍において相関長 <span class="arithmatex">\(\xi\)</span> がどのような挙動を示すべきか述べよ。また，臨界点<span class="arithmatex">\(T = T_c\)</span>そのものにおいては，相関関数 <span class="arithmatex">\(G(r)\)</span> の指数減衰の形が崩れ，べき乗減衰<span class="arithmatex">\(G(r) \propto \frac{1}{r^{1+\eta}}\)</span>へと変化する。この変化が意味する系の微視的なパターンの特徴を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>距離が相関長よりも十分に離れた極限（ <span class="arithmatex">\(r \gg \xi\)</span> ）を考えます。
-指数関数 <span class="arithmatex">\(\exp(-r/\xi)\)</span> は，分子が大きくなるにつれて極めて急速にゼロへと減衰するため，相関関数の値はゼロに漸近します。</p>
+<p>距離が相関長よりも十分に離れた極限<span class="arithmatex">\(r \gg \xi\)</span>を考えます。
+指数関数 <span class="arithmatex">\(\exp(-r/\xi)\)</span> は，分子が大きくなるにつれて非常に急速にゼロへと減衰するため，相関関数の値はゼロに漸近します。</p>
 <div class="arithmatex">\[
 \lim_{r \to \infty} G(r) = 0
 \]</div>
 <p>相関関数の定義より，これは <span class="arithmatex">\(\langle s(\boldsymbol{r}_1) s(\boldsymbol{r}_2) \rangle = \langle s(\boldsymbol{r}_1) \rangle \langle s(\boldsymbol{r}_2) \rangle\)</span> が成り立つことを意味します。</p>
-<p>物理的には，2つのスピンが十分に離れると，一方のスピンが熱運動によってどちらを向くかという微視的な確率分布が，もう一方のスピンの向きに全く影響を与えなくなる状態を指します。すなわち，遠距離において2点のスピンのゆらぎが確率論的に完全に<strong>独立</strong>になっていることを表しています。</p>
+<p>物理的には，2つのスピンが十分に離れると，一方のスピンが熱運動によってどちらを向くかという微視的な確率分布が，もう一方のスピンの向きに全く影響を与えなくなる状態を指します。すなわち，遠距離にある2点のスピンが統計的に独立であることを表しています。</p>
 <h3 id="2">(2)</h3>
 <p>与えられた磁化率の式に，高温相における相関関数 <span class="arithmatex">\(G(r)\)</span> の具体的な表現を代入します。</p>
 <div class="arithmatex">\[
@@ -14587,11 +14587,11 @@ G(r) \propto \frac{1}{r} \exp\left( -\frac{r}{\xi} \right)
 <div class="arithmatex">\[
 \chi_T \propto \xi^2
 \]</div>
-<p>したがって，温度を臨界温度に近づけたときにマクロな磁化率が無限大に発散する（ <span class="arithmatex">\(\chi_T \to \infty\)</span> ）ということは，ミクロな空間スケールである<strong>相関長 <span class="arithmatex">\(\xi\)</span> も同様に無限大へと発散（ <span class="arithmatex">\(\xi \to \infty\)</span> ）</strong>しなければならないことを意味します。</p>
+<p>したがって，温度を臨界温度に近づけたときにマクロな磁化率が無限大に発散する<span class="arithmatex">\(\chi_T \to \infty\)</span>ということは，ミクロな空間スケールである<strong>相関長 <span class="arithmatex">\(\xi\)</span> も同様に無限大へと発散<span class="arithmatex">\(\xi \to \infty\)</span></strong>しなければならないことを意味します。</p>
 <p><strong>臨界点における微視的パターンの特徴</strong></p>
-<p>通常，ある1つのスピンが周囲を同じ向きに揃えようとする影響力（秩序の種）は，相関長 <span class="arithmatex">\(\xi\)</span> の有限な距離までしか届きません。しかし，臨界点（ <span class="arithmatex">\(T = T_c\)</span> ）に達すると <span class="arithmatex">\(\xi\)</span> が無限大に発散するため，指数関数によるカットオフが消滅します。</p>
-<p>これにより，相関関数は緩やかなべき乗減衰（ <span class="arithmatex">\(G(r) \propto \frac{1}{r^{1+\eta}}\)</span> ）の形へと変化します。</p>
-<p>物理的には，系の中に特定の長さの標準スケール（相関長）が存在しなくなり，あらゆる大きさ（1マス単位の微視的なスケールから，系全体のサイズにおよぶ巨視的なスケールまで）のスピンの塊（クラスター）が，均等に重なり合って同時に激しくゆらいでいる<strong>自己相似な構造（フラクタル性）</strong>が実現していることを意味します。</p>
+<p>通常，ある1つのスピンが周囲を同じ向きに揃えようとする影響力は，相関長 <span class="arithmatex">\(\xi\)</span> の有限な距離までしか届きません。しかし，臨界点<span class="arithmatex">\(T = T_c\)</span>に達すると <span class="arithmatex">\(\xi\)</span> が無限大に発散するため，指数関数によるカットオフが消滅します。</p>
+<p>これにより，相関関数は緩やかなべき乗減衰<span class="arithmatex">\(G(r) \propto \frac{1}{r^{1+\eta}}\)</span>の形へと変化します。</p>
+<p>物理的には，系の中に特定の長さの標準スケールが存在しなくなり，異なる空間スケールで自己相似な揺らぎが生じていることを意味します。</p>
 
 
 

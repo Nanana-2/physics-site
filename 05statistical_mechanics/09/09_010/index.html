@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12473,7 +12473,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12501,7 +12501,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14542,9 +14542,9 @@
 
 <h1 id="_1">エネルギー揺らぎ</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にある，体積 <span class="arithmatex">\(V\)</span>，全粒子数 <span class="arithmatex">\(N\)</span> の閉じた系（カノニカルアンサンブル）を考える。この系の微視的状態を <span class="arithmatex">\(s\)</span> とし，状態 <span class="arithmatex">\(s\)</span> が持つエネルギーを <span class="arithmatex">\(E_s\)</span> とする。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と平衡にある，体積 <span class="arithmatex">\(V\)</span>，全粒子数 <span class="arithmatex">\(N\)</span> のカノニカル系を考える。この系の微視的状態を <span class="arithmatex">\(s\)</span> とし，状態 <span class="arithmatex">\(s\)</span> が持つエネルギーを <span class="arithmatex">\(E_s\)</span> とする。</p>
 <p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，系が状態 <span class="arithmatex">\(s\)</span> をとる確率 <span class="arithmatex">\(P_s\)</span> は，分配関数 <span class="arithmatex">\(Z(\beta) = \sum_s \exp(-\beta E_s)\)</span> を用いて <span class="arithmatex">\(P_s = \frac{1}{Z(\beta)} \exp(-\beta E_s)\)</span> と表される。</p>
-<p>系のエネルギーの平均値を <span class="arithmatex">\(\langle E \rangle\)</span>，エネルギーの分散（揺らぎの大きさ）を <span class="arithmatex">\(\langle (\Delta E)^2 \rangle = \langle (E - \langle E \rangle)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2\)</span> とするとき，以下の問いに答えよ。</p>
+<p>系のエネルギーの平均値を <span class="arithmatex">\(\langle E \rangle\)</span>，エネルギーの分散を <span class="arithmatex">\(\langle (\Delta E)^2 \rangle = \langle (E - \langle E \rangle)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) エネルギーの平均値 <span class="arithmatex">\(\langle E \rangle = \sum_s E_s P_s\)</span> が，分配関数の対数微分を用いて以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 \langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
@@ -14557,7 +14557,7 @@
 <div class="arithmatex">\[
 \frac{\partial \langle E \rangle}{\partial \beta} = \frac{\partial \langle E \rangle}{\partial T} \frac{\partial T}{\partial \beta}
 \]</div>
-<p>を利用して，(2) の結果を系の定積熱容量 <span class="arithmatex">\(C_V = \frac{\partial \langle E \rangle}{\partial T}\)</span> を用いた式に書き換えよ。また，粒子数 <span class="arithmatex">\(N\)</span> がアボガドロ数程度のマクロな大きさ（ <span class="arithmatex">\(N \sim 10^{23}\)</span> ）であるとき，エネルギーの相対的な揺らぎの大きさ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle}\)</span> がどのようなオーダーになるかを見積もり，マクロな系においてエネルギーの揺らぎがどのように観測されるかを記述せよ。</p>
+<p>を利用して，(2) の結果を系の定積熱容量 <span class="arithmatex">\(C_V = \frac{\partial \langle E \rangle}{\partial T}\)</span> を用いた式に書き換えよ。また，粒子数 <span class="arithmatex">\(N\)</span> がアボガドロ数程度のマクロな大きさ<span class="arithmatex">\(N \sim 10^{23}\)</span>であるとき，エネルギーの相対的な揺らぎの大きさ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle}\)</span> がどのようなオーダーになるかを見積もり，マクロな系においてエネルギーの揺らぎがどのように観測されるかを表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14605,12 +14605,12 @@
 \langle (\Delta E)^2 \rangle = k_B T^2 C_V
 \]</div>
 <p><strong>マクロな系における揺らぎの見積もり</strong></p>
-<p>系のマクロな性質を調べるため，粒子数 <span class="arithmatex">\(N\)</span> に対する各物理量のスケーリング（依存性）を考えます。
+<p>系のマクロな性質を調べるため，粒子数 <span class="arithmatex">\(N\)</span> に対する各物理量のスケーリングを考えます。
 平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> および定積熱容量 <span class="arithmatex">\(C_V\)</span> は，系の大きさに比例する示量性変数であるため，粒子数 <span class="arithmatex">\(N\)</span> の1乗のオーダーを持ちます。</p>
 <div class="arithmatex">\[
 \langle E \rangle \propto N, \quad C_V \propto N
 \]</div>
-<p>(3) の結果より，エネルギーの分散は <span class="arithmatex">\(\langle (\Delta E)^2 \rangle \propto N\)</span> となり，その平方根である標準偏差（揺らぎの絶対的な幅）は <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーになります。</p>
+<p>(3) の結果より，エネルギーの分散は <span class="arithmatex">\(\langle (\Delta E)^2 \rangle \propto N\)</span> となり，その平方根である標準偏差は <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーになります。</p>
 <div class="arithmatex">\[
 \sqrt{\langle (\Delta E)^2 \rangle} = \sqrt{k_B T^2 C_V} \propto \sqrt{N}
 \]</div>
@@ -14618,8 +14618,8 @@
 <div class="arithmatex">\[
 \frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle} \propto \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}}
 \]</div>
-<p>粒子数が <span class="arithmatex">\(N \sim 10^{23}\)</span> であるマクロな系では，この値は <span class="arithmatex">\(\frac{1}{\sqrt{10^{23}}} \sim 10^{-11}\)</span> 程度となり，事実上完全にゼロとみなせるほど極めて小さな値になります。</p>
-<p>この結果は，微視的にはエネルギーが絶えず揺らいでいるカノニカル分布であっても，マクロな視点ではエネルギーが平均値の周囲に極めて鋭く集中し，実質的にエネルギーが一定であるミクロカノニカル分布と完全に一致した熱力学的挙動を示すことを数学的に裏付けています。</p>
+<p>粒子数が <span class="arithmatex">\(N \sim 10^{23}\)</span> であるマクロな系では，この値は <span class="arithmatex">\(\frac{1}{\sqrt{10^{23}}} \sim 10^{-11}\)</span> 程度となり，非常に小さな値です。</p>
+<p>この結果は，微視的にはエネルギーが絶えず揺らいでいるカノニカル分布であっても，マクロな視点ではエネルギーが平均値の周囲に非常に鋭く集中し，実質的にエネルギーが一定であるミクロカノニカル分布と一致した熱力学的挙動を示すことを数学的に裏付けています。</p>
 
 
 
@@ -14674,7 +14674,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../08/08_080/" class="md-footer__link md-footer__link--prev" aria-label="Previous: デバイ模型の固体比熱">
+          <a href="../../08/08_080/" class="md-footer__link md-footer__link--prev" aria-label="Previous: デバイ模型による固体の熱容量">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -14684,7 +14684,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                デバイ模型の固体比熱
+                デバイ模型による固体の熱容量
               </div>
             </div>
           </a>

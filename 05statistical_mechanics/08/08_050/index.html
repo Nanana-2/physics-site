@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12583,7 +12583,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12611,7 +12611,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14542,18 +14542,18 @@
 
 <h1 id="_1">プランクの黒体放射法則</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある体積 <span class="arithmatex">\(V\)</span> の空洞壁から放射される電磁波（黒体放射）を考える。空洞内部の電磁場は，各振動数を持つ独立な調和振動子の集まり（電磁場モード）として扱うことができる。量子力学によると，角振動数 <span class="arithmatex">\(\omega\)</span> のモードのエネルギーは，光子の数 <span class="arithmatex">\(n\)</span> を用いて <span class="arithmatex">\(\epsilon_n = \hbar \omega n\)</span> と離散化される。ただし，零点エネルギーは基準の取り方によって相殺されるためここでは無視する。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある体積 <span class="arithmatex">\(V\)</span> の空洞内の黒体放射を考える。空洞内部の電磁場は，各振動数を持つ独立な調和振動子の集まりとして扱うことができる。量子力学によると，角振動数 <span class="arithmatex">\(\omega\)</span> のモードのエネルギーは，光子の数 <span class="arithmatex">\(n\)</span> を用いて <span class="arithmatex">\(\epsilon_n = \hbar \omega n\)</span> と離散化される。ただし，零点エネルギーは基準の取り方によって相殺されるためここでは無視する。</p>
 <p>光子は化学ポテンシャルが <span class="arithmatex">\(\mu = 0\)</span> のボース粒子であるため，温度 <span class="arithmatex">\(T\)</span> における特定のモードの平均光子数はプランク分布に従う。</p>
 <div class="arithmatex">\[
 \langle n \rangle = \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1}
 \]</div>
-<p>三次元空間において，角振動数が <span class="arithmatex">\(\omega\)</span> から <span class="arithmatex">\(\omega + d\omega\)</span> の範囲にある電磁場モードの数（状態密度）は，光子の2つの偏光自由度を考慮すると以下の式で与えられる。ここで <span class="arithmatex">\(c\)</span> は光速である。</p>
+<p>三次元空間において，角振動数が <span class="arithmatex">\(\omega\)</span> から <span class="arithmatex">\(\omega + d\omega\)</span> の範囲にある電磁場モードの数の状態密度は，光子の2つの偏光自由度を考慮すると以下の式で与えられる。ここで <span class="arithmatex">\(c\)</span> は光速である。</p>
 <div class="arithmatex">\[
 D(\omega) d\omega = \frac{V \omega^2}{\pi^2 c^3} d\omega
 \]</div>
 <p>これらを基にして，以下の問いに答えよ。</p>
-<p>(1) 角振動数 <span class="arithmatex">\(\omega\)</span> から <span class="arithmatex">\(\omega + d\omega\)</span> の範囲にある電磁波の全エネルギーを <span class="arithmatex">\(u(\omega, T) V d\omega\)</span> と表すとき，単位体積あたりのエネルギー純度であるエネルギー密度分布 <span class="arithmatex">\(u(\omega, T)\)</span> の式を導出せよ。この関係式はプランクの放射公式と呼ばれる。</p>
-<p>(2) (1) で得られた <span class="arithmatex">\(u(\omega, T)\)</span> について，長波長（低振動数）の極限である <span class="arithmatex">\(\hbar \omega \ll k_B T\)</span> を考える。このとき，指数関数をテイラー展開 <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> によって近似することで，プランクの公式が古典電磁気学から導かれるレイリー・ジーンズの法則に一致することを示せ。</p>
+<p>(1) 角振動数 <span class="arithmatex">\(\omega\)</span> から <span class="arithmatex">\(\omega + d\omega\)</span> の範囲にある電磁波の全エネルギーを <span class="arithmatex">\(u(\omega, T) V d\omega\)</span> と表すとき，エネルギー密度分布 <span class="arithmatex">\(u(\omega, T)\)</span> の式を導出せよ。この関係式はプランクの放射公式と呼ばれる。</p>
+<p>(2) (1) で得られた <span class="arithmatex">\(u(\omega, T)\)</span> について，長波長極限である <span class="arithmatex">\(\hbar \omega \ll k_B T\)</span> を考える。このとき，指数関数をテイラー展開 <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> によって近似することで，プランクの公式が古典電磁気学から導かれるレイリー・ジーンズの法則に一致することを示せ。</p>
 <p>(3) 逆に，短波長の極限である <span class="arithmatex">\(\hbar \omega \gg k_B T\)</span> において， <span class="arithmatex">\(u(\omega, T)\)</span> の分母の <span class="arithmatex">\(-1\)</span> を無視する近似を行うことで，ウィーンの放射法則と呼ばれる形式に帰着することを示せ。また，古典論における未解決問題であった，高振動数側でエネルギーが無限大に発散する問題が，量子論的なプランクの公式によってどのように回避されているかを説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14584,7 +14584,7 @@ u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar 
 <div class="arithmatex">\[
 u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \cdot \frac{1}{\frac{\hbar \omega}{k_B T}} = \frac{\omega^2}{\pi^2 c^3} k_B T
 \]</div>
-<p>この結果は，プランクの公式が低振動数領域において，各モードに平均エネルギー <span class="arithmatex">\(k_B T\)</span> が一様に分配されるという古典統計力学のエネルギー等配分の法則（レイリー・ジーンズの法則）と完全に一致することを示しています。</p>
+<p>この結果は，プランクの公式が低振動数領域において，古典統計力学のエネルギー等配分則から得られるレイリー・ジーンズの法則と一致することを示しています。</p>
 <h3 id="3">(3)</h3>
 <p>高振動数極限 <span class="arithmatex">\(\hbar \omega \gg k_B T\)</span> では，指数関数の値が 1 に比べて非常に大きくなります。</p>
 <div class="arithmatex">\[
@@ -14596,10 +14596,10 @@ u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\
 \]</div>
 <p>この結果は，高振動数側でエネルギーが指数関数的に減衰するというウィーンの放射法則の形に対応しています。</p>
 <p><strong>紫外線破綻の回避に関する説明</strong></p>
-<p>古典論に基づくレイリー・ジーンズの法則では，エネルギー密度が <span class="arithmatex">\(\omega^2\)</span> に比例するため，振動数 <span class="arithmatex">\(\omega\)</span> が大きくなるほど（紫外線側の領域へ進むほど）エネルギー密度がどこまでも増大し，全振動数で積分した全エネルギーが無限大に発散してしまうという不都合が生じていました。</p>
+<p>古典論に基づくレイリー・ジーンズの法則では，エネルギー密度が <span class="arithmatex">\(\omega^2\)</span> に比例するため，振動数 <span class="arithmatex">\(\omega\)</span> が大きくなるほどエネルギー密度がどこまでも増大し，全振動数で積分した全エネルギーが無限大に発散してしまうという不都合が生じていました。</p>
 <p>これに対してプランクの公式では，エネルギーの授受が <span class="arithmatex">\(\hbar \omega\)</span> という不連続な単位で行われると仮定しています。振動数 <span class="arithmatex">\(\omega\)</span> が高くなると，光子1個を生成するために必要なエネルギーのハードルが熱エネルギー <span class="arithmatex">\(k_B T\)</span> に比べて高くなりすぎます。</p>
-<p>その結果，高振動数領域では光子がそもそも1個も存在できない確率が支配的になり，平均光子数自体が指数関数的な勢いでゼロへと急激に減少します。</p>
-<p>この分母の指数関数の強い増大が，分子の <span class="arithmatex">\(\omega^3\)</span> の増加を完全に抑え込むため，高振動数側でもエネルギーは発散せず，滑らかにゼロへと収束します。これにより，古典論の破綻が解消されることになります。</p>
+<p>したがって，高振動数領域では平均光子数が指数関数的に減少します。</p>
+<p>分母の指数関数は分子の <span class="arithmatex">\(\omega^3\)</span> より速く増加するため，高振動数側でもエネルギーは発散せず，滑らかにゼロへと収束します。これにより，古典論の破綻が解消されることになります。</p>
 
 
 

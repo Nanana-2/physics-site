@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12473,7 +12473,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12501,7 +12501,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14542,9 +14542,9 @@
 
 <h1 id="_1">磁化揺らぎと磁化率</h1>
 <h2 id="_2">問題</h2>
-<p>外部磁場 <span class="arithmatex">\(B\)</span> のもとで，温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にある一連のスピン系（カノニカル分布）を考える。</p>
+<p>外部磁場 <span class="arithmatex">\(B\)</span> のもとで，温度 <span class="arithmatex">\(T\)</span> の熱浴とカノニカル平衡にあるスピン系を考える。</p>
 <p>系の微視的状態を <span class="arithmatex">\(s\)</span> とし，状態 <span class="arithmatex">\(s\)</span> における全体の総磁化を <span class="arithmatex">\(M_s\)</span> と置く。磁場 <span class="arithmatex">\(B\)</span> と磁化 <span class="arithmatex">\(M_s\)</span> の相互作用を考慮すると，状態 <span class="arithmatex">\(s\)</span> が持つエネルギーは，磁場がないときのエネルギー <span class="arithmatex">\(E_{s,0}\)</span> を用いて <span class="arithmatex">\(E_s = E_{s,0} - M_s B\)</span> と表される。</p>
-<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，分配関数は <span class="arithmatex">\(Z(\beta, B) = \sum_s \exp\left[ -\beta (E_{s,0} - M_s B) \right]\)</span> となる。総磁化の平均値を <span class="arithmatex">\(\langle M \rangle\)</span> ，磁化の分散（揺らぎの大きさ）を <span class="arithmatex">\(\langle (\Delta M)^2 \rangle = \langle M^2 \rangle - \langle M \rangle^2\)</span> とするとき，以下の問いに答えよ。</p>
+<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，分配関数は <span class="arithmatex">\(Z(\beta, B) = \sum_s \exp\left[ -\beta (E_{s,0} - M_s B) \right]\)</span> となる。総磁化の平均値を <span class="arithmatex">\(\langle M \rangle\)</span> ，磁化の分散を <span class="arithmatex">\(\langle (\Delta M)^2 \rangle = \langle M^2 \rangle - \langle M \rangle^2\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) 磁化の平均値 <span class="arithmatex">\(\langle M \rangle = \sum_s M_s P_s\)</span> が，分配関数の磁場 <span class="arithmatex">\(B\)</span> による偏微分を用いて以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 \langle M \rangle = \frac{1}{\beta} \frac{\partial \log Z}{\partial B}
@@ -14553,7 +14553,7 @@
 <div class="arithmatex">\[
 \langle (\Delta M)^2 \rangle = k_B T \chi_T
 \]</div>
-<p>(3) スピン同士の相互作用を無視した <span class="arithmatex">\(N\)</span> 個の独立な自由スピン系（常磁性体）において，等温磁化率はキュリーの法則により <span class="arithmatex">\(\chi_T = \frac{N C}{T}\)</span> （ <span class="arithmatex">\(C\)</span> は正の定数）に従う。このとき，磁化の相対揺らぎ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta M)^2 \rangle}}{\langle M \rangle}\)</span> が，温度を一定に保ったまま粒子数 <span class="arithmatex">\(N\)</span> を大きくしていくマクロな極限において，どのようなオーダーでゼロに近づくかを示せ。</p>
+<p>(3) スピン同士の相互作用を無視した <span class="arithmatex">\(N\)</span> 個の独立な自由スピン系において，等温磁化率はキュリーの法則により <span class="arithmatex">\(\chi_T = \frac{N C}{T}\)</span> 。ここで <span class="arithmatex">\(C\)</span> は正の定数であるに従う。このとき，磁化の相対揺らぎ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta M)^2 \rangle}}{\langle M \rangle}\)</span> が，温度を一定に保ったまま粒子数 <span class="arithmatex">\(N\)</span> を大きくしていくマクロな極限において，どのようなオーダーでゼロに近づくかを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14591,19 +14591,19 @@ P_s = \frac{\exp\left[ -\beta(E_{s,0} - M_s B) \right]}{Z}
 <div class="arithmatex">\[
 \langle (\Delta M)^2 \rangle = k_B T \chi_T
 \]</div>
-<p>これにより，ミクロなスピンの向きの反転に伴う磁化の統計的揺らぎが，マクロに外部磁場を変化させたときの応答の良さを示す等温磁化率に完全に比例するという重要な関係式が導出されました。</p>
+<p>これにより，磁化の分散が等温磁化率に比例することが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>与えられた常磁性体のキュリーの法則 <span class="arithmatex">\(\chi_T = \frac{N C}{T}\)</span> を (2) の結果に代入し，磁化の分散の大きさを評価します。</p>
 <div class="arithmatex">\[
 \langle (\Delta M)^2 \rangle = k_B T \left( \frac{N C}{T} \right) = N k_B C
 \]</div>
-<p>この式から，磁化の分散 <span class="arithmatex">\(\langle (\Delta M)^2 \rangle\)</span> は粒子数 <span class="arithmatex">\(N\)</span> の1乗に比例（ <span class="arithmatex">\(\propto N\)</span> ）し，その平方根である標準偏差は <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーを持つことがわかります。</p>
-<p>一方，磁場 <span class="arithmatex">\(B\)</span> が印加されているときの平均磁化 <span class="arithmatex">\(\langle M \rangle\)</span> も，系全体のサイズに比例する示量性変数であるため，粒子数 <span class="arithmatex">\(N\)</span> の1乗のオーダー（ <span class="arithmatex">\(\langle M \rangle \propto N\)</span> ）を持ちます。</p>
+<p>この式から，磁化の分散 <span class="arithmatex">\(\langle (\Delta M)^2 \rangle\)</span> は粒子数 <span class="arithmatex">\(N\)</span> の1乗に比例<span class="arithmatex">\(\propto N\)</span>し，その平方根である標準偏差は <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーを持つことがわかります。</p>
+<p>一方，磁場 <span class="arithmatex">\(B\)</span> が印加されているときの平均磁化 <span class="arithmatex">\(\langle M \rangle\)</span> も，系全体のサイズに比例する示量性変数であるため，粒子数 <span class="arithmatex">\(N\)</span> の1乗のオーダー<span class="arithmatex">\(\langle M \rangle \propto N\)</span>を持ちます。</p>
 <p>これらを用いて，平均値に対する磁化の相対揺らぎを計算します。</p>
 <div class="arithmatex">\[
 \frac{\sqrt{\langle (\Delta M)^2 \rangle}}{\langle M \rangle} \propto \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}}
 \]</div>
-<p>したがって，マクロな極限（ <span class="arithmatex">\(N \to \infty\)</span> ）において，磁化の相対揺らぎは <strong><span class="arithmatex">\(\frac{1}{\sqrt{N}}\)</span> のオーダー</strong>でゼロに近づきます。アボガドロ数規模の巨大なスピン系では，熱的な磁化のバタつきは相対的に完全に無視できるようになり，マクロな測定値として一本の確定した磁化曲線が観測される熱力学的な妥当性が，この揺らぎの式によって保証されています。</p>
+<p>したがって，<span class="arithmatex">\(N \to \infty\)</span> において磁化の相対揺らぎは <span class="arithmatex">\(N^{-1/2}\)</span> のオーダーでゼロに近づきます。</p>
 
 
 

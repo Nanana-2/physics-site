@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12583,7 +12583,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12611,7 +12611,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14542,21 +14542,21 @@
 
 <h1 id="_1">ボース・アインシュタイン凝縮</h1>
 <h2 id="_2">問題</h2>
-<p>体積 <span class="arithmatex">\(V\)</span> の容器に閉じ込められた全粒子数 <span class="arithmatex">\(N\)</span> の三次元理想ボース気体を考える。ボース気体では励起状態に存在できる粒子の総数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> には温度 <span class="arithmatex">\(T\)</span> によって決まる最大キャパシティが存在し，化学ポテンシャルが上限（ <span class="arithmatex">\(\mu = 0\)</span> ）に達したときに最大値をとる。</p>
+<p>体積 <span class="arithmatex">\(V\)</span> の容器に閉じ込められた全粒子数 <span class="arithmatex">\(N\)</span> の三次元理想ボース気体を考える。ボース気体では励起状態に存在できる粒子の総数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> には温度 <span class="arithmatex">\(T\)</span> によって決まる最大収容量が存在し，化学ポテンシャルが上限<span class="arithmatex">\(\mu = 0\)</span>に達したときに最大値をとる。</p>
 <div class="arithmatex">\[
 N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}
 \]</div>
-<p>全粒子数がこの励起状態の最大収容量を上回るとき，あふれた粒子が基底状態（エネルギー <span class="arithmatex">\(\epsilon_0 = 0\)</span> ）に落ち込むことでボース・アインシュタイン凝縮（BEC）が発生する。以下の問いに答えよ。</p>
-<p>(1) ちょうどすべての粒子が励起状態だけで収容できなくなる（すなわち <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) = N\)</span> が成立する）境界の温度を凝縮の<strong>臨界温度</strong> <span class="arithmatex">\(T_c\)</span> と呼ぶ。臨界温度 <span class="arithmatex">\(T_c\)</span> の式を，粒子密度 <span class="arithmatex">\(\rho = N/V\)</span> および定数を用いて表せ。</p>
+<p>全粒子数がこの励起状態の最大収容量を上回るとき，残りの粒子がエネルギー <span class="arithmatex">\(\epsilon_0 = 0\)</span> の基底状態を占有し，ボース・アインシュタイン凝縮が生じる。以下の問いに答えよ。</p>
+<p>(1) <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) = N\)</span> が成立する温度を凝縮の<strong>臨界温度</strong> <span class="arithmatex">\(T_c\)</span> と呼ぶ。臨界温度 <span class="arithmatex">\(T_c\)</span> の式を，粒子密度 <span class="arithmatex">\(\rho = N/V\)</span> および定数を用いて表せ。</p>
 <p>(2) (1) で求めた臨界温度 <span class="arithmatex">\(T_c\)</span> を利用すると，任意の温度 <span class="arithmatex">\(T\)</span> における励起状態の最大収容量が，全粒子数 <span class="arithmatex">\(N\)</span> を用いて以下のように表現できることを示せ。</p>
 <div class="arithmatex">\[
 N_{\mathrm{ex}}^{\max}(T) = N \left( \frac{T}{T_c} \right)^{3/2}
 \]</div>
-<p>(3) 臨界温度以下（ <span class="arithmatex">\(T &lt; T_c\)</span> ）の低温領域において，基底状態に凝縮している粒子数 <span class="arithmatex">\(N_0\)</span> の温度依存性を表す式を， <span class="arithmatex">\(N, T, T_c\)</span> を用いて導出せよ。また，その関数が示す挙動を，絶対零度（ <span class="arithmatex">\(T = 0\)</span> ）および臨界温度（ <span class="arithmatex">\(T = T_c\)</span> ）の極限値に触れながら説明せよ。</p>
+<p>(3) 臨界温度以下<span class="arithmatex">\(T &lt; T_c\)</span>の低温領域において，基底状態に凝縮している粒子数 <span class="arithmatex">\(N_0\)</span> の温度依存性を表す式を， <span class="arithmatex">\(N, T, T_c\)</span> を用いて導出せよ。また，その関数が示す挙動を，絶対零度<span class="arithmatex">\(T = 0\)</span>および臨界温度<span class="arithmatex">\(T = T_c\)</span>の極限値に触れながら説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>臨界温度 <span class="arithmatex">\(T_c\)</span> の定義より， <span class="arithmatex">\(T = T_c\)</span> において励起状態の最大キャパシティが全粒子数 <span class="arithmatex">\(N\)</span> と一致します。</p>
+<p>臨界温度 <span class="arithmatex">\(T_c\)</span> の定義より， <span class="arithmatex">\(T = T_c\)</span> において励起状態の最大収容量が全粒子数 <span class="arithmatex">\(N\)</span> と一致します。</p>
 <div class="arithmatex">\[
 N = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T_c}{h^2} \right)^{3/2}
 \]</div>
@@ -14574,7 +14574,7 @@ T_c = \frac{h^2}{2\pi m k_B} \left( \frac{\rho}{\zeta\left(\frac{3}{2}\right)} \
 \]</div>
 <p>この結果から，粒子密度 <span class="arithmatex">\(\rho\)</span> が高いほど，あるいは粒子の質量 <span class="arithmatex">\(m\)</span> が軽いほど，量子力学的な波の重なりが比較的高い温度で発生するため，臨界温度 <span class="arithmatex">\(T_c\)</span> が高くなることがわかります。</p>
 <h3 id="2">(2)</h3>
-<p>任意の温度 <span class="arithmatex">\(T\)</span> における励起状態の最大収容量 <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T)\)</span> の式を眺めると，温度以外のすべてのパラメータ（ <span class="arithmatex">\(V, m, h, k_B\)</span> など）は共通しています。</p>
+<p>任意の温度 <span class="arithmatex">\(T\)</span> における励起状態の最大収容量 <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T)\)</span> の式を眺めると，温度以外のすべてのパラメータ <span class="arithmatex">\(V, m, h, k_B\)</span>は共通しています。</p>
 <div class="arithmatex">\[
 N_{\mathrm{ex}}^{\max}(T) \propto T^{3/2}
 \]</div>
@@ -14587,8 +14587,8 @@ N_{\mathrm{ex}}^{\max}(T) \propto T^{3/2}
 N_{\mathrm{ex}}^{\max}(T) = N \left( \frac{T}{T_c} \right)^{3/2}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>臨界温度以下（ <span class="arithmatex">\(T &lt; T_c\)</span> ）では，化学ポテンシャルが <span class="arithmatex">\(\mu = 0\)</span> に完全に固定され，励起状態は定員いっぱいの <span class="arithmatex">\(N_{\mathrm{ex}} = N_{\mathrm{ex}}^{\max}(T)\)</span> まで粒子を詰め込みます。</p>
-<p>系全体の全粒子数 <span class="arithmatex">\(N\)</span> は一定であるため，そこからあふれた残りの粒子がすべて基底状態の凝縮粒子数 <span class="arithmatex">\(N_0\)</span> になります。</p>
+<p>臨界温度以下 <span class="arithmatex">\(T &lt; T_c\)</span> では，化学ポテンシャルが <span class="arithmatex">\(\mu = 0\)</span> となり，<span class="arithmatex">\(N_{\mathrm{ex}} = N_{\mathrm{ex}}^{\max}(T)\)</span> が成り立ちます。</p>
+<p>系全体の全粒子数 <span class="arithmatex">\(N\)</span> は一定であるため，残りの粒子がすべて基底状態の凝縮粒子数 <span class="arithmatex">\(N_0\)</span> になります。</p>
 <div class="arithmatex">\[
 N_0 = N - N_{\mathrm{ex}} = N - N \left( \frac{T}{T_c} \right)^{3/2}
 \]</div>
@@ -14598,12 +14598,12 @@ N_0(T) = N \left[ 1 - \left( \frac{T}{T_c} \right)^{3/2} \right]
 \]</div>
 <p>この関数が示す物理的挙動は以下の通りです。</p>
 <ul>
-<li><strong>臨界温度（ <span class="arithmatex">\(T = T_c\)</span> ）のとき</strong>
+<li><strong>臨界温度<span class="arithmatex">\(T = T_c\)</span>のとき</strong>
   括弧の中身が <span class="arithmatex">\(1 - 1 = 0\)</span> となるため，凝縮粒子数は <span class="arithmatex">\(N_0 = 0\)</span> です。この温度からちょうど凝縮が始まり，基底状態へのマクロな粒子の流入がスタートします。</li>
-<li><strong>温度が下がるプロセス（ <span class="arithmatex">\(0 &lt; T &lt; T_c\)</span> ）</strong>
-  温度が下がるにつれて，熱運動の低下に伴い励起状態のキャパシティが <span class="arithmatex">\(T^{3/2}\)</span> のペースで急速に縮小していきます。その縮小した分を補うようにして，基底状態の占有数がマクロな規模で湧き上がるように増大していきます。</li>
-<li><strong>絶対零度（ <span class="arithmatex">\(T = 0\)</span> ）の極限</strong>
-  括弧の中身が <span class="arithmatex">\(1 - 0 = 1\)</span> となるため， <span class="arithmatex">\(N_0 = N\)</span> に達します。すべての励起状態の座席が完全に消滅し，系に存在するすべてのボース粒子が例外なくただ一つの基底状態（ <span class="arithmatex">\(\epsilon = 0\)</span> ）へと完全に凝縮した状態になります。</li>
+<li><strong>温度が下がるプロセス<span class="arithmatex">\(0 &lt; T &lt; T_c\)</span></strong>
+  温度が下がるにつれて，熱運動の低下に伴い励起状態の収容量が <span class="arithmatex">\(T^{3/2}\)</span> のペースで急速に縮小していきます。その縮小した分を補うようにして，基底状態の占有数がマクロな規模で湧き上がるように増大していきます。</li>
+<li><strong>絶対零度<span class="arithmatex">\(T = 0\)</span>の極限</strong>
+  括弧の中身が <span class="arithmatex">\(1 - 0 = 1\)</span> となるため， <span class="arithmatex">\(N_0 = N\)</span> に達します。すべての粒子が基底状態 <span class="arithmatex">\(\epsilon = 0\)</span> を占有します。</li>
 </ul>
 
 

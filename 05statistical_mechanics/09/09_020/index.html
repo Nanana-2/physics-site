@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12473,7 +12473,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12501,7 +12501,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14542,8 +14542,8 @@
 
 <h1 id="_1">粒子数揺らぎ</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の熱浴および粒子浴と平衡状態にある開放系（グランドカノニカルアンサンブル）を考える。</p>
-<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，系全体の微視的状態が大分配関数 <span class="arithmatex">\(\Xi(\beta, V, \mu) = \sum_N \sum_s \exp\left[ -\beta (E_{s,N} - \mu N) \right]\)</span> で制御されるとき，全粒子数 <span class="arithmatex">\(N\)</span> の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> および分散（揺らぎの大きさ） <span class="arithmatex">\(\langle (\Delta N)^2 \rangle = \langle N^2 \rangle - \langle N \rangle^2\)</span> について，以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が指定されたグランドカノニカル系を考える。</p>
+<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，系全体の微視的状態が大分配関数 <span class="arithmatex">\(\Xi(\beta, V, \mu) = \sum_N \sum_s \exp\left[ -\beta (E_{s,N} - \mu N) \right]\)</span> で制御されるとき，全粒子数 <span class="arithmatex">\(N\)</span> の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> および分散 <span class="arithmatex">\(\langle (\Delta N)^2 \rangle = \langle N^2 \rangle - \langle N \rangle^2\)</span> について，以下の問いに答えよ。</p>
 <p>(1) 粒子数の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> が，大分配関数の化学ポテンシャル <span class="arithmatex">\(\mu\)</span> による偏微分，あるいは大カノニカルポテンシャル <span class="arithmatex">\(\Phi = -k_B T \log \Xi\)</span> を用いて以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 \langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu} = -\frac{\partial \Phi}{\partial \mu}
@@ -14553,7 +14553,7 @@
 <div class="arithmatex">\[
 \langle (\Delta N)^2 \rangle = \frac{k_B T \langle N \rangle^2}{V} \kappa_T
 \]</div>
-<p>この関係式に基づき，マクロな系（ <span class="arithmatex">\(\langle N \rangle \sim 10^{23}\)</span> ）における粒子数の相対揺らぎ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta N)^2 \rangle}}{\langle N \rangle}\)</span> の大きさを通常の相（等温圧縮率が有限の値をとる状態）において見積もれ。また，気液臨界点などで等温圧縮率が異常に増大（発散）するとき，粒子数の揺らぎがマクロにどのような現象を引き起こすか説明せよ。</p>
+<p>この関係式に基づき，マクロな系<span class="arithmatex">\(\langle N \rangle \sim 10^{23}\)</span>における粒子数の相対揺らぎ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta N)^2 \rangle}}{\langle N \rangle}\)</span> の大きさを等温圧縮率が有限な通常の相において見積もれ。また，気液臨界点などで等温圧縮率が異常に増大するとき，粒子数の揺らぎがマクロにどのような現象を引き起こすか説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14590,25 +14590,22 @@ P_{s,N} = \frac{\exp\left[ -\beta(E_{s,N} - \mu N) \right]}{\Xi}
 <div class="arithmatex">\[
 \frac{\partial \langle N \rangle}{\partial \mu} = \frac{1}{\beta} \left[ -\frac{1}{\Xi^2} (\beta \Xi \langle N \rangle)^2 + \frac{1}{\Xi} (\beta^2 \Xi \langle N^2 \rangle) \right] = \beta \left( \langle N^2 \rangle - \langle N \rangle^2 \right) = \beta \langle (\Delta N)^2 \rangle
 \]</div>
-<p>両辺を <span class="arithmatex">\(\beta\)</span> で割る（ <span class="arithmatex">\(k_B T\)</span> を掛ける）ことで，粒子数の揺らぎが，化学ポテンシャルの変化に対する粒子数のマクロな応答係数に比例するという重要な関係式が得られます。</p>
+<p>両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，粒子数の揺らぎが，化学ポテンシャルの変化に対する粒子数のマクロな応答係数に比例するという関係式が得られます。</p>
 <div class="arithmatex">\[
 \langle (\Delta N)^2 \rangle = k_B T \frac{\partial \langle N \rangle}{\partial \mu}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>通常の相（気体や液体など，圧縮率 <span class="arithmatex">\(\kappa_T\)</span> が有限の値をとる状態）において，粒子数に依存するスケーリングを評価します。平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> および体積 <span class="arithmatex">\(V\)</span> は示量性変数であり，その比である密度は一定であるため， <span class="arithmatex">\(\langle N \rangle \propto V\)</span> です。
+<p>通常の相において，粒子数に依存するスケーリングを評価します。平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> および体積 <span class="arithmatex">\(V\)</span> は示量性変数であり，その比である密度は一定であるため， <span class="arithmatex">\(\langle N \rangle \propto V\)</span> です。
 与えられた圧縮率を用いた式より，粒子数の分散のオーダーを求めます。</p>
 <div class="arithmatex">\[
 \langle (\Delta N)^2 \rangle = \frac{k_B T \langle N \rangle^2}{V} \kappa_T \propto \frac{\langle N \rangle^2}{\langle N \rangle} = \langle N \rangle
 \]</div>
-<p>したがって，粒子数の標準偏差（揺らぎの絶対幅）は <span class="arithmatex">\(\sqrt{\langle N \rangle}\)</span> のオーダーとなり，平均値に対する相対揺らぎは以下のようになります。</p>
+<p>したがって，粒子数の標準偏差は <span class="arithmatex">\(\sqrt{\langle N \rangle}\)</span> のオーダーとなり，平均値に対する相対揺らぎは以下のようになります。</p>
 <div class="arithmatex">\[
 \frac{\sqrt{\langle (\Delta N)^2 \rangle}}{\langle N \rangle} \propto \frac{\sqrt{\langle N \rangle}}{\langle N \rangle} = \frac{1}{\sqrt{\langle N \rangle}}
 \]</div>
-<p>通常の相であれば，マクロな系（ <span class="arithmatex">\(\langle N \rangle \sim 10^{23}\)</span> ）においてこの値は <span class="arithmatex">\(10^{-11}\)</span> 程度と極めて小さく，カノニカル分布などと同様に粒子数の揺らぎは完全に無視できます。</p>
-<p><strong>臨界点における物理現象（臨界乳光）</strong></p>
-<p>しかし，物質が気液臨界点に達すると，気体と液体の境界が消失し，系は極めて押し潰されやすい状態になります。すなわち，等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span> がマクロに発散（ <span class="arithmatex">\(\kappa_T \to \infty\)</span> ）します。</p>
-<p>圧縮率が発散すると，(3) の式に従って粒子数の揺らぎの幅も急激に増大し，相対揺らぎが <span class="arithmatex">\(\frac{1}{\sqrt{N}}\)</span> の枠を超えてマクロな規模へと跳ね上がります。これは，容器の内部で，分子が非常に密に集まった領域（液体的クラスター）と，非常にスカスカな領域（気体的クラスター）の境界が，目で見えるほどの巨視的なスケール（可視光の波長と同程度以上）で絶えず激しく発生・消滅を繰り返すことを意味します。</p>
-<p>このマクロな密度揺らぎ（粒子数揺らぎ）によって，容器に照射された可視光線が四方八方へと強く散乱されるようになり，もともと透明だった流体が突如として牛乳のように白濁する現象が引き起こされます。この現象は<strong>臨界乳光</strong>と呼ばれ，ミクロな統計統計力学的揺らぎがマクロな光学現象として直接観察される代表的な例となっています。</p>
+<p>通常の相では，<span class="arithmatex">\(\langle N \rangle \sim 10^{23}\)</span> のとき相対揺らぎは <span class="arithmatex">\(10^{-11}\)</span> 程度となります。</p>
+<p>気液臨界点で <span class="arithmatex">\(\kappa_T\)</span> が発散すると，(3) の式より粒子数の揺らぎも増大します。これに伴う大きな密度揺らぎは可視光を強く散乱し，臨界乳光を生じさせます。</p>
 
 
 

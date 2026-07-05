@@ -12166,7 +12166,7 @@
   <span class="md-ellipsis">
     
   
-    ゾンマーフェルト展開と電子比熱
+    ゾンマーフェルト展開と電子熱容量
   
 
     
@@ -12583,7 +12583,7 @@
   <span class="md-ellipsis">
     
   
-    アインシュタイン模型の固体比熱
+    アインシュタイン模型による固体の熱容量
   
 
     
@@ -12611,7 +12611,7 @@
   <span class="md-ellipsis">
     
   
-    デバイ模型の固体比熱
+    デバイ模型による固体の熱容量
   
 
     
@@ -14542,16 +14542,20 @@
 
 <h1 id="_1">光子気体と化学ポテンシャル</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある空洞の内部に閉じ込められた電磁波（光子気体）を考える。光子はスピン 1 のボース粒子であり，ボース・アインシュタイン統計に従う。以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある空洞内の光子気体を考える。光子はスピン 1 のボース粒子であり，ボース・アインシュタイン統計に従う。以下の問いに答えよ。</p>
 <p>(1) 通常の理想気体では，全粒子数 <span class="arithmatex">\(N\)</span> が一定であるという拘束条件が存在するため，大カノニカル分布における大分配関数を構成する際に化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が重要な役割を果たす。しかし，光子気体では空洞の壁との間で光子の吸収や放出が絶えず行われており，全粒子数 <span class="arithmatex">\(N\)</span> を一定に保つ拘束条件が存在しない。</p>
-<p>一定の温度 <span class="arithmatex">\(T\)</span> と体積 <span class="arithmatex">\(V\)</span> のもとで，系のヘルムホルツの自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> が最小化されるという熱力学的な平衡条件から，光子気体の化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が厳密にゼロ（ <span class="arithmatex">\(\mu = 0\)</span> ）でなければならないことを示せ。</p>
-<p>(2) (1) の結果に基づき，エネルギー <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> （ <span class="arithmatex">\(\omega\)</span> は光子の角振動数）を持つ特定の光子状態における平均占有数（プランク分布）の式を， <span class="arithmatex">\(\hbar, \omega, k_B, T\)</span> を用いて記述せよ。</p>
-<p>(3) ボース粒子の統計力学において，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> は通常，基底状態のエネルギー（ <span class="arithmatex">\(\epsilon_0 = 0\)</span> ）よりも小さくなければならないという制限（ <span class="arithmatex">\(\mu &lt; 0\)</span> ）があった。光子気体において <span class="arithmatex">\(\mu = 0\)</span> という極限値が許され，かつ低温にしても理想ボース気体のようなボース・アインシュタイン凝縮（特定の基底状態への粒子のマクロな滞留）が発生しない理由を，光子のエネルギーと粒子数の変動性の観点から説明せよ。</p>
+<p>一定の温度 <span class="arithmatex">\(T\)</span> と体積 <span class="arithmatex">\(V\)</span> のもとで，系のヘルムホルツの自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> が最小化されるという熱力学的な平衡条件から，光子気体の化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が厳密にゼロ<span class="arithmatex">\(\mu = 0\)</span>でなければならないことを示せ。</p>
+<p>(2) 光子の角振動数を <span class="arithmatex">\(\omega\)</span> とする。(1) の結果に基づき，エネルギー <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> を持つ光子状態の平均占有数を，<span class="arithmatex">\(\hbar, \omega, k_B, T\)</span> を用いて表せ。</p>
+<p>(3) 単位体積・単位角振動数あたりの光子の状態密度を</p>
+<div class="arithmatex">\[
+g(\omega)=\frac{\omega^2}{\pi^2c^3}
+\]</div>
+<p>とする。全光子数 <span class="arithmatex">\(N_\gamma\)</span> を積分で表し，変数変換 <span class="arithmatex">\(x=\hbar\omega/(k_BT)\)</span> によって <span class="arithmatex">\(N_\gamma\propto VT^3\)</span> を示せ。この結果から <span class="arithmatex">\(T\to0\)</span> における光子数の極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>熱力学の基本関係式によると，一定の温度 <span class="arithmatex">\(T\)</span> と体積 <span class="arithmatex">\(V\)</span> のもとで熱平衡状態にある系では，ヘルムホルツの自由エネルギー <span class="arithmatex">\(F\)</span> が最小値をとります。
-もし粒子数 <span class="arithmatex">\(N\)</span> が自由に変形できる（拘束条件がない）のであれば，系は自由エネルギー <span class="arithmatex">\(F\)</span> が粒子数 <span class="arithmatex">\(N\)</span> に関して極小（最小）となるような粒子数を自発的に選択します。したがって， <span class="arithmatex">\(N\)</span> に関する偏微分がゼロになります。</p>
+もし粒子数 <span class="arithmatex">\(N\)</span> が自由に変形できるためのであれば，系は自由エネルギー <span class="arithmatex">\(F\)</span> が粒子数 <span class="arithmatex">\(N\)</span> に関して最小となるような粒子数を自発的に選択します。したがって， <span class="arithmatex">\(N\)</span> に関する偏微分がゼロになります。</p>
 <div class="arithmatex">\[
 \left( \frac{\partial F}{\partial N} \right)_{T, V} = 0
 \]</div>
@@ -14574,11 +14578,23 @@
 \]</div>
 <p>この式はプランク分布，あるいはプランクの放射公式と呼ばれ，量子力学の幕開けを飾った黒体放射のエネルギー分布を説明する式となります。</p>
 <h3 id="3">(3)</h3>
-<p>物質粒子（例えばヘリウム4の原子など）の理想ボース気体では，温度を下げていくと，全粒子数 <span class="arithmatex">\(N\)</span> を一定に保ったまま励起状態のキャパシティが減少していくため，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が 0 に向かって上昇し，最終的にあふれた粒子が基底状態（ <span class="arithmatex">\(\epsilon = 0\)</span> ）に凝縮せざるを得ませんでした。</p>
-<p>しかし光子気体では，そもそも全粒子数を一定に保つ必要がありません。温度 <span class="arithmatex">\(T\)</span> を下げていくと，分母の指数関数が大きくなるため，すべての励起状態における光子の平均占有数（定員）は一斉に減少します。</p>
-<p>このとき，あふれた光子たちは基底状態へと移るのではなく，空洞の壁に吸収されて<strong>系から完全に消滅（消去）</strong>します。温度が下がるにつれて，光子気体は単に全体の粒子数 <span class="arithmatex">\(N\)</span> 自体を自発的に減らしていく性質を持っています。</p>
-<p>さらに，光子のエネルギーは <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> であり，角振動数 <span class="arithmatex">\(\omega = 0\)</span> （波長が無限大，または運動量がゼロ）の光子というのは物理的に存在しない（エネルギーがゼロの光子は存在しないことと同義）ため，粒子が溜まるべき基底状態そのものが最初から存在しません。</p>
-<p>このように，粒子数の保存則が存在せず，熱力学的な要請から <span class="arithmatex">\(\mu = 0\)</span> に最初から固定されているため，光子気体では温度をどれほど下げてもボース・アインシュタイン凝縮のような相転移は起こらず，単に光子の総数が減少して絶対零度で完全に空っぽの真空（光子数がゼロの状態）へと向かうことになります。</p>
+<p>全光子数は状態密度と平均占有数を用いて</p>
+<div class="arithmatex">\[
+N_\gamma=V\int_0^\infty
+\frac{\omega^2}{\pi^2c^3}
+\frac{d\omega}{\exp(\hbar\omega/k_BT)-1}
+\]</div>
+<p>と表されます。<span class="arithmatex">\(x=\hbar\omega/(k_BT)\)</span> とおくと</p>
+<div class="arithmatex">\[
+N_\gamma=\frac{V}{\pi^2c^3}
+\left(\frac{k_BT}{\hbar}\right)^3
+\int_0^\infty\frac{x^2}{e^x-1}\,dx
+\]</div>
+<p>となるため，<span class="arithmatex">\(N_\gamma\propto VT^3\)</span> です。したがって</p>
+<div class="arithmatex">\[
+\lim_{T\to0}N_\gamma=0
+\]</div>
+<p>となります。光子数は保存されず，温度の低下とともに光子が空洞壁へ吸収されるため，余った粒子が基底状態へ蓄積することはありません。</p>
 
 
 
