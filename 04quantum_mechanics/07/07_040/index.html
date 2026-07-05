@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">シュテルン・ゲルラッハ実験</h1>
 <h2 id="_2">問題</h2>
-<p>古典的な磁気モーメントを持つ粒子が不均一な磁場中を通過すると，磁場から受ける力によってその軌道が連続的に曲げられる。しかし，電子などのスピン <span class="arithmatex">\(1/2\)</span> 粒子を用いた実験では，軌道は連続的に広がらず，スピンの成分に応じて離散的な2本のビームに完全に分裂する。ここでは，不均一磁場が粒子に及ぼす力を定式化し，この実験が持つ量子力学的な測定の意味を考える。</p>
+<p>古典的な磁気モーメントを持つ粒子が不均一な磁場中を通過すると，磁場から受ける力によって軌道が連続的に曲げられる。一方，スピン <span class="arithmatex">\(1/2\)</span> 粒子のビームは，スピン成分に応じた2本に分裂する。</p>
 <p><span class="arithmatex">\(z\)</span> 軸方向に強い成分を持ち，かつ <span class="arithmatex">\(z\)</span> 軸方向に沿って強さが変化する不均一磁場 <span class="arithmatex">\(\boldsymbol{B} = (0, 0, B_z(z))\)</span> を考える。磁場の勾配を <span class="arithmatex">\(\frac{\partial B_z}{\partial z}\)</span> とする。</p>
 <p>この磁場中を通過する磁気モーメント <span class="arithmatex">\(\boldsymbol{\mu}\)</span> の粒子が受けるポテンシャルエネルギーは <span class="arithmatex">\(V = -\boldsymbol{\mu} \cdot \boldsymbol{B}\)</span> である。スピン <span class="arithmatex">\(1/2\)</span> 粒子の磁気モーメントは，磁気回転比 <span class="arithmatex">\(\gamma\)</span> とスピン演算子 <span class="arithmatex">\(\boldsymbol{S}\)</span> を用いて <span class="arithmatex">\(\boldsymbol{\mu} = \gamma \boldsymbol{S}\)</span> と表されるため，ポテンシャルは以下のように与えられる。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14551,7 @@
 <p>以下の問いに答えよ。</p>
 <p>(1) 粒子が受ける <span class="arithmatex">\(z\)</span> 方向の力は，ポテンシャルの微分演算子を用いて <span class="arithmatex">\(\hat{F}_z = -\frac{\partial \hat{V}}{\partial z}\)</span> と定義される。この力演算子 <span class="arithmatex">\(\hat{F}_z\)</span> を，スピン成分 <span class="arithmatex">\(\hat{S}_z\)</span> と磁場勾配を用いて表せ。</p>
 <p>(2) 磁場を通過する粒子の状態が <span class="arithmatex">\(\hat{S}_z\)</span> の固有状態である上向き状態 <span class="arithmatex">\(|+\rangle\)</span> または下向き状態 <span class="arithmatex">\(|-\rangle\)</span> であるとき，それぞれの状態の粒子が受ける力 <span class="arithmatex">\(F_+\)</span> および <span class="arithmatex">\(F_-\)</span> を求めよ。また，これらの力が粒子の軌道にどのような影響を与えるか，古典力学の予想との違いに触れて説明せよ。</p>
-<p>(3) スピンが <span class="arithmatex">\(x\)</span> 軸上向きの固有状態 <span class="arithmatex">\(|\psi\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span> である粒子を，この不均一磁場（ <span class="arithmatex">\(z\)</span> 軸方向の測定器）に進入させたとする。このとき，測定器を通過した直後に粒子が検出される位置の分布と，それぞれの位置に分裂する確率を求めよ。</p>
+<p>(3) <span class="arithmatex">\(x\)</span> 軸上向きのスピン固有状態 <span class="arithmatex">\(|\psi\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span> にある粒子を，<span class="arithmatex">\(z\)</span> 軸方向を測定する不均一磁場に入射させる。測定器の通過後に粒子が検出される位置と，各位置での検出確率を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14577,7 +14577,7 @@
 \]</div>
 <p>したがって，受ける力は <span class="arithmatex">\(F_- = -\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}\)</span> となります。</p>
 <p>古典力学では，粒子の持つ磁気モーメントの向きは連続的にあらゆる方向を向くことができるため，受ける力も連続的な分布をとり，スクリーン上の衝突位置は一本の線状に広がると予想されます。</p>
-<p>しかし量子力学では，力が <span class="arithmatex">\(\hat{S}_z\)</span> の固有値に対応する <span class="arithmatex">\(F_+\)</span> と <span class="arithmatex">\(F_-\)</span> のふたつの値しかとらないため，ビームは上下の2本に完全に分裂し，スクリーン上には離散的な2つの点として記録されます。</p>
+<p>しかし量子力学では，力が <span class="arithmatex">\(\hat{S}_z\)</span> の固有値に対応する <span class="arithmatex">\(F_+\)</span> と <span class="arithmatex">\(F_-\)</span> のふたつの値しかとらないため，ビームは上下の2本に分裂し，スクリーン上には離散的な2つの点として記録されます。</p>
 <h3 id="3">(3)</h3>
 <p>進入させる初期状態を，ハミルトニアンおよび力演算子の固有状態である <span class="arithmatex">\(z\)</span> 軸の基底で展開します。</p>
 <div class="arithmatex">\[
@@ -14587,10 +14587,10 @@
 <p>測定器を通過すると，状態 <span class="arithmatex">\(|+\rangle\)</span> の成分は (2) で求めた力 <span class="arithmatex">\(F_+\)</span> を受けて上側に曲げられ，状態 <span class="arithmatex">\(|-\rangle\)</span> の成分は力 <span class="arithmatex">\(F_-\)</span> を受けて下側に曲げられます。これにより，空間的な検出位置は上側と下側の2箇所に分裂します。</p>
 <p>それぞれの位置に粒子が到達する確率は，各固有状態の展開係数の絶対値の2乗で与えられます。</p>
 <ul>
-<li>上側の位置（スピン上向き）に検出される確率： <span class="arithmatex">\(P_+ = \left| \frac{1}{\sqrt{2}} \right|^2 = \frac{1}{2}\)</span></li>
-<li>下側の位置（スピン下向き）に検出される確率： <span class="arithmatex">\(P_- = \left| \frac{1}{\sqrt{2}} \right|^2 = \frac{1}{2}\)</span></li>
+<li>上側，すなわちスピン上向きの位置での検出確率： <span class="arithmatex">\(P_+ = \left| \frac{1}{\sqrt{2}} \right|^2 = \frac{1}{2}\)</span></li>
+<li>下側，すなわちスピン下向きの位置での検出確率： <span class="arithmatex">\(P_- = \left| \frac{1}{\sqrt{2}} \right|^2 = \frac{1}{2}\)</span></li>
 </ul>
-<p>このように，事前に <span class="arithmatex">\(x\)</span> 軸方向にスピンが確定していた粒子であっても， <span class="arithmatex">\(z\)</span> 軸方向の測定器に通した瞬間に状態の射影が起こり， <span class="arithmatex">\(50\%\)</span> ずつの一様な確率で上下に振り分けられます。</p>
+<p>したがって，<span class="arithmatex">\(x\)</span> 軸上向きの状態にある粒子を <span class="arithmatex">\(z\)</span> 軸方向に測定すると，上向きと下向きがそれぞれ <span class="arithmatex">\(50\%\)</span> の確率で得られます。</p>
 
 
 

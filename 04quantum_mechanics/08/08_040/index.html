@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">水素原子の波動関数</h1>
 <h2 id="_2">問題</h2>
-<p>水素原子の定常状態を表す波動関数は，動径方程式の解である動径関数 <span class="arithmatex">\(R_{n,l}(r)\)</span> と，角度方程式の解である球面調和関数 <span class="arithmatex">\(Y_{l,m}(\theta, \phi)\)</span> の積として構成される。これらの関数に含まれる3つの量子数は，系の物理量の量子化と軌道の空間的な分布に直接関連している。ここでは，具体的な波動関数の数式から，電子の存在確率の分布と各量子数の物理的な意味を解析する。</p>
+<p>水素原子の定常状態を表す波動関数は，動径関数 <span class="arithmatex">\(R_{n,l}(r)\)</span> と球面調和関数 <span class="arithmatex">\(Y_{l,m}(\theta, \phi)\)</span> の積で表される。これらの関数に含まれる3つの量子数は，物理量の量子化と軌道の空間分布に対応する。</p>
 <p>主量子数 <span class="arithmatex">\(n=2\)</span> ，軌道角運動量量子数 <span class="arithmatex">\(l=1\)</span> ，磁気量子数 <span class="arithmatex">\(m=0\)</span> に対応する水素原子の波動関数 <span class="arithmatex">\(\psi_{2,1,0}(r, \theta, \phi)\)</span> は，ボーア半径 <span class="arithmatex">\(a_0 = \frac{4\pi\varepsilon_0 \hbar^2}{me^2}\)</span> を用いて以下のように与えられる。</p>
 <div class="arithmatex">\[
 \psi_{2,1,0}(r, \theta, \phi) = R_{2,1}(r) Y_{1,0}(\theta, \phi)
@@ -14552,7 +14552,7 @@ R_{2,1}(r) = \frac{1}{\sqrt{24} a_0^{3/2}} \frac{r}{a_0} e^{-r/2a_0}, \quad Y_{1
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 量子数 <span class="arithmatex">\(n, l, m\)</span> のそれぞれについて，その名称と，各量子数が決定する物理量を示せ。</p>
-<p>(2) 電子が，中心からの距離 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(r+dr\)</span> の間にある球殻内に見出される確率を動径分布関数 <span class="arithmatex">\(D(r)\)</span> と呼ぶ。 <span class="arithmatex">\(D(r) = r^2 |R_{2,1}(r)|^2\)</span> で定義される動径分布関数の具体的な数式を求めよ。また， <span class="arithmatex">\(D(r)\)</span> が最大値をとる距離 <span class="arithmatex">\(r_{\text{max}}\)</span> を <span class="arithmatex">\(a_0\)</span> を用いて表せ。</p>
+<p>(2) 電子が，中心からの距離 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(r+dr\)</span> の間にある球殻内に見出される確率を動径分布関数 <span class="arithmatex">\(D(r)\)</span> と呼ぶ。 <span class="arithmatex">\(D(r) = r^2 |R_{2,1}(r)|^2\)</span> で定義される動径分布関数の数式を求めよ。また， <span class="arithmatex">\(D(r)\)</span> が最大値をとる距離 <span class="arithmatex">\(r_{\text{max}}\)</span> を <span class="arithmatex">\(a_0\)</span> を用いて表せ。</p>
 <p>(3) 波動関数の角度部分の絶対値の2乗 <span class="arithmatex">\(|Y_{1,0}(\theta, \phi)|^2\)</span> の <span class="arithmatex">\(\theta\)</span> 依存性を調べよ。 <span class="arithmatex">\(\theta = 0\)</span>， <span class="arithmatex">\(\frac{\pi}{2}\)</span>， <span class="arithmatex">\(\pi\)</span> の各方向における存在確率の大きさを比較し，この軌道が空間的にどのような方向に広がっているか説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14561,13 +14561,13 @@ R_{2,1}(r) = \frac{1}{\sqrt{24} a_0^{3/2}} \frac{r}{a_0} e^{-r/2a_0}, \quad Y_{1
 <ul>
 <li><strong>主量子数 <span class="arithmatex">\(n\)</span></strong></li>
 </ul>
-<p>エネルギーの大きさを決定する量子数です。水素原子の場合，電子のエネルギー準位は <span class="arithmatex">\(E_n \propto -1/n^2\)</span> となり，この量子数だけで決定されます。また，電子軌道の平均的な広がり（半径）の目安も与えます。
+<p>エネルギーの大きさを決定する量子数です。水素原子では <span class="arithmatex">\(E_n \propto -1/n^2\)</span> となります。また，電子軌道の平均半径の目安も与えます。
 * <strong>軌道角運動量量子数 <span class="arithmatex">\(l\)</span></strong></p>
-<p>軌道角運動量の大きさを決定する量子数です。演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> の固有値が <span class="arithmatex">\(l(l+1)\hbar^2\)</span> となることに対応し，電子軌道の立体的な形状（s軌道やp軌道などの種類）を指定します。</p>
+<p>軌道角運動量の大きさを決定する量子数です。演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> の固有値 <span class="arithmatex">\(l(l+1)\hbar^2\)</span> に対応し，s軌道やp軌道などの軌道の形状を指定します。</p>
 <ul>
 <li><strong>磁気量子数 <span class="arithmatex">\(m\)</span></strong></li>
 </ul>
-<p>軌道角運動量の <span class="arithmatex">\(z\)</span> 成分を決定する量子数です。演算子 <span class="arithmatex">\(\hat{J}_z\)</span> の固有値が <span class="arithmatex">\(m\hbar\)</span> となることに対応し，軌道が空間のどの向きに配向しているか（空間方向の異方性）を指定します。</p>
+<p>軌道角運動量の <span class="arithmatex">\(z\)</span> 成分を決定する量子数です。演算子 <span class="arithmatex">\(\hat{J}_z\)</span> の固有値 <span class="arithmatex">\(m\hbar\)</span> に対応し，軌道の空間的な向きを指定します。</p>
 <h3 id="2">(2)</h3>
 <p>与えられた動径関数 <span class="arithmatex">\(R_{2,1}(r)\)</span> の数式を 2乗して <span class="arithmatex">\(r^2\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
@@ -14593,9 +14593,9 @@ D(r) = r^2 |R_{2,1}(r)|^2 = \frac{r^4}{24 a_0^5} e^{-r/a_0}
 \]</div>
 <p>この関数は方位角 <span class="arithmatex">\(\phi\)</span> には依存せず，極角 <span class="arithmatex">\(\theta\)</span> にのみ依存します。各角度における値を調べます。</p>
 <ul>
-<li><span class="arithmatex">\(\theta = 0\)</span> （ <span class="arithmatex">\(z\)</span> 軸正の方向）： <span class="arithmatex">\(\cos^2 0 = 1\)</span> となり，値は最大値 <span class="arithmatex">\(\frac{3}{4\pi}\)</span> をとります。</li>
-<li><span class="arithmatex">\(\theta = \pi\)</span> （ <span class="arithmatex">\(z\)</span> 軸負の方向）： <span class="arithmatex">\(\cos^2 \pi = (-1)^2 = 1\)</span> となり，同じく最大値 <span class="arithmatex">\(\frac{3}{4\pi}\)</span> をとります。</li>
-<li><span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> （ <span class="arithmatex">\(xy\)</span> 平面上の方向）： <span class="arithmatex">\(\cos^2 \frac{\pi}{2} = 0\)</span> となり，値は 0 になります。</li>
+<li><span class="arithmatex">\(z\)</span> 軸正方向の <span class="arithmatex">\(\theta = 0\)</span> では，<span class="arithmatex">\(\cos^2 0 = 1\)</span> となり，最大値 <span class="arithmatex">\(\frac{3}{4\pi}\)</span> をとります。</li>
+<li><span class="arithmatex">\(z\)</span> 軸負方向の <span class="arithmatex">\(\theta = \pi\)</span> でも，<span class="arithmatex">\(\cos^2 \pi = 1\)</span> となり，同じ最大値をとります。</li>
+<li><span class="arithmatex">\(xy\)</span> 平面上の <span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> では，<span class="arithmatex">\(\cos^2 \frac{\pi}{2} = 0\)</span> となります。</li>
 </ul>
 <p>この比較から，この定常状態にある電子は， <span class="arithmatex">\(xy\)</span> 平面上には全く存在せず， <span class="arithmatex">\(z\)</span> 軸に沿った上下の方向に強く引き伸ばされた，亜鈴型の空間分布を持っていることが分かります。これは化学における <span class="arithmatex">\(2\text{p}_z\)</span> 軌道に相当します。</p>
 

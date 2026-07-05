@@ -14543,7 +14543,7 @@
 <h1 id="_1">スピン軌道相互作用</h1>
 <p>※摂動論を学習後に見ることを推奨します。</p>
 <h2 id="_2">問題</h2>
-<p>電子が原子核の周りを運動するとき，電子の静止系から見ると，正に帯電した原子核の運動によって有効的な磁場が生じる。この磁場と電子の持つスピン磁気モーメントが相互作用を起こすことで，ハミルトニアンにスピン軌道相互作用項が加わる。ここでは，この相互作用を摂動論によって扱い，全角運動量量子数に応じてエネルギー準位がどのように分裂するかを解析する。</p>
+<p>電子の静止系では，正に帯電した原子核の運動によって有効磁場が生じる。この磁場と電子のスピン磁気モーメントとの相互作用を，スピン軌道相互作用と呼ぶ。</p>
 <p>水素様原子におけるスピン軌道相互作用のハミルトニアン <span class="arithmatex">\(\hat{H}_{\text{SO}}\)</span> は，軌道角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}\)</span> とスピン角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{S}}\)</span> を用いて以下のように与えられる。</p>
 <div class="arithmatex">\[
 \hat{H}_{\text{SO}} = \xi(r) \hat{\boldsymbol{L}} \cdot \hat{\boldsymbol{S}}
@@ -14552,7 +14552,7 @@
 <p>この相互作用を考慮するため，全角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{J}} = \hat{\boldsymbol{L}} + \hat{\boldsymbol{S}}\)</span> を導入する。系の状態は，主量子数 <span class="arithmatex">\(n\)</span> ，軌道角運動量量子数 <span class="arithmatex">\(l\)</span> ，スピン量子数 <span class="arithmatex">\(s = 1/2\)</span> ，および全角運動量量子数 <span class="arithmatex">\(j\)</span> を用いた共同固有状態 <span class="arithmatex">\(|n, l, s, j, m_j\rangle\)</span> を基底として展開される。以下の問いに答えよ。</p>
 <p>(1) 全角運動量演算子の2乗 <span class="arithmatex">\(\hat{\boldsymbol{J}}^2\)</span> の定義式を展開することにより，スピン軌道相互作用の演算子部分である内積 <span class="arithmatex">\(\hat{\boldsymbol{L}} \cdot \hat{\boldsymbol{S}}\)</span> を， <span class="arithmatex">\(\hat{\boldsymbol{J}}^2\)</span> ， <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> ， <span class="arithmatex">\(\hat{\boldsymbol{S}}^2\)</span> を用いて表せ。</p>
 <p>(2) 状態 <span class="arithmatex">\(|n, l, s, j, m_j\rangle\)</span> に対する演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}} \cdot \hat{\boldsymbol{S}}\)</span> の固有値方程式を求めよ。固有値を <span class="arithmatex">\(l\)</span> と <span class="arithmatex">\(j\)</span> および <span class="arithmatex">\(\hbar\)</span> を用いて表せ。ただし， <span class="arithmatex">\(s = 1/2\)</span> を代入して整理せよ。</p>
-<p>(3) 主量子数 <span class="arithmatex">\(n=2\)</span> ，軌道角運動量量子数 <span class="arithmatex">\(l=1\)</span> （ <span class="arithmatex">\(2\text{p}\)</span> 軌道）の状態を考える。全角運動量量子数 <span class="arithmatex">\(j\)</span> が取り得るすべての値を求めよ。また，動径方向の期待値を <span class="arithmatex">\(\langle \xi(r) \rangle_{n,l} = \zeta_{n,l}\)</span> と置くとき，それぞれの <span class="arithmatex">\(j\)</span> の状態におけるスピン軌道相互作用による1次のエネルギーシフト <span class="arithmatex">\(\Delta E_{\text{SO}}\)</span> を求めよ。</p>
+<p>(3) 主量子数 <span class="arithmatex">\(n=2\)</span>，軌道角運動量量子数 <span class="arithmatex">\(l=1\)</span> の <span class="arithmatex">\(2\text{p}\)</span> 軌道を考える。全角運動量量子数 <span class="arithmatex">\(j\)</span> の取り得る値をすべて求めよ。また，<span class="arithmatex">\(\langle \xi(r) \rangle_{n,l} = \zeta_{n,l}\)</span> とするとき，各 <span class="arithmatex">\(j\)</span> に対するスピン軌道相互作用の1次のエネルギーシフト <span class="arithmatex">\(\Delta E_{\text{SO}}\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14619,7 +14619,7 @@
 <div class="arithmatex">\[
   \Delta E_{\text{SO}} = \frac{\hbar^2}{2} (-2) \zeta_{2,1} = -\hbar^2 \zeta_{2,1}
 \]</div>
-<p>計算結果より，スピン軌道相互作用を考慮に入れることで，本来は完全に縮退していた <span class="arithmatex">\(2\text{p}\)</span> 軌道のエネルギー準位が，全角運動量量子数の違いによって <span class="arithmatex">\(j=3/2\)</span> の上側と <span class="arithmatex">\(j=1/2\)</span> の下側の 2つの準位へと分裂する現象が導かれました。</p>
+<p>スピン軌道相互作用により，縮退していた <span class="arithmatex">\(2\text{p}\)</span> 軌道のエネルギー準位は，<span class="arithmatex">\(j=3/2\)</span> と <span class="arithmatex">\(j=1/2\)</span> の2準位に分裂します。</p>
 
 
 

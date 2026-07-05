@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">動径方程式と有効ポテンシャル</h1>
 <h2 id="_2">問題</h2>
-<p>球対称な中心力場におけるシュレーディンガー方程式から導かれた動径方程式は，変数を適切に変換することにより，1次元のシュレーディンガー方程式と同等の形式に整理できる。このとき，元のポテンシャルに角運動量の効果が加わった有効ポテンシャルが現れる。ここでは，有効ポテンシャルの形を導き，粒子が束縛される条件を解析する。</p>
+<p>球対称な中心力場における動径方程式は，変数変換によって1次元のシュレーディンガー方程式と同じ形に整理できる。このとき，元のポテンシャルに角運動量の効果を加えた有効ポテンシャルが現れる。</p>
 <p>動径関数 <span class="arithmatex">\(R(r)\)</span> が満たすべき微分方程式は以下の通りである。</p>
 <div class="arithmatex">\[
 \frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) + \left[ \frac{2m}{\hbar^2} (E - V(r)) - \frac{l(l+1)}{r^2} \right] R(r) = 0
@@ -14556,8 +14556,8 @@
 <div class="arithmatex">\[
 \left[ -\frac{\hbar^2}{2m} \frac{d^2}{dr^2} + V_{\text{eff}}(r) \right] u(r) = E u(r)
 \]</div>
-<p>このとき，有効ポテンシャル <span class="arithmatex">\(V_{\text{eff}}(r)\)</span> の具体的な表式を <span class="arithmatex">\(V(r)\)</span> ， <span class="arithmatex">\(l\)</span> ， <span class="arithmatex">\(m\)</span> ， <span class="arithmatex">\(r\)</span> を用いて表せ。</p>
-<p>(3) ポテンシャルが引力クーロン場 <span class="arithmatex">\(V(r) = -\frac{k}{r}\)</span> （ <span class="arithmatex">\(k\)</span> は正の定数）であり，角運動量量子数が <span class="arithmatex">\(l \geq 1\)</span> のとき，有効ポテンシャル <span class="arithmatex">\(V_{\text{eff}}(r)\)</span> の概形を考えよ。 <span class="arithmatex">\(r \to 0\)</span> および <span class="arithmatex">\(r \to \infty\)</span> における挙動を調べ，粒子が束縛状態を形成し得るエネルギー <span class="arithmatex">\(E\)</span> の範囲を不等式で示せ。</p>
+<p>このとき，有効ポテンシャル <span class="arithmatex">\(V_{\text{eff}}(r)\)</span> の表式を <span class="arithmatex">\(V(r)\)</span> ， <span class="arithmatex">\(l\)</span> ， <span class="arithmatex">\(m\)</span> ， <span class="arithmatex">\(r\)</span> を用いて表せ。</p>
+<p>(3) 正の定数 <span class="arithmatex">\(k\)</span> に対して，引力クーロンポテンシャル <span class="arithmatex">\(V(r) = -\frac{k}{r}\)</span> と角運動量量子数 <span class="arithmatex">\(l \geq 1\)</span> を考える。有効ポテンシャル <span class="arithmatex">\(V_{\text{eff}}(r)\)</span> の概形を描き，<span class="arithmatex">\(r \to 0\)</span> および <span class="arithmatex">\(r \to \infty\)</span> における挙動と，束縛状態を形成し得るエネルギー <span class="arithmatex">\(E\)</span> の範囲を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14577,7 +14577,7 @@
 <div class="arithmatex">\[
 r \left[ \frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) \right] = 2 \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2}
 \]</div>
-<p>両者の右辺が完全に一致したため，等式が成立することが示されました。</p>
+<p>両者の右辺が一致したため，等式が成立することが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>元の動径方程式の全体に <span class="arithmatex">\(r\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
@@ -14597,7 +14597,7 @@ V_{\text{eff}}(r) = V(r) + \frac{\hbar^2 l(l+1)}{2m r^2}
 \]</div>
 <p>第2項は遠心力バリアに対応する項であり，角運動量を持つ粒子が中心に近づくことを妨げる働きをします。</p>
 <h3 id="3">(3)</h3>
-<p>具体的なポテンシャル <span class="arithmatex">\(V(r) = -\frac{k}{r}\)</span> を有効ポテンシャルの式に代入します。</p>
+<p>ポテンシャル <span class="arithmatex">\(V(r) = -\frac{k}{r}\)</span> を有効ポテンシャルの式に代入します。</p>
 <div class="arithmatex">\[
 V_{\text{eff}}(r) = -\frac{k}{r} + \frac{\hbar^2 l(l+1)}{2m r^2}
 \]</div>

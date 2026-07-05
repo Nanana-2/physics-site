@@ -14542,8 +14542,8 @@
 
 <h1 id="_1">変分法</h1>
 <h2 id="_2">問題</h2>
-<p>厳密な解法が知られていないハミルトニアンに対して，基底状態のエネルギーの近似値を見つけ出す手法として変分法がある。任意の規格化された状態におけるハミルトニアンの期待値は，その系の真の基底状態エネルギーよりも必ず大きくなるか，あるいは等しくなるという数学的性質を利用する。ここでは，パラメータを含む試行波動関数を構成し，ハミルトニアンの期待値を最小化することで，特定のポテンシャルにおける基底状態エネルギーの上限を評価する。</p>
-<p>質量 <span class="arithmatex">\(m\)</span> の粒子が，以下の絶対値に比例する1次元のポテンシャル <span class="arithmatex">\(V(x) = F|x|\)</span> （ただし <span class="arithmatex">\(F&gt;0\)</span> ）の中を運動するモデルを考える。この系のハミルトニアンは次の通りである。</p>
+<p>変分法では，任意の規格化された状態におけるハミルトニアンの期待値が，真の基底状態エネルギー以上になることを利用する。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> の粒子が，<span class="arithmatex">\(F&gt;0\)</span> として1次元ポテンシャル <span class="arithmatex">\(V(x) = F|x|\)</span> の中を運動する系を考える。ハミルトニアンは次の通りである。</p>
 <div class="arithmatex">\[
 \hat{H} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + F|x|
 \]</div>
@@ -14551,7 +14551,7 @@
 <div class="arithmatex">\[
 \psi(x) = \left( \frac{\alpha}{\pi} \right)^{1/4} e^{-\alpha x^2 / 2}
 \]</div>
-<p>この試行波動関数は，全空間にわたる積分においてあらかじめ規格化されている（ <span class="arithmatex">\(\int_{-\infty}^{\infty} |\psi(x)|^2 dx = 1\)</span> ）。以下の問いに答えよ。</p>
+<p>この試行波動関数は，<span class="arithmatex">\(\int_{-\infty}^{\infty} |\psi(x)|^2 dx = 1\)</span> を満たすように規格化されている。以下の問いに答えよ。</p>
 <p>(1) 試行波動関数における運動エネルギーの期待値 <span class="arithmatex">\(\langle K \rangle = \int_{-\infty}^{\infty} \psi(x) \left( -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} \right) \psi(x) dx\)</span> を計算せよ。必要であれば，以下のガウス積分の公式を利用せよ。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} e^{-\alpha x^2} dx = \sqrt{\frac{\pi}{\alpha}}, \quad \int_{-\infty}^{\infty} x^2 e^{-\alpha x^2} dx = \frac{1}{2\alpha}\sqrt{\frac{\pi}{\alpha}}

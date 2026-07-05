@@ -14564,8 +14564,8 @@
 
 <h1 id="_1">ランダウ準位</h1>
 <h2 id="_2">問題</h2>
-<p>一様な磁場の中を運動する二次元平面内の荷電粒子は，磁場に束縛されることで連続的なエネルギー状態をとることができなくなり，離散的なエネルギー準位へと量子化される。このエネルギー準位はランダウ準位と呼ばれ，各準位には非常に多くの状態が重なり合う巨大な縮退が存在する。ここでは，前問に引き続きランダウゲージを用いてハミルトニアンの固有値を決定し，その縮退度を領域の面積から算出する。</p>
-<p><span class="arithmatex">\(z\)</span> 軸の正の方向に一様な磁場 <span class="arithmatex">\(\boldsymbol{B} = (0, 0, B_0)\)</span> がかかっており，その中を運動する電荷 <span class="arithmatex">\(q\)</span> （ただし <span class="arithmatex">\(q&gt;0\)</span> ），質量 <span class="arithmatex">\(m\)</span> の粒子を考える。粒子の運動領域を <span class="arithmatex">\(x\)</span> 方向に長さ <span class="arithmatex">\(L_x\)</span> ， <span class="arithmatex">\(y\)</span> 方向に長さ <span class="arithmatex">\(L_y\)</span> を持つ面積 <span class="arithmatex">\(S = L_x L_y\)</span> の長方形の領域に制限する。 <span class="arithmatex">\(x\)</span> 方向には周期境界条件 <span class="arithmatex">\(\psi(x + L_x, y) = \psi(x, y)\)</span> を課す。</p>
+<p>一様な磁場中を運動する二次元の荷電粒子は，離散的なエネルギー準位をとる。この準位をランダウ準位と呼び，各準位には多数の状態が縮退している。</p>
+<p><span class="arithmatex">\(z\)</span> 軸の正方向に一様な磁場 <span class="arithmatex">\(\boldsymbol{B} = (0, 0, B_0)\)</span> がかかっている。電荷 <span class="arithmatex">\(q&gt;0\)</span>，質量 <span class="arithmatex">\(m\)</span> の粒子が，<span class="arithmatex">\(x\)</span> 方向の長さ <span class="arithmatex">\(L_x\)</span>，<span class="arithmatex">\(y\)</span> 方向の長さ <span class="arithmatex">\(L_y\)</span>，面積 <span class="arithmatex">\(S = L_xL_y\)</span> の長方形領域内を運動する。<span class="arithmatex">\(x\)</span> 方向には周期境界条件 <span class="arithmatex">\(\psi(x + L_x, y) = \psi(x, y)\)</span> を課す。</p>
 <p>ランダウゲージ <span class="arithmatex">\(\boldsymbol{A} = (-B_0 y, 0, 0)\)</span> を用いたときの二次元ハミルトニアンは以下の通りである。</p>
 <div class="arithmatex">\[
 \hat{H} = \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (\hat{p}_x + qB_0 y)^2
@@ -14602,7 +14602,7 @@ e^{i p_x (x + L_x) / \hbar} = e^{i p_x x / \hbar} \implies e^{i p_x L_x / \hbar}
 <div class="arithmatex">\[
 y_0 = -\frac{2\pi\hbar}{qB_0 L_x} k
 \]</div>
-<p>この中心位置 <span class="arithmatex">\(y_0\)</span> が，実空間の幅 <span class="arithmatex">\(0 \leq y_0 \leq L_y\)</span> の間に存在しなければ，波動関数が領域の外部で急激に減衰してしまい，系の中に存在できなくなります。電荷 <span class="arithmatex">\(q&gt;0\)</span> ，磁場 <span class="arithmatex">\(B_0&gt;0\)</span> であるとき， <span class="arithmatex">\(y_0 \geq 0\)</span> を満たすためには整数 <span class="arithmatex">\(k\)</span> は 0 または負の整数でなければなりません。符号を扱いやすくするため <span class="arithmatex">\(k = - \kappa\)</span> （ <span class="arithmatex">\(\kappa \geq 0\)</span> ）と置き換えて不等式を作ります。</p>
+<p>中心位置 <span class="arithmatex">\(y_0\)</span> は <span class="arithmatex">\(0 \leq y_0 \leq L_y\)</span> を満たす必要があります。<span class="arithmatex">\(q&gt;0\)</span>，<span class="arithmatex">\(B_0&gt;0\)</span> のとき，整数 <span class="arithmatex">\(k\)</span> は 0 または負の整数です。そこで <span class="arithmatex">\(\kappa \geq 0\)</span> として <span class="arithmatex">\(k = -\kappa\)</span> と置き，不等式を整理します。</p>
 <div class="arithmatex">\[
 0 \leq \frac{2\pi\hbar}{qB_0 L_x} \kappa \leq L_y
 \]</div>
@@ -14623,7 +14623,7 @@ N = 0 - \left( -\frac{qB_0 L_x L_y}{2\pi\hbar} \right) = \frac{qB_0 S}{2\pi\hbar
 <div class="arithmatex">\[
 N = \frac{B_0 S}{\frac{2\pi\hbar}{q}} = \frac{\Phi}{\Phi_0}
 \]</div>
-<p>計算結果より，1つのランダウ準位に属する状態の総数は，そのサンプルの面内を通過する全磁束が，量子力学的な最小単位である磁束量子をいくつ含むかという比率に完全に一致することが示されました。</p>
+<p>計算結果より，1つのランダウ準位に属する状態の総数は，そのサンプルの面内を通過する全磁束が，量子力学的な最小単位である磁束量子をいくつ含むかという比率に一致することが示されました。</p>
 
 
 

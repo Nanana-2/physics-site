@@ -14586,7 +14586,7 @@
 
 <h1 id="_1">二準位系のラビ振動と非共鳴への拡張</h1>
 <h2 id="_2">問題</h2>
-<p>外部から周期的な摂動を受ける二準位系において，外場の角振動数と二準位間の固有角振動数との関係性に応じて，状態間の遷移確率は強く制御される。ここでは，時間依存のシュレーディンガー方程式から出発し，まず完全な共鳴条件におけるラビ振動を導出する。さらに，外場とのズレを表すパラメータを導入した一般式へと拡張し，非共鳴状態における遷移確率の制限を解析する。</p>
+<p>周期的な摂動を受ける二準位系では，外場の角振動数と二準位間の固有角振動数との関係によって，状態間の遷移確率が変化する。共鳴条件のもとで状態間を周期的に遷移する現象を，ラビ振動と呼ぶ。</p>
 <p>非摂動ハミルトニアン <span class="arithmatex">\(\hat{H}_0\)</span> の固有状態を <span class="arithmatex">\(|1\rangle\)</span> および <span class="arithmatex">\(|2\rangle\)</span> とし，それぞれのエネルギー固有値を <span class="arithmatex">\(E_1 = 0\)</span> ， <span class="arithmatex">\(E_2 = \hbar \omega_0\)</span> とする。角振動数 <span class="arithmatex">\(\omega\)</span> の外場による相互作用項を <span class="arithmatex">\(\hat{V}(t)\)</span> とし，回転波近似を適用した全ハミルトニアン <span class="arithmatex">\(\hat{H}(t)\)</span> の行列要素を以下のように定義する。ただし， <span class="arithmatex">\(G\)</span> は実数の結合定数とする。</p>
 <div class="arithmatex">\[
 \langle 1|\hat{H}(t)|1\rangle = 0, \quad \langle 2|\hat{H}(t)|2\rangle = \hbar \omega_0
@@ -14601,8 +14601,8 @@ i \frac{dc_1(t)}{dt} = G e^{i\omega t} c_2(t)
 <div class="arithmatex">\[
 i \frac{dc_2(t)}{dt} = \omega_0 c_2(t) + G e^{-i\omega t} c_1(t)
 \]</div>
-<p>初期条件は時刻 <span class="arithmatex">\(t=0\)</span> で状態 <span class="arithmatex">\(|1\rangle\)</span> に完全に存在していた，すなわち <span class="arithmatex">\(c_1(0) = 1\)</span> ， <span class="arithmatex">\(c_2(0) = 0\)</span> とする。以下の問いに答えよ。</p>
-<p>(1) 外場の角振動数がエネルギー差と完全に一致する共鳴条件 <span class="arithmatex">\(\omega = \omega_0\)</span> を考える。このとき，新変数 <span class="arithmatex">\(b_2(t) = c_2(t) e^{i\omega_0 t}\)</span> を導入して連立微分方程式を書き換え，定数行列を持つ形に整理せよ。</p>
+<p>初期条件を <span class="arithmatex">\(c_1(0) = 1\)</span>，<span class="arithmatex">\(c_2(0) = 0\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) 外場の角振動数がエネルギー差と一致する共鳴条件 <span class="arithmatex">\(\omega = \omega_0\)</span> を考える。このとき，新変数 <span class="arithmatex">\(b_2(t) = c_2(t) e^{i\omega_0 t}\)</span> を導入して連立微分方程式を書き換え，定数行列を持つ形に整理せよ。</p>
 <p>(2) (1) の共鳴条件において， <span class="arithmatex">\(b_2(t)\)</span> に関する2階線形微分方程式を導き，初期条件のもとで状態 <span class="arithmatex">\(|2\rangle\)</span> への遷移確率 <span class="arithmatex">\(P_2(t) = |c_2(t)|^2\)</span> を求めよ。</p>
 <p>(3) 次に，共鳴条件から外れた一般の場合を考える。外場と固有振動数のズレを表すディチューニングを <span class="arithmatex">\(\Delta = \omega_0 - \omega\)</span> と定義し，新しい変数 <span class="arithmatex">\(\tilde{c}_2(t) = c_2(t) e^{i\omega t}\)</span> を導入する。係数ベクトル <span class="arithmatex">\(\boldsymbol{C}(t) = \begin{pmatrix} c_1(t) \\ \tilde{c}_2(t) \end{pmatrix}\)</span> が満たす時間独立な連立微分方程式 <span class="arithmatex">\(i \frac{d}{dt}\boldsymbol{C}(t) = M \boldsymbol{C}(t)\)</span> を導き，2行2列の行列 <span class="arithmatex">\(M\)</span> の各要素を <span class="arithmatex">\(\Delta\)</span> と <span class="arithmatex">\(G\)</span> を用いて表せ。</p>
 <p>(4) 行列 <span class="arithmatex">\(M\)</span> の固有値を求めることにより，有効ラビ角振動数 <span class="arithmatex">\(\Omega = \sqrt{\Delta^2 + 4G^2}\)</span> を導出せよ。</p>
@@ -14696,11 +14696,11 @@ c_1(t) = e^{-i\Delta t/2} \left( A \cos \frac{\Omega t}{2} + B \sin \frac{\Omega
 <div class="arithmatex">\[
 P_2(t) = \frac{4G^2}{\Omega^2} \sin^2 \frac{\Omega t}{2} = \frac{4G^2}{\Delta^2 + 4G^2} \sin^2 \left( \frac{\sqrt{\Delta^2 + 4G^2}}{2} t \right)
 \]</div>
-<p>ここで <span class="arithmatex">\(\Delta = 0\)</span> と置くと，前方の係数は <span class="arithmatex">\(\frac{4G^2}{4G^2} = 1\)</span> となり，揺動の角振動数は <span class="arithmatex">\(\frac{\sqrt{4G^2}}{2} = G\)</span> となるため， (2) で求めた <span class="arithmatex">\(\sin^2 Gt\)</span> に完全に一致します。</p>
+<p>ここで <span class="arithmatex">\(\Delta = 0\)</span> と置くと，前方の係数は <span class="arithmatex">\(\frac{4G^2}{4G^2} = 1\)</span> となり，揺動の角振動数は <span class="arithmatex">\(\frac{\sqrt{4G^2}}{2} = G\)</span> となるため， (2) で求めた <span class="arithmatex">\(\sin^2 Gt\)</span> に一致します。</p>
 <p><span class="arithmatex">\(\Delta \neq 0\)</span> のときは，共鳴時と比較して以下の変化が起こります。</p>
 <ul>
 <li><strong>最大遷移確率の低下</strong>：前方の分数係数が 1 より小さくなるため，状態 <span class="arithmatex">\(|2\rangle\)</span> へ 100% 移りきることが不可能になります。</li>
-<li><strong>振動周期の短縮</strong>：正弦関数の中身の角振動数が大きくなるため，より速いテンポで不完全に往復するようになります。</li>
+<li><strong>振動周期の短縮</strong>：正弦関数の角振動数が大きくなるため，遷移確率はより短い周期で振動します。</li>
 </ul>
 
 

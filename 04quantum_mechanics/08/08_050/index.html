@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">水素原子の隠れた対称性と縮退の計算</h1>
 <h2 id="_2">問題</h2>
-<p>水素原子のエネルギー準位は主量子数 <span class="arithmatex">\(n\)</span> のみによって決定され，軌道角運動量量子数 <span class="arithmatex">\(l\)</span> が異なる状態の間にも完全な縮退が存在する。この異常縮退は，空間の回転対称性に加え，クーロン場特有の保存量であるルンゲ・レンツベクトルが存在することに起因する。ここでは，ルンゲ・レンツ演算子と角運動量演算子の交換関係から状態間の遷移を具体的に計算し， <span class="arithmatex">\(n=2\)</span> における縮退の仕組みを解析する。</p>
+<p>水素原子のエネルギー準位は主量子数 <span class="arithmatex">\(n\)</span> のみによって決まり，軌道角運動量量子数 <span class="arithmatex">\(l\)</span> が異なる状態の間にも縮退が存在する。この縮退には，空間の回転対称性に加え，クーロン場に固有の保存量であるルンゲ・レンツベクトルが関係している。</p>
 <p>水素原子のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とし，軌道角運動量演算子を <span class="arithmatex">\(\hat{\boldsymbol{L}}\)</span> とする。ハミルトニアンが負のエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つ束縛状態の空間において，修正されたルンゲ・レンツ演算子 <span class="arithmatex">\(\hat{\boldsymbol{M}}\)</span> を導入する。これらはハミルトニアンと可換であり，さらに角運動量演算子との間に以下の交換関係を満たす。</p>
 <div class="arithmatex">\[
 [\hat{L}_i, \, \hat{M}_j] = i\hbar \sum_{k} \epsilon_{ijk} \hat{M}_k
@@ -14556,12 +14556,12 @@
 \]</div>
 <p>主量子数 <span class="arithmatex">\(n=2\)</span> のエネルギー準位に属する4つの状態は，軌道角運動量の基底 <span class="arithmatex">\(|l, m\rangle\)</span> を用いて <span class="arithmatex">\(|0, 0\rangle\)</span> ， <span class="arithmatex">\(|1, 1\rangle\)</span> ， <span class="arithmatex">\(|1, 0\rangle\)</span> ， <span class="arithmatex">\(|1, -1\rangle\)</span> と表される。これらはすべて共通のエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つ。以下の問いに答えよ。</p>
 <p>(1) 演算子 <span class="arithmatex">\(\hat{K}_z\)</span> を用いた交換関係 <span class="arithmatex">\([\hat{L}_z, \, \hat{K}_z]\)</span> の値を計算せよ。また，この結果に基づき，状態 <span class="arithmatex">\(|1, 0\rangle\)</span> に <span class="arithmatex">\(\hat{K}_z\)</span> を作用させて得られる新しい状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> の <span class="arithmatex">\(\hat{L}_z\)</span> に対する固有値を求めよ。</p>
-<p>(2) 演算子のパリティ対称性から， <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> は <span class="arithmatex">\(l=0\)</span> の状態と結びつく。 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> と <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> の交換関係から導かれる以下の具体的な行列要素の関係式を考える。</p>
+<p>(2) 演算子のパリティ対称性から， <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> は <span class="arithmatex">\(l=0\)</span> の状態と結びつく。 <span class="arithmatex">\(\hat{\boldsymbol{L}}^2\)</span> と <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> の交換関係から導かれる以下の行列要素の関係式を考える。</p>
 <div class="arithmatex">\[
 \langle 0, 0 | \hat{K}_z | 1, 0 \rangle = \alpha
 \]</div>
 <p>ここで <span class="arithmatex">\(\alpha\)</span> は非ゼロの実数定数である。このとき，エルミート共役の関係を用いて行列要素 <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 0, 0 \rangle\)</span> を <span class="arithmatex">\(\alpha\)</span> を用いて表せ。</p>
-<p>(3) 状態 <span class="arithmatex">\(|0, 0\rangle\)</span> と <span class="arithmatex">\(|1, 0\rangle\)</span> の 2つの状態がなす部分空間において，演算子 <span class="arithmatex">\(\hat{K}_z\)</span> の行列表現を <span class="arithmatex">\(\alpha\)</span> を用いて 2行2列の行列で書き下せ。さらに，この行列の固有値方程式を解くことにより， <span class="arithmatex">\(\hat{K}_z\)</span> の固有値と，それに対応する規格化された固有状態を <span class="arithmatex">\(\alpha\)</span> ， <span class="arithmatex">\(|0, 0\rangle\)</span> ， <span class="arithmatex">\(|1, 0\rangle\)</span> を用いて具体的に求めよ。</p>
+<p>(3) 状態 <span class="arithmatex">\(|0, 0\rangle\)</span> と <span class="arithmatex">\(|1, 0\rangle\)</span> の 2つの状態がなす部分空間において，演算子 <span class="arithmatex">\(\hat{K}_z\)</span> の行列表現を <span class="arithmatex">\(\alpha\)</span> を用いて 2行2列の行列で書き下せ。さらに，この行列の固有値方程式を解くことにより， <span class="arithmatex">\(\hat{K}_z\)</span> の固有値と，それに対応する規格化された固有状態を <span class="arithmatex">\(\alpha\)</span> ， <span class="arithmatex">\(|0, 0\rangle\)</span> ， <span class="arithmatex">\(|1, 0\rangle\)</span> を用いて求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14575,7 +14575,7 @@
 \]</div>
 <p>したがって，新しい状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> もまた， <span class="arithmatex">\(\hat{L}_z\)</span> に対する固有値が 0 となる固有状態であることが求まります。</p>
 <h3 id="2">(2)</h3>
-<p>ルンゲ・レンツ演算子およびそれから誘導される演算子 <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> は，物理的にエルミート演算子（自己共役演算子）です。したがって， <span class="arithmatex">\(\hat{K}_z^\dagger = \hat{K}_z\)</span> が成り立ちます。</p>
+<p>ルンゲ・レンツ演算子と，そこから導かれる演算子 <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> はエルミート演算子です。したがって， <span class="arithmatex">\(\hat{K}_z^\dagger = \hat{K}_z\)</span> が成り立ちます。</p>
 <p>行列要素の複素共役の定義を適用します。</p>
 <div class="arithmatex">\[
 \langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \langle 0, 0 | \hat{K}_z^\dagger | 1, 0 \rangle^* = \langle 0, 0 | \hat{K}_z | 1, 0 \rangle^*
@@ -14587,8 +14587,8 @@
 <p>これより，求める行列要素は <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \alpha\)</span> となります。</p>
 <h3 id="3">(3)</h3>
 <p>基底ベクトルを最初を <span class="arithmatex">\(|0, 0\rangle\)</span> ，2番目を <span class="arithmatex">\(|1, 0\rangle\)</span> とする順序で並べ，演算子 <span class="arithmatex">\(\hat{K}_z\)</span> の行列要素を決定します。
-* 1行1列目： <span class="arithmatex">\(\langle 0, 0 | \hat{K}_z | 0, 0 \rangle = 0\)</span> （パリティ奇の演算子による同パリティ状態間の遷移のため 0 ）
-* 2行2列目： <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 1, 0 \rangle = 0\)</span> （同様の理由により 0 ）
+* 1行1列目：パリティが等しい状態間の行列要素であるため，<span class="arithmatex">\(\langle 0, 0 | \hat{K}_z | 0, 0 \rangle = 0\)</span>
+* 2行2列目：同様に，<span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 1, 0 \rangle = 0\)</span>
 * 1行2列目： <span class="arithmatex">\(\langle 0, 0 | \hat{K}_z | 1, 0 \rangle = \alpha\)</span>
 * 2行1列目： <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \alpha\)</span></p>
 <p>これらを行列形式にまとめます。</p>
@@ -14621,7 +14621,7 @@
 <div class="arithmatex">\[
   |\phi_-\rangle = \frac{1}{\sqrt{2}} |0, 0\rangle - \frac{1}{\sqrt{2}} |1, 0\rangle
 \]</div>
-<p>この計算結果は，ハミルトニアンと可換な演算子 <span class="arithmatex">\(\hat{K}_z\)</span> が，異なる軌道角運動量量子数 <span class="arithmatex">\(l=0\)</span> と <span class="arithmatex">\(l=1\)</span> の状態を互いに混ぜ合わせる固有状態を形成することを示しています。角運動量を変化させる保存量の存在により，本来は異なるはずの <span class="arithmatex">\(l\)</span> の間でエネルギー準位が完全に一致する異常縮退が引き起こされる仕組みが，具体的な行列計算によって導かれました。</p>
+<p>演算子 <span class="arithmatex">\(\hat{K}_z\)</span> はハミルトニアンと可換であり，<span class="arithmatex">\(l=0\)</span> と <span class="arithmatex">\(l=1\)</span> の状態を混合します。この保存量の存在が，異なる <span class="arithmatex">\(l\)</span> の状態間に生じる縮退と対応しています。</p>
 
 
 

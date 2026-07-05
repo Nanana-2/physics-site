@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">時間依存摂動論</h1>
 <h2 id="_2">問題</h2>
-<p>これまでに扱ってきた時間に依存しない摂動論とは異なり，ハミルトニアンに時間とともに変化する外部場が加わる場合，系のエネルギーは保存されず，異なるエネルギー固有状態の間で遷移が引き起こされる。ここでは，時間依存する弱い摂動を受ける量子系について，時間依存シュレーディンガー方程式から遷移振幅の1次近似式を導出し，一定の時間内に別の状態へ移る遷移確率の基本的な形を計算する。</p>
+<p>時間とともに変化する外部場が加わると，異なるエネルギー固有状態の間に遷移が生じる。このような系は，時間依存摂動論によって扱うことができる。</p>
 <p>非摂動ハミルトニアンを <span class="arithmatex">\(\hat{H}_0\)</span> とし，その固有状態を <span class="arithmatex">\(|n\rangle\)</span> ，エネルギー固有値を <span class="arithmatex">\(E_n\)</span> とする。</p>
 <div class="arithmatex">\[
 \hat{H}_0 |n\rangle = E_n |n\rangle
@@ -14552,12 +14552,12 @@
 |\psi(t)\rangle = \sum_{n} c_n(t) e^{-i E_n t / \hbar} |n\rangle
 \]</div>
 <p>時刻 <span class="arithmatex">\(t=0\)</span> において，系は確実に特定の固有状態 <span class="arithmatex">\(|i\rangle\)</span> にあったものとする。すなわち初期条件は <span class="arithmatex">\(c_i(0) = 1\)</span> ，および <span class="arithmatex">\(n \neq i\)</span> に対して <span class="arithmatex">\(c_n(0) = 0\)</span> である。以下の問いに答えよ。</p>
-<p>(1) 時間依存シュレーディンガー方程式 <span class="arithmatex">\(i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = \hat{H}(t) |\psi(t)\rangle\)</span> に対し，上記の展開式を代入せよ。両辺に左から別の固有状態 <span class="arithmatex">\(\langle f|\)</span> （ <span class="arithmatex">\(f \neq i\)</span> ）を掛け算することにより，展開係数 <span class="arithmatex">\(c_f(t)\)</span> の時間変化に関する以下の微分方程式を導け。ただし，2つの状態のエネルギー差に対応する角振動数を <span class="arithmatex">\(\omega_{fi} = (E_f - E_i)/\hbar\)</span> と定義し，行列要素を <span class="arithmatex">\(V_{fi}(t) = \langle f| \hat{V}(t) |i\rangle\)</span> とする。</p>
+<p>(1) 時間依存シュレーディンガー方程式 <span class="arithmatex">\(i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = \hat{H}(t) |\psi(t)\rangle\)</span> に上記の展開式を代入し，<span class="arithmatex">\(f \neq i\)</span> として左から <span class="arithmatex">\(\langle f|\)</span> を掛け，展開係数 <span class="arithmatex">\(c_f(t)\)</span> に対する以下の微分方程式を導け。ただし，<span class="arithmatex">\(\omega_{fi} = (E_f - E_i)/\hbar\)</span>，<span class="arithmatex">\(V_{fi}(t) = \langle f| \hat{V}(t) |i\rangle\)</span> とする。</p>
 <div class="arithmatex">\[
 i\hbar \frac{d c_f(t)}{dt} = \sum_{n} \langle f| \hat{V}(t) |n\rangle e^{i (E_f - E_n) t / \hbar} c_n(t)
 \]</div>
-<p>(2) 摂動が十分に弱いと仮定し，右辺の係数 <span class="arithmatex">\(c_n(t)\)</span> を 0次の初期条件である <span class="arithmatex">\(c_n(0)\)</span> で置き換える1次近似（ボルン近似）を行う。このとき，時刻 <span class="arithmatex">\(t\)</span> における遷移振幅 <span class="arithmatex">\(c_f(t)\)</span> を求めるための積分形式の式を導け。</p>
-<p>(3) 具体的なケースとして，時刻 <span class="arithmatex">\(t=0\)</span> から <span class="arithmatex">\(t\)</span> まで，時間的に変化しない一定の摂動 <span class="arithmatex">\(\hat{V}(t) = \hat{V}\)</span> が加わり続けたとする。 (2) で得られた式を用いて積分を実行し，最終状態 <span class="arithmatex">\(|f\rangle\)</span> に見出される遷移確率 <span class="arithmatex">\(P_{i \to f}(t) = |c_f(t)|^2\)</span> の数式を求めよ。さらに，その式の中に以下のシンク関数型の因子が含まれることを示せ。</p>
+<p>(2) 摂動が十分に弱いと仮定し，右辺の係数 <span class="arithmatex">\(c_n(t)\)</span> を0次の値 <span class="arithmatex">\(c_n(0)\)</span> で置き換えるボルン近似を行う。時刻 <span class="arithmatex">\(t\)</span> における遷移振幅 <span class="arithmatex">\(c_f(t)\)</span> の積分表示を導け。</p>
+<p>(3) 例として，時刻 <span class="arithmatex">\(t=0\)</span> から <span class="arithmatex">\(t\)</span> まで，時間的に変化しない一定の摂動 <span class="arithmatex">\(\hat{V}(t) = \hat{V}\)</span> が加わり続けたとする。 (2) で得られた式を用いて積分を実行し，最終状態 <span class="arithmatex">\(|f\rangle\)</span> に見出される遷移確率 <span class="arithmatex">\(P_{i \to f}(t) = |c_f(t)|^2\)</span> の数式を求めよ。さらに，その式の中に以下のシンク関数型の因子が含まれることを示せ。</p>
 <div class="arithmatex">\[
 \frac{\sin^2(\omega_{fi}t/2)}{(\omega_{fi}/2)^2}
 \]</div>
@@ -14629,7 +14629,7 @@ P_{i \to f}(t) = |c_f(t)|^2 = \frac{|V_{fi}|^2}{\hbar^2 \omega_{fi}^2} |e^{i \om
 <div class="arithmatex">\[
 P_{i \to f}(t) = \frac{|V_{fi}|^2}{\hbar^2} \frac{4\sin^2(\omega_{fi}t/2)}{\omega_{fi}^2} = \frac{|V_{fi}|^2}{\hbar^2} \frac{\sin^2(\omega_{fi}t/2)}{(\omega_{fi}/2)^2}
 \]</div>
-<p>これにより，特定の状態へ移る遷移確率の数式が得られ，指定された通りのシンク関数型の因子が含まれることが示されました。この因子は，時間が経過するにつれてエネルギー保存則を厳密に満たす位置（ <span class="arithmatex">\(\omega_{fi} = 0\)</span> ）のまわりに鋭く集中する性質を持っており，これがさらに長時間の遷移確率を記述するフェルミの黄金律へと繋がっていきます。</p>
+<p>遷移確率にはシンク関数型の因子が含まれます。この因子は，時間とともにエネルギー保存則を満たす <span class="arithmatex">\(\omega_{fi} = 0\)</span> の近傍へ集中し，長時間極限ではフェルミの黄金律に対応します。</p>
 
 
 

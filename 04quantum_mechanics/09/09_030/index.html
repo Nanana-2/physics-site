@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">一様磁場中の荷電粒子</h1>
 <h2 id="_2">問題</h2>
-<p>空間全体に一様な強さの磁場がかかっているとき，その中を動く荷電粒子は磁場から力を受けて円運動を行う。量子力学においてこの系を扱うには，一様磁場を表すベクトルポテンシャルを自分で決めてハミルトニアンを組み立てる必要がある。ここでは，特定のゲージを選択して方程式を整理し，得られる数式が古典力学の円運動とどのように結びつくかを調べる。</p>
+<p>一様な磁場中を運動する荷電粒子は，磁場から力を受けて円運動する。量子力学では，磁場を与えるベクトルポテンシャルを選び，最小結合によってハミルトニアンを定める。</p>
 <p><span class="arithmatex">\(z\)</span> 軸の正の方向に一様な磁場 <span class="arithmatex">\(\boldsymbol{B} = (0, 0, B_0)\)</span> がかかっている空間を考える。この磁場を与えるベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A} = (A_x, A_y, A_z)\)</span> として，以下のランダウゲージを選択する。</p>
 <div class="arithmatex">\[
 A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
@@ -14552,7 +14552,7 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 \hat{H} = \frac{1}{2m} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 = \frac{1}{2m} \left[ (\hat{p}_x - qA_x)^2 + (\hat{p}_y - qA_y)^2 + \hat{p}_z^2 \right]
 \]</div>
 <p>粒子の運動を <span class="arithmatex">\(xy\)</span> 平面内に限るものとし， <span class="arithmatex">\(z\)</span> 方向の運動量演算子を <span class="arithmatex">\(\hat{p}_z = 0\)</span> と置く。以下の問いに答えよ。</p>
-<p>(1) 選択したランダウゲージの各成分を代入し，ハミルトニアンの具体的な式を導け。</p>
+<p>(1) 選択したランダウゲージの各成分を代入し，ハミルトニアンの式を導け。</p>
 <p>(2) (1) で得られたハミルトニアンにおいて，演算子 <span class="arithmatex">\(\hat{p}_x\)</span> がハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> と可換であること，すなわち <span class="arithmatex">\([\hat{H}, \hat{p}_x] = 0\)</span> が成立することを示せ。</p>
 <p>(3) <span class="arithmatex">\(\hat{p}_x\)</span> が可換であることから， <span class="arithmatex">\(x\)</span> 方向の波動関数を固有値 <span class="arithmatex">\(p_x\)</span> を持つ平面波 <span class="arithmatex">\(e^{i p_x x / \hbar}\)</span> として置き換えることができる。全体の波動関数を <span class="arithmatex">\(\psi(x, y) = e^{i p_x x / \hbar} \chi(y)\)</span> と置いてハミルトニアンに作用させ， <span class="arithmatex">\(y\)</span> に関する微分方程式を作れ。さらに，その方程式が，ある中心位置 <span class="arithmatex">\(y_0\)</span> を中心に振動する1次元調和振動子と同じ形になることを示し，中心位置 <span class="arithmatex">\(y_0\)</span> を <span class="arithmatex">\(p_x\)</span> ， <span class="arithmatex">\(q\)</span> ， <span class="arithmatex">\(B_0\)</span> を用いて表せ。</p>
 <hr />
@@ -14598,11 +14598,11 @@ $$
 $$
 = \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2} m \omega_c^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y) = E \chi(y)
 \]</div>
-<p>この式は，ばね定数 <span class="arithmatex">\(m\omega_c^2\)</span> を持つ1次元調和振動子の形と完全に一致しています。振動の中心位置となる座標を <span class="arithmatex">\(y_0\)</span> と置くと，数式の形から中心位置は以下のように求まります。</p>
+<p>この式は，ばね定数 <span class="arithmatex">\(m\omega_c^2\)</span> を持つ1次元調和振動子の形と一致しています。振動の中心位置となる座標を <span class="arithmatex">\(y_0\)</span> と置くと，数式の形から中心位置は以下のように求まります。</p>
 <div class="arithmatex">\[
 y_0 = -\frac{p_x}{qB_0}
 \]</div>
-<p>量子力学的な荷電粒子は，磁場の中では自由に進むことができず， <span class="arithmatex">\(x\)</span> 方向の運動量に応じた特定の <span class="arithmatex">\(y_0\)</span> という位置を中心にして，古典的な円運動の周期と同じ速さでそのまわりを細かく振動する挙動をとることが導かれました。</p>
+<p>荷電粒子の運動は，<span class="arithmatex">\(x\)</span> 方向の運動量で決まる位置 <span class="arithmatex">\(y_0\)</span> を中心とした，角振動数 <span class="arithmatex">\(\omega_c\)</span> の調和振動子に対応します。</p>
 
 
 

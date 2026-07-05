@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">任意方向のスピン測定</h1>
 <h2 id="_2">問題</h2>
-<p>スピン <span class="arithmatex">\(1/2\)</span> 粒子の状態は，<span class="arithmatex">\(z\)</span> 軸方向を基準とした上向き状態と下向き状態の重ね合わせとして表現される。しかし，実際の測定は <span class="arithmatex">\(z\)</span> 軸に限らず任意の方向の軸に沿って行うことができる。ここでは，3次元空間内の任意の方向を向いた単位ベクトルを導入し，その軸に沿ったスピン演算子の固有値問題を解くことで，任意の方向における測定確率を導出する。</p>
+<p>スピン <span class="arithmatex">\(1/2\)</span> 粒子の状態は，<span class="arithmatex">\(z\)</span> 軸方向を基準とした上向き状態と下向き状態の重ね合わせで表される。スピンは <span class="arithmatex">\(z\)</span> 軸に限らず，任意の方向に沿って測定できる。</p>
 <p>3次元空間における任意の方向を表す単位ベクトル <span class="arithmatex">\(\boldsymbol{n}\)</span> を，極角 <span class="arithmatex">\(\theta\)</span> と方位角 <span class="arithmatex">\(\phi\)</span> を用いて以下のように定義する。</p>
 <div class="arithmatex">\[
 \boldsymbol{n} = (\sin\theta\cos\phi, \, \sin\theta\sin\phi, \, \cos\theta)
@@ -14552,7 +14552,7 @@
 \hat{S}_n = \boldsymbol{S} \cdot \boldsymbol{n} = \hat{S}_x \sin\theta\cos\phi + \hat{S}_y \sin\theta\sin\phi + \hat{S}_z \cos\theta
 \]</div>
 <p>で与えられる。パウリ行列を用いた成分表示では <span class="arithmatex">\(\hat{S}_n = \frac{\hbar}{2} \boldsymbol{\sigma} \cdot \boldsymbol{n}\)</span> である。以下の問いに答えよ。</p>
-<p>(1) パウリ行列の具体的な成分を代入することにより，演算子 <span class="arithmatex">\(\hat{S}_n\)</span> の2行2列の行列表現を <span class="arithmatex">\(\theta\)</span> と <span class="arithmatex">\(\phi\)</span> を用いて表せ。ただし，オイラーの公式 <span class="arithmatex">\(e^{\pm i\phi} = \cos\phi \pm i\sin\phi\)</span> を用いて行列要素を整理せよ。</p>
+<p>(1) パウリ行列の成分を代入することにより，演算子 <span class="arithmatex">\(\hat{S}_n\)</span> の2行2列の行列表現を <span class="arithmatex">\(\theta\)</span> と <span class="arithmatex">\(\phi\)</span> を用いて表せ。ただし，オイラーの公式 <span class="arithmatex">\(e^{\pm i\phi} = \cos\phi \pm i\sin\phi\)</span> を用いて行列要素を整理せよ。</p>
 <p>(2) 行列 <span class="arithmatex">\(\hat{S}_n\)</span> の固有方程式を解き，固有値が <span class="arithmatex">\(\pm\frac{\hbar}{2}\)</span> になることを示せ。また，固有値 <span class="arithmatex">\(+\frac{\hbar}{2}\)</span> に対応する規格化された固有状態 <span class="arithmatex">\(|\boldsymbol{n}, +\rangle\)</span> が以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 | \boldsymbol{n}, +\rangle = \begin{pmatrix} \cos\frac{\theta}{2} \\ e^{i\phi} \sin\frac{\theta}{2} \end{pmatrix}

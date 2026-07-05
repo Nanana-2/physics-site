@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">荷電粒子の保存電流</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学において，粒子の存在確率の全量が時間的に変化せず一定に保たれるという性質は，確率流密度を用いた連続の式によって表される。電磁場が存在しない自由空間では，確率流密度は運動量演算子を用いて定義されるが，電磁場が存在する空間では，最小結合の規則に従ってベクトルポテンシャルを含む形へと修正されなければならない。ここでは，電磁場中のシュレーディンガー方程式とその複素共役式から出発し，確率保存を満たす新しい確率流密度の数式を導く。</p>
+<p>粒子の存在確率が保存されることは，確率密度と確率流密度が満たす連続の式で表される。電磁場中の確率流密度には，最小結合に従ってベクトルポテンシャルが含まれる。</p>
 <p>スカラーポテンシャル <span class="arithmatex">\(\phi\)</span> およびベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A}\)</span> の中にある電荷 <span class="arithmatex">\(q\)</span> ，質量 <span class="arithmatex">\(m\)</span> の荷電粒子に関する時間依存シュレーディンガー方程式は以下の通りである。</p>
 <div class="arithmatex">\[
 i\hbar \frac{\partial \psi}{\partial t} = \left[ \frac{1}{2m} (\hat{\boldsymbol{p}} - q\boldsymbol{A})^2 + q\phi \right] \psi
@@ -14553,12 +14553,12 @@ i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \boldsymbol{\nabla
 \]</div>
 <p>確率密度を <span class="arithmatex">\(\rho = |\psi|^2 = \psi^* \psi\)</span> と定義する。以下の問いに答えよ。</p>
 <p>(1) 与えられたシュレーディンガー方程式の全体について複素共役をとることにより， <span class="arithmatex">\(\psi^*\)</span> の時間微分 <span class="arithmatex">\(-i\hbar \frac{\partial \psi^*}{\partial t}\)</span> に関する方程式を求めよ。</p>
-<p>(2) 確率密度の時間変化 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} = \frac{\partial \psi^*}{\partial t} \psi + \psi^* \frac{\partial \psi}{\partial t}\)</span> に対し， (1) の結果および元のシュレーディンガー方程式を代入して整理せよ。ポテンシャル <span class="arithmatex">\(\phi\)</span> を含む項が完全に相殺されることを確認せよ。</p>
+<p>(2) 確率密度の時間変化 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} = \frac{\partial \psi^*}{\partial t} \psi + \psi^* \frac{\partial \psi}{\partial t}\)</span> に対し， (1) の結果および元のシュレーディンガー方程式を代入して整理せよ。ポテンシャル <span class="arithmatex">\(\phi\)</span> を含む項が相殺されることを確認せよ。</p>
 <p>(3) (2) で得られた式を，確率の連続の式である以下の形式へと変形せよ。</p>
 <div class="arithmatex">\[
 \frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \boldsymbol{J} = 0
 \]</div>
-<p>このとき，電磁場中における確率流密度 <span class="arithmatex">\(\boldsymbol{J}\)</span> の具体的な表式を <span class="arithmatex">\(\psi\)</span> ， <span class="arithmatex">\(\psi^*\)</span> ， <span class="arithmatex">\(\boldsymbol{A}\)</span> などの変数を用いて導け。</p>
+<p>このとき，電磁場中における確率流密度 <span class="arithmatex">\(\boldsymbol{J}\)</span> の表式を <span class="arithmatex">\(\psi\)</span> ， <span class="arithmatex">\(\psi^*\)</span> ， <span class="arithmatex">\(\boldsymbol{A}\)</span> などの変数を用いて導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14597,7 +14597,7 @@ i\hbar \frac{\partial \rho}{\partial t} = \frac{\hbar^2}{2m} \left( \psi \boldsy
 \frac{\partial \rho}{\partial t} = \frac{\hbar}{2mi} \left( \psi \boldsymbol{\nabla}^2 \psi^* - \psi^* \boldsymbol{\nabla}^2 \psi \right) + \frac{q}{m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^*\psi + \frac{q}{m} \boldsymbol{A} \cdot \left( \psi \boldsymbol{\nabla}\psi^* + \psi^* \boldsymbol{\nabla}\psi \right)
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) の右辺にある各項を，ナブラ演算子 <span class="arithmatex">\(\boldsymbol{\nabla}\)</span> が全体の先頭に位置する全微分の形（湧き出しの形）へと変形します。</p>
+<p>(2) の右辺にある各項を，ナブラ演算子 <span class="arithmatex">\(\boldsymbol{\nabla}\)</span> が先頭にくる発散の形へ変形します。</p>
 <ul>
 <li>第1項の括弧部分に，ベクトルの恒等式 <span class="arithmatex">\(\boldsymbol{\nabla} \cdot (\psi \boldsymbol{\nabla}\psi^* - \psi^* \boldsymbol{\nabla}\psi) = \psi \boldsymbol{\nabla}^2 \psi^* - \psi^* \boldsymbol{\nabla}^2 \psi\)</span> を適用します。</li>
 </ul>
@@ -14622,7 +14622,7 @@ i\hbar \frac{\partial \rho}{\partial t} = \frac{\hbar^2}{2m} \left( \psi \boldsy
 <div class="arithmatex">\[
 \boldsymbol{J} = \frac{\hbar}{2mi} \left( \psi^* \boldsymbol{\nabla}\psi - \psi \boldsymbol{\nabla}\psi^* \right) - \frac{q}{m} \boldsymbol{A} |\psi|^2
 \]</div>
-<p>この式は，自由空間での確率流密度の式に対し，ベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A}\)</span> に比例する第2項が新しく追加された形をしています。最小結合による置き換えの効果が，波の流れる量を表す電流密度の形にも直接反映されることが導かれました。</p>
+<p>自由空間での確率流密度に，ベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A}\)</span> に比例する項が加わっています。これは最小結合による運動量の置き換えに対応します。</p>
 
 
 

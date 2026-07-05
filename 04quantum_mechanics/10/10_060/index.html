@@ -14542,8 +14542,8 @@
 
 <h1 id="wkb">WKB近似の量子化条件</h1>
 <h2 id="_1">問題</h2>
-<p>ポテンシャルの空間変化が粒子の物質波の波長に比べて十分に緩やかな場合，量子力学的な波動関数を古典的な物理量である運動量を用いて近似的に表すことができる。この手法はWKB近似と呼ばれ，高エネルギーの束縛状態やトンネル効果の解析に用いられる。ここでは，1次元のポテンシャルに閉じ込められた粒子に対し，古典的に運動が許されている領域での波動関数の位相を調べ，転回点での接続条件を考慮することで，ボーア・ゾンマーフェルト型の量子化条件を導出する。</p>
-<p>1次元の滑らかなポテンシャルエネルギー <span class="arithmatex">\(V(x)\)</span> の中にあるエネルギー <span class="arithmatex">\(E\)</span> の粒子を考える。 <span class="arithmatex">\(V(x) = E\)</span> となる位置を転回点と呼び，ここでは <span class="arithmatex">\(x = x_1\)</span> および <span class="arithmatex">\(x = x_2\)</span> （ただし <span class="arithmatex">\(x_1 &lt; x_2\)</span> ）の 2箇所を転回点とする。粒子は <span class="arithmatex">\(x_1 \le x \le x_2\)</span> の領域に閉じ込められており，この古典的に許された領域における局所的な運動量 <span class="arithmatex">\(p(x)\)</span> を以下のように定義する。</p>
+<p>ポテンシャルの空間変化が物質波の波長に比べて十分に緩やかな場合，波動関数を古典的な運動量によって近似できる。この手法をWKB近似と呼ぶ。</p>
+<p>1次元の滑らかなポテンシャル <span class="arithmatex">\(V(x)\)</span> の中にある，エネルギー <span class="arithmatex">\(E\)</span> の粒子を考える。<span class="arithmatex">\(V(x) = E\)</span> を満たす2つの転回点を <span class="arithmatex">\(x = x_1, x_2\)</span> とし，<span class="arithmatex">\(x_1 &lt; x_2\)</span> とする。粒子は <span class="arithmatex">\(x_1 \le x \le x_2\)</span> の領域に閉じ込められており，この古典的許容領域における局所的な運動量 <span class="arithmatex">\(p(x)\)</span> を以下のように定義する。</p>
 <div class="arithmatex">\[
 p(x) = \sqrt{2m(E - V(x))}
 \]</div>
@@ -14556,7 +14556,7 @@ p(x) = \sqrt{2m(E - V(x))}
 \psi_2(x) \propto \frac{1}{\sqrt{p(x)}} \sin \left( \theta_2(x) + \frac{\pi}{4} \right)
 \]</div>
 <p>2つの関数が同じ状態を表すためには，サイン関数の引数の和が <span class="arithmatex">\(\pi\)</span> の整数倍に一致しなければならない。この関係式を書き下せ。</p>
-<p>(2) (1) で得られた引数の関係式に対し， 2つの積分の和が <span class="arithmatex">\(x_1\)</span> から <span class="arithmatex">\(x_2\)</span> までの全区間の積分 <span class="arithmatex">\(\int_{x_1}^{x_2} p(x) dx\)</span> に等しいことを利用して，以下の量子化条件（ボーア・ゾンマーフェルトの量子化条件）を導け。ただし， <span class="arithmatex">\(n\)</span> は非負の整数（ <span class="arithmatex">\(n = 0, 1, 2, \dots\)</span> ）とする。</p>
+<p>(2) (1) の関係式から，以下のボーア・ゾンマーフェルトの量子化条件を導け。ただし，<span class="arithmatex">\(n = 0, 1, 2, \dots\)</span> とする。</p>
 <div class="arithmatex">\[
 \int_{x_1}^{x_2} p(x) dx = \pi \hbar \left( n + \frac{1}{2} \right)
 \]</div>
@@ -14589,7 +14589,7 @@ p(x) = \sqrt{2m(E - V(x))}
 <div class="arithmatex">\[
 \int_{x_1}^{x_2} p(x) dx = k \pi \hbar - \frac{\pi}{2}\hbar = \pi \hbar \left( k - \frac{1}{2} \right)
 \]</div>
-<p>ここで，非負の整数 <span class="arithmatex">\(n = 0, 1, 2, \dots\)</span> を用いて記述を整理するため，整数 <span class="arithmatex">\(k\)</span> （ <span class="arithmatex">\(1, 2, 3, \dots\)</span> ）を <span class="arithmatex">\(k = n + 1\)</span> と置き換えます。</p>
+<p>ここで，正の整数 <span class="arithmatex">\(k = 1, 2, 3, \dots\)</span> を，非負整数 <span class="arithmatex">\(n = 0, 1, 2, \dots\)</span> によって <span class="arithmatex">\(k = n + 1\)</span> と置きます。</p>
 <div class="arithmatex">\[
 k - \frac{1}{2} = (n + 1) - \frac{1}{2} = n + \frac{1}{2}
 \]</div>

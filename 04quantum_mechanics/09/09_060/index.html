@@ -14542,12 +14542,12 @@
 
 <h1 id="_1">ゼーマン効果</h1>
 <h2 id="_2">問題</h2>
-<p>一様な外部磁場の中に置かれた原子は，電子の軌道角運動量およびスピン角運動量に由来する磁気モーメントが磁場からトルクを受ける。これにより，磁場の方向に沿ってエネルギー準位が離散的に分裂する。この現象はゼーマン効果と呼ばれ，ここでは磁場が十分に弱く，スピン軌道相互作用による分裂に比べて摂動として扱える場合の異常ゼーマン効果を解析する。</p>
+<p>外部磁場によって原子のエネルギー準位が分裂する現象を，ゼーマン効果と呼ぶ。弱い磁場では，軌道角運動量とスピン角運動量に由来する磁気モーメントと磁場との相互作用を摂動として扱える。</p>
 <p>外部から <span class="arithmatex">\(z\)</span> 軸方向に一様な弱い磁場 <span class="arithmatex">\(\boldsymbol{B} = (0, 0, B_0)\)</span> が印加されているとする。このとき，磁場と電子の運動との相互作用を表すゼーマンハミルトニアン <span class="arithmatex">\(\hat{H}_{\text{Z}}\)</span> は，軌道角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}\)</span> ，スピン角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{S}}\)</span> ，ボーア磁子 <span class="arithmatex">\(\mu_{\text{B}} = \frac{e\hbar}{2m}\)</span> を用いて以下のように与えられる。</p>
 <div class="arithmatex">\[
 \hat{H}_{\text{Z}} = \frac{\mu_{\text{B}}}{\hbar} (\hat{\boldsymbol{L}} + 2\hat{\boldsymbol{S}}) \cdot \boldsymbol{B} = \frac{\mu_{\text{B}} B_0}{\hbar} (\hat{L}_z + 2\hat{S}_z)
 \]</div>
-<p>スピンの係数が 2 になっているのは，電子の異常磁気モーメント（ <span class="arithmatex">\(g\)</span> 因子）に由来する。</p>
+<p>スピンの係数 2 は，電子の <span class="arithmatex">\(g\)</span> 因子に由来する。</p>
 <p>全角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{J}} = \hat{\boldsymbol{L}} + \hat{\boldsymbol{S}}\)</span> を導入し，スピン軌道相互作用が支配的な系における適切な基底として共同固有状態 <span class="arithmatex">\(|n, l, s, j, m_j\rangle\)</span> を採用する。この状態は <span class="arithmatex">\(\hat{J}_z\)</span> の固有状態であり， <span class="arithmatex">\(\hat{J}_z |n, l, s, j, m_j\rangle = m_j \hbar |n, l, s, j, m_j\rangle\)</span> を満たす。以下の問いに答えよ。</p>
 <p>(1) ゼーマンハミルトニアンの括弧内の演算子を <span class="arithmatex">\(\hat{\boldsymbol{J}}\)</span> と <span class="arithmatex">\(\hat{\boldsymbol{S}}\)</span> を用いて書き換えよ。また，状態 <span class="arithmatex">\(|n, l, s, j, m_j\rangle\)</span> において， <span class="arithmatex">\(\hat{S}_z\)</span> の期待値が全角運動量の方向への射影を介して <span class="arithmatex">\(\langle \hat{S}_z \rangle = \frac{\langle \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \rangle}{\langle \hat{\boldsymbol{J}}^2 \rangle} \langle \hat{J}_z \rangle\)</span> と近似できるとする。このとき， <span class="arithmatex">\(\hat{H}_{\text{Z}}\)</span> の期待値が以下の形式で表されることを示せ。</p>
 <div class="arithmatex">\[
@@ -14557,7 +14557,7 @@
 <div class="arithmatex">\[
 g_j = 1 + \frac{j(j+1) - l(l+1) + 3/4}{2j(j+1)}
 \]</div>
-<p>(3) 主量子数 <span class="arithmatex">\(n=2\)</span> ，軌道角運動量量子数 <span class="arithmatex">\(l=1\)</span> ，全角運動量量子数 <span class="arithmatex">\(j=1/2\)</span> の状態（ <span class="arithmatex">\(2\text{p}_{1/2}\)</span> 状態）を考える。この状態におけるランデの <span class="arithmatex">\(g\)</span> 因子 <span class="arithmatex">\(g_j\)</span> の具体的な値を求めよ。また，磁気量子数 <span class="arithmatex">\(m_j\)</span> が取り得る値をすべて挙げ，磁場によってこの準位が何本のエネルギー準位に分裂するか，それぞれの1次のエネルギーシフトの大きさと合わせて求めよ。</p>
+<p>(3) 主量子数 <span class="arithmatex">\(n=2\)</span>，軌道角運動量量子数 <span class="arithmatex">\(l=1\)</span>，全角運動量量子数 <span class="arithmatex">\(j=1/2\)</span> の <span class="arithmatex">\(2\text{p}_{1/2}\)</span> 状態を考える。ランデの <span class="arithmatex">\(g\)</span> 因子 <span class="arithmatex">\(g_j\)</span> と磁気量子数 <span class="arithmatex">\(m_j\)</span> の取り得る値を求め，磁場による準位の分裂数と各準位の1次のエネルギーシフトを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14616,7 +14616,7 @@ g_j = 1 + \frac{\frac{3}{4} - 2 + \frac{3}{4}}{2 \cdot \frac{3}{4}} = 1 + \frac{
 <div class="arithmatex">\[
 m_j = \frac{1}{2}, \, -\frac{1}{2}
 \]</div>
-<p><span class="arithmatex">\(m_j\)</span> の値が 2つ存在することから，磁場によってこのエネルギー準位は 2本の準位へと完全に分裂します。</p>
+<p><span class="arithmatex">\(m_j\)</span> の値が 2つ存在することから，磁場によってこのエネルギー準位は 2本の準位へと分裂します。</p>
 <p>それぞれの状態における1次のエネルギーシフト <span class="arithmatex">\(\Delta E_{\text{Z}} = \langle \hat{H}_{\text{Z}} \rangle\)</span> を計算します。
 * <strong><span class="arithmatex">\(m_j = \frac{1}{2}\)</span> のとき</strong></p>
 <div class="arithmatex">\[
@@ -14628,7 +14628,7 @@ m_j = \frac{1}{2}, \, -\frac{1}{2}
 <div class="arithmatex">\[
   \Delta E_{\text{Z}} = \frac{2}{3} \mu_{\text{B}} B_0 \left( -\frac{1}{2} \right) = -\frac{1}{3} \mu_{\text{B}} B_0
 \]</div>
-<p>計算結果より，外部磁場を印加することで，縮退していた <span class="arithmatex">\(2\text{p}_{1/2}\)</span> 状態がエネルギー間隔 <span class="arithmatex">\(\frac{2}{3}\mu_{\text{B}}B_0\)</span> を持って上下対称に 2分割される異常ゼーマン効果の振る舞いが導かれました。</p>
+<p>したがって，<span class="arithmatex">\(2\text{p}_{1/2}\)</span> 状態は，エネルギー間隔 <span class="arithmatex">\(\frac{2}{3}\mu_{\text{B}}B_0\)</span> の2準位に分裂します。</p>
 
 
 
