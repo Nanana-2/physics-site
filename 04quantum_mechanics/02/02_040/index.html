@@ -309,7 +309,7 @@
   <span class="md-ellipsis">
     
   
-    タグ一覧
+    全問題一覧
   
 
     
@@ -14510,7 +14510,7 @@
       
       
       
-        <a href="../../../tags/#tag:標準" class="md-tag">標準</a>
+        <a href="../../../tag-index/#tag:標準" class="md-tag">標準</a>
       
     
   </nav>
@@ -14519,28 +14519,28 @@
 
 <h1 id="_1">演算子の行列要素</h1>
 <h2 id="_2">問題</h2>
-<p>抽象的な線形演算子 <span class="arithmatex">\(\hat{A}\)</span> は、正規直交基底を用いて行列の形で表現できる。ブラとケットで演算子を挟んだ複素数 <span class="arithmatex">\(A_{mn} = \langle m|\hat{A}|n\rangle\)</span> は演算子の行列要素と呼ばれ、これを用いることで、量子力学における期待値の計算や固有値問題の解析が、通常の線形代数における行列計算へと帰着される。</p>
-<p>ある量子系の正規直交基底を <span class="arithmatex">\(\{|1\rangle, |2\rangle\}\)</span> とし、この基底における演算子 <span class="arithmatex">\(\hat{A}\)</span> の行列要素が以下のように与えられている。</p>
+<p>抽象的な線形演算子 <span class="arithmatex">\(\hat{A}\)</span> は，正規直交基底を用いて行列の形で表現できる。ブラとケットで演算子を挟んだ複素数 <span class="arithmatex">\(A_{mn} = \langle m|\hat{A}|n\rangle\)</span> は演算子の行列要素と呼ばれ，これを用いることで，量子力学における期待値の計算や固有値問題の解析が，通常の線形代数における行列計算へと帰着される。</p>
+<p>ある量子系の正規直交基底を <span class="arithmatex">\(\{|1\rangle, |2\rangle\}\)</span> とし，この基底における演算子 <span class="arithmatex">\(\hat{A}\)</span> の行列要素が以下のように与えられている。</p>
 <div class="arithmatex">\[
 A_{11} = \langle 1|\hat{A}|1\rangle = 2, \quad A_{12} = \langle 1|\hat{A}|2\rangle = i
 \]</div>
 <div class="arithmatex">\[
 A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\rangle = 2
 \]</div>
-<p>このとき、演算子 <span class="arithmatex">\(\hat{A}\)</span> は行列形式で </p>
+<p>このとき，演算子 <span class="arithmatex">\(\hat{A}\)</span> は行列形式で </p>
 <div class="arithmatex">\[
 \hat{A} \to \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix}
 \]</div>
 <p>と表される。以下の問いに答えよ。</p>
-<p>(1) この系のある状態ベクトルが <span class="arithmatex">\(|\psi\rangle = \frac{1}{\sqrt{2}} |1\rangle + \frac{i}{\sqrt{2}} |2\rangle\)</span> と与えられている。この状態における物理量 <span class="arithmatex">\(\hat{A}\)</span> の期待値 <span class="arithmatex">\(\langle A \rangle = \langle \psi|\hat{A}|\psi\rangle\)</span> を、完全性関係 <span class="arithmatex">\(\sum_{n=1,2} |n\rangle\langle n| = \hat{I}\)</span> を利用して計算せよ。</p>
-<p>(2) 演算子 <span class="arithmatex">\(\hat{A}\)</span> の固有値方程式 <span class="arithmatex">\(\hat{A}|\phi\rangle = \lambda |\phi\rangle\)</span> を考える。状態ベクトルを <span class="arithmatex">\(|\phi\rangle = c_1 |1\rangle + c_2 |2\rangle\)</span> として基底展開し、これが以下の行列の固有値問題に等しくなることを示せ。また、この系の2つの固有値 <span class="arithmatex">\(\lambda\)</span> を求めよ。</p>
+<p>(1) この系のある状態ベクトルが <span class="arithmatex">\(|\psi\rangle = \frac{1}{\sqrt{2}} |1\rangle + \frac{i}{\sqrt{2}} |2\rangle\)</span> と与えられている。この状態における物理量 <span class="arithmatex">\(\hat{A}\)</span> の期待値 <span class="arithmatex">\(\langle A \rangle = \langle \psi|\hat{A}|\psi\rangle\)</span> を，完全性関係 <span class="arithmatex">\(\sum_{n=1,2} |n\rangle\langle n| = \hat{I}\)</span> を利用して計算せよ。</p>
+<p>(2) 演算子 <span class="arithmatex">\(\hat{A}\)</span> の固有値方程式 <span class="arithmatex">\(\hat{A}|\phi\rangle = \lambda |\phi\rangle\)</span> を考える。状態ベクトルを <span class="arithmatex">\(|\phi\rangle = c_1 |1\rangle + c_2 |2\rangle\)</span> として基底展開し，これが以下の行列の固有値問題に等しくなることを示せ。また，この系の2つの固有値 <span class="arithmatex">\(\lambda\)</span> を求めよ。</p>
 <div class="arithmatex">\[
 \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \lambda \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
 \]</div>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>期待値の定義式 <span class="arithmatex">\(\langle \psi|\hat{A}|\psi\rangle\)</span> の内部に、ブラと演算子の間、および演算子とケットの間の2箇所に完全性関係を挿入します。</p>
+<p>期待値の定義式 <span class="arithmatex">\(\langle \psi|\hat{A}|\psi\rangle\)</span> の内部に，ブラと演算子の間，および演算子とケットの間の2箇所に完全性関係を挿入します。</p>
 <div class="arithmatex">\[
 \langle A \rangle = \langle \psi| \left( \sum_{m=1,2} |m\rangle\langle m| \right) \hat{A} \left( \sum_{n=1,2} |n\rangle\langle n| \right) |\psi\rangle
 \]</div>
@@ -14548,7 +14548,7 @@ A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\ran
 <div class="arithmatex">\[
 \langle A \rangle = \sum_{m=1,2} \sum_{n=1,2} \langle \psi|m\rangle \big( \langle m|\hat{A}|n\rangle \big) \langle n|\psi\rangle
 \]</div>
-<p>ここで、中央の大括弧は演算子の行列要素 <span class="arithmatex">\(A_{mn}\)</span> です。また、与えられた <span class="arithmatex">\(|\psi\rangle\)</span> から内積を計算します。</p>
+<p>ここで，中央の大括弧は演算子の行列要素 <span class="arithmatex">\(A_{mn}\)</span> です。また，与えられた <span class="arithmatex">\(|\psi\rangle\)</span> から内積を計算します。</p>
 <div class="arithmatex">\[
 \langle 1|\psi\rangle = \frac{1}{\sqrt{2}}, \quad \langle 2|\psi\rangle = \frac{i}{\sqrt{2}}
 \]</div>
@@ -14567,7 +14567,7 @@ $$</p>
 <div class="arithmatex">\[
 = \frac{2}{2} + \frac{-1}{2} + \frac{-1}{2} + \frac{2}{2} = 1 - \frac{1}{2} - \frac{1}{2} + 1 = 1
 \]</div>
-<p>したがって、求める期待値は 1 となります。これは通常のベクトルと行列の積 </p>
+<p>したがって，求める期待値は 1 となります。これは通常のベクトルと行列の積 </p>
 <div class="arithmatex">\[
 \begin{pmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{i}{\sqrt{2}} \end{pmatrix} \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{i}{\sqrt{2}} \end{pmatrix}
 \]</div>
@@ -14586,7 +14586,7 @@ $$</p>
 <div class="arithmatex">\[
   \langle 2|\hat{A}|\phi\rangle = \lambda \langle 2|\phi\rangle
 \]</div>
-<p>ここで、左辺の演算子の右側に完全性関係 <span class="arithmatex">\(\sum_{n=1,2} |n\rangle\langle n| = \hat{I}\)</span> を挿入し、右辺には展開式 <span class="arithmatex">\(|\phi\rangle = c_1 |1\rangle + c_2 |2\rangle\)</span> から得られる内積 <span class="arithmatex">\(\langle 1|\phi\rangle = c_1, \langle 2|\phi\rangle = c_2\)</span> を代入します。</p>
+<p>ここで，左辺の演算子の右側に完全性関係 <span class="arithmatex">\(\sum_{n=1,2} |n\rangle\langle n| = \hat{I}\)</span> を挿入し，右辺には展開式 <span class="arithmatex">\(|\phi\rangle = c_1 |1\rangle + c_2 |2\rangle\)</span> から得られる内積 <span class="arithmatex">\(\langle 1|\phi\rangle = c_1, \langle 2|\phi\rangle = c_2\)</span> を代入します。</p>
 <ul>
 <li><strong>1つ目の式</strong></li>
 </ul>
@@ -14607,22 +14607,22 @@ $$</p>
 <div class="arithmatex">\[
   -ic_1 + 2c_2 = \lambda c_2
 \]</div>
-<p>この連立方程式をベクトルの表記にまとめることで、提示された行列の固有値問題の方程式が導かれます。</p>
+<p>この連立方程式をベクトルの表記にまとめることで，提示された行列の固有値問題の方程式が導かれます。</p>
 <div class="arithmatex">\[
 \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \lambda \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
 \]</div>
-<p>この行列の固有値を求めるため、特性方程式 <span class="arithmatex">\(\det(\hat{A} - \lambda \hat{I}) = 0\)</span> を解きます。</p>
+<p>この行列の固有値を求めるため，特性方程式 <span class="arithmatex">\(\det(\hat{A} - \lambda \hat{I}) = 0\)</span> を解きます。</p>
 <div class="arithmatex">\[
 \begin{vmatrix} 2-\lambda &amp; i \\ -i &amp; 2-\lambda \end{vmatrix} = 0 \implies (2-\lambda)^2 - (i)(-i) = 0
 \]</div>
 <div class="arithmatex">\[
 (2-\lambda)^2 - 1 = 0 \implies (2-\lambda)^2 = 1
 \]</div>
-<p>平方根をとることで、 <span class="arithmatex">\(\lambda\)</span> の値が求まります。</p>
+<p>平方根をとることで， <span class="arithmatex">\(\lambda\)</span> の値が求まります。</p>
 <div class="arithmatex">\[
 2-\lambda = \pm 1 \implies \lambda = 2 \mp 1
 \]</div>
-<p>したがって、求める固有値は <span class="arithmatex">\(\lambda = 1, 3\)</span> となります。</p>
+<p>したがって，求める固有値は <span class="arithmatex">\(\lambda = 1, 3\)</span> となります。</p>
 
 
 
@@ -14723,6 +14723,8 @@ $$</p>
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/problem-filter.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -309,7 +309,7 @@
   <span class="md-ellipsis">
     
   
-    タグ一覧
+    全問題一覧
   
 
     
@@ -14510,7 +14510,7 @@
       
       
       
-        <a href="../../../tags/#tag:発展" class="md-tag">発展</a>
+        <a href="../../../tag-index/#tag:発展" class="md-tag">発展</a>
       
     
   </nav>
@@ -14523,16 +14523,16 @@
 <div class="arithmatex">\[
 \hat{\mathcal{H}} = \frac{1}{2} \hat{\pi}^2 + \frac{1}{2} c^2 (\boldsymbol{\nabla}\hat{\phi})^2 + \frac{1}{2} \left(\frac{mc^2}{\hbar}\right)^2 \hat{\phi}^2
 \]</div>
-<p>これらの場を、体積 <span class="arithmatex">\(V\)</span> の周期境界条件のもとで、生成消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger, \hat{a}_{\boldsymbol{k}}\)</span> を用いて次のようにフーリエ展開する。</p>
+<p>これらの場を，体積 <span class="arithmatex">\(V\)</span> の周期境界条件のもとで，生成消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger, \hat{a}_{\boldsymbol{k}}\)</span> を用いて次のようにフーリエ展開する。</p>
 <div class="arithmatex">\[
 \hat{\phi}(\boldsymbol{r}) = \sum_{\boldsymbol{k}} \sqrt{\frac{\hbar}{2V\omega_{\boldsymbol{k}}}} \left( \hat{a}_{\boldsymbol{k}} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} + \hat{a}_{\boldsymbol{k}}^\dagger e^{-i\boldsymbol{k}\cdot\boldsymbol{r}} \right)
 \]</div>
 <div class="arithmatex">\[
 \hat{\pi}(\boldsymbol{r}) = \sum_{\boldsymbol{k}} (-i) \sqrt{\frac{\hbar\omega_{\boldsymbol{k}}}{2V}} \left( \hat{a}_{\boldsymbol{k}} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} - \hat{a}_{\boldsymbol{k}}^\dagger e^{-i\boldsymbol{k}\cdot\boldsymbol{r}} \right)
 \]</div>
-<p>ここで、 <span class="arithmatex">\(\omega_{\boldsymbol{k}} = \sqrt{c^2\boldsymbol{k}^2 + (mc^2/\hbar)^2}\)</span> である。以下の問いに答えよ。</p>
-<p>(1) 全空間のハミルトニアン <span class="arithmatex">\(\hat{H} = \int V d\boldsymbol{r} \, \hat{\mathcal{H}}\)</span> のうち、運動量項の積分 <span class="arithmatex">\(\int V d\boldsymbol{r} \, \frac{1}{2} \hat{\pi}^2\)</span> を実行せよ。空間積分によって現れるデルタ関数の性質 <span class="arithmatex">\(\int V d\boldsymbol{r} \, e^{i(\boldsymbol{k}+\boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}, -\boldsymbol{k}'}\)</span> を用いて、 <span class="arithmatex">\(\boldsymbol{k}\)</span> の和の形式に整理せよ。</p>
-<p>(2) 残りの空間項の積分も実行してすべてを足し合わせることで、全ハミルトニアンが次の形式にまとまることを示せ。</p>
+<p>ここで， <span class="arithmatex">\(\omega_{\boldsymbol{k}} = \sqrt{c^2\boldsymbol{k}^2 + (mc^2/\hbar)^2}\)</span> である。以下の問いに答えよ。</p>
+<p>(1) 全空間のハミルトニアン <span class="arithmatex">\(\hat{H} = \int V d\boldsymbol{r} \, \hat{\mathcal{H}}\)</span> のうち，運動量項の積分 <span class="arithmatex">\(\int V d\boldsymbol{r} \, \frac{1}{2} \hat{\pi}^2\)</span> を実行せよ。空間積分によって現れるデルタ関数の性質 <span class="arithmatex">\(\int V d\boldsymbol{r} \, e^{i(\boldsymbol{k}+\boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}, -\boldsymbol{k}'}\)</span> を用いて， <span class="arithmatex">\(\boldsymbol{k}\)</span> の和の形式に整理せよ。</p>
+<p>(2) 残りの空間項の積分も実行してすべてを足し合わせることで，全ハミルトニアンが次の形式にまとまることを示せ。</p>
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}} \frac{1}{2} \hbar \omega_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} \right)
 \]</div>
@@ -14543,33 +14543,33 @@
 <div class="arithmatex">\[
 \frac{1}{2} \int d\boldsymbol{r} \, \hat{\pi}^2 = -\frac{1}{2} \sum_{\boldsymbol{k}, \boldsymbol{k}'} \frac{\hbar \sqrt{\omega_{\boldsymbol{k}}\omega_{\boldsymbol{k}'}}}{2V} \int d\boldsymbol{r} \left( \hat{a}_{\boldsymbol{k}} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} - \hat{a}_{\boldsymbol{k}}^\dagger e^{-i\boldsymbol{k}\cdot\boldsymbol{r}} \right) \left( \hat{a}_{\boldsymbol{k}'} e^{i\boldsymbol{k}'\cdot\boldsymbol{r}} - \hat{a}_{\boldsymbol{k}'}^\dagger e^{-i\boldsymbol{k}'\cdot\boldsymbol{r}} \right)
 \]</div>
-<p>括弧を展開すると、4つの異なる指数関数の項が出現します。それぞれの空間積分に問題文のデルタ関数の性質を適用します。</p>
+<p>括弧を展開すると，4つの異なる指数関数の項が出現します。それぞれの空間積分に問題文のデルタ関数の性質を適用します。</p>
 <div class="arithmatex">\[
 \int d\boldsymbol{r} \, e^{i(\boldsymbol{k}+\boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}, -\boldsymbol{k}'}, \quad \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k}+\boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}, -\boldsymbol{k}'}
 \]</div>
 <div class="arithmatex">\[
 \int d\boldsymbol{r} \, e^{i(\boldsymbol{k}-\boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}, \boldsymbol{k}'}, \quad \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k}-\boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}, \boldsymbol{k}'}
 \]</div>
-<p>デルタ関数の作用によって <span class="arithmatex">\(\boldsymbol{k}'\)</span> の和を消去します。 <span class="arithmatex">\(\omega_{-\boldsymbol{k}} = \omega_{\boldsymbol{k}}\)</span> であることに注意して整理すると、次のようになります。</p>
+<p>デルタ関数の作用によって <span class="arithmatex">\(\boldsymbol{k}'\)</span> の和を消去します。 <span class="arithmatex">\(\omega_{-\boldsymbol{k}} = \omega_{\boldsymbol{k}}\)</span> であることに注意して整理すると，次のようになります。</p>
 <div class="arithmatex">\[
 \frac{1}{2} \int d\boldsymbol{r} \, \hat{\pi}^2 = \sum_{\boldsymbol{k}} \frac{1}{4} \hbar \omega_{\boldsymbol{k}} \left( -\hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}} + \hat{a}_{\boldsymbol{k}}\hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{\boldsymbol{k}} - \hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger \right)
 \]</div>
 <h3 id="2">(2)</h3>
-<p>同様にして、ハミルトニアン密度の残りの2項（空間微分項と質量項）の積分を計算します。便宜上、これらをまとめると次のようになります。</p>
+<p>同様にして，ハミルトニアン密度の残りの2項（空間微分項と質量項）の積分を計算します。便宜上，これらをまとめると次のようになります。</p>
 <div class="arithmatex">\[
 \frac{1}{2} \int d\boldsymbol{r} \left[ c^2 (\boldsymbol{\nabla}\hat{\phi})^2 + \left(\frac{mc^2}{\hbar}\right)^2 \hat{\phi}^2 \right]
 \]</div>
-<p>空間微分によって <span class="arithmatex">\(\boldsymbol{\nabla} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} = i\boldsymbol{k} e^{i\boldsymbol{k}\cdot\boldsymbol{r}}\)</span> が得られます。これらを展開して同様に空間積分を処理すると、次の等式が導かれます。</p>
+<p>空間微分によって <span class="arithmatex">\(\boldsymbol{\nabla} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} = i\boldsymbol{k} e^{i\boldsymbol{k}\cdot\boldsymbol{r}}\)</span> が得られます。これらを展開して同様に空間積分を処理すると，次の等式が導かれます。</p>
 <div class="arithmatex">\[
 = \sum_{\boldsymbol{k}} \frac{\hbar}{4V\omega_{\boldsymbol{k}}} \left[ c^2 \boldsymbol{k}^2 + \left(\frac{mc^2}{\hbar}\right)^2 \right] V \left( \hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}} + \hat{a}_{\boldsymbol{k}}\hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{\boldsymbol{k}} + \hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger \right)
 \]</div>
-<p>ここで、問題文に与えられた関係式 <span class="arithmatex">\(c^2\boldsymbol{k}^2 + (mc^2/\hbar)^2 = \omega_{\boldsymbol{k}}^2\)</span> を代入して係数を約分します。</p>
+<p>ここで，問題文に与えられた関係式 <span class="arithmatex">\(c^2\boldsymbol{k}^2 + (mc^2/\hbar)^2 = \omega_{\boldsymbol{k}}^2\)</span> を代入して係数を約分します。</p>
 <div class="arithmatex">\[
 = \sum_{\boldsymbol{k}} \frac{1}{4} \hbar \omega_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}} + \hat{a}_{\boldsymbol{k}}\hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{\boldsymbol{k}} + \hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger \right)
 \]</div>
-<p>(1) で求めた運動量項の結果と、この空間項の結果を足し合わせます。</p>
+<p>(1) で求めた運動量項の結果と，この空間項の結果を足し合わせます。</p>
 <p>符号の異なる演算子の組み合わせ <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger\)</span> が完全に相殺されて消去されます。</p>
-<p>残った共通の項をまとめると、指定された次の形式が得られます。</p>
+<p>残った共通の項をまとめると，指定された次の形式が得られます。</p>
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}} \frac{1}{2} \hbar \omega_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} \right)
 \]</div>
@@ -14673,6 +14673,8 @@
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/problem-filter.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

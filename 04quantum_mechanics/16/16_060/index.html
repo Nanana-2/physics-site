@@ -309,7 +309,7 @@
   <span class="md-ellipsis">
     
   
-    タグ一覧
+    全問題一覧
   
 
     
@@ -14510,7 +14510,7 @@
       
       
       
-        <a href="../../../tags/#tag:発展" class="md-tag">発展</a>
+        <a href="../../../tag-index/#tag:発展" class="md-tag">発展</a>
       
     
   </nav>
@@ -14519,15 +14519,15 @@
 
 <h1 id="_1">実スカラー場の量子化</h1>
 <h2 id="_2">問題</h2>
-<p>自由な実スカラー場 <span class="arithmatex">\(\hat{\phi}(\boldsymbol{r})\)</span> とその共役運動量場 <span class="arithmatex">\(\hat{\pi}(\boldsymbol{r})\)</span> のハミルトニアンは、生成消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger, \hat{a}_{\boldsymbol{k}}\)</span> を用いて次のように表される。</p>
+<p>自由な実スカラー場 <span class="arithmatex">\(\hat{\phi}(\boldsymbol{r})\)</span> とその共役運動量場 <span class="arithmatex">\(\hat{\pi}(\boldsymbol{r})\)</span> のハミルトニアンは，生成消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger, \hat{a}_{\boldsymbol{k}}\)</span> を用いて次のように表される。</p>
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}} \frac{1}{2} \hbar \omega_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} \right)
 \]</div>
-<p>ここで、場演算子同士は次の同時刻正準交換関係を満たすものとする。</p>
+<p>ここで，場演算子同士は次の同時刻正準交換関係を満たすものとする。</p>
 <div class="arithmatex">\[
 [\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] = i\hbar \delta(\boldsymbol{r} - \boldsymbol{r}'), \quad [\hat{\phi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] = [\hat{\pi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] = 0
 \]</div>
-<p>また、フーリエ反転公式により、消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\)</span> とそのエルミート共役である生成演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger\)</span> は、場演算子を用いて次のように与えられる。</p>
+<p>また，フーリエ反転公式により，消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\)</span> とそのエルミート共役である生成演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger\)</span> は，場演算子を用いて次のように与えられる。</p>
 <div class="arithmatex">\[
 \hat{a}_{\boldsymbol{k}} = \int d\boldsymbol{r} \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r}} \left( \sqrt{\frac{\omega_{\boldsymbol{k}}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}) + \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}}}} \hat{\pi}(\boldsymbol{r}) \right)
 \]</div>
@@ -14535,12 +14535,12 @@
 \hat{a}_{\boldsymbol{k}'}^\dagger = \int d\boldsymbol{r}' \, e^{i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( \sqrt{\frac{\omega_{\boldsymbol{k}'}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}') - \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}'}}} \hat{\pi}(\boldsymbol{r}') \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 与えられた <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}'}^\dagger\)</span> の式を用いて、交換関係 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger]\)</span> を計算せよ。場演算子の正準交換関係を代入し、空間積分を実行することで、等式 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \delta_{\boldsymbol{k}\boldsymbol{k}'}\)</span> を導出せよ。ただし、空間積分の公式 </p>
+<p>(1) 与えられた <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}'}^\dagger\)</span> の式を用いて，交換関係 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger]\)</span> を計算せよ。場演算子の正準交換関係を代入し，空間積分を実行することで，等式 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \delta_{\boldsymbol{k}\boldsymbol{k}'}\)</span> を導出せよ。ただし，空間積分の公式 </p>
 <div class="arithmatex">\[
 \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}\boldsymbol{k}'}
 \]</div>
 <p>を用いよ。</p>
-<p>(2) (1) で得られた交換関係を用いて、ハミルトニアンの式から <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger\)</span> を消去せよ。粒子数演算子 <span class="arithmatex">\(\hat{n}_{\boldsymbol{k}} = \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}}\)</span> を用いた標準的な表示を導け。</p>
+<p>(2) (1) で得られた交換関係を用いて，ハミルトニアンの式から <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger\)</span> を消去せよ。粒子数演算子 <span class="arithmatex">\(\hat{n}_{\boldsymbol{k}} = \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}}\)</span> を用いた標準的な表示を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14548,7 +14548,7 @@
 <div class="arithmatex">\[
 [\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left[ \sqrt{\frac{\omega_{\boldsymbol{k}}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}) + \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}}}} \hat{\pi}(\boldsymbol{r}) , \sqrt{\frac{\omega_{\boldsymbol{k}'}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}') - \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}'}}} \hat{\pi}(\boldsymbol{r}') \right]
 \]</div>
-<p>交換関係の性質を用いて括弧内部を展開します。同じ場同士の交換関係は 0 になるため、異なる場が交差する項だけが残ります。</p>
+<p>交換関係の性質を用いて括弧内部を展開します。同じ場同士の交換関係は 0 になるため，異なる場が交差する項だけが残ります。</p>
 <div class="arithmatex">\[
 = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( -\frac{i\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V\hbar} [\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] + \frac{i\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V\hbar} [\hat{\pi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] \right)
 \]</div>
@@ -14556,7 +14556,7 @@
 <div class="arithmatex">\[
 = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( \frac{\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') + \frac{\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') \right)
 \]</div>
-<p>デルタ関数の作用により、 <span class="arithmatex">\(\boldsymbol{r}'\)</span> の空間積分を実行して <span class="arithmatex">\(\boldsymbol{r}' = \boldsymbol{r}\)</span> と置きます。このとき、デルタ関数の性質から <span class="arithmatex">\(\boldsymbol{k}' = \boldsymbol{k}\)</span> の項のみが抽出されるため、固有振動数は <span class="arithmatex">\(\omega_{\boldsymbol{k}'} = \omega_{\boldsymbol{k}}\)</span> となり、等式は次のように整理されます。</p>
+<p>デルタ関数の作用により， <span class="arithmatex">\(\boldsymbol{r}'\)</span> の空間積分を実行して <span class="arithmatex">\(\boldsymbol{r}' = \boldsymbol{r}\)</span> と置きます。このとき，デルタ関数の性質から <span class="arithmatex">\(\boldsymbol{k}' = \boldsymbol{k}\)</span> の項のみが抽出されるため，固有振動数は <span class="arithmatex">\(\omega_{\boldsymbol{k}'} = \omega_{\boldsymbol{k}}\)</span> となり，等式は次のように整理されます。</p>
 <div class="arithmatex">\[
 = \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} \left( \frac{1}{2V} + \frac{1}{2V} \right) = \frac{1}{V} \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}}
 \]</div>
@@ -14564,17 +14564,17 @@
 <div class="arithmatex">\[
 = \frac{1}{V} \left( V \delta_{\boldsymbol{k}\boldsymbol{k}'} \right) = \delta_{\boldsymbol{k}\boldsymbol{k}'}
 \]</div>
-<p>これにより、演算子の交換関係が導出されました。</p>
+<p>これにより，演算子の交換関係が導出されました。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた交換関係において <span class="arithmatex">\(\boldsymbol{k} = \boldsymbol{k}'\)</span> と置いた式を変形します。</p>
 <div class="arithmatex">\[
 [\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}}^\dagger] = \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger - \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} = 1
 \]</div>
-<p>この等式から、次の置き換え式を作ります。</p>
+<p>この等式から，次の置き換え式を作ります。</p>
 <div class="arithmatex">\[
 \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger = \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} + 1
 \]</div>
-<p>この関係式を、全ハミルトニアンの式の括弧内にある第1項へと代入します。</p>
+<p>この関係式を，全ハミルトニアンの式の括弧内にある第1項へと代入します。</p>
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}} \frac{1}{2} \hbar \omega_{\boldsymbol{k}} \left( \left( \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} + 1 \right) + \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} \right)
 \]</div>
@@ -14582,11 +14582,11 @@
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}} \frac{1}{2} \hbar \omega_{\boldsymbol{k}} \left( 2 \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} + 1 \right)
 \]</div>
-<p>係数の <span class="arithmatex">\(\frac{1}{2}\)</span> を分配し、粒子数演算子 <span class="arithmatex">\(\hat{n}_{\boldsymbol{k}} = \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}}\)</span> を適用します。</p>
+<p>係数の <span class="arithmatex">\(\frac{1}{2}\)</span> を分配し，粒子数演算子 <span class="arithmatex">\(\hat{n}_{\boldsymbol{k}} = \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}}\)</span> を適用します。</p>
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}} \hbar \omega_{\boldsymbol{k}} \left( \hat{n}_{\boldsymbol{k}} + \frac{1}{2} \right)
 \]</div>
-<p>これにより、ハミルトニアンが粒子数演算子を用いた標準的な形式へと変形されました。</p>
+<p>これにより，ハミルトニアンが粒子数演算子を用いた標準的な形式へと変形されました。</p>
 
 
 
@@ -14687,6 +14687,8 @@
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/problem-filter.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

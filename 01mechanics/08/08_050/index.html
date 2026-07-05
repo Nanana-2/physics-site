@@ -309,7 +309,7 @@
   <span class="md-ellipsis">
     
   
-    タグ一覧
+    全問題一覧
   
 
     
@@ -14532,7 +14532,7 @@
       
       
       
-        <a href="../../../tags/#tag:標準" class="md-tag">標準</a>
+        <a href="../../../tag-index/#tag:標準" class="md-tag">標準</a>
       
     
   </nav>
@@ -14541,87 +14541,87 @@
 
 <h1 id="_1">回転座標系の運動方程式</h1>
 <h2 id="_2">問題</h2>
-<p>宇宙空間に浮かぶ巨大な円筒形の宇宙ステーションを考える。このステーションは、将来の長期滞在に向けて、遠心力を利用した人工重力を発生させる計画を進めている。ステーションは、その中心軸を回転軸として、一定の角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転している。</p>
-<p>ステーション内部の観測者は、物体を投げたときに描かれる奇妙な軌道を説明するため、回転する部屋の内部を基準とした座標系における運動方程式を構築しようと考えた。</p>
-<p>固定された慣性基準系を系 <span class="arithmatex">\(S\)</span> とし、ステーションとともに回転する基準系を系 <span class="arithmatex">\(S'\)</span> とする。便宜上、系 <span class="arithmatex">\(S\)</span> と系 <span class="arithmatex">\(S'\)</span> の原点は一致しているものとする。系 <span class="arithmatex">\(S\)</span> における時間微分を <span class="arithmatex">\(d/dt\)</span> で表し、系 <span class="arithmatex">\(S'\)</span> における時間微分を <span class="arithmatex">\(d'/dt\)</span> で表す。</p>
-<p>(1) 回転系 <span class="arithmatex">\(S'\)</span> において静止している任意のベクトルは、慣性系 <span class="arithmatex">\(S\)</span> から見ると、角速度 <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転運動を行う。この事実を出発点として、系 <span class="arithmatex">\(S'\)</span> において運動している任意のベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> に対する、慣性系と回転系の時間微分の間の変換公式
+<p>宇宙空間に浮かぶ巨大な円筒形の宇宙ステーションを考える。このステーションは，将来の長期滞在に向けて，遠心力を利用した人工重力を発生させる計画を進めている。ステーションは，その中心軸を回転軸として，一定の角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転している。</p>
+<p>ステーション内部の観測者は，物体を投げたときに描かれる奇妙な軌道を説明するため，回転する部屋の内部を基準とした座標系における運動方程式を構築しようと考えた。</p>
+<p>固定された慣性基準系を系 <span class="arithmatex">\(S\)</span> とし，ステーションとともに回転する基準系を系 <span class="arithmatex">\(S'\)</span> とする。便宜上，系 <span class="arithmatex">\(S\)</span> と系 <span class="arithmatex">\(S'\)</span> の原点は一致しているものとする。系 <span class="arithmatex">\(S\)</span> における時間微分を <span class="arithmatex">\(d/dt\)</span> で表し，系 <span class="arithmatex">\(S'\)</span> における時間微分を <span class="arithmatex">\(d'/dt\)</span> で表す。</p>
+<p>(1) 回転系 <span class="arithmatex">\(S'\)</span> において静止している任意のベクトルは，慣性系 <span class="arithmatex">\(S\)</span> から見ると，角速度 <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転運動を行う。この事実を出発点として，系 <span class="arithmatex">\(S'\)</span> において運動している任意のベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> に対する，慣性系と回転系の時間微分の間の変換公式
 $$
 \frac{d\boldsymbol{B}}{dt} = \frac{d'\boldsymbol{B}}{dt} + \boldsymbol{\omega} \times \boldsymbol{B}
 $$
 を導出せよ。</p>
-<p>(2) 小問(1)で得られた変換公式を、系 <span class="arithmatex">\(S'\)</span> における物体の位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に繰り返し適用することにより、慣性系 <span class="arithmatex">\(S\)</span> における加速度 <span class="arithmatex">\(\boldsymbol{a} = d^2 \boldsymbol{r}/dt^2\)</span> と、回転系 <span class="arithmatex">\(S'\)</span> における加速度 <span class="arithmatex">\(\boldsymbol{a}' = d'^2 \boldsymbol{r}/dt^2\)</span>、および回転系 <span class="arithmatex">\(S'\)</span> における速度 <span class="arithmatex">\(\boldsymbol{v}' = d'\boldsymbol{r}/dt\)</span> の間の関係式を求めよ。ただし、角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> は時間的に一定であるとする。</p>
-<p>(3) 質量 <span class="arithmatex">\(m\)</span> の物体に作用する実在の力を <span class="arithmatex">\(\boldsymbol{F}\)</span> とするとき、慣性系における運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> から、回転系における物体の運動方程式を導出せよ。また、得られた運動方程式に現れる見かけの力のうち、速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に依存する力と、回転軸からの位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力をそれぞれ何と呼ぶか答えよ。さらに、ステーション内で物体を静止させたときに作用する見かけの力が、人工重力として機能する理由を説明せよ。</p>
+<p>(2) 小問(1)で得られた変換公式を，系 <span class="arithmatex">\(S'\)</span> における物体の位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に繰り返し適用することにより，慣性系 <span class="arithmatex">\(S\)</span> における加速度 <span class="arithmatex">\(\boldsymbol{a} = d^2 \boldsymbol{r}/dt^2\)</span> と，回転系 <span class="arithmatex">\(S'\)</span> における加速度 <span class="arithmatex">\(\boldsymbol{a}' = d'^2 \boldsymbol{r}/dt^2\)</span>，および回転系 <span class="arithmatex">\(S'\)</span> における速度 <span class="arithmatex">\(\boldsymbol{v}' = d'\boldsymbol{r}/dt\)</span> の間の関係式を求めよ。ただし，角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> は時間的に一定であるとする。</p>
+<p>(3) 質量 <span class="arithmatex">\(m\)</span> の物体に作用する実在の力を <span class="arithmatex">\(\boldsymbol{F}\)</span> とするとき，慣性系における運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> から，回転系における物体の運動方程式を導出せよ。また，得られた運動方程式に現れる見かけの力のうち，速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に依存する力と，回転軸からの位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力をそれぞれ何と呼ぶか答えよ。さらに，ステーション内で物体を静止させたときに作用する見かけの力が，人工重力として機能する理由を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>回転系 <span class="arithmatex">\(S'\)</span> の正規直交基底ベクトルを <span class="arithmatex">\(\boldsymbol{e}_1\)</span>，<span class="arithmatex">\(\boldsymbol{e}_2\)</span>，<span class="arithmatex">\(\boldsymbol{e}_3\)</span> とします。これらは系 <span class="arithmatex">\(S'\)</span> に固定されているため、系 <span class="arithmatex">\(S'\)</span> から見れば時間変化しませんが、慣性系 <span class="arithmatex">\(S\)</span> から見ると角速度 <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転しています。</p>
-<p>系 <span class="arithmatex">\(S\)</span> から見た各基底ベクトルの時間変化率は、微小時間 <span class="arithmatex">\(dt\)</span> の間に生じる回転による変位を考えることで、次のように表されます。</p>
+<p>回転系 <span class="arithmatex">\(S'\)</span> の正規直交基底ベクトルを <span class="arithmatex">\(\boldsymbol{e}_1\)</span>，<span class="arithmatex">\(\boldsymbol{e}_2\)</span>，<span class="arithmatex">\(\boldsymbol{e}_3\)</span> とします。これらは系 <span class="arithmatex">\(S'\)</span> に固定されているため，系 <span class="arithmatex">\(S'\)</span> から見れば時間変化しませんが，慣性系 <span class="arithmatex">\(S\)</span> から見ると角速度 <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転しています。</p>
+<p>系 <span class="arithmatex">\(S\)</span> から見た各基底ベクトルの時間変化率は，微小時間 <span class="arithmatex">\(dt\)</span> の間に生じる回転による変位を考えることで，次のように表されます。</p>
 <div class="arithmatex">\[
 \frac{d\boldsymbol{e}_i}{dt} = \boldsymbol{\omega} \times \boldsymbol{e}_i \quad (i = 1, 2, 3)
 \]</div>
-<p>任意のベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> は、これらの基底ベクトルを用いて次のように展開できます。
+<p>任意のベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> は，これらの基底ベクトルを用いて次のように展開できます。
 $$
 \boldsymbol{B} = B_1 \boldsymbol{e}_1 + B_2 \boldsymbol{e}_2 + B_3 \boldsymbol{e}_3
 $$</p>
-<p>このベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> の慣性系 <span class="arithmatex">\(S\)</span> における時間変化率を、積の微分法を用いて計算します。</p>
+<p>このベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> の慣性系 <span class="arithmatex">\(S\)</span> における時間変化率を，積の微分法を用いて計算します。</p>
 <div class="arithmatex">\[
 \frac{d\boldsymbol{B}}{dt} = \sum_{i=1}^3 \frac{dB_i}{dt} \boldsymbol{e}_i + \sum_{i=1}^3 B_i \frac{d\boldsymbol{e}_i}{dt}
 \]</div>
-<p>右辺の第1項は、回転系 <span class="arithmatex">\(S'\)</span> の基底ベクトルを固定したまま成分のみを時間微分したものであるため、系 <span class="arithmatex">\(S'\)</span> における <span class="arithmatex">\(\boldsymbol{B}\)</span> の時間変化率 <span class="arithmatex">\(d'\boldsymbol{B}/dt\)</span> に他なりません。</p>
-<p>右辺の第2項に、基底ベクトルの時間微分の式を代入します。</p>
+<p>右辺の第1項は，回転系 <span class="arithmatex">\(S'\)</span> の基底ベクトルを固定したまま成分のみを時間微分したものであるため，系 <span class="arithmatex">\(S'\)</span> における <span class="arithmatex">\(\boldsymbol{B}\)</span> の時間変化率 <span class="arithmatex">\(d'\boldsymbol{B}/dt\)</span> に他なりません。</p>
+<p>右辺の第2項に，基底ベクトルの時間微分の式を代入します。</p>
 <div class="arithmatex">\[
 \sum_{i=1}^3 B_i \frac{d\boldsymbol{e}_i}{dt} = \sum_{i=1}^3 B_i \left( \boldsymbol{\omega} \times \boldsymbol{e}_i \right)
 \]</div>
-<p>外積の線形性を用いることで、この項は次のように整理できます。</p>
+<p>外積の線形性を用いることで，この項は次のように整理できます。</p>
 <div class="arithmatex">\[
 \sum_{i=1}^3 B_i \left( \boldsymbol{\omega} \times \boldsymbol{e}_i \right) = \boldsymbol{\omega} \times \left( \sum_{i=1}^3 B_i \boldsymbol{e}_i \right) = \boldsymbol{\omega} \times \boldsymbol{B}
 \]</div>
-<p>これらを合わせることで、求める時間微分の変換公式が導出されます。</p>
+<p>これらを合わせることで，求める時間微分の変換公式が導出されます。</p>
 <div class="arithmatex">\[
 \frac{d\boldsymbol{B}}{dt} = \frac{d'\boldsymbol{B}}{dt} + \boldsymbol{\omega} \times \boldsymbol{B}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>小問(1)で得られた変換公式を、物体の位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に適用します。これにより、慣性系における速度 <span class="arithmatex">\(\boldsymbol{v}\)</span> と、回転系における速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> の関係が得られます。
+<p>小問(1)で得られた変換公式を，物体の位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に適用します。これにより，慣性系における速度 <span class="arithmatex">\(\boldsymbol{v}\)</span> と，回転系における速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> の関係が得られます。
 $$
 \boldsymbol{v} = \frac{d\boldsymbol{r}}{dt} = \frac{d'\boldsymbol{r}}{dt} + \boldsymbol{\omega} \times \boldsymbol{r} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}
 $$
-次に、慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a} = d\boldsymbol{v}/dt\)</span> を求めるため、この速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> に対して再度変換公式を適用します。
+次に，慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a} = d\boldsymbol{v}/dt\)</span> を求めるため，この速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> に対して再度変換公式を適用します。
 $$
 \boldsymbol{a} = \frac{d\boldsymbol{v}}{dt} = \frac{d'\boldsymbol{v}}{dt} + \boldsymbol{\omega} \times \boldsymbol{v}
 $$
-ここで、右辺の第1項に <span class="arithmatex">\(\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}\)</span> を代入します。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> が時間的に一定であることに注意すると、次のようになります。
+ここで，右辺の第1項に <span class="arithmatex">\(\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}\)</span> を代入します。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> が時間的に一定であることに注意すると，次のようになります。
 $$
 \frac{d'\boldsymbol{v}}{dt} = \frac{d'}{dt} \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) = \frac{d'\boldsymbol{v}'}{dt} + \boldsymbol{\omega} \times \frac{d'\boldsymbol{r}}{dt} = \boldsymbol{a}' + \boldsymbol{\omega} \times \boldsymbol{v}'
 $$
-同様に、右辺の第2項に <span class="arithmatex">\(\boldsymbol{v}\)</span> の表現を代入します。
+同様に，右辺の第2項に <span class="arithmatex">\(\boldsymbol{v}\)</span> の表現を代入します。
 $$
 \boldsymbol{\omega} \times \boldsymbol{v} = \boldsymbol{\omega} \times \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) = \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
 $$
-これら2つの項を足し合わせることで、慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a}\)</span> と、回転系における物理量との関係式が得られます。
+これら2つの項を足し合わせることで，慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a}\)</span> と，回転系における物理量との関係式が得られます。
 $$
 \boldsymbol{a} = \boldsymbol{a}' + 2 \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
 $$</p>
 <h3 id="3">(3)</h3>
-<p>慣性系における運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> に、小問(2)で得られた加速度の関係式を代入します。
+<p>慣性系における運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> に，小問(2)で得られた加速度の関係式を代入します。
 $$
 \boldsymbol{F} = m \left( \boldsymbol{a}' + 2 \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right) \right)
 $$
-この式を、回転系における物体の加速度 <span class="arithmatex">\(\boldsymbol{a}'\)</span> について整理します。
+この式を，回転系における物体の加速度 <span class="arithmatex">\(\boldsymbol{a}'\)</span> について整理します。
 $$
 m \boldsymbol{a}' = \boldsymbol{F} - 2 m \boldsymbol{\omega} \times \boldsymbol{v}' - m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
 $$
 これが回転座標系における物体の運動方程式です。</p>
-<p>この方程式の右辺に現れる見かけの力は、それぞれ以下のように定義されます。
-- 速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に比例する力 <span class="arithmatex">\(-2 m \boldsymbol{\omega} \times \boldsymbol{v}'\)</span> を、コリオリの力と呼びます。
-- 位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力 <span class="arithmatex">\(-m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)\)</span> を、遠心力と呼びます。</p>
-<p>次に、この遠心力が人工重力として機能する理由を説明します。</p>
-<p>ステーションの内部で物体が静止している、すなわち <span class="arithmatex">\(\boldsymbol{v}' = \boldsymbol{0}\)</span> であるとき、コリオリの力は作用せず、見かけの力は遠心力のみとなります。</p>
-<p>ここで、回転軸から物体へ向かって、回転軸に垂直に引いたベクトルを <span class="arithmatex">\(\boldsymbol{r}_{\perp}\)</span> とします。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> と位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の関係から、遠心力は次のように書き直すことができます。
+<p>この方程式の右辺に現れる見かけの力は，それぞれ以下のように定義されます。
+- 速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に比例する力 <span class="arithmatex">\(-2 m \boldsymbol{\omega} \times \boldsymbol{v}'\)</span> を，コリオリの力と呼びます。
+- 位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力 <span class="arithmatex">\(-m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)\)</span> を，遠心力と呼びます。</p>
+<p>次に，この遠心力が人工重力として機能する理由を説明します。</p>
+<p>ステーションの内部で物体が静止している，すなわち <span class="arithmatex">\(\boldsymbol{v}' = \boldsymbol{0}\)</span> であるとき，コリオリの力は作用せず，見かけの力は遠心力のみとなります。</p>
+<p>ここで，回転軸から物体へ向かって，回転軸に垂直に引いたベクトルを <span class="arithmatex">\(\boldsymbol{r}_{\perp}\)</span> とします。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> と位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の関係から，遠心力は次のように書き直すことができます。
 $$
 - m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right) = m \omega^2 \boldsymbol{r}_{\perp}
 $$
-この式は、遠心力が常に回転軸から遠ざかる外向きに働き、その大きさが回転軸からの距離に比例することを示しています。</p>
-<p>宇宙ステーションの内壁を床とみなすと、この外向きに働く遠心力は、床に向かって物体を押し付ける力となります。これは、地球上において重力が私たちを地面に引きつける現象と完全に同等です。したがって、ステーションの回転速度と半径を適切に設計することにより、地球上と同じ大きさの遠心力を生み出すことが可能となり、人工重力として機能させることができます。</p>
+この式は，遠心力が常に回転軸から遠ざかる外向きに働き，その大きさが回転軸からの距離に比例することを示しています。</p>
+<p>宇宙ステーションの内壁を床とみなすと，この外向きに働く遠心力は，床に向かって物体を押し付ける力となります。これは，地球上において重力が私たちを地面に引きつける現象と完全に同等です。したがって，ステーションの回転速度と半径を適切に設計することにより，地球上と同じ大きさの遠心力を生み出すことが可能となり，人工重力として機能させることができます。</p>
 
 
 
@@ -14722,6 +14722,8 @@ $$
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/problem-filter.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

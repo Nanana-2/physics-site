@@ -309,7 +309,7 @@
   <span class="md-ellipsis">
     
   
-    タグ一覧
+    全問題一覧
   
 
     
@@ -14532,7 +14532,7 @@
       
       
       
-        <a href="../../../tags/#tag:標準" class="md-tag">標準</a>
+        <a href="../../../tag-index/#tag:標準" class="md-tag">標準</a>
       
     
   </nav>
@@ -14541,8 +14541,8 @@
 
 <h1 id="_1">角運動量の行列表現</h1>
 <h2 id="_2">問題</h2>
-<p>量子数 <span class="arithmatex">\(l\)</span> が指定されたとき、角運動量の各演算子は <span class="arithmatex">\((2l+1)\)</span> 次元の正方行列として表すことができる。ここでは <span class="arithmatex">\(l=1\)</span> の場合を例にとり、状態ベクトルを基底とする行列表現を組み立て、演算子間で成り立つ関係式を行列計算によって検証する。</p>
-<p>全角運動量量子数が <span class="arithmatex">\(l=1\)</span> のとき、 <span class="arithmatex">\(z\)</span> 成分の量子数は <span class="arithmatex">\(m = 1, 0, -1\)</span> の3つの値をとる。これらに対応する同時固有状態を、以下の順に並べた列ベクトルで表す。</p>
+<p>量子数 <span class="arithmatex">\(l\)</span> が指定されたとき，角運動量の各演算子は <span class="arithmatex">\((2l+1)\)</span> 次元の正方行列として表すことができる。ここでは <span class="arithmatex">\(l=1\)</span> の場合を例にとり，状態ベクトルを基底とする行列表現を組み立て，演算子間で成り立つ関係式を行列計算によって検証する。</p>
+<p>全角運動量量子数が <span class="arithmatex">\(l=1\)</span> のとき， <span class="arithmatex">\(z\)</span> 成分の量子数は <span class="arithmatex">\(m = 1, 0, -1\)</span> の3つの値をとる。これらに対応する同時固有状態を，以下の順に並べた列ベクトルで表す。</p>
 <div class="arithmatex">\[
 |1, 1\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad |1, 0\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad |1, -1\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
 \]</div>
@@ -14557,16 +14557,16 @@
 \hat{L}_- |1, 1\rangle = \sqrt{2}\hbar |1, 0\rangle, \quad \hat{L}_- |1, 0\rangle = \sqrt{2}\hbar |1, -1\rangle, \quad \hat{L}_- |1, -1\rangle = 0
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 演算子 <span class="arithmatex">\(\hat{L}_z\)</span> の行列表現 <span class="arithmatex">\(L_z\)</span> を求めよ。また、昇降演算子の行列表現 <span class="arithmatex">\(L_+\)</span> および <span class="arithmatex">\(L_-\)</span> をそれぞれ求めよ。</p>
-<p>(2) 関係式 <span class="arithmatex">\(\hat{L}_x = \frac{1}{2}(\hat{L}_+ + \hat{L}_-)\)</span> および <span class="arithmatex">\(\hat{L}_y = \frac{1}{2i}(\hat{L}_+ - \hat{L}_-)\)</span> を用いて、成分演算子の行列表現 <span class="arithmatex">\(L_x\)</span> と <span class="arithmatex">\(L_y\)</span> をそれぞれ求めよ。</p>
-<p>(3) 求めた行列 <span class="arithmatex">\(L_x\)</span> と <span class="arithmatex">\(L_y\)</span> の積から交換関係 <span class="arithmatex">\([L_x, L_y] = L_x L_y - L_y L_x\)</span> を計算し、これが <span class="arithmatex">\(i\hbar L_z\)</span> に一致することを確認せよ。</p>
+<p>(1) 演算子 <span class="arithmatex">\(\hat{L}_z\)</span> の行列表現 <span class="arithmatex">\(L_z\)</span> を求めよ。また，昇降演算子の行列表現 <span class="arithmatex">\(L_+\)</span> および <span class="arithmatex">\(L_-\)</span> をそれぞれ求めよ。</p>
+<p>(2) 関係式 <span class="arithmatex">\(\hat{L}_x = \frac{1}{2}(\hat{L}_+ + \hat{L}_-)\)</span> および <span class="arithmatex">\(\hat{L}_y = \frac{1}{2i}(\hat{L}_+ - \hat{L}_-)\)</span> を用いて，成分演算子の行列表現 <span class="arithmatex">\(L_x\)</span> と <span class="arithmatex">\(L_y\)</span> をそれぞれ求めよ。</p>
+<p>(3) 求めた行列 <span class="arithmatex">\(L_x\)</span> と <span class="arithmatex">\(L_y\)</span> の積から交換関係 <span class="arithmatex">\([L_x, L_y] = L_x L_y - L_y L_x\)</span> を計算し，これが <span class="arithmatex">\(i\hbar L_z\)</span> に一致することを確認せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>各状態に対する演算子の作用結果から、3行3列の行列要素を決定します。行列の第 <span class="arithmatex">\(j\)</span> 列目は、演算子を右側の基底に作用させたときの各成分の係数に対応します。</p>
+<p>各状態に対する演算子の作用結果から，3行3列の行列要素を決定します。行列の第 <span class="arithmatex">\(j\)</span> 列目は，演算子を右側の基底に作用させたときの各成分の係数に対応します。</p>
 <ul>
 <li><strong><span class="arithmatex">\(L_z\)</span> の構成</strong>
-  各状態に <span class="arithmatex">\(\hat{L}_z\)</span> を作用させると、それぞれの固有値が前に出ます。</li>
+  各状態に <span class="arithmatex">\(\hat{L}_z\)</span> を作用させると，それぞれの固有値が前に出ます。</li>
 </ul>
 <div class="arithmatex">\[
   \hat{L}_z |1, 1\rangle = \hbar |1, 1\rangle, \quad \hat{L}_z |1, 0\rangle = 0, \quad \hat{L}_z |1, -1\rangle = -\hbar |1, -1\rangle
@@ -14587,7 +14587,7 @@
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(L_-\)</span> の構成</strong>
-  同様に、 <span class="arithmatex">\(\hat{L}_-\)</span> の作用規則から列ベクトルを作ります。</li>
+  同様に， <span class="arithmatex">\(\hat{L}_-\)</span> の作用規則から列ベクトルを作ります。</li>
 <li>第1列： <span class="arithmatex">\(\hat{L}_- |1, 1\rangle = \sqrt{2}\hbar |1, 0\rangle\)</span></li>
 <li>第2列： <span class="arithmatex">\(\hat{L}_- |1, 0\rangle = \sqrt{2}\hbar |1, -1\rangle\)</span></li>
 <li>第3列： <span class="arithmatex">\(\hat{L}_- |1, -1\rangle = 0\)</span></li>
@@ -14611,7 +14611,7 @@
   L_y = \frac{1}{2i} (L_+ - L_-) = \frac{\hbar}{2i} \left[ \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix} - \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix} \right] = \frac{\hbar}{\sqrt{2}} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>行列の積の定義に従って、 <span class="arithmatex">\(L_x L_y\)</span> と <span class="arithmatex">\(L_y L_x\)</span> をそれぞれ計算します。全体の係数は <span class="arithmatex">\(\left(\frac{\hbar}{\sqrt{2}}\right)^2 = \frac{\hbar^2}{2}\)</span> になります。</p>
+<p>行列の積の定義に従って， <span class="arithmatex">\(L_x L_y\)</span> と <span class="arithmatex">\(L_y L_x\)</span> をそれぞれ計算します。全体の係数は <span class="arithmatex">\(\left(\frac{\hbar}{\sqrt{2}}\right)^2 = \frac{\hbar^2}{2}\)</span> になります。</p>
 <ul>
 <li><strong><span class="arithmatex">\(L_x L_y\)</span> の計算</strong></li>
 </ul>
@@ -14636,7 +14636,7 @@ L_x L_y - L_y L_x = i\hbar \cdot \hbar \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &a
 <div class="arithmatex">\[
 [L_x, L_y] = i\hbar L_z
 \]</div>
-<p>行列を用いた具体的な計算によっても、角運動量の交換関係が満たされていることが確かめられました。</p>
+<p>行列を用いた具体的な計算によっても，角運動量の交換関係が満たされていることが確かめられました。</p>
 
 
 
@@ -14737,6 +14737,8 @@ L_x L_y - L_y L_x = i\hbar \cdot \hbar \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &a
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/problem-filter.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
