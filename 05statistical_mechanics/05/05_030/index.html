@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,15 +14542,15 @@
 
 <h1 id="_1">マクスウェル速度分布</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> （逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>）の熱浴と熱平衡状態にある質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体粒子を考える。ある1つの粒子に着目したとき，その位置を <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span>，速度を <span class="arithmatex">\(\boldsymbol{v} = (v_x, v_y, v_z)\)</span> とすると，ハミルトニアンは </p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にある質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体粒子を考え，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。1粒子の位置を <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span>，速度を <span class="arithmatex">\(\boldsymbol{v} = (v_x, v_y, v_z)\)</span> とすると，ハミルトニアンは</p>
 <div class="arithmatex">\[
 h = \frac{1}{2}m\boldsymbol{v}^2 = \frac{1}{2}m(v_x^2 + v_y^2 + v_z^2)
 \]</div>
 <p>と表される。</p>
-<p>カノニカル分布において，この粒子の速度が <span class="arithmatex">\(\boldsymbol{v}\)</span> から <span class="arithmatex">\(\boldsymbol{v} + d\boldsymbol{v}\)</span> （すなわち <span class="arithmatex">\(v_x \sim v_x+dv_x, v_y \sim v_y+dv_y, v_z \sim v_z+dv_z\)</span>）の範囲に見出される確率は， <span class="arithmatex">\(P(\boldsymbol{v}) dv_x dv_y dv_z \propto \exp(-\beta h) dv_x dv_y dv_z\)</span> に比例する。以下の問いに答えよ。</p>
-<p>(1) 速度の全空間（ <span class="arithmatex">\(-\infty &lt; v_x, v_y, v_z &lt; \infty\)</span> ）における確率の規格化条件 <span class="arithmatex">\(\int P(\boldsymbol{v}) d^3\boldsymbol{v} = 1\)</span> を用いて，3次元速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> を求めよ。ただし，ガウス積分の公式 <span class="arithmatex">\(\int_{-\infty}^{\infty} \exp(-a x^2) dx = \sqrt{\frac{\pi}{a}}\)</span> を用いよ。</p>
-<p>(2) <span class="arithmatex">\(P(\boldsymbol{v})\)</span> から， <span class="arithmatex">\(x\)</span> 成分の速度のみに着目した1次元速度分布関数 <span class="arithmatex">\(f(v_x)\)</span> を導出せよ。また， <span class="arithmatex">\(f(v_x)\)</span> が <span class="arithmatex">\(v_x = 0\)</span> を中心とするどのような形状の関数になるか，名称を答えよ。</p>
-<p>(3) 速度の「向き」を問わず，「速さ」 <span class="arithmatex">\(v = |\boldsymbol{v}| = \sqrt{v_x^2 + v_y^2 + v_z^2}\)</span> のみが <span class="arithmatex">\(v \sim v+dv\)</span> の範囲にある確率を <span class="arithmatex">\(F(v)dv\)</span> とする。3次元速度空間における体積要素 <span class="arithmatex">\(dv_x dv_y dv_z\)</span> を極座標変換（球殻の体積 <span class="arithmatex">\(4\pi v^2 dv\)</span>）することによって，速さの分布関数 <span class="arithmatex">\(F(v)\)</span> を導出せよ。さらに， <span class="arithmatex">\(F(v)\)</span> の概形を， <span class="arithmatex">\(v \to 0\)</span> および <span class="arithmatex">\(v \to \infty\)</span> の振る舞いに着目して説明せよ。</p>
+<p>速度が各成分について <span class="arithmatex">\(v_i\)</span> から <span class="arithmatex">\(v_i+dv_i\)</span> の範囲にある確率を <span class="arithmatex">\(P(\boldsymbol{v})dv_xdv_ydv_z\)</span> とし，<span class="arithmatex">\(P(\boldsymbol{v})\propto\exp(-\beta h)\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) <span class="arithmatex">\(-\infty &lt; v_x, v_y, v_z &lt; \infty\)</span> における規格化条件 <span class="arithmatex">\(\int P(\boldsymbol{v}) d^3\boldsymbol{v} = 1\)</span> を用いて，3次元速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> を求めよ。ただし，ガウス積分 <span class="arithmatex">\(\int_{-\infty}^{\infty} \exp(-a x^2) dx = \sqrt{\frac{\pi}{a}}\)</span> を用いよ。</p>
+<p>(2) <span class="arithmatex">\(P(\boldsymbol{v})\)</span> を <span class="arithmatex">\(v_y,v_z\)</span> について積分し，1次元速度分布関数 <span class="arithmatex">\(f(v_x)\)</span> を導出せよ。さらに，<span class="arithmatex">\(\langle v_x\rangle\)</span> と <span class="arithmatex">\(\langle v_x^2\rangle\)</span> を求めよ。</p>
+<p>(3) 速さを <span class="arithmatex">\(v = |\boldsymbol{v}| = \sqrt{v_x^2 + v_y^2 + v_z^2}\)</span> とする。速度空間の体積要素を球座標へ変換し，半径 <span class="arithmatex">\(v\)</span>，厚さ <span class="arithmatex">\(dv\)</span> の球殻の体積 <span class="arithmatex">\(4\pi v^2dv\)</span> を用いて速さの分布関数 <span class="arithmatex">\(F(v)\)</span> を導出せよ。さらに，<span class="arithmatex">\(dF/dv=0\)</span> を満たす <span class="arithmatex">\(v&gt;0\)</span> を求め，分布が最大となる最確速度を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14558,7 +14558,7 @@ h = \frac{1}{2}m\boldsymbol{v}^2 = \frac{1}{2}m(v_x^2 + v_y^2 + v_z^2)
 <div class="arithmatex">\[
 P(\boldsymbol{v}) = C \exp\left[ -\frac{m(v_x^2 + v_y^2 + v_z^2)}{2k_B T} \right] = C \exp\left( -\frac{m v_x^2}{2k_B T} \right) \exp\left( -\frac{m v_y^2}{2k_B T} \right) \exp\left( -\frac{m v_z^2}{2k_B T} \right)
 \]</div>
-<p>全速度空間で積分して 1 となる条件から定数 <span class="arithmatex">\(C\)</span> を決定します。積分の変数が各成分に完全に分離できるため，3つの独立なガウス積分の積になります。</p>
+<p>規格化条件から定数 <span class="arithmatex">\(C\)</span> を決定します。積分は3つの独立なガウス積分の積に分離できます。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_x dv_y dv_z = C \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_B T} \right) dv \right)^3 = 1
 \]</div>
@@ -14575,17 +14575,27 @@ C \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^3 = 1 \quad \implies \quad C = \lef
 P(\boldsymbol{v}) = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m\boldsymbol{v}^2}{2k_B T} \right)
 \]</div>
 <h3 id="2">(2)</h3>
-<p>特定の成分（例えば <span class="arithmatex">\(x\)</span> 成分）の速度分布 <span class="arithmatex">\(f(v_x)\)</span> を得るには，興味のない他の成分 <span class="arithmatex">\(v_y, v_z\)</span> について全空間で重ね合わせ（積分）を行います。</p>
+<p><span class="arithmatex">\(x\)</span> 成分の速度分布 <span class="arithmatex">\(f(v_x)\)</span> を得るため，<span class="arithmatex">\(v_y,v_z\)</span> について全空間で積分します。</p>
 <div class="arithmatex">\[
 f(v_x) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_y dv_z = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m v_x^2}{2k_B T} \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_y^2}{2k_B T} \right) dv_y \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_z^2}{2k_B T} \right) dv_z \right)
 \]</div>
-<p>(1) と同様に <span class="arithmatex">\(v_y, v_z\)</span> の積分を実行すると，それぞれ <span class="arithmatex">\(\sqrt{\frac{2\pi k_B T}{m}}\)</span> が出てくるため，前方の係数の <span class="arithmatex">\(3/2\)</span> 乗のうちの 1乗分（2つの積）が相殺されます。</p>
+<p>(1) と同様に <span class="arithmatex">\(v_y,v_z\)</span> を積分すると，それぞれ <span class="arithmatex">\(\sqrt{\frac{2\pi k_B T}{m}}\)</span> を与えるため，係数を整理して</p>
 <div class="arithmatex">\[
 f(v_x) = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^2 \exp\left( -\frac{m v_x^2}{2k_B T} \right) = \sqrt{\frac{m}{2\pi k_B T}} \exp\left( -\frac{m v_x^2}{2k_B T} \right)
 \]</div>
-<p>この関数は， <span class="arithmatex">\(v_x = 0\)</span> で最大値をとり，左右対称に滑らかに減衰する特徴的な釣鐘型の形状をしています。これは統計学における<strong>ガウス分布（正規分布）</strong>にほかなりません。気体分子の各方向の速度成分は，静止状態である 0 を最も好む確率分布に従うことがわかります。</p>
+<p><span class="arithmatex">\(f(v_x)\)</span> は偶関数なので，</p>
+<div class="arithmatex">\[
+\langle v_x\rangle=\int_{-\infty}^{\infty}v_xf(v_x)\,dv_x=0
+\]</div>
+<p>です。また，ガウス積分を用いると，</p>
+<div class="arithmatex">\[
+\langle v_x^2\rangle
+=\int_{-\infty}^{\infty}v_x^2f(v_x)\,dv_x
+=\frac{k_BT}{m}
+\]</div>
+<p>を得ます。</p>
 <h3 id="3">(3)</h3>
-<p>速さ <span class="arithmatex">\(v = |\boldsymbol{v}|\)</span> は，速度空間における原点からの距離に対応します。速度空間において，速さが <span class="arithmatex">\(v\)</span> から <span class="arithmatex">\(v+dv\)</span> の範囲にある領域は，半径 <span class="arithmatex">\(v\)</span>，厚み <span class="arithmatex">\(dv\)</span> の「球殻」を形成します。この球殻の微小体積は，球の表面積を用いて <span class="arithmatex">\(4\pi v^2 dv\)</span> と書き換えることができます。</p>
+<p>速さ <span class="arithmatex">\(v\)</span> は速度空間における原点からの距離です。速さが <span class="arithmatex">\(v\)</span> から <span class="arithmatex">\(v+dv\)</span> の範囲にある領域の体積は <span class="arithmatex">\(4\pi v^2dv\)</span> です。</p>
 <p>したがって，方向を区別せず速さのみに注目した分布関数 <span class="arithmatex">\(F(v)dv\)</span> は，3次元速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> にこの球殻の体積要素を掛け合わせることで導出されます。</p>
 <div class="arithmatex">\[
 F(v) dv = P(\boldsymbol{v}) \cdot 4\pi v^2 dv = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
@@ -14593,14 +14603,15 @@ F(v) dv = P(\boldsymbol{v}) \cdot 4\pi v^2 dv = 4\pi \left( \frac{m}{2\pi k_B T}
 <div class="arithmatex">\[
 F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)
 \]</div>
-<p>これが<strong>マクスウェル・ボルツマンの速さの分布関数</strong>です。</p>
-<p><strong>【グラフの概形の考察】</strong></p>
-<p>この関数は，前方の <span class="arithmatex">\(v^2\)</span> （次元の広がりによる効果）と，後方の指数関数（熱的な抑制効果）の相克によって決まります。</p>
-<ul>
-<li><span class="arithmatex">\(v \to 0\)</span> のとき，指数関数項は <span class="arithmatex">\(1\)</span> に近づきますが，前方の <span class="arithmatex">\(v^2\)</span> の効果が強く働くため， <span class="arithmatex">\(F(v) \to 0\)</span> となり，グラフは原点から放物線状に立ち上がります。成分の分布 <span class="arithmatex">\(f(v_x)\)</span> が原点で最大値をとるのに対し，速さの分布 <span class="arithmatex">\(F(v)\)</span> が原点で 0 になるのは，速さ 0 付近に該当する速度の組み合わせ（状態数）が空間的に極めて狭いためです。</li>
-<li><span class="arithmatex">\(v \to \infty\)</span> のとき，前方の <span class="arithmatex">\(v^2\)</span> は増大しようとしますが，後方の指数関数が圧倒的な速度で減少（ <span class="arithmatex">\(\exp(-v^2) \to 0\)</span> ）するため，全体として <span class="arithmatex">\(F(v) \to 0\)</span> に急速に収束します。</li>
-</ul>
-<p>この2つの挙動により，グラフは原点から滑らかに立ち上がった後，ある代表的な速さのところでピーク（極大値）を迎え，その後は右側に長い裾野を引きながら 0 に向かって減衰していく，非対称な山型の曲線を描きます。</p>
+<p><span class="arithmatex">\(F(v)\)</span> を微分すると，<span class="arithmatex">\(v&gt;0\)</span> における極値条件は</p>
+<div class="arithmatex">\[
+\frac{d}{dv}\log F(v)=\frac{2}{v}-\frac{mv}{k_BT}=0
+\]</div>
+<p>となります。したがって，最確速度は</p>
+<div class="arithmatex">\[
+v_{\mathrm{mp}}=\sqrt{\frac{2k_BT}{m}}
+\]</div>
+<p>です。</p>
 
 
 

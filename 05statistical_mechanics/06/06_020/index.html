@@ -11692,7 +11692,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,16 +14542,16 @@
 
 <h1 id="_1">占有数表示</h1>
 <h2 id="_2">問題</h2>
-<p>互いに相互作用しない <span class="arithmatex">\(N\)</span> 個の同種粒子（ボース粒子またはフェルミ粒子）からなる量子力学的な系を考える。この系における単一粒子の独立な量子状態（準位）をエネルギーの低い順に <span class="arithmatex">\(k = 1, 2, 3, \dots\)</span> とラベルづけし，それぞれの準位のエネルギーを <span class="arithmatex">\(\epsilon_1, \epsilon_2, \epsilon_3, \dots\)</span> とする。</p>
-<p>粒子が区別できない同種粒子系では，個々の粒子に番号をつけて状態を指定する代わりに，各準位 <span class="arithmatex">\(k\)</span> に何個の粒子が配置されているかという<strong>占有数</strong> <span class="arithmatex">\(n_k\)</span> の順序対 <span class="arithmatex">\((n_1, n_2, n_3, \dots)\)</span> を用いて系全体の微視的状態を指定する手法が極めて有効である。これを占有数表示と呼ぶ。以下の問いに答えよ。</p>
-<p>(1) 粒子がボース粒子（ボソン）である場合を考える。ある特定の準位 <span class="arithmatex">\(k\)</span> に入ることができる粒子の個数（占有数 <span class="arithmatex">\(n_k\)</span>）として許される値の範囲を，非負の整数を用いて示せ。また，全粒子数が <span class="arithmatex">\(N\)</span> で固定されているカノニカル集団において，各準位の占有数の総和が満たすべき拘束条件の式を記述せよ。</p>
-<p>(2) 粒子がフェルミ粒子（フェルミオン）である場合を考える。パウリの排他原理を考慮したとき，ある特定の準位 <span class="arithmatex">\(k\)</span> の占有数 <span class="arithmatex">\(n_k\)</span> として許される値をすべて挙げよ。</p>
-<p>(3) 3つの単一粒子準位 <span class="arithmatex">\(k = 1, 2, 3\)</span> のみが存在し，そこに合計で 2 個の同種粒子（ <span class="arithmatex">\(N=2\)</span> ）を配置する具体的な状況を考える。</p>
+<p>互いに相互作用しない <span class="arithmatex">\(N\)</span> 個のボース粒子またはフェルミ粒子からなる系を考える。1粒子状態をエネルギーの低い順に <span class="arithmatex">\(k = 1, 2, 3, \dots\)</span> とし，各準位のエネルギーを <span class="arithmatex">\(\epsilon_k\)</span> とする。</p>
+<p>同種粒子系では，各準位 <span class="arithmatex">\(k\)</span> にある粒子数 <span class="arithmatex">\(n_k\)</span> の組 <span class="arithmatex">\((n_1,n_2,n_3,\dots)\)</span> を用いて微視的状態を表す。これを占有数表示と呼ぶ。以下の問いに答えよ。</p>
+<p>(1) ボース粒子について，準位 <span class="arithmatex">\(k\)</span> の占有数 <span class="arithmatex">\(n_k\)</span> がとり得る値を示せ。また，全粒子数が <span class="arithmatex">\(N\)</span> で固定されているとき，占有数が満たす拘束条件を式で表せ。</p>
+<p>(2) フェルミ粒子について，パウリの排他原理を考慮し，準位 <span class="arithmatex">\(k\)</span> の占有数 <span class="arithmatex">\(n_k\)</span> がとり得る値を示せ。</p>
+<p>(3) 3つの1粒子準位 <span class="arithmatex">\(k=1,2,3\)</span> に2粒子を配置する。</p>
 <ul>
 <li>粒子がボース粒子である場合</li>
 <li>粒子がフェルミ粒子である場合</li>
 </ul>
-<p>それぞれのケースについて，系全体としてとり得るすべての微視的状態を占有数の組 <span class="arithmatex">\((n_1, n_2, n_3)\)</span> の形式で具体的にすべて列挙せよ。また，状態の総数（全状態数）が両者でどのように異なるかを比較せよ。</p>
+<p>それぞれについて，占有数の組 <span class="arithmatex">\((n_1,n_2,n_3)\)</span> をすべて列挙し，状態数を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14573,7 +14573,7 @@ n_k = 0, 1
 <h3 id="3">(3)</h3>
 <p>3つの準位に対して 2 個の粒子を配置するすべての組み合わせを，書き漏らしのないように探索します。常に <span class="arithmatex">\(n_1 + n_2 + n_3 = 2\)</span> の条件が満たされている必要があります。</p>
 <p><strong>ボース粒子のケース</strong>
-ボース粒子では同一の準位に 2 個の粒子が同時に入る（ <span class="arithmatex">\(n_k = 2\)</span> ）ことが許されます。条件を満たす状態を列挙すると，以下の <strong>6通り</strong> となります。</p>
+ボース粒子では同一の準位に 2 個の粒子が同時に入る<span class="arithmatex">\(n_k = 2\)</span>ことが許されます。条件を満たす状態を列挙すると，以下の <strong>6通り</strong> となります。</p>
 <ul>
 <li>1つの準位に2粒子が固まって入る状態：
   <span class="arithmatex">\((2, 0, 0), \ (0, 2, 0), \ (0, 0, 2)\)</span></li>
@@ -14586,7 +14586,7 @@ n_k = 0, 1
 <li><span class="arithmatex">\((1, 1, 0), \ (1, 0, 1), \ (0, 1, 1)\)</span></li>
 </ul>
 <p><strong>全状態数の比較</strong></p>
-<p>ボース粒子では全状態数が 6 通りであるのに対し，フェルミ粒子ではパウリの排他原理による禁止則が働くため，全状態数が 3 通りへと減少します。このように，粒子の持つ波動関数の対称性の違いは，微視的な状態の数え上げ（状態密度）に直接影響を与え，これがマクロな熱力学的な振る舞いや分布関数の違いを生み出す根本的な原因となります。</p>
+<p>したがって，状態数はボース粒子で6，フェルミ粒子で3です。</p>
 
 
 

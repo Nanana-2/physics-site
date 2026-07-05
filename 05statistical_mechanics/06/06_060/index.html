@@ -11692,7 +11692,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">量子理想気体の大分配関数</h1>
 <h2 id="_2">問題</h2>
-<p>互いに相互作用しない同種粒子からなる理想量子気体系を考える。単一粒子の独立な量子状態を <span class="arithmatex">\(k = 1, 2, \dots\)</span> とし，それぞれの準位のエネルギーを <span class="arithmatex">\(\epsilon_k\)</span> とする。系全体の微視的状態は，各準位の占有数 <span class="arithmatex">\(n_k\)</span> の組 <span class="arithmatex">\(n_1, n_2, \dots\)</span> によって完全に指定され，このときの系の全粒子数 <span class="arithmatex">\(N\)</span> および全エネルギー <span class="arithmatex">\(E\)</span> は以下のように表される。</p>
+<p>互いに相互作用しない同種粒子からなる理想量子気体を考える。1粒子状態を <span class="arithmatex">\(k=1,2,\dots\)</span>，各準位のエネルギーを <span class="arithmatex">\(\epsilon_k\)</span> とする。微視的状態を各準位の占有数 <span class="arithmatex">\(n_k\)</span> の組で表すと，全粒子数 <span class="arithmatex">\(N\)</span> と全エネルギー <span class="arithmatex">\(E\)</span> は</p>
 <div class="arithmatex">\[
 N = \sum_{k} n_k, \quad E = \sum_{k} \epsilon_k n_k
 \]</div>
@@ -14569,7 +14569,7 @@ E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - 
 <div class="arithmatex">\[
 \Xi = \sum_{n_1, n_2, \dots} \exp\left[ -\beta \sum_{k} (\epsilon_k - \mu) n_k \right] = \sum_{n_1, n_2, \dots} \prod_{k} \exp\left[ -\beta (\epsilon_k - \mu) n_k \right]
 \]</div>
-<p>粒子間に相互作用がないため，各準位の占有数 <span class="arithmatex">\(n_k\)</span> は他の準位の状態に関わらず，それぞれ独立に値をとることができます。したがって，全体の大きな和の記号を各準位ごとの和の積へと完全に分配し，因数分解することが可能になります。</p>
+<p>粒子間に相互作用がないため，各準位の占有数は独立です。したがって，全状態に関する和を各準位の和の積へ因数分解できます。</p>
 <div class="arithmatex">\[
 \Xi = \left( \sum_{n_1} \exp\left[ - \beta(\epsilon_1 - \mu)n_1 \right] \right) \left( \sum_{n_2} \exp\left[ - \beta(\epsilon_2 - \mu)n_2 \right] \right) \dots = \prod_{k} \left( \sum_{n_k} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] \right)
 \]</div>
@@ -14577,7 +14577,7 @@ E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - 
 <div class="arithmatex">\[
 \Xi = \prod_{k} \Xi_k
 \]</div>
-<p>カノニカル分布では全粒子数一定の拘束条件があるためこのような分離ができませんが，大カノニカル分布では粒子数が自由に変形できるため，各準位を完全に独立な独立国のように扱えるという極めて大きなメリットが生じます。</p>
+<p>大正準集団では粒子数一定の拘束がないため，各準位の和を独立に計算できます。</p>
 <h3 id="2">(2)</h3>
 <p>各準位の大分配関数 <span class="arithmatex">\(\Xi_k = \sum_{n_k} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right]\)</span> を，粒子の性質に合わせて計算します。</p>
 <p><strong>フェルミ粒子のケース</strong></p>
@@ -14609,7 +14609,7 @@ E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - 
 <div class="arithmatex">\[
 \Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
 \]</div>
-<p>フェルミ粒子の場合は外側がマイナスで内側がプラス，ボース粒子の場合は外側がプラスで内側がマイナスという，一対の美しい対称性を持った量子理想気体の基礎方程式が導出されました。このグランドポテンシャルを各種マクロ熱力学変数で微分することにより，理想フェルミ気体や理想ボース気体のすべての熱力学性質を導き出すことが可能になります。</p>
+<p>以上より，フェルミ粒子とボース粒子のグランドポテンシャルが得られます。</p>
 
 
 

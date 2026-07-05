@@ -23,7 +23,7 @@
     
     
       
-        <title>理想気体の内部エネルギーと比熱 - 大学物理の問題集</title>
+        <title>理想気体の内部エネルギーと熱容量 - 大学物理の問題集</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              理想気体の内部エネルギーと比熱
+              理想気体の内部エネルギーと熱容量
             
           </span>
         </div>
@@ -11703,7 +11703,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -11721,7 +11721,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14540,7 +14540,7 @@
 
 
 
-<h1 id="_1">理想気体の内部エネルギーと比熱</h1>
+<h1 id="_1">理想気体の内部エネルギーと熱容量</h1>
 <h2 id="_2">問題</h2>
 <p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> の古典的な単原子分子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。系のカノニカル分配関数 <span class="arithmatex">\(Z_N\)</span> は以下の通りである。</p>
 <div class="arithmatex">\[
@@ -14548,8 +14548,8 @@ Z_N = \frac{1}{N!} \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right
 \]</div>
 <p>この分配関数を出発点として，以下の問いに答えよ。</p>
 <p>(1) 系の内部エネルギー <span class="arithmatex">\(U\)</span> は，カノニカル分布における平均エネルギー <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z_N}{\partial \beta}\)</span> として定義される。逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて分配関数を書き換えることで，内部エネルギー <span class="arithmatex">\(U\)</span> が <span class="arithmatex">\(U = \frac{3}{2} N k_B T\)</span> となることを導出せよ。</p>
-<p>(2) 系の定積比熱 <span class="arithmatex">\(C_V\)</span> の定義式を，内部エネルギー <span class="arithmatex">\(U\)</span> の温度微分として示せ。また，(1) の結果を用いて，古典的単原子理想気体の定積比熱 <span class="arithmatex">\(C_V\)</span> を求めよ。</p>
-<p>(3) (2) で得られた定積比熱の結果を，エネルギー等分配則の観点から物理的に説明せよ。</p>
+<p>(2) 系の定積熱容量 <span class="arithmatex">\(C_V\)</span> を内部エネルギー <span class="arithmatex">\(U\)</span> の温度微分として定義し，(1) の結果から <span class="arithmatex">\(C_V\)</span> を求めよ。</p>
+<p>(3) 1粒子のハミルトニアンに含まれる運動量の二次形式の項を数え，エネルギー等分配則から <span class="arithmatex">\(N\)</span> 粒子系の内部エネルギーと定積熱容量を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14571,7 +14571,7 @@ U = - \left( -\frac{3N}{2\beta} \right) = \frac{3N}{2} k_B T = \frac{3}{2} N k_B
 \]</div>
 <p>これにより，熱力学で知られる単原子分子理想気体の内部エネルギーの式が統計力学から導かれました。</p>
 <h3 id="2">(2)</h3>
-<p>定積比熱 <span class="arithmatex">\(C_V\)</span> は，体積 <span class="arithmatex">\(V\)</span> と粒子数 <span class="arithmatex">\(N\)</span> を一定に保ったまま，系を <span class="arithmatex">\(1\text{ K}\)</span> 上昇させるのに必要な熱量（内部エネルギーの変化量）であるため，定義式は以下の通りです。</p>
+<p>定積熱容量 <span class="arithmatex">\(C_V\)</span> を以下のように定義します。</p>
 <div class="arithmatex">\[
 C_V = \left( \frac{\partial U}{\partial T} \right)_{V, N}
 \]</div>
@@ -14579,18 +14579,18 @@ C_V = \left( \frac{\partial U}{\partial T} \right)_{V, N}
 <div class="arithmatex">\[
 C_V = \frac{\partial}{\partial T} \left( \frac{3}{2} N k_B T \right) = \frac{3}{2} N k_B
 \]</div>
-<p>したがって，古典的単原子理想気体の定積比熱は，温度に依存しない一定値 <span class="arithmatex">\(\frac{3}{2}N k_B\)</span> になることが示されました。</p>
+<p>したがって，定積熱容量は <span class="arithmatex">\(\frac{3}{2}N k_B\)</span> です。</p>
 <h3 id="3">(3)</h3>
-<p>古典統計力学のエネルギー等分配則によれば，ハミルトニアンの中で座標や運動量の2乗（二次形式）の形で現れる独立な自由度1つあたり，平均して <span class="arithmatex">\(\frac{1}{2} k_B T\)</span> のエネルギーが分配されます。</p>
-<p>単原子分子理想気体の場合，内部構造（分子の回転や振動の自由度）を持たないため，系のエネルギーは各粒子の空間3方向（ <span class="arithmatex">\(x, y, z\)</span> 方向）の平行移動の運動エネルギーのみで構成されます。1粒子あたり，以下の3つの運動量の二次形式の項を持ちます。</p>
+<p>エネルギー等分配則より，ハミルトニアンに含まれる二次形式の項一つあたり，平均エネルギー <span class="arithmatex">\(k_BT/2\)</span> が割り当てられます。</p>
+<p>単原子理想気体の1粒子ハミルトニアンは，以下の3個の二次形式の項を含みます。</p>
 <div class="arithmatex">\[
 h = \frac{p_x^2}{2m} + \frac{p_y^2}{2m} + \frac{p_z^2}{2m}
 \]</div>
-<p>系全体には <span class="arithmatex">\(N\)</span> 個の粒子が存在するため，二次形式で表される独立な運動の自由度の総数は合計で <span class="arithmatex">\(3N\)</span> 個になります。これに等分配則を適用すると，全体の平均エネルギー（内部エネルギー）は次のように見積もられます。</p>
+<p><span class="arithmatex">\(N\)</span> 粒子系には二次形式の項が合計 <span class="arithmatex">\(3N\)</span> 個あります。したがって，</p>
 <div class="arithmatex">\[
 U = 3N \times \left( \frac{1}{2} k_B T \right) = \frac{3}{2} N k_B T
 \]</div>
-<p>定積比熱 <span class="arithmatex">\(C_V\)</span> は，このエネルギーの温度変化に対する応答特性（温度係数）であるため，自由度1つあたり <span class="arithmatex">\(\frac{1}{2} k_B\)</span> の比熱を担うことになります。総自由度数が <span class="arithmatex">\(3N\)</span> 個であることから，全体の比熱が <span class="arithmatex">\(3N \times \frac{1}{2} k_B = \frac{3}{2} N k_B\)</span> となるのは，等分配則の観点から極めて整合的であると説明できます。</p>
+<p>これを温度で微分すると，<span class="arithmatex">\(C_V=3Nk_B/2\)</span> を得ます。</p>
 
 
 

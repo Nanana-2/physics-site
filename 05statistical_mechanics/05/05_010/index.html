@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,12 +14542,12 @@
 
 <h1 id="_1">古典理想気体の分配関数</h1>
 <h2 id="_2">問題</h2>
-<p>一辺の長さが <span class="arithmatex">\(L\)</span>，体積 <span class="arithmatex">\(V = L^3\)</span> の立方体の容器に閉じ込められた，質量 <span class="arithmatex">\(m\)</span> の独立な単原子分子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。古典統計力学において，1つの粒子の位置座標を <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span>，運動量を <span class="arithmatex">\(\boldsymbol{p} = (p_x, p_y, p_z)\)</span> とすると，1粒子のハミルトニアンは <span class="arithmatex">\(h(\boldsymbol{r}, \boldsymbol{p}) = \frac{\boldsymbol{p}^2}{2m}\)</span> と表される。この系が温度 <span class="arithmatex">\(T\)</span> （逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>）の熱浴と熱平衡状態にあるとき，以下の問いに答えよ。</p>
+<p>一辺の長さが <span class="arithmatex">\(L\)</span>，体積 <span class="arithmatex">\(V = L^3\)</span> の立方体容器に閉じ込められた，質量 <span class="arithmatex">\(m\)</span> の単原子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。1粒子の位置を <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span>，運動量を <span class="arithmatex">\(\boldsymbol{p} = (p_x, p_y, p_z)\)</span> とし，ハミルトニアンを <span class="arithmatex">\(h(\boldsymbol{r}, \boldsymbol{p}) = \frac{\boldsymbol{p}^2}{2m}\)</span> とする。この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 古典統計力学における1粒子分配関数 <span class="arithmatex">\(z_1\)</span> は，プランク定数 <span class="arithmatex">\(h\)</span> を用いて以下のように定義される。この積分を実行し， <span class="arithmatex">\(z_1\)</span> を <span class="arithmatex">\(V, \beta, m, h\)</span> を用いて表せ。ただし，ガウス積分の公式 <span class="arithmatex">\(\int_{-\infty}^{\infty} \exp(-a x^2) dx = \sqrt{\frac{\pi}{a}}\)</span> を用いよ。</p>
 <div class="arithmatex">\[
 z_1 = \frac{1}{h^3} \int_V d^3\boldsymbol{r} \int_{-\infty}^{\infty} d^3\boldsymbol{p} \exp\left[ -\beta h(\boldsymbol{r}, \boldsymbol{p}) \right]
 \]</div>
-<p>(2) 互いに独立な <span class="arithmatex">\(N\)</span> 個の同種粒子からなる系全体のカノニカル分配関数 <span class="arithmatex">\(Z_N\)</span> を構成する際，粒子が「互いに区別できない（不可区別である）」という量子力学的な要請を考慮すると，単純な <span class="arithmatex">\(1\)</span> 粒子分配関数の <span class="arithmatex">\(N\)</span> 乗に対して <span class="arithmatex">\(1/N!\)</span> の補正因子を掛ける必要がある。系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> を <span class="arithmatex">\(z_1\)</span> と <span class="arithmatex">\(N\)</span> を用いて表せ。また，もしこの <span class="arithmatex">\(1/N!\)</span> の因子を忘れて <span class="arithmatex">\(Z_N = (z_1)^N\)</span> とした場合，マクロな熱力学量であるヘルムホルツの自由エネルギー <span class="arithmatex">\(F\)</span> の示量性（系の大きさを2倍にすると <span class="arithmatex">\(F\)</span> も2倍になる性質）が満たされなくなることを，スターリングの近似公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を用いて示せ。</p>
+<p>(2) 同種粒子の不可区別性を考慮し，系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> を <span class="arithmatex">\(z_1\)</span> と <span class="arithmatex">\(N\)</span> を用いて表せ。また，補正因子 <span class="arithmatex">\(1/N!\)</span> を含めず <span class="arithmatex">\(Z_N=(z_1)^N\)</span> とした場合，ヘルムホルツ自由エネルギーが示量性を満たさないことを示せ。</p>
 <p>(3) 正しい分配関数 <span class="arithmatex">\(Z_N = \frac{1}{N!} (z_1)^N\)</span> を用いることで，自由エネルギー <span class="arithmatex">\(F\)</span> が正しく示量性を満たすことを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14567,7 +14567,7 @@ z_1 = \frac{V}{h^3} \left( \int_{-\infty}^{\infty} \exp\left( -\frac{\beta p^2}{
 <div class="arithmatex">\[
 z_1 = \frac{V}{h^3} \left( \sqrt{\frac{2\pi m}{\beta}} \right)^3 = V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}
 \]</div>
-<p>（※ここで <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> とおくと， <span class="arithmatex">\(z_1 = \frac{V}{\lambda^3}\)</span> と非常に簡潔に表すことができます。 <span class="arithmatex">\(\lambda\)</span> は熱的ド・ブロイ波長と呼ばれます。）</p>
+<p>熱的ド・ブロイ波長を <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> と定義すると，<span class="arithmatex">\(z_1 = \frac{V}{\lambda^3}\)</span> と表せます。</p>
 <h3 id="2">(2)</h3>
 <p>量子力学的な粒子の不可区別性を考慮した，系全体の正しい分配関数 <span class="arithmatex">\(Z_N\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
@@ -14577,15 +14577,15 @@ Z_N = \frac{1}{N!} (z_1)^N
 <div class="arithmatex">\[
 F^{\mathrm{wrong}} = -k_B T \log (z_1)^N = -N k_B T \log z_1 = -N k_B T \log \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right]
 \]</div>
-<p>系のマクロな大きさを <span class="arithmatex">\(\alpha\)</span> 倍にする操作（ <span class="arithmatex">\(V \to \alpha V, N \to \alpha N\)</span> ）を考えます。もし <span class="arithmatex">\(F\)</span> が示量性を持つならば，変形後の自由エネルギーは <span class="arithmatex">\(\alpha F\)</span> になるはずです。実際に上の式に代入してみます。</p>
+<p>系のマクロな大きさを <span class="arithmatex">\(\alpha\)</span> 倍にする操作<span class="arithmatex">\(V \to \alpha V, N \to \alpha N\)</span>を考えます。もし <span class="arithmatex">\(F\)</span> が示量性を持つならば，変形後の自由エネルギーは <span class="arithmatex">\(\alpha F\)</span> になるはずです。実際に上の式に代入してみます。</p>
 <div class="arithmatex">\[
 F^{\mathrm{wrong}}(\alpha V, \alpha N) = -\alpha N k_B T \log \left[ \alpha V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right]
 \]</div>
-<p>対数の性質（ <span class="arithmatex">\(\log(\alpha X) = \log \alpha + \log X\)</span> ）を用いて展開します。</p>
+<p>対数の性質<span class="arithmatex">\(\log(\alpha X) = \log \alpha + \log X\)</span>を用いて展開します。</p>
 <div class="arithmatex">\[
 F^{\mathrm{wrong}}(\alpha V, \alpha N) = -\alpha N k_B T \log \alpha - \alpha N k_B T \log \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right] = -\alpha N k_B T \log \alpha + \alpha F^{\mathrm{wrong}}(V, N)
 \]</div>
-<p>右辺に <span class="arithmatex">\(-\alpha N k_B T \log \alpha\)</span> という余分な項が残るため， <span class="arithmatex">\(F^{\mathrm{wrong}}(\alpha V, \alpha N) \neq \alpha F^{\mathrm{wrong}}(V, N)\)</span> となり，示量性が満たされません（これはギブズのパラドックスの本質です）。</p>
+<p>右辺に <span class="arithmatex">\(-\alpha N k_B T \log \alpha\)</span> が残るため，<span class="arithmatex">\(F^{\mathrm{wrong}}(\alpha V, \alpha N) \neq \alpha F^{\mathrm{wrong}}(V, N)\)</span> となり，示量性を満たしません。</p>
 <h3 id="3">(3)</h3>
 <p>正しい分配関数 <span class="arithmatex">\(Z_N = \frac{1}{N!} (z_1)^N\)</span> を用いて自由エネルギー <span class="arithmatex">\(F = -k_B T \log Z_N\)</span> を計算します。</p>
 <div class="arithmatex">\[
@@ -14599,15 +14599,15 @@ F \simeq -k_B T \left[ N \log z_1 - (N \log N - N) \right] = -N k_B T \left[ \lo
 <div class="arithmatex">\[
 F = -N k_B T \left[ \log \left( \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right) + 1 \right]
 \]</div>
-<p>この正しい自由エネルギーの式に対して，同様に系の大きさを <span class="arithmatex">\(\alpha\)</span> 倍にする操作（ <span class="arithmatex">\(V \to \alpha V, N \to \alpha N\)</span> ）を適用します。
-対数の内部にある分数に注目すると，分子の <span class="arithmatex">\(V\)</span> と分母の <span class="arithmatex">\(N\)</span> がともに <span class="arithmatex">\(\alpha\)</span> 倍されるため， <span class="arithmatex">\(\frac{\alpha V}{\alpha N} = \frac{V}{N}\)</span> となり， <span class="arithmatex">\(\alpha\)</span> が完全に相殺されます。</p>
+<p>この正しい自由エネルギーの式に対して，同様に系の大きさを <span class="arithmatex">\(\alpha\)</span> 倍にする操作<span class="arithmatex">\(V \to \alpha V, N \to \alpha N\)</span>を適用します。
+分子の <span class="arithmatex">\(V\)</span> と分母の <span class="arithmatex">\(N\)</span> がともに <span class="arithmatex">\(\alpha\)</span> 倍されるため，<span class="arithmatex">\(\frac{\alpha V}{\alpha N} = \frac{V}{N}\)</span> となります。</p>
 <div class="arithmatex">\[
 F(\alpha V, \alpha N) = -\alpha N k_B T \left[ \log \left( \frac{\alpha V}{\alpha N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right) + 1 \right]
 \]</div>
 <div class="arithmatex">\[
 F(\alpha V, \alpha N) = -\alpha N k_B T \left[ \log \left( \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right) + 1 \right] = \alpha F(V, N)
 \]</div>
-<p>これにより，括弧の内部が系のサイズに依存しない強度変数となり，全体の自由エネルギー <span class="arithmatex">\(F\)</span> が粒子数 <span class="arithmatex">\(N\)</span> を介して正しく全体のサイズに比例する示量性（加理性）を満たすことが証明されました。</p>
+<p>括弧内は系の大きさに依存しないため，自由エネルギー <span class="arithmatex">\(F\)</span> は粒子数 <span class="arithmatex">\(N\)</span> に比例し，示量性を満たします。</p>
 
 
 

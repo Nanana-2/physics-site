@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14553,7 +14553,7 @@
 <p>この吸着系が，温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の気体相と熱平衡状態にあるとき，大正準集団に基づいて以下の問いに答えよ。</p>
 <p>(1) 1つの吸着サイトに着目し，このサイトの1サイトあたりの大分配関数 <span class="arithmatex">\(\xi(\beta, \mu)\)</span> を求めよ。</p>
 <p>(2) 1つの吸着サイトあたりの平均吸着粒子数 <span class="arithmatex">\(\langle n \rangle\)</span> を， <span class="arithmatex">\(\xi\)</span> およびその偏微分を用いて導出せよ。結果は <span class="arithmatex">\(\beta, \epsilon, \mu, U\)</span> を用いて表すこと。</p>
-<p>(3) 得られた <span class="arithmatex">\(\langle n \rangle\)</span> の式について，粒子間の斥力が極めて強い極限 <span class="arithmatex">\(U \to \infty\)</span> における振る舞いを調べ，その結果がもつ物理的な意味を考察せよ。</p>
+<p>(3) <span class="arithmatex">\(U \to \infty\)</span> における <span class="arithmatex">\(\langle n \rangle\)</span> の極限を求め，1サイトに最大1粒子だけが吸着できる模型の式へ一致することを示せ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14580,13 +14580,13 @@
 \]</div>
 <p>この式が，相互作用を含む1サイト2粒子モデルにおける厳密な平均吸着粒子数を与えます。</p>
 <h3 id="3">(3)</h3>
-<p>粒子間の斥力が極めて強い極限 <span class="arithmatex">\(U \to \infty\)</span> を考えます。</p>
-<p>このとき， <span class="arithmatex">\(\beta &gt; 0\)</span> であるため指数関数 <span class="arithmatex">\(\exp(-\beta U)\)</span> は <span class="arithmatex">\(0\)</span> に限りなく近づきます。したがって，平均吸着粒子数の式に含まれる <span class="arithmatex">\(U\)</span> をもつ項，すなわち2個の粒子が吸着している状態のボルツマン因子は完全に消滅します。</p>
+<p><span class="arithmatex">\(U \to \infty\)</span> の極限を考えます。</p>
+<p><span class="arithmatex">\(\beta &gt; 0\)</span> なので <span class="arithmatex">\(\exp(-\beta U)\to0\)</span> となり，2粒子吸着状態の項は0へ収束します。</p>
 <p>式から該当する項を削除すると，以下の結果が得られます。</p>
 <div class="arithmatex">\[
 \langle n \rangle = \frac{\exp\left[ \beta(\epsilon + \mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right]}
 \]</div>
-<p>この結果は，1サイトに最大1個しか吸着できない基本モデルから導出されるラングミュアの吸着等温式と完全に一致しています。物理的には，同じサイトに2個目の粒子が侵入しようとしても強烈な斥力によって弾き返されるため，実質的に2個目の吸着が禁止される排他体積効果を正しく表現していると解釈できます。</p>
+<p>これは，1サイトに最大1粒子だけが吸着できる模型の式と一致します。</p>
 
 
 

@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,31 +14542,51 @@
 
 <h1 id="_1">粒子数が変化する系</h1>
 <h2 id="_2">問題</h2>
-<p>これまでに扱ってきたカノニカル分布は，外部の熱浴と熱（エネルギー）のみをやり取りし，粒子数 <span class="arithmatex">\(N\)</span> が一定に保たれた閉じた系を対象としていた。しかし，現実の物理現象や化学反応，相転移においては，周囲の環境と熱だけでなく「粒子」そのものも自由に行き来できる状況が頻繁に現れる。</p>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱浴であり，同時に粒子を自由に出し入れできる巨大な「粒子源（粒子浴）」を兼ね備えた環境を考える。この環境に，一定の体積 <span class="arithmatex">\(V\)</span> を持つ小さな系が接触している状況を想定し，以下の問いに答えよ。</p>
-<p>(1) このように周囲と熱および粒子の両方を交換し，エネルギー <span class="arithmatex">\(E\)</span> と粒子数 <span class="arithmatex">\(N\)</span> がともに変動しうる熱力学的な系のことを何と呼ぶか。</p>
-<p>(2) このような系において，熱平衡状態を規定するためのマクロな環境のパラメータ（示温熱力学量）として，温度 <span class="arithmatex">\(T\)</span> に加えて新たに導入される熱力学量を答えよ。また，その量と粒子数 <span class="arithmatex">\(N\)</span> がどのような熱力学的な役割（共役な関係）にあるか，ヘルムホルツ自由エネルギー <span class="arithmatex">\(F\)</span> の全微分式 </p>
-<p>$$
-dF = -S dT - P dV + \mu dN
-$$ 
-を基に説明せよ。</p>
-<p>(3) この系において，ある特定の粒子数 <span class="arithmatex">\(N\)</span> およびエネルギー <span class="arithmatex">\(E_r\)</span> を持つ微視的状態 <span class="arithmatex">\(r\)</span> が実現する確率は，環境のパラメータによって一般化されたボルツマン因子（ギブズ因子）に比例する。カノニカル分布をそのまま適用することが困難である理由を，確率の規格化の観点から簡潔に述べよ。</p>
+<p>体積 <span class="arithmatex">\(V\)</span> の系が，十分に大きな外部環境とエネルギーおよび粒子を交換している。系と外部環境を合わせた全体系は孤立しており，全エネルギーを <span class="arithmatex">\(E_{\mathrm{tot}}\)</span>，全粒子数を <span class="arithmatex">\(N_{\mathrm{tot}}\)</span> とする。系が粒子数 <span class="arithmatex">\(N\)</span>，エネルギー <span class="arithmatex">\(E_r\)</span> の微視的状態 <span class="arithmatex">\(r\)</span> にあるとき，外部環境のエネルギーと粒子数はそれぞれ <span class="arithmatex">\(E_{\mathrm{tot}}-E_r\)</span>，<span class="arithmatex">\(N_{\mathrm{tot}}-N\)</span> である。外部環境の温度を <span class="arithmatex">\(T\)</span>，化学ポテンシャルを <span class="arithmatex">\(\mu\)</span> とし，以下の問いに答えよ。</p>
+<p>(1) 外部環境のエントロピー <span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}}-E_r,N_{\mathrm{tot}}-N)\)</span> を <span class="arithmatex">\(E_r=0,N=0\)</span> のまわりで1次まで展開せよ。ただし，</p>
+<div class="arithmatex">\[
+\left(\frac{\partial S_{\mathrm{B}}}{\partial E_{\mathrm{B}}}\right)_{V,N_{\mathrm{B}}}=\frac{1}{T},\qquad
+\left(\frac{\partial S_{\mathrm{B}}}{\partial N_{\mathrm{B}}}\right)_{E_{\mathrm{B}},V}=-\frac{\mu}{T}
+\]</div>
+<p>を用いよ。</p>
+<p>(2) 全体系に等重率の原理を適用し，状態 <span class="arithmatex">\(r\)</span> の実現確率が <span class="arithmatex">\(\exp[-\beta(E_r-\mu N)]\)</span> に比例することを示せ。ここで <span class="arithmatex">\(\beta=1/(k_BT)\)</span> である。</p>
+<p>(3) 粒子数と微視的状態の両方について確率を規格化し，大分配関数 <span class="arithmatex">\(\Xi\)</span> と確率 <span class="arithmatex">\(P_{N,r}\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>周囲の環境と熱（エネルギー）だけでなく，粒子も自由にやり取りできる体積一定の熱力学的な系のことを，<strong>「開いた系（開放系）」</strong> と呼びます。また，この開いた系を統計力学的に記述するためのアンサンブル（統計集団）を<strong>「グランドカノニカルアンサンブル（大正準集団）」</strong> と呼びます。</p>
-<h3 id="2">(2)</h3>
-<p>新しく導入される環境のパラメータは <strong>化学ポテンシャル <span class="arithmatex">\(\mu\)</span></strong> です。</p>
-<p>ヘルムホルツ自由エネルギー <span class="arithmatex">\(F\)</span> の全微分式 <span class="arithmatex">\(dF = -S dT - P dV + \mu dN\)</span> を見ると，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> は以下のように定義されます。</p>
+<p>2変数のテイラー展開を1次まで行うと，</p>
 <div class="arithmatex">\[
-\mu = \left( \frac{\partial F}{\partial N} \right)_{T, V}
+\begin{aligned}
+S_{\mathrm{B}}(E_{\mathrm{tot}}-E_r,N_{\mathrm{tot}}-N)
+&amp;\simeq S_{\mathrm{B}}(E_{\mathrm{tot}},N_{\mathrm{tot}})
+-\left(\frac{\partial S_{\mathrm{B}}}{\partial E_{\mathrm{B}}}\right)E_r
+-\left(\frac{\partial S_{\mathrm{B}}}{\partial N_{\mathrm{B}}}\right)N \\
+&amp;=S_0-\frac{E_r}{T}+\frac{\mu N}{T}
+\end{aligned}
 \]</div>
-<p>これは，温度 <span class="arithmatex">\(T\)</span> と体積 <span class="arithmatex">\(V\)</span> を一定に保ったまま，系に粒子を1個付け加える（あるいは取り除く）のに必要な自由エネルギーの変化量を表しています。
-熱力学において，温度 <span class="arithmatex">\(T\)</span> がエネルギーの移動（熱の移動）を制御する駆動の指標となるのと同様に，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> は粒子の移動を制御する駆動の指標となります。したがって， <span class="arithmatex">\(\mu\)</span> と <span class="arithmatex">\(N\)</span> は，温度 <span class="arithmatex">\(T\)</span> とエントロピー <span class="arithmatex">\(S\)</span> の関係，あるいは圧力 <span class="arithmatex">\(P\)</span> と体積 <span class="arithmatex">\(V\)</span> の関係と同じように，互いに「共役な熱力学量」のペアとして働きます。</p>
+<p>となります。<span class="arithmatex">\(S_0\)</span> は系の状態に依存しない定数です。</p>
+<h3 id="2">(2)</h3>
+<p>系が状態 <span class="arithmatex">\(r\)</span> にあるとき，全体系の状態数は外部環境の状態数に比例します。したがって，</p>
+<div class="arithmatex">\[
+P_{N,r}\propto \exp\left(\frac{S_{\mathrm{B}}}{k_B}\right)
+\propto \exp\left[-\frac{E_r-\mu N}{k_BT}\right]
+=\exp[-\beta(E_r-\mu N)]
+\]</div>
+<p>を得ます。</p>
 <h3 id="3">(3)</h3>
-<p>カノニカル分布では，粒子数 <span class="arithmatex">\(N\)</span> が一定の定数として固定されていることを大前提としてシステムを構築していました。そのため，確率の規格化を行うための分配関数は，固定された <span class="arithmatex">\(N\)</span> のもとで，エネルギー状態 <span class="arithmatex">\(r\)</span> のみをすべて足し合わせる形式（ <span class="arithmatex">\(Z = \sum_r \exp(-\beta E_r)\)</span> ）をとっていました。</p>
-<p>しかし，粒子数 <span class="arithmatex">\(N\)</span> 自体がマクロに変異しうる開いた系では，系が <span class="arithmatex">\(N=0\)</span> の状態から <span class="arithmatex">\(N=1, 2, \dots, \infty\)</span> の状態まで，あらゆる粒子数に変化する可能性を包括しなければなりません。したがって，固定された <span class="arithmatex">\(N\)</span> に対する分配関数 <span class="arithmatex">\(Z(N)\)</span> だけでは全状態を網羅できず，確率を正しく規格化することが不可能になります。</p>
-<p>この問題を解決するためには，エネルギーの和 <span class="arithmatex">\(\sum_r\)</span> だけでなく，粒子数の和 <span class="arithmatex">\(\sum_N\)</span> も同時に二重に行うような，新しい規格化因子（大分配関数）を導入する必要性が生じます。</p>
+<p>粒子数 <span class="arithmatex">\(N\)</span> は <span class="arithmatex">\(0,1,2,\dots\)</span> をとるため，規格化条件は</p>
+<div class="arithmatex">\[
+\sum_{N=0}^{\infty}\sum_r P_{N,r}=1
+\]</div>
+<p>です。したがって，大分配関数を</p>
+<div class="arithmatex">\[
+\Xi=\sum_{N=0}^{\infty}\sum_r\exp[-\beta(E_r-\mu N)]
+\]</div>
+<p>と定義すれば，確率は</p>
+<div class="arithmatex">\[
+P_{N,r}=\frac{1}{\Xi}\exp[-\beta(E_r-\mu N)]
+\]</div>
+<p>となります。</p>
 
 
 

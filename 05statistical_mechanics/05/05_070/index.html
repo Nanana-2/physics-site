@@ -11694,7 +11694,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,28 +14542,28 @@
 
 <h1 id="_1">ビリアル展開</h1>
 <h2 id="_2">問題</h2>
-<p>現実の不完全気体では，理想気体とは異なり分子間に相互作用（長距離の引力や短距離の斥力）が働く。この相互作用による理想気体からのズレを補正するため，不完全気体の状態方程式を平均粒子密度 <span class="arithmatex">\(\rho = N/V\)</span> のべき級数として展開する手法を<strong>ビリアル展開</strong>と呼ぶ。</p>
+<p>実在気体では分子間に引力や斥力が働く。状態方程式を数密度 <span class="arithmatex">\(\rho=N/V\)</span> のべき級数として表すビリアル展開を考える。</p>
 <div class="arithmatex">\[
 \frac{P}{k_B T} = \rho + B_2(T) \rho^2 + B_3(T) \rho^3 + \dots
 \]</div>
 <p>ここで <span class="arithmatex">\(B_2(T)\)</span> は第2ビリアル係数， <span class="arithmatex">\(B_3(T)\)</span> は第3ビリアル係数であり，これらは温度のみの関数である。</p>
-<p>2粒子間の中心力ポテンシャルを <span class="arithmatex">\(\phi(r)\)</span> とするとき，統計力学のクラスター展開（メイヤーの <span class="arithmatex">\(f\)</span> 関数 <span class="arithmatex">\(f(r) = \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1\)</span> ）を用いると，第2ビリアル係数は以下のように位置積分で表される。</p>
+<p>2粒子間の中心力ポテンシャルを <span class="arithmatex">\(\phi(r)\)</span> とし，メイヤー関数を <span class="arithmatex">\(f(r)=\exp[-\phi(r)/(k_BT)]-1\)</span> と定義する。第2ビリアル係数は</p>
 <div class="arithmatex">\[
 B_2(T) = -\frac{1}{2} \int_0^\infty 4\pi r^2 f(r) dr
 \]</div>
 <p>この関係式を基にして，以下の問いに答えよ。</p>
-<p>(1) 分子間ポテンシャルとして，最も単純な「硬い球モデル（有限の半径 <span class="arithmatex">\(\sigma\)</span> を持ち，それ以内には他の粒子が絶対に侵入できないモデル）」を考える。</p>
+<p>(1) 分子間ポテンシャルとして，半径 <span class="arithmatex">\(\sigma\)</span> の硬い球模型を考える。</p>
 <div class="arithmatex">\[
 \phi(r) = \begin{cases} \infty &amp; (r &lt; \sigma) \\ 0 &amp; (r \ge \sigma) \end{cases}
 \]</div>
 <p>このときのメイヤーの <span class="arithmatex">\(f\)</span> 関数を <span class="arithmatex">\(r &lt; \sigma\)</span> と <span class="arithmatex">\(r \ge \sigma\)</span> のそれぞれの領域について求めよ。また，これを用いて硬い球モデルの第2ビリアル係数 <span class="arithmatex">\(B_2^{\mathrm{HS}}\)</span> を計算せよ。</p>
-<p>(2) 実在気体のより現実的な近似として，硬い球の斥力に加えて，その外側に弱い長距離引力（ <span class="arithmatex">\(r \ge \sigma\)</span> で <span class="arithmatex">\(\phi(r) &lt; 0\)</span> かつ <span class="arithmatex">\(|\phi(r)| \ll k_B T\)</span> ）が働くモデルを考える。</p>
-<p>このとき，引力領域（ <span class="arithmatex">\(r \ge \sigma\)</span> ）において，マクローリン展開 <span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span> を用いて </p>
+<p>(2) 硬い球の斥力に加えて，<span class="arithmatex">\(r\ge\sigma\)</span> で <span class="arithmatex">\(\phi(r)&lt;0\)</span> かつ <span class="arithmatex">\(|\phi(r)|\ll k_BT\)</span> を満たす弱い引力が働く模型を考える。</p>
+<p>引力領域 <span class="arithmatex">\(r\ge\sigma\)</span> において，<span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span> を用いて</p>
 <div class="arithmatex">\[
 f(r) \simeq -\frac{\phi(r)}{k_B T}
 \]</div>
-<p>と近似できることを示せ。また，これを用いて全体の第2ビリアル係数が <span class="arithmatex">\(B_2(T) = b - \frac{a}{k_B T}\)</span> （ <span class="arithmatex">\(a, b\)</span> は正の定数）の形式で表されることを導き，定数 <span class="arithmatex">\(a, b\)</span> をポテンシャルを用いた積分構造として定義せよ。</p>
-<p>(3) (2) の結果をビリアル展開の第2項までをとった式 <span class="arithmatex">\(\frac{P}{k_B T} \simeq \rho + B_2(T) \rho^2\)</span> に代入し，密度が十分に低い（ <span class="arithmatex">\(\rho^2 \simeq \frac{N^2}{V^2}\)</span> ）条件のもとで，この式が実在気体の有名な状態方程式であるファン・デル・ワールスの状態方程式の低密度展開式 </p>
+<p>と近似できることを示せ。また，<span class="arithmatex">\(B_2(T) = b - \frac{a}{k_B T}\)</span> と表し，正の定数 <span class="arithmatex">\(a,b\)</span> をポテンシャルの積分で定義せよ。</p>
+<p>(3) (2) の結果を <span class="arithmatex">\(\frac{P}{k_B T} \simeq \rho + B_2(T) \rho^2\)</span> に代入し，<span class="arithmatex">\(\rho=N/V\)</span> を用いて，ファン・デル・ワールス方程式の低密度展開</p>
 <div class="arithmatex">\[
 \left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_B T
 \]</div>
@@ -14571,7 +14571,7 @@ f(r) \simeq -\frac{\phi(r)}{k_B T}
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>メイヤーの <span class="arithmatex">\(f\)</span> 関数の定義式 <span class="arithmatex">\(f(r) = \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1\)</span> に，与えられた硬い球（Hard Sphere）ポテンシャルを代入します。</p>
+<p>メイヤー関数 <span class="arithmatex">\(f(r) = \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1\)</span> に硬い球ポテンシャルを代入します。</p>
 <ul>
 <li><span class="arithmatex">\(r &lt; \sigma\)</span> のとき， <span class="arithmatex">\(\phi(r) = \infty\)</span> より <span class="arithmatex">\(\exp(-\infty) = 0\)</span> となるため， <span class="arithmatex">\(f(r) = 0 - 1 = -1\)</span></li>
 <li><span class="arithmatex">\(r \ge \sigma\)</span> のとき， <span class="arithmatex">\(\phi(r) = 0\)</span> より <span class="arithmatex">\(\exp(0) = 1\)</span> となるため， <span class="arithmatex">\(f(r) = 1 - 1 = 0\)</span></li>
@@ -14584,14 +14584,14 @@ f(r) = \begin{cases} -1 &amp; (r &lt; \sigma) \\ 0 &amp; (r \ge \sigma) \end{cas
 <div class="arithmatex">\[
 B_2^{\mathrm{HS}} = -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr = \frac{1}{2} \cdot 4\pi \left[ \frac{r^3}{3} \right]_0^\sigma = \frac{2\pi \sigma^3}{3}
 \]</div>
-<p>この結果 <span class="arithmatex">\(B_2^{\mathrm{HS}} = \frac{2\pi \sigma^3}{3}\)</span> は，1つの粒子の体積 <span class="arithmatex">\(v_0 = \frac{4}{3}\pi \left(\frac{\sigma}{2}\right)^3 = \frac{\pi \sigma^3}{6}\)</span> のちょうど 4 倍（ <span class="arithmatex">\(4v_0\)</span> ）に相当します。これは統計力学において，粒子同士が重なり合えないことによって生じる排除体積の効果を表しています。</p>
+<p>この結果 <span class="arithmatex">\(B_2^{\mathrm{HS}} = \frac{2\pi \sigma^3}{3}\)</span> は，1つの粒子の体積 <span class="arithmatex">\(v_0 = \frac{4}{3}\pi \left(\frac{\sigma}{2}\right)^3 = \frac{\pi \sigma^3}{6}\)</span> のちょうど 4 倍<span class="arithmatex">\(4v_0\)</span>に相当します。これは統計力学において，粒子同士が重なり合えないことによって生じる排除体積の効果を表しています。</p>
 <h3 id="2">(2)</h3>
-<p>引力領域（ <span class="arithmatex">\(r \ge \sigma\)</span> ）では，分子間引力が熱エネルギーに比べて十分に弱い（ <span class="arithmatex">\(|\phi(r)| \ll k_B T\)</span> ）という条件が与えられています。したがって， <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> の近似公式を <span class="arithmatex">\(x = -\frac{\phi(r)}{k_B T}\)</span> として適用できます。</p>
+<p>引力領域<span class="arithmatex">\(r \ge \sigma\)</span>では，分子間引力が熱エネルギーに比べて十分に弱い<span class="arithmatex">\(|\phi(r)| \ll k_B T\)</span>という条件が与えられています。したがって， <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> の近似公式を <span class="arithmatex">\(x = -\frac{\phi(r)}{k_B T}\)</span> として適用できます。</p>
 <div class="arithmatex">\[
 f(r) = \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1 \simeq \left( 1 - \frac{\phi(r)}{k_B T} \right) - 1 = -\frac{\phi(r)}{k_B T}
 \]</div>
 <p>これにより，引力領域での近似式が示されました。</p>
-<p>次に，全体の第2ビリアル係数の積分を，斥力領域（ <span class="arithmatex">\(0 \le r &lt; \sigma\)</span> ）と引力領域（ <span class="arithmatex">\(r \ge \sigma\)</span> ）の2つに分割して計算します。</p>
+<p>次に，全体の第2ビリアル係数の積分を，斥力領域<span class="arithmatex">\(0 \le r &lt; \sigma\)</span>と引力領域<span class="arithmatex">\(r \ge \sigma\)</span>の2つに分割して計算します。</p>
 <div class="arithmatex">\[
 B_2(T) = -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr - \frac{1}{2} \int_\sigma^\infty 4\pi r^2 \left( -\frac{\phi(r)}{k_B T} \right) dr
 \]</div>
@@ -14624,7 +14624,7 @@ P = \frac{N k_B T}{V} + b k_B T \frac{N^2}{V^2} - \frac{a N^2}{V^2}
 <div class="arithmatex">\[
 P + \frac{a N^2}{V^2} = \frac{N k_B T}{V} \left( 1 + \frac{N b}{V} \right)
 \]</div>
-<p>ここで，低密度の条件から <span class="arithmatex">\(\frac{N b}{V} \ll 1\)</span> であるため，近似公式 <span class="arithmatex">\(\frac{1}{1-x} \simeq 1 + x\)</span> の逆の変形（ <span class="arithmatex">\(1+x \simeq \frac{1}{1-x}\)</span> ）を右辺の括弧に適用します。</p>
+<p>ここで，低密度の条件から <span class="arithmatex">\(\frac{N b}{V} \ll 1\)</span> であるため，近似公式 <span class="arithmatex">\(\frac{1}{1-x} \simeq 1 + x\)</span> の逆の変形<span class="arithmatex">\(1+x \simeq \frac{1}{1-x}\)</span>を右辺の括弧に適用します。</p>
 <div class="arithmatex">\[
 P + \frac{a N^2}{V^2} \simeq \frac{N k_B T}{V} \cdot \frac{1}{1 - \frac{N b}{V}} = \frac{N k_B T}{V - N b}
 \]</div>

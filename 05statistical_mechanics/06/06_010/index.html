@@ -11692,7 +11692,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,16 +14542,16 @@
 
 <h1 id="_1">同種粒子と波動関数の対称性</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学において，電子やヘリウム原子のように，質量，電荷，スピンなどの内部自由度が完全に同一である粒子を「同種粒子」と呼ぶ。古典力学とは異なり，量子力学では不確定性原理によって粒子の軌道を追跡できないため，同種粒子は「互いに本質的に区別不可能（不可区別）」である。</p>
-<p>今，2つの同種粒子 1, 2 からなる系を考える。粒子 1 の座標（空間座標とスピン自由度を含む）を <span class="arithmatex">\(x_1\)</span>，粒子 2 の座標を <span class="arithmatex">\(x_2\)</span> とし，系全体の波動関数を <span class="arithmatex">\(\Psi(x_1, x_2)\)</span> とする。また，2つの粒子の座標を入れ替える演算子（置換演算子） <span class="arithmatex">\(\hat{P}_{12}\)</span> を以下のように定義する。</p>
+<p>質量，電荷，スピンなどの内部自由度が同一である同種粒子を考える。量子力学では同種粒子を互いに区別できない。</p>
+<p>2つの同種粒子からなる系を考える。空間座標とスピン自由度をまとめた各粒子の座標を <span class="arithmatex">\(x_1,x_2\)</span> とし，系全体の波動関数を <span class="arithmatex">\(\Psi(x_1,x_2)\)</span> とする。二粒子を入れ替える置換演算子 <span class="arithmatex">\(\hat{P}_{12}\)</span> を</p>
 <div class="arithmatex">\[
 \hat{P}_{12} \Psi(x_1, x_2) = \Psi(x_2, x_1)
 \]</div>
 <p>この量子力学的な前提を基にして，以下の問いに答えよ。</p>
 <p>(1) 粒子が不可区別であるならば，粒子を入れ替える前と後で，その状態を見出す存在確率密度は物理的に全く変化しないはずである。この条件 <span class="arithmatex">\(|\Psi(x_1, x_2)|^2 = |\Psi(x_2, x_1)|^2\)</span> から，置換演算子 <span class="arithmatex">\(\hat{P}_{12}\)</span> の固有値が <span class="arithmatex">\(+1\)</span> または <span class="arithmatex">\(-1\)</span> のいずれかに限られることを示せ。</p>
-<p>(2) 固有値が <span class="arithmatex">\(+1\)</span> となる波動関数（対称波動関数）を持つ粒子を<strong>ボース粒子（ボソン）</strong>，固有値が <span class="arithmatex">\(-1\)</span> となる波動関数（反対称波動関数）を持つ粒子を<strong>フェルミ粒子（フェルミオン）</strong>と呼ぶ。</p>
-<p>互いに相互作用しない2粒子を考え，それぞれの粒子が独立な1粒子量子状態 <span class="arithmatex">\(\phi_a(x)\)</span> および <span class="arithmatex">\(\phi_b(x)\)</span> をとるものとする。このとき，系全体の波動関数 <span class="arithmatex">\(\Psi(x_1, x_2)\)</span> を，不可区別性を満たすように正しく規格化して構成せよ。ボース粒子のケースとフェルミ粒子のケースの両方をそれぞれ示すこと。ただし， <span class="arithmatex">\(\phi_a\)</span> と <span class="arithmatex">\(\phi_b\)</span> は互いに直交規格化されている（ <span class="arithmatex">\(a \neq b\)</span> ）とする。</p>
-<p>(3) (2) で得られたフェルミ粒子の波動関数において，2つの粒子が全く同じ1粒子量子状態をとる場合（ <span class="arithmatex">\(a = b\)</span> ）を考える。このとき，波動関数 <span class="arithmatex">\(\Psi(x_1, x_2)\)</span> がどのようになるかを示し，そこから導かれる物理的な基本原理について説明せよ。</p>
+<p>(2) 固有値が <span class="arithmatex">\(+1\)</span> の対称波動関数を持つ粒子をボース粒子，固有値が <span class="arithmatex">\(-1\)</span> の反対称波動関数を持つ粒子をフェルミ粒子と呼ぶ。</p>
+<p>互いに相互作用しない2粒子が1粒子状態 <span class="arithmatex">\(\phi_a(x)\)</span> および <span class="arithmatex">\(\phi_b(x)\)</span> をとる。ボース粒子とフェルミ粒子について，規格化された2粒子波動関数をそれぞれ構成せよ。ただし，<span class="arithmatex">\(a\neq b\)</span> とし，<span class="arithmatex">\(\phi_a\)</span> と <span class="arithmatex">\(\phi_b\)</span> は直交規格化されているものとする。</p>
+<p>(3) (2)のフェルミ粒子について <span class="arithmatex">\(a=b\)</span> と置き，<span class="arithmatex">\(\Psi(x_1,x_2)=0\)</span> となることを示せ。したがって，同じ1粒子状態を二つのフェルミ粒子が同時に占有できないことを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14559,7 +14559,7 @@
 <div class="arithmatex">\[
 \hat{P}_{12}^2 \Psi(x_1, x_2) = \hat{P}_{12} \Psi(x_2, x_1) = \Psi(x_1, x_2)
 \]</div>
-<p>これは，演算子として <span class="arithmatex">\(\hat{P}_{12}^2 = \hat{1}\)</span> （恒等演算子）であることを意味しています。</p>
+<p>これは，<span class="arithmatex">\(\hat{P}_{12}^2 = \hat{1}\)</span> であることを意味します。</p>
 <p>ここで， <span class="arithmatex">\(\hat{P}_{12}\)</span> の固有値を <span class="arithmatex">\(\lambda\)</span> とおくと，固有値方程式は <span class="arithmatex">\(\hat{P}_{12} \Psi = \lambda \Psi\)</span> です。この両辺に左からもう一度 <span class="arithmatex">\(\hat{P}_{12}\)</span> を作用させます。</p>
 <div class="arithmatex">\[
 \hat{P}_{12}^2 \Psi = \hat{P}_{12} (\lambda \Psi) = \lambda (\hat{P}_{12} \Psi) = \lambda^2 \Psi
@@ -14568,31 +14568,31 @@
 <div class="arithmatex">\[
 \lambda^2 = 1 \quad \implies \quad \lambda = \pm 1
 \]</div>
-<p>これにより，同種粒子の不可区別性（確率密度の不変性）に由来する固有値は， <span class="arithmatex">\(+1\)</span> または <span class="arithmatex">\(-1\)</span> のいずれかしかとり得ないことが証明されました。</p>
+<p>したがって，置換演算子の固有値は <span class="arithmatex">\(+1\)</span> または <span class="arithmatex">\(-1\)</span> です。</p>
 <h3 id="2">(2)</h3>
-<p>もし粒子が区別できるならば，粒子 1 が状態 <span class="arithmatex">\(a\)</span>，粒子 2 が状態 <span class="arithmatex">\(b\)</span> にある系の波動関数は，単純な積 <span class="arithmatex">\(\phi_a(x_1)\phi_b(x_2)\)</span> で表されます。しかし，粒子が区別できない場合，これだけでは「どちらの粒子が状態 <span class="arithmatex">\(a\)</span> にいるか」を指定してしまっているため不完全です。</p>
+<p>もし粒子が区別できるならば，粒子 1 が状態 <span class="arithmatex">\(a\)</span>，粒子 2 が状態 <span class="arithmatex">\(b\)</span> にある系の波動関数は，単純な積 <span class="arithmatex">\(\phi_a(x_1)\phi_b(x_2)\)</span> で表されます。しかし，粒子が区別できない場合，これだけではどちらの粒子が状態 <span class="arithmatex">\(a\)</span> にいるかを指定してしまっているため不完全です。</p>
 <p>(1) で示した対称性の要請を満たすように，重ね合わせを用いて正しい波動関数を構築します。</p>
-<p><strong>【ボース粒子の場合（固有値 <span class="arithmatex">\(+1\)</span> ：対称）】</strong></p>
+<p><strong>ボース粒子</strong></p>
 <p>座標の入れ替えに対して符号が変わらないように，和の形式で組み合わせます。</p>
 <div class="arithmatex">\[
 \Psi_{\mathrm{B}}(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_b(x_2) + \phi_b(x_1)\phi_a(x_2) \right]
 \]</div>
 <p>実際に <span class="arithmatex">\(x_1\)</span> と <span class="arithmatex">\(x_2\)</span> を入れ替えても，括弧の中の第1項と第2項が入れ替わるだけなので，関数全体としては <span class="arithmatex">\(\Psi_{\mathrm{B}}(x_2, x_1) = \Psi_{\mathrm{B}}(x_1, x_2)\)</span> となり，対称性が満たされます。</p>
-<p><strong>【フェルミ粒子の場合（固有値 <span class="arithmatex">\(-1\)</span> ：反対称）】</strong></p>
+<p><strong>フェルミ粒子</strong></p>
 <p>座標の入れ替えに対して全体の符号が反転するように，差の形式で組み合わせます。</p>
 <div class="arithmatex">\[
 \Psi_{\mathrm{F}}(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_b(x_2) - \phi_b(x_1)\phi_a(x_2) \right]
 \]</div>
 <p>実際に <span class="arithmatex">\(x_1\)</span> と <span class="arithmatex">\(x_2\)</span> を入れ替えると，括弧の中身の引き算の順序が逆になるため，関数全体にマイナス符号が飛び出し， <span class="arithmatex">\(\Psi_{\mathrm{F}}(x_2, x_1) = -\Psi_{\mathrm{F}}(x_1, x_2)\)</span> となって反対称性が満たされます。</p>
-<p>（※なお，このフェルミ粒子の反対称波動関数は，行列式を用いて <span class="arithmatex">\(\frac{1}{\sqrt{2}} \begin{vmatrix} \phi_a(x_1) &amp; \phi_a(x_2) \\ \phi_b(x_1) &amp; \phi_b(x_2) \end{vmatrix}\)</span> と表すこともでき，これは<strong>スレーター行列式</strong>と呼ばれます。）</p>
+<p>反対称波動関数は，スレーター行列式 <span class="arithmatex">\(\frac{1}{\sqrt{2}} \begin{vmatrix} \phi_a(x_1) &amp; \phi_a(x_2) \\ \phi_b(x_1) &amp; \phi_b(x_2) \end{vmatrix}\)</span> としても表せます。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で求めたフェルミ粒子の波動関数 <span class="arithmatex">\(\Psi_{\mathrm{F}}\)</span> において，2つの粒子が全く同じ1粒子量子状態にある，すなわち <span class="arithmatex">\(a = b\)</span> という状況を代入してみます。</p>
 <div class="arithmatex">\[
 \Psi_{\mathrm{F}}(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_a(x_2) - \phi_a(x_1)\phi_a(x_2) \right] = 0
 \]</div>
-<p>波動関数が完全に <span class="arithmatex">\(0\)</span> になってしまいます。量子力学において波動関数が 0 であるということは，そのような状態（存在確率が 0 ）はこの自然界に存在し得ないということを意味します。</p>
+<p><span class="arithmatex">\(\Psi_{\mathrm{F}}=0\)</span> なので，この状態の存在確率は0です。</p>
 <p>この結果は，<strong>2つのフェルミ粒子は，同一の量子状態を同時に占有することはできない</strong>という重要な原則を示しています。この原理を<strong>パウリの排他原理</strong>と呼びます。</p>
-<p>電子などのフェルミ粒子が，原子内でエネルギーの低い軌道から順に詰まっていく性質や，物質が一定の体積を保って潰れない性質（物質の硬さ）は，すべてこの波動関数の反対称性から生じるパウリの排他原理によって支えられています。</p>
+<p>したがって，二つのフェルミ粒子は同じ1粒子状態を同時に占有できません。</p>
 
 
 

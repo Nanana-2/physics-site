@@ -11694,7 +11694,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,14 +14542,14 @@
 
 <h1 id="_1">外力場中の理想気体</h1>
 <h2 id="_2">問題</h2>
-<p>一定の重力場（重力加速度 <span class="arithmatex">\(g\)</span>）の中にある，質量 <span class="arithmatex">\(m\)</span> の古典的単原子分子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。系の体積を <span class="arithmatex">\(V\)</span> とし，鉛直上向きに <span class="arithmatex">\(z\)</span> 軸をとる。地表を <span class="arithmatex">\(z = 0\)</span> とし，気体は底面積 <span class="arithmatex">\(S\)</span>，高さ <span class="arithmatex">\(H\)</span> の均一な直方体の容器（ <span class="arithmatex">\(V = S \times H\)</span> ）に閉じ込められているとする。</p>
+<p>重力加速度が <span class="arithmatex">\(g\)</span> で一定の重力場中にある，質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。鉛直上向きに <span class="arithmatex">\(z\)</span> 軸をとり，地表を <span class="arithmatex">\(z=0\)</span> とする。気体は底面積 <span class="arithmatex">\(S\)</span>，高さ <span class="arithmatex">\(H\)</span>，体積 <span class="arithmatex">\(V=SH\)</span> の直方体容器に閉じ込められている。</p>
 <p>このとき，各粒子のハミルトニアンは，運動エネルギーと重力による位置エネルギーの和として以下のように表される。</p>
 <div class="arithmatex">\[
 h(\boldsymbol{r}, \boldsymbol{p}) = \frac{\boldsymbol{p}^2}{2m} + m g z
 \]</div>
-<p>この系が温度 <span class="arithmatex">\(T\)</span> （逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>）の熱浴と熱平衡状態にあるとき，以下の問いに答えよ。</p>
-<p>(1) 粒子の不可区別性を考慮した系全体のカノニカル分配関数 <span class="arithmatex">\(Z_N\)</span> を構成せよ。積分を実行し，外力がない場合の分配関数（位置エネルギーが常に 0 の場合）に対して，重力による補正因子がどのように掛かるかを示せ。</p>
-<p>(2) 地表から高さ <span class="arithmatex">\(z \sim z + dz\)</span> の微小な区間（厚み <span class="arithmatex">\(dz\)</span> の薄い層）に存在する平均粒子数 <span class="arithmatex">\(d\langle N(z) \rangle\)</span> は，その高さにおけるボルツマン因子に比例する。これを利用して，高さ <span class="arithmatex">\(z\)</span> における単位体積あたりの粒子密度分布 <span class="arithmatex">\(\rho(z)\)</span> が，地表での密度 <span class="arithmatex">\(\rho(0)\)</span> を用いて以下のように表されることを示せ。</p>
+<p>この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) 粒子の不可区別性を考慮したカノニカル分配関数 <span class="arithmatex">\(Z_N\)</span> を求めよ。また，位置エネルギーを0とした場合の分配関数に対する重力の補正因子を求めよ。</p>
+<p>(2) 高さ <span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z+dz\)</span> の層にある平均粒子数が，その高さのボルツマン因子に比例することを用いて，粒子密度 <span class="arithmatex">\(\rho(z)\)</span> が地表の密度 <span class="arithmatex">\(\rho(0)\)</span> により以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 \rho(z) = \rho(0) \exp\left( -\frac{m g z}{k_B T} \right)
 \]</div>
@@ -14561,7 +14561,7 @@ h(\boldsymbol{r}, \boldsymbol{p}) = \frac{\boldsymbol{p}^2}{2m} + m g z
 <div class="arithmatex">\[
 z_1 = \frac{1}{h^3} \int_{-\infty}^{\infty} d^3\boldsymbol{p} \exp\left( -\frac{\beta \boldsymbol{p}^2}{2m} \right) \int_0^L dx \int_0^L dy \int_0^H dz \exp(-\beta m g z)
 \]</div>
-<p>運動量の積分，および <span class="arithmatex">\(x, y\)</span> の積分（面積 <span class="arithmatex">\(S = L^2\)</span> ）は外力がない場合と全く同様に実行できます。</p>
+<p>運動量積分と <span class="arithmatex">\(x,y\)</span> に関する積分は外力がない場合と同じです。<span class="arithmatex">\(x,y\)</span> の積分は面積 <span class="arithmatex">\(S\)</span> を与えます。</p>
 <div class="arithmatex">\[
 z_1 = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \cdot S \cdot \int_0^H \exp(-\beta m g z) dz
 \]</div>
@@ -14573,12 +14573,12 @@ z_1 = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \cdot S \cdot \int_0^H \exp(
 <div class="arithmatex">\[
 z_1 = S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_B T} \right) \right)
 \]</div>
-<p>外力がない（ <span class="arithmatex">\(g \to 0\)</span> ）の極限の1粒子分配関数 <span class="arithmatex">\(z_1^{(0)} = V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}\)</span> を基準として，マクローリン展開（ <span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span> ）を考えると，この式はきれいに外力なしの形に帰着します。系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> は，この <span class="arithmatex">\(z_1\)</span> を用いて以下のように構成されます。</p>
+<p>外力がない<span class="arithmatex">\(g \to 0\)</span>の極限の1粒子分配関数 <span class="arithmatex">\(z_1^{(0)} = V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}\)</span> を基準として，マクローリン展開<span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span>を考えると，この式はきれいに外力なしの形に帰着します。系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> は，この <span class="arithmatex">\(z_1\)</span> を用いて以下のように構成されます。</p>
 <div class="arithmatex">\[
 Z_N = \frac{1}{N!} \left[ S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_B T} \right) \right) \right]^N
 \]</div>
 <h3 id="2">(2)</h3>
-<p>ある1つの粒子が高さ <span class="arithmatex">\(z \sim z + dz\)</span> の範囲に見出される確率 <span class="arithmatex">\(P(z) dz\)</span> は，位置の被積分関数（ボルツマン因子）の比によって決まります。 <span class="arithmatex">\(x, y\)</span> 方向は一様であるため， <span class="arithmatex">\(z\)</span> 依存性のみを抽出します。</p>
+<p>1粒子が高さ <span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z+dz\)</span> にある確率 <span class="arithmatex">\(P(z)dz\)</span> はボルツマン因子に比例します。<span class="arithmatex">\(x,y\)</span> 方向は一様なので，<span class="arithmatex">\(z\)</span> 依存性だけを取り出します。</p>
 <div class="arithmatex">\[
 P(z) dz = \frac{\exp(-\beta m g z) dz}{\int_0^H \exp(-\beta m g z) dz}
 \]</div>
@@ -14594,7 +14594,7 @@ d\langle N(z) \rangle = N P(z) dz = N \frac{\exp(-\beta m g z)}{\int_0^H \exp(-\
 <div class="arithmatex">\[
 \rho(0) = \frac{N}{S} \frac{1}{\int_0^H \exp(-\beta m g z) dz}
 \]</div>
-<p>この <span class="arithmatex">\(\rho(0)\)</span> の塊を元の <span class="arithmatex">\(\rho(z)\)</span> の式に代入すると，定数の分母が完全に吸収され，目的の密度分布の式（ボルツマン分布）が導出されます。</p>
+<p>これを <span class="arithmatex">\(\rho(z)\)</span> の式に代入すると，</p>
 <div class="arithmatex">\[
 \rho(z) = \rho(0) \exp(-\beta m g z) = \rho(0) \exp\left( -\frac{m g z}{k_B T} \right)
 \]</div>
@@ -14615,7 +14615,7 @@ P(z) = P(0) \exp\left( -\frac{m g z}{k_B T} \right)
 <div class="arithmatex">\[
 \frac{dP(z)}{dz} = -\frac{m g}{k_B T} P(z) = -\frac{m g}{k_B T} \left( \rho(z) k_B T \right) = -\rho(z) m g
 \]</div>
-<p>これにより，統計力学のボルツマン分布から導いた気圧の式が，大気の微小要素にかかる上向きの圧力差と下向きの重力が釣り合っていることを示す流体力学の「静水圧平衡の式」を満たしていることが証明されました。</p>
+<p>これにより，統計力学のボルツマン分布から導いた気圧の式が，大気の微小要素にかかる上向きの圧力差と下向きの重力が釣り合っていることを示す流体力学の静水圧平衡の式を満たしていることが証明されました。</p>
 
 
 
@@ -14670,7 +14670,7 @@ P(z) = P(0) \exp\left( -\frac{m g z}{k_B T} \right)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../05_050/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 理想気体の内部エネルギーと比熱">
+          <a href="../05_050/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 理想気体の内部エネルギーと熱容量">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -14680,7 +14680,7 @@ P(z) = P(0) \exp\left( -\frac{m g z}{k_B T} \right)
                 Previous
               </span>
               <div class="md-ellipsis">
-                理想気体の内部エネルギーと比熱
+                理想気体の内部エネルギーと熱容量
               </div>
             </div>
           </a>

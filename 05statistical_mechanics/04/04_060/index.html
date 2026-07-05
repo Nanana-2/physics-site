@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14542,11 +14542,11 @@
 
 <h1 id="1">吸着模型とラングミュア等温式 (1)</h1>
 <h2 id="_1">問題</h2>
-<p>固体表面にある気体分子の吸着現象を記述する簡単なモデルとして，独立な <span class="arithmatex">\(M\)</span> 個の吸着サイト（格子点）からなる系を考える。各吸着サイトには，気体粒子が最大で1個だけ吸着することができ，2個以上の粒子が同じサイトに入ることはできない。また，吸着した粒子間には相互作用は働かないものとする。1個の粒子が吸着サイトに束縛されたときのエネルギーを <span class="arithmatex">\(-\epsilon\)</span> （ <span class="arithmatex">\(\epsilon &gt; 0\)</span> ）とし，粒子が吸着していないときのエネルギーを <span class="arithmatex">\(0\)</span> とする。</p>
-<p>この吸着系が，温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の気体相（粒子浴および熱浴）と熱平衡状態にあるとき，大正準集団に基づいて以下の問いに答えよ。</p>
+<p>固体表面に独立な <span class="arithmatex">\(M\)</span> 個の吸着サイトがある模型を考える。各サイトには気体粒子が最大1個だけ吸着でき，吸着粒子間の相互作用はないものとする。粒子が吸着したサイトのエネルギーを <span class="arithmatex">\(-\epsilon\)</span> とし，<span class="arithmatex">\(\epsilon&gt;0\)</span> とする。空のサイトのエネルギーは0である。</p>
+<p>この吸着系が，温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の気体相と熱平衡状態にあるとき，大正準集団に基づいて以下の問いに答えよ。</p>
 <p>(1) 1つの吸着サイトに着目する。このサイトの粒子数 <span class="arithmatex">\(n\)</span> は <span class="arithmatex">\(0\)</span> または <span class="arithmatex">\(1\)</span> のいずれかの値をとる。この1サイトあたりの大分配関数 <span class="arithmatex">\(\xi(\beta, \mu)\)</span> を求めよ。</p>
 <p>(2) 各吸着サイトは互いに独立であるため，系全体の大分配関数 <span class="arithmatex">\(\Xi(\beta, \mu)\)</span> は <span class="arithmatex">\(\Xi = \xi^M\)</span> と表される。この関係を用いて，系全体の平均吸着粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> を計算せよ。</p>
-<p>(3) 全吸着サイトのうち，実際に粒子が吸着している割合を被覆率（吸着率） <span class="arithmatex">\(\theta = \frac{\langle N \rangle}{M}\)</span> と定義する。被覆率 <span class="arithmatex">\(\theta\)</span> を <span class="arithmatex">\(\beta, \mu, \epsilon\)</span> を用いて表せ。また，周囲の理想気体相の圧力を <span class="arithmatex">\(P\)</span> としたとき，気体の化学ポテンシャルが <span class="arithmatex">\(\mu = k_B T \log (P / P_0)\)</span> （ <span class="arithmatex">\(P_0\)</span> は温度のみに依存する定数）と表されることを利用して，被覆率 <span class="arithmatex">\(\theta\)</span> を圧力 <span class="arithmatex">\(P\)</span> の関数として書き換えよ。</p>
+<p>(3) 被覆率を <span class="arithmatex">\(\theta = \frac{\langle N \rangle}{M}\)</span> と定義し，<span class="arithmatex">\(\beta, \mu, \epsilon\)</span> を用いて表せ。また，気体相の圧力を <span class="arithmatex">\(P\)</span> とし，<span class="arithmatex">\(\mu = k_B T \log (P / P_0)\)</span> を用いて <span class="arithmatex">\(\theta\)</span> を <span class="arithmatex">\(P\)</span> の関数として表せ。ただし，<span class="arithmatex">\(P_0\)</span> は温度だけに依存する定数である。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1_1">(1)</h3>
@@ -14584,7 +14584,7 @@
 <div class="arithmatex">\[
 \langle N \rangle = \frac{M}{\exp\left[ -\beta(\epsilon + \mu) \right] + 1}
 \]</div>
-<p>この形式は，フェルミ・ディラック統計の分布関数と本質的に等価です。1つのサイトに1個しか粒子が入らないという排他律が，自動的にこの統計性を生み出しています。</p>
+<p>この形はフェルミ・ディラック分布と同じ構造を持ちます。</p>
 <h3 id="3">(3)</h3>
 <p>被覆率 <span class="arithmatex">\(\theta\)</span> は，(2) で求めた平均吸着粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> を総サイト数 <span class="arithmatex">\(M\)</span> で割ったものであるため，以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14602,9 +14602,9 @@
 <div class="arithmatex">\[
 \theta = \frac{K(T) P}{1 + K(T) P}
 \]</div>
-<p>この式は，固体表面への気体分子の単分子層吸着の挙動をきれいに表す<strong>「ラングミュアの吸着等温式」</strong>にほかなりません。</p>
-<p>圧力が非常に低い極限（ <span class="arithmatex">\(P \to 0\)</span> ）では，分母の <span class="arithmatex">\(K(T)P\)</span> が <span class="arithmatex">\(1\)</span> に比べて無視できるようになるため， <span class="arithmatex">\(\theta \simeq K(T)P\)</span> となり，吸着量が圧力に比例するというヘンリーの法則が再現されます。</p>
-<p>逆に，圧力が非常に高い極限（ <span class="arithmatex">\(P \to \infty\)</span> ）では，分母の <span class="arithmatex">\(1\)</span> が無視できるようになり， <span class="arithmatex">\(\theta \to 1\)</span> へと収束します。これは，すべての吸着サイトが完全に粒子で埋め尽くされた飽和吸着状態を正しく記述しています。</p>
+<p>この式は，固体表面への気体分子の単分子層吸着の挙動をきれいに表す<strong>ラングミュアの吸着等温式</strong>にほかなりません。</p>
+<p>圧力が非常に低い極限<span class="arithmatex">\(P \to 0\)</span>では，分母の <span class="arithmatex">\(K(T)P\)</span> が <span class="arithmatex">\(1\)</span> に比べて無視できるようになるため， <span class="arithmatex">\(\theta \simeq K(T)P\)</span> となり，吸着量が圧力に比例するというヘンリーの法則が再現されます。</p>
+<p><span class="arithmatex">\(P \to \infty\)</span> では分母の1を無視でき，<span class="arithmatex">\(\theta\to1\)</span> となります。</p>
 
 
 

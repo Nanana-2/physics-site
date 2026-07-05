@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14557,7 +14557,7 @@
 <div class="arithmatex">\[
 \left( \frac{\partial \langle N \rangle}{\partial \mu} \right)_{T, V} = \frac{\langle N \rangle^2}{V} \kappa_T
 \]</div>
-<p>と書き換えることができる。粒子数の標準偏差 <span class="arithmatex">\(\Delta N = \sqrt{\langle (N - \langle N \rangle)^2 \rangle}\)</span> と平均粒子数の比（相対揺らぎ） <span class="arithmatex">\(\frac{\Delta N}{\langle N \rangle}\)</span> を，等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span>，体積 <span class="arithmatex">\(V\)</span>，温度 <span class="arithmatex">\(T\)</span> を用いて表せ。さらに，マクロな極限（ <span class="arithmatex">\(V \to \infty\)</span> ）において相対揺らぎがどのように振る舞うか述べよ。</p>
+<p>と書き換えられる。粒子数の標準偏差 <span class="arithmatex">\(\Delta N = \sqrt{\langle (N - \langle N \rangle)^2 \rangle}\)</span> と平均粒子数の比 <span class="arithmatex">\(\frac{\Delta N}{\langle N \rangle}\)</span> を，等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span>，体積 <span class="arithmatex">\(V\)</span>，温度 <span class="arithmatex">\(T\)</span> を用いて表せ。さらに，<span class="arithmatex">\(V\to\infty\)</span> における相対揺らぎの極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14573,7 +14573,7 @@
 <div class="arithmatex">\[
 \frac{1}{\beta^2 \Xi} \frac{\partial^2 \Xi}{\partial \mu^2} = \frac{1}{\Xi} \sum_N \sum_i N^2 \exp\left[ -\beta(E_{i,N} - \mu N) \right]
 \]</div>
-<p>右辺のシグマと <span class="arithmatex">\(\Xi\)</span> の部分は，大正準集団における <span class="arithmatex">\(N^2\)</span> のアンサンブル平均（期待値）の定義そのものであるため，目的の式が示されました。</p>
+<p>右辺の和と <span class="arithmatex">\(\Xi\)</span> の組は <span class="arithmatex">\(N^2\)</span> のアンサンブル平均なので，目的の式を得ます。</p>
 <div class="arithmatex">\[
 \langle N^2 \rangle = \frac{1}{\beta^2 \Xi} \frac{\partial^2 \Xi}{\partial \mu^2}
 \]</div>
@@ -14611,11 +14611,11 @@
 <div class="arithmatex">\[
 \frac{\Delta N}{\langle N \rangle} = \sqrt{\frac{k_B T \kappa_T}{V}}
 \]</div>
-<p>マクロな極限（ <span class="arithmatex">\(V \to \infty\)</span> ）を考えます。等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span> は系の大きさに依存しない強度変数（示強性熱力学量）であるため，体積 <span class="arithmatex">\(V\)</span> が大きくなっても変化しません。したがって，体積 <span class="arithmatex">\(V\)</span> が無限大に向かうとき，相対揺らぎは分母の <span class="arithmatex">\(\sqrt{V}\)</span> の効果によって <span class="arithmatex">\(0\)</span> に収束します。</p>
+<p><span class="arithmatex">\(V \to \infty\)</span> を考えます。等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span> は系の大きさに依存しないため，相対揺らぎは <span class="arithmatex">\(1/\sqrt{V}\)</span> に比例して0へ収束します。</p>
 <div class="arithmatex">\[
 \lim_{V \to \infty} \frac{\Delta N}{\langle N \rangle} = 0
 \]</div>
-<p>この結果は，マクロなサイズの系においては粒子数の熱的揺らぎが平均値に比べて完全に無視できるようになり，開いた系を対象とする大正準集団による記述が，粒子数の固定された正準集団（カノニカル分布）による記述と実質的に一致すること（アンサンブルの等価性）を証明しています。</p>
+<p>したがって，巨視的極限では粒子数の相対揺らぎを無視できます。</p>
 
 
 

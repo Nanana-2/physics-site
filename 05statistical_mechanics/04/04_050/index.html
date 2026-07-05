@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14548,8 +14548,8 @@
 \]</div>
 <p>熱力学において， <span class="arithmatex">\(\Omega\)</span> の全微分関係式は <span class="arithmatex">\(d\Omega = -S dT - P dV - N d\mu\)</span> で与えられる。この統計力学的な定義と熱力学の基礎式を基にして，以下の問いに答えよ。</p>
 <p>(1) エントロピー <span class="arithmatex">\(S\)</span>，圧力 <span class="arithmatex">\(P\)</span>，および粒子数 <span class="arithmatex">\(N\)</span> を，グランドポテンシャル <span class="arithmatex">\(\Omega\)</span> の偏微分としてそれぞれ表せ。</p>
-<p>(2) グランドポテンシャル <span class="arithmatex">\(\Omega\)</span> は，系のマクロな大きさを <span class="arithmatex">\(\lambda\)</span> 倍（ <span class="arithmatex">\(V \to \lambda V\)</span> ）にしたとき，自身も <span class="arithmatex">\(\lambda\)</span> 倍になるという示量性を持つ。この体積に対する均一性から，熱力学的に <span class="arithmatex">\(\Omega = -PV\)</span> という関係式が厳密に成り立つことを，オイラーの定理を用いて証明せよ。</p>
-<p>(3) (2) の結果から，系の圧力 <span class="arithmatex">\(P\)</span> は分配関数を用いて <span class="arithmatex">\(P = \frac{k_B T}{V} \log \Xi\)</span> と表せる。マクロな極限において圧力 <span class="arithmatex">\(P\)</span> が体積 <span class="arithmatex">\(V\)</span> に依存しない強度変数（示強性熱力学量）になることを，大分配関数の性質と関連付けて説明せよ。</p>
+<p>(2) グランドポテンシャルは <span class="arithmatex">\(\Omega(T,\lambda V,\mu)=\lambda\Omega(T,V,\mu)\)</span> を満たす。この式を <span class="arithmatex">\(\lambda\)</span> で微分し，<span class="arithmatex">\(\lambda=1\)</span> と置くことで <span class="arithmatex">\(\Omega=-PV\)</span> を示せ。</p>
+<p>(3) 相互作用しない二つの部分系について <span class="arithmatex">\(\Xi_{12}=\Xi_1\Xi_2\)</span> が成り立つことから，<span class="arithmatex">\(\log\Xi\)</span> が体積に比例することを示せ。<span class="arithmatex">\(\log\Xi=c(T,\mu)V\)</span> と置き，<span class="arithmatex">\(P = \frac{k_B T}{V} \log \Xi\)</span> が体積に依存しないことを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14558,7 +14558,7 @@
 S = -\left( \frac{\partial \Omega}{\partial T} \right)_{V, \mu}, \quad P = -\left( \frac{\partial \Omega}{\partial V} \right)_{T, \mu}, \quad N = -\left( \frac{\partial \Omega}{\partial \mu} \right)_{T, V}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>温度 <span class="arithmatex">\(T\)</span> と化学ポテンシャル <span class="arithmatex">\(\mu\)</span> は，系のサイズに依存しない強度変数（示強性熱力学量）です。したがって，体積のみを <span class="arithmatex">\(\lambda\)</span> 倍にしたとき，示量性をもつグランドポテンシャル <span class="arithmatex">\(\Omega\)</span> は以下の関係を満たします。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> と化学ポテンシャル <span class="arithmatex">\(\mu\)</span> は系の大きさに依存しません。体積を <span class="arithmatex">\(\lambda\)</span> 倍すると，グランドポテンシャルは</p>
 <div class="arithmatex">\[
 \Omega(T, \lambda V, \mu) = \lambda \Omega(T, V, \mu)
 \]</div>
@@ -14577,18 +14577,21 @@ S = -\left( \frac{\partial \Omega}{\partial T} \right)_{V, \mu}, \quad P = -\lef
 <div class="arithmatex">\[
 (-P) V = \Omega \quad \implies \quad \Omega = -PV
 \]</div>
-<p>これにより，示量性の仮定から熱力学的な関係式 <span class="arithmatex">\(\Omega = -PV\)</span> が完全に証明されました。</p>
+<p>したがって，<span class="arithmatex">\(\Omega=-PV\)</span> が成り立ちます。</p>
 <h3 id="3">(3)</h3>
 <p>(2) の結果である <span class="arithmatex">\(\Omega = -PV\)</span> に，統計力学の定義式 <span class="arithmatex">\(\Omega = -k_B T \log \Xi\)</span> を代入します。</p>
 <div class="arithmatex">\[
 -PV = -k_B T \log \Xi \quad \implies \quad P = \frac{k_B T}{V} \log \Xi
 \]</div>
-<p>マクロな系において，互いに相互作用の無視できる独立な2つの系1と系2を合わせた複合系を考えると，大正準集団における大分配関数はそれぞれの積（ <span class="arithmatex">\(\Xi_{\mathrm{tot}} = \Xi_1 \cdot \Xi_2\)</span> ）として表されます。このとき，対数をとることで積の性質は和の性質へと変換されます。</p>
+<p>相互作用しない二つの部分系を合わせると，大分配関数は <span class="arithmatex">\(\Xi_{12}=\Xi_1\Xi_2\)</span> を満たします。対数をとると，</p>
 <div class="arithmatex">\[
 \log \Xi_{\mathrm{tot}} = \log \Xi_1 + \log \Xi_2
 \]</div>
-<p>これは，大分配関数の対数 <span class="arithmatex">\(\log \Xi\)</span> が，体積 <span class="arithmatex">\(V\)</span> や粒子数 <span class="arithmatex">\(N\)</span> と同様に系のサイズに比例して増大する示量性の変数であることを意味しています。</p>
-<p>圧力の式 <span class="arithmatex">\(P = k_B T \frac{\log \Xi}{V}\)</span> に注目すると，分子にある <span class="arithmatex">\(\log \Xi\)</span> は体積 <span class="arithmatex">\(V\)</span> に比例して大きくなる示量性変数であり，分母にある <span class="arithmatex">\(V\)</span> も当然ながら示量性変数です。したがって，マクロな極限（ <span class="arithmatex">\(V \to \infty\)</span> ）において，体積の増大に伴って <span class="arithmatex">\(\log \Xi\)</span> も同じ比率で増大するため，その比である圧力 <span class="arithmatex">\(P\)</span> は体積 <span class="arithmatex">\(V\)</span> に依存しない一定の値に収束します。これにより，統計力学の枠組みからも，圧力が系全体の大きさに依存しない強度変数（示強性熱力学量）になる性質が正しく保証されます。</p>
+<p>となります。したがって，均一な巨視的系では <span class="arithmatex">\(\log\Xi=c(T,\mu)V\)</span> と書けます。これを圧力の式へ代入すると，</p>
+<div class="arithmatex">\[
+P=k_BT\,c(T,\mu)
+\]</div>
+<p>となり，圧力は体積に依存しません。</p>
 
 
 

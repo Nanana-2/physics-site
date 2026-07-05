@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14571,14 +14571,14 @@ F = -N k_B T \log \left[ \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/
 \]</div>
 <h3 id="2">(2)</h3>
 <p>自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> の全微分関係式 <span class="arithmatex">\(dF = -S dT - P dV + \mu dN\)</span> に注目します。
-ここで，温度 <span class="arithmatex">\(T\)</span> と粒子数 <span class="arithmatex">\(N\)</span> を一定に保ったまま（ <span class="arithmatex">\(dT = 0, dN = 0\)</span> ）体積を微小変化させたときの自由エネルギーの変化を考えると， <span class="arithmatex">\(dF = -P dV\)</span> となります。</p>
+ここで，温度 <span class="arithmatex">\(T\)</span> と粒子数 <span class="arithmatex">\(N\)</span> を一定に保ったまま<span class="arithmatex">\(dT = 0, dN = 0\)</span>体積を微小変化させたときの自由エネルギーの変化を考えると， <span class="arithmatex">\(dF = -P dV\)</span> となります。</p>
 <p>したがって，系のマクロな圧力 <span class="arithmatex">\(P\)</span> は，自由エネルギー <span class="arithmatex">\(F\)</span> の定温・定粒子数での体積偏微分として以下のように定義されます。</p>
 <div class="arithmatex">\[
 P = -\left( \frac{\partial F}{\partial V} \right)_{T, N}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で定義した圧力の式に，(1) で求めた自由エネルギー <span class="arithmatex">\(F\)</span> の表現を代入して体積 <span class="arithmatex">\(V\)</span> で偏微分します。
-微分を実行する際，体積 <span class="arithmatex">\(V\)</span> を含まない項（対数の中の <span class="arithmatex">\(V\)</span> 以外の係数や，末尾の <span class="arithmatex">\(-N k_B T\)</span> の項）は定数として扱えます。式を見通しやすくするため，対数の性質を用いて <span class="arithmatex">\(V\)</span> が含まれる項を外に切り離します。</p>
+体積 <span class="arithmatex">\(V\)</span> を含まない項は定数として扱い，<span class="arithmatex">\(V\)</span> に依存する項だけを微分します。</p>
 <div class="arithmatex">\[
 F = -N k_B T \left\{ \log V + \log \left[ \frac{1}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right] \right\} - N k_B T
 \]</div>
@@ -14590,7 +14590,7 @@ F = -N k_B T \left\{ \log V + \log \left[ \frac{1}{N} \left( \frac{2\pi m k_B T}
 <div class="arithmatex">\[
 P = - \left( -\frac{N k_B T}{V} \right) = \frac{N k_B T}{V}
 \]</div>
-<p>両辺に体積 <span class="arithmatex">\(V\)</span> を掛け合わせることで，マクロな熱力学における理想気体の状態方程式が統計力学から完全に導出されました。</p>
+<p>両辺に体積 <span class="arithmatex">\(V\)</span> を掛けると，理想気体の状態方程式を得ます。</p>
 <div class="arithmatex">\[
 P V = N k_B T
 \]</div>

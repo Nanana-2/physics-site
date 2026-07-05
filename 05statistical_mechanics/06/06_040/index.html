@@ -11692,7 +11692,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14550,7 +14550,7 @@
 \langle n_k \rangle = \frac{1}{\beta} \frac{\partial \log \Xi_k}{\partial \mu}
 \]</div>
 <p>を用いて，平均占有数 <span class="arithmatex">\(\langle n_k \rangle\)</span> がボース・アインシュタイン分布関数となることを導出せよ。</p>
-<p>(3) 導出したボース・アインシュタイン分布関数について，温度を一定に保ったまま化学ポテンシャル <span class="arithmatex">\(\mu\)</span> を (1) で求めた上限値（ <span class="arithmatex">\(\mu \to \epsilon_0\)</span> ）に極限まで近づけたとき，基底状態の平均占有数 <span class="arithmatex">\(\langle n_0 \rangle\)</span> がどのような挙動を示すか答えよ。また，この挙動がどのような物理現象へと繋がるか簡潔に説明せよ。</p>
+<p>(3) <span class="arithmatex">\(\delta=\epsilon_0-\mu\)</span> と置き，<span class="arithmatex">\(\delta\to0^+\)</span> における基底状態の平均占有数 <span class="arithmatex">\(\langle n_0\rangle\)</span> の漸近形を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14558,7 +14558,7 @@
 <div class="arithmatex">\[
 \Xi_k = \sum_{n_k=0}^{\infty} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] = \sum_{n_k=0}^{\infty} \left( \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)^{n_k}
 \]</div>
-<p>この式は，公比が <span class="arithmatex">\(x = \exp\left[ -\beta(\epsilon_k - \mu) \right]\)</span> の無限等比級数です。この級数が正しく有限の値に収束するためには，公比の絶対値が <span class="arithmatex">\(1\)</span> より小さくなければなりません（ <span class="arithmatex">\(x &lt; 1\)</span> ）。 <span class="arithmatex">\(\beta &gt; 0\)</span> であるため，指数関数の肩が負であること，すなわち以下の条件が必要となります。</p>
+<p>この式は，公比が <span class="arithmatex">\(x = \exp\left[ -\beta(\epsilon_k - \mu) \right]\)</span> の無限等比級数です。この級数が正しく有限の値に収束するためには，公比の絶対値が <span class="arithmatex">\(1\)</span> より小さくなければなりません<span class="arithmatex">\(x &lt; 1\)</span>。 <span class="arithmatex">\(\beta &gt; 0\)</span> であるため，指数関数の肩が負であること，すなわち以下の条件が必要となります。</p>
 <div class="arithmatex">\[
 -\beta(\epsilon_k - \mu) &lt; 0 \quad \implies \quad \epsilon_k - \mu &gt; 0 \quad \implies \quad \mu &lt; \epsilon_k
 \]</div>
@@ -14591,22 +14591,21 @@
 <div class="arithmatex">\[
 \langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] - 1}
 \]</div>
-<p>分母の符号がフェルミ分布では <span class="arithmatex">\(+1\)</span> であったのに対し，ボース分布では <span class="arithmatex">\(-1\)</span> になっている点が決定的な違いです。</p>
+<p>ボース分布では分母が <span class="arithmatex">\(\exp[\beta(\epsilon_k-\mu)]-1\)</span> となります。</p>
 <h3 id="3">(3)</h3>
-<p>基底状態 <span class="arithmatex">\(k=0\)</span> （エネルギー <span class="arithmatex">\(\epsilon_0\)</span> ）におけるボース・アインシュタイン分布関数の形は以下の通りです。</p>
+<p>基底状態 <span class="arithmatex">\(k=0\)</span> の平均占有数は</p>
 <div class="arithmatex">\[
 \langle n_0 \rangle = \frac{1}{\exp\left[ \beta(\epsilon_0 - \mu) \right] - 1}
 \]</div>
-<p>ここで，温度を一定に保ったまま化学ポテンシャル <span class="arithmatex">\(\mu\)</span> を上限である <span class="arithmatex">\(\epsilon_0\)</span> に限りなく近づける極限（ <span class="arithmatex">\(\mu \to \epsilon_0\)</span> ）を考えます。このとき，指数関数の引数は <span class="arithmatex">\(\beta(\epsilon_0 - \mu) \to 0\)</span> となるため，マクローリン展開（ <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> ）を用いて分母を近似できます。</p>
+<p><span class="arithmatex">\(\delta=\epsilon_0-\mu\)</span> と置きます。<span class="arithmatex">\(\delta\to0^+\)</span> では <span class="arithmatex">\(\exp(\beta\delta)\simeq1+\beta\delta\)</span> なので，</p>
 <div class="arithmatex">\[
 \exp\left[ \beta(\epsilon_0 - \mu) \right] - 1 \simeq \left( 1 + \beta(\epsilon_0 - \mu) \right) - 1 = \beta(\epsilon_0 - \mu)
 \]</div>
-<p>これを元の式に代入すると，基底状態の占有数は以下のように振る舞います。</p>
+<p>したがって，</p>
 <div class="arithmatex">\[
 \langle n_0 \rangle \simeq \frac{1}{\beta(\epsilon_0 - \mu)} \to \infty
 \]</div>
-<p>分母が 0 に近づくため，基底状態の平均占有数 <span class="arithmatex">\(\langle n_0 \rangle\)</span> はマクロな巨大数へと劇的に発散します。</p>
-<p>この性質は，ある臨界温度以下で大半のボース粒子がこぞって最低エネルギー状態である基底状態に一斉に落ち込み，マクロな数の粒子が単一の量子状態を共有するという驚異的な量子現象を引き起こします。この現象を<strong>ボース・アインシュタイン凝縮</strong>と呼び，超流動や超伝導といったマクロな量子効果の根底にある物理機構となっています。</p>
+<p><span class="arithmatex">\(\langle n_0\rangle\)</span> は <span class="arithmatex">\(1/\delta\)</span> に比例して発散します。</p>
 
 
 

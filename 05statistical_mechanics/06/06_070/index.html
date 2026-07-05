@@ -11692,7 +11692,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14546,8 +14546,8 @@
 <div class="arithmatex">\[
 \epsilon_{\boldsymbol{n}} = \frac{h^2}{8mL^2} \left( n_x^2 + n_y^2 + n_z^2 \right)
 \]</div>
-<p>マクロな大きさの容器では，エネルギー準位の間隔が極めて狭くなるため，和を積分で置き換える連続近似が可能となる。このとき，単位エネルギー幅あたりに存在する量子状態の数を表す状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> が重要な役割を果たす。以下の問いに答えよ。</p>
-<p>(1) <span class="arithmatex">\(n_x, n_y, n_z\)</span> を座標軸とする三次元の数空間において，エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下となる状態の総数 <span class="arithmatex">\(N(\epsilon)\)</span> を考えたい。この条件を満たす領域が，数空間において半径 <span class="arithmatex">\(R = \frac{2L}{h}\sqrt{2m\epsilon}\)</span> の球の第1象限に相当することを示し，状態の総数 <span class="arithmatex">\(N(\epsilon)\)</span> の式を <span class="arithmatex">\(V, m, h, \epsilon\)</span> を用いて導出せよ。ただし，粒子のスピンによる自由度は無視して1（スピンなし）として計算せよ。</p>
+<p>巨視的な容器ではエネルギー準位の間隔が狭いため，和を積分で近似できる。単位エネルギー幅あたりの状態数を表す状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> について，以下の問いに答えよ。</p>
+<p>(1) <span class="arithmatex">\(n_x,n_y,n_z\)</span> を座標軸とする数空間において，エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下となる領域が半径 <span class="arithmatex">\(R = \frac{2L}{h}\sqrt{2m\epsilon}\)</span> の球の第1八分体に対応することを示せ。スピン自由度を考えず，状態数 <span class="arithmatex">\(N(\epsilon)\)</span> を <span class="arithmatex">\(V,m,h,\epsilon\)</span> で表せ。</p>
 <p>(2) 状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> は，総数関数 <span class="arithmatex">\(N(\epsilon)\)</span> のエネルギー微分 <span class="arithmatex">\(D(\epsilon) = \frac{dN(\epsilon)}{d\epsilon}\)</span> として定義される。三次元空間における自由粒子の状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を求め，それがエネルギーの何乗に比例するかを示せ。</p>
 <p>(3) 粒子のスピン自由度を <span class="arithmatex">\(g = 2\)</span> と置く。このスピン自由度を考慮したとき，前問で得られた量子理想気体のグランドポテンシャル <span class="arithmatex">\(\Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)\)</span> の状態の和 <span class="arithmatex">\(\sum_k\)</span> を，状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を用いたエネルギー積分へと書き換えよ。</p>
 <hr />
@@ -14561,7 +14561,7 @@ n_x^2 + n_y^2 + n_z^2 = \frac{8mL^2}{h^2} \epsilon
 <div class="arithmatex">\[
 R = \sqrt{\frac{8mL^2}{h^2} \epsilon} = \frac{2L}{h}\sqrt{2m\epsilon}
 \]</div>
-<p>エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下である状態の総数 <span class="arithmatex">\(N(\epsilon)\)</span> は，この半径 <span class="arithmatex">\(R\)</span> の球の内部に含まれる格子の数（体積）に相当します。ただし，量子数 <span class="arithmatex">\(n_x, n_y, n_z\)</span> は正の整数しかとり得ないため，空間全体の球の体積のうち，すべての座標が正である第1象限の体積のみをカウントする必要があります。</p>
+<p>エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下の状態数 <span class="arithmatex">\(N(\epsilon)\)</span> は，半径 <span class="arithmatex">\(R\)</span> の球内にある格子点数です。<span class="arithmatex">\(n_x,n_y,n_z\)</span> は正なので，球の第1八分体の体積を用います。</p>
 <p>したがって，状態の総数 <span class="arithmatex">\(N(\epsilon)\)</span> は球の体積公式 <span class="arithmatex">\(\frac{4}{3}\pi R^3\)</span> を用いて以下のように計算されます。</p>
 <div class="arithmatex">\[
 N(\epsilon) = \frac{1}{8} \times \frac{4}{3}\pi R^3 = \frac{\pi}{6} \left( \frac{2L}{h}\sqrt{2m\epsilon} \right)^3 = \frac{\pi}{6} \cdot \frac{8L^3}{h^3} (2m\epsilon)^{3/2}
@@ -14575,7 +14575,7 @@ N(\epsilon) = \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon^{3/2}
 <div class="arithmatex">\[
 D(\epsilon) = \frac{dN(\epsilon)}{d\epsilon} = \frac{4\pi V}{3h^3} (2m)^{3/2} \cdot \frac{3}{2}\epsilon^{1/2} = \frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon}
 \]</div>
-<p>この結果から，三次元自由粒子の状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> は，エネルギーの <strong><span class="arithmatex">\(1/2\)</span> 乗（平方根 <span class="arithmatex">\(\sqrt{\epsilon}\)</span> ）</strong>に比例することが示されました。エネルギーが高くなるほど，同じエネルギー幅の中に詰め込まれている量子状態の数が放物線状に増加していく性質を持っています。</p>
+<p>したがって，三次元自由粒子の状態密度は <span class="arithmatex">\(D(\epsilon)\propto\sqrt{\epsilon}\)</span> を満たします。</p>
 <h3 id="3">(3)</h3>
 <p>マクロな系ではエネルギー準位の感覚が非常に細かくなるため，離散的な準位 <span class="arithmatex">\(k\)</span> に関する総和 <span class="arithmatex">\(\sum_k\)</span> は，エネルギーに関する連続積分へと置き換えることができます。</p>
 <p>ある微小なエネルギー幅 <span class="arithmatex">\(d\epsilon\)</span> の中には， <span class="arithmatex">\(D(\epsilon)d\epsilon\)</span> 個の軌道状態が存在します。さらに，各軌道に対してスピン自由度 <span class="arithmatex">\(g = 2\)</span> の倍率がかかるため，置き換えの規則は以下のようになります。</p>

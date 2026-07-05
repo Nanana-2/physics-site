@@ -11692,7 +11692,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14548,13 +14548,13 @@
 <p>(2) 状態 <span class="arithmatex">\(k\)</span> の平均占有数 <span class="arithmatex">\(\langle n_k \rangle\)</span> を大分配関数の対数微分公式 <span class="arithmatex">\(\langle n_k \rangle = \frac{1}{\beta} \frac{\partial \log \Xi_k}{\partial \mu}\)</span> を用いて計算し，フェルミ・ディラック分布関数を導出せよ。</p>
 <p>(3) 導出したフェルミ・ディラック分布関数の温度依存性について考察する。</p>
 <ul>
-<li>絶対零度（ <span class="arithmatex">\(T \to 0\)</span> すなわち <span class="arithmatex">\(\beta \to \infty\)</span> ）の極限において， <span class="arithmatex">\(\epsilon_k &lt; \mu\)</span> の領域と <span class="arithmatex">\(\epsilon_k &gt; \mu\)</span> の領域で <span class="arithmatex">\(\langle n_k \rangle\)</span> がそれぞれどのような値に収束するかを調べ，グラフの概形を説明せよ。</li>
-<li>有限温度（ <span class="arithmatex">\(T &gt; 0\)</span> ）において， <span class="arithmatex">\(\epsilon_k = \mu\)</span> となる準位の平均占有数 <span class="arithmatex">\(\langle n_k \rangle\)</span> の値を求めよ。</li>
+<li><span class="arithmatex">\(T \to 0\)</span>，すなわち <span class="arithmatex">\(\beta \to \infty\)</span> において，<span class="arithmatex">\(\epsilon_k &lt; \mu\)</span> と <span class="arithmatex">\(\epsilon_k &gt; \mu\)</span> の各領域で <span class="arithmatex">\(\langle n_k \rangle\)</span> の極限を求めよ。</li>
+<li><span class="arithmatex">\(T&gt;0\)</span> において，<span class="arithmatex">\(\epsilon_k = \mu\)</span> を満たす準位の平均占有数を求めよ。</li>
 </ul>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>状態 <span class="arithmatex">\(k\)</span> のとり得る微視的状態は，粒子が存在しない状態（ <span class="arithmatex">\(n_k = 0\)</span>，エネルギー <span class="arithmatex">\(0\)</span> ）と，粒子が1個存在する状態（ <span class="arithmatex">\(n_k = 1\)</span>，エネルギー <span class="arithmatex">\(\epsilon_k\)</span> ）の2通りのみです。大正準集団における状態 <span class="arithmatex">\(k\)</span> の大分配関数 <span class="arithmatex">\(\Xi_k\)</span> は，これら2つの状態のギブズ因子の和として計算されます。</p>
+<p>状態 <span class="arithmatex">\(k\)</span> のとり得る微視的状態は，粒子が存在しない状態<span class="arithmatex">\(n_k = 0\)</span>，エネルギー <span class="arithmatex">\(0\)</span>と，粒子が1個存在する状態<span class="arithmatex">\(n_k = 1\)</span>，エネルギー <span class="arithmatex">\(\epsilon_k\)</span>の2通りのみです。大正準集団における状態 <span class="arithmatex">\(k\)</span> の大分配関数 <span class="arithmatex">\(\Xi_k\)</span> は，これら2つの状態のギブズ因子の和として計算されます。</p>
 <div class="arithmatex">\[
 \Xi_k = \sum_{n_k=0}^{1} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] = \exp(0) + \exp\left[ -\beta(\epsilon_k - \mu) \right] = 1 + \exp\left[ -\beta(\epsilon_k - \mu) \right]
 \]</div>
@@ -14575,8 +14575,8 @@
 \langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] + 1}
 \]</div>
 <h3 id="3">(3)</h3>
-<p><strong>絶対零度（ <span class="arithmatex">\(T \to 0\)</span> ）の極限</strong>
-<span class="arithmatex">\(\beta \to \infty\)</span> となるため，指数関数の肩の符号によって挙動が完全に2つに分岐します。</p>
+<p><strong>絶対零度<span class="arithmatex">\(T \to 0\)</span>の極限</strong>
+<span class="arithmatex">\(\beta \to \infty\)</span> では，指数 <span class="arithmatex">\(\beta(\epsilon_k-\mu)\)</span> の符号により極限が分かれます。</p>
 <ul>
 <li><span class="arithmatex">\(\epsilon_k &lt; \mu\)</span> のとき：
   <span class="arithmatex">\(\epsilon_k - \mu &lt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to -\infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(-\infty) = 0\)</span> となり，平均占有数は最大値である 1 に収束します。
@@ -14590,12 +14590,12 @@
   $$</li>
 </ul>
 <p>物理的には，絶対零度においてフェルミ粒子はパウリの排他原理を満たしながら，エネルギーの低い準位から順に隙間なく1個ずつ詰まっていき， <span class="arithmatex">\(\epsilon_k = \mu\)</span> の境界を境にして，それより高いエネルギーの状態には1つも粒子が入らなくなります。このときの境界の化学ポテンシャルをフェルミエネルギーと呼び，グラフの形状は境界で 1 から 0 へ垂直にステップ状に飛び降りる階段関数になります。</p>
-<p><strong>有限温度（ <span class="arithmatex">\(T &gt; 0\)</span> ）のとき</strong>
-エネルギーが化学ポテンシャルに完全に一致する準位（ <span class="arithmatex">\(\epsilon_k = \mu\)</span> ）に注目すると，指数の肩が 0 になります。 <span class="arithmatex">\(\exp(0) = 1\)</span> であるため，分布関数の値は以下のようになります。</p>
+<p><strong>有限温度<span class="arithmatex">\(T &gt; 0\)</span>のとき</strong>
+<span class="arithmatex">\(\epsilon_k=\mu\)</span> では指数が0となり，<span class="arithmatex">\(\exp(0)=1\)</span> なので，</p>
 <div class="arithmatex">\[
 \langle n_k \rangle = \frac{1}{\exp(0) + 1} = \frac{1}{1 + 1} = \frac{1}{2}
 \]</div>
-<p>したがって，温度がどれほど変化しても（絶対零度でない限り）， <span class="arithmatex">\(\epsilon_k = \mu\)</span> の準位における粒子の平均占有数は常にぴったり <span class="arithmatex">\(\frac{1}{2}\)</span> （確率 50%）を維持します。有限温度のグラフは，絶対零度の鋭い階段状の角が熱励起によってなだらかに削られ， <span class="arithmatex">\(\left(\mu, \frac{1}{2}\right)\)</span> の点を中心に点対称に変化する滑らかなS字曲線を描くことになります。</p>
+<p>したがって，<span class="arithmatex">\(T&gt;0\)</span> では <span class="arithmatex">\(\epsilon_k=\mu\)</span> における平均占有数は <span class="arithmatex">\(1/2\)</span> です。</p>
 
 
 

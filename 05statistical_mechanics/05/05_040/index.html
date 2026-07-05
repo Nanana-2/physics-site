@@ -11802,7 +11802,7 @@
   <span class="md-ellipsis">
     
   
-    理想気体の内部エネルギーと比熱
+    理想気体の内部エネルギーと熱容量
   
 
     
@@ -14546,8 +14546,8 @@
 <div class="arithmatex">\[
 F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)
 \]</div>
-<p>この分布曲線において，気体分子の運動状態を特徴づける代表的な3つの指標速度（最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span>，平均速度 <span class="arithmatex">\(\langle v \rangle\)</span>，二乗平均平方根速度 <span class="arithmatex">\(v_{\mathrm{rms}}\)</span>）について，以下の問いに答えよ。</p>
-<p>(1) 分布関数 <span class="arithmatex">\(F(v)\)</span> が最大値をとる（ピークとなる）速さである最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span> を， <span class="arithmatex">\(\frac{dF(v)}{dv} = 0\)</span> の条件から求めよ。</p>
+<p>この分布について，最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span>，平均速度 <span class="arithmatex">\(\langle v \rangle\)</span>，二乗平均平方根速度 <span class="arithmatex">\(v_{\mathrm{rms}}\)</span> を求める。</p>
+<p>(1) <span class="arithmatex">\(\frac{dF(v)}{dv} = 0\)</span> を満たす <span class="arithmatex">\(v&gt;0\)</span> を求め，最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span> を求めよ。</p>
 <p>(2) 期待値の定義に従い，平均速度 <span class="arithmatex">\(\langle v \rangle = \int_0^\infty v F(v) dv\)</span> を計算せよ。ただし，定積分公式 <span class="arithmatex">\(\int_0^\infty v^3 \exp(-a v^2) dv = \frac{1}{2a^2}\)</span> を用いよ。</p>
 <p>(3) 速度の2乗の平均値から得られる二乗平均平方根速度 <span class="arithmatex">\(v_{\mathrm{rms}} = \sqrt{\langle v^2 \rangle}\)</span> を計算せよ。ただし，定積分公式 </p>
 <div class="arithmatex">\[
@@ -14557,7 +14557,7 @@ F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span> （most probable velocity）は，分布の頂点を与える速さです。 <span class="arithmatex">\(F(v)\)</span> のうち，変数 <span class="arithmatex">\(v\)</span> を含む部分 <span class="arithmatex">\(f(v) = v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)\)</span> について積の微分公式を適用し，極大条件を求めます。</p>
+<p>最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span> は分布の頂点を与える速さです。<span class="arithmatex">\(f(v) = v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)\)</span> を微分して極大条件を求めます。</p>
 <div class="arithmatex">\[
 \frac{df(v)}{dv} = 2v \exp\left( -\frac{m v^2}{2k_B T} \right) + v^2 \left( -\frac{2m v}{2k_B T} \right) \exp\left( -\frac{m v^2}{2k_B T} \right) = 0
 \]</div>
@@ -14595,7 +14595,7 @@ F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^
 <div class="arithmatex">\[
 \langle v^2 \rangle = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \cdot \frac{3}{8} \sqrt{\pi} \left( \frac{2k_B T}{m} \right)^{5/2} = \frac{3}{2} \cdot \pi \cdot \sqrt{\pi} \cdot \left( \frac{m}{2\pi k_B T} \cdot \frac{2k_B T}{m} \right)^{3/2} \cdot \frac{2k_B T}{m} = \frac{3k_B T}{m}
 \]</div>
-<p>（※この結果は，1粒子の平均運動エネルギーの式 <span class="arithmatex">\(\langle \frac{1}{2}m v^2 \rangle = \frac{3}{2}k_B T\)</span> と完全に一致します。）
+<p>この結果から，<span class="arithmatex">\(\langle \frac{1}{2}m v^2 \rangle = \frac{3}{2}k_B T\)</span> を得ます。
 求める二乗平均平方根速度 <span class="arithmatex">\(v_{\mathrm{rms}}\)</span> は，この平方根をとったものです。</p>
 <div class="arithmatex">\[
 v_{\mathrm{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{3k_B T}{m}}
@@ -14611,8 +14611,8 @@ v_{\mathrm{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{3k_B T}{m}}
 <div class="arithmatex">\[
 v_{\mathrm{mp}} &lt; \langle v \rangle &lt; v_{\mathrm{rms}}
 \]</div>
-<p>マクスウェル分布は右側に長い裾野を持つ非対称な形をしているため，単純に最も確率の高い頂点の位置（最確速度）よりも，裾野の大きな値に引っ張られる平均速度のほうが右側にずれます。</p>
-<p>さらに，二乗平均平方根速度はエネルギーに直結する「大きな速度」をより重く評価する平均のとり方であるため，3つの中で最も大きな値をとります。</p>
+<p>マクスウェル分布は右側に裾を持つため，平均速度は最確速度より大きくなります。</p>
+<p>さらに，二乗平均平方根速度はエネルギーに直結する大きな速度をより重く評価する平均のとり方であるため，3つの中で最も大きな値をとります。</p>
 
 
 
@@ -14684,13 +14684,13 @@ v_{\mathrm{mp}} &lt; \langle v \rangle &lt; v_{\mathrm{rms}}
         
         
           
-          <a href="../05_050/" class="md-footer__link md-footer__link--next" aria-label="Next: 理想気体の内部エネルギーと比熱">
+          <a href="../05_050/" class="md-footer__link md-footer__link--next" aria-label="Next: 理想気体の内部エネルギーと熱容量">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                理想気体の内部エネルギーと比熱
+                理想気体の内部エネルギーと熱容量
               </div>
             </div>
             <div class="md-footer__button md-icon">
