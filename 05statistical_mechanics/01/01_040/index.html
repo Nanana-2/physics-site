@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14545,7 +14545,11 @@
 <p>孤立した容器の中に，互いに相互作用をしない区別可能な <span class="arithmatex">\(N\)</span> 個の粒子からなる気体が存在している。容器の内部は中央の仮想的な境界によって左側と右側の2つの等しい領域に分かれており，粒子はどちらの領域にも等しい確率で入ることができるものとする。左側の領域に存在する粒子数を <span class="arithmatex">\(n\)</span>，右側の領域に存在する粒子数を <span class="arithmatex">\(N-n\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) 左側の領域にちょうど <span class="arithmatex">\(n\)</span> 個の粒子が存在するときの微視的状態数 <span class="arithmatex">\(\Omega(n)\)</span> を求めよ。</p>
 <p>(2) ボルツマンのエントロピー公式 <span class="arithmatex">\(S(n) = k_B \log \Omega(n)\)</span> にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用し，エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(n\)</span> を用いて表せ。</p>
-<p>(3) エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(n\)</span> について微分することにより，<span class="arithmatex">\(S(n)\)</span> が最大となる <span class="arithmatex">\(n\)</span> の値を求めよ。また，粒子数 <span class="arithmatex">\(N\)</span> が非常に大きいとき，この状態が熱力学的平衡状態として観測される理由を状態数の観点から説明せよ。</p>
+<p>(3) エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(n\)</span> について微分し，最大値をとる <span class="arithmatex">\(n\)</span> を求めよ。さらに，<span class="arithmatex">\(n=N/2+\delta n\)</span> と置いて <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(\delta n\)</span> の2次まで展開し，状態数の比が</p>
+<div class="arithmatex">\[
+\frac{\Omega(N/2+\delta n)}{\Omega(N/2)} \simeq \exp\left[-\frac{2(\delta n)^2}{N}\right]
+\]</div>
+<p>となることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14582,7 +14586,23 @@ S(n) \simeq k_B \left[ N \log N - n \log n - (N-n) \log (N-n) \right]
 n = \frac{N}{2}
 \]</div>
 <p>2階微分を計算すると <span class="arithmatex">\(\frac{d^2S}{dn^2} = -k_B \left( \frac{1}{n} + \frac{1}{N-n} \right) &lt; 0\)</span> となるため，<span class="arithmatex">\(n = N/2\)</span> のときにエントロピーは確かに最大値をとります。</p>
-<p>粒子数 <span class="arithmatex">\(N\)</span> がアボガドロ数規模で圧倒的に大きい場合，微視的状態数 <span class="arithmatex">\(\Omega(n)\)</span> はエントロピーが最大となる <span class="arithmatex">\(n = N/2\)</span> の直近に極めて鋭く集中します。この配置からわずかでも外れた状態の確率は実質的に 0 とみなせるため，マクロな観測においてはエントロピー最大化条件を満たす一様でもっとも乱雑な状態（<span class="arithmatex">\(n=N/2\)</span>）のみが熱力学的平衡状態として安定して現れることになります。</p>
+<p><span class="arithmatex">\(n=N/2\)</span> におけるエントロピーと2階微分は</p>
+<div class="arithmatex">\[
+S\left(\frac{N}{2}\right)=Nk_B\log 2,\qquad
+\left.\frac{d^2S}{dn^2}\right|_{n=N/2}=-\frac{4k_B}{N}
+\]</div>
+<p>です。したがって，<span class="arithmatex">\(n=N/2+\delta n\)</span> として2次まで展開すると，</p>
+<div class="arithmatex">\[
+S\left(\frac{N}{2}+\delta n\right)
+\simeq Nk_B\log 2-\frac{2k_B}{N}(\delta n)^2
+\]</div>
+<p>となります。<span class="arithmatex">\(S=k_B\log\Omega\)</span> を用いれば，状態数の比は</p>
+<div class="arithmatex">\[
+\frac{\Omega(N/2+\delta n)}{\Omega(N/2)}
+=\exp\left[\frac{S(N/2+\delta n)-S(N/2)}{k_B}\right]
+\simeq \exp\left[-\frac{2(\delta n)^2}{N}\right]
+\]</div>
+<p>です。したがって，粒子数のずれの典型的な大きさは <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーであり，相対的なずれは <span class="arithmatex">\(1/\sqrt{N}\)</span> のオーダーで0に近づきます。</p>
 
 
 

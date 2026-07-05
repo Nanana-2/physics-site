@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14552,7 +14552,7 @@ dF = -S dT - P dV + \mu dN
 \]</div>
 <p>を用いて，以下の問いに答えよ。</p>
 <p>(1) エントロピー <span class="arithmatex">\(S\)</span> および圧力 <span class="arithmatex">\(P\)</span> を，自由エネルギー <span class="arithmatex">\(F\)</span> の偏微分としてそれぞれ表せ。また，それらの式を用いて，<span class="arithmatex">\(S\)</span> と <span class="arithmatex">\(P\)</span> を分配関数 <span class="arithmatex">\(Z\)</span> または <span class="arithmatex">\(\log Z\)</span> の微分を用いた形へ書き換えよ。</p>
-<p>(2) 熱力学における自由エネルギーの定義 <span class="arithmatex">\(F = U - TS\)</span> を用いて，内部エネルギー <span class="arithmatex">\(U\)</span> を <span class="arithmatex">\(F\)</span> およびその温度微分で表せ。また，この関係式から出発して， <span class="arithmatex">\(U\)</span> を分配関数の対数微分 <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta}\)</span> を用いた形へと変形し，内部エネルギーが平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> と完全に一致することを示せ。</p>
+<p>(2) 自由エネルギーの定義 <span class="arithmatex">\(F = U - TS\)</span> を用いて，内部エネルギー <span class="arithmatex">\(U\)</span> を <span class="arithmatex">\(F\)</span> およびその温度微分で表せ。また，<span class="arithmatex">\(U\)</span> を分配関数の対数微分 <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta}\)</span> で表し，平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> と等しいことを示せ。</p>
 <p>(3) 系の定積熱容量を <span class="arithmatex">\(C_V = \left( \frac{\partial U}{\partial T} \right)_{V, N}\)</span> と定義する。これを逆温度 <span class="arithmatex">\(\beta\)</span> による <span class="arithmatex">\(\log Z\)</span> の2階偏微分を用いた形に書き換えよ。また，エネルギーの分散 <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle\)</span> と関連付けて，<span class="arithmatex">\(C_V \ge 0\)</span> となる理由を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14563,7 +14563,7 @@ S = -\left( \frac{\partial F}{\partial T} \right)_{V, N}, \quad P = -\left( \fra
 \]</div>
 <p>ここに <span class="arithmatex">\(F = -k_B T \log Z\)</span> を代入して，分配関数による表現に書き換えます。</p>
 <p><strong>【エントロピー <span class="arithmatex">\(S\)</span>】</strong>
-温度 <span class="arithmatex">\(T\)</span> による偏微分には，積の微分公式（ <span class="arithmatex">\((f \cdot g)^\prime = f^\prime g + f g^\prime\)</span> ）を適用します。</p>
+温度 <span class="arithmatex">\(T\)</span> による偏微分には，積の微分公式 <span class="arithmatex">\((f \cdot g)^\prime = f^\prime g + f g^\prime\)</span> を適用します。</p>
 <div class="arithmatex">\[
 S = -\frac{\partial}{\partial T} \left( -k_B T \log Z \right) = k_B \log Z + k_B T \left( \frac{\partial \log Z}{\partial T} \right)_{V, N}
 \]</div>
@@ -14577,7 +14577,7 @@ P = -\frac{\partial}{\partial V} \left( -k_B T \log Z \right) = k_B T \left( \fr
 <div class="arithmatex">\[
 U = F - T \left( \frac{\partial F}{\partial T} \right)_{V, N}
 \]</div>
-<p>この右辺を分配関数を用いた表現へと変形します。合成関数の微分（連鎖律）より，温度微分 <span class="arithmatex">\(\frac{\partial}{\partial T}\)</span> と逆温度微分 <span class="arithmatex">\(\frac{\partial}{\partial \beta}\)</span> の間には <span class="arithmatex">\(\frac{\partial}{\partial T} = \frac{\partial \beta}{\partial T} \frac{\partial}{\partial \beta} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta}\)</span> の関係があります。これを用いて <span class="arithmatex">\(F = -k_B T \log Z\)</span> を <span class="arithmatex">\(T\)</span> で偏微分します。</p>
+<p>この右辺を分配関数で表します。連鎖律より，温度微分と逆温度微分の間には <span class="arithmatex">\(\frac{\partial}{\partial T} = \frac{\partial \beta}{\partial T} \frac{\partial}{\partial \beta} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta}\)</span> の関係があります。これを用いて <span class="arithmatex">\(F = -k_B T \log Z\)</span> を <span class="arithmatex">\(T\)</span> で偏微分します。</p>
 <div class="arithmatex">\[
 \left( \frac{\partial F}{\partial T} \right)_{V, N} = -k_B \log Z - k_B T \left( \frac{\partial \log Z}{\partial T} \right)_{V, N} = -k_B \log Z - k_B T \left( -\frac{1}{k_B T^2} \frac{\partial \log Z}{\partial \beta} \right) = -k_B \log Z + \frac{1}{T} \frac{\partial \log Z}{\partial \beta}
 \]</div>
@@ -14588,9 +14588,9 @@ U = (-k_B T \log Z) - T \left( -k_B \log Z + \frac{1}{T} \frac{\partial \log Z}{
 <div class="arithmatex">\[
 U = -k_B T \log Z + k_B T \log Z - \frac{\partial \log Z}{\partial \beta} = -\frac{\partial \log Z}{\partial \beta}
 \]</div>
-<p>カノニカル分布の基本法則から導かれる平均エネルギーの式 <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}\)</span> と比較すると，マクロな内部エネルギー <span class="arithmatex">\(U\)</span> がミクロな統計平均値 <span class="arithmatex">\(\langle E \rangle\)</span> と完全に一致（ <span class="arithmatex">\(U = \langle E \rangle\)</span> ）することが示されました。</p>
+<p>平均エネルギーの式 <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}\)</span> と比較すると，<span class="arithmatex">\(U = \langle E \rangle\)</span> が成り立ちます。</p>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた <span class="arithmatex">\(U = -\frac{\partial \log Z}{\partial \beta}\)</span> を定積比熱の定義に代入します。ここでも連鎖律 <span class="arithmatex">\(\frac{\partial}{\partial T} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta} = -k_B \beta^2 \frac{\partial}{\partial \beta}\)</span> を利用して，温度微分を <span class="arithmatex">\(\beta\)</span> 微分に変換します。</p>
+<p>(2) で得られた <span class="arithmatex">\(U = -\frac{\partial \log Z}{\partial \beta}\)</span> を定積熱容量の定義に代入します。連鎖律 <span class="arithmatex">\(\frac{\partial}{\partial T} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta} = -k_B \beta^2 \frac{\partial}{\partial \beta}\)</span> を用いて，温度微分を <span class="arithmatex">\(\beta\)</span> 微分に変換します。</p>
 <div class="arithmatex">\[
 C_V = \frac{\partial U}{\partial T} = \left( -k_B \beta^2 \frac{\partial}{\partial \beta} \right) \left( -\frac{\partial \log Z}{\partial \beta} \right) = k_B \beta^2 \frac{\partial^2 \log Z}{\partial \beta^2}
 \]</div>
@@ -14602,12 +14602,12 @@ C_V = \frac{\partial U}{\partial T} = \left( -k_B \beta^2 \frac{\partial}{\parti
 <div class="arithmatex">\[
 \frac{\partial^2 \log Z}{\partial \beta^2} = - \left( -\frac{1}{Z} \sum_i E_i \exp(-\beta E_i) \right)^2 + \frac{1}{Z} \sum_i E_i^2 \exp(-\beta E_i) = -\langle E \rangle^2 + \langle E^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2
 \]</div>
-<p>この差の形は，まさにエネルギーの分散の定義式 <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle\)</span> そのものです。したがって，比熱は以下のように表せます。</p>
+<p>この差はエネルギーの分散 <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle\)</span> です。したがって，定積熱容量は</p>
 <div class="arithmatex">\[
 C_V = k_B \beta^2 \langle (E - \langle E \rangle)^2 \rangle
 \]</div>
-<p>実数の2乗の平均値（分散）は，数学的な性質から決して負の値をとることはありません（ <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle \ge 0\)</span> ）。また，ボルツマン定数 <span class="arithmatex">\(k_B\)</span> や逆温度 <span class="arithmatex">\(\beta^2\)</span> も常に正の実数です。
-したがって，この「比熱がエネルギーの揺らぎに比例する」という統計力学的な関係（揺動散逸定理の一種）により，系の定積比熱 <span class="arithmatex">\(C_V\)</span> は常に 0 以上（ <span class="arithmatex">\(C_V \ge 0\)</span> ）になることが物理的に保証されます。</p>
+<p>エネルギーの分散は <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle \ge 0\)</span> を満たします。また，ボルツマン定数 <span class="arithmatex">\(k_B\)</span> と <span class="arithmatex">\(\beta^2\)</span> も正です。
+エネルギーの分散が負にならないため，定積熱容量は <span class="arithmatex">\(C_V \ge 0\)</span> を満たします。</p>
 
 
 
@@ -14679,13 +14679,13 @@ C_V = k_B \beta^2 \langle (E - \langle E \rangle)^2 \rangle
         
         
           
-          <a href="../03_060/" class="md-footer__link md-footer__link--next" aria-label="Next: エネルギー揺らぎと比熱">
+          <a href="../03_060/" class="md-footer__link md-footer__link--next" aria-label="Next: エネルギー揺らぎと熱容量">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                エネルギー揺らぎと比熱
+                エネルギー揺らぎと熱容量
               </div>
             </div>
             <div class="md-footer__button md-icon">

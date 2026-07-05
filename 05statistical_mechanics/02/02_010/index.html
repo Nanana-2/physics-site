@@ -10898,17 +10898,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -11328,7 +11317,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14495,17 +14484,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14542,15 +14520,12 @@
 
 <h1 id="_1">等重率の原理</h1>
 <h2 id="_2">問題</h2>
-<p>エネルギー <span class="arithmatex">\(E\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> が一定に保たれた孤立系を考える。これらの巨視的条件を満たす微視的状態の集合をミクロカノニカルアンサンブルとする。以下の問いに答えよ。</p>
-<p>(1) 統計力学の基礎となる等重率の原理とはどのような仮説か，簡潔に説明せよ。</p>
-<p>(2) 系全体がとりうる微視的状態の総数を <span class="arithmatex">\(\Omega\)</span> とする。ある特定の状態 <span class="arithmatex">\(k\)</span> が実現する確率 <span class="arithmatex">\(P_k\)</span> を <span class="arithmatex">\(\Omega\)</span> を用いて表せ。また，確率の規格化条件，すなわちすべての状態についての確率の総和が <span class="arithmatex">\(1\)</span> になることを示せ。</p>
-<p>(3) 各微視的状態 <span class="arithmatex">\(k\)</span> において，ある物理量 <span class="arithmatex">\(A\)</span> が値 <span class="arithmatex">\(A_k\)</span> をとるものとする。このとき，等重率の原理に基づく物理量 <span class="arithmatex">\(A\)</span> のアンサンブル平均 <span class="arithmatex">\(\langle A \rangle\)</span> の定義式を示せ。</p>
+<p>エネルギー <span class="arithmatex">\(E\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> が一定に保たれた孤立系を考える。これらの巨視的条件を満たす微視的状態の集合をミクロカノニカルアンサンブルとする。許されたすべての微視的状態は等しい確率で実現すると仮定し，以下の問いに答えよ。</p>
+<p>(1) 系全体がとりうる微視的状態の総数を <span class="arithmatex">\(\Omega\)</span> とする。ある特定の状態 <span class="arithmatex">\(k\)</span> が実現する確率 <span class="arithmatex">\(P_k\)</span> を <span class="arithmatex">\(\Omega\)</span> を用いて表せ。また，すべての状態について確率を足し合わせ，規格化条件を満たすことを示せ。</p>
+<p>(2) 各微視的状態 <span class="arithmatex">\(k\)</span> において，ある物理量 <span class="arithmatex">\(A\)</span> が値 <span class="arithmatex">\(A_k\)</span> をとるものとする。物理量 <span class="arithmatex">\(A\)</span> のアンサンブル平均 <span class="arithmatex">\(\langle A \rangle\)</span> と分散 <span class="arithmatex">\(\langle A^2\rangle-\langle A\rangle^2\)</span> を，<span class="arithmatex">\(A_k\)</span> と <span class="arithmatex">\(\Omega\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>等重率の原理とは，外部から孤立してマクロな状態（エネルギー <span class="arithmatex">\(E\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span>）が一定に指定された平衡状態において，系がとりうるすべての許されたミクロな状態（微視的状態）は，どれも「完全に等しい確率」で出現するという統計力学の根本的な仮説です。ミクロな力学法則からは特定の状態を優遇する理由がないため，この等確率性が要請されます。</p>
-<h3 id="2">(2)</h3>
 <p>許された微視的状態の総数が <span class="arithmatex">\(\Omega\)</span> であり，等重率の原理からすべての状態が等確率で実現するため，個々の特定の状態 <span class="arithmatex">\(k\)</span> が実現する確率 <span class="arithmatex">\(P_k\)</span> は状態数の逆数として一意に決まります。</p>
 <div class="arithmatex">\[
 P_k = \frac{1}{\Omega}
@@ -14560,12 +14535,22 @@ P_k = \frac{1}{\Omega}
 \sum_{k=1}^{\Omega} P_k = \sum_{k=1}^{\Omega} \frac{1}{\Omega} = \frac{1}{\Omega} \times \Omega = 1
 \]</div>
 <p>これにより，全確率の総和が <span class="arithmatex">\(1\)</span> になるという規格化条件が満たされていることが示されました。</p>
-<h3 id="3">(3)</h3>
-<p>等重率の原理に基づくと，物理量 <span class="arithmatex">\(A\)</span> のアンサンブル平均 <span class="arithmatex">\(\langle A \rangle\)</span> は，各状態における物理量の値 <span class="arithmatex">\(A_k\)</span> にその出現確率 <span class="arithmatex">\(P_k = 1/\Omega\)</span> を掛けて，すべての微視的状態について足し合わせることで定義されます。</p>
+<h3 id="2">(2)</h3>
+<p>物理量 <span class="arithmatex">\(A\)</span> のアンサンブル平均 <span class="arithmatex">\(\langle A \rangle\)</span> は，各状態における値 <span class="arithmatex">\(A_k\)</span> に確率 <span class="arithmatex">\(P_k = 1/\Omega\)</span> を掛け，すべての微視的状態について足し合わせて求めます。</p>
 <div class="arithmatex">\[
 \langle A \rangle = \sum_{k=1}^{\Omega} P_k A_k = \frac{1}{\Omega} \sum_{k=1}^{\Omega} A_k
 \]</div>
-<p>これは，系がとりうるすべての微視的状態にわたる物理量の単純な算術平均に対応しており，ミクロな状態の数え上げによってマクロな観測値を説明する基礎となります。</p>
+<p>同様に，<span class="arithmatex">\(A^2\)</span> の平均は</p>
+<div class="arithmatex">\[
+\langle A^2\rangle=\frac{1}{\Omega}\sum_{k=1}^{\Omega}A_k^2
+\]</div>
+<p>です。したがって，分散は</p>
+<div class="arithmatex">\[
+\langle A^2\rangle-\langle A\rangle^2
+=\frac{1}{\Omega}\sum_{k=1}^{\Omega}A_k^2
+-\left(\frac{1}{\Omega}\sum_{k=1}^{\Omega}A_k\right)^2
+\]</div>
+<p>となります。</p>
 
 
 

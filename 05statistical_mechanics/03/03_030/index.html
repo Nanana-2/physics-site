@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14545,7 +14545,11 @@
 <p>互いに独立で区別可能な <span class="arithmatex">\(N\)</span> 個の粒子からなる二準位系を考える。各粒子は，エネルギーが <span class="arithmatex">\(0\)</span> の基底状態と，エネルギーが <span class="arithmatex">\(\epsilon &gt; 0\)</span> の励起状態のいずれかをとる。この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。カノニカル分布に基づいて以下の問いに答えよ。</p>
 <p>(1) 1粒子あたりの分配関数 <span class="arithmatex">\(z(\beta)\)</span> を求めよ。また，系全体の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> を <span class="arithmatex">\(z(\beta)\)</span> と <span class="arithmatex">\(N\)</span> を用いて表せ。</p>
 <p>(2) 系全体の平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を <span class="arithmatex">\(\beta\)</span> および <span class="arithmatex">\(T\)</span> の関数としてそれぞれ求めよ。また，高温極限 <span class="arithmatex">\(T \to \infty\)</span> および低温極限 <span class="arithmatex">\(T \to 0\)</span> における <span class="arithmatex">\(\langle E \rangle\)</span> の値を求め，その物理的意味を説明せよ。</p>
-<p>(3) 系の熱容量 <span class="arithmatex">\(C = \frac{\partial \langle E \rangle}{\partial T}\)</span> を求めよ。また，この熱容量は温度に対して極大値をもつ。この振る舞いの名称を答えよ。</p>
+<p>(3) 系の熱容量 <span class="arithmatex">\(C = \frac{\partial \langle E \rangle}{\partial T}\)</span> を求めよ。さらに，<span class="arithmatex">\(x=\epsilon/(k_BT)\)</span> と置き，<span class="arithmatex">\(C\)</span> が極大となる条件が</p>
+<div class="arithmatex">\[
+x\tanh\left(\frac{x}{2}\right)=2
+\]</div>
+<p>となることを示せ。この方程式の解 <span class="arithmatex">\(x\simeq2.40\)</span> を用いて，極大となる温度を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14553,7 +14557,7 @@
 <div class="arithmatex">\[
 z(\beta) = \sum_{i} \exp(-\beta E_i) = \exp(-\beta \cdot 0) + \exp(-\beta \epsilon) = 1 + \exp(-\beta \epsilon)
 \]</div>
-<p>系を構成する <span class="arithmatex">\(N\)</span> 個の粒子は互いに独立であり，かつ「区別可能」であるため，系全体の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> は1粒子分配関数の単純な <span class="arithmatex">\(N\)</span> 乗として表されます。</p>
+<p>系を構成する <span class="arithmatex">\(N\)</span> 個の粒子は互いに独立で区別可能であるため，系全体の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> は1粒子分配関数の <span class="arithmatex">\(N\)</span> 乗になります。</p>
 <div class="arithmatex">\[
 Z(\beta) = [z(\beta)]^N = \left( 1 + \exp(-\beta \epsilon) \right)^N
 \]</div>
@@ -14574,19 +14578,10 @@ Z(\beta) = [z(\beta)]^N = \left( 1 + \exp(-\beta \epsilon) \right)^N
 <div class="arithmatex">\[
 \langle E \rangle = \frac{N \epsilon}{\exp\left(\frac{\epsilon}{k_B T}\right) + 1}
 \]</div>
-<p><strong>【各極限の考察】</strong></p>
-<ul>
-<li>
-<p><strong>低温極限（ <span class="arithmatex">\(T \to 0\)</span> ）</strong>
-    <span class="arithmatex">\(T \to 0\)</span> のとき，指数の肩は <span class="arithmatex">\(\frac{\epsilon}{k_B T} \to \infty\)</span> となるため，分母の <span class="arithmatex">\(\exp\left(\frac{\epsilon}{k_B T}\right) \to \infty\)</span> となります。したがって， <span class="arithmatex">\(\langle E \rangle \to 0\)</span> となります。これは，熱運動が完全に凍結され，すべての粒子が基底状態（エネルギー <span class="arithmatex">\(0\)</span>）に落ち込むという物理的直感に一致します。</p>
-</li>
-<li>
-<p><strong>高温極限（ <span class="arithmatex">\(T \to \infty\)</span> ）</strong>
-    <span class="arithmatex">\(T \to \infty\)</span> のとき，指数の肩は <span class="arithmatex">\(\frac{\epsilon}{k_B T} \to 0\)</span> となるため，分母の <span class="arithmatex">\(\exp\left(\frac{\epsilon}{k_B T}\right) \to \exp(0) = 1\)</span> となります。したがって， <span class="arithmatex">\(\langle E \rangle \to \frac{N \epsilon}{1 + 1} = \frac{1}{2}N\epsilon\)</span> となります。これは，激しい熱攪乱によって基底状態と励起状態が完全に等確率（どちらも出現確率 <span class="arithmatex">\(1/2\)</span>）でランダムに選ばれる状態（等確率の規則）に対応します。</p>
-</li>
-</ul>
+<p>低温極限 <span class="arithmatex">\(T \to 0\)</span> では <span class="arithmatex">\(\epsilon/(k_BT)\to\infty\)</span> なので，<span class="arithmatex">\(\langle E\rangle\to0\)</span> となります。したがって，すべての粒子が基底状態へ近づきます。</p>
+<p>高温極限 <span class="arithmatex">\(T \to \infty\)</span> では <span class="arithmatex">\(\epsilon/(k_BT)\to0\)</span> なので，<span class="arithmatex">\(\langle E\rangle\to N\epsilon/2\)</span> となります。これは，基底状態と励起状態の占有確率がともに <span class="arithmatex">\(1/2\)</span> へ近づくことを表します。</p>
 <h3 id="3">(3)</h3>
-<p>比熱 <span class="arithmatex">\(C\)</span> を求めるため，(2) で得られた <span class="arithmatex">\(\langle E \rangle\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分します。商の微分公式と合成関数の微分を利用します。</p>
+<p>熱容量 <span class="arithmatex">\(C\)</span> を求めるため，(2) で得られた <span class="arithmatex">\(\langle E \rangle\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分します。商の微分公式と合成関数の微分を用います。</p>
 <div class="arithmatex">\[
 C = \frac{\partial \langle E \rangle}{\partial T} = N \epsilon \cdot \left[ - \frac{1}{\left( \exp\left(\frac{\epsilon}{k_B T}\right) + 1 \right)^2} \right] \cdot \exp\left(\frac{\epsilon}{k_B T}\right) \cdot \left( -\frac{\epsilon}{k_B T^2} \right)
 \]</div>
@@ -14594,8 +14589,25 @@ C = \frac{\partial \langle E \rangle}{\partial T} = N \epsilon \cdot \left[ - \f
 <div class="arithmatex">\[
 C = N k_B \left( \frac{\epsilon}{k_B T} \right)^2 \frac{\exp\left(\frac{\epsilon}{k_B T}\right)}{\left( \exp\left(\frac{\epsilon}{k_B T}\right) + 1 \right)^2}
 \]</div>
-<p>この比熱は，極端な低温（ <span class="arithmatex">\(T \to 0\)</span> ）ではボルツマン因子によって指数関数的に <span class="arithmatex">\(0\)</span> へと抑制され，極端な高温（ <span class="arithmatex">\(T \to \infty\)</span> ）でも分母の <span class="arithmatex">\(T^2\)</span> が支配的になって <span class="arithmatex">\(0\)</span> に減衰します。その結果，中間の温度領域（ <span class="arithmatex">\(k_B T \simeq 0.42 \epsilon\)</span> 付近）で一つのなだらかなピーク（極大値）を持つ山型のグラフを描きます。</p>
-<p>このような有限の離散準位をもつ系に特有の比熱の異常（山型の振る舞い）のことは，<strong>ショットキー比熱</strong> と呼ばれます。</p>
+<p><span class="arithmatex">\(x=\epsilon/(k_BT)\)</span> と置くと，</p>
+<div class="arithmatex">\[
+\frac{C}{Nk_B}=\frac{x^2e^x}{(e^x+1)^2}
+=\frac{x^2}{4\cosh^2(x/2)}
+\]</div>
+<p>です。対数微分を0と置けば，</p>
+<div class="arithmatex">\[
+\frac{d}{dx}\log\left(\frac{C}{Nk_B}\right)
+=\frac{2}{x}-\tanh\left(\frac{x}{2}\right)=0
+\]</div>
+<p>となるため，極大条件は</p>
+<div class="arithmatex">\[
+x\tanh\left(\frac{x}{2}\right)=2
+\]</div>
+<p>です。<span class="arithmatex">\(x\simeq2.40\)</span> を代入すると，</p>
+<div class="arithmatex">\[
+k_BT_{\mathrm{max}}\simeq\frac{\epsilon}{2.40}\simeq0.42\epsilon
+\]</div>
+<p>を得ます。</p>
 
 
 

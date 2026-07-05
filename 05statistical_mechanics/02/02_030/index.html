@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14542,10 +14542,10 @@
 
 <h1 id="_1">二つの系の熱平衡条件</h1>
 <h2 id="_2">問題</h2>
-<p>完全に孤立した大きな容器の中に，熱を伝える隔壁で仕切られた系1と系2が存在する。全エネルギーは <span class="arithmatex">\(E_{\mathrm{tot}}\)</span> で一定に保たれており，各系のエネルギーを <span class="arithmatex">\(E_1, E_2\)</span> とすると，<span class="arithmatex">\(E_1 + E_2 = E_{\mathrm{tot}}\)</span> が成り立つ。系 <span class="arithmatex">\(i\)</span> がエネルギー <span class="arithmatex">\(E_i\)</span> を持つときの微視的状態数を <span class="arithmatex">\(\Omega_i(E_i)\)</span> とする。ここで <span class="arithmatex">\(i=1, 2\)</span> である。以下の問いに答えよ。</p>
+<p>孤立した大きな容器の中に，熱を伝える隔壁で仕切られた系1と系2が存在する。全エネルギーは <span class="arithmatex">\(E_{\mathrm{tot}}\)</span> で一定に保たれており，各系のエネルギーを <span class="arithmatex">\(E_1, E_2\)</span> とすると，<span class="arithmatex">\(E_1 + E_2 = E_{\mathrm{tot}}\)</span> が成り立つ。系 <span class="arithmatex">\(i\)</span> がエネルギー <span class="arithmatex">\(E_i\)</span> を持つときの微視的状態数を <span class="arithmatex">\(\Omega_i(E_i)\)</span> とする。ここで <span class="arithmatex">\(i=1, 2\)</span> である。以下の問いに答えよ。</p>
 <p>(1) 全体の微視的状態数 <span class="arithmatex">\(\Omega_{\mathrm{tot}}(E_1)\)</span> が最大になるとき，全体のボルツマンエントロピー <span class="arithmatex">\(S_{\mathrm{tot}} = S_1(E_1) + S_2(E_2)\)</span> も最大となる。<span class="arithmatex">\(S_{\mathrm{tot}}\)</span> が最大値をとるための必要条件を，<span class="arithmatex">\(S_1\)</span> および <span class="arithmatex">\(S_2\)</span> のエネルギー微分を用いて表せ。</p>
 <p>(2) エネルギーの微小な変化量 <span class="arithmatex">\(dE_1\)</span> と <span class="arithmatex">\(dE_2\)</span> の間に成り立つ関係式を示し，(1)の条件を各系の統計力学的な逆温度 <span class="arithmatex">\(\beta_i = \frac{\partial \log \Omega_i}{\partial E_i}\)</span> を用いた簡潔な関係式に書き換えよ。</p>
-<p>(3) 全エントロピーが増大して最大値に達する過程と，熱が高温側から低温側へ流れて最終的に等温の熱平衡状態へ至る過程との対応を説明せよ。</p>
+<p>(3) <span class="arithmatex">\(\beta_1&gt;\beta_2\)</span> の初期状態を考える。<span class="arithmatex">\(dE_2=-dE_1\)</span> を用いて全エントロピーの変化 <span class="arithmatex">\(dS_{\mathrm{tot}}\)</span> を <span class="arithmatex">\(dE_1\)</span> で表し，<span class="arithmatex">\(dS_{\mathrm{tot}}&gt;0\)</span> となるエネルギー移動の向きを求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14553,12 +14553,12 @@
 <div class="arithmatex">\[
 \frac{dS_{\mathrm{tot}}}{dE_1} = \frac{d}{dE_1} \left[ S_1(E_1) + S_2(E_2) \right] = 0
 \]</div>
-<p>合成関数の微分法（連鎖律）を適用すると，次の式が得られます。</p>
+<p>連鎖律を適用すると，次の式を得ます。</p>
 <div class="arithmatex">\[
 \frac{dS_1(E_1)}{dE_1} + \frac{dS_2(E_2)}{dE_2} \frac{dE_2}{dE_1} = 0
 \]</div>
 <h3 id="2">(2)</h3>
-<p>全体のエネルギーが一定（<span class="arithmatex">\(E_1 + E_2 = E_{\mathrm{tot}}\)</span>）であるため，その全微分をとると <span class="arithmatex">\(dE_1 + dE_2 = 0\)</span> となり，変化量の間の関係式は以下のようになります。</p>
+<p>全体のエネルギーは <span class="arithmatex">\(E_1 + E_2 = E_{\mathrm{tot}}\)</span> で一定です。その全微分をとると <span class="arithmatex">\(dE_1 + dE_2 = 0\)</span> となるため，</p>
 <div class="arithmatex">\[
 \frac{dE_2}{dE_1} = -1
 \]</div>
@@ -14571,7 +14571,7 @@
 \beta_1 = \beta_2
 \]</div>
 <h3 id="3">(3)</h3>
-<p>熱平衡に達していない初期状態として，<span class="arithmatex">\(\beta_1 &gt; \beta_2\)</span> （すなわち温度が <span class="arithmatex">\(T_1 &lt; T_2\)</span>）の状況を考えます。このとき，全エントロピーの微小変化は以下のように表せます。</p>
+<p><span class="arithmatex">\(\beta_1 &gt; \beta_2\)</span>，すなわち <span class="arithmatex">\(T_1 &lt; T_2\)</span> の初期状態を考えます。全エントロピーの微小変化は</p>
 <div class="arithmatex">\[
 dS_{\mathrm{tot}} = \frac{dS_1}{dE_1} dE_1 + \frac{dS_2}{dE_2} dE_2 = k_B (\beta_1 dE_1 + \beta_2 dE_2)
 \]</div>
@@ -14579,8 +14579,7 @@ dS_{\mathrm{tot}} = \frac{dS_1}{dE_1} dE_1 + \frac{dS_2}{dE_2} dE_2 = k_B (\beta
 <div class="arithmatex">\[
 dS_{\mathrm{tot}} = k_B (\beta_1 - \beta_2) dE_1
 \]</div>
-<p>孤立系において自発的な変化はエントロピーが増加する方向（<span class="arithmatex">\(dS_{\mathrm{tot}} &gt; 0\)</span>）に進行するため，<span class="arithmatex">\(\beta_1 - \beta_2 &gt; 0\)</span> であるならば，<span class="arithmatex">\(dE_1 &gt; 0\)</span> でなければなりません。これは，温度の「高い」系2から温度の「低い」系1へとエネルギー（熱）が自発的に移動することを意味します。
-このエネルギー移動に伴って <span class="arithmatex">\(\beta_1\)</span> と <span class="arithmatex">\(\beta_2\)</span> の差は縮まっていき，最終的に <span class="arithmatex">\(\beta_1 = \beta_2\)</span> （<span class="arithmatex">\(T_1 = T_2\)</span>）となった時点でエントロピーが最大化され，マクロな熱の移動が停止する「熱平衡状態」へと至ります。</p>
+<p>孤立系では <span class="arithmatex">\(dS_{\mathrm{tot}} &gt; 0\)</span> となる変化が生じます。<span class="arithmatex">\(\beta_1 - \beta_2 &gt; 0\)</span> なので，この条件を満たすには <span class="arithmatex">\(dE_1 &gt; 0\)</span> でなければなりません。したがって，温度が高い系2から温度が低い系1へエネルギーが移動します。移動は <span class="arithmatex">\(\beta_1 = \beta_2\)</span>，すなわち <span class="arithmatex">\(T_1=T_2\)</span> となるまで続きます。</p>
 
 
 

@@ -11339,7 +11339,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14588,7 +14588,7 @@ Z(\beta) = \exp\left( -\frac{1}{2}\beta\hbar\omega \right) \sum_{n=0}^{\infty} \
 <div class="arithmatex">\[
 Z(\beta) = \frac{\exp\left( -\frac{1}{2}\beta\hbar\omega \right)}{1 - \exp(-\beta\hbar\omega)}
 \]</div>
-<p>（※分母・分子に <span class="arithmatex">\(\exp\left(\frac{1}{2}\beta\hbar\omega\right)\)</span> を掛けて，双曲線関数を用いて <span class="arithmatex">\(Z(\beta) = \frac{1}{2\sinh\left(\frac{1}{2}\beta\hbar\omega\right)}\)</span> と表すこともあります。）</p>
+<p>分母と分子に <span class="arithmatex">\(\exp\left(\frac{1}{2}\beta\hbar\omega\right)\)</span> を掛ければ，<span class="arithmatex">\(Z(\beta) = \frac{1}{2\sinh\left(\frac{1}{2}\beta\hbar\omega\right)}\)</span> とも表せます。</p>
 <h3 id="2">(2)</h3>
 <p>平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を分配関数の対数微分から求めます。(1) で得られた <span class="arithmatex">\(Z(\beta)\)</span> の対数をとります。</p>
 <div class="arithmatex">\[
@@ -14601,7 +14601,7 @@ Z(\beta) = \frac{\exp\left( -\frac{1}{2}\beta\hbar\omega \right)}{1 - \exp(-\bet
 <div class="arithmatex">\[
 \langle E \rangle = \frac{1}{2}\hbar\omega + \frac{\hbar\omega \exp(-\beta\hbar\omega)}{1 - \exp(-\beta\hbar\omega)}
 \]</div>
-<p>第2項の分母・分子を <span class="arithmatex">\(\exp(-\beta\hbar\omega)\)</span> で割って整理すると，逆温度 <span class="arithmatex">\(\beta\)</span> を用いた以下の美しい表現が得られます。</p>
+<p>第2項の分母と分子を <span class="arithmatex">\(\exp(-\beta\hbar\omega)\)</span> で割って整理すると，逆温度 <span class="arithmatex">\(\beta\)</span> を用いた以下の表式を得ます。</p>
 <div class="arithmatex">\[
 \langle E \rangle = \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\exp(\beta\hbar\omega) - 1}
 \]</div>
@@ -14614,9 +14614,9 @@ Z(\beta) = \frac{\exp\left( -\frac{1}{2}\beta\hbar\omega \right)}{1 - \exp(-\bet
 <div class="arithmatex">\[
 \langle E \rangle \to \frac{1}{2}\hbar\omega
 \]</div>
-<p>これは，絶対零度であっても熱運動が完全には静止せず，不確定性原理に由来する最低限のエネルギーである「零点エネルギー（基底状態のエネルギー）」が残るという，量子力学特有の重要な物理的現象を正しく表しています。</p>
+<p>これは，<span class="arithmatex">\(T\to0\)</span> でも基底状態のエネルギーである零点エネルギーが残ることを表します。</p>
 <h3 id="3">(3)</h3>
-<p>高温極限（ <span class="arithmatex">\(T \to \infty\)</span> ）では，熱エネルギーがエネルギー間隔に比べて十分に大きく（ <span class="arithmatex">\(k_B T \gg \hbar\omega\)</span> ）， <span class="arithmatex">\(\frac{\hbar\omega}{k_B T} \ll 1\)</span> となります。ここで，近似式 <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> を第2項の分母に適用します。</p>
+<p>高温極限 <span class="arithmatex">\(T \to \infty\)</span> では <span class="arithmatex">\(k_B T \gg \hbar\omega\)</span> であり，<span class="arithmatex">\(\frac{\hbar\omega}{k_B T} \ll 1\)</span> となります。近似式 <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> を第2項の分母に適用します。</p>
 <div class="arithmatex">\[
 \exp\left(\frac{\hbar\omega}{k_B T}\right) - 1 \simeq \left( 1 + \frac{\hbar\omega}{k_B T} \right) - 1 = \frac{\hbar\omega}{k_B T}
 \]</div>
@@ -14628,9 +14628,9 @@ Z(\beta) = \frac{\exp\left( -\frac{1}{2}\beta\hbar\omega \right)}{1 - \exp(-\bet
 <div class="arithmatex">\[
 \langle E \rangle \simeq k_B T
 \]</div>
-<p>古典力学において，1次元調和振動子は「運動エネルギーの自由度（ <span class="arithmatex">\(p^2/2m\)</span> ）」と「位置のポテンシャルエネルギーの自由度（ <span class="arithmatex">\(m\omega^2 x^2/2\)</span> ）」の2つの2次形式の自由度を持ちます。エネルギー等配分法則により，1つの2次形式の自由度あたり <span class="arithmatex">\(\frac{1}{2}k_B T\)</span> の熱エネルギーが割り振られるため，計 <span class="arithmatex">\(2 \times \frac{1}{2}k_B T = k_B T\)</span> となり，量子論的な計算から古典統計力学の限界が正しく再現されることが示されました。</p>
+<p>1次元調和振動子のハミルトニアンには，運動エネルギー <span class="arithmatex">\(p^2/2m\)</span> と位置エネルギー <span class="arithmatex">\(m\omega^2x^2/2\)</span> という二つの二次形式の項があります。等分配則によれば，各項の平均エネルギーは <span class="arithmatex">\(k_BT/2\)</span> なので，合計は <span class="arithmatex">\(k_BT\)</span> です。これは上で求めた高温極限と一致します。</p>
 <h3 id="4">(4)</h3>
-<p>比熱 <span class="arithmatex">\(C\)</span> を求めるため，(2) で得られた平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分します。零点エネルギーの項は定数なので消え，第2項に商の微分公式と合成関数の微分を適用します。</p>
+<p>熱容量 <span class="arithmatex">\(C\)</span> を求めるため，(2) で得られた平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分します。零点エネルギーの項は定数なので消え，第2項に商の微分公式と合成関数の微分を適用します。</p>
 <div class="arithmatex">\[
 C = \frac{\partial \langle E \rangle}{\partial T} = \hbar\omega \cdot \left[ - \frac{1}{\left(\exp\left(\frac{\hbar\omega}{k_B T}\right) - 1\right)^2} \right] \cdot \exp\left(\frac{\hbar\omega}{k_B T}\right) \cdot \left( -\frac{\hbar\omega}{k_B T^2} \right)
 \]</div>

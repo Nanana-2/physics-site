@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14543,7 +14543,11 @@
 <h1 id="_1">スターリングの公式</h1>
 <h2 id="_2">問題</h2>
 <p>統計力学において，構成粒子数がアボガドロ数規模に達する多体系を扱う際，階乗 <span class="arithmatex">\(N!\)</span> の計算が頻出する。この巨大な階乗の対数を扱いやすい形に変形するため，スターリングの公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> の導出とその適用について，以下の問いに答えよ。ただし，対数は自然対数とする。</p>
-<p>(1) 自然数 <span class="arithmatex">\(N\)</span> に対して，その階乗の対数 <span class="arithmatex">\(\log N!\)</span> は和の記号を用いて <span class="arithmatex">\(\sum_{x=1}^N \log x\)</span> と表せる。<span class="arithmatex">\(N\)</span> が非常に大きいとき，この和を定積分 <span class="arithmatex">\(\int_1^N \log x \, dx\)</span> で近似できる理由について，階段関数の面積と連続関数のグラフが囲む面積との関係から説明せよ。</p>
+<p>(1) 関数 <span class="arithmatex">\(\log x\)</span> が単調増加することを用いて，階乗の対数 <span class="arithmatex">\(\log N! = \sum_{x=1}^N \log x\)</span> が次の不等式を満たすことを示せ。</p>
+<div class="arithmatex">\[
+\int_1^N \log x \, dx \le \log N! \le \int_1^N \log x \, dx + \log N
+\]</div>
+<p>さらに，<span class="arithmatex">\(N\)</span> が十分に大きいとき，右辺に現れる補正項 <span class="arithmatex">\(\log N\)</span> が主要項に比べて無視できることを示せ。</p>
 <p>(2) 部分積分法を用いることで定積分 <span class="arithmatex">\(\int_1^N \log x \, dx\)</span> を計算し，スターリングの公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を導出せよ。</p>
 <p>(3) 導出した公式を用いて，独立な <span class="arithmatex">\(N\)</span> 個の二状態系においてちょうど半数の <span class="arithmatex">\(N/2\)</span> 個の粒子が励起状態にあるときの微視的状態数</p>
 <div class="arithmatex">\[
@@ -14557,7 +14561,23 @@
 <div class="arithmatex">\[
 \log N! = \log (1 \times 2 \times \cdots \times N) = \sum_{x=1}^N \log x
 \]</div>
-<p>この和は，幅 <span class="arithmatex">\(1\)</span>，高さ <span class="arithmatex">\(\log x\)</span> の長方形の面積を <span class="arithmatex">\(x=1\)</span> から <span class="arithmatex">\(x=N\)</span> まで足し合わせた総面積とみなすことができます。<span class="arithmatex">\(N\)</span> が十分に大きいとき，この階段状の長方形の並びがなす境界線は，連続関数 <span class="arithmatex">\(y = \log x\)</span> の滑らかな曲線でよく近似されます。したがって，長方形の面積の総和を関数 <span class="arithmatex">\(y = \log x\)</span> の積分に置き換えることが可能となります。</p>
+<p><span class="arithmatex">\(\log x\)</span> は単調増加関数です。区間 <span class="arithmatex">\([k-1,k]\)</span> では <span class="arithmatex">\(\log x \le \log k\)</span> であるため，</p>
+<div class="arithmatex">\[
+\int_{k-1}^{k}\log x\,dx \le \log k
+\]</div>
+<p>が成り立ちます。<span class="arithmatex">\(k=2\)</span> から <span class="arithmatex">\(N\)</span> まで足し合わせると，<span class="arithmatex">\(\log 1=0\)</span> より</p>
+<div class="arithmatex">\[
+\int_1^N\log x\,dx \le \sum_{k=1}^N\log k=\log N!
+\]</div>
+<p>を得ます。一方，区間 <span class="arithmatex">\([k,k+1]\)</span> では <span class="arithmatex">\(\log k\le\log x\)</span> なので，<span class="arithmatex">\(k=1\)</span> から <span class="arithmatex">\(N-1\)</span> まで足し合わせると</p>
+<div class="arithmatex">\[
+\log N! - \log N \le \int_1^N\log x\,dx
+\]</div>
+<p>となります。したがって，</p>
+<div class="arithmatex">\[
+\int_1^N \log x \, dx \le \log N! \le \int_1^N \log x \, dx + \log N
+\]</div>
+<p>が成り立ちます。積分の主要項は <span class="arithmatex">\(N\log N\)</span> のオーダーであるのに対し，補正項は <span class="arithmatex">\(\log N\)</span> のオーダーです。その比は <span class="arithmatex">\(1/N\)</span> で0に近づくため，<span class="arithmatex">\(N\)</span> が十分に大きければ和を積分で近似できます。</p>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(y = \log x\)</span> の積分を部分積分法を用いて計算します。<span class="arithmatex">\(\log x\)</span> の前に隠れている <span class="arithmatex">\(1 = (x)^\prime\)</span> を意識して計算を進めます。</p>
 <div class="arithmatex">\[

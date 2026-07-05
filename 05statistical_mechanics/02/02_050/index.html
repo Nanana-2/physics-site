@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14542,18 +14542,23 @@
 
 <h1 id="_1">サッカー・テトロード方程式</h1>
 <h2 id="_2">問題</h2>
-<p>互いに区別できない質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。体積を <span class="arithmatex">\(V\)</span>，全エネルギーを <span class="arithmatex">\(E\)</span> とし，ミクロカノニカル分布によって系を記述する。位相空間では，一つの微視的状態が占める体積を3次元 <span class="arithmatex">\(N\)</span> 粒子系について <span class="arithmatex">\(h^{3N}\)</span> とし，同種粒子の不可区別性により状態数を <span class="arithmatex">\(1/N!\)</span> 倍する。したがって，系全体の微視的状態数 <span class="arithmatex">\(\Omega(E, V, N)\)</span> は，エネルギー <span class="arithmatex">\(E\)</span> 以下の位相空間体積 <span class="arithmatex">\(\Gamma(E)\)</span> を用いて <span class="arithmatex">\(\Omega \simeq \frac{1}{N! h^{3N}} \Gamma(E)\)</span> と近似できる。以下の問いに答えよ。</p>
+<p>互いに区別できない質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。体積を <span class="arithmatex">\(V\)</span>，全エネルギーを <span class="arithmatex">\(E\)</span> とし，ミクロカノニカル分布で扱う。位相空間では，一つの微視的状態が占める体積を3次元 <span class="arithmatex">\(N\)</span> 粒子系について <span class="arithmatex">\(h^{3N}\)</span> とし，同種粒子の不可区別性により状態数を <span class="arithmatex">\(1/N!\)</span> 倍する。したがって，系全体の微視的状態数 <span class="arithmatex">\(\Omega(E, V, N)\)</span> は，エネルギー <span class="arithmatex">\(E\)</span> 以下の位相空間体積 <span class="arithmatex">\(\Gamma(E)\)</span> を用いて <span class="arithmatex">\(\Omega \simeq \frac{1}{N! h^{3N}} \Gamma(E)\)</span> と近似できる。以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(3N\)</span> 次元超球の体積を用いた位相空間体積は以下のように与えられる。</p>
 <div class="arithmatex">\[
 \Gamma(E) = V^N \frac{\pi^{3N/2}}{\left(\frac{3N}{2}\right)!} (2mE)^{3N/2}
 \]</div>
 <p>これを用いて，量子論的な補正を取り入れた全状態数 <span class="arithmatex">\(\Omega\)</span> の対数 <span class="arithmatex">\(\log \Omega\)</span> を書き下せ。</p>
 <p>(2) <span class="arithmatex">\(N\)</span> が非常に大きい熱力学極限において，<span class="arithmatex">\(\log N!\)</span> および <span class="arithmatex">\(\left(\frac{3N}{2}\right)!\)</span> の項にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用し，<span class="arithmatex">\(\log \Omega\)</span> を <span class="arithmatex">\(N\)</span> に比例する形へ整理せよ。</p>
-<p>(3) ボルツマンエントロピー <span class="arithmatex">\(S = k_B \log \Omega\)</span> を求め，示量性を満たす形へ整理してサッカー・テトロード方程式を導出せよ。</p>
+<p>(3) ボルツマンエントロピー <span class="arithmatex">\(S = k_B \log \Omega\)</span> を求め，次の形へ整理せよ。</p>
+<div class="arithmatex">\[
+S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
++\frac{3}{2}\log\left(\frac{4\pi mE}{3Nh^2}\right)+\frac{5}{2}\right]
+\]</div>
+<p>さらに，<span class="arithmatex">\(E,V,N\)</span> を同時に <span class="arithmatex">\(\lambda\)</span> 倍したとき，<span class="arithmatex">\(S\)</span> も <span class="arithmatex">\(\lambda\)</span> 倍となることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>与えられた量子論的補正（<span class="arithmatex">\(h^{3N}\)</span> による規格化および不可区別性の因子 <span class="arithmatex">\(1/N!\)</span>）を考慮した状態数 <span class="arithmatex">\(\Omega\)</span> の式は以下のようになります。</p>
+<p><span class="arithmatex">\(h^{3N}\)</span> による規格化と不可区別性の因子 <span class="arithmatex">\(1/N!\)</span> を考慮すると，状態数 <span class="arithmatex">\(\Omega\)</span> は</p>
 <div class="arithmatex">\[
 \Omega = \frac{1}{N! h^{3N}} V^N \frac{\pi^{3N/2}}{\left(\frac{3N}{2}\right)!} (2mE)^{3N/2}
 \]</div>
@@ -14589,12 +14594,15 @@ N \log V - N \log N = N \log \left( \frac{V}{N} \right)
 \log \Omega \simeq N \log \left( \frac{V}{N} \right) + \frac{3N}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2}N
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた <span class="arithmatex">\(\log \Omega\)</span> の結果にボルツマンの定数 <span class="arithmatex">\(k_B\)</span> を掛けることで，エントロピー <span class="arithmatex">\(S = k_B \log \Omega\)</span> が得られます。式全体から共通因子 <span class="arithmatex">\(N\)</span> を括り出すことで，以下の形式に整理できます。</p>
+<p>(2) で得られた <span class="arithmatex">\(\log \Omega\)</span> にボルツマン定数 <span class="arithmatex">\(k_B\)</span> を掛け，共通因子 <span class="arithmatex">\(N\)</span> を括り出します。</p>
 <div class="arithmatex">\[
 S(E, V, N) = N k_B \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2} \right]
 \]</div>
-<p>この方程式はサッカー・テトロード方程式と呼ばれます。</p>
-<p>この式の中では，体補正としての体積 <span class="arithmatex">\(V\)</span> やエネルギー <span class="arithmatex">\(E\)</span> がすべて粒子数 <span class="arithmatex">\(N\)</span> で割られた比の形（<span class="arithmatex">\(V/N\)</span>, <span class="arithmatex">\(E/N\)</span>）で含まれています。そのため，系全体の大きさを <span class="arithmatex">\(\lambda\)</span> 倍にしたとき（<span class="arithmatex">\(N \to \lambda N, V \to \lambda V, E \to \lambda E\)</span>），エントロピー全体も正しく <span class="arithmatex">\(\lambda\)</span> 倍（<span class="arithmatex">\(S \to \lambda S\)</span>）になるという，熱力学的な示量性の要請を完全に満たす正しい理想気体のエントロピーが導出されました。</p>
+<p>この式はサッカー・テトロード方程式と呼ばれます。<span class="arithmatex">\(E,V,N\)</span> を同時に <span class="arithmatex">\(\lambda\)</span> 倍すると，対数内の <span class="arithmatex">\(V/N\)</span> と <span class="arithmatex">\(E/N\)</span> は変化せず，括弧の外の <span class="arithmatex">\(N\)</span> だけが <span class="arithmatex">\(\lambda N\)</span> になります。したがって，</p>
+<div class="arithmatex">\[
+S(\lambda E,\lambda V,\lambda N)=\lambda S(E,V,N)
+\]</div>
+<p>が成り立ち，示量性を満たします。</p>
 
 
 

@@ -11328,7 +11328,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">ボルツマン因子と分配関数</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の十分に大きな熱浴と熱的に接触し，平衡状態にある微視的な系を考える。この系がとりうる微視的状態を <span class="arithmatex">\(r\)</span> とし，状態 <span class="arithmatex">\(r\)</span> における系のエネルギーを <span class="arithmatex">\(E_r\)</span> とする。孤立系を記述するミクロカノニカル分布からカノニカル分布を導出する。以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の十分に大きな熱浴と熱的に接触し，平衡状態にある微視的な系を考える。この系がとりうる微視的状態を <span class="arithmatex">\(r\)</span> とし，状態 <span class="arithmatex">\(r\)</span> における系のエネルギーを <span class="arithmatex">\(E_r\)</span> とする。孤立系を表すミクロカノニカル分布からカノニカル分布を導出する。以下の問いに答えよ。</p>
 <p>(1) 系がエネルギー <span class="arithmatex">\(E_r\)</span> をもつ状態 <span class="arithmatex">\(r\)</span> にある確率は，熱源の微視的状態数 <span class="arithmatex">\(\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> に比例する。熱源のエントロピー <span class="arithmatex">\(S_{\mathrm{B}} = k_B \log \Omega_{\mathrm{B}}\)</span> を用いて，この確率が </p>
 <div class="arithmatex">\[
 \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
@@ -14553,7 +14553,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>系と熱源を合わせた全体は孤立系であるため，等重率の原理が成り立ちます。系が特定の状態 <span class="arithmatex">\(r\)</span>（エネルギー <span class="arithmatex">\(E_r\)</span>）にあるとき，熱源がとりうる微視的状態数は <span class="arithmatex">\(\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> となります。したがって，系が状態 <span class="arithmatex">\(r\)</span> をとる確率 <span class="arithmatex">\(P_r\)</span> はこの状態数に比例します。</p>
+<p>系と熱浴を合わせた全体は孤立系です。系がエネルギー <span class="arithmatex">\(E_r\)</span> の状態 <span class="arithmatex">\(r\)</span> にあるとき，熱浴がとりうる微視的状態数は <span class="arithmatex">\(\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> となります。したがって，系が状態 <span class="arithmatex">\(r\)</span> をとる確率 <span class="arithmatex">\(P_r\)</span> はこの状態数に比例します。</p>
 <div class="arithmatex">\[
 P_r \propto \Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)
 \]</div>
@@ -14562,7 +14562,7 @@ P_r \propto \Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)
 P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
 \]</div>
 <h3 id="2">(2)</h3>
-<p>熱源のエントロピー関数 <span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> を <span class="arithmatex">\(E_r\)</span> の微小量として1次までテイラー展開（マクローリン展開）します。</p>
+<p>熱浴のエントロピー <span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> を <span class="arithmatex">\(E_r=0\)</span> のまわりで1次までテイラー展開します。</p>
 <div class="arithmatex">\[
 S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r) \simeq S_{\mathrm{B}}(E_{\mathrm{tot}}) - \left. \frac{\partial S_{\mathrm{B}}}{\partial E} \right|_{E = E_{\mathrm{tot}}} E_r
 \]</div>
@@ -14591,7 +14591,7 @@ P_r \propto \exp(-\beta E_r)
 <div class="arithmatex">\[
 C = \frac{1}{\sum_r \exp(-\beta E_r)}
 \]</div>
-<p>したがって，状態 <span class="arithmatex">\(r\)</span> が実現する確定的な確率表現（カノニカル分布）は以下のようになります。</p>
+<p>したがって，状態 <span class="arithmatex">\(r\)</span> の実現確率は以下のカノニカル分布で与えられます。</p>
 <div class="arithmatex">\[
 P_r = \frac{\exp(-\beta E_r)}{\sum_r \exp(-\beta E_r)} = \frac{1}{Z} \exp(-\beta E_r)
 \]</div>

@@ -11220,7 +11220,7 @@
   <span class="md-ellipsis">
     
   
-    エネルギー揺らぎと比熱
+    エネルギー揺らぎと熱容量
   
 
     
@@ -14561,7 +14561,7 @@ Z = \int_{-\infty}^{\infty} dx_1 \int \cdots \int dx_2 \dots dx_f \exp\left[ -\b
 <div class="arithmatex">\[
 Z = \left( \int_{-\infty}^{\infty} \exp(-\beta A x_1^2) dx_1 \right) \times \left( \int \cdots \int dx_2 \dots dx_f \exp\left[ -\beta H^\prime(x_2, \dots, x_f) \right] \right)
 \]</div>
-<p>前半の <span class="arithmatex">\(x_1\)</span> に関する積分を <span class="arithmatex">\(Z_{x_1}\)</span>，後半の残りの積分を <span class="arithmatex">\(Z^\prime\)</span> とおくと，分配関数は次のように積の形で完全に分離されます。</p>
+<p>前半の <span class="arithmatex">\(x_1\)</span> に関する積分を <span class="arithmatex">\(Z_{x_1}\)</span>，残りの積分を <span class="arithmatex">\(Z^\prime\)</span> とおくと，分配関数は次の積に分離されます。</p>
 <div class="arithmatex">\[
 Z = Z_{x_1} \cdot Z^\prime
 \]</div>
@@ -14589,12 +14589,12 @@ Z_{x_1} = \sqrt{\frac{\pi}{\beta A}} = \left( \frac{\pi}{A} \right)^{1/2} \beta^
 <div class="arithmatex">\[
 H = \sum_{i=1}^N \left( \frac{p_{xi}^2}{2m} + \frac{p_{yi}^2}{2m} + \frac{p_{zi}^2}{2m} \right)
 \]</div>
-<p>1粒子あたり 3 つの二次形式の項（自由度）があり， <span class="arithmatex">\(N\)</span> 粒子全体では合計 <span class="arithmatex">\(3N\)</span> 個の自由度が存在します。
+<p>1粒子あたり二次形式の項が3個あり，<span class="arithmatex">\(N\)</span> 粒子全体では合計 <span class="arithmatex">\(3N\)</span> 個です。
 エネルギー等分配則を適用すると，全平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
 \langle E \rangle = 3N \times \frac{1}{2}k_B T = \frac{3}{2}N k_B T
 \]</div>
-<p>定積比熱 <span class="arithmatex">\(C_V\)</span> は，このエネルギーを温度 <span class="arithmatex">\(T\)</span> で微分して求まります。</p>
+<p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，このエネルギーを温度 <span class="arithmatex">\(T\)</span> で微分して求まります。</p>
 <div class="arithmatex">\[
 C_V = \frac{\partial \langle E \rangle}{\partial T} = \frac{3}{2}N k_B
 \]</div>
@@ -14603,16 +14603,16 @@ C_V = \frac{\partial \langle E \rangle}{\partial T} = \frac{3}{2}N k_B
 <div class="arithmatex">\[
 H = \sum_{i=1}^N \left( \frac{p_{xi}^2}{2m} + \frac{p_{yi}^2}{2m} + \frac{p_{zi}^2}{2m} + \frac{1}{2}m\omega^2 x_i^2 + \frac{1}{2}m\omega^2 y_i^2 + \frac{1}{2}m\omega^2 z_i^2 \right)
 \]</div>
-<p>1つの3次元振動子あたり 6 つの二次形式の項（運動量 3，位置 3）があり， <span class="arithmatex">\(N\)</span> 個の独立な振動子全体では合計 <span class="arithmatex">\(6N\)</span> 個の自由度が存在します。
+<p>1つの3次元振動子には運動量に関する3項と位置に関する3項があり，<span class="arithmatex">\(N\)</span> 個の振動子全体では二次形式の項が合計 <span class="arithmatex">\(6N\)</span> 個あります。
 エネルギー等分配則を適用すると，全平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
 \langle E \rangle = 6N \times \frac{1}{2}k_B T = 3N k_B T
 \]</div>
-<p>定積比熱 <span class="arithmatex">\(C_V\)</span> は，同様に温度 <span class="arithmatex">\(T\)</span> で微分して求まります。</p>
+<p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，同様に温度 <span class="arithmatex">\(T\)</span> で微分して求まります。</p>
 <div class="arithmatex">\[
 C_V = \frac{\partial \langle E \rangle}{\partial T} = 3N k_B
 \]</div>
-<p>この固体振動子の比熱が温度によらず <span class="arithmatex">\(3N k_B\)</span> という一定値をとる古典的な結論は，デュロン・プティの法則として知られています。</p>
+<p>この固体振動子の定積熱容量が温度によらず <span class="arithmatex">\(3N k_B\)</span> となる結果は，デュロン・プティの法則に対応します。</p>
 
 
 
@@ -14667,7 +14667,7 @@ C_V = \frac{\partial \langle E \rangle}{\partial T} = 3N k_B
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../03_060/" class="md-footer__link md-footer__link--prev" aria-label="Previous: エネルギー揺らぎと比熱">
+          <a href="../03_060/" class="md-footer__link md-footer__link--prev" aria-label="Previous: エネルギー揺らぎと熱容量">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -14677,7 +14677,7 @@ C_V = \frac{\partial \langle E \rangle}{\partial T} = 3N k_B
                 Previous
               </span>
               <div class="md-ellipsis">
-                エネルギー揺らぎと比熱
+                エネルギー揺らぎと熱容量
               </div>
             </div>
           </a>
