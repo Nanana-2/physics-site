@@ -47,13 +47,20 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/mathjax.js
+  - javascripts/problem-filter.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+hooks:
+  - hooks/problem_index.py
+
+not_in_nav: |
+  tag-index.md
 
 plugins:
   - search
   - awesome-pages
   - tags:
-      tags_file: tags.md                # ✨ コロン(:)を付けて、設定を下に書く
+      tags_file: tag-index.md
                   
 
 

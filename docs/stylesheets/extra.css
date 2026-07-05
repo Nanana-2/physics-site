@@ -360,3 +360,170 @@ body, input {
     text-align: left;
   }
 }
+
+/* ==========================================
+   14. 全問題一覧・絞り込み
+   ========================================== */
+.problem-finder {
+  margin-top: 1.5rem;
+}
+
+.problem-finder__controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+}
+
+.problem-finder__controls label {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.problem-finder__keyword {
+  grid-column: 1 / -1;
+}
+
+.problem-finder__controls input,
+.problem-finder__controls select {
+  width: 100%;
+  min-width: 0;
+  height: 2.45rem;
+  box-sizing: border-box;
+  padding: 0 0.7rem;
+  color: var(--md-typeset-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.problem-finder__controls input:focus,
+.problem-finder__controls select:focus {
+  border-color: var(--md-accent-fg-color);
+  outline: 2px solid color-mix(in srgb, var(--md-accent-fg-color) 22%, transparent);
+  outline-offset: 1px;
+}
+
+.problem-finder__reset,
+.problem-finder__more {
+  min-height: 2.45rem;
+  padding: 0.45rem 0.85rem;
+  color: var(--md-primary-fg-color);
+  background: transparent;
+  border: 1px solid var(--md-primary-fg-color--light);
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.problem-finder__reset {
+  align-self: end;
+}
+
+.problem-finder__reset:hover,
+.problem-finder__more:hover {
+  color: #ffffff;
+  background: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .problem-finder__reset,
+[data-md-color-scheme="slate"] .problem-finder__more {
+  color: #b9c3ec;
+  border-color: #6673aa;
+}
+
+.problem-finder__status {
+  margin: 1.2rem 0 0.65rem !important;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.problem-finder__results {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.problem-result {
+  padding: 0.9rem 0.25rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .problem-result__title {
+  color: var(--md-typeset-color);
+  border-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.md-typeset .problem-result__title:hover {
+  color: var(--md-typeset-a-color);
+}
+
+.problem-result__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.7rem;
+  margin: 0.35rem 0 0 !important;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.problem-result__meta > span + span:not(.problem-result__difficulty)::before {
+  margin-right: 0.7rem;
+  color: var(--md-default-fg-color--lighter);
+  content: "/";
+}
+
+.problem-result__difficulty {
+  display: inline-flex;
+  padding: 0.08rem 0.45rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 999px;
+}
+
+.problem-result__difficulty[data-difficulty="発展"] {
+  color: var(--site-heading-accent);
+  border-color: var(--site-heading-accent);
+}
+
+[data-md-color-scheme="slate"] .problem-result__difficulty[data-difficulty="発展"] {
+  color: #a5b0df;
+}
+
+.problem-finder__more {
+  display: block;
+  margin: 1.2rem auto 0;
+}
+
+.problem-finder__more[hidden] {
+  display: none;
+}
+
+.problem-finder__empty {
+  padding: 1.4rem 0;
+  color: var(--md-default-fg-color--light);
+}
+
+@media screen and (max-width: 45em) {
+  .problem-finder__controls {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .problem-finder__keyword {
+    grid-column: auto;
+  }
+}
