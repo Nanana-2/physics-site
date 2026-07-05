@@ -1,13 +1,13 @@
 # 全問題一覧
 
-収録されている問題を、分野・章・難易度・キーワードから絞り込めます。
-キーワードは問題名だけでなく、問題文の内容も検索します。
+収録されている問題を，分野・章・難易度・キーワードから絞り込めます。
+キーワードは問題名だけでなく，問題文の内容も検索します。
 
 <div class="problem-finder" data-index-url="../problem-index.json">
   <div class="problem-finder__controls">
     <label class="problem-finder__keyword">
       <span>キーワード</span>
-      <input type="search" data-problem-keyword placeholder="例：角運動量、分配関数" autocomplete="off">
+      <input type="search" data-problem-keyword placeholder="例：角運動量，分配関数" autocomplete="off">
     </label>
 
     <label>
@@ -41,5 +41,5 @@
   <div class="problem-finder__results" data-problem-results></div>
   <button type="button" class="problem-finder__more" data-problem-more hidden>続きを表示</button>
 
-  <noscript>この絞り込み機能を使うには、ブラウザのJavaScriptを有効にしてください。</noscript>
+  <noscript>この絞り込み機能を使うには，ブラウザのJavaScriptを有効にしてください。</noscript>
 </div>
