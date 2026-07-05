@@ -14520,12 +14520,12 @@
 
 <h1 id="_1">光学定理</h1>
 <h2 id="_2">問題</h2>
-<p>散乱現象において，入射した粒子全体の確率が保存されるという事実は，散乱振幅と全断面積の間に重要な制約をもたらす。この制約は光学定理と呼ばれ，前方に散乱されずにそのまま透過していく波と，あらゆる方向へ散乱されて失われる波の強度のバランスを表す。ここでは，3次元散乱の波動関数の遠方における漸近形から出発し，全空間を囲む巨大な球面を通過する総確率流が 0 になるという確率保存則から光学定理を導出する。</p>
+<p>散乱における確率保存則から，前方散乱振幅と全断面積の関係が得られる。この関係を光学定理と呼ぶ。</p>
 <p><span class="arithmatex">\(z\)</span> 軸の正の方向から入射する粒子の波数ベクトルを <span class="arithmatex">\(\boldsymbol{k}_{\text{in}} = k \hat{\boldsymbol{z}}\)</span> とする。十分遠方における波動関数 <span class="arithmatex">\(\psi(\boldsymbol{r})\)</span> は，入射平面波と散乱波の重ね合わせとして以下の形式で与えられる。</p>
 <div class="arithmatex">\[
 \psi(\boldsymbol{r}) = e^{i k z} + f(\theta) \frac{e^{i k r}}{r}
 \]</div>
-<p>ここで <span class="arithmatex">\(f(\theta)\)</span> は球対称ポテンシャルを想定した散乱振幅であり，方位角には依存しない。全空間における確率保存則より，ポテンシャルが粒子を吸収も生成もしない定常状態であれば，原点を中心とする半径 <span class="arithmatex">\(r\)</span> の巨大な球面 <span class="arithmatex">\(S\)</span> を外側へ突き抜ける全確率流密度ベクトルの積分は 0 にならなければならない。</p>
+<p>ここで <span class="arithmatex">\(f(\theta)\)</span> は球対称ポテンシャルに対する散乱振幅であり，方位角には依存しない。粒子の吸収や生成がない定常状態では，原点を中心とする半径 <span class="arithmatex">\(r\)</span> の球面 <span class="arithmatex">\(S\)</span> を通過する全確率流は 0 となる。</p>
 <div class="arithmatex">\[
 \oint_{S} \boldsymbol{J} \cdot \hat{\boldsymbol{r}} \, dS = 0
 \]</div>
@@ -14538,7 +14538,7 @@
 <div class="arithmatex">\[
 \oint_{S} \boldsymbol{J}_{\text{sc}} \cdot \hat{\boldsymbol{r}} \, dS = \frac{\hbar k}{m} \sigma
 \]</div>
-<p>(2) 全確率流を 0 とする条件において，入射波のみによる積分は完全に相殺して 0 になる。したがって，確率保存則は散乱波の積分と干渉項の積分の和が 0 になるという関係式に帰着する。干渉項の積分を遠方極限で評価すると，以下の結果が得られることが知られている。</p>
+<p>(2) 全確率流を 0 とする条件において，入射波のみによる積分は相殺して 0 になる。したがって，確率保存則は散乱波の積分と干渉項の積分の和が 0 になるという関係式にまとめられる。干渉項の積分を遠方極限で評価すると，以下の結果が得られることが知られている。</p>
 <div class="arithmatex">\[
 \oint_{S} \boldsymbol{J}_{\text{int}} \cdot \hat{\boldsymbol{r}} \, dS = -\frac{\hbar k}{m} \frac{4\pi}{k} \text{Im}[f(0)]
 \]</div>
@@ -14598,7 +14598,7 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \righ
 <div class="arithmatex">\[
 \sigma = \frac{4\pi}{k} \text{Im}[f(0)]
 \]</div>
-<p>これにより，あらゆる方向への散乱の合計値である全断面積が，散乱されずに真っ直ぐ進む方向の散乱振幅の虚部だけで特定できるという光学定理が導かれました。</p>
+<p>したがって，全断面積は前方散乱振幅の虚部によって表されます。</p>
 
 
 

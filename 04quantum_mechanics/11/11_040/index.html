@@ -14542,7 +14542,7 @@
 
 <h1 id="s">低エネルギーs波散乱</h1>
 <h2 id="_1">問題</h2>
-<p>入射粒子のエネルギーが十分に低い散乱現象では，粒子が持つ物質波の波長がポテンシャルの及ぶ範囲に比べて非常に長くなる。この極限では，軌道角運動量量子数が 1 以上の部分波は原点付近のポテンシャルまで到達できず，障壁によって跳ね返されるため，散乱には軌道角運動量が 0 の部分波である <span class="arithmatex">\(s\)</span> 波だけが寄与する。ここでは，低エネルギー極限における <span class="arithmatex">\(s\)</span> 波の位相シフトから散乱長と呼ばれる物理量を定義し，全断面積の近似式を導出する。</p>
+<p>入射粒子のエネルギーが十分に低い散乱現象では，粒子が持つ物質波の波長がポテンシャルの及ぶ範囲に比べて非常に長くなる。この極限では，軌道角運動量量子数が 1 以上の部分波は原点付近のポテンシャルまで到達できず，障壁によって跳ね返されるため，散乱には軌道角運動量が 0 の部分波である <span class="arithmatex">\(s\)</span> 波だけが寄与する。</p>
 <p>球対称ポテンシャルによる散乱において，全断面積 <span class="arithmatex">\(\sigma\)</span> は各部分波の位相シフト <span class="arithmatex">\(\delta_l\)</span> を用いて以下のように表される。</p>
 <div class="arithmatex">\[
 \sigma = \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1) \sin^2\delta_l
@@ -14555,7 +14555,7 @@
 <p>以下の問いに答えよ。</p>
 <p>(1) 低エネルギー極限 <span class="arithmatex">\(k \to 0\)</span> においては，位相シフト <span class="arithmatex">\(\delta_0\)</span> 自体も 0 に近づく。このとき，三角関数の近似式 <span class="arithmatex">\(\sin\delta_0 \approx \tan\delta_0 \approx \delta_0\)</span> が成り立つ。散乱長 <span class="arithmatex">\(a\)</span> の定義式を用いて， <span class="arithmatex">\(k \to 0\)</span> における <span class="arithmatex">\(\sin\delta_0\)</span> の近似形状を <span class="arithmatex">\(k\)</span> と <span class="arithmatex">\(a\)</span> を用いて表せ。</p>
 <p>(2) (1) で得られた近似式を全断面積の式に代入することにより，低エネルギー極限における全断面積 <span class="arithmatex">\(\sigma\)</span> の値を散乱長 <span class="arithmatex">\(a\)</span> を用いて表せ。</p>
-<p>(3) 具体例として，半径 <span class="arithmatex">\(R\)</span> の無限に高い球形ポテンシャル障壁による散乱を考える。このポテンシャルの外側 <span class="arithmatex">\(r &gt; R\)</span> における <span class="arithmatex">\(s\)</span> 波の径方向波動関数 <span class="arithmatex">\(u_0(r) = r \psi_0(r)\)</span> は，自由粒子の解に位相シフトを含めた以下の形式を持つ。</p>
+<p>(3) 例として，半径 <span class="arithmatex">\(R\)</span> の無限に高い球形ポテンシャル障壁による散乱を考える。このポテンシャルの外側 <span class="arithmatex">\(r &gt; R\)</span> における <span class="arithmatex">\(s\)</span> 波の径方向波動関数 <span class="arithmatex">\(u_0(r) = r \psi_0(r)\)</span> は，自由粒子の解に位相シフトを含めた以下の形式を持つ。</p>
 <div class="arithmatex">\[
 u_0(r) = A \sin(kr + \delta_0)
 \]</div>
@@ -14588,11 +14588,11 @@ u_0(r) = A \sin(kr + \delta_0)
 <div class="arithmatex">\[
 \sigma \approx \frac{4\pi}{k^2} (-k a)^2 = \frac{4\pi}{k^2} \cdot k^2 a^2
 \]</div>
-<p>分母と分子にある <span class="arithmatex">\(k^2\)</span> が掛け算によって相殺され，完全に消去されます。</p>
+<p>分母と分子にある <span class="arithmatex">\(k^2\)</span> が掛け算によって相殺され，消去されます。</p>
 <div class="arithmatex">\[
 \sigma = 4\pi a^2
 \]</div>
-<p>これにより，低エネルギーにおける粒子の散乱の度合いは，波数に依存しない一定の値をとり，散乱長のみによって決定されることが導かれました。</p>
+<p>したがって，低エネルギー極限の全断面積は波数に依存せず，散乱長によって決まります。</p>
 <h3 id="3">(3)</h3>
 <p>与えられた径方向波動関数の式に対し，球の表面 <span class="arithmatex">\(r=R\)</span> における境界条件を適用します。</p>
 <div class="arithmatex">\[
@@ -14619,7 +14619,7 @@ a = R
 <div class="arithmatex">\[
 \sigma = 4\pi R^2
 \]</div>
-<p>古典力学における幾何学的な球の断面積は，粒子が球の影に衝突する領域の面積に等しいため， <span class="arithmatex">\(\sigma_{\text{classical}} = \pi R^2\)</span> と表されます。量子力学的な全断面積と古典的な断面積の比率を計算します。</p>
+<p>古典力学における球の断面積は，粒子が球の影に衝突する領域の面積に等しいため， <span class="arithmatex">\(\sigma_{\text{classical}} = \pi R^2\)</span> と表されます。量子力学的な全断面積と古典的な断面積の比率を計算します。</p>
 <div class="arithmatex">\[
 \frac{\sigma}{\sigma_{\text{classical}}} = \frac{4\pi R^2}{\pi R^2} = 4
 \]</div>

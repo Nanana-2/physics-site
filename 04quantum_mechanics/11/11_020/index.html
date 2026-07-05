@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">ボルン近似</h1>
 <h2 id="_2">問題</h2>
-<p>ポテンシャルによる粒子の散乱において，そのポテンシャルが十分に弱い場合，散乱状態の波動関数を摂動論的に近似する手法が有効である。これをボルン近似と呼ぶ。ここでは，定常状態のシュレーディンガー方程式を積分方程式の形式へと書き換え，1次のボルン近似を適用することにより，散乱振幅がポテンシャルのフーリエ変換として導出されることを示す。</p>
+<p>ポテンシャルによる粒子の散乱において，そのポテンシャルが十分に弱い場合，散乱状態の波動関数を摂動論的に近似する手法が有効である。これをボルン近似と呼ぶ。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> の粒子がポテンシャル <span class="arithmatex">\(V(\boldsymbol{r})\)</span> によって散乱される定常状態のシュレーディンガー方程式は，波数 <span class="arithmatex">\(k = \sqrt{2mE}/\hbar\)</span> を用いて以下のように表される。</p>
 <div class="arithmatex">\[
 (\boldsymbol{\nabla}^2 + k^2)\psi(\boldsymbol{r}) = \frac{2m}{\hbar^2}V(\boldsymbol{r})\psi(\boldsymbol{r})
@@ -14560,7 +14560,7 @@ G(\boldsymbol{r}, \boldsymbol{r}') = -\frac{1}{4\pi} \frac{e^{i k |\boldsymbol{r
 \psi(\boldsymbol{r}) = e^{i \boldsymbol{k}_{\text{in}} \cdot \boldsymbol{r}} + \frac{2m}{\hbar^2} \int G(\boldsymbol{r}, \boldsymbol{r}') V(\boldsymbol{r}') \psi(\boldsymbol{r}') d^3r'
 \]</div>
 <p>ここで， <span class="arithmatex">\(\boldsymbol{k}_{\text{in}}\)</span> は入射粒子の波数ベクトルであり，その大きさは <span class="arithmatex">\(|\boldsymbol{k}_{\text{in}}| = k\)</span> である。以下の問いに答えよ。</p>
-<p>(1) 観測点 <span class="arithmatex">\(\boldsymbol{r}\)</span> がポテンシャルの存在する領域 <span class="arithmatex">\(\boldsymbol{r}'\)</span> に比べて十分に遠方にあるとする。このとき，距離の近似式 <span class="arithmatex">\(|\boldsymbol{r} - \boldsymbol{r}'| \approx r - \hat{\boldsymbol{r}} \cdot \boldsymbol{r}'\)</span> （ただし <span class="arithmatex">\(\hat{\boldsymbol{r}} = \boldsymbol{r}/r\)</span> ）を利用して，グリーン関数を以下の形式へと近似せよ。分母の因数については，最も低次の近似である <span class="arithmatex">\(|\boldsymbol{r} - \boldsymbol{r}'| \approx r\)</span> を適用せよ。</p>
+<p>(1) 観測点 <span class="arithmatex">\(\boldsymbol{r}\)</span> がポテンシャルの存在する領域 <span class="arithmatex">\(\boldsymbol{r}'\)</span> に比べて十分遠方にあるとする。<span class="arithmatex">\(\hat{\boldsymbol{r}} = \boldsymbol{r}/r\)</span> として，近似式 <span class="arithmatex">\(|\boldsymbol{r} - \boldsymbol{r}'| \approx r - \hat{\boldsymbol{r}} \cdot \boldsymbol{r}'\)</span> を用い，グリーン関数を以下の形に近似せよ。分母には <span class="arithmatex">\(|\boldsymbol{r} - \boldsymbol{r}'| \approx r\)</span> を用いよ。</p>
 <div class="arithmatex">\[
 G(\boldsymbol{r}, \boldsymbol{r}') \approx -\frac{1}{4\pi} \frac{e^{i k r}}{r} e^{-i \boldsymbol{k}_{\text{sc}} \cdot \boldsymbol{r}'}
 \]</div>
@@ -14605,7 +14605,7 @@ f(\theta, \phi) = - \frac{m}{2\pi \hbar^2} \int V(\boldsymbol{r}') e^{i (\boldsy
 <div class="arithmatex">\[
 f(\theta, \phi) = - \frac{m}{2\pi \hbar^2} \int V(\boldsymbol{r}') e^{i \boldsymbol{q} \cdot \boldsymbol{r}'} d^3r'
 \]</div>
-<p>この積分計算部分は，問題文で定義されたポテンシャル <span class="arithmatex">\(V(\boldsymbol{r}')\)</span> の3次元フーリエ変換の式そのものです。</p>
+<p>この積分は，ポテンシャル <span class="arithmatex">\(V(\boldsymbol{r}')\)</span> の3次元フーリエ変換です。</p>
 <div class="arithmatex">\[
 \int V(\boldsymbol{r}') e^{i \boldsymbol{q} \cdot \boldsymbol{r}'} d^3r' = \tilde{V}(\boldsymbol{q})
 \]</div>
@@ -14613,7 +14613,7 @@ f(\theta, \phi) = - \frac{m}{2\pi \hbar^2} \int V(\boldsymbol{r}') e^{i \boldsym
 <div class="arithmatex">\[
 f(\theta, \phi) = - \frac{m}{2\pi \hbar^2} \tilde{V}(\boldsymbol{q})
 \]</div>
-<p>これより，1次ボルン近似の枠組みにおいて，散乱振幅はポテンシャルのフーリエ変換に比例することが導かれました。</p>
+<p>したがって，1次ボルン近似における散乱振幅は，ポテンシャルのフーリエ変換に比例します。</p>
 
 
 

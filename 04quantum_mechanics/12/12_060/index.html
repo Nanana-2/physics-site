@@ -14542,14 +14542,14 @@
 
 <h1 id="_1">虚時間と統計力学</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学における時間発展演算子は，時間を実数から純虚数へと複素平面上で変換（ウィック回転）することにより，統計力学における温度のボルツマン因子と数学的に同一の形式になる。この対応関係を利用すると，量子力学の経路積分表示を応用して，統計力学の分配関数をすべての可能な閉じた経路にわたる積分として書き表すことができる。ここでは，虚時間の導入から出発し，分配関数の経路積分表示を導出する。</p>
+<p>時間を純虚数へ変換するウィック回転により，時間発展演算子は統計力学のボルツマン因子と同じ形になる。この対応を用いると，分配関数を閉じた経路にわたる積分で表せる。</p>
 <p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が時間に依存しない量子系を考える。実時間 <span class="arithmatex">\(t\)</span> に対して，純虚数の時間 <span class="arithmatex">\(\tau = it\)</span> を定義する。この <span class="arithmatex">\(\tau\)</span> は虚時間と呼ばれる。温度 <span class="arithmatex">\(T\)</span> における系の逆温度を <span class="arithmatex">\(\beta = 1 / (k_{\text{B}} T)\)</span> とするとき，以下の問いに答えよ。ただし <span class="arithmatex">\(k_{\text{B}}\)</span> はボルツマン定数である。</p>
-<p>(1) 量子力学の実時間 <span class="arithmatex">\(t\)</span> の時間発展演算子は <span class="arithmatex">\(e^{-i \hat{H} t / \hbar}\)</span> である。この式に虚時間 <span class="arithmatex">\(\tau = it\)</span> を代入せよ。さらに，虚時間の範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\tau_f\)</span> までとしたときの発展演算子が，統計力学のボルツマン因子 <span class="arithmatex">\(e^{-\beta \hat{H}}\)</span> と完全に一致するために，最終虚時間 <span class="arithmatex">\(\tau_f\)</span> が満たすべき条件を <span class="arithmatex">\(\beta\)</span> と <span class="arithmatex">\(\hbar\)</span> を用いて示せ。</p>
+<p>(1) 量子力学の実時間 <span class="arithmatex">\(t\)</span> の時間発展演算子は <span class="arithmatex">\(e^{-i \hat{H} t / \hbar}\)</span> である。この式に虚時間 <span class="arithmatex">\(\tau = it\)</span> を代入せよ。さらに，虚時間の範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\tau_f\)</span> までとしたときの発展演算子が，統計力学のボルツマン因子 <span class="arithmatex">\(e^{-\beta \hat{H}}\)</span> と一致するために，最終虚時間 <span class="arithmatex">\(\tau_f\)</span> が満たすべき条件を <span class="arithmatex">\(\beta\)</span> と <span class="arithmatex">\(\hbar\)</span> を用いて示せ。</p>
 <p>(2) 統計力学における正準集団の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> は，エネルギー固有状態の和，あるいは位置固有状態を用いたトレースとして以下のように定義される。</p>
 <div class="arithmatex">\[
 Z(\beta) = \text{Tr}\left[ e^{-\beta \hat{H}} \right] = \int_{-\infty}^{\infty} \langle x | e^{-\beta \hat{H}} | x \rangle dx
 \]</div>
-<p>(1) で得られた対応関係を利用し，被積分関数である行列要素 <span class="arithmatex">\(\langle x | e^{-\beta \hat{H}} | x \rangle\)</span> を，初期位置 <span class="arithmatex">\(x_i\)</span> から最終位置 <span class="arithmatex">\(x_f\)</span> への虚時間伝播核 <span class="arithmatex">\(K_{\text{E}}(x_f, \tau_f; x_i, 0)\)</span> の特定の端点条件として書き換えよ。分配関数を計算するにあたり，始点と終点の位置，および虚時間の長さがどのような条件を満たすべきか述べよ。</p>
+<p>前問で得られた対応関係を用いて，行列要素 <span class="arithmatex">\(\langle x | e^{-\beta \hat{H}} | x \rangle\)</span> を虚時間伝播核 <span class="arithmatex">\(K_{\text{E}}(x_f, \tau_f; x_i, 0)\)</span> によって表せ。また，始点と終点の位置および虚時間の長さが満たす条件を述べよ。</p>
 <p>(3) 質量 <span class="arithmatex">\(m\)</span> ，ポテンシャル <span class="arithmatex">\(V(x)\)</span> の中を運動する粒子の実時間作用は <span class="arithmatex">\(S = \int \left[ \frac{1}{2}m (\frac{dx}{dt})^2 - V(x) \right] dt\)</span> である。時間の変数を <span class="arithmatex">\(t = -i\tau\)</span> に変換することで，実時間の積分因子 <span class="arithmatex">\(i S / \hbar\)</span> が，虚時間 <span class="arithmatex">\(\tau\)</span> を用いた次の形式に変化することを示せ。</p>
 <div class="arithmatex">\[
 \frac{i}{\hbar} S = -\frac{1}{\hbar} S_{\text{E}}
@@ -14580,7 +14580,7 @@ e^{-\hat{H} \tau_f / \hbar} = e^{-\beta \hat{H}}
 <div class="arithmatex">\[
 Z(\beta) = \int_{-\infty}^{\infty} K_{\text{E}}(x, \hbar\beta; x, 0) dx
 \]</div>
-<p>この式の構造から，分配関数を計算するためには，始点の位置 <span class="arithmatex">\(x_i\)</span> と終点の位置 <span class="arithmatex">\(x_f\)</span> が同じ位置（ <span class="arithmatex">\(x_i = x_f = x\)</span> ）でなければなりません。すなわち，虚時間において元の位置へと戻ってくる閉じた経路のみを対象とし，その虚時間の周期の長さを <span class="arithmatex">\(\tau_f = \hbar\beta\)</span> に設定した上で，すべての開始位置について全空間積分を実行するという条件を満たす必要があります。</p>
+<p>この式の構造から，分配関数を計算するためには，始点の位置 <span class="arithmatex">\(x_i\)</span> と終点の位置 <span class="arithmatex">\(x_f\)</span> が同じ位置 <span class="arithmatex">\(x_i = x_f = x\)</span> でなければなりません。すなわち，虚時間において元の位置へと戻ってくる閉じた経路のみを対象とし，その虚時間の周期の長さを <span class="arithmatex">\(\tau_f = \hbar\beta\)</span> に設定した上で，すべての開始位置について全空間積分を実行するという条件を満たす必要があります。</p>
 <h3 id="3">(3)</h3>
 <p>実時間作用の複素位相因子の式において，時間変数の微小要素を <span class="arithmatex">\(dt = -i d\tau\)</span> に置き換えます。また，速度の微分項は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14602,7 +14602,7 @@ $$
 \frac{i}{\hbar} S = -\frac{1}{\hbar} S_{\text{E}}
 \]</div>
 <p>通常の経路積分における重み因子 <span class="arithmatex">\(e^{iS/\hbar}\)</span> は，虚時間においてはボルツマン因子の類似形である <span class="arithmatex">\(e^{-S_{\text{E}}/\hbar}\)</span> へと変化します。</p>
-<p>これに (2) の周期的境界条件（ <span class="arithmatex">\(x(0) = x(\hbar\beta)\)</span> ）を組み合わせることで，正準分配関数の経路積分表示が以下のように完成します。</p>
+<p>これに (2) の周期的境界条件 <span class="arithmatex">\(x(0) = x(\hbar\beta)\)</span> を組み合わせることで，正準分配関数の経路積分表示が以下のように完成します。</p>
 <div class="arithmatex">\[
 Z(\beta) = \int_{x(0)=x(\hbar\beta)} \mathcal{D}[x(\tau)] e^{- S_{\text{E}}[x(\tau)] / \hbar}
 \]</div>

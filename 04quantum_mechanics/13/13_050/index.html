@@ -14542,20 +14542,19 @@
 
 <h1 id="_1">光と物質の相互作用</h1>
 <h2 id="_2">問題</h2>
-<p>ここでは，相互作用ハミルトニアンの基本形式を導き，1光子吸収過程における遷移行列要素の具体的な計算を行う。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，電荷 <span class="arithmatex">\(q\)</span> の1つの粒子が，ポテンシャル <span class="arithmatex">\(V(\boldsymbol{r})\)</span> のもとで運動し，外部の量子化された電磁場と相互作用している系を考える。クーロンゲージ <span class="arithmatex">\(\boldsymbol{\nabla} \cdot \hat{\boldsymbol{A}} = 0\)</span> のもとで，系の全ハミルトニアンは以下のように与えられる。</p>
 <div class="arithmatex">\[
 \hat{H} = \frac{1}{2m} \left( \hat{\boldsymbol{p}} - q \hat{\boldsymbol{A}}(\boldsymbol{r}) \right)^2 + V(\boldsymbol{r}) + \hat{H}_{\text{rad}}
 \]</div>
 <p>ここで <span class="arithmatex">\(\hat{\boldsymbol{p}} = -i\hbar\boldsymbol{\nabla}\)</span> は粒子の運動量演算子， <span class="arithmatex">\(\hat{\boldsymbol{A}}(\boldsymbol{r})\)</span> は量子化されたベクトルポテンシャル演算子， <span class="arithmatex">\(\hat{H}_{\text{rad}}\)</span> は自由電磁場のハミルトニアンである。以下の問いに答えよ。</p>
-<p>(1) ハミルトニアンの第1項の括弧を展開せよ。クーロンゲージの条件により粒子の運動量演算子とベクトルポテンシャル演算子が可換（ <span class="arithmatex">\(\hat{\boldsymbol{p}} \cdot \hat{\boldsymbol{A}} = \hat{\boldsymbol{A}} \cdot \hat{\boldsymbol{p}}\)</span> ）であることを用いて展開式を整理せよ。</p>
+<p>(1) ハミルトニアンの第1項の括弧を展開せよ。クーロンゲージの条件により粒子の運動量演算子とベクトルポテンシャル演算子が可換 <span class="arithmatex">\(\hat{\boldsymbol{p}} \cdot \hat{\boldsymbol{A}} = \hat{\boldsymbol{A}} \cdot \hat{\boldsymbol{p}}\)</span> であることを用いて展開式を整理せよ。</p>
 <p>さらに，電磁場が十分に弱く <span class="arithmatex">\(q^2 \hat{\boldsymbol{A}}^2\)</span> の項が無視できるとき，粒子のみのハミルトニアン <span class="arithmatex">\(\hat{H}_0 = \frac{\hat{\boldsymbol{p}}^2}{2m} + V(\boldsymbol{r})\)</span> を除く，粒子と電磁場の相互作用を表す第1次の摂動ハミルトニアン <span class="arithmatex">\(\hat{H}_{\text{int}}\)</span> の形式を求めよ。</p>
 <p>(2) 量子化されたベクトルポテンシャル演算子は，定数 <span class="arithmatex">\(C_{\boldsymbol{k}} = \sqrt{\frac{\hbar}{2\epsilon_0 \omega_{\boldsymbol{k}} L^3}}\)</span> を用いて次のように表される。</p>
 <div class="arithmatex">\[
 \hat{\boldsymbol{A}}(\boldsymbol{r}) = \sum_{\boldsymbol{k}, \lambda} C_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}, \lambda} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right)
 \]</div>
-<p>物質の初期状態を <span class="arithmatex">\(|i\rangle\)</span> ，最終状態を <span class="arithmatex">\(|f\rangle\)</span> とし，電磁場の初期状態を特定のモード（ <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> ）に光子が <span class="arithmatex">\(n\)</span> 個存在する状態 <span class="arithmatex">\(|n\rangle\)</span> とする。物質がそのモードから光子を1個吸収して消滅させる遷移過程（初期状態 <span class="arithmatex">\(|i, n\rangle \to\)</span> 最終状態 <span class="arithmatex">\(|f, n-1\rangle\)</span> ）を考える。この遷移に関する相互作用ハミルトニアンの行列要素 <span class="arithmatex">\(\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle\)</span> を計算し，生成消滅演算子の作用を適用した形を導出せよ。</p>
-<p>(3) 光の波長が原子の大きさに比べて十分に長いと仮定できる場合，空間依存性の因子を原点での値に近似する長波長近似（ <span class="arithmatex">\(e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \approx 1\)</span> ）を適用できる。この近似のもとで，(2) で得られた遷移行列要素の式から空間の指数関数を消去した表現を示せ。</p>
+<p>物質の初期状態を <span class="arithmatex">\(|i\rangle\)</span>，最終状態を <span class="arithmatex">\(|f\rangle\)</span> とし，あるモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> に光子が <span class="arithmatex">\(n\)</span> 個存在する状態を <span class="arithmatex">\(|n\rangle\)</span> とする。光子を1個吸収する遷移 <span class="arithmatex">\(|i,n\rangle \to |f,n-1\rangle\)</span> について，行列要素 <span class="arithmatex">\(\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle\)</span> を求めよ。</p>
+<p>(3) 光の波長が原子の大きさに比べて十分に長いと仮定できる場合，空間依存性の因子を原点での値に近似する長波長近似 <span class="arithmatex">\(e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \approx 1\)</span> を適用できる。この近似のもとで，(2) で得られた遷移行列要素の式から空間の指数関数を消去した表現を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14589,17 +14588,17 @@
 \hat{H}_{\text{int}} = - \frac{q}{m} \sum_{\boldsymbol{k}', \lambda'} C_{\boldsymbol{k}'} \left( \hat{a}_{\boldsymbol{k}', \lambda'} \boldsymbol{\epsilon}_{\boldsymbol{k}', \lambda'} \cdot \hat{\boldsymbol{p}} e^{i \boldsymbol{k}' \cdot \boldsymbol{r}} + \hat{a}_{\boldsymbol{k}', \lambda'}^\dagger \boldsymbol{\epsilon}_{\boldsymbol{k}', \lambda'} \cdot \hat{\boldsymbol{p}} e^{-i \boldsymbol{k}' \cdot \boldsymbol{r}} \right)
 \]</div>
 <p>この演算子を初期状態 <span class="arithmatex">\(|i, n\rangle\)</span> に作用させ，最終状態 <span class="arithmatex">\(\langle f, n-1|\)</span> との内積をとります。電磁場の状態に対する生成消滅演算子の作用を個別に計算します。光子を1個減少させる遷移であるため，消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}', \lambda'}\)</span> を含む項のみが，電磁場の内積 <span class="arithmatex">\(\langle n-1 | \hat{a}_{\boldsymbol{k}', \lambda'} | n \rangle = \sqrt{\times} = \sqrt{n} \delta_{\boldsymbol{k}, \boldsymbol{k}'} \delta_{\lambda, \lambda'}\)</span> として生き残ります。生成演算子の項は，状態が <span class="arithmatex">\(|n+1\rangle\)</span> になるため，最終状態 <span class="arithmatex">\(|n-1\rangle\)</span> と直交して 0 となります。</p>
-<p>デルタ関数の条件から，和の記号の変数が特定のモード（ <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> ）へと固定されます。電磁場部分の計算を完了して整理すると，行列要素は以下のようになります。</p>
+<p>デルタ関数の条件から，和の記号の変数が特定のモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> へと固定されます。電磁場部分の計算を完了して整理すると，行列要素は以下のようになります。</p>
 <div class="arithmatex">\[
 \langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} C_{\boldsymbol{k}} \sqrt{n} \langle f | e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \hat{\boldsymbol{p}} | i \rangle
 \]</div>
-<p>物質（粒子）の状態に関する行列要素の計算形式が導かれました。</p>
+<p>残る因子は，物質の初期状態と最終状態の間の行列要素です。</p>
 <h3 id="3">(3)</h3>
 <p>長波長近似の条件 <span class="arithmatex">\(e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \approx 1\)</span> を適用します。 (2) の結果における粒子の行列要素の内部にある指数関数の因子を 1 に置き換えます。</p>
 <div class="arithmatex">\[
 \langle f | e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \hat{\boldsymbol{p}} | i \rangle \approx \langle f | \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \hat{\boldsymbol{p}} | i \rangle = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \langle f | \hat{\boldsymbol{p}} | i \rangle
 \]</div>
-<p>偏極ベクトルは空間座標に依存しないため，行列要素の積分の外へ出すことができます。これをもとの全体の行列要素の式に代入します。定数の具体的な表現も合わせて書き下します。</p>
+<p>偏極ベクトルは空間座標に依存しないため，行列要素の積分の外へ出すことができます。これをもとの全体の行列要素の式に代入します。定数の表現も合わせて書き下します。</p>
 <div class="arithmatex">\[
 \langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} \sqrt{\frac{\hbar n}{2\epsilon_0 \omega_{\boldsymbol{k}} L^3}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \langle f | \hat{\boldsymbol{p}} | i \rangle
 \]</div>

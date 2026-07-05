@@ -14552,11 +14552,19 @@
 \psi(x) = \left( \frac{\alpha}{\pi} \right)^{1/4} e^{-\alpha x^2 / 2}
 \]</div>
 <p>この試行波動関数は，<span class="arithmatex">\(\int_{-\infty}^{\infty} |\psi(x)|^2 dx = 1\)</span> を満たすように規格化されている。以下の問いに答えよ。</p>
-<p>(1) 試行波動関数における運動エネルギーの期待値 <span class="arithmatex">\(\langle K \rangle = \int_{-\infty}^{\infty} \psi(x) \left( -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} \right) \psi(x) dx\)</span> を計算せよ。必要であれば，以下のガウス積分の公式を利用せよ。</p>
+<p>(1) 試行波動関数における運動エネルギーの期待値</p>
+<div class="arithmatex">\[
+\langle K \rangle = \int_{-\infty}^{\infty} \psi(x) \left( -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} \right) \psi(x) dx
+\]</div>
+<p>を計算せよ。必要であれば，以下のガウス積分の公式を利用せよ。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} e^{-\alpha x^2} dx = \sqrt{\frac{\pi}{\alpha}}, \quad \int_{-\infty}^{\infty} x^2 e^{-\alpha x^2} dx = \frac{1}{2\alpha}\sqrt{\frac{\pi}{\alpha}}
 \]</div>
-<p>(2) 試行波動関数におけるポテンシャルエネルギーの期待値 <span class="arithmatex">\(\langle V \rangle = \int_{-\infty}^{\infty} \psi(x) F|x| \psi(x) dx\)</span> を計算せよ。必要であれば，以下の積分の公式を利用せよ。</p>
+<p>(2) 試行波動関数におけるポテンシャルエネルギーの期待値</p>
+<div class="arithmatex">\[
+\langle V \rangle = \int_{-\infty}^{\infty} \psi(x) F|x| \psi(x) dx
+\]</div>
+<p>を計算せよ。必要であれば，以下の積分の公式を利用せよ。</p>
 <div class="arithmatex">\[
 \int_{0}^{\infty} x e^{-\alpha x^2} dx = \frac{1}{2\alpha}
 \]</div>
@@ -14616,7 +14624,11 @@ E(\alpha) = \langle K \rangle + \langle V \rangle = \frac{\hbar^2 \alpha}{4m} + 
 <div class="arithmatex">\[
 \alpha_0 = \left( \frac{2mF}{\sqrt{\pi}\hbar^2} \right)^{2/3}
 \]</div>
-<p>この <span class="arithmatex">\(\alpha_0\)</span> の値を全エネルギーの式に代入して，最小値となる上限エネルギー <span class="arithmatex">\(E_{\text{var}}\)</span> を計算します。式を整理しやすくするため， <span class="arithmatex">\(E(\alpha) = \frac{\hbar^2 \alpha}{4m} + \frac{\hbar^2}{2m}\alpha \cdot \left( \frac{2mF}{\sqrt{\pi}\hbar^2}\alpha^{-3/2} \right)\)</span> の関係に着目すると，第2項は <span class="arithmatex">\(\frac{\hbar^2 \alpha}{2m}\)</span> に書き換わります。</p>
+<p>この <span class="arithmatex">\(\alpha_0\)</span> の値を全エネルギーの式に代入して，最小値となる上限エネルギー <span class="arithmatex">\(E_{\text{var}}\)</span> を計算します。式を整理しやすくするため，</p>
+<div class="arithmatex">\[
+E(\alpha) = \frac{\hbar^2 \alpha}{4m} + \frac{\hbar^2}{2m}\alpha \cdot \left( \frac{2mF}{\sqrt{\pi}\hbar^2}\alpha^{-3/2} \right)
+\]</div>
+<p>の関係に着目すると，第2項は <span class="arithmatex">\(\frac{\hbar^2 \alpha}{2m}\)</span> に書き換わります。</p>
 <div class="arithmatex">\[
 E_{\text{var}} = \frac{\hbar^2 \alpha_0}{4m} + \frac{\hbar^2 \alpha_0}{2m} = \frac{3\hbar^2 \alpha_0}{4m}
 \]</div>

@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">摂動によるエネルギー準位の分裂</h1>
 <h2 id="_2">問題</h2>
-<p>対称性の高い量子系に対して，その対称性を一部崩すような外部からの摂動が加わると，もともと同一のエネルギーに縮退していた準位が複数の異なるエネルギー準位へと分裂する現象が起こる。この準位分裂の様子は，元の高い対称性を持つ点群の既約表現が，対称性の低下した部分群の既約表現へとどのように直和分解されるかを計算することで決定できる。ここでは，3次元空間の全回転対称性を持つ系に対して結晶の場による摂動が加わった場合を例に，既約表現の縮小規則に基づいた準位分裂の解析を行う。</p>
+<p>系の対称性を下げる摂動が加わると，縮退していたエネルギー準位が分裂する。分裂後の準位は，元の既約表現を部分群の既約表現に分解することで分類できる。</p>
 <p>球対称なポテンシャルを持つ原子のハミルトニアンを <span class="arithmatex">\(\hat{H}_0\)</span> とし，その対称性群を3次元回転群 <span class="arithmatex">\(O(3)\)</span> とする。このとき，角運動量量子数 <span class="arithmatex">\(l=2\)</span> に属する <span class="arithmatex">\(d\)</span> 軌道の状態は <span class="arithmatex">\(2l+1=5\)</span> 次元に縮退しており，回転群の5次元既約表現 <span class="arithmatex">\(D^{(2)}\)</span> の基底となっている。</p>
 <p>この原子を，立方体型の結晶格子の中に配置する。この結晶環境が作る静電ポテンシャルを摂動ハミルトニアン <span class="arithmatex">\(\hat{V}\)</span> とすると，全ハミルトニアン <span class="arithmatex">\(\hat{H} = \hat{H}_0 + \hat{V}\)</span> が持つ対称性は，立方体の対称操作の集まりである立方体点群 <span class="arithmatex">\(O\)</span> へと低下する。立方体点群 <span class="arithmatex">\(O\)</span> には，以下の5つの既約表現が存在する
 。
@@ -14561,10 +14561,10 @@
 <tr>
 <th style="text-align: center;">既約表現</th>
 <th style="text-align: center;"><span class="arithmatex">\(\hat{E}\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_3\)</span>（120度回転）</th>
-<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_2\)</span>（180度回転）</th>
-<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_4\)</span>（90度回転）</th>
-<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_2'\)</span>（別の180度回転）</th>
+<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_3\)</span>：120度回転</th>
+<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_2\)</span>：180度回転</th>
+<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_4\)</span>：90度回転</th>
+<th style="text-align: center;"><span class="arithmatex">\(\hat{C}_2'\)</span>：別の180度回転</th>
 </tr>
 </thead>
 <tbody>
@@ -14611,7 +14611,7 @@
 </tbody>
 </table>
 <p>以下の問いに答えよ。</p>
-<p>(1) 割愛された一般式に <span class="arithmatex">\(l=2\)</span> を代入し，角度 <span class="arithmatex">\(\theta\)</span> がそれぞれ0度，120度，180度，90度であるときの表現 <span class="arithmatex">\(D^{(2)}\)</span> の指標 <span class="arithmatex">\(\chi^{(2)}(\theta)\)</span> の具体的な数値を計算せよ。ただし， <span class="arithmatex">\(\theta \to 0\)</span> の極限では <span class="arithmatex">\(\chi^{(l)}(0) = 2l+1\)</span> が成り立つ。</p>
+<p>(1) 割愛された一般式に <span class="arithmatex">\(l=2\)</span> を代入し，角度 <span class="arithmatex">\(\theta\)</span> がそれぞれ0度，120度，180度，90度であるときの表現 <span class="arithmatex">\(D^{(2)}\)</span> の指標 <span class="arithmatex">\(\chi^{(2)}(\theta)\)</span> の数値を計算せよ。ただし， <span class="arithmatex">\(\theta \to 0\)</span> の極限では <span class="arithmatex">\(\chi^{(l)}(0) = 2l+1\)</span> が成り立つ。</p>
 <p>(2) (1) で得られた指標の数値を，立方体点群 <span class="arithmatex">\(O\)</span> の各対称操作の文字表の並びに対応させて書き並べよ。この指標の並びが，文字表の既約表現 <span class="arithmatex">\(E\)</span> の行と <span class="arithmatex">\(T_2\)</span> の行の数値を足し合わせたものに等しいこと，すなわち <span class="arithmatex">\(D^{(2)} = E \oplus T_2\)</span> という直和分解が成り立つことを数式で示せ。</p>
 <p>(3) 摂動が加わる前には 5 重に縮退していた <span class="arithmatex">\(d\)</span> 軌道のエネルギー準位は，立方体型の結晶場による摂動によって，いくつの準位に分裂するか。また，分裂したそれぞれの準位の縮退度を答えよ。</p>
 <hr />
@@ -14658,19 +14658,19 @@
 <div class="arithmatex">\[
 \chi^E + \chi^{T_2} = \left( 2+3, -1+0, 2-1, 0-1, 0+1 \right) = \left( 5, -1, 1, -1, 1 \right)
 \]</div>
-<p>この加算結果の数値ベクトルは，先ほど配置した <span class="arithmatex">\(\chi^{(2)}\)</span> の成分と完全に一致します。群論の定理により，全体の指標が既約表現の指標の和で表されるとき，表現空間はそれらの直和へと分解されます。したがって，以下の等式が証明されました。</p>
+<p>この和は <span class="arithmatex">\(\chi^{(2)}\)</span> と一致します。したがって，表現 <span class="arithmatex">\(D^{(2)}\)</span> は以下の直和に分解されます。</p>
 <div class="arithmatex">\[
 D^{(2)} = E \oplus T_2
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) の計算結果により，もともと回転群の表現空間を構成していた状態は，結晶の対称性の下では既約表現 <span class="arithmatex">\(E\)</span> に属する空間と，既約表現 <span class="arithmatex">\(T_2\)</span> に属する空間の2つに完全に分離されることが分かります。</p>
+<p>(2) の計算結果により，もともと回転群の表現空間を構成していた状態は，結晶の対称性の下では既約表現 <span class="arithmatex">\(E\)</span> に属する空間と，既約表現 <span class="arithmatex">\(T_2\)</span> に属する空間の2つに分離されることが分かります。</p>
 <p>外部からの摂動ハミルトニアンの作用により，これら異なる既約表現の間にはエネルギーの差が生じるため，元の準位は <strong>2つ</strong> のエネルギー準位へと分裂します。</p>
 <p>それぞれの新しい準位の縮退度は，対応する既約表現の次元数と厳密に一致します。</p>
 <ul>
 <li>既約表現 <span class="arithmatex">\(E\)</span> に対応する準位の縮退度は <strong>2</strong> となります。</li>
 <li>既約表現 <span class="arithmatex">\(T_2\)</span> に対応する準位の縮退度は <strong>3</strong> となります。</li>
 </ul>
-<p>これにより，結晶場によって <span class="arithmatex">\(d\)</span> 軌道が 2 重に縮退した準位と 3 重に縮退した準位の 2 つへと分裂する幾何学的な構造が導かれました。</p>
+<p>したがって，結晶場によって <span class="arithmatex">\(d\)</span> 軌道は2重縮退と3重縮退の準位に分裂します。</p>
 
 
 

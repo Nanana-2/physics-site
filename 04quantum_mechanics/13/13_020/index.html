@@ -14542,12 +14542,12 @@
 
 <h1 id="_1">クーロンゲージと横波条件</h1>
 <h2 id="_2">問題</h2>
-<p>電磁場を記述するポテンシャルには，物理状態を変えずに任意に関数を変化させられるゲージ自由度が存在する。真空中の自由電磁場を正準量子化する際には，クーロンゲージを選択することが一般的である。このゲージ条件を課すことにより，ベクトルポテンシャルの進行方向成分が消去され，電磁場の持つ実際の自由度が波の進行方向と直交する2つの横波成分のみに制限される。</p>
+<p>電磁ポテンシャルには，電磁場を変えないゲージ自由度がある。クーロンゲージを課すと，ベクトルポテンシャルの進行方向成分が消え，独立な成分は進行方向に垂直な2つの偏極成分となる。</p>
 <p>電荷や電流が存在しない真空中で，ベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A}(\boldsymbol{r}, t)\)</span> に対し，以下のクーロンゲージ条件を課す。</p>
 <div class="arithmatex">\[
 \boldsymbol{\nabla} \cdot \boldsymbol{A}(\boldsymbol{r}, t) = 0
 \]</div>
-<p>実数条件 <span class="arithmatex">\(\boldsymbol{A} = \boldsymbol{A}^*\)</span> およびクーロンゲージ条件を満たすように，各波数ベクトル <span class="arithmatex">\(\boldsymbol{k}\)</span> に対して直交する2つの単位実ベクトル <span class="arithmatex">\(\boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> （ <span class="arithmatex">\(\lambda = 1, 2\)</span> ）を導入する。これらは以下の偏極条件を満たす。</p>
+<p>実数条件 <span class="arithmatex">\(\boldsymbol{A} = \boldsymbol{A}^*\)</span> とクーロンゲージ条件を満たすように，各波数ベクトル <span class="arithmatex">\(\boldsymbol{k}\)</span> に直交する2つの単位実ベクトル <span class="arithmatex">\(\boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span>，<span class="arithmatex">\(\lambda = 1, 2\)</span> を導入する。これらは以下の偏極条件を満たす。</p>
 <div class="arithmatex">\[
 \boldsymbol{k} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} = 0, \quad \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda'} = \delta_{\lambda, \lambda'}, \quad \boldsymbol{\epsilon}_{-\boldsymbol{k}, \lambda} = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}
 \]</div>
@@ -14558,7 +14558,7 @@
 <p>ここで <span class="arithmatex">\(C_{\boldsymbol{k}}\)</span> は定数， <span class="arithmatex">\(a_{\boldsymbol{k}, \lambda}(t)\)</span> は複素数の時間振幅である。以下の問いに答えよ。</p>
 <p>(1) 空間の任意の点 <span class="arithmatex">\(\boldsymbol{r}\)</span> において，この展開式がクーロンゲージ条件 <span class="arithmatex">\(\boldsymbol{\nabla} \cdot \boldsymbol{A} = 0\)</span> を自動的に満たしていることを，空間微分を直接実行することで証明せよ。</p>
 <p>(2) この電磁場から導かれる電場 <span class="arithmatex">\(\boldsymbol{E}(\boldsymbol{r}, t) = -\frac{\partial \boldsymbol{A}}{\partial t}\)</span> および磁場 <span class="arithmatex">\(\boldsymbol{B}(\boldsymbol{r}, t) = \boldsymbol{\nabla} \times \boldsymbol{A}\)</span> のベクトル算式を，展開式を用いてそれぞれ書き下せ。</p>
-<p>(3) (2) で求めた電場と磁場に対し，ある特定のモード（ <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> ）の進行方向成分，すなわち波数ベクトルとの内積 <span class="arithmatex">\(\boldsymbol{k} \cdot \boldsymbol{E}_{\boldsymbol{k}, \lambda}\)</span> および <span class="arithmatex">\(\boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda}\)</span> を計算し，これらが 0 になることを示せ。必要であれば，ベクトル解析の外積の性質である <span class="arithmatex">\(\boldsymbol{a} \cdot (\boldsymbol{a} \times \boldsymbol{b}) = 0\)</span> を利用せよ。</p>
+<p>(3) (2) で求めた電場と磁場に対し，ある特定のモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> の進行方向成分，すなわち波数ベクトルとの内積 <span class="arithmatex">\(\boldsymbol{k} \cdot \boldsymbol{E}_{\boldsymbol{k}, \lambda}\)</span> および <span class="arithmatex">\(\boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda}\)</span> を計算し，これらが 0 になることを示せ。必要であれば，ベクトル解析の外積の性質である <span class="arithmatex">\(\boldsymbol{a} \cdot (\boldsymbol{a} \times \boldsymbol{b}) = 0\)</span> を利用せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14578,7 +14578,7 @@
 <div class="arithmatex">\[
 \boldsymbol{\nabla} \cdot \boldsymbol{A} = 0
 \]</div>
-<p>これにより，この展開形式がゲージ条件を自動的に満たすことが証明されました。</p>
+<p>したがって，この展開はクーロンゲージ条件を満たします。</p>
 <h3 id="2">(2)</h3>
 <p>電場 <span class="arithmatex">\(\boldsymbol{E}\)</span> は，ベクトルポテンシャルを時間 <span class="arithmatex">\(t\)</span> で偏微分して負の符号を付与することで得られます。時間微分は時間関数である <span class="arithmatex">\(a_{\boldsymbol{k}, \lambda}(t)\)</span> とその複素共役にのみ作用します。粒子速度の1階時間微分をドット記号で表記します。</p>
 <div class="arithmatex">\[
@@ -14597,7 +14597,7 @@
 \boldsymbol{B}(\boldsymbol{r}, t) = \sum_{\boldsymbol{k}} \sum_{\lambda=1}^{2} C_{\boldsymbol{k}} i \left( \boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) \left( a_{\boldsymbol{k}, \lambda}(t) e^{i \boldsymbol{k} \cdot \boldsymbol{r}} - a_{\boldsymbol{k}, \lambda}^*(t) e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right)
 \]</div>
 <h3 id="3">(3)</h3>
-<p>特定のモード（ <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> ）の電場成分 <span class="arithmatex">\(\boldsymbol{E}_{\boldsymbol{k}, \lambda}\)</span> と波数ベクトル <span class="arithmatex">\(\boldsymbol{k}\)</span> の内積を計算します。 (2) の結果より，電場のベクトル方向は偏極ベクトル <span class="arithmatex">\(\boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> と同一です。</p>
+<p>特定のモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> の電場成分 <span class="arithmatex">\(\boldsymbol{E}_{\boldsymbol{k}, \lambda}\)</span> と波数ベクトル <span class="arithmatex">\(\boldsymbol{k}\)</span> の内積を計算します。 (2) の結果より，電場のベクトル方向は偏極ベクトル <span class="arithmatex">\(\boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> と同一です。</p>
 <div class="arithmatex">\[
 \boldsymbol{k} \cdot \boldsymbol{E}_{\boldsymbol{k}, \lambda} \propto \boldsymbol{k} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}
 \]</div>
@@ -14613,7 +14613,7 @@
 <div class="arithmatex">\[
 \boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda} = 0
 \]</div>
-<p>以上の数式計算により，クーロンゲージにおける電場と磁場は，波の進行方向成分を持たない横波であることが示されました。</p>
+<p>したがって，クーロンゲージにおける電場と磁場は，進行方向成分を持たない横波です。</p>
 
 
 

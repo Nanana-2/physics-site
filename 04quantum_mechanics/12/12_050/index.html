@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">調和振動子の経路積分</h1>
 <h2 id="_2">問題</h2>
-<p>ポテンシャルが位置の2次関数で表される調和振動子の系では，任意の経路に対する作用が古典経路のまわりの2次形式として厳密に展開される。この特質を利用すると，経路積分を古典経路に依存する部分と，量子力学的な揺らぎを表す部分へと因数分解できる。ここでは，境界条件を満たす古典経路を具体的に求め，古典作用を直接計算した上で，調和振動子の伝播核を導出する。</p>
+<p>調和振動子では作用が経路の2次式であるため，経路積分を古典経路に依存する部分と，そのまわりの揺らぎを表す部分に分けられる。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子のラグランジアンは次の通りである。</p>
 <div class="arithmatex">\[
 L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}m\omega^2 x^2
@@ -14553,12 +14553,12 @@ L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}m\omega^2 x^2
 <div class="arithmatex">\[
 S_{\text{cl}} = \frac{1}{2}m \left[ x_{\text{cl}}(\tau) \dot{x}_{\text{cl}}(\tau) \right]_{0}^{t}
 \]</div>
-<p>さらに，(1) で得られた解を代入して整理することにより，古典作用の具体的な形状を導出せよ。</p>
+<p>さらに，(1) で得られた解を代入して整理することにより，古典作用の形状を導出せよ。</p>
 <p>(3) 任意の経路を古典経路からのずれ <span class="arithmatex">\(y(\tau)\)</span> を用いて <span class="arithmatex">\(x(\tau) = x_{\text{cl}}(\tau) + y(\tau)\)</span> と表すと，全体の作用は <span class="arithmatex">\(S[x] = S_{\text{cl}} + S_0[y]\)</span> と分離される。これにより，全体の伝播核は次のように書き換えられる。</p>
 <div class="arithmatex">\[
 K(x_f, t; x_i, 0) = F(t) e^{i S_{\text{cl}} / \hbar}
 \]</div>
-<p>ここで <span class="arithmatex">\(F(t) = \int \mathcal{D}[y] e^{i S_0[y] / \hbar}\)</span> は，端点に依存せず時間 <span class="arithmatex">\(t\)</span> のみに依存する関数である。自由粒子の極限 <span class="arithmatex">\(\omega \to 0\)</span> において，伝播核が自由粒子の伝播核 <span class="arithmatex">\(\sqrt{\frac{m}{2\pi i \hbar t}} e^{i m(x_f - x_i)^2 / 2\hbar t}\)</span> に一致すべきであるという対応原理を利用して，未知の関数 <span class="arithmatex">\(F(t)\)</span> の具体的な形を決定せよ。</p>
+<p>ここで <span class="arithmatex">\(F(t) = \int \mathcal{D}[y] e^{i S_0[y] / \hbar}\)</span> は，端点に依存せず時間 <span class="arithmatex">\(t\)</span> のみに依存する関数である。自由粒子の極限 <span class="arithmatex">\(\omega \to 0\)</span> において，伝播核が自由粒子の伝播核 <span class="arithmatex">\(\sqrt{\frac{m}{2\pi i \hbar t}} e^{i m(x_f - x_i)^2 / 2\hbar t}\)</span> に一致すべきであるという対応原理を利用して，未知の関数 <span class="arithmatex">\(F(t)\)</span> の形を決定せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14574,7 +14574,7 @@ x_{\text{cl}}(t) = A \sin\omega t + x_i \cos\omega t = x_f
 <div class="arithmatex">\[
 A \sin\omega t = x_f - x_i \cos\omega t \implies A = \frac{x_f - x_i \cos\omega t}{\sin\omega t}
 \]</div>
-<p>したがって，求める古典経路の具体的な係数が決定されました。</p>
+<p>したがって，求める古典経路の係数が決定されました。</p>
 <h3 id="2">(2)</h3>
 <p>古典作用の積分式にラグランジアンの定義を代入します。</p>
 <div class="arithmatex">\[
@@ -14634,7 +14634,7 @@ S_{\text{cl}} = \frac{m\omega}{2\sin\omega t} \left[ (x_i^2 + x_f^2)\cos\omega t
 <div class="arithmatex">\[
 \lim_{\omega \to 0} K(x_f, t; x_i, 0) = \left( \lim_{\omega \to 0} F(t) \right) e^{\frac{i m(x_f - x_i)^2}{2\hbar t}}
 \]</div>
-<p>これが自由粒子の伝播核と完全に一致しなければなりません。</p>
+<p>これが自由粒子の伝播核と一致しなければなりません。</p>
 <div class="arithmatex">\[
 \left( \lim_{\omega \to 0} F(t) \right) e^{\frac{i m(x_f - x_i)^2}{2\hbar t}} = \sqrt{\frac{m}{2\pi i \hbar t}} e^{\frac{i m(x_f - x_i)^2}{2\hbar t}}
 \]</div>

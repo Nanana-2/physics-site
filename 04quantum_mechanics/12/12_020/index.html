@@ -14542,22 +14542,22 @@
 
 <h1 id="_1">経路積分の導入</h1>
 <h2 id="_2">問題</h2>
-<p>時間発展演算子を細かく分割し，各時間ステップの間に位置の完全系を挿入していく手続きにより，量子力学の状態遷移確率をすべての可能な経路の足し合わせとして表す経路積分表示が導かれる。ここでは，1次元を運動する粒子を対象とし，短時間分割から経路積分の基本形式を構築する。</p>
+<p>時間発展演算子を細かく分割し，各時間ステップの間に位置の完全系を挿入していく手続きにより，量子力学の状態遷移確率をすべての可能な経路の足し合わせとして表す経路積分表示が導かれる。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，ポテンシャル <span class="arithmatex">\(V(x)\)</span> の中を運動する粒子のハミルトニアンを <span class="arithmatex">\(\hat{H} = \hat{K} + \hat{V}\)</span> とする。ここで運動エネルギー項は <span class="arithmatex">\(\hat{K} = \hat{p}^2 / 2m\)</span> である。時刻 <span class="arithmatex">\(t_i\)</span> から <span class="arithmatex">\(t_f\)</span> までの時間を <span class="arithmatex">\(N\)</span> 等分し，微小な時間間隔を <span class="arithmatex">\(\epsilon = (t_f - t_i)/N\)</span> と置く。このとき，伝播核は次のように積の形式に分割できる。</p>
 <div class="arithmatex">\[
 K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| \left( e^{-i \hat{H} \epsilon / \hbar} \right)^N \right| x_i \right\rangle
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 各時間ステップの間を埋めるため， <span class="arithmatex">\(N-1\)</span> 個の中間時刻 <span class="arithmatex">\(t_j = t_i + j\epsilon\)</span> （ <span class="arithmatex">\(j = 1, 2, \dots, N-1\)</span> ）における位置固有状態の完全性関係 <span class="arithmatex">\(\int |x_j\rangle \langle x_j| dx_j = 1\)</span> を，分割された演算子の間にそれぞれ挿入せよ。これにより，伝播核が <span class="arithmatex">\(N\)</span> 個の短時間伝播核の積分として表されることを示せ。ただし， <span class="arithmatex">\(x_0 = x_i\)</span> ， <span class="arithmatex">\(x_N = x_f\)</span> とする。</p>
+<p>(1) <span class="arithmatex">\(j = 1, 2, \dots, N-1\)</span> に対する中間時刻を <span class="arithmatex">\(t_j = t_i + j\epsilon\)</span> とする。位置固有状態の完全性関係 <span class="arithmatex">\(\int |x_j\rangle \langle x_j| dx_j = 1\)</span> を分割された演算子の間に挿入し，伝播核を <span class="arithmatex">\(N\)</span> 個の短時間伝播核の積分として表せ。ただし，<span class="arithmatex">\(x_0 = x_i\)</span>，<span class="arithmatex">\(x_N = x_f\)</span> とする。</p>
 <p>(2) <span class="arithmatex">\(\epsilon\)</span> が十分に小さいとき，トロッター公式の簡易形である <span class="arithmatex">\(e^{-i(\hat{K}+\hat{V})\epsilon/\hbar} \approx e^{-i\hat{K}\epsilon/\hbar} e^{-i\hat{V}\epsilon/\hbar}\)</span> が成り立つ。これを用いて，1つの短時間伝播核を次のように変形せよ。</p>
 <div class="arithmatex">\[
 \langle x_{j} | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle \approx \langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle e^{-i V(x_{j-1}) \epsilon / \hbar}
 \]</div>
-<p>さらに，運動量固有状態の完全性関係 <span class="arithmatex">\(\int |p_j\rangle \langle p_j| dp_j = 1\)</span> および自由粒子の波動関数 <span class="arithmatex">\(\langle x | p \rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{i p x / \hbar}\)</span> を挿入して <span class="arithmatex">\(p_j\)</span> のガウス積分を実行し，短時間伝播核の具体的な形を導け。必要であれば，以下の積分公式を利用せよ。</p>
+<p>さらに，運動量固有状態の完全性関係 <span class="arithmatex">\(\int |p_j\rangle \langle p_j| dp_j = 1\)</span> および自由粒子の波動関数 <span class="arithmatex">\(\langle x | p \rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{i p x / \hbar}\)</span> を挿入して <span class="arithmatex">\(p_j\)</span> のガウス積分を実行し，短時間伝播核の形を導け。必要であれば，以下の積分公式を利用せよ。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} e^{-A p^2 + B p} dp = \sqrt{\frac{\pi}{A}} e^{B^2 / 4A}
 \]</div>
-<p>(3) (2) の結果を (1) の全空間積分へ代入し，指数部分を <span class="arithmatex">\(\epsilon \sum_{j=1}^{N}\)</span> の形式にまとめよ。 <span class="arithmatex">\(\epsilon \to 0\)</span> の極限において，この和が位置 <span class="arithmatex">\(x(t)\)</span> と速度 <span class="arithmatex">\(\dot{x}(t)\)</span> を用いた時間積分，すなわち古典力学の作用 <span class="arithmatex">\(S = \int L dt\)</span> を用いた次の経路積分の形式に帰着することを示せ。</p>
+<p>(3) (2) の結果を (1) の全空間積分へ代入し，指数部分を <span class="arithmatex">\(\epsilon \sum_{j=1}^{N}\)</span> の形式にまとめよ。 <span class="arithmatex">\(\epsilon \to 0\)</span> の極限において，この和が位置 <span class="arithmatex">\(x(t)\)</span> と速度 <span class="arithmatex">\(\dot{x}(t)\)</span> を用いた時間積分，すなわち古典力学の作用 <span class="arithmatex">\(S = \int L dt\)</span> を用いた次の経路積分の形式にまとめられることを示せ。</p>
 <div class="arithmatex">\[
 K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}
 \]</div>

@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">群の定義と対称操作の群</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学における対称操作の集まりは，数学における群の構造を持つ。系の物理的な対称性を代数的に扱うためには，操作の集合が群の定義を完全に満たしていることを確認する必要がある。ここでは，群の4つの基本定義を確認し，空間反転の操作がなす有限群を具体例としてその数学的構造を導出する。</p>
+<p>量子力学における対称操作の集合は，群として扱うことができる。</p>
 <p>集合 <span class="arithmatex">\(G\)</span> の元に対して演算が定義されているとき， <span class="arithmatex">\(G\)</span> が群をなすための定義は以下の4つである。</p>
 <ul>
 <li>
@@ -14558,7 +14558,7 @@
 <p><strong>逆元の存在</strong>： <span class="arithmatex">\(G\)</span> の任意の元 <span class="arithmatex">\(a\)</span> に対して， <span class="arithmatex">\(aa^{-1} = a^{-1}a = e\)</span> を満たす元 <span class="arithmatex">\(a^{-1}\)</span> が <span class="arithmatex">\(G\)</span> に存在する。</p>
 </li>
 </ul>
-<p>3次元空間の位置座標ベクトル <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span> の符号をすべて反転させる空間反転の操作を <span class="arithmatex">\(\hat{I}\)</span> とし，何もしない操作（恒等変換）を <span class="arithmatex">\(\hat{E}\)</span> とする。これら2つの操作の集合 <span class="arithmatex">\(G = \{ \hat{E}, \hat{I} \}\)</span> を考える。以下の問いに答えよ。</p>
+<p>3次元空間の位置ベクトル <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span> の符号をすべて反転させる空間反転を <span class="arithmatex">\(\hat{I}\)</span>，恒等変換を <span class="arithmatex">\(\hat{E}\)</span> とする。これら2つの操作の集合 <span class="arithmatex">\(G = \{ \hat{E}, \hat{I} \}\)</span> を考える。以下の問いに答えよ。</p>
 <p>(1) 空間反転の操作を2回連続で行う合成操作 <span class="arithmatex">\(\hat{I}^2\)</span> を考える。任意のベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に作用させたときの座標の変化を計算し， <span class="arithmatex">\(\hat{I}^2\)</span> が <span class="arithmatex">\(\hat{E}\)</span> に等しいことを示せ。</p>
 <p>(2) 集合 <span class="arithmatex">\(G = \{ \hat{E}, \hat{I} \}\)</span> におけるすべての元の積の組み合わせを計算し，縦書きと横書きの表として整理した積表を完成させよ。</p>
 <p>(3) (2) で得られた積表の結果に基づき，集合 <span class="arithmatex">\(G\)</span> が群の定義である閉性，単位元の存在，逆元の存在の3つを満たしていることを，数式あるいは元の関係性を用いてそれぞれ個別に証明せよ。ただし，結合法則は満たされているものとする。</p>
@@ -14573,7 +14573,7 @@
 <div class="arithmatex">\[
 \hat{I}^2 \boldsymbol{r} = \hat{I} (\hat{I} \boldsymbol{r}) = \hat{I} (-\boldsymbol{r}) = -(-\boldsymbol{r}) = \boldsymbol{r}
 \]</div>
-<p>2回連続の操作により，任意のベクトルは元の座標へと完全に復元されます。これは何もしない恒等変換 <span class="arithmatex">\(\hat{E}\)</span> の作用 <span class="arithmatex">\(\hat{E}\boldsymbol{r} = \boldsymbol{r}\)</span> と全く同一であるため，演算子として以下の等式が成り立ちます。</p>
+<p>2回連続の操作により，任意のベクトルは元の座標へと復元されます。これは何もしない恒等変換 <span class="arithmatex">\(\hat{E}\)</span> の作用 <span class="arithmatex">\(\hat{E}\boldsymbol{r} = \boldsymbol{r}\)</span> と同一であるため，演算子として以下の等式が成り立ちます。</p>
 <div class="arithmatex">\[
 \hat{I}^2 = \hat{E}
 \]</div>
@@ -14606,9 +14606,9 @@
 <ul>
 <li>閉性：積表の内部に現れる元は <span class="arithmatex">\(\hat{E}\)</span> と <span class="arithmatex">\(\hat{I}\)</span> のみです。これは集合 <span class="arithmatex">\(G\)</span> の要素以外の元を含まないため，任意の積が集合の内部に留まるという閉性を満たしています。</li>
 <li>単位元の存在：表の第1行および第1列の並びを確認すると， <span class="arithmatex">\(\hat{E}\)</span> を掛け算した相手の元がそのまま出力されています。したがって，恒等変換 <span class="arithmatex">\(\hat{E}\)</span> が単位元として集合の内部に存在しています。</li>
-<li>逆元の存在：積表において，結果が単位元 <span class="arithmatex">\(\hat{E}\)</span> になる組み合わせを探索します。 <span class="arithmatex">\(\hat{E}\hat{E}=\hat{E}\)</span> より <span class="arithmatex">\(\hat{E}\)</span> の逆元は自身（ <span class="arithmatex">\(\hat{E}^{-1} = \hat{E}\)</span> ）です。また， <span class="arithmatex">\(\hat{I}\hat{I}=\hat{E}\)</span> より <span class="arithmatex">\(\hat{I}\)</span> の逆元も自身（ <span class="arithmatex">\(\hat{I}^{-1} = \hat{I}\)</span> ）です。すべての元に対して逆元が集合の内部に存在しています。</li>
+<li>逆元の存在：積表において，結果が単位元 <span class="arithmatex">\(\hat{E}\)</span> になる組み合わせを探索します。 <span class="arithmatex">\(\hat{E}\hat{E}=\hat{E}\)</span> より <span class="arithmatex">\(\hat{E}\)</span> の逆元は自身 <span class="arithmatex">\(\hat{E}^{-1} = \hat{E}\)</span> です。また， <span class="arithmatex">\(\hat{I}\hat{I}=\hat{E}\)</span> より <span class="arithmatex">\(\hat{I}\)</span> の逆元も自身 <span class="arithmatex">\(\hat{I}^{-1} = \hat{I}\)</span> です。すべての元に対して逆元が集合の内部に存在しています。</li>
 </ul>
-<p>以上の計算と確認により，空間反転操作の集合 <span class="arithmatex">\(G\)</span> が群の定義を満たしていることが証明されました。</p>
+<p>したがって，空間反転操作の集合 <span class="arithmatex">\(G\)</span> は群の定義を満たします。</p>
 
 
 

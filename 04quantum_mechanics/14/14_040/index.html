@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">点群と簡単な対称性の分類</h1>
 <h2 id="_2">問題</h2>
-<p>分子や結晶などの局所的な構造が持つ対称性は，空間の特定の1点を不動に保つ対称操作の集まりである点群として分類される。水分子などは2回回転軸と2つの互いに直交する鏡映面を持っており，これらの操作の集合は数学的に特定の点群を構成する。ここでは，具体的な幾何学的操作の合成を数式で計算し，積表を作成することで，点群の持つ構造を明らかにする。</p>
+<p>分子や結晶の対称性は，空間の1点を動かさない対称操作の集合である点群によって分類できる。水分子は2回回転軸と，互いに直交する2つの鏡映面を持つ。</p>
 <p>3次元空間において， <span class="arithmatex">\(z\)</span> 軸のまわりの180度反転を行う2回回転操作を <span class="arithmatex">\(\hat{C}_2\)</span> とする。また， <span class="arithmatex">\(xz\)</span> 平面を対称面とする鏡映操作を <span class="arithmatex">\(\hat{\sigma}_v\)</span> ， <span class="arithmatex">\(yz\)</span> 平面を対称面とする鏡映操作を <span class="arithmatex">\(\hat{\sigma}_v'\)</span> とし，何もしない恒等操作を <span class="arithmatex">\(\hat{E}\)</span> とする。これら4つの操作の集合 <span class="arithmatex">\(G = \{ \hat{E}, \hat{C}_2, \hat{\sigma}_v, \hat{\sigma}_v' \}\)</span> は <span class="arithmatex">\(C_{2v}\)</span> 点群と呼ばれる。以下の問いに答えよ。</p>
 <p>(1) 空間の任意の点 <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span> に対し，3つの対称操作 <span class="arithmatex">\(\hat{C}_2, \hat{\sigma}_v, \hat{\sigma}_v'\)</span> を作用させたときの変換後の座標をそれぞれ数式で表せ。</p>
 <p>(2) 回転操作に続いて鏡映操作を連続して行う合成操作 <span class="arithmatex">\(\hat{\sigma}_v \hat{C}_2\)</span> を考える。任意の点 <span class="arithmatex">\(\boldsymbol{r}\)</span> にこの合成操作を作用させたときの座標の変化を計算し，この操作が集合 <span class="arithmatex">\(G\)</span> のどの単一の操作に等しいか等式で示せ。同様に， <span class="arithmatex">\(\hat{\sigma}_v' \hat{\sigma}_v\)</span> についても計算し，等しい操作を特定せよ。</p>
@@ -14550,7 +14550,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>各幾何学的対称操作の定義に従って，座標ベクトルの変換式を書き下します。</p>
+<p>各対称操作の定義に従って，座標ベクトルの変換式を書き下します。</p>
 <p><span class="arithmatex">\(z\)</span> 軸まわりの180度回転 <span class="arithmatex">\(\hat{C}_2\)</span> は， <span class="arithmatex">\(z\)</span> 座標を固定したまま <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(y\)</span> の符号を反転させます。</p>
 <div class="arithmatex">\[
 \hat{C}_2 (x, y, z) = (-x, -y, z)
@@ -14572,7 +14572,7 @@
 <div class="arithmatex">\[
 = (-x, -(-y), z) = (-x, y, z)
 \]</div>
-<p>(1) の結果と比較すると，この変換後の座標は <span class="arithmatex">\(\hat{\sigma}_v'\)</span> の作用による結果と完全に一致します。したがって，以下の関係式が成り立ちます。</p>
+<p>(1) の結果と比較すると，この変換後の座標は <span class="arithmatex">\(\hat{\sigma}_v'\)</span> の作用による結果と一致します。したがって，以下の関係式が成り立ちます。</p>
 <div class="arithmatex">\[
 \hat{\sigma}_v \hat{C}_2 = \hat{\sigma}_v'
 \]</div>
@@ -14584,7 +14584,7 @@
 <div class="arithmatex">\[
 = (-x, -y, z)
 \]</div>
-<p>(1) の結果と比較すると，この変換後の座標は <span class="arithmatex">\(\hat{C}_2\)</span> の作用による結果と完全に一致します。したがって，以下の関係式が成り立ちます。</p>
+<p>(1) の結果と比較すると，この変換後の座標は <span class="arithmatex">\(\hat{C}_2\)</span> の作用による結果と一致します。したがって，以下の関係式が成り立ちます。</p>
 <div class="arithmatex">\[
 \hat{\sigma}_v' \hat{\sigma}_v = \hat{C}_2
 \]</div>

@@ -14542,13 +14542,13 @@
 
 <h1 id="_1">自由粒子の伝播核</h1>
 <h2 id="_2">問題</h2>
-<p>ポテンシャルが存在しない1次元空間を運動する自由粒子を対象とし，時間発展演算子の具体的な行列要素を計算することで，自由粒子の伝播核を導出する。さらに，得られた伝播核を用いて初期のガウス型波束の時間発展を計算し，量子力学的な波束の広がりを数式に基づいて解析する。</p>
+<p>1次元を運動する自由粒子と，ガウス型波束の時間発展を考える。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> の1次元自由粒子のハミルトニアンは <span class="arithmatex">\(\hat{H} = \hat{p}^2 / 2m\)</span> である。初期時刻を <span class="arithmatex">\(t_i = 0\)</span> ，最終時刻を <span class="arithmatex">\(t_f = t\)</span> とすると，自由粒子の伝播核 <span class="arithmatex">\(K(x_f, t; x_i, 0)\)</span> は以下のように定義される。</p>
 <div class="arithmatex">\[
 K(x_f, t; x_i, 0) = \langle x_f | e^{-i \hat{p}^2 t / 2m\hbar} | x_i\rangle
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 運動量固有状態の完全性関係 <span class="arithmatex">\(\int_{-\infty}^{\infty} |p\rangle \langle p| dp = 1\)</span> ，および固有関数 <span class="arithmatex">\(\langle x | p \rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{i p x / \hbar}\)</span> を定義式に挿入し， <span class="arithmatex">\(p\)</span> に関する積分を実行することで，自由粒子の伝播核の具体的な形状を導出せよ。必要であれば，以下のガウス積分公式を利用せよ。</p>
+<p>(1) 運動量固有状態の完全性関係 <span class="arithmatex">\(\int_{-\infty}^{\infty} |p\rangle \langle p| dp = 1\)</span> ，および固有関数 <span class="arithmatex">\(\langle x | p \rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{i p x / \hbar}\)</span> を定義式に挿入し， <span class="arithmatex">\(p\)</span> に関する積分を実行することで，自由粒子の伝播核の形状を導出せよ。必要であれば，以下のガウス積分公式を利用せよ。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} e^{-A p^2 + B p} dp = \sqrt{\frac{\pi}{A}} e^{B^2 / 4A}
 \]</div>
@@ -14627,7 +14627,7 @@ a = \frac{\hbar t - 2i m \Delta^2}{4\Delta^2 \hbar t}
 <div class="arithmatex">\[
 \Delta(t)^2 = \Delta^2 \left[ 1 + \left( \frac{\hbar t}{2m\Delta^2} \right)^2 \right] = \Delta^2 + \left( \frac{\hbar t}{2m\Delta} \right)^2
 \]</div>
-<p>第1項は初期の波束の広がりであり，第2項は時間に比例して増大する成分です。したがって，自由粒子の波束は，時間が経過するにつれて空間的に拡散し，その幅の2乗が時間の2乗に比例して増大していくことが示されました。</p>
+<p>第1項は初期の波束の広がり，第2項は時間発展による広がりを表します。したがって，十分長い時間では波束の幅の2乗が <span class="arithmatex">\(t^2\)</span> に比例して増大します。</p>
 
 
 

@@ -14542,10 +14542,10 @@
 
 <h1 id="_1">ハミルトニアンの固有状態と既約表現</h1>
 <h2 id="_2">問題</h2>
-<p>ハミルトニアンがある対称群のすべての対称操作演算子と可換であるとき，そのハミルトニアンの固有状態は群の既約表現の基底として分類される。対称性から導かれるこの性質は，エネルギー準位が持つ縮退度を決定づける重要な要因となる。ここでは，シュレーディンガー方程式と演算子の交換関係を基礎として，エネルギーの縮退度と既約表現の次元数が一致することを示す。</p>
+<p>ハミルトニアンが対称群のすべての演算子と可換であるとき，その固有状態は群の既約表現によって分類できる。既約表現の次元は，対応するエネルギー準位の縮退度と関係する。</p>
 <p>ある対称群 <span class="arithmatex">\(G\)</span> に属する任意の対称操作演算子を <span class="arithmatex">\(\hat{R}\)</span> とする。系のハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> は，すべての <span class="arithmatex">\(\hat{R}\)</span> と可換であるとする。すなわち， <span class="arithmatex">\([\hat{H}, \hat{R}] = 0\)</span> である。</p>
 <p>ハミルトニアンの固有値方程式を <span class="arithmatex">\(\hat{H} | \psi \rangle = E | \psi \rangle\)</span> とする。このエネルギー固有値 <span class="arithmatex">\(E\)</span> に対し，互いに線形独立な <span class="arithmatex">\(d\)</span> 個の固有状態 <span class="arithmatex">\(| \psi_1 \rangle, | \psi_2 \rangle, \dots, | \psi_d \rangle\)</span> が縮退しているものとする。以下の問いに答えよ。</p>
-<p>(1) 固有状態の 1 つである <span class="arithmatex">\(| \psi_i \rangle\)</span> （ <span class="arithmatex">\(i = 1, 2, \dots, d\)</span> ）に対し，対称操作演算子を左から作用させた新しい状態 <span class="arithmatex">\(\hat{R} | \psi_i \rangle\)</span> を考える。交換関係 <span class="arithmatex">\(\hat{H}\hat{R} = \hat{R}\hat{H}\)</span> を利用することにより，この新しい状態 <span class="arithmatex">\(\hat{R} | \psi_i \rangle\)</span> もまた，同一のエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つハミルトニアンの固有状態であることを示せ。</p>
+<p>(1) <span class="arithmatex">\(i = 1, 2, \dots, d\)</span> として，固有状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> に対称操作演算子を作用させた状態 <span class="arithmatex">\(\hat{R}|\psi_i\rangle\)</span> を考える。交換関係 <span class="arithmatex">\(\hat{H}\hat{R} = \hat{R}\hat{H}\)</span> を用いて，この状態も同じエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つことを示せ。</p>
 <p>(2) (1) の結果より，状態 <span class="arithmatex">\(\hat{R} | \psi_i \rangle\)</span> は，同じエネルギーに属する <span class="arithmatex">\(d\)</span> 個の固有状態の線形結合として必ず展開できる。その展開係数を <span class="arithmatex">\(D_{ji}(\hat{R})\)</span> とすると，以下のように書き表すことができる。</p>
 <div class="arithmatex">\[
 \hat{R} | \psi_i \rangle = \sum_{j=1}^{d} | \psi_j \rangle D_{ji}(\hat{R})
@@ -14567,7 +14567,7 @@
 <div class="arithmatex">\[
 = \hat{R} \left( E | \psi_i \rangle \right) = E \left( \hat{R} | \psi_i \rangle \right)
 \]</div>
-<p>等式の両端を結ぶと， <span class="arithmatex">\(\hat{H} (\hat{R} | \psi_i \rangle) = E (\hat{R} | \psi_i \rangle)\)</span> となります。したがって，対称操作を施した状態 <span class="arithmatex">\(\hat{R} | \psi_i \rangle\)</span> もまた，元の状態と同じエネルギー固有値 <span class="arithmatex">\(E\)</span> を持つ固有状態であることが証明されました。</p>
+<p>以上より，<span class="arithmatex">\(\hat{H}(\hat{R}|\psi_i\rangle) = E(\hat{R}|\psi_i\rangle)\)</span> となります。したがって，対称操作後の状態も同じエネルギー固有値 <span class="arithmatex">\(E\)</span> を持ちます。</p>
 <h3 id="2">(2)</h3>
 <p>2つの対称操作 <span class="arithmatex">\(\hat{B}\)</span> と <span class="arithmatex">\(\hat{A}\)</span> を順番に作用させたときの状態の変化を計算します。まず，右側の <span class="arithmatex">\(\hat{B}\)</span> から作用させて問題文の展開式を適用します。</p>
 <div class="arithmatex">\[
@@ -14589,13 +14589,13 @@
 <div class="arithmatex">\[
 D_{ki}(\hat{A}\hat{B}) = \sum_{j=1}^{d} D_{kj}(\hat{A}) D_{ji}(\hat{B})
 \]</div>
-<p>右辺の形式は，行列 <span class="arithmatex">\(D(\hat{A})\)</span> と <span class="arithmatex">\(D(\hat{B})\)</span> の通常の行列積の定義そのものです。したがって，全体の行列として以下の積の保存則が成り立ち，この変換行列の集まりが群の表現を構成することが証明されました。</p>
+<p>右辺は行列 <span class="arithmatex">\(D(\hat{A})\)</span> と <span class="arithmatex">\(D(\hat{B})\)</span> の積です。したがって，変換行列は群の積を保ち，群の表現を構成します。</p>
 <div class="arithmatex">\[
 D(\hat{A}\hat{B}) = D(\hat{A}) D(\hat{B})
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(1) と (2) の数理構造により，ハミルトニアンの縮退した固有状態のセットは，必ずその対称群の表現行列の空間を構成することが分かります。</p>
-<p>この表現がこれ以上小さなブロックに分解できない既約表現である場合，その固有状態の数 <span class="arithmatex">\(d\)</span> は，対応する既約表現の行列のサイズ（次元数）そのものに拘束されます。</p>
+<p>この表現が既約表現であれば，固有状態の数 <span class="arithmatex">\(d\)</span> は既約表現の次元に等しくなります。</p>
 <p>したがって，エネルギー準位の縮退度 <span class="arithmatex">\(d\)</span> は，ハミルトニアンが持つ対称群の既約表現の次元数と等号で結ばれる関係にあります。</p>
 <div class="arithmatex">\[
 \text{準位の縮退度} = \text{既約表現の次元数}
