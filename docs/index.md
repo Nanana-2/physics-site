@@ -1,5 +1,6 @@
 ---
 title: ホーム
+hero_image: assets/images/index.jpg
 ---
 
 ## このサイトは何者？

@@ -1,3 +1,8 @@
+---
+title: 全問題一覧
+hero_image: assets/images/desktop-computer.png
+---
+
 # 全問題一覧
 
 収録されている問題を，分野・章・難易度・キーワードから絞り込めます。

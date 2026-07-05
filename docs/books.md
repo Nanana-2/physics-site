@@ -1,3 +1,8 @@
+---
+title: 参考文献一覧
+hero_image: assets/images/tag.jpg
+---
+
 # 参考文献一覧
 
 
@@ -281,4 +286,3 @@
 
 
 ## その他
-
