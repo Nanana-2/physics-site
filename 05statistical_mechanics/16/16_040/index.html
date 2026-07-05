@@ -14542,14 +14542,14 @@
 
 <h1 id="_1">ベルの不等式</h1>
 <h2 id="_2">問題</h2>
-<p>局所実在論，すなわち各測定値が測定前から確定しており，遠方の測定操作から影響を受けないという仮定に基づく古典的な相関には，満たすべき数学的な限界が存在する。ここでは，2つのスピン 1/2 系を対象として，CHSH（Clauser-Horne-Shimony-Holt）不等式を具体的に計算し，量子力学的なスピン相関がその限界値を破ることを数学的に示す。</p>
-<p>系Aに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{a}, \vec{a}'\)</span> とし，系Bに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{b}, \vec{b}'\)</span> とする。局所実在論の仮定のもとでは，各方向に対するスピン測定値（パウリ行列の測定期待値に相当）は，あらかじめ決まった隠れた変数 <span class="arithmatex">\(\lambda\)</span> によって制御され， <span class="arithmatex">\(A(\vec{a}, \lambda), A(\vec{a}', \lambda), B(\vec{b}, \lambda), B(\vec{b}', \lambda) \in \{-1, +1\}\)</span> のいずれかの値をとる。</p>
+<p>局所実在論のもとで成り立つCHSH不等式を考える。</p>
+<p>系Aに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{a}, \vec{a}'\)</span> とし，系Bに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{b}, \vec{b}'\)</span> とする。局所実在論の仮定のもとでは，各方向に対するスピン測定値は，あらかじめ決まった隠れた変数 <span class="arithmatex">\(\lambda\)</span> によって制御され， <span class="arithmatex">\(A(\vec{a}, \lambda), A(\vec{a}', \lambda), B(\vec{b}, \lambda), B(\vec{b}', \lambda) \in \{-1, +1\}\)</span> のいずれかの値をとる。</p>
 <p>以下の問いに答えよ。</p>
 <p>(1) 任意の <span class="arithmatex">\(\lambda\)</span> に対して，以下の代数的な組み合わせを考える。</p>
 <div class="arithmatex">\[
 C(\lambda) = A(\vec{a}, \lambda) B(\vec{b}, \lambda) + A(\vec{a}, \lambda) B(\vec{b}', \lambda) + A(\vec{a}', \lambda) B(\vec{b}, \lambda) - A(\vec{a}', \lambda) B(\vec{b}', \lambda)
 \]</div>
-<p><span class="arithmatex">\(A(\vec{a}, \lambda)\)</span> および <span class="arithmatex">\(A(\vec{a}', \lambda)\)</span> で共通因子を括り出すことにより， <span class="arithmatex">\(C(\lambda)\)</span> のとり得る値が常に <span class="arithmatex">\(+2\)</span> または <span class="arithmatex">\(-2\)</span> のいずれかになることを示せ。さらに， <span class="arithmatex">\(\lambda\)</span> の確率分布関数を <span class="arithmatex">\(P(\lambda)\)</span> （ただし <span class="arithmatex">\(\int P(\lambda) d\lambda = 1\)</span> ）とするとき，各方向の相関期待値の平均値 <span class="arithmatex">\(E(\vec{a}, \vec{b}) = \int A(\vec{a}, \lambda) B(\vec{b}, \lambda) P(\lambda) d\lambda\)</span> が，以下の不等式を満たすことを導け。</p>
+<p><span class="arithmatex">\(A(\vec{a}, \lambda)\)</span> および <span class="arithmatex">\(A(\vec{a}', \lambda)\)</span> で共通因子を括り出すことにより， <span class="arithmatex">\(C(\lambda)\)</span> のとり得る値が常に <span class="arithmatex">\(+2\)</span> または <span class="arithmatex">\(-2\)</span> のいずれかになることを示せ。さらに， <span class="arithmatex">\(\lambda\)</span> の確率分布関数を <span class="arithmatex">\(P(\lambda)\)</span> とするとき，各方向の相関期待値の平均値 <span class="arithmatex">\(E(\vec{a}, \vec{b}) = \int A(\vec{a}, \lambda) B(\vec{b}, \lambda) P(\lambda) d\lambda\)</span> が，以下の不等式を満たすことを導け。</p>
 <div class="arithmatex">\[
 |E(\vec{a}, \vec{b}) + E(\vec{a}, \vec{b}') + E(\vec{a}', \vec{b}) - E(\vec{a}', \vec{b}')| \le 2
 \]</div>
@@ -14565,8 +14565,8 @@ C(\lambda) = A(\vec{a}, \lambda) B(\vec{b}, \lambda) + A(\vec{a}, \lambda) B(\ve
 <li><span class="arithmatex">\(\vec{b} = \frac{1}{\sqrt{2}} (1, 0, 1)\)</span></li>
 <li><span class="arithmatex">\(\vec{b}' = \frac{1}{\sqrt{2}} (-1, 0, 1)\)</span></li>
 </ul>
-<p>このときの4つの相関期待値 <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b})\)</span> , <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b}')\)</span> , <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b})\)</span> , <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b}')\)</span> の値をそれぞれ具体的に計算せよ。</p>
-<p>(3) (2) で得られた4つの具体的な数値を，(1) の不等式の左辺の式に代入して計算せよ。その計算結果が限界値である 2 を超えることを示し，局所実在論の仮定と量子力学の計算結果が両立しないことを確認せよ。</p>
+<p>このときの4つの相関期待値 <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b})\)</span> , <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b}')\)</span> , <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b})\)</span> , <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b}')\)</span> の値をそれぞれ計算せよ。</p>
+<p>(3) (2) の結果からCHSH量を求め，局所実在論の上限 2 を超えることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14637,11 +14637,11 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 <div class="arithmatex">\[
 \text{左辺} = \left| -\frac{4}{\sqrt{2}} \right| = \left| -2\sqrt{2} \right| = 2\sqrt{2}
 \]</div>
-<p><span class="arithmatex">\(\sqrt{2} \approx 1.414\)</span> であるため，具体的な数値は以下のようになります。</p>
+<p><span class="arithmatex">\(\sqrt{2} \approx 1.414\)</span> であるため，数値は以下のようになります。</p>
 <div class="arithmatex">\[
 2\sqrt{2} \approx 2.828
 \]</div>
-<p>この計算結果は，局所実在論から導かれた限界値である 2 よりも明確に大きくなります（ $2\sqrt{2} &gt; 2 $ ）。</p>
+<p>この計算結果は，局所実在論から導かれた限界値である 2 よりも明確に大きくなります $2\sqrt{2} &gt; 2 $。</p>
 <p>これにより，特定の測定方向の組み合わせにおいて，量子もつれ状態が示す統計的相関はベルの不等式を破ることが数学的に示され，局所実在論の仮定が成立しないことが確認されました。</p>
 
 

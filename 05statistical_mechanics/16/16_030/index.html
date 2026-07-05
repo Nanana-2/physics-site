@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">ベル状態</h1>
 <h2 id="_2">問題</h2>
-<p>2つの量子ビット系（スピン 1/2 系）において，最も強い量子相関を持つ4つの直交した純粋状態はベル状態と呼ばれる。ここでは，これら4つの状態を具体的に書き下し，全系としては完全に判明している純粋状態であるにもかかわらず，一方の部分系だけに着目すると不確定性が最大となる混合状態へと変化する性質を計算によって確認する。</p>
 <p>系Aと系Bの基底を，スピンの上向きと下向きに対応する <span class="arithmatex">\(\{|0\rangle, |1\rangle\}\)</span> とする。4つのベル状態は以下のように定義される。</p>
 <div class="arithmatex">\[
 |\Phi^\pm\rangle = \frac{1}{\sqrt{2}} \big( |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle \pm |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle \big)
@@ -14551,9 +14550,9 @@
 |\Psi^\pm\rangle = \frac{1}{\sqrt{2}} \big( |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle \pm |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle \big)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 4つのベル状態のうち，一例として <span class="arithmatex">\(|\Psi^-\rangle\)</span>（シングレット状態）に注目する。この状態に対応する全系の密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}} = |\Psi^-\rangle\langle\Psi^-\rangle\)</span> を，4次元の結合基底 <span class="arithmatex">\(\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}\)</span> による行列要素の形式で展開せよ。</p>
+<p>(1) <span class="arithmatex">\(|\Psi^-\rangle\)</span> の密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}\)</span> を，基底 <span class="arithmatex">\(\{|00\rangle,|01\rangle,|10\rangle,|11\rangle\}\)</span> で行列表示せよ。</p>
 <p>(2) (1) で求めた全密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}\)</span> に対し，系Bに関する部分トレースを実行し，系Aの縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}} = \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{tot}})\)</span> を求めよ。</p>
-<p>(3) (2) で得られた <span class="arithmatex">\(\rho_{\mathrm{A}}\)</span> の2乗のトレース <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{A}}^2)\)</span>（純粋度）を計算せよ。また，全系の純粋度 <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{tot}}^2)\)</span> の値と対比し，この結果が部分系の物理的な状態について何を意味しているか，状態の乱雑さの観点から説明せよ。</p>
+<p>(3) <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{A}}^2)\)</span> と <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{tot}}^2)\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14568,7 +14567,7 @@
 <div class="arithmatex">\[
 \rho_{\mathrm{tot}} = \frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}| - \frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}| - \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}|
 \]</div>
-<p>これが求める全密度行列の展開式です。対角項に加えて，符号が負の非対角項（干渉項）が存在していることがわかります。</p>
+<p>これが求める全密度行列の展開式です。対角項に加えて，符号が負の非対角項が存在していることがわかります。</p>
 <h3 id="2">(2)</h3>
 <p>系Aの縮約密度行列を求めるため，系Bの正規直交基底 <span class="arithmatex">\(\{|0_{\mathrm{B}}\rangle, |1_{\mathrm{B}}\rangle\}\)</span> を用いて部分トレースを行います。</p>
 <div class="arithmatex">\[
@@ -14589,7 +14588,7 @@
 <p>$$
   \langle 1_{\mathrm{B}}|\rho_{\mathrm{tot}}|1_{\mathrm{B}}\rangle = \frac{1}{2} |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}|
   $$</p>
-<p>非対角項は系Bの基底が異なるため（ <span class="arithmatex">\(|1_{\mathrm{B}}\rangle\langle 0_{\mathrm{B}}|\)</span> など），部分トレースによってすべて 0 になります。これらを足し合わせることで，系Aの縮約密度行列が得られます。</p>
+<p>非対角項は系Bの基底が異なるため，部分トレースによってすべて 0 になります。これらを足し合わせることで，系Aの縮約密度行列が得られます。</p>
 <div class="arithmatex">\[
 \rho_{\mathrm{A}} = \frac{1}{2} |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| + \frac{1}{2} |1_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}|
 \]</div>
@@ -14607,8 +14606,8 @@
 \mathrm{Tr}(\rho_{\mathrm{A}}^2) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}
 \]</div>
 <p><strong>物理的な意味</strong></p>
-<p>全系の純粋度が 1 であるのに対し，部分系の純粋度は <span class="arithmatex">\(\frac{1}{2}\)</span>（2次元系における最小値）へと減少しています。</p>
-<p>全系全体としては不確定性がなく情報が完全に開示されているにもかかわらず，相関の片方である系Bの情報を捨てて系Aだけを取り出すと，スピンの上向きと下向きが等確率（ <span class="arithmatex">\(1/2\)</span> ずつ）で混ざり合った，乱雑さが最大の混合状態（最大混合状態）へと変化します。これは，部分系の物理的な状態が，自分自身ではなく他方のシステムとの強い量子もつれ関係のなかに完全に埋没していることを意味しています。</p>
+<p>全系の純粋度が 1 であるのに対し，部分系の純粋度は <span class="arithmatex">\(\frac{1}{2}\)</span> へと減少しています。</p>
+<p>全系は純粋状態ですが，部分系Aは最大混合状態です。部分系だけでは純粋状態を定められず，情報が系Aと系Bの相関に含まれていることを表します。</p>
 
 
 

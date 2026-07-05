@@ -14542,23 +14542,22 @@
 
 <h1 id="_1">合成系と分離可能状態</h1>
 <h2 id="_2">問題</h2>
-<p>2つの独立な量子系AとBからなる合成系を考える。合成系の全状態はそれぞれの部分系の状態のテンソル積空間上で記述される。ここでは，部分系の相関がまったくない積状態，古典的な確率論の範囲内で相関を持つ分離可能状態，および量子力学特有の相関を持つ量子もつれ状態の3つの違いを，密度行列の構造から整理する。</p>
 <p>系Aのヒルベルト空間の基底を <span class="arithmatex">\(\{|i_{\mathrm{A}}\rangle\}\)</span> ，系Bの基底を <span class="arithmatex">\(\{|j_{\mathrm{B}}\rangle\}\)</span> とする。合成系の全密度行列を <span class="arithmatex">\(\rho\)</span> とするとき，以下の問いに答えよ。</p>
-<p>(1) 合成系の純粋状態 <span class="arithmatex">\(|\Psi\rangle\)</span> が，系Aの純粋状態 <span class="arithmatex">\(|\psi_{\mathrm{A}}\rangle\)</span> と系Bの純粋状態 <span class="arithmatex">\(|\phi_{\mathrm{B}}\rangle\)</span> のテンソル積を用いて <span class="arithmatex">\(|\Psi\rangle = |\psi_{\mathrm{A}}\rangle \otimes |\phi_{\mathrm{B}}\rangle\)</span> と表されるとき，この状態を積状態と呼ぶ。この純粋積状態に対応する合成系の全密度行列 <span class="arithmatex">\(\rho_{\mathrm{prod}} = |\Psi\rangle\langle\Psi|\)</span> が，それぞれの部分系の密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}} = |\psi_{\mathrm{A}}\rangle\langle\psi_{\mathrm{A}}|\)</span> と <span class="arithmatex">\(\rho_{\mathrm{B}} = |\phi_{\mathrm{B}}\rangle\langle\phi_{\mathrm{B}}|\)</span> のテンソル積形式 <span class="arithmatex">\(\rho_{\mathrm{prod}} = \rho_{\mathrm{A}} \otimes \rho_{\mathrm{B}}\)</span> に展開できることを示せ。</p>
-<p>(2) 合成系の密度行列 <span class="arithmatex">\(\rho\)</span> が，複数の純粋積状態の組 <span class="arithmatex">\(|\psi_{n,\mathrm{A}}\rangle \otimes |\phi_{n,\mathrm{B}}\rangle\)</span> と，確率の重み <span class="arithmatex">\(w_n\)</span> （ただし <span class="arithmatex">\(0 \le w_n \le 1, \sum_n w_n = 1\)</span> ）を用いて以下の形式で書けるとき，この <span class="arithmatex">\(\rho_{\mathrm{sep}}\)</span> を混合分離可能状態と呼ぶ。</p>
+<p>(1) <span class="arithmatex">\(|\Psi\rangle=|\psi_{\mathrm{A}}\rangle\otimes|\phi_{\mathrm{B}}\rangle\)</span> とする。<span class="arithmatex">\(\rho_{\mathrm{prod}}=\rho_{\mathrm{A}}\otimes\rho_{\mathrm{B}}\)</span> を示せ。</p>
+<p>(2) 合成系の密度行列 <span class="arithmatex">\(\rho\)</span> が，複数の純粋積状態の組 <span class="arithmatex">\(|\psi_{n,\mathrm{A}}\rangle \otimes |\phi_{n,\mathrm{B}}\rangle\)</span> と，確率の重み <span class="arithmatex">\(w_n\)</span> を用いて以下の形式で書けるとき，この <span class="arithmatex">\(\rho_{\mathrm{sep}}\)</span> を混合分離可能状態と呼ぶ。</p>
 <div class="arithmatex">\[
 \rho_{\mathrm{sep}} = \sum_n w_n \Big( |\psi_{n,\mathrm{A}}\rangle\langle\psi_{n,\mathrm{A}}| \otimes |\phi_{n,\mathrm{B}}\rangle\langle\phi_{n,\mathrm{B}}| \Big)
 \]</div>
-<p>2準位系（量子ビット）の合成系において，以下の密度行列 <span class="arithmatex">\(\rho_1\)</span> を考える。</p>
+<p>2準位系の合成系において，以下の密度行列 <span class="arithmatex">\(\rho_1\)</span> を考える。</p>
 <div class="arithmatex">\[
 \rho_1 = \frac{1}{2} |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 0_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 1_{\mathrm{B}}|
 \]</div>
 <p>この <span class="arithmatex">\(\rho_1\)</span> は分離可能状態の定義を満たしているか判定せよ。また，系Aについての部分トレース <span class="arithmatex">\(\rho_{\mathrm{B}} = \mathrm{Tr}_{\mathrm{A}}(\rho_1)\)</span> を計算し，系Aを測定して結果が <span class="arithmatex">\(0_{\mathrm{A}}\)</span> だった場合に系Bの状態が一意に決定されるという古典的な相関の挙動を示せ。</p>
-<p>(3) 以下の最大量子もつれ状態（ベル状態）の純粋状態を考える。</p>
+<p>(3) 以下の最大量子もつれ状態の純粋状態を考える。</p>
 <div class="arithmatex">\[
 |\Phi^+\rangle = \frac{1}{\sqrt{2}} \left( |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle + |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle \right)
 \]</div>
-<p>この状態に対応する全密度行列 <span class="arithmatex">\(\rho_2 = |\Phi^+\rangle\langle\Phi^+|\)</span> を行列要素の形式で展開せよ。さらに，この <span class="arithmatex">\(\rho_2\)</span> を (2) の定義式 <span class="arithmatex">\(\sum_n w_n ( \rho_{n,\mathrm{A}} \otimes \rho_{n,\mathrm{B}} )\)</span> の形式で書き表すことが不可能である理由を，(2) で扱った <span class="arithmatex">\(\rho_1\)</span> には存在しない非対角成分（干渉項）の有無に着目して説明せよ。</p>
+<p><span class="arithmatex">\(\rho_2=|\Phi^+\rangle\langle\Phi^+|\)</span> を展開し，<span class="arithmatex">\(\rho_{2,\mathrm{A}}=\mathrm{Tr}_{\mathrm{B}}(\rho_2)\)</span> と <span class="arithmatex">\(\mathrm{Tr}(\rho_{2,\mathrm{A}}^2)\)</span> を求めよ。この結果から <span class="arithmatex">\(|\Phi^+\rangle\)</span> が積状態でないことを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14597,12 +14596,16 @@
 <div class="arithmatex">\[
 \rho_2 = \frac{1}{2} |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 0_{\mathrm{B}}| + \frac{1}{2} |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 1_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 0_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 1_{\mathrm{B}}|
 \]</div>
-<p>この式を，(2) の <span class="arithmatex">\(\rho_1\)</span> と比較します。</p>
+<p>系Bについて部分トレースをとると</p>
 <div class="arithmatex">\[
-\rho_2 = \rho_1 + \frac{1}{2} \Big( |0_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}| \otimes |0_{\mathrm{B}}\rangle\langle 1_{\mathrm{B}}| \Big) + \frac{1}{2} \Big( \ |1_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| \otimes |1_{\mathrm{B}}\rangle\langle 0_{\mathrm{B}}| \Big)
+\rho_{2,\mathrm{A}}=rac{1}{2}|0_{\mathrm{A}}\rangle\langle0_{\mathrm{A}}|
++\frac{1}{2}|1_{\mathrm{A}}\rangle\langle1_{\mathrm{A}}|
 \]</div>
-<p><span class="arithmatex">\(\rho_2\)</span> には， <span class="arithmatex">\(\rho_1\)</span> には存在しない <span class="arithmatex">\(|0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 1_{\mathrm{B}}|\)</span> のような非対角成分が含まれています。</p>
-<p>(2) の定義式 <span class="arithmatex">\(\sum_n w_n ( \rho_{n,\mathrm{A}} \otimes \rho_{n,\mathrm{B}} )\)</span> をどのように組み合わせても，各項の係数 <span class="arithmatex">\(w_n\)</span> が正の実数である限り，部分系の非対角成分の積から合成系の特定の非対角成分だけを独立に生成し，かつ対角成分との間に純粋状態としての強固な位相関係（全系のランクが1である条件）を維持することは数学的に不可能です。このような非対角項（量子コヒーレンス）による相関を持つため， <span class="arithmatex">\(\rho_2\)</span> は分離不能状態の形式に展開できず，量子もつれ状態に分類されます。</p>
+<p>となります。したがって</p>
+<div class="arithmatex">\[
+\mathrm{Tr}(\rho_{2,\mathrm{A}}^2)=\frac{1}{2}
+\]</div>
+<p>です。純粋な積状態ならば各部分系も純粋であり，縮約密度行列の純粋度は 1 になります。ここでは純粋度が <span class="arithmatex">\(1/2\)</span> であるため，<span class="arithmatex">\(|\Phi^+\rangle\)</span> は積状態ではなく，量子もつれ状態です。</p>
 
 
 

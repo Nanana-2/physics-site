@@ -14543,7 +14543,7 @@
 <h1 id="_1">エンタングルメントエントロピー</h1>
 <h2 id="_2">問題</h2>
 <p>合成系全体の量子状態が純粋状態であるとき，一方の部分系を部分トレースして得られる縮約密度行列のフォン・ノイマンエントロピーは，エンタングルメントエントロピーと呼ばれる。この量は，2つの部分系の間に存在する量子もつれの強さを定量的に評価するための指標となる。</p>
-<p>2つの量子ビット系AとBからなる合成系を考える。全系の正規直交基底を <span class="arithmatex">\(\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}\)</span> とする。実数のパラメータ <span class="arithmatex">\(\theta\)</span> （ただし <span class="arithmatex">\(0 \le \theta \le \frac{\pi}{2}\)</span> ）を用いて，全系の純粋状態 <span class="arithmatex">\(|\Psi(\theta)\rangle\)</span> が以下のように与えられている。</p>
+<p>2つの量子ビット系AとBからなる合成系を考える。全系の正規直交基底を <span class="arithmatex">\(\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}\)</span> とする。実数のパラメータ <span class="arithmatex">\(\theta\)</span> を用いて，全系の純粋状態 <span class="arithmatex">\(|\Psi(\theta)\rangle\)</span> が以下のように与えられている。</p>
 <div class="arithmatex">\[
 |\Psi(\theta)\rangle = \cos\theta |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle + \sin\theta |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle
 \]</div>
@@ -14551,7 +14551,7 @@
 <p>(1) 状態 <span class="arithmatex">\(|\Psi(\theta)\rangle\)</span> に対する合成系の全密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(\theta) = |\Psi(\theta)\rangle\langle\Psi(\theta)|\)</span> を展開せよ。</p>
 <p>さらに，系Bに関する部分トレースを実行し，系Aの縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta) = \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{tot}}(\theta))\)</span> を <span class="arithmatex">\(|0_{\mathrm{A}}\rangle, |1_{\mathrm{A}}\rangle\)</span> を基底とする行列形式で求めよ。</p>
 <p>(2) (1) で得られた縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta)\)</span> を用いて，系Aのエンタングルメントエントロピー <span class="arithmatex">\(E(\theta) = -k_B \mathrm{Tr}(\rho_{\mathrm{A}}(\theta) \ln \rho_{\mathrm{A}}(\theta))\)</span> を <span class="arithmatex">\(\theta\)</span> の関数として式で表せ。</p>
-<p>(3) パラメータ <span class="arithmatex">\(\theta\)</span> が以下の3つの値をとる場合における <span class="arithmatex">\(E(\theta)\)</span> の値をそれぞれ計算せよ。また，それぞれの値において，系Aと系Bの間の量子もつれがどのような状態にあるか，エントロピーの値と結びつけて説明せよ。</p>
+<p>(3) 指定された3つの <span class="arithmatex">\(\theta\)</span> について <span class="arithmatex">\(E(\theta)\)</span> を求め，最大値と最小値を与える状態を答えよ。</p>
 <ul>
 <li><span class="arithmatex">\(\theta = 0\)</span></li>
 <li><span class="arithmatex">\(\theta = \frac{\pi}{4}\)</span></li>
@@ -14572,7 +14572,7 @@
 <div class="arithmatex">\[
 \rho_{\mathrm{A}}(\theta) = \langle 0_{\mathrm{B}}|\rho_{\mathrm{tot}}(\theta)|0_{\mathrm{B}}\rangle + \langle 1_{\mathrm{B}}|\rho_{\mathrm{tot}}(\theta)|1_{\mathrm{B}}\rangle
 \]</div>
-<p>系Bの直交条件（ <span class="arithmatex">\(\langle 0_{\mathrm{B}}|1_{\mathrm{B}}\rangle = 0\)</span> など）により，非対角項はすべて 0 になり，対角項の系Bの成分が内積によって消去されます。</p>
+<p>系Bの直交条件により，非対角項はすべて 0 になり，対角項の系Bの成分が内積によって消去されます。</p>
 <div class="arithmatex">\[
 \rho_{\mathrm{A}}(\theta) = \cos^2\theta |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| + \sin^2\theta |1_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}|
 \]</div>
@@ -14581,7 +14581,7 @@
 \rho_{\mathrm{A}}(\theta) = \begin{pmatrix} \cos^2\theta &amp; 0 \\ 0 &amp; \sin^2\theta \end{pmatrix}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta)\)</span> はすでに対角化されているため，対角成分がそのまま固有値（出現確率）となります。固有値分布は以下の通りです。</p>
+<p>(1) で得られた縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta)\)</span> はすでに対角化されているため，対角成分がそのまま固有値となります。固有値分布は以下の通りです。</p>
 <div class="arithmatex">\[
 p_0 = \cos^2\theta, \quad p_1 = \sin^2\theta
 \]</div>
@@ -14609,7 +14609,7 @@ E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2
   E\left(\frac{\pi}{4}\right) = -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = -k_B \ln \frac{1}{2} = k_B \ln 2
   $$</p>
 <p><strong>状態の説明</strong>: </p>
-<p>2次元量子系においてエントロピーが最大値の <span class="arithmatex">\(k_B \ln 2\)</span> に達しているため，系Aと系Bの間には最も強い量子もつれ（最大量子もつれ状態）が形成されています。元の状態はベル状態 <span class="arithmatex">\(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)</span> に相当します。</p>
+<p>2次元量子系においてエントロピーが最大値の <span class="arithmatex">\(k_B \ln 2\)</span> に達しているため，系Aと系Bの間には最も強い量子もつれが形成されています。元の状態はベル状態 <span class="arithmatex">\(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)</span> に相当します。</p>
 <ul>
 <li><strong><span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> のとき</strong></li>
 </ul>

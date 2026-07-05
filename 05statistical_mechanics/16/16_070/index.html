@@ -14540,16 +14540,15 @@
 
 <h1 id="_1">リンドブラッド方程式</h1>
 <h2 id="_2">問題</h2>
-<p>環境と弱く相互作用し，過去の履歴に依存しない性質（マルコフ性）を持つ開放量子系の時間発展は，リンドブラッド方程式（マスター方程式）によって記述される。この方程式は，孤立系のユニタリー発展を表すフォン・ノイマン方程式に，環境へのエネルギー流出や位相の消失を表す非ユニタリーな項を加えた形式をしており，量子光学や量子情報科学における散逸系の解析に広く用いられる。</p>
-<p>対象系の密度行列を <span class="arithmatex">\(\rho\)</span> とし，系のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。環境との相互作用による効果が，いくつかのジャンプ演算子（散逸演算子） <span class="arithmatex">\(\hat{L}_\mu\)</span> （ <span class="arithmatex">\(\mu = 1, 2, \dots\)</span> ）によって表されるとき，リンドブラッド方程式は以下の数式で与えられる。</p>
+<p>対象系の密度行列を <span class="arithmatex">\(\rho\)</span> とし，系のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。環境との相互作用による効果が，いくつかのジャンプ演算子 <span class="arithmatex">\(\hat{L}_\mu\)</span> <span class="arithmatex">\(\mu = 1, 2, \dots\)</span> によって表されるとき，リンドブラッド方程式は以下の数式で与えられる。</p>
 <div class="arithmatex">\[
 \frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho] + \sum_\mu \left( \hat{L}_\mu \rho \hat{L}_\mu^\dagger - \frac{1}{2} \hat{L}_\mu^\dagger \hat{L}_\mu \rho - \frac{1}{2} \rho \hat{L}_\mu^\dagger \hat{L}_\mu \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 方程式の右辺第1項（ハミルトン項）である <span class="arithmatex">\(-\frac{i}{\hbar} [\hat{H}, \rho]\)</span> の物理的な意味を述べよ。また，ジャンプ演算子がすべて 0 （ <span class="arithmatex">\(\hat{L}_\mu = 0\)</span> ）である特殊な状況において，この方程式がどのような系の時間発展に一致するかを答えよ。</p>
+<p>(1) <span class="arithmatex">\(\hat{L}_\mu=0\)</span> のとき，リンドブラッド方程式がフォン・ノイマン方程式に一致することを示せ。</p>
 <p>(2) リンドブラッド方程式に従って時間発展する密度行列が，任意の時刻においてトレースの保存則 <span class="arithmatex">\(\frac{d}{dt} \mathrm{Tr}(\rho) = 0\)</span> を満たすことを，トレースの巡回対称性 <span class="arithmatex">\(\mathrm{Tr}(\hat{A}\hat{B}) = \mathrm{Tr}(\hat{B}\hat{A})\)</span> を用いて証明せよ。</p>
-<p>(3) 2準位系において，励起状態 <span class="arithmatex">\(|1\rangle\)</span> から基底状態 <span class="arithmatex">\(|0\rangle\)</span> へのエネルギー緩和（自発放出）のみが起きる状況を考える。この緩和レートを <span class="arithmatex">\(\Gamma\)</span> （ <span class="arithmatex">\(\Gamma &gt; 0\)</span> ）とすると，対応するジャンプ演算子は <span class="arithmatex">\(\hat{L} = \sqrt{\Gamma} |0\rangle\langle 1|\)</span> の1つだけで表される。
-ハミルトニアンを <span class="arithmatex">\(\hat{H} = 0\)</span> と仮定するとき，この系におけるリンドブラッド方程式の右辺の散逸項を具体的に計算し，各行列要素（ <span class="arithmatex">\(\rho_{00}, \rho_{11}, \rho_{01}, \rho_{10}\)</span> ）に関する4つの微分方程式を導出せよ。</p>
+<p>(3) 2準位系において，励起状態 <span class="arithmatex">\(|1\rangle\)</span> から基底状態 <span class="arithmatex">\(|0\rangle\)</span> へのエネルギー緩和のみが起きる状況を考える。この緩和レートを <span class="arithmatex">\(\Gamma\)</span> <span class="arithmatex">\(\Gamma &gt; 0\)</span> とすると，対応するジャンプ演算子は <span class="arithmatex">\(\hat{L} = \sqrt{\Gamma} |0\rangle\langle 1|\)</span> の1つだけで表される。
+<span class="arithmatex">\(\hat{H}=0\)</span> とし，<span class="arithmatex">\(\rho_{00},\rho_{11},\rho_{01},\rho_{10}\)</span> が満たす微分方程式を導出せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14558,7 +14557,7 @@
 <div class="arithmatex">\[
 \frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho]
 \]</div>
-<p>この数式は，外部環境と一切のエネルギーや情報のやり取りを行わない「孤立量子系」の時間発展を記述するフォン・ノイマン方程式（またはシュレーディンガー方程式の密度行列表示）に完全に一致します。</p>
+<p>この数式は，外部環境とすべてのエネルギーや情報のやり取りを行わない孤立量子系の時間発展を表すフォン・ノイマン方程式に一致します。</p>
 <h3 id="2">(2)</h3>
 <p>リンドブラッド方程式の両辺のトレースをとります。トレースの線形性により，各項のトレースの和に分解できます。</p>
 <div class="arithmatex">\[
@@ -14640,7 +14639,7 @@
 <div class="arithmatex">\[
 \frac{d\rho_{10}}{dt} = -\frac{\Gamma}{2} \rho_{10}
 \]</div>
-<p>この結果から，励起状態の確率 <span class="arithmatex">\(\rho_{11}\)</span> がレート <span class="arithmatex">\(\Gamma\)</span> で指数関数的に減少して基底状態 <span class="arithmatex">\(\rho_{00}\)</span> へと移っていく散逸の挙動と，非対角成分（コヒーレンス）がレート <span class="arithmatex">\(\frac{\Gamma}{2}\)</span> で減衰していくデコヒーレンスの挙動が，リンドブラッド方程式から直接導かれることがわかります。</p>
+<p>この結果から，励起状態の確率 <span class="arithmatex">\(\rho_{11}\)</span> がレート <span class="arithmatex">\(\Gamma\)</span> で指数関数的に減少して基底状態 <span class="arithmatex">\(\rho_{00}\)</span> へと移っていく散逸の挙動と，非対角成分がレート <span class="arithmatex">\(\frac{\Gamma}{2}\)</span> で減衰していくデコヒーレンスの挙動が，リンドブラッド方程式から直接導かれることがわかります。</p>
 
 
 

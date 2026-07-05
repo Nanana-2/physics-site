@@ -14542,14 +14542,14 @@
 
 <h1 id="_1">シュミット分解</h1>
 <h2 id="_2">問題</h2>
-<p>2つの量子系AとBからなる合成系の純粋状態は，それぞれの部分系の基底を適切に選び直すことで，対角項のみが残る形式へと変形できる。この展開をシュミット分解と呼ぶ。シュミット分解の展開項数や係数の値を見ることで，全系に量子もつれが存在するかどうかを直接判定できる。</p>
+<p>合成系の純粋状態を部分系ごとの正規直交基底で展開するシュミット分解を考える。</p>
 <p>系Aのヒルベルト空間の次元数を <span class="arithmatex">\(d_{\mathrm{A}}\)</span> ，系Bのヒルベルト空間の次元数を <span class="arithmatex">\(d_{\mathrm{B}}\)</span> とし， <span class="arithmatex">\(d = \min(d_{\mathrm{A}}, d_{\mathrm{B}})\)</span> とする。合成系の任意の純粋状態 <span class="arithmatex">\(|\Psi\rangle\)</span> は，適切に選ばれた系Aの正規直交基底 <span class="arithmatex">\(\{|i_{\mathrm{A}}\rangle\}\)</span> と系Bの正規直交基底 <span class="arithmatex">\(\{|i_{\mathrm{B}}\rangle\}\)</span> を用いて，以下の形式で展開できる。</p>
 <div class="arithmatex">\[
 |\Psi\rangle = \sum_{i=1}^{d} \lambda_i |i_{\mathrm{A}}\rangle \otimes |i_{\mathrm{B}}\rangle
 \]</div>
 <p>ただし， <span class="arithmatex">\(\lambda_i\)</span> は <span class="arithmatex">\(\lambda_i &gt; 0\)</span> を満たす実数の定数であり，シュミット係数と呼ばれる。以下の問いに答えよ。</p>
 <p>(1) 状態 <span class="arithmatex">\(|\Psi\rangle\)</span> の規格化条件 <span class="arithmatex">\(\langle\Psi|\Psi\rangle = 1\)</span> を用いて，シュミット係数の2乗の総和 <span class="arithmatex">\(\sum_{i=1}^{d} \lambda_i^2\)</span> が満たすべき関係式を導け。</p>
-<p>(2) 状態 <span class="arithmatex">\(|\Psi\rangle\)</span> に対する合成系の全密度行列 <span class="arithmatex">\(\rho = |\Psi\rangle\langle\Psi|\)</span> を作り，系Bについて部分トレースをとることで，系Aの縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}} = \mathrm{Tr}_{\mathrm{B}}(\rho)\)</span> を求めよ。また，得られた <span class="arithmatex">\(\rho_{\mathrm{A}}\)</span> のトレースの2乗 <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{A}}^2)\)</span> （純粋度）をシュミット係数 <span class="arithmatex">\(\lambda_i\)</span> を用いて表せ。</p>
+<p>(2) 状態 <span class="arithmatex">\(|\Psi\rangle\)</span> に対する合成系の全密度行列 <span class="arithmatex">\(\rho = |\Psi\rangle\langle\Psi|\)</span> を作り，系Bについて部分トレースをとることで，系Aの縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}} = \mathrm{Tr}_{\mathrm{B}}(\rho)\)</span> を求めよ。また，得られた <span class="arithmatex">\(\rho_{\mathrm{A}}\)</span> のトレースの2乗 <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{A}}^2)\)</span> をシュミット係数 <span class="arithmatex">\(\lambda_i\)</span> を用いて表せ。</p>
 <p>(3) 2つの量子ビット系において，合成系の状態が以下の2つの場合を考える。</p>
 <ul>
 <li>状態1: <span class="arithmatex">\(|\Psi_1\rangle = \frac{1}{2}|0_{\mathrm{A}} 0_{\mathrm{B}}\rangle + \frac{\sqrt{3}}{2}|0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\)</span></li>
