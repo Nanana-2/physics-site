@@ -14564,24 +14564,24 @@
 
 <h1 id="_1">クローニッヒ・ペニー模型とエネルギーバンド</h1>
 <h2 id="_2">問題</h2>
-<p>結晶のように原子が規則正しく配列した系では，粒子が受けるポテンシャルは空間的な周期性を持つ。このような周期ポテンシャル中の電子が満たすべき波動関数の満たすべき性質を示したのがブロッホの定理である。ここでは，周期ポテンシャルを単純化したクローニッヒ・ペニー模型を扱い，境界条件とブロッホの定理を組み合わせることで，結晶中の電子が特定のエネルギー領域しか取れなくなるエネルギーバンド（許容帯と禁制帯）の形成を理解する。</p>
+<p>原子が規則正しく配列した結晶では，粒子が受けるポテンシャルは空間的な周期性を持つ。周期ポテンシャル中の電子の波動関数が満たす条件はブロッホの定理で与えられる。ここでは，周期ポテンシャルを単純化したクローニッヒ・ペニー模型を扱い，境界条件とブロッホの定理から許容帯と禁制帯が生じることを示す。</p>
 <p>周期 <span class="arithmatex">\(L = a + b\)</span> を持つ一次元の周期ポテンシャル <span class="arithmatex">\(V(x) = V(x + L)\)</span> を以下のように設定する。</p>
 <div class="arithmatex">\[
 V(x) = \begin{cases} 0 &amp; (0 &lt; x &lt; a) \\ V_0 &amp; (-b &lt; x &lt; 0) \end{cases}
 \]</div>
-<p>この系において，障壁の高さより低いエネルギー <span class="arithmatex">\(E\)</span>（ <span class="arithmatex">\(0 &lt; E &lt; V_0\)</span> ）を持つ質量 <span class="arithmatex">\(m\)</span> の電子を考える。</p>
-<p>周期ポテンシャル中の波動関数は，結晶波数 <span class="arithmatex">\(k\)</span> を用いて <span class="arithmatex">\(\psi(x + L) = e^{ikL}\psi(x)\)</span> という関係を満たす（ブロッホの定理）。以下の問いに答えよ。</p>
-<p>(1) 領域 I（ <span class="arithmatex">\(0 &lt; x &lt; a\)</span> ）の波動関数を <span class="arithmatex">\(\psi_{\text{I}}(x) = A e^{i\alpha x} + B e^{-i\alpha x}\)</span> ，領域 II（ <span class="arithmatex">\(-b &lt; x &lt; 0\)</span> ）の波動関数を <span class="arithmatex">\(\psi_{\text{II}}(x) = C e^{\beta x} + D e^{-\beta x}\)</span> と置く。正の実数の定数 <span class="arithmatex">\(\alpha, \beta\)</span> を <span class="arithmatex">\(E, V_0, m, \hbar\)</span> を用いてそれぞれ表せ。</p>
-<p>(2) <span class="arithmatex">\(x = 0\)</span> における接続条件（波動関数とその微分の連続性）を書き下せ。また，もう一つの境界である <span class="arithmatex">\(x = a\)</span> における接続条件を，ブロッホの定理を用いて領域 II の負の境界 <span class="arithmatex">\(x = -b\)</span> での値と結びつけることにより， <span class="arithmatex">\(\psi_{\text{I}}(a) = e^{ikL}\psi_{\text{II}}(-b)\)</span> および <span class="arithmatex">\(\psi_{\text{I}}'(a) = e^{ikL}\psi_{\text{II}}'(-b)\)</span> と表せることを示せ。</p>
-<p>(3) 上記の接続条件から得られる4つの連立方程式が，係数 <span class="arithmatex">\(A, B, C, D\)</span> がすべて 0 になるという自明な解以外の解を持つための条件を課すと，以下の関係式（超越方程式）が導かれる。</p>
+<p>この系において，<span class="arithmatex">\(0 &lt; E &lt; V_0\)</span> を満たすエネルギー <span class="arithmatex">\(E\)</span> の質量 <span class="arithmatex">\(m\)</span> の電子を考える。</p>
+<p>ブロッホの定理より，周期ポテンシャル中の波動関数は，結晶波数 <span class="arithmatex">\(k\)</span> を用いて <span class="arithmatex">\(\psi(x + L) = e^{ikL}\psi(x)\)</span> を満たす。以下の問いに答えよ。</p>
+<p>(1) 領域 I を <span class="arithmatex">\(0 &lt; x &lt; a\)</span>，領域 II を <span class="arithmatex">\(-b &lt; x &lt; 0\)</span> とする。各領域の波動関数を <span class="arithmatex">\(\psi_{\text{I}}(x) = A e^{i\alpha x} + B e^{-i\alpha x}\)</span>，<span class="arithmatex">\(\psi_{\text{II}}(x) = C e^{\beta x} + D e^{-\beta x}\)</span> と置く。正の実数の定数 <span class="arithmatex">\(\alpha, \beta\)</span> を <span class="arithmatex">\(E, V_0, m, \hbar\)</span> を用いてそれぞれ表せ。</p>
+<p>(2) <span class="arithmatex">\(x = 0\)</span> における波動関数とその微分の連続条件を書き下せ。また，<span class="arithmatex">\(x = a\)</span> における接続条件を，ブロッホの定理を用いて領域 II の境界 <span class="arithmatex">\(x = -b\)</span> での値と結びつけ，<span class="arithmatex">\(\psi_{\text{I}}(a) = e^{ikL}\psi_{\text{II}}(-b)\)</span> および <span class="arithmatex">\(\psi_{\text{I}}'(a) = e^{ikL}\psi_{\text{II}}'(-b)\)</span> と表せることを示せ。</p>
+<p>(3) 上記の接続条件から得られる4つの連立方程式が，<span class="arithmatex">\(A, B, C, D\)</span> の少なくとも一つが0でない解を持つ条件を課すと，以下の超越方程式が得られる。</p>
 <div class="arithmatex">\[
 \frac{\beta^2 - \alpha^2}{2\alpha\beta} \sinh(\beta b) \sin(\alpha a) + \cosh(\beta b) \cos(\alpha a) = \cos(kL)
 \]</div>
-<p>ここで，計算を簡略化するために「障壁の幅 <span class="arithmatex">\(b\)</span> を極限まで薄くし，逆に高さ <span class="arithmatex">\(V_0\)</span> を極限まで高くする」というデルタ関数型の極限（ <span class="arithmatex">\(b \to 0, V_0 \to \infty\)</span> で，その積 <span class="arithmatex">\(V_0 b\)</span> を有限の値にとどめる極限）を考える。このとき，上の関係式が以下の形に簡略化されることを示せ。ただし， <span class="arithmatex">\(P = \frac{m a V_0 b}{\hbar^2}\)</span> とする。</p>
+<p>計算を簡略化するため，<span class="arithmatex">\(b \to 0, V_0 \to \infty\)</span> とし，積 <span class="arithmatex">\(V_0b\)</span> を有限に保つデルタ関数型の極限を考える。このとき，上の関係式が以下の形に簡略化されることを示せ。ただし，<span class="arithmatex">\(P = \frac{m a V_0 b}{\hbar^2}\)</span> とする。</p>
 <div class="arithmatex">\[
 P \frac{\sin(\alpha a)}{\alpha a} + \cos(\alpha a) = \cos(kL)
 \]</div>
-<p>(4) 結晶波数 <span class="arithmatex">\(k\)</span> は実数でなければならないため，(3) の右辺の絶対値は 1 以下（ <span class="arithmatex">\(|\cos(kL)| \le 1\)</span> ）という制限を受ける。このことから，電子が取り得るエネルギー <span class="arithmatex">\(E\)</span> に不連続な領域（バンドギャップ）が生じる理由を説明せよ。</p>
+<p>(4) 結晶波数 <span class="arithmatex">\(k\)</span> は実数であるため，(3) の右辺は <span class="arithmatex">\(|\cos(kL)| \le 1\)</span> を満たす。この制限から，電子がとり得ないエネルギー領域であるバンドギャップが生じる理由を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>

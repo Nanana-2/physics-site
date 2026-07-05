@@ -14543,12 +14543,12 @@
 <h1 id="_1">有限ポテンシャル障壁とトンネル効果</h1>
 <h2 id="_2">問題</h2>
 <p>粒子が持つエネルギーよりも高い有限の幅の壁が存在する系を，有限ポテンシャル障壁と呼ぶ。古典力学では，エネルギーが足りない粒子は壁を越えることができず，100%跳ね返される。しかし量子力学では，壁の内部において波動関数が指数関数的に減衰しながらも有限の値として残り，壁の厚さが薄ければ，粒子が一定の確率で壁の向こう側へ通り抜ける。この現象はトンネル効果と呼ばれ，走査型トンネル顕微鏡などの技術に応用されている。</p>
-<p>幅 <span class="arithmatex">\(a\)</span> ，高さ <span class="arithmatex">\(V_0\)</span> （ <span class="arithmatex">\(V_0 &gt; 0\)</span> ）の一次元ポテンシャル障壁を以下のように設定する。</p>
+<p>幅 <span class="arithmatex">\(a\)</span>，高さ <span class="arithmatex">\(V_0 &gt; 0\)</span> の一次元ポテンシャル障壁を以下のように設定する。</p>
 <div class="arithmatex">\[
 V(x) = \begin{cases} 0 &amp; (x &lt; 0) \\ V_0 &amp; (0 \le x \le a) \\ 0 &amp; (x &gt; a) \end{cases}
 \]</div>
-<p>領域 I（ <span class="arithmatex">\(x &lt; 0\)</span> ）の左側から，障壁の高さより低いエネルギー <span class="arithmatex">\(E\)</span> （ <span class="arithmatex">\(0 &lt; E &lt; V_0\)</span> ）を持つ質量 <span class="arithmatex">\(m\)</span> の粒子が入射する場合を考える。以下の問いに答えよ。</p>
-<p>(1) 領域 I（ <span class="arithmatex">\(x &lt; 0\)</span> ），領域 II（ <span class="arithmatex">\(0 \le x \le a\)</span> ），領域 III（ <span class="arithmatex">\(x &gt; a\)</span> ）の各領域における時間依存しないシュレーディンガー方程式を示せ。また，各領域の解を以下のように置くとき，正の実数の定数 <span class="arithmatex">\(k, \kappa\)</span> を <span class="arithmatex">\(E, V_0, m, \hbar\)</span> を用いてそれぞれ表せ。ただし，領域 III では透過波のみが存在するものとする。</p>
+<p>領域 I を <span class="arithmatex">\(x &lt; 0\)</span>，領域 II を <span class="arithmatex">\(0 \le x \le a\)</span>，領域 III を <span class="arithmatex">\(x &gt; a\)</span> とする。領域 I の左側から，<span class="arithmatex">\(0 &lt; E &lt; V_0\)</span> を満たすエネルギー <span class="arithmatex">\(E\)</span> の質量 <span class="arithmatex">\(m\)</span> の粒子が入射する場合を考える。以下の問いに答えよ。</p>
+<p>(1) 各領域における時間独立シュレーディンガー方程式を示せ。また，各領域の解を以下のように置くとき，正の実数の定数 <span class="arithmatex">\(k, \kappa\)</span> を <span class="arithmatex">\(E, V_0, m, \hbar\)</span> を用いてそれぞれ表せ。ただし，領域 III では透過波のみが存在するものとする。</p>
 <div class="arithmatex">\[
 \psi_{\text{I}}(x) = A e^{ikx} + B e^{-ikx}
 \]</div>
@@ -14559,7 +14559,7 @@ V(x) = \begin{cases} 0 &amp; (x &lt; 0) \\ V_0 &amp; (0 \le x \le a) \\ 0 &amp; 
 \psi_{\text{III}}(x) = F e^{ikx}
 \]</div>
 <p>(2) 境界 <span class="arithmatex">\(x = 0\)</span> と <span class="arithmatex">\(x = a\)</span> の2箇所において，波動関数とその微分がそれぞれ連続である条件を課せ。得られる4つの関係式を示せ。</p>
-<p>(3) 障壁が十分に厚く，かつ高い（ <span class="arithmatex">\(\kappa a \gg 1\)</span> ）と仮定すると，領域 II の解の係数 <span class="arithmatex">\(D\)</span> の項は <span class="arithmatex">\(C\)</span> の項に比べて無視できるほど小さくなる。この近似を用いて，入射波の係数 <span class="arithmatex">\(A\)</span> と透過波の係数 <span class="arithmatex">\(F\)</span> の比を計算し，透過確率（透過係数） <span class="arithmatex">\(T = |F|^2 / |A|^2\)</span> が以下のように指数関数的に減少する形で表されることを導け。</p>
+<p>(3) 障壁が十分に厚く，かつ高いため <span class="arithmatex">\(\kappa a \gg 1\)</span> が成り立つとする。このとき，領域 II の解の係数 <span class="arithmatex">\(D\)</span> の項は <span class="arithmatex">\(C\)</span> の項に比べて無視できるほど小さい。この近似を用いて，入射波の係数 <span class="arithmatex">\(A\)</span> と透過波の係数 <span class="arithmatex">\(F\)</span> の比を計算し，透過係数 <span class="arithmatex">\(T = |F|^2 / |A|^2\)</span> が以下のように指数関数的に減少することを導け。</p>
 <div class="arithmatex">\[
 T \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}
 \]</div>

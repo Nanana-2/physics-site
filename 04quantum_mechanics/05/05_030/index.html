@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">エルミート多項式と固有関数</h1>
 <h2 id="_2">問題</h2>
-<p>調和振動子のシュレーディンガー方程式を一般の量子数 <span class="arithmatex">\(n\)</span> に対して厳密に解くため，波動関数をガウス型関数と未知の関数 <span class="arithmatex">\(H_n(\xi)\)</span> の積として表し，多項式解（級数解）を求める手法を扱う。遠方での収束条件から級数が有限の次数で打ち切られる必要性を示し，任意の量子数 <span class="arithmatex">\(n\)</span> に対するエネルギー固有値と波動関数の一般形を導出する。</p>
+<p>調和振動子のシュレーディンガー方程式を一般の量子数 <span class="arithmatex">\(n\)</span> に対して解くため，波動関数をガウス型関数と未知関数 <span class="arithmatex">\(H_n(\xi)\)</span> の積で表し，べき級数法を適用する。遠方での収束条件から級数が有限次数で打ち切られる条件を求め，任意の量子数 <span class="arithmatex">\(n\)</span> に対するエネルギー固有値と波動関数の一般形を導出する。</p>
 <p>無次元化された調和振動子のシュレーディンガー方程式は以下の通りである。</p>
 <div class="arithmatex">\[
 \frac{d^2\psi}{d\xi^2} + (\lambda - \xi^2)\psi = 0
@@ -14556,8 +14556,8 @@
 <div class="arithmatex">\[
 c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 \]</div>
-<p>(3) 級数が無限に続くと仮定すると， <span class="arithmatex">\(m \to \infty\)</span> の極限で係数の比は <span class="arithmatex">\(c_{m+2}/c_m \to 2/m\)</span> となり，これは <span class="arithmatex">\(e^{\xi^2}\)</span> の展開式の係数比と一致する。このとき波動関数 <span class="arithmatex">\(\psi(\xi)\)</span> が無限遠（ <span class="arithmatex">\(\xi \to \pm\infty\)</span> ）で発散してしまうことを説明せよ。</p>
-<p>また，波動関数が収束するために級数が有限の次数 <span class="arithmatex">\(m=n\)</span> で打ち切られて多項式（エルミート多項式 <span class="arithmatex">\(H_n(\xi)\)</span> ）となる条件から，無次元エネルギー <span class="arithmatex">\(\lambda\)</span> が量子数 <span class="arithmatex">\(n\)</span> を用いて <span class="arithmatex">\(\lambda = 2n + 1\)</span> と表されることを示し，実際のエネルギー固有値 <span class="arithmatex">\(E_n\)</span> を導け。</p>
+<p>(3) 級数が無限に続くと仮定すると，<span class="arithmatex">\(m \to \infty\)</span> の極限で係数の比は <span class="arithmatex">\(c_{m+2}/c_m \to 2/m\)</span> となり，これは <span class="arithmatex">\(e^{\xi^2}\)</span> の展開式の係数比と一致する。このとき波動関数 <span class="arithmatex">\(\psi(\xi)\)</span> が <span class="arithmatex">\(\xi \to \pm\infty\)</span> で発散することを説明せよ。</p>
+<p>また，波動関数が収束するために級数が有限次数 <span class="arithmatex">\(m=n\)</span> で打ち切られ，エルミート多項式 <span class="arithmatex">\(H_n(\xi)\)</span> となる条件を求めよ。この条件から，無次元エネルギーが <span class="arithmatex">\(\lambda = 2n + 1\)</span> と表されることを示し，エネルギー固有値 <span class="arithmatex">\(E_n\)</span> を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>

@@ -14542,13 +14542,13 @@
 
 <h1 id="_1">分配関数の基本</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> （逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>）の熱浴と熱的に接触し，熱平衡状態にあるマクロな系を考える。この系がとりうる微視的状態を <span class="arithmatex">\(i\)</span> とし，状態 <span class="arithmatex">\(i\)</span> における系のエネルギーを <span class="arithmatex">\(E_i\)</span> とするとき，状態 <span class="arithmatex">\(i\)</span> が実現する確率はボルツマン因子 <span class="arithmatex">\(\exp(-\beta E_i)\)</span> に比例する。以下の問いに答えよ。</p>
-<p>(1) 状態 <span class="arithmatex">\(i\)</span> が実現する確率 <span class="arithmatex">\(P_i\)</span> を，分配関数（状態和） <span class="arithmatex">\(Z = \sum_i \exp(-\beta E_i)\)</span> を用いて表せ。また，すべての状態について確率の総和をとると，正しく <span class="arithmatex">\(1\)</span> に規格化されることを示せ。</p>
-<p>(2) 系のエネルギーの期待値（平均エネルギー） <span class="arithmatex">\(\langle E \rangle\)</span> の定義式を示せ。また，分配関数 <span class="arithmatex">\(Z\)</span> の <span class="arithmatex">\(\beta\)</span> による偏微分が <span class="arithmatex">\(\frac{\partial Z}{\partial \beta} = -\sum_i E_i \exp(-\beta E_i)\)</span> となることを利用して，平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> が分配関数の対数微分を用いて以下のように表されることを導出せよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱的に接触し，熱平衡状態にある巨視的な系を考える。逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。この系がとりうる微視的状態を <span class="arithmatex">\(i\)</span> とし，状態 <span class="arithmatex">\(i\)</span> における系のエネルギーを <span class="arithmatex">\(E_i\)</span> とするとき，状態 <span class="arithmatex">\(i\)</span> が実現する確率はボルツマン因子 <span class="arithmatex">\(\exp(-\beta E_i)\)</span> に比例する。以下の問いに答えよ。</p>
+<p>(1) 状態和である分配関数を <span class="arithmatex">\(Z = \sum_i \exp(-\beta E_i)\)</span> と定義する。状態 <span class="arithmatex">\(i\)</span> が実現する確率 <span class="arithmatex">\(P_i\)</span> を <span class="arithmatex">\(Z\)</span> を用いて表し，すべての状態について確率の総和をとると <span class="arithmatex">\(1\)</span> に規格化されることを示せ。</p>
+<p>(2) 系の平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> の定義式を示せ。また，分配関数 <span class="arithmatex">\(Z\)</span> の <span class="arithmatex">\(\beta\)</span> による偏微分が <span class="arithmatex">\(\frac{\partial Z}{\partial \beta} = -\sum_i E_i \exp(-\beta E_i)\)</span> となることを利用して，<span class="arithmatex">\(\langle E \rangle\)</span> が分配関数の対数微分を用いて以下のように表されることを導出せよ。</p>
 <div class="arithmatex">\[
 \langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
 \]</div>
-<p>(3) 熱力学におけるヘルムホルツの自由エネルギー <span class="arithmatex">\(F\)</span> は，統計力学の分配関数 <span class="arithmatex">\(Z\)</span> と <span class="arithmatex">\(F = -k_B T \log Z\)</span> という関係式で結ばれている。この関係式と，熱力学的な関係式 <span class="arithmatex">\(U = \left( \frac{\partial (F/T)}{\partial (1/T)} \right)_{V, N}\)</span> （ギブズ・ヘルムホルツの式）を用いることで，統計力学的な平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> が熱力学的な内部エネルギー <span class="arithmatex">\(U\)</span> と完全に一致することを示せ。</p>
+<p>(3) ヘルムホルツの自由エネルギー <span class="arithmatex">\(F\)</span> と分配関数 <span class="arithmatex">\(Z\)</span> の関係 <span class="arithmatex">\(F = -k_B T \log Z\)</span>，およびギブズ・ヘルムホルツの式 <span class="arithmatex">\(U = \left( \frac{\partial (F/T)}{\partial (1/T)} \right)_{V, N}\)</span> を用いて，統計力学的な平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> が熱力学的な内部エネルギー <span class="arithmatex">\(U\)</span> と一致することを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
