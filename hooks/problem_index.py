@@ -116,6 +116,7 @@ def on_post_build(config, **kwargs):
                         "chapter": chapter,
                         "chapterSlug": chapter_dir.name,
                         "difficulty": difficulty,
+                        "number": markdown_file.stem,
                         "searchText": _question_text(markdown),
                     }
                 )

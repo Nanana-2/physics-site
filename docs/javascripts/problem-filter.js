@@ -85,12 +85,16 @@
           const href = new URL(`../${problem.url}`, window.location.href).href;
           return `
             <article class="problem-result">
-              <a class="problem-result__title" href="${escapeHtml(href)}">${escapeHtml(problem.title)}</a>
-              <p class="problem-result__meta">
-                <span>${escapeHtml(problem.subject)}</span>
-                <span>${escapeHtml(problem.chapter)}</span>
-                <span class="problem-result__difficulty" data-difficulty="${escapeHtml(problem.difficulty)}">${escapeHtml(problem.difficulty)}</span>
-              </p>
+              <div class="problem-result__body">
+                <a class="problem-result__title" href="${escapeHtml(href)}">${escapeHtml(problem.title)}</a>
+                <p class="problem-result__meta">
+                  <span>${escapeHtml(problem.subject)}</span>
+                  <span aria-hidden="true">›</span>
+                  <span>${escapeHtml(problem.chapter)}</span>
+                  <span class="problem-result__number">${escapeHtml(problem.number || "")}</span>
+                </p>
+              </div>
+              <span class="problem-result__difficulty" data-difficulty="${escapeHtml(problem.difficulty)}">${escapeHtml(problem.difficulty)}</span>
             </article>`;
         })
         .join("");
