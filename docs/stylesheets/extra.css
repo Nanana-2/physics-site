@@ -222,15 +222,34 @@ body, input {
   .md-nav--primary > .md-nav__title {
     display: flex !important;
     align-items: center !important;
-    gap: 1.0rem !important;
-    padding-left: 1.0rem !important;
-    padding-right: 1.0rem !important;
+    justify-content: flex-start !important;
+    gap: 0.75rem !important;
+    height: 4rem !important;
+    padding: 0.8rem 1rem !important;
+    color: #ffffff !important;
+    background-color: var(--md-primary-fg-color) !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+  }
+
+  .md-nav--primary > .md-nav__title .md-logo {
+    position: static !important;
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
   }
 
   .md-nav--primary > .md-nav__title .md-logo img,
   .md-nav--primary > .md-nav__title .md-logo svg {
-    height: 1.6rem !important;
-    width: auto !important;
+    width: 1.55rem !important;
+    height: 1.55rem !important;
   }
 
   .md-nav--primary {
@@ -238,14 +257,12 @@ body, input {
   }
 
   .md-nav--primary > .md-nav__title {
-    background-color: transparent !important;
-    color: var(--md-typeset-color) !important;
-    box-shadow: none !important;
+    color: #ffffff !important;
   }
 
   .md-nav--primary > .md-nav__title .md-logo,
   .md-nav--primary > .md-nav__title .md-nav__icon {
-    color: var(--md-typeset-color) !important;
+    color: #ffffff !important;
   }
 }
 
@@ -590,15 +607,11 @@ body, input {
    15. 問題末尾から分野一覧へ戻る導線
    ========================================== */
 .problem-subject-return {
+  display: grid;
+  gap: 0.65rem;
   margin-top: 3rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--md-default-fg-color--lightest);
-}
-
-.problem-subject-return p {
-  margin: 0 0 0.6rem !important;
-  color: var(--md-default-fg-color--light);
-  font-size: 0.72rem;
 }
 
 .md-typeset .problem-subject-return a {
@@ -622,6 +635,14 @@ body, input {
   color: var(--md-primary-fg-color--dark);
   background: var(--md-default-bg-color);
   border-color: var(--site-heading-accent);
+}
+
+.md-typeset .problem-subject-return__reference {
+  border-left-color: var(--site-heading-soft);
+}
+
+.md-typeset .problem-subject-return__reference:hover {
+  border-left-color: var(--site-heading-accent);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .problem-subject-return a {
