@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">詳細釣り合い</h1>
 <h2 id="_2">問題</h2>
-<p>熱平衡状態にある統計力学的な系は，微視的には常に状態間の遷移を繰り返しているが，マクロな出現確率は時間的に変化しない。このような定常な確率分布を維持するための微視的な条件として詳細釣り合い条件が挙げられる。</p>
 <p>系がとり得る微視的状態を <span class="arithmatex">\(i, j\)</span> とし，状態 <span class="arithmatex">\(i\)</span> にある系が単位時間あたりに状態 <span class="arithmatex">\(j\)</span> へ遷移する確率を <span class="arithmatex">\(W(i \to j)\)</span> とする。また，状態 <span class="arithmatex">\(i\)</span> の出現確率を <span class="arithmatex">\(P_i(t)\)</span> とする。この確率の満たす時間発展方程式は，以下のマスター方程式で表される。</p>
 <div class="arithmatex">\[
 \frac{dP_i(t)}{dt} = \sum_{j \neq i} \left[ W(j \to i) P_j(t) - W(i \to j) P_i(t) \right]
@@ -14550,7 +14549,7 @@
 <p>系が熱平衡状態に達したときの確率分布を <span class="arithmatex">\(P_i^{\mathrm{eq}}\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) 状態 <span class="arithmatex">\(i\)</span> と状態 <span class="arithmatex">\(j\)</span> のあらゆるペアの間で，状態の移動による確率の正味の流れがゼロであるという条件を詳細釣り合い条件と呼ぶ。この詳細釣り合い条件を表す数式を， <span class="arithmatex">\(P_i^{\mathrm{eq}}, P_j^{\mathrm{eq}}, W(i \to j), W(j \to i)\)</span> を用いて述べよ。</p>
 <p>(2) (1) で表した詳細釣り合い条件が満たされているとき，マスター方程式の右辺が恒等的にゼロになり，平衡分布 <span class="arithmatex">\(P_i^{\mathrm{eq}}\)</span> が時間的に変化しない定常状態 <span class="arithmatex">\(\frac{dP_i^{\mathrm{eq}}}{dt} = 0\)</span> であることが保証されることを示せ。</p>
-<p>(3) カノニカル分布における状態 <span class="arithmatex">\(i\)</span> の平衡出現確率は，その状態のエネルギー <span class="arithmatex">\(E_i\)</span> を用いて <span class="arithmatex">\(P_i^{\mathrm{eq}} \propto \exp(-\beta E_i)\)</span> と表される。このとき，詳細釣り合い条件を満たす遷移速度の比 <span class="arithmatex">\(\frac{W(i \to j)}{W(j \to i)}\)</span> が，2つの状態のエネルギー差 <span class="arithmatex">\(\Delta E = E_j - E_i\)</span> と逆温度 <span class="arithmatex">\(\beta\)</span> を用いてどのように表されるか導出せよ。また，この規則を利用してモンテカルロシミュレーションで広く用いられるメトロポリス法の遷移確率の選定基準について説明せよ。</p>
+<p>(3) <span class="arithmatex">\(P_i^{\mathrm{eq}} \propto \exp(-\beta E_i)\)</span> とする。詳細釣り合い条件から遷移速度の比 <span class="arithmatex">\(\frac{W(i \to j)}{W(j \to i)}\)</span> を，<span class="arithmatex">\(\Delta E = E_j - E_i\)</span> と <span class="arithmatex">\(\beta\)</span> を用いて表せ。また，メトロポリス法の遷移確率を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>

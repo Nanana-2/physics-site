@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">ブラウン運動とランジュバン方程式</h1>
 <h2 id="_2">問題</h2>
-<p>溶媒中に浮遊する微小な粒子の不規則な熱運動を力学的に表すため，ランジュバンは，粒子が受ける力をマクロな粘性抵抗力と，周囲の溶媒分子との衝突によるミクロなランダム力の2つに分離した運動方程式を提案した。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，位置 <span class="arithmatex">\(x(t)\)</span> ，速度 <span class="arithmatex">\(v(t) = \frac{dx(t)}{dt}\)</span> の一次元ブラウン粒子を考える。流体から受ける摩擦係数を <span class="arithmatex">\(\gamma\)</span> ，ランダム力を <span class="arithmatex">\(R(t)\)</span> とするとき，この粒子の運動方程式は以下のように与えられる。</p>
 <div class="arithmatex">\[
 m \frac{dv(t)}{dt} = -\gamma v(t) + R(t)
@@ -14552,9 +14551,9 @@ m \frac{dv(t)}{dt} = -\gamma v(t) + R(t)
 \langle R(t) R(t') \rangle = 2 \gamma k_B T \delta(t - t')
 \]</div>
 <p>ここで <span class="arithmatex">\(\delta(t)\)</span> はデルタ関数， <span class="arithmatex">\(T\)</span> は流体の絶対温度である。以下の問いに答えよ。</p>
-<p>(1) 時刻 <span class="arithmatex">\(t=0\)</span> における粒子の速度を <span class="arithmatex">\(v(0)\)</span> とし，定数変化法などを用いてランジュバン方程式を解くことにより，任意の時刻 <span class="arithmatex">\(t\)</span> における速度 <span class="arithmatex">\(v(t)\)</span> の式を <span class="arithmatex">\(v(0), m, \gamma\)</span> および <span class="arithmatex">\(R(t)\)</span> の積分項を用いて表せ。</p>
-<p>(2) (1) の解を利用して，速度の熱平均の2乗 <span class="arithmatex">\(\langle v(t)^2 \rangle\)</span> を計算せよ。ただし，初期速度とランダム力に相関はないもの <span class="arithmatex">\(\langle v(0) R(t) \rangle = 0\)</span> とし，十分時間が経過した極限 <span class="arithmatex">\(t \to \infty\)</span> において，この結果が熱力学のエネルギー等配分則 <span class="arithmatex">\(\frac{1}{2}m \langle v^2 \rangle = \frac{1}{2}k_B T\)</span> と一致することを確認せよ。</p>
-<p>(3) 粒子の位置の平均二乗変位 <span class="arithmatex">\(\langle x(t)^2 \rangle\)</span> を計算するため，ランジュバン方程式の両辺に位置 <span class="arithmatex">\(x\)</span> を掛け， <span class="arithmatex">\(x \frac{dv}{dt} = \frac{d}{dt}(xv) - v^2\)</span> などの関係式を用いて変形する。初期位置を <span class="arithmatex">\(x(0)=0\)</span> とし，十分時間が経過した長時間極限 <span class="arithmatex">\(t \gg m/\gamma\)</span> において，平均二乗変位が時間に比例する挙動 <span class="arithmatex">\(\langle x(t)^2 \rangle \simeq 2 D t\)</span> を示すことを導出し，拡散係数 <span class="arithmatex">\(D\)</span> が摩擦係数 <span class="arithmatex">\(\gamma\)</span> と絶対温度 <span class="arithmatex">\(T\)</span> を用いてどのように表されるかを示せ。</p>
+<p>(1) 初期速度を <span class="arithmatex">\(v(0)\)</span> としてランジュバン方程式を解き，<span class="arithmatex">\(v(t)\)</span> を求めよ。</p>
+<p>(2) <span class="arithmatex">\(\langle v(0)R(t)\rangle=0\)</span> として <span class="arithmatex">\(\langle v(t)^2\rangle\)</span> を求め，<span class="arithmatex">\(t\to\infty\)</span> でエネルギー等配分則を満たすことを示せ。</p>
+<p>(3) <span class="arithmatex">\(x(0)=0\)</span> とする。長時間極限 <span class="arithmatex">\(t\gg m/\gamma\)</span> における <span class="arithmatex">\(\langle x(t)^2\rangle\)</span> を求め，<span class="arithmatex">\(\langle x(t)^2\rangle\simeq2Dt\)</span> との比較から拡散係数 <span class="arithmatex">\(D\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>

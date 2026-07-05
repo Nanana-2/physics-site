@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">マスター方程式</h1>
 <h2 id="_2">問題</h2>
-<p>非平衡状態にある系が時間とともに熱平衡状態へと近づいていく緩和過程を表すため，確率論的なアプローチであるマスター方程式を導入する。</p>
 <p>最も単純な例として，系が状態 1 と状態 2 の2つの離散状態のみをとる状況を考える。時刻 <span class="arithmatex">\(t\)</span> において系が状態 1，状態 2 にある確率をそれぞれ <span class="arithmatex">\(P_1(t), P_2(t)\)</span> とする。状態 1 から状態 2 への単位時間あたりの遷移速度を <span class="arithmatex">\(k_1\)</span> ，状態 2 から状態 1 への遷移速度を <span class="arithmatex">\(k_2\)</span> とするとき，確率の保存則を考慮したマスター方程式は以下の連立微分方程式で与えられる。</p>
 <div class="arithmatex">\[
 \frac{dP_1(t)}{dt} = -k_1 P_1(t) + k_2 P_2(t)
@@ -14552,8 +14551,8 @@
 \]</div>
 <p>ただし，遷移速度は正の定数 <span class="arithmatex">\(k_1 &gt; 0, k_2 &gt; 0\)</span> であり，全確率の保存則 <span class="arithmatex">\(P_1(t) + P_2(t) = 1\)</span> が常に成り立つものとして，以下の問いに答えよ。</p>
 <p>(1) 時間変化がなくなった十分時間経過後の定常状態 <span class="arithmatex">\(\frac{dP_1(t)}{dt} = 0, \frac{dP_2(t)}{dt} = 0\)</span> における確率分布 <span class="arithmatex">\(P_1^{\mathrm{st}}, P_2^{\mathrm{st}}\)</span> を， <span class="arithmatex">\(k_1, k_2\)</span> を用いて表せ。</p>
-<p>(2) 全確率の保存則を用いて <span class="arithmatex">\(P_2(t) = 1 - P_1(t)\)</span> として消去することにより， <span class="arithmatex">\(P_1(t)\)</span> に関する1階の単独の線形微分方程式を導出せよ。さらに，時刻 <span class="arithmatex">\(t=0\)</span> における初期確率を <span class="arithmatex">\(P_1(0) = 1, P_2(0) = 0\)</span> とするとき，任意の時刻 <span class="arithmatex">\(t\)</span> における確率 <span class="arithmatex">\(P_1(t)\)</span> の時間発展の解を求めよ。</p>
-<p>(3) (2) で得られた解 <span class="arithmatex">\(P_1(t)\)</span> は，時間の経過とともに (1) で求めた定常値 <span class="arithmatex">\(P_1^{\mathrm{st}}\)</span> へと指数関数的に近づいていく。系が定常状態へ近づく時間スケールを特徴づける<strong>緩和時間</strong> <span class="arithmatex">\(\tau\)</span> の式を <span class="arithmatex">\(k_1, k_2\)</span> を用いて述べよ。また，遷移速度 <span class="arithmatex">\(k_1, k_2\)</span> が大きくなるほど，緩和時間 <span class="arithmatex">\(\tau\)</span> がどのように変化するか物理的に説明せよ。</p>
+<p>(2) <span class="arithmatex">\(P_2(t)=1-P_1(t)\)</span> とし，初期条件 <span class="arithmatex">\(P_1(0)=1\)</span> のもとで <span class="arithmatex">\(P_1(t)\)</span> を求めよ。</p>
+<p>(3) <span class="arithmatex">\(P_1(t)\)</span> の指数減衰から緩和時間 <span class="arithmatex">\(\tau\)</span> を求めよ。また，<span class="arithmatex">\(k_1\)</span>，<span class="arithmatex">\(k_2\)</span> が増加したときの <span class="arithmatex">\(\tau\)</span> の変化を答えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14589,7 +14588,7 @@ y(t) = y(0) \exp\left[ -(k_1 + k_2) t \right] \implies P_1(t) - P_1^{\mathrm{st}
 <div class="arithmatex">\[
 P_1(t) = P_1^{\mathrm{st}} + (1 - P_1^{\mathrm{st}}) \exp\left[ -(k_1 + k_2) t \right]
 \]</div>
-<p>ここに具体的な <span class="arithmatex">\(P_1^{\mathrm{st}} = \frac{k_2}{k_1 + k_2}\)</span> および <span class="arithmatex">\(1 - P_1^{\mathrm{st}} = \frac{k_1}{k_1 + k_2}\)</span> を戻すことで，求める時間発展の解が得られます。</p>
+<p>ここに <span class="arithmatex">\(P_1^{\mathrm{st}} = \frac{k_2}{k_1 + k_2}\)</span> および <span class="arithmatex">\(1 - P_1^{\mathrm{st}} = \frac{k_1}{k_1 + k_2}\)</span> を戻すことで，求める時間発展の解が得られます。</p>
 <div class="arithmatex">\[
 P_1(t) = \frac{k_2}{k_1 + k_2} + \frac{k_1}{k_1 + k_2} \exp\left[ -(k_1 + k_2) t \right]
 \]</div>

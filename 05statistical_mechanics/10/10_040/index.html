@@ -14542,19 +14542,18 @@
 
 <h1 id="_1">平均場近似</h1>
 <h2 id="_2">問題</h2>
-<p>二次元や三次元の格子点上にスピンが配置された高次元イジング模型は，一次元とは異なり有限温度で相転移を示すが，その分配関数を厳密に計算することは数学的に非常に困難である。そこで，多体系の近似解析手法として広く用いられる平均場近似を導入する。</p>
 <p>各格子点 <span class="arithmatex">\(i\)</span> のスピンを <span class="arithmatex">\(s_i = \pm 1\)</span> とし，1つのスピンに隣接するスピンの数を <span class="arithmatex">\(z\)</span> とする。強磁性的相互作用 <span class="arithmatex">\(J &gt; 0\)</span> が働き，外部磁場 <span class="arithmatex">\(B\)</span> が一様に印加されているとき，系全体のハミルトニアンは以下の通りである。</p>
 <div class="arithmatex">\[
 H = -J \sum_{\langle i, j \rangle} s_i s_j - B \sum_{i} s_i
 \]</div>
 <p>ここで， <span class="arithmatex">\(\sum_{\langle i, j \rangle}\)</span> は隣り合うスピンのペアについての和を意味する。平均場近似では，ある特定の中心スピン <span class="arithmatex">\(s_i\)</span> に注目したとき，周囲の隣接スピン <span class="arithmatex">\(s_j\)</span> がすべてその平均値 <span class="arithmatex">\(\langle s_j \rangle = m\)</span> に置き換わったと仮定する。以下の問いに答えよ。</p>
-<p>(1) 周囲のスピンを平均値 <span class="arithmatex">\(m\)</span> に置き換えることで，中心スピン <span class="arithmatex">\(s_i\)</span> が周囲の <span class="arithmatex">\(z\)</span> 個のスピンおよび外部磁場から受けるエネルギー項を <span class="arithmatex">\(- m_{\mathrm{eff}} s_i\)</span> の形にまとめよ。このとき，スピン <span class="arithmatex">\(s_i\)</span> が実効的に感じる有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> の式を <span class="arithmatex">\(J, z, m, B\)</span> を用いて述べよ。</p>
+<p>(1) 周囲のスピンを平均値 <span class="arithmatex">\(m\)</span> に置き換え，有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> を <span class="arithmatex">\(J,z,m,B\)</span> で表せ。</p>
 <p>(2) 逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> のなかに置かれた単一のスピン <span class="arithmatex">\(s_i = \pm 1\)</span> に関する分配関数 <span class="arithmatex">\(z_{\mathrm{single}}\)</span> を求め，このスピンの平均値 <span class="arithmatex">\(\langle s_i \rangle\)</span> の式を双曲線関数 <span class="arithmatex">\(\tanh\)</span> を用いて表せ。</p>
 <p>(3) 系の自己整合性から，自発磁化 <span class="arithmatex">\(m\)</span> が満たすべき以下の<strong>平均場方程式</strong>を導出せよ。</p>
 <div class="arithmatex">\[
 m = \tanh\left[ \beta (z J m + B) \right]
 \]</div>
-<p>また，外部磁場がない状態 <span class="arithmatex">\(B = 0\)</span> において，この方程式が <span class="arithmatex">\(m = 0\)</span> 以外のゼロでない解を持ち得るための温度 <span class="arithmatex">\(T\)</span> の条件を， <span class="arithmatex">\(\tanh(x)\)</span> の原点での傾きに注目して調べ，この近似モデルにおける転移温度 <span class="arithmatex">\(T_c\)</span> の式を <span class="arithmatex">\(J, z, k_B\)</span> を用いて表せ。</p>
+<p>また，<span class="arithmatex">\(B=0\)</span> で <span class="arithmatex">\(m\ne0\)</span> の解が存在する条件を求め，転移温度 <span class="arithmatex">\(T_c\)</span> を <span class="arithmatex">\(J,z,k_B\)</span> で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14584,7 +14583,7 @@ z_{\mathrm{single}} = \sum_{s_i = \pm 1} \exp( \beta B_{\mathrm{eff}} s_i ) = e^
 \langle s_i \rangle = \frac{(+1) \cdot e^{\beta B_{\mathrm{eff}}} + (-1) \cdot e^{-\beta B_{\mathrm{eff}}}}{z_{\mathrm{single}}} = \frac{e^{\beta B_{\mathrm{eff}}} - e^{-\beta B_{\mathrm{eff}}}}{e^{\beta B_{\mathrm{eff}}} + e^{-\beta B_{\mathrm{eff}}}} = \tanh( \beta B_{\mathrm{eff}} )
 \]</div>
 <h3 id="3">(3)</h3>
-<p>格子全体の一様性から，中心スピンの平均値も周囲の平均磁化と一致するべき <span class="arithmatex">\(\langle s_i \rangle = m\)</span> という条件を課します。(2) の結果に (1) の有効磁場の具体的な表現を代入することで，目的の平均場方程式が得られます。</p>
+<p>格子全体の一様性から，中心スピンの平均値も周囲の平均磁化と一致するべき <span class="arithmatex">\(\langle s_i \rangle = m\)</span> という条件を課します。(2) の結果に (1) の有効磁場の表現を代入することで，目的の平均場方程式が得られます。</p>
 <div class="arithmatex">\[
 m = \tanh\left[ \beta (z J m + B) \right]
 \]</div>

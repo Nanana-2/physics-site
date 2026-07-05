@@ -14542,17 +14542,16 @@
 
 <h1 id="_1">ランダムウォークと拡散</h1>
 <h2 id="_2">問題</h2>
-<p>微小な粒子が熱運動によって周囲の分子と衝突を繰り返し，不規則に位置を変える現象は，確率論的なランダムウォークとしてモデル化できる。ここでは，最も単純なモデルとして，離散的な時間と空間を進む一次元のランダムウォークを考える。</p>
 <p>無限に続く直線の格子の上を移動する粒子がある。この粒子は，時刻 <span class="arithmatex">\(t=0\)</span> に原点 <span class="arithmatex">\(x=0\)</span> を出発し，単位時間 <span class="arithmatex">\(\Delta t\)</span> が経過するごとに，独立に確率 <span class="arithmatex">\(1/2\)</span> で右または左の隣接する格子点へ等しい確率でステップを踏む。</p>
 <p>時刻 <span class="arithmatex">\(t = n \Delta t\)</span> における粒子の位置を <span class="arithmatex">\(X_n\)</span> とする。 <span class="arithmatex">\(i\)</span> 番目のステップにおける移動量を <span class="arithmatex">\(\Delta x_i = \pm a\)</span> と置くと， <span class="arithmatex">\(n\)</span> ステップ目の位置は <span class="arithmatex">\(X_n = \sum_{i=1}^n \Delta x_i\)</span> と表される。各ステップの移動の平均値は <span class="arithmatex">\(\langle \Delta x_i \rangle = 0\)</span> ，2乗平均は <span class="arithmatex">\(\langle (\Delta x_i)^2 \rangle = a^2\)</span> である。また，異なるステップ間の移動には相関がない。以下の問いに答えよ。</p>
-<p>(1) <span class="arithmatex">\(n\)</span> ステップ目における粒子の位置の平均値 <span class="arithmatex">\(\langle X_n \rangle\)</span> を求めよ。また，位置の広がりを評価するため，<strong>平均二乗変位</strong> <span class="arithmatex">\(\langle X_n^2 \rangle\)</span> を計算し，それがステップ数 <span class="arithmatex">\(n\)</span> に比例することを示せ。</p>
-<p>(2) 時間と空間のステップを非常に細かくする連続極限を考える。ステップ数 <span class="arithmatex">\(n\)</span> を時刻 <span class="arithmatex">\(t\)</span> と単位時間 <span class="arithmatex">\(\Delta t\)</span> を用いて消去することにより，(1) で得られた平均二乗変位 <span class="arithmatex">\(\langle X_n^2 \rangle\)</span> を時刻 <span class="arithmatex">\(t\)</span> の関数として書き直せ。さらに，マクロな拡散方程式から得られる関係式 <span class="arithmatex">\(\langle x^2 \rangle = 2 D t\)</span> と比較することで，微視的なパラメータ <span class="arithmatex">\(a, \Delta t\)</span> を用いて表される<strong>拡散係数</strong> <span class="arithmatex">\(D\)</span> の式を導出せよ。</p>
+<p>(1) <span class="arithmatex">\(\langle X_n\rangle\)</span> と平均二乗変位 <span class="arithmatex">\(\langle X_n^2\rangle\)</span> を求めよ。</p>
+<p>(2) <span class="arithmatex">\(t=n\Delta t\)</span> と <span class="arithmatex">\(\langle x^2\rangle=2Dt\)</span> を用いて，拡散係数 <span class="arithmatex">\(D\)</span> を <span class="arithmatex">\(a\)</span> と <span class="arithmatex">\(\Delta t\)</span> で表せ。</p>
 <p>(3) 粒子数 <span class="arithmatex">\(N\)</span> 個の独立なランダムウォーク粒子を同時に原点から出発させた場合，時刻 <span class="arithmatex">\(t\)</span> における粒子の空間的な存在密度分布 <span class="arithmatex">\(\rho(x, t)\)</span> は，以下の拡散方程式を満たす。</p>
 <div class="arithmatex">\[
 \frac{\partial \rho(x, t)}{\partial t} = D \frac{\partial^2 \rho(x, t)}{\partial x^2
 }
 \]</div>
-<p>この方程式の解であり，初期条件 <span class="arithmatex">\(\rho(x, 0) = N \delta(x)\)</span> を満たすガウス分布型の解を述べよ。また，時間の経過に伴って，この密度分布の形状がどのように変化するかを説明せよ。</p>
+<p>初期条件 <span class="arithmatex">\(\rho(x, 0) = N \delta(x)\)</span> を満たす解を求め，分布の高さと幅の時間依存性を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>

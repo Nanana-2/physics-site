@@ -14542,7 +14542,6 @@
 
 <h1 id="_1">二準位系の密度行列</h1>
 <h2 id="_2">問題</h2>
-<p>任意のスピン <span class="arithmatex">\(1/2\)</span> 系や量子ビットに代表される二準位量子系は，その密度行列を3次元のブロッホ球の内部，あるいは表面の点として表現することができる。ここでは，熱平衡状態がこのブロッホ球の中でどのような一点に対応するかを具体的に計算する。</p>
 <p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が，エネルギー固有値 <span class="arithmatex">\(\pm \epsilon\)</span> <span class="arithmatex">\(\epsilon &gt; 0\)</span> を電子の持つパウリ行列 <span class="arithmatex">\(\sigma_z\)</span> を用いて以下のように表される二準位系を考える。</p>
 <div class="arithmatex">\[
 \hat{H} = \epsilon \sigma_z = \begin{pmatrix} \epsilon &amp; 0 \\ 0 &amp; -\epsilon \end{pmatrix}
@@ -14552,9 +14551,9 @@
 \rho = \frac{1}{2} (I + \boldsymbol{P} \cdot \boldsymbol{\sigma}) = \frac{1}{2} \begin{pmatrix} 1 + P_z &amp; P_x - i P_y \\ P_x + i P_y &amp; 1 - P_z \end{pmatrix}
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) このハミルトニアンに対する分配関数 <span class="arithmatex">\(Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big)\)</span> を具体的に計算し，双曲線関数を用いて表せ。</p>
-<p>(2) この熱平衡状態におけるカノニカル密度行列 <span class="arithmatex">\(\rho\)</span> の各成分を2行2列の行列形式で具体的に書き下せ。</p>
-<p>(3) (2) で得られた熱平衡状態の行列と，ブロッホベクトル表現の行列を比較することにより，熱平衡状態に対応するブロッホベクトルの各成分 <span class="arithmatex">\(P_x, P_y, P_z\)</span> をそれぞれ求めよ。また，温度が絶対零度に向かう極限 <span class="arithmatex">\(\beta \to \infty\)</span> と，無限に高くなる極限 <span class="arithmatex">\(\beta \to 0\)</span> において，このベクトルがブロッホ球内のどのような位置に落ち着くか説明せよ。</p>
+<p>(1) 分配関数 <span class="arithmatex">\(Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big)\)</span> を求め，双曲線関数を用いて表せ。</p>
+<p>(2) カノニカル密度行列 <span class="arithmatex">\(\rho\)</span> を行列表示せよ。</p>
+<p>(3) 熱平衡状態のブロッホベクトル <span class="arithmatex">\(P_x,P_y,P_z\)</span> を求めよ。また，<span class="arithmatex">\(\beta\to\infty\)</span> と <span class="arithmatex">\(\beta\to0\)</span> における極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14575,7 +14574,7 @@ Z = 2 \cdot \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} = 2 \cosh(\be
 <div class="arithmatex">\[
 \rho = \frac{1}{2 \cosh(\beta \epsilon)} \begin{pmatrix} \exp(-\beta \epsilon) &amp; 0 \\ 0 &amp; \exp(\beta \epsilon) \end{pmatrix} = \begin{pmatrix} \frac{\exp(-\beta \epsilon)}{2 \cosh(\beta \epsilon)} &amp; 0 \\ 0 &amp; \frac{\exp(\beta \epsilon)}{2 \cosh(\beta \epsilon)} \end{pmatrix}
 \]</div>
-<p>これが求める熱平衡状態の具体的な行列表現です。エネルギーの固有基底をそのまま用いているため，非対角成分はすべてゼロの対角行列となります。</p>
+<p>これが求める熱平衡状態の行列表現です。エネルギーの固有基底をそのまま用いているため，非対角成分はすべてゼロの対角行列となります。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた熱平衡状態の密度行列と，ブロッホベクトルを用いた一般的な表現の行列の各成分を直接比較します。</p>
 <div class="arithmatex">\[

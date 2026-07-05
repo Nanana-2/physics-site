@@ -14547,14 +14547,14 @@
 <div class="arithmatex">\[
 H = -J \sum_{i=1}^N s_i s_{i+1} - B \sum_{i=1}^N s_i
 \]</div>
-<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とするとき，転送行列法を用いてこの系の熱力学的性質を調べるため，以下の問いに答えよ。</p>
+<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 系の分配関数 <span class="arithmatex">\(Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} \exp(-\beta H)\)</span> は，隣り合う2つのスピン状態の組み合わせに関する指数の積として，以下の形に書き下すことができる。</p>
 <div class="arithmatex">\[
 Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} P(s_1, s_2) P(s_2, s_3) \dots P(s_N, s_1)
 \]</div>
-<p>行列要素 <span class="arithmatex">\(P(s_i, s_{i+1}) = \exp\left[ \beta J s_i s_{i+1} + \frac{\beta B}{2} (s_i + s_{i+1}) \right]\)</span> を定義するとき，スピンの取り得る状態の組を <span class="arithmatex">\(s_i = 1, -1\)</span> の順として，2行2列の転送行列 <span class="arithmatex">\(P\)</span> の具体的な全成分を述べよ。</p>
+<p>行列要素 <span class="arithmatex">\(P(s_i, s_{i+1}) = \exp\left[ \beta J s_i s_{i+1} + \frac{\beta B}{2} (s_i + s_{i+1}) \right]\)</span> を定義する。基底を <span class="arithmatex">\(s_i = 1, -1\)</span> の順にとり，転送行列 <span class="arithmatex">\(P\)</span> を求めよ。</p>
 <p>(2) 分配関数 <span class="arithmatex">\(Z\)</span> が転送行列の積のトレースを用いて <span class="arithmatex">\(Z = \mathrm{Tr}(P^N)\)</span> と表されることを利用する。転送行列 <span class="arithmatex">\(P\)</span> の2つの固有値 <span class="arithmatex">\(\lambda_+, \lambda_-\)</span> を <span class="arithmatex">\(\beta, J, B\)</span> を用いて求め，系全体の分配関数 <span class="arithmatex">\(Z\)</span> の式を固有値を用いて表せ。</p>
-<p>(3) 粒子数 <span class="arithmatex">\(N\)</span> が無限大に大きい熱力学的極限において，1スピンあたりの自由エネルギー <span class="arithmatex">\(f = \lim_{N \to \infty} \left( -\frac{1}{\beta N} \log Z \right)\)</span> は2つの固有値の大きい方のみで決定される。外部磁場がない状態 <span class="arithmatex">\(B = 0\)</span> における自由エネルギー <span class="arithmatex">\(f\)</span> を求めよ。また，有限温度 <span class="arithmatex">\(T &gt; 0\)</span> において，この系では自発磁化が現れず，相転移が起こらないことを自由エネルギーの磁場微分，あるいは固有値の挙動から説明せよ。</p>
+<p>(3) 熱力学的極限における1スピンあたりの自由エネルギー <span class="arithmatex">\(f\)</span> を <span class="arithmatex">\(B=0\)</span> で求めよ。また，有限温度で相転移が生じないことを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
