@@ -14543,7 +14543,11 @@
 <h1 id="_1">ベルの不等式</h1>
 <h2 id="_2">問題</h2>
 <p>局所実在論のもとで成り立つCHSH不等式を考える。</p>
-<p>系Aに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{a}, \vec{a}'\)</span> とし，系Bに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{b}, \vec{b}'\)</span> とする。局所実在論の仮定のもとでは，各方向に対するスピン測定値は，あらかじめ決まった隠れた変数 <span class="arithmatex">\(\lambda\)</span> によって制御され， <span class="arithmatex">\(A(\vec{a}, \lambda), A(\vec{a}', \lambda), B(\vec{b}, \lambda), B(\vec{b}', \lambda) \in \{-1, +1\}\)</span> のいずれかの値をとる。</p>
+<p>系Aに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{a}, \vec{a}'\)</span> とし，系Bに対する測定方向を表す単位ベクトルを <span class="arithmatex">\(\vec{b}, \vec{b}'\)</span> とする。局所実在論の仮定のもとでは，各方向に対するスピン測定値は，あらかじめ決まった隠れた変数 <span class="arithmatex">\(\lambda\)</span> によって制御され， </p>
+<div class="arithmatex">\[
+A(\vec{a}, \lambda), A(\vec{a}', \lambda), B(\vec{b}, \lambda), B(\vec{b}', \lambda) \in \{-1, +1\}
+\]</div>
+<p>のいずれかの値をとる。</p>
 <p>以下の問いに答えよ。</p>
 <p>(1) 任意の <span class="arithmatex">\(\lambda\)</span> に対して，以下の代数的な組み合わせを考える。</p>
 <div class="arithmatex">\[
@@ -14578,16 +14582,16 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 <ul>
 <li><strong>パターン1:</strong> <span class="arithmatex">\(B(\vec{b}, \lambda) = B(\vec{b}', \lambda)\)</span> のとき</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
   B(\vec{b}, \lambda) + B(\vec{b}', \lambda) = \pm 2, \quad B(\vec{b}, \lambda) - B(\vec{b}', \lambda) = 0
-  $$</p>
+\]</div>
 <p>これを <span class="arithmatex">\(C(\lambda)\)</span> に代入すると， <span class="arithmatex">\(A(\vec{a}, \lambda) = \pm 1\)</span> より <span class="arithmatex">\(C(\lambda) = \pm 2 \cdot (\pm 1) + 0 = \pm 2\)</span> となります。</p>
 <ul>
 <li><strong>パターン2:</strong> <span class="arithmatex">\(B(\vec{b}, \lambda) \neq B(\vec{b}', \lambda)\)</span> のとき</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
   B(\vec{b}, \lambda) + B(\vec{b}', \lambda) = 0, \quad B(\vec{b}, \lambda) - B(\vec{b}', \lambda) = \pm 2
-  $$</p>
+\]</div>
 <p>これを <span class="arithmatex">\(C(\lambda)\)</span> に代入すると， <span class="arithmatex">\(A(\vec{a}', \lambda) = \pm 1\)</span> より <span class="arithmatex">\(C(\lambda) = 0 + \pm 2 \cdot (\pm 1) = \pm 2\)</span> となります。</p>
 <p>よって，どのような隠れた変数の値 <span class="arithmatex">\(\lambda\)</span> に対しても， <span class="arithmatex">\(C(\lambda) = \pm 2\)</span> が成り立ち，その絶対値は <span class="arithmatex">\(|C(\lambda)| = 2\)</span> です。</p>
 <p>この関係式に対して，確率分布 <span class="arithmatex">\(P(\lambda)\)</span> による平均値の積分を実行します。</p>
@@ -14607,27 +14611,27 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b})\)</span> の計算</strong></li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
   E_{\mathrm{QM}}(\vec{a}, \vec{b}) = -(0, 0, 1) \cdot \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\frac{1}{\sqrt{2}}
-  $$</p>
+\]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b}')\)</span> の計算</strong></li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
   E_{\mathrm{QM}}(\vec{a}, \vec{b}') = -(0, 0, 1) \cdot \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\frac{1}{\sqrt{2}}
-  $$</p>
+\]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b})\)</span> の計算</strong></li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
   E_{\mathrm{QM}}(\vec{a}', \vec{b}) = -(1, 0, 0) \cdot \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\frac{1}{\sqrt{2}}
-  $$</p>
+\]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b}')\)</span> の計算</strong></li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
   E_{\mathrm{QM}}(\vec{a}', \vec{b}') = -(1, 0, 0) \cdot \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\left(-\frac{1}{\sqrt{2}}\right) = \frac{1}{\sqrt{2}}
-  $$</p>
+\]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた4つの期待値を，不等式の左辺の式に代入して計算を行います。</p>
 <div class="arithmatex">\[
@@ -14641,7 +14645,7 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 <div class="arithmatex">\[
 2\sqrt{2} \approx 2.828
 \]</div>
-<p>この計算結果は，局所実在論から導かれた限界値である 2 よりも明確に大きくなります $2\sqrt{2} &gt; 2 $。</p>
+<p>この計算結果は，局所実在論から導かれた限界値である 2 よりも大きくなります。</p>
 <p>これにより，特定の測定方向の組み合わせにおいて，量子もつれ状態が示す統計的相関はベルの不等式を破ることが数学的に示され，局所実在論の仮定が成立しないことが確認されました。</p>
 
 
