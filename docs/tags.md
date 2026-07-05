@@ -1,6 +1,6 @@
 ---
 title: 全問題一覧
-hero_image: assets/images/desktop-computer.png
+hero_image: assets/images/search.jpg
 ---
 
 # 全問題一覧
