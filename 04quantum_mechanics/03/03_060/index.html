@@ -14520,7 +14520,7 @@
 
 <h1 id="_1">半無限井戸と境界条件</h1>
 <h2 id="_2">問題</h2>
-<p>一方が無限に高く，もう一方が有限の高さを持つポテンシャル障壁で囲まれた領域を半無限井戸型ポテンシャルと呼ぶ。この系では，無限大の壁がある境界では波動関数が完全に 0 となり，有限の壁がある境界では波動関数が外部へ染み出す挙動を示す。左右非対称な境界条件を適切に組み合わせることで，系に許される束縛状態のエネルギー条件を導出する。</p>
+<p>半無限井戸型ポテンシャルでは，一方の境界で波動関数が 0 となり，有限の壁を持つ境界では波動関数が外部へ染み出す。</p>
 <p>一次元ポテンシャル <span class="arithmatex">\(V(x)\)</span> を以下のように設定する。ただし， <span class="arithmatex">\(V_0\)</span> は正の定数である。</p>
 <div class="arithmatex">\[
 V(x) = \begin{cases} \infty &amp; (x \le 0) \\ 0 &amp; (0 &lt; x &lt; a) \\ V_0 &amp; (x \le a) \end{cases}
@@ -14536,7 +14536,7 @@ k = \sqrt{\frac{2mE}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}
 <h3 id="1">(1)</h3>
 <p>それぞれの領域におけるシュレーディンガー方程式の一般解から，境界条件に合う形を選択します。</p>
 <ul>
-<li><strong>井戸の内部（ <span class="arithmatex">\(0 &lt; x &lt; a\)</span> ）</strong></li>
+<li><strong>井戸の内部 <span class="arithmatex">\(0 &lt; x &lt; a\)</span></strong></li>
 </ul>
 <p>ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> であるため，解は三角関数の重ね合わせ <span class="arithmatex">\(A \sin(kx) + B \cos(kx)\)</span> です。
   ここで， <span class="arithmatex">\(x=0\)</span> にある無限に高い壁の境界条件 <span class="arithmatex">\(\psi_{\text{in}}(0) = 0\)</span> を適用します。</p>
@@ -14548,9 +14548,9 @@ k = \sqrt{\frac{2mE}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}
   \psi_{\text{in}}(x) = A \sin(kx)
 \]</div>
 <ul>
-<li><strong>井戸の外部（ <span class="arithmatex">\(x \ge a\)</span> ）</strong>
+<li><strong>井戸の外部 <span class="arithmatex">\(x \ge a\)</span></strong>
   ポテンシャルは <span class="arithmatex">\(V(x) = V_0\)</span> であり， <span class="arithmatex">\(E &lt; V_0\)</span> であるため，解は指数関数 <span class="arithmatex">\(C e^{-\kappa x} + D e^{\kappa x}\)</span> です。
-  <span class="arithmatex">\(x \to \infty\)</span> の遠方で波動関数が発散せずに有限にとどまる（ 0 に収束する）という条件から，指数増加の項を除外します。</li>
+  <span class="arithmatex">\(x \to \infty\)</span> の遠方で波動関数が発散せずに有限にとどまるという条件から，指数増加の項を除外します。</li>
 </ul>
 <div class="arithmatex">\[
   \psi_{\text{out}}(x) = C e^{-\kappa x}
@@ -14581,7 +14581,7 @@ k = \sqrt{\frac{2mE}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}
 <div class="arithmatex">\[
 \tan(ka) = -\frac{k}{\kappa}
 \]</div>
-<p>これにより，半無限井戸型ポテンシャルにおける束縛状態のエネルギーを決定するための条件式が導かれました。この式は，一方が完全に閉じているために，両側が有限である場合とは異なる非対称な形をしています。</p>
+<p>これにより，半無限井戸型ポテンシャルにおける束縛状態のエネルギー条件が得られました。一方の壁が無限に高いため，両側が有限である場合とは異なる非対称な形になります。</p>
 
 
 

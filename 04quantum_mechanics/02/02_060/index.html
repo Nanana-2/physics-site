@@ -14536,14 +14536,14 @@
 \frac{d}{dt}\hat{U}^\dagger(t) = \frac{i}{\hbar}\hat{U}^\dagger(t)\hat{H}
 \]</div>
 <p>を満たすことを用いて，ハイゼンベルク演算子の時間微分 <span class="arithmatex">\(\frac{d}{dt}\hat{A}_H(t)\)</span> を計算せよ。</p>
-<p>(2) (1) の計算結果を，交換子 <span class="arithmatex">\([\hat{H}, \hat{A}_H(t)] = \hat{H}\hat{A}_H(t) - \hat{A}_H(t)\hat{H}\)</span> を用いて整理することにより，以下のハイゼンベルク方程式を導出せよ。ただし，シュレーディンガー演算子の明示的な時間微分に対応する項を <span class="arithmatex">\(\frac{\partial \hat{A}_H}{\partial t} = \hat{U}^\dagger(t) \left( \frac{\partial \hat{A}_S}{\partial t} \right) \hat{U}(t)\)</span> と表記する。</p>
+<p>(2) (1) の結果から次のハイゼンベルク方程式を導出せよ。</p>
 <div class="arithmatex">\[
 \frac{d\hat{A}_H(t)}{dt} = \frac{i}{\hbar} [\hat{H}, \hat{A}_H(t)] + \frac{\partial \hat{A}_H(t)}{\partial t}
 \]</div>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>ハイゼンベルク表示の演算子の定義式 <span class="arithmatex">\(\hat{A}_H(t) = \hat{U}^\dagger(t) \hat{A}_S(t) \hat{U}(t)\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。3つの演算子の積になっているため，積の微分公式（それぞれの項を順番に微分していく規則）を適用します。</p>
+<p>ハイゼンベルク表示の演算子の定義式 <span class="arithmatex">\(\hat{A}_H(t) = \hat{U}^\dagger(t) \hat{A}_S(t) \hat{U}(t)\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。3つの演算子の積になっているため，積の微分公式を適用します。</p>
 <div class="arithmatex">\[
 \frac{d\hat{A}_H(t)}{dt} = \left( \frac{d\hat{U}^\dagger}{dt} \right) \hat{A}_S \hat{U} + \hat{U}^\dagger \left( \frac{\partial \hat{A}_S}{\partial t} \right) \hat{U} + \hat{U}^\dagger \hat{A}_S \left( \frac{d\hat{U}}{dt} \right)
 \]</div>
@@ -14574,7 +14574,7 @@
 <div class="arithmatex">\[
 \frac{d\hat{A}_H(t)}{dt} = \frac{i}{\hbar} [\hat{H}, \hat{A}_H(t)] + \frac{\partial \hat{A}_H(t)}{\partial t}
 \]</div>
-<p>物理量が明示的に時間に依存しない場合（ <span class="arithmatex">\(\frac{\partial \hat{A}_S}{\partial t} = 0\)</span> ），右辺第2項は消え，ハミルトニアンとの交換関係だけで時間発展が決定されます。</p>
+<p>物理量が明示的に時間に依存しない場合 <span class="arithmatex">\(\frac{\partial \hat{A}_S}{\partial t} = 0\)</span>，右辺第2項は消え，ハミルトニアンとの交換関係だけで時間発展が決定されます。</p>
 
 
 

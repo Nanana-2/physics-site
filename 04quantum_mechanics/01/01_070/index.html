@@ -14542,7 +14542,7 @@
 
 <h1 id="_1">不確定性関係</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学において，位置と運動量を同時に正確に決めることはできない。この制限はハイゼンベルクの不確定性関係として知られる。ここでは，位置と運動量の交換関係から不確定性の一般式を導き，ガウス波束がその下限を与える最小不確定性状態であることを確認する。</p>
+<p>量子力学では，位置と運動量を同時に正確に決めることはできない。この制限をハイゼンベルクの不確定性関係と呼ぶ。</p>
 <p>位置演算子を <span class="arithmatex">\(\hat{x}\)</span>，運動量演算子を <span class="arithmatex">\(\hat{p}\)</span> とし，その交換関係を <span class="arithmatex">\([\hat{x}, \hat{p}] = i\hbar\)</span> とする。ある状態における各物理量の演算子からのずれを <span class="arithmatex">\(\Delta \hat{x} = \hat{x} - \langle x \rangle\)</span>，<span class="arithmatex">\(\Delta \hat{p} = \hat{p} - \langle p \rangle\)</span> と定義する。</p>
 <p>以下の問いに答えよ。</p>
 <p>(1) 任意の規格化された波動関数 <span class="arithmatex">\(\psi(x)\)</span> と，任意の実数 <span class="arithmatex">\(\alpha\)</span> に対して，以下の積分は常に非負となる。</p>
@@ -14565,7 +14565,7 @@ I(\alpha) = \int_{-\infty}^{\infty} \left| \left( \alpha \Delta \hat{x} - i \Del
 <div class="arithmatex">\[
 \sigma_p^2 = \int_{-\infty}^{\infty} \psi^*(x) \left( -\hbar^2 \frac{d^2}{dx^2} \right) \psi(x) dx = \frac{\hbar^2}{4\sigma_x^2}
 \]</div>
-<p>と計算されるとき，このガウス波束の不確定性の積 <span class="arithmatex">\(\sigma_x \sigma_p\)</span> を求めよ。また，その結果からこの状態がどのような意味を持つか説明せよ。</p>
+<p>と計算されるとき，<span class="arithmatex">\(\sigma_x\sigma_p\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14593,7 +14593,6 @@ I(\alpha) = \int_{-\infty}^{\infty} \psi^*(x) \left( \alpha \Delta \hat{x} + i \
 <div class="arithmatex">\[
 \sigma_x^2 \alpha^2 + \hbar \alpha + \sigma_p^2 \ge 0
 \]</div>
-<p>（※任意の <span class="arithmatex">\(\alpha\)</span> で成り立つため， <span class="arithmatex">\(\alpha \to -\alpha\)</span> と置き換えても同値であり， <span class="arithmatex">\(\sigma_x^2 \alpha^2 - \hbar \alpha + \sigma_p^2 \ge 0\)</span> としても一般性を失いません。）</p>
 <h3 id="2">(2)</h3>
 <p>(1) の <span class="arithmatex">\(\alpha\)</span> に関する二次不等式が，すべてのアナログな実数 <span class="arithmatex">\(\alpha\)</span> で常に 0 以上となるためには，この二次方程式の判別式 <span class="arithmatex">\(D\)</span> が 0 以下でなければなりません。</p>
 <div class="arithmatex">\[
@@ -14617,7 +14616,7 @@ D = (-\hbar)^2 - 4 \cdot \sigma_x^2 \cdot \sigma_p^2 \le 0
 \sigma_x \sigma_p = \sigma_x \cdot \frac{\hbar}{2\sigma_x} = \frac{\hbar}{2}
 \]</div>
 <p><strong>結果の説明</strong></p>
-<p>計算された不確定性の積は <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，(2) で導いた不確定性関係の不等式の絶対的な下限値（等号）に完全に一致します。このことから，ガウス波束は位置と運動量の両方のばらつきを同時に最も小さく抑えた状態（最小不確定性状態）であることが確認できます。</p>
+<p>計算された不確定性の積は <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，(2) で導いた不確定性関係の不等式の絶対的な下限値に一致します。このことから，ガウス波束は位置と運動量の両方のばらつきを同時に最も小さく抑えた状態であることが確認できます。</p>
 
 
 

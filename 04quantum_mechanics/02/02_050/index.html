@@ -14558,7 +14558,7 @@ i\hbar \frac{d}{dt}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = e^{-\frac{i}{\hbar}\hat{H}t}\)</span> のエルミート共役（随伴演算子） <span class="arithmatex">\(\hat{U}^\dagger(t)\)</span> を求めます。指数関数の肩にある演算子積のエルミート共役をとる際，複素数の係数の符号が反転します。</p>
+<p>時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = e^{-\frac{i}{\hbar}\hat{H}t}\)</span> のエルミート共役 <span class="arithmatex">\(\hat{U}^\dagger(t)\)</span> を求めます。指数関数の肩にある演算子積のエルミート共役をとる際，複素数の係数の符号が反転します。</p>
 <div class="arithmatex">\[
 \hat{U}^\dagger(t) = \left( e^{-\frac{i}{\hbar}\hat{H}t} \right)^\dagger = e^{+\frac{i}{\hbar}\hat{H}^\dagger t}
 \]</div>
@@ -14570,8 +14570,7 @@ i\hbar \frac{d}{dt}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle
 <div class="arithmatex">\[
 \hat{U}^\dagger(t) \hat{U}(t) = e^{\frac{i}{\hbar}\hat{H}t} e^{-\frac{i}{\hbar}\hat{H}t} = e^{\frac{i}{\hbar}\hat{H}t - \frac{i}{\hbar}\hat{H}t} = e^{\hat{0}} = \hat{I}
 \]</div>
-<p>（ただし， <span class="arithmatex">\(\hat{0}\)</span> は零演算子， <span class="arithmatex">\(\hat{I}\)</span> は単位演算子です。）</p>
-<p>これにより，時間発展演算子がユニタリー性を満たすことが示されました。この性質によって，状態ベクトルのノルム（全確率の総和）は時間変化に関わらず常に 1 に保たれます。</p>
+<p>これにより，時間発展演算子がユニタリー性を満たすことが示されました。この性質によって，状態ベクトルのノルムは時間変化に関わらず常に 1 に保たれます。</p>
 <h3 id="2">(2)</h3>
 <p>状態ベクトル <span class="arithmatex">\(|\psi(t)\rangle = e^{-\frac{i}{\hbar}\hat{H}t} |\psi(0)\rangle\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。初期状態 <span class="arithmatex">\(|\psi(0)\rangle\)</span> は時間に依存しないベクトルであるため，指数関数の微分のみを実行します。</p>
 <div class="arithmatex">\[
@@ -14594,7 +14593,7 @@ i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle
 <div class="arithmatex">\[
 = \frac{1}{\sqrt{2}} e^{-\frac{i}{\hbar}\hat{H}t} |1\rangle + \frac{1}{\sqrt{2}} e^{-\frac{i}{\hbar}\hat{H}t} |2\rangle
 \]</div>
-<p>一般に，演算子の指数関数をその固有状態に作用させると，演算子の部分がそのまま固有値に置き換わります（ <span class="arithmatex">\(e^{\hat{A}}|n\rangle = e^{a_n}|n\rangle\)</span> ）。固有値方程式 <span class="arithmatex">\(\hat{H}|1\rangle = E_1|1\rangle, \hat{H}|2\rangle = E_2|2\rangle\)</span> をそれぞれに適用します。</p>
+<p>一般に，演算子の指数関数をその固有状態に作用させると，演算子の部分がそのまま固有値に置き換わります <span class="arithmatex">\(e^{\hat{A}}|n\rangle = e^{a_n}|n\rangle\)</span>。固有値方程式 <span class="arithmatex">\(\hat{H}|1\rangle = E_1|1\rangle, \hat{H}|2\rangle = E_2|2\rangle\)</span> をそれぞれに適用します。</p>
 <div class="arithmatex">\[
 |\psi(t)\rangle = \frac{1}{\sqrt{2}} e^{-\frac{i E_1}{\hbar}t} |1\rangle + \frac{1}{\sqrt{2}} e^{-\frac{i E_2}{\hbar}t} |2\rangle
 \]</div>

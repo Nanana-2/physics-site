@@ -14520,14 +14520,14 @@
 
 <h1 id="_1">位置表示と運動量表示</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学における状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> は特定の基底に依存しない抽象的な対象であるが，これを連続的な基底である位置固有状態 <span class="arithmatex">\(|x\rangle\)</span> や運動量固有状態 <span class="arithmatex">\(|p\rangle\)</span> で展開することによって，具体的な関数としての波動関数が得られる。位置基底による展開係数は通常の波動関数 <span class="arithmatex">\(\psi(x)\)</span> であり，運動量基底による展開係数は運動量表示の波動関数 <span class="arithmatex">\(\phi(p)\)</span> と呼ばれる。ここでは，これらの表示の間の変換がフーリエ変換によって結ばれていることを確認する。</p>
+<p>状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> の位置基底による展開係数を <span class="arithmatex">\(\psi(x)\)</span>，運動量基底による展開係数を <span class="arithmatex">\(\phi(p)\)</span> とする。</p>
 <p>位置固有状態の完全性関係は <span class="arithmatex">\(\int_{-\infty}^{\infty} |x\rangle\langle x| dx = \hat{I}\)</span>，運動量固有状態の完全性関係は <span class="arithmatex">\(\int_{-\infty}^{\infty} |p\rangle\langle p| dp = \hat{I}\)</span> である。また，位置表示における運動量固有状態の波動関数は以下のように与えられる。</p>
 <div class="arithmatex">\[
 \langle x|p\rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{\frac{i}{\hbar}px}
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 抽象的な状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> の左から位置固有状態の完全性関係を作用させることで， <span class="arithmatex">\(|\psi\rangle\)</span> を位置固有状態の線形結合として展開せよ。また，位置表示の波動関数が <span class="arithmatex">\(\psi(x) = \langle x|\psi\rangle\)</span> と定義されることを示せ。</p>
-<p>(2) 運動量表示の波動関数を <span class="arithmatex">\(\phi(p) = \langle p|\psi\rangle\)</span> とする。 <span class="arithmatex">\(\phi(p)\)</span> の定義式の内部に位置固有状態の完全性関係を挿入することにより， <span class="arithmatex">\(\phi(p)\)</span> が通常の波動関数 <span class="arithmatex">\(\psi(x)\)</span> のフーリエ変換として以下のように表されることを導け。</p>
+<p>(2) <span class="arithmatex">\(\phi(p)=\langle p|\psi\rangle\)</span> とする。完全性関係を用いて，<span class="arithmatex">\(\phi(p)\)</span> を <span class="arithmatex">\(\psi(x)\)</span> のフーリエ変換として表せ。</p>
 <div class="arithmatex">\[
 \phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_{-\infty}^{\infty} \psi(x) e^{-\frac{i}{\hbar}px} dx
 \]</div>

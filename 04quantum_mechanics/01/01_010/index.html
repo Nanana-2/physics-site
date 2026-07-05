@@ -14520,18 +14520,18 @@
 
 <h1 id="_1">波動関数の規格化</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学において，粒子の状態は複素数で表される波動関数 <span class="arithmatex">\(\psi(x, t)\)</span> によって記述される。ボルンの確率解釈によれば，ある時刻 <span class="arithmatex">\(t\)</span> において位置 <span class="arithmatex">\(x\)</span> の境界 <span class="arithmatex">\(x \sim x+dx\)</span> の間に粒子が見出される確率密度は <span class="arithmatex">\(|\psi(x, t)|^2\)</span> で与えられる。粒子は全空間のどこかには必ず存在しなければならないため，全空間で確率密度を積分した値は 1 にならなければならない。この要請を満たすように波動関数の係数を決定する操作を規格化と呼ぶ。</p>
+<p>量子力学において，粒子の状態は複素数で表される波動関数 <span class="arithmatex">\(\psi(x, t)\)</span> によって表される。ボルンの確率解釈によれば，ある時刻 <span class="arithmatex">\(t\)</span> において位置 <span class="arithmatex">\(x\)</span> の境界 <span class="arithmatex">\(x \sim x+dx\)</span> の間に粒子が見出される確率密度は <span class="arithmatex">\(|\psi(x, t)|^2\)</span> で与えられる。粒子は全空間のどこかには必ず存在しなければならないため，全空間で確率密度を積分した値は 1 にならなければならない。この要請を満たすように波動関数の係数を決定する操作を規格化と呼ぶ。</p>
 <p>一次元空間 <span class="arithmatex">\(-\infty &lt; x &lt; \infty\)</span> において，ある時刻における粒子の波動関数が，正の実数の定数 <span class="arithmatex">\(\alpha\)</span> と複素数の定数 <span class="arithmatex">\(N\)</span> を用いて以下のように与えられている。</p>
 <div class="arithmatex">\[
 \psi(x) = N e^{-\alpha |x|}
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 波動関数 <span class="arithmatex">\(\psi(x)\)</span> が全空間で規格化条件を満たすように，定数 <span class="arithmatex">\(N\)</span> の絶対値 <span class="arithmatex">\(|N|\)</span> を求めよ。ただし <span class="arithmatex">\(N\)</span> は正の実数であると仮定してよい。</p>
-<p>(2) 規格化された波動関数を用いて，粒子が領域 <span class="arithmatex">\(-\frac{1}{2\alpha} \le x \le \frac{1}{2\alpha}\)</span> に見出される確率 <span class="arithmatex">\(P\)</span> を具体的に計算せよ。また，ネイピア数の近似値 <span class="arithmatex">\(e \approx 2.718\)</span> を用いて，この確率が約何%になるか整数値で答えよ。</p>
+<p>(2) 規格化された波動関数を用いて，粒子が領域 <span class="arithmatex">\(-\frac{1}{2\alpha} \le x \le \frac{1}{2\alpha}\)</span> に見出される確率 <span class="arithmatex">\(P\)</span> を計算せよ。また，ネイピア数の近似値 <span class="arithmatex">\(e \approx 2.718\)</span> を用いて，この確率が約何%になるか整数値で答えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>波動関数の規格化条件は，全空間（ <span class="arithmatex">\(-\infty\)</span> から <span class="arithmatex">\(\infty\)</span> ）における確率密度の積分が 1 になることです。</p>
+<p>波動関数の規格化条件は，全空間における確率密度の積分が 1 になることです。</p>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} |\psi(x)|^2 dx = 1
 \]</div>
@@ -14556,7 +14556,7 @@
 N = \sqrt{\alpha}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>粒子が指定された領域 <span class="arithmatex">\([-L, L]\)</span> （ただし <span class="arithmatex">\(L = \frac{1}{2\alpha}\)</span> ）に見出される確率 <span class="arithmatex">\(P\)</span> は，その範囲における確率密度の積分で計算されます。</p>
+<p>粒子が指定された領域 <span class="arithmatex">\([-L, L]\)</span> に見出される確率 <span class="arithmatex">\(P\)</span> は，その範囲における確率密度の積分で計算されます。</p>
 <div class="arithmatex">\[
 P = \int_{-L}^{L} |\psi(x)|^2 dx = \int_{-\frac{1}{2\alpha}}^{\frac{1}{2\alpha}} \alpha e^{-2\alpha |x|} dx
 \]</div>
@@ -14573,7 +14573,7 @@ P = 2\alpha \left[ -\frac{1}{2\alpha} e^{-2\alpha x} \right]_{0}^{\frac{1}{2\alp
 P = -\left( e^{-1} - 1 \right) = 1 - \frac{1}{e}
 \]</div>
 <p>これが確率 <span class="arithmatex">\(P\)</span> の明示式です。</p>
-<p>次に， <span class="arithmatex">\(e \approx 2.718\)</span> を代入して具体的な数値を計算します。</p>
+<p>次に， <span class="arithmatex">\(e \approx 2.718\)</span> を代入して数値を計算します。</p>
 <div class="arithmatex">\[
 P \approx 1 - \frac{1}{2.718} \approx 1 - 0.3679 = 0.6321
 \]</div>

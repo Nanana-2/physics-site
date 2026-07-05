@@ -14555,7 +14555,7 @@
 <p>2つの関数 <span class="arithmatex">\(\phi_R(x)\)</span> と <span class="arithmatex">\(\phi_L(x)\)</span> の重なりが十分小さく，互いに直交しており，それぞれ規格化されていると仮定して，規格化定数 <span class="arithmatex">\(C_+, C_-\)</span> の値を求めよ。</p>
 <p>(2) それぞれの状態に対するエネルギー期待値 <span class="arithmatex">\(E_+ = \langle \psi_+ | \hat{H} | \psi_+ \rangle\)</span> および <span class="arithmatex">\(E_- = \langle \psi_- | \hat{H} | \psi_- \rangle\)</span> を計算せよ。</p>
 <p>また，行列要素を <span class="arithmatex">\(\alpha = \langle \phi_R | \hat{H} | \phi_R \rangle = \langle \phi_L | \hat{H} | \phi_L \rangle\)</span>，トンネル積分を <span class="arithmatex">\(\beta = \langle \phi_L | \hat{H} | \phi_R \rangle = \langle \phi_R | \hat{H} | \phi_L \rangle\)</span> と定義する。<span class="arithmatex">\(E_+\)</span> と <span class="arithmatex">\(E_-\)</span> を <span class="arithmatex">\(\alpha\)</span> と <span class="arithmatex">\(\beta\)</span> を用いて表せ。</p>
-<p>(3) 障壁を介した相互作用により，<span class="arithmatex">\(\beta &lt; 0\)</span> となる場合を考える。このとき，対称状態のエネルギー <span class="arithmatex">\(E_+\)</span> と反対称状態のエネルギー <span class="arithmatex">\(E_-\)</span> のどちらが低くなるか答えよ。また，2つのエネルギー準位の差 <span class="arithmatex">\(\Delta E = E_- - E_+\)</span> を求め，準位の分裂を確認せよ。</p>
+<p>(3) <span class="arithmatex">\(\beta&lt;0\)</span> のとき，<span class="arithmatex">\(E_+\)</span> と <span class="arithmatex">\(E_-\)</span> の大小関係および <span class="arithmatex">\(\Delta E=E_--E_+\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14567,7 +14567,7 @@
 <div class="arithmatex">\[
 |C_+|^2 \left[ \int |\phi_R|^2 dx + \int |\phi_L|^2 dx + \int \phi_R^* \phi_L dx + \int \phi_L^* \phi_R dx \right] = 1
 \]</div>
-<p>問題の仮定より，各関数は規格化されているため最初の2項は 1 となり，互いにほぼ直交しているため交差項（重なり積分）は 0 とみなせます。</p>
+<p>問題の仮定より，各関数は規格化されているため最初の2項は 1 となり，互いにほぼ直交しているため交差項は 0 とみなせます。</p>
 <div class="arithmatex">\[
 |C_+|^2 \big[ 1 + 1 + 0 + 0 \big] = 1 \implies 2|C_+|^2 = 1 \implies C_+ = \frac{1}{\sqrt{2}}
 \]</div>
@@ -14604,12 +14604,12 @@ E_- = \frac{1}{2} \big[ \alpha + \alpha - \beta - \beta \big] = \frac{1}{2} (2\a
 <li><strong><span class="arithmatex">\(E_+\)</span> の値：</strong> <span class="arithmatex">\(\alpha + \beta = \alpha - |\beta|\)</span> となり，元の基準エネルギーから下がります。</li>
 <li><strong><span class="arithmatex">\(E_-\)</span> の値：</strong> <span class="arithmatex">\(\alpha - \beta = \alpha + |\beta|\)</span> となり，元の基準エネルギーから上がります。</li>
 </ul>
-<p>したがって，対称状態（偶パリティ）のエネルギー <span class="arithmatex">\(E_+\)</span> の方が低くなります。これは，対称状態の波動関数が井戸の間の障壁領域でゼロにならない有限の値を持つため，運動エネルギーの増加が抑えられることに対応しています。</p>
+<p>したがって，対称状態のエネルギー <span class="arithmatex">\(E_+\)</span> の方が低くなります。これは，対称状態の波動関数が井戸の間の障壁領域でゼロにならない有限の値を持つため，運動エネルギーの増加が抑えられることに対応しています。</p>
 <p>2つのエネルギー準位の差 <span class="arithmatex">\(\Delta E\)</span> を計算します。</p>
 <div class="arithmatex">\[
 \Delta E = E_- - E_+ = (\alpha - \beta) - (\alpha + \beta) = -2\beta = 2|\beta|
 \]</div>
-<p>この結果から，本来は同じエネルギー <span class="arithmatex">\(\alpha\)</span> を持っていた2つの独立した状態が，障壁を通り抜ける確率（トンネル効果）に由来する相互作用 <span class="arithmatex">\(\beta\)</span> によって結びつくことで，間隔 <span class="arithmatex">\(2|\beta|\)</span> だけ離れた2つの準位に分裂することが示されました。</p>
+<p>この結果から，本来は同じエネルギー <span class="arithmatex">\(\alpha\)</span> を持っていた2つの独立した状態が，障壁を通り抜ける確率に由来する相互作用 <span class="arithmatex">\(\beta\)</span> によって結びつくことで，間隔 <span class="arithmatex">\(2|\beta|\)</span> だけ離れた2つの準位に分裂することが示されました。</p>
 
 
 
