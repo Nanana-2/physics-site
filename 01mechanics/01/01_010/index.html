@@ -1417,7 +1417,7 @@
   <span class="md-ellipsis">
     
   
-    質量変化系（ロケット方程式）
+    質量変化系とロケット方程式
   
 
     
@@ -14563,16 +14563,16 @@
 
 <h1 id="_1">等加速度運動の一般解</h1>
 <h2 id="_2">問題</h2>
-<p>宇宙空間の平坦な領域において，質量 <span class="arithmatex">\(m\)</span> の無人探査機が一直線上の軌道に沿って運動している。この軌道に沿って <span class="arithmatex">\(x\)</span> 軸をとる。探査機は，搭載されたエンジンから進行方向（<span class="arithmatex">\(x\)</span> 軸の正の向き）に常に一定の推進力 <span class="arithmatex">\(F_0\)</span> を受け続けている。</p>
-<p>時刻 <span class="arithmatex">\(t = 0\)</span> において，探査機は原点 <span class="arithmatex">\(x = 0\)</span> を通過し，そのときの速度は <span class="arithmatex">\(v_0\)</span>（<span class="arithmatex">\(v_0 &gt; 0\)</span>）であった。探査機を質量 <span class="arithmatex">\(m\)</span> の質点とみなし，以下の問いに答えよ。</p>
-<p>(1) 探査機の位置を <span class="arithmatex">\(x(t)\)</span>，速度を <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> とするとき，探査機の運動方程式を記述せよ。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> の無人探査機が，宇宙空間を一直線上に運動している。軌道に沿って <span class="arithmatex">\(x\)</span> 軸をとり，探査機は <span class="arithmatex">\(x\)</span> 軸の正方向に一定の推進力 <span class="arithmatex">\(F_0\)</span> を受けるものとする。</p>
+<p>時刻 <span class="arithmatex">\(t = 0\)</span> において，探査機は原点 <span class="arithmatex">\(x = 0\)</span> を速度 <span class="arithmatex">\(v_0&gt;0\)</span> で通過した。探査機を質点とみなし，以下の問いに答えよ。</p>
+<p>(1) 探査機の位置を <span class="arithmatex">\(x(t)\)</span>，速度を <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> とするとき，運動方程式を示せ。</p>
 <p>(2) (1) で得られた運動方程式を，速度 <span class="arithmatex">\(v(t)\)</span> に関する1階微分方程式とみなす。初期条件 <span class="arithmatex">\(v(0) = v_0\)</span> のもとでこの微分方程式を解き，速度 <span class="arithmatex">\(v(t)\)</span> を時間の関数として求めよ。</p>
 <p>(3) (2) の結果と <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> の関係を用いて，位置 <span class="arithmatex">\(x(t)\)</span> に関する微分方程式を立てよ。これを初期条件 <span class="arithmatex">\(x(0) = 0\)</span> のもとで解き，位置 <span class="arithmatex">\(x(t)\)</span> を時間の関数として求めよ。</p>
-<p>(4) 探査機が初期位置（原点）から距離 <span class="arithmatex">\(L\)</span>（<span class="arithmatex">\(L &gt; 0\)</span>）だけ進んだときの速度 <span class="arithmatex">\(v_L\)</span> を，<span class="arithmatex">\(m\)</span>，<span class="arithmatex">\(F_0\)</span>，<span class="arithmatex">\(v_0\)</span>，<span class="arithmatex">\(L\)</span> を用いて表せ。</p>
+<p>(4) 探査機が原点から距離 <span class="arithmatex">\(L&gt;0\)</span> だけ進んだときの速度 <span class="arithmatex">\(v_L\)</span> を，<span class="arithmatex">\(m\)</span>，<span class="arithmatex">\(F_0\)</span>，<span class="arithmatex">\(v_0\)</span>，<span class="arithmatex">\(L\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>運動の第2法則（運動方程式）より，質量と加速度の積は物体に働く外力に等しくなります。加速度は位置 <span class="arithmatex">\(x(t)\)</span> の時間についての2階微分 <span class="arithmatex">\(\frac{d^2x}{dt^2}\)</span>，または速度 <span class="arithmatex">\(v(t)\)</span> の時間についての1階微分 <span class="arithmatex">\(\frac{dv}{dt}\)</span> で表されます。</p>
+<p>運動方程式より，質量と加速度の積は物体に働く外力に等しくなります。加速度は <span class="arithmatex">\(\frac{d^2x}{dt^2}\)</span> または <span class="arithmatex">\(\frac{dv}{dt}\)</span> と表されます。</p>
 <p>探査機に働く外力は <span class="arithmatex">\(x\)</span> 軸正の向きに一定の力 <span class="arithmatex">\(F_0\)</span> であるため，求める運動方程式は以下のようになります。</p>
 <div class="arithmatex">\[
 m \frac{d^2x}{dt^2} = F_0
@@ -14582,7 +14582,7 @@ m \frac{d^2x}{dt^2} = F_0
 m \frac{dv}{dt} = F_0
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた速度に関する運動方程式の両辺を <span class="arithmatex">\(m\)</span>（<span class="arithmatex">\(m &gt; 0\)</span>）で割ると，次のようになります。</p>
+<p>(1) で得られた運動方程式の両辺を <span class="arithmatex">\(m&gt;0\)</span> で割ると，次のようになります。</p>
 <div class="arithmatex">\[
 \frac{dv}{dt} = \frac{F_0}{m}
 \]</div>
@@ -14600,7 +14600,7 @@ v(0) = \frac{F_0}{m} \cdot 0 + C_1 = v_0
 <div class="arithmatex">\[
 v(t) = v_0 + \frac{F_0}{m} t
 \]</div>
-<p>これは，高校物理で学習する等加速度直線運動の速度の公式 <span class="arithmatex">\(v = v_0 + at\)</span> において，加速度が <span class="arithmatex">\(a = \frac{F_0}{m}\)</span> である場合に対応しています。</p>
+<p>加速度は一定値 <span class="arithmatex">\(a = \frac{F_0}{m}\)</span> です。</p>
 <h3 id="3">(3)</h3>
 <p>速度と位置の関係式 <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> に (2) の結果を代入すると，次の1階微分方程式が得られます。</p>
 <div class="arithmatex">\[
@@ -14623,13 +14623,13 @@ x(0) = v_0 \cdot 0 + \frac{F_0}{2m} \cdot 0^2 + C_2 = 0
 <div class="arithmatex">\[
 x(t) = v_0 t + \frac{F_0}{2m} t^2
 \]</div>
-<p>これも，等加速度直線運動の位置の公式 <span class="arithmatex">\(x = v_0 t + \frac{1}{2} a t^2\)</span> と一致する結果となっています。</p>
+<p>これは一定加速度 <span class="arithmatex">\(a = \frac{F_0}{m}\)</span> の等加速度運動を表します。</p>
 <h3 id="4">(4)</h3>
 <p>探査機が距離 <span class="arithmatex">\(L\)</span> だけ進んだときの時刻を <span class="arithmatex">\(t_L\)</span> とします。このとき，<span class="arithmatex">\(x(t_L) = L\)</span> が成り立ちます。(3) の結果より，次の関係式が得られます。</p>
 <div class="arithmatex">\[
 v_0 t_L + \frac{F_0}{2m} t_L^2 = L
 \]</div>
-<p>この式から直接 <span class="arithmatex">\(t_L\)</span> を求めても良いですが，ここでは物理的によく知られた「時間を消去した等加速度運動の公式」を導出する方法で解き進めます。</p>
+<p>速度と位置の式から時刻 <span class="arithmatex">\(t\)</span> を消去します。</p>
 <p>(2) より，時刻 <span class="arithmatex">\(t\)</span> における速度 <span class="arithmatex">\(v(t)\)</span> の式から <span class="arithmatex">\(t\)</span> を孤立させます。</p>
 <div class="arithmatex">\[
 t = \frac{m}{F_0} (v(t) - v_0)
@@ -14644,7 +14644,7 @@ x(t) &amp;= v_0 \left\{ \frac{m}{F_0} (v(t) - v_0) \right\} + \frac{F_0}{2m} \le
 &amp;= \frac{m}{2F_0} (v(t)^2 - v_0^2)
 \end{aligned}
 \]</div>
-<p>この式を整理すると，以下の重要な関係式が得られます。</p>
+<p>この式を整理すると，以下の関係式が得られます。</p>
 <div class="arithmatex">\[
 v(t)^2 - v_0^2 = \frac{2F_0}{m} x(t)
 \]</div>

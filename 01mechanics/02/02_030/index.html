@@ -1417,7 +1417,7 @@
   <span class="md-ellipsis">
     
   
-    質量変化系（ロケット方程式）
+    質量変化系とロケット方程式
   
 
     
@@ -14563,23 +14563,22 @@
 
 <h1 id="_1">速度比例抵抗を受ける落下</h1>
 <h2 id="_2">問題</h2>
-<p>雨の日の空を見上げると，無数の雨粒が地上に向かって落ちてくる。雲の高さは通常数千メートルに達するため，もし雨粒が真空中の自由落下と同じように加速し続けたとすれば，地上に到達する頃には新幹線並みの恐るべき速度に達し，傘を貫通してしまうはずである。しかし，現実の雨粒が安全な速度で降ってくるのは，空気から速度に比例する抵抗力を受けながら落下しているためである。</p>
-<p>ここでは，この現象を単純化したモデルとして，質量 <span class="arithmatex">\(m\)</span> の雨粒（質点）が，重力加速度 <span class="arithmatex">\(g\)</span> の一様な重力場中を鉛直下向きに落下する運動を考える。空気抵抗の大きさは雨粒の速度に比例し，比例定数を <span class="arithmatex">\(k\)</span> （<span class="arithmatex">\(k &gt; 0\)</span>）とする。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> の雨粒を質点とみなし，重力加速度 <span class="arithmatex">\(g\)</span> の一様な重力場中を鉛直下向きに落下する運動を考える。空気抵抗の大きさは雨粒の速度に比例し，比例定数を <span class="arithmatex">\(k&gt;0\)</span> とする。</p>
 <p>鉛直下向きを <span class="arithmatex">\(y\)</span> 軸の正の向きにとり，雨粒が落下を開始した時刻を <span class="arithmatex">\(t = 0\)</span>，初期位置を <span class="arithmatex">\(y(0) = 0\)</span>，初期速度を <span class="arithmatex">\(v(0) = 0\)</span> と定義する。ただし，速度は <span class="arithmatex">\(v(t) = \frac{dy}{dt}\)</span> である。</p>
 <p>(1) 時刻 <span class="arithmatex">\(t\)</span> における雨粒の運動方程式を，速度 <span class="arithmatex">\(v(t)\)</span> とその時間微分を用いて表せ。</p>
-<p>(2) (1)で得られた運動方程式を変数分離法を用いて解き，速度 <span class="arithmatex">\(v(t)\)</span> を <span class="arithmatex">\(t, m, g, k\)</span> を用いて表せ。</p>
-<p>(3) 十分に時間が経過したときの雨粒の速度（終端速度） <span class="arithmatex">\(v_{\infty} = \lim_{t \to \infty} v(t)\)</span> を求めよ。また，運動方程式において加速度が <span class="arithmatex">\(0\)</span> になるという物理的条件から得られる速度が，極限として求めた <span class="arithmatex">\(v_{\infty}\)</span> と一致することを示せ。</p>
+<p>(2) (1) で得られた運動方程式を変数分離法で解き，速度 <span class="arithmatex">\(v(t)\)</span> を <span class="arithmatex">\(t, m, g, k\)</span> を用いて表せ。</p>
+<p>(3) 終端速度 <span class="arithmatex">\(v_{\infty} = \lim_{t \to \infty} v(t)\)</span> を求めよ。また，運動方程式で加速度を 0 として得られる速度と一致することを示せ。</p>
 <p>(4) 初期条件 <span class="arithmatex">\(y(0) = 0\)</span> のもとで，雨粒の位置 <span class="arithmatex">\(y(t)\)</span> を <span class="arithmatex">\(t, m, g, k\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>雨粒に作用する力は，鉛直下向き（<span class="arithmatex">\(y\)</span> 軸正の向き）の重力 <span class="arithmatex">\(mg\)</span> と，運動の向きと逆方向である鉛直上向き（<span class="arithmatex">\(y\)</span> 軸負の向き）の空気抵抗 <span class="arithmatex">\(-kv(t)\)</span> です。
+<p>雨粒には，<span class="arithmatex">\(y\)</span> 軸正方向に重力 <span class="arithmatex">\(mg\)</span>，負方向に空気抵抗 <span class="arithmatex">\(-kv(t)\)</span> が作用します。
 したがって，雨粒の運動方程式は次のようになります。
 $$
 m \frac{dv}{dt} = mg - kv
 $$</p>
 <h3 id="2">(2)</h3>
-<p>(1)で得られた運動方程式は，速度 <span class="arithmatex">\(v\)</span> に関する1階の常微分方程式です。これを解くために，以下のように変数分離を行います。
+<p>(1) で得られた運動方程式は，速度 <span class="arithmatex">\(v\)</span> に関する1階の常微分方程式です。以下のように変数分離します。
 $$
 \frac{dv}{dt} = -\frac{k}{m} \left( v - \frac{mg}{k} \right)
 $$
@@ -14608,12 +14607,12 @@ $$
 v(t) = \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} t} \right)
 $$</p>
 <h3 id="3">(3)</h3>
-<p>十分に時間が経過した極限（<span class="arithmatex">\(t \to \infty\)</span>）を考えます。(2)で求めた速度の式において，<span class="arithmatex">\(e^{-\frac{k}{m} t}\)</span> は <span class="arithmatex">\(0\)</span> に収束するため，終端速度 <span class="arithmatex">\(v_{\infty}\)</span> は次のように求まります。
+<p><span class="arithmatex">\(t \to \infty\)</span> では <span class="arithmatex">\(e^{-\frac{k}{m} t}\)</span> が 0 に収束するため，終端速度は次のようになります。
 $$
 v_{\infty} = \lim_{t \to \infty} v(t) = \frac{mg}{k}
 $$
 次に，運動方程式から直接終端速度を導きます。
-雨粒が一定の速度で落下するようになると，速度の時間変化（加速度）は <span class="arithmatex">\(0\)</span> になります。
+終端速度では加速度が 0 になります。
 すなわち，運動方程式において <span class="arithmatex">\(\frac{dv}{dt} = 0\)</span> とおくと，以下の関係式が得られます。
 $$
 0 = mg - kv
@@ -14622,7 +14621,7 @@ $$
 $$
 v = \frac{mg}{k}
 $$
-これは極限から求めた <span class="arithmatex">\(v_{\infty}\)</span> と一致します。物理的には，雨粒に働く「重力」と「空気抵抗力」が釣り合って合力が <span class="arithmatex">\(0\)</span> になり，等速度運動に移行した状態を表しています。</p>
+これは極限から求めた <span class="arithmatex">\(v_{\infty}\)</span> と一致します。このとき，重力と空気抵抗がつり合っています。</p>
 <h3 id="4">(4)</h3>
 <p>速度 <span class="arithmatex">\(v(t)\)</span> は位置 <span class="arithmatex">\(y(t)\)</span> の時間微分 <span class="arithmatex">\(v(t) = \frac{dy}{dt}\)</span> であるため，位置 <span class="arithmatex">\(y(t)\)</span> は <span class="arithmatex">\(v(t)\)</span> を時間で積分することで求められます。
 初期条件 <span class="arithmatex">\(y(0) = 0\)</span> を用いると，時刻 <span class="arithmatex">\(t\)</span> における位置 <span class="arithmatex">\(y(t)\)</span> は以下の定積分で表されます。
