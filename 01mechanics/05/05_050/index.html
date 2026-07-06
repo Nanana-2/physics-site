@@ -384,7 +384,7 @@
   <span class="md-ellipsis">
     
   
-    力学の問題一覧
+    力学 の問題一覧
   
 
     
@@ -767,34 +767,6 @@
     
   
     時間に依存する外力を受ける運動
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02/02_070/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    連成運動の基本
   
 
     
@@ -3013,7 +2985,7 @@
   <span class="md-ellipsis">
     
   
-    電磁気学の問題一覧
+    電磁気学 の問題一覧
   
 
     
@@ -5075,7 +5047,7 @@
   <span class="md-ellipsis">
     
   
-    熱力学の問題一覧
+    熱力学 の問題一覧
   
 
     
@@ -6635,7 +6607,7 @@
   <span class="md-ellipsis">
     
   
-    量子力学の問題一覧
+    量子力学 の問題一覧
   
 
     
@@ -10593,7 +10565,7 @@
   <span class="md-ellipsis">
     
   
-    統計力学の問題一覧
+    統計力学 の問題一覧
   
 
     
@@ -14563,18 +14535,18 @@
 
 <h1 id="_1">振動エネルギーの減衰</h1>
 <h2 id="_2">問題</h2>
-<p>なめらかな水平面上を運動する質量 <span class="arithmatex">\(m\)</span> の小物体を考える。この小物体には，一端を壁に固定されたばね定数 <span class="arithmatex">\(k\)</span> の軽いばねが取り付けられている。さらに，小物体は周囲の流体から速度に比例する粘性抵抗力を受けて運動するものとする。ばねの自然長の位置を原点 <span class="arithmatex">\(O\)</span> とし，水平右向きに <span class="arithmatex">\(x\)</span> 軸をとる。時刻 <span class="arithmatex">\(t\)</span> における小物体の位置を <span class="arithmatex">\(x(t)\)</span>，速度を <span class="arithmatex">\(v(t) = \dot{x}(t) = \frac{dx}{dt}\)</span> と表す。抵抗力は <span class="arithmatex">\(-c \dot{x}\)</span> （<span class="arithmatex">\(c\)</span> は正の定数）と表される。</p>
+<p>水平面上で，ばね定数 <span class="arithmatex">\(k\)</span> の軽いばねに取り付けられた質量 <span class="arithmatex">\(m\)</span> の質点を考える。ばねが自然長となる位置を <span class="arithmatex">\(x=0\)</span> とし，質点には速度に比例する抵抗力 <span class="arithmatex">\(-c\dot{x}\)</span> が働くものとする。ただし <span class="arithmatex">\(c&gt;0\)</span> である。</p>
 <p>以下の問いに答えよ。</p>
-<p>(1) 小物体の運動方程式を書き，これを用いて小物体の力学的エネルギー</p>
+<p>(1) 質点の運動方程式を書き，これを用いて力学的エネルギー</p>
 <div class="arithmatex">\[
 E(t) = \frac{1}{2}m \dot{x}^2 + \frac{1}{2}kx^2
 \]</div>
-<p>の時間変化率 <span class="arithmatex">\(\frac{dE}{dt}\)</span> を求めよ。また，その結果から得られる物理的な解釈を述べよ。</p>
-<p>(2) 減衰が十分に弱い場合（弱減衰：<span class="arithmatex">\(\gamma = \frac{c}{2m} &lt; \omega_0 = \sqrt{\frac{k}{m}}\)</span>）を考える。このときの運動方程式の一般解は，定数 <span class="arithmatex">\(A\)</span>，<span class="arithmatex">\(\phi\)</span> を用いて以下のように表される。</p>
+<p>の時間変化率 <span class="arithmatex">\(\frac{dE}{dt}\)</span> を求めよ。また，抵抗力がエネルギーに及ぼす影響を説明せよ。</p>
+<p>(2) <span class="arithmatex">\(\gamma=\frac{c}{2m}\)</span>，<span class="arithmatex">\(\omega_0=\sqrt{\frac{k}{m}}\)</span> とし，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> の場合を考える。この条件は，振幅の変化が1周期の間では小さいことを意味する。変位を</p>
 <div class="arithmatex">\[
 x(t) = A e^{-\gamma t} \cos(\omega t + \phi)
 \]</div>
-<p>ここで <span class="arithmatex">\(\omega = \sqrt{\omega_0^2 - \gamma^2}\)</span> である。減衰が極めて緩やかであり <span class="arithmatex">\(\gamma \ll \omega_0\)</span> が成り立つ（<span class="arithmatex">\(\omega \approx \omega_0\)</span> と近似できる）とする。この近似のもとで，速度 <span class="arithmatex">\(v(t) = \dot{x}(t)\)</span> を，<span class="arithmatex">\(\gamma\)</span> の1次の微小項を無視して簡略化した形で表せ。</p>
+<p>と表す。ただし <span class="arithmatex">\(\omega=\sqrt{\omega_0^2-\gamma^2}\)</span> である。<span class="arithmatex">\(\omega\approx\omega_0\)</span> とし，<span class="arithmatex">\(\gamma/\omega_0\)</span> に比例する項を無視して速度 <span class="arithmatex">\(v(t)=\dot{x}(t)\)</span> を求めよ。</p>
 <p>(3) 振動の1周期 <span class="arithmatex">\(T = \frac{2\pi}{\omega_0}\)</span> の時間スケールにおいて，減衰因子 <span class="arithmatex">\(e^{-2\gamma t}\)</span> はほぼ一定とみなすことができる。この近似のもとで，運動エネルギー <span class="arithmatex">\(K(t) = \frac{1}{2}m \dot{x}^2\)</span> とポテンシャルエネルギー <span class="arithmatex">\(U(t) = \frac{1}{2}kx^2\)</span> の1周期にわたる時間平均 <span class="arithmatex">\(\langle K(t) \rangle\)</span> および <span class="arithmatex">\(\langle U(t) \rangle\)</span> をそれぞれ求めよ。
 なお，任意の時間関数 <span class="arithmatex">\(f(t)\)</span> の時間平均は以下で定義される。</p>
 <div class="arithmatex">\[
@@ -14607,14 +14579,13 @@ kx \dot{x} = \frac{d}{dt} \left( \frac{1}{2} k x^2 \right)
 <div class="arithmatex">\[
 \frac{dE}{dt} = -c \dot{x}^2
 \]</div>
-<p><strong>物理的解釈：</strong>
-<span class="arithmatex">\(c &gt; 0\)</span> かつ <span class="arithmatex">\(\dot{x}^2 \ge 0\)</span> であるため，常に <span class="arithmatex">\(\frac{dE}{dt} \le 0\)</span> が成り立ちます。これは，散逸力である粘性抵抗力 <span class="arithmatex">\(-c\dot{x}\)</span> が物体に対して負の仕事をし続けることで，力学的エネルギーが熱エネルギーなどとして絶えず系から散逸していることを意味しています。</p>
+<p><span class="arithmatex">\(c&gt;0\)</span> かつ <span class="arithmatex">\(\dot{x}^2\geq0\)</span> であるため，常に <span class="arithmatex">\(\frac{dE}{dt}\leq0\)</span> が成り立ちます。これは，抵抗力 <span class="arithmatex">\(-c\dot{x}\)</span> が質点に負の仕事をし，力学的エネルギーを減少させることを意味します。</p>
 <h3 id="2">(2)</h3>
 <p>変位の式 <span class="arithmatex">\(x(t) = A e^{-\gamma t} \cos(\omega t + \phi)\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。積の微分公式を用いると，速度は以下のようになります。</p>
 <div class="arithmatex">\[
 \dot{x}(t) = -\gamma A e^{-\gamma t} \cos(\omega t + \phi) - \omega A e^{-\gamma t} \sin(\omega t + \phi)
 \]</div>
-<p>ここで，問題設定の近似 <span class="arithmatex">\(\gamma \ll \omega_0\)</span> を適用します。このとき <span class="arithmatex">\(\omega = \sqrt{\omega_0^2 - \gamma^2} \approx \omega_0\)</span> であり，振幅にかかる係数を比較すると，第1項の <span class="arithmatex">\(\gamma\)</span> は第2項の <span class="arithmatex">\(\omega \approx \omega_0\)</span> に比べて無視できるほど小さくなります（<span class="arithmatex">\(\gamma / \omega_0 \ll 1\)</span>）。
+<p>ここで <span class="arithmatex">\(\gamma\ll\omega_0\)</span> より，<span class="arithmatex">\(\omega\approx\omega_0\)</span> とします。また，第1項は第2項に比べて <span class="arithmatex">\(\gamma/\omega_0\)</span> の程度だけ小さいため無視します。
 したがって，<span class="arithmatex">\(\gamma\)</span> の1次以上の微小項を無視することで，速度 <span class="arithmatex">\(v(t)\)</span> は以下のように簡略化されます。</p>
 <div class="arithmatex">\[
 v(t) = \dot{x}(t) \approx -\omega_0 A e^{-\gamma t} \sin(\omega_0 t + \phi)
@@ -14654,7 +14625,7 @@ $$</p>
 &amp;= \frac{1}{4} k A^2 e^{-2\gamma t}
 \end{aligned}
 \]</div>
-<p>この結果は，十分に弱い減衰振動においては，1周期平均をとると運動エネルギーとポテンシャルエネルギーが等しく分配されることを示しています。</p>
+<p>したがって，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> のとき，1周期で平均した運動エネルギーとポテンシャルエネルギーは等しくなります。</p>
 <h3 id="4">(4)</h3>
 <p>(3)の結果を足し合わせることで，時間平均された全力学的エネルギー <span class="arithmatex">\(\langle E(t) \rangle\)</span> が求まります。</p>
 <div class="arithmatex">\[
@@ -14676,7 +14647,7 @@ $$</p>
 <div class="arithmatex">\[
 \langle E(t) \rangle = \langle E(0) \rangle e^{-2\gamma t}
 \]</div>
-<p>この結果から，時間平均された力学的エネルギー <span class="arithmatex">\(\langle E(t) \rangle\)</span> は，時間経過とともに指数関数的に減少（減衰）していくことが証明されました。この減衰の速さは，減衰定数 <span class="arithmatex">\(\gamma = \frac{c}{2m}\)</span> の2倍（<span class="arithmatex">\(2\gamma\)</span>）の指数因子によって支配されます。</p>
+<p>したがって，1周期で平均した力学的エネルギーは <span class="arithmatex">\(e^{-2\gamma t}\)</span> に比例して減少します。</p>
 
 
 

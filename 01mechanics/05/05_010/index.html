@@ -384,7 +384,7 @@
   <span class="md-ellipsis">
     
   
-    力学の問題一覧
+    力学 の問題一覧
   
 
     
@@ -767,34 +767,6 @@
     
   
     時間に依存する外力を受ける運動
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02/02_070/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    連成運動の基本
   
 
     
@@ -3002,7 +2974,7 @@
   <span class="md-ellipsis">
     
   
-    電磁気学の問題一覧
+    電磁気学 の問題一覧
   
 
     
@@ -5064,7 +5036,7 @@
   <span class="md-ellipsis">
     
   
-    熱力学の問題一覧
+    熱力学 の問題一覧
   
 
     
@@ -6624,7 +6596,7 @@
   <span class="md-ellipsis">
     
   
-    量子力学の問題一覧
+    量子力学 の問題一覧
   
 
     
@@ -10582,7 +10554,7 @@
   <span class="md-ellipsis">
     
   
-    統計力学の問題一覧
+    統計力学 の問題一覧
   
 
     
@@ -14541,16 +14513,15 @@
 
 <h1 id="_1">単振動の基本</h1>
 <h2 id="_2">問題</h2>
-<p>水平で摩擦のない床の上に質量 <span class="arithmatex">\(m\)</span> の質点を置き，壁に固定されたばね定数 <span class="arithmatex">\(k\)</span> （<span class="arithmatex">\(k &gt; 0\)</span>）の引き伸ばしや圧縮が可能な軽いばねの一端をこの質点に取り付ける。ばねのもう一端は壁にしっかりと固定されており，ばね自身は常に水平に保たれているものとする。
-壁から質点に向かう方向に <span class="arithmatex">\(x\)</span> 軸をとり，ばねが自然長（伸びも縮みもない状態）のときの質点の位置を原点 <span class="arithmatex">\(O\)</span> （<span class="arithmatex">\(x = 0\)</span>）とする。</p>
+<p>水平で摩擦のない床の上に質量 <span class="arithmatex">\(m\)</span> の質点を置き，ばね定数 <span class="arithmatex">\(k&gt;0\)</span> の軽いばねで壁につなぐ。ばねが自然長となる質点の位置を <span class="arithmatex">\(x=0\)</span> とする。</p>
 <p>このとき，以下の問いに答えよ。</p>
-<p>(1) 質点が位置 <span class="arithmatex">\(x\)</span> にあるとき，ばねから受ける力を記述し，質点の運動方程式を立てよ。ただし，時間 <span class="arithmatex">\(t\)</span> による微分を <span class="arithmatex">\(\frac{d}{dt}\)</span> で表す。</p>
-<p>(2) <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> と定義する。初期状態として，時刻 <span class="arithmatex">\(t = 0\)</span> において質点を原点から正の方向に <span class="arithmatex">\(A\)</span> （<span class="arithmatex">\(A &gt; 0\)</span>）だけ引き離して静かに手を離した（初期速度が <span class="arithmatex">\(0\)</span> であった）とする。この初期条件のもとで，運動方程式を解き，質点の位置 <span class="arithmatex">\(x(t)\)</span> を時間の関数として求めよ。</p>
-<p>(3) (2) で求めた位置 <span class="arithmatex">\(x(t)\)</span> を用いて，質点の速度 <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> および加速度 <span class="arithmatex">\(a(t) = \frac{d^2x}{dt^2}\)</span> を時間の関数として求めよ。また，速度の大きさ（速さ） <span class="arithmatex">\(|v(t)|\)</span> が最大となるときの位置 <span class="arithmatex">\(x\)</span> と，加速度の大きさ <span class="arithmatex">\(|a(t)|\)</span> が最大となるときの位置 <span class="arithmatex">\(x\)</span> をそれぞれ答えよ。</p>
+<p>(1) 質点が位置 <span class="arithmatex">\(x\)</span> にあるとき，ばねから受ける力と運動方程式を示せ。</p>
+<p>(2) <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> とする。初期条件 <span class="arithmatex">\(x(0)=A&gt;0\)</span>，<span class="arithmatex">\(\dot{x}(0)=0\)</span> のもとで運動方程式を解き，位置 <span class="arithmatex">\(x(t)\)</span> を求めよ。</p>
+<p>(3) 速度 <span class="arithmatex">\(v(t)\)</span> と加速度 <span class="arithmatex">\(a(t)\)</span> を求めよ。また，<span class="arithmatex">\(|v(t)|\)</span> と <span class="arithmatex">\(|a(t)|\)</span> が最大となる位置をそれぞれ答えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>質点が位置 <span class="arithmatex">\(x\)</span> にあるとき，ばねの自然長からの伸び（または縮み）は <span class="arithmatex">\(x\)</span> となります。フックの法則により，ばねが質点を原点 <span class="arithmatex">\(O\)</span> に引き戻そうとする力（復元力） <span class="arithmatex">\(F\)</span> は以下のように表されます。</p>
+<p>質点が位置 <span class="arithmatex">\(x\)</span> にあるとき，ばねの自然長からの変位は <span class="arithmatex">\(x\)</span> です。フックの法則により，ばねが質点を原点 <span class="arithmatex">\(O\)</span> に引き戻す復元力 <span class="arithmatex">\(F\)</span> は次のように表されます。</p>
 <div class="arithmatex">\[
 F = -kx
 \]</div>
@@ -14572,7 +14543,7 @@ x(t) = C_1 \cos \omega_0 t + C_2 \sin \omega_0 t
 <div class="arithmatex">\[
 v(t) = \frac{dx}{dt} = -C_1 \omega_0 \sin \omega_0 t + C_2 \omega_0 \cos \omega_0 t
 \]</div>
-<p>次に，与えられた初期条件（<span class="arithmatex">\(t = 0\)</span> で <span class="arithmatex">\(x(0) = A\)</span> ，<span class="arithmatex">\(v(0) = 0\)</span>）から定数 <span class="arithmatex">\(C_1\)</span> ，<span class="arithmatex">\(C_2\)</span> を決定します。
+<p>次に，初期条件 <span class="arithmatex">\(x(0)=A\)</span>，<span class="arithmatex">\(v(0)=0\)</span> から定数 <span class="arithmatex">\(C_1\)</span>，<span class="arithmatex">\(C_2\)</span> を決定します。
 まず <span class="arithmatex">\(x(0) = A\)</span> より，以下の関係が成り立ちます。</p>
 <div class="arithmatex">\[
 x(0) = C_1 \cos 0 + C_2 \sin 0 = C_1 = A
@@ -14605,7 +14576,7 @@ a(t) = \frac{d^2 x}{dt^2} = -A \omega_0^2 \cos \omega_0 t
 <div class="arithmatex">\[
 x = 0
 \]</div>
-<p>すなわち，速さが最大となるのは質点が原点（平衡点）を通過するときです。</p>
+<p>すなわち，速さが最大となるのは質点が平衡点 <span class="arithmatex">\(x=0\)</span> を通過するときです。</p>
 <p>一方で，加速度の大きさ <span class="arithmatex">\(|a(t)|\)</span> は以下のように表されます。</p>
 <div class="arithmatex">\[
 |a(t)| = A \omega_0^2 |\cos \omega_0 t|
@@ -14614,7 +14585,7 @@ x = 0
 <div class="arithmatex">\[
 x = \pm A
 \]</div>
-<p>すなわち，加速度の大きさが最大となるのは，質点が振動の両端（折り返し地点）に達したときです。これは，ばねの伸びまたは縮みが最大となり，質点に最も強い復元力が働く瞬間と一致しています。</p>
+<p>すなわち，加速度の大きさが最大となるのは，質点が振動の両端 <span class="arithmatex">\(x=\pm A\)</span> に達したときです。この位置では，復元力の大きさも最大になります。</p>
 
 
 

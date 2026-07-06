@@ -384,7 +384,7 @@
   <span class="md-ellipsis">
     
   
-    力学の問題一覧
+    力学 の問題一覧
   
 
     
@@ -767,34 +767,6 @@
     
   
     時間に依存する外力を受ける運動
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02/02_070/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    連成運動の基本
   
 
     
@@ -3002,7 +2974,7 @@
   <span class="md-ellipsis">
     
   
-    電磁気学の問題一覧
+    電磁気学 の問題一覧
   
 
     
@@ -5064,7 +5036,7 @@
   <span class="md-ellipsis">
     
   
-    熱力学の問題一覧
+    熱力学 の問題一覧
   
 
     
@@ -6624,7 +6596,7 @@
   <span class="md-ellipsis">
     
   
-    量子力学の問題一覧
+    量子力学 の問題一覧
   
 
     
@@ -10582,7 +10554,7 @@
   <span class="md-ellipsis">
     
   
-    統計力学の問題一覧
+    統計力学 の問題一覧
   
 
     
@@ -14541,28 +14513,20 @@
 
 <h1 id="q">Q値と共鳴特性</h1>
 <h2 id="_1">問題</h2>
-<p>水平に置かれたなめらかな床の上で，一端を壁に固定されたばね定数 <span class="arithmatex">\(k\)</span> の軽いばねの他端に，質量 <span class="arithmatex">\(m\)</span> のおもり（質点）を取り付ける。おもりには，その速度に比例する粘性抵抗力（比例定数 <span class="arithmatex">\(b &gt; 0\)</span>）が働き，さらに外部から時間 <span class="arithmatex">\(t\)</span> に依存する外力 <span class="arithmatex">\(F(t) = F_0 \cos(\omega t)\)</span> （<span class="arithmatex">\(F_0 &gt; 0\)</span>，<span class="arithmatex">\(\omega &gt; 0\)</span>）が加えられている。おもりの平衡位置（ばねの自然長の位置）を原点 <span class="arithmatex">\(x=0\)</span> とし，ばねの伸縮方向を <span class="arithmatex">\(x\)</span> 軸とする。</p>
-<p>系の固有角振動数を <span class="arithmatex">\(\omega_0 = \sqrt{k/m}\)</span>，減衰係数を <span class="arithmatex">\(\gamma = b / (2m)\)</span> と定義する。ここでは，減衰が十分に小さい弱減衰の事例（<span class="arithmatex">\(\gamma \ll \omega_0\)</span>）を扱う。この系において，振動の「品質」や「エネルギー散逸の度合い」を表す無次元量である品質係数（Quality Factor）<span class="arithmatex">\(Q\)</span> を以下のように定義する。</p>
+<p>水平面上で，ばね定数 <span class="arithmatex">\(k\)</span> の軽いばねに取り付けられた質量 <span class="arithmatex">\(m\)</span> の質点を考える。ばねが自然長となる位置を <span class="arithmatex">\(x=0\)</span> とする。質点には速度に比例する抵抗力 <span class="arithmatex">\(-b\dot{x}\)</span> と，周期外力 <span class="arithmatex">\(F(t)=F_0\cos\omega t\)</span> が働く。ただし <span class="arithmatex">\(b&gt;0\)</span>，<span class="arithmatex">\(F_0&gt;0\)</span>，<span class="arithmatex">\(\omega&gt;0\)</span> とする。</p>
+<p>固有角振動数を <span class="arithmatex">\(\omega_0=\sqrt{k/m}\)</span>，減衰係数を <span class="arithmatex">\(\gamma=b/(2m)\)</span> とする。以下では <span class="arithmatex">\(\gamma\ll\omega_0\)</span> を仮定する。この条件では，振幅は1周期の間にほとんど変化しない。品質係数 <span class="arithmatex">\(Q\)</span> を</p>
 <div class="arithmatex">\[
 Q = \frac{\omega_0}{2\gamma}
 \]</div>
-<p>以下の問いに答えよ。</p>
-<p>(1) 
-外力がない場合（<span class="arithmatex">\(F(t) = 0\)</span>）の減衰自由振動を考える。
-弱減衰（<span class="arithmatex">\(\gamma \ll \omega_0\)</span>）のとき，おもりの変位は概ね角振動数 <span class="arithmatex">\(\omega_0\)</span> で振動しながら，その振幅が時間とともに指数関数的に減少する。</p>
-<p>系の力学的エネルギー <span class="arithmatex">\(E(t)\)</span> の時間変化率 <span class="arithmatex">\(\frac{dE}{dt}\)</span> を求めよ。また，弱減衰極限（<span class="arithmatex">\(Q \gg 1\)</span>）において，振動の 1 周期 <span class="arithmatex">\(T \approx \frac{2\pi}{\omega_0}\)</span> の間におもりが失うエネルギーの割合 <span class="arithmatex">\(\frac{\Delta E}{E}\)</span> が，品質係数 <span class="arithmatex">\(Q\)</span> を用いて以下のように表されることを示せ。ただし，<span class="arithmatex">\(\Delta E = E(t) - E(t+T)\)</span> とする。</p>
+<p>と定義する。以下の問いに答えよ。</p>
+<p>(1) 外力がない場合を考える。変位は角振動数を <span class="arithmatex">\(\omega_0\)</span> とみなせる速さで振動し，振幅は <span class="arithmatex">\(e^{-\gamma t}\)</span> に比例して減少する。</p>
+<p>力学的エネルギー <span class="arithmatex">\(E(t)\)</span> の時間変化率を求めよ。また，<span class="arithmatex">\(Q\gg1\)</span> のとき，1周期 <span class="arithmatex">\(T\approx\frac{2\pi}{\omega_0}\)</span> の間に失われるエネルギーの割合が以下のように表されることを示せ。ただし，<span class="arithmatex">\(\Delta E=E(t)-E(t+T)\)</span> とする。</p>
 <div class="arithmatex">\[
 \frac{\Delta E}{E} \approx \frac{2\pi}{Q}
 \]</div>
-<p>(2) 
-外力 <span class="arithmatex">\(F(t) = F_0 \cos(\omega t)\)</span> が作用している場合の運動方程式を書き下せ。
-また，十分な時間が経過した後に実現される定常状態におけるおもりの運動を <span class="arithmatex">\(x(t) = A(\omega) \cos(\omega t - \delta)\)</span> とおく。複素振幅の定式化（または三角関数の合成）を用いることで，振幅 <span class="arithmatex">\(A(\omega)\)</span> を <span class="arithmatex">\(\omega_0\)</span>，<span class="arithmatex">\(\gamma\)</span>，<span class="arithmatex">\(f_0 = F_0 / m\)</span>，および駆動角振動数 <span class="arithmatex">\(\omega\)</span> を用いて表せ。</p>
-<p>(3) 
-弱減衰極限（<span class="arithmatex">\(Q \gg 1\)</span>）において，振幅 <span class="arithmatex">\(A(\omega)\)</span> は <span class="arithmatex">\(\omega \approx \omega_0\)</span> の近傍で非常に鋭いピーク（共鳴）を持つ。</p>
-<p>共鳴時（<span class="arithmatex">\(\omega = \omega_0\)</span>）の振幅 <span class="arithmatex">\(A(\omega_0)\)</span> を求めよ。
-また，おもりの運動エネルギーと復元力によるポテンシャルエネルギーの和の長時間平均（平均エネルギー） <span class="arithmatex">\(\langle E(\omega) \rangle\)</span> は，振幅の平方 <span class="arithmatex">\(A(\omega)^2\)</span> に比例する。
-平均エネルギー <span class="arithmatex">\(\langle E(\omega) \rangle\)</span> が，共鳴時の値 <span class="arithmatex">\(\langle E(\omega_0) \rangle\)</span> のちょうど半分になるような 2 つの角振動数を <span class="arithmatex">\(\omega_{\pm}\)</span>（<span class="arithmatex">\(\omega_- &lt; \omega_0 &lt; \omega_+\)</span>）とする。</p>
-<p><span class="arithmatex">\(\omega \approx \omega_0\)</span> の近似（ローレンツ近似）を用いることで，これら 2 つの角振動数の差（半値全幅） <span class="arithmatex">\(\Delta \omega = \omega_+ - \omega_-\)</span> が以下の関係を満たすことを示せ。</p>
+<p>(2) 外力 <span class="arithmatex">\(F(t)=F_0\cos\omega t\)</span> が働く場合の運動方程式を書け。定常状態における変位を <span class="arithmatex">\(x(t)=A(\omega)\cos(\omega t-\delta)\)</span> とおき，振幅 <span class="arithmatex">\(A(\omega)\)</span> を <span class="arithmatex">\(\omega_0\)</span>，<span class="arithmatex">\(\gamma\)</span>，<span class="arithmatex">\(f_0=F_0/m\)</span>，<span class="arithmatex">\(\omega\)</span> を用いて表せ。</p>
+<p>(3) <span class="arithmatex">\(Q\gg1\)</span> のとき，振幅 <span class="arithmatex">\(A(\omega)\)</span> は <span class="arithmatex">\(\omega\approx\omega_0\)</span> の近くで鋭いピークを持つ。<span class="arithmatex">\(\omega=\omega_0\)</span> における振幅 <span class="arithmatex">\(A(\omega_0)\)</span> を求めよ。</p>
+<p><span class="arithmatex">\(\omega\approx\omega_0\)</span> では，1周期で平均した力学的エネルギー <span class="arithmatex">\(\langle E(\omega)\rangle\)</span> は <span class="arithmatex">\(A(\omega)^2\)</span> に比例するとみなせる。<span class="arithmatex">\(\langle E(\omega)\rangle\)</span> が <span class="arithmatex">\(\langle E(\omega_0)\rangle\)</span> の半分となる2つの角振動数を <span class="arithmatex">\(\omega_-\)</span>，<span class="arithmatex">\(\omega_+\)</span> とし，<span class="arithmatex">\(\omega_-&lt;\omega_0&lt;\omega_+\)</span> とする。<span class="arithmatex">\(\omega\approx\omega_0\)</span> の近似を用いて，半値全幅 <span class="arithmatex">\(\Delta\omega=\omega_+-\omega_-\)</span> が次の関係を満たすことを示せ。</p>
 <div class="arithmatex">\[
 \frac{\Delta \omega}{\omega_0} \approx \frac{1}{Q}
 \]</div>
@@ -14591,12 +14555,11 @@ E(t) = \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2
 \frac{dE}{dt} = -b\dot{x}^2 = -2m\gamma \dot{x}^2 \le 0
 \]</div>
 <p>これは，抵抗力によって力学的エネルギーが常に散逸していることを示しています。</p>
-<p>次に，弱減衰（<span class="arithmatex">\(\gamma \ll \omega_0\)</span>）における 1 周期のエネルギー散逸率を計算します。
-弱減衰のとき，変位 <span class="arithmatex">\(x(t)\)</span> はおおよそ以下のように表されます。</p>
+<p>次に，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> のときの1周期あたりのエネルギー減少率を求めます。このとき，変位 <span class="arithmatex">\(x(t)\)</span> は近似的に次のように表されます。</p>
 <div class="arithmatex">\[
 x(t) \approx A_0 e^{-\gamma t} \cos(\omega_0 t + \phi)
 \]</div>
-<p>速度 <span class="arithmatex">\(\dot{x}(t)\)</span> は，<span class="arithmatex">\(\gamma \ll \omega_0\)</span> であるため指数部分の微分による寄与（<span class="arithmatex">\(\gamma e^{-\gamma t}\)</span>）を無視すると，以下のように近似できます。</p>
+<p>速度 <span class="arithmatex">\(\dot{x}(t)\)</span> を求める際には，指数関数を微分して生じる項は他の項より <span class="arithmatex">\(\gamma/\omega_0\)</span> の程度だけ小さいため無視できます。したがって，</p>
 <div class="arithmatex">\[
 \dot{x}(t) \approx -\omega_0 A_0 e^{-\gamma t} \sin(\omega_0 t + \phi)
 \]</div>
@@ -14616,7 +14579,7 @@ E(t) &amp;= \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2 \\\\
 &amp;= E(t) \left( 1 - e^{-2\gamma T} \right)
 \end{aligned}
 \]</div>
-<p>ここで，弱減衰（<span class="arithmatex">\(\gamma T \ll 1\)</span>）であるため，マクローリン展開 <span class="arithmatex">\(e^{-x} \approx 1 - x\)</span> を用いて近似します。</p>
+<p><span class="arithmatex">\(\gamma T\ll1\)</span> であるため，<span class="arithmatex">\(e^{-x}\approx1-x\)</span> を用いると，</p>
 <div class="arithmatex">\[
 1 - e^{-2\gamma T} \approx 2\gamma T
 \]</div>
@@ -14628,7 +14591,7 @@ E(t) &amp;= \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2 \\\\
 <div class="arithmatex">\[
 \frac{\Delta E}{E} \approx \frac{2\pi}{Q}
 \]</div>
-<p>これにより，品質係数 <span class="arithmatex">\(Q\)</span> は「1 周期の間に散逸するエネルギーの割合の逆数（に <span class="arithmatex">\(2\pi\)</span> を掛けたもの）」という物理的意味を持つことが示されました。</p>
+<p>したがって，<span class="arithmatex">\(Q\)</span> が大きいほど，1周期の間に失われるエネルギーの割合は小さくなります。</p>
 <h3 id="2">(2)</h3>
 <p>周期外力 <span class="arithmatex">\(F(t) = F_0 \cos(\omega t)\)</span> が働く場合の運動方程式は以下の通りです。</p>
 <div class="arithmatex">\[
@@ -14638,7 +14601,7 @@ m \ddot{x} = -kx - b\dot{x} + F_0 \cos(\omega t)
 <div class="arithmatex">\[
 \ddot{x} + 2\gamma \dot{x} + \omega_0^2 x = f_0 \cos(\omega t)
 \]</div>
-<p>この微分方程式の定常解を求めるため，複素数を用いた解法を導入します。外力を <span class="arithmatex">\(f_0 e^{i\omega t}\)</span> とおき，対応する定常解を <span class="arithmatex">\(z(t) = \tilde{A} e^{i\omega t}\)</span>（<span class="arithmatex">\(\tilde{A}\)</span> は複素振幅）と仮定します。これを運動方程式に代入します。</p>
+<p>外力を <span class="arithmatex">\(f_0e^{i\omega t}\)</span> に置き換え，複素振幅を <span class="arithmatex">\(\tilde{A}\)</span> として定常解を <span class="arithmatex">\(z(t)=\tilde{A}e^{i\omega t}\)</span> とおきます。これを運動方程式に代入すると，</p>
 <div class="arithmatex">\[
 \left( -\omega^2 + 2i\gamma\omega + \omega_0^2 \right) \tilde{A} e^{i\omega t} = f_0 e^{i\omega t}
 \]</div>
@@ -14652,7 +14615,7 @@ m \ddot{x} = -kx - b\dot{x} + F_0 \cos(\omega t)
 A(\omega) = |\tilde{A}| = \frac{f_0}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2}}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>弱減衰（<span class="arithmatex">\(\gamma \ll \omega_0\)</span>）のもとでの共鳴現象を議論します。</p>
+<p><span class="arithmatex">\(\gamma\ll\omega_0\)</span> の場合を考えます。</p>
 <p>まず，共鳴角振動数 <span class="arithmatex">\(\omega = \omega_0\)</span> における振幅 <span class="arithmatex">\(A(\omega_0)\)</span> を求めます。(2) の結果に <span class="arithmatex">\(\omega = \omega_0\)</span> を代入すると，第 1 項が消去されて以下が得られます。</p>
 <div class="arithmatex">\[
 A(\omega_0) = \frac{f_0}{2\gamma\omega_0}
@@ -14661,7 +14624,7 @@ A(\omega_0) = \frac{f_0}{2\gamma\omega_0}
 <div class="arithmatex">\[
 A(\omega)^2 = \frac{1}{2} A(\omega_0)^2
 \]</div>
-<p>具体的に書き下すと以下のようになります。</p>
+<p>振幅の式を代入すると，</p>
 <div class="arithmatex">\[
 \frac{f_0^2}{(\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2} = \frac{1}{2} \left( \frac{f_0}{2\gamma\omega_0} \right)^2 = \frac{f_0^2}{8\gamma^2\omega_0^2}
 \]</div>
@@ -14669,7 +14632,7 @@ A(\omega)^2 = \frac{1}{2} A(\omega_0)^2
 <div class="arithmatex">\[
 (\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2 = 8\gamma^2\omega_0^2
 \]</div>
-<p>ここで，共鳴ピークが非常に鋭い（<span class="arithmatex">\(\gamma \ll \omega_0\)</span>）ため，関心のある角振動数 <span class="arithmatex">\(\omega\)</span> は <span class="arithmatex">\(\omega_0\)</span> に極めて近い領域（<span class="arithmatex">\(\omega \approx \omega_0\)</span>）に限定されます。この近傍で以下の近似（ローレンツ近似）を適用します。</p>
+<p><span class="arithmatex">\(\gamma\ll\omega_0\)</span> では，半値をとる角振動数は <span class="arithmatex">\(\omega_0\)</span> の近くにあります。そこで，<span class="arithmatex">\(\omega\approx\omega_0\)</span> として次のように近似します。</p>
 <div class="arithmatex">\[
 \omega_0^2 - \omega^2 = (\omega_0 + \omega)(\omega_0 - \omega) \approx 2\omega_0 (\omega_0 - \omega)
 \]</div>
@@ -14689,7 +14652,7 @@ A(\omega)^2 = \frac{1}{2} A(\omega_0)^2
 <div class="arithmatex">\[
 \omega_{\pm} \approx \omega_0 \pm \gamma
 \]</div>
-<p>この 2 つの角振動数の幅（半値全幅） <span class="arithmatex">\(\Delta \omega\)</span> は以下のように求まります。</p>
+<p>したがって，半値全幅 <span class="arithmatex">\(\Delta\omega\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 \Delta \omega = \omega_+ - \omega_- \approx 2\gamma
 \]</div>
@@ -14697,9 +14660,7 @@ A(\omega)^2 = \frac{1}{2} A(\omega_0)^2
 <div class="arithmatex">\[
 \frac{\Delta \omega}{\omega_0} \approx \frac{2\gamma}{\omega_0} = \frac{1}{Q}
 \]</div>
-<p><strong>物理的な解釈：</strong>
-この結果は，Q値が<strong>「共鳴の鋭さ（選択性）」</strong>を定量的に表す指標であることを意味しています。</p>
-<p>Q値が大きければ大きいほど，共鳴ピークの幅 <span class="arithmatex">\(\Delta \omega\)</span> は中心振動数 <span class="arithmatex">\(\omega_0\)</span> に比べて相対的に狭くなり，特定の周波数の外力に対して極めて鋭敏に反応する系（選択性の高い系）になります。逆にQ値が小さい系は，共鳴のピークがなだらかになり，幅広い周波数の外力に対して同等に反応するようになります。</p>
+<p><span class="arithmatex">\(Q\)</span> が大きいほど <span class="arithmatex">\(\Delta\omega/\omega_0\)</span> は小さくなり，共鳴ピークは狭くなります。したがって，<span class="arithmatex">\(Q\)</span> は共鳴の鋭さを表します。</p>
 
 
 

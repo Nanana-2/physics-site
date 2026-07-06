@@ -384,7 +384,7 @@
   <span class="md-ellipsis">
     
   
-    力学の問題一覧
+    力学 の問題一覧
   
 
     
@@ -888,34 +888,6 @@
     
   
     時間に依存する外力を受ける運動
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_070/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    連成運動の基本
   
 
     
@@ -3013,7 +2985,7 @@
   <span class="md-ellipsis">
     
   
-    電磁気学の問題一覧
+    電磁気学 の問題一覧
   
 
     
@@ -5075,7 +5047,7 @@
   <span class="md-ellipsis">
     
   
-    熱力学の問題一覧
+    熱力学 の問題一覧
   
 
     
@@ -6635,7 +6607,7 @@
   <span class="md-ellipsis">
     
   
-    量子力学の問題一覧
+    量子力学 の問題一覧
   
 
     
@@ -10593,7 +10565,7 @@
   <span class="md-ellipsis">
     
   
-    統計力学の問題一覧
+    統計力学 の問題一覧
   
 
     
@@ -14563,22 +14535,21 @@
 
 <h1 id="_1">二乗抵抗を受ける運動</h1>
 <h2 id="_2">問題</h2>
-<p>上空にある雲から雨滴が落下する際，雨滴はある程度まで加速すると，空気抵抗の影響によってそれ以上加速しなくなり，一定の速度（終端速度）に達することが知られている。
-質量 <span class="arithmatex">\(m\)</span> の雨滴が，高層ビルの屋上から初速度 <span class="arithmatex">\(0\)</span> で鉛直下向きに落下する状況を考える。鉛直下向きを <span class="arithmatex">\(x\)</span> 軸の正の向きとし，落下を開始した位置を原点 <span class="arithmatex">\(x = 0\)</span> とし，時刻を <span class="arithmatex">\(t\)</span> とする。重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。
-雨滴のサイズが比較的大きい場合，空気抵抗の大きさは速度の二乗に比例することが知られている。雨滴が速度 <span class="arithmatex">\(v\)</span> （<span class="arithmatex">\(v \ge 0\)</span>）で運動するとき，空気抵抗が <span class="arithmatex">\(F = -k v^2\)</span> （<span class="arithmatex">\(k\)</span> は正の定数）として働くものとして，以下の問いに答えよ。</p>
-<p>(1) 雨滴の速度 <span class="arithmatex">\(v(t)\)</span> に対する運動方程式を記述せよ。また，十分に時間が経過したときに雨滴が達する終端速度 <span class="arithmatex">\(v_{\infty}\)</span> を <span class="arithmatex">\(m\)</span> ，<span class="arithmatex">\(g\)</span> ，<span class="arithmatex">\(k\)</span> を用いて表せ。</p>
-<p>(2) 雨滴の初期速度が <span class="arithmatex">\(v(0) = 0\)</span> であるとき，変数分離法を用いて，任意の時刻 <span class="arithmatex">\(t\)</span> における速度 <span class="arithmatex">\(v(t)\)</span> を求めよ。答には双曲線正接関数（ハイパボリックタンジェント） <span class="arithmatex">\(\tanh\)</span> を用いよ。</p>
-<p>(3) 落下開始直後のごく短い時間（<span class="arithmatex">\(t \approx 0\)</span>）において，速度 <span class="arithmatex">\(v(t)\)</span> を時間 <span class="arithmatex">\(t\)</span> の3次の項まで，および位置 <span class="arithmatex">\(x(t)\)</span> を4次の項までマクローリン展開を用いて近似せよ。これらの結果について，空気抵抗がない場合の自由落下と対比させながら物理的な解釈を述べよ。</p>
-<p>(4) 位置 <span class="arithmatex">\(x(t)\)</span> の厳密解を時間 <span class="arithmatex">\(t\)</span> の関数として求めよ。さらに，<span class="arithmatex">\(t \to \infty\)</span> における <span class="arithmatex">\(x(t)\)</span> の漸近的な振る舞い（<span class="arithmatex">\(t\)</span> の1次式の形）を求め，その物理的な解釈を述べよ。ただし，初期条件は <span class="arithmatex">\(x(0) = 0\)</span> とし，積分公式 <span class="arithmatex">\(\int \tanh \theta d\theta = \ln \cosh \theta + C\)</span> （<span class="arithmatex">\(C\)</span> は積分定数）を用いてよい。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> の物体が，初速度 0 で鉛直下向きに落下する運動を考える。鉛直下向きを <span class="arithmatex">\(x\)</span> 軸の正方向とし，落下開始位置を <span class="arithmatex">\(x=0\)</span> とする。重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。</p>
+<p>物体が速度 <span class="arithmatex">\(v\geq0\)</span> で落下するとき，速度と反対向きに大きさ <span class="arithmatex">\(kv^2\)</span> の抵抗力が働くものとする。ただし <span class="arithmatex">\(k&gt;0\)</span> である。以下の問いに答えよ。</p>
+<p>(1) 速度 <span class="arithmatex">\(v(t)\)</span> に対する運動方程式を示せ。また，終端速度 <span class="arithmatex">\(v_{\infty}\)</span> を <span class="arithmatex">\(m\)</span>，<span class="arithmatex">\(g\)</span>，<span class="arithmatex">\(k\)</span> を用いて表せ。</p>
+<p>(2) 初期条件 <span class="arithmatex">\(v(0)=0\)</span> のもとで運動方程式を変数分離法で解き，速度 <span class="arithmatex">\(v(t)\)</span> を求めよ。答には双曲線正接関数 <span class="arithmatex">\(\tanh\)</span> を用いてよい。</p>
+<p>(3) <span class="arithmatex">\(t\approx0\)</span> において，速度 <span class="arithmatex">\(v(t)\)</span> を <span class="arithmatex">\(t\)</span> の3次まで，位置 <span class="arithmatex">\(x(t)\)</span> を <span class="arithmatex">\(t\)</span> の4次まで展開せよ。また，自由落下との差を述べよ。</p>
+<p>(4) 初期条件 <span class="arithmatex">\(x(0)=0\)</span> のもとで位置 <span class="arithmatex">\(x(t)\)</span> を求めよ。さらに，<span class="arithmatex">\(t\to\infty\)</span> における <span class="arithmatex">\(x(t)\)</span> の漸近形を求めよ。積分公式 <span class="arithmatex">\(\int \tanh\theta\,d\theta=\ln\cosh\theta+C\)</span> を用いてよい。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>雨滴には，鉛直下向き（<span class="arithmatex">\(x\)</span> 軸の正の向き）に重力 <span class="arithmatex">\(mg\)</span> が働き，運動を妨げる鉛直上向き（<span class="arithmatex">\(x\)</span> 軸の負の向き）に二乗抵抗 <span class="arithmatex">\(kv^2\)</span> が働きます。
+<p>物体には，<span class="arithmatex">\(x\)</span> 軸の正方向に重力 <span class="arithmatex">\(mg\)</span> が働き，負方向に抵抗力 <span class="arithmatex">\(kv^2\)</span> が働きます。
 したがって，運動方程式は以下のようになります。</p>
 <div class="arithmatex">\[
 m \frac{dv}{dt} = mg - kv^2
 \]</div>
-<p>十分に時間が経過すると，重力と空気抵抗が釣り合って加速が止まり，速度は一定値（終端速度 <span class="arithmatex">\(v_{\infty}\)</span>）に収束します。このとき <span class="arithmatex">\(\frac{dv}{dt} = 0\)</span> となるため，</p>
+<p>十分に時間が経過すると，重力と抵抗力が釣り合って加速が止まり，速度は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> に近づきます。このとき <span class="arithmatex">\(\frac{dv}{dt} = 0\)</span> となるため，</p>
 <div class="arithmatex">\[
 mg - k v_{\infty}^2 = 0
 \]</div>
@@ -14630,10 +14601,8 @@ x(t) &amp;= \int_{0}^{t} v(t') dt' \\\\
 &amp;\approx \frac{1}{2}gt^2 - \frac{kg^2}{12m} t^4
 \end{aligned}
 \]</div>
-<p><strong>物理的解釈：</strong>
-空気抵抗がない場合の自由落下では，速度は <span class="arithmatex">\(v(t) = gt\)</span>，位置は <span class="arithmatex">\(x(t) = \frac{1}{2}gt^2\)</span> となります。
-近似式を見ると，落下開始直後（<span class="arithmatex">\(t \approx 0\)</span>）においては，速度・位置ともに自由落下の式でよく近似されることがわかります。
-時間が少し経過すると，空気抵抗による補正項（速度に対しては <span class="arithmatex">\(-\frac{kg^2}{3m} t^3\)</span>，位置に対しては <span class="arithmatex">\(-\frac{kg^2}{12m} t^4\)</span>）が現れ，自由落下よりも運動が遅れる様子が定量的に示されています。この遅れは，空気抵抗係数 <span class="arithmatex">\(k\)</span> に比例し，質量 <span class="arithmatex">\(m\)</span> に反比例します。</p>
+<p>空気抵抗がない場合の自由落下では，速度は <span class="arithmatex">\(v(t) = gt\)</span>，位置は <span class="arithmatex">\(x(t) = \frac{1}{2}gt^2\)</span> となります。
+落下開始直後は自由落下の式が主要項となり，抵抗力による補正は速度では <span class="arithmatex">\(t^3\)</span>，位置では <span class="arithmatex">\(t^4\)</span> から現れます。</p>
 <h3 id="4">(4)</h3>
 <p>速度 <span class="arithmatex">\(v(t)\)</span> をさらに時間積分して，位置 <span class="arithmatex">\(x(t)\)</span> の厳密解を求めます。</p>
 <div class="arithmatex">\[
@@ -14655,16 +14624,14 @@ x(t) = \frac{v_{\infty}^2}{g} \ln \cosh \left( \frac{g}{v_{\infty}} t \right)
 <div class="arithmatex">\[
 \ln \cosh y \approx \ln \left( \frac{e^y}{2} \right) = y - \ln 2
 \]</div>
-<p>となります。この関係を <span class="arithmatex">\(y = \frac{g}{v_{\infty}} t\)</span> として適応すると，<span class="arithmatex">\(t \to \infty\)</span> における <span class="arithmatex">\(x(t)\)</span> の漸近式が得られます。</p>
+<p>となります。この関係を <span class="arithmatex">\(y = \frac{g}{v_{\infty}} t\)</span> に適用すると，<span class="arithmatex">\(t \to \infty\)</span> における <span class="arithmatex">\(x(t)\)</span> の漸近式が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 x(t) &amp;\approx \frac{v_{\infty}^2}{g} \left( \frac{g}{v_{\infty}} t - \ln 2 \right) \\\\
 &amp;= v_{\infty} t - \frac{v_{\infty}^2}{g} \ln 2
 \end{aligned}
 \]</div>
-<p><strong>物理的解釈：</strong>
-十分に時間が経過すると，雨滴は等速直線運動（<span class="arithmatex">\(x(t) \propto v_{\infty} t\)</span>）に近づきます。
-しかし，初期の加速途中で空気抵抗によって減速された影響が，定数項 <span class="arithmatex">\(-\frac{v_{\infty}^2}{g} \ln 2\)</span> という「位置の遅れ（オフセット）」として永久に残り続けることをこの漸近式は意味しています。</p>
+<p>十分に時間が経過すると，物体は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> で等速運動するため，位置は <span class="arithmatex">\(v_{\infty}t\)</span> を主要項とする一次式に近づきます。</p>
 
 
 
