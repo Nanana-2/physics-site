@@ -48,12 +48,12 @@
         status.textContent = "ページのURLをコピーしました。";
       } catch (error) {
         console.error("Could not copy page URL:", error);
-        label.textContent = "コピーできませんでした";
+        label.textContent = "コピー失敗";
         status.textContent = "ブラウザのアドレス欄からURLをコピーしてください。";
       }
 
       resetTimer = window.setTimeout(() => {
-        label.textContent = "リンクをコピー";
+        label.textContent = "リンクコピー";
         status.textContent = "";
       }, 2500);
     });
