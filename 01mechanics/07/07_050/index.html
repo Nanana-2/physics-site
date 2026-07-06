@@ -14567,121 +14567,121 @@ $$
 &amp;= (\ddot{r} - r \dot{\theta}^2) \boldsymbol{e}_r + (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) \boldsymbol{e}_{\theta}
 \end{aligned}
 \]</div>
-<p>惑星に働く力は，恒星へ向かう万有引力のみであるため，力ベクトルは次のように表されます。
-$$
+<p>惑星に働く力は，恒星へ向かう万有引力のみであるため，力ベクトルは次のように表されます。</p>
+<div class="arithmatex">\[
 \boldsymbol{F} = -\frac{GMm}{r^2} \boldsymbol{e}_{r}
-$$
-運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> を成分ごとに分解すると，動径方向は次のようになります。
-$$
+\]</div>
+<p>運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> を成分ごとに分解すると，動径方向は次のようになります。</p>
+<div class="arithmatex">\[
 m (\ddot{r} - r \dot{\theta}^2) = -\frac{GMm}{r^2}
-$$
-角度方向は次のようになります。
-$$
+\]</div>
+<p>角度方向は次のようになります。</p>
+<div class="arithmatex">\[
 m (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) = 0
-$$
-角度方向の式に <span class="arithmatex">\(r\)</span> をかけると，次のように整理できます。
-$$
+\]</div>
+<p>角度方向の式に <span class="arithmatex">\(r\)</span> をかけると，次のように整理できます。</p>
+<div class="arithmatex">\[
 m (r^2 \ddot{\theta} + 2 r \dot{r} \dot{\theta}) = \frac{d}{dt} (m r^2 \dot{\theta}) = 0
-$$
-これにより，角運動量の大きさ <span class="arithmatex">\(L = m r^2 \dot{\theta}\)</span> が時間的に変化しない一定の値であることが示されます。</p>
+\]</div>
+<p>これにより，角運動量の大きさ <span class="arithmatex">\(L = m r^2 \dot{\theta}\)</span> が時間的に変化しない一定の値であることが示されます。</p>
 <h3 id="2">(2)</h3>
-<p>動径の逆数 <span class="arithmatex">\(u = 1/r\)</span> の時間微分を計算します。
-$$
+<p>動径の逆数 <span class="arithmatex">\(u = 1/r\)</span> の時間微分を計算します。</p>
+<div class="arithmatex">\[
 \dot{r} = \frac{d}{dt}\left(\frac{1}{u}\right) = -\frac{1}{u^2} \frac{du}{dt} = -\frac{1}{u^2} \dot{\theta} \frac{du}{d\theta}
-$$
-角運動量保存則より <span class="arithmatex">\(\dot{\theta} = L u^2 / m\)</span> であるため，これを代入します。
-$$
+\]</div>
+<p>角運動量保存則より <span class="arithmatex">\(\dot{\theta} = L u^2 / m\)</span> であるため，これを代入します。</p>
+<div class="arithmatex">\[
 \dot{r} = -\frac{1}{u^2} \left(\frac{L u^2}{m}\right) \frac{du}{d\theta} = -\frac{L}{m} \frac{du}{d\theta}
-$$
-これをさらに時間で微分します。
-$$
+\]</div>
+<p>これをさらに時間で微分します。</p>
+<div class="arithmatex">\[
 \ddot{r} = \frac{d}{dt} \left(-\frac{L}{m} \frac{du}{d\theta}\right) = -\frac{L}{m} \dot{\theta} \frac{d^2u}{d\theta^2} = -\frac{L^2 u^2}{m^2} \frac{d^2u}{d\theta^2}
-$$
-これらの結果を動径方向の運動方程式に代入します。
-$$
+\]</div>
+<p>これらの結果を動径方向の運動方程式に代入します。</p>
+<div class="arithmatex">\[
 m \left(-\frac{L^2 u^2}{m^2} \frac{d^2u}{d\theta^2}\right) - m \left(\frac{1}{u}\right) \left(\frac{L u^2}{m}\right)^2 = -GMm u^2
-$$
-左辺を整理します。
-$$
+\]</div>
+<p>左辺を整理します。</p>
+<div class="arithmatex">\[
 -\frac{L^2 u^2}{m} \frac{d^2u}{d\theta^2} - \frac{L^2 u^3}{m} = -GMm u^2
-$$
-両辺を <span class="arithmatex">\(-L^2 u^2 / m\)</span> で割ることで，目的の軌道方程式が得られます。
-$$
+\]</div>
+<p>両辺を <span class="arithmatex">\(-L^2 u^2 / m\)</span> で割ることで，目的の軌道方程式が得られます。</p>
+<div class="arithmatex">\[
 \frac{d^2u}{d\theta^2} + u = \frac{GMm^2}{L^2}
-$$</p>
+\]</div>
 <h3 id="3">(3)</h3>
-<p>微分方程式の一般解において，<span class="arithmatex">\(\theta_0 = 0\)</span> とおくと次のようになります。
-$$
+<p>微分方程式の一般解において，<span class="arithmatex">\(\theta_0 = 0\)</span> とおくと次のようになります。</p>
+<div class="arithmatex">\[
 u = C \cos \theta + \frac{GMm^2}{L^2}
-$$
-<span class="arithmatex">\(r = 1/u\)</span> であるため，動径 <span class="arithmatex">\(r\)</span> は次の形で表されます。
-$$
+\]</div>
+<p><span class="arithmatex">\(r = 1/u\)</span> であるため，動径 <span class="arithmatex">\(r\)</span> は次の形で表されます。</p>
+<div class="arithmatex">\[
 r = \frac{1}{\frac{GMm^2}{L^2} + C \cos \theta} = \frac{\frac{L^2}{GMm^2}}{1 + \frac{CL^2}{GMm^2} \cos \theta}
-$$
-ここで，半通径 <span class="arithmatex">\(p = L^2 / GMm^2\)</span> および離心率 <span class="arithmatex">\(e = CL^2 / GMm^2\)</span> を定義すると，軌道方程式は次のようになります。
-$$
+\]</div>
+<p>ここで，半通径 <span class="arithmatex">\(p = L^2 / GMm^2\)</span> および離心率 <span class="arithmatex">\(e = CL^2 / GMm^2\)</span> を定義すると，軌道方程式は次のようになります。</p>
+<div class="arithmatex">\[
 r = \frac{p}{1 + e \cos \theta}
-$$
-この方程式が楕円を表す条件は，離心率 <span class="arithmatex">\(e\)</span> が <span class="arithmatex">\(0\)</span> 以上 <span class="arithmatex">\(1\)</span> 未満であることです。したがって，楕円軌道をとる条件は <span class="arithmatex">\(e &lt; 1\)</span> です。
-近地点における距離 <span class="arithmatex">\(r_{\min}\)</span> は <span class="arithmatex">\(\theta = 0\)</span> のときであり，遠地点における距離 <span class="arithmatex">\(r_{\max}\)</span> は <span class="arithmatex">\(\theta = \pi\)</span> のときです。
-$$
+\]</div>
+<p>この方程式が楕円を表す条件は，離心率 <span class="arithmatex">\(e\)</span> が <span class="arithmatex">\(0\)</span> 以上 <span class="arithmatex">\(1\)</span> 未満であることです。したがって，楕円軌道をとる条件は <span class="arithmatex">\(e &lt; 1\)</span> です。
+近地点における距離 <span class="arithmatex">\(r_{\min}\)</span> は <span class="arithmatex">\(\theta = 0\)</span> のときであり，遠地点における距離 <span class="arithmatex">\(r_{\max}\)</span> は <span class="arithmatex">\(\theta = \pi\)</span> のときです。</p>
+<div class="arithmatex">\[
 r_{\min} = \frac{p}{1 + e}
-$$
-$$
+\]</div>
+<div class="arithmatex">\[
 r_{\max} = \frac{p}{1 - e}
-$$
-楕円の軌道長半径 <span class="arithmatex">\(a\)</span> は，近地点距離と遠地点距離の平均値に等しくなります。
-$$
+\]</div>
+<p>楕円の軌道長半径 <span class="arithmatex">\(a\)</span> は，近地点距離と遠地点距離の平均値に等しくなります。</p>
+<div class="arithmatex">\[
 \begin{aligned}
-a &amp;= \frac{r_{\min} + r_{\max}}{2} \\
-&amp;= \frac{1}{2} \left( \frac{p}{1 + e} + \frac{p}{1 - e} \right) \\
+a &amp;= \frac{r_{\min} + r_{\max}}{2} \\\\
+&amp;= \frac{1}{2} \left( \frac{p}{1 + e} + \frac{p}{1 - e} \right) \\\\
 &amp;= \frac{p}{1 - e^2}
 \end{aligned}
-$$
-<span class="arithmatex">\(p\)</span> を元の物理定数で表した式を代入します。
-$$
+\]</div>
+<p><span class="arithmatex">\(p\)</span> を元の物理定数で表した式を代入します。</p>
+<div class="arithmatex">\[
 a = \frac{L^2}{GMm^2 (1 - e^2)}
-$$
-これが求める軌道長半径の表現です。</p>
+\]</div>
+<p>これが求める軌道長半径の表現です。</p>
 <h3 id="4">(4)</h3>
-<p>面積速度 <span class="arithmatex">\(S\)</span> は，動径が単位時間あたりに掃く面積であり，次のように定義されます。
-$$
+<p>面積速度 <span class="arithmatex">\(S\)</span> は，動径が単位時間あたりに掃く面積であり，次のように定義されます。</p>
+<div class="arithmatex">\[
 S = \frac{1}{2} r^2 \dot{\theta} = \frac{L}{2m}
-$$
-角運動量 <span class="arithmatex">\(L\)</span> が一定であるため，面積速度 <span class="arithmatex">\(S\)</span> も時間的に一定です。これはケプラーの第2法則に対応します。
-惑星が楕円軌道を1周する間に掃く総面積は，楕円の面積 <span class="arithmatex">\(A\)</span> に等しくなります。
-$$
+\]</div>
+<p>角運動量 <span class="arithmatex">\(L\)</span> が一定であるため，面積速度 <span class="arithmatex">\(S\)</span> も時間的に一定です。これはケプラーの第2法則に対応します。
+惑星が楕円軌道を1周する間に掃く総面積は，楕円の面積 <span class="arithmatex">\(A\)</span> に等しくなります。</p>
+<div class="arithmatex">\[
 A = \pi a b
-$$
-短半径 <span class="arithmatex">\(b\)</span> に <span class="arithmatex">\(b = a \sqrt{1 - e^2}\)</span> を代入すると，面積は次のようになります。
-$$
+\]</div>
+<p>短半径 <span class="arithmatex">\(b\)</span> に <span class="arithmatex">\(b = a \sqrt{1 - e^2}\)</span> を代入すると，面積は次のようになります。</p>
+<div class="arithmatex">\[
 A = \pi a^2 \sqrt{1 - e^2}
-$$
-一方，面積速度が一定であるため，周期 <span class="arithmatex">\(T\)</span> を用いて面積は <span class="arithmatex">\(A = S T\)</span> とも表されます。
-$$
+\]</div>
+<p>一方，面積速度が一定であるため，周期 <span class="arithmatex">\(T\)</span> を用いて面積は <span class="arithmatex">\(A = S T\)</span> とも表されます。</p>
+<div class="arithmatex">\[
 \pi a^2 \sqrt{1 - e^2} = \frac{L}{2m} T
-$$
-この両辺を2乗して整理します。
-$$
+\]</div>
+<p>この両辺を2乗して整理します。</p>
+<div class="arithmatex">\[
 \pi^2 a^4 (1 - e^2) = \frac{L^2}{4m^2} T^2
-$$
-前問の結果から，次の関係式が得られます。
-$$
+\]</div>
+<p>前問の結果から，次の関係式が得られます。</p>
+<div class="arithmatex">\[
 1 - e^2 = \frac{L^2}{GMm^2 a}
-$$
-これを代入します。
-$$
+\]</div>
+<p>これを代入します。</p>
+<div class="arithmatex">\[
 \pi^2 a^4 \left( \frac{L^2}{GMm^2 a} \right) = \frac{L^2}{4m^2} T^2
-$$
-左辺を整理します。
-$$
+\]</div>
+<p>左辺を整理します。</p>
+<div class="arithmatex">\[
 \frac{\pi^2 L^2 a^3}{GMm^2} = \frac{L^2}{4m^2} T^2
-$$
-両辺から <span class="arithmatex">\(L^2 / m^2\)</span> を消去し，<span class="arithmatex">\(T^2\)</span> について解きます。
-$$
+\]</div>
+<p>両辺から <span class="arithmatex">\(L^2 / m^2\)</span> を消去し，<span class="arithmatex">\(T^2\)</span> について解きます。</p>
+<div class="arithmatex">\[
 T^2 = \frac{4\pi^2}{GM} a^3
-$$
-これにより，公転周期の2乗 <span class="arithmatex">\(T^2\)</span> が軌道長半径の3乗 <span class="arithmatex">\(a^3\)</span> に比例するというケプラーの第3法則が導かれました。比例定数である <span class="arithmatex">\(4\pi^2 / GM\)</span> は，万有引力定数 <span class="arithmatex">\(G\)</span> と恒星の質量 <span class="arithmatex">\(M\)</span> のみによって定まり，惑星の質量 <span class="arithmatex">\(m\)</span> や軌道要素には依存しないことが示されました。</p>
+\]</div>
+<p>これにより，公転周期の2乗 <span class="arithmatex">\(T^2\)</span> が軌道長半径の3乗 <span class="arithmatex">\(a^3\)</span> に比例するというケプラーの第3法則が導かれました。比例定数である <span class="arithmatex">\(4\pi^2 / GM\)</span> は，万有引力定数 <span class="arithmatex">\(G\)</span> と恒星の質量 <span class="arithmatex">\(M\)</span> のみによって定まり，惑星の質量 <span class="arithmatex">\(m\)</span> や軌道要素には依存しないことが示されました。</p>
 
 
 

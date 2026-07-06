@@ -14536,62 +14536,62 @@
 <h1 id="_1">平行軸の定理</h1>
 <h2 id="_2">問題</h2>
 <p>質量 <span class="arithmatex">\(M\)</span> の剛体について，その重心を通る回転軸まわりの慣性モーメントと，これに平行な別の回転軸まわりの慣性モーメントとの関係を考える。</p>
-<p>3次元直交座標系 <span class="arithmatex">\(O-xyz\)</span> の原点 <span class="arithmatex">\(O\)</span> に剛体の重心 <span class="arithmatex">\(G\)</span> が位置しているとする。剛体を構成する <span class="arithmatex">\(i\)</span> 番目の質点の質量を <span class="arithmatex">\(m_i\)</span>，その位置座標を <span class="arithmatex">\((x_i, y_i, z_i)\)</span> とする。重心が原点にあることから，各座標の質量による加重平均はゼロとなり，以下の式が成り立つ。
-$$
+<p>3次元直交座標系 <span class="arithmatex">\(O-xyz\)</span> の原点 <span class="arithmatex">\(O\)</span> に剛体の重心 <span class="arithmatex">\(G\)</span> が位置しているとする。剛体を構成する <span class="arithmatex">\(i\)</span> 番目の質点の質量を <span class="arithmatex">\(m_i\)</span>，その位置座標を <span class="arithmatex">\((x_i, y_i, z_i)\)</span> とする。重心が原点にあることから，各座標の質量による加重平均はゼロとなり，以下の式が成り立つ。</p>
+<div class="arithmatex">\[
 \sum_i m_i x_i = 0
-$$
-$$
+\]</div>
+<div class="arithmatex">\[
 \sum_i m_i y_i = 0
-$$</p>
+\]</div>
 <p>(1) この剛体の重心を通る回転軸として <span class="arithmatex">\(z\)</span> 軸を考える。 <span class="arithmatex">\(z\)</span> 軸から各質点までの距離の2乗を求めることで， <span class="arithmatex">\(z\)</span> 軸まわりの剛体の慣性モーメント <span class="arithmatex">\(I_G\)</span> を，各質点の質量 <span class="arithmatex">\(m_i\)</span> と座標 <span class="arithmatex">\(x_i, y_i\)</span> を用いて表せ。</p>
 <p>(2) 次に， <span class="arithmatex">\(z\)</span> 軸と平行で， <span class="arithmatex">\(x\)</span> 軸の正の方向に距離 <span class="arithmatex">\(d\)</span> だけ平行移動した直線を新たな回転軸 <span class="arithmatex">\(z'\)</span> とする。新たな回転軸 <span class="arithmatex">\(z'\)</span> から各質点までの最短距離の2乗を，座標 <span class="arithmatex">\(x_i, y_i\)</span> および距離 <span class="arithmatex">\(d\)</span> を用いて表せ。さらに，これを用いて軸 <span class="arithmatex">\(z'\)</span> まわりの剛体の慣性モーメント <span class="arithmatex">\(I\)</span> を， <span class="arithmatex">\(m_i, x_i, y_i, d\)</span> の総和の形式で表せ。</p>
-<p>(3) (2) で得られた慣性モーメント <span class="arithmatex">\(I\)</span> の式を展開し，重心の性質および (1) の結果を利用することで，以下の関係式が成り立つことを示せ。
-$$
+<p>(3) (2) で得られた慣性モーメント <span class="arithmatex">\(I\)</span> の式を展開し，重心の性質および (1) の結果を利用することで，以下の関係式が成り立つことを示せ。</p>
+<div class="arithmatex">\[
 I = I_G + M d^2
-$$</p>
+\]</div>
 <p>(4) 第2項 <span class="arithmatex">\(Md^2\)</span> の意味を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>回転軸から各質点までの最短距離は， <span class="arithmatex">\(xy\)</span> 平面における原点からの距離に対応します。 <span class="arithmatex">\(i\)</span> 番目の質点から <span class="arithmatex">\(z\)</span> 軸までの最短距離の2乗は <span class="arithmatex">\(x_i^2 + y_i^2\)</span> と表されます。
-慣性モーメントの定義は，各質点の質量に回転軸からの距離の2乗を乗じたものの総和であるため，重心 <span class="arithmatex">\(G\)</span> を通る <span class="arithmatex">\(z\)</span> 軸まわりの慣性モーメント <span class="arithmatex">\(I_G\)</span> は以下のようになります。
-$$
+<p>回転軸から各質点までの最短距離は， <span class="arithmatex">\(xy\)</span> 平面における原点からの距離に対応します。 <span class="arithmatex">\(i\)</span> 番目の質点から <span class="arithmatex">\(z\)</span> 軸までの最短距離の2乗は <span class="arithmatex">\(x_i^2 + y_i^2\)</span> と表されます。</p>
+<p>慣性モーメントの定義は，各質点の質量に回転軸からの距離の2乗を乗じたものの総和であるため，重心 <span class="arithmatex">\(G\)</span> を通る <span class="arithmatex">\(z\)</span> 軸まわりの慣性モーメント <span class="arithmatex">\(I_G\)</span> は以下のようになります。</p>
+<div class="arithmatex">\[
 I_G = \sum_i m_i (x_i^2 + y_i^2)
-$$</p>
+\]</div>
 <h3 id="2">(2)</h3>
-<p>新たな回転軸 <span class="arithmatex">\(z'\)</span> は， <span class="arithmatex">\(xy\)</span> 平面において点 <span class="arithmatex">\((d, 0)\)</span> を通り <span class="arithmatex">\(z\)</span> 軸に平行な直線です。したがって， <span class="arithmatex">\(i\)</span> 番目の質点 <span class="arithmatex">\((x_i, y_i, z_i)\)</span> から軸 <span class="arithmatex">\(z'\)</span> までの最短距離の2乗は， <span class="arithmatex">\(xy\)</span> 平面上における点 <span class="arithmatex">\((x_i, y_i)\)</span> と点 <span class="arithmatex">\((d, 0)\)</span> の間の距離の2乗に等しくなります。
-$$
+<p>新たな回転軸 <span class="arithmatex">\(z'\)</span> は， <span class="arithmatex">\(xy\)</span> 平面において点 <span class="arithmatex">\((d, 0)\)</span> を通り <span class="arithmatex">\(z\)</span> 軸に平行な直線です。したがって， <span class="arithmatex">\(i\)</span> 番目の質点 <span class="arithmatex">\((x_i, y_i, z_i)\)</span> から軸 <span class="arithmatex">\(z'\)</span> までの最短距離の2乗は， <span class="arithmatex">\(xy\)</span> 平面上における点 <span class="arithmatex">\((x_i, y_i)\)</span> と点 <span class="arithmatex">\((d, 0)\)</span> の間の距離の2乗に等しくなります。</p>
+<div class="arithmatex">\[
 (x_i - d)^2 + y_i^2
-$$
-この距離の2乗を用いて，軸 <span class="arithmatex">\(z'\)</span> まわりの慣性モーメント <span class="arithmatex">\(I\)</span> の定義式を書き下すと，以下の総和の形式を得ます。
-$$
+\]</div>
+<p>この距離の2乗を用いて，軸 <span class="arithmatex">\(z'\)</span> まわりの慣性モーメント <span class="arithmatex">\(I\)</span> の定義式を書き下すと，以下の総和の形式を得ます。</p>
+<div class="arithmatex">\[
 I = \sum_i m_i \left( (x_i - d)^2 + y_i^2 \right)
-$$</p>
+\]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた式の括弧を展開して整理します。
-$$
+<p>(2) で得られた式の括弧を展開して整理します。</p>
+<div class="arithmatex">\[
 \begin{aligned}
-I &amp;= \sum_i m_i (x_i^2 - 2d x_i + d^2 + y_i^2) \\
+I &amp;= \sum_i m_i (x_i^2 - 2d x_i + d^2 + y_i^2) \\\\
 &amp;= \sum_i m_i (x_i^2 + y_i^2) - 2d \sum_i m_i x_i + d^2 \sum_i m_i
 \end{aligned}
-$$
-ここで，右辺の各項について個別に評価を行います。
-第1項は (1) で求めた重心まわりの慣性モーメント <span class="arithmatex">\(I_G\)</span> そのものです。
-$$
+\]</div>
+<p>ここで，右辺の各項について個別に評価を行います。</p>
+<p>第1項は (1) で求めた重心まわりの慣性モーメント <span class="arithmatex">\(I_G\)</span> そのものです。</p>
+<div class="arithmatex">\[
 \sum_i m_i (x_i^2 + y_i^2) = I_G
-$$
-第2項に含まれる総和は，重心が原点にあるという問題文の条件からゼロになります。
-$$
+\]</div>
+<p>第2項に含まれる総和は，重心が原点にあるという問題文の条件からゼロになります。</p>
+<div class="arithmatex">\[
 \sum_i m_i x_i = 0
-$$
-第3項の総和は剛体の全質量 <span class="arithmatex">\(M\)</span> を表します。
-$$
+\]</div>
+<p>第3項の総和は剛体の全質量 <span class="arithmatex">\(M\)</span> を表します。</p>
+<div class="arithmatex">\[
 \sum_i m_i = M
-$$
-これらを展開した式に代入することにより，平行軸の定理が導かれます。
-$$
+\]</div>
+<p>これらを展開した式に代入することにより，平行軸の定理が導かれます。</p>
+<div class="arithmatex">\[
 I = I_G + M d^2
-$$</p>
+\]</div>
 <h3 id="4">(4)</h3>
 <p>第2項 <span class="arithmatex">\(Md^2\)</span> は，剛体の全質量 <span class="arithmatex">\(M\)</span> が重心に集中しているとみなしたとき，その重心が回転軸から距離 <span class="arithmatex">\(d\)</span> の位置を回ることによる慣性モーメントに相当します。</p>
 <p>このことから，平行軸の定理は，任意の平行軸まわりの剛体の回転運動にともなう慣性モーメントが，以下の2つの成分の和にきれいに分離できることを意味しています。</p>

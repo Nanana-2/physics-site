@@ -14566,14 +14566,14 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>北緯 <span class="arithmatex">\(\theta\)</span> の地点では，地球の自転軸は北向きの水平線から仰角 <span class="arithmatex">\(\theta\)</span> の方向を向きます。
-局所座標系では，北向きが <span class="arithmatex">\(x\)</span> 軸，東向きが <span class="arithmatex">\(y\)</span> 軸，鉛直下向きが <span class="arithmatex">\(z\)</span> 軸です。
-したがって，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> は，北向きに <span class="arithmatex">\(\Omega \cos\theta\)</span>，鉛直上向きに <span class="arithmatex">\(\Omega \sin\theta\)</span> の成分を持ちます。
-鉛直下向きが <span class="arithmatex">\(z\)</span> 軸の正方向であるため，鉛直上向きは <span class="arithmatex">\(z\)</span> 軸の負方向に対応します。東向きである <span class="arithmatex">\(y\)</span> 軸方向の成分は <span class="arithmatex">\(0\)</span> です。
-以上の位置関係から，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> の各成分は次のように表されます。
-$$
+<p>北緯 <span class="arithmatex">\(\theta\)</span> の地点では，地球の自転軸は北向きの水平線から仰角 <span class="arithmatex">\(\theta\)</span> の方向を向きます。</p>
+<p>局所座標系では，北向きが <span class="arithmatex">\(x\)</span> 軸，東向きが <span class="arithmatex">\(y\)</span> 軸，鉛直下向きが <span class="arithmatex">\(z\)</span> 軸です。</p>
+<p>したがって，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> は，北向きに <span class="arithmatex">\(\Omega \cos\theta\)</span>，鉛直上向きに <span class="arithmatex">\(\Omega \sin\theta\)</span> の成分を持ちます。
+鉛直下向きが <span class="arithmatex">\(z\)</span> 軸の正方向であるため，鉛直上向きは <span class="arithmatex">\(z\)</span> 軸の負方向に対応します。東向きである <span class="arithmatex">\(y\)</span> 軸方向の成分は <span class="arithmatex">\(0\)</span> です。</p>
+<p>以上の位置関係から，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> の各成分は次のように表されます。</p>
+<div class="arithmatex">\[
 \mathbf{\Omega} = (\Omega \cos\theta, 0, -\Omega \sin\theta)
-$$</p>
+\]</div>
 <h3 id="2">(2)</h3>
 <p>コリオリ力 <span class="arithmatex">\(\mathbf{F}_c\)</span> は，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> と重りの速度ベクトル <span class="arithmatex">\(\mathbf{v} = (\dot{x}, \dot{y}, \dot{z})\)</span> の外積を用いて定義されます。</p>
 <div class="arithmatex">\[
@@ -14651,18 +14651,18 @@ m \ddot{y} = -mg \frac{y}{L} - 2m \Omega \dot{x} \sin\theta
 \]</div>
 <h3 id="4">(4)</h3>
 <p>得られた2つの運動方程式を統合するため，複素変数 <span class="arithmatex">\(\zeta = x + iy\)</span> を定義します。</p>
-<p><span class="arithmatex">\(x\)</span> 成分の方程式に，<span class="arithmatex">\(y\)</span> 成分の方程式に虚数単位 <span class="arithmatex">\(i\)</span> を掛けたものを加算します。
-$$
+<p><span class="arithmatex">\(x\)</span> 成分の方程式に，<span class="arithmatex">\(y\)</span> 成分の方程式に虚数単位 <span class="arithmatex">\(i\)</span> を掛けたものを加算します。</p>
+<div class="arithmatex">\[
 \ddot{x} + i\ddot{y} = -\omega_0^2 (x + iy) + 2\omega_z (\dot{y} - i\dot{x})
-$$</p>
+\]</div>
 <p>右辺の第2項は次のように変形できます。</p>
 <div class="arithmatex">\[
 2\omega_z (\dot{y} - i\dot{x}) = -2i\omega_z (\dot{x} + i\dot{y}) = -2i\omega_z \dot{\zeta}
 \]</div>
-<p>したがって，複素変数 <span class="arithmatex">\(\zeta\)</span> に関する2階線形同次微分方程式が得られます。
-$$
+<p>したがって，複素変数 <span class="arithmatex">\(\zeta\)</span> に関する2階線形同次微分方程式が得られます。</p>
+<div class="arithmatex">\[
 \ddot{\zeta} + 2i\omega_z \dot{\zeta} + \omega_0^2 \zeta = 0
-$$</p>
+\]</div>
 <p>この微分方程式の解を <span class="arithmatex">\(\zeta(t) = e^{rt}\)</span> と仮定して代入すると，特性方程式は次のようになります。</p>
 <div class="arithmatex">\[
 r^2 + 2i\omega_z r + \omega_0^2 = 0
