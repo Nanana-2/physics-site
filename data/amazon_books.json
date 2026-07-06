@@ -1,0 +1,26 @@
+{
+  "books": [
+    {"id": "mechanics-exercises", "title": "演習しよう力学", "asin": ""},
+    {"id": "mechanics-kodansha", "title": "講談社基礎物理学シリーズ　力学", "asin": ""},
+    {"id": "electromagnetism-sunagawa-theory", "title": "砂川　理論電磁気学", "asin": ""},
+    {"id": "electromagnetism-sunagawa-exercises", "title": "砂川　電磁気学演習", "asin": ""},
+    {"id": "electromagnetism-exercises", "title": "演習しよう電磁気学", "asin": ""},
+    {"id": "optics", "title": "光学", "asin": ""},
+    {"id": "thermodynamics-masema", "title": "マセマ　熱力学", "asin": ""},
+    {"id": "statistical-mechanics-kubo", "title": "詳細演習　熱・統計力学", "asin": ""},
+    {"id": "quantum-sakurai", "title": "JJサクライ　現代の量子力学", "asin": ""},
+    {"id": "quantum-exercises", "title": "演習しよう量子力学", "asin": ""},
+    {"id": "quantum-utokyo-engineering", "title": "東京大学工学教程　量子力学", "asin": ""},
+    {"id": "geometry-topology-utokyo", "title": "東京大学工学教程　微分幾何学とトポロジー", "asin": ""},
+    {"id": "quantum-kodansha", "title": "講談社基礎物理学シリーズ　量子力学", "asin": ""},
+    {"id": "quantum-inoki-kawai", "title": "猪木川合　量子力学", "asin": ""},
+    {"id": "statistical-mechanics-nagaoka", "title": "長岡統計力学", "asin": ""},
+    {"id": "statistical-mechanics-nagaosa", "title": "現代統計力学", "asin": ""},
+    {"id": "quantum-measurement-control", "title": "SGC　量子測定と量子制御", "asin": ""},
+    {"id": "statistical-mechanics-abe", "title": "阿部龍三　統計力学", "asin": ""},
+    {"id": "phase-transition-rg", "title": "西森　相転移とくりこみ群", "asin": ""},
+    {"id": "theoretical-physics-roadmap", "title": "理論物理の道標", "asin": ""},
+    {"id": "new-physics-introduction", "title": "新・物理入門", "asin": ""},
+    {"id": "graduate-entrance-physics", "title": "大学院入試問題　物理学", "asin": ""}
+  ]
+}

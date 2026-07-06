@@ -1,1 +1,11 @@
 site/
+
+# ローカルの認証情報
+.env
+.env.*
+!.env.example
+*creatorsapi*credentials*.csv
+*amazon*credentials*.csv
+
+# APIの一時取得結果
+.cache/
