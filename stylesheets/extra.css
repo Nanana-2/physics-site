@@ -340,6 +340,16 @@ body, input {
   margin-top: auto;
 }
 
+.book-actions {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.book-actions .book-btn {
+  margin-top: 0;
+}
+
 .book-info h3 {
   margin: 0.4rem 0 0.6rem !important;
   color: var(--md-typeset-color) !important;
