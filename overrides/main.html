@@ -163,6 +163,34 @@
   {{ super() }}
 
   {% if page and page.file %}
+    {% if page.is_homepage %}
+      {% set share_title = config.site_name %}
+    {% else %}
+      {% set share_title = (page.meta.title or page.title) ~ '｜' ~ config.site_name %}
+    {% endif %}
+    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="{{ share_title | e }}">
+      <p class="page-share__label">このページをシェア</p>
+      <div class="page-share__buttons">
+        <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+          <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/x-twitter.svg" %}</span>
+          <span>X</span>
+        </a>
+        <a class="page-share__button" data-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebookでシェア">
+          <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/facebook-f.svg" %}</span>
+          <span>Facebook</span>
+        </a>
+        <a class="page-share__button" data-share-line href="#" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+          <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/line.svg" %}</span>
+          <span>LINE</span>
+        </a>
+        <button class="page-share__button" type="button" data-share-copy>
+          <span class="page-share__icon" aria-hidden="true">{% include ".icons/material/link-variant.svg" %}</span>
+          <span data-share-copy-label>リンクをコピー</span>
+        </button>
+      </div>
+      <p class="page-share__status" data-share-status role="status" aria-live="polite"></p>
+    </section>
+
     {% set path_parts = page.file.src_uri.split('/') %}
     {% set subject_links = {
       '01mechanics': ('力学', '01mechanics/'),

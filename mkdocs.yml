@@ -48,6 +48,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/problem-filter.js
+  - javascripts/share.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
