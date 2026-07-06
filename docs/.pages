@@ -1,0 +1,9 @@
+nav:
+  - index.md
+  - books.md
+  - tags.md
+  - 01mechanics
+  - 02electromagnetism
+  - 03thermodynamics
+  - 04quantum_mechanics
+  - 05statistical_mechanics

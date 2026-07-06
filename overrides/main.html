@@ -162,7 +162,7 @@
 {% block content %}
   {{ super() }}
 
-  {% if page and page.file %}
+  {% if page and page.file and not page.meta.hide_share %}
     {% if page.is_homepage %}
       {% set share_title = config.site_name %}
     {% else %}

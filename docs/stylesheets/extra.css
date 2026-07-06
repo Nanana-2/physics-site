@@ -431,6 +431,22 @@ body, input {
   }
 }
 
+.site-footer-links {
+  margin-bottom: 0.25rem;
+}
+
+.site-footer-links a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 0.18em;
+}
+
+.site-footer-links a:hover {
+  color: #ffffff;
+  text-decoration-color: currentColor;
+}
+
 /* ==========================================
    14. 全問題一覧・絞り込み
    ========================================== */
