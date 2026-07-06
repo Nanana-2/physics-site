@@ -1,4 +1,9 @@
-# 力学 の問題一覧
+---
+title: 力学の問題一覧
+hero_image: assets/images/mechanical.jpg
+---
+
+# 力学の問題一覧
 
 この単元に収録されている演習問題の一覧です。
 

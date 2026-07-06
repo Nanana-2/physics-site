@@ -10,6 +10,14 @@ TARGET_DIRS = [
     "05statistical_mechanics",
 ]
 
+HERO_IMAGES = {
+    "01mechanics": "assets/images/mechanical.jpg",
+    "02electromagnetism": "assets/images/electromagnetism.jpg",
+    "03thermodynamics": "assets/images/thermodynamics.jpg",
+    "04quantum_mechanics": "assets/images/quantum_mechanics.jpg",
+    "05statistical_mechanics": "assets/images/statistical_mechanics.jpg",
+}
+
 for base_dir in TARGET_DIRS:
     docs_base_path = os.path.join("docs", base_dir)
     if not os.path.exists(docs_base_path):
@@ -28,8 +36,15 @@ for base_dir in TARGET_DIRS:
                     display_title = match.group(1).strip()
                     break    
 
-    # ✨ 見出しの部分を、取得した「display_title」に修正しました！
-    content = f"# {display_title} の問題一覧\n\n"
+    page_title = f"{display_title}の問題一覧"
+    hero_image = HERO_IMAGES.get(base_dir)
+
+    content = "---\n"
+    content += f"title: {page_title}\n"
+    if hero_image:
+        content += f"hero_image: {hero_image}\n"
+    content += "---\n\n"
+    content += f"# {page_title}\n\n"
     content += "この単元に収録されている演習問題の一覧です。\n\n"
     content += '<div class="grid cards" markdown>\n\n'
 
