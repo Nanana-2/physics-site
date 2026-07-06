@@ -1,9 +1,4 @@
----
-title: 電磁気学の問題一覧
-hero_image: assets/images/electromagnetism.jpg
----
-
-# 電磁気学の問題一覧
+# 電磁気学 の問題一覧
 
 この単元に収録されている演習問題の一覧です。
 

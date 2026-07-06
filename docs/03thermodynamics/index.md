@@ -1,9 +1,4 @@
----
-title: 熱力学の問題一覧
-hero_image: assets/images/thermodynamics.jpg
----
-
-# 熱力学の問題一覧
+# 熱力学 の問題一覧
 
 この単元に収録されている演習問題の一覧です。
 
