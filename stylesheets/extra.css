@@ -662,3 +662,89 @@ body, input {
     padding: 0.9rem;
   }
 }
+
+/* ==========================================
+   16. ページ共有ボタン
+   ========================================== */
+.page-share {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .page-share__label {
+  margin: 0 0 0.7rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.page-share__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.md-typeset .page-share__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.15rem;
+  padding: 0.45rem 0.75rem;
+  color: var(--md-default-fg-color--light);
+  background: transparent;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 5px;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.md-typeset .page-share__button:hover {
+  color: var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  border-color: var(--site-heading-accent);
+}
+
+.page-share__icon {
+  display: inline-flex;
+  width: 0.82rem;
+  height: 0.82rem;
+}
+
+.page-share__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentcolor;
+}
+
+.md-typeset .page-share__status {
+  min-height: 1em;
+  margin: 0.45rem 0 0;
+  color: var(--md-primary-fg-color);
+  font-size: 0.68rem;
+}
+
+.page-share + .problem-subject-return {
+  margin-top: 1.5rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .page-share__button:hover {
+  color: #eef1ff;
+}
+
+@media screen and (max-width: 30em) {
+  .page-share__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md-typeset .page-share__button {
+    width: 100%;
+  }
+}
