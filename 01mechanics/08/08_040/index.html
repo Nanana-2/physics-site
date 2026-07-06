@@ -14536,11 +14536,11 @@
 <h1 id="_1">コリオリ力の影響</h1>
 <h2 id="_2">問題</h2>
 <p>鉛直上向きを <span class="arithmatex">\(z\)</span> 軸とし，水平面内で反時計回りに一定の角速度 <span class="arithmatex">\(\omega\)</span> で回転している無限に広い円盤を考える。この円盤の中心を原点 <span class="arithmatex">\(O\)</span> とし，円盤とともに回転する座標系を <span class="arithmatex">\(O-xy\)</span> と定める。ここで，<span class="arithmatex">\(z\)</span> 軸は回転の軸と一致しており，右手系の直交座標系を構成している。</p>
-<p>時刻 <span class="arithmatex">\(t = 0\)</span> において，原点 <span class="arithmatex">\(O\)</span> にある質量 <span class="arithmatex">\(m\)</span> の小球を，回転座標系の <span class="arithmatex">\(x\)</span> 軸の正の向きに，円盤に対して相対速度 <span class="arithmatex">\(v_0\)</span> で打ち出す。小球は円盤の表面を滑らかに運動し，摩擦や空気抵抗は一切無視できるものとする。また，鉛直方向の重力の影響は円盤からの垂直抗力によって完全に打ち消されている。この小球の運動について，以下の問いに答えよ。</p>
+<p>時刻 <span class="arithmatex">\(t=0\)</span> に原点 <span class="arithmatex">\(O\)</span> から，質量 <span class="arithmatex">\(m\)</span> の小球を回転座標系の <span class="arithmatex">\(x\)</span> 軸の正方向へ，円盤に対する速度 <span class="arithmatex">\(v_0\)</span> で打ち出す。摩擦と空気抵抗は無視し，鉛直方向では重力と垂直抗力がつりあっているものとする。以下の問いに答えよ。</p>
 <p>(1) 回転座標系において，角速度ベクトルを <span class="arithmatex">\(\boldsymbol{\omega}\)</span>，小球の位置ベクトルを <span class="arithmatex">\(\boldsymbol{r} = (x, y, 0)\)</span>，相対速度ベクトルを <span class="arithmatex">\(\boldsymbol{v} = (\dot{x}, \dot{y}, 0)\)</span> とする。小球に働く遠心力とコリオリ力の成分をそれぞれ求め，小球の運動方程式の <span class="arithmatex">\(x\)</span> 成分および <span class="arithmatex">\(y\)</span> 成分を導出せよ。ここで，文字の上の点は時間微分を表す。</p>
 <p>(2) 複素数 <span class="arithmatex">\(z = x + iy\)</span> を導入することにより，(1) で得られた二つの運動方程式を，複素数 <span class="arithmatex">\(z\)</span> とその時間微分に関する一本の二階微分方程式に統合せよ。ここで <span class="arithmatex">\(i\)</span> は虚数単位を表す。</p>
 <p>(3) 初期条件として，時刻 <span class="arithmatex">\(t = 0\)</span> において <span class="arithmatex">\(z = 0\)</span> かつ <span class="arithmatex">\(\dot{z} = v_0\)</span> であることを用いて，(2) の微分方程式を解き，小球の座標 <span class="arithmatex">\(x\)</span> および <span class="arithmatex">\(y\)</span> を時間の関数として求めよ。</p>
-<p>(4) 回転していない静止した慣性座標系 <span class="arithmatex">\(O-XY\)</span> を考える。この座標系は，時刻 <span class="arithmatex">\(t = 0\)</span> において回転座標系 <span class="arithmatex">\(O-xy\)</span> と完全に一致しているものとする。慣性座標系における小球の運動方程式を解き，その軌道を求めよ。さらに，その軌道に対して適切な回転の座標変換を施すことで，(3) で得られた結果と一致することを示し，コリオリ力と遠心力による偏向の物理的な意味を説明せよ。</p>
+<p>(4) 慣性座標系 <span class="arithmatex">\(O-XY\)</span> を考え，<span class="arithmatex">\(t=0\)</span> で回転座標系 <span class="arithmatex">\(O-xy\)</span> と一致しているものとする。慣性座標系における小球の軌道を求め，回転座標系へ変換した結果が (3) と一致することを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14548,7 +14548,7 @@
 <div class="arithmatex">\[
 m \frac{d^2 \boldsymbol{r}}{dt^2} = \boldsymbol{F} - 2m (\boldsymbol{\omega} \times \boldsymbol{v}) - m \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \boldsymbol{r})
 \]</div>
-<p>本問では摩擦や重力の影響を考慮しないため，水平方向の外力は <span class="arithmatex">\(\boldsymbol{F} = \boldsymbol{0}\)</span> です。
+<p>摩擦を無視しているため，水平方向の実在の力は <span class="arithmatex">\(\boldsymbol{F}=\boldsymbol{0}\)</span> です。
 角速度ベクトルは <span class="arithmatex">\(\boldsymbol{\omega} = (0, 0, \omega)\)</span>，位置ベクトルは <span class="arithmatex">\(\boldsymbol{r} = (x, y, 0)\)</span>，相対速度ベクトルは <span class="arithmatex">\(\boldsymbol{v} = (\dot{x}, \dot{y}, 0)\)</span> と表されます。</p>
 <p>まず，コリオリ力 <span class="arithmatex">\(\boldsymbol{F}_{\text{cor}} = -2m (\boldsymbol{\omega} \times \boldsymbol{v})\)</span> を計算します。外積の部分は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14582,7 +14582,7 @@ m \frac{d^2 \boldsymbol{r}}{dt^2} = \boldsymbol{F} - 2m (\boldsymbol{\omega} \ti
 <div class="arithmatex">\[
 \ddot{x} + i\ddot{y} = \omega^2 (x + iy) + 2\omega (\dot{y} - i\dot{x})
 \]</div>
-<p>右辺の第二項において，虚数単位 <span class="arithmatex">\(i\)</span> を用いて次のように変形します。</p>
+<p>右辺の第2項を，虚数単位 <span class="arithmatex">\(i\)</span> を用いて次のように変形します。</p>
 <div class="arithmatex">\[
 \dot{y} - i\dot{x} = -i (\dot{x} + i\dot{y}) = -i\dot{z}
 \]</div>
@@ -14663,8 +14663,8 @@ x(t) &amp;= v_0 t \cos \omega t \\\\
 y(t) &amp;= -v_0 t \sin \omega t
 \end{aligned}
 \]</div>
-<p>これは (3) で得られた結果と完全に一致します。</p>
-<p>この結果は，慣性系から見れば単なる等速直線運動であるものが，回転座標系から観測されることによって，進行方向の右向きに曲げられるコリオリ力と，外側へ引き離そうとする遠心力の影響を受け，時計回りの渦巻きを描くように偏向して見えることを示しています。このように，見かけの力は観測者の座標系の回転を反映した幾何学的な効果であることが物理的に理解されます。</p>
+<p>これは (3) で得られた結果と一致します。</p>
+<p>慣性系では小球は等速直線運動をしますが，回転座標系では座標軸自体が回転するため，曲線を描いて見えます。回転座標系の運動方程式では，この偏向がコリオリ力と遠心力によって表されます。</p>
 
 
 

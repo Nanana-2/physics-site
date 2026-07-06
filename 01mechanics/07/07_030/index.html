@@ -14513,10 +14513,10 @@
 
 <h1 id="_1">脱出速度の導出</h1>
 <h2 id="_2">問題</h2>
-<p>天体観測や宇宙開発において，打ち上げた探査機が地球の重力を振り切って宇宙の彼方へ旅立つために必要な速度を求めることは極めて重要である。地球の質量を <span class="arithmatex">\(M\)</span> ，半径を <span class="arithmatex">\(R\)</span> ，万有引力定数を <span class="arithmatex">\(G\)</span> とする。地球の中心を原点とし，探査機の位置を地球の中心からの距離 <span class="arithmatex">\(r\)</span> を用いて表す。地表である <span class="arithmatex">\(r = R\)</span> の位置から，質量 <span class="arithmatex">\(m\)</span> の探査機を鉛直上向きに初速度 <span class="arithmatex">\(v_0\)</span> で打ち上げる。探査機には地球からの万有引力のみが働き，大気による抵抗や地球の自転，他の天体による重力の影響はすべて無視できるものとする。以下の問いに答えよ。</p>
+<p>質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(R\)</span> の地球を考え，万有引力定数を <span class="arithmatex">\(G\)</span> とする。地表 <span class="arithmatex">\(r=R\)</span> から質量 <span class="arithmatex">\(m\)</span> の探査機を鉛直上向きに初速度 <span class="arithmatex">\(v_0\)</span> で打ち上げる。探査機には地球からの万有引力のみが働き，大気抵抗，地球の自転，他の天体の影響は無視できるものとする。以下の問いに答えよ。</p>
 <p>(1) 探査機が地球の中心から距離 <span class="arithmatex">\(r\)</span> の位置にあるとき，探査機に働く万有引力による位置エネルギーを求めよ。ただし，無限遠を基準点とする。</p>
 <p>(2) 打ち上げ直後の地表における探査機の力学的エネルギーを求めよ。また，探査機が地球の重力圏を脱出して無限に遠い場所に到達したときの速度を <span class="arithmatex">\(v_{\infty}\)</span> とするとき，その位置における探査機の力学的エネルギーを求めよ。</p>
-<p>(3) 探査機が地球の重力に縛られずに無限遠まで到達するための最小の初速度，すなわち脱出速度 <span class="arithmatex">\(v_{\text{esc}}\)</span> を <span class="arithmatex">\(G\)</span> ， <span class="arithmatex">\(M\)</span> ， <span class="arithmatex">\(R\)</span> を用いて表せ。さらに，地表における重力加速度の大きさを <span class="arithmatex">\(g\)</span> とするとき， <span class="arithmatex">\(v_{\text{esc}}\)</span> を <span class="arithmatex">\(g\)</span> と <span class="arithmatex">\(R\)</span> のみを用いて表せ。</p>
+<p>(3) 無限遠まで到達するための最小の初速度を脱出速度 <span class="arithmatex">\(v_{\text{esc}}\)</span> とする。<span class="arithmatex">\(v_{\text{esc}}\)</span> を <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(M\)</span>，<span class="arithmatex">\(R\)</span> を用いて表せ。さらに，地表における重力加速度の大きさを <span class="arithmatex">\(g\)</span> として，<span class="arithmatex">\(g\)</span> と <span class="arithmatex">\(R\)</span> のみを用いた形に書き換えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14555,7 +14555,7 @@ E_0 = E_{\infty}
 <div class="arithmatex">\[
 \frac{1}{2} m v_0^2 - G \frac{M m}{R} = \frac{1}{2} m v_{\infty}^2
 \]</div>
-<p>探査機が地球の重力圏を脱出して無限遠に到達するためには，無限遠において運動エネルギーが <span class="arithmatex">\(0\)</span> 以上でなければなりません。すなわち，速度の実数値が存在するためには <span class="arithmatex">\(v_{\infty}^2 \ge 0\)</span> である必要があります。この条件は以下のように書き換えられます。</p>
+<p>探査機が無限遠に到達するには，<span class="arithmatex">\(v_{\infty}^2\geq0\)</span> でなければなりません。この条件は次のように書き換えられます。</p>
 <div class="arithmatex">\[
 \frac{1}{2} m v_{\infty}^2 = \frac{1}{2} m v_0^2 - G \frac{M m}{R} \ge 0
 \]</div>
@@ -14563,7 +14563,7 @@ E_0 = E_{\infty}
 <div class="arithmatex">\[
 v_0^2 \ge \frac{2GM}{R}
 \]</div>
-<p>したがって，無限遠に到達できる最小の初速度，すなわち脱出速度 <span class="arithmatex">\(v_{\text{esc}}\)</span> は，不等式の等号が成立するときであり，以下のようになります。</p>
+<p>脱出速度 <span class="arithmatex">\(v_{\text{esc}}\)</span> は，不等式の等号が成り立つときの初速度です。したがって，</p>
 <div class="arithmatex">\[
 v_{\text{esc}} = \sqrt{\frac{2GM}{R}}
 \]</div>
@@ -14583,7 +14583,7 @@ GM = g R^2
 <div class="arithmatex">\[
 v_{\text{esc}} = \sqrt{\frac{2 g R^2}{R}} = \sqrt{2gR}
 \]</div>
-<p>これにより，脱出速度を地表の重力加速度 <span class="arithmatex">\(g\)</span> と地球の半径 <span class="arithmatex">\(R\)</span> のみを用いて表すことができました。</p>
+<p>したがって，脱出速度は <span class="arithmatex">\(g\)</span> と <span class="arithmatex">\(R\)</span> のみでも表せます。</p>
 
 
 

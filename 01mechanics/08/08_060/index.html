@@ -14557,18 +14557,17 @@
 
 <h1 id="_1">フーコーの振り子</h1>
 <h2 id="_2">問題</h2>
-<p>地球の自転という壮大な物理現象を地上で直接証明した歴史的な試みとして，フーコーの振り子が知られている。本問では，自転する地球上に設置された振り子の運動を解析し，その振動面が時間とともに回転していく様子を数学的に導出する。</p>
 <p>地球は半径 <span class="arithmatex">\(R\)</span> の完全な球体であり，南極から北極に向かう地軸のまわりに一定の角速度 <span class="arithmatex">\(\Omega\)</span> で自転しているものとする。北緯 <span class="arithmatex">\(\theta\)</span> の地点に，長さ <span class="arithmatex">\(L\)</span> の質量を無視できる糸の先端に質量 <span class="arithmatex">\(m\)</span> の重りを取り付けた振り子を設置する。振り子の支持点である天井の固定点を原点とし，水平北向きに <span class="arithmatex">\(x\)</span> 軸，水平東向きに <span class="arithmatex">\(y\)</span> 軸，鉛直下向きに <span class="arithmatex">\(z\)</span> 軸をとる右手系の局所座標系を導入する。この座標系は地球とともに回転する非慣性系である。重りには地球の重力，糸の張力，および地球の自転に伴う慣性力が働く。自転の遠心力による効果は，重力加速度 <span class="arithmatex">\(g\)</span> の中にあらかじめ含められているものとし，以下では慣性力としてコリオリ力のみを考慮する。</p>
 <p>(1) 地球の自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> の，この局所座標系における成分表示を求めよ。</p>
 <p>(2) 重りの速度ベクトルを <span class="arithmatex">\(\mathbf{v} = (\dot{x}, \dot{y}, \dot{z})\)</span> とするとき，重りに働くコリオリ力 <span class="arithmatex">\(\mathbf{F}_c = -2m (\mathbf{\Omega} \times \mathbf{v})\)</span> の各成分を求めよ。</p>
-<p>(3) 重りの水平方向の変位が糸の長さに比べて十分に小さいという微小振動の近似のもとで，<span class="arithmatex">\(z\)</span> 軸方向の運動を無視し，糸の張力の水平成分を考慮することにより，水平面内における重りの運動方程式の <span class="arithmatex">\(x\)</span> 成分および <span class="arithmatex">\(y\)</span> 成分を導け。ただし，地球の自転に伴う効果に比べ，重りの鉛直方向の速度 <span class="arithmatex">\(\dot{z}\)</span> は極めて小さいものとして無視してよい。また，単振り子の固有振動数 <span class="arithmatex">\(\omega_0 = \sqrt{g/L}\)</span> を用いよ。</p>
+<p>(3) 水平変位が糸の長さに比べて十分に小さい場合を考える。<span class="arithmatex">\(z\)</span> 方向の運動と速度 <span class="arithmatex">\(\dot{z}\)</span> を無視し，張力の水平成分を考慮して，水平面内の運動方程式を導け。単振り子の固有角振動数 <span class="arithmatex">\(\omega_0=\sqrt{g/L}\)</span> を用いてよい。</p>
 <p>(4) 複素変数 <span class="arithmatex">\(\zeta = x + iy\)</span> を導入することにより，前問で得られた2つの運動方程式を1つの複素微分方程式に統合せよ。さらに，自転角速度 <span class="arithmatex">\(\Omega\)</span> が振り子の固有振動数 <span class="arithmatex">\(\omega_0\)</span> に比べて十分に小さいという近似を用いて，この複素微分方程式の一般解を求めよ。</p>
-<p>(5) 時刻 <span class="arithmatex">\(t = 0\)</span> において，重りを <span class="arithmatex">\(x = a\)</span> （ただし <span class="arithmatex">\(a &gt; 0\)</span>），<span class="arithmatex">\(y = 0\)</span> の位置から静かに放したとする。この初期条件のもとで，重りの運動を表す軌道 <span class="arithmatex">\(x(t)\)</span> および <span class="arithmatex">\(y(t)\)</span> を求めよ。また，振り子の振動面が回転する周期および単位時間あたりの回転角速度を求め，その物理的な意味を北極および赤道における具体的な挙動とともに対比して説明せよ。</p>
+<p>(5) <span class="arithmatex">\(t=0\)</span> に重りを <span class="arithmatex">\(x=a&gt;0\)</span>，<span class="arithmatex">\(y=0\)</span> の位置から静かに放す。<span class="arithmatex">\(x(t)\)</span>，<span class="arithmatex">\(y(t)\)</span> を求めよ。また，振動面の回転角速度と1回転する周期を求め，北極と赤道における運動を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>地球の自転軸は，赤道面から北極へ向かう方向を指しています。北緯 <span class="arithmatex">\(\theta\)</span> の地点において，水平地平線から北側を見上げたとき，地軸（自転軸）はその方向から仰角 <span class="arithmatex">\(\theta\)</span> だけ立ち上がった方向にあります。
-本問で設定した局所座標系において，北向きが <span class="arithmatex">\(x\)</span> 軸，東向きが <span class="arithmatex">\(y\)</span> 軸，鉛直下向きが <span class="arithmatex">\(z\)</span> 軸です。
+<p>北緯 <span class="arithmatex">\(\theta\)</span> の地点では，地球の自転軸は北向きの水平線から仰角 <span class="arithmatex">\(\theta\)</span> の方向を向きます。
+局所座標系では，北向きが <span class="arithmatex">\(x\)</span> 軸，東向きが <span class="arithmatex">\(y\)</span> 軸，鉛直下向きが <span class="arithmatex">\(z\)</span> 軸です。
 したがって，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> は，北向きに <span class="arithmatex">\(\Omega \cos\theta\)</span>，鉛直上向きに <span class="arithmatex">\(\Omega \sin\theta\)</span> の成分を持ちます。
 鉛直下向きが <span class="arithmatex">\(z\)</span> 軸の正方向であるため，鉛直上向きは <span class="arithmatex">\(z\)</span> 軸の負方向に対応します。東向きである <span class="arithmatex">\(y\)</span> 軸方向の成分は <span class="arithmatex">\(0\)</span> です。
 以上の位置関係から，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> の各成分は次のように表されます。
@@ -14580,7 +14579,7 @@ $$</p>
 <div class="arithmatex">\[
 \mathbf{F}_c = -2m (\mathbf{\Omega} \times \mathbf{v})
 \]</div>
-<p>外積の各成分を具体的に計算します。</p>
+<p>外積の各成分を計算します。</p>
 <div class="arithmatex">\[
 \mathbf{\Omega} \times \mathbf{v} = \det \begin{pmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ \Omega \cos\theta &amp; 0 &amp; -\Omega \sin\theta \\ \dot{x} &amp; \dot{y} &amp; \dot{z} \end{pmatrix}
 \]</div>
@@ -14675,7 +14674,7 @@ r^2 + 2i\omega_z r + \omega_0^2 = 0
 <div class="arithmatex">\[
 (r + i\omega_z)^2 = -(\omega_0^2 + \omega_z^2)
 \]</div>
-<p>ここで，地球の自転角速度は非常に小さく，振り子の固有振動数に比べて <span class="arithmatex">\(\omega_z \ll \omega_0\)</span> が成り立ちます。したがって，根号内の自転の効果を無視して <span class="arithmatex">\(\omega_0^2 + \omega_z^2 \approx \omega_0^2\)</span> と近似することができます。</p>
+<p><span class="arithmatex">\(\omega_z\ll\omega_0\)</span> であるため，根号内では <span class="arithmatex">\(\omega_0^2+\omega_z^2\approx\omega_0^2\)</span> と近似できます。</p>
 <div class="arithmatex">\[
 (r + i\omega_z)^2 \approx -\omega_0^2
 \]</div>
@@ -14709,7 +14708,7 @@ i\omega_0 (A - B) = i\omega_z a
 <div class="arithmatex">\[
 A - B = \frac{\omega_z}{\omega_0} a
 \]</div>
-<p>ここで，<span class="arithmatex">\(\omega_z \ll \omega_0\)</span> であるため，右辺はほぼ <span class="arithmatex">\(0\)</span> とみなすことができます。したがって，<span class="arithmatex">\(A \approx B\)</span> となり，これと <span class="arithmatex">\(A + B = a\)</span> から次の近似解が得られます。</p>
+<p><span class="arithmatex">\(\omega_z\ll\omega_0\)</span> であるため右辺を0とみなすと，<span class="arithmatex">\(A\approx B\)</span> です。これと <span class="arithmatex">\(A+B=a\)</span> から次の近似解が得られます。</p>
 <div class="arithmatex">\[
 A \approx B \approx \frac{a}{2}
 \]</div>
@@ -14730,15 +14729,14 @@ y(t) \approx -a \sin(\omega_z t) \cos(\omega_0 t)
 \omega_z = \Omega \sin\theta
 \]</div>
 <p>回転の向きは，負の符号がついていることから，北半球においては上空から見て時計回りであることが分かります。
-この振動面が <span class="arithmatex">\(360\)</span> 度（<span class="arithmatex">\(2\pi\)</span> ラジアン）回転するのに要する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
+振動面が <span class="arithmatex">\(2\pi\)</span> 回転する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
 <div class="arithmatex">\[
 T = \frac{2\pi}{\omega_z} = \frac{2\pi}{\Omega \sin\theta}
 \]</div>
 <p>地球の自転周期を <span class="arithmatex">\(T_{\text{earth}} = 2\pi / \Omega\)</span> とすると，周期は <span class="arithmatex">\(T = T_{\text{earth}} / \sin\theta\)</span> と表されます。</p>
-<p>この物理的な意味を特定の緯度で考察します。</p>
-<p>北極（<span class="arithmatex">\(\theta = 90^\circ\)</span>）においては，<span class="arithmatex">\(\sin\theta = 1\)</span> となるため，回転周期は自転周期と等しい約24時間になります。これは，宇宙の慣性系から見て振り子が同じ方向に振動し続けているのに対し，その真下で地球が24時間で1回転している様子を，地球上の観測者が相対的に見ていることに対応します。</p>
-<p>一方，赤道（<span class="arithmatex">\(\theta = 0^\circ\)</span>）においては，<span class="arithmatex">\(\sin\theta = 0\)</span> となるため，振動面の回転は発生せず，周期は無限大になります。これは，赤道上では自転軸と鉛直方向が直交しており，コリオリ力の水平成分が振り子の運動方向に影響を与えないためです。
-このように，フーコーの振り子は，地球が慣性系に対して自転しているという事実を，地上の観測によって視覚的に示す極めて重要な物理系です。</p>
+<p>北極と赤道の場合を確認します。</p>
+<p>北極では <span class="arithmatex">\(\theta=90^\circ\)</span>，<span class="arithmatex">\(\sin\theta=1\)</span> であるため，回転周期は地球の自転周期と等しくなります。</p>
+<p>一方，赤道では <span class="arithmatex">\(\theta=0^\circ\)</span>，<span class="arithmatex">\(\sin\theta=0\)</span> であるため，振動面は回転しません。</p>
 
 
 

@@ -14513,8 +14513,8 @@
 
 <h1 id="_1">ラザフォード散乱</h1>
 <h2 id="_2">問題</h2>
-<p>正の電荷をもつ重い原子核によるアルファ粒子の散乱現象は，原子構造の解明において決定的な役割を果たした。ここでは，原点に固定された質量無限大で電荷 <span class="arithmatex">\(q_2\)</span> をもつ原子核によって，質量 <span class="arithmatex">\(m\)</span> で電荷 <span class="arithmatex">\(q_1\)</span> をもつアルファ粒子が散乱される状況を考える。</p>
-<p>２つの粒子の間には，距離 <span class="arithmatex">\(r\)</span> の２乗に反比例するクーロン反発力
+<p>原点に固定された電荷 <span class="arithmatex">\(q_2\)</span> の原子核によって，質量 <span class="arithmatex">\(m\)</span>，電荷 <span class="arithmatex">\(q_1\)</span> のアルファ粒子が散乱される運動を考える。原子核の質量は十分に大きく，運動しないものとする。</p>
+<p>2つの粒子の間には，距離 <span class="arithmatex">\(r\)</span> の2乗に反比例するクーロン反発力
 $$
 F = \frac{K}{r^2}
 $$
@@ -14573,7 +14573,7 @@ E = \frac{L^2}{2m} \left( \left( \frac{du}{d\theta} \right)^2 + u^2 \right) + K 
 <div class="arithmatex">\[
 \left( \frac{du}{d\theta} \right)^2 = \frac{2mE}{L^2} - \frac{2mK}{L^2} u - u^2
 \]</div>
-<p>粒子が最も接近する点（最近接点）において <span class="arithmatex">\(r\)</span> は最小値をとるため，<span class="arithmatex">\(u\)</span> は最大値 <span class="arithmatex">\(u_{\max}\)</span> をとります。このとき <span class="arithmatex">\(du / d\theta = 0\)</span> となります。</p>
+<p>最近接点では <span class="arithmatex">\(r\)</span> が最小となるため，<span class="arithmatex">\(u\)</span> は最大値 <span class="arithmatex">\(u_{\max}\)</span> をとり，<span class="arithmatex">\(du/d\theta=0\)</span> となります。</p>
 <p>最近接点に達するまでの接近過程を考えると，<span class="arithmatex">\(\theta\)</span> の増加に伴って <span class="arithmatex">\(u\)</span> も増加するため，微分係数は正となります。したがって</p>
 <div class="arithmatex">\[
 \frac{d\theta}{du} = \frac{1}{\sqrt{\frac{2mE}{L^2} - \frac{2mK}{L^2} u - u^2}}
@@ -14583,7 +14583,7 @@ E = \frac{L^2}{2m} \left( \left( \frac{du}{d\theta} \right)^2 + u^2 \right) + K 
 <div class="arithmatex">\[
 \theta = \int_{u_{\max}}^{u} \frac{du'}{\sqrt{\frac{2mE}{L^2} - \frac{2mK}{L^2} u' - u'^2}}
 \]</div>
-<p>が得られます。接近過程と遠ざかる過程の対称性を考慮し，根号の符号を適切に処理することで，軌道全体を表す積分方程式は以下のように記述できます。</p>
+<p>が得られます。接近時と遠ざかるときの対称性を考慮すると，軌道は次の積分で表されます。</p>
 <div class="arithmatex">\[
 \theta = -\int \frac{du}{\sqrt{A - B u - u^2}}
 \]</div>
@@ -14637,20 +14637,20 @@ $$
 <div class="arithmatex">\[
 \epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}} &gt; 1
 \]</div>
-<p>となることが示され，この軌道は原点を外側の焦点とする双曲線であることが分かります。</p>
+<p>したがって，この軌道は原点を外側の焦点とする双曲線です。</p>
 <h3 id="3">(3)</h3>
 <p>粒子が無限遠に飛び去る極限 <span class="arithmatex">\(r \to \infty\)</span> においては，<span class="arithmatex">\(u \to 0\)</span> となります。</p>
 <p>軌道方程式より，このとき角度は次の条件を満たす極限値 <span class="arithmatex">\(\theta_\infty\)</span> に近づきます。</p>
 <div class="arithmatex">\[
 \epsilon \cos \theta_\infty - 1 = 0
 \]</div>
-<p>すなわち</p>
+<p>したがって，</p>
 <div class="arithmatex">\[
 \cos \theta_\infty = \frac{1}{\epsilon}
 \]</div>
 <p>です。</p>
 <p>粒子は <span class="arithmatex">\(\theta = -\theta_\infty\)</span> の方向から進入し，最近接点を経て <span class="arithmatex">\(\theta = \theta_\infty\)</span> の方向へと去っていきます。
-入射方向の直線と射出方向の直線のなす角が散乱角 <span class="arithmatex">\(\theta_s\)</span> であるため，幾何学的な対称性から以下の関係が成り立ちます。</p>
+軌道は最近接点を通る軸に関して対称であるため，散乱角 <span class="arithmatex">\(\theta_s\)</span> との間に次の関係が成り立ちます。</p>
 <div class="arithmatex">\[
 \theta_s = \pi - 2\theta_\infty
 \]</div>
@@ -14658,7 +14658,7 @@ $$
 <div class="arithmatex">\[
 \cos \left( \frac{\pi - \theta_s}{2} \right) = \sin \left( \frac{\theta_s}{2} \right) = \frac{1}{\epsilon}
 \]</div>
-<p>三角関数の相互関係を用いることで，散乱角の半角のココタンジェントを計算することができます。</p>
+<p>三角関数の関係から，散乱角の半角の余接は次のようになります。</p>
 <div class="arithmatex">\[
 \cot^2 \left( \frac{\theta_s}{2} \right) = \frac{1}{\sin^2 \left( \frac{\theta_s}{2} \right)} - 1 = \epsilon^2 - 1 = \frac{2EL^2}{mK^2}
 \]</div>
@@ -14674,7 +14674,7 @@ $$
 <div class="arithmatex">\[
 b = \frac{K}{m v_0^2} \cot \frac{\theta_s}{2}
 \]</div>
-<p>この結果は，衝突パラメータ <span class="arithmatex">\(b\)</span> が小さいほど散乱角 <span class="arithmatex">\(\theta_s\)</span> が大きくなり，強い反発を受けるという物理的な直感と一致しています。</p>
+<p>衝突パラメータ <span class="arithmatex">\(b\)</span> が小さいほど，散乱角 <span class="arithmatex">\(\theta_s\)</span> は大きくなります。</p>
 
 
 

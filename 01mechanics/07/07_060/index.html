@@ -14535,18 +14535,18 @@
 
 <h1 id="_1">軌道の分類</h1>
 <h2 id="_2">問題</h2>
-<p>宇宙空間において十分重い質量 <span class="arithmatex">\(M\)</span> の恒星が存在し，その重力場の中を質量 <span class="arithmatex">\(m\)</span> の探査機が運動している。恒星の位置を原点とし，探査機の位置を極座標 <span class="arithmatex">\(r\)</span> および <span class="arithmatex">\(\theta\)</span> を用いて表す。万有引力定数を <span class="arithmatex">\(G\)</span> とする。探査機には恒星からの万有引力のみが働くものとして，以下の問いに答えよ。</p>
+<p>質量 <span class="arithmatex">\(M\)</span> の恒星を原点に固定し，その重力場中を質量 <span class="arithmatex">\(m\)</span> の探査機が運動している。探査機の位置を極座標 <span class="arithmatex">\(r\)</span>，<span class="arithmatex">\(\theta\)</span> で表し，万有引力定数を <span class="arithmatex">\(G\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 探査機の角運動量の大きさ <span class="arithmatex">\(L\)</span> が運動の定数であることを示し，探査機の力学的エネルギー <span class="arithmatex">\(E\)</span> を <span class="arithmatex">\(r\)</span> ，時間 <span class="arithmatex">\(t\)</span> による微分 <span class="arithmatex">\(\dot{r} = dr/dt\)</span> ，<span class="arithmatex">\(L\)</span> ，および与えられた定数を用いて表せ。</p>
-<p>(2) 軌道の幾何学的形状を調べるため，変数 <span class="arithmatex">\(u = 1/r\)</span> を導入し，時間による微分を <span class="arithmatex">\(\theta\)</span> による微分に変換する。これを用いて，軌道を決定する次の微分方程式が成り立つことを示せ。
+<p>(2) <span class="arithmatex">\(u=1/r\)</span> とおき，時間微分を <span class="arithmatex">\(\theta\)</span> による微分に変換して，次の軌道方程式を示せ。
 $$
 \frac{d^2 u}{d\theta^2} + u = \frac{G M m^2}{L^2}
 $$</p>
-<p>(3) 前問の微分方程式の一般解は，適当な初期位相を選択することにより，離心率を表す定数 <span class="arithmatex">\(\epsilon\)</span> を用いて <span class="arithmatex">\(u = \frac{G M m^2}{L^2} (1 + \epsilon \cos\theta)\)</span> と表すことができる。このとき <span class="arithmatex">\(r\)</span> の極方程式を
+<p>(3) 偏角の原点を選び，前問の一般解を <span class="arithmatex">\(u=\frac{GMm^2}{L^2}(1+\epsilon\cos\theta)\)</span> とする。このとき <span class="arithmatex">\(r\)</span> の方程式を
 $$
 r = \frac{p}{1 + \epsilon \cos\theta}
 $$
 の形に整理し，半通径 <span class="arithmatex">\(p\)</span> および離心率 <span class="arithmatex">\(\epsilon\)</span> を <span class="arithmatex">\(G\)</span> ，<span class="arithmatex">\(M\)</span> ，<span class="arithmatex">\(m\)</span> ，<span class="arithmatex">\(L\)</span> ，および力学的エネルギー <span class="arithmatex">\(E\)</span> を用いて表せ。</p>
-<p>(4) 力学的エネルギー <span class="arithmatex">\(E\)</span> の符号により，探査機が描く軌道の幾何学的形状がどのように分類されるかを，離心率 <span class="arithmatex">\(\epsilon\)</span> の値の範囲とともに関連付けて説明せよ。</p>
+<p>(4) 力学的エネルギー <span class="arithmatex">\(E\)</span> の符号と離心率 <span class="arithmatex">\(\epsilon\)</span> の値によって，軌道を楕円，放物線，双曲線に分類せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14575,7 +14575,7 @@ E = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) - \frac{G M m}{r}
 E = \frac{1}{2} m \dot{r}^2 + \frac{L^2}{2 m r^2} - \frac{G M m}{r}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>変数 <span class="arithmatex">\(u = 1/r\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。合成関数の微分公式と <span class="arithmatex">\(L = m r^2 \dot{\theta}\)</span> すなわち <span class="arithmatex">\(\dot{\theta} = \frac{L u^2}{m}\)</span> を用いると，</p>
+<p>変数 <span class="arithmatex">\(u=1/r\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。<span class="arithmatex">\(L=mr^2\dot{\theta}\)</span> より <span class="arithmatex">\(\dot{\theta}=Lu^2/m\)</span> であるため，</p>
 <div class="arithmatex">\[
 \dot{r} = \frac{d}{dt} \left( \frac{1}{u} \right) = - \frac{1}{u^2} \frac{du}{d\theta} \dot{\theta} = - \frac{1}{u^2} \frac{du}{d\theta} \left( \frac{L u^2}{m} \right) = - \frac{L}{m} \frac{du}{d\theta}
 \]</div>
@@ -14587,7 +14587,7 @@ E = \frac{L^2}{2m} \left( \frac{du}{d\theta} \right)^2 + \frac{L^2 u^2}{2m} - G 
 <div class="arithmatex">\[
 0 = \frac{L^2}{m} \frac{du}{d\theta} \frac{d^2 u}{d\theta^2} + \frac{L^2 u}{m} \frac{du}{d\theta} - G M m \frac{du}{d\theta}
 \]</div>
-<p>探査機が円軌道以外の一般的な運動をするとして <span class="arithmatex">\(\frac{du}{d\theta} \neq 0\)</span> と仮定し，両辺を <span class="arithmatex">\(\frac{L^2}{m} \frac{du}{d\theta}\)</span> で割ると，求める微分方程式が得られます。</p>
+<p><span class="arithmatex">\(\frac{du}{d\theta}\neq0\)</span> の区間で両辺を <span class="arithmatex">\(\frac{L^2}{m}\frac{du}{d\theta}\)</span> で割ると，求める微分方程式が得られます。</p>
 <div class="arithmatex">\[
 \frac{d^2 u}{d\theta^2} + u = \frac{G M m^2}{L^2}
 \]</div>
@@ -14629,13 +14629,13 @@ E = \frac{G^2 M^2 m^3}{2 L^2} ( \epsilon^2 - 1 )
 <div class="arithmatex">\[
 r = \frac{p}{1 + \epsilon \cos\theta}
 \]</div>
-<p>が表す幾何学的形状は，離心率 <span class="arithmatex">\(\epsilon\)</span> の値の範囲によって以下のように分類されます。</p>
+<p>が表す軌道は，離心率 <span class="arithmatex">\(\epsilon\)</span> の値によって次のように分類されます。</p>
 <ol>
 <li><span class="arithmatex">\(\epsilon &lt; 1\)</span> のとき，軌道は閉じられた曲線である楕円となります。</li>
 <li><span class="arithmatex">\(\epsilon = 1\)</span> のとき，軌道は放物線となります。</li>
 <li><span class="arithmatex">\(\epsilon &gt; 1\)</span> のとき，軌道は開いた曲線である双曲線となります。</li>
 </ol>
-<p>小問(3)で得られた <span class="arithmatex">\(\epsilon\)</span> と力学的エネルギー <span class="arithmatex">\(E\)</span> の関係式から，これらの幾何学的分類は <span class="arithmatex">\(E\)</span> の符号と以下のように完全に対応します。</p>
+<p>小問(3)で得た <span class="arithmatex">\(\epsilon\)</span> と <span class="arithmatex">\(E\)</span> の関係から，軌道は <span class="arithmatex">\(E\)</span> の符号によって次のように分類できます。</p>
 <ol>
 <li><span class="arithmatex">\(E &lt; 0\)</span> のとき：</li>
 </ol>

@@ -14535,15 +14535,8 @@
 
 <h1 id="_1">回転運動とエネルギー</h1>
 <h2 id="_2">問題</h2>
-<p>固定された大きな円筒の内面を，小さな固体円柱が滑ることなく転がり落ちる運動を考える。
-固定された円筒の内半径を <span class="arithmatex">\(R\)</span> とする。
-その内部を転がる質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(r\)</span> の一様な固体円柱を考える。
-固定円筒の中心軸と固体円柱の中心軸は常に平行に保たれ，どちらも水平であるとする。
-固体円柱は固定円筒の内壁に対して滑ることなく転がり運動を行う。
-鉛直下向きに大きさ <span class="arithmatex">\(g\)</span> の重力加速度が作用している。
-固定円筒の中心軸を通る鉛直線において，最も低い位置を基準とする。この基準線から，固定円筒の中心軸のまわりに測った角度を <span class="arithmatex">\(\theta\)</span> と定義する。固体円柱の重心が最も低い位置にあるとき，<span class="arithmatex">\(\theta = 0\)</span> である。
-固体円柱の重心は，固定円筒の中心軸から距離 <span class="arithmatex">\(R - r\)</span> の円軌道上を運動する。
-また，質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(r\)</span> の一様な円柱の重心のまわりの慣性モーメントが <span class="arithmatex">\(I = \frac{1}{2} M r^2\)</span> であることを用いてよい。</p>
+<p>内半径 <span class="arithmatex">\(R\)</span> の固定円筒の内面を，質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(r\)</span> の一様な固体円柱が滑らずに転がる。両円筒の中心軸は水平で，互いに平行とする。重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。</p>
+<p>固定円筒の中心から鉛直下向きに引いた線を基準とし，固体円柱の重心位置を角度 <span class="arithmatex">\(\theta\)</span> で表す。重心が最下点にあるとき <span class="arithmatex">\(\theta=0\)</span> とする。重心は半径 <span class="arithmatex">\(R-r\)</span> の円軌道上を運動する。また，固体円柱の重心まわりの慣性モーメントは <span class="arithmatex">\(I=\frac{1}{2}Mr^2\)</span> である。</p>
 <p>(1) 固体円柱が角速度 <span class="arithmatex">\(\dot{\theta} = \frac{d\theta}{dt}\)</span> で運動しているとき，固体円柱の重心のまわりの自転角速度 <span class="arithmatex">\(\omega\)</span> を，<span class="arithmatex">\(\dot{\theta}\)</span>，および半径 <span class="arithmatex">\(R\)</span> と <span class="arithmatex">\(r\)</span> を用いて表せ。</p>
 <p>(2) 固体円柱の運動エネルギー <span class="arithmatex">\(T\)</span> を，重心の並進運動エネルギーと重心のまわりの回転運動エネルギーの和として表し，これらを <span class="arithmatex">\(\dot{\theta}\)</span> を用いて整理せよ。</p>
 <p>(3) 固体円柱が <span class="arithmatex">\(\theta = \theta_0\)</span> の位置から静止した状態から転がり始めたとする。ここで <span class="arithmatex">\(\theta_0\)</span> は <span class="arithmatex">\(0\)</span> より大きく <span class="arithmatex">\(\pi/2\)</span> より小さい角度とする。力学的エネルギー保存則を用いて，任意の角度 <span class="arithmatex">\(\theta\)</span> における重心の速度の大きさ <span class="arithmatex">\(v\)</span> を求めよ。</p>
@@ -14592,7 +14585,7 @@ T = \frac{1}{2} M (R - r)^2 \dot{\theta}^2 + \frac{1}{4} M (R - r)^2 \dot{\theta
 <h3 id="3">(3)</h3>
 <p>系の力学的エネルギーが保存されることを利用します。
 固体円柱の重心が最下点 <span class="arithmatex">\(\theta = 0\)</span> にあるときを位置エネルギーの基準面とします。
-任意の角度 <span class="arithmatex">\(\theta\)</span> における重心の最下点からの高さ <span class="arithmatex">\(h\)</span> は，幾何学的な関係から次のようになります。</p>
+角度 <span class="arithmatex">\(\theta\)</span> における重心の最下点からの高さ <span class="arithmatex">\(h\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 h = (R - r) - (R - r) \cos\theta = (R - r) (1 - \cos\theta)
 \]</div>
@@ -14608,7 +14601,7 @@ E = M g (R - r) (1 - \cos\theta_0)
 <div class="arithmatex">\[
 T + U = E
 \]</div>
-<p>ここに具体的な式を代入します。</p>
+<p>各項を代入します。</p>
 <div class="arithmatex">\[
 \frac{3}{4} M (R - r)^2 \dot{\theta}^2 + M g (R - r) (1 - \cos\theta) = M g (R - r) (1 - \cos\theta_0)
 \]</div>
@@ -14619,7 +14612,7 @@ T + U = E
 <div class="arithmatex">\[
 (R - r)^2 \dot{\theta}^2 = \frac{4}{3} g (R - r) (\cos\theta - \cos\theta_0)
 \]</div>
-<p>重心の速度の大きさは <span class="arithmatex">\(v = (R - r) \dot{\theta}\)</span> であるため，速度の２乗は以下のようになります。</p>
+<p>重心の速度の大きさは <span class="arithmatex">\(v=(R-r)\dot{\theta}\)</span> であるため，速度の2乗は次のようになります。</p>
 <div class="arithmatex">\[
 v^2 = \frac{4}{3} g (R - r) (\cos\theta - \cos\theta_0)
 \]</div>
@@ -14628,12 +14621,12 @@ v^2 = \frac{4}{3} g (R - r) (\cos\theta - \cos\theta_0)
 v = \sqrt{\frac{4}{3} g (R - r) (\cos\theta - \cos\theta_0)}
 \]</div>
 <h3 id="4">(4)</h3>
-<p>最下点 <span class="arithmatex">\(\theta = 0\)</span> を通過するときの重心の速度の２乗 <span class="arithmatex">\(v_0^2\)</span> は，(3) の結果に <span class="arithmatex">\(\theta = 0\)</span> を代入することで得られます。</p>
+<p>最下点 <span class="arithmatex">\(\theta=0\)</span> を通過するときの重心速度の2乗 <span class="arithmatex">\(v_0^2\)</span> は，(3) の結果に <span class="arithmatex">\(\theta=0\)</span> を代入して得られます。</p>
 <div class="arithmatex">\[
 v_0^2 = \frac{4}{3} g (R - r) (1 - \cos\theta_0)
 \]</div>
 <p>最下点における固体円柱の重心の運動に注目します。
-重心は半径 <span class="arithmatex">\(R - r\)</span> の円軌道を描いて運動しているため，動径方向（鉛直上向き）の運動方程式は，垂直抗力 <span class="arithmatex">\(N\)</span> と重力 <span class="arithmatex">\(M g\)</span> を用いて以下のように書くことができます。</p>
+重心は半径 <span class="arithmatex">\(R-r\)</span> の円軌道上を運動します。最下点における鉛直上向きの運動方程式は，垂直抗力 <span class="arithmatex">\(N\)</span> と重力 <span class="arithmatex">\(Mg\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
 M \frac{v_0^2}{R - r} = N - M g
 \]</div>
@@ -14656,7 +14649,7 @@ N = M g \left( 1 + \frac{4}{3} (1 - \cos\theta_0) \right)
 N = M g \left( \frac{7 - 4 \cos\theta_0}{3} \right)
 \]</div>
 <p>これが最下点において固体円柱が受ける垂直抗力の大きさです。
-並進運動だけでなく，回転運動のエネルギーも考慮したことで，滑る場合と比べて最下点での速度が小さくなり，その結果として垂直抗力の値も滑る場合とは異なる値をとることが分かります。</p>
+以上が最下点で受ける垂直抗力です。</p>
 
 
 

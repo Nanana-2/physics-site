@@ -14536,7 +14536,7 @@
 <h1 id="_1">撃力と角運動量</h1>
 <h2 id="_2">問題</h2>
 <p>粗い水平な床の上に静止している質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(R\)</span> の一様な球体がある。この球体の慣性モーメントは <span class="arithmatex">\(I = \frac{2}{5}MR^2\)</span> である。この球体に，水平方向の鋭い打撃である撃力を与える。撃力の作用線は球体の中心を通る鉛直面内にあり，球体の中心から鉛直上方に距離 <span class="arithmatex">\(h\)</span> だけ離れた水平線に一致するものとする。ここで <span class="arithmatex">\(h\)</span> は正のときに重心より上方の位置を表し，その範囲は <span class="arithmatex">\(-R \le h \le R\)</span> である。</p>
-<p>撃力が作用する時間は極めて短いため，その間に球体が移動する距離は無視でき，また床から受ける摩擦力の力積も無視できるものとする。撃力による水平方向の力積の大きさを <span class="arithmatex">\(J\)</span> とし，撃力の向きを正の方向にとる。球体の回転運動については，撃力の向きへの並進運動を促すような転がり方向，すなわち球体の最下点が床に対して撃力と逆方向に動くような回転の向きを角速度および角運動量の正の向きとして定義する。重力加速度の大きさを <span class="arithmatex">\(g\)</span>，床と球体の間の動摩擦係数を <span class="arithmatex">\(\mu\)</span> とする。以下の問いに答えよ。</p>
+<p>撃力が作用する時間は十分に短く，その間の球体の変位と，床から受ける摩擦力の力積は無視できるものとする。撃力による水平方向の力積を <span class="arithmatex">\(J\)</span> とし，その向きを並進運動の正方向にとる。球体が正方向へ転がる向きを回転の正方向とする。重力加速度の大きさを <span class="arithmatex">\(g\)</span>，床と球体の間の動摩擦係数を <span class="arithmatex">\(\mu\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 撃力が作用した直後における球体の重心速度 <span class="arithmatex">\(v_0\)</span> および重心まわりの角速度 <span class="arithmatex">\(\omega_0\)</span> を，<span class="arithmatex">\(M\)</span>，<span class="arithmatex">\(R\)</span>，<span class="arithmatex">\(J\)</span>，<span class="arithmatex">\(h\)</span> を用いて表せ。</p>
 <p>(2) 撃力が加わった直後に，球体が床に対して滑ることなく，ただちに純粋な転がり運動を開始するような高さ <span class="arithmatex">\(h\)</span> を <span class="arithmatex">\(R\)</span> を用いて求めよ。</p>
 <p>(3) 撃力を加える高さが <span class="arithmatex">\(h = \frac{1}{2}R\)</span> である場合を考える。撃力が作用した直後，球体は滑りながら運動を開始する。撃力が作用した直後から，球体が床から動摩擦力を受けて運動している間の，時間 <span class="arithmatex">\(t\)</span> における重心速度 <span class="arithmatex">\(v(t)\)</span> および重心まわりの角速度 <span class="arithmatex">\(\omega(t)\)</span> を，撃力直後を時刻 <span class="arithmatex">\(t=0\)</span> として求めよ。</p>
@@ -14544,7 +14544,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>撃力が作用する極めて短い時間において，床からの摩擦力による力積は無視できます。したがって，この間に球体が水平方向に受けた力積は撃力による力積 <span class="arithmatex">\(J\)</span> のみです。</p>
+<p>撃力が作用する間は，床からの摩擦力による力積を無視できます。したがって，球体が水平方向に受ける力積は <span class="arithmatex">\(J\)</span> です。</p>
 <p>球体の並進運動に関する運動量の変化と力積の関係より，以下の式が成り立ちます。</p>
 <div class="arithmatex">\[
 M v_0 - 0 = J
@@ -14570,7 +14570,7 @@ I \omega_0 - 0 = J h
 <div class="arithmatex">\[
 v_{\text{bottom}} = v_0 - R \omega_0
 \]</div>
-<p>滑りなしの条件は <span class="arithmatex">\(v_{\text{bottom}} = 0\)</span>，すなわち以下の関係が成り立つことです。</p>
+<p>滑りなしの条件 <span class="arithmatex">\(v_{\text{bottom}}=0\)</span> より，次の関係が成り立ちます。</p>
 <div class="arithmatex">\[
 v_0 = R \omega_0
 \]</div>
@@ -14598,7 +14598,7 @@ v_0 = \frac{J}{M}
 <div class="arithmatex">\[
 v_{\text{bottom}}(0) = v_0 - R \omega_0 = \frac{J}{M} - \frac{5 J}{4 M} = -\frac{J}{4 M}
 \]</div>
-<p>最下点の速度が負であるため，最下点は床に対して並進運動の向きとは逆の方向へ滑っています。したがって，床から球体が受ける動摩擦力 <span class="arithmatex">\(f\)</span> は，滑りを妨げる向き，すなわち並進運動の方向へ前向きに働きます。球体が受ける垂直抗力は <span class="arithmatex">\(N = Mg\)</span> であるため，動摩擦力の大きさは以下のようになります。</p>
+<p>最下点の速度が負であるため，最下点は床に対して負方向へ滑っています。したがって，動摩擦力 <span class="arithmatex">\(f\)</span> は正方向に働きます。垂直抗力は <span class="arithmatex">\(N=Mg\)</span> であるため，動摩擦力の大きさは次のようになります。</p>
 <div class="arithmatex">\[
 f = \mu M g
 \]</div>

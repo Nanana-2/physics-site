@@ -14513,8 +14513,7 @@
 
 <h1 id="_1">回転座標系の運動方程式</h1>
 <h2 id="_2">問題</h2>
-<p>宇宙空間に浮かぶ巨大な円筒形の宇宙ステーションを考える。このステーションは，将来の長期滞在に向けて，遠心力を利用した人工重力を発生させる計画を進めている。ステーションは，その中心軸を回転軸として，一定の角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転している。</p>
-<p>ステーション内部の観測者は，物体を投げたときに描かれる奇妙な軌道を説明するため，回転する部屋の内部を基準とした座標系における運動方程式を構築しようと考えた。</p>
+<p>中心軸のまわりを一定の角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転する，円筒形の宇宙ステーションを考える。</p>
 <p>固定された慣性基準系を系 <span class="arithmatex">\(S\)</span> とし，ステーションとともに回転する基準系を系 <span class="arithmatex">\(S'\)</span> とする。便宜上，系 <span class="arithmatex">\(S\)</span> と系 <span class="arithmatex">\(S'\)</span> の原点は一致しているものとする。系 <span class="arithmatex">\(S\)</span> における時間微分を <span class="arithmatex">\(d/dt\)</span> で表し，系 <span class="arithmatex">\(S'\)</span> における時間微分を <span class="arithmatex">\(d'/dt\)</span> で表す。</p>
 <p>(1) 回転系 <span class="arithmatex">\(S'\)</span> において静止している任意のベクトルは，慣性系 <span class="arithmatex">\(S\)</span> から見ると，角速度 <span class="arithmatex">\(\boldsymbol{\omega}\)</span> で回転運動を行う。この事実を出発点として，系 <span class="arithmatex">\(S'\)</span> において運動している任意のベクトル <span class="arithmatex">\(\boldsymbol{B}\)</span> に対する，慣性系と回転系の時間微分の間の変換公式
 $$
@@ -14587,13 +14586,13 @@ $$
 - 速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に比例する力 <span class="arithmatex">\(-2 m \boldsymbol{\omega} \times \boldsymbol{v}'\)</span> を，コリオリの力と呼びます。
 - 位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力 <span class="arithmatex">\(-m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)\)</span> を，遠心力と呼びます。</p>
 <p>次に，この遠心力が人工重力として機能する理由を説明します。</p>
-<p>ステーションの内部で物体が静止している，すなわち <span class="arithmatex">\(\boldsymbol{v}' = \boldsymbol{0}\)</span> であるとき，コリオリの力は作用せず，見かけの力は遠心力のみとなります。</p>
+<p>ステーション内で物体が静止しているときは <span class="arithmatex">\(\boldsymbol{v}'=\boldsymbol{0}\)</span> であり，コリオリ力は働きません。したがって，慣性力は遠心力だけです。</p>
 <p>ここで，回転軸から物体へ向かって，回転軸に垂直に引いたベクトルを <span class="arithmatex">\(\boldsymbol{r}_{\perp}\)</span> とします。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> と位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の関係から，遠心力は次のように書き直すことができます。
 $$
 - m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right) = m \omega^2 \boldsymbol{r}_{\perp}
 $$
 この式は，遠心力が常に回転軸から遠ざかる外向きに働き，その大きさが回転軸からの距離に比例することを示しています。</p>
-<p>宇宙ステーションの内壁を床とみなすと，この外向きに働く遠心力は，床に向かって物体を押し付ける力となります。これは，地球上において重力が私たちを地面に引きつける現象と完全に同等です。したがって，ステーションの回転速度と半径を適切に設計することにより，地球上と同じ大きさの遠心力を生み出すことが可能となり，人工重力として機能させることができます。</p>
+<p>宇宙ステーションの内壁を床とみなすと，外向きの遠心力は物体を床へ押し付ける向きに働きます。そのため，回転系内の観測者には重力に相当する力として感じられます。</p>
 
 
 

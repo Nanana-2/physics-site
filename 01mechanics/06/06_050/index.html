@@ -14515,7 +14515,7 @@
 <h2 id="_2">問題</h2>
 <p>等間隔 <span class="arithmatex">\(a\)</span> で一列に並んだ無数の質点の運動を考える。各質点の質量はすべて <span class="arithmatex">\(m\)</span> であり，隣り合う質点間はすべてばね定数 <span class="arithmatex">\(k\)</span> の軽いばねで結合されている。 <span class="arithmatex">\(n\)</span> 番目の質点の平衡位置からの水平方向の変位を <span class="arithmatex">\(y_n(t)\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(n\)</span> 番目の質点に着目し，両隣の質点から受けるばねの復元力を考慮して，変位 <span class="arithmatex">\(y_n\)</span> に関する運動方程式を立てよ。</p>
-<p>(2) 質点の数が非常に多く，格子間隔 <span class="arithmatex">\(a\)</span> が極めて小さい連続体の極限を考える。 <span class="arithmatex">\(n\)</span> 番目の質点の位置を <span class="arithmatex">\(x = na\)</span> と置き，変位を連続関数 <span class="arithmatex">\(y(x, t)\)</span> を用いて <span class="arithmatex">\(y_n(t) = y(x, t)\)</span> と表す。テイラー展開を用いて， <span class="arithmatex">\(y_{n+1}\)</span> および <span class="arithmatex">\(y_{n-1}\)</span> を位置 <span class="arithmatex">\(x\)</span> のまわりで位置の微小変化 <span class="arithmatex">\(a\)</span> に関して 2 次の項まで展開せよ。</p>
+<p>(2) 格子間隔 <span class="arithmatex">\(a\)</span> を小さくした連続体の極限を考える。<span class="arithmatex">\(n\)</span> 番目の質点の位置を <span class="arithmatex">\(x=na\)</span> とし，<span class="arithmatex">\(y_n(t)=y(x,t)\)</span> と表す。<span class="arithmatex">\(y_{n+1}\)</span> および <span class="arithmatex">\(y_{n-1}\)</span> を，位置 <span class="arithmatex">\(x\)</span> のまわりで <span class="arithmatex">\(a\)</span> の2次までテイラー展開せよ。</p>
 <p>(3) (2) の展開式を (1) の運動方程式に代入し，格子間隔を 0 に近づける極限 <span class="arithmatex">\(a \to 0\)</span> をとる。このとき，単位長さあたりの質量 <span class="arithmatex">\(\rho = \frac{m}{a}\)</span> および，ばねの弾性を表す定数 <span class="arithmatex">\(T = ka\)</span> が一定に保たれるものとして，連続体中の 1 次元波動方程式を導出せよ。また，導出された波の伝播速度 <span class="arithmatex">\(v\)</span> を <span class="arithmatex">\(\rho\)</span> と <span class="arithmatex">\(T\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14566,7 +14566,7 @@ m \frac{\partial^2 y}{\partial t^2} = k a^2 \frac{\partial^2 y}{\partial x^2}
 <div class="arithmatex">\[
 v = \sqrt{\frac{T}{\rho}}
 \]</div>
-<p>これにより，離散的な質点系の連成振動において，間隔を無限に小さくする極限をとることで，空間を連続的に伝わる波動の振る舞いが正しく導き出されます。</p>
+<p>したがって，格子間隔を0に近づけると，離散的な運動方程式から連続体の波動方程式が得られます。</p>
 
 
 

@@ -14535,10 +14535,7 @@
 
 <h1 id="_1">有効ポテンシャル</h1>
 <h2 id="_2">問題</h2>
-<p>宇宙空間における天体の運動を考える。
-質量が極めて大きな恒星が空間の原点に静止しており，その周囲を質量 <span class="arithmatex">\(m\)</span> の惑星が万有引力によって運動している。
-この系は中心力場における運動であり，運動は初期の位置と速度のベクトルが定義する二次元平面内に制限される。
-この平面上に原点を極とする極座標系 <span class="arithmatex">\(r, \theta\)</span> を導入し，万有引力定数を <span class="arithmatex">\(G\)</span>，恒星の質量を <span class="arithmatex">\(M\)</span> として惑星の軌道運動の性質を解析する。</p>
+<p>質量 <span class="arithmatex">\(M\)</span> の恒星を原点に固定し，その周囲を質量 <span class="arithmatex">\(m\)</span> の惑星が万有引力によって運動している。惑星の運動面に極座標 <span class="arithmatex">\(r\)</span>，<span class="arithmatex">\(\theta\)</span> を導入し，万有引力定数を <span class="arithmatex">\(G\)</span> とする。</p>
 <p>(1) 惑星の運動エネルギー <span class="arithmatex">\(T\)</span> および万有引力によるポテンシャルエネルギー <span class="arithmatex">\(U\)</span> を極座標 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(\theta\)</span>，およびそれらの時間微分 <span class="arithmatex">\(\dot{r}\)</span> と <span class="arithmatex">\(\dot{\theta}\)</span> を用いて表せ。
 また，ラグランジアンを構成することにより， <span class="arithmatex">\(\theta\)</span> が循環座標であることを示し，角運動量が保存することを示せ。</p>
 <p>(2) 惑星の全エネルギー <span class="arithmatex">\(E\)</span> は，保存量である角運動量の大きさ <span class="arithmatex">\(L\)</span> を用いることで，動径方向の座標 <span class="arithmatex">\(r\)</span> とその時間微分 <span class="arithmatex">\(\dot{r}\)</span> のみを含む式に変形できる。
@@ -14600,7 +14597,7 @@ $$
 E = \frac{1}{2} m \dot{r}^2 + \frac{L^2}{2 m r^2} - \frac{GMm}{r}
 $$
 となります。
-この式は，動径方向の一次元運動に関するエネルギーの式とみなすことができます。
+この式は，動径方向の一次元運動のエネルギーを表します。
 第2項と第3項をまとめた部分を，動径方向の運動に対する有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> と定義します。
 $$
 U_{eff}(r) = \frac{L^2}{2 m r^2} - \frac{GMm}{r}
@@ -14633,7 +14630,7 @@ E_0 &amp;= U_{eff}(r_0) \\
 $$
 これが円軌道における惑星の全エネルギーです。</p>
 <h3 id="4">(4)</h3>
-<p>物理的な運動が実現するためには，動径方向の速度の二乗が非負でなければならないため， <span class="arithmatex">\(\dot{r}^2 \ge 0\)</span> より
+<p>動径方向の速度について <span class="arithmatex">\(\dot{r}^2\geq0\)</span> であるため，
 $$
 E \ge U_{eff}(r)
 $$

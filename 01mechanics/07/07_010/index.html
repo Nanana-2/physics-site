@@ -14535,14 +14535,14 @@
 
 <h1 id="_1">角運動量保存則の導出</h1>
 <h2 id="_2">問題</h2>
-<p>宇宙空間において，質量が無視できるほど小さい探査機が，質量が非常に大きく原点に固定されているとみなせる恒星の周りを運動している。恒星から探査機に働く力は，二点間を結ぶ直線の方向にのみ働き，その大きさは二点間の距離にのみ依存する。このような力を中心力と呼ぶ。本問では，中心力を受けて運動する探査機の軌道運動を解析し，角運動量保存則とその物理的帰結を導出する。</p>
+<p>原点に固定された恒星のまわりを，質量 <span class="arithmatex">\(m\)</span> の探査機が運動している。探査機には，恒星と探査機を結ぶ直線方向の中心力が働き，その大きさは両者の距離のみに依存するものとする。</p>
 <p>3次元空間の座標原点に恒星が存在し，時刻 <span class="arithmatex">\(t\)</span> における探査機の位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}(t)\)</span>，質量を <span class="arithmatex">\(m\)</span>，速度ベクトルを <span class="arithmatex">\(\boldsymbol{v}(t) = \frac{d\boldsymbol{r}}{dt}\)</span> とする。恒星が探査機に及ぼす万有引力 <span class="arithmatex">\(\boldsymbol{F}(\boldsymbol{r})\)</span> は，距離 <span class="arithmatex">\(r = |\boldsymbol{r}|\)</span> の関数 <span class="arithmatex">\(f(r)\)</span> を用いて以下のように表される。</p>
 <div class="arithmatex">\[
 \boldsymbol{F}(\boldsymbol{r}) = f(r) \frac{\boldsymbol{r}}{r}
 \]</div>
 <p>(1) 探査機の運動方程式を示し，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> と探査機に働く力 <span class="arithmatex">\(\boldsymbol{F}\)</span> の外積であるトルク <span class="arithmatex">\(\boldsymbol{N} = \boldsymbol{r} \times \boldsymbol{F}\)</span> が常に零ベクトルになることを示せ。</p>
 <p>(2) 探査機の角運動量 <span class="arithmatex">\(\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}\)</span> を定義する。ここで <span class="arithmatex">\(\boldsymbol{p} = m\boldsymbol{v}\)</span> は運動量ベクトルである。角運動量の時間微分 <span class="arithmatex">\(\frac{d\boldsymbol{L}}{dt}\)</span> を計算し，(1) の結果を用いて，角運動量ベクトル <span class="arithmatex">\(\boldsymbol{L}\)</span> が時間的に変化しない定ベクトルであることを示せ。</p>
-<p>(3) 角運動量 <span class="arithmatex">\(\boldsymbol{L}\)</span> が定ベクトルであることから，探査機の軌道運動が常に <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直な同一平面内に制限されることを示せ。</p>
+<p>(3) 角運動量 <span class="arithmatex">\(\boldsymbol{L}\)</span> が一定であることから，探査機の軌道が <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直な同一平面内にあることを示せ。</p>
 <p>(4) 探査機の位置を極座標 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(\theta\)</span> を用いて表す。軌道平面内での面積速度が一定であることを，角運動量の大きさ <span class="arithmatex">\(L = |\boldsymbol{L}|\)</span> を用いて示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14551,7 +14551,7 @@
 <div class="arithmatex">\[
 \frac{d\boldsymbol{p}}{dt} = \boldsymbol{F}
 \]</div>
-<p>このとき，探査機に働く力のモーメント，すなわちトルク <span class="arithmatex">\(\boldsymbol{N}\)</span> は次のように計算されます。</p>
+<p>このとき，探査機に働くトルク <span class="arithmatex">\(\boldsymbol{N}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 \boldsymbol{N} = \boldsymbol{r} \times \boldsymbol{F} = \boldsymbol{r} \times \left( f(r) \frac{\boldsymbol{r}}{r} \right) = \frac{f(r)}{r} (\boldsymbol{r} \times \boldsymbol{r})
 \]</div>
@@ -14586,9 +14586,9 @@
 <div class="arithmatex">\[
 \boldsymbol{r} \cdot \boldsymbol{L} = \boldsymbol{r} \cdot (\boldsymbol{r} \times \boldsymbol{p}) = 0
 \]</div>
-<p>(2) で示したように，<span class="arithmatex">\(\boldsymbol{L}\)</span> は大きさと向きが不変の定ベクトルです。この定ベクトル <span class="arithmatex">\(\boldsymbol{L}\)</span> と位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の内積が常にゼロであるという事実は，探査機の位置ベクトルが，常に <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直な平面内に存在し続けることを示しています。これにより，探査機の軌道は3次元空間全体に広がることなく，特定の2次元平面内に制限されることが証明されます。</p>
+<p>(2) で示したように，<span class="arithmatex">\(\boldsymbol{L}\)</span> は大きさと向きが一定です。また，<span class="arithmatex">\(\boldsymbol{L}\cdot\boldsymbol{r}=0\)</span> であるため，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> は常に <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直です。したがって，探査機の軌道は <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直な同一平面内にあります。</p>
 <h3 id="4">(4)</h3>
-<p>軌道平面を <span class="arithmatex">\(xy\)</span> 平面とし，この平面に直交する単位ベクトルを <span class="arithmatex">\(\boldsymbol{e}_z\)</span> と定めます。角運動量ベクトルは <span class="arithmatex">\(\boldsymbol{L} = L \boldsymbol{e}_z\)</span> と表されます。平面内において極座標 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(\theta\)</span> を導入すると，動径方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_r\)</span> および回転方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_\theta\)</span> を用いて，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> と速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> は以下のように記述できます。</p>
+<p>軌道平面を <span class="arithmatex">\(xy\)</span> 平面とし，この平面に直交する単位ベクトルを <span class="arithmatex">\(\boldsymbol{e}_z\)</span> とします。角運動量ベクトルは <span class="arithmatex">\(\boldsymbol{L}=L\boldsymbol{e}_z\)</span> と表されます。平面内に極座標 <span class="arithmatex">\(r\)</span>，<span class="arithmatex">\(\theta\)</span> を導入すると，位置と速度は次のように表されます。</p>
 <div class="arithmatex">\[
 \boldsymbol{r} = r \boldsymbol{e}_r
 \]</div>
@@ -14619,7 +14619,7 @@ dS = \frac{1}{2} r^2 d\theta
 <div class="arithmatex">\[
 \frac{dS}{dt} = \frac{L}{2m}
 \]</div>
-<p>角運動量の大きさ <span class="arithmatex">\(L\)</span> および質量 <span class="arithmatex">\(m\)</span> は時間的に一定であるため，面積速度もまた常に一定となります。これは，ケプラーの第二法則が角運動量保存則の直接的な帰結であることを示しています。</p>
+<p><span class="arithmatex">\(L\)</span> と <span class="arithmatex">\(m\)</span> は一定であるため，面積速度も一定です。これがケプラーの第2法則です。</p>
 
 
 

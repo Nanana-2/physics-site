@@ -14546,32 +14546,32 @@ $$</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>質点には，復元力 <span class="arithmatex">\(-kx\)</span> と抵抗力 <span class="arithmatex">\(-\gamma\dot{x}\)</span> が働きます。したがって，運動方程式は次のようになります。
-$$
+<p>質点には，復元力 <span class="arithmatex">\(-kx\)</span> と抵抗力 <span class="arithmatex">\(-\gamma\dot{x}\)</span> が働きます。したがって，運動方程式は次のようになります。</p>
+<div class="arithmatex">\[
 m \ddot{x} = -kx - \gamma \dot{x}
-$$
-この式の両辺を <span class="arithmatex">\(m\)</span> で割り，すべての項を左辺に移項します。
-$$
+\]</div>
+<p>この式の両辺を <span class="arithmatex">\(m\)</span> で割り，すべての項を左辺に移項します。</p>
+<div class="arithmatex">\[
 \ddot{x} + \frac{\gamma}{m} \dot{x} + \frac{k}{m} x = 0
-$$
-ここで，与えられた定数 <span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span>，<span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いると，<span class="arithmatex">\(\frac{\gamma}{m} = 2\gamma_0\)</span>，<span class="arithmatex">\(\frac{k}{m} = \omega_0^2\)</span> となるため，運動方程式は以下の通りに整理されます。
-$$
+\]</div>
+<p>ここで，与えられた定数 <span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span>，<span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いると，<span class="arithmatex">\(\frac{\gamma}{m} = 2\gamma_0\)</span>，<span class="arithmatex">\(\frac{k}{m} = \omega_0^2\)</span> となるため，運動方程式は以下の通りに整理されます。</p>
+<div class="arithmatex">\[
 \ddot{x} + 2\gamma_0 \dot{x} + \omega_0^2 x = 0
-$$</p>
+\]</div>
 <h3 id="2">(2)</h3>
-<p>(1)で得られた線形同次微分方程式の解を <span class="arithmatex">\(x(t) = e^{\lambda t}\)</span> と仮定して代入します。<span class="arithmatex">\(\dot{x} = \lambda e^{\lambda t}\)</span>，<span class="arithmatex">\(\ddot{x} = \lambda^2 e^{\lambda t}\)</span> であるため，運動方程式に代入すると次式を得ます。
-$$
+<p>(1)で得られた線形同次微分方程式の解を <span class="arithmatex">\(x(t) = e^{\lambda t}\)</span> と仮定して代入します。<span class="arithmatex">\(\dot{x} = \lambda e^{\lambda t}\)</span>，<span class="arithmatex">\(\ddot{x} = \lambda^2 e^{\lambda t}\)</span> であるため，運動方程式に代入すると次式を得ます。</p>
+<div class="arithmatex">\[
 (\lambda^2 + 2\gamma_0 \lambda + \omega_0^2) e^{\lambda t} = 0
-$$
-<span class="arithmatex">\(e^{\lambda t} \neq 0\)</span> であることから，次の特性方程式が得られます。
-$$
+\]</div>
+<p><span class="arithmatex">\(e^{\lambda t} \neq 0\)</span> であることから，次の特性方程式が得られます。</p>
+<div class="arithmatex">\[
 \lambda^2 + 2\gamma_0 \lambda + \omega_0^2 = 0
-$$
-この2次方程式を <span class="arithmatex">\(\lambda\)</span> について解くと，解は以下のようになります。
-$$
+\]</div>
+<p>この2次方程式を <span class="arithmatex">\(\lambda\)</span> について解くと，解は以下のようになります。</p>
+<div class="arithmatex">\[
 \lambda = -\gamma_0 \pm \sqrt{\gamma_0^2 - \omega_0^2}
-$$
-根号の中身 <span class="arithmatex">\(\gamma_0^2-\omega_0^2\)</span> の符号によって，以下の3つに分かれます。</p>
+\]</div>
+<p>根号の中身 <span class="arithmatex">\(\gamma_0^2-\omega_0^2\)</span> の符号によって，以下の3つに分かれます。</p>
 <ol>
 <li><strong><span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span></strong>
    特性根は共役複素数となり，振幅を減らしながら振動します。この運動を減衰振動と呼びます。</li>
@@ -14582,10 +14582,10 @@ $$
 </ol>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span> の場合を考えます。
-このとき，<span class="arithmatex">\(\sqrt{\gamma_0^2 - \omega_0^2} = \sqrt{-1(\omega_0^2 - \gamma_0^2)} = i \omega\)</span> とおくことができます。ここで <span class="arithmatex">\(i\)</span> は虚数単位であり，<span class="arithmatex">\(\omega\)</span> は以下で定義される減衰振動の角振動数です。
-$$
+このとき，<span class="arithmatex">\(\sqrt{\gamma_0^2 - \omega_0^2} = \sqrt{-1(\omega_0^2 - \gamma_0^2)} = i \omega\)</span> とおくことができます。ここで <span class="arithmatex">\(i\)</span> は虚数単位であり，<span class="arithmatex">\(\omega\)</span> は以下で定義される減衰振動の角振動数です。</p>
+<div class="arithmatex">\[
 \omega = \sqrt{\omega_0^2 - \gamma_0^2}
-$$</p>
+\]</div>
 <p>このとき，特性方程式の解は <span class="arithmatex">\(\lambda = -\gamma_0 \pm i\omega\)</span> となるため，一般解は任意定数 <span class="arithmatex">\(A, B\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
 x(t) = e^{-\gamma_0 t} (A \cos \omega t + B \sin \omega t)

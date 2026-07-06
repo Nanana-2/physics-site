@@ -14513,15 +14513,14 @@
 
 <h1 id="_1">円軌道の条件</h1>
 <h2 id="_2">問題</h2>
-<p>現代の宇宙開発において，人工衛星を地球の周回軌道に乗せる技術は不可欠である。人工衛星が地球の重力に引かれて落下することなく，一定の高度を維持して回り続けるためには，適切な速度で運動させる必要がある。</p>
 <p>地球を質量 <span class="arithmatex">\(M\)</span> ，半径 <span class="arithmatex">\(R\)</span> の完全な球体とし，地球の自転や空気抵抗の影響は無視できるものとする。万有引力定数を <span class="arithmatex">\(G\)</span> とする。地表からの高度が <span class="arithmatex">\(h\)</span> の位置で，質量 <span class="arithmatex">\(m\)</span> の人工衛星が地球の中心を中心とする半径 <span class="arithmatex">\(r = R + h\)</span> の円軌道上を，一定の速さ <span class="arithmatex">\(v\)</span> で等速円運動している状況を考える。</p>
-<p>(1) 人工衛星とともに回転する非慣性系（回転座標系）を考える。このとき人工衛星に働く遠心力と万有引力のつり合いの式を立て，軌道半径 <span class="arithmatex">\(r\)</span> を一定に保って等速円運動するために必要な速さ（軌道速度） <span class="arithmatex">\(v\)</span> を， <span class="arithmatex">\(G\)</span> ， <span class="arithmatex">\(M\)</span> ， <span class="arithmatex">\(r\)</span> を用いて表せ。</p>
-<p>(2) 人工衛星が地球を1周するのに要する周期 <span class="arithmatex">\(T\)</span> を， <span class="arithmatex">\(G\)</span> ， <span class="arithmatex">\(M\)</span> ， <span class="arithmatex">\(r\)</span> を用いて表せ。また，周期の2乗 <span class="arithmatex">\(T^2\)</span> と軌道半径の3乗 <span class="arithmatex">\(r^3\)</span> の比が一定値になること（ケプラーの第3法則）を示せ。</p>
-<p>(3) 地表の極めて近く（高度 <span class="arithmatex">\(h \approx 0\)</span> ，すなわち軌道半径 <span class="arithmatex">\(r \approx R\)</span> ）を円軌道運動する仮想的な人工衛星を考える。このときの速度 <span class="arithmatex">\(v_1\)</span> は「第一宇宙速度」と呼ばれる。 <span class="arithmatex">\(v_1\)</span> を地表における重力加速度の大きさ <span class="arithmatex">\(g = \frac{GM}{R^2}\)</span> と半径 <span class="arithmatex">\(R\)</span> を用いて表せ。また， <span class="arithmatex">\(g = 9.8 \text{ m/s}^2\)</span> ， <span class="arithmatex">\(R = 6.4 \times 10^6 \text{ m}\)</span> として， <span class="arithmatex">\(v_1\)</span> の具体的な数値を計算し，有効数字2桁で答えよ。</p>
+<p>(1) 人工衛星とともに回転する座標系で，遠心力と万有引力のつり合いの式を立て，軌道速度 <span class="arithmatex">\(v\)</span> を <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(M\)</span>，<span class="arithmatex">\(r\)</span> を用いて表せ。</p>
+<p>(2) 人工衛星の周期 <span class="arithmatex">\(T\)</span> を <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(M\)</span>，<span class="arithmatex">\(r\)</span> を用いて表せ。また，<span class="arithmatex">\(T^2/r^3\)</span> が一定となることを示せ。</p>
+<p>(3) <span class="arithmatex">\(h\approx0\)</span>，<span class="arithmatex">\(r\approx R\)</span> とし，この円軌道の速度である第一宇宙速度 <span class="arithmatex">\(v_1\)</span> を，<span class="arithmatex">\(g=GM/R^2\)</span> と <span class="arithmatex">\(R\)</span> を用いて表せ。また，<span class="arithmatex">\(g=9.8\,\mathrm{m/s^2}\)</span>，<span class="arithmatex">\(R=6.4\times10^6\,\mathrm{m}\)</span> として数値を有効数字2桁で求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>等速円運動する人工衛星とともに回転する観測者から見ると，人工衛星には地球の中心に向かう万有引力 <span class="arithmatex">\(F\)</span> と，外向き（地球の中心から遠ざかる向き）の遠心力 <span class="arithmatex">\(f\)</span> が作用し，これらがつり合っています。</p>
+<p>人工衛星とともに回転する座標系では，地球の中心に向かう万有引力 <span class="arithmatex">\(F\)</span> と，中心から遠ざかる向きの遠心力 <span class="arithmatex">\(f\)</span> がつりあいます。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> の人工衛星が半径 <span class="arithmatex">\(r\)</span> ，速さ <span class="arithmatex">\(v\)</span> で等速円運動するときの遠心力の大きさ <span class="arithmatex">\(f\)</span> は，以下のように表されます。
 $$
 f = m \frac{v^2}{r}
@@ -14542,7 +14541,7 @@ $$</p>
 $$
 v = \sqrt{\frac{GM}{r}}
 $$
-この結果は，軌道半径 <span class="arithmatex">\(r\)</span> が大きい（高度が高い）ほど，軌道を維持するために必要な速度は遅くてよいことを示しています。</p>
+軌道半径 <span class="arithmatex">\(r\)</span> が大きいほど，円軌道の速度は小さくなります。</p>
 <h3 id="2">(2)</h3>
 <p>人工衛星が半径 <span class="arithmatex">\(r\)</span> の円軌道を1周する距離は，円周の長さ <span class="arithmatex">\(2\pi r\)</span> です。したがって，1周に要する周期 <span class="arithmatex">\(T\)</span> は，距離を速さ <span class="arithmatex">\(v\)</span> で割ることで求められます。
 $$
@@ -14563,9 +14562,9 @@ $$</p>
 $$
 \frac{T^2}{r^3} = \frac{4\pi^2}{GM}
 $$
-右辺の <span class="arithmatex">\(\frac{4\pi^2}{GM}\)</span> は，中心天体の質量 <span class="arithmatex">\(M\)</span> と万有引力定数 <span class="arithmatex">\(G\)</span> のみで決まる定数です。したがって，周期の2乗と軌道半径の3乗の比が一定になるという「ケプラーの第3法則」が成り立つことが示されました。</p>
+右辺の <span class="arithmatex">\(\frac{4\pi^2}{GM}\)</span> は，中心天体の質量 <span class="arithmatex">\(M\)</span> と万有引力定数 <span class="arithmatex">\(G\)</span> のみで決まります。したがって，<span class="arithmatex">\(T^2/r^3\)</span> は一定となります。</p>
 <h3 id="3">(3)</h3>
-<p>地表スレスレの高度（ <span class="arithmatex">\(r \approx R\)</span> ）を運動する人工衛星を考えます。このときの軌道速度 <span class="arithmatex">\(v_1\)</span> は，(1)の式において <span class="arithmatex">\(r = R\)</span> と置くことで得られます。
+<p>地表近くで <span class="arithmatex">\(r\approx R\)</span> とします。このときの軌道速度 <span class="arithmatex">\(v_1\)</span> は，(1) の式に <span class="arithmatex">\(r=R\)</span> を代入して得られます。
 $$
 v_1 = \sqrt{\frac{GM}{R}}
 $$</p>
@@ -14573,15 +14572,15 @@ $$</p>
 $$
 g = \frac{GM}{R^2}
 $$</p>
-<p>この式より， <span class="arithmatex">\(GM = gR^2\)</span> と表すことができます。これを <span class="arithmatex">\(v_1\)</span> の式に代入します。
+<p>この式より <span class="arithmatex">\(GM=gR^2\)</span> です。これを <span class="arithmatex">\(v_1\)</span> の式に代入します。
 $$
 \begin{aligned}
 v_1 &amp;= \sqrt{\frac{gR^2}{R}} \\
 &amp;= \sqrt{gR}
 \end{aligned}
 $$</p>
-<p>これが，地球における第一宇宙速度の代数的な表現です。</p>
-<p>次に，与えられた具体的な数値を代入して計算を行います。 <span class="arithmatex">\(g = 9.8 \text{ m/s}^2\)</span> ， <span class="arithmatex">\(R = 6.4 \times 10^6 \text{ m}\)</span> を代入すると，以下のようになります。
+<p>これが第一宇宙速度です。</p>
+<p>次に，<span class="arithmatex">\(g=9.8\,\mathrm{m/s^2}\)</span>，<span class="arithmatex">\(R=6.4\times10^6\,\mathrm{m}\)</span> を代入します。
 $$
 \begin{aligned}
 v_1 &amp;= \sqrt{9.8 \times 6.4 \times 10^6} \\
@@ -14597,7 +14596,7 @@ $$</p>
 $$
 v_1 = 7.9 \text{ km/s}
 $$
-この結果は，地球上で物体を水平方向に約 <span class="arithmatex">\(7.9 \text{ km/s}\)</span> （マッハ23以上）という極めて高速で撃ち出すことができれば，その物体は地表に落下することなく地球を回り続ける人工衛星になることを意味しています。</p>
+したがって，第一宇宙速度は約 <span class="arithmatex">\(7.9\,\mathrm{km/s}\)</span> です。</p>
 
 
 

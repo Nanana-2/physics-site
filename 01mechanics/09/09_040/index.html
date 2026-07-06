@@ -14535,10 +14535,10 @@
 
 <h1 id="_1">転がり運動</h1>
 <h2 id="_2">問題</h2>
-<p>斜面を転がり落ちる剛体の運動は，並進運動と回転運動が互いに拘束し合う代表的な物理現象である。ここでは，傾斜角 <span class="arithmatex">\(\theta\)</span> の固定された斜面上を，質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(R\)</span> の均質な円柱が滑らずに転がり落ちる運動を考える。円柱の中心軸まわりの慣性モーメントを <span class="arithmatex">\(I\)</span> とし，重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。</p>
-<p>斜面に沿って下向きに <span class="arithmatex">\(x\)</span> 軸をとり，斜面の上端を原点とする。円柱の中心軸は常に斜面と平行であり，円柱の重心は <span class="arithmatex">\(x\)</span> 軸上を運動する。円柱の重心の座標を <span class="arithmatex">\(x\)</span> とし，中心軸まわりの回転角を <span class="arithmatex">\(\phi\)</span> とする。回転の正の向きは，円柱が斜面を下るときに転がる向き，すなわち <span class="arithmatex">\(x\)</span> が増加するときに円柱の右側面から見て時計回りに回転する方向にとる。</p>
+<p>傾斜角 <span class="arithmatex">\(\theta\)</span> の斜面を，質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(R\)</span> の一様な円柱が滑らずに転がり落ちる運動を考える。円柱の中心軸まわりの慣性モーメントを <span class="arithmatex">\(I\)</span>，重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。</p>
+<p>斜面に沿って下向きに <span class="arithmatex">\(x\)</span> 軸をとり，円柱の重心座標を <span class="arithmatex">\(x\)</span> とする。中心軸まわりの回転角を <span class="arithmatex">\(\phi\)</span> とし，円柱が斜面を下るときの回転方向を正とする。</p>
 <p>(1) 円柱の重心の並進運動に関する運動方程式，および重心まわりの回転運動に関する運動方程式を立てよ。ただし，円柱が斜面から受ける静止摩擦力の大きさを <span class="arithmatex">\(f\)</span> とし，その向きは斜面に沿って上向きとする。また，垂直抗力の大きさを <span class="arithmatex">\(N\)</span> とする。</p>
-<p>(2) 円柱が斜面に対して滑らずに転がるという拘束条件を用いて，並進加速度 <span class="arithmatex">\(a = \frac{d^2 x}{dt^2}\)</span> および静止摩擦力 <span class="arithmatex">\(f\)</span> を <span class="arithmatex">\(M\)</span>， <span class="arithmatex">\(R\)</span>， <span class="arithmatex">\(I\)</span>， <span class="arithmatex">\(g\)</span>， <span class="arithmatex">\(\theta\)</span> を用いて表せ。さらに，均質な円柱の慣性モーメントが <span class="arithmatex">\(\frac{1}{2}MR^2\)</span> で与えられるとき，具体的な加速度 <span class="arithmatex">\(a\)</span> の値を求めよ。</p>
+<p>(2) 滑らずに転がる条件を用いて，並進加速度 <span class="arithmatex">\(a=d^2x/dt^2\)</span> と静止摩擦力 <span class="arithmatex">\(f\)</span> を <span class="arithmatex">\(M\)</span>，<span class="arithmatex">\(R\)</span>，<span class="arithmatex">\(I\)</span>，<span class="arithmatex">\(g\)</span>，<span class="arithmatex">\(\theta\)</span> を用いて表せ。さらに，<span class="arithmatex">\(I=\frac{1}{2}MR^2\)</span> の場合の加速度を求めよ。</p>
 <p>(3) 円柱と斜面の間の静止摩擦係数を <span class="arithmatex">\(\mu\)</span> とする。円柱が滑ることなく純粋な転がり運動を続けるために，斜面の傾斜角 <span class="arithmatex">\(\theta\)</span> が満たすべき条件を求めよ。</p>
 <p>(4) 円柱が静止状態から斜面に沿って距離 <span class="arithmatex">\(L\)</span> だけ転がり落ちたとき，重心の速度 <span class="arithmatex">\(v = \frac{dx}{dt}\)</span> の大きさを，運動方程式から導かれる等加速度直線運動の公式を用いて求めよ。次に，初期状態と距離 <span class="arithmatex">\(L\)</span> だけ運動した状態の間で力学的エネルギー保存則を適用し，両者の結果が一致することを示せ。</p>
 <hr />
@@ -14554,7 +14554,7 @@ N = Mg \cos \theta
 <div class="arithmatex">\[
 M \frac{d^2 x}{dt^2} = Mg \sin \theta - f
 \]</div>
-<p>また，円柱の中心軸まわりの回転運動を考えます。重心のまわりの力のモーメントを生み出すのは静止摩擦力 <span class="arithmatex">\(f\)</span> のみです。静止摩擦力は斜面上向きに働くため，重心から接触点への位置ベクトルとの外積により，回転を加速させる方向，すなわち時計回りのトルク <span class="arithmatex">\(fR\)</span> を生じさせます。角加速度を <span class="arithmatex">\(\alpha = \frac{d^2 \phi}{dt^2}\)</span> とすると，回転運動方程式は次のようになります。</p>
+<p>重心まわりの力のモーメントを生じるのは静止摩擦力 <span class="arithmatex">\(f\)</span> です。これによるトルクの大きさは <span class="arithmatex">\(fR\)</span> です。角加速度を <span class="arithmatex">\(\alpha=d^2\phi/dt^2\)</span> とすると，回転の運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
 I \frac{d^2 \phi}{dt^2} = fR
 \]</div>
@@ -14597,7 +14597,7 @@ a = \frac{g \sin \theta}{1 + \frac{1}{2}} = \frac{2}{3} g \sin \theta
 \]</div>
 <p>これにより，自由落下や摩擦のない斜面を滑り落ちる場合の加速度 <span class="arithmatex">\(g \sin \theta\)</span> よりも，転がり運動の加速度は小さくなることがわかります。これは重力による位置エネルギーの一部が並進運動だけでなく回転運動のエネルギーにも分配されるためです。</p>
 <h3 id="3">(3)</h3>
-<p>静止摩擦力 <span class="arithmatex">\(f\)</span> が満たすべき物理的な限界は，最大静止摩擦力以下であることです。すなわち，静止摩擦係数を <span class="arithmatex">\(\mu\)</span> とすると，次の不等式が成り立たなければなりません。</p>
+<p>静止摩擦力は最大静止摩擦力以下でなければならないため，次の条件が成り立ちます。</p>
 <div class="arithmatex">\[
 f \le \mu N
 \]</div>
@@ -14659,7 +14659,7 @@ v^2 = \frac{4}{3} g L \sin \theta
 <div class="arithmatex">\[
 v = \sqrt{\frac{4}{3} g L \sin \theta}
 \]</div>
-<p>これは，運動方程式から求めた速度と完全に一致します。この一致は，静止摩擦力が仕事をしない力であるために，系の力学的エネルギーが保存されるという事実を裏付けています。静止摩擦力は接触点において常に速度が零の点に働くため，仕事をしません。</p>
+<p>これは運動方程式から求めた速度と一致します。滑らずに転がる場合，接触点の速度は0であり，静止摩擦力は仕事をしません。</p>
 
 
 

@@ -14535,13 +14535,12 @@
 
 <h1 id="_1">加速系での運動方程式</h1>
 <h2 id="_2">問題</h2>
-<p>水平方向に一定の加速度で進行する電車の内部でおこなわれる振り子の運動を解析することにより，非慣性系における運動方程式の記述方法と慣性力の物理的な意味を理解しよう。</p>
 <p>静止した地上に固定された座標系を慣性系と呼ぶ。この慣性系の水平右向きに <span class="arithmatex">\(x\)</span> 軸をとり，鉛直上向きに <span class="arithmatex">\(y\)</span> 軸をとる。この地上に対して，<span class="arithmatex">\(x\)</span> 軸の正の向きに一定の加速度 <span class="arithmatex">\(\alpha\)</span> で直線運動する電車がある。電車の天井の一点から，長さ <span class="arithmatex">\(L\)</span> の質量が無視できる軽くて伸びない糸で，質量 <span class="arithmatex">\(m\)</span> のおもりが吊り下げられている。重力加速度の大きさを <span class="arithmatex">\(g\)</span> とし，空気抵抗や糸の質量は無視できるものとする。</p>
 <p>おもりにはたらく力は，重力と糸の張力のみである。糸の張力の大きさを <span class="arithmatex">\(S\)</span> とする。おもりの位置から天井の支点へ向かう方向が，鉛直下向きから反時計回りになす角度を <span class="arithmatex">\(\theta\)</span> とする。</p>
 <p>(1) 慣性系においておもりの座標を <span class="arithmatex">\((x, y)\)</span> とするとき，おもりの運動方程式の <span class="arithmatex">\(x\)</span> 成分および <span class="arithmatex">\(y\)</span> 成分を，張力の大きさ <span class="arithmatex">\(S\)</span> と角度 <span class="arithmatex">\(\theta\)</span> を用いてそれぞれ示せ。</p>
 <p>(2) 電車とともに運動する座標系を加速系と呼ぶ。電車の支点の位置を原点とし，水平右向きに <span class="arithmatex">\(x'\)</span> 軸，鉛直上向きに <span class="arithmatex">\(y'\)</span> 軸をとる。慣性系におけるおもりの座標 <span class="arithmatex">\((x, y)\)</span> と，加速系におけるおもりの座標 <span class="arithmatex">\((x', y')\)</span> の間の関係式を求めよ。ただし，時刻 <span class="arithmatex">\(t = 0\)</span> において二つの座標系の原点は一致しており，電車の初速度はゼロであったとする。さらに，この関係式を用いて，加速系におけるおもりの運動方程式の <span class="arithmatex">\(x'\)</span> 成分および <span class="arithmatex">\(y'\)</span> 成分を導け。</p>
-<p>(3) 電車に乗っている観測者から見て，おもりが静止して見える状態，すなわち相対的なつりあいの状態にあるとき，糸が鉛直下向きとなす角度を <span class="arithmatex">\(\theta_0\)</span> とする。このとき，<span class="arithmatex">\(\tan \theta_0\)</span> の値を <span class="arithmatex">\(\alpha\)</span> と <span class="arithmatex">\(g\)</span> を用いて表せ。また，このつりあいの状態においておもりにはたらく慣性力と重力の合力について，その大きさと向きを説明せよ。</p>
-<p>(4) つりあいの角度 <span class="arithmatex">\(\theta_0\)</span> からおもりをわずかに揺らしたときの微小振動を考える。角度のつりあいからのずれを <span class="arithmatex">\(\phi = \theta - \theta_0\)</span> とおく。<span class="arithmatex">\(\phi\)</span> が極めて小さいとして近似を行うことにより，加速系におけるおもりの運動方程式から <span class="arithmatex">\(\phi\)</span> に関する単振動の微分方程式を導き，その振動周期 <span class="arithmatex">\(T\)</span> を求めよ。</p>
+<p>(3) 電車内でおもりがつりあっているとき，糸が鉛直下向きとなす角度を <span class="arithmatex">\(\theta_0\)</span> とする。<span class="arithmatex">\(\tan\theta_0\)</span> を <span class="arithmatex">\(\alpha\)</span> と <span class="arithmatex">\(g\)</span> を用いて表せ。また，慣性力と重力の合力の大きさと向きを求めよ。</p>
+<p>(4) つりあいの角度からのずれを <span class="arithmatex">\(\phi=\theta-\theta_0\)</span> とする。<span class="arithmatex">\(|\phi|\ll1\)</span> として運動方程式を近似し，微小振動の周期 <span class="arithmatex">\(T\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14616,7 +14615,7 @@ F_{\text{eff}} = \sqrt{(mg)^2 + (m\alpha)^2} = m\sqrt{g^2 + \alpha^2}
 <div class="arithmatex">\[
 mL \frac{d^2 \phi}{dt^2} = -m\sqrt{g^2 + \alpha^2} \sin \phi
 \]</div>
-<p>ここで，角度のずれ <span class="arithmatex">\(\phi\)</span> が極めて小さいと仮定すると，<span class="arithmatex">\(\sin \phi \approx \phi\)</span> という近似を適用することができます。これにより，運動方程式は次のように書き換えられます。</p>
+<p><span class="arithmatex">\(|\phi|\ll1\)</span> のとき，<span class="arithmatex">\(\sin\phi\approx\phi\)</span> と近似できるため，運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
 \frac{d^2 \phi}{dt^2} = -\frac{\sqrt{g^2 + \alpha^2}}{L} \phi
 \]</div>
