@@ -318,6 +318,28 @@ body, input {
   content: "";
 }
 
+.book-grid--text-only .book-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-grid--text-only .book-cover {
+  display: none;
+}
+
+.book-grid--text-only .book-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  float: none;
+  width: 100%;
+}
+
+.book-grid--text-only .book-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 .book-info h3 {
   margin: 0.4rem 0 0.6rem !important;
   color: var(--md-typeset-color) !important;
