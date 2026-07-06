@@ -675,8 +675,9 @@ body, input {
 .md-typeset .page-share__label {
   margin: 0 0 0.7rem;
   color: var(--md-default-fg-color--light);
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .page-share__buttons {
@@ -700,6 +701,7 @@ body, input {
   font-size: 0.72rem;
   font-weight: 500;
   line-height: 1;
+  white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
@@ -725,14 +727,14 @@ body, input {
 
 .md-typeset .page-share__button[data-share-facebook] {
   color: #ffffff;
-  background: #1877f2;
-  border-color: #1877f2;
+  background: #4267b2;
+  border-color: #4267b2;
 }
 
 .md-typeset .page-share__button[data-share-facebook]:hover {
   color: #ffffff;
-  background: #0f65d8;
-  border-color: #0f65d8;
+  background: #365899;
+  border-color: #365899;
 }
 
 .md-typeset .page-share__button[data-share-line] {
@@ -745,6 +747,10 @@ body, input {
   color: #ffffff;
   background: #05ad4a;
   border-color: #05ad4a;
+}
+
+.md-typeset .page-share__button[data-share-copy] {
+  background: var(--md-code-bg-color);
 }
 
 .page-share__icon {
