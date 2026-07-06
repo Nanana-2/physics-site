@@ -157,6 +157,7 @@
       reset.addEventListener("click", () => {
         keyword.value = "";
         subject.value = "";
+        chapter.value = "";
         difficulty.value = "";
         populateChapters();
         filter();
