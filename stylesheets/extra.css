@@ -365,6 +365,13 @@ body, input {
   line-height: 1.6 !important;
 }
 
+.book-info .book-meta {
+  margin: -0.2rem 0 1rem !important;
+  color: var(--md-default-fg-color--light) !important;
+  font-size: 0.76rem !important;
+  line-height: 1.5 !important;
+}
+
 .book-tag {
   display: inline-block;
   padding: 0.15rem 0.5rem;
