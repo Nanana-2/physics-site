@@ -680,8 +680,8 @@ body, input {
 }
 
 .page-share__buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.55rem;
 }
 
@@ -711,6 +711,42 @@ body, input {
   border-color: var(--site-heading-accent);
 }
 
+.md-typeset .page-share__button[data-share-x] {
+  color: #ffffff;
+  background: #000000;
+  border-color: #000000;
+}
+
+.md-typeset .page-share__button[data-share-x]:hover {
+  color: #ffffff;
+  background: #242424;
+  border-color: #242424;
+}
+
+.md-typeset .page-share__button[data-share-facebook] {
+  color: #ffffff;
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.md-typeset .page-share__button[data-share-facebook]:hover {
+  color: #ffffff;
+  background: #0f65d8;
+  border-color: #0f65d8;
+}
+
+.md-typeset .page-share__button[data-share-line] {
+  color: #ffffff;
+  background: #06c755;
+  border-color: #06c755;
+}
+
+.md-typeset .page-share__button[data-share-line]:hover {
+  color: #ffffff;
+  background: #05ad4a;
+  border-color: #05ad4a;
+}
+
 .page-share__icon {
   display: inline-flex;
   width: 0.82rem;
@@ -734,13 +770,12 @@ body, input {
   margin-top: 1.5rem;
 }
 
-[data-md-color-scheme="slate"] .md-typeset .page-share__button:hover {
+[data-md-color-scheme="slate"] .md-typeset .page-share__button[data-share-copy]:hover {
   color: #eef1ff;
 }
 
-@media screen and (max-width: 30em) {
+@media screen and (max-width: 45em) {
   .page-share__buttons {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
