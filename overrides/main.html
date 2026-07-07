@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+{% endblock %}
+
 {% block header %}
   {{ super() }}
   {% if page and (page.is_homepage or page.meta.hero_image) %}
