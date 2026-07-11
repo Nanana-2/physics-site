@@ -1,4 +1,5 @@
 site_name: 大学物理の問題集
+site_url: https://nanana-2.github.io/physics-site/
 theme:
   name: material
   custom_dir: overrides
