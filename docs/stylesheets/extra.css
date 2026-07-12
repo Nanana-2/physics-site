@@ -844,3 +844,49 @@ body, input {
     width: 100%;
   }
 }
+/* 問題文中の模式図 */
+.md-typeset .problem-figure {
+  display: block;
+  width: 100%;
+  max-width: 44rem;
+  margin: 1.5rem auto 1.75rem;
+  text-align: center;
+}
+
+.problem-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.problem-diagram {
+  position: relative;
+  width: 100%;
+  container-type: inline-size;
+}
+
+.diagram-label {
+  position: absolute;
+  color: #111;
+  font-size: 4cqi;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+.diagram-label--inclined-m { left: 55.8%; top: 29.5%; }
+.diagram-label--inclined-x { left: 33.2%; top: 67%; }
+.diagram-label--inclined-y { left: 44.5%; top: 5.5%; }
+.diagram-label--inclined-theta { left: 24.8%; top: 74.5%; }
+
+.diagram-label--pulley-origin { left: 45%; top: 19.5%; }
+.diagram-label--pulley-x { left: 46%; top: 36.5%; }
+.diagram-label--pulley-m1 { left: 34.7%; top: 53.5%; }
+.diagram-label--pulley-mp { left: 52.8%; top: 49%; }
+.diagram-label--pulley-m2 { left: 41.7%; top: 85%; }
+.diagram-label--pulley-m3 { left: 55.6%; top: 80%; }
+
+.problem-figure figcaption {
+  margin-top: 0.45rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}

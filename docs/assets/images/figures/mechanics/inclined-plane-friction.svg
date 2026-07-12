@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-labelledby="title desc">
+  <title id="title">粗い斜面上の物体と座標軸</title>
+  <desc id="desc">右上がりの粗い斜面上に質量mの物体がある。斜面に沿って左下向きにx軸、斜面に垂直な左上向きにy軸をとる。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#111"/>
+    </marker>
+    <clipPath id="incline-surface">
+      <path d="M90 325H640L640 35Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="720" height="400" fill="#fff"/>
+
+  <!-- 三角形は白地とし、斜面表面にグレーの帯を置いてから黒い輪郭線を重ねる -->
+  <path d="M90 325H640L640 35Z" fill="#fff" stroke="none"/>
+  <line x1="90" y1="325" x2="640" y2="35" stroke="#999" stroke-width="10" stroke-linecap="round" clip-path="url(#incline-surface)"/>
+  <path d="M90 325H640L640 35Z" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- 座標軸。原点は物体底面と斜面の接触位置に置く -->
+  <line x1="420" y1="151" x2="258" y2="236" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="420" y1="151" x2="340" y2="1" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 物体。底面中央が斜面に接する位置まで法線方向に持ち上げる -->
+  <g transform="translate(402 117) rotate(-28)">
+    <rect x="-55" y="-38" width="110" height="76" fill="#fff" stroke="#111" stroke-width="3"/>
+  </g>
+
+  <!-- 傾斜角 -->
+  <path d="M161 325A71 71 0 0 0 153 292" fill="none" stroke="#111" stroke-width="2.5"/>
+</svg>
