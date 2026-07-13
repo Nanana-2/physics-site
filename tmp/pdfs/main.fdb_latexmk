@@ -1,6 +1,6 @@
 # Fdb version 4
-["lualatex"] 1783918924.9701 "main.tex" "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.pdf" "main" 1783918927.10738 0
-  "../common/book-style.tex" 1783918909.69913 2553 27c21432d408a680dab8195843a9eaa0 ""
+["lualatex"] 1783921198.87076 "main.tex" "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.pdf" "main" 1783921201.0763 0
+  "../common/book-style.tex" 1783921193.02493 2980 ab72d7e8334bc514b2f48355518106cc ""
   "/Users/hasegawalab_mac/Library/TinyTeX/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf" 1755461869 4760392 2b663d1fb7e2425c94926535198454fc ""
   "/Users/hasegawalab_mac/Library/TinyTeX/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf" 1755461869 6422896 22a59bd5a758ac1dcb12a9a2dc5e5242 ""
   "/Users/hasegawalab_mac/Library/TinyTeX/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf" 1255129361 111240 0af0b64d6d3df41bead3f9de314afbd4 ""
@@ -299,8 +299,8 @@
   "/Users/hasegawalab_mac/Library/TinyTeX/texmf-dist/tex/luatex/luatexja/patches/lltjp-stfloats.sty" 1743709798 1460 d9cffa91511753153e54212c964448a6 ""
   "/Users/hasegawalab_mac/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1783917152 426877 80266334cf89a468d72abbbb9cad4d95 ""
   "/Users/hasegawalab_mac/Library/TinyTeX/texmf-var/web2c/luahbtex/lualatex.fmt" 1783917208 6747765 d7b85de89fae9866dce2e3f8329c46ec ""
-  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.aux" 1783918926.8458 1329 7cf62613b7f27f1613952077466285f2 "lualatex"
-  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.toc" 1783918926.84726 206 cb5565c1e68cb1eed9d104fd407d3633 "lualatex"
+  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.aux" 1783921200.79839 1329 7cf62613b7f27f1613952077466285f2 "lualatex"
+  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.toc" 1783921200.79957 206 cb5565c1e68cb1eed9d104fd407d3633 "lualatex"
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/haranoajigothic-medium.luc" 1783918571.20389 1943027 f3c09c220eff13434654250d4d92a1ab ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/haranoajimincho-regular.luc" 1783918569.54708 2011348 c522d0696c3c0c7a9fd7b7dddcf43c2f ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1783918569.65969 81890 5fc8200fafa4dac234b7cb65753c5856 ""
@@ -312,6 +312,8 @@
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc" 1783918569.83718 128161 fff62ff0e94c871366025b529c9cab9b ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-bold.luc" 1783918617.65131 128466 4feef92f70246d22a7d1f835fb55644e ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc" 1783918569.99001 127975 b203116ddaf09c834b092bc9149d5246 ""
+  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-bold.luc" 1783921102.2648 128119 04f5a173b99f01fccbaa3fa0609e5d36 ""
+  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regular.luc" 1783921102.22313 127661 dcca4361ca2bd274a09b90a406057568 ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1783918567.57633 122278 76e10e68c0dba0447dc5440728f178a6 ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_haranoajigothic-medium.luc" 1783918571.2701 321585 20bdf5bfba13fa87cff9b5a971998598 ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_haranoajimincho-regular.luc" 1783918569.61625 322628 a59d32715919e8b6111c3f0c6e01b848 ""
@@ -324,11 +326,13 @@
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmroman8-regular.luc" 1783918569.84505 17367 2b591584926ba925bcd588086ba49e38 ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmroman9-bold.luc" 1783918617.65435 17367 2b591584926ba925bcd588086ba49e38 ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmroman9-regular.luc" 1783918569.99339 17367 2b591584926ba925bcd588086ba49e38 ""
+  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmsans10-bold.luc" 1783921102.2682 17367 2b591584926ba925bcd588086ba49e38 ""
+  "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmsans10-regular.luc" 1783921102.22659 17367 2b591584926ba925bcd588086ba49e38 ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/ltj-cid-auto-adobe-japan1.luc" 1783918564.50685 1643763 c1ea8ddc02b30d60bd3941c236e2085b ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/ltj-jisx0208.luc" 1783918569.74402 93919 1f6dc76354e6e3b148c06f9f9254f22e ""
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/ltj-kinsoku_default.luc" 1783918564.72548 17654 e3e3c85f63c77f4caa824d338e2428e0 ""
   "main.tex" 1783918909.81683 1397 a01cf6e9026b319520bf0f1e430d860a ""
-  "problems/01_010.tex" 1783918886.36825 5110 fbe0b2b945ff925692bffc4b66148e2c ""
+  "problems/01_010.tex" 1783921091.31199 5153 eb9a4c2be379fff9e8856e28c3c49cc2 ""
   (generated)
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.aux"
   "/Users/hasegawalab_mac/physics-site/tmp/pdfs/main.log"

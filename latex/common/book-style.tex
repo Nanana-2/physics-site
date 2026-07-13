@@ -55,7 +55,11 @@
 \fancyhead[R]{\small\color{PhysicsNavy}大学物理の問題集}
 \fancyfoot[C]{\small\color{PhysicsNavy}\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\headrule}{\hbox to\headwidth{\color{PhysicsRule}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\headrule}{%
+  \vskip-6pt%
+  \hbox to\headwidth{\color{PhysicsRule}\leaders\hrule height \headrulewidth\hfill}%
+  \vskip6pt%
+}
 \renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
 
 % 問題ボックス
@@ -89,21 +93,36 @@
 }
 
 \newcommand{\solutionheading}{%
-  \section*{解説}%
+  \par\noindent{\Large\bfseries\color{PhysicsNavy}解説}%
   \addcontentsline{toc}{section}{解説}%
+  \par\vspace{-0.45\baselineskip}%
   \noindent\color{PhysicsNavy}\rule{\linewidth}{0.8pt}%
-  \par\vspace{0.9\baselineskip}\color{PhysicsText}%
+  \par\vspace{0.25\baselineskip}\color{PhysicsText}%
 }
 
-\newcommand{\solutionpart}[1]{%
-  \par\vspace{1.1\baselineskip}%
-  \noindent{\large\bfseries\color{PhysicsNavy}#1}%
-  \par\vspace{0.35\baselineskip}\color{PhysicsText}%
+% 解説では設問番号を左に置き，本文全体を番号より右側で揃える
+\newlist{solutionparts}{description}{1}
+\setlist[solutionparts]{
+  leftmargin=2.5em,
+  labelindent=0pt,
+  labelwidth=1.7em,
+  labelsep=0.8em,
+  listparindent=0pt,
+  align=left,
+  font=\normalfont\color{PhysicsNavy},
+  itemsep=1.1\baselineskip,
+  topsep=0pt,
+  parsep=0.25\baselineskip
 }
+\newcommand{\solutionpart}[1]{\item[#1]}
 
 \setlist[enumerate]{
   label=(\arabic*),
-  leftmargin=3em,
+  leftmargin=2.3em,
+  labelindent=0pt,
+  labelwidth=1.4em,
+  labelsep=0.9em,
+  align=left,
   itemsep=0.75\baselineskip,
   topsep=0.6\baselineskip
 }

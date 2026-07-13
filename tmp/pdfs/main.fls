@@ -334,6 +334,10 @@ OUTPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/main.toc
 INPUT ./problems/01_010.tex
 INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-bold.luc
 INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmroman9-bold.luc
+INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regular.luc
+INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmsans10-regular.luc
+INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-bold.luc
+INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/texmf-var/luatexja/extra_lmsans10-bold.luc
 INPUT /Users/hasegawalab_mac/physics-site/tmp/pdfs/main.aux
 INPUT /Users/hasegawalab_mac/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /Users/hasegawalab_mac/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
