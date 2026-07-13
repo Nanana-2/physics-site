@@ -1,0 +1,56 @@
+\documentclass[book,paper=a4,fontsize=10.5pt,oneside,openany]{jlreq}
+
+\input{../common/book-style.tex}
+
+\hypersetup{
+  pdftitle={大学物理の問題集 力学},
+  pdfsubject={大学物理の演習問題と解説},
+  pdfcreator={LuaLaTeX}
+}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[PhysicsNavy]
+      (current page.north west) rectangle
+      ([yshift=-12mm]current page.north east);
+    \fill[PhysicsNavy]
+      ([yshift=12mm]current page.south west) rectangle
+      (current page.south east);
+    \draw[PhysicsRule,line width=1pt]
+      ([xshift=23mm,yshift=-48mm]current page.north west) --
+      ([xshift=-23mm,yshift=-48mm]current page.north east);
+  \end{tikzpicture}
+
+  \vspace*{38mm}
+  {\Large\color{PhysicsNavy}大学物理の問題集\par}
+  \vspace{7mm}
+  {\fontsize{34pt}{42pt}\selectfont\bfseries\color{PhysicsNavy}力学\par}
+  \vspace{5mm}
+  {\large 演習問題と解説\par}
+
+  \vfill
+  \begin{flushright}
+    {\large 第1章\quad 運動学と座標系\par}
+    \vspace{3mm}
+    {\small 試作版・第1問収録\par}
+  \end{flushright}
+  \vspace*{22mm}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\frontmatter
+\tableofcontents
+\clearpage
+
+\mainmatter
+\pagestyle{fancy}
+\chapter{運動学と座標系}
+\thispagestyle{fancy}
+
+\input{problems/01_010.tex}
+
+\end{document}

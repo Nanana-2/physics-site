@@ -1,0 +1,138 @@
+\addcontentsline{toc}{section}{1.1　等加速度運動の一般解}
+
+\begin{problemBox}{問題 1.1\quad 等加速度運動の一般解\hfill\small 基本}
+質量 $m$ の無人探査機が，宇宙空間を一直線上に運動している。軌道に沿って $x$ 軸をとり，探査機は $x$ 軸の正方向に一定の推進力 $F_0$ を受けるものとする。
+
+時刻 $t=0$ において，探査機は原点 $x=0$ を速度 $v_0>0$ で通過した。探査機を質点とみなし，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 探査機の位置を $x(t)$，速度を
+  $v(t)=\dfrac{dx}{dt}$ とするとき，運動方程式を示せ。
+
+  \item (1) で得られた運動方程式を，速度 $v(t)$ に関する1階微分方程式とみなす。初期条件 $v(0)=v_0$ のもとでこの微分方程式を解き，速度 $v(t)$ を時間の関数として求めよ。
+
+  \item (2) の結果と $v(t)=\dfrac{dx}{dt}$ の関係を用いて，位置 $x(t)$ に関する微分方程式を立てよ。これを初期条件 $x(0)=0$ のもとで解き，位置 $x(t)$ を時間の関数として求めよ。
+
+  \item 探査機が原点から距離 $L>0$ だけ進んだときの速度 $v_L$ を，$m$，$F_0$，$v_0$，$L$ を用いて表せ。
+\end{enumerate}
+\end{problemBox}
+
+\clearpage
+\solutionheading
+
+\solutionpart{(1)}
+運動方程式より，質量と加速度の積は物体に働く外力に等しくなります。加速度は $\dfrac{d^2x}{dt^2}$ または $\dfrac{dv}{dt}$ と表されます。
+
+探査機に働く外力は $x$ 軸正の向きに一定の力 $F_0$ であるため，求める運動方程式は以下のようになります。
+
+\begin{equation*}
+  m\frac{d^2x}{dt^2}=F_0
+\end{equation*}
+
+あるいは，速度 $v$ を用いて以下のように表すこともできます。
+
+\begin{equation*}
+  m\frac{dv}{dt}=F_0
+\end{equation*}
+
+\solutionpart{(2)}
+(1) で得られた運動方程式の両辺を $m>0$ で割ると，次のようになります。
+
+\begin{equation*}
+  \frac{dv}{dt}=\frac{F_0}{m}
+\end{equation*}
+
+この方程式は，両辺を時間 $t$ で積分することにより解くことができます。
+
+\begin{equation*}
+  v(t)=\int\frac{F_0}{m}\,dt=\frac{F_0}{m}t+C_1
+\end{equation*}
+
+ここで $C_1$ は積分定数です。初期条件 $v(0)=v_0$ を代入すると，
+
+\begin{equation*}
+  v(0)=\frac{F_0}{m}\cdot 0+C_1=v_0
+\end{equation*}
+
+となり，$C_1=v_0$ が得られます。したがって，速度 $v(t)$ の時間依存性は以下のように求まります。
+
+\begin{equation*}
+  \boxed{v(t)=v_0+\frac{F_0}{m}t}
+\end{equation*}
+
+加速度は一定値 $a=\dfrac{F_0}{m}$ です。
+
+\solutionpart{(3)}
+速度と位置の関係式 $v(t)=\dfrac{dx}{dt}$ に (2) の結果を代入すると，次の1階微分方程式が得られます。
+
+\begin{equation*}
+  \frac{dx}{dt}=v_0+\frac{F_0}{m}t
+\end{equation*}
+
+この方程式の両辺を時間 $t$ で積分します。
+
+\begin{align*}
+  x(t)
+  &=\int\left(v_0+\frac{F_0}{m}t\right)dt \\
+  &=v_0t+\frac{F_0}{2m}t^2+C_2
+\end{align*}
+
+ここで $C_2$ は積分定数です。初期条件 $x(0)=0$ を代入すると，
+
+\begin{equation*}
+  x(0)=v_0\cdot 0+\frac{F_0}{2m}\cdot 0^2+C_2=0
+\end{equation*}
+
+となり，$C_2=0$ が得られます。したがって，位置 $x(t)$ の時間依存性は以下のようになります。
+
+\begin{equation*}
+  \boxed{x(t)=v_0t+\frac{F_0}{2m}t^2}
+\end{equation*}
+
+これは一定加速度 $a=\dfrac{F_0}{m}$ の等加速度運動を表します。
+
+\solutionpart{(4)}
+探査機が距離 $L$ だけ進んだときの時刻を $t_L$ とします。このとき，$x(t_L)=L$ が成り立ちます。(3) の結果より，次の関係式が得られます。
+
+\begin{equation*}
+  v_0t_L+\frac{F_0}{2m}t_L^2=L
+\end{equation*}
+
+速度と位置の式から時刻 $t$ を消去します。(2) より，時刻 $t$ における速度 $v(t)$ の式から $t$ を孤立させます。
+
+\begin{equation*}
+  t=\frac{m}{F_0}\bigl(v(t)-v_0\bigr)
+\end{equation*}
+
+この式を (3) の位置の式に代入します。
+
+\begin{align*}
+  x(t)
+  &=v_0\left\{\frac{m}{F_0}\bigl(v(t)-v_0\bigr)\right\}
+    +\frac{F_0}{2m}
+    \left\{\frac{m}{F_0}\bigl(v(t)-v_0\bigr)\right\}^2 \\
+  &=\frac{mv_0}{F_0}\bigl(v(t)-v_0\bigr)
+    +\frac{m}{2F_0}\bigl(v(t)-v_0\bigr)^2 \\
+  &=\frac{m}{2F_0}\bigl(v(t)-v_0\bigr)
+    \left\{2v_0+\bigl(v(t)-v_0\bigr)\right\} \\
+  &=\frac{m}{2F_0}\bigl(v(t)-v_0\bigr)\bigl(v(t)+v_0\bigr) \\
+  &=\frac{m}{2F_0}\bigl(v(t)^2-v_0^2\bigr).
+\end{align*}
+
+この式を整理すると，以下の関係式が得られます。
+
+\begin{equation*}
+  v(t)^2-v_0^2=\frac{2F_0}{m}x(t)
+\end{equation*}
+
+探査機が位置 $x(t_L)=L$ に達したときの速度を $v_L=v(t_L)$ とすると，
+
+\begin{equation*}
+  v_L^2=v_0^2+\frac{2F_0L}{m}
+\end{equation*}
+
+探査機は正の向きの力を受け続けて加速するため，$v_L>0$ です。したがって，平方根の正の値を採用することで，求める速度 $v_L$ は以下のように得られます。
+
+\begin{equation*}
+  \boxed{v_L=\sqrt{v_0^2+\frac{2F_0L}{m}}}
+\end{equation*}
