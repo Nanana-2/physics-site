@@ -1,0 +1,96 @@
+\problemstart
+\addcontentsline{toc}{section}{2.3　速度比例抵抗を受ける落下}
+
+\begin{problemBox}{問題 2.3\quad 速度比例抵抗を受ける落下\hspace{1.2em}{\small\mdseries 〔標準〕}}
+質量 $m$ の雨粒を質点とみなし，重力加速度 $g$ の一様な重力場中を鉛直下向きに落下する運動を考える。空気抵抗の大きさは雨粒の速度に比例し，比例定数を $k>0$ とする。
+\par
+鉛直下向きを $y$ 軸の正の向きにとり，雨粒が落下を開始した時刻を $t = 0$，初期位置を $y(0) = 0$，初期速度を $v(0) = 0$ と定義する。ただし，速度は $v(t) = \frac{dy}{dt}$ である。
+
+\begin{enumerate}
+  \item 時刻 $t$ における雨粒の運動方程式を，速度 $v(t)$ とその時間微分を用いて表せ。
+
+  \item (1) で得られた運動方程式を変数分離法で解き，速度 $v(t)$ を $t, m, g, k$ を用いて表せ。
+
+  \item 終端速度 $v_{\infty} = \lim_{t \to \infty} v(t)$ を求めよ。また，運動方程式で加速度を 0 として得られる速度と一致することを示せ。
+
+  \item 初期条件 $y(0) = 0$ のもとで，雨粒の位置 $y(t)$ を $t, m, g, k$ を用いて表せ。
+\end{enumerate}
+\end{problemBox}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+雨粒には，$y$ 軸正方向に重力 $mg$，負方向に空気抵抗 $-kv(t)$ が作用します。 したがって，雨粒の運動方程式は次のようになります。
+\begin{equation*}
+m \frac{dv}{dt} = mg - kv
+\end{equation*}
+
+\solutionpart{(2)}
+(1) で得られた運動方程式は，速度 $v$ に関する1階の常微分方程式です。以下のように変数分離します。
+\begin{equation*}
+\frac{dv}{dt} = -\frac{k}{m} \left( v - \frac{mg}{k} \right)
+\end{equation*}
+両辺を $v - \frac{mg}{k}$ で割り，両辺を $t$ で積分します。
+\begin{equation*}
+\int \frac{dv}{v - \frac{mg}{k}} = -\int \frac{k}{m} dt
+\end{equation*}
+この積分を実行すると，積分定数を $C_1$ として次のようになります。
+\begin{equation*}
+\ln \left| v - \frac{mg}{k} \right| = -\frac{k}{m} t + C_1
+\end{equation*}
+対数の定義から，次のように変形できます。
+\begin{equation*}
+v - \frac{mg}{k} = \pm e^{C_1} e^{-\frac{k}{m} t}
+\end{equation*}
+ここで $\pm e^{C_1}$ を新たな定数 $C$ と置くと，次のように表せます。
+\begin{equation*}
+v(t) = \frac{mg}{k} + C e^{-\frac{k}{m} t}
+\end{equation*}
+初期条件である $t = 0$ のとき $v(0) = 0$ を上式に代入して，定数 $C$ を決定します。
+\begin{equation*}
+0 = \frac{mg}{k} + C \implies C = -\frac{mg}{k}
+\end{equation*}
+これをもとの式に代入することで，求める速度 $v(t)$ が以下のように得られます。
+\begin{equation*}
+v(t) = \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} t} \right)
+\end{equation*}
+
+\solutionpart{(3)}
+$t \to \infty$ では $e^{-\frac{k}{m} t}$ が 0 に収束するため，終端速度は次のようになります。
+\begin{equation*}
+v_{\infty} = \lim_{t \to \infty} v(t) = \frac{mg}{k}
+\end{equation*}
+次に，運動方程式から直接終端速度を導きます。
+\par
+終端速度では加速度が 0 になります。すなわち，運動方程式において $\frac{dv}{dt} = 0$ とおくと，以下の関係式が得られます。
+\begin{equation*}
+0 = mg - kv
+\end{equation*}
+これを $v$ について解くと，以下のようになります。
+\begin{equation*}
+v = \frac{mg}{k}
+\end{equation*}
+これは極限から求めた $v_{\infty}$ と一致します。このとき，重力と空気抵抗がつり合っています。
+
+\solutionpart{(4)}
+速度 $v(t)$ は位置 $y(t)$ の時間微分 $v(t) = \frac{dy}{dt}$ であるため，位置 $y(t)$ は $v(t)$ を時間で積分することで求められます。
+\par
+初期条件 $y(0) = 0$ を用いると，時刻 $t$ における位置 $y(t)$ は以下の定積分で表されます。
+\begin{equation*}
+y(t) = \int_0^t v(\tau) d\tau = \int_0^t \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} \tau} \right) d\tau
+\end{equation*}
+この積分を実行します。
+\begin{equation*}
+\begin{aligned}
+y(t) &= \frac{mg}{k} \left( t + \frac{m}{k} e^{-\frac{k}{m} t} - \frac{m}{k} \right) \\
+&= \frac{mg}{k} t - \frac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)
+\end{aligned}
+\end{equation*}
+したがって，求める雨粒の位置 $y(t)$ は以下のようになります。
+\begin{equation*}
+y(t) = \frac{mg}{k} t - \frac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)
+\end{equation*}
+となります。
+
+\end{solutionparts}

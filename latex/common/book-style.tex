@@ -8,28 +8,52 @@
 \usepackage{geometry}
 \usepackage{fancyhdr}
 \usepackage{enumitem}
+\usepackage{needspace}
 \usepackage{hyperref}
 \usepackage{bookmark}
 
-\geometry{
-  a4paper,
-  top=23mm,
-  bottom=24mm,
-  inner=23mm,
-  outer=20mm,
-  headheight=28pt,
-  headsep=5mm
-}
+\ifdefined\AfourVersion
+  \geometry{
+    top=23mm,
+    bottom=24mm,
+    inner=23mm,
+    outer=20mm,
+    headheight=28pt,
+    headsep=5mm
+  }
+\else
+  \geometry{
+    top=24mm,
+    bottom=20mm,
+    inner=19mm,
+    outer=17mm,
+    headheight=28pt,
+    headsep=7mm
+  }
+\fi
 
 \definecolor{PhysicsNavy}{HTML}{151E3D}
+\definecolor{PhysicsTocSection}{HTML}{4D5874}
 \definecolor{PhysicsBlueGray}{HTML}{E9EDF4}
 \definecolor{PhysicsRule}{HTML}{AAB3C3}
 \definecolor{PhysicsText}{HTML}{20242C}
 
 \color{PhysicsText}
 \setlength{\parindent}{1em}
-\setlength{\parskip}{0.25\baselineskip}
+\setlength{\parskip}{0.15\baselineskip}
 \linespread{1.12}
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+
+% Web版よりは紙面を詰めつつ，表示数式の前後に適度な呼吸を持たせる
+\AtBeginDocument{%
+  \setlength{\abovedisplayskip}{4.5pt}%
+  \setlength{\belowdisplayskip}{5.5pt}%
+  \setlength{\abovedisplayshortskip}{4.5pt}%
+  \setlength{\belowdisplayshortskip}{5.5pt}%
+}
 
 \hypersetup{
   colorlinks=true,
@@ -42,7 +66,8 @@
 % 章・節見出し（jlreq純正の設定を利用）
 \ModifyHeading{chapter}{
   font={\Huge\bfseries\color{PhysicsNavy}},
-  label_format={第\thechapter 章}
+  label_format={第\thechapter 章},
+  after_label_space={0.5\zw}
 }
 \ModifyHeading{section}{
   font={\Large\bfseries\color{PhysicsNavy}}
@@ -55,11 +80,6 @@
 \fancyhead[R]{\small\color{PhysicsNavy}大学物理の問題集}
 \fancyfoot[C]{\small\color{PhysicsNavy}\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\headrule}{%
-  \vskip-6pt%
-  \hbox to\headwidth{\color{PhysicsRule}\leaders\hrule height \headrulewidth\hfill}%
-  \vskip6pt%
-}
 \renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
 
 % 問題ボックス
@@ -93,9 +113,9 @@
 }
 
 \newcommand{\solutionheading}{%
+  \Needspace{8\baselineskip}%
   \par\noindent{\Large\bfseries\color{PhysicsNavy}解説}%
-  \addcontentsline{toc}{section}{解説}%
-  \par\vspace{-0.45\baselineskip}%
+  \par\vspace{-0.75\baselineskip}%
   \noindent\color{PhysicsNavy}\rule{\linewidth}{0.8pt}%
   \par\vspace{0.25\baselineskip}\color{PhysicsText}%
 }
@@ -110,11 +130,17 @@
   listparindent=0pt,
   align=left,
   font=\normalfont\color{PhysicsNavy},
-  itemsep=1.1\baselineskip,
+  itemsep=0.8\baselineskip,
   topsep=0pt,
   parsep=0.25\baselineskip
 }
-\newcommand{\solutionpart}[1]{\item[#1]}
+\newcommand{\solutionpart}[1]{\Needspace{4\baselineskip}\item[#1]}
+
+% 前の問題の解説に続けて配置しつつ，問題枠の冒頭だけは分断しない
+\newcommand{\problemstart}{%
+  \par\addvspace{1.5\baselineskip}%
+  \Needspace{12\baselineskip}%
+}
 
 \setlist[enumerate]{
   label=(\arabic*),
@@ -128,3 +154,18 @@
 }
 
 \setcounter{tocdepth}{1}
+
+% 目次では，章と問題の書体・色を分けて階層を見やすくする
+\makeatletter
+\renewcommand*{\l@chapter}[2]{%
+  \@dottedtocline{0}{0pt}{3.9\zw}%
+    {{\sffamily\gtfamily\bfseries\color{PhysicsNavy}#1}}%
+    {{\color{PhysicsNavy}#2}}%
+}
+\let\physics@l@section\l@section
+\renewcommand*{\l@section}[2]{%
+  \physics@l@section
+    {{\mcfamily\mdseries\color{PhysicsTocSection}#1}}%
+    {{\color{PhysicsTocSection}#2}}%
+}
+\makeatother

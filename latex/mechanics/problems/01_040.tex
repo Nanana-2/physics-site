@@ -1,0 +1,69 @@
+\problemstart
+\addcontentsline{toc}{section}{1.4　円運動の速度と加速度}
+
+\begin{problemBox}{問題 1.4\quad 円運動の速度と加速度\hspace{1.2em}{\small\mdseries 〔基本〕}}
+平面上において，半径 $R$ の円軌道上を運動する質点の挙動を平面極座標を用いて考察する。質点の位置ベクトルは，動径方向の単位ベクトルを $\boldsymbol{e}_r$ とすると $\boldsymbol{r} = R \boldsymbol{e}_r$ と表される。ここで，平面極座標における速度ベクトルおよび加速度ベクトルの一般形式は次の通りである。
+\begin{equation*}
+\boldsymbol{v} = \dot{r} \boldsymbol{e}_r + r \dot{\theta} \boldsymbol{e}_\theta
+\end{equation*}
+\begin{equation*}
+\boldsymbol{a} = (\ddot{r} - r \dot{\theta}^2) \boldsymbol{e}_r + (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) \boldsymbol{e}_\theta
+\end{equation*}
+以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 半径 $R$ が時間変化しない円運動の条件を考慮し，速度ベクトル $\boldsymbol{v}$ および加速度ベクトル $\boldsymbol{a}$ を， $R$ ，角速度 $\omega = \dot{\theta}$ ，角加速度 $\alpha = \ddot{\theta}$ ，および単位ベクトル $\boldsymbol{e}_r, \boldsymbol{e}_\theta$ を用いて表せ。
+
+  \item 角速度 $\omega$ が時間変化しない等速円運動の場合を想定する。このときの加速度ベクトルを求め，その向きが円の中心を向く理由を数式に基づいて説明せよ。
+
+  \item 時刻 $t = 0$ において静止していた質点が，一定の角加速度 $\alpha_0$ で円運動を始める場合を想定する。任意の時刻 $t$ における加速度ベクトルの大きさを $R, \alpha_0, t$ を用いて表せ。
+\end{enumerate}
+\end{problemBox}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+半径が一定の円運動であるため，時間微分は $\dot{r} = 0$ および $\ddot{r} = 0$ となります。提示された一般形式にこれらの条件を代入します。
+\par
+速度ベクトルは次のようになります。
+\begin{equation*}
+\boldsymbol{v} = 0 \cdot \boldsymbol{e}_r + R \dot{\theta} \boldsymbol{e}_\theta = R \omega \boldsymbol{e}_\theta
+\end{equation*}
+加速度ベクトルは次のようになります。
+\begin{align*}
+\boldsymbol{a}
+  &= (0-R\dot{\theta}^2)\boldsymbol{e}_r
+   +(R\ddot{\theta}+2\cdot0\cdot\dot{\theta})\boldsymbol{e}_\theta \\
+  &= -R\omega^2\boldsymbol{e}_r+R\alpha\boldsymbol{e}_\theta
+\end{align*}
+
+\solutionpart{(2)}
+等速円運動では角速度が一定であるため，角加速度は $\alpha = \ddot{\theta} = 0$ となります。(1) の結果にこれを代入します。
+\begin{equation*}
+\boldsymbol{a} = -R \omega^2 \boldsymbol{e}_r
+\end{equation*}
+動径方向の単位ベクトル $\boldsymbol{e}_r$ は円の中心から外側を向くベクトルです。したがって，その係数にマイナス符号がついているこの加速度ベクトルは，常に円の中心を向くことになります。この成分は向心加速度と呼ばれます。
+
+\solutionpart{(3)}
+一定の角加速度 $\alpha_0$ のもとで静止状態から運動を始めるため，任意の時刻 $t$ における角速度は，時間積分によって $\omega(t) = \alpha_0 t$ と求まります。これらを (1) の加速度ベクトルの式に代入します。
+\begin{align*}
+\boldsymbol{a}
+  &= -R(\alpha_0t)^2\boldsymbol{e}_r
+   +R\alpha_0\boldsymbol{e}_\theta \\
+  &= -R\alpha_0^2t^2\boldsymbol{e}_r
+   +R\alpha_0\boldsymbol{e}_\theta
+\end{align*}
+平面極座標の単位ベクトル $\boldsymbol{e}_r$ と $\boldsymbol{e}_\theta$ は互いに直交しているため，ベクトルの大きさは各成分の2乗の和の平方根として計算できます。
+\begin{align*}
+|\boldsymbol{a}|
+  &= \sqrt{(-R\alpha_0^2t^2)^2+(R\alpha_0)^2} \\
+  &= \sqrt{R^2\alpha_0^4t^4+R^2\alpha_0^2}
+\end{align*}
+根号の内部から共通因数である $R^2 \alpha_0^2$ を外へ括り出して整理します。
+\begin{equation*}
+|\boldsymbol{a}| = R \alpha_0 \sqrt{\alpha_0^2 t^4 + 1}
+\end{equation*}
+これにより，接線方向の加速成分と中心に向かう向心成分の双方が合成された加速度の大きさが求まります。
+
+\end{solutionparts}

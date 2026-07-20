@@ -1,0 +1,91 @@
+\problemstart
+\addcontentsline{toc}{section}{1.5　放物運動と到達距離}
+
+\begin{problemBox}{問題 1.5\quad 放物運動と到達距離\hspace{1.2em}{\small\mdseries 〔基本〕}}
+水平な地面の上の原点 O から，鉛直面内において初速度の大きさ $v_0$ ，水平面からの投射角 $\theta$ で質点を斜方投射する。水平方向を $x$ 軸，鉛直上向きを $y$ 軸とし，重力加速度の大きさを $g$ とする。空気抵抗は無視できるものとする。以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 質点の加速度ベクトルを成分表示で示し，初期時刻 $t=0$ における位置および速度の初期条件を用いて，任意の時刻 $t$ における速度成分 $v_x(t), v_y(t)$ および位置成分 $x(t), y(t)$ をそれぞれ求めよ。
+
+  \item 位置の式から時間 $t$ を消去することにより，軌道方程式 $y = f(x)$ を導出せよ。
+
+  \item 質点が最高点に達する時刻 $t_1$ とそのときの最高点の高さ $y_{\text{max}}$ を求めよ。また，質点が再び地面 $y=0$ に着地するまでの全飛行時間 $t_2$ と，水平到達距離 $x_{\text{max}}$ をそれぞれ $v_0, \theta, g$ を用いて表せ。
+\end{enumerate}
+\end{problemBox}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+質点は鉛直下向きに大きさ $g$ の重力加速度のみを受けるため，加速度の各成分は次のようになります。
+\begin{equation*}
+a_x = 0
+\end{equation*}
+\begin{equation*}
+a_y = -g
+\end{equation*}
+初期条件として，時刻 $t=0$ での位置は $x(0) = 0, y(0) = 0$ であり，速度の初期成分は $v_x(0) = v_0 \cos\theta, v_y(0) = v_0 \sin\theta$ です。加速度を時間で積分することにより，任意の時刻における速度成分が得られます。
+\begin{equation*}
+v_x(t) = v_0 \cos\theta
+\end{equation*}
+\begin{equation*}
+v_y(t) = v_0 \sin\theta - gt
+\end{equation*}
+速度成分をさらに時間で積分し，初期位置が原点であることを考慮すると，位置成分は次のようになります。
+\begin{equation*}
+x(t) = v_0 t \cos\theta
+\end{equation*}
+\begin{equation*}
+y(t) = v_0 t \sin\theta - \frac{1}{2} gt^2
+\end{equation*}
+
+\solutionpart{(2)}
+水平方向の位置の式 $x = v_0 t \cos\theta$ を，時間について整理します。
+\begin{equation*}
+t = \frac{x}{v_0 \cos\theta}
+\end{equation*}
+この時間の表現を，鉛直方向の位置の式 $y = v_0 t \sin\theta - \frac{1}{2} gt^2$ に代入します。
+\begin{equation*}
+y = v_0 \left( \frac{x}{v_0 \cos\theta} \right) \sin\theta - \frac{1}{2} g \left( \frac{x}{v_0 \cos\theta} \right)^2
+\end{equation*}
+分母分子の初速度 $v_0$ を約分し，三角関数の関係式 $\frac{\sin\theta}{\cos\theta} = \tan\theta$ を適用して式を整理します。
+\begin{equation*}
+y = x \tan\theta - \frac{g}{2 v_0^2 \cos^2\theta} x^2
+\end{equation*}
+これが求める軌道方程式であり， $x$ の2次関数として表されるため軌跡が放物線になることがわかります。
+
+\solutionpart{(3)}
+最高点においては，鉛直方向の速度成分が 0 になります。したがって， $v_y(t_1) = 0$ として等式を組み立てます。
+\begin{equation*}
+v_0 \sin\theta - gt_1 = 0
+\end{equation*}
+この式から，最高点に達する時刻が求まります。
+\begin{equation*}
+t_1 = \frac{v_0 \sin\theta}{g}
+\end{equation*}
+この時刻 $t_1$ を位置成分 $y(t)$ の式に代入することで，最高点の高さが得られます。
+\begin{align*}
+y_{\text{max}}
+  &= v_0\left(\frac{v_0\sin\theta}{g}\right)\sin\theta
+   -\frac{1}{2}g\left(\frac{v_0\sin\theta}{g}\right)^2 \\
+  &= \frac{v_0^2\sin^2\theta}{g}
+   -\frac{v_0^2\sin^2\theta}{2g} \\
+  &= \frac{v_0^2\sin^2\theta}{2g}
+\end{align*}
+軌道の対称性より，再び地面に着地するまでの全飛行時間 $t_2$ は，最高点に達する時刻のちょうど2倍になります。
+\begin{equation*}
+t_2 = 2t_1 = \frac{2v_0 \sin\theta}{g}
+\end{equation*}
+水平到達距離 $x_{\text{max}}$ は，この全飛行時間 $t_2$ のときにおける水平方向の位置 $x(t_2)$ として計算できます。
+\begin{align*}
+x_{\text{max}}
+  &= v_0t_2\cos\theta \\
+  &= v_0\left(\frac{2v_0\sin\theta}{g}\right)\cos\theta \\
+  &= \frac{2v_0^2\sin\theta\cos\theta}{g}
+\end{align*}
+三角関数の2倍角の公式 $2 \sin\theta \cos\theta = \sin 2\theta$ を適用して式をまとめます。
+\begin{equation*}
+x_{\text{max}} = \frac{v_0^2 \sin 2\theta}{g}
+\end{equation*}
+
+\end{solutionparts}

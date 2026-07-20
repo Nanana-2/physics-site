@@ -1,9 +1,14 @@
-\documentclass[book,paper=a4,fontsize=10.5pt,oneside,openany]{jlreq}
+\ifdefined\AfourVersion
+  \documentclass[book,paper=a4,fontsize=10.5pt,oneside,openany]{jlreq}
+\else
+  \documentclass[book,paper=b5j,fontsize=10.5pt,oneside,openany]{jlreq}
+\fi
 
 \input{../common/book-style.tex}
 
 \hypersetup{
   pdftitle={大学物理の問題集 力学},
+  pdfauthor={ななな２},
   pdfsubject={大学物理の演習問題と解説},
   pdfcreator={LuaLaTeX}
 }
@@ -31,26 +36,45 @@
   {\fontsize{34pt}{42pt}\selectfont\bfseries\color{PhysicsNavy}力学\par}
   \vspace{5mm}
   {\large 演習問題と解説\par}
+  \vspace{12mm}
+  {\normalsize ななな２\par}
 
   \vfill
   \begin{flushright}
-    {\large 第1章\quad 運動学と座標系\par}
+    {\large 第1--2章\quad 運動学と運動方程式\par}
     \vspace{3mm}
-    {\small 試作版・第1問収録\par}
+    {\small 試作版・全10問収録\par}
+    \vspace{2mm}
+    {\footnotesize\textcopyright\ 2026 ななな２\par}
   \end{flushright}
   \vspace*{22mm}
 \end{titlepage}
 \hypersetup{pageanchor=true}
 
 \frontmatter
+\input{frontmatter/preface.tex}
+\clearpage
 \tableofcontents
 \clearpage
 
 \mainmatter
-\pagestyle{fancy}
 \chapter{運動学と座標系}
+\pagestyle{fancy}
 \thispagestyle{fancy}
 
 \input{problems/01_010.tex}
+\input{problems/01_020.tex}
+\input{problems/01_030.tex}
+\input{problems/01_040.tex}
+\input{problems/01_050.tex}
+\input{problems/01_060.tex}
+
+\chapter{運動方程式と力学の基本}
+\thispagestyle{fancy}
+
+\input{problems/02_010.tex}
+\input{problems/02_030.tex}
+\input{problems/02_040.tex}
+\input{problems/02_050.tex}
 
 \end{document}

@@ -1,0 +1,91 @@
+\problemstart
+\addcontentsline{toc}{section}{2.1　斜面上の束縛運動と摩擦}
+
+\begin{problemBox}{問題 2.1\quad 斜面上の束縛運動と摩擦\hspace{1.2em}{\small\mdseries 〔基本〕}}
+水平面に対して角度 $0 < \theta < \frac{\pi}{2}$ だけ傾いた粗い斜面上に，質量 $m$ の小物体を置く。
+\par
+斜面に沿って下る向きに $x$ 軸をとり，斜面に垂直で物体から離れる向きに $y$ 軸をとる。重力加速度の大きさを $g$，静止摩擦係数を $\mu$，動摩擦係数を $\mu'<\mu$ とする。
+\par
+時刻 $t = 0$ において，原点 $x = 0$ に静止させた物体から静かに手を離す。以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 物体が自発的に滑り始めるための傾斜角 $\theta$ に関する条件を，静止摩擦係数 $\mu$ を用いて表せ。
+
+  \item 角度 $\theta$ が (1) で求めた条件を満たしているとき，物体は滑り始める。滑り始めた後の $x$ 方向の運動方程式を，速度 $v(t) = \frac{dx}{dt}$ に関する1階微分方程式として表せ。また，この運動における物体の加速度を求めよ。
+
+  \item 初期条件 $v(0) = 0$ および $x(0) = 0$ のもとで，(2) の微分方程式を解き，時刻 $t$ における物体の速度 $v(t)$ および位置 $x(t)$ を求めよ。
+\end{enumerate}
+\end{problemBox}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+物体が斜面上で静止しているとき，物体に作用する力は，重力 $mg$，斜面からの垂直抗力 $N$，および静止摩擦力 $f$ です。 $y$ 方向の力のつり合いより，垂直抗力 $N$ は以下のように求まります。
+\begin{equation*}
+N - m g \cos \theta = 0
+\end{equation*}
+\begin{equation*}
+N = m g \cos \theta
+\end{equation*}
+一方，$x$ 方向の力のつり合いを考えると，重力の斜面平行成分 $m g \sin \theta$ と静止摩擦力 $f$ がつり合っています。
+\begin{equation*}
+f = m g \sin \theta
+\end{equation*}
+物体が静止し続けるためには，この静止摩擦力 $f$ が最大静止摩擦力 $f_{\text{max}} = \mu N$ 以下である必要があります。
+\begin{equation*}
+f \le \mu N
+\end{equation*}
+したがって，物体が自発的に滑り出すための条件は，重力の斜面平行成分が最大静止摩擦力を超えること，すなわち $f > \mu N$ となることです。
+\begin{equation*}
+m g \sin \theta > \mu m g \cos \theta
+\end{equation*}
+両辺を $m g \cos \theta > 0$ で割ることで，求める条件が得られます。
+\begin{equation*}
+\tan \theta > \mu
+\end{equation*}
+物理的には，斜面の傾き $\theta$ が摩擦角 $\arctan \mu$ よりも大きくなったときに，物体は滑り始めることを意味しています。
+
+\solutionpart{(2)}
+物体が滑り始めた後は，物体に作用する摩擦力は動摩擦力 $f'$ となります。動摩擦力の大きさは，垂直抗力 $N$ を用いて以下のように表されます。
+\begin{equation*}
+f' = \mu' N = \mu' m g \cos \theta
+\end{equation*}
+動摩擦力は物体の運動を妨げる向きに働くため，$x$ 軸の負の向きに作用します。 したがって，滑り出した後の $x$ 方向の運動方程式は次のようになります。
+\begin{equation*}
+m \frac{dv}{dt} = m g \sin \theta - \mu' m g \cos \theta
+\end{equation*}
+両辺を質量 $m$ で割ることで，速度 $v(t)$ に関する1階微分方程式が得られます。
+\begin{equation*}
+\frac{dv}{dt} = g (\sin \theta - \mu' \cos \theta)
+\end{equation*}
+この式の右辺は時間 $t$ に依存しない定数であるため，物体の加速度 $a$ は一定となります。したがって，求める加速度 $a$ は以下の通りです。
+\begin{equation*}
+a = g (\sin \theta - \mu' \cos \theta)
+\end{equation*}
+(1) の条件 $\tan \theta > \mu$ かつ $\mu > \mu'$ より，$\sin \theta - \mu' \cos \theta > 0$ が成り立つため，加速度は正の値となり，物体は斜面を下向きに加速していきます。
+
+\solutionpart{(3)}
+(2) で得られた微分方程式は，両辺を時間 $t$ で直接積分することで解くことができます。
+\begin{equation*}
+\frac{dv}{dt} = a
+\end{equation*}
+両辺を $t$ について積分すると，積分定数を $C_1$ として，以下のようになります。
+\begin{equation*}
+v(t) = a t + C_1
+\end{equation*}
+初期条件 $v(0) = 0$ を代入すると， $C_1 = 0$ と定まります。 したがって，時刻 $t$ における物体の速度 $v(t)$ は以下のように求まります。
+\begin{equation*}
+v(t) = g (\sin \theta - \mu' \cos \theta) t
+\end{equation*}
+次に，位置 $x(t)$ は速度の定義 $v(t) = \frac{dx}{dt}$ より，速度を時間 $t$ でさらに積分することで得られます。
+\begin{equation*}
+x(t) = \int v(t) dt = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2 + C_2
+\end{equation*}
+ここで $C_2$ は積分定数です。初期条件 $x(0) = 0$ を代入すると， $C_2 = 0$ と定まります。 したがって，時刻 $t$ における物体の位置 $x(t)$ は以下のようになります。
+\begin{equation*}
+x(t) = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2
+\end{equation*}
+したがって，物体は加速度 $g (\sin \theta - \mu' \cos \theta)$ の等加速度運動を行います。
+
+\end{solutionparts}

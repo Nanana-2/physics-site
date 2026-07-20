@@ -1,0 +1,71 @@
+\problemstart
+\addcontentsline{toc}{section}{2.5　時間に依存する外力を受ける運動}
+
+\begin{problemBox}{問題 2.5\quad 時間に依存する外力を受ける運動\hspace{1.2em}{\small\mdseries 〔標準〕}}
+質量 $m$ の質点が $x$ 軸上を運動しており，初期時刻 $t=0$ において原点に静止している。この質点に対して，時刻 $t=0$ から時間とともに強さが変化する外力 $F(t) = F_0 e^{-kt}$ が $x$ 軸の正の方向に加わる。ここで $F_0$ および $k$ は正の定数である。以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 質点の速度を $v(t)$ とするとき，この運動に関する運動方程式を示せ。また，初期条件 $v(0)=0$ を用いて，任意の時刻 $t$ における速度 $v(t)$ を $m, F_0, k, t$ を用いて表せ。
+
+  \item 時刻 $t=0$ から任意の時刻 $t$ までに外力が質点に与えた力積 $I(t) = \int_0^t F(t') dt'$ を計算せよ。また，この力積が，時刻 $t$ における質点の運動量 $p(t) = mv(t)$ と初期運動量 $p(0)$ の差に等しいことを示せ。
+
+  \item 速度の式をさらに時間で積分することにより，任意の時刻 $t$ における質点の位置 $x(t)$ を求めよ。
+\end{enumerate}
+\end{problemBox}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+質点の加速度は $\frac{dv}{dt}$ であるため，ニュートンの運動方程式は次のようになります。
+\begin{equation*}
+m \frac{dv}{dt} = F_0 e^{-kt}
+\end{equation*}
+この式の両辺を質量 $m$ で割り算します。
+\begin{equation*}
+\frac{dv}{dt} = \frac{F_0}{m} e^{-kt}
+\end{equation*}
+両辺を時刻 0 から $t$ まで時間積分します。初期速度が $v(0) = 0$ であることを考慮すると，左辺の積分は $v(t)$ となり，右辺の積分は次のようになります。
+\begin{equation*}
+v(t) = \int_0^t \frac{F_0}{m} e^{-kt'} dt' = \frac{F_0}{m} \left[ - \frac{1}{k} e^{-kt'} \right]_0^t
+\end{equation*}
+大括弧の内部を展開して整理します。
+\begin{equation*}
+v(t) = \frac{F_0}{mk} \left( 1 - e^{-kt} \right)
+\end{equation*}
+
+\solutionpart{(2)}
+外力 $F(t) = F_0 e^{-kt}$ が時刻 0 から $t$ までの間に与えた力積 $I(t)$ を定義通りに計算します。
+\begin{equation*}
+I(t) = \int_0^t F_0 e^{-kt'} dt' = F_0 \left[ - \frac{1}{k} e^{-kt'} \right]_0^t = \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\end{equation*}
+次に，時刻 $t$ における質点の運動量を求めます。(1) で得られた速度の式に質量 $m$ を掛け算します。
+\begin{equation*}
+p(t) = mv(t) = m \cdot \frac{F_0}{mk} \left( 1 - e^{-kt} \right) = \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\end{equation*}
+初期時刻において質点は静止しているため，初期運動量は $p(0) = 0$ です。したがって，運動量の変化量は次のようになります。
+\begin{equation*}
+p(t) - p(0) = \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\end{equation*}
+この結果は，求めた力積 $I(t)$ の式と完全に一致します。これにより，時間に依存する力が加わる場合であっても，力積が運動量の変化に等しいという関係性が成り立っていることが示されます。
+
+\solutionpart{(3)}
+速度は位置の時間微分 $\frac{dx}{dt} = v(t)$ であるため，(1) で得られた速度の式をさらに時間で積分します。初期位置が $x(0) = 0$ であることを考慮して等式を組み立てます。
+\begin{equation*}
+x(t) = \int_0^t v(t') dt' = \int_0^t \frac{F_0}{mk} \left( 1 - e^{-kt'} \right) dt'
+\end{equation*}
+積分計算をそれぞれの項に分けて実行します。
+\begin{equation*}
+x(t) = \frac{F_0}{mk} \left[ t' + \frac{1}{k} e^{-kt'} \right]_0^t
+\end{equation*}
+大括弧の内部に上限 $t$ と下限 0 をそれぞれ代入します。下限の 0 を代入したとき，指数関数の項は $e^0 = 1$ となるため， $\frac{1}{k}$ の値が残ることに注意して展開します。
+\begin{equation*}
+x(t) = \frac{F_0}{mk} \left( t + \frac{1}{k} e^{-kt} - \frac{1}{k} \right)
+\end{equation*}
+括弧の内部を整理してまとめます。
+\begin{equation*}
+x(t) = \frac{F_0}{mk} t - \frac{F_0}{mk^2} \left( 1 - e^{-kt} \right)
+\end{equation*}
+これにより，指数関数的に減少する外力を受ける質点の，任意の時刻における位置の変化が求まります。
+
+\end{solutionparts}

@@ -1,0 +1,114 @@
+\problemstart
+\addcontentsline{toc}{section}{2.4　二乗抵抗を受ける運動}
+
+\begin{problemBox}{問題 2.4\quad 二乗抵抗を受ける運動\hspace{1.2em}{\small\mdseries 〔標準〕}}
+質量 $m$ の物体が，初速度 0 で鉛直下向きに落下する運動を考える。鉛直下向きを $x$ 軸の正方向とし，落下開始位置を $x=0$ とする。重力加速度の大きさを $g$ とする。
+\par
+物体が速度 $v\geq0$ で落下するとき，速度と反対向きに大きさ $kv^2$ の抵抗力が働くものとする。ただし $k>0$ である。以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 速度 $v(t)$ に対する運動方程式を示せ。また，終端速度 $v_{\infty}$ を $m$，$g$，$k$ を用いて表せ。
+
+  \item 初期条件 $v(0)=0$ のもとで運動方程式を変数分離法で解き，速度 $v(t)$ を求めよ。答には双曲線正接関数 $\tanh$ を用いてよい。
+
+  \item $t\approx0$ において，速度 $v(t)$ を $t$ の3次まで，位置 $x(t)$ を $t$ の4次まで展開せよ。また，自由落下との差を述べよ。
+
+  \item 初期条件 $x(0)=0$ のもとで位置 $x(t)$ を求めよ。さらに，$t\to\infty$ における $x(t)$ の漸近形を求めよ。積分公式 $\int \tanh\theta\,d\theta=\ln\cosh\theta+C$ を用いてよい。
+\end{enumerate}
+\end{problemBox}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+物体には，$x$ 軸の正方向に重力 $mg$ が働き，負方向に抵抗力 $kv^2$ が働きます。 したがって，運動方程式は以下のようになります。
+\begin{equation*}
+m \frac{dv}{dt} = mg - kv^2
+\end{equation*}
+十分に時間が経過すると，重力と抵抗力が釣り合って加速が止まり，速度は終端速度 $v_{\infty}$ に近づきます。このとき $\frac{dv}{dt} = 0$ となるため，
+\begin{equation*}
+mg - k v_{\infty}^2 = 0
+\end{equation*}
+が成り立ちます。これを $v_{\infty} > 0$ について解くことで，終端速度が得られます。
+\begin{equation*}
+v_{\infty} = \sqrt{\frac{mg}{k}}
+\end{equation*}
+
+\solutionpart{(2)}
+(1) で求めた終端速度 $v_{\infty}$ の関係式 $k = \frac{mg}{v_{\infty}^2}$ を運動方程式に代入して整理します。
+\begin{equation*}
+\frac{dv}{dt} = g \left( 1 - \frac{v^2}{v_{\infty}^2} \right)
+\end{equation*}
+この微分方程式を変数分離します。
+\begin{equation*}
+\frac{dv}{1 - \left(\frac{v}{v_{\infty}}\right)^2} = g dt
+\end{equation*}
+両辺を積分します。初期条件 $v(0) = 0$ を考慮すると，
+\begin{equation*}
+\int_{0}^{v} \frac{dv'}{1 - \left(\frac{v'}{v_{\infty}}\right)^2} = \int_{0}^{t} g dt'
+\end{equation*}
+左辺の積分を実行するために，$v' = v_{\infty} \tanh \theta$ と置換します。$dv' = v_{\infty} \frac{1}{\cosh^2 \theta} d\theta$ および $1 - \tanh^2 \theta = \frac{1}{\cosh^2 \theta}$ であることを利用すると，
+\begin{equation*}
+\int_{0}^{\operatorname{artanh}(v/v_{\infty})} v_{\infty} d\theta = gt
+\end{equation*}
+\begin{equation*}
+v_{\infty} \operatorname{artanh} \left( \frac{v}{v_{\infty}} \right) = gt
+\end{equation*}
+となります。これを $v$ について解くことで，速度 $v(t)$ が求められます。
+\begin{equation*}
+v(t) = v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t \right)
+\end{equation*}
+
+\solutionpart{(3)}
+双曲線正接関数 $\tanh y$ の $y \approx 0$ におけるマクローリン展開は以下の通りです。
+\begin{equation*}
+\tanh y = y - \frac{1}{3}y^3 + O(y^5)
+\end{equation*}
+これに $y = \frac{g}{v_{\infty}} t$ を代入して，速度 $v(t)$ を $t$ の3次の項まで近似します。
+\begin{equation*}
+\begin{aligned}
+v(t) &\approx v_{\infty} \left\{ \frac{g}{v_{\infty}} t - \frac{1}{3} \left( \frac{g}{v_{\infty}} t \right)^3 \right\} \\
+&= gt - \frac{g^3}{3 v_{\infty}^2} t^3 \\
+&= gt - \frac{kg^2}{3m} t^3
+\end{aligned}
+\end{equation*}
+この速度の近似式を時間 $t$ で積分し，初期条件 $x(0) = 0$ を用いることで，位置 $x(t)$ の4次までの近似式が得られます。
+\begin{equation*}
+\begin{aligned}
+x(t) &= \int_{0}^{t} v(t') dt' \\
+&\approx \frac{1}{2}gt^2 - \frac{kg^2}{12m} t^4
+\end{aligned}
+\end{equation*}
+空気抵抗がない場合の自由落下では，速度は $v(t) = gt$，位置は $x(t) = \frac{1}{2}gt^2$ となります。 落下開始直後は自由落下の式が主要項となり，抵抗力による補正は速度では $t^3$，位置では $t^4$ から現れます。
+
+\solutionpart{(4)}
+速度 $v(t)$ をさらに時間積分して，位置 $x(t)$ の厳密解を求めます。
+\begin{equation*}
+x(t) = \int_{0}^{t} v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t' \right) dt'
+\end{equation*}
+与えられた積分公式 $\int \tanh \theta d\theta = \ln \cosh \theta + C$ を用いると，
+\begin{equation*}
+x(t) = \frac{v_{\infty}^2}{g} \left[ \ln \cosh \left( \frac{g}{v_{\infty}} t' \right) \right]_{0}^{t}
+\end{equation*}
+$\cosh 0 = 1$ より $\ln \cosh 0 = 0$ となるため，位置の厳密解は以下のようになります。
+\begin{equation*}
+x(t) = \frac{v_{\infty}^2}{g} \ln \cosh \left( \frac{g}{v_{\infty}} t \right)
+\end{equation*}
+次に，$t \to \infty$ における漸近的な振る舞いを考えます。双曲線余弦関数の定義 $\cosh y = \frac{e^y + e^{-y}}{2}$ より，$y \to \infty$ のとき $e^{-y} \to 0$ となるため，
+\begin{equation*}
+\cosh y \approx \frac{e^y}{2}
+\end{equation*}
+と近似できます。これを用いて $\ln \cosh y$ を近似すると，
+\begin{equation*}
+\ln \cosh y \approx \ln \left( \frac{e^y}{2} \right) = y - \ln 2
+\end{equation*}
+となります。この関係を $y = \frac{g}{v_{\infty}} t$ に適用すると，$t \to \infty$ における $x(t)$ の漸近式が得られます。
+\begin{equation*}
+\begin{aligned}
+x(t) &\approx \frac{v_{\infty}^2}{g} \left( \frac{g}{v_{\infty}} t - \ln 2 \right) \\
+&= v_{\infty} t - \frac{v_{\infty}^2}{g} \ln 2
+\end{aligned}
+\end{equation*}
+十分に時間が経過すると，物体は終端速度 $v_{\infty}$ で等速運動するため，位置は $v_{\infty}t$ を主要項とする一次式に近づきます。
+
+\end{solutionparts}
