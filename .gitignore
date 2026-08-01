@@ -9,3 +9,11 @@ site/
 
 # APIの一時取得結果
 .cache/
+
+# 有料PDFの制作物（公開リポジトリには含めない）
+/private/pdf-books/
+
+# 旧配置への誤出力を防ぐ
+/latex/
+/output/pdf/
+/tmp/pdfs/
