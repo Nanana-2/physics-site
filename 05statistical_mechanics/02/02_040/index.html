@@ -14531,7 +14531,10 @@ V_D(R) = \frac{\pi^{D/2}}{\Gamma(D/2 + 1)} R^D
 <h3 id="1">(1)</h3>
 <p>相互作用のない単原子分子理想気体では，系の全エネルギーは各粒子の運動エネルギーの総和のみで表されます。したがって，系全体のハミルトニアン <span class="arithmatex">\(H\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-H = \sum_{i=1}^N \frac{\boldsymbol{p}_i^2}{2m} = \sum_{i=1}^N \frac{p_{xi}^2 + p_{yi}^2 + p_{zi}^2}{2m}
+\begin{aligned}
+H &amp;= \sum_{i=1}^N \frac{\boldsymbol{p}_i^2}{2m} \\
+&amp;= \finalanswer{\sum_{i=1}^N \frac{p_{xi}^2 + p_{yi}^2 + p_{zi}^2}{2m}}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>全エネルギーが <span class="arithmatex">\(E\)</span> 以下となる位相空間の領域の体積 <span class="arithmatex">\(\Gamma(E)\)</span> は，以下の多重積分で定義されます。</p>
@@ -14540,7 +14543,10 @@ H = \sum_{i=1}^N \frac{\boldsymbol{p}_i^2}{2m} = \sum_{i=1}^N \frac{p_{xi}^2 + p
 \]</div>
 <p>この積分は，位置座標 <span class="arithmatex">\(\boldsymbol{r}_i\)</span> に関する積分と，運動量 <span class="arithmatex">\(\boldsymbol{p}_i\)</span> に関する積分へ分離できます。各粒子は体積 <span class="arithmatex">\(V\)</span> の容器内のどこにでも存在できるため，位置に関する積分は粒子ごとに <span class="arithmatex">\(V\)</span> を与え，全体で <span class="arithmatex">\(V^N\)</span> となります。</p>
 <div class="arithmatex">\[
-\Gamma(E) = \left( \int_V \prod_{i=1}^N d\boldsymbol{r}_i \right) \left( \int_{\sum \frac{\boldsymbol{p}_i^2}{2m} \le E} \prod_{i=1}^N d\boldsymbol{p}_i \right) = V^N \int_{\sum_{i=1}^{3N} p_i^2 \le 2mE} \prod_{i=1}^{3N} p_i
+\begin{aligned}
+\Gamma(E) &amp;= \left( \int_V \prod_{i=1}^N d\boldsymbol{r}_i \right) \left( \int_{\sum \frac{\boldsymbol{p}_i^2}{2m} \le E} \prod_{i=1}^N d\boldsymbol{p}_i \right) \\
+&amp;= \finalanswer{V^N \int_{\sum_{i=1}^{3N} p_i^2 \le 2mE} \prod_{i=1}^{3N} p_i}
+\end{aligned}
 \]</div>
 <p>運動量に関する積分条件 <span class="arithmatex">\(\sum_{i=1}^{3N} p_i^2 \le 2mE\)</span> は，<span class="arithmatex">\(3N\)</span> 次元の空間において，半径が <span class="arithmatex">\(R = \sqrt{2mE}\)</span> である超球の内部を表しています。したがって，積分は <span class="arithmatex">\(3N\)</span> 次元超球の体積計算に帰着されます。</p>
 <h3 id="3">(3)</h3>
@@ -14558,7 +14564,7 @@ S = k_B \frac{3N}{2} \log E + (\text{$E$ に依存しない項})
 \]</div>
 <p>この式の両辺の逆数をとり，エネルギー <span class="arithmatex">\(E\)</span> について整理をすることで，単原子分子理想気体の内部エネルギーの公式が導出されます。</p>
 <div class="arithmatex">\[
-E = \frac{3}{2} N k_B T
+\finalanswer{E = \frac{3}{2} N k_B T}
 \]</div>
 
 

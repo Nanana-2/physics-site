@@ -14531,7 +14531,7 @@ y = -x \tan \alpha
 \]</div>
 <p>この等式を整理したものが，質点の運動を制限する拘束条件式になります。</p>
 <div class="arithmatex">\[
-x \sin \alpha + y \cos \alpha = 0
+\finalanswer{x \sin \alpha + y \cos \alpha = 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>斜面に沿った移動距離 <span class="arithmatex">\(s\)</span> を用いると，直角三角形の辺の比の関わりから，位置座標 <span class="arithmatex">\(x\)</span> および <span class="arithmatex">\(y\)</span> は次のように表現されます。</p>
@@ -14544,7 +14544,11 @@ x = s \cos \alpha, \quad y = -s \sin \alpha
 \]</div>
 <p>運動エネルギー <span class="arithmatex">\(T\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-T = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2) = \frac{1}{2}m(\dot{s}^2 \cos^2 \alpha + \dot{s}^2 \sin^2 \alpha) = \frac{1}{2}m\dot{s}^2
+\begin{aligned}
+T &amp;= \frac{1}{2}m(\dot{x}^2 + \dot{y}^2) \\
+&amp;= \frac{1}{2}m(\dot{s}^2 \cos^2 \alpha + \dot{s}^2 \sin^2 \alpha) \\
+&amp;= \frac{1}{2}m\dot{s}^2
+\end{aligned}
 \]</div>
 <p>原点の高さを基準面とすると，ポテンシャルエネルギー <span class="arithmatex">\(U\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
@@ -14552,7 +14556,7 @@ U = mgy = -mgs \sin \alpha
 \]</div>
 <p>したがって，求めるラグランジアン <span class="arithmatex">\(L = T - U\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-L = \frac{1}{2}m\dot{s}^2 + mgs \sin \alpha
+\finalanswer{L = \frac{1}{2}m\dot{s}^2 + mgs \sin \alpha}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>一般化座標 <span class="arithmatex">\(s\)</span> に対するオイラー・ラグランジュ方程式は次の通りです。</p>
@@ -14572,7 +14576,7 @@ m\ddot{s} - mg \sin \alpha = 0
 \]</div>
 <p>両辺を共通の質量 <span class="arithmatex">\(m\)</span> で割り算することにより，拘束力を式に登場させることなく，求める運動方程式が導出されます。</p>
 <div class="arithmatex">\[
-\ddot{s} = g \sin \alpha
+\finalanswer{\ddot{s} = g \sin \alpha}
 \]</div>
 
 

@@ -14516,7 +14516,7 @@
 
 <h1 id="_1">リンドブラッド方程式</h1>
 <h2 id="_2">問題</h2>
-<p>対象系の密度行列を <span class="arithmatex">\(\rho\)</span> とし，系のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。環境との相互作用による効果が，いくつかのジャンプ演算子 <span class="arithmatex">\(\hat{L}_\mu\)</span> <span class="arithmatex">\(\mu = 1, 2, \dots\)</span> によって表されるとき，リンドブラッド方程式は以下の数式で与えられる。</p>
+<p>対象系の密度行列を <span class="arithmatex">\(\rho\)</span> とし，系のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。環境との相互作用による効果が，いくつかのジャンプ演算子 <span class="arithmatex">\(\hat{L}_\mu\)</span> <span class="arithmatex">\(\mu = 1, 2, \dots\)</span> によって表されるとき，リンドブラッド方程式は以下で与えられる。</p>
 <div class="arithmatex">\[
 \frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho] + \sum_\mu \left( \hat{L}_\mu \rho \hat{L}_\mu^\dagger - \frac{1}{2} \hat{L}_\mu^\dagger \hat{L}_\mu \rho - \frac{1}{2} \rho \hat{L}_\mu^\dagger \hat{L}_\mu \right)
 \]</div>
@@ -14531,7 +14531,7 @@
 <p>右辺の第1項である <span class="arithmatex">\(-\frac{i}{\hbar} [\hat{H}, \rho]\)</span> は，環境との相互作用に依存せず，系自身の持つハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> のみに起因するコヒーレントな時間発展を表します。</p>
 <p>すべてのジャンプ演算子が <span class="arithmatex">\(\hat{L}_\mu = 0\)</span> であるとき，リンドブラッド方程式は以下の形になります。</p>
 <div class="arithmatex">\[
-\frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho]
+\finalanswer{\frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho]}
 \]</div>
 <p>この数式は，外部環境とすべてのエネルギーや情報のやり取りを行わない孤立量子系の時間発展を表すフォン・ノイマン方程式に一致します。</p>
 <h3 id="2">(2)</h3>
@@ -14544,7 +14544,12 @@
 <li><strong>ハミルトン項のトレース</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \mathrm{Tr}\big( [\hat{H}, \rho] \big) = \mathrm{Tr}(\hat{H}\rho - \rho\hat{H}) = \mathrm{Tr}(\hat{H}\rho) - \mathrm{Tr}(\rho\hat{H}) = \mathrm{Tr}(\hat{H}\rho) - \mathrm{Tr}(\hat{H}\rho) = 0
+\begin{aligned}
+\mathrm{Tr}\big( [\hat{H}, \rho] \big) &amp;= \mathrm{Tr}(\hat{H}\rho - \rho\hat{H}) \\
+&amp;= \mathrm{Tr}(\hat{H}\rho) - \mathrm{Tr}(\rho\hat{H}) \\
+&amp;= \mathrm{Tr}(\hat{H}\rho) - \mathrm{Tr}(\hat{H}\rho) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>散逸項の各成分のトレース</strong>
@@ -14559,11 +14564,14 @@
 \]</div>
 <p>これらを散逸項のトレースの式に代入してまとめます。</p>
 <div class="arithmatex">\[
-\sum_\mu \left( \mathrm{Tr}(\hat{L}_\mu^\dagger \hat{L}_\mu \rho) - \frac{1}{2} \mathrm{Tr}(\hat{L}_\mu^\dagger \hat{L}_\mu \rho) - \frac{1}{2} \mathrm{Tr}(\hat{L}_\mu^\dagger \hat{L}_\mu \rho) \right) = \sum_\mu 0 = 0
+\begin{aligned}
+\sum_\mu \left( \mathrm{Tr}(\hat{L}_\mu^\dagger \hat{L}_\mu \rho) - \frac{1}{2} \mathrm{Tr}(\hat{L}_\mu^\dagger \hat{L}_\mu \rho) - \frac{1}{2} \mathrm{Tr}(\hat{L}_\mu^\dagger \hat{L}_\mu \rho) \right) &amp;= \sum_\mu 0 \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>すべての項が相殺して 0 になるため，以下の保存則が成り立ちます。</p>
 <div class="arithmatex">\[
-\frac{d}{dt} \mathrm{Tr}(\rho) = 0
+\finalanswer{\frac{d}{dt} \mathrm{Tr}(\rho) = 0}
 \]</div>
 <p>これにより，時間発展の全過程を通じて全確率の総和が 1 に保たれることが証明されました。</p>
 <h3 id="3">(3)</h3>
@@ -14573,30 +14581,45 @@
 <li><strong><span class="arithmatex">\(\hat{L}^\dagger \hat{L}\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{L}^\dagger \hat{L} = \left( \sqrt{\Gamma} |1\rangle\langle 0| \right) \left( \sqrt{\Gamma} |0\rangle\langle 1| \right) = \Gamma |1\rangle \langle 0|0\rangle \langle 1| = \Gamma |1\rangle\langle 1|
+\begin{aligned}
+\hat{L}^\dagger \hat{L} &amp;= \left( \sqrt{\Gamma} |1\rangle\langle 0| \right) \left( \sqrt{\Gamma} |0\rangle\langle 1| \right) \\
+&amp;= \Gamma |1\rangle \langle 0|0\rangle \langle 1| \\
+&amp;= \Gamma |1\rangle\langle 1|
+\end{aligned}
 \]</div>
 <p>これらを用いて，方程式の右辺にある3つの項を行列表示で計算します。密度行列を <span class="arithmatex">\(\rho = \sum_{i,j} \rho_{ij} |i\rangle\langle j|\)</span> と置きます。</p>
 <ul>
-<li><strong>第1項: <span class="arithmatex">\(\hat{L} \rho \hat{L}^\dagger\)</span></strong></li>
+<li><strong>【第1項 <span class="arithmatex">\(\hat{L} \rho \hat{L}^\dagger\)</span>】</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{L} \rho \hat{L}^\dagger = \left( \sqrt{\Gamma} |0\rangle\langle 1| \right) \left( \sum_{i,j} \rho_{ij} |i\rangle\langle j| \right) \left( \sqrt{\Gamma} |1\rangle\langle 0| \right) = \Gamma \sum_{i,j} \rho_{ij} |0\rangle \langle 1|i\rangle \langle j|1\rangle \langle 0|
+\begin{aligned}
+\hat{L} \rho \hat{L}^\dagger &amp;= \left( \sqrt{\Gamma} |0\rangle\langle 1| \right) \left( \sum_{i,j} \rho_{ij} |i\rangle\langle j| \right) \left( \sqrt{\Gamma} |1\rangle\langle 0| \right) \\
+&amp;= \Gamma \sum_{i,j} \rho_{ij} |0\rangle \langle 1|i\rangle \langle j|1\rangle \langle 0|
+\end{aligned}
 \]</div>
 <p>内積により <span class="arithmatex">\(i=1\)</span> かつ <span class="arithmatex">\(j=1\)</span> の項だけが残るため，以下のようになります。</p>
 <div class="arithmatex">\[
   \hat{L} \rho \hat{L}^\dagger = \Gamma \rho_{11} |0\rangle\langle 0|
 \]</div>
 <ul>
-<li><strong>第2項: <span class="arithmatex">\(-\frac{1}{2} \hat{L}^\dagger \hat{L} \rho\)</span></strong></li>
+<li><strong>【第2項 <span class="arithmatex">\(-\frac{1}{2} \hat{L}^\dagger \hat{L} \rho\)</span>】</strong></li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{1}{2} \hat{L}^\dagger \hat{L} \rho = -\frac{1}{2} \big( \Gamma |1\rangle\langle 1| \big) \left( \sum_{i,j} \rho_{ij} |i\rangle\langle j| \right) = -\frac{\Gamma}{2} \sum_{j} \left( \rho_{1j} |1\rangle\langle j| \right) = -\frac{\Gamma}{2} \big( \rho_{10} |1\rangle\langle 0| + \rho_{11} |1\rangle\langle 1| \big)
+\begin{aligned}
+-\frac{1}{2} \hat{L}^\dagger \hat{L} \rho &amp;= -\frac{1}{2} \big( \Gamma |1\rangle\langle 1| \big) \left( \sum_{i,j} \rho_{ij} |i\rangle\langle j| \right) \\
+&amp;= -\frac{\Gamma}{2} \sum_{j} \left( \rho_{1j} |1\rangle\langle j| \right) \\
+&amp;= -\frac{\Gamma}{2} \big( \rho_{10} |1\rangle\langle 0| + \rho_{11} |1\rangle\langle 1| \big)
+\end{aligned}
 \]</div>
 <ul>
-<li><strong>第3項: <span class="arithmatex">\(-\frac{1}{2} \rho \hat{L}^\dagger \hat{L}\)</span></strong></li>
+<li><strong>【第3項 <span class="arithmatex">\(-\frac{1}{2} \rho \hat{L}^\dagger \hat{L}\)</span>】</strong></li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{1}{2} \rho \hat{L}^\dagger \hat{L} = -\frac{1}{2} \left( \sum_{i,j} \rho_{ij} |i\rangle\langle j| \right) \big( \Gamma |1\rangle\langle 1| \big) = -\frac{\Gamma}{2} \sum_{i} \left( \rho_{i1} |i\rangle\langle 1| \right) = -\frac{\Gamma}{2} \big( \rho_{01} |0\rangle\langle 1| + \rho_{11} |1\rangle\langle 1| \big)
+\begin{aligned}
+-\frac{1}{2} \rho \hat{L}^\dagger \hat{L} &amp;= -\frac{1}{2} \left( \sum_{i,j} \rho_{ij} |i\rangle\langle j| \right) \big( \Gamma |1\rangle\langle 1| \big) \\
+&amp;= -\frac{\Gamma}{2} \sum_{i} \left( \rho_{i1} |i\rangle\langle 1| \right) \\
+&amp;= -\frac{\Gamma}{2} \big( \rho_{01} |0\rangle\langle 1| + \rho_{11} |1\rangle\langle 1| \big)
+\end{aligned}
 \]</div>
 <p>これら3つの項をすべて足し合わせ，成分ごとにまとめます。</p>
 <div class="arithmatex">\[
@@ -14613,7 +14636,7 @@
 \frac{d\rho_{01}}{dt} = -\frac{\Gamma}{2} \rho_{01}
 \]</div>
 <div class="arithmatex">\[
-\frac{d\rho_{10}}{dt} = -\frac{\Gamma}{2} \rho_{10}
+\finalanswer{\frac{d\rho_{10}}{dt} = -\frac{\Gamma}{2} \rho_{10}}
 \]</div>
 <p>この結果から，励起状態の確率 <span class="arithmatex">\(\rho_{11}\)</span> がレート <span class="arithmatex">\(\Gamma\)</span> で指数関数的に減少して基底状態 <span class="arithmatex">\(\rho_{00}\)</span> へと移っていく散逸の挙動と，非対角成分がレート <span class="arithmatex">\(\frac{\Gamma}{2}\)</span> で減衰していくデコヒーレンスの挙動が，リンドブラッド方程式から直接導かれることがわかります。</p>
 

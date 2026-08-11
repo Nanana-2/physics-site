@@ -14546,11 +14546,11 @@
   各状態に <span class="arithmatex">\(\hat{L}_z\)</span> を作用させると，それぞれの固有値が前に出ます。</li>
 </ul>
 <div class="arithmatex">\[
-  \hat{L}_z |1, 1\rangle = \hbar |1, 1\rangle, \quad \hat{L}_z |1, 0\rangle = 0, \quad \hat{L}_z |1, -1\rangle = -\hbar |1, -1\rangle
+  \finalanswer{\hat{L}_z |1, 1\rangle = \hbar |1, 1\rangle, \quad \hat{L}_z |1, 0\rangle = 0, \quad \hat{L}_z |1, -1\rangle = -\hbar |1, -1\rangle}
 \]</div>
 <p>これらを列ベクトルとして並べます。</p>
 <div class="arithmatex">\[
-  L_z = \hbar \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{pmatrix}
+  \finalanswer{L_z = \hbar \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{pmatrix}}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(L_+\)</span> の構成</strong>
@@ -14560,7 +14560,7 @@
 <li>第3列： <span class="arithmatex">\(\hat{L}_+ |1, -1\rangle = \sqrt{2}\hbar |1, 0\rangle\)</span></li>
 </ul>
 <div class="arithmatex">\[
-  L_+ = \hbar \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix}
+  \finalanswer{L_+ = \hbar \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix}}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(L_-\)</span> の構成</strong>
@@ -14570,7 +14570,7 @@
 <li>第3列： <span class="arithmatex">\(\hat{L}_- |1, -1\rangle = 0\)</span></li>
 </ul>
 <div class="arithmatex">\[
-  L_- = \hbar \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix}
+  \finalanswer{L_- = \hbar \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた行列の和と差を計算します。全体の係数である <span class="arithmatex">\(\hbar\)</span> は共通因数として外に出します。</p>
@@ -14578,14 +14578,22 @@
 <li><strong><span class="arithmatex">\(L_x\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  L_x = \frac{1}{2} (L_+ + L_-) = \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix} + \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix} \right] = \frac{\hbar}{\sqrt{2}} \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{pmatrix}
+\begin{aligned}
+L_x &amp;= \frac{1}{2} (L_+ + L_-) \\
+&amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix} + \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix} \right] \\
+&amp;= \finalanswer{\frac{\hbar}{\sqrt{2}} \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{pmatrix}}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(L_y\)</span> の計算</strong>
   分母の <span class="arithmatex">\(i\)</span> を分子の <span class="arithmatex">\(-i\)</span> に変換して整理します。</li>
 </ul>
 <div class="arithmatex">\[
-  L_y = \frac{1}{2i} (L_+ - L_-) = \frac{\hbar}{2i} \left[ \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix} - \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix} \right] = \frac{\hbar}{\sqrt{2}} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix}
+\begin{aligned}
+L_y &amp;= \frac{1}{2i} (L_+ - L_-) \\
+&amp;= \frac{\hbar}{2i} \left[ \begin{pmatrix} 0 &amp; \sqrt{2} &amp; 0 \\ 0 &amp; 0 &amp; \sqrt{2} \\ 0 &amp; 0 &amp; 0 \end{pmatrix} - \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2} &amp; 0 \end{pmatrix} \right] \\
+&amp;= \finalanswer{\frac{\hbar}{\sqrt{2}} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix}}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>行列の積の定義に従って， <span class="arithmatex">\(L_x L_y\)</span> と <span class="arithmatex">\(L_y L_x\)</span> をそれぞれ計算します。全体の係数は <span class="arithmatex">\(\left(\frac{\hbar}{\sqrt{2}}\right)^2 = \frac{\hbar^2}{2}\)</span> になります。</p>
@@ -14593,17 +14601,26 @@
 <li><strong><span class="arithmatex">\(L_x L_y\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  L_x L_y = \frac{\hbar^2}{2} \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix} = \frac{\hbar^2}{2} \begin{pmatrix} i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ i &amp; 0 &amp; -i \end{pmatrix}
+\begin{aligned}
+L_x L_y &amp;= \frac{\hbar^2}{2} \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix} \\
+&amp;= \frac{\hbar^2}{2} \begin{pmatrix} i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ i &amp; 0 &amp; -i \end{pmatrix}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(L_y L_x\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  L_y L_x = \frac{\hbar^2}{2} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{pmatrix} = \frac{\hbar^2}{2} \begin{pmatrix} -i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ -i &amp; 0 &amp; i \end{pmatrix}
+\begin{aligned}
+L_y L_x &amp;= \frac{\hbar^2}{2} \begin{pmatrix} 0 &amp; -i &amp; 0 \\ i &amp; 0 &amp; -i \\ 0 &amp; i &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \end{pmatrix} \\
+&amp;= \frac{\hbar^2}{2} \begin{pmatrix} -i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ -i &amp; 0 &amp; i \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>ふたつの積の差をとって交換関係を計算します。</p>
 <div class="arithmatex">\[
-L_x L_y - L_y L_x = \frac{\hbar^2}{2} \left[ \begin{pmatrix} i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ i &amp; 0 &amp; -i \end{pmatrix} - \begin{pmatrix} -i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ -i &amp; 0 &amp; i \end{pmatrix} \right] = \frac{\hbar^2}{2} \begin{pmatrix} 2i &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -2i \end{pmatrix}
+\begin{aligned}
+L_x L_y - L_y L_x &amp;= \frac{\hbar^2}{2} \left[ \begin{pmatrix} i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ i &amp; 0 &amp; -i \end{pmatrix} - \begin{pmatrix} -i &amp; 0 &amp; -i \\ 0 &amp; 0 &amp; 0 \\ -i &amp; 0 &amp; i \end{pmatrix} \right] \\
+&amp;= \frac{\hbar^2}{2} \begin{pmatrix} 2i &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -2i \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>共通因数である <span class="arithmatex">\(i\hbar\)</span> を行列の外にくくり出します。</p>
 <div class="arithmatex">\[
@@ -14611,7 +14628,7 @@ L_x L_y - L_y L_x = i\hbar \cdot \hbar \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &a
 \]</div>
 <p>右辺の行列部分は (1) で求めた <span class="arithmatex">\(L_z\)</span> と一致します。</p>
 <div class="arithmatex">\[
-[L_x, L_y] = i\hbar L_z
+\finalanswer{[L_x, L_y] = i\hbar L_z}
 \]</div>
 <p>行列を用いた計算によっても，角運動量の交換関係が満たされていることが確かめられました。</p>
 

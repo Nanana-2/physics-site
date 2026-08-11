@@ -14553,7 +14553,10 @@
 \frac{d\psi}{dx} = -\alpha x \psi(x)
 \]</div>
 <div class="arithmatex">\[
-\frac{d^2\psi}{dx^2} = -\alpha \psi(x) + (-\alpha x)^2 \psi(x) = \left( \alpha^2 x^2 - \alpha \right) \psi(x)
+\begin{aligned}
+\frac{d^2\psi}{dx^2} &amp;= -\alpha \psi(x) + (-\alpha x)^2 \psi(x) \\
+&amp;= \left( \alpha^2 x^2 - \alpha \right) \psi(x)
+\end{aligned}
 \]</div>
 <p>これを運動エネルギーの期待値の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14567,34 +14570,56 @@
 \langle K \rangle = -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ \alpha^2 \cdot \frac{1}{2\alpha}\sqrt{\frac{\pi}{\alpha}} - \alpha \cdot \sqrt{\frac{\pi}{\alpha}} \right]
 \]</div>
 <div class="arithmatex">\[
-= -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ \frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}} - \alpha \sqrt{\frac{\pi}{\alpha}} \right] = -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ -\frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}} \right]
+\begin{aligned}
+ &amp;= -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ \frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}} - \alpha \sqrt{\frac{\pi}{\alpha}} \right] \\
+&amp;= -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ -\frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}} \right]
+\end{aligned}
 \]</div>
 <p>共通するルートの因数を掛け算して相殺させます。</p>
 <div class="arithmatex">\[
-\langle K \rangle = -\frac{\hbar^2}{2m} \cdot \left( -\frac{\alpha}{2} \right) = \frac{\hbar^2 \alpha}{4m}
+\begin{aligned}
+\langle K \rangle &amp;= -\frac{\hbar^2}{2m} \cdot \left( -\frac{\alpha}{2} \right) \\
+&amp;= \finalanswer{\frac{\hbar^2 \alpha}{4m}}
+\end{aligned}
 \]</div>
 <p>これが運動エネルギーの期待値の数式表現です。</p>
 <h3 id="2">(2)</h3>
 <p>ポテンシャルエネルギーの期待値を計算します。被積分関数に含まれる <span class="arithmatex">\(|x|\)</span> は偶関数であるため，積分範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\infty\)</span> までの2倍の形に変形できます。</p>
 <div class="arithmatex">\[
-\langle V \rangle = \left( \frac{\alpha}{\pi} \right)^{1/2} \int_{-\infty}^{\infty} F|x| e^{-\alpha x^2} dx = 2F \left( \frac{\alpha}{\pi} \right)^{1/2} \int_{0}^{\infty} x e^{-\alpha x^2} dx
+\begin{aligned}
+\langle V \rangle &amp;= \left( \frac{\alpha}{\pi} \right)^{1/2} \int_{-\infty}^{\infty} F|x| e^{-\alpha x^2} dx \\
+&amp;= 2F \left( \frac{\alpha}{\pi} \right)^{1/2} \int_{0}^{\infty} x e^{-\alpha x^2} dx
+\end{aligned}
 \]</div>
 <p>提示された公式 <span class="arithmatex">\(\int_{0}^{\infty} x e^{-\alpha x^2} dx = \frac{1}{2\alpha}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\langle V \rangle = 2F \left( \frac{\alpha}{\pi} \right)^{1/2} \cdot \frac{1}{2\alpha} = \frac{F}{\alpha} \left( \frac{\alpha}{\pi} \right)^{1/2} = \frac{F}{\sqrt{\pi \alpha}}
+\begin{aligned}
+\langle V \rangle &amp;= 2F \left( \frac{\alpha}{\pi} \right)^{1/2} \cdot \frac{1}{2\alpha} \\
+&amp;= \frac{F}{\alpha} \left( \frac{\alpha}{\pi} \right)^{1/2} \\
+&amp;= \finalanswer{\frac{F}{\sqrt{\pi \alpha}}}
+\end{aligned}
 \]</div>
 <p>これでポテンシャルエネルギーの期待値が得られました。</p>
 <h3 id="3">(3)</h3>
 <p>全エネルギーの期待値の関数 <span class="arithmatex">\(E(\alpha)\)</span> を書き下します。</p>
 <div class="arithmatex">\[
-E(\alpha) = \langle K \rangle + \langle V \rangle = \frac{\hbar^2 \alpha}{4m} + \frac{F}{\sqrt{\pi}} \alpha^{-1/2}
+\begin{aligned}
+E(\alpha) &amp;= \langle K \rangle + \langle V \rangle \\
+&amp;= \frac{\hbar^2 \alpha}{4m} + \frac{F}{\sqrt{\pi}} \alpha^{-1/2}
+\end{aligned}
 \]</div>
 <p>この関数を最小にするため，パラメータ <span class="arithmatex">\(\alpha\)</span> で微分して 0 と置きます。</p>
 <div class="arithmatex">\[
-\frac{dE(\alpha)}{dx} = \frac{\hbar^2}{4m} - \frac{1}{2} \frac{F}{\sqrt{\pi}} \alpha^{-3/2} = 0
+\begin{aligned}
+\frac{dE(\alpha)}{dx} &amp;= \frac{\hbar^2}{4m} - \frac{1}{2} \frac{F}{\sqrt{\pi}} \alpha^{-3/2} \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\frac{\hbar^2}{4m} = \frac{F}{2\sqrt{\pi}} \alpha^{-3/2} \implies \alpha^{3/2} = \frac{2mF}{\sqrt{\pi}\hbar^2}
+\begin{aligned}
+\frac{\hbar^2}{4m} &amp;= \frac{F}{2\sqrt{\pi}} \alpha^{-3/2} \implies \alpha^{3/2} \\
+&amp;= \frac{2mF}{\sqrt{\pi}\hbar^2}
+\end{aligned}
 \]</div>
 <p>両辺を <span class="arithmatex">\(2/3\)</span> 乗することにより，最適なパラメータ <span class="arithmatex">\(\alpha_0\)</span> が決定されます。</p>
 <div class="arithmatex">\[
@@ -14606,15 +14631,21 @@ E(\alpha) = \frac{\hbar^2 \alpha}{4m} + \frac{\hbar^2}{2m}\alpha \cdot \left( \f
 \]</div>
 <p>の関係に着目すると，第2項は <span class="arithmatex">\(\frac{\hbar^2 \alpha}{2m}\)</span> に書き換わります。</p>
 <div class="arithmatex">\[
-E_{\text{var}} = \frac{\hbar^2 \alpha_0}{4m} + \frac{\hbar^2 \alpha_0}{2m} = \frac{3\hbar^2 \alpha_0}{4m}
+\begin{aligned}
+E_{\text{var}} &amp;= \frac{\hbar^2 \alpha_0}{4m} + \frac{\hbar^2 \alpha_0}{2m} \\
+&amp;= \frac{3\hbar^2 \alpha_0}{4m}
+\end{aligned}
 \]</div>
 <p>ここに算出した <span class="arithmatex">\(\alpha_0\)</span> を代入します。</p>
 <div class="arithmatex">\[
-E_{\text{var}} = \frac{3\hbar^2}{4m} \left( \frac{2mF}{\sqrt{\pi}\hbar^2} \right)^{2/3} = 3 \left( \frac{1}{32\pi} \right)^{1/3} \left( \frac{\hbar^2 F^2}{m} \right)^{1/3}
+\begin{aligned}
+E_{\text{var}} &amp;= \frac{3\hbar^2}{4m} \left( \frac{2mF}{\sqrt{\pi}\hbar^2} \right)^{2/3} \\
+&amp;= 3 \left( \frac{1}{32\pi} \right)^{1/3} \left( \frac{\hbar^2 F^2}{m} \right)^{1/3}
+\end{aligned}
 \]</div>
 <p>係数を中に入れるなどしてまとめると，以下の最終的な上限値の式が得られます。</p>
 <div class="arithmatex">\[
-E_{\text{var}} = \left( \frac{27}{32\pi} \right)^{1/3} \left( \frac{\hbar^2 F^2}{m} \right)^{1/3}
+\finalanswer{E_{\text{var}} = \left( \frac{27}{32\pi} \right)^{1/3} \left( \frac{\hbar^2 F^2}{m} \right)^{1/3}}
 \]</div>
 
 

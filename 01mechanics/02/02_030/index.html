@@ -14552,7 +14552,7 @@
 <p>雨粒には，<span class="arithmatex">\(y\)</span> 軸正方向に重力 <span class="arithmatex">\(mg\)</span>，負方向に空気抵抗 <span class="arithmatex">\(-kv(t)\)</span> が作用します。
 したがって，雨粒の運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
-m \frac{dv}{dt} = mg - kv
+\finalanswer{m \frac{dv}{dt} = mg - kv}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた運動方程式は，速度 <span class="arithmatex">\(v\)</span> に関する1階の常微分方程式です。以下のように変数分離します。</p>
@@ -14581,7 +14581,7 @@ v(t) = \frac{mg}{k} + C e^{-\frac{k}{m} t}
 \]</div>
 <p>これをもとの式に代入することで，求める速度 <span class="arithmatex">\(v(t)\)</span> が以下のように得られます。</p>
 <div class="arithmatex">\[
-v(t) = \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} t} \right)
+\finalanswer{v(t) = \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} t} \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(t \to \infty\)</span> では <span class="arithmatex">\(e^{-\frac{k}{m} t}\)</span> が 0 に収束するため，終端速度は次のようになります。</p>
@@ -14595,14 +14595,17 @@ v_{\infty} = \lim_{t \to \infty} v(t) = \frac{mg}{k}
 \]</div>
 <p>これを <span class="arithmatex">\(v\)</span> について解くと，以下のようになります。</p>
 <div class="arithmatex">\[
-v = \frac{mg}{k}
+v = \finalanswer{\frac{mg}{k}}
 \]</div>
 <p>これは極限から求めた <span class="arithmatex">\(v_{\infty}\)</span> と一致します。このとき，重力と空気抵抗がつり合っています。</p>
 <h3 id="4">(4)</h3>
 <p>速度 <span class="arithmatex">\(v(t)\)</span> は位置 <span class="arithmatex">\(y(t)\)</span> の時間微分 <span class="arithmatex">\(v(t) = \frac{dy}{dt}\)</span> であるため，位置 <span class="arithmatex">\(y(t)\)</span> は <span class="arithmatex">\(v(t)\)</span> を時間で積分することで求められます。</p>
 <p>初期条件 <span class="arithmatex">\(y(0) = 0\)</span> を用いると，時刻 <span class="arithmatex">\(t\)</span> における位置 <span class="arithmatex">\(y(t)\)</span> は以下の定積分で表されます。</p>
 <div class="arithmatex">\[
-y(t) = \int_0^t v(\tau) d\tau = \int_0^t \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} \tau} \right) d\tau
+\begin{aligned}
+y(t) &amp;= \int_0^t v(\tau) d\tau \\
+&amp;= \int_0^t \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} \tau} \right) d\tau
+\end{aligned}
 \]</div>
 <p>この積分を実行します。</p>
 <div class="arithmatex">\[
@@ -14613,7 +14616,7 @@ y(t) &amp;= \frac{mg}{k} \left( t + \frac{m}{k} e^{-\frac{k}{m} t} - \frac{m}{k}
 \]</div>
 <p>したがって，求める雨粒の位置 <span class="arithmatex">\(y(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-y(t) = \frac{mg}{k} t - \frac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)
+\finalanswer{y(t) = \frac{mg}{k} t - \frac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)}
 \]</div>
 <p>となります。</p>
 

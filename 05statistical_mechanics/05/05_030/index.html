@@ -14532,11 +14532,17 @@ h = \frac{1}{2}m\boldsymbol{v}^2 = \frac{1}{2}m(v_x^2 + v_y^2 + v_z^2)
 <h3 id="1">(1)</h3>
 <p>確率密度関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> はボルツマン因子に比例するため，規格化定数を <span class="arithmatex">\(C\)</span> とおくと以下のように表せます。</p>
 <div class="arithmatex">\[
-P(\boldsymbol{v}) = C \exp\left[ -\frac{m(v_x^2 + v_y^2 + v_z^2)}{2k_B T} \right] = C \exp\left( -\frac{m v_x^2}{2k_B T} \right) \exp\left( -\frac{m v_y^2}{2k_B T} \right) \exp\left( -\frac{m v_z^2}{2k_B T} \right)
+\begin{aligned}
+P(\boldsymbol{v}) &amp;= C \exp\left[ -\frac{m(v_x^2 + v_y^2 + v_z^2)}{2k_B T} \right] \\
+&amp;= C \exp\left( -\frac{m v_x^2}{2k_B T} \right) \exp\left( -\frac{m v_y^2}{2k_B T} \right) \exp\left( -\frac{m v_z^2}{2k_B T} \right)
+\end{aligned}
 \]</div>
 <p>規格化条件から定数 <span class="arithmatex">\(C\)</span> を決定します。積分は3つの独立なガウス積分の積に分離できます。</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_x dv_y dv_z = C \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_B T} \right) dv \right)^3 = 1
+\begin{aligned}
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_x dv_y dv_z &amp;= C \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_B T} \right) dv \right)^3 \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>ガウス積分の公式を <span class="arithmatex">\(a = \frac{m}{2k_B T}\)</span> として適用します。</p>
 <div class="arithmatex">\[
@@ -14544,37 +14550,50 @@ P(\boldsymbol{v}) = C \exp\left[ -\frac{m(v_x^2 + v_y^2 + v_z^2)}{2k_B T} \right
 \]</div>
 <p>これを代入して <span class="arithmatex">\(C\)</span> について解きます。</p>
 <div class="arithmatex">\[
-C \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^3 = 1 \quad \implies \quad C = \left( \frac{m}{2\pi k_B T} \right)^{3/2}
+\begin{aligned}
+C \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^3 &amp;= 1 \quad \implies \quad C \\
+&amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2}
+\end{aligned}
 \]</div>
 <p>したがって，3次元マクスウェル速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-P(\boldsymbol{v}) = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m\boldsymbol{v}^2}{2k_B T} \right)
+\finalanswer{P(\boldsymbol{v}) = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m\boldsymbol{v}^2}{2k_B T} \right)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(x\)</span> 成分の速度分布 <span class="arithmatex">\(f(v_x)\)</span> を得るため，<span class="arithmatex">\(v_y,v_z\)</span> について全空間で積分します。</p>
 <div class="arithmatex">\[
-f(v_x) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_y dv_z = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m v_x^2}{2k_B T} \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_y^2}{2k_B T} \right) dv_y \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_z^2}{2k_B T} \right) dv_z \right)
+\begin{aligned}
+f(v_x) &amp;= \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_y dv_z \\
+&amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m v_x^2}{2k_B T} \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_y^2}{2k_B T} \right) dv_y \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_z^2}{2k_B T} \right) dv_z \right)
+\end{aligned}
 \]</div>
 <p>(1) と同様に <span class="arithmatex">\(v_y,v_z\)</span> を積分すると，それぞれ <span class="arithmatex">\(\sqrt{\frac{2\pi k_B T}{m}}\)</span> を与えるため，係数を整理して</p>
 <div class="arithmatex">\[
-f(v_x) = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^2 \exp\left( -\frac{m v_x^2}{2k_B T} \right) = \sqrt{\frac{m}{2\pi k_B T}} \exp\left( -\frac{m v_x^2}{2k_B T} \right)
+\begin{aligned}
+f(v_x) &amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2} \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^2 \exp\left( -\frac{m v_x^2}{2k_B T} \right) \\
+&amp;= \finalanswer{\sqrt{\frac{m}{2\pi k_B T}} \exp\left( -\frac{m v_x^2}{2k_B T} \right)}
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(f(v_x)\)</span> は偶関数なので，</p>
 <div class="arithmatex">\[
-\langle v_x\rangle=\int_{-\infty}^{\infty}v_xf(v_x)\,dv_x=0
+\finalanswer{\langle v_x\rangle=\int_{-\infty}^{\infty}v_xf(v_x)\,dv_x=0}
 \]</div>
 <p>です。また，ガウス積分を用いると，</p>
 <div class="arithmatex">\[
-\langle v_x^2\rangle
-=\int_{-\infty}^{\infty}v_x^2f(v_x)\,dv_x
-=\frac{k_BT}{m}
+\begin{aligned}
+\langle v_x^2\rangle &amp;= \int_{-\infty}^{\infty}v_x^2f(v_x)\,dv_x \\
+&amp;= \frac{k_BT}{m}
+\end{aligned}
 \]</div>
 <p>を得ます。</p>
 <h3 id="3">(3)</h3>
 <p>速さ <span class="arithmatex">\(v\)</span> は速度空間における原点からの距離です。速さが <span class="arithmatex">\(v\)</span> から <span class="arithmatex">\(v+dv\)</span> の範囲にある領域の体積は <span class="arithmatex">\(4\pi v^2dv\)</span> です。</p>
 <p>したがって，方向を区別せず速さのみに注目した分布関数 <span class="arithmatex">\(F(v)dv\)</span> は，3次元速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> にこの球殻の体積要素を掛け合わせることで導出されます。</p>
 <div class="arithmatex">\[
-F(v) dv = P(\boldsymbol{v}) \cdot 4\pi v^2 dv = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+\begin{aligned}
+F(v) dv &amp;= P(\boldsymbol{v}) \cdot 4\pi v^2 dv \\
+&amp;= 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)
@@ -14585,7 +14604,7 @@ F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^
 \]</div>
 <p>となります。したがって，最確速度は</p>
 <div class="arithmatex">\[
-v_{\mathrm{mp}}=\sqrt{\frac{2k_BT}{m}}
+\finalanswer{v_{\mathrm{mp}}=\sqrt{\frac{2k_BT}{m}}}
 \]</div>
 <p>です。</p>
 

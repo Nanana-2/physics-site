@@ -14549,11 +14549,19 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 \]</div>
 <p>各括弧を展開すると， <span class="arithmatex">\(\hat{x}^2\)</span> と <span class="arithmatex">\(\hat{p}^2\)</span> の項は引き算によって相殺されます。残るのは交差項の組み合わせです。</p>
 <div class="arithmatex">\[
-[\hat{a}, \hat{a}^\dagger] = \frac{i}{2\hbar} (-\hat{x}\hat{p} + \hat{p}\hat{x}) - \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) = -\frac{i}{2\hbar} [\hat{x}, \hat{p}] - \frac{i}{2\hbar} [\hat{x}, \hat{p}] = -\frac{i}{\hbar} [\hat{x}, \hat{p}]
+\begin{aligned}
+[\hat{a}, \hat{a}^\dagger] &amp;= \frac{i}{2\hbar} (-\hat{x}\hat{p} + \hat{p}\hat{x}) - \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) \\
+&amp;= -\frac{i}{2\hbar} [\hat{x}, \hat{p}] - \frac{i}{2\hbar} [\hat{x}, \hat{p}] \\
+&amp;= -\frac{i}{\hbar} [\hat{x}, \hat{p}]
+\end{aligned}
 \]</div>
 <p>ここに基本交換関係 <span class="arithmatex">\([\hat{x}, \hat{p}] = i\hbar\)</span> を代入します。</p>
 <div class="arithmatex">\[
-[\hat{a}, \hat{a}^\dagger] = -\frac{i}{\hbar} (i\hbar) = -i^2 = 1
+\begin{aligned}
+[\hat{a}, \hat{a}^\dagger] &amp;= -\frac{i}{\hbar} (i\hbar) \\
+&amp;= -i^2 \\
+&amp;= \finalanswer{1}
+\end{aligned}
 \]</div>
 <p>これにより，簡潔な交換関係 <span class="arithmatex">\([\hat{a}, \hat{a}^\dagger] = 1\)</span> が得られました。</p>
 <h3 id="2">(2)</h3>
@@ -14562,7 +14570,10 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 \hat{a}^\dagger \hat{a} = \left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} - \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)\left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} + \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)
 \]</div>
 <div class="arithmatex">\[
-= \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) + \frac{1}{2m\hbar\omega} \hat{p}^2 = \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} [\hat{x}, \hat{p}] + \frac{1}{2m\hbar\omega} \hat{p}^2
+\begin{aligned}
+ &amp;= \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) + \frac{1}{2m\hbar\omega} \hat{p}^2 \\
+&amp;= \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} [\hat{x}, \hat{p}] + \frac{1}{2m\hbar\omega} \hat{p}^2
+\end{aligned}
 \]</div>
 <p>ここに <span class="arithmatex">\([\hat{x}, \hat{p}] = i\hbar\)</span> を代入します。中央の項は <span class="arithmatex">\(\frac{i}{2\hbar}(i\hbar) = -\frac{1}{2}\)</span> となります。</p>
 <div class="arithmatex">\[
@@ -14574,11 +14585,17 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 \]</div>
 <p>右辺の前半2項の和はハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> そのものです。</p>
 <div class="arithmatex">\[
-\hbar\omega \hat{a}^\dagger \hat{a} = \hat{H} - \frac{1}{2}\hbar\omega \implies \hat{H} = \hbar\omega \hat{a}^\dagger \hat{a} + \frac{1}{2}\hbar\omega
+\begin{aligned}
+\hbar\omega \hat{a}^\dagger \hat{a} &amp;= \hat{H} - \frac{1}{2}\hbar\omega \implies \hat{H} \\
+&amp;= \hbar\omega \hat{a}^\dagger \hat{a} + \frac{1}{2}\hbar\omega
+\end{aligned}
 \]</div>
 <p>共通因数でくくることで，数演算子 <span class="arithmatex">\(\hat{N} = \hat{a}^\dagger \hat{a}\)</span> を用いたハミルトニアンの形が導かれました。</p>
 <div class="arithmatex">\[
-\hat{H} = \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) = \hbar\omega \left( \hat{N} + \frac{1}{2} \right)
+\begin{aligned}
+\hat{H} &amp;= \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) \\
+&amp;= \finalanswer{\hbar\omega \left( \hat{N} + \frac{1}{2} \right)}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めたハミルトニアンの関係式を，数演算子の固有状態 <span class="arithmatex">\(|n\rangle\)</span> に作用させます。</p>
@@ -14591,11 +14608,14 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 \]</div>
 <p>数演算子の固有値関係 <span class="arithmatex">\(\hat{N}|n\rangle = n|n\rangle\)</span> を代入します。この段階では <span class="arithmatex">\(n\)</span> を実数とし，後に非負整数であることを定めます。</p>
 <div class="arithmatex">\[
-\hat{H}|n\rangle = \hbar\omega (n|n\rangle) + \frac{1}{2}\hbar\omega |n\rangle = \hbar\omega \left( n + \frac{1}{2} \right) |n\rangle
+\begin{aligned}
+\hat{H}|n\rangle &amp;= \hbar\omega (n|n\rangle) + \frac{1}{2}\hbar\omega |n\rangle \\
+&amp;= \hbar\omega \left( n + \frac{1}{2} \right) |n\rangle
+\end{aligned}
 \]</div>
 <p>ハミルトニアンの固有値関係 <span class="arithmatex">\(\hat{H}|n\rangle = E_n|n\rangle\)</span> と比較すると，対応するエネルギー固有値が得られます。</p>
 <div class="arithmatex">\[
-E_n = \hbar\omega \left( n + \frac{1}{2} \right)
+\finalanswer{E_n = \hbar\omega \left( n + \frac{1}{2} \right)}
 \]</div>
 <p>これにより，微分方程式を直接解くことなく，演算子の交換関係という代数的な性質のみから調和振動子のエネルギー準位が求まりました。</p>
 

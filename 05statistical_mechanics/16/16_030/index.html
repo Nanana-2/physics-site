@@ -14541,7 +14541,7 @@
 \rho_{\mathrm{tot}} = \frac{1}{2} \big( |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle - |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle \big) \big( \langle 0_{\mathrm{A}} 1_{\mathrm{B}}| - \langle 1_{\mathrm{A}} 0_{\mathrm{B}}| \big)
 \]</div>
 <div class="arithmatex">\[
-\rho_{\mathrm{tot}} = \frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}| - \frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}| - \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}|
+\rho_{\mathrm{tot}} = \finalanswer{\frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}|} - \frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}| - \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}|
 \]</div>
 <p>これが求める全密度行列の展開式です。対角項に加えて，符号が負の非対角項が存在していることがわかります。</p>
 <h3 id="2">(2)</h3>
@@ -14566,7 +14566,7 @@
   $$</p>
 <p>非対角項は系Bの基底が異なるため，部分トレースによってすべて 0 になります。これらを足し合わせることで，系Aの縮約密度行列が得られます。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{A}} = \frac{1}{2} |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| + \frac{1}{2} |1_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}|
+\finalanswer{\rho_{\mathrm{A}} = \frac{1}{2} |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| + \frac{1}{2} |1_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}|}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>全系はもともと単一のベクトルで表される純粋状態であるため，その2乗のトレースは 1 になります。</p>
@@ -14579,7 +14579,10 @@
 \]</div>
 <p>このトレースをとることで，系Aの純粋度が得られます。</p>
 <div class="arithmatex">\[
-\mathrm{Tr}(\rho_{\mathrm{A}}^2) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}
+\begin{aligned}
+\mathrm{Tr}(\rho_{\mathrm{A}}^2) &amp;= \frac{1}{4} + \frac{1}{4} \\
+&amp;= \finalanswer{\frac{1}{2}}
+\end{aligned}
 \]</div>
 <p><strong>物理的な意味</strong></p>
 <p>全系の純粋度が 1 であるのに対し，部分系の純粋度は <span class="arithmatex">\(\frac{1}{2}\)</span> へと減少しています。</p>

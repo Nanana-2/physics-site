@@ -14564,7 +14564,12 @@ L = m v_0 b
 <p>次に，時間を消去して軌道の式を導くために，<span class="arithmatex">\(u = 1/r\)</span> という変数変換を行います。
 時間微分を <span class="arithmatex">\(\theta\)</span> による微分に変換すると</p>
 <div class="arithmatex">\[
-\dot{r} = \frac{dr}{d\theta} \dot{\theta} = \frac{d}{d\theta} \left( \frac{1}{u} \right) \frac{L}{m r^2} = -\frac{1}{u^2} \frac{du}{d\theta} \frac{L u^2}{m} = -\frac{L}{m} \frac{du}{d\theta}
+\begin{aligned}
+\dot{r} &amp;= \frac{dr}{d\theta} \dot{\theta} \\
+&amp;= \frac{d}{d\theta} \left( \frac{1}{u} \right) \frac{L}{m r^2} \\
+&amp;= -\frac{1}{u^2} \frac{du}{d\theta} \frac{L u^2}{m} \\
+&amp;= -\frac{L}{m} \frac{du}{d\theta}
+\end{aligned}
 \]</div>
 <p>となります。これをエネルギー保存則の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14594,10 +14599,10 @@ E = \frac{L^2}{2m} \left( \left( \frac{du}{d\theta} \right)^2 + u^2 \right) + K 
 \]</div>
 <p>このとき，定数 <span class="arithmatex">\(A\)</span> および <span class="arithmatex">\(B\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
-A = \frac{2mE}{L^2}
+\finalanswer{A = \frac{2mE}{L^2}}
 \]</div>
 <div class="arithmatex">\[
-B = \frac{2mK}{L^2}
+\finalanswer{B = \frac{2mK}{L^2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>得られた積分の分母の根号内を平方完成します。</p>
@@ -14606,16 +14611,23 @@ A - B u - u^2 = \left( A + \frac{B^2}{4} \right) - \left( u + \frac{B}{2} \right
 \]</div>
 <p>ここで，新たな定数 <span class="arithmatex">\(C\)</span> を以下のように定義します。</p>
 <div class="arithmatex">\[
-C = \sqrt{A + \frac{B^2}{4}} = \sqrt{\frac{2mE}{L^2} + \frac{m^2 K^2}{L^4}} = \frac{mK}{L^2} \sqrt{1 + \frac{2EL^2}{mK^2}}
+\begin{aligned}
+C &amp;= \sqrt{A + \frac{B^2}{4}} \\
+&amp;= \sqrt{\frac{2mE}{L^2} + \frac{m^2 K^2}{L^4}} \\
+&amp;= \frac{mK}{L^2} \sqrt{1 + \frac{2EL^2}{mK^2}}
+\end{aligned}
 \]</div>
 <p>離心率 <span class="arithmatex">\(\epsilon\)</span> を</p>
 <div class="arithmatex">\[
-\epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}}
+\finalanswer{\epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}}}
 \]</div>
 <p>と定義すると，<span class="arithmatex">\(C = \epsilon B / 2\)</span> と表せます。
 このとき，積分は次のように実行できます。</p>
 <div class="arithmatex">\[
-\theta = -\int \frac{du}{\sqrt{C^2 - \left( u + \frac{B}{2} \right)^2}} = \arccos \left( \frac{u + \frac{B}{2}}{C} \right)
+\begin{aligned}
+\theta &amp;= -\int \frac{du}{\sqrt{C^2 - \left( u + \frac{B}{2} \right)^2}} \\
+&amp;= \arccos \left( \frac{u + \frac{B}{2}}{C} \right)
+\end{aligned}
 \]</div>
 <p>積分定数は最近接点 <span class="arithmatex">\(\theta = 0\)</span> で <span class="arithmatex">\(u\)</span> が最大値 <span class="arithmatex">\(C - B/2\)</span> をとる条件から <span class="arithmatex">\(0\)</span> となります。
 これを <span class="arithmatex">\(u\)</span> について解くと</p>
@@ -14627,11 +14639,11 @@ u = \frac{mK}{L^2} \left( \epsilon \cos \theta - 1 \right)
 \]</div>
 <p>となります。<span class="arithmatex">\(r = 1/u\)</span> であることから，軌道方程式は以下のように求まります。</p>
 <div class="arithmatex">\[
-r(\theta) = \frac{\frac{L^2}{mK}}{\epsilon \cos \theta - 1}
+\finalanswer{r(\theta) = \frac{\frac{L^2}{mK}}{\epsilon \cos \theta - 1}}
 \]</div>
 <p>パラメータを <span class="arithmatex">\(p = L^2 / (mK)\)</span> とおくと，求める軌道方程式</p>
 <div class="arithmatex">\[
-r(\theta) = \frac{p}{\epsilon \cos \theta - 1}
+\finalanswer{r(\theta) = \frac{p}{\epsilon \cos \theta - 1}}
 \]</div>
 <p>が得られます。</p>
 <p>アルファ粒子のエネルギーは無限遠において正の値を持ちます。
@@ -14640,7 +14652,7 @@ E = \frac{1}{2} m v_0^2 &gt; 0
 $$
 これにより，離心率の定義式から</p>
 <div class="arithmatex">\[
-\epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}} &gt; 1
+\finalanswer{\epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}} &gt; 1}
 \]</div>
 <p>したがって，この軌道は原点を外側の焦点とする双曲線です。</p>
 <h3 id="3">(3)</h3>
@@ -14661,15 +14673,25 @@ $$
 \]</div>
 <p>これを変形すると <span class="arithmatex">\(\theta_\infty = (\pi - \theta_s)/2\)</span> となり，先ほどの式に代入することで次の関係が得られます。</p>
 <div class="arithmatex">\[
-\cos \left( \frac{\pi - \theta_s}{2} \right) = \sin \left( \frac{\theta_s}{2} \right) = \frac{1}{\epsilon}
+\begin{aligned}
+\cos \left( \frac{\pi - \theta_s}{2} \right) &amp;= \sin \left( \frac{\theta_s}{2} \right) \\
+&amp;= \frac{1}{\epsilon}
+\end{aligned}
 \]</div>
 <p>三角関数の関係から，散乱角の半角の余接は次のようになります。</p>
 <div class="arithmatex">\[
-\cot^2 \left( \frac{\theta_s}{2} \right) = \frac{1}{\sin^2 \left( \frac{\theta_s}{2} \right)} - 1 = \epsilon^2 - 1 = \frac{2EL^2}{mK^2}
+\begin{aligned}
+\cot^2 \left( \frac{\theta_s}{2} \right) &amp;= \frac{1}{\sin^2 \left( \frac{\theta_s}{2} \right)} - 1 \\
+&amp;= \epsilon^2 - 1 \\
+&amp;= \frac{2EL^2}{mK^2}
+\end{aligned}
 \]</div>
 <p>ここに，(1)で求めた <span class="arithmatex">\(E = \frac{1}{2} m v_0^2\)</span> および <span class="arithmatex">\(L = m v_0 b\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\cot^2 \left( \frac{\theta_s}{2} \right) = \frac{2 \left( \frac{1}{2} m v_0^2 \right) \left( m v_0 b \right)^2}{m K^2} = \left( \frac{m v_0^2 b}{K} \right)^2
+\begin{aligned}
+\cot^2 \left( \frac{\theta_s}{2} \right) &amp;= \frac{2 \left( \frac{1}{2} m v_0^2 \right) \left( m v_0 b \right)^2}{m K^2} \\
+&amp;= \left( \frac{m v_0^2 b}{K} \right)^2
+\end{aligned}
 \]</div>
 <p>散乱角は <span class="arithmatex">\(0 &lt; \theta_s &lt; \pi\)</span> の範囲にあるため，両辺の平方根をとることで正の値同士が等しくなります。</p>
 <div class="arithmatex">\[
@@ -14677,7 +14699,7 @@ $$
 \]</div>
 <p>これを衝突パラメータ <span class="arithmatex">\(b\)</span> について解くことで，目的の関係式が導出されます。</p>
 <div class="arithmatex">\[
-b = \frac{K}{m v_0^2} \cot \frac{\theta_s}{2}
+\finalanswer{b = \frac{K}{m v_0^2} \cot \frac{\theta_s}{2}}
 \]</div>
 <p>衝突パラメータ <span class="arithmatex">\(b\)</span> が小さいほど，散乱角 <span class="arithmatex">\(\theta_s\)</span> は大きくなります。</p>
 

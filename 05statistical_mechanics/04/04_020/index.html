@@ -14538,16 +14538,22 @@ dJ=-S\,dT-P\,dV-N\,d\mu
 <h3 id="1">(1)</h3>
 <p>開いた系において，粒子数が <span class="arithmatex">\(N\)</span> で状態が <span class="arithmatex">\(i\)</span> であるマクロな出現確率は，一般化されたボルツマン因子であるギブズ因子 <span class="arithmatex">\(\exp\left[ -\beta (E_{i,N} - \mu N) \right]\)</span> に比例します。大分配関数 <span class="arithmatex">\(\Xi\)</span> はすべての粒子数 <span class="arithmatex">\(N\)</span> およびすべての微視的状態 <span class="arithmatex">\(i\)</span> にわたるギブズ因子の総和として定義されているため，求める確率 <span class="arithmatex">\(P_{i,N}\)</span> は大分配関数を分母とする以下の形式で表されます。</p>
 <div class="arithmatex">\[
-P_{i,N} = \frac{\exp\left[ -\beta (E_{i,N} - \mu N) \right]}{\Xi}
+\finalanswer{P_{i,N} = \frac{\exp\left[ -\beta (E_{i,N} - \mu N) \right]}{\Xi}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> は，各状態の粒子数 <span class="arithmatex">\(N\)</span> にその出現確率 <span class="arithmatex">\(P_{i,N}\)</span> を掛けて，すべての粒子数と微視的状態について足し合わせたものであるため，定義式は以下のようになります。</p>
 <div class="arithmatex">\[
-\langle N \rangle = \sum_{N=0}^{\infty} \sum_{i} N P_{i,N} = \frac{1}{\Xi} \sum_{N=0}^{\infty} \sum_{i} N \exp\left[ -\beta (E_{i,N} - \mu N) \right]
+\begin{aligned}
+\langle N \rangle &amp;= \sum_{N=0}^{\infty} \sum_{i} N P_{i,N} \\
+&amp;= \frac{1}{\Xi} \sum_{N=0}^{\infty} \sum_{i} N \exp\left[ -\beta (E_{i,N} - \mu N) \right]
+\end{aligned}
 \]</div>
 <p>ここで，大分配関数 <span class="arithmatex">\(\Xi\)</span> の定義式を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> で偏微分します。指数の微分により，微分の前に <span class="arithmatex">\(\beta N\)</span> が降ります。</p>
 <div class="arithmatex">\[
-\frac{\partial \Xi}{\partial \mu} = \sum_{N=0}^{\infty} \sum_{i} \beta N \exp\left[ -\beta (E_{i,N} - \mu N) \right] = \beta \sum_{N=0}^{\infty} \sum_{i} N \exp\left[ -\beta (E_{i,N} - \mu N) \right]
+\begin{aligned}
+\frac{\partial \Xi}{\partial \mu} &amp;= \sum_{N=0}^{\infty} \sum_{i} \beta N \exp\left[ -\beta (E_{i,N} - \mu N) \right] \\
+&amp;= \beta \sum_{N=0}^{\infty} \sum_{i} N \exp\left[ -\beta (E_{i,N} - \mu N) \right]
+\end{aligned}
 \]</div>
 <p>合成関数の微分公式 <span class="arithmatex">\(\frac{\partial \log \Xi}{\partial \mu} = \frac{1}{\Xi} \frac{\partial \Xi}{\partial \mu}\)</span> を用いて，大分配関数の対数微分を計算します。上の微分結果を代入します。</p>
 <div class="arithmatex">\[
@@ -14559,7 +14565,7 @@ P_{i,N} = \frac{\exp\left[ -\beta (E_{i,N} - \mu N) \right]}{\Xi}
 \]</div>
 <p>両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，目的の式が導出されました。</p>
 <div class="arithmatex">\[
-\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}
+\finalanswer{\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>熱力学における完全な熱力学関数としてのグランドポテンシャルの全微分関係式は <span class="arithmatex">\(dJ = -S dT - P dV - N d\mu\)</span> と与えられているため，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の係数を比較することで，熱力学的な粒子数 <span class="arithmatex">\(N\)</span> は次のように割当られます。</p>
@@ -14568,11 +14574,14 @@ N = -\left( \frac{\partial J}{\partial \mu} \right)_{T, V}
 \]</div>
 <p>ここに統計力学によるグランドポテンシャルの定義式 <span class="arithmatex">\(J = -k_B T \log \Xi\)</span> を代入します。偏微分を行う際，温度 <span class="arithmatex">\(T\)</span> は定数として扱えるため微分の外に出すことができます。</p>
 <div class="arithmatex">\[
-N = -\left( \frac{\partial (-k_B T \log \Xi)}{\partial \mu} \right)_{T, V} = k_B T \frac{\partial \log \Xi}{\partial \mu}
+\begin{aligned}
+N &amp;= -\left( \frac{\partial (-k_B T \log \Xi)}{\partial \mu} \right)_{T, V} \\
+&amp;= k_B T \frac{\partial \log \Xi}{\partial \mu}
+\end{aligned}
 \]</div>
 <p>逆温度の定義 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> より <span class="arithmatex">\(k_B T = \frac{1}{\beta}\)</span> であるため，この式は以下のように書き換えられます。</p>
 <div class="arithmatex">\[
-N = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}
+\finalanswer{N = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}}
 \]</div>
 <p>この結果は，(2)で確率分布から求めた平均粒子数 <span class="arithmatex">\(\langle N\rangle\)</span> と等しくなります。</p>
 

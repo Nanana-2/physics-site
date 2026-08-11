@@ -14533,16 +14533,22 @@
 </ul>
 <p>大正準集団における1サイトあたりの大分配関数 <span class="arithmatex">\(\xi\)</span> は，これら2つの状態のギブズ因子の和として以下のように定義されます。</p>
 <div class="arithmatex">\[
-\xi = \sum_{n} \exp\left[ -\beta(E - \mu n) \right] = \exp\left[ -\beta(0 - \mu \cdot 0) \right] + \exp\left[ -\beta(-\epsilon - \mu \cdot 1) \right]
+\begin{aligned}
+\xi &amp;= \sum_{n} \exp\left[ -\beta(E - \mu n) \right] \\
+&amp;= \exp\left[ -\beta(0 - \mu \cdot 0) \right] + \exp\left[ -\beta(-\epsilon - \mu \cdot 1) \right]
+\end{aligned}
 \]</div>
 <p>各式を整理すると，1サイトの大分配関数が得られます。</p>
 <div class="arithmatex">\[
-\xi = 1 + \exp\left[ \beta(\epsilon + \mu) \right]
+\finalanswer{\xi = 1 + \exp\left[ \beta(\epsilon + \mu) \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>系全体の <span class="arithmatex">\(M\)</span> 個の吸着サイトは，互いに区別可能で独立に粒子を出し入れできるため，系全体の大分配関数 <span class="arithmatex">\(\Xi\)</span> は1サイトの大分配関数の単純な <span class="arithmatex">\(M\)</span> 乗になります。</p>
 <div class="arithmatex">\[
-\Xi = \xi^M = \left( 1 + \exp\left[ \beta(\epsilon + \mu) \right] \right)^M
+\begin{aligned}
+\Xi &amp;= \xi^M \\
+&amp;= \left( 1 + \exp\left[ \beta(\epsilon + \mu) \right] \right)^M
+\end{aligned}
 \]</div>
 <p>全体の平均吸着粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> は，大分配関数の対数微分公式 <span class="arithmatex">\(\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}\)</span> から求まります。まず対数をとります。</p>
 <div class="arithmatex">\[
@@ -14558,25 +14564,34 @@
 \]</div>
 <p>分母と分子を <span class="arithmatex">\(\exp\left[ \beta(\epsilon + \mu) \right]\)</span> で割って整理した以下の形式も，同じ平均粒子数を表します。</p>
 <div class="arithmatex">\[
-\langle N \rangle = \frac{M}{\exp\left[ -\beta(\epsilon + \mu) \right] + 1}
+\finalanswer{\langle N \rangle = \frac{M}{\exp\left[ -\beta(\epsilon + \mu) \right] + 1}}
 \]</div>
 <p>この形はフェルミ・ディラック分布と同じ構造を持ちます。</p>
 <h3 id="3">(3)</h3>
 <p>被覆率 <span class="arithmatex">\(\theta\)</span> は，(2) で求めた平均吸着粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> を総サイト数 <span class="arithmatex">\(M\)</span> で割ったものであるため，以下のようになります。</p>
 <div class="arithmatex">\[
-\theta = \frac{\langle N \rangle}{M} = \frac{\exp\left[ \beta(\epsilon + \mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right]}
+\begin{aligned}
+\theta &amp;= \frac{\langle N \rangle}{M} \\
+&amp;= \frac{\exp\left[ \beta(\epsilon + \mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right]}
+\end{aligned}
 \]</div>
 <p>ここに，気体相の圧力 <span class="arithmatex">\(P\)</span> と化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の関係式 <span class="arithmatex">\(\mu = k_B T \log (P / P_0)\)</span> を代入します。このとき <span class="arithmatex">\(\beta \mu = \frac{\mu}{k_B T} = \log (P / P_0)\)</span> となるため，以下の指数項が整理できます。</p>
 <div class="arithmatex">\[
-\exp(\beta \mu) = \exp\left[ \log \left( \frac{P}{P_0} \right) \right] = \frac{P}{P_0}
+\begin{aligned}
+\exp(\beta \mu) &amp;= \exp\left[ \log \left( \frac{P}{P_0} \right) \right] \\
+&amp;= \frac{P}{P_0}
+\end{aligned}
 \]</div>
 <p>この関係を利用して，被覆率の式に含まれるボルツマン因子の部分を展開します。</p>
 <div class="arithmatex">\[
-\exp\left[ \beta(\epsilon + \mu) \right] = \exp(\beta \epsilon) \cdot \exp(\beta \mu) = \exp(\beta \epsilon) \cdot \frac{P}{P_0}
+\begin{aligned}
+\exp\left[ \beta(\epsilon + \mu) \right] &amp;= \exp(\beta \epsilon) \cdot \exp(\beta \mu) \\
+&amp;= \exp(\beta \epsilon) \cdot \frac{P}{P_0}
+\end{aligned}
 \]</div>
 <p>ここで，温度のみに依存する定数の塊を <span class="arithmatex">\(K(T) = \frac{\exp(\beta \epsilon)}{P_0}\)</span> と定義します。これを被覆率の式に代入します。</p>
 <div class="arithmatex">\[
-\theta = \frac{K(T) P}{1 + K(T) P}
+\finalanswer{\theta = \frac{K(T) P}{1 + K(T) P}}
 \]</div>
 <p>この式は，固体表面への気体分子の単分子層吸着の挙動をきれいに表す<strong>ラングミュアの吸着等温式</strong>にほかなりません。</p>
 <p>圧力が非常に低い極限<span class="arithmatex">\(P \to 0\)</span>では，分母の <span class="arithmatex">\(K(T)P\)</span> が <span class="arithmatex">\(1\)</span> に比べて無視できるようになるため， <span class="arithmatex">\(\theta \simeq K(T)P\)</span> となり，吸着量が圧力に比例するというヘンリーの法則が再現されます。</p>

@@ -14554,7 +14554,7 @@
 <li>2行1列目： </li>
 </ul>
 <div class="arithmatex">\[
-\sin\theta\cos\phi + i\sin\theta\sin\phi = \sin\theta(\cos\phi + i\sin\phi)
+\finalanswer{\sin\theta\cos\phi + i\sin\theta\sin\phi = \sin\theta(\cos\phi + i\sin\phi)}
 \]</div>
 <p>オイラーの公式 <span class="arithmatex">\(\cos\phi \pm i\sin\phi = e^{\pm i\phi}\)</span> を適用して整理します。</p>
 <div class="arithmatex">\[
@@ -14571,12 +14571,20 @@
 \]</div>
 <p>展開して整理します。 <span class="arithmatex">\(e^{-i\phi}e^{i\phi} = 1\)</span> であり，三角関数の公式 <span class="arithmatex">\(\cos^2\theta + \sin^2\theta = 1\)</span> を用います。</p>
 <div class="arithmatex">\[
--\cos^2\theta + \lambda'^2 - \sin^2\theta = 0 \implies \lambda'^2 = \cos^2\theta + \sin^2\theta = 1 \implies \lambda' = \pm 1
+\begin{aligned}
+-\cos^2\theta + \lambda'^2 - \sin^2\theta &amp;= 0 \implies \lambda'^2 \\
+&amp;= \cos^2\theta + \sin^2\theta \\
+&amp;= 1 \implies \lambda' \\
+&amp;= \pm 1
+\end{aligned}
 \]</div>
 <p>元の係数 <span class="arithmatex">\(\frac{\hbar}{2}\)</span> を掛け直すことで，固有値は <span class="arithmatex">\(\lambda = \pm\frac{\hbar}{2}\)</span> と求まります。スピンはどの方向を測っても，その軸に対して上向きか下向きのふたつの値しかとり得ないことが示されました。</p>
 <p>次に， <span class="arithmatex">\(\lambda' = +1\)</span> に対する固有ベクトル <span class="arithmatex">\(\begin{pmatrix} a \\ b \end{pmatrix}\)</span> を求めます。行列の1行目の関係式を書き出します。</p>
 <div class="arithmatex">\[
-(\cos\theta - 1)a + \sin\theta e^{-i\phi}b = 0 \implies \sin\theta e^{-i\phi}b = (1 - \cos\theta)a
+\begin{aligned}
+(\cos\theta - 1)a + \sin\theta e^{-i\phi}b &amp;= 0 \implies \sin\theta e^{-i\phi}b \\
+&amp;= (1 - \cos\theta)a
+\end{aligned}
 \]</div>
 <p>ここで，半角の公式 <span class="arithmatex">\(1 - \cos\theta = 2\sin^2\frac{\theta}{2}\)</span> および倍角の公式 <span class="arithmatex">\(\sin\theta = 2\sin\frac{\theta}{2}\cos\frac{\theta}{2}\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14584,12 +14592,19 @@
 \]</div>
 <p>両辺を <span class="arithmatex">\(2\sin\frac{\theta}{2}\)</span> で割り算して整理します。</p>
 <div class="arithmatex">\[
-\cos\frac{\theta}{2} e^{-i\phi}b = \sin\frac{\theta}{2}a \implies b = e^{i\phi} \frac{\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} a
+\begin{aligned}
+\cos\frac{\theta}{2} e^{-i\phi}b &amp;= \sin\frac{\theta}{2}a \implies b \\
+&amp;= e^{i\phi} \frac{\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} a
+\end{aligned}
 \]</div>
 <p>比率を保つように <span class="arithmatex">\(a = \cos\frac{\theta}{2}\)</span> と置くと， <span class="arithmatex">\(b = e^{i\phi}\sin\frac{\theta}{2}\)</span> となります。
 このベクトルの大きさを確認します。</p>
 <div class="arithmatex">\[
-|a|^2 + |b|^2 = \cos^2\frac{\theta}{2} + |e^{i\phi}|^2\sin^2\frac{\theta}{2} = \cos^2\frac{\theta}{2} + \sin^2\frac{\theta}{2} = 1
+\begin{aligned}
+|a|^2 + |b|^2 &amp;= \cos^2\frac{\theta}{2} + |e^{i\phi}|^2\sin^2\frac{\theta}{2} \\
+&amp;= \cos^2\frac{\theta}{2} + \sin^2\frac{\theta}{2} \\
+&amp;= \finalanswer{1}
+\end{aligned}
 \]</div>
 <p>すでに大きさは 1 に規格化されているため，固有状態の形が以下のように導かれました。</p>
 <div class="arithmatex">\[
@@ -14603,11 +14618,18 @@
 \]</div>
 <p>状態 <span class="arithmatex">\(|+\rangle\)</span> との内積を計算します。</p>
 <div class="arithmatex">\[
-\langle \boldsymbol{n}, +|+\rangle = \begin{pmatrix} \cos\frac{\theta}{2}, &amp; e^{-i\phi} \sin\frac{\theta}{2} \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \cos\frac{\theta}{2} \cdot 1 + e^{-i\phi} \sin\frac{\theta}{2} \cdot 0 = \cos\frac{\theta}{2}
+\begin{aligned}
+\langle \boldsymbol{n}, +|+\rangle &amp;= \begin{pmatrix} \cos\frac{\theta}{2}, &amp; e^{-i\phi} \sin\frac{\theta}{2} \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= \cos\frac{\theta}{2} \cdot 1 + e^{-i\phi} \sin\frac{\theta}{2} \cdot 0 \\
+&amp;= \cos\frac{\theta}{2}
+\end{aligned}
 \]</div>
 <p>確率はこの値の絶対値の2乗で与えられます。</p>
 <div class="arithmatex">\[
-P_+ = |\langle \boldsymbol{n}, +|+\rangle|^2 = \cos^2\frac{\theta}{2}
+\begin{aligned}
+P_+ &amp;= |\langle \boldsymbol{n}, +|+\rangle|^2 \\
+&amp;= \finalanswer{\cos^2\frac{\theta}{2}}
+\end{aligned}
 \]</div>
 <p>半角の公式を用いて書き直すと <span class="arithmatex">\(P_+ = \frac{1 + \cos\theta}{2}\)</span> となります。例えば <span class="arithmatex">\(\theta = 0\)</span> であれば確率は 1 となり， <span class="arithmatex">\(\theta = \pi\)</span> であれば確率は 0 となり， <span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> であれば確率は <span class="arithmatex">\(\frac{1}{2}\)</span> となることが分かります。</p>
 

@@ -14524,7 +14524,7 @@ N = \sum_{k} n_k, \quad E = \sum_{k} \epsilon_k n_k
 \]</div>
 <p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の熱・粒子浴と平衡状態にある系全体の大分配関数 <span class="arithmatex">\(\Xi\)</span> は，すべての微視的状態に関するギブズ因子の和として定義される。以下の問いに答えよ。</p>
 <p>(1) 大分配関数 <span class="arithmatex">\(\Xi\)</span> の定義式において，全粒子数 <span class="arithmatex">\(N\)</span> と全エネルギー <span class="arithmatex">\(E\)</span> の式を代入し，各準位 <span class="arithmatex">\(k\)</span> の占有数 <span class="arithmatex">\(n_k\)</span> に関する独立な和の積へと分解できることを示せ。これによって，系全体の大分配関数が，各準位ごとの大分配関数 <span class="arithmatex">\(\Xi_k\)</span> の積 <span class="arithmatex">\(\Xi = \prod_{k} \Xi_k\)</span> として表されることを導け。</p>
-<p>(2) フェルミ粒子およびボース粒子のそれぞれについて，各準位の占有数 <span class="arithmatex">\(n_k\)</span> がとり得る値の範囲を考慮して <span class="arithmatex">\(\Xi_k\)</span> の和を具体的に計算せよ。ただし，ボース粒子の計算においては収束条件 <span class="arithmatex">\(\mu &lt; \epsilon_k\)</span> が満たされているものとする。</p>
+<p>(2) フェルミ粒子およびボース粒子のそれぞれについて，各準位の占有数 <span class="arithmatex">\(n_k\)</span> がとり得る値の範囲を考慮して <span class="arithmatex">\(\Xi_k\)</span> の和を計算せよ。ただし，ボース粒子の計算においては収束条件 <span class="arithmatex">\(\mu &lt; \epsilon_k\)</span> が満たされているものとする。</p>
 <p>(3) (2) の結果を用いることで，系全体のグランドポテンシャル <span class="arithmatex">\(\Omega = -k_B T \log \Xi\)</span> が，フェルミ粒子とボース粒子で符号が異なる以下の一体型の形式で表現できることを示せ。</p>
 <div class="arithmatex">\[
 \Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
@@ -14539,19 +14539,28 @@ N = \sum_{k} n_k, \quad E = \sum_{k} \epsilon_k n_k
 \]</div>
 <p>この式の指数部分に，与えられた <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(E\)</span> の表現を代入します。</p>
 <div class="arithmatex">\[
-E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - \mu) n_k
+\begin{aligned}
+E - \mu N &amp;= \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k \\
+&amp;= \sum_{k} (\epsilon_k - \mu) n_k
+\end{aligned}
 \]</div>
 <p>これを指数関数の中に書き戻すと，和の指数関数は，各項の指数関数の積へと書き換えることができます。</p>
 <div class="arithmatex">\[
-\Xi = \sum_{n_1, n_2, \dots} \exp\left[ -\beta \sum_{k} (\epsilon_k - \mu) n_k \right] = \sum_{n_1, n_2, \dots} \prod_{k} \exp\left[ -\beta (\epsilon_k - \mu) n_k \right]
+\begin{aligned}
+\Xi &amp;= \sum_{n_1, n_2, \dots} \exp\left[ -\beta \sum_{k} (\epsilon_k - \mu) n_k \right] \\
+&amp;= \sum_{n_1, n_2, \dots} \prod_{k} \exp\left[ -\beta (\epsilon_k - \mu) n_k \right]
+\end{aligned}
 \]</div>
 <p>粒子間に相互作用がないため，各準位の占有数は独立です。したがって，全状態に関する和を各準位の和の積へ因数分解できます。</p>
 <div class="arithmatex">\[
-\Xi = \left( \sum_{n_1} \exp\left[ - \beta(\epsilon_1 - \mu)n_1 \right] \right) \left( \sum_{n_2} \exp\left[ - \beta(\epsilon_2 - \mu)n_2 \right] \right) \dots = \prod_{k} \left( \sum_{n_k} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] \right)
+\begin{aligned}
+\Xi &amp;= \left( \sum_{n_1} \exp\left[ - \beta(\epsilon_1 - \mu)n_1 \right] \right) \left( \sum_{n_2} \exp\left[ - \beta(\epsilon_2 - \mu)n_2 \right] \right) \dots \\
+&amp;= \prod_{k} \left( \sum_{n_k} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] \right)
+\end{aligned}
 \]</div>
 <p>括弧の内部は，特定の量子状態 <span class="arithmatex">\(k\)</span> のみが担う大分配関数 <span class="arithmatex">\(\Xi_k\)</span> そのものです。これにより，系全体の大分配関数が各一粒子準位の大分配関数の積に帰着することが証明されました。</p>
 <div class="arithmatex">\[
-\Xi = \prod_{k} \Xi_k
+\finalanswer{\Xi = \prod_{k} \Xi_k}
 \]</div>
 <p>大正準集団では粒子数一定の拘束がないため，各準位の和を独立に計算できます。</p>
 <h3 id="2">(2)</h3>
@@ -14559,17 +14568,27 @@ E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - 
 <p><strong>フェルミ粒子のケース</strong></p>
 <p>パウリの排他原理により，占有数は <span class="arithmatex">\(n_k = 0, 1\)</span> の2つの状態しか存在しません。したがって，和は2項のみとなります。</p>
 <div class="arithmatex">\[
-\Xi_k^{\mathrm{Fermi}} = \exp(0) + \exp\left[ -\beta(\epsilon_k - \mu) \right] = 1 + \exp\left[ -\beta(\epsilon_k - \mu) \right]
+\begin{aligned}
+\Xi_k^{\mathrm{Fermi}} &amp;= \exp(0) + \exp\left[ -\beta(\epsilon_k - \mu) \right] \\
+&amp;= 1 + \exp\left[ -\beta(\epsilon_k - \mu) \right]
+\end{aligned}
 \]</div>
 <p><strong>ボース粒子のケース</strong></p>
 <p>状態への侵入制限がないため，占有数は <span class="arithmatex">\(n_k = 0\)</span> から無限大までのすべての非負整数をとります。無限等比級数の和の公式を適用します。</p>
 <div class="arithmatex">\[
-\Xi_k^{\mathrm{Bose}} = \sum_{n_k=0}^{\infty} \left( \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)^{n_k} = \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]}
+\begin{aligned}
+\Xi_k^{\mathrm{Bose}} &amp;= \sum_{n_k=0}^{\infty} \left( \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)^{n_k} \\
+&amp;= \finalanswer{\frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]}}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>系全体のグランドポテンシャル <span class="arithmatex">\(\Omega\)</span> の定義式に，(1) で得られた大分配関数の積の表現を代入します。対数の性質により，積の対数は対数の和へと変換されます。</p>
 <div class="arithmatex">\[
-\Omega = -k_B T \log \Xi = -k_B T \log \left( \prod_{k} \Xi_k \right) = -k_B T \sum_{k} \log \Xi_k
+\begin{aligned}
+\Omega &amp;= -k_B T \log \Xi \\
+&amp;= -k_B T \log \left( \prod_{k} \Xi_k \right) \\
+&amp;= -k_B T \sum_{k} \log \Xi_k
+\end{aligned}
 \]</div>
 <p>この式に，(2) で求めたフェルミ粒子とボース粒子のそれぞれの <span class="arithmatex">\(\Xi_k\)</span> を代入して整理します。</p>
 <p><strong>フェルミ粒子の場合</strong></p>
@@ -14579,11 +14598,14 @@ E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - 
 <p><strong>ボース粒子の場合</strong></p>
 <p>分母にある構造を対数の外に出すため，マイナス符号が相殺されてプラスになります。</p>
 <div class="arithmatex">\[
-\Omega_{\mathrm{Bose}} = -k_B T \sum_{k} \log \left( \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \right) = +k_B T \sum_{k} \log \left( 1 - \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
+\begin{aligned}
+\Omega_{\mathrm{Bose}} &amp;= -k_B T \sum_{k} \log \left( \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \right) \\
+&amp;= +k_B T \sum_{k} \log \left( 1 - \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
+\end{aligned}
 \]</div>
 <p>この二つの式を複号を用いて一つの形にまとめます。</p>
 <div class="arithmatex">\[
-\Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
+\finalanswer{\Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)}
 \]</div>
 <p>以上より，フェルミ粒子とボース粒子のグランドポテンシャルが得られます。</p>
 

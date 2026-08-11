@@ -14540,17 +14540,26 @@
 <h3 id="1">(1)</h3>
 <p>入射波 <span class="arithmatex">\(\psi_{\text{in}} = e^{i k z}\)</span> に対し，各微分演算を行います。 <span class="arithmatex">\(z\)</span> 方向以外の微分は 0 になります。</p>
 <div class="arithmatex">\[
-\boldsymbol{\nabla} \psi_{\text{in}} = \hat{\boldsymbol{z}} \frac{\partial}{\partial z} e^{i k z} = i k \hat{\boldsymbol{z}} e^{i k z}
+\begin{aligned}
+\boldsymbol{\nabla} \psi_{\text{in}} &amp;= \hat{\boldsymbol{z}} \frac{\partial}{\partial z} e^{i k z} \\
+&amp;= i k \hat{\boldsymbol{z}} e^{i k z}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{\nabla} \psi_{\text{in}}^* = \hat{\boldsymbol{z}} \frac{\partial}{\partial z} e^{-i k z} = -i k \hat{\boldsymbol{z}} e^{-i k z}
+\begin{aligned}
+\boldsymbol{\nabla} \psi_{\text{in}}^* &amp;= \hat{\boldsymbol{z}} \frac{\partial}{\partial z} e^{-i k z} \\
+&amp;= -i k \hat{\boldsymbol{z}} e^{-i k z}
+\end{aligned}
 \]</div>
 <p>これらを入射確率流密度の定義式に代入します。</p>
 <div class="arithmatex">\[
 \boldsymbol{J}_{\text{in}} = \frac{\hbar}{2mi} \left[ e^{-i k z} \left( i k \hat{\boldsymbol{z}} e^{i k z} \right) - e^{i k z} \left( -i k \hat{\boldsymbol{z}} e^{-i k z} \right) \right]
 \]</div>
 <div class="arithmatex">\[
-= \frac{\hbar}{2mi} \left[ i k \hat{\boldsymbol{z}} + i k \hat{\boldsymbol{z}} \right] = \frac{\hbar}{2mi} \left( 2i k \hat{\boldsymbol{z}} \right)
+\begin{aligned}
+ &amp;= \frac{\hbar}{2mi} \left[ i k \hat{\boldsymbol{z}} + i k \hat{\boldsymbol{z}} \right] \\
+&amp;= \frac{\hbar}{2mi} \left( 2i k \hat{\boldsymbol{z}} \right)
+\end{aligned}
 \]</div>
 <p>分母と分子の <span class="arithmatex">\(2i\)</span> を約分します。</p>
 <div class="arithmatex">\[
@@ -14558,7 +14567,7 @@
 \]</div>
 <p>このベクトルの大きさを <span class="arithmatex">\(I\)</span> と置きます。</p>
 <div class="arithmatex">\[
-I = \frac{\hbar k}{m}
+\finalanswer{I = \frac{\hbar k}{m}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>散乱波 <span class="arithmatex">\(\psi_{\text{sc}} = f(\theta, \phi) \frac{e^{i k r}}{r}\)</span> に対し，遠方で残る半径方向の微分演算を行います。</p>
@@ -14582,11 +14591,14 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ \psi_{\text{sc}}^* \frac{\partial \p
 \]</div>
 <p>括弧の内部を掛け算すると，指数関数部分が相殺して 1 になります。</p>
 <div class="arithmatex">\[
-J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ i k \frac{|f(\theta, \phi)|^2}{r^2} + i k \frac{|f(\theta, \phi)|^2}{r^2} \right] = \frac{\hbar}{2mi} \left( 2i k \frac{|f(\theta, \phi)|^2}{r^2} \right)
+\begin{aligned}
+J_{\text{sc}, r} &amp;= \frac{\hbar}{2mi} \left[ i k \frac{|f(\theta, \phi)|^2}{r^2} + i k \frac{|f(\theta, \phi)|^2}{r^2} \right] \\
+&amp;= \frac{\hbar}{2mi} \left( 2i k \frac{|f(\theta, \phi)|^2}{r^2} \right)
+\end{aligned}
 \]</div>
 <p>分母と分子の <span class="arithmatex">\(2i\)</span> を約分します。</p>
 <div class="arithmatex">\[
-J_{\text{sc}, r} = \frac{\hbar k}{m r^2} |f(\theta, \phi)|^2
+\finalanswer{J_{\text{sc}, r} = \frac{\hbar k}{m r^2} |f(\theta, \phi)|^2}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた定義式に基づき，各物理量の関係を組み立てます。</p>
@@ -14607,7 +14619,7 @@ J_{\text{sc}, r} = \frac{\hbar k}{m r^2} |f(\theta, \phi)|^2
 \]</div>
 <p>分子にある <span class="arithmatex">\(r^2\)</span> と <span class="arithmatex">\(1/r^2\)</span> が掛け算されて相殺します。さらに，分子と分母に共通して存在する因数 <span class="arithmatex">\(\frac{\hbar k}{m}\)</span> が約分されて消去されます。</p>
 <div class="arithmatex">\[
-\frac{d\sigma}{d\Omega} = |f(\theta, \phi)|^2
+\finalanswer{\frac{d\sigma}{d\Omega} = |f(\theta, \phi)|^2}
 \]</div>
 
 

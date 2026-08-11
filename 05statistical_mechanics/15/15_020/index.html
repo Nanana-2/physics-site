@@ -14542,7 +14542,10 @@ F = U - TS
 <h3 id="1">(1)</h3>
 <p>目的関数 <span class="arithmatex">\(I(\{p_n\}, \alpha, \beta)\)</span> の各項について， <span class="arithmatex">\(p_k\)</span> による偏微分を実行します。</p>
 <div class="arithmatex">\[
-\frac{\partial}{\partial p_k} \left( -\sum_n p_n \ln p_n \right) = -\ln p_k - p_k \cdot \frac{1}{p_k} = -\ln p_k - 1
+\begin{aligned}
+\frac{\partial}{\partial p_k} \left( -\sum_n p_n \ln p_n \right) &amp;= -\ln p_k - p_k \cdot \frac{1}{p_k} \\
+&amp;= -\ln p_k - 1
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \frac{\partial}{\partial p_k} \left[ - \alpha \left( \sum_n p_n - 1 \right) \right] = -\alpha
@@ -14560,12 +14563,19 @@ F = U - TS
 \]</div>
 <p>両辺の指数をとることで，求める確率の表現が導かれます。</p>
 <div class="arithmatex">\[
-p_k = \exp(-1 - \alpha - \beta E_k) = \exp(-1 - \alpha) \exp(-\beta E_k)
+\begin{aligned}
+p_k &amp;= \exp(-1 - \alpha - \beta E_k) \\
+&amp;= \finalanswer{\exp(-1 - \alpha) \exp(-\beta E_k)}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>すべての状態について確率の総和をとり，これが 1 に等しいという条件を課します。</p>
 <div class="arithmatex">\[
-\sum_n p_n = \sum_n \exp(-1 - \alpha) \exp(-\beta E_n) = \exp(-1 - \alpha) \sum_n \exp(-\beta E_n) = 1
+\begin{aligned}
+\sum_n p_n &amp;= \sum_n \exp(-1 - \alpha) \exp(-\beta E_n) \\
+&amp;= \exp(-1 - \alpha) \sum_n \exp(-\beta E_n) \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>ここで，状態和を <span class="arithmatex">\(Z = \sum_n \exp(-\beta E_n)\)</span> と定義すると，定数因子の値が以下のように決定されます。</p>
 <div class="arithmatex">\[
@@ -14577,16 +14587,22 @@ p_k = \frac{\exp(-\beta E_k)}{Z}
 \]</div>
 <p>この固有値を対角成分に持つ密度行列 <span class="arithmatex">\(\rho\)</span> は，ハミルトニアンの固有基底において <span class="arithmatex">\(\rho = \sum_n p_n |n\rangle\langle n|\)</span> と表されるため，演算子形式の指数関数を用いて以下のように直接的にまとめることができます。</p>
 <div class="arithmatex">\[
-\rho = \frac{\exp(-\beta \hat{H})}{Z}
+\finalanswer{\rho = \frac{\exp(-\beta \hat{H})}{Z}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>シャノンエントロピーの式に，固有値 <span class="arithmatex">\(p_n = \frac{\exp(-\beta E_n)}{Z}\)</span> を代入します。対数部分を分割します。</p>
 <div class="arithmatex">\[
-\ln p_n = \ln \left( \frac{\exp(-\beta E_n)}{Z} \right) = -\beta E_n - \ln Z
+\begin{aligned}
+\ln p_n &amp;= \ln \left( \frac{\exp(-\beta E_n)}{Z} \right) \\
+&amp;= -\beta E_n - \ln Z
+\end{aligned}
 \]</div>
 <p>これをエントロピーの定義式に適用します。</p>
 <div class="arithmatex">\[
-S = -k_B \sum_n p_n \left( -\beta E_n - \ln Z \right) = k_B \beta \sum_n p_n E_n + k_B \ln Z \sum_n p_n
+\begin{aligned}
+S &amp;= -k_B \sum_n p_n \left( -\beta E_n - \ln Z \right) \\
+&amp;= k_B \beta \sum_n p_n E_n + k_B \ln Z \sum_n p_n
+\end{aligned}
 \]</div>
 <p>ここで，束縛条件であるエネルギー期待値の定義 <span class="arithmatex">\(\sum_n p_n E_n = U\)</span> と，規格化条件 <span class="arithmatex">\(\sum_n p_n = 1\)</span> をそれぞれの項に代入します。</p>
 <div class="arithmatex">\[
@@ -14606,7 +14622,7 @@ TS = U - F
 \]</div>
 <p>この式を <span class="arithmatex">\(F\)</span> について解くように移項することで，マクロ熱力学における基本関係式が導出されます。</p>
 <div class="arithmatex">\[
-F = U - TS
+\finalanswer{F = U - TS}
 \]</div>
 
 

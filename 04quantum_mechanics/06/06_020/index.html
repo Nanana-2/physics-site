@@ -14532,28 +14532,40 @@
 <h3 id="1">(1)</h3>
 <p>状態 <span class="arithmatex">\(\hat{L}_\pm |l, m\rangle\)</span> に左から <span class="arithmatex">\(\hat{L}_z\)</span> を作用させます。提示された交換関係より <span class="arithmatex">\(\hat{L}_z \hat{L}_\pm = \hat{L}_\pm \hat{L}_z \pm \hbar \hat{L}_\pm\)</span> と順序を入れ替えることができます。</p>
 <div class="arithmatex">\[
-\hat{L}_z \left( \hat{L}_\pm |l, m\rangle \right) = (\hat{L}_z \hat{L}_\pm) |l, m\rangle = (\hat{L}_\pm \hat{L}_z \pm \hbar \hat{L}_\pm) |l, m\rangle
+\begin{aligned}
+\hat{L}_z \left( \hat{L}_\pm |l, m\rangle \right) &amp;= (\hat{L}_z \hat{L}_\pm) |l, m\rangle \\
+&amp;= (\hat{L}_\pm \hat{L}_z \pm \hbar \hat{L}_\pm) |l, m\rangle
+\end{aligned}
 \]</div>
 <p>右側の状態に <span class="arithmatex">\(\hat{L}_z\)</span> を作用させて固有値を前に出します。</p>
 <div class="arithmatex">\[
-\hat{L}_\pm (m\hbar |l, m\rangle) \pm \hbar \hat{L}_\pm |l, m\rangle = (m \pm 1)\hbar \left( \hat{L}_\pm |l, m\rangle \right)
+\finalanswer{\hat{L}_\pm (m\hbar |l, m\rangle) \pm \hbar \hat{L}_\pm |l, m\rangle = (m \pm 1)\hbar \left( \hat{L}_\pm |l, m\rangle \right)}
 \]</div>
 <p>これにより，新しく作られた状態の <span class="arithmatex">\(\hat{L}_z\)</span> に対する固有値は <span class="arithmatex">\((m \pm 1)\hbar\)</span> になることが分かります。 <span class="arithmatex">\(\hat{L}_+\)</span> は <span class="arithmatex">\(m\)</span> を 1 つ上げ， <span class="arithmatex">\(\hat{L}_-\)</span> は <span class="arithmatex">\(m\)</span> を 1 つ下げる演算子です。</p>
 <h3 id="2">(2)</h3>
 <p>定義に従って掛け算を行います。成分同士が非可換であることに注意します。</p>
 <div class="arithmatex">\[
-\hat{L}_- \hat{L}_+ = (\hat{L}_x - i\hat{L}_y)(\hat{L}_x + i\hat{L}_y) = \hat{L}_x^2 + i\hat{L}_x \hat{L}_y - i\hat{L}_y \hat{L}_x + \hat{L}_y^2
+\begin{aligned}
+\hat{L}_- \hat{L}_+ &amp;= (\hat{L}_x - i\hat{L}_y)(\hat{L}_x + i\hat{L}_y) \\
+&amp;= \hat{L}_x^2 + i\hat{L}_x \hat{L}_y - i\hat{L}_y \hat{L}_x + \hat{L}_y^2
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-= \hat{L}_x^2 + \hat{L}_y^2 + i(\hat{L}_x \hat{L}_y - \hat{L}_y \hat{L}_x) = \hat{L}_x^2 + \hat{L}_y^2 + i[\hat{L}_x, \hat{L}_y]
+\begin{aligned}
+ &amp;= \hat{L}_x^2 + \hat{L}_y^2 + i(\hat{L}_x \hat{L}_y - \hat{L}_y \hat{L}_x) \\
+&amp;= \hat{L}_x^2 + \hat{L}_y^2 + i[\hat{L}_x, \hat{L}_y]
+\end{aligned}
 \]</div>
 <p>ここに <span class="arithmatex">\(\hat{L}_x^2 + \hat{L}_y^2 = \hat{L}^2 - \hat{L}_z^2\)</span> および交換関係 <span class="arithmatex">\([\hat{L}_x, \hat{L}_y] = i\hbar \hat{L}_z\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\hat{L}_- \hat{L}_+ = \hat{L}^2 - \hat{L}_z^2 + i(i\hbar \hat{L}_z) = \hat{L}^2 - \hat{L}_z^2 - \hbar \hat{L}_z
+\begin{aligned}
+\hat{L}_- \hat{L}_+ &amp;= \hat{L}^2 - \hat{L}_z^2 + i(i\hbar \hat{L}_z) \\
+&amp;= \hat{L}^2 - \hat{L}_z^2 - \hbar \hat{L}_z
+\end{aligned}
 \]</div>
 <p>符号を反転させて同様に計算すると，逆の順序の積が得られます。</p>
 <div class="arithmatex">\[
-\hat{L}_+ \hat{L}_- = \hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z
+\finalanswer{\hat{L}_+ \hat{L}_- = \hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>これ以上 <span class="arithmatex">\(m\)</span> の値を上げることができない最大の状態 <span class="arithmatex">\(|l, l\rangle\)</span> に <span class="arithmatex">\(\hat{L}_+\)</span> を作用させると 0 になります。</p>
@@ -14581,15 +14593,21 @@
 \]</div>
 <p>次に，これ以上 <span class="arithmatex">\(m\)</span> の値を下げることができない最小の状態 <span class="arithmatex">\(|l, m_{\text{min}}\rangle\)</span> に対して <span class="arithmatex">\(\hat{L}_- |l, m_{\text{min}}\rangle = 0\)</span> と置き，左から <span class="arithmatex">\(\hat{L}_+\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-\hat{L}_+ \hat{L}_- |l, m_{\text{min}}\rangle = 0 \implies (\hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z) |l, m_{\text{min}}\rangle = 0
+\begin{aligned}
+\hat{L}_+ \hat{L}_- |l, m_{\text{min}}\rangle &amp;= 0 \implies (\hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z) |l, m_{\text{min}}\rangle \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>すでに求めた <span class="arithmatex">\(\lambda = l(l+1)\hbar^2\)</span> と，固有値 <span class="arithmatex">\(m_{\text{min}}\hbar\)</span> を代入します。</p>
 <div class="arithmatex">\[
-l(l+1)\hbar^2 - m_{\text{min}}^2\hbar^2 + m_{\text{min}}\hbar^2 = 0 \implies l^2 + l - m_{\text{min}}^2 + m_{\text{min}} = 0
+\begin{aligned}
+l(l+1)\hbar^2 - m_{\text{min}}^2\hbar^2 + m_{\text{min}}\hbar^2 &amp;= 0 \implies l^2 + l - m_{\text{min}}^2 + m_{\text{min}} \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>因数分解して整理します。</p>
 <div class="arithmatex">\[
-(l + m_{\text{min}})(l - m_{\text{min}}) + (l + m_{\text{min}}) = 0 \implies (l + m_{\text{min}})(l - m_{\text{min}} + 1) = 0
+\finalanswer{(l + m_{\text{min}})(l - m_{\text{min}}) + (l + m_{\text{min}}) = 0 \implies (l + m_{\text{min}})(l - m_{\text{min}} + 1) = 0}
 \]</div>
 <p><span class="arithmatex">\(m_{\text{min}}\)</span> は最大値 <span class="arithmatex">\(l\)</span> 以下の値をとるため，第2項の括弧が 0 になることはありません。したがって第1項の括弧が 0 になり， <span class="arithmatex">\(m_{\text{min}} = -l\)</span> が定まります。</p>
 <p>昇降演算子の作用によって <span class="arithmatex">\(m\)</span> は 1 ずつ変化するため，最大値から最小値までの間には整数回のステップが存在します。これにより， <span class="arithmatex">\(m\)</span> の範囲は <span class="arithmatex">\(-l\)</span> から <span class="arithmatex">\(l\)</span> までの等間隔な領域に制限されることが示されました。</p>

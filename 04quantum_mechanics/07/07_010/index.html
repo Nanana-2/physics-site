@@ -14539,35 +14539,71 @@
 <li><strong>状態 <span class="arithmatex">\(|+\rangle\)</span> への作用</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{S}_z |+\rangle = \frac{\hbar}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 1 \cdot 1 + 0 \cdot 0 \\ 0 \cdot 1 + (-1) \cdot 0 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = +\frac{\hbar}{2} |+\rangle
+\begin{aligned}
+\hat{S}_z |+\rangle &amp;= \frac{\hbar}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= \frac{\hbar}{2} \begin{pmatrix} 1 \cdot 1 + 0 \cdot 0 \\ 0 \cdot 1 + (-1) \cdot 0 \end{pmatrix} \\
+&amp;= \frac{\hbar}{2} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= \finalanswer{+\frac{\hbar}{2} |+\rangle}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>状態 <span class="arithmatex">\(|-\rangle\)</span> への作用</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{S}_z |-\rangle = \frac{\hbar}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 1 \cdot 0 + 0 \cdot 1 \\ 0 \cdot 0 + (-1) \cdot 1 \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix} 0 \\ -1 \end{pmatrix} = -\frac{\hbar}{2} |-\rangle
+\begin{aligned}
+\hat{S}_z |-\rangle &amp;= \frac{\hbar}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+&amp;= \frac{\hbar}{2} \begin{pmatrix} 1 \cdot 0 + 0 \cdot 1 \\ 0 \cdot 0 + (-1) \cdot 1 \end{pmatrix} \\
+&amp;= \frac{\hbar}{2} \begin{pmatrix} 0 \\ -1 \end{pmatrix} \\
+&amp;= \finalanswer{-\frac{\hbar}{2} |-\rangle}
+\end{aligned}
 \]</div>
 <p>計算結果より，それぞれの状態が固有値 <span class="arithmatex">\(+\frac{\hbar}{2}\)</span> および <span class="arithmatex">\(-\frac{\hbar}{2}\)</span> を持つ固有状態であることが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>各成分演算子の定義 <span class="arithmatex">\(\hat{S}_x = \frac{\hbar}{2}\sigma_x\)</span> ， <span class="arithmatex">\(\hat{S}_y = \frac{\hbar}{2}\sigma_y\)</span> を昇降演算子の定義式に代入します。</p>
 <div class="arithmatex">\[
-\hat{S}_+ = \frac{\hbar}{2}(\sigma_x + i\sigma_y) = \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + i \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \right] = \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} \right] = \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}
+\begin{aligned}
+\hat{S}_+ &amp;= \frac{\hbar}{2}(\sigma_x + i\sigma_y) \\
+&amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + i \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \right] \\
+&amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} \right] \\
+&amp;= \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\hat{S}_- = \frac{\hbar}{2}(\sigma_x - i\sigma_y) = \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} - i \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \right] = \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} - \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} \right] = \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}
+\begin{aligned}
+\hat{S}_- &amp;= \frac{\hbar}{2}(\sigma_x - i\sigma_y) \\
+&amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} - i \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \right] \\
+&amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} - \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} \right] \\
+&amp;= \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>求めた行列を各ベクトルに作用させて規則を調べます。</p>
 <div class="arithmatex">\[
-\hat{S}_+ |+\rangle = \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} = 0
+\begin{aligned}
+\hat{S}_+ |+\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\hat{S}_+ |-\rangle = \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \hbar \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \hbar |+\rangle
+\begin{aligned}
+\hat{S}_+ |-\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+&amp;= \hbar \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= \hbar |+\rangle
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\hat{S}_- |+\rangle = \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \hbar \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \hbar |-\rangle
+\begin{aligned}
+\hat{S}_- |+\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= \hbar \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+&amp;= \hbar |-\rangle
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\hat{S}_- |-\rangle = \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} = 0
+\begin{aligned}
+\hat{S}_- |-\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+&amp;= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>この結果より， <span class="arithmatex">\(\hat{S}_+\)</span> は下向き状態を上向き状態へ引き上げ，すでに上向きの状態に作用すると 0 にする性質を持ちます。 <span class="arithmatex">\(\hat{S}_-\)</span> はその逆の作用をします。</p>
 <h3 id="3">(3)</h3>
@@ -14576,26 +14612,45 @@
 <li><strong><span class="arithmatex">\(\sigma_x \sigma_y\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \sigma_x \sigma_y = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} = \begin{pmatrix} 0 \cdot 0 + 1 \cdot i &amp; 0 \cdot (-i) + 1 \cdot 0 \\ 1 \cdot 0 + 0 \cdot i &amp; 1 \cdot (-i) + 0 \cdot 0 \end{pmatrix} = \begin{pmatrix} i &amp; 0 \\ 0 &amp; -i \end{pmatrix}
+\begin{aligned}
+\sigma_x \sigma_y &amp;= \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} 0 \cdot 0 + 1 \cdot i &amp; 0 \cdot (-i) + 1 \cdot 0 \\ 1 \cdot 0 + 0 \cdot i &amp; 1 \cdot (-i) + 0 \cdot 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} i &amp; 0 \\ 0 &amp; -i \end{pmatrix}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(\sigma_y \sigma_x\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \sigma_y \sigma_x = \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} = \begin{pmatrix} 0 \cdot 0 + (-i) \cdot 1 &amp; 0 \cdot 1 + (-i) \cdot 0 \\ i \cdot 0 + 0 \cdot 1 &amp; i \cdot 1 + 0 \cdot 0 \end{pmatrix} = \begin{pmatrix} -i &amp; 0 \\ 0 &amp; i \end{pmatrix}
+\begin{aligned}
+\sigma_y \sigma_x &amp;= \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} 0 \cdot 0 + (-i) \cdot 1 &amp; 0 \cdot 1 + (-i) \cdot 0 \\ i \cdot 0 + 0 \cdot 1 &amp; i \cdot 1 + 0 \cdot 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} -i &amp; 0 \\ 0 &amp; i \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>ふたつの積の差をとります。</p>
 <div class="arithmatex">\[
-\sigma_x \sigma_y - \sigma_y \sigma_x = \begin{pmatrix} i &amp; 0 \\ 0 &amp; -i \end{pmatrix} - \begin{pmatrix} -i &amp; 0 \\ 0 &amp; i \end{pmatrix} = \begin{pmatrix} 2i &amp; 0 \\ 0 &amp; -2i \end{pmatrix} = 2i \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
+\begin{aligned}
+\sigma_x \sigma_y - \sigma_y \sigma_x &amp;= \begin{pmatrix} i &amp; 0 \\ 0 &amp; -i \end{pmatrix} - \begin{pmatrix} -i &amp; 0 \\ 0 &amp; i \end{pmatrix} \\
+&amp;= \begin{pmatrix} 2i &amp; 0 \\ 0 &amp; -2i \end{pmatrix} \\
+&amp;= 2i \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>右辺の行列は <span class="arithmatex">\(\sigma_z\)</span> そのものであるため， <span class="arithmatex">\([\sigma_x, \sigma_y] = 2i\sigma_z\)</span> が成り立ちます。</p>
 <p>この結果を用いて，スピン演算子の交換関係を組み立てます。定義より係数が出ます。</p>
 <div class="arithmatex">\[
-[\hat{S}_x, \hat{S}_y] = \left[ \frac{\hbar}{2}\sigma_x, \frac{\hbar}{2}\sigma_y \right] = \frac{\hbar^2}{4} [\sigma_x, \sigma_y]
+\begin{aligned}
+[\hat{S}_x, \hat{S}_y] &amp;= \left[ \frac{\hbar}{2}\sigma_x, \frac{\hbar}{2}\sigma_y \right] \\
+&amp;= \frac{\hbar^2}{4} [\sigma_x, \sigma_y]
+\end{aligned}
 \]</div>
 <p>ここにパウリ行列の交換関係を代入します。</p>
 <div class="arithmatex">\[
-[\hat{S}_x, \hat{S}_y] = \frac{\hbar^2}{4} (2i\sigma_z) = i\hbar \left( \frac{\hbar}{2}\sigma_z \right) = i\hbar \hat{S}_z
+\begin{aligned}
+[\hat{S}_x, \hat{S}_y] &amp;= \frac{\hbar^2}{4} (2i\sigma_z) \\
+&amp;= i\hbar \left( \frac{\hbar}{2}\sigma_z \right) \\
+&amp;= \finalanswer{i\hbar \hat{S}_z}
+\end{aligned}
 \]</div>
 <p>これにより，空間的な微分を含まない行列による定義であっても，角運動量が満たすべき基本的な交換関係が正しく成立していることが確認されました。</p>
 

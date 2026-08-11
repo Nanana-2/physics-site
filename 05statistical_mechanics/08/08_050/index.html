@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">プランクの黒体放射法則</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある体積 <span class="arithmatex">\(V\)</span> の空洞内の黒体放射を考える。空洞内部の電磁場は，各振動数を持つ独立な調和振動子の集まりとして扱うことができる。量子力学によると，角振動数 <span class="arithmatex">\(\omega\)</span> のモードのエネルギーは，光子の数 <span class="arithmatex">\(n\)</span> を用いて <span class="arithmatex">\(\epsilon_n = \hbar \omega n\)</span> と離散化される。ただし，零点エネルギーは基準の取り方によって相殺されるためここでは無視する。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある体積 <span class="arithmatex">\(V\)</span> の空洞内の黒体放射を考える。空洞内部の電磁場は，各振動数を持つ独立な調和振動子の集まりとして扱うことができる。量子力学によると，角振動数 <span class="arithmatex">\(\omega\)</span> のモードのエネルギーは，光子の数 <span class="arithmatex">\(n\)</span> を用いて <span class="arithmatex">\(\epsilon_n = \hbar \omega n\)</span> と離散化される。ただし，零点エネルギーは無視する。</p>
 <p>光子は化学ポテンシャルが <span class="arithmatex">\(\mu = 0\)</span> のボース粒子であるため，温度 <span class="arithmatex">\(T\)</span> における特定のモードの平均光子数はプランク分布に従う。</p>
 <div class="arithmatex">\[
 \langle n \rangle = \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1}
@@ -14545,7 +14545,7 @@ u(\omega, T) V d\omega = \left( \frac{\hbar \omega}{\exp\left[ \frac{\hbar \omeg
 \]</div>
 <p>両辺から共通する因数 <span class="arithmatex">\(V d\omega\)</span> を除くと，単位体積あたりのエネルギー密度分布が得られます。</p>
 <div class="arithmatex">\[
-u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1}
+\finalanswer{u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>低振動数極限 <span class="arithmatex">\(\hbar \omega \ll k_B T\)</span> では，指数関数の肩の変数が 1 に比べて十分に小さくなります。したがって，一次の項までのテイラー展開による近似が適用できます。</p>
@@ -14558,7 +14558,7 @@ u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar 
 \]</div>
 <p>これを元の式に書き戻して整理します。</p>
 <div class="arithmatex">\[
-u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \cdot \frac{1}{\frac{\hbar \omega}{k_B T}} = \frac{\omega^2}{\pi^2 c^3} k_B T
+\finalanswer{u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \cdot \frac{1}{\frac{\hbar \omega}{k_B T}} = \frac{\omega^2}{\pi^2 c^3} k_B T}
 \]</div>
 <p>この結果は，プランクの公式が低振動数領域において，古典統計力学のエネルギー等配分則から得られるレイリー・ジーンズの法則と一致することを示しています。</p>
 <h3 id="3">(3)</h3>
@@ -14568,7 +14568,7 @@ u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \cdot \frac{1}{\frac{\hbar 
 \]</div>
 <p>そのため，分母にある <span class="arithmatex">\(-1\)</span> を相対的に無視することができます。</p>
 <div class="arithmatex">\[
-u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right]} = \frac{\hbar \omega^3}{\pi^2 c^3} \exp\left[ -\frac{\hbar \omega}{k_B T} \right]
+\finalanswer{u(\omega, T) \simeq \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right]} = \frac{\hbar \omega^3}{\pi^2 c^3} \exp\left[ -\frac{\hbar \omega}{k_B T} \right]}
 \]</div>
 <p>この結果は，高振動数側でエネルギーが指数関数的に減衰するというウィーンの放射法則の形に対応しています。</p>
 <p><strong>紫外線破綻の回避に関する説明</strong></p>

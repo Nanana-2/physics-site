@@ -14540,7 +14540,11 @@
 <h3 id="1">(1)</h3>
 <p>展開式の各項に対して空間のダイバージェンス演算を適用します。ナブラ演算は空間座標 <span class="arithmatex">\(\boldsymbol{r}\)</span> を含む指数関数の部分にのみ作用します。</p>
 <div class="arithmatex">\[
-\boldsymbol{\nabla} \cdot \left( \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \left( \boldsymbol{\nabla} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \left( i \boldsymbol{k} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) = i \left( \boldsymbol{k} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) e^{i \boldsymbol{k} \cdot \boldsymbol{r}}
+\begin{aligned}
+\boldsymbol{\nabla} \cdot \left( \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) &amp;= \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \left( \boldsymbol{\nabla} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \\
+&amp;= \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \left( i \boldsymbol{k} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \\
+&amp;= i \left( \boldsymbol{k} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) e^{i \boldsymbol{k} \cdot \boldsymbol{r}}
+\end{aligned}
 \]</div>
 <p>同様に，後半の複素共役の項についても微分を実行します。</p>
 <div class="arithmatex">\[
@@ -14552,7 +14556,7 @@
 \]</div>
 <p>問題文で与えられた偏極ベクトルの直交条件より，すべての <span class="arithmatex">\(\boldsymbol{k}\)</span> と <span class="arithmatex">\(\lambda\)</span> について内積は <span class="arithmatex">\(\boldsymbol{k} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} = 0\)</span> です。したがって，すべての項が 0 となり，以下が成り立ちます。</p>
 <div class="arithmatex">\[
-\boldsymbol{\nabla} \cdot \boldsymbol{A} = 0
+\finalanswer{\boldsymbol{\nabla} \cdot \boldsymbol{A} = 0}
 \]</div>
 <p>したがって，この展開はクーロンゲージ条件を満たします。</p>
 <h3 id="2">(2)</h3>
@@ -14562,7 +14566,11 @@
 \]</div>
 <p>磁場 <span class="arithmatex">\(\boldsymbol{B}\)</span> は，ベクトルポテンシャルのローテーション演算を実行します。ナブラ演算子と偏極ベクトルの外積を計算します。</p>
 <div class="arithmatex">\[
-\boldsymbol{\nabla} \times \left( \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) = \left( \boldsymbol{\nabla} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} = \left( i \boldsymbol{k} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} = i \left( \boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) e^{i \boldsymbol{k} \cdot \boldsymbol{r}}
+\begin{aligned}
+\boldsymbol{\nabla} \times \left( \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) &amp;= \left( \boldsymbol{\nabla} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \\
+&amp;= \left( i \boldsymbol{k} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \\
+&amp;= i \left( \boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) e^{i \boldsymbol{k} \cdot \boldsymbol{r}}
+\end{aligned}
 \]</div>
 <p>後半の項も同様に微分します。</p>
 <div class="arithmatex">\[
@@ -14570,7 +14578,7 @@
 \]</div>
 <p>これらを合わせて磁場の展開式を構成します。</p>
 <div class="arithmatex">\[
-\boldsymbol{B}(\boldsymbol{r}, t) = \sum_{\boldsymbol{k}} \sum_{\lambda=1}^{2} C_{\boldsymbol{k}} i \left( \boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) \left( a_{\boldsymbol{k}, \lambda}(t) e^{i \boldsymbol{k} \cdot \boldsymbol{r}} - a_{\boldsymbol{k}, \lambda}^*(t) e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right)
+\finalanswer{\boldsymbol{B}(\boldsymbol{r}, t) = \sum_{\boldsymbol{k}} \sum_{\lambda=1}^{2} C_{\boldsymbol{k}} i \left( \boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right) \left( a_{\boldsymbol{k}, \lambda}(t) e^{i \boldsymbol{k} \cdot \boldsymbol{r}} - a_{\boldsymbol{k}, \lambda}^*(t) e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>特定のモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> の電場成分 <span class="arithmatex">\(\boldsymbol{E}_{\boldsymbol{k}, \lambda}\)</span> と波数ベクトル <span class="arithmatex">\(\boldsymbol{k}\)</span> の内積を計算します。 (2) の結果より，電場のベクトル方向は偏極ベクトル <span class="arithmatex">\(\boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> と同一です。</p>
@@ -14587,7 +14595,7 @@
 \]</div>
 <p>提示されたベクトル解析の公式において， <span class="arithmatex">\(\boldsymbol{a} = \boldsymbol{k}\)</span> ， <span class="arithmatex">\(\boldsymbol{b} = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> と置くと，同一ベクトルの外積との内積になるため，この値は厳密に 0 になります。</p>
 <div class="arithmatex">\[
-\boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda} = 0
+\finalanswer{\boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda} = 0}
 \]</div>
 <p>したがって，クーロンゲージにおける電場と磁場は，進行方向成分を持たない横波です。</p>
 

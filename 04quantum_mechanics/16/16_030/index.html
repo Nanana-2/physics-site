@@ -14508,7 +14508,11 @@
 <h3 id="1">(1)</h3>
 <p>一粒子ハミルトニアン <span class="arithmatex">\(\hat{h}\)</span> の行列要素 <span class="arithmatex">\(h_{ij}\)</span> を，固有状態の性質を用いて計算します。</p>
 <div class="arithmatex">\[
-h_{ij} = \langle i | \hat{h} | j \rangle = \langle i | \left( \varepsilon_j | j \rangle \right) = \varepsilon_j \langle i | j \rangle
+\begin{aligned}
+h_{ij} &amp;= \langle i | \hat{h} | j \rangle \\
+&amp;= \langle i | \left( \varepsilon_j | j \rangle \right) \\
+&amp;= \varepsilon_j \langle i | j \rangle
+\end{aligned}
 \]</div>
 <p>基底ベクトルの互いの直交性 <span class="arithmatex">\(\langle i | j \rangle = \delta_{ij}\)</span> を適用します。</p>
 <div class="arithmatex">\[
@@ -14516,17 +14520,23 @@ h_{ij} = \varepsilon_j \delta_{ij}
 \]</div>
 <p>この結果を，第二量子化された演算子の定義式に代入します。</p>
 <div class="arithmatex">\[
-\hat{H} = \sum_{i, j} h_{ij} \hat{a}_i^\dagger \hat{a}_j = \sum_{i, j} \varepsilon_j \delta_{ij} \hat{a}_i^\dagger \hat{a}_j
+\begin{aligned}
+\hat{H} &amp;= \sum_{i, j} h_{ij} \hat{a}_i^\dagger \hat{a}_j \\
+&amp;= \sum_{i, j} \varepsilon_j \delta_{ij} \hat{a}_i^\dagger \hat{a}_j
+\end{aligned}
 \]</div>
 <p>クロネッカーのデルタの性質により，添字 <span class="arithmatex">\(j\)</span> に関する和の計算において <span class="arithmatex">\(j=i\)</span> の項だけが生き残ります。</p>
 <div class="arithmatex">\[
-\hat{H} = \sum_{i} \varepsilon_i \hat{a}_i^\dagger \hat{a}_i
+\finalanswer{\hat{H} = \sum_{i} \varepsilon_i \hat{a}_i^\dagger \hat{a}_i}
 \]</div>
 <p>これにより，対角化された基底における多粒子系ハミルトニアンの第二量子化表示が導かれました。</p>
 <h3 id="2">(2)</h3>
 <p>投影演算子 <span class="arithmatex">\(\hat{P}_k = | k \rangle \langle k |\)</span> の行列要素を定義通りに書き下します。</p>
 <div class="arithmatex">\[
-\left( P_k \right)_{ij} = \langle i | \left( | k \rangle \langle k | \right) | j \rangle = \langle i | k \rangle \langle k | j \rangle
+\begin{aligned}
+\left( P_k \right)_{ij} &amp;= \langle i | \left( | k \rangle \langle k | \right) | j \rangle \\
+&amp;= \langle i | k \rangle \langle k | j \rangle
+\end{aligned}
 \]</div>
 <p>ここでも基底の直交性を利用して，ブラとケットの内積をそれぞれクロネッカーのデルタに置き換えます。</p>
 <div class="arithmatex">\[
@@ -14534,7 +14544,10 @@ h_{ij} = \varepsilon_j \delta_{ij}
 \]</div>
 <p>この結果を第二量子化の定義式にはめ込み，演算子 <span class="arithmatex">\(\hat{N}_k\)</span> を構築します。</p>
 <div class="arithmatex">\[
-\hat{N}_k = \sum_{i, j} \left( P_k \right)_{ij} \hat{a}_i^\dagger \hat{a}_j = \sum_{i, j} \delta_{ik} \delta_{kj} \hat{a}_i^\dagger \hat{a}_j
+\begin{aligned}
+\hat{N}_k &amp;= \sum_{i, j} \left( P_k \right)_{ij} \hat{a}_i^\dagger \hat{a}_j \\
+&amp;= \sum_{i, j} \delta_{ik} \delta_{kj} \hat{a}_i^\dagger \hat{a}_j
+\end{aligned}
 \]</div>
 <p>まず，添字 <span class="arithmatex">\(i\)</span> に関する和を計算すると， <span class="arithmatex">\(\delta_{ik}\)</span> の作用によって <span class="arithmatex">\(i=k\)</span> の項のみが抽出されます。</p>
 <div class="arithmatex">\[
@@ -14542,7 +14555,7 @@ h_{ij} = \varepsilon_j \delta_{ij}
 \]</div>
 <p>続いて，添字 <span class="arithmatex">\(j\)</span> に関する和を計算すると， <span class="arithmatex">\(\delta_{kj}\)</span> の作用によって <span class="arithmatex">\(j=k\)</span> の項のみが抽出されます。</p>
 <div class="arithmatex">\[
-\hat{N}_k = \hat{a}_k^\dagger \hat{a}_k
+\finalanswer{\hat{N}_k = \hat{a}_k^\dagger \hat{a}_k}
 \]</div>
 <p>以上の二段階の選別により，投影演算子の第二量子化が粒子数演算子そのものになることが導出されました。</p>
 

@@ -14539,15 +14539,24 @@ U_0 = \int_0^{\epsilon_F} \epsilon \cdot 2 D(\epsilon) d\epsilon
 \]</div>
 <p>ここに具体的な状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> の表現を代入します。</p>
 <div class="arithmatex">\[
-U_0 = 2 \int_0^{\epsilon_F} \epsilon \cdot \left( \frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon} \right) d\epsilon = \frac{4\pi V}{h^3} (2m)^{3/2} \int_0^{\epsilon_F} \epsilon^{3/2} d\epsilon
+\begin{aligned}
+U_0 &amp;= 2 \int_0^{\epsilon_F} \epsilon \cdot \left( \frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon} \right) d\epsilon \\
+&amp;= \frac{4\pi V}{h^3} (2m)^{3/2} \int_0^{\epsilon_F} \epsilon^{3/2} d\epsilon
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\epsilon^{3/2}\)</span> の定積分を実行します。原点 <span class="arithmatex">\(0\)</span> での値は <span class="arithmatex">\(0\)</span> です。</p>
 <div class="arithmatex">\[
-\int_0^{\epsilon_F} \epsilon^{3/2} d\epsilon = \left[ \frac{2}{5} \epsilon^{5/2} \right]_0^{\epsilon_F} = \frac{2}{5} \epsilon_F^{5/2}
+\begin{aligned}
+\int_0^{\epsilon_F} \epsilon^{3/2} d\epsilon &amp;= \left[ \frac{2}{5} \epsilon^{5/2} \right]_0^{\epsilon_F} \\
+&amp;= \frac{2}{5} \epsilon_F^{5/2}
+\end{aligned}
 \]</div>
 <p>これを外側の係数と掛け合わせることで，内部エネルギーの式が得られます。</p>
 <div class="arithmatex">\[
-U_0 = \frac{4\pi V}{h^3} (2m)^{3/2} \cdot \frac{2}{5} \epsilon_F^{5/2} = \frac{8\pi V}{5h^3} (2m)^{3/2} \epsilon_F^{5/2}
+\begin{aligned}
+U_0 &amp;= \frac{4\pi V}{h^3} (2m)^{3/2} \cdot \frac{2}{5} \epsilon_F^{5/2} \\
+&amp;= \finalanswer{\frac{8\pi V}{5h^3} (2m)^{3/2} \epsilon_F^{5/2}}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた <span class="arithmatex">\(U_0\)</span> の式を，全粒子数 <span class="arithmatex">\(N\)</span> を因数として取り出せるように変形します。 <span class="arithmatex">\(\epsilon_F^{5/2} = \epsilon_F^{3/2} \cdot \epsilon_F\)</span> であることに着目して式を分解します。</p>
@@ -14560,12 +14569,16 @@ U_0 = \left( \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon_F^{3/2} \right) \cdot \frac
 \]</div>
 <p>これらを組み合わせることで，容器の体積や粒子の質量といった具体的なパラメータがすべて粒子数の中に吸収され，目的の関係式が導出されます。</p>
 <div class="arithmatex">\[
-U_0 = \frac{3}{5} N \epsilon_F
+\finalanswer{U_0 = \frac{3}{5} N \epsilon_F}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>粒子1個あたりの平均エネルギー <span class="arithmatex">\(\langle \epsilon \rangle_0\)</span> の定義に従い，(2) で求めた全内部エネルギー <span class="arithmatex">\(U_0\)</span> を全粒子数 <span class="arithmatex">\(N\)</span> で割ります。</p>
 <div class="arithmatex">\[
-\langle \epsilon \rangle_0 = \frac{U_0}{N} = \frac{\frac{3}{5} N \epsilon_F}{N} = \frac{3}{5} \epsilon_F
+\begin{aligned}
+\langle \epsilon \rangle_0 &amp;= \frac{U_0}{N} \\
+&amp;= \frac{\frac{3}{5} N \epsilon_F}{N} \\
+&amp;= \finalanswer{\frac{3}{5} \epsilon_F}
+\end{aligned}
 \]</div>
 <p>したがって，絶対零度におけるフェルミ粒子の平均エネルギーは，最高エネルギーであるフェルミエネルギーの <span class="arithmatex">\(3/5\)</span> 倍，すなわち0.6倍になることが示されました。</p>
 <p><strong>物理的な意味の考察</strong></p>

@@ -14546,7 +14546,7 @@ i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]
 \]</div>
 <p>ハミルトニアンのエルミート性 <span class="arithmatex">\(\hat{H}^\dagger = \hat{H}\)</span> を代入し，両辺にマイナスを掛けます。これにより，ブラベクトルに関する時間発展方程式が得られます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{d}{dt}\langle\psi_k(t)| = - \langle\psi_k(t)| \hat{H}
+\finalanswer{i\hbar \frac{d}{dt}\langle\psi_k(t)| = - \langle\psi_k(t)| \hat{H}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>密度行列 <span class="arithmatex">\(\rho(t)\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。確率 <span class="arithmatex">\(p_k\)</span> は定数であるため微分の外へ出し，ブラケットの部分に積の微分公式を適用します。</p>
@@ -14571,17 +14571,23 @@ i\hbar \frac{d\rho(t)}{dt} = \hat{H}\rho(t) - \rho(t)\hat{H}
 \]</div>
 <p>右辺を交換子の記号を用いてまとめることで，フォン・ノイマン方程式が導出されます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]
+\finalanswer{i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>提示された解 <span class="arithmatex">\(\rho(t) = \hat{U}(t) \rho(0) \hat{U}^\dagger(t)\)</span> がフォン・ノイマン方程式を満たすか実際に時間微分して検証します。
 まず，ユニタリー時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = \exp\left(-\frac{i\hat{H}t}{\hbar}\right)\)</span> の時間微分は以下の通りです。</p>
 <div class="arithmatex">\[
-\frac{d\hat{U}(t)}{dt} = -\frac{i\hat{H}}{\hbar} \hat{U}(t) \implies i\hbar \frac{d\hat{U}(t)}{dt} = \hat{H}\hat{U}(t)
+\begin{aligned}
+\frac{d\hat{U}(t)}{dt} &amp;= -\frac{i\hat{H}}{\hbar} \hat{U}(t) \implies i\hbar \frac{d\hat{U}(t)}{dt} \\
+&amp;= \hat{H}\hat{U}(t)
+\end{aligned}
 \]</div>
 <p>同様に，そのエルミート共役 <span class="arithmatex">\(\hat{U}^\dagger(t) = \exp\left(\frac{i\hat{H}t}{\hbar}\right)\)</span> の時間微分は以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{d\hat{U}^\dagger(t)}{dt} = \frac{i\hat{H}}{\hbar} \hat{U}^\dagger(t) \implies i\hbar \frac{d\hat{U}^\dagger(t)}{dt} = -\hat{U}^\dagger(t)\hat{H}
+\begin{aligned}
+\frac{d\hat{U}^\dagger(t)}{dt} &amp;= \frac{i\hat{H}}{\hbar} \hat{U}^\dagger(t) \implies i\hbar \frac{d\hat{U}^\dagger(t)}{dt} \\
+&amp;= -\hat{U}^\dagger(t)\hat{H}
+\end{aligned}
 \]</div>
 <p>定数行列 <span class="arithmatex">\(\rho(0)\)</span> を挟んだ微分公式を適用し，両辺に <span class="arithmatex">\(i\hbar\)</span> を掛けます。</p>
 <div class="arithmatex">\[
@@ -14593,7 +14599,10 @@ i\hbar \frac{d\rho(t)}{dt} = \hat{H}\hat{U}(t) \rho(0) \hat{U}^\dagger(t) - \hat
 \]</div>
 <p>右辺の各項において， <span class="arithmatex">\(\hat{U}(t) \rho(0) \hat{U}^\dagger(t)\)</span> を元の <span class="arithmatex">\(\rho(t)\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{d\rho(t)}{dt} = \hat{H}\rho(t) - \rho(t)\hat{H} = [\hat{H}, \rho(t)]
+\begin{aligned}
+i\hbar \frac{d\rho(t)}{dt} &amp;= \hat{H}\rho(t) - \rho(t)\hat{H} \\
+&amp;= \finalanswer{[\hat{H}, \rho(t)]}
+\end{aligned}
 \]</div>
 <p>微分方程式を満たすことが確認できました。また， <span class="arithmatex">\(t=0\)</span> を代入すると <span class="arithmatex">\(\hat{U}(0) = I\)</span> となり初期条件も満たします。したがって，密度行列の時間発展はハミルトニアンによるユニタリー変換として表されることが示されました。</p>
 

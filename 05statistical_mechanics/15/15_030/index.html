@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">量子相対エントロピー</h1>
 <h2 id="_2">問題</h2>
-<p>2つの密度行列を <span class="arithmatex">\(\rho\)</span> と <span class="arithmatex">\(\sigma\)</span> とするとき， <span class="arithmatex">\(\sigma\)</span> に対する <span class="arithmatex">\(\rho\)</span> の量子相対エントロピー <span class="arithmatex">\(D(\rho || \sigma)\)</span> は以下の数式で定義される。</p>
+<p>2つの密度行列を <span class="arithmatex">\(\rho\)</span> と <span class="arithmatex">\(\sigma\)</span> とするとき， <span class="arithmatex">\(\sigma\)</span> に対する <span class="arithmatex">\(\rho\)</span> の量子相対エントロピー <span class="arithmatex">\(D(\rho || \sigma)\)</span> は以下で定義される。</p>
 <div class="arithmatex">\[
 D(\rho || \sigma) = \mathrm{Tr}(\rho \ln \rho) - \mathrm{Tr}(\rho \ln \sigma)
 \]</div>
@@ -14539,11 +14539,14 @@ D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_
 \]</div>
 <p>この行列の対数関数を計算します。行列の積の性質および対数関数の性質から，分子の指数関数部分と分母のスカラー量を分離することができます。</p>
 <div class="arithmatex">\[
-\ln \rho_{\mathrm{eq}} = \ln \left( \exp(-\beta \hat{H}) \cdot \frac{1}{Z} \right) = \ln \left( \exp(-\beta \hat{H}) \right) + \ln \left( \frac{1}{Z} \cdot \hat{I} \right)
+\begin{aligned}
+\ln \rho_{\mathrm{eq}} &amp;= \ln \left( \exp(-\beta \hat{H}) \cdot \frac{1}{Z} \right) \\
+&amp;= \ln \left( \exp(-\beta \hat{H}) \right) + \ln \left( \frac{1}{Z} \cdot \hat{I} \right)
+\end{aligned}
 \]</div>
 <p>第1項は指数関数の逆写像であるため <span class="arithmatex">\(-\beta \hat{H}\)</span> となり，第2項のスカラーの逆数は <span class="arithmatex">\(-\ln Z \cdot \hat{I}\)</span> となります。これらを合わせることで，目的の表現が得られます。</p>
 <div class="arithmatex">\[
-\ln \rho_{\mathrm{eq}} = -\beta \hat{H} - \ln Z \cdot \hat{I}
+\finalanswer{\ln \rho_{\mathrm{eq}} = -\beta \hat{H} - \ln Z \cdot \hat{I}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>量子相対エントロピーの定義式における <span class="arithmatex">\(\sigma\)</span> に，熱平衡状態 <span class="arithmatex">\(\rho_{\mathrm{eq}}\)</span> を代入します。</p>
@@ -14556,7 +14559,10 @@ D(\rho || \rho_{\mathrm{eq}}) = \mathrm{Tr}(\rho \ln \rho) - \mathrm{Tr}(\rho \l
 \]</div>
 <p>右辺の第2項の括弧の内部に，(1) で導出した <span class="arithmatex">\(\ln \rho_{\mathrm{eq}}\)</span> の展開式を代入してトレースの線形性を適用します。</p>
 <div class="arithmatex">\[
--\mathrm{Tr}(\rho \ln \rho_{\mathrm{eq}}) = -\mathrm{Tr}\big( \rho [ -\beta \hat{H} - \ln Z \cdot \hat{I} ] \big) = \beta \mathrm{Tr}(\rho \hat{H}) + \ln Z \mathrm{Tr}(\rho \hat{I})
+\begin{aligned}
+-\mathrm{Tr}(\rho \ln \rho_{\mathrm{eq}}) &amp;= -\mathrm{Tr}\big( \rho [ -\beta \hat{H} - \ln Z \cdot \hat{I} ] \big) \\
+&amp;= \beta \mathrm{Tr}(\rho \hat{H}) + \ln Z \mathrm{Tr}(\rho \hat{I})
+\end{aligned}
 \]</div>
 <p>ここで，状態 <span class="arithmatex">\(\rho\)</span> におけるエネルギー期待値の定義 <span class="arithmatex">\(\mathrm{Tr}(\rho \hat{H}) = \langle E \rangle_\rho\)</span> と，密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> をそれぞれ代入します。</p>
 <div class="arithmatex">\[
@@ -14564,7 +14570,7 @@ D(\rho || \rho_{\mathrm{eq}}) = \mathrm{Tr}(\rho \ln \rho) - \mathrm{Tr}(\rho \l
 \]</div>
 <p>これら2つの項を足し合わせることで，求める展開式が導出されます。</p>
 <div class="arithmatex">\[
-D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_B} + \ln Z
+\finalanswer{D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_B} + \ln Z}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた方程式の右辺を，提示された自由エネルギーの定義を用いて整理します。まず，式の全体に <span class="arithmatex">\(k_B T = \frac{1}{\beta}\)</span> を掛け算します。</p>
@@ -14573,7 +14579,10 @@ k_B T D(\rho || \rho_{\mathrm{eq}}) = \langle E \rangle_\rho - T S(\rho) + k_B T
 \]</div>
 <p>右辺の前半2項は，非平衡状態における有効自由エネルギー <span class="arithmatex">\(F(\rho) = \langle E \rangle_\rho - T S(\rho)\)</span> そのものです。また，第3項は真の熱平衡状態の自由エネルギー <span class="arithmatex">\(F_{\mathrm{eq}} = -k_B T \ln Z\)</span> の符号を反転させたもの <span class="arithmatex">\(-F_{\mathrm{eq}}\)</span> に等しくなります。これらを代入します。</p>
 <div class="arithmatex">\[
-k_B T D(\rho || \rho_{\mathrm{eq}}) = F(\rho) - F_{\mathrm{eq}} = \Delta F
+\begin{aligned}
+k_B T D(\rho || \rho_{\mathrm{eq}}) &amp;= F(\rho) - F_{\mathrm{eq}} \\
+&amp;= \Delta F
+\end{aligned}
 \]</div>
 <p>したがって，量子相対エントロピーと自由エネルギー差の間に成り立つ比例関係式は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14583,7 +14592,7 @@ k_B T D(\rho || \rho_{\mathrm{eq}}) = F(\rho) - F_{\mathrm{eq}} = \Delta F
 <p>量子相対エントロピーは，任意の2つの密度行列に対して常に 0 以上になる <span class="arithmatex">\(D(\rho || \sigma) \ge 0\)</span> という数学的性質を持っています。また，2つの状態が一致するときに限り，値は 0 になります。</p>
 <p>絶対温度 <span class="arithmatex">\(T\)</span> およびボルツマン定数 <span class="arithmatex">\(k_B\)</span> は常に正の定数であるため，この性質を上記の比例関係式に適用すると，以下の不等式が導かれます。</p>
 <div class="arithmatex">\[
-\Delta F \ge 0 \implies F(\rho) \ge F_{\mathrm{eq}}
+\finalanswer{\Delta F \ge 0 \implies F(\rho) \ge F_{\mathrm{eq}}}
 \]</div>
 <p>この不等式は，温度 <span class="arithmatex">\(T\)</span> の熱浴に接している系において，任意の非平衡状態が持つ有効自由エネルギー <span class="arithmatex">\(F(\rho)\)</span> は，真の熱平衡状態が持つ自由エネルギー <span class="arithmatex">\(F_{\mathrm{eq}}\)</span> よりも常に大きく，熱平衡に達したときに最小値をとるという熱力学第二法則の要請を意味しています。</p>
 

@@ -14562,19 +14562,25 @@ v'_1 = \frac{m_1 - e m_2}{m_1 + m_2} v_1 + \frac{m_2(1 + e)}{m_1 + m_2} v_2
 \]</div>
 <p>同様の手順，あるいは対称性を用いてもう一方の速度 <span class="arithmatex">\(v'_2\)</span> についても連立方程式を解きます。</p>
 <div class="arithmatex">\[
-v'_2 = \frac{m_1(1 + e)}{m_1 + m_2} v_1 + \frac{m_2 - e m_1}{m_1 + m_2} v_2
+\finalanswer{v'_2 = \frac{m_1(1 + e)}{m_1 + m_2} v_1 + \frac{m_2 - e m_1}{m_1 + m_2} v_2}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた衝突後の速度の式に <span class="arithmatex">\(e = 0\)</span> を代入します。</p>
 <div class="arithmatex">\[
-v'_1 = \frac{m_1}{m_1 + m_2} v_1 + \frac{m_2}{m_1 + m_2} v_2 = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}
+\begin{aligned}
+v'_1 &amp;= \frac{m_1}{m_1 + m_2} v_1 + \frac{m_2}{m_1 + m_2} v_2 \\
+&amp;= \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-v'_2 = \frac{m_1}{m_1 + m_2} v_1 + \frac{m_2}{m_1 + m_2} v_2 = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}
+\begin{aligned}
+v'_2 &amp;= \frac{m_1}{m_1 + m_2} v_1 + \frac{m_2}{m_1 + m_2} v_2 \\
+&amp;= \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}
+\end{aligned}
 \]</div>
 <p>両者の式は完全に一致するため <span class="arithmatex">\(v'_1 = v'_2\)</span> が成り立ちます。このときの共通の速度 <span class="arithmatex">\(v'\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-v' = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}
+\finalanswer{v' = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}}
 \]</div>
 <p>この速度は二体からなる系全体の重心速度そのものです。完全非弾性衝突においては，2つの質点が衝突後に一体となって重心と同じ速度で運動することが数式から示されます。</p>
 <h3 id="3">(3)</h3>
@@ -14590,7 +14596,10 @@ K' = \frac{1}{2}(m_1 + m_2)v_{\text{G}}^2 + \frac{1}{2}\mu(v'_1 - v'_2)^2
 \]</div>
 <p>外力が働かない衝突において重心速度 <span class="arithmatex">\(v_{\text{G}}\)</span> は一定であるため，運動エネルギーの差をとると重心運動の項は相殺されて消去されます。</p>
 <div class="arithmatex">\[
-\Delta K = K - K' = \frac{1}{2}\mu(v_1 - v_2)^2 - \frac{1}{2}\mu(v'_1 - v'_2)^2
+\begin{aligned}
+\Delta K &amp;= K - K' \\
+&amp;= \frac{1}{2}\mu(v_1 - v_2)^2 - \frac{1}{2}\mu(v'_1 - v'_2)^2
+\end{aligned}
 \]</div>
 <p>ここで，(1) の最初で確認した反発係数の関係式 <span class="arithmatex">\(v'_2 - v'_1 = e(v_1 - v_2)\)</span> より，両辺を2乗すると <span class="arithmatex">\((v'_1 - v'_2)^2 = e^2(v_1 - v_2)^2\)</span> となります。これをエネルギー差の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14598,7 +14607,7 @@ K' = \frac{1}{2}(m_1 + m_2)v_{\text{G}}^2 + \frac{1}{2}\mu(v'_1 - v'_2)^2
 \]</div>
 <p>共通因数で括り出して式を整理します。</p>
 <div class="arithmatex">\[
-\Delta K = \frac{1}{2}\mu (1 - e^2) (v_1 - v_2)^2
+\finalanswer{\Delta K = \frac{1}{2}\mu (1 - e^2) (v_1 - v_2)^2}
 \]</div>
 <p>これにより，失われる運動エネルギーの大きさが，換算質量 <span class="arithmatex">\(\mu\)</span> ，反発係数 <span class="arithmatex">\(e\)</span> ，および衝突前の相対速度の2乗の積によって簡潔に決定されることが導かれます。</p>
 

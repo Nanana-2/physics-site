@@ -14567,7 +14567,7 @@ e^{ikz} \approx \sum_{l=0}^{\infty} \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\p
 \]</div>
 <p>これをすべての <span class="arithmatex">\(l\)</span> について足し合わせることで，求める散乱波の展開式が得られます。</p>
 <div class="arithmatex">\[
-\psi_{\text{sc}}(\boldsymbol{r}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} e^{-i\frac{l\pi}{2}} e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \frac{e^{ikr}}{r}
+\finalanswer{\psi_{\text{sc}}(\boldsymbol{r}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} e^{-i\frac{l\pi}{2}} e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \frac{e^{ikr}}{r}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で算出した展開式を，もう一つの散乱波の表現と比較します。</p>
@@ -14580,7 +14580,7 @@ f_l = \frac{e^{i\delta_l} \sin\delta_l}{k}
 \]</div>
 <p>これを冒頭の定義式に代入することにより，散乱振幅 <span class="arithmatex">\(f(\theta)\)</span> の展開式が完成します。</p>
 <div class="arithmatex">\[
-f(\theta) = \frac{1}{k} \sum_{l=0}^{\infty} (2l+1) e^{i\delta_l} \sin\delta_l P_l(\cos\theta)
+\finalanswer{f(\theta) = \frac{1}{k} \sum_{l=0}^{\infty} (2l+1) e^{i\delta_l} \sin\delta_l P_l(\cos\theta)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>全断面積の定義式に， (2) で求めた <span class="arithmatex">\(f(\theta)\)</span> の展開式を代入します。絶対値の2乗を計算するため， <span class="arithmatex">\(l\)</span> と <span class="arithmatex">\(l'\)</span> の2つの独立な添字を用いた和の掛け算として書き下します。 <span class="arithmatex">\(\phi\)</span> に関する積分は，被積分関数が <span class="arithmatex">\(\phi\)</span> を含まないため単に <span class="arithmatex">\(2\pi\)</span> となります。</p>
@@ -14601,7 +14601,7 @@ f(\theta) = \frac{1}{k} \sum_{l=0}^{\infty} (2l+1) e^{i\delta_l} \sin\delta_l P_
 \]</div>
 <p>分母にある <span class="arithmatex">\(2l+1\)</span> と，分子の因数の1つが約分されます。また，定数部分の <span class="arithmatex">\(2\pi \times 2 = 4\pi\)</span> をまとめます。</p>
 <div class="arithmatex">\[
-\sigma = \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1) \sin^2\delta_l
+\finalanswer{\sigma = \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1) \sin^2\delta_l}
 \]</div>
 <p>これが各部分波の位相シフトを用いて表された全断面積の公式です。</p>
 

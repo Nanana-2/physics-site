@@ -14540,16 +14540,24 @@ R = \sqrt{\frac{8mL^2}{h^2} \epsilon} = \frac{2L}{h}\sqrt{2m\epsilon}
 <p>エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下の状態数 <span class="arithmatex">\(N(\epsilon)\)</span> は，半径 <span class="arithmatex">\(R\)</span> の球内にある格子点数です。<span class="arithmatex">\(n_x,n_y,n_z\)</span> は正なので，球の第1八分体の体積を用います。</p>
 <p>したがって，状態の総数 <span class="arithmatex">\(N(\epsilon)\)</span> は球の体積公式 <span class="arithmatex">\(\frac{4}{3}\pi R^3\)</span> を用いて以下のように計算されます。</p>
 <div class="arithmatex">\[
-N(\epsilon) = \frac{1}{8} \times \frac{4}{3}\pi R^3 = \frac{\pi}{6} \left( \frac{2L}{h}\sqrt{2m\epsilon} \right)^3 = \frac{\pi}{6} \cdot \frac{8L^3}{h^3} (2m\epsilon)^{3/2}
+\begin{aligned}
+N(\epsilon) &amp;= \frac{1}{8} \times \frac{4}{3}\pi R^3 \\
+&amp;= \frac{\pi}{6} \left( \frac{2L}{h}\sqrt{2m\epsilon} \right)^3 \\
+&amp;= \frac{\pi}{6} \cdot \frac{8L^3}{h^3} (2m\epsilon)^{3/2}
+\end{aligned}
 \]</div>
 <p>容器の体積 <span class="arithmatex">\(V = L^3\)</span> を代入して整理すると，状態の総数関数が求まります。</p>
 <div class="arithmatex">\[
-N(\epsilon) = \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon^{3/2}
+\finalanswer{N(\epsilon) = \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon^{3/2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> の定義に従い，(1) で得られた <span class="arithmatex">\(N(\epsilon)\)</span> をエネルギー <span class="arithmatex">\(\epsilon\)</span> で微分します。 <span class="arithmatex">\(\epsilon^{3/2}\)</span> の微分によって <span class="arithmatex">\(\frac{3}{2}\epsilon^{1/2}\)</span> が前に降ります。</p>
 <div class="arithmatex">\[
-D(\epsilon) = \frac{dN(\epsilon)}{d\epsilon} = \frac{4\pi V}{3h^3} (2m)^{3/2} \cdot \frac{3}{2}\epsilon^{1/2} = \frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon}
+\begin{aligned}
+D(\epsilon) &amp;= \frac{dN(\epsilon)}{d\epsilon} \\
+&amp;= \frac{4\pi V}{3h^3} (2m)^{3/2} \cdot \frac{3}{2}\epsilon^{1/2} \\
+&amp;= \finalanswer{\frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon}}
+\end{aligned}
 \]</div>
 <p>したがって，三次元自由粒子の状態密度は <span class="arithmatex">\(D(\epsilon)\propto\sqrt{\epsilon}\)</span> を満たします。</p>
 <h3 id="3">(3)</h3>
@@ -14563,7 +14571,7 @@ D(\epsilon) = \frac{dN(\epsilon)}{d\epsilon} = \frac{4\pi V}{3h^3} (2m)^{3/2} \c
 \Omega = \pm g k_B T \int_0^\infty D(\epsilon) \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon
 \]</div>
 <div class="arithmatex">\[
-\Omega = \pm \frac{4\pi V}{h^3} (2m)^{3/2} k_B T \int_0^\infty \sqrt{\epsilon} \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon
+\finalanswer{\Omega = \pm \frac{4\pi V}{h^3} (2m)^{3/2} k_B T \int_0^\infty \sqrt{\epsilon} \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon}
 \]</div>
 <p>この積分形式に変形することで，理想フェルミ気体の圧力や，理想ボース気体のボース凝縮といった複雑な量子統計力学の具体的な熱力学量の計算を数学的に進めることが可能になります。</p>
 

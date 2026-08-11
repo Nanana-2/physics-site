@@ -14536,7 +14536,10 @@
 <h3 id="1">(1)</h3>
 <p>光子数演算子 <span class="arithmatex">\(\hat{N} = \hat{a}^\dagger \hat{a}\)</span> と消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> の交換子を展開します。交換子の基本的な計算結果である <span class="arithmatex">\([\hat{A}\hat{B}, \hat{C}] = \hat{A}[\hat{B}, \hat{C}] + [\hat{A}, \hat{C}]\hat{B}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-[\hat{N}, \hat{a}] = [\hat{a}^\dagger \hat{a}, \hat{a}] = \hat{a}^\dagger [\hat{a}, \hat{a}] + [\hat{a}^\dagger, \hat{a}] \hat{a}
+\begin{aligned}
+[\hat{N}, \hat{a}] &amp;= [\hat{a}^\dagger \hat{a}, \hat{a}] \\
+&amp;= \hat{a}^\dagger [\hat{a}, \hat{a}] + [\hat{a}^\dagger, \hat{a}] \hat{a}
+\end{aligned}
 \]</div>
 <p>同一の演算子の交換子は 0 であり，問題文に与えられた交換関係から <span class="arithmatex">\([\hat{a}^\dagger, \hat{a}] = -1\)</span> となります。</p>
 <div class="arithmatex">\[
@@ -14544,11 +14547,17 @@
 \]</div>
 <p>同様に，生成演算子 <span class="arithmatex">\(\hat{a}^\dagger\)</span> との交換子を計算します。</p>
 <div class="arithmatex">\[
-[\hat{N}, \hat{a}^\dagger] = [\hat{a}^\dagger \hat{a}, \hat{a}^\dagger] = \hat{a}^\dagger [\hat{a}, \hat{a}^\dagger] + [\hat{a}^\dagger, \hat{a}^\dagger] \hat{a}
+\begin{aligned}
+[\hat{N}, \hat{a}^\dagger] &amp;= [\hat{a}^\dagger \hat{a}, \hat{a}^\dagger] \\
+&amp;= \hat{a}^\dagger [\hat{a}, \hat{a}^\dagger] + [\hat{a}^\dagger, \hat{a}^\dagger] \hat{a}
+\end{aligned}
 \]</div>
 <p>条件 <span class="arithmatex">\([\hat{a}, \hat{a}^\dagger] = 1\)</span> を代入します。</p>
 <div class="arithmatex">\[
-[\hat{N}, \hat{a}^\dagger] = \hat{a}^\dagger (1) + 0 = \hat{a}^\dagger
+\begin{aligned}
+[\hat{N}, \hat{a}^\dagger] &amp;= \hat{a}^\dagger (1) + 0 \\
+&amp;= \finalanswer{\hat{a}^\dagger}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> に光子数演算子 <span class="arithmatex">\(\hat{N}\)</span> を左から掛け算します。 (1) で求めた関係式 <span class="arithmatex">\([\hat{N}, \hat{a}^\dagger] = \hat{N}\hat{a}^\dagger - \hat{a}^\dagger\hat{N} = \hat{a}^\dagger\)</span> より，積の順序を <span class="arithmatex">\(\hat{N}\hat{a}^\dagger = \hat{a}^\dagger\hat{N} + \hat{a}^\dagger\)</span> に置き換えます。</p>
@@ -14557,22 +14566,39 @@
 \]</div>
 <p>右側の固有状態に対して演算子 <span class="arithmatex">\(\hat{N}\)</span> を作用させ，固有値 <span class="arithmatex">\(n\)</span> に変換します。</p>
 <div class="arithmatex">\[
-= \hat{a}^\dagger \left( \hat{N}|n\rangle \right) + \hat{a}^\dagger |n\rangle = \hat{a}^\dagger (n|n\rangle) + \hat{a}^\dagger |n\rangle = (n+1) \hat{a}^\dagger |n\rangle
+\begin{aligned}
+ &amp;= \hat{a}^\dagger \left( \hat{N}|n\rangle \right) + \hat{a}^\dagger |n\rangle \\
+&amp;= \hat{a}^\dagger (n|n\rangle) + \hat{a}^\dagger |n\rangle \\
+&amp;= (n+1) \hat{a}^\dagger |n\rangle
+\end{aligned}
 \]</div>
 <p>この式は，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> が光子数演算子の固有状態であり，その固有値が <span class="arithmatex">\(n+1\)</span> に変化したことを示しています。</p>
 <p>次に，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> に対しても同様の計算を行います。順序の入れ替えに <span class="arithmatex">\(\hat{N}\hat{a} = \hat{a}\hat{N} - \hat{a}\)</span> を用います。</p>
 <div class="arithmatex">\[
-\hat{N} \left( \hat{a} |n\rangle \right) = \left( \hat{a} \hat{N} - \hat{a} \right) |n\rangle = \hat{a} (n|n\rangle) - \hat{a} |n\rangle = (n-1) \hat{a} |n\rangle
+\begin{aligned}
+\hat{N} \left( \hat{a} |n\rangle \right) &amp;= \left( \hat{a} \hat{N} - \hat{a} \right) |n\rangle \\
+&amp;= \hat{a} (n|n\rangle) - \hat{a} |n\rangle \\
+&amp;= \finalanswer{(n-1) \hat{a} |n\rangle}
+\end{aligned}
 \]</div>
 <p>この結果より，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は固有値 <span class="arithmatex">\(n-1\)</span> を持つ固有状態であることが導かれます。</p>
 <h3 id="3">(3)</h3>
 <p>状態のノルムを計算します。生成消滅演算子の共役関係により， <span class="arithmatex">\(\hat{a}|n\rangle = c_- |n-1\rangle\)</span> のブラベクトルは <span class="arithmatex">\(\langle n|\hat{a}^\dagger = c_-^* \langle n-1|\)</span> となります。規格化条件 <span class="arithmatex">\(\langle n-1|n-1\rangle = 1\)</span> を用います。</p>
 <div class="arithmatex">\[
-\langle n| \hat{a}^\dagger \hat{a} |n\rangle = \left( c_-^* \langle n-1| \right) \left( c_- |n-1\rangle \right) = |c_-|^2 \langle n-1|n-1\rangle = |c_-|^2
+\begin{aligned}
+\langle n| \hat{a}^\dagger \hat{a} |n\rangle &amp;= \left( c_-^* \langle n-1| \right) \left( c_- |n-1\rangle \right) \\
+&amp;= |c_-|^2 \langle n-1|n-1\rangle \\
+&amp;= |c_-|^2
+\end{aligned}
 \]</div>
 <p>一方で，左辺は光子数演算子そのものの期待値計算であるため，固有値 <span class="arithmatex">\(n\)</span> を用いて次のように計算されます。</p>
 <div class="arithmatex">\[
-\langle n| \hat{a}^\dagger \hat{a} |n\rangle = \langle n| \hat{N} |n\rangle = \langle n| n |n\rangle = n \langle n|n\rangle = n
+\begin{aligned}
+\langle n| \hat{a}^\dagger \hat{a} |n\rangle &amp;= \langle n| \hat{N} |n\rangle \\
+&amp;= \langle n| n |n\rangle \\
+&amp;= n \langle n|n\rangle \\
+&amp;= n
+\end{aligned}
 \]</div>
 <p>両辺を比較することで，消滅演算子の係数の絶対値が求まります。</p>
 <div class="arithmatex">\[
@@ -14580,11 +14606,18 @@
 \]</div>
 <p>続いて，生成演算子の作用によるノルムを計算します。</p>
 <div class="arithmatex">\[
-\langle n| \hat{a} \hat{a}^\dagger |n\rangle = |c_+|^2 \langle n+1|n+1\rangle = |c_+|^2
+\begin{aligned}
+\langle n| \hat{a} \hat{a}^\dagger |n\rangle &amp;= |c_+|^2 \langle n+1|n+1\rangle \\
+&amp;= |c_+|^2
+\end{aligned}
 \]</div>
 <p>左辺の演算子の順序を交換関係 <span class="arithmatex">\(\hat{a}\hat{a}^\dagger = \hat{a}^\dagger\hat{a} + 1 = \hat{N} + 1\)</span> を用いて並び替えます。</p>
 <div class="arithmatex">\[
-\langle n| \hat{a} \hat{a}^\dagger |n\rangle = \langle n| (\hat{N} + 1) |n\rangle = (n+1) \langle n|n\rangle = n+1
+\begin{aligned}
+\langle n| \hat{a} \hat{a}^\dagger |n\rangle &amp;= \langle n| (\hat{N} + 1) |n\rangle \\
+&amp;= (n+1) \langle n|n\rangle \\
+&amp;= n+1
+\end{aligned}
 \]</div>
 <p>これらを結ぶことで，生成演算子の係数の絶対値が得られます。</p>
 <div class="arithmatex">\[
@@ -14593,11 +14626,15 @@
 <p>各演算子の位相因子を正の実数に選ぶと，よく知られた関係式 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle = \sqrt{n+1}|n+1\rangle\)</span> および <span class="arithmatex">\(\hat{a}|n\rangle = \sqrt{n}|n-1\rangle\)</span> が定まります。</p>
 <p>ハミルトニアンの固有値は，光子数演算子の固有値 <span class="arithmatex">\(n\)</span> を代入することで直接的に得られます。</p>
 <div class="arithmatex">\[
-\hat{H}|n\rangle = \hbar \omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) |n\rangle = \hbar \omega \left( \hat{N} + \frac{1}{2} \right) |n\rangle = \hbar \omega \left( n + \frac{1}{2} \right) |n\rangle
+\begin{aligned}
+\hat{H}|n\rangle &amp;= \hbar \omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) |n\rangle \\
+&amp;= \hbar \omega \left( \hat{N} + \frac{1}{2} \right) |n\rangle \\
+&amp;= \hbar \omega \left( n + \frac{1}{2} \right) |n\rangle
+\end{aligned}
 \]</div>
 <p>したがって，固有エネルギーの式は以下の通りに確定します。</p>
 <div class="arithmatex">\[
-E_n = \hbar \omega \left( n + \frac{1}{2} \right)
+\finalanswer{E_n = \hbar \omega \left( n + \frac{1}{2} \right)}
 \]</div>
 
 

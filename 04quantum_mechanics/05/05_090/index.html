@@ -14544,7 +14544,10 @@
   消滅演算子を各項に作用させます。基底状態に作用した項 <span class="arithmatex">\(n=0\)</span> は 0 になるため，和の始まりが <span class="arithmatex">\(n=1\)</span> に変わります。</li>
 </ul>
 <div class="arithmatex">\[
-  \hat{a}|\alpha\rangle = \sum_{n=0}^{\infty} c_n \hat{a}|n\rangle = \sum_{n=1}^{\infty} c_n \sqrt{n}|n-1\rangle
+\begin{aligned}
+\hat{a}|\alpha\rangle &amp;= \sum_{n=0}^{\infty} c_n \hat{a}|n\rangle \\
+&amp;= \sum_{n=1}^{\infty} c_n \sqrt{n}|n-1\rangle
+\end{aligned}
 \]</div>
 <p>ここで，ダミーの和の添字を <span class="arithmatex">\(m = n-1\)</span> と置き換えます。 <span class="arithmatex">\(n = m+1\)</span> となり，範囲は <span class="arithmatex">\(m=0\)</span> から無限大までになります。</p>
 <div class="arithmatex">\[
@@ -14559,7 +14562,10 @@
 \]</div>
 <p>左右の両辺で，同じ数状態 <span class="arithmatex">\(|n\rangle\)</span> にかかっている係数を比較します。</p>
 <div class="arithmatex">\[
-c_{n+1} \sqrt{n+1} = \alpha c_n \implies c_{n+1} = \frac{\alpha}{\sqrt{n+1}} c_n
+\begin{aligned}
+c_{n+1} \sqrt{n+1} &amp;= \alpha c_n \implies c_{n+1} \\
+&amp;= \frac{\alpha}{\sqrt{n+1}} c_n
+\end{aligned}
 \]</div>
 <p>この漸化式を繰り返し用いて，各項を <span class="arithmatex">\(c_0\)</span> から順に書き下します。</p>
 <ul>
@@ -14569,16 +14575,23 @@ c_{n+1} \sqrt{n+1} = \alpha c_n \implies c_{n+1} = \frac{\alpha}{\sqrt{n+1}} c_n
 </ul>
 <p>この規則性から，一般の第 <span class="arithmatex">\(n\)</span> 項の係数は以下のように求まります。</p>
 <div class="arithmatex">\[
-c_n = \frac{\alpha^n}{\sqrt{n!}} c_0
+\finalanswer{c_n = \frac{\alpha^n}{\sqrt{n!}} c_0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>規格化条件 <span class="arithmatex">\(\langle \alpha|\alpha\rangle = 1\)</span> を計算します。状態ベクトルのブラ <span class="arithmatex">\(\langle \alpha|\)</span> を作るとき，係数は複素共役をとる必要があります。また，異なる数状態の間には直交関係 <span class="arithmatex">\(\langle m|n\rangle = \delta_{mn}\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
-\langle \alpha|\alpha\rangle = \sum_{m=0}^{\infty} \sum_{n=0}^{\infty} c_m^* c_n \langle m|n\rangle = \sum_{n=0}^{\infty} |c_n|^2 = 1
+\begin{aligned}
+\langle \alpha|\alpha\rangle &amp;= \sum_{m=0}^{\infty} \sum_{n=0}^{\infty} c_m^* c_n \langle m|n\rangle \\
+&amp;= \sum_{n=0}^{\infty} |c_n|^2 \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>ここに (1) で求めた <span class="arithmatex">\(c_n\)</span> の表式を代入します。</p>
 <div class="arithmatex">\[
-\sum_{n=0}^{\infty} \left| \frac{\alpha^n}{\sqrt{n!}} c_0 \right|^2 = |c_0|^2 \sum_{n=0}^{\infty} \frac{(|\alpha|^2)^n}{n!} = 1
+\begin{aligned}
+\sum_{n=0}^{\infty} \left| \frac{\alpha^n}{\sqrt{n!}} c_0 \right|^2 &amp;= |c_0|^2 \sum_{n=0}^{\infty} \frac{(|\alpha|^2)^n}{n!} \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>提示された指数関数の展開公式において， <span class="arithmatex">\(x = |\alpha|^2\)</span> と置くことで，この無限級数の和の形をまとめることができます。</p>
 <div class="arithmatex">\[
@@ -14590,7 +14603,7 @@ c_0 = e^{-\frac{1}{2}|\alpha|^2}
 \]</div>
 <p>これをもとの展開式に戻すことで，コヒーレント状態の数状態による重ね合わせの形が得られます。</p>
 <div class="arithmatex">\[
-|\alpha\rangle = e^{-\frac{1}{2}|\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} |n\rangle
+\finalanswer{|\alpha\rangle = e^{-\frac{1}{2}|\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} |n\rangle}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>初期状態の固有値を <span class="arithmatex">\(\alpha_0\)</span> と書くことにして，時間発展の式に各エネルギー固有値を代入します。</p>
@@ -14607,7 +14620,7 @@ c_0 = e^{-\frac{1}{2}|\alpha|^2}
 \]</div>
 <p>ここで，時間変化する複素数 <span class="arithmatex">\(\alpha(t) = \alpha_0 e^{-i\omega t}\)</span> を定義します。その絶対値の2乗は <span class="arithmatex">\(|\alpha(t)|^2 = |\alpha_0|^2\)</span> であり，時間に依存しません。これを用いて全体の式を書き換えます。</p>
 <div class="arithmatex">\[
-|\alpha(t)\rangle \sim e^{-\frac{1}{2}|\alpha(t)|^2} \sum_{n=0}^{\infty} \frac{\alpha(t)^n}{\sqrt{n!}} |n\rangle
+\finalanswer{|\alpha(t)\rangle \sim e^{-\frac{1}{2}|\alpha(t)|^2} \sum_{n=0}^{\infty} \frac{\alpha(t)^n}{\sqrt{n!}} |n\rangle}
 \]</div>
 <p>この右辺の形は， (2) で求めたコヒーレント状態の定義式そのものです。</p>
 <p>したがって，時間が経過しても複素数の重ね合わせのバランスは崩れることがなく，固有値が <span class="arithmatex">\(\alpha(t) = \alpha_0 e^{-i\omega t}\)</span> という規則で複素平面上を時計回りに角振動数 <span class="arithmatex">\(\omega\)</span> で回転し続けるような，新しいコヒーレント状態へとうつり変わっていくことが示されました。これは，古典的な調和振動子が一定の周期でいつまでも往復運動を続ける様子と対応しています。</p>

@@ -14536,11 +14536,17 @@
 <h3 id="1">(1)</h3>
 <p>スクリーン上での全波動関数を展開します。</p>
 <div class="arithmatex">\[
-\psi = \psi_{0,1} e^{i\phi_1} + \psi_{0,2} e^{i\phi_2} = e^{i\phi_2} \left( \psi_{0,1} e^{i(\phi_1 - \phi_2)} + \psi_{0,2} \right)
+\begin{aligned}
+\psi &amp;= \psi_{0,1} e^{i\phi_1} + \psi_{0,2} e^{i\phi_2} \\
+&amp;= e^{i\phi_2} \left( \psi_{0,1} e^{i(\phi_1 - \phi_2)} + \psi_{0,2} \right)
+\end{aligned}
 \]</div>
 <p>存在確率を求めるために絶対値の2乗を計算すると，干渉項の内部に位相差 <span class="arithmatex">\(\Delta\phi = \Delta\phi_0 + (\phi_1 - \phi_2)\)</span> が現れます。このうち，ベクトルポテンシャルに起因する追加の位相差 <span class="arithmatex">\(\Delta\phi_{\text{AB}}\)</span> を書き下します。</p>
 <div class="arithmatex">\[
-\Delta\phi_{\text{AB}} = \phi_1 - \phi_2 = \frac{q}{\hbar} \int_{\text{パス1}} \boldsymbol{A} \cdot d\boldsymbol{r} - \frac{q}{\hbar} \int_{\text{パス2}} \boldsymbol{A} \cdot d\boldsymbol{r}
+\begin{aligned}
+\Delta\phi_{\text{AB}} &amp;= \phi_1 - \phi_2 \\
+&amp;= \frac{q}{\hbar} \int_{\text{パス1}} \boldsymbol{A} \cdot d\boldsymbol{r} - \frac{q}{\hbar} \int_{\text{パス2}} \boldsymbol{A} \cdot d\boldsymbol{r}
+\end{aligned}
 \]</div>
 <p>パス2の積分の向きを反転させることで，引き算を足し算に変更します。</p>
 <div class="arithmatex">\[
@@ -14548,7 +14554,7 @@
 \]</div>
 <p>光源からスリット1を経てスクリーンに至るパス1と，スクリーンからスリット2を経て光源へと戻る逆向きのパス2を繋ぎ合わせると，ソレノイドを取り囲む1つの反時計回りの閉曲線 <span class="arithmatex">\(C\)</span> が形成されます。これらを1つの積分にまとめます。</p>
 <div class="arithmatex">\[
-\Delta\phi_{\text{AB}} = \frac{q}{\hbar} \oint_{C} \boldsymbol{A} \cdot d\boldsymbol{r}
+\finalanswer{\Delta\phi_{\text{AB}} = \frac{q}{\hbar} \oint_{C} \boldsymbol{A} \cdot d\boldsymbol{r}}
 \]</div>
 <p>これで閉曲線に関する線積分の形式が得られました。</p>
 <h3 id="2">(2)</h3>
@@ -14566,7 +14572,7 @@
 \]</div>
 <p>この関係を (1) の式に代入します。</p>
 <div class="arithmatex">\[
-\Delta\phi_{\text{AB}} = \frac{q}{\hbar} \Phi
+\finalanswer{\Delta\phi_{\text{AB}} = \frac{q}{\hbar} \Phi}
 \]</div>
 <p>粒子が通る経路上の磁場はどこでも 0 であるにもかかわらず，波動関数の位相差にはソレノイド内部の磁通の大きさが直接反映されることが示されました。</p>
 <h3 id="3">(3)</h3>
@@ -14577,7 +14583,7 @@
 \]</div>
 <p>配置を元に戻すための最小の非ゼロ磁通は， <span class="arithmatex">\(n=1\)</span> のときに相当します。式を <span class="arithmatex">\(\Phi\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\Phi = \frac{2\pi\hbar}{q}
+\finalanswer{\Phi = \frac{2\pi\hbar}{q}}
 \]</div>
 <p>この磁通の大きさを磁束量子と呼びます。粒子が磁場のある領域を通らなくても，ベクトルポテンシャルによる位相差が干渉縞に現れます。</p>
 

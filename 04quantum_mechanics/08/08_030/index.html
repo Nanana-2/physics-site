@@ -14558,7 +14558,7 @@
 \]</div>
 <p>因数分解を行います。</p>
 <div class="arithmatex">\[
-  (s - l - 1)(s + l) = 0 \implies s = l+1, \, -l
+  \finalanswer{(s - l - 1)(s + l) = 0 \implies s = l+1, \, -l}
 \]</div>
 <p>原点 <span class="arithmatex">\(r = 0\)</span> において波動関数が発散せず，存在確率が定義できるためには，正の指数を選択する必要があります。したがって，求める指数は <span class="arithmatex">\(s = l+1\)</span> となります。</p>
 <h3 id="2">(2)</h3>
@@ -14571,7 +14571,7 @@
 \]</div>
 <p>ここで， <span class="arithmatex">\(f(\rho)\)</span> 自体が満たす微分方程式の性質を利用して元の動径方程式に代入し，全体を <span class="arithmatex">\(f(\rho)\)</span> で割り算して整理します。各微分項を丁寧にまとめると，以下の等式が得られます。</p>
 <div class="arithmatex">\[
-\rho \frac{d^2 v}{d\rho^2} + [2(l+1) - \rho] \frac{dv}{d\rho} + (\lambda - l - 1) v = 0
+\finalanswer{\rho \frac{d^2 v}{d\rho^2} + [2(l+1) - \rho] \frac{dv}{d\rho} + (\lambda - l - 1) v = 0}
 \]</div>
 <p>これにより，合流型超幾何微分方程式が導かれました。</p>
 <h3 id="3">(3)</h3>
@@ -14589,15 +14589,21 @@ N + l + 1 - \lambda = 0 \implies \lambda = N + l + 1
 \]</div>
 <p>問題文で定義された <span class="arithmatex">\(\lambda\)</span> の式にこれを代入し，エネルギーについて解きます。</p>
 <div class="arithmatex">\[
-n = \frac{me^2}{4\pi\varepsilon_0 \hbar^2 \sqrt{2m|E|}} \implies \sqrt{2m|E|} = \frac{me^2}{4\pi\varepsilon_0 \hbar^2 n}
+\begin{aligned}
+n &amp;= \frac{me^2}{4\pi\varepsilon_0 \hbar^2 \sqrt{2m|E|}} \implies \sqrt{2m|E|} \\
+&amp;= \frac{me^2}{4\pi\varepsilon_0 \hbar^2 n}
+\end{aligned}
 \]</div>
 <p>両辺を2乗します。</p>
 <div class="arithmatex">\[
-2m|E| = \frac{m^2 e^4}{(4\pi\varepsilon_0)^2 \hbar^4 n^2} \implies |E| = \frac{m e^4}{2(4\pi\varepsilon_0)^2 \hbar^4 n^2}
+\begin{aligned}
+2m|E| &amp;= \frac{m^2 e^4}{(4\pi\varepsilon_0)^2 \hbar^4 n^2} \implies |E| \\
+&amp;= \frac{m e^4}{2(4\pi\varepsilon_0)^2 \hbar^4 n^2}
+\end{aligned}
 \]</div>
 <p>エネルギーは負の値であるため，絶対値を外してマイナスを付与します。 <span class="arithmatex">\(\hbar = \frac{h}{2\pi}\)</span> を用いて整理すると，最終的なエネルギー準位の式が以下のように導かれます。</p>
 <div class="arithmatex">\[
-E_n = -\frac{m e^4}{32 \pi^2 \varepsilon_0^2 \hbar^2 \frac{1}{n^2}}
+\finalanswer{E_n = -\frac{m e^4}{32 \pi^2 \varepsilon_0^2 \hbar^2 \frac{1}{n^2}}}
 \]</div>
 <p>この結果より，水素原子の束縛エネルギーは，角運動量量子数 <span class="arithmatex">\(l\)</span> や磁気量子数 <span class="arithmatex">\(m\)</span> には依存せず，主量子数 <span class="arithmatex">\(n\)</span> のみによって決定されることが示されました。</p>
 

@@ -14539,16 +14539,22 @@ g_j = 1 + \frac{j(j+1) - l(l+1) + 3/4}{2j(j+1)}
 <h3 id="1">(1)</h3>
 <p>全角運動量の定義式 <span class="arithmatex">\(\hat{\boldsymbol{J}} = \hat{\boldsymbol{L}} + \hat{\boldsymbol{S}}\)</span> を変形すると， <span class="arithmatex">\(\hat{\boldsymbol{L}} = \hat{\boldsymbol{J}} - \hat{\boldsymbol{S}}\)</span> となります。これをゼーマンハミルトニアンの括弧内に代入します。</p>
 <div class="arithmatex">\[
-\hat{L}_z + 2\hat{S}_z = (\hat{J}_z - \hat{S}_z) + 2\hat{S}_z = \hat{J}_z + \hat{S}_z
+\begin{aligned}
+\hat{L}_z + 2\hat{S}_z &amp;= (\hat{J}_z - \hat{S}_z) + 2\hat{S}_z \\
+&amp;= \hat{J}_z + \hat{S}_z
+\end{aligned}
 \]</div>
 <p>したがって，ハミルトニアンは <span class="arithmatex">\(\hat{H}_{\text{Z}} = \frac{\mu_{\text{B}} B_0}{\hbar} (\hat{J}_z + \hat{S}_z)\)</span> と書き換えられます。</p>
 <p>この演算子の期待値をとります。提示された <span class="arithmatex">\(\hat{S}_z\)</span> の期待値の近似式を代入します。</p>
 <div class="arithmatex">\[
-\langle \hat{H}_{\text{Z}} \rangle = \frac{\mu_{\text{B}} B_0}{\hbar} \left( \langle \hat{J}_z \rangle + \langle \hat{S}_z \rangle \right) = \frac{\mu_{\text{B}} B_0}{\hbar} \left( 1 + \frac{\langle \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \rangle}{\langle \hat{\boldsymbol{J}}^2 \rangle} \right) \langle \hat{J}_z \rangle
+\begin{aligned}
+\langle \hat{H}_{\text{Z}} \rangle &amp;= \frac{\mu_{\text{B}} B_0}{\hbar} \left( \langle \hat{J}_z \rangle + \langle \hat{S}_z \rangle \right) \\
+&amp;= \frac{\mu_{\text{B}} B_0}{\hbar} \left( 1 + \frac{\langle \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \rangle}{\langle \hat{\boldsymbol{J}}^2 \rangle} \right) \langle \hat{J}_z \rangle
+\end{aligned}
 \]</div>
 <p>固有状態に対する固有値関係 <span class="arithmatex">\(\langle \hat{J}_z \rangle = m_j \hbar\)</span> を代入し，全体の共通因数である <span class="arithmatex">\(\hbar\)</span> を約分します。</p>
 <div class="arithmatex">\[
-\langle \hat{H}_{\text{Z}} \rangle = \mu_{\text{B}} B_0 m_j \left( 1 + \frac{\langle \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \rangle}{\langle \hat{\boldsymbol{J}}^2 \rangle} \right)
+\finalanswer{\langle \hat{H}_{\text{Z}} \rangle = \mu_{\text{B}} B_0 m_j \left( 1 + \frac{\langle \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \rangle}{\langle \hat{\boldsymbol{J}}^2 \rangle} \right)}
 \]</div>
 <p>括弧で囲まれた数式部分をランデの <span class="arithmatex">\(g\)</span> 因子 <span class="arithmatex">\(g_j = 1 + \frac{\langle \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \rangle}{\langle \hat{\boldsymbol{J}}^2 \rangle}\)</span> と定義することにより，求める形式である <span class="arithmatex">\(\langle \hat{H}_{\text{Z}} \rangle = g_j \mu_{\text{B}} B_0 m_j\)</span> が導かれました。</p>
 <h3 id="2">(2)</h3>
@@ -14558,7 +14564,10 @@ g_j = 1 + \frac{j(j+1) - l(l+1) + 3/4}{2j(j+1)}
 \]</div>
 <p>この等式を内積 <span class="arithmatex">\(\hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}}\)</span> について解きます。</p>
 <div class="arithmatex">\[
-2\hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} = \hat{\boldsymbol{J}}^2 - \hat{\boldsymbol{L}}^2 + \hat{\boldsymbol{S}}^2 \implies \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} = \frac{1}{2} \left( \hat{\boldsymbol{J}}^2 - \hat{\boldsymbol{L}}^2 + \hat{\boldsymbol{S}}^2 \right)
+\begin{aligned}
+2\hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} &amp;= \hat{\boldsymbol{J}}^2 - \hat{\boldsymbol{L}}^2 + \hat{\boldsymbol{S}}^2 \implies \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{J}} \\
+&amp;= \frac{1}{2} \left( \hat{\boldsymbol{J}}^2 - \hat{\boldsymbol{L}}^2 + \hat{\boldsymbol{S}}^2 \right)
+\end{aligned}
 \]</div>
 <p>この演算子の期待値を固有値に置き換えます。</p>
 <div class="arithmatex">\[
@@ -14568,11 +14577,17 @@ g_j = 1 + \frac{j(j+1) - l(l+1) + 3/4}{2j(j+1)}
 \langle \hat{\boldsymbol{L}}^2 \rangle = l(l+1)\hbar^2
 \]</div>
 <div class="arithmatex">\[
-\langle \hat{\boldsymbol{S}}^2 \rangle = s(s+1)\hbar^2 = \frac{3}{4}\hbar^2
+\begin{aligned}
+\langle \hat{\boldsymbol{S}}^2 \rangle &amp;= s(s+1)\hbar^2 \\
+&amp;= \frac{3}{4}\hbar^2
+\end{aligned}
 \]</div>
 <p>これらを (1) で定義した <span class="arithmatex">\(g_j\)</span> の式に代入します。分母と分子の <span class="arithmatex">\(\hbar^2\)</span> は共通因数として約分されます。</p>
 <div class="arithmatex">\[
-g_j = 1 + \frac{\frac{1}{2} [j(j+1) - l(l+1) + 3/4]\hbar^2}{j(j+1)\hbar^2} = 1 + \frac{j(j+1) - l(l+1) + 3/4}{2j(j+1)}
+\begin{aligned}
+g_j &amp;= 1 + \frac{\frac{1}{2} [j(j+1) - l(l+1) + 3/4]\hbar^2}{j(j+1)\hbar^2} \\
+&amp;= \finalanswer{1 + \frac{j(j+1) - l(l+1) + 3/4}{2j(j+1)}}
+\end{aligned}
 \]</div>
 <p>これにより，ランデの <span class="arithmatex">\(g\)</span> 因子の公式が導出されました。</p>
 <h3 id="3">(3)</h3>
@@ -14585,7 +14600,13 @@ l(l+1) = 1 \left( 1 + 1 \right) = 2
 \]</div>
 <p>これより</p>
 <div class="arithmatex">\[
-g_j = 1 + \frac{\frac{3}{4} - 2 + \frac{3}{4}}{2 \cdot \frac{3}{4}} = 1 + \frac{\frac{3}{2} - 2}{\frac{3}{2}} = 1 + \frac{-\frac{1}{2}}{\frac{3}{2}} = 1 - \frac{1}{3} = \frac{2}{3}
+\begin{aligned}
+g_j &amp;= 1 + \frac{\frac{3}{4} - 2 + \frac{3}{4}}{2 \cdot \frac{3}{4}} \\
+&amp;= 1 + \frac{\frac{3}{2} - 2}{\frac{3}{2}} \\
+&amp;= 1 + \frac{-\frac{1}{2}}{\frac{3}{2}} \\
+&amp;= 1 - \frac{1}{3} \\
+&amp;= \frac{2}{3}
+\end{aligned}
 \]</div>
 <p>したがって，この状態におけるランデの <span class="arithmatex">\(g\)</span> 因子は <span class="arithmatex">\(g_j = \frac{2}{3}\)</span> となります。</p>
 <p>全角運動量量子数 <span class="arithmatex">\(j=1/2\)</span> に対して，磁気量子数 <span class="arithmatex">\(m_j\)</span> が取り得る値は <span class="arithmatex">\(-j \leq m_j \leq j\)</span> の範囲のステップ 1 刻みの値です。</p>
@@ -14596,13 +14617,19 @@ m_j = \frac{1}{2}, \, -\frac{1}{2}
 <p>それぞれの状態における1次のエネルギーシフト <span class="arithmatex">\(\Delta E_{\text{Z}} = \langle \hat{H}_{\text{Z}} \rangle\)</span> を計算します。
 * <strong><span class="arithmatex">\(m_j = \frac{1}{2}\)</span> のとき</strong></p>
 <div class="arithmatex">\[
-  \Delta E_{\text{Z}} = \frac{2}{3} \mu_{\text{B}} B_0 \left( \frac{1}{2} \right) = \frac{1}{3} \mu_{\text{B}} B_0
+\begin{aligned}
+\Delta E_{\text{Z}} &amp;= \frac{2}{3} \mu_{\text{B}} B_0 \left( \frac{1}{2} \right) \\
+&amp;= \frac{1}{3} \mu_{\text{B}} B_0
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(m_j = -\frac{1}{2}\)</span> のとき</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \Delta E_{\text{Z}} = \frac{2}{3} \mu_{\text{B}} B_0 \left( -\frac{1}{2} \right) = -\frac{1}{3} \mu_{\text{B}} B_0
+\begin{aligned}
+\Delta E_{\text{Z}} &amp;= \frac{2}{3} \mu_{\text{B}} B_0 \left( -\frac{1}{2} \right) \\
+&amp;= \finalanswer{-\frac{1}{3} \mu_{\text{B}} B_0}
+\end{aligned}
 \]</div>
 <p>したがって，<span class="arithmatex">\(2\text{p}_{1/2}\)</span> 状態は，エネルギー間隔 <span class="arithmatex">\(\frac{2}{3}\mu_{\text{B}}B_0\)</span> の2準位に分裂します。</p>
 

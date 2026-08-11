@@ -14533,16 +14533,23 @@
 <h3 id="1">(1)</h3>
 <p>置換演算子 <span class="arithmatex">\(\hat{P}_{12}\)</span> を波動関数に2回続けて作用させる操作を考えます。2回入れ替えると，粒子の配置は当然ながら元に戻ります。</p>
 <div class="arithmatex">\[
-\hat{P}_{12}^2 \Psi(x_1, x_2) = \hat{P}_{12} \Psi(x_2, x_1) = \Psi(x_1, x_2)
+\begin{aligned}
+\hat{P}_{12}^2 \Psi(x_1, x_2) &amp;= \hat{P}_{12} \Psi(x_2, x_1) \\
+&amp;= \Psi(x_1, x_2)
+\end{aligned}
 \]</div>
 <p>これは，<span class="arithmatex">\(\hat{P}_{12}^2 = \hat{1}\)</span> であることを意味します。</p>
 <p>ここで， <span class="arithmatex">\(\hat{P}_{12}\)</span> の固有値を <span class="arithmatex">\(\lambda\)</span> とおくと，固有値方程式は <span class="arithmatex">\(\hat{P}_{12} \Psi = \lambda \Psi\)</span> です。この両辺に左からもう一度 <span class="arithmatex">\(\hat{P}_{12}\)</span> を作用させます。</p>
 <div class="arithmatex">\[
-\hat{P}_{12}^2 \Psi = \hat{P}_{12} (\lambda \Psi) = \lambda (\hat{P}_{12} \Psi) = \lambda^2 \Psi
+\begin{aligned}
+\hat{P}_{12}^2 \Psi &amp;= \hat{P}_{12} (\lambda \Psi) \\
+&amp;= \lambda (\hat{P}_{12} \Psi) \\
+&amp;= \lambda^2 \Psi
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\hat{P}_{12}^2 = \hat{1}\)</span> であるため，左辺は <span class="arithmatex">\(\Psi\)</span> に戻ります。したがって， <span class="arithmatex">\(\Psi = \lambda^2 \Psi\)</span> が成り立ち，固有値について以下の条件が課されます。</p>
 <div class="arithmatex">\[
-\lambda^2 = 1 \quad \implies \quad \lambda = \pm 1
+\finalanswer{\lambda^2 = 1 \quad \implies \quad \lambda = \pm 1}
 \]</div>
 <p>したがって，置換演算子の固有値は <span class="arithmatex">\(+1\)</span> または <span class="arithmatex">\(-1\)</span> です。</p>
 <h3 id="2">(2)</h3>
@@ -14557,14 +14564,17 @@
 <p><strong>フェルミ粒子</strong></p>
 <p>座標の入れ替えに対して全体の符号が反転するように，差の形式で組み合わせます。</p>
 <div class="arithmatex">\[
-\Psi_{\mathrm{F}}(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_b(x_2) - \phi_b(x_1)\phi_a(x_2) \right]
+\finalanswer{\Psi_{\mathrm{F}}(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_b(x_2) - \phi_b(x_1)\phi_a(x_2) \right]}
 \]</div>
 <p>実際に <span class="arithmatex">\(x_1\)</span> と <span class="arithmatex">\(x_2\)</span> を入れ替えると，括弧の中身の引き算の順序が逆になるため，関数全体にマイナス符号が飛び出し， <span class="arithmatex">\(\Psi_{\mathrm{F}}(x_2, x_1) = -\Psi_{\mathrm{F}}(x_1, x_2)\)</span> となって反対称性が満たされます。</p>
 <p>反対称波動関数は，スレーター行列式 <span class="arithmatex">\(\frac{1}{\sqrt{2}} \begin{vmatrix} \phi_a(x_1) &amp; \phi_a(x_2) \\ \phi_b(x_1) &amp; \phi_b(x_2) \end{vmatrix}\)</span> としても表せます。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で求めたフェルミ粒子の波動関数 <span class="arithmatex">\(\Psi_{\mathrm{F}}\)</span> において，2つの粒子が全く同じ1粒子量子状態にある，すなわち <span class="arithmatex">\(a = b\)</span> という状況を代入してみます。</p>
 <div class="arithmatex">\[
-\Psi_{\mathrm{F}}(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_a(x_2) - \phi_a(x_1)\phi_a(x_2) \right] = 0
+\begin{aligned}
+\Psi_{\mathrm{F}}(x_1, x_2) &amp;= \frac{1}{\sqrt{2}} \left[ \phi_a(x_1)\phi_a(x_2) - \phi_a(x_1)\phi_a(x_2) \right] \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\Psi_{\mathrm{F}}=0\)</span> なので，この状態の存在確率は0です。</p>
 <p>この結果は，<strong>2つのフェルミ粒子は，同一の量子状態を同時に占有することはできない</strong>という重要な原則を示しています。この原理を<strong>パウリの排他原理</strong>と呼びます。</p>

@@ -14538,7 +14538,10 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <h3 id="1">(1)</h3>
 <p>仮定した波動関数 <span class="arithmatex">\(\psi(\xi) = H(\xi) e^{-\frac{1}{2}\xi^2}\)</span> の1階微分と2階微分を順に計算します。積の微分公式を適用します。</p>
 <div class="arithmatex">\[
-\frac{d\psi}{d\xi} = \frac{dH}{d\xi} e^{-\frac{1}{2}\xi^2} - \xi H e^{-\frac{1}{2}\xi^2} = \left( \frac{dH}{d\xi} - \xi H \right) e^{-\frac{1}{2}\xi^2}
+\begin{aligned}
+\frac{d\psi}{d\xi} &amp;= \frac{dH}{d\xi} e^{-\frac{1}{2}\xi^2} - \xi H e^{-\frac{1}{2}\xi^2} \\
+&amp;= \left( \frac{dH}{d\xi} - \xi H \right) e^{-\frac{1}{2}\xi^2}
+\end{aligned}
 \]</div>
 <p>2階微分は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14553,15 +14556,21 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 \]</div>
 <p><span class="arithmatex">\(\xi^2 H\)</span> の項が互いに相殺されるため，式を整理すると目的の微分方程式が得られます。</p>
 <div class="arithmatex">\[
-\frac{d^2 H}{d\xi^2} - 2\xi \frac{dH}{d\xi} + (\lambda - 1)H = 0
+\finalanswer{\frac{d^2 H}{d\xi^2} - 2\xi \frac{dH}{d\xi} + (\lambda - 1)H = 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(H(\xi) = \sum_{m=0}^{\infty} c_m \xi^m\)</span> の各階微分を計算して方程式に代入します。</p>
 <div class="arithmatex">\[
-\frac{dH}{d\xi} = \sum_{m=1}^{\infty} m c_m \xi^{m-1} \implies 2\xi \frac{dH}{d\xi} = \sum_{m=0}^{\infty} 2m c_m \xi^m
+\begin{aligned}
+\frac{dH}{d\xi} &amp;= \sum_{m=1}^{\infty} m c_m \xi^{m-1} \implies 2\xi \frac{dH}{d\xi} \\
+&amp;= \sum_{m=0}^{\infty} 2m c_m \xi^m
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\frac{d^2H}{d\xi^2} = \sum_{m=2}^{\infty} m(m-1) c_m \xi^{m-2} = \sum_{m=0}^{\infty} (m+2)(m+1) c_{m+2} \xi^m
+\begin{aligned}
+\frac{d^2H}{d\xi^2} &amp;= \sum_{m=2}^{\infty} m(m-1) c_m \xi^{m-2} \\
+&amp;= \sum_{m=0}^{\infty} (m+2)(m+1) c_{m+2} \xi^m
+\end{aligned}
 \]</div>
 <p>これらをはじめの方程式に代入し， <span class="arithmatex">\(\xi^m\)</span> の係数をまとめます。</p>
 <div class="arithmatex">\[
@@ -14573,7 +14582,7 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 \]</div>
 <p>これを <span class="arithmatex">\(c_{m+2}\)</span> について解くことで，係数の漸化式が導かれます。</p>
 <div class="arithmatex">\[
-c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
+\finalanswer{c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(m\)</span> が十分に大きいとき，漸化式の定数項を無視すると係数比は以下のようになります。</p>
@@ -14584,7 +14593,10 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <p>したがって，級数が無限に続くと <span class="arithmatex">\(H(\xi) \sim e^{\xi^2}\)</span> のように振る舞います。</p>
 <p>これを波動関数の仮定式に戻すと，以下のようになります。</p>
 <div class="arithmatex">\[
-\psi(\xi) = H(\xi) e^{-\frac{1}{2}\xi^2} \sim e^{\xi^2} e^{-\frac{1}{2}\xi^2} = e^{\frac{1}{2}\xi^2}
+\begin{aligned}
+\psi(\xi) &amp;= H(\xi) e^{-\frac{1}{2}\xi^2} \sim e^{\xi^2} e^{-\frac{1}{2}\xi^2} \\
+&amp;= e^{\frac{1}{2}\xi^2}
+\end{aligned}
 \]</div>
 <p>この関数は <span class="arithmatex">\(\xi \to \pm\infty\)</span> で無限大に発散するため，確率解釈を満たす物理的な波動関数としては不適となります。</p>
 <p>波動関数が有限にとどまるためには，級数がある有限の次数 <span class="arithmatex">\(m=n\)</span> で途切れ，それ以上の高次の係数がすべて 0 になる必要があります。漸化式の分子が 0 になることがその条件です。</p>
@@ -14594,7 +14606,7 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <p>このとき <span class="arithmatex">\(H(\xi)\)</span> は <span class="arithmatex">\(n\)</span> 次のエルミート多項式 <span class="arithmatex">\(H_n(\xi)\)</span> となり，遠方ではガウス因子によって波動関数が 0 に収束します。</p>
 <p>最後に，無次元エネルギーの定義式 <span class="arithmatex">\(2E / \hbar\omega = \lambda\)</span> にこの結果を代入して実際のエネルギーを計算します。</p>
 <div class="arithmatex">\[
-\frac{2E_n}{\hbar\omega} = 2n + 1 \implies E_n = \left(n + \frac{1}{2}\right)\hbar\omega
+\finalanswer{\frac{2E_n}{\hbar\omega} = 2n + 1 \implies E_n = \left(n + \frac{1}{2}\right)\hbar\omega}
 \]</div>
 <p>これにより，一般の量子数 <span class="arithmatex">\(n\)</span> に対するエネルギー固有値の等間隔な準位構造が厳密に導かれました。</p>
 

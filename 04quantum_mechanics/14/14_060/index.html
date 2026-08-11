@@ -14537,21 +14537,30 @@
 \]</div>
 <p>問題文より，ハミルトニアンと対称操作演算子は可換であるため，演算子の順序を <span class="arithmatex">\(\hat{H}\hat{R} = \hat{R}\hat{H}\)</span> と入れ替えることができます。</p>
 <div class="arithmatex">\[
-= \left( \hat{R} \hat{H} \right) | \psi_i \rangle = \hat{R} \left( \hat{H} | \psi_i \rangle \right)
+\begin{aligned}
+ &amp;= \left( \hat{R} \hat{H} \right) | \psi_i \rangle \\
+&amp;= \hat{R} \left( \hat{H} | \psi_i \rangle \right)
+\end{aligned}
 \]</div>
 <p>ここで， <span class="arithmatex">\(| \psi_i \rangle\)</span> はエネルギー固有値 <span class="arithmatex">\(E\)</span> の固有状態であるため， <span class="arithmatex">\(\hat{H} | \psi_i \rangle = E | \psi_i \rangle\)</span> を代入します。固有値 <span class="arithmatex">\(E\)</span> は単なる実数の定数であるため，演算子の前に引き出すことが可能です。</p>
 <div class="arithmatex">\[
-= \hat{R} \left( E | \psi_i \rangle \right) = E \left( \hat{R} | \psi_i \rangle \right)
+\finalanswer{= \hat{R} \left( E | \psi_i \rangle \right) = E \left( \hat{R} | \psi_i \rangle \right)}
 \]</div>
 <p>以上より，<span class="arithmatex">\(\hat{H}(\hat{R}|\psi_i\rangle) = E(\hat{R}|\psi_i\rangle)\)</span> となります。したがって，対称操作後の状態も同じエネルギー固有値 <span class="arithmatex">\(E\)</span> を持ちます。</p>
 <h3 id="2">(2)</h3>
 <p>2つの対称操作 <span class="arithmatex">\(\hat{B}\)</span> と <span class="arithmatex">\(\hat{A}\)</span> を順番に作用させたときの状態の変化を計算します。まず，右側の <span class="arithmatex">\(\hat{B}\)</span> から作用させて問題文の展開式を適用します。</p>
 <div class="arithmatex">\[
-\hat{A} \hat{B} | \psi_i \rangle = \hat{A} \left( \hat{B} | \psi_i \rangle \right) = \hat{A} \sum_{j=1}^{d} | \psi_j \rangle D_{ji}(\hat{B})
+\begin{aligned}
+\hat{A} \hat{B} | \psi_i \rangle &amp;= \hat{A} \left( \hat{B} | \psi_i \rangle \right) \\
+&amp;= \hat{A} \sum_{j=1}^{d} | \psi_j \rangle D_{ji}(\hat{B})
+\end{aligned}
 \]</div>
 <p>和の記号と行列要素の定数を演算子の左側へ括り出し，残った状態 <span class="arithmatex">\(| \psi_j \rangle\)</span> に対して改めて操作 <span class="arithmatex">\(\hat{A}\)</span> を作用させます。ここでもう一度展開式を適用しますが，和の変数を区別するために新しい添字 <span class="arithmatex">\(k\)</span> を導入します。</p>
 <div class="arithmatex">\[
-= \sum_{j=1}^{d} \left( \hat{A} | \psi_j \rangle \right) D_{ji}(\hat{B}) = \sum_{j=1}^{d} \left( \sum_{k=1}^{d} | \psi_k \rangle D_{kj}(\hat{A}) \right) D_{ji}(\hat{B})
+\begin{aligned}
+ &amp;= \sum_{j=1}^{d} \left( \hat{A} | \psi_j \rangle \right) D_{ji}(\hat{B}) \\
+&amp;= \sum_{j=1}^{d} \left( \sum_{k=1}^{d} | \psi_k \rangle D_{kj}(\hat{A}) \right) D_{ji}(\hat{B})
+\end{aligned}
 \]</div>
 <p>2つの和の記号を整理し，行列要素の積の部分をまとめます。</p>
 <div class="arithmatex">\[
@@ -14567,14 +14576,14 @@ D_{ki}(\hat{A}\hat{B}) = \sum_{j=1}^{d} D_{kj}(\hat{A}) D_{ji}(\hat{B})
 \]</div>
 <p>右辺は行列 <span class="arithmatex">\(D(\hat{A})\)</span> と <span class="arithmatex">\(D(\hat{B})\)</span> の積です。したがって，変換行列は群の積を保ち，群の表現を構成します。</p>
 <div class="arithmatex">\[
-D(\hat{A}\hat{B}) = D(\hat{A}) D(\hat{B})
+\finalanswer{D(\hat{A}\hat{B}) = D(\hat{A}) D(\hat{B})}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(1) と (2) の数理構造により，ハミルトニアンの縮退した固有状態のセットは，必ずその対称群の表現行列の空間を構成することが分かります。</p>
 <p>この表現が既約表現であれば，固有状態の数 <span class="arithmatex">\(d\)</span> は既約表現の次元に等しくなります。</p>
 <p>したがって，エネルギー準位の縮退度 <span class="arithmatex">\(d\)</span> は，ハミルトニアンが持つ対称群の既約表現の次元数と等号で結ばれる関係にあります。</p>
 <div class="arithmatex">\[
-\text{準位の縮退度} = \text{既約表現の次元数}
+\finalanswer{\text{準位の縮退度} = \text{既約表現の次元数}}
 \]</div>
 
 

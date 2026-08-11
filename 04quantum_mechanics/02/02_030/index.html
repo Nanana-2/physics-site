@@ -14516,7 +14516,10 @@
 \]</div>
 <p>を掛けます。</p>
 <div class="arithmatex">\[
-|\psi\rangle = \hat{I}|\psi\rangle = \left( \int_{-\infty}^{\infty} |x\rangle\langle x| dx \right) |\psi\rangle
+\begin{aligned}
+|\psi\rangle &amp;= \hat{I}|\psi\rangle \\
+&amp;= \left( \int_{-\infty}^{\infty} |x\rangle\langle x| dx \right) |\psi\rangle
+\end{aligned}
 \]</div>
 <p>積分の線形性により，右端のケットベクトルを積分の内部に入れます。</p>
 <div class="arithmatex">\[
@@ -14524,13 +14527,16 @@
 \]</div>
 <p>ここで，連続基底における展開の係数となる内積部分を <span class="arithmatex">\(\psi(x) = \langle x|\psi\rangle\)</span> と定義します。これをもとの式に代入します。</p>
 <div class="arithmatex">\[
-|\psi\rangle = \int_{-\infty}^{\infty} \psi(x) |x\rangle dx
+\finalanswer{|\psi\rangle = \int_{-\infty}^{\infty} \psi(x) |x\rangle dx}
 \]</div>
 <p>これにより，抽象的な状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> は，各点における粒子の存在振幅 <span class="arithmatex">\(\psi(x)\)</span> を重みとする位置固有状態 <span class="arithmatex">\(|x\rangle\)</span> の連続的な重ね合わせとして展開されます。</p>
 <h3 id="2">(2)</h3>
 <p>運動量表示の波動関数の定義式 <span class="arithmatex">\(\phi(p) = \langle p|\psi\rangle\)</span> の内部に，ブラ <span class="arithmatex">\(\langle p|\)</span> とケット <span class="arithmatex">\(|\psi\rangle\)</span> の隙間を押し広げるようにして位置の単位演算子を挿入します。</p>
 <div class="arithmatex">\[
-\phi(p) = \langle p| \hat{I} |\psi\rangle = \langle p| \left( \int_{-\infty}^{\infty} |x\rangle\langle x| dx \right) |\psi\rangle
+\begin{aligned}
+\phi(p) &amp;= \langle p| \hat{I} |\psi\rangle \\
+&amp;= \langle p| \left( \int_{-\infty}^{\infty} |x\rangle\langle x| dx \right) |\psi\rangle
+\end{aligned}
 \]</div>
 <p>積分の記号と変数 <span class="arithmatex">\(dx\)</span> を全体の左側にくくり出します。</p>
 <div class="arithmatex">\[
@@ -14538,7 +14544,10 @@
 \]</div>
 <p>ここで， (1) の定義より <span class="arithmatex">\(\langle x|\psi\rangle = \psi(x)\)</span> です。また，与えられた位置と運動量の内積の式 <span class="arithmatex">\(\langle x|p\rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{\frac{i}{\hbar}px}\)</span> の複素共役をとることで，順序を入れ替えた内積 <span class="arithmatex">\(\langle p|x\rangle\)</span> が求まります。</p>
 <div class="arithmatex">\[
-\langle p|x\rangle = (\langle x|p\rangle)^* = \frac{1}{\sqrt{2\pi\hbar}} e^{-\frac{i}{\hbar}px}
+\begin{aligned}
+\langle p|x\rangle &amp;= (\langle x|p\rangle)^* \\
+&amp;= \frac{1}{\sqrt{2\pi\hbar}} e^{-\frac{i}{\hbar}px}
+\end{aligned}
 \]</div>
 <p>これらの要素を積分の式にそれぞれ代入します。</p>
 <div class="arithmatex">\[
@@ -14546,7 +14555,7 @@
 \]</div>
 <p>定数の係数を積分の外側に整理します。</p>
 <div class="arithmatex">\[
-\phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_{-\infty}^{\infty} \psi(x) e^{-\frac{i}{\hbar}px} dx
+\finalanswer{\phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_{-\infty}^{\infty} \psi(x) e^{-\frac{i}{\hbar}px} dx}
 \]</div>
 <p>これにより，運動量空間における波動関数 <span class="arithmatex">\(\phi(p)\)</span> は，実空間における波動関数 <span class="arithmatex">\(\psi(x)\)</span> をフーリエ変換したものであることが数学的に導出されました。</p>
 

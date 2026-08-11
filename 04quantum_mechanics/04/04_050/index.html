@@ -14540,7 +14540,10 @@ T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx
 <h3 id="1">(1)</h3>
 <p>時間依存しないシュレーディンガー方程式は以下の形をしています。</p>
 <div class="arithmatex">\[
--\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + V(x)\psi = E\psi \implies \frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} = [V(x) - E]\psi
+\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + V(x)\psi &amp;= E\psi \implies \frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} \\
+&amp;= [V(x) - E]\psi
+\end{aligned}
 \]</div>
 <p>波動関数の形を <span class="arithmatex">\(\psi(x) = e^{\Phi(x)/\hbar}\)</span> と仮定して， <span class="arithmatex">\(x\)</span> による1階微分と2階微分を計算します。</p>
 <div class="arithmatex">\[
@@ -14566,7 +14569,7 @@ T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx
 \]</div>
 <p>したがって，波動関数は以下の指数関数の形で表されることが示されました。</p>
 <div class="arithmatex">\[
-\psi(x) \sim \exp\left[ -\frac{1}{\hbar} \int p(x) dx \right]
+\finalanswer{\psi(x) \sim \exp\left[ -\frac{1}{\hbar} \int p(x) dx \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>障壁の進入限界点である <span class="arithmatex">\(x = x_1\)</span> における波動関数の振幅を <span class="arithmatex">\(\psi(x_1)\)</span> とし，障壁の脱出点である <span class="arithmatex">\(x = x_2\)</span> における波動関数の振幅を <span class="arithmatex">\(\psi(x_2)\)</span> とします。 (1) の積分型の一般解を用いると，この区間を通過する間の振幅の比は以下のように表されます。</p>
@@ -14579,12 +14582,15 @@ T \approx \left| \frac{\psi(x_2)}{\psi(x_1)} \right|^2 \approx \exp\left[ -\frac
 \]</div>
 <p>ここに <span class="arithmatex">\(p(x) = \sqrt{2m[V(x) - E]}\)</span> を代入することで，目的の近似式が得られます。</p>
 <div class="arithmatex">\[
-T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx \right]
+\finalanswer{T \approx \exp\left[ -\frac{2}{\hbar} \int_{x_1}^{x_2} \sqrt{2m[V(x) - E]} \, dx \right]}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた矩形ポテンシャル障壁の条件 <span class="arithmatex">\(x_1 = 0, x_2 = a, V(x) = V_0\)</span> を (2) の式に適用します。被積分関数が位置 <span class="arithmatex">\(x\)</span> に依存しない定数となるため，積分計算が単純な掛け算になります。</p>
 <div class="arithmatex">\[
-\int_{0}^{a} \sqrt{2m(V_0 - E)} \, dx = \sqrt{2m(V_0 - E)} \int_{0}^{a} dx = \sqrt{2m(V_0 - E)} \cdot a
+\begin{aligned}
+\int_{0}^{a} \sqrt{2m(V_0 - E)} \, dx &amp;= \sqrt{2m(V_0 - E)} \int_{0}^{a} dx \\
+&amp;= \sqrt{2m(V_0 - E)} \cdot a
+\end{aligned}
 \]</div>
 <p>この積分結果を (2) の式に戻します。</p>
 <div class="arithmatex">\[
@@ -14596,7 +14602,7 @@ T \approx \exp\left[ -\frac{2}{\hbar} \sqrt{2m(V_0 - E)} \cdot a \right]
 \]</div>
 <p>したがって，透過確率は以下のようになります。</p>
 <div class="arithmatex">\[
-T \approx \exp( -2\kappa a ) = e^{-2\kappa a}
+\finalanswer{T \approx \exp( -2\kappa a ) = e^{-2\kappa a}}
 \]</div>
 <p>この結果は，前問において境界条件を直接解いて得られた，厚い障壁に対する透過確率の主要な減少因子と一致します。これにより，WKB近似が滑らかな障壁だけでなく，矩形障壁の極限においても正しい依存性を与えることが確認されました。</p>
 

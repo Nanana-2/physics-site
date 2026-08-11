@@ -14543,22 +14543,35 @@
 <h3 id="1">(1)</h3>
 <p>交換関係 <span class="arithmatex">\([\hat{L}_z, \, \hat{K}_z]\)</span> を計算します。与えられた交換関係において，同一の成分同士の交換子は 0 になります。</p>
 <div class="arithmatex">\[
-[\hat{L}_z, \, \hat{K}_z] = \hat{L}_z \hat{K}_z - \hat{K}_z \hat{L}_z = 0
+\begin{aligned}
+[\hat{L}_z, \, \hat{K}_z] &amp;= \hat{L}_z \hat{K}_z - \hat{K}_z \hat{L}_z \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>この可換性を用いて，状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> に演算子 <span class="arithmatex">\(\hat{L}_z\)</span> を作用させます。状態 <span class="arithmatex">\(|1, 0\rangle\)</span> は <span class="arithmatex">\(\hat{L}_z\)</span> の固有値 0 の固有状態であるため， <span class="arithmatex">\(\hat{L}_z |1, 0\rangle = 0\)</span> です。</p>
 <div class="arithmatex">\[
-\hat{L}_z \left( \hat{K}_z |1, 0\rangle \right) = \hat{K}_z \hat{L}_z |1, 0\rangle = \hat{K}_z \left( 0 \right) = 0
+\begin{aligned}
+\hat{L}_z \left( \hat{K}_z |1, 0\rangle \right) &amp;= \hat{K}_z \hat{L}_z |1, 0\rangle \\
+&amp;= \hat{K}_z \left( 0 \right) \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>したがって，新しい状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> もまた， <span class="arithmatex">\(\hat{L}_z\)</span> に対する固有値が 0 となる固有状態であることが求まります。</p>
 <h3 id="2">(2)</h3>
 <p>ルンゲ・レンツ演算子と，そこから導かれる演算子 <span class="arithmatex">\(\hat{\boldsymbol{K}}\)</span> はエルミート演算子です。したがって， <span class="arithmatex">\(\hat{K}_z^\dagger = \hat{K}_z\)</span> が成り立ちます。</p>
 <p>行列要素の複素共役の定義を適用します。</p>
 <div class="arithmatex">\[
-\langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \langle 0, 0 | \hat{K}_z^\dagger | 1, 0 \rangle^* = \langle 0, 0 | \hat{K}_z | 1, 0 \rangle^*
+\begin{aligned}
+\langle 1, 0 | \hat{K}_z | 0, 0 \rangle &amp;= \langle 0, 0 | \hat{K}_z^\dagger | 1, 0 \rangle^* \\
+&amp;= \langle 0, 0 | \hat{K}_z | 1, 0 \rangle^*
+\end{aligned}
 \]</div>
 <p>定数 <span class="arithmatex">\(\alpha\)</span> は実数であるため，複素共役をとっても値は変化しません。</p>
 <div class="arithmatex">\[
-\langle 0, 0 | \hat{K}_z | 1, 0 \rangle^* = \alpha^* = \alpha
+\begin{aligned}
+\langle 0, 0 | \hat{K}_z | 1, 0 \rangle^* &amp;= \alpha^* \\
+&amp;= \finalanswer{\alpha}
+\end{aligned}
 \]</div>
 <p>これより，求める行列要素は <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \alpha\)</span> となります。</p>
 <h3 id="3">(3)</h3>
@@ -14573,7 +14586,11 @@
 \]</div>
 <p>この行列の固有値を <span class="arithmatex">\(\lambda\)</span> と置き，特性方程式を計算します。</p>
 <div class="arithmatex">\[
-\begin{vmatrix} -\lambda &amp; \alpha \\ \alpha &amp; -\lambda \end{vmatrix} = 0 \implies \lambda^2 - \alpha^2 = 0 \implies \lambda = \pm \alpha
+\begin{aligned}
+\begin{vmatrix} -\lambda &amp; \alpha \\ \alpha &amp; -\lambda \end{vmatrix} &amp;= 0 \implies \lambda^2 - \alpha^2 \\
+&amp;= 0 \implies \lambda \\
+&amp;= \pm \alpha
+\end{aligned}
 \]</div>
 <p>したがって，固有値は <span class="arithmatex">\(\lambda = \alpha\)</span> および <span class="arithmatex">\(\lambda = -\alpha\)</span> です。</p>
 <p>それぞれの固有値に対応する固有ベクトル <span class="arithmatex">\(\begin{pmatrix} c_1 \\ c_2 \end{pmatrix}\)</span> を求めます。</p>
@@ -14581,7 +14598,11 @@
 <li><strong>固有値 <span class="arithmatex">\(\lambda = \alpha\)</span> のとき</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \alpha \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} \implies \alpha c_2 = \alpha c_1 \implies c_1 = c_2
+\begin{aligned}
+\begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} &amp;= \alpha \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} \implies \alpha c_2 \\
+&amp;= \alpha c_1 \implies c_1 \\
+&amp;= c_2
+\end{aligned}
 \]</div>
 <p>規格化条件 <span class="arithmatex">\(2|c_1|^2 = 1\)</span> より，固有状態は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14591,11 +14612,15 @@
 <li><strong>固有値 <span class="arithmatex">\(\lambda = -\alpha\)</span> のとき</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = -\alpha \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} \implies \alpha c_2 = - \alpha c_1 \implies c_2 = -c_1
+\begin{aligned}
+\begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} &amp;= -\alpha \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} \implies \alpha c_2 \\
+&amp;= - \alpha c_1 \implies c_2 \\
+&amp;= -c_1
+\end{aligned}
 \]</div>
 <p>同様に規格化を行い，固有状態は以下のようになります。</p>
 <div class="arithmatex">\[
-  |\phi_-\rangle = \frac{1}{\sqrt{2}} |0, 0\rangle - \frac{1}{\sqrt{2}} |1, 0\rangle
+  \finalanswer{|\phi_-\rangle = \frac{1}{\sqrt{2}} |0, 0\rangle - \frac{1}{\sqrt{2}} |1, 0\rangle}
 \]</div>
 <p>演算子 <span class="arithmatex">\(\hat{K}_z\)</span> はハミルトニアンと可換であり，<span class="arithmatex">\(l=0\)</span> と <span class="arithmatex">\(l=1\)</span> の状態を混合します。この保存量の存在が，異なる <span class="arithmatex">\(l\)</span> の状態間に生じる縮退と対応しています。</p>
 

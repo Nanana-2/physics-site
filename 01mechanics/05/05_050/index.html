@@ -14582,7 +14582,7 @@ kx \dot{x} = \frac{d}{dt} \left( \frac{1}{2} k x^2 \right)
 \]</div>
 <p>括弧の中身は全力学的エネルギー <span class="arithmatex">\(E(t)\)</span> そのものであるため，求める時間変化率は以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{dE}{dt} = -c \dot{x}^2
+\finalanswer{\frac{dE}{dt} = -c \dot{x}^2}
 \]</div>
 <p><span class="arithmatex">\(c&gt;0\)</span> かつ <span class="arithmatex">\(\dot{x}^2\geq0\)</span> であるため，常に <span class="arithmatex">\(\frac{dE}{dt}\leq0\)</span> が成り立ちます。これは，抵抗力 <span class="arithmatex">\(-c\dot{x}\)</span> が質点に負の仕事をし，力学的エネルギーを減少させることを意味します。</p>
 <h3 id="2">(2)</h3>
@@ -14593,7 +14593,7 @@ kx \dot{x} = \frac{d}{dt} \left( \frac{1}{2} k x^2 \right)
 <p>ここで <span class="arithmatex">\(\gamma\ll\omega_0\)</span> より，<span class="arithmatex">\(\omega\approx\omega_0\)</span> とします。また，第1項は第2項に比べて <span class="arithmatex">\(\gamma/\omega_0\)</span> の程度だけ小さいため無視します。
 したがって，<span class="arithmatex">\(\gamma\)</span> の1次以上の微小項を無視することで，速度 <span class="arithmatex">\(v(t)\)</span> は以下のように簡略化されます。</p>
 <div class="arithmatex">\[
-v(t) = \dot{x}(t) \approx -\omega_0 A e^{-\gamma t} \sin(\omega_0 t + \phi)
+\finalanswer{v(t) = \dot{x}(t) \approx -\omega_0 A e^{-\gamma t} \sin(\omega_0 t + \phi)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2)で得られた近似式を用いて，運動エネルギー <span class="arithmatex">\(K(t)\)</span> とポテンシャルエネルギー <span class="arithmatex">\(U(t)\)</span> を表します。</p>
@@ -14627,14 +14627,18 @@ $$</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle U(t) \rangle &amp;\approx \frac{1}{2} k A^2 e^{-2\gamma t} \cdot \frac{1}{T} \int_{t}^{t+T} \cos^2(\omega_0 t' + \phi) dt' \\\\
-&amp;= \frac{1}{4} k A^2 e^{-2\gamma t}
+&amp;= \finalanswer{\frac{1}{4} k A^2 e^{-2\gamma t}}
 \end{aligned}
 \]</div>
 <p>したがって，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> のとき，1周期で平均した運動エネルギーとポテンシャルエネルギーは等しくなります。</p>
 <h3 id="4">(4)</h3>
 <p>(3)の結果を足し合わせることで，時間平均された全力学的エネルギー <span class="arithmatex">\(\langle E(t) \rangle\)</span> が求まります。</p>
 <div class="arithmatex">\[
-\langle E(t) \rangle = \langle K(t) \rangle + \langle U(t) \rangle = \frac{1}{4} k A^2 e^{-2\gamma t} + \frac{1}{4} k A^2 e^{-2\gamma t} = \frac{1}{2} k A^2 e^{-2\gamma t}
+\begin{aligned}
+\langle E(t) \rangle &amp;= \langle K(t) \rangle + \langle U(t) \rangle \\
+&amp;= \frac{1}{4} k A^2 e^{-2\gamma t} + \frac{1}{4} k A^2 e^{-2\gamma t} \\
+&amp;= \frac{1}{2} k A^2 e^{-2\gamma t}
+\end{aligned}
 \]</div>
 <p>この両辺を時間 <span class="arithmatex">\(t\)</span> で微分します。</p>
 <div class="arithmatex">\[
@@ -14650,7 +14654,7 @@ $$</p>
 \]</div>
 <p>この微分方程式の解は，初期時刻 <span class="arithmatex">\(t=0\)</span> における平均エネルギーを <span class="arithmatex">\(\langle E(0) \rangle = \frac{1}{2} k A^2\)</span> とすると，次のように与えられます。</p>
 <div class="arithmatex">\[
-\langle E(t) \rangle = \langle E(0) \rangle e^{-2\gamma t}
+\finalanswer{\langle E(t) \rangle = \langle E(0) \rangle e^{-2\gamma t}}
 \]</div>
 <p>したがって，1周期で平均した力学的エネルギーは <span class="arithmatex">\(e^{-2\gamma t}\)</span> に比例して減少します。</p>
 

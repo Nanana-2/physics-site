@@ -14516,11 +14516,14 @@
 \]</div>
 <p>このとき，分母の <span class="arithmatex">\(\pm1\)</span> を指数関数に対して無視できます。</p>
 <div class="arithmatex">\[
-\langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] \pm 1} \simeq \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right]} = \exp\left[ -\beta(\epsilon_k - \mu) \right]
+\begin{aligned}
+\langle n_k \rangle &amp;= \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] \pm 1} \simeq \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right]} \\
+&amp;= \exp\left[ -\beta(\epsilon_k - \mu) \right]
+\end{aligned}
 \]</div>
 <p>指数法則を用いてこの式を展開し， <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-\langle n_k \rangle \simeq \exp(\beta \mu) \exp(-\beta \epsilon_k) = \exp\left[ \frac{\mu}{k_B T} \right] \exp\left[ -\frac{\epsilon_k}{k_B T} \right]
+\finalanswer{\langle n_k \rangle \simeq \exp(\beta \mu) \exp(-\beta \epsilon_k) = \exp\left[ \frac{\mu}{k_B T} \right] \exp\left[ -\frac{\epsilon_k}{k_B T} \right]}
 \]</div>
 <p>したがって，どちらの分布も同じマクスウェル・ボルツマン分布へ近づきます。</p>
 <h3 id="2">(2)</h3>
@@ -14534,19 +14537,28 @@ N = \exp(\beta \mu) \sum_k \exp(-\beta \epsilon_k)
 \]</div>
 <p>右辺の総和は1粒子分配関数 <span class="arithmatex">\(z_1\)</span> です。</p>
 <div class="arithmatex">\[
-N = \exp(\beta \mu) z_1 \quad \implies \quad \exp(\beta \mu) = \frac{N}{z_1}
+\begin{aligned}
+N &amp;= \exp(\beta \mu) z_1 \quad \implies \quad \exp(\beta \mu) \\
+&amp;= \frac{N}{z_1}
+\end{aligned}
 \]</div>
 <p>両辺の自然対数をとり，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\beta \mu = \log \left( \frac{N}{z_1} \right) \quad \implies \quad \mu = k_B T \log \left( \frac{N}{z_1} \right)
+\begin{aligned}
+\beta \mu &amp;= \log \left( \frac{N}{z_1} \right) \quad \implies \quad \mu \\
+&amp;= k_B T \log \left( \frac{N}{z_1} \right)
+\end{aligned}
 \]</div>
 <p>ここで，体積 <span class="arithmatex">\(V\)</span> の空間における 1 粒子分配関数は，熱的ド・ブロイ波長 <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> を用いて <span class="arithmatex">\(z_1 = \frac{V}{\lambda^3}\)</span> と表されます。これを代入します。</p>
 <div class="arithmatex">\[
-\mu = k_B T \log \left( \frac{N \lambda^3}{V} \right) = k_B T \log \left( \rho \lambda^3 \right)
+\begin{aligned}
+\mu &amp;= k_B T \log \left( \frac{N \lambda^3}{V} \right) \\
+&amp;= k_B T \log \left( \rho \lambda^3 \right)
+\end{aligned}
 \]</div>
 <p>ここで <span class="arithmatex">\(\rho = N/V\)</span> は数密度です。古典極限の条件 <span class="arithmatex">\(\exp(\beta \mu) \ll 1\)</span> は，</p>
 <div class="arithmatex">\[
-\rho \lambda^3 \ll 1
+\finalanswer{\rho \lambda^3 \ll 1}
 \]</div>
 <p>と等価です。</p>
 

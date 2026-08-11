@@ -14532,7 +14532,7 @@ S(E) = -k_B \left[ M \log \left(\frac{M}{N}\right) + (N-M) \log \left(\frac{N-M}
 \]</div>
 <p>ここで，<span class="arithmatex">\(\frac{M}{N} = \frac{u}{\epsilon}\)</span> および <span class="arithmatex">\(\frac{N-M}{N} = 1 - \frac{u}{\epsilon}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-S(u) = -N k_B \left[ \frac{u}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \log \left(1 - \frac{u}{\epsilon}\right) \right]
+\finalanswer{S(u) = -N k_B \left[ \frac{u}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \log \left(1 - \frac{u}{\epsilon}\right) \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を求めるため，エントロピー <span class="arithmatex">\(S\)</span> を全エネルギー <span class="arithmatex">\(E\)</span> で微分します。連鎖律 <span class="arithmatex">\(\frac{dS}{dE} = \frac{1}{N} \frac{dS}{du}\)</span> を用います。</p>
@@ -14540,15 +14540,23 @@ S(u) = -N k_B \left[ \frac{u}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \
 \frac{dS}{du} = -N k_B \left[ \frac{1}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \frac{u}{\epsilon} \cdot \frac{\epsilon}{u} \cdot \frac{1}{\epsilon} - \frac{1}{\epsilon} \log \left(1 - \frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \cdot \frac{\epsilon}{\epsilon - u} \cdot \left(-\frac{1}{\epsilon}\right) \right]
 \]</div>
 <div class="arithmatex">\[
-\frac{dS}{du} = -\frac{N k_B}{\epsilon} \left[ \log \left(\frac{u}{\epsilon}\right) + 1 - \log \left(1 - \frac{u}{\epsilon}\right) - 1 \right] = -\frac{N k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right)
+\begin{aligned}
+\frac{dS}{du} &amp;= -\frac{N k_B}{\epsilon} \left[ \log \left(\frac{u}{\epsilon}\right) + 1 - \log \left(1 - \frac{u}{\epsilon}\right) - 1 \right] \\
+&amp;= -\frac{N k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right)
+\end{aligned}
 \]</div>
 <p>これより，<span class="arithmatex">\(\frac{1}{T} = \frac{1}{N} \frac{dS}{du}\)</span> を用いて <span class="arithmatex">\(\beta\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\beta = \frac{1}{k_B T} = \frac{1}{k_B} \left( -\frac{k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) \right) = -\frac{1}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) = \frac{1}{\epsilon} \log \left( \frac{\epsilon - u}{u} \right)
+\begin{aligned}
+\beta &amp;= \frac{1}{k_B T} \\
+&amp;= \frac{1}{k_B} \left( -\frac{k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) \right) \\
+&amp;= -\frac{1}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) \\
+&amp;= \finalanswer{\frac{1}{\epsilon} \log \left( \frac{\epsilon - u}{u} \right)}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(u &gt; \frac{\epsilon}{2}\)</span> のとき，分母と分子の大小関係は <span class="arithmatex">\(u &gt; \epsilon - u\)</span> となります。したがって，対数の中身は <span class="arithmatex">\(\frac{\epsilon - u}{u} &lt; 1\)</span> となり，その自然対数は負の値をとります。
-このとき，(2) の結果から <span class="arithmatex">\(\beta &lt; 0\)</span>，したがって <span class="arithmatex">\(T &lt; 0\)</span> となります。</p>
+このとき，(2) の結果から <span class="arithmatex">\(\beta &lt; 0\)</span>，したがって <span class="arithmatex">\(\finalanswer{T &lt; 0}\)</span> となります。</p>
 <p>通常の理想気体では運動エネルギーに上限がなく，エネルギー <span class="arithmatex">\(E\)</span> の増加とともに状態数は単調に増加するため，<span class="arithmatex">\(dS/dE&gt;0\)</span> となります。</p>
 <p>一方，二準位系では各粒子のエネルギーに上限 <span class="arithmatex">\(\epsilon\)</span> があります。<span class="arithmatex">\(u=\epsilon/2\)</span> でエントロピーは最大となり，<span class="arithmatex">\(u&gt;\epsilon/2\)</span> ではエネルギーの増加に伴ってエントロピーが減少するため，<span class="arithmatex">\(dS/dE&lt;0\)</span> となります。この領域で負温度が現れます。</p>
 

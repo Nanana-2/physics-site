@@ -14558,11 +14558,15 @@
 \]</div>
 <p>このとき，探査機に働くトルク <span class="arithmatex">\(\boldsymbol{N}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-\boldsymbol{N} = \boldsymbol{r} \times \boldsymbol{F} = \boldsymbol{r} \times \left( f(r) \frac{\boldsymbol{r}}{r} \right) = \frac{f(r)}{r} (\boldsymbol{r} \times \boldsymbol{r})
+\begin{aligned}
+\boldsymbol{N} &amp;= \boldsymbol{r} \times \boldsymbol{F} \\
+&amp;= \boldsymbol{r} \times \left( f(r) \frac{\boldsymbol{r}}{r} \right) \\
+&amp;= \frac{f(r)}{r} (\boldsymbol{r} \times \boldsymbol{r})
+\end{aligned}
 \]</div>
 <p>任意のベクトルについて，自分自身との外積は常に零ベクトルになります。したがって，<span class="arithmatex">\(\boldsymbol{r} \times \boldsymbol{r} = \boldsymbol{0}\)</span> となり，トルクは常に零ベクトルであることが示されます。</p>
 <div class="arithmatex">\[
-\boldsymbol{N} = \boldsymbol{0}
+\finalanswer{\boldsymbol{N} = \boldsymbol{0}}
 \]</div>
 <p>これは，中心力の作用線が常に座標原点を通るため，回転を引き起こす効果を持たないことを意味しています。</p>
 <h3 id="2">(2)</h3>
@@ -14575,21 +14579,31 @@
 \]</div>
 <p>ここで，右辺の第1項に <span class="arithmatex">\(\frac{d\boldsymbol{r}}{dt} = \boldsymbol{v}\)</span> および <span class="arithmatex">\(\boldsymbol{p} = m\boldsymbol{v}\)</span> を代入すると，速度ベクトル同士の外積が現れます。</p>
 <div class="arithmatex">\[
-\frac{d\boldsymbol{r}}{dt} \times \boldsymbol{p} = \boldsymbol{v} \times (m\boldsymbol{v}) = m (\boldsymbol{v} \times \boldsymbol{v}) = \boldsymbol{0}
+\begin{aligned}
+\frac{d\boldsymbol{r}}{dt} \times \boldsymbol{p} &amp;= \boldsymbol{v} \times (m\boldsymbol{v}) \\
+&amp;= m (\boldsymbol{v} \times \boldsymbol{v}) \\
+&amp;= \boldsymbol{0}
+\end{aligned}
 \]</div>
 <p>また，右辺の第2項には運動方程式を代入します。</p>
 <div class="arithmatex">\[
-\boldsymbol{r} \times \frac{d\boldsymbol{p}}{dt} = \boldsymbol{r} \times \boldsymbol{F} = \boldsymbol{N}
+\begin{aligned}
+\boldsymbol{r} \times \frac{d\boldsymbol{p}}{dt} &amp;= \boldsymbol{r} \times \boldsymbol{F} \\
+&amp;= \boldsymbol{N}
+\end{aligned}
 \]</div>
 <p>(1) の結果より，トルク <span class="arithmatex">\(\boldsymbol{N}\)</span> は零ベクトルであるため，角運動量の時間微分は最終的に以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{d\boldsymbol{L}}{dt} = \boldsymbol{0}
+\finalanswer{\frac{d\boldsymbol{L}}{dt} = \boldsymbol{0}}
 \]</div>
 <p>時間微分が常に零ベクトルであることは，角運動量 <span class="arithmatex">\(\boldsymbol{L}\)</span> が時間経過によって変化しない定ベクトルであることを示しています。これが角運動量保存則です。</p>
 <h3 id="3">(3)</h3>
 <p>角運動量ベクトル <span class="arithmatex">\(\boldsymbol{L}\)</span> と，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の内積を考えます。外積の性質から，外積によって作られるベクトルは元の二つのベクトルの両方に直交します。したがって，以下の関係が常に成り立ちます。</p>
 <div class="arithmatex">\[
-\boldsymbol{r} \cdot \boldsymbol{L} = \boldsymbol{r} \cdot (\boldsymbol{r} \times \boldsymbol{p}) = 0
+\begin{aligned}
+\boldsymbol{r} \cdot \boldsymbol{L} &amp;= \boldsymbol{r} \cdot (\boldsymbol{r} \times \boldsymbol{p}) \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>(2) で示したように，<span class="arithmatex">\(\boldsymbol{L}\)</span> は大きさと向きが一定です。また，<span class="arithmatex">\(\boldsymbol{L}\cdot\boldsymbol{r}=0\)</span> であるため，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> は常に <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直です。したがって，探査機の軌道は <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直な同一平面内にあります。</p>
 <h3 id="4">(4)</h3>
@@ -14622,7 +14636,7 @@ dS = \frac{1}{2} r^2 d\theta
 \]</div>
 <p>この式に角運動量の大きさ <span class="arithmatex">\(L\)</span> を代入して整理すると，面積速度は以下のように表されます。</p>
 <div class="arithmatex">\[
-\frac{dS}{dt} = \frac{L}{2m}
+\finalanswer{\frac{dS}{dt} = \frac{L}{2m}}
 \]</div>
 <p><span class="arithmatex">\(L\)</span> と <span class="arithmatex">\(m\)</span> は一定であるため，面積速度も一定です。これがケプラーの第2法則です。</p>
 

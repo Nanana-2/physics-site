@@ -14542,13 +14542,16 @@ U_0 = \frac{3}{5} N \left[ \frac{\hbar^2}{2m} \left( \frac{3\pi^2 N}{V} \right)^
 \]</div>
 <p>この式において，体積 <span class="arithmatex">\(V\)</span> に依存する項だけを右側に切り離し，それ以外の体積に依存しない因子を一つにまとめます。</p>
 <div class="arithmatex">\[
-U_0 = \left[ \frac{3}{5} \frac{\hbar^2}{2m} (3\pi^2)^{2/3} N^{5/3} \right] \cdot V^{-2/3}
+\finalanswer{U_0 = \left[ \frac{3}{5} \frac{\hbar^2}{2m} (3\pi^2)^{2/3} N^{5/3} \right] \cdot V^{-2/3}}
 \]</div>
 <p>したがって，絶対零度における自由フェルミ気体の内部エネルギー <span class="arithmatex">\(U_0\)</span> は，体積 <span class="arithmatex">\(V\)</span> の <strong><span class="arithmatex">\(-2/3\)</span> 乗<span class="arithmatex">\(V^{-2/3}\)</span></strong>に比例することが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた体積依存性 <span class="arithmatex">\(U_0 \propto V^{-2/3}\)</span> を，圧力の熱力学的な定義式に適用します。粒子数 <span class="arithmatex">\(N\)</span> は一定であるため，体積に依存しない因子をそのまま維持しながら <span class="arithmatex">\(V\)</span> で微分します。 <span class="arithmatex">\(V^{-2/3}\)</span> の微分により，前に <span class="arithmatex">\(-\frac{2}{3} V^{-5/3}\)</span> が降ります。</p>
 <div class="arithmatex">\[
-P_0 = -\frac{\partial U_0}{\partial V} = - \left[ \frac{3}{5} \frac{\hbar^2}{2m} (3\pi^2)^{2/3} N^{5/3} \right] \cdot \left( -\frac{2}{3} V^{-5/3} \right)
+\begin{aligned}
+P_0 &amp;= -\frac{\partial U_0}{\partial V} \\
+&amp;= - \left[ \frac{3}{5} \frac{\hbar^2}{2m} (3\pi^2)^{2/3} N^{5/3} \right] \cdot \left( -\frac{2}{3} V^{-5/3} \right)
+\end{aligned}
 \]</div>
 <p>マイナス符号同士が相殺されてプラスになります。ここで，元の <span class="arithmatex">\(U_0\)</span> を用いて表せるように，右端の <span class="arithmatex">\(V^{-5/3}\)</span> を <span class="arithmatex">\(V^{-2/3} \cdot V^{-1}\)</span> と分解して式を整理します。</p>
 <div class="arithmatex">\[
@@ -14556,13 +14559,21 @@ P_0 = \frac{2}{3} \cdot \left\{ \left[ \frac{3}{5} \frac{\hbar^2}{2m} (3\pi^2)^{
 \]</div>
 <p>波括弧で囲まれた部分は，(1) で定義した内部エネルギー <span class="arithmatex">\(U_0\)</span> そのものです。</p>
 <div class="arithmatex">\[
-P_0 = \frac{2}{3} \cdot U_0 \cdot V^{-1} = \frac{2}{3} \frac{U_0}{V}
+\begin{aligned}
+P_0 &amp;= \frac{2}{3} \cdot U_0 \cdot V^{-1} \\
+&amp;= \finalanswer{\frac{2}{3} \frac{U_0}{V}}
+\end{aligned}
 \]</div>
 <p>これにより，絶対零度の縮退圧が，単位体積あたりのエネルギー密度のちょうど <span class="arithmatex">\(2/3\)</span> 倍に一致するという関係式が導かれました。これは古典理想気体で成り立つ関係式 <span class="arithmatex">\(P = \frac{2}{3}\frac{U}{V}\)</span> と同じ形をしています。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた式に <span class="arithmatex">\(U_0 = \frac{3}{5}N\epsilon_F\)</span> を代入し，さらに <span class="arithmatex">\(\epsilon_F \propto (N/V)^{2/3}\)</span> の関係を代入します。</p>
 <div class="arithmatex">\[
-P_0 = \frac{2}{3} \frac{\frac{3}{5}N\epsilon_F}{V} = \frac{2}{5} \frac{N}{V} \epsilon_F = \frac{2}{5} \rho \cdot \left[ \frac{\hbar^2}{2m} (3\pi^2)^{2/3} \rho^{2/3} \right] = \frac{\hbar^2}{5m} (3\pi^2)^{2/3} \rho^{5/3}
+\begin{aligned}
+P_0 &amp;= \frac{2}{3} \frac{\frac{3}{5}N\epsilon_F}{V} \\
+&amp;= \frac{2}{5} \frac{N}{V} \epsilon_F \\
+&amp;= \frac{2}{5} \rho \cdot \left[ \frac{\hbar^2}{2m} (3\pi^2)^{2/3} \rho^{2/3} \right] \\
+&amp;= \finalanswer{\frac{\hbar^2}{5m} (3\pi^2)^{2/3} \rho^{5/3}}
+\end{aligned}
 \]</div>
 <p>この結果から，絶対零度の縮退圧 <span class="arithmatex">\(P_0\)</span> は，粒子密度 <span class="arithmatex">\(\rho\)</span> の <strong><span class="arithmatex">\(5/3\)</span> 乗<span class="arithmatex">\(\rho^{5/3}\)</span></strong>に比例することがわかります。</p>
 <p><strong>縮退圧が生じる物理的メカニズム</strong></p>

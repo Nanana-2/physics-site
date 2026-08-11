@@ -14522,7 +14522,7 @@
 <div class="arithmatex">\[
 P_X(x_i) = \sum_{j=1}^{m} P(x_i, y_j), \quad P_Y(y_j) = \sum_{i=1}^{n} P(x_i, y_j)
 \]</div>
-<p>このとき， <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> の間の相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> は以下の数式で定義される。</p>
+<p>このとき， <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> の間の相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> は以下で定義される。</p>
 <div class="arithmatex">\[
 I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln\left( \frac{P(x_i, y_j)}{P_X(x_i) P_Y(y_j)} \right)
 \]</div>
@@ -14569,7 +14569,10 @@ I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln\left( \frac{P_X(x_i) P_Y
 \]</div>
 <p>対数の内部の分数が 1 になります。自然対数 <span class="arithmatex">\(\ln 1\)</span> の値は 0 であるため，すべての項の掛け算がゼロとなります。</p>
 <div class="arithmatex">\[
-I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \cdot 0 = 0
+\begin{aligned}
+I(X; Y) &amp;= \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \cdot 0 \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>2つの変数間にいかなる統計的依存関係も存在しない場合，相互情報量は厳密に 0 になることが示されました。</p>
 <h3 id="2">(2)</h3>
@@ -14609,7 +14612,7 @@ I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln P(x_i, y_j) - \sum_{i=1}
   $$</p>
 <p>これら3つの結果を足し合わせることで，目的の関係式が導出されます。</p>
 <div class="arithmatex">\[
-I(X; Y) = H(X) + H(Y) - H(X, Y)
+\finalanswer{I(X; Y) = H(X) + H(Y) - H(X, Y)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた結合確率の表から，各行および各列の和をとることで周辺確率分布を求めます。</p>
@@ -14629,22 +14632,31 @@ I(X; Y) = H(X) + H(Y) - H(X, Y)
   P_Y(0) = P(0,0) + P(1,0) = \frac{1}{2} + 0 = \frac{1}{2}
   $$</p>
 <p>$$
-  P_Y(1) = P(0,1) + P(1,1) = 0 + \frac{1}{2} = \frac{1}{2}
+  P_Y(1) = P(0,1) + P(1,1) = 0 + \frac{1}{2} = \finalanswer{\frac{1}{2}}
   $$</p>
 <p>各周辺エントロピーを計算します。</p>
 <div class="arithmatex">\[
-H(X) = -\left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = \ln 2
+\begin{aligned}
+H(X) &amp;= -\left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
+&amp;= \ln 2
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-H(Y) = -\left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = \ln 2
+\begin{aligned}
+H(Y) &amp;= -\left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
+&amp;= \ln 2
+\end{aligned}
 \]</div>
 <p>結合エントロピーを計算します。確率が 0 の項はゼロとなるため，確率が <span class="arithmatex">\(\frac{1}{2}\)</span> の2つの項だけが残ります。</p>
 <div class="arithmatex">\[
-H(X, Y) = -\left( \frac{1}{2} \ln \frac{1}{2} + 0 + 0 + \frac{1}{2} \ln \frac{1}{2} \right) = \ln 2
+\begin{aligned}
+H(X, Y) &amp;= -\left( \frac{1}{2} \ln \frac{1}{2} + 0 + 0 + \frac{1}{2} \ln \frac{1}{2} \right) \\
+&amp;= \ln 2
+\end{aligned}
 \]</div>
 <p>(2) で得られた関係式にこれらの値を代入して相互情報量を求めます。</p>
 <div class="arithmatex">\[
-I(X; Y) = \ln 2 + \ln 2 - \ln 2 = \ln 2
+I(X; Y) = \ln 2 + \ln 2 - \ln 2 = \finalanswer{\ln 2}
 \]</div>
 <p><strong>状態の説明</strong></p>
 <p>独立な場合 <span class="arithmatex">\(I=0\)</span> とは対照的に，今回の相互情報量は周辺エントロピーの最大値に等しい <span class="arithmatex">\(\ln 2\)</span> となりました。これは， <span class="arithmatex">\(X=0\)</span> のときには必ず <span class="arithmatex">\(Y=0\)</span> となり， <span class="arithmatex">\(X=1\)</span> のときには必ず <span class="arithmatex">\(Y=1\)</span> となるような，2つの変数の間に完全な相関が存在する状態に対応しています。</p>

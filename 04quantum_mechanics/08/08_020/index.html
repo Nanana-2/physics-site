@@ -14543,15 +14543,21 @@
 \]</div>
 <p>この式をさらにもう一度 <span class="arithmatex">\(r\)</span> で微分します。</p>
 <div class="arithmatex">\[
-\frac{d^2 u(r)}{dr^2} = \frac{dR(r)}{dr} + \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2} = 2 \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2}
+\begin{aligned}
+\frac{d^2 u(r)}{dr^2} &amp;= \frac{dR(r)}{dr} + \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2} \\
+&amp;= 2 \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2}
+\end{aligned}
 \]</div>
 <p>一方で，証明すべき右辺の括弧の中身を展開します。</p>
 <div class="arithmatex">\[
-\frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) = \frac{1}{r^2} \left( 2r \frac{dR(r)}{dr} + r^2 \frac{d^2 R(r)}{dr^2} \right) = \frac{2}{r} \frac{dR(r)}{dr} + \frac{d^2 R(r)}{dr^2}
+\begin{aligned}
+\frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) &amp;= \frac{1}{r^2} \left( 2r \frac{dR(r)}{dr} + r^2 \frac{d^2 R(r)}{dr^2} \right) \\
+&amp;= \frac{2}{r} \frac{dR(r)}{dr} + \frac{d^2 R(r)}{dr^2}
+\end{aligned}
 \]</div>
 <p>この式の全体に <span class="arithmatex">\(r\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-r \left[ \frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) \right] = 2 \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2}
+\finalanswer{r \left[ \frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) \right] = 2 \frac{dR(r)}{dr} + r \frac{d^2 R(r)}{dr^2}}
 \]</div>
 <p>両者の右辺が一致したため，等式が成立することが示されました。</p>
 <h3 id="2">(2)</h3>
@@ -14569,7 +14575,7 @@ r \left[ \frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) \right] 
 \]</div>
 <p>提示された形式と比較すると，有効ポテンシャルは以下のように求まります。</p>
 <div class="arithmatex">\[
-V_{\text{eff}}(r) = V(r) + \frac{\hbar^2 l(l+1)}{2m r^2}
+\finalanswer{V_{\text{eff}}(r) = V(r) + \frac{\hbar^2 l(l+1)}{2m r^2}}
 \]</div>
 <p>第2項は遠心力バリアに対応する項であり，角運動量を持つ粒子が中心に近づくことを妨げる働きをします。</p>
 <h3 id="3">(3)</h3>
@@ -14595,7 +14601,7 @@ V_{\text{eff}}(r) = -\frac{k}{r} + \frac{\hbar^2 l(l+1)}{2m r^2}
 <p>このふたつの挙動の間において，有効ポテンシャルは必ず極小値を持ちます。粒子がこの谷の中に捉えられて無限遠まで逃げ出せない状態が束縛状態です。</p>
 <p>束縛状態が存在するためには，粒子の全エネルギー <span class="arithmatex">\(E\)</span> が無限遠でのポテンシャルの値よりも低く，かつ有効ポテンシャルの最小値よりも高くなければなりません。有効ポテンシャルの最小値を <span class="arithmatex">\(V_{\text{min}}\)</span> と置くと，求めるエネルギーの範囲は以下の不等式で表されます。</p>
 <div class="arithmatex">\[
-V_{\text{min}} \leq E &lt; 0
+\finalanswer{V_{\text{min}} \leq E &lt; 0}
 \]</div>
 
 

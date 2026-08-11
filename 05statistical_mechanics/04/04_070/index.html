@@ -14539,12 +14539,15 @@
 \]</div>
 <p>各項の指数部分を整理します。</p>
 <div class="arithmatex">\[
-\xi = 1 + \exp\left[ \beta(\epsilon + \mu) \right] + \exp\left[ \beta(2\epsilon - U + 2\mu) \right]
+\finalanswer{\xi = 1 + \exp\left[ \beta(\epsilon + \mu) \right] + \exp\left[ \beta(2\epsilon - U + 2\mu) \right]}
 \]</div>
 <h3 id="2_1">(2)</h3>
 <p>1つのサイトあたりの平均吸着粒子数 <span class="arithmatex">\(\langle n \rangle\)</span> は，大分配関数 <span class="arithmatex">\(\xi\)</span> の対数微分から計算できます。</p>
 <div class="arithmatex">\[
-\langle n \rangle = \frac{1}{\beta} \frac{\partial \log \xi}{\partial \mu} = \frac{1}{\beta \xi} \frac{\partial \xi}{\partial \mu}
+\begin{aligned}
+\langle n \rangle &amp;= \frac{1}{\beta} \frac{\partial \log \xi}{\partial \mu} \\
+&amp;= \frac{1}{\beta \xi} \frac{\partial \xi}{\partial \mu}
+\end{aligned}
 \]</div>
 <p>大分配関数 <span class="arithmatex">\(\xi\)</span> を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> で偏微分します。</p>
 <div class="arithmatex">\[
@@ -14552,7 +14555,7 @@
 \]</div>
 <p>この微分結果を元の式に代入し，共通する <span class="arithmatex">\(\beta\)</span> を約分して整理します。</p>
 <div class="arithmatex">\[
-\langle n \rangle = \frac{\exp\left[ \beta(\epsilon + \mu) \right] + 2 \exp\left[ \beta(2\epsilon - U + 2\mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right] + \exp\left[ \beta(2\epsilon - U + 2\mu) \right]}
+\finalanswer{\langle n \rangle = \frac{\exp\left[ \beta(\epsilon + \mu) \right] + 2 \exp\left[ \beta(2\epsilon - U + 2\mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right] + \exp\left[ \beta(2\epsilon - U + 2\mu) \right]}}
 \]</div>
 <p>この式が，相互作用を含む1サイト2粒子モデルにおける厳密な平均吸着粒子数を与えます。</p>
 <h3 id="3">(3)</h3>
@@ -14560,7 +14563,7 @@
 <p><span class="arithmatex">\(\beta &gt; 0\)</span> なので <span class="arithmatex">\(\exp(-\beta U)\to0\)</span> となり，2粒子吸着状態の項は0へ収束します。</p>
 <p>式から該当する項を削除すると，以下の結果が得られます。</p>
 <div class="arithmatex">\[
-\langle n \rangle = \frac{\exp\left[ \beta(\epsilon + \mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right]}
+\finalanswer{\langle n \rangle = \frac{\exp\left[ \beta(\epsilon + \mu) \right]}{1 + \exp\left[ \beta(\epsilon + \mu) \right]}}
 \]</div>
 <p>これは，1サイトに最大1粒子だけが吸着できる模型の式と一致します。</p>
 

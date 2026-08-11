@@ -14531,7 +14531,11 @@ F(T, m) = F_0(T) + \frac{a(T)}{2} m^2 + \frac{b}{4} m^4
 <h3 id="1">(1)</h3>
 <p>系の熱平衡状態を決定するため，ランダウ自由エネルギー <span class="arithmatex">\(F(T, m)\)</span> を秩序変数 <span class="arithmatex">\(m\)</span> で微分して極小条件を求めます。</p>
 <div class="arithmatex">\[
-\frac{\partial F}{\partial m} = a(T) m + b m^3 = m \left( a(T) + b m^2 \right) = 0
+\begin{aligned}
+\frac{\partial F}{\partial m} &amp;= a(T) m + b m^3 \\
+&amp;= m \left( a(T) + b m^2 \right) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>この方程式の解の候補は <span class="arithmatex">\(m = 0\)</span> または <span class="arithmatex">\(m^2 = -\frac{a(T)}{b}\)</span> です。系の安定性は2階微分の符号 <span class="arithmatex">\(\frac{\partial^2 F}{\partial m^2} = a(T) + 3b m^2\)</span> によって判定されます。</p>
 <ul>
@@ -14539,26 +14543,29 @@ F(T, m) = F_0(T) + \frac{a(T)}{2} m^2 + \frac{b}{4} m^4
 <p><strong>高温相 <span class="arithmatex">\(T &gt; T_c\)</span> のとき</strong>
   <span class="arithmatex">\(a(T) = a_0(T - T_c) &gt; 0\)</span> となります。 <span class="arithmatex">\(b &gt; 0\)</span> であるため， <span class="arithmatex">\(m^2 = -a(T)/b\)</span> は実数解を持ちません。したがって，解は <span class="arithmatex">\(m = 0\)</span> のみです。このとき2階微分は <span class="arithmatex">\(\frac{\partial^2 F}{\partial m^2} = a(T) &gt; 0\)</span> となり，自由エネルギーは <span class="arithmatex">\(m = 0\)</span> で単一の極小値を持ちます。すなわち，平衡状態の秩序変数は以下の通りです。
   $$
-  m_{\mathrm{eq}} = 0
+  \finalanswer{m_{\mathrm{eq}} = 0}
   $$</p>
 </li>
 <li>
 <p><strong>低温相 <span class="arithmatex">\(T &lt; T_c\)</span> のとき</strong>
   <span class="arithmatex">\(a(T) = a_0(T - T_c) &lt; 0\)</span> となります。このとき <span class="arithmatex">\(m = 0\)</span> での2階微分は <span class="arithmatex">\(a(T) &lt; 0\)</span> となり，極大値へと変化します。代わりに， <span class="arithmatex">\(m^2 = -\frac{a(T)}{b} &gt; 0\)</span> を満たす2つの実数解が極小値として安定化します。したがって，平衡状態の秩序変数は以下の通りです。
   $$
-  m_{\mathrm{eq}} = \pm \sqrt{-\frac{a(T)}{b}}
+  \finalanswer{m_{\mathrm{eq}} = \pm \sqrt{-\frac{a(T)}{b}}}
   $$</p>
 </li>
 </ul>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた低温相の秩序変数 <span class="arithmatex">\(m_{\mathrm{eq}}\)</span> の式に，係数の温度依存性 <span class="arithmatex">\(a(T) = a_0(T - T_c) = -a_0(T_c - T)\)</span> を代入します。</p>
 <div class="arithmatex">\[
-m_{\mathrm{eq}} = \pm \sqrt{\frac{a_0(T_c - T)}{b}} = \pm \left(\frac{a_0}{b}\right)^{1/2} (T_c - T)^{1/2}
+\begin{aligned}
+m_{\mathrm{eq}} &amp;= \pm \sqrt{\frac{a_0(T_c - T)}{b}} \\
+&amp;= \pm \left(\frac{a_0}{b}\right)^{1/2} (T_c - T)^{1/2}
+\end{aligned}
 \]</div>
 <p>この式は，温度が <span class="arithmatex">\(T_c\)</span> を下回ると同時に，それまで対称性の中心であった <span class="arithmatex">\(m=0\)</span> から秩序変数が滑らかに左右へ現れる挙動を数学的に示しています。
 これをべき乗規則 <span class="arithmatex">\(m \propto (T_c - T)^\beta\)</span> と比較すると，ランダウ理論における自発磁化の臨界指数は以下の値をとることがわかります。</p>
 <div class="arithmatex">\[
-\beta = \frac{1}{2} = 0.5
+\beta = \frac{1}{2} = \finalanswer{0.5}
 \]</div>
 <p>この値はイジング模型の平均場近似から得られた指数と一致しており，ランダウ理論が平均場的なマクロ表現の同じ近似に基づくことを意味します。</p>
 <h3 id="3">(3)</h3>
@@ -14575,8 +14582,11 @@ m_{\mathrm{eq}} = \pm \sqrt{\frac{a_0(T_c - T)}{b}} = \pm \left(\frac{a_0}{b}\ri
 <p><strong>低温相 <span class="arithmatex">\(T &lt; T_c\)</span> のとき</strong>
   <span class="arithmatex">\(m_{\mathrm{eq}}^2 = -\frac{a(T)}{b}\)</span> を代入します。
   $$
-  F_{\mathrm{eq}}(T) = F_0(T) + \frac{a(T)}{2} \left( -\frac{a(T)}{b} \right) + \frac{b}{4} \left( -\frac{a(T)}{b} \right)^2 = F_0(T) - \frac{a(T)^2}{4b}
-  $$</p>
+\begin{aligned}
+F_{\mathrm{eq}}(T) &amp;= F_0(T) + \frac{a(T)}{2} \left( -\frac{a(T)}{b} \right) + \frac{b}{4} \left( -\frac{a(T)}{b} \right)^2 \
+&amp;= F_0(T) - \frac{a(T)^2}{4b}
+\end{aligned}
+$$</p>
 </li>
 </ul>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，自由エネルギーの温度による2階微分から <span class="arithmatex">\(C_V = -T \frac{\partial^2 F_{\mathrm{eq}}}{\partial T^2}\)</span> として計算されます。背景項 <span class="arithmatex">\(F_0(T)\)</span> からの熱容量の寄与を <span class="arithmatex">\(C_0 = -T \frac{\partial^2 F_0}{\partial T^2}\)</span> と置きます。
@@ -14592,21 +14602,30 @@ m_{\mathrm{eq}} = \pm \sqrt{\frac{a_0(T_c - T)}{b}} = \pm \left(\frac{a_0}{b}\ri
 <p><strong>低温相側の熱容量</strong>
   追加項の1階微分は以下の通りです。
   $$
-  \frac{\partial}{\partial T} \left( -\frac{a(T)^2}{4b} \right) = -\frac{2a(T)}{4b} \frac{\partial a(T)}{\partial T} = -\frac{a_0^2(T - T_c)}{2b}
-  $$
+\begin{aligned}
+\frac{\partial}{\partial T} \left( -\frac{a(T)^2}{4b} \right) &amp;= -\frac{2a(T)}{4b} \frac{\partial a(T)}{\partial T} \
+&amp;= -\frac{a_0^2(T - T_c)}{2b}
+\end{aligned}
+$$
   さらに温度で微分します。
   $$
   \frac{\partial^2}{\partial T^2} \left( -\frac{a(T)^2}{4b} \right) = -\frac{a_0^2}{2b}
   $$
   したがって，低温相側から転移点に近づけたときの熱容量は以下のようになります。
   $$
-  C_V(T \to T_c^-) = C_0 - T_c \left( -\frac{a_0^2}{2b} \right) = C_0 + \frac{a_0^2 T_c}{2b}
-  $$</p>
+\begin{aligned}
+C_V(T \to T_c^-) &amp;= C_0 - T_c \left( -\frac{a_0^2}{2b} \right) \
+&amp;= C_0 + \frac{a_0^2 T_c}{2b}
+\end{aligned}
+$$</p>
 </li>
 </ul>
 <p>両側の極限値の差をとることで，二次相転移点における熱容量の不連続な跳びの大きさが導出されます。</p>
 <div class="arithmatex">\[
-\Delta C_V = \left( C_0 + \frac{a_0^2 T_c}{2b} \right) - C_0 = \frac{a_0^2 T_c}{2b}
+\begin{aligned}
+\Delta C_V &amp;= \left( C_0 + \frac{a_0^2 T_c}{2b} \right) - C_0 \\
+&amp;= \finalanswer{\frac{a_0^2 T_c}{2b}}
+\end{aligned}
 \]</div>
 <p>この結果は，自由エネルギーとその1階微分は転移点で連続であるものの，2階微分である熱容量には有限の段差が生じるという，二次相転移の特徴を説明しています。</p>
 

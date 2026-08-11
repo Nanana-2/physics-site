@@ -14528,7 +14528,7 @@ R_{2,1}(r) = \frac{1}{\sqrt{24} a_0^{3/2}} \frac{r}{a_0} e^{-r/2a_0}, \quad Y_{1
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 量子数 <span class="arithmatex">\(n, l, m\)</span> のそれぞれについて，その名称と，各量子数が決定する物理量を示せ。</p>
-<p>(2) 電子が，中心からの距離 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(r+dr\)</span> の間にある球殻内に見出される確率を動径分布関数 <span class="arithmatex">\(D(r)\)</span> と呼ぶ。 <span class="arithmatex">\(D(r) = r^2 |R_{2,1}(r)|^2\)</span> で定義される動径分布関数の数式を求めよ。また， <span class="arithmatex">\(D(r)\)</span> が最大値をとる距離 <span class="arithmatex">\(r_{\text{max}}\)</span> を <span class="arithmatex">\(a_0\)</span> を用いて表せ。</p>
+<p>(2) 電子が，中心からの距離 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(r+dr\)</span> の間にある球殻内に見出される確率を動径分布関数 <span class="arithmatex">\(D(r)\)</span> と呼ぶ。 <span class="arithmatex">\(D(r) = r^2 |R_{2,1}(r)|^2\)</span> で定義される動径分布関数を求めよ。また， <span class="arithmatex">\(D(r)\)</span> が最大値をとる距離 <span class="arithmatex">\(r_{\text{max}}\)</span> を <span class="arithmatex">\(a_0\)</span> を用いて表せ。</p>
 <p>(3) 波動関数の角度部分の絶対値の2乗 <span class="arithmatex">\(|Y_{1,0}(\theta, \phi)|^2\)</span> の <span class="arithmatex">\(\theta\)</span> 依存性を調べよ。 <span class="arithmatex">\(\theta = 0\)</span>， <span class="arithmatex">\(\frac{\pi}{2}\)</span>， <span class="arithmatex">\(\pi\)</span> の各方向における存在確率の大きさを比較し，この軌道が空間的にどのような方向に広がっているか説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14545,29 +14545,40 @@ R_{2,1}(r) = \frac{1}{\sqrt{24} a_0^{3/2}} \frac{r}{a_0} e^{-r/2a_0}, \quad Y_{1
 <ul>
 <li><strong>磁気量子数 <span class="arithmatex">\(m\)</span></strong></li>
 </ul>
-<p>軌道角運動量の <span class="arithmatex">\(z\)</span> 成分を決定する量子数です。演算子 <span class="arithmatex">\(\hat{J}_z\)</span> の固有値 <span class="arithmatex">\(m\hbar\)</span> に対応し，軌道の空間的な向きを指定します。</p>
+<p>軌道角運動量の <span class="arithmatex">\(z\)</span> 成分を決定する量子数です。演算子 <span class="arithmatex">\(\hat{L}_z\)</span> の固有値 <span class="arithmatex">\(m\hbar\)</span> に対応し，軌道の空間的な向きを指定します。</p>
 <h3 id="2">(2)</h3>
 <p>与えられた動径関数 <span class="arithmatex">\(R_{2,1}(r)\)</span> の数式を 2乗して <span class="arithmatex">\(r^2\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-|R_{2,1}(r)|^2 = \left( \frac{1}{\sqrt{24} a_0^{3/2}} \right)^2 \left( \frac{r}{a_0} \right)^2 e^{-r/a_0} = \frac{1}{24 a_0^3} \frac{r^2}{a_0^2} e^{-r/a_0} = \frac{r^2}{24 a_0^5} e^{-r/a_0}
+\begin{aligned}
+|R_{2,1}(r)|^2 &amp;= \left( \frac{1}{\sqrt{24} a_0^{3/2}} \right)^2 \left( \frac{r}{a_0} \right)^2 e^{-r/a_0} \\
+&amp;= \frac{1}{24 a_0^3} \frac{r^2}{a_0^2} e^{-r/a_0} \\
+&amp;= \frac{r^2}{24 a_0^5} e^{-r/a_0}
+\end{aligned}
 \]</div>
 <p>これに <span class="arithmatex">\(r^2\)</span> を掛け算したものが動径分布関数 <span class="arithmatex">\(D(r)\)</span> です。</p>
 <div class="arithmatex">\[
-D(r) = r^2 |R_{2,1}(r)|^2 = \frac{r^4}{24 a_0^5} e^{-r/a_0}
+\begin{aligned}
+D(r) &amp;= r^2 |R_{2,1}(r)|^2 \\
+&amp;= \finalanswer{\frac{r^4}{24 a_0^5} e^{-r/a_0}}
+\end{aligned}
 \]</div>
 <p>この関数が最大値をとる条件を求めるため， <span class="arithmatex">\(r\)</span> で微分して 0 と置きます。定数項を除いた <span class="arithmatex">\(f(r) = r^4 e^{-r/a_0}\)</span> の部分について積の微分を行います。</p>
 <div class="arithmatex">\[
-\frac{df(r)}{dr} = 4r^3 e^{-r/a_0} + r^4 \left( -\frac{1}{a_0} e^{-r/a_0} \right) = r^3 \left( 4 - \frac{r}{a_0} \right) e^{-r/a_0} = 0
+\begin{aligned}
+\frac{df(r)}{dr} &amp;= 4r^3 e^{-r/a_0} + r^4 \left( -\frac{1}{a_0} e^{-r/a_0} \right) \\
+&amp;= r^3 \left( 4 - \frac{r}{a_0} \right) e^{-r/a_0} \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(r &gt; 0\)</span> においてこの微分係数が 0 になるのは，括弧の中身が 0 になるときです。</p>
 <div class="arithmatex">\[
-4 - \frac{r}{a_0} = 0 \implies r = 4a_0
+\finalanswer{4 - \frac{r}{a_0} = 0 \implies r = 4a_0}
 \]</div>
 <p>したがって，存在確率が最も高くなる距離は <span class="arithmatex">\(r_{\text{max}} = 4a_0\)</span> と求まります。</p>
 <h3 id="3">(3)</h3>
 <p>角度部分の絶対値の2乗を計算します。</p>
 <div class="arithmatex">\[
-|Y_{1,0}(\theta, \phi)|^2 = \frac{3}{4\pi} \cos^2\theta
+\finalanswer{|Y_{1,0}(\theta, \phi)|^2 = \frac{3}{4\pi} \cos^2\theta}
 \]</div>
 <p>この関数は方位角 <span class="arithmatex">\(\phi\)</span> には依存せず，極角 <span class="arithmatex">\(\theta\)</span> にのみ依存します。各角度における値を調べます。</p>
 <ul>

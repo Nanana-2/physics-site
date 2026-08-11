@@ -14602,7 +14602,7 @@ i \frac{d}{dt} \left( b_2(t) e^{-i\omega_0 t} \right) = i \frac{db_2(t)}{dt} e^{
 i \frac{db_2(t)}{dt} e^{-i\omega_0 t} + \omega_0 b_2(t) e^{-i\omega_0 t} = \omega_0 b_2(t) e^{-i\omega_0 t} + G e^{-i\omega_0 t} c_1(t)
 \]</div>
 <div class="arithmatex">\[
-i \frac{db_2(t)}{dt} = G c_1(t)
+\finalanswer{i \frac{db_2(t)}{dt} = G c_1(t)}
 \]</div>
 <p>第1式についても， <span class="arithmatex">\(e^{i\omega_0 t} c_2(t) = b_2(t)\)</span> を代入することで <span class="arithmatex">\(i \frac{dc_1(t)}{dt} = G b_2(t)\)</span> となります。これらを行列形式にまとめます。</p>
 <div class="arithmatex">\[
@@ -14615,7 +14615,11 @@ i \frac{d}{dt} \begin{pmatrix} c_1(t) \\ b_2(t) \end{pmatrix} = \begin{pmatrix} 
 \]</div>
 <p>第2式を時間 <span class="arithmatex">\(t\)</span> でもう一度微分し，そこに第1式を代入します。</p>
 <div class="arithmatex">\[
-\frac{d^2 b_2(t)}{dt^2} = -iG \frac{dc_1(t)}{dt} = -iG \left( -iG b_2(t) \right) = -G^2 b_2(t)
+\begin{aligned}
+\frac{d^2 b_2(t)}{dt^2} &amp;= -iG \frac{dc_1(t)}{dt} \\
+&amp;= -iG \left( -iG b_2(t) \right) \\
+&amp;= -G^2 b_2(t)
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \frac{d^2 b_2(t)}{dt^2} + G^2 b_2(t) = 0
@@ -14626,7 +14630,7 @@ b_2(t) = -i \sin Gt
 \]</div>
 <p>元の変数に戻すと <span class="arithmatex">\(c_2(t) = -i e^{-i\omega_0 t} \sin Gt\)</span> となり，遷移確率は以下の通り求まります。</p>
 <div class="arithmatex">\[
-P_2(t) = |c_2(t)|^2 = \sin^2 Gt
+P_2(t) = |c_2(t)|^2 = \finalanswer{\sin^2 Gt}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>一般の <span class="arithmatex">\(\omega \neq \omega_0\)</span> の場合において， <span class="arithmatex">\(c_2(t) = \tilde{c}_2(t) e^{-i\omega t}\)</span> を微分方程式の第2式に代入します。</p>
@@ -14635,7 +14639,10 @@ i \frac{d\tilde{c}_2(t)}{dt} e^{-i\omega t} + \omega \tilde{c}_2(t) e^{-i\omega 
 \]</div>
 <p>全項から <span class="arithmatex">\(e^{-i\omega t}\)</span> を消去し，左辺の <span class="arithmatex">\(\omega \tilde{c}_2(t)\)</span> を右辺に移項して <span class="arithmatex">\(\Delta = \omega_0 - \omega\)</span> でまとめます。</p>
 <div class="arithmatex">\[
-i \frac{d\tilde{c}_2(t)}{dt} = (\omega_0 - \omega)\tilde{c}_2(t) + G c_1(t) = \Delta \tilde{c}_2(t) + G c_1(t)
+\begin{aligned}
+i \frac{d\tilde{c}_2(t)}{dt} &amp;= (\omega_0 - \omega)\tilde{c}_2(t) + G c_1(t) \\
+&amp;= \finalanswer{\Delta \tilde{c}_2(t) + G c_1(t)}
+\end{aligned}
 \]</div>
 <p>第1式は <span class="arithmatex">\(i \frac{dc_1(t)}{dt} = G \tilde{c}_2(t)\)</span> となるため，これらを行列形式でまとめます。</p>
 <div class="arithmatex">\[
@@ -14645,17 +14652,25 @@ i \frac{d}{dt} \begin{pmatrix} c_1(t) \\ \tilde{c}_2(t) \end{pmatrix} = \begin{p
 <h3 id="4">(4)</h3>
 <p>行列 <span class="arithmatex">\(M\)</span> の特性方程式 <span class="arithmatex">\(\det(M - \lambda I) = 0\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\begin{vmatrix} -\lambda &amp; G \\ G &amp; \Delta - \lambda \end{vmatrix} = 0 \implies \lambda^2 - \Delta \lambda - G^2 = 0
+\begin{aligned}
+\begin{vmatrix} -\lambda &amp; G \\ G &amp; \Delta - \lambda \end{vmatrix} &amp;= 0 \implies \lambda^2 - \Delta \lambda - G^2 \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>解の公式より，固有値は以下のように求まります。</p>
 <div class="arithmatex">\[
-\lambda_\pm = \frac{\Delta \pm \sqrt{\Delta^2 + 4G^2}}{2}
+\finalanswer{\lambda_\pm = \frac{\Delta \pm \sqrt{\Delta^2 + 4G^2}}{2}}
 \]</div>
 <p>根号の中身に提示された有効ラビ角振動数 <span class="arithmatex">\(\Omega = \sqrt{\Delta^2 + 4G^2}\)</span> を代入することで，固有値は <span class="arithmatex">\(\lambda_\pm = \frac{\Delta \pm \Omega}{2}\)</span> と導出されます。</p>
 <h3 id="5">(5)</h3>
 <p>(3) の連立関係式から <span class="arithmatex">\(c_1\)</span> に関する2階微分方程式を組み立てます。</p>
 <div class="arithmatex">\[
-i \frac{d^2c_1}{dt^2} = G \frac{d\tilde{c}_2}{dt} \implies -\frac{d^2c_1}{dt^2} = G \left( i \frac{d\tilde{c}_2}{dt} \right) = G \left( \Delta \tilde{c}_2 + G c_1 \right) = \Delta \left( i \frac{dc_1}{dt} \right) + G^2 c_1
+\begin{aligned}
+i \frac{d^2c_1}{dt^2} &amp;= G \frac{d\tilde{c}_2}{dt} \implies -\frac{d^2c_1}{dt^2} \\
+&amp;= G \left( i \frac{d\tilde{c}_2}{dt} \right) \\
+&amp;= G \left( \Delta \tilde{c}_2 + G c_1 \right) \\
+&amp;= \Delta \left( i \frac{dc_1}{dt} \right) + G^2 c_1
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \frac{d^2c_1}{dt^2} + i\Delta \frac{dc_1}{dt} + G^2 c_1 = 0
@@ -14670,7 +14685,10 @@ c_1(t) = e^{-i\Delta t/2} \left( A \cos \frac{\Omega t}{2} + B \sin \frac{\Omega
 \]</div>
 <p>元の変数 <span class="arithmatex">\(c_2(t) = \tilde{c}_2(t) e^{-i\omega t}\)</span> に戻して絶対値の2乗を計算すると，遷移確率の一般式が得られます。</p>
 <div class="arithmatex">\[
-P_2(t) = \frac{4G^2}{\Omega^2} \sin^2 \frac{\Omega t}{2} = \frac{4G^2}{\Delta^2 + 4G^2} \sin^2 \left( \frac{\sqrt{\Delta^2 + 4G^2}}{2} t \right)
+\begin{aligned}
+P_2(t) &amp;= \frac{4G^2}{\Omega^2} \sin^2 \frac{\Omega t}{2} \\
+&amp;= \finalanswer{\frac{4G^2}{\Delta^2 + 4G^2} \sin^2 \left( \frac{\sqrt{\Delta^2 + 4G^2}}{2} t \right)}
+\end{aligned}
 \]</div>
 <p>ここで <span class="arithmatex">\(\Delta = 0\)</span> と置くと，前方の係数は <span class="arithmatex">\(\frac{4G^2}{4G^2} = 1\)</span> となり，揺動の角振動数は <span class="arithmatex">\(\frac{\sqrt{4G^2}}{2} = G\)</span> となるため， (2) で求めた <span class="arithmatex">\(\sin^2 Gt\)</span> に一致します。</p>
 <p><span class="arithmatex">\(\Delta \neq 0\)</span> のときは，共鳴時と比較して以下の変化が起こります。</p>

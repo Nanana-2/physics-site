@@ -14537,15 +14537,25 @@
 <h3 id="1">(1)</h3>
 <p>ハミルトニアン <span class="arithmatex">\(\hat{H} = \frac{\hbar \omega_0}{2} \sigma_z\)</span> を各基底に作用させます。</p>
 <div class="arithmatex">\[
-\hat{H}|+\rangle = \frac{\hbar \omega_0}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = +\frac{\hbar \omega_0}{2}|+\rangle
+\begin{aligned}
+\hat{H}|+\rangle &amp;= \frac{\hbar \omega_0}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&amp;= +\frac{\hbar \omega_0}{2}|+\rangle
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\hat{H}|-\rangle = \frac{\hbar \omega_0}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = -\frac{\hbar \omega_0}{2}|-\rangle
+\begin{aligned}
+\hat{H}|-\rangle &amp;= \frac{\hbar \omega_0}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+&amp;= -\frac{\hbar \omega_0}{2}|-\rangle
+\end{aligned}
 \]</div>
-<p>したがって，エネルギー固有値は <span class="arithmatex">\(E_+ = \frac{\hbar \omega_0}{2}\)</span> ， <span class="arithmatex">\(E_- = -\frac{\hbar \omega_0}{2}\)</span> です。</p>
+<p>したがって，エネルギー固有値は <span class="arithmatex">\(\finalanswer{E_+ = \frac{\hbar \omega_0}{2}}\)</span> ， <span class="arithmatex">\(\finalanswer{E_- = -\frac{\hbar \omega_0}{2}}\)</span> です。</p>
 <p>時間発展の規則に従い，各固有状態に <span class="arithmatex">\(e^{-iEt/\hbar}\)</span> を掛け算します。初期状態は <span class="arithmatex">\(|\psi(0)\rangle = \frac{1}{\sqrt{2}}|+\rangle + \frac{1}{\sqrt{2}}|-\rangle\)</span> と展開できるため，時刻 <span class="arithmatex">\(t\)</span> の状態は以下のようになります。</p>
 <div class="arithmatex">\[
-|\psi(t)\rangle = \frac{1}{\sqrt{2}} e^{-iE_+t/\hbar} |+\rangle + \frac{1}{\sqrt{2}} e^{-iE_-t/\hbar} |-\rangle = \frac{1}{\sqrt{2}} e^{-i\omega_0 t/2} \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \frac{1}{\sqrt{2}} e^{i\omega_0 t/2} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \frac{1}{\sqrt{2}} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
+\begin{aligned}
+|\psi(t)\rangle &amp;= \frac{1}{\sqrt{2}} e^{-iE_+t/\hbar} |+\rangle + \frac{1}{\sqrt{2}} e^{-iE_-t/\hbar} |-\rangle \\
+&amp;= \frac{1}{\sqrt{2}} e^{-i\omega_0 t/2} \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \frac{1}{\sqrt{2}} e^{i\omega_0 t/2} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+&amp;= \finalanswer{\frac{1}{\sqrt{2}} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>期待値を計算するため，ブラベクトル <span class="arithmatex">\(\langle \psi(t)|\)</span> を作ります。複素共役により指数の符号が反転します。</p>
@@ -14557,11 +14567,14 @@
 \langle \hat{S}_x \rangle_t = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
 \]</div>
 <div class="arithmatex">\[
-= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{i\omega_0 t/2} \\ e^{-i\omega_0 t/2} \end{pmatrix} = \frac{\hbar}{4} \left( e^{i\omega_0 t} + e^{-i\omega_0 t} \right)
+\begin{aligned}
+ &amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{i\omega_0 t/2} \\ e^{-i\omega_0 t/2} \end{pmatrix} \\
+&amp;= \frac{\hbar}{4} \left( e^{i\omega_0 t} + e^{-i\omega_0 t} \right)
+\end{aligned}
 \]</div>
 <p>オイラーの公式から導かれる関係式 <span class="arithmatex">\(\cos\theta = \frac{e^{i\theta} + e^{-i\theta}}{2}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-\langle \hat{S}_x \rangle_t = \frac{\hbar}{2} \cos\omega_0 t
+\finalanswer{\langle \hat{S}_x \rangle_t = \frac{\hbar}{2} \cos\omega_0 t}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>同様の手順で <span class="arithmatex">\(y\)</span> 成分と <span class="arithmatex">\(z\)</span> 成分の期待値を計算します。</p>
@@ -14573,11 +14586,15 @@
   \langle \hat{S}_y \rangle_t = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
 \]</div>
 <div class="arithmatex">\[
-  = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} -i e^{i\omega_0 t/2} \\ i e^{-i\omega_0 t/2} \end{pmatrix} = \frac{\hbar}{4} \left( -i e^{i\omega_0 t} + i e^{-i\omega_0 t} \right) = \frac{\hbar}{2} \frac{e^{i\omega_0 t} - e^{-i\omega_0 t} }{2i}
+\begin{aligned}
+ &amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} -i e^{i\omega_0 t/2} \\ i e^{-i\omega_0 t/2} \end{pmatrix} \\
+&amp;= \frac{\hbar}{4} \left( -i e^{i\omega_0 t} + i e^{-i\omega_0 t} \right) \\
+&amp;= \frac{\hbar}{2} \frac{e^{i\omega_0 t} - e^{-i\omega_0 t} }{2i}
+\end{aligned}
 \]</div>
 <p>関係式 <span class="arithmatex">\(\sin\theta = \frac{e^{i\theta} - e^{-i\theta}}{2i}\)</span> を適用します。
 $$
-  \langle \hat{S}_y \rangle_t = \frac{\hbar}{2} \sin\omega_0 t
+  \finalanswer{\langle \hat{S}_y \rangle_t = \frac{\hbar}{2} \sin\omega_0 t}
 $$</p>
 <ul>
 <li><strong><span class="arithmatex">\(z\)</span> 成分の 計算</strong>
@@ -14587,11 +14604,15 @@ $$</p>
   \langle \hat{S}_z \rangle_t = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
 \]</div>
 <div class="arithmatex">\[
-  = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ -e^{i\omega_0 t/2} \end{pmatrix} = \frac{\hbar}{4} \left( 1 - 1 \right) = 0
+\begin{aligned}
+ &amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ -e^{i\omega_0 t/2} \end{pmatrix} \\
+&amp;= \frac{\hbar}{4} \left( 1 - 1 \right) \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>得られた期待値の各成分をベクトルとしてまとめます。</p>
 <div class="arithmatex">\[
-\langle \boldsymbol{S} \rangle_t = \frac{\hbar}{2} (\cos\omega_0 t, \, \sin\omega_0 t, \, 0)
+\finalanswer{\langle \boldsymbol{S} \rangle_t = \frac{\hbar}{2} (\cos\omega_0 t, \, \sin\omega_0 t, \, 0)}
 \]</div>
 <p>スピンの期待値は <span class="arithmatex">\(z\)</span> 成分が 0 のまま，<span class="arithmatex">\(xy\)</span> 平面内で大きさ <span class="arithmatex">\(\frac{\hbar}{2}\)</span> を保ち，角振動数 <span class="arithmatex">\(\omega_0\)</span> で回転します。これが <span class="arithmatex">\(z\)</span> 軸まわりのラーモア歳差運動です。</p>
 

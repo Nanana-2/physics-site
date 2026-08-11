@@ -14535,7 +14535,10 @@
 <h3 id="1">(1)</h3>
 <p>階乗の対数は，対数の性質 <span class="arithmatex">\(\log(ab) = \log a + \log b\)</span> を用いることで，以下のように和の形で書き下すことができます。</p>
 <div class="arithmatex">\[
-\log N! = \log (1 \times 2 \times \cdots \times N) = \sum_{x=1}^N \log x
+\begin{aligned}
+\log N! &amp;= \log (1 \times 2 \times \cdots \times N) \\
+&amp;= \sum_{x=1}^N \log x
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\log x\)</span> は単調増加関数です。区間 <span class="arithmatex">\([k-1,k]\)</span> では <span class="arithmatex">\(\log x \le \log k\)</span> であるため，</p>
 <div class="arithmatex">\[
@@ -14551,7 +14554,7 @@
 \]</div>
 <p>となります。したがって，</p>
 <div class="arithmatex">\[
-\int_1^N \log x \, dx \le \log N! \le \int_1^N \log x \, dx + \log N
+\finalanswer{\int_1^N \log x \, dx \le \log N! \le \int_1^N \log x \, dx + \log N}
 \]</div>
 <p>が成り立ちます。積分の主要項は <span class="arithmatex">\(N\log N\)</span> のオーダーであるのに対し，補正項は <span class="arithmatex">\(\log N\)</span> のオーダーです。その比は <span class="arithmatex">\(1/N\)</span> で0に近づくため，<span class="arithmatex">\(N\)</span> が十分に大きければ和を積分で近似できます。</p>
 <h3 id="2">(2)</h3>
@@ -14565,7 +14568,7 @@
 \]</div>
 <p>ここで <span class="arithmatex">\(N\)</span> が非常に大きい極限を考えているため，定数項の <span class="arithmatex">\(1\)</span> は <span class="arithmatex">\(N\)</span> や <span class="arithmatex">\(N \log N\)</span> に比べて無視することができます。これにより，スターリングの公式が導かれます。</p>
 <div class="arithmatex">\[
-\log N! \simeq N \log N - N
+\finalanswer{\log N! \simeq N \log N - N}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>状態数 <span class="arithmatex">\(\Omega\)</span> の対数をとり，対数の性質を用いて分子と分母を分解します。</p>
@@ -14585,7 +14588,7 @@
 \]</div>
 <p>共通する項を相殺することで，以下の簡潔な結果が得られます。</p>
 <div class="arithmatex">\[
-\log \Omega \simeq N \log 2
+\finalanswer{\log \Omega \simeq N \log 2}
 \]</div>
 
 

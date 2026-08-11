@@ -14539,45 +14539,67 @@ P_s = \frac{\exp\left[ -\beta(E_{s,0} - M_s B) \right]}{Z}
 \]</div>
 <p>総磁化の平均値 <span class="arithmatex">\(\langle M \rangle\)</span> の定義式に確率 <span class="arithmatex">\(P_s\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\langle M \rangle = \sum_s M_s \frac{\exp\left[ -\beta(E_{s,0} - M_s B) \right]}{Z} = \frac{1}{Z} \sum_s M_s \exp\left[ -\beta(E_{s,0} - M_s B) \right]
+\begin{aligned}
+\langle M \rangle &amp;= \sum_s M_s \frac{\exp\left[ -\beta(E_{s,0} - M_s B) \right]}{Z} \\
+&amp;= \frac{1}{Z} \sum_s M_s \exp\left[ -\beta(E_{s,0} - M_s B) \right]
+\end{aligned}
 \]</div>
 <p>ここで，分配関数 <span class="arithmatex">\(Z = \sum_s \exp\left[ -\beta(E_{s,0} - M_s B) \right]\)</span> を外部磁場 <span class="arithmatex">\(B\)</span> で偏微分すると，指数関数の肩から <span class="arithmatex">\(\beta M_s\)</span> が前に降ります。</p>
 <div class="arithmatex">\[
-\frac{\partial Z}{\partial B} = \sum_s (\beta M_s) \exp\left[ -\beta(E_{s,0} - M_s B) \right] = \beta \sum_s M_s \exp\left[ -\beta(E_{s,0} - M_s B) \right]
+\begin{aligned}
+\frac{\partial Z}{\partial B} &amp;= \sum_s (\beta M_s) \exp\left[ -\beta(E_{s,0} - M_s B) \right] \\
+&amp;= \beta \sum_s M_s \exp\left[ -\beta(E_{s,0} - M_s B) \right]
+\end{aligned}
 \]</div>
 <p>この偏微分の関係を元の平均値の式に代入し，対数微分の形に整理します。</p>
 <div class="arithmatex">\[
-\langle M \rangle = \frac{1}{Z} \left( \frac{1}{\beta} \frac{\partial Z}{\partial B} \right) = \frac{1}{\beta} \frac{\partial \log Z}{\partial B}
+\begin{aligned}
+\langle M \rangle &amp;= \frac{1}{Z} \left( \frac{1}{\beta} \frac{\partial Z}{\partial B} \right) \\
+&amp;= \finalanswer{\frac{1}{\beta} \frac{\partial \log Z}{\partial B}}
+\end{aligned}
 \]</div>
 <p>これにより，平均磁化が分配関数の外部磁場微分として抽出できることが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた等式 <span class="arithmatex">\(\langle M \rangle = \frac{1}{\beta Z} \frac{\partial Z}{\partial B}\)</span> を，さらに外部磁場 <span class="arithmatex">\(B\)</span> で微分します。</p>
 <div class="arithmatex">\[
-\frac{\partial \langle M \rangle}{\partial B} = \frac{1}{\beta} \frac{\partial}{\partial B} \left( \frac{1}{Z} \frac{\partial Z}{\partial B} \right) = \frac{1}{\beta} \left[ -\frac{1}{Z^2} \left( \frac{\partial Z}{\partial B} \right)^2 + \frac{1}{Z} \frac{\partial^2 Z}{\partial B^2} \right]
+\begin{aligned}
+\frac{\partial \langle M \rangle}{\partial B} &amp;= \frac{1}{\beta} \frac{\partial}{\partial B} \left( \frac{1}{Z} \frac{\partial Z}{\partial B} \right) \\
+&amp;= \frac{1}{\beta} \left[ -\frac{1}{Z^2} \left( \frac{\partial Z}{\partial B} \right)^2 + \frac{1}{Z} \frac{\partial^2 Z}{\partial B^2} \right]
+\end{aligned}
 \]</div>
 <p>ここで，分配関数を <span class="arithmatex">\(B\)</span> で2階微分すると，前に <span class="arithmatex">\((\beta M_s)^2\)</span> が降ります。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 Z}{\partial B^2} = \sum_s (\beta M_s)^2 \exp\left[ -\beta(E_{s,0} - M_s B) \right] = \beta^2 Z \langle M^2 \rangle
+\begin{aligned}
+\frac{\partial^2 Z}{\partial B^2} &amp;= \sum_s (\beta M_s)^2 \exp\left[ -\beta(E_{s,0} - M_s B) \right] \\
+&amp;= \beta^2 Z \langle M^2 \rangle
+\end{aligned}
 \]</div>
 <p>また，(1) より <span class="arithmatex">\(\frac{\partial Z}{\partial B} = \beta Z \langle M \rangle\)</span> です。これらを大括弧の中に代入します。</p>
 <div class="arithmatex">\[
-\frac{\partial \langle M \rangle}{\partial B} = \frac{1}{\beta} \left[ -\frac{1}{Z^2} (\beta Z \langle M \rangle)^2 + \frac{1}{Z} (\beta^2 Z \langle M^2 \rangle) \right] = \beta \left( \langle M^2 \rangle - \langle M \rangle^2 \right) = \beta \langle (\Delta M)^2 \rangle
+\begin{aligned}
+\frac{\partial \langle M \rangle}{\partial B} &amp;= \frac{1}{\beta} \left[ -\frac{1}{Z^2} (\beta Z \langle M \rangle)^2 + \frac{1}{Z} (\beta^2 Z \langle M^2 \rangle) \right] \\
+&amp;= \beta \left( \langle M^2 \rangle - \langle M \rangle^2 \right) \\
+&amp;= \beta \langle (\Delta M)^2 \rangle
+\end{aligned}
 \]</div>
 <p>等温磁化率の定義 <span class="arithmatex">\(\chi_T = \frac{\partial \langle M \rangle}{\partial B}\)</span> を代入し，両辺に <span class="arithmatex">\(k_B T = \frac{1}{\beta}\)</span> を掛けて整理します。</p>
 <div class="arithmatex">\[
-\langle (\Delta M)^2 \rangle = k_B T \chi_T
+\finalanswer{\langle (\Delta M)^2 \rangle = k_B T \chi_T}
 \]</div>
 <p>これにより，磁化の分散が等温磁化率に比例することが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>与えられた常磁性体のキュリーの法則 <span class="arithmatex">\(\chi_T = \frac{N C}{T}\)</span> を (2) の結果に代入し，磁化の分散の大きさを評価します。</p>
 <div class="arithmatex">\[
-\langle (\Delta M)^2 \rangle = k_B T \left( \frac{N C}{T} \right) = N k_B C
+\begin{aligned}
+\langle (\Delta M)^2 \rangle &amp;= k_B T \left( \frac{N C}{T} \right) \\
+&amp;= N k_B C
+\end{aligned}
 \]</div>
 <p>この式から，磁化の分散 <span class="arithmatex">\(\langle (\Delta M)^2 \rangle\)</span> は粒子数 <span class="arithmatex">\(N\)</span> の1乗に比例<span class="arithmatex">\(\propto N\)</span>し，その平方根である標準偏差は <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーを持つことがわかります。</p>
 <p>一方，磁場 <span class="arithmatex">\(B\)</span> が印加されているときの平均磁化 <span class="arithmatex">\(\langle M \rangle\)</span> も，系全体のサイズに比例する示量性変数であるため，粒子数 <span class="arithmatex">\(N\)</span> の1乗のオーダー<span class="arithmatex">\(\langle M \rangle \propto N\)</span>を持ちます。</p>
 <p>これらを用いて，平均値に対する磁化の相対揺らぎを計算します。</p>
 <div class="arithmatex">\[
-\frac{\sqrt{\langle (\Delta M)^2 \rangle}}{\langle M \rangle} \propto \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}}
+\finalanswer{\frac{\sqrt{\langle (\Delta M)^2 \rangle}}{\langle M \rangle} \propto \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}}}
 \]</div>
 <p>したがって，<span class="arithmatex">\(N \to \infty\)</span> において磁化の相対揺らぎは <span class="arithmatex">\(N^{-1/2}\)</span> のオーダーでゼロに近づきます。</p>
 

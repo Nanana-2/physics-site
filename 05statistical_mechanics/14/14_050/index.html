@@ -14544,7 +14544,7 @@ W(X, P) = \frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \int_{-\infty}^{\infty} \exp
 \]</div>
 <p>これに係数 <span class="arithmatex">\(-\frac{1}{2} \exp(2r)\)</span> を掛け算し，残りの駆動項 <span class="arithmatex">\(-i2PY\)</span> と合わせます。 <span class="arithmatex">\(Y\)</span> に依存しない <span class="arithmatex">\(X\)</span> の項を積分の外へ括り出すことで，積分実行直前の式が得られます。</p>
 <div class="arithmatex">\[
-W(X, P) = \frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \exp\left( -\exp(2r)X^2 \right) \int_{-\infty}^{\infty} \exp\left( -\frac{1}{4}\exp(2r)Y^2 - i2PY \right) dY
+W(X, P) = \finalanswer{\frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \exp\left( -\exp(2r)X^2 \right)} \int_{-\infty}^{\infty} \exp\left( -\frac{1}{4}\exp(2r)Y^2 - i2PY \right) dY
 \]</div>
 <h3 id="2">(2)</h3>
 <p>積分の内部にある <span class="arithmatex">\(Y\)</span> の二次式を平方完成します。</p>
@@ -14557,7 +14557,10 @@ W(X, P) = \frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \exp\left( -\exp(2r)X^2 - \e
 \]</div>
 <p>積分部分に対してガウス積分の公式を適用します。係数は <span class="arithmatex">\(a = \frac{1}{4}\exp(2r)\)</span> であるため，積分の値は以下のように求まります。</p>
 <div class="arithmatex">\[
-\sqrt{\frac{\pi}{\frac{1}{4}\exp(2r)}} = \sqrt{\frac{4\pi}{\exp(2r)}} = 2\sqrt{\pi}\exp(-r)
+\begin{aligned}
+\sqrt{\frac{\pi}{\frac{1}{4}\exp(2r)}} &amp;= \sqrt{\frac{4\pi}{\exp(2r)}} \\
+&amp;= 2\sqrt{\pi}\exp(-r)
+\end{aligned}
 \]</div>
 <p>これを前方の係数と掛け合わせます。前方の定数部分は <span class="arithmatex">\(\frac{1}{\pi} \frac{\exp(r)}{\sqrt{\pi}} = \frac{\exp(r)}{\pi\sqrt{\pi}}\)</span> です。</p>
 <div class="arithmatex">\[
@@ -14565,7 +14568,7 @@ W(X, P) = \frac{\exp(r)}{\pi\sqrt{\pi}} \cdot 2\sqrt{\pi}\exp(-r) \cdot \exp\lef
 \]</div>
 <p>定数因数が相殺して整理されます。無次元変数を元の実変数 <span class="arithmatex">\(x, p\)</span> に戻す前の，スクイーズド真空状態に対するウィグナー分布関数の最終的な関数形が得られます。</p>
 <div class="arithmatex">\[
-W(X, P) = \frac{2}{\pi} \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right)
+\finalanswer{W(X, P) = \frac{2}{\pi} \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた関数において， <span class="arithmatex">\(W(X, P) = \text{定数}\)</span> と置くことは，指数の内部の値を一定にすることと同値です。したがって，等高線が満たすべき代数方程式は以下の通りです。</p>
@@ -14574,7 +14577,7 @@ W(X, P) = \frac{2}{\pi} \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right)
 \]</div>
 <p>この方程式の両辺を <span class="arithmatex">\(C\)</span> で割り算します。</p>
 <div class="arithmatex">\[
-\frac{X^2}{\left(\sqrt{C}\exp(-r)\right)^2} + \frac{P^2}{\left(\frac{\sqrt{C}}{2}\exp(r)\right)^2} = 1
+\finalanswer{\frac{X^2}{\left(\sqrt{C}\exp(-r)\right)^2} + \frac{P^2}{\left(\frac{\sqrt{C}}{2}\exp(r)\right)^2} = 1}
 \]</div>
 <p>この数式は，2次元平面における楕円の方程式そのものです。</p>
 <p><strong>コヒーレント状態との形状比較</strong></p>

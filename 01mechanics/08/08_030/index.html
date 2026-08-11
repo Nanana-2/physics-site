@@ -14589,10 +14589,16 @@
 \]</div>
 <p>が成り立ちます。したがって，次のようになります。</p>
 <div class="arithmatex">\[
-\boldsymbol{\omega} \times \boldsymbol{i}' = \omega \boldsymbol{k}' \times \boldsymbol{i}' = \omega \boldsymbol{j}'
+\begin{aligned}
+\boldsymbol{\omega} \times \boldsymbol{i}' &amp;= \omega \boldsymbol{k}' \times \boldsymbol{i}' \\
+&amp;= \omega \boldsymbol{j}'
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{\omega} \times \boldsymbol{j}' = \omega \boldsymbol{k}' \times \boldsymbol{j}' = -\omega \boldsymbol{i}'
+\begin{aligned}
+\boldsymbol{\omega} \times \boldsymbol{j}' &amp;= \omega \boldsymbol{k}' \times \boldsymbol{j}' \\
+&amp;= -\omega \boldsymbol{i}'
+\end{aligned}
 \]</div>
 <p>これらは先ほど時間微分によって直接求めた式と一致します。また，<span class="arithmatex">\(\boldsymbol{k}'\)</span> については，静止系の <span class="arithmatex">\(\boldsymbol{k}\)</span> と常に等しく一定であるため</p>
 <div class="arithmatex">\[
@@ -14600,7 +14606,10 @@
 \]</div>
 <p>となります。これも</p>
 <div class="arithmatex">\[
-\boldsymbol{\omega} \times \boldsymbol{k}' = \omega \boldsymbol{k}' \times \boldsymbol{k}' = \boldsymbol{0}
+\begin{aligned}
+\boldsymbol{\omega} \times \boldsymbol{k}' &amp;= \omega \boldsymbol{k}' \times \boldsymbol{k}' \\
+&amp;= \finalanswer{\boldsymbol{0}}
+\end{aligned}
 \]</div>
 <p>と一致します。以上より，提示された外積の関係式が成り立つことが示されました。</p>
 <h3 id="2">(2)</h3>
@@ -14610,7 +14619,10 @@
 \]</div>
 <p>右辺の最初の括弧の項は，回転座標系における速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> そのものです。</p>
 <div class="arithmatex">\[
-\boldsymbol{v}' = \frac{d'\boldsymbol{r}}{dt} = \frac{dx'}{dt}\boldsymbol{i}' + \frac{dy'}{dt}\boldsymbol{j}' + \frac{dz'}{dt}\boldsymbol{k}'
+\begin{aligned}
+\boldsymbol{v}' &amp;= \frac{d'\boldsymbol{r}}{dt} \\
+&amp;= \frac{dx'}{dt}\boldsymbol{i}' + \frac{dy'}{dt}\boldsymbol{j}' + \frac{dz'}{dt}\boldsymbol{k}'
+\end{aligned}
 \]</div>
 <p>右辺の二番目の括弧の項に (1) で得られた関係式を代入します。</p>
 <div class="arithmatex">\[
@@ -14622,12 +14634,15 @@ x'\frac{d\boldsymbol{i}'}{dt} + y'\frac{d\boldsymbol{j}'}{dt} + z'\frac{d\boldsy
 \]</div>
 <p>これらを合わせることで，求める速度の関係式が得られます。</p>
 <div class="arithmatex">\[
-\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}
+\finalanswer{\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>前問で得られた演算子の関係式を，速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> に対して適用します。</p>
 <p>$$
-\boldsymbol{a} = \frac{d\boldsymbol{v}}{dt} = \frac{d'\boldsymbol{v}}{dt} + \boldsymbol{\omega} \times \boldsymbol{v}
+\begin{aligned}
+\boldsymbol{a} &amp;= \frac{d\boldsymbol{v}}{dt} \
+&amp;= \frac{d'\boldsymbol{v}}{dt} + \boldsymbol{\omega} \times \boldsymbol{v}
+\end{aligned}
 $$
 この式に <span class="arithmatex">\(\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}\)</span> を代入して展開します。</p>
 <div class="arithmatex">\[
@@ -14640,7 +14655,7 @@ $$
 <div class="arithmatex">\[
 \begin{aligned}
 \boldsymbol{a} &amp;= \boldsymbol{a}' + \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times ( \boldsymbol{\omega} \times \boldsymbol{r} ) \\\\
-&amp;= \boldsymbol{a}' + 2\boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times ( \boldsymbol{\omega} \times \boldsymbol{r} )
+&amp;= \finalanswer{\boldsymbol{a}' + 2\boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times ( \boldsymbol{\omega} \times \boldsymbol{r} )}
 \end{aligned}
 \]</div>
 <p>これが，静止系における加速度と回転系における加速度の関係式です。</p>
@@ -14686,7 +14701,7 @@ $$</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \boldsymbol{F}_{\text{cf}} &amp;= m\omega^2 ( \boldsymbol{r}_{\perp} + z'\boldsymbol{k}' ) - m\omega^2 z'\boldsymbol{k}' \\\\
-&amp;= m\omega^2 \boldsymbol{r}_{\perp}
+&amp;= \finalanswer{m\omega^2 \boldsymbol{r}_{\perp}}
 \end{aligned}
 \]</div>
 <p>したがって，遠心力は回転軸から垂直に遠ざかる向きに働き，その大きさは回転軸からの距離 <span class="arithmatex">\(r_{\perp}=|\boldsymbol{r}_{\perp}|\)</span> に比例して <span class="arithmatex">\(m\omega^2r_{\perp}\)</span> となります。</p>

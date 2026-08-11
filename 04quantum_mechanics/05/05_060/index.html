@@ -14528,11 +14528,17 @@
 <h3 id="1">(1)</h3>
 <p>新しく作られた状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> に，左から数演算子 <span class="arithmatex">\(\hat{N}\)</span> を作用させて固有値方程式の形を作ります。提示された演算子の並び替え関係 <span class="arithmatex">\(\hat{N}\hat{a} = \hat{a}(\hat{N}-1)\)</span> を適用します。</p>
 <div class="arithmatex">\[
-\hat{N} \left( \hat{a}|n\rangle \right) = (\hat{N}\hat{a}) |n\rangle = \hat{a}(\hat{N}-1) |n\rangle
+\begin{aligned}
+\hat{N} \left( \hat{a}|n\rangle \right) &amp;= (\hat{N}\hat{a}) |n\rangle \\
+&amp;= \hat{a}(\hat{N}-1) |n\rangle
+\end{aligned}
 \]</div>
 <p>線形性により，括弧の中身を分配して <span class="arithmatex">\(|n\rangle\)</span> に作用させます。固有値関係 <span class="arithmatex">\(\hat{N}|n\rangle = n|n\rangle\)</span> を用います。</p>
 <div class="arithmatex">\[
-\hat{a}(\hat{N}|n\rangle - |n\rangle) = \hat{a}(n|n\rangle - |n\rangle) = \hat{a}(n-1)|n\rangle
+\begin{aligned}
+\hat{a}(\hat{N}|n\rangle - |n\rangle) &amp;= \hat{a}(n|n\rangle - |n\rangle) \\
+&amp;= \hat{a}(n-1)|n\rangle
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(n-1\)</span> は固有値であるため，演算子の前に出すことができます。</p>
 <div class="arithmatex">\[
@@ -14541,7 +14547,13 @@
 <p>これにより，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は数演算子の固有状態であり，その固有値は元の状態より 1 だけ小さい <span class="arithmatex">\(n-1\)</span> になることが示されました。</p>
 <p>同様に，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> に <span class="arithmatex">\(\hat{N}\)</span> を作用させます。</p>
 <div class="arithmatex">\[
-\hat{N} \left( \hat{a}^\dagger|n\rangle \right) = (\hat{N}\hat{a}^\dagger) |n\rangle = \hat{a}^\dagger(\hat{N}+1) |n\rangle = \hat{a}^\dagger(\hat{N}|n\rangle + |n\rangle) = \hat{a}^\dagger(n+1)|n\rangle = (n+1) \left( \hat{a}^\dagger|n\rangle \right)
+\begin{aligned}
+\hat{N} \left( \hat{a}^\dagger|n\rangle \right) &amp;= (\hat{N}\hat{a}^\dagger) |n\rangle \\
+&amp;= \hat{a}^\dagger(\hat{N}+1) |n\rangle \\
+&amp;= \hat{a}^\dagger(\hat{N}|n\rangle + |n\rangle) \\
+&amp;= \hat{a}^\dagger(n+1)|n\rangle \\
+&amp;= \finalanswer{(n+1) \left( \hat{a}^\dagger|n\rangle \right)}
+\end{aligned}
 \]</div>
 <p>したがって，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> の固有値は元の状態より 1 だけ大きい <span class="arithmatex">\(n+1\)</span> になります。</p>
 <h3 id="2">(2)</h3>
@@ -14560,7 +14572,10 @@
 <p>元の状態は規格化されているため <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> です。したがって，内積の値は <span class="arithmatex">\(n\)</span> になります。
 一方で，係数 <span class="arithmatex">\(c_n\)</span> を用いた表現との比較を行います。</p>
 <div class="arithmatex">\[
-\left( c_n |n-1\rangle \right)^\dagger \left( c_n |n-1\rangle \right) = c_n^* c_n \langle n-1|n-1\rangle = |c_n|^2
+\begin{aligned}
+\left( c_n |n-1\rangle \right)^\dagger \left( c_n |n-1\rangle \right) &amp;= c_n^* c_n \langle n-1|n-1\rangle \\
+&amp;= |c_n|^2
+\end{aligned}
 \]</div>
 <p>2つの結果を等号で結びます。</p>
 <div class="arithmatex">\[
@@ -14568,7 +14583,7 @@
 \]</div>
 <p>これにより，消滅演算子の作用規則が以下のように定まりました。
 $$
-\hat{a}|n\rangle = \sqrt{n}|n-1\rangle
+\finalanswer{\hat{a}|n\rangle = \sqrt{n}|n-1\rangle}
 $$</p>
 <h3 id="3">(3)</h3>
 <p>状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> の内積を同様に計算します。エルミート共役によって <span class="arithmatex">\(\left( \hat{a}^\dagger|n\rangle \right)^\dagger = \langle n|\hat{a}\)</span> となります。</p>
@@ -14581,7 +14596,11 @@ $$</p>
 \]</div>
 <p>これを内積の式に代入します。</p>
 <div class="arithmatex">\[
-\langle n| (\hat{N} + 1) |n\rangle = \langle n|\hat{N}|n\rangle + \langle n|n\rangle = n \langle n|n\rangle + \langle n|n\rangle = (n+1)\langle n|n\rangle
+\begin{aligned}
+\langle n| (\hat{N} + 1) |n\rangle &amp;= \langle n|\hat{N}|n\rangle + \langle n|n\rangle \\
+&amp;= n \langle n|n\rangle + \langle n|n\rangle \\
+&amp;= (n+1)\langle n|n\rangle
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\langle n|n\rangle = 1\)</span> であるため，内積の値は <span class="arithmatex">\(n+1\)</span> になります。
 係数 <span class="arithmatex">\(d_n\)</span> を用いた表現と比較します。</p>
@@ -14590,7 +14609,7 @@ $$</p>
 \]</div>
 <p>これにより，生成演算子の作用規則が以下のように定まりました。
 $$
-\hat{a}^\dagger|n\rangle = \sqrt{n+1}|n+1\rangle
+\finalanswer{\hat{a}^\dagger|n\rangle = \sqrt{n+1}|n+1\rangle}
 $$</p>
 
 

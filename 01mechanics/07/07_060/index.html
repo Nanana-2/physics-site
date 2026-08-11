@@ -14564,7 +14564,10 @@ m ( r \ddot{\theta} + 2 \dot{r} \dot{\theta} ) = 0
 \]</div>
 <p><span class="arithmatex">\(\theta\)</span> 方向の方程式の両辺に <span class="arithmatex">\(r\)</span> を乗じると，</p>
 <div class="arithmatex">\[
-m ( r^2 \ddot{\theta} + 2 r \dot{r} \dot{\theta} ) = m \frac{d}{dt} ( r^2 \dot{\theta} ) = 0
+\begin{aligned}
+m ( r^2 \ddot{\theta} + 2 r \dot{r} \dot{\theta} ) &amp;= m \frac{d}{dt} ( r^2 \dot{\theta} ) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>が得られます。したがって，角運動量の大きさ</p>
 <div class="arithmatex">\[
@@ -14577,12 +14580,17 @@ E = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) - \frac{G M m}{r}
 \]</div>
 <p>ここで，角運動量保存則より <span class="arithmatex">\(r \dot{\theta} = \frac{L}{mr}\)</span> であるため，これを代入して整理すると，力学的エネルギー <span class="arithmatex">\(E\)</span> の式が得られます。</p>
 <div class="arithmatex">\[
-E = \frac{1}{2} m \dot{r}^2 + \frac{L^2}{2 m r^2} - \frac{G M m}{r}
+\finalanswer{E = \frac{1}{2} m \dot{r}^2 + \frac{L^2}{2 m r^2} - \frac{G M m}{r}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>変数 <span class="arithmatex">\(u=1/r\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。<span class="arithmatex">\(L=mr^2\dot{\theta}\)</span> より <span class="arithmatex">\(\dot{\theta}=Lu^2/m\)</span> であるため，</p>
 <div class="arithmatex">\[
-\dot{r} = \frac{d}{dt} \left( \frac{1}{u} \right) = - \frac{1}{u^2} \frac{du}{d\theta} \dot{\theta} = - \frac{1}{u^2} \frac{du}{d\theta} \left( \frac{L u^2}{m} \right) = - \frac{L}{m} \frac{du}{d\theta}
+\begin{aligned}
+\dot{r} &amp;= \frac{d}{dt} \left( \frac{1}{u} \right) \\
+&amp;= - \frac{1}{u^2} \frac{du}{d\theta} \dot{\theta} \\
+&amp;= - \frac{1}{u^2} \frac{du}{d\theta} \left( \frac{L u^2}{m} \right) \\
+&amp;= - \frac{L}{m} \frac{du}{d\theta}
+\end{aligned}
 \]</div>
 <p>となります。これを小問(1)で求めた力学的エネルギー <span class="arithmatex">\(E\)</span> の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14594,7 +14602,7 @@ E = \frac{L^2}{2m} \left( \frac{du}{d\theta} \right)^2 + \frac{L^2 u^2}{2m} - G 
 \]</div>
 <p><span class="arithmatex">\(\frac{du}{d\theta}\neq0\)</span> の区間で両辺を <span class="arithmatex">\(\frac{L^2}{m}\frac{du}{d\theta}\)</span> で割ると，求める微分方程式が得られます。</p>
 <div class="arithmatex">\[
-\frac{d^2 u}{d\theta^2} + u = \frac{G M m^2}{L^2}
+\finalanswer{\frac{d^2 u}{d\theta^2} + u = \frac{G M m^2}{L^2}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた一般解 <span class="arithmatex">\(u = \frac{G M m^2}{L^2} (1 + \epsilon \cos\theta)\)</span> の逆数をとることで，軌道の極方程式が得られます。</p>
@@ -14627,7 +14635,7 @@ E = \frac{G^2 M^2 m^3}{2 L^2} ( \epsilon^2 - 1 )
 \]</div>
 <p>これを <span class="arithmatex">\(\epsilon\)</span> について解くことで，求める離心率の式が得られます。</p>
 <div class="arithmatex">\[
-\epsilon = \sqrt{1 + \frac{2 E L^2}{G^2 M^2 m^3}}
+\finalanswer{\epsilon = \sqrt{1 + \frac{2 E L^2}{G^2 M^2 m^3}}}
 \]</div>
 <h3 id="4">(4)</h3>
 <p>極方程式</p>
@@ -14645,21 +14653,21 @@ r = \frac{p}{1 + \epsilon \cos\theta}
 <li><span class="arithmatex">\(E &lt; 0\)</span> のとき：</li>
 </ol>
 <div class="arithmatex">\[
-\epsilon = \sqrt{1 + \frac{2 E L^2}{G^2 M^2 m^3}} &lt; 1
+\finalanswer{\epsilon = \sqrt{1 + \frac{2 E L^2}{G^2 M^2 m^3}} &lt; 1}
 \]</div>
 <p>となり，軌道は楕円となります。これは探査機が恒星の重力圏に捕らわれて束縛運動をしている状態に対応します。</p>
 <ol>
 <li><span class="arithmatex">\(E = 0\)</span> のとき：</li>
 </ol>
 <div class="arithmatex">\[
-\epsilon = 1
+\finalanswer{\epsilon = 1}
 \]</div>
 <p>となり，軌道は放物線となります。これは探査機が無限遠において速度がちょうどゼロになるような，脱出に必要な最小限のエネルギーを持つ臨界状態に対応します。</p>
 <ol>
 <li><span class="arithmatex">\(E &gt; 0\)</span> のとき：</li>
 </ol>
 <div class="arithmatex">\[
-\epsilon &gt; 1
+\finalanswer{\epsilon &gt; 1}
 \]</div>
 <p>となり，軌道は双曲線となります。これは探査機が無限遠に達してもなお有限の速度を保持できる，非束縛の脱出軌道に対応します。</p>
 

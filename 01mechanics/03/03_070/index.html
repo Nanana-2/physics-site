@@ -14531,7 +14531,10 @@ U(x) = U_0 \left\{ \left( \frac{a}{x} \right)^{12} - 2 \left( \frac{a}{x} \right
 <h3 id="1">(1)</h3>
 <p>一次元運動における力とポテンシャルの関係式 <span class="arithmatex">\(F(x) = -\frac{dU(x)}{dx}\)</span> に基づき，与えられた関数を微分します。</p>
 <div class="arithmatex">\[
-\frac{dU}{dx} = U_0 \left\{ -12 \frac{a^{12}}{x^{13}} + 12 \frac{a^6}{x^7} \right\} = \frac{12 U_0}{x} \left\{ - \left( \frac{a}{x} \right)^{12} + \left( \frac{a}{x} \right)^6 \right\}
+\begin{aligned}
+\frac{dU}{dx} &amp;= U_0 \left\{ -12 \frac{a^{12}}{x^{13}} + 12 \frac{a^6}{x^7} \right\} \\
+&amp;= \frac{12 U_0}{x} \left\{ - \left( \frac{a}{x} \right)^{12} + \left( \frac{a}{x} \right)^6 \right\}
+\end{aligned}
 \]</div>
 <p>平衡点 <span class="arithmatex">\(x_0\)</span> ではこの微分の値が 0 になります。 <span class="arithmatex">\(x &gt; 0\)</span> かつ <span class="arithmatex">\(U_0 &gt; 0\)</span> であるため，中括弧の内部が 0 にならなければなりません。</p>
 <div class="arithmatex">\[
@@ -14542,7 +14545,7 @@ U(x) = U_0 \left\{ \left( \frac{a}{x} \right)^{12} - 2 \left( \frac{a}{x} \right
 \]</div>
 <p>定数 <span class="arithmatex">\(a\)</span> および座標 <span class="arithmatex">\(x_0\)</span> はともに正の実数であるため，平衡点の位置は次のように定まります。</p>
 <div class="arithmatex">\[
-x_0 = a
+\finalanswer{x_0 = a}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>平衡点 <span class="arithmatex">\(x = x_0\)</span> のまわりでのテイラー展開の一般形式は次の通りです。</p>
@@ -14563,11 +14566,14 @@ U(a) = U_0 (1 - 2) = -U_0
 \]</div>
 <p>この 2 階微分の式に平衡点 <span class="arithmatex">\(x = a\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\left. \frac{d^2U}{dx^2} \right|_{x=a} = U_0 \left\{ \frac{156}{a^2} - \frac{84}{a^2} \right\} = \frac{72 U_0}{a^2}
+\begin{aligned}
+\left. \frac{d^2U}{dx^2} \right|_{x=a} &amp;= U_0 \left\{ \frac{156}{a^2} - \frac{84}{a^2} \right\} \\
+&amp;= \frac{72 U_0}{a^2}
+\end{aligned}
 \]</div>
 <p>この値は正の定数であるため，平衡点が安定であることが確認できます。これらを一般形式に代入して， 2 次の項までの展開式を組み立てます。</p>
 <div class="arithmatex">\[
-U(x) \approx -U_0 + \frac{36 U_0}{a^2} (x - a)^2
+\finalanswer{U(x) \approx -U_0 + \frac{36 U_0}{a^2} (x - a)^2}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた展開式において，位置の基準を平衡点からの変位 <span class="arithmatex">\(\xi = x - a\)</span> と置き換えると，定数項を除いたポテンシャルの変化は次のようになります。</p>
@@ -14587,7 +14593,7 @@ k_{\text{eff}} = \frac{72 U_0}{a^2}
 \]</div>
 <p>根号の内部から平方数の因数を取り出して整理します。</p>
 <div class="arithmatex">\[
-\omega = \frac{6}{a} \sqrt{\frac{2 U_0}{m}}
+\finalanswer{\omega = \frac{6}{a} \sqrt{\frac{2 U_0}{m}}}
 \]</div>
 <p>これにより，複雑な非線形ポテンシャルであっても，平衡点の極小値近傍においては単純な調和振動として近似的に挙動を扱えることが示されます。</p>
 

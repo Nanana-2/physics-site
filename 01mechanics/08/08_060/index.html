@@ -14577,7 +14577,7 @@
 鉛直下向きが <span class="arithmatex">\(z\)</span> 軸の正方向であるため，鉛直上向きは <span class="arithmatex">\(z\)</span> 軸の負方向に対応します。東向きである <span class="arithmatex">\(y\)</span> 軸方向の成分は <span class="arithmatex">\(0\)</span> です。</p>
 <p>以上の位置関係から，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> の各成分は次のように表されます。</p>
 <div class="arithmatex">\[
-\mathbf{\Omega} = (\Omega \cos\theta, 0, -\Omega \sin\theta)
+\finalanswer{\mathbf{\Omega} = (\Omega \cos\theta, 0, -\Omega \sin\theta)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>コリオリ力 <span class="arithmatex">\(\mathbf{F}_c\)</span> は，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> と重りの速度ベクトル <span class="arithmatex">\(\mathbf{v} = (\dot{x}, \dot{y}, \dot{z})\)</span> の外積を用いて定義されます。</p>
@@ -14600,7 +14600,7 @@ F_{cx} = 2m \Omega \dot{y} \sin\theta
 F_{cy} = 2m \Omega \left( \dot{z} \cos\theta - \dot{x} \sin\theta \right)
 \]</div>
 <div class="arithmatex">\[
-F_{cz} = -2m \Omega \dot{y} \cos\theta
+\finalanswer{F_{cz} = -2m \Omega \dot{y} \cos\theta}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>振り子の長さ <span class="arithmatex">\(L\)</span> に比べて，水平方向の変位 <span class="arithmatex">\(x, y\)</span> が十分に小さいという微小振動の近似を考えます。
@@ -14652,7 +14652,7 @@ m \ddot{y} = -mg \frac{y}{L} - 2m \Omega \dot{x} \sin\theta
 \ddot{x} = -\omega_0^2 x + 2\omega_z \dot{y}
 \]</div>
 <div class="arithmatex">\[
-\ddot{y} = -\omega_0^2 y - 2\omega_z \dot{x}
+\finalanswer{\ddot{y} = -\omega_0^2 y - 2\omega_z \dot{x}}
 \]</div>
 <h3 id="4">(4)</h3>
 <p>得られた2つの運動方程式を統合するため，複素変数 <span class="arithmatex">\(\zeta = x + iy\)</span> を定義します。</p>
@@ -14662,7 +14662,10 @@ m \ddot{y} = -mg \frac{y}{L} - 2m \Omega \dot{x} \sin\theta
 \]</div>
 <p>右辺の第2項は次のように変形できます。</p>
 <div class="arithmatex">\[
-2\omega_z (\dot{y} - i\dot{x}) = -2i\omega_z (\dot{x} + i\dot{y}) = -2i\omega_z \dot{\zeta}
+\begin{aligned}
+2\omega_z (\dot{y} - i\dot{x}) &amp;= -2i\omega_z (\dot{x} + i\dot{y}) \\
+&amp;= -2i\omega_z \dot{\zeta}
+\end{aligned}
 \]</div>
 <p>したがって，複素変数 <span class="arithmatex">\(\zeta\)</span> に関する2階線形同次微分方程式が得られます。</p>
 <div class="arithmatex">\[
@@ -14691,7 +14694,7 @@ r \approx -i\omega_z \pm i\omega_0
 \]</div>
 <p>これより，複素微分方程式の一般解は，2つの複素任意定数 <span class="arithmatex">\(A\)</span> および <span class="arithmatex">\(B\)</span> を用いて次のように求められます。
 $$
-\zeta(t) = e^{-i\omega_z t} \left( A e^{i\omega_0 t} + B e^{-i\omega_0 t} \right)
+\finalanswer{\zeta(t) = e^{-i\omega_z t} \left( A e^{i\omega_0 t} + B e^{-i\omega_0 t} \right)}
 $$</p>
 <h3 id="5">(5)</h3>
 <p>初期条件 <span class="arithmatex">\(t = 0\)</span> において <span class="arithmatex">\(\zeta(0) = a\)</span> および <span class="arithmatex">\(\dot{\zeta}(0) = 0\)</span> を適用します。</p>
@@ -14736,7 +14739,10 @@ y(t) \approx -a \sin(\omega_z t) \cos(\omega_0 t)
 <p>回転の向きは，負の符号がついていることから，北半球においては上空から見て時計回りであることが分かります。
 振動面が <span class="arithmatex">\(2\pi\)</span> 回転する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
 <div class="arithmatex">\[
-T = \frac{2\pi}{\omega_z} = \frac{2\pi}{\Omega \sin\theta}
+\begin{aligned}
+T &amp;= \frac{2\pi}{\omega_z} \\
+&amp;= \finalanswer{\frac{2\pi}{\Omega \sin\theta}}
+\end{aligned}
 \]</div>
 <p>地球の自転周期を <span class="arithmatex">\(T_{\text{earth}} = 2\pi / \Omega\)</span> とすると，周期は <span class="arithmatex">\(T = T_{\text{earth}} / \sin\theta\)</span> と表されます。</p>
 <p>北極と赤道の場合を確認します。</p>

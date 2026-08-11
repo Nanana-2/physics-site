@@ -14535,7 +14535,10 @@ F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^
 <h3 id="1">(1)</h3>
 <p>最確速度 <span class="arithmatex">\(v_{\mathrm{mp}}\)</span> は分布の頂点を与える速さです。<span class="arithmatex">\(f(v) = v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)\)</span> を微分して極大条件を求めます。</p>
 <div class="arithmatex">\[
-\frac{df(v)}{dv} = 2v \exp\left( -\frac{m v^2}{2k_B T} \right) + v^2 \left( -\frac{2m v}{2k_B T} \right) \exp\left( -\frac{m v^2}{2k_B T} \right) = 0
+\begin{aligned}
+\frac{df(v)}{dv} &amp;= 2v \exp\left( -\frac{m v^2}{2k_B T} \right) + v^2 \left( -\frac{2m v}{2k_B T} \right) \exp\left( -\frac{m v^2}{2k_B T} \right) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>共通因数の <span class="arithmatex">\(2v \exp\left( -\frac{m v^2}{2k_B T} \right)\)</span> で括り出します。</p>
 <div class="arithmatex">\[
@@ -14543,33 +14546,57 @@ F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^
 \]</div>
 <p><span class="arithmatex">\(v &gt; 0\)</span> においてこの方程式を満たすのは，括弧の内部が 0 になるときです。</p>
 <div class="arithmatex">\[
-1 - \frac{m v_{\mathrm{mp}}^2}{2k_B T} = 0 \quad \implies \quad v_{\mathrm{mp}} = \sqrt{\frac{2k_B T}{m}}
+\finalanswer{1 - \frac{m v_{\mathrm{mp}}^2}{2k_B T} = 0 \quad \implies \quad v_{\mathrm{mp}} = \sqrt{\frac{2k_B T}{m}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>平均速度 <span class="arithmatex">\(\langle v \rangle\)</span> の定義式に分布関数を代入します。</p>
 <div class="arithmatex">\[
-\langle v \rangle = \int_0^\infty v \cdot 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right) dv = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \int_0^\infty v^3 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+\begin{aligned}
+\langle v \rangle &amp;= \int_0^\infty v \cdot 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right) dv \\
+&amp;= 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \int_0^\infty v^3 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+\end{aligned}
 \]</div>
 <p>与えられた定積分公式を <span class="arithmatex">\(a = \frac{m}{2k_B T}\)</span> として適用します。</p>
 <div class="arithmatex">\[
-\int_0^\infty v^3 \exp(-a v^2) dv = \frac{1}{2a^2} = \frac{1}{2} \left( \frac{2k_B T}{m} \right)^2 = \frac{2k_B^2 T^2}{m^2}
+\begin{aligned}
+\int_0^\infty v^3 \exp(-a v^2) dv &amp;= \frac{1}{2a^2} \\
+&amp;= \frac{1}{2} \left( \frac{2k_B T}{m} \right)^2 \\
+&amp;= \frac{2k_B^2 T^2}{m^2}
+\end{aligned}
 \]</div>
 <p>これを外側の係数と掛け合わせ，各項を整理します。</p>
 <div class="arithmatex">\[
-\langle v \rangle = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \cdot \frac{2k_B^2 T^2}{m^2} = 8\pi \cdot \frac{m^{3/2}}{(2\pi)^{3/2} (k_B T)^{3/2}} \cdot \frac{k_B^2 T^2}{m^2} = \frac{8\pi}{(2\pi \sqrt{2\pi})} \sqrt{\frac{k_B T}{m}} = \sqrt{\frac{8k_B T}{\pi m}}
+\begin{aligned}
+\langle v \rangle &amp;= 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \cdot \frac{2k_B^2 T^2}{m^2} \\
+&amp;= 8\pi \cdot \frac{m^{3/2}}{(2\pi)^{3/2} (k_B T)^{3/2}} \cdot \frac{k_B^2 T^2}{m^2} \\
+&amp;= \frac{8\pi}{(2\pi \sqrt{2\pi})} \sqrt{\frac{k_B T}{m}} \\
+&amp;= \finalanswer{\sqrt{\frac{8k_B T}{\pi m}}}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>まず，速度の2乗平均 <span class="arithmatex">\(\langle v^2 \rangle\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\langle v^2 \rangle = \int_0^\infty v^2 F(v) dv = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \int_0^\infty v^4 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+\begin{aligned}
+\langle v^2 \rangle &amp;= \int_0^\infty v^2 F(v) dv \\
+&amp;= 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \int_0^\infty v^4 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+\end{aligned}
 \]</div>
 <p>与えられた定積分公式を <span class="arithmatex">\(a = \frac{m}{2k_B T}\)</span> として適用します。</p>
 <div class="arithmatex">\[
-\int_0^\infty v^4 \exp(-a v^2) dv = \frac{3}{8}\sqrt{\frac{\pi}{a^5}} = \frac{3}{8}\sqrt{\pi \left( \frac{2k_B T}{m} \right)^5} = \frac{3}{8} \cdot 4 \cdot \sqrt{\frac{\pi \cdot 2k_B^5 T^5}{m^5}} = \frac{3}{2} \left( \frac{2k_B T}{m} \right)^{2} \sqrt{\frac{\pi 2k_B T}{m}}
+\begin{aligned}
+\int_0^\infty v^4 \exp(-a v^2) dv &amp;= \frac{3}{8}\sqrt{\frac{\pi}{a^5}} \\
+&amp;= \frac{3}{8}\sqrt{\pi \left( \frac{2k_B T}{m} \right)^5} \\
+&amp;= \frac{3}{8} \cdot 4 \cdot \sqrt{\frac{\pi \cdot 2k_B^5 T^5}{m^5}} \\
+&amp;= \frac{3}{2} \left( \frac{2k_B T}{m} \right)^{2} \sqrt{\frac{\pi 2k_B T}{m}}
+\end{aligned}
 \]</div>
 <p>外側の係数と合わせて慎重に相殺を行います。</p>
 <div class="arithmatex">\[
-\langle v^2 \rangle = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \cdot \frac{3}{8} \sqrt{\pi} \left( \frac{2k_B T}{m} \right)^{5/2} = \frac{3}{2} \cdot \pi \cdot \sqrt{\pi} \cdot \left( \frac{m}{2\pi k_B T} \cdot \frac{2k_B T}{m} \right)^{3/2} \cdot \frac{2k_B T}{m} = \frac{3k_B T}{m}
+\begin{aligned}
+\langle v^2 \rangle &amp;= 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} \cdot \frac{3}{8} \sqrt{\pi} \left( \frac{2k_B T}{m} \right)^{5/2} \\
+&amp;= \frac{3}{2} \cdot \pi \cdot \sqrt{\pi} \cdot \left( \frac{m}{2\pi k_B T} \cdot \frac{2k_B T}{m} \right)^{3/2} \cdot \frac{2k_B T}{m} \\
+&amp;= \frac{3k_B T}{m}
+\end{aligned}
 \]</div>
 <p>この結果から，<span class="arithmatex">\(\langle \frac{1}{2}m v^2 \rangle = \frac{3}{2}k_B T\)</span> を得ます。
 求める二乗平均平方根速度 <span class="arithmatex">\(v_{\mathrm{rms}}\)</span> は，この平方根をとったものです。</p>
@@ -14585,7 +14612,7 @@ v_{\mathrm{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{3k_B T}{m}}
 </ul>
 <p>したがって，共通の因数 <span class="arithmatex">\(\sqrt{\frac{k_B T}{m}}\)</span> を除いた大きさの大小関係は以下のようになります。</p>
 <div class="arithmatex">\[
-v_{\mathrm{mp}} &lt; \langle v \rangle &lt; v_{\mathrm{rms}}
+\finalanswer{v_{\mathrm{mp}} &lt; \langle v \rangle &lt; v_{\mathrm{rms}}}
 \]</div>
 <p>マクスウェル分布は右側に裾を持つため，平均速度は最確速度より大きくなります。</p>
 <p>さらに，二乗平均平方根速度はエネルギーに直結する大きな速度をより重く評価する平均のとり方であるため，3つの中で最も大きな値をとります。</p>

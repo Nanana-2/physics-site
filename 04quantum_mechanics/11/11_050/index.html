@@ -14539,7 +14539,10 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ \psi_{\text{sc}}^* \frac{\partial \p
 \]</div>
 <p>指数関数部分が相殺して消去されます。</p>
 <div class="arithmatex">\[
-J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \right] = \frac{\hbar k}{m r^2} |f(\theta)|^2
+\begin{aligned}
+J_{\text{sc}, r} &amp;= \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \right] \\
+&amp;= \frac{\hbar k}{m r^2} |f(\theta)|^2
+\end{aligned}
 \]</div>
 <p>この確率流密度を，半径 <span class="arithmatex">\(r\)</span> の球面全体で積分します。微小面積要素は <span class="arithmatex">\(dS = r^2 \sin\theta d\theta d\phi\)</span> であり，積分範囲は <span class="arithmatex">\(\theta\)</span> が <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\pi\)</span> まで， <span class="arithmatex">\(\phi\)</span> が <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(2\pi\)</span> までです。</p>
 <div class="arithmatex">\[
@@ -14547,7 +14550,10 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \righ
 \]</div>
 <p>分母の <span class="arithmatex">\(r^2\)</span> と分子の <span class="arithmatex">\(r^2\)</span> が約分されます。また， <span class="arithmatex">\(\phi\)</span> の積分から <span class="arithmatex">\(2\pi\)</span> が外に出ます。</p>
 <div class="arithmatex">\[
-= \frac{\hbar k}{m} \int_{0}^{2\pi} d\phi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta = \frac{\hbar k}{m} \cdot 2\pi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta
+\begin{aligned}
+ &amp;= \frac{\hbar k}{m} \int_{0}^{2\pi} d\phi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta \\
+&amp;= \frac{\hbar k}{m} \cdot 2\pi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta
+\end{aligned}
 \]</div>
 <p>ここで，全断面積の定義式は微分断面積 <span class="arithmatex">\(|f(\theta)|^2\)</span> を全立体角で積分したものであるため，以下の関係が成り立っています。</p>
 <div class="arithmatex">\[
@@ -14555,7 +14561,7 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \righ
 \]</div>
 <p>これを代入することにより，散乱波の総確率流が全断面積を用いて表されます。</p>
 <div class="arithmatex">\[
-\oint_{S} \boldsymbol{J}_{\text{sc}} \cdot \hat{\boldsymbol{r}} \, dS = \frac{\hbar k}{m} \sigma
+\finalanswer{\oint_{S} \boldsymbol{J}_{\text{sc}} \cdot \hat{\boldsymbol{r}} \, dS = \frac{\hbar k}{m} \sigma}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>球面上を通過する総確率流が 0 になるという条件から，入射波の単独寄与が消えた後の残る 2 つの積分の和を等式に表します。</p>
@@ -14572,7 +14578,7 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \righ
 \]</div>
 <p>マイナスの項を右辺に移項します。</p>
 <div class="arithmatex">\[
-\sigma = \frac{4\pi}{k} \text{Im}[f(0)]
+\finalanswer{\sigma = \frac{4\pi}{k} \text{Im}[f(0)]}
 \]</div>
 <p>したがって，全断面積は前方散乱振幅の虚部によって表されます。</p>
 

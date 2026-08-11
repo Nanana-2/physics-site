@@ -14543,7 +14543,10 @@
 \]</div>
 <p>この式をさらに <span class="arithmatex">\(\mu\)</span> で偏微分します。再び <span class="arithmatex">\(\beta N\)</span> が前に降りるため，以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 \Xi}{\partial \mu^2} = \sum_N \sum_i \beta^2 N^2 \exp\left[ -\beta(E_{i,N} - \mu N) \right] = \beta^2 \sum_N \sum_i N^2 \exp\left[ -\beta(E_{i,N} - \mu N) \right]
+\begin{aligned}
+\frac{\partial^2 \Xi}{\partial \mu^2} &amp;= \sum_N \sum_i \beta^2 N^2 \exp\left[ -\beta(E_{i,N} - \mu N) \right] \\
+&amp;= \beta^2 \sum_N \sum_i N^2 \exp\left[ -\beta(E_{i,N} - \mu N) \right]
+\end{aligned}
 \]</div>
 <p>この式の両辺を <span class="arithmatex">\(\beta^2 \Xi\)</span> で割ります。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14554,7 @@
 \]</div>
 <p>右辺の和と <span class="arithmatex">\(\Xi\)</span> の組は <span class="arithmatex">\(N^2\)</span> のアンサンブル平均なので，目的の式を得ます。</p>
 <div class="arithmatex">\[
-\langle N^2 \rangle = \frac{1}{\beta^2 \Xi} \frac{\partial^2 \Xi}{\partial \mu^2}
+\finalanswer{\langle N^2 \rangle = \frac{1}{\beta^2 \Xi} \frac{\partial^2 \Xi}{\partial \mu^2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>大分配関数の対数 <span class="arithmatex">\(\log \Xi\)</span> を <span class="arithmatex">\(\mu\)</span> で1階偏微分した式を出発点とします。</p>
@@ -14560,28 +14563,43 @@
 \]</div>
 <p>この式をもう一度 <span class="arithmatex">\(\mu\)</span> で偏微分します。商の微分公式を適用します。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 \log \Xi}{\partial \mu^2} = \frac{\frac{\partial^2 \Xi}{\partial \mu^2} \cdot \Xi - \frac{\partial \Xi}{\partial \mu} \cdot \frac{\partial \Xi}{\partial \mu}}{\Xi^2} = \frac{1}{\Xi} \frac{\partial^2 \Xi}{\partial \mu^2} - \left( \frac{1}{\Xi} \frac{\partial \Xi}{\partial \mu} \right)^2
+\begin{aligned}
+\frac{\partial^2 \log \Xi}{\partial \mu^2} &amp;= \frac{\frac{\partial^2 \Xi}{\partial \mu^2} \cdot \Xi - \frac{\partial \Xi}{\partial \mu} \cdot \frac{\partial \Xi}{\partial \mu}}{\Xi^2} \\
+&amp;= \frac{1}{\Xi} \frac{\partial^2 \Xi}{\partial \mu^2} - \left( \frac{1}{\Xi} \frac{\partial \Xi}{\partial \mu} \right)^2
+\end{aligned}
 \]</div>
 <p>(1) の結果および平均粒子数の微分関係式を各項に適用します。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 \log \Xi}{\partial \mu^2} = \beta^2 \langle N^2 \rangle - (\beta \langle N \rangle)^2 = \beta^2 \left( \langle N^2 \rangle - \langle N \rangle^2 \right)
+\begin{aligned}
+\frac{\partial^2 \log \Xi}{\partial \mu^2} &amp;= \beta^2 \langle N^2 \rangle - (\beta \langle N \rangle)^2 \\
+&amp;= \beta^2 \left( \langle N^2 \rangle - \langle N \rangle^2 \right)
+\end{aligned}
 \]</div>
 <p>分散の定義 <span class="arithmatex">\(\langle (N - \langle N \rangle)^2 \rangle = \langle N^2 \rangle - \langle N \rangle^2\)</span> を用いて式を整理します。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 \log \Xi}{\partial \mu^2} = \beta^2 \langle (N - \langle N \rangle)^2 \rangle \quad \implies \quad \langle (N - \langle N \rangle)^2 \rangle = \frac{1}{\beta^2} \frac{\partial^2 \log \Xi}{\partial \mu^2}
+\begin{aligned}
+\frac{\partial^2 \log \Xi}{\partial \mu^2} &amp;= \beta^2 \langle (N - \langle N \rangle)^2 \rangle \quad \implies \quad \langle (N - \langle N \rangle)^2 \rangle \\
+&amp;= \frac{1}{\beta^2} \frac{\partial^2 \log \Xi}{\partial \mu^2}
+\end{aligned}
 \]</div>
 <p>ここで，右辺の微分を <span class="arithmatex">\(\frac{1}{\beta} \frac{\partial}{\partial \mu} \left( \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu} \right)\)</span> と変形します。括弧の中身は平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> の表現そのものであるため，以下の関係が導かれます。</p>
 <div class="arithmatex">\[
-\langle (N - \langle N \rangle)^2 \rangle = \frac{1}{\beta} \frac{\partial \langle N \rangle}{\partial \mu}
+\finalanswer{\langle (N - \langle N \rangle)^2 \rangle = \frac{1}{\beta} \frac{\partial \langle N \rangle}{\partial \mu}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた粒子数の分散の式に，問題文で与えられた熱力学的関係式 <span class="arithmatex">\(\frac{\partial \langle N \rangle}{\partial \mu} = \frac{\langle N \rangle^2}{V} \kappa_T\)</span> と <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\langle (N - \langle N \rangle)^2 \rangle = k_B T \frac{\partial \langle N \rangle}{\partial \mu} = k_B T \frac{\langle N \rangle^2}{V} \kappa_T
+\begin{aligned}
+\langle (N - \langle N \rangle)^2 \rangle &amp;= k_B T \frac{\partial \langle N \rangle}{\partial \mu} \\
+&amp;= k_B T \frac{\langle N \rangle^2}{V} \kappa_T
+\end{aligned}
 \]</div>
 <p>粒子数の標準偏差 <span class="arithmatex">\(\Delta N\)</span> は，この分散の平方根として求められます。</p>
 <div class="arithmatex">\[
-\Delta N = \sqrt{k_B T \frac{\langle N \rangle^2}{V} \kappa_T} = \langle N \rangle \sqrt{\frac{k_B T \kappa_T}{V}}
+\begin{aligned}
+\Delta N &amp;= \sqrt{k_B T \frac{\langle N \rangle^2}{V} \kappa_T} \\
+&amp;= \langle N \rangle \sqrt{\frac{k_B T \kappa_T}{V}}
+\end{aligned}
 \]</div>
 <p>両辺を平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> で割ることで，相対揺らぎの式が得られます。</p>
 <div class="arithmatex">\[
@@ -14589,7 +14607,7 @@
 \]</div>
 <p><span class="arithmatex">\(V \to \infty\)</span> を考えます。等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span> は系の大きさに依存しないため，相対揺らぎは <span class="arithmatex">\(1/\sqrt{V}\)</span> に比例して0へ収束します。</p>
 <div class="arithmatex">\[
-\lim_{V \to \infty} \frac{\Delta N}{\langle N \rangle} = 0
+\finalanswer{\lim_{V \to \infty} \frac{\Delta N}{\langle N \rangle} = 0}
 \]</div>
 <p>したがって，巨視的極限では粒子数の相対揺らぎを無視できます。</p>
 

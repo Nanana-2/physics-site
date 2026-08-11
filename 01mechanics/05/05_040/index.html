@@ -14561,7 +14561,7 @@ m \ddot{x} = -kx - \gamma \dot{x}
 \]</div>
 <p>ここで，与えられた定数 <span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span>，<span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いると，<span class="arithmatex">\(\frac{\gamma}{m} = 2\gamma_0\)</span>，<span class="arithmatex">\(\frac{k}{m} = \omega_0^2\)</span> となるため，運動方程式は以下の通りに整理されます。</p>
 <div class="arithmatex">\[
-\ddot{x} + 2\gamma_0 \dot{x} + \omega_0^2 x = 0
+\finalanswer{\ddot{x} + 2\gamma_0 \dot{x} + \omega_0^2 x = 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1)で得られた線形同次微分方程式の解を <span class="arithmatex">\(x(t) = e^{\lambda t}\)</span> と仮定して代入します。<span class="arithmatex">\(\dot{x} = \lambda e^{\lambda t}\)</span>，<span class="arithmatex">\(\ddot{x} = \lambda^2 e^{\lambda t}\)</span> であるため，運動方程式に代入すると次式を得ます。</p>
@@ -14574,7 +14574,7 @@ m \ddot{x} = -kx - \gamma \dot{x}
 \]</div>
 <p>この2次方程式を <span class="arithmatex">\(\lambda\)</span> について解くと，解は以下のようになります。</p>
 <div class="arithmatex">\[
-\lambda = -\gamma_0 \pm \sqrt{\gamma_0^2 - \omega_0^2}
+\finalanswer{\lambda = -\gamma_0 \pm \sqrt{\gamma_0^2 - \omega_0^2}}
 \]</div>
 <p>根号の中身 <span class="arithmatex">\(\gamma_0^2-\omega_0^2\)</span> の符号によって，以下の3つに分かれます。</p>
 <ol>
@@ -14613,14 +14613,14 @@ B = \frac{\gamma_0}{\omega} x_0
 \]</div>
 <p>したがって，求める解 <span class="arithmatex">\(x(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-x(t) = x_0 e^{-\gamma_0 t} \left( \cos \omega t + \frac{\gamma_0}{\omega} \sin \omega t \right)
+\finalanswer{x(t) = x_0 e^{-\gamma_0 t} \left( \cos \omega t + \frac{\gamma_0}{\omega} \sin \omega t \right)}
 \]</div>
 <p>三角関数の合成公式を用いると，この解はさらに以下のように書き換えることができます。</p>
 <div class="arithmatex">\[
 x(t) = x_0 \sqrt{1 + \left(\frac{\gamma_0}{\omega}\right)^2} e^{-\gamma_0 t} \cos(\omega t - \phi)
 \]</div>
 <div class="arithmatex">\[
-\tan \phi = \frac{\gamma_0}{\omega}
+\finalanswer{\tan \phi = \frac{\gamma_0}{\omega}}
 \]</div>
 <p>振幅は <span class="arithmatex">\(e^{-\gamma_0t}\)</span> に比例して減少します。質点は原点を通過しながら往復し，最終的に <span class="arithmatex">\(x=0\)</span> で静止します。</p>
 <h3 id="4">(4)</h3>
@@ -14643,7 +14643,7 @@ x(0) = C_1 = x_0
 \]</div>
 <p>よって，臨界減衰の解は以下のようになります。</p>
 <div class="arithmatex">\[
-x(t) = x_0 (1 + \gamma_0 t) e^{-\gamma_0 t}
+\finalanswer{x(t) = x_0 (1 + \gamma_0 t) e^{-\gamma_0 t}}
 \]</div>
 <p><strong><span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span> の場合</strong>
 <span class="arithmatex">\(\beta=\sqrt{\gamma_0^2-\omega_0^2}&gt;0\)</span> とおくと，特性方程式の解は <span class="arithmatex">\(\lambda=-\gamma_0\pm\beta\)</span> となり，一般解は次のように表されます。</p>
@@ -14659,7 +14659,11 @@ x(t) = e^{-\gamma_0 t} \left( D_1 e^{\beta t} + D_2 e^{-\beta t} \right)
 x(0) = D_1 + D_2 = x_0
 \]</div>
 <div class="arithmatex">\[
-\dot{x}(0) = -\gamma_0 (D_1 + D_2) + \beta (D_1 - D_2) = 0 \implies \beta (D_1 - D_2) = \gamma_0 x_0
+\begin{aligned}
+\dot{x}(0) &amp;= -\gamma_0 (D_1 + D_2) + \beta (D_1 - D_2) \\
+&amp;= 0 \implies \beta (D_1 - D_2) \\
+&amp;= \gamma_0 x_0
+\end{aligned}
 \]</div>
 <p>これらの連立方程式から <span class="arithmatex">\(D_1, D_2\)</span> を求めます。</p>
 <div class="arithmatex">\[
@@ -14677,7 +14681,7 @@ D_2 &amp;= \frac{x_0}{2} \left( 1 - \frac{\gamma_0}{\beta} \right)
 \]</div>
 <p>したがって，過減衰の解は以下のようになります。</p>
 <div class="arithmatex">\[
-x(t) = \frac{x_0}{2} e^{-\gamma_0 t} \left[ \left( 1 + \frac{\gamma_0}{\beta} \right) e^{\beta t} + \left( 1 - \frac{\gamma_0}{\beta} \right) e^{-\beta t} \right]
+\finalanswer{x(t) = \frac{x_0}{2} e^{-\gamma_0 t} \left[ \left( 1 + \frac{\gamma_0}{\beta} \right) e^{\beta t} + \left( 1 - \frac{\gamma_0}{\beta} \right) e^{-\beta t} \right]}
 \]</div>
 <p>いずれの場合も特性根は実数であるため，解に三角関数は現れず，質点は振動せずに平衡点へ近づきます。臨界減衰は，振動を生じない範囲で最も速く平衡点へ戻る条件です。</p>
 

@@ -14532,11 +14532,14 @@
 <h3 id="1">(1)</h3>
 <p>1つの調和振動子がとり得る状態のエネルギーをすべて足し合わせて分配関数 <span class="arithmatex">\(z\)</span> を構成します。</p>
 <div class="arithmatex">\[
-z = \sum_{n=0}^\infty \exp\left[ -\beta \hbar \omega_E \left( n + \frac{1}{2} \right) \right] = \exp\left( -\frac{1}{2}\beta \hbar \omega_E \right) \sum_{n=0}^\infty \left[ \exp\left( -\beta \hbar \omega_E \right) \right]^n
+\begin{aligned}
+z &amp;= \sum_{n=0}^\infty \exp\left[ -\beta \hbar \omega_E \left( n + \frac{1}{2} \right) \right] \\
+&amp;= \exp\left( -\frac{1}{2}\beta \hbar \omega_E \right) \sum_{n=0}^\infty \left[ \exp\left( -\beta \hbar \omega_E \right) \right]^n
+\end{aligned}
 \]</div>
 <p>和の境界は初項 1，公比 <span class="arithmatex">\(\exp( -\beta \hbar \omega_E ) &lt; 1\)</span> の無限等比級数であるため，公式を適用してまとめます。</p>
 <div class="arithmatex">\[
-z = \frac{\exp\left( -\frac{1}{2}\beta \hbar \omega_E \right)}{1 - \exp\left( -\beta \hbar \omega_E \right)}
+\finalanswer{z = \frac{\exp\left( -\frac{1}{2}\beta \hbar \omega_E \right)}{1 - \exp\left( -\beta \hbar \omega_E \right)}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>1振動子あたりの平均エネルギー <span class="arithmatex">\(\langle \epsilon \rangle\)</span> を求めるため， <span class="arithmatex">\(\log z\)</span> を計算して <span class="arithmatex">\(\beta\)</span> で微分します。</p>
@@ -14544,11 +14547,18 @@ z = \frac{\exp\left( -\frac{1}{2}\beta \hbar \omega_E \right)}{1 - \exp\left( -\
 \log z = -\frac{1}{2}\beta \hbar \omega_E - \log\left[ 1 - \exp\left( -\beta \hbar \omega_E \right) \right]
 \]</div>
 <div class="arithmatex">\[
-\langle \epsilon \rangle = -\frac{\partial \log z}{\partial \beta} = \frac{1}{2}\hbar \omega_E + \frac{\hbar \omega_E \exp\left( -\beta \hbar \omega_E \right)}{1 - \exp\left( -\beta \hbar \omega_E \right)} = \frac{1}{2}\hbar \omega_E + \frac{\hbar \omega_E}{\exp\left( \beta \hbar \omega_E \right) - 1}
+\begin{aligned}
+\langle \epsilon \rangle &amp;= -\frac{\partial \log z}{\partial \beta} \\
+&amp;= \frac{1}{2}\hbar \omega_E + \frac{\hbar \omega_E \exp\left( -\beta \hbar \omega_E \right)}{1 - \exp\left( -\beta \hbar \omega_E \right)} \\
+&amp;= \frac{1}{2}\hbar \omega_E + \frac{\hbar \omega_E}{\exp\left( \beta \hbar \omega_E \right) - 1}
+\end{aligned}
 \]</div>
 <p>この第1項は絶対零度でも残る零点エネルギー，第2項はボース・アインシュタイン統計に従う熱励起エネルギーに対応しています。系全体の内部エネルギー <span class="arithmatex">\(U\)</span> は，これを <span class="arithmatex">\(3N\)</span> 倍したものになります。</p>
 <div class="arithmatex">\[
-U = 3N \langle \epsilon \rangle = 3N \left[ \frac{1}{2}\hbar \omega_E + \frac{\hbar \omega_E}{\exp\left( \beta \hbar \omega_E \right) - 1} \right]
+\begin{aligned}
+U &amp;= 3N \langle \epsilon \rangle \\
+&amp;= \finalanswer{3N \left[ \frac{1}{2}\hbar \omega_E + \frac{\hbar \omega_E}{\exp\left( \beta \hbar \omega_E \right) - 1} \right]}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分することで求まります。連鎖律 <span class="arithmatex">\(\frac{\partial U}{\partial T} = \frac{\partial U}{\partial \beta} \frac{\partial \beta}{\partial T}\)</span> を利用します。ここで <span class="arithmatex">\(\frac{\partial \beta}{\partial T} = -\frac{1}{k_B T^2}\)</span> です。</p>
@@ -14556,7 +14566,10 @@ U = 3N \langle \epsilon \rangle = 3N \left[ \frac{1}{2}\hbar \omega_E + \frac{\h
 \frac{\partial U}{\partial \beta} = 3N \left[ -\frac{\hbar \omega_E \cdot \hbar \omega_E \exp(\beta \hbar \omega_E)}{\left( \exp(\beta \hbar \omega_E) - 1 \right)^2} \right]
 \]</div>
 <div class="arithmatex">\[
-C_V = \left( -\frac{1}{k_B T^2} \right) \cdot \left( -3N \frac{\hbar^2 \omega_E^2 \exp(\beta \hbar \omega_E)}{\left( \exp(\beta \hbar \omega_E) - 1 \right)^2} \right) = 3N k_B \left( \frac{\hbar \omega_E}{k_B T} \right)^2 \frac{\exp\left( \frac{\hbar \omega_E}{k_B T} \right)}{\left[ \exp\left( \frac{\hbar \omega_E}{k_B T} \right) - 1 \right]^2}
+\begin{aligned}
+C_V &amp;= \left( -\frac{1}{k_B T^2} \right) \cdot \left( -3N \frac{\hbar^2 \omega_E^2 \exp(\beta \hbar \omega_E)}{\left( \exp(\beta \hbar \omega_E) - 1 \right)^2} \right) \\
+&amp;= 3N k_B \left( \frac{\hbar \omega_E}{k_B T} \right)^2 \frac{\exp\left( \frac{\hbar \omega_E}{k_B T} \right)}{\left[ \exp\left( \frac{\hbar \omega_E}{k_B T} \right) - 1 \right]^2}
+\end{aligned}
 \]</div>
 <p>ここでアインシュタイン温度 <span class="arithmatex">\(T_E = \frac{\hbar \omega_E}{k_B}\)</span> を定義すると，熱容量の式は以下のように簡潔に書き表せます。</p>
 <div class="arithmatex">\[
@@ -14568,15 +14581,18 @@ C_V = 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{\exp(T_E/T)}{[\exp(T_E/T) - 1]
   変数が非常に小さくなるため，分母の指数関数を <span class="arithmatex">\(\exp(T_E/T) \simeq 1 + \frac{T_E}{T}\)</span> と近似し，分子の指数関数は 1 とみなせます。</li>
 </ul>
 <p>$$
-  C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left[ \left( 1 + \frac{T_E}{T} \right) - 1 \right]^2} = 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left( \frac{T_E}{T} \right)^2} = 3N k_B
-  $$</p>
+\begin{aligned}
+C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left[ \left( 1 + \frac{T_E}{T} \right) - 1 \right]^2} &amp;= 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left( \frac{T_E}{T} \right)^2} \
+&amp;= 3N k_B
+\end{aligned}
+$$</p>
 <p>これにより，高温側では量子効果が薄れ，古典論によるデュロン・プティの法則が正しく再現されることが示されました。</p>
 <ul>
 <li><strong>低温極限<span class="arithmatex">\(T \ll T_E\)</span></strong>
   変数が非常に大きくなるため，分母の括弧内では <span class="arithmatex">\(\exp(T_E/T) \gg 1\)</span> となり， <span class="arithmatex">\(-1\)</span> の存在を無視できます。</li>
 </ul>
 <p>$$
-  C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{\exp(T_E/T)}{\left[ \exp(T_E/T) \right]^2} = 3N k_B \left( \frac{T_E}{T} \right)^2 \exp\left( -\frac{T_E}{T} \right)
+  \finalanswer{C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{\exp(T_E/T)}{\left[ \exp(T_E/T) \right]^2} = 3N k_B \left( \frac{T_E}{T} \right)^2 \exp\left( -\frac{T_E}{T} \right)}
   $$</p>
 <p>指数関数 <span class="arithmatex">\(\exp(-T_E/T)\)</span> が多項式因子より速くゼロへ近づくため，熱容量は指数関数的に減少します。実際の固体では低温で <span class="arithmatex">\(C_V\propto T^3\)</span> となるため，この違いは振動数を一定としたアインシュタイン模型の限界を示します。</p>
 

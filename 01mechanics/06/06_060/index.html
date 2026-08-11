@@ -14558,30 +14558,42 @@ y_{n-1} = A e^{i\{k_x (n-1)a - \omega t\}} = y_n e^{-ik_x a}
 \]</div>
 <p>設定された範囲において <span class="arithmatex">\(\omega &gt; 0\)</span> および <span class="arithmatex">\(\sin \frac{k_x a}{2} \ge 0\)</span> であるため，両辺の平方根をとることで求める分散関係が導かれます。</p>
 <div class="arithmatex">\[
-\omega = 2 \sqrt{\frac{k}{m}} \sin \frac{k_x a}{2}
+\finalanswer{\omega = 2 \sqrt{\frac{k}{m}} \sin \frac{k_x a}{2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>位相速度 <span class="arithmatex">\(v_{\text{p}}\)</span> の定義式に (1) の結果を代入します。</p>
 <div class="arithmatex">\[
-v_{\text{p}} = \frac{\omega}{k_x} = \frac{2}{k_x} \sqrt{\frac{k}{m}} \sin \frac{k_x a}{2}
+\begin{aligned}
+v_{\text{p}} &amp;= \frac{\omega}{k_x} \\
+&amp;= \frac{2}{k_x} \sqrt{\frac{k}{m}} \sin \frac{k_x a}{2}
+\end{aligned}
 \]</div>
 <p>群速度 <span class="arithmatex">\(v_{\text{g}}\)</span> は分散関係を波数 <span class="arithmatex">\(k_x\)</span> で微分することで求まります。合成関数の微分法を用います。</p>
 <div class="arithmatex">\[
-v_{\text{g}} = \frac{d\omega}{dk_x} = 2 \sqrt{\frac{k}{m}} \cdot \left( \cos \frac{k_x a}{2} \right) \cdot \frac{a}{2}
+\begin{aligned}
+v_{\text{g}} &amp;= \frac{d\omega}{dk_x} \\
+&amp;= 2 \sqrt{\frac{k}{m}} \cdot \left( \cos \frac{k_x a}{2} \right) \cdot \frac{a}{2}
+\end{aligned}
 \]</div>
 <p>係数を整理します。</p>
 <div class="arithmatex">\[
-v_{\text{g}} = a \sqrt{\frac{k}{m}} \cos \frac{k_x a}{2}
+\finalanswer{v_{\text{g}} = a \sqrt{\frac{k}{m}} \cos \frac{k_x a}{2}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>長波長極限 <span class="arithmatex">\(k_x \to 0\)</span> における各速度の極限値を計算します。</p>
 <p>マクローリン展開の近似式 <span class="arithmatex">\(\sin \theta \approx \theta\)</span> を位相速度の式に適用します。</p>
 <div class="arithmatex">\[
-\lim_{k_x \to 0} v_{\text{p}} = \lim_{k_x \to 0} \frac{2}{k_x} \sqrt{\frac{k}{m}} \left( \frac{k_x a}{2} \right) = a \sqrt{\frac{k}{m}}
+\begin{aligned}
+\lim_{k_x \to 0} v_{\text{p}} &amp;= \lim_{k_x \to 0} \frac{2}{k_x} \sqrt{\frac{k}{m}} \left( \frac{k_x a}{2} \right) \\
+&amp;= a \sqrt{\frac{k}{m}}
+\end{aligned}
 \]</div>
 <p>次に，群速度の式において <span class="arithmatex">\(\cos 0 = 1\)</span> となる性質を適用します。</p>
 <div class="arithmatex">\[
-\lim_{k_x \to 0} v_{\text{g}} = a \sqrt{\frac{k}{m}} \cdot 1 = a \sqrt{\frac{k}{m}}
+\begin{aligned}
+\lim_{k_x \to 0} v_{\text{g}} &amp;= a \sqrt{\frac{k}{m}} \cdot 1 \\
+&amp;= \finalanswer{a \sqrt{\frac{k}{m}}}
+\end{aligned}
 \]</div>
 <p>したがって，長波長極限では位相速度と群速度は等しくなります。</p>
 

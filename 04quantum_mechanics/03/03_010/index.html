@@ -14536,7 +14536,7 @@ V(x) = \begin{cases} 0 &amp; (0 &lt; x &lt; L) \\ \infty &amp; (x \le 0, \, L \l
 \]</div>
 <p>ここで <span class="arithmatex">\(k^2 = \frac{2mE}{\hbar^2}\)</span> と置くと，方程式は二階の線形常微分方程式 <span class="arithmatex">\(\frac{d^2 \psi}{dx^2} = -k^2 \psi\)</span> となります。この方程式の一般解は，サインとコサインの重ね合わせで表現されます。</p>
 <div class="arithmatex">\[
-\psi(x) = A \sin(kx) + B \cos(kx)
+\finalanswer{\psi(x) = A \sin(kx) + B \cos(kx)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>得られた一般解に境界条件を適用して，係数と定数を絞り込みます。</p>
@@ -14563,7 +14563,10 @@ k = \frac{n\pi}{L}
 \]</div>
 <p>この <span class="arithmatex">\(k\)</span> を定義式 <span class="arithmatex">\(E = \frac{\hbar^2 k^2}{2m}\)</span> に代入することで，エネルギー固有値が導かれます。</p>
 <div class="arithmatex">\[
-E_n = \frac{\hbar^2}{2m} \left( \frac{n\pi}{L} \right)^2 = \frac{n^2 \pi^2 \hbar^2}{2mL^2}
+\begin{aligned}
+E_n &amp;= \frac{\hbar^2}{2m} \left( \frac{n\pi}{L} \right)^2 \\
+&amp;= \finalanswer{\frac{n^2 \pi^2 \hbar^2}{2mL^2}}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) より，波動関数は <span class="arithmatex">\(\psi_n(x) = A \sin\left(\frac{n\pi x}{L}\right)\)</span> です。これが規格化条件を満たすように定数 <span class="arithmatex">\(A\)</span> を決めます。井戸の外では波動関数がゼロなので，積分の範囲は <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(L\)</span> までとなります。</p>
@@ -14580,7 +14583,7 @@ E_n = \frac{\hbar^2}{2m} \left( \frac{n\pi}{L} \right)^2 = \frac{n^2 \pi^2 \hbar
 \]</div>
 <p>係数を正の実数として選ぶと， <span class="arithmatex">\(A = \sqrt{\frac{2}{L}}\)</span> となります。したがって，規格化された固有関数は以下のようになります。</p>
 <div class="arithmatex">\[
-\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi x}{L}\right)
+\finalanswer{\psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi x}{L}\right)}
 \]</div>
 
 

@@ -14531,39 +14531,55 @@ x\tanh\left(\frac{x}{2}\right)=2
 <h3 id="1">(1)</h3>
 <p>1つの粒子がとりうるエネルギー準位は <span class="arithmatex">\(0\)</span> と <span class="arithmatex">\(\epsilon\)</span> の2つです。したがって，1粒子あたりの分配関数 <span class="arithmatex">\(z(\beta)\)</span> は定義通り以下のようになります。</p>
 <div class="arithmatex">\[
-z(\beta) = \sum_{i} \exp(-\beta E_i) = \exp(-\beta \cdot 0) + \exp(-\beta \epsilon) = 1 + \exp(-\beta \epsilon)
+\begin{aligned}
+z(\beta) &amp;= \sum_{i} \exp(-\beta E_i) \\
+&amp;= \exp(-\beta \cdot 0) + \exp(-\beta \epsilon) \\
+&amp;= \finalanswer{1 + \exp(-\beta \epsilon)}
+\end{aligned}
 \]</div>
 <p>系を構成する <span class="arithmatex">\(N\)</span> 個の粒子は互いに独立で区別可能であるため，系全体の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> は1粒子分配関数の <span class="arithmatex">\(N\)</span> 乗になります。</p>
 <div class="arithmatex">\[
-Z(\beta) = [z(\beta)]^N = \left( 1 + \exp(-\beta \epsilon) \right)^N
+\begin{aligned}
+Z(\beta) &amp;= [z(\beta)]^N \\
+&amp;= \finalanswer{\left( 1 + \exp(-\beta \epsilon) \right)^N}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>系全体の平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は，分配関数の対数微分を用いて計算できます。</p>
 <div class="arithmatex">\[
-\langle E \rangle = -\frac{\partial \log Z}{\partial \beta} = -\frac{\partial}{\partial \beta} \left[ N \log \left( 1 + \exp(-\beta \epsilon) \right) \right]
+\begin{aligned}
+\langle E \rangle &amp;= -\frac{\partial \log Z}{\partial \beta} \\
+&amp;= -\frac{\partial}{\partial \beta} \left[ N \log \left( 1 + \exp(-\beta \epsilon) \right) \right]
+\end{aligned}
 \]</div>
 <p>合成関数の微分法を適用します。</p>
 <div class="arithmatex">\[
-\langle E \rangle = -N \cdot \frac{1}{1 + \exp(-\beta \epsilon)} \cdot \left( -\epsilon \exp(-\beta \epsilon) \right) = \frac{N \epsilon \exp(-\beta \epsilon)}{1 + \exp(-\beta \epsilon)}
+\begin{aligned}
+\langle E \rangle &amp;= -N \cdot \frac{1}{1 + \exp(-\beta \epsilon)} \cdot \left( -\epsilon \exp(-\beta \epsilon) \right) \\
+&amp;= \frac{N \epsilon \exp(-\beta \epsilon)}{1 + \exp(-\beta \epsilon)}
+\end{aligned}
 \]</div>
 <p>分母・分子に <span class="arithmatex">\(\exp(\beta \epsilon)\)</span> を掛けて整理すると，逆温度 <span class="arithmatex">\(\beta\)</span> を用いたすっきりした表現になります。</p>
 <div class="arithmatex">\[
-\langle E \rangle = \frac{N \epsilon}{\exp(\beta \epsilon) + 1}
+\finalanswer{\langle E \rangle = \frac{N \epsilon}{\exp(\beta \epsilon) + 1}}
 \]</div>
 <p>ここに <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入することで，温度 <span class="arithmatex">\(T\)</span> の関数としても表せます。</p>
 <div class="arithmatex">\[
-\langle E \rangle = \frac{N \epsilon}{\exp\left(\frac{\epsilon}{k_B T}\right) + 1}
+\finalanswer{\langle E \rangle = \frac{N \epsilon}{\exp\left(\frac{\epsilon}{k_B T}\right) + 1}}
 \]</div>
 <p>低温極限 <span class="arithmatex">\(T \to 0\)</span> では <span class="arithmatex">\(\epsilon/(k_BT)\to\infty\)</span> なので，<span class="arithmatex">\(\langle E\rangle\to0\)</span> となります。したがって，すべての粒子が基底状態へ近づきます。</p>
 <p>高温極限 <span class="arithmatex">\(T \to \infty\)</span> では <span class="arithmatex">\(\epsilon/(k_BT)\to0\)</span> なので，<span class="arithmatex">\(\langle E\rangle\to N\epsilon/2\)</span> となります。これは，基底状態と励起状態の占有確率がともに <span class="arithmatex">\(1/2\)</span> へ近づくことを表します。</p>
 <h3 id="3">(3)</h3>
 <p>熱容量 <span class="arithmatex">\(C\)</span> を求めるため，(2) で得られた <span class="arithmatex">\(\langle E \rangle\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分します。商の微分公式と合成関数の微分を用います。</p>
 <div class="arithmatex">\[
-C = \frac{\partial \langle E \rangle}{\partial T} = N \epsilon \cdot \left[ - \frac{1}{\left( \exp\left(\frac{\epsilon}{k_B T}\right) + 1 \right)^2} \right] \cdot \exp\left(\frac{\epsilon}{k_B T}\right) \cdot \left( -\frac{\epsilon}{k_B T^2} \right)
+\begin{aligned}
+C &amp;= \frac{\partial \langle E \rangle}{\partial T} \\
+&amp;= N \epsilon \cdot \left[ - \frac{1}{\left( \exp\left(\frac{\epsilon}{k_B T}\right) + 1 \right)^2} \right] \cdot \exp\left(\frac{\epsilon}{k_B T}\right) \cdot \left( -\frac{\epsilon}{k_B T^2} \right)
+\end{aligned}
 \]</div>
 <p>マイナス同士を相殺させ，式を整理します。</p>
 <div class="arithmatex">\[
-C = N k_B \left( \frac{\epsilon}{k_B T} \right)^2 \frac{\exp\left(\frac{\epsilon}{k_B T}\right)}{\left( \exp\left(\frac{\epsilon}{k_B T}\right) + 1 \right)^2}
+\finalanswer{C = N k_B \left( \frac{\epsilon}{k_B T} \right)^2 \frac{\exp\left(\frac{\epsilon}{k_B T}\right)}{\left( \exp\left(\frac{\epsilon}{k_B T}\right) + 1 \right)^2}}
 \]</div>
 <p><span class="arithmatex">\(x=\epsilon/(k_BT)\)</span> と置くと，</p>
 <div class="arithmatex">\[
@@ -14572,16 +14588,18 @@ C = N k_B \left( \frac{\epsilon}{k_B T} \right)^2 \frac{\exp\left(\frac{\epsilon
 \]</div>
 <p>です。対数微分を0と置けば，</p>
 <div class="arithmatex">\[
-\frac{d}{dx}\log\left(\frac{C}{Nk_B}\right)
-=\frac{2}{x}-\tanh\left(\frac{x}{2}\right)=0
+\begin{aligned}
+\frac{d}{dx}\log\left(\frac{C}{Nk_B}\right) &amp;= \frac{2}{x}-\tanh\left(\frac{x}{2}\right) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>となるため，極大条件は</p>
 <div class="arithmatex">\[
-x\tanh\left(\frac{x}{2}\right)=2
+\finalanswer{x\tanh\left(\frac{x}{2}\right)=2}
 \]</div>
 <p>です。<span class="arithmatex">\(x\simeq2.40\)</span> を代入すると，</p>
 <div class="arithmatex">\[
-k_BT_{\mathrm{max}}\simeq\frac{\epsilon}{2.40}\simeq0.42\epsilon
+\finalanswer{k_BT_{\mathrm{max}}\simeq\frac{\epsilon}{2.40}\simeq0.42\epsilon}
 \]</div>
 <p>を得ます。</p>
 

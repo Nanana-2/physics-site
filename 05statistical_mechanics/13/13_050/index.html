@@ -14543,12 +14543,15 @@ Q(x, p) = \frac{1}{2\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
 <h3 id="1">(1)</h3>
 <p>提示されたウィグナー分布関数の式に，原点条件 <span class="arithmatex">\(x = 0, p = 0\)</span> を代入します。このとき無次元半径の2乗は <span class="arithmatex">\(R^2 = 0\)</span> となります。</p>
 <div class="arithmatex">\[
-W(0, 0) = \frac{1}{\pi\hbar} \left( 2 \cdot 0 - 1 \right) \exp\left( 0 \right) = -\frac{1}{\pi\hbar}
+\begin{aligned}
+W(0, 0) &amp;= \frac{1}{\pi\hbar} \left( 2 \cdot 0 - 1 \right) \exp\left( 0 \right) \\
+&amp;= -\frac{1}{\pi\hbar}
+\end{aligned}
 \]</div>
 <p>原点における値は負の実数となることがわかります。</p>
 <p>次に，この関数が負の値をとる条件を調べます。定数係数および指数関数の部分は常に正であるため，括弧の内部の符号が負になれば全体も負になります。</p>
 <div class="arithmatex">\[
-2R^2 - 1 &lt; 0 \implies R^2 &lt; \frac{1}{2} \implies R &lt; \frac{1}{\sqrt{2}}
+\finalanswer{2R^2 - 1 &lt; 0 \implies R^2 &lt; \frac{1}{2} \implies R &lt; \frac{1}{\sqrt{2}}}
 \]</div>
 <p>したがって，ウィグナー分布関数は，位相空間の原点を中心とする半径 <span class="arithmatex">\(\frac{1}{\sqrt{2}}\)</span> 未満の円盤状の領域において，一様に負の値をとることが示されます。</p>
 <h3 id="2">(2)</h3>
@@ -14562,7 +14565,10 @@ Q(x, p) \ge 0
 \]</div>
 <p>次に，原点 <span class="arithmatex">\(x = 0, p = 0\)</span> を代入します。 <span class="arithmatex">\(R^2 = 0\)</span> となるため，式全体に掛け算されて結果は 0 になります。</p>
 <div class="arithmatex">\[
-Q(0, 0) = \frac{1}{2\pi\hbar} \cdot 0 \cdot \exp\left( 0 \right) = 0
+\begin{aligned}
+Q(0, 0) &amp;= \frac{1}{2\pi\hbar} \cdot 0 \cdot \exp\left( 0 \right) \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>伏見関数は原点において負に沈み込むことなく，ちょうど 0 という最小値をとることがわかります。</p>
 <h3 id="3">(3)</h3>

@@ -14550,22 +14550,26 @@
 <h3 id="1">(1)</h3>
 <p>全セグメント数は右向きと左向きのセグメントの和であり，ゴム紐全体の長さ <span class="arithmatex">\(L\)</span> はそれぞれの向きが打ち消し合った正味の長さになります。</p>
 <div class="arithmatex">\[
-N = N_+ + N_-
+\finalanswer{N = N_+ + N_-}
 \]</div>
 <div class="arithmatex">\[
-L = a N_+ - a N_- = a(N_+ - N_-)
+L = a N_+ - a N_- = \finalanswer{a(N_+ - N_-)}
 \]</div>
 <p>2つ目の式に <span class="arithmatex">\(N_- = N - N_+\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-L = a(N_+ - (N - N_+)) = a(2N_+ - N) \quad \implies \quad \frac{L}{a} = 2N_+ - N
+\begin{aligned}
+L &amp;= a(N_+ - (N - N_+)) \\
+&amp;= a(2N_+ - N) \quad \implies \quad \frac{L}{a} \\
+&amp;= 2N_+ - N
+\end{aligned}
 \]</div>
 <p>これを <span class="arithmatex">\(N_+\)</span> について解くことで，以下の関係式が得られます。</p>
 <div class="arithmatex">\[
-N_+ = \frac{N}{2} + \frac{L}{2a}
+\finalanswer{N_+ = \frac{N}{2} + \frac{L}{2a}}
 \]</div>
 <p>同様に， <span class="arithmatex">\(N_-\)</span> についても以下の関係が成り立ちます。</p>
 <div class="arithmatex">\[
-N_- = \frac{N}{2} - \frac{L}{2a}
+\finalanswer{N_- = \frac{N}{2} - \frac{L}{2a}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>区別可能な <span class="arithmatex">\(N\)</span> 個 of セグメントから，右向きになる <span class="arithmatex">\(N_+\)</span> 個を選ぶ組合せの数が微視的状態数 <span class="arithmatex">\(\Omega(L)\)</span> に対応します。</p>
@@ -14581,20 +14585,28 @@ N_- = \frac{N}{2} - \frac{L}{2a}
 \]</div>
 <p>定数項 <span class="arithmatex">\(-N + N_+ + N_- = 0\)</span> となって消去されるため，ボルツマンの定数 <span class="arithmatex">\(k_B\)</span> を掛けたエントロピーの表現は以下のようになります。</p>
 <div class="arithmatex">\[
-S(L) \simeq k_B \left( N \log N - N_+ \log N_+ - N_- \log N_- \right)
+\finalanswer{S(L) \simeq k_B \left( N \log N - N_+ \log N_+ - N_- \log N_- \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>エントロピー <span class="arithmatex">\(S\)</span> を <span class="arithmatex">\(N_+\)</span> で偏微分します。この際， <span class="arithmatex">\(N_- = N - N_+\)</span> であるため <span class="arithmatex">\(\frac{\partial N_-}{\partial N_+} = -1\)</span> となることに注意します。</p>
 <div class="arithmatex">\[
-\frac{\partial S}{\partial N_+} = k_B \left[ - (\log N_+ + 1) - (\log N_- + 1)(-1) \right] = -k_B \log \left( \frac{N_+}{N_-} \right)
+\begin{aligned}
+\frac{\partial S}{\partial N_+} &amp;= k_B \left[ - (\log N_+ + 1) - (\log N_- + 1)(-1) \right] \\
+&amp;= -k_B \log \left( \frac{N_+}{N_-} \right)
+\end{aligned}
 \]</div>
 <p>また，(1) の結果より <span class="arithmatex">\(\frac{\partial N_+}{\partial L} = \frac{1}{2a}\)</span> です。これらを用いて，長さ <span class="arithmatex">\(L\)</span> によるエントロピーの微分を連鎖律から計算します。</p>
 <div class="arithmatex">\[
-\frac{\partial S}{\partial L} = \frac{\partial N_+}{\partial L} \frac{\partial S}{\partial N_+} = \frac{1}{2a} \left[ -k_B \log \left( \frac{N_+}{N_-} \right) \right] = -\frac{k_B}{2a} \log \left( \frac{\frac{N}{2} + \frac{L}{2a}}{\frac{N}{2} - \frac{L}{2a}} \right) = -\frac{k_B}{2a} \log \left( \frac{1 + \frac{L}{Na}}{1 - \frac{L}{Na}} \right)
+\begin{aligned}
+\frac{\partial S}{\partial L} &amp;= \frac{\partial N_+}{\partial L} \frac{\partial S}{\partial N_+} \\
+&amp;= \frac{1}{2a} \left[ -k_B \log \left( \frac{N_+}{N_-} \right) \right] \\
+&amp;= -\frac{k_B}{2a} \log \left( \frac{\frac{N}{2} + \frac{L}{2a}}{\frac{N}{2} - \frac{L}{2a}} \right) \\
+&amp;= -\frac{k_B}{2a} \log \left( \frac{1 + \frac{L}{Na}}{1 - \frac{L}{Na}} \right)
+\end{aligned}
 \]</div>
 <p>与えられた張力の定義式 <span class="arithmatex">\(f = -T \frac{\partial S}{\partial L}\)</span> にこれを代入します。</p>
 <div class="arithmatex">\[
-f = \frac{k_B T}{2a} \log \left( \frac{1 + \frac{L}{Na}}{1 - \frac{L}{Na}} \right)
+\finalanswer{f = \frac{k_B T}{2a} \log \left( \frac{1 + \frac{L}{Na}}{1 - \frac{L}{Na}} \right)}
 \]</div>
 <h3 id="4">(4)</h3>
 <p>対数の性質 <span class="arithmatex">\(\log(A/B) = \log A - \log B\)</span> を用いて，(3)で得られた張力の式を分解します。</p>
@@ -14607,11 +14619,14 @@ f = \frac{k_B T}{2a} \left[ \log \left( 1 + \frac{L}{Na} \right) - \log \left( 1
 \]</div>
 <p>これらを張力の式に代入して整理します。</p>
 <div class="arithmatex">\[
-f \simeq \frac{k_B T}{2a} \left[ \frac{L}{Na} - \left( -\frac{L}{Na} \right) \right] = \frac{k_B T}{2a} \left( \frac{2L}{Na} \right) = \left( \frac{k_B T}{N a^2} \right) L
+\begin{aligned}
+f \simeq \frac{k_B T}{2a} \left[ \frac{L}{Na} - \left( -\frac{L}{Na} \right) \right] &amp;= \frac{k_B T}{2a} \left( \frac{2L}{Na} \right) \\
+&amp;= \left( \frac{k_B T}{N a^2} \right) L
+\end{aligned}
 \]</div>
 <p>これにより，張力 <span class="arithmatex">\(f\)</span> はフックの法則 <span class="arithmatex">\(f = k L\)</span> に従います。ばね定数 <span class="arithmatex">\(k\)</span> は</p>
 <div class="arithmatex">\[
-k = \frac{k_B T}{N a^2}
+\finalanswer{k = \frac{k_B T}{N a^2}}
 \]</div>
 <p>この復元力は，高分子を引き伸ばすとセグメントの配置数が減少することに由来します。また，得られたばね定数は温度 <span class="arithmatex">\(T\)</span> に比例します。</p>
 

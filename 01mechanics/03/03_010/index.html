@@ -14524,7 +14524,7 @@ m \frac{d\boldsymbol{v}}{dt} \cdot \boldsymbol{v} = \boldsymbol{F} \cdot \boldsy
 \]</div>
 <p>左辺の括弧の内部は運動エネルギー <span class="arithmatex">\(K = \frac{1}{2} m |\boldsymbol{v}|^2\)</span> そのものであるため，運動方程式の左辺と速度の内積は，運動エネルギーの時間微分に一致することが示されます。</p>
 <div class="arithmatex">\[
-\frac{dK}{dt} = \boldsymbol{F} \cdot \boldsymbol{v}
+\finalanswer{\frac{dK}{dt} = \boldsymbol{F} \cdot \boldsymbol{v}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた等式 <span class="arithmatex">\(\frac{dK}{dt} = \boldsymbol{F} \cdot \boldsymbol{v}\)</span> の両辺を，時刻 <span class="arithmatex">\(t_{\text{A}}\)</span> から時刻 <span class="arithmatex">\(t_{\text{B}}\)</span> まで時間積分します。</p>
@@ -14533,7 +14533,10 @@ m \frac{d\boldsymbol{v}}{dt} \cdot \boldsymbol{v} = \boldsymbol{F} \cdot \boldsy
 \]</div>
 <p>左辺は微分したものを積分するため，上限と下限の値の差になります。時刻 <span class="arithmatex">\(t_{\text{A}}\)</span> における運動エネルギーを <span class="arithmatex">\(K_{\text{A}} = \frac{1}{2} m v_{\text{A}}^2\)</span> ，時刻 <span class="arithmatex">\(t_{\text{B}}\)</span> における運動エネルギーを <span class="arithmatex">\(K_{\text{B}} = \frac{1}{2} m v_{\text{B}}^2\)</span> とすると，左辺は次のようになります。</p>
 <div class="arithmatex">\[
-\int_{t_{\text{A}}}^{t_{\text{B}}} \frac{dK}{dt} dt = K_{\text{B}} - K_{\text{A}} = \frac{1}{2} m v_{\text{B}}^2 - \frac{1}{2} m v_{\text{A}}^2
+\begin{aligned}
+\int_{t_{\text{A}}}^{t_{\text{B}}} \frac{dK}{dt} dt &amp;= K_{\text{B}} - K_{\text{A}} \\
+&amp;= \frac{1}{2} m v_{\text{B}}^2 - \frac{1}{2} m v_{\text{A}}^2
+\end{aligned}
 \]</div>
 <p>次に右辺の積分を考察します。速度ベクトルの定義 <span class="arithmatex">\(\boldsymbol{v} = \frac{d\boldsymbol{r}}{dt}\)</span> を代入すると，微小時間変化にともなう移動距離との間に <span class="arithmatex">\(\boldsymbol{v} dt = d\boldsymbol{r}\)</span> という関係が成り立ちます。これを用いて，右辺の時間積分を位置に関する線積分へと変換します。</p>
 <div class="arithmatex">\[
@@ -14541,7 +14544,7 @@ m \frac{d\boldsymbol{v}}{dt} \cdot \boldsymbol{v} = \boldsymbol{F} \cdot \boldsy
 \]</div>
 <p>この線積分は，問題文で提示された力が質点に対しておこなう仕事 <span class="arithmatex">\(W\)</span> の定義そのものです。したがって，両辺の積分の結果を組み合わせることで，次の等式が得られます。</p>
 <div class="arithmatex">\[
-\frac{1}{2} m v_{\text{B}}^2 - \frac{1}{2} m v_{\text{A}}^2 = W
+\finalanswer{\frac{1}{2} m v_{\text{B}}^2 - \frac{1}{2} m v_{\text{A}}^2 = W}
 \]</div>
 <p>これにより，質点の運動エネルギーの変化量が，移動の間に外力から加えられた仕事の総量に完全に一致するという定理が導かれます。</p>
 

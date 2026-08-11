@@ -14520,7 +14520,7 @@ L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U(r)
 \]</div>
 <p>括弧の内部は共役運動量の定義式 <span class="arithmatex">\(p_k = \frac{\partial L}{\partial \dot{q}_k}\)</span> そのものであるため，式は次のように書き換えられます。</p>
 <div class="arithmatex">\[
-\frac{d}{dt} p_k = 0
+\finalanswer{\frac{d}{dt} p_k = 0}
 \]</div>
 <p>時間微分が 0 になることは，その物理量が時間変化しないことを意味します。したがって，共役運動量 <span class="arithmatex">\(p_k\)</span> は一定の値を保つ保存量であることが証明されます。</p>
 <h3 id="2">(2)</h3>
@@ -14535,12 +14535,18 @@ L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U(r)
 <p>これにより，この系における循環座標は <span class="arithmatex">\(\theta\)</span> になります。</p>
 <p>次に，先ほど証明した規則に基づき，循環座標 <span class="arithmatex">\(\theta\)</span> に対する共役運動量 <span class="arithmatex">\(p_{\theta}\)</span> を偏微分によって計算します。</p>
 <div class="arithmatex">\[
-p_{\theta} = \frac{\partial L}{\partial \dot{\theta}} = m r^2 \dot{\theta}
+\begin{aligned}
+p_{\theta} &amp;= \frac{\partial L}{\partial \dot{\theta}} \\
+&amp;= m r^2 \dot{\theta}
+\end{aligned}
 \]</div>
 <p>時間変化しないため，この <span class="arithmatex">\(m r^2 \dot{\theta}\)</span> が系において不変に保たれる保存量となります。</p>
 <p>この物理量の意味を検討します。質点の位置ベクトルの大きさが <span class="arithmatex">\(r\)</span> であり，周方向の速度成分が <span class="arithmatex">\(v_{\theta} = r\dot{\theta}\)</span> であることから，この式は次のように書き換えることができます。</p>
 <div class="arithmatex">\[
-p_{\theta} = r \cdot m r \dot{\theta} = r \cdot m v_{\theta}
+\begin{aligned}
+p_{\theta} &amp;= r \cdot m r \dot{\theta} \\
+&amp;= \finalanswer{r \cdot m v_{\theta}}
+\end{aligned}
 \]</div>
 <p>これは，中心点のまわりの運動量モーメントを表しています。ニュートン力学におけるこの量の名称は角運動量であり，得られた結果は，中心力のみが働く系においては角運動量の大きさが一定に保たれるという角運動量保存則に対応します。</p>
 

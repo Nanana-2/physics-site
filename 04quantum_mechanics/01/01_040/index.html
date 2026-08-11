@@ -14544,7 +14544,7 @@ i\hbar \phi(x) \frac{dT(t)}{dt} = E \phi(x) T(t)
 \]</div>
 <p>両辺を共通因子である <span class="arithmatex">\(\phi(x)\)</span> で割ることで，時間成分 <span class="arithmatex">\(T(t)\)</span> のみが従う微分方程式が得られます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{dT(t)}{dt} = E T(t) \implies \frac{dT(t)}{dt} = -\frac{iE}{\hbar} T(t)
+\finalanswer{i\hbar \frac{dT(t)}{dt} = E T(t) \implies \frac{dT(t)}{dt} = -\frac{iE}{\hbar} T(t)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた常微分方程式は，変形すると <span class="arithmatex">\(\frac{1}{T} dT = -\frac{iE}{\hbar} dt\)</span> となり，直接積分することができます。</p>
@@ -14561,7 +14561,7 @@ T(t) = e^{-\frac{iE}{\hbar} t}
 \]</div>
 <p>これらを組み合わせることで，全体の波動関数 <span class="arithmatex">\(\Psi(x, t)\)</span> の時間発展が以下のように求まります。</p>
 <div class="arithmatex">\[
-\Psi(x, t) = \phi(x) e^{-\frac{iE}{\hbar} t}
+\finalanswer{\Psi(x, t) = \phi(x) e^{-\frac{iE}{\hbar} t}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>時刻 <span class="arithmatex">\(t\)</span> における確率密度 <span class="arithmatex">\(|\Psi(x, t)|^2\)</span> は，複素共役との積によって計算されます。</p>
@@ -14574,7 +14574,11 @@ T(t) = e^{-\frac{iE}{\hbar} t}
 \]</div>
 <p>順序を並べ替えて指数部分をまとめます。</p>
 <div class="arithmatex">\[
-|\Psi(x, t)|^2 = \phi^*(x) \phi(x) e^{\frac{iE}{\hbar} t - \frac{iE}{\hbar} t} = |\phi(x)|^2 e^0 = |\phi(x)|^2
+\begin{aligned}
+|\Psi(x, t)|^2 &amp;= \phi^*(x) \phi(x) e^{\frac{iE}{\hbar} t - \frac{iE}{\hbar} t} \\
+&amp;= |\phi(x)|^2 e^0 \\
+&amp;= \finalanswer{|\phi(x)|^2}
+\end{aligned}
 \]</div>
 <p>計算結果から，時間依存性を表す指数項は相殺され，確率密度分布には初期の空間分布 <span class="arithmatex">\(|\phi(x)|^2\)</span> のみが残ります。</p>
 <p>時間経過に関わらず，空間上のどの位置においても粒子の存在確率密度がまったく変化しないため，このような性質を持つハミルトニアンの固有状態は定常状態と呼ばれます。</p>

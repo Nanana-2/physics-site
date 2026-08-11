@@ -14527,21 +14527,24 @@
 <h3 id="1">(1)</h3>
 <p>独立な <span class="arithmatex">\(N\)</span> 個の試行において，特定の状態が <span class="arithmatex">\(n\)</span> 回現れる確率は，二項分布により以下のように与えられます。</p>
 <div class="arithmatex">\[
-P(n) = \binom{N}{n} p^{N-n} (1-p)^n
+\finalanswer{P(n) = \binom{N}{n} p^{N-n} (1-p)^n}
 \]</div>
 <p>ただし，ここでは状態Aが確率 <span class="arithmatex">\(p\)</span> で選ばれることを前提としています。</p>
 <h3 id="2">(2)</h3>
 <p>二項分布の性質より，期待値と分散は以下のように計算されます。</p>
 <div class="arithmatex">\[
-\langle n \rangle = N(1-p)
+\finalanswer{\langle n \rangle = N(1-p)}
 \]</div>
 <div class="arithmatex">\[
-\sigma_n^2 = Np(1-p)
+\finalanswer{\sigma_n^2 = Np(1-p)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>相対揺らぎを計算すると，次のようになります。</p>
 <div class="arithmatex">\[
-\frac{\sigma_n}{\langle n \rangle} = \frac{\sqrt{Np(1-p)}}{N(1-p)} = \sqrt{\frac{p}{N(1-p)}}
+\begin{aligned}
+\frac{\sigma_n}{\langle n \rangle} &amp;= \frac{\sqrt{Np(1-p)}}{N(1-p)} \\
+&amp;= \finalanswer{\sqrt{\frac{p}{N(1-p)}}}
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(N \to \infty\)</span> では，相対揺らぎは <span class="arithmatex">\(1/\sqrt{N}\)</span> に比例して0へ収束します。したがって，粒子数が十分に多い系では，<span class="arithmatex">\(n\)</span> の観測値は平均値の近くに集中します。</p>
 

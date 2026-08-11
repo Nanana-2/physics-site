@@ -14550,7 +14550,11 @@ y = l \cos \theta
 \]</div>
 <p>したがって，おもりの速度の2乗 <span class="arithmatex">\(v^2\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-v^2 = \dot{x}^2 + \dot{y}^2 = l^2 \dot{\theta}^2 (\cos^2 \theta + \sin^2 \theta) = l^2 \dot{\theta}^2
+\begin{aligned}
+v^2 &amp;= \dot{x}^2 + \dot{y}^2 \\
+&amp;= l^2 \dot{\theta}^2 (\cos^2 \theta + \sin^2 \theta) \\
+&amp;= l^2 \dot{\theta}^2
+\end{aligned}
 \]</div>
 <p>これより，おもりの運動エネルギー <span class="arithmatex">\(K\)</span> は次のように求まります。</p>
 <div class="arithmatex">\[
@@ -14564,7 +14568,10 @@ U = mgl(1 - \cos \theta)
 \]</div>
 <p>ラグランジアン <span class="arithmatex">\(L\)</span> は，運動エネルギー <span class="arithmatex">\(K\)</span> とポテンシャルエネルギー <span class="arithmatex">\(U\)</span> の差として定義されるため，求めるラグランジアンは以下の通りです。</p>
 <div class="arithmatex">\[
-L = K - U = \frac{1}{2} m l^2 \dot{\theta}^2 - mgl(1 - \cos \theta)
+\begin{aligned}
+L &amp;= K - U \\
+&amp;= \finalanswer{\frac{1}{2} m l^2 \dot{\theta}^2 - mgl(1 - \cos \theta)}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めたラグランジアン <span class="arithmatex">\(L\)</span> を，ラグランジュの運動方程式に代入します。
@@ -14589,7 +14596,7 @@ m l^2 \ddot{\theta} + mgl \sin \theta &amp;= 0
 \]</div>
 <p>両辺を <span class="arithmatex">\(m l^2\)</span> で割ることで，<span class="arithmatex">\(\theta\)</span> に関する運動方程式が得られます。</p>
 <div class="arithmatex">\[
-\ddot{\theta} + \frac{g}{l} \sin \theta = 0
+\finalanswer{\ddot{\theta} + \frac{g}{l} \sin \theta = 0}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>振れ角 <span class="arithmatex">\(\theta \ll 1\)</span> のとき，小角近似 <span class="arithmatex">\(\sin \theta \approx \theta\)</span> を用います。この近似を (2) の運動方程式に適用すると，次のようになります。</p>
@@ -14607,7 +14614,7 @@ m l^2 \ddot{\theta} + mgl \sin \theta &amp;= 0
 \]</div>
 <p>また，周期 <span class="arithmatex">\(T\)</span> は角振動数 <span class="arithmatex">\(\omega\)</span> との間にある関係式 <span class="arithmatex">\(T = \frac{2\pi}{\omega}\)</span> から，次のように導出されます。</p>
 <div class="arithmatex">\[
-T = 2\pi \sqrt{\frac{l}{g}}
+\finalanswer{T = 2\pi \sqrt{\frac{l}{g}}}
 \]</div>
 <p>小角近似の範囲では，周期は質量 <span class="arithmatex">\(m\)</span> や振幅に依存せず，糸の長さ <span class="arithmatex">\(l\)</span> と重力加速度 <span class="arithmatex">\(g\)</span> のみで決まります。</p>
 

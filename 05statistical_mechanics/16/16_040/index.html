@@ -14556,23 +14556,32 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 \]</div>
 <p>ここで， <span class="arithmatex">\(B(\vec{b}, \lambda)\)</span> と <span class="arithmatex">\(B(\vec{b}', \lambda)\)</span> はそれぞれ <span class="arithmatex">\(+1\)</span> または <span class="arithmatex">\(-1\)</span> のいずれかの値しかとりません。そのため，これらの組み合わせによる大括弧の内部の値は以下の2つのパターンに限定されます。</p>
 <ul>
-<li><strong>パターン1:</strong> <span class="arithmatex">\(B(\vec{b}, \lambda) = B(\vec{b}', \lambda)\)</span> のとき</li>
+<li><strong>【パターン1】</strong> <span class="arithmatex">\(B(\vec{b}, \lambda) = B(\vec{b}', \lambda)\)</span> のとき</li>
 </ul>
 <div class="arithmatex">\[
-  B(\vec{b}, \lambda) + B(\vec{b}', \lambda) = \pm 2, \quad B(\vec{b}, \lambda) - B(\vec{b}', \lambda) = 0
+\begin{aligned}
+B(\vec{b}, \lambda) + B(\vec{b}', \lambda) &amp;= \pm 2, \quad B(\vec{b}, \lambda) - B(\vec{b}', \lambda) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>これを <span class="arithmatex">\(C(\lambda)\)</span> に代入すると， <span class="arithmatex">\(A(\vec{a}, \lambda) = \pm 1\)</span> より <span class="arithmatex">\(C(\lambda) = \pm 2 \cdot (\pm 1) + 0 = \pm 2\)</span> となります。</p>
 <ul>
-<li><strong>パターン2:</strong> <span class="arithmatex">\(B(\vec{b}, \lambda) \neq B(\vec{b}', \lambda)\)</span> のとき</li>
+<li><strong>【パターン2】</strong> <span class="arithmatex">\(B(\vec{b}, \lambda) \neq B(\vec{b}', \lambda)\)</span> のとき</li>
 </ul>
 <div class="arithmatex">\[
-  B(\vec{b}, \lambda) + B(\vec{b}', \lambda) = 0, \quad B(\vec{b}, \lambda) - B(\vec{b}', \lambda) = \pm 2
+\begin{aligned}
+B(\vec{b}, \lambda) + B(\vec{b}', \lambda) &amp;= 0, \quad B(\vec{b}, \lambda) - B(\vec{b}', \lambda) \\
+&amp;= \pm 2
+\end{aligned}
 \]</div>
 <p>これを <span class="arithmatex">\(C(\lambda)\)</span> に代入すると， <span class="arithmatex">\(A(\vec{a}', \lambda) = \pm 1\)</span> より <span class="arithmatex">\(C(\lambda) = 0 + \pm 2 \cdot (\pm 1) = \pm 2\)</span> となります。</p>
 <p>よって，どのような隠れた変数の値 <span class="arithmatex">\(\lambda\)</span> に対しても， <span class="arithmatex">\(C(\lambda) = \pm 2\)</span> が成り立ち，その絶対値は <span class="arithmatex">\(|C(\lambda)| = 2\)</span> です。</p>
 <p>この関係式に対して，確率分布 <span class="arithmatex">\(P(\lambda)\)</span> による平均値の積分を実行します。</p>
 <div class="arithmatex">\[
-\left| \int C(\lambda) P(\lambda) d\lambda \right| \le \int |C(\lambda)| P(\lambda) d\lambda = 2 \int P(\lambda) d\lambda = 2
+\begin{aligned}
+\left| \int C(\lambda) P(\lambda) d\lambda \right| \le \int |C(\lambda)| P(\lambda) d\lambda &amp;= 2 \int P(\lambda) d\lambda \\
+&amp;= 2
+\end{aligned}
 \]</div>
 <p>積分の線形性により，左辺の内部を各相関期待値の和に分解します。</p>
 <div class="arithmatex">\[
@@ -14580,7 +14589,7 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 \]</div>
 <p>これらを合わせることで，CHSH不等式が導出されます。</p>
 <div class="arithmatex">\[
-|E(\vec{a}, \vec{b}) + E(\vec{a}, \vec{b}') + E(\vec{a}', \vec{b}) - E(\vec{a}', \vec{b}')| \le 2
+\finalanswer{|E(\vec{a}, \vec{b}) + E(\vec{a}, \vec{b}') + E(\vec{a}', \vec{b}) - E(\vec{a}', \vec{b}')| \le 2}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>与えられた量子力学的相関の公式 <span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b}) = -\vec{a} \cdot \vec{b}\)</span> に従って，4つのベクトルの内積を順に計算します。</p>
@@ -14588,25 +14597,38 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b})\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  E_{\mathrm{QM}}(\vec{a}, \vec{b}) = -(0, 0, 1) \cdot \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\frac{1}{\sqrt{2}}
+\begin{aligned}
+E_{\mathrm{QM}}(\vec{a}, \vec{b}) &amp;= -(0, 0, 1) \cdot \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) \\
+&amp;= -\frac{1}{\sqrt{2}}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}, \vec{b}')\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  E_{\mathrm{QM}}(\vec{a}, \vec{b}') = -(0, 0, 1) \cdot \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\frac{1}{\sqrt{2}}
+\begin{aligned}
+E_{\mathrm{QM}}(\vec{a}, \vec{b}') &amp;= -(0, 0, 1) \cdot \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) \\
+&amp;= -\frac{1}{\sqrt{2}}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b})\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  E_{\mathrm{QM}}(\vec{a}', \vec{b}) = -(1, 0, 0) \cdot \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\frac{1}{\sqrt{2}}
+\begin{aligned}
+E_{\mathrm{QM}}(\vec{a}', \vec{b}) &amp;= -(1, 0, 0) \cdot \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) \\
+&amp;= -\frac{1}{\sqrt{2}}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E_{\mathrm{QM}}(\vec{a}', \vec{b}')\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  E_{\mathrm{QM}}(\vec{a}', \vec{b}') = -(1, 0, 0) \cdot \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = -\left(-\frac{1}{\sqrt{2}}\right) = \frac{1}{\sqrt{2}}
+\begin{aligned}
+E_{\mathrm{QM}}(\vec{a}', \vec{b}') &amp;= -(1, 0, 0) \cdot \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) \\
+&amp;= -\left(-\frac{1}{\sqrt{2}}\right) \\
+&amp;= \finalanswer{\frac{1}{\sqrt{2}}}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた4つの期待値を，不等式の左辺の式に代入して計算を行います。</p>
@@ -14615,11 +14637,15 @@ C(\lambda) = A(\vec{a}, \lambda) \left[ B(\vec{b}, \lambda) + B(\vec{b}', \lambd
 \]</div>
 <p>括弧の内部をまとめます。</p>
 <div class="arithmatex">\[
-\text{左辺} = \left| -\frac{4}{\sqrt{2}} \right| = \left| -2\sqrt{2} \right| = 2\sqrt{2}
+\begin{aligned}
+\text{左辺} &amp;= \left| -\frac{4}{\sqrt{2}} \right| \\
+&amp;= \left| -2\sqrt{2} \right| \\
+&amp;= 2\sqrt{2}
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\sqrt{2} \approx 1.414\)</span> であるため，数値は以下のようになります。</p>
 <div class="arithmatex">\[
-2\sqrt{2} \approx 2.828
+\finalanswer{2\sqrt{2} \approx 2.828}
 \]</div>
 <p>この計算結果は，局所実在論から導かれた限界値である 2 よりも大きくなります。</p>
 <p>これにより，特定の測定方向の組み合わせにおいて，量子もつれ状態が示す統計的相関はベルの不等式を破ることが数学的に示され，局所実在論の仮定が成立しないことが確認されました。</p>

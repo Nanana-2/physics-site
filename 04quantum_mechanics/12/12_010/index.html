@@ -14539,7 +14539,7 @@ K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} | x_i\rang
 <h3 id="1">(1)</h3>
 <p>ハミルトニアンが時間に依存しない系において，状態ベクトルの時間発展を司る時間発展演算子は <span class="arithmatex">\(e^{-i \hat{H}(t_f - t_i)/\hbar}\)</span> と表されます。初期時刻 <span class="arithmatex">\(t_i\)</span> における状態ベクトル <span class="arithmatex">\(|\psi(t_i)\rangle\)</span> に対し，この時間発展演算子を左から掛け算することにより，時刻 <span class="arithmatex">\(t_f\)</span> における状態ベクトルが以下のように得られます。</p>
 <div class="arithmatex">\[
-|\psi(t_f)\rangle = e^{-i \hat{H}(t_f - t_i)/\hbar} |\psi(t_i)\rangle
+\finalanswer{|\psi(t_f)\rangle = e^{-i \hat{H}(t_f - t_i)/\hbar} |\psi(t_i)\rangle}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>時刻 <span class="arithmatex">\(t_f\)</span> における波動関数 <span class="arithmatex">\(\psi(x_f, t_f)\)</span> の定義式から計算を始めます。</p>
@@ -14560,7 +14560,7 @@ K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} | x_i\rang
 \]</div>
 <p>括弧で囲まれた内側の成分に着目すると，前半のブラとケットに挟まれた領域は問題文で定義された伝播核 <span class="arithmatex">\(K(x_f, t_f; x_i, t_i)\)</span> そのものであり，後半の成分は初期時刻における波動関数 <span class="arithmatex">\(\psi(x_i, t_i)\)</span> に一致します。これらを置き換えることで，求める積分方程式が導かれます。</p>
 <div class="arithmatex">\[
-\psi(x_f, t_f) = \int_{-\infty}^{\infty} K(x_f, t_f; x_i, t_i) \psi(x_i, t_i) dx_i
+\finalanswer{\psi(x_f, t_f) = \int_{-\infty}^{\infty} K(x_f, t_f; x_i, t_i) \psi(x_i, t_i) dx_i}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>問題文で与えられた伝播核の定義式を書き下します。</p>
@@ -14585,7 +14585,7 @@ K(x_f, t_f; x_i, t_i) = \sum_{n} \langle x_f | n\rangle e^{-i E_n(t_f - t_i)/\hb
 \]</div>
 <p>ここで，固有関数の定義 <span class="arithmatex">\(\phi_n(x_f) = \langle x_f | n\rangle\)</span> ，およびその複素共役の関係 <span class="arithmatex">\(\phi_n^*(x_i) = \langle n | x_i\rangle\)</span> をそれぞれ代入します。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \sum_{n} \phi_n(x_f) \phi_n^*(x_i) e^{-i E_n(t_f - t_i)/\hbar}
+\finalanswer{K(x_f, t_f; x_i, t_i) = \sum_{n} \phi_n(x_f) \phi_n^*(x_i) e^{-i E_n(t_f - t_i)/\hbar}}
 \]</div>
 <p>これにより，系のエネルギー固有値と固有関数が既知であれば，それらの和を計算することによって伝播核を構成できることが示されました。</p>
 

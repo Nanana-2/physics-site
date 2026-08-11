@@ -14535,7 +14535,7 @@ P_r \propto \Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)
 \]</div>
 <p>熱源のボルツマンエントロピーの定義 <span class="arithmatex">\(S_{\mathrm{B}} = k_B \log \Omega_{\mathrm{B}}\)</span> の両辺の指数をとると，<span class="arithmatex">\(\Omega_{\mathrm{B}} = \exp\left( \frac{S_{\mathrm{B}}}{k_B} \right)\)</span> となります。これを上の比例式に代入することで，確率が以下のようにエントロピーを用いて表されることが示されます。</p>
 <div class="arithmatex">\[
-P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
+\finalanswer{P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>熱浴のエントロピー <span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> を <span class="arithmatex">\(E_r=0\)</span> のまわりで1次までテイラー展開します。</p>
@@ -14556,7 +14556,7 @@ P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}}) - \frac{E_r}{T}}{k
 \]</div>
 <p>第1因子の <span class="arithmatex">\(\exp[S_{\mathrm{B}}(E_{\mathrm{tot}})/k_B]\)</span> は状態 <span class="arithmatex">\(r\)</span> に依存しない共通の定数であるため，比例関係から除外することができます。逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を導入すると，確率 <span class="arithmatex">\(P_r\)</span> がボルツマン因子に比例することが導かれます。</p>
 <div class="arithmatex">\[
-P_r \propto \exp(-\beta E_r)
+\finalanswer{P_r \propto \exp(-\beta E_r)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の比例関係から，適当な規格化定数 <span class="arithmatex">\(C\)</span> を用いて <span class="arithmatex">\(P_r = C \exp(-\beta E_r)\)</span> とおきます。全確率の和が <span class="arithmatex">\(1\)</span> になるという規格化条件を適用します。</p>
@@ -14569,11 +14569,14 @@ C = \frac{1}{\sum_r \exp(-\beta E_r)}
 \]</div>
 <p>したがって，状態 <span class="arithmatex">\(r\)</span> の実現確率は以下のカノニカル分布で与えられます。</p>
 <div class="arithmatex">\[
-P_r = \frac{\exp(-\beta E_r)}{\sum_r \exp(-\beta E_r)} = \frac{1}{Z} \exp(-\beta E_r)
+\begin{aligned}
+P_r &amp;= \frac{\exp(-\beta E_r)}{\sum_r \exp(-\beta E_r)} \\
+&amp;= \frac{1}{Z} \exp(-\beta E_r)
+\end{aligned}
 \]</div>
 <p>この分母にあるすべての微視的状態にわたるボルツマン因子の和 <span class="arithmatex">\(Z\)</span> は分配関数と定義され，数式としては以下のように表されます。</p>
 <div class="arithmatex">\[
-Z(\beta) = \sum_r \exp(-\beta E_r)
+\finalanswer{Z(\beta) = \sum_r \exp(-\beta E_r)}
 \]</div>
 
 

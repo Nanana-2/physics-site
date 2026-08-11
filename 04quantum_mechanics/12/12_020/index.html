@@ -14549,7 +14549,7 @@ K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| e^{-i \hat{H} \epsilon / \hbar} 
 \]</div>
 <p>境界の条件を <span class="arithmatex">\(x_0 = x_i\)</span> ， <span class="arithmatex">\(x_N = x_f\)</span> と書き換えて，総乗の記号 <span class="arithmatex">\(\prod\)</span> でまとめます。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} \left[ \prod_{j=1}^{N} \langle x_j | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle \right] dx_1 \cdots dx_{N-1}
+\finalanswer{K(x_f, t_f; x_i, t_i) = \int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} \left[ \prod_{j=1}^{N} \langle x_j | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle \right] dx_1 \cdots dx_{N-1}}
 \]</div>
 <p>これにより，全体の伝播核が短時間伝播核の多重積分に分解されました。</p>
 <h3 id="2">(2)</h3>
@@ -14570,14 +14570,22 @@ K(x_f, t_f; x_i, t_i) = \int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} \
 \]</div>
 <p>提示された公式を適用するため，係数を <span class="arithmatex">\(A = \frac{i\epsilon}{2m\hbar}\)</span> ， <span class="arithmatex">\(B = \frac{i(x_j - x_{j-1})}{\hbar}\)</span> と置きます。</p>
 <div class="arithmatex">\[
-\sqrt{\frac{\pi}{A}} = \sqrt{\frac{2\pi m\hbar}{i\epsilon}} = \sqrt{\frac{2\pi m\hbar \cdot i}{-\epsilon}} \implies \frac{1}{2\pi\hbar} \sqrt{\frac{2\pi m\hbar}{i\epsilon}} = \sqrt{\frac{m}{2\pi i \hbar \epsilon}}
+\begin{aligned}
+\sqrt{\frac{\pi}{A}} &amp;= \sqrt{\frac{2\pi m\hbar}{i\epsilon}} \\
+&amp;= \sqrt{\frac{2\pi m\hbar \cdot i}{-\epsilon}} \implies \frac{1}{2\pi\hbar} \sqrt{\frac{2\pi m\hbar}{i\epsilon}} \\
+&amp;= \sqrt{\frac{m}{2\pi i \hbar \epsilon}}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\frac{B^2}{4A} = \frac{ -\frac{(x_j - x_{j-1})^2}{\hbar^2} }{ \frac{4i\epsilon}{2m\hbar} } = -\frac{m(x_j - x_{j-1})^2}{2i\hbar\epsilon} = \frac{i m (x_j - x_{j-1})^2}{2\hbar\epsilon}
+\begin{aligned}
+\frac{B^2}{4A} &amp;= \frac{ -\frac{(x_j - x_{j-1})^2}{\hbar^2} }{ \frac{4i\epsilon}{2m\hbar} } \\
+&amp;= -\frac{m(x_j - x_{j-1})^2}{2i\hbar\epsilon} \\
+&amp;= \frac{i m (x_j - x_{j-1})^2}{2\hbar\epsilon}
+\end{aligned}
 \]</div>
 <p>これらをまとめてポテンシャルの因子と掛け合わせると，短時間伝播核が得られます。</p>
 <div class="arithmatex">\[
-\langle x_{j} | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle = \sqrt{\frac{m}{2\pi i \hbar \epsilon}} e^{\frac{i}{\hbar} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 - V(x_{j-1}) \right] \epsilon}
+\finalanswer{\langle x_{j} | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle = \sqrt{\frac{m}{2\pi i \hbar \epsilon}} e^{\frac{i}{\hbar} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 - V(x_{j-1}) \right] \epsilon}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の結果を (1) の多重積分に代入します。</p>
@@ -14594,7 +14602,7 @@ K(x_f, t_f; x_i, t_i) = \int \cdots \int \left( \frac{m}{2\pi i \hbar \epsilon} 
 \]</div>
 <p>積分測度を <span class="arithmatex">\(\mathcal{D}[x(t)] = \lim_{N \to \infty} \left( \frac{m}{2\pi i \hbar \epsilon} \right)^{N/2} dx_1 \cdots dx_{N-1}\)</span> と定義することで，求める形式が導かれます。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}
+\finalanswer{K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}}
 \]</div>
 
 

@@ -14547,7 +14547,12 @@ N_{B\alpha} = \frac{N}{2} - N_{A\alpha} = \frac{N}{4} (1 - X)
 \]</div>
 <p>合金全体でA原子とB原子はそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつであるため， <span class="arithmatex">\(\beta\)</span> 副格子上の各原子数も決まります。</p>
 <div class="arithmatex">\[
-N_{A\beta} = \frac{N}{2} - N_{A\alpha} = \frac{N}{4} (1 - X), \quad N_{B\beta} = \frac{N}{2} - N_{B\alpha} = \frac{N}{4} (1 + X)
+\begin{aligned}
+N_{A\beta} &amp;= \frac{N}{2} - N_{A\alpha} \\
+&amp;= \frac{N}{4} (1 - X), \quad N_{B\beta} \\
+&amp;= \frac{N}{2} - N_{B\alpha} \\
+&amp;= \frac{N}{4} (1 + X)
+\end{aligned}
 \]</div>
 <p>系全体の状態数 <span class="arithmatex">\(W\)</span> は， <span class="arithmatex">\(\alpha\)</span> 副格子への原子配置の組み合わせと， <span class="arithmatex">\(\beta\)</span> 副格子への原子配置の組み合わせの積になります。</p>
 <div class="arithmatex">\[
@@ -14562,20 +14567,29 @@ W = \frac{\left(\frac{N}{2}\right)!}{N_{A\alpha}! N_{B\alpha}!} \times \frac{\le
 \]</div>
 <p>原子数の式を代入して整理を進めると，配置のエントロピー <span class="arithmatex">\(S = k_B \log W\)</span> は以下の形に収束します。</p>
 <div class="arithmatex">\[
-S = - \frac{N k_B}{2} \left[ (1 + X) \log(1 + X) + (1 - X) \log(1 - X) - 2 \log 2 \right]
+\finalanswer{S = - \frac{N k_B}{2} \left[ (1 + X) \log(1 + X) + (1 - X) \log(1 - X) - 2 \log 2 \right]}
 \]</div>
 <h3 id="2_1">(2)</h3>
 <p>内部エネルギー <span class="arithmatex">\(U\)</span> を計算するため，最近接原子対の数を評価します。ブラッグ・ウィリアムズ近似では， <span class="arithmatex">\(\alpha\)</span> 副格子上の原子の周囲にある最近接格子点はすべて <span class="arithmatex">\(\beta\)</span> 副格子に属します。したがって，ある原子対が形成される確率は，それぞれの副格子における原子の存在確率の積に比例します。</p>
 <p><span class="arithmatex">\(\alpha\)</span> 副格子上でA原子を選ぶ確率は <span class="arithmatex">\(\frac{N_{A\alpha}}{N/2} = \frac{1+X}{2}\)</span> であり，隣接する <span class="arithmatex">\(\beta\)</span> 副格子上でA原子を選ぶ確率は <span class="arithmatex">\(\frac{N_{A\beta}}{N/2} = \frac{1-X}{2}\)</span> です。全原子対の総数 <span class="arithmatex">\(zN/2\)</span> を掛けることで，A-A対の総数 <span class="arithmatex">\(N_{AA}\)</span> が求まります。</p>
 <div class="arithmatex">\[
-N_{AA} = \frac{zN}{2} \left( \frac{1 + X}{2} \right) \left( \frac{1 - X}{2} \right) = \frac{zN}{8} (1 - X^2)
+\begin{aligned}
+N_{AA} &amp;= \frac{zN}{2} \left( \frac{1 + X}{2} \right) \left( \frac{1 - X}{2} \right) \\
+&amp;= \frac{zN}{8} (1 - X^2)
+\end{aligned}
 \]</div>
 <p>同様にして，B-B対の総数 <span class="arithmatex">\(N_{BB}\)</span>，およびA-B対の総数 <span class="arithmatex">\(N_{AB}\)</span> を計算します。A-B対は， <span class="arithmatex">\(\alpha\)</span> がAで <span class="arithmatex">\(\beta\)</span> がBの場合と， <span class="arithmatex">\(\alpha\)</span> がBで <span class="arithmatex">\(\beta\)</span> がAの場合の2通りがあります。</p>
 <div class="arithmatex">\[
-N_{BB} = \frac{zN}{2} \left( \frac{1 - X}{2} \right) \left( \frac{1 + X}{2} \right) = \frac{zN}{8} (1 - X^2)
+\begin{aligned}
+N_{BB} &amp;= \frac{zN}{2} \left( \frac{1 - X}{2} \right) \left( \frac{1 + X}{2} \right) \\
+&amp;= \frac{zN}{8} (1 - X^2)
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-N_{AB} = \frac{zN}{2} \left[ \left( \frac{1 + X}{2} \right) \left( \frac{1 + X}{2} \right) + \left( \frac{1 - X}{2} \right) \left( \frac{1 - X}{2} \right) \right] = \frac{zN}{4} (1 + X^2)
+\begin{aligned}
+N_{AB} &amp;= \frac{zN}{2} \left[ \left( \frac{1 + X}{2} \right) \left( \frac{1 + X}{2} \right) + \left( \frac{1 - X}{2} \right) \left( \frac{1 - X}{2} \right) \right] \\
+&amp;= \frac{zN}{4} (1 + X^2)
+\end{aligned}
 \]</div>
 <p>全体の内部エネルギーは，各対の数に結合エネルギーを掛け合わせた和になります。</p>
 <div class="arithmatex">\[
@@ -14590,7 +14604,7 @@ U = U_0 + \frac{zN X^2}{4} \left[ v_{AB} - \frac{1}{2}(v_{AA} + v_{BB}) \right] 
 \]</div>
 <p>ここで与えられたパラメータ <span class="arithmatex">\(v = v_{AB} - \frac{1}{2}(v_{AA} + v_{BB})\)</span> を用いて整理すると，指定された内部エネルギーの式が導かれます。</p>
 <div class="arithmatex">\[
-U = U_0 - \frac{z N v}{2} X^2
+\finalanswer{U = U_0 - \frac{z N v}{2} X^2}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(1) と (2) の結果を組み合わせることで，系全体のヘルムホルツの自由エネルギー <span class="arithmatex">\(F = U - TS\)</span> が構成されます。</p>
@@ -14599,18 +14613,28 @@ F = U_0 - \frac{z N v}{2} X^2 + \frac{N k_B T}{2} \left[ (1 + X) \log(1 + X) + (
 \]</div>
 <p>この自由エネルギーを規則度 <span class="arithmatex">\(X\)</span> で偏微分し，極小条件を求めます。</p>
 <div class="arithmatex">\[
-\frac{\partial F}{\partial X} = -z N v X + \frac{N k_B T}{2} \left[ \log(1 + X) + 1 - \log(1 - X) - 1 \right] = 0
+\begin{aligned}
+\frac{\partial F}{\partial X} &amp;= -z N v X + \frac{N k_B T}{2} \left[ \log(1 + X) + 1 - \log(1 - X) - 1 \right] \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 -z N v X + \frac{N k_B T}{2} \log\left( \frac{1 + X}{1 - X} \right) = 0
 \]</div>
 <p>対数項の形を整理します。</p>
 <div class="arithmatex">\[
-\log\left( \frac{1 + X}{1 - X} \right) = \frac{2 z v X}{k_B T} \quad \implies \quad \frac{1 + X}{1 - X} = \exp\left( \frac{2 z v X}{k_B T} \right)
+\begin{aligned}
+\log\left( \frac{1 + X}{1 - X} \right) &amp;= \frac{2 z v X}{k_B T} \quad \implies \quad \frac{1 + X}{1 - X} \\
+&amp;= \exp\left( \frac{2 z v X}{k_B T} \right)
+\end{aligned}
 \]</div>
 <p>この式を <span class="arithmatex">\(X\)</span> について解くために，右辺を <span class="arithmatex">\(e^{2Y}\)</span> と置いて変形します。</p>
 <div class="arithmatex">\[
-X = \frac{\exp\left( \frac{2 z v X}{k_B T} \right) - 1}{\exp\left( \frac{2 z v X}{k_B T} \right) + 1} = \frac{\exp\left( \frac{z v X}{k_B T} \right) - \exp\left( -\frac{z v X}{k_B T} \right)}{\exp\left( \frac{z v X}{k_B T} \right) + \exp\left( -\frac{z v X}{k_B T} \right)} = \tanh\left( \frac{z v X}{2 k_B T} \right)
+\begin{aligned}
+X &amp;= \frac{\exp\left( \frac{2 z v X}{k_B T} \right) - 1}{\exp\left( \frac{2 z v X}{k_B T} \right) + 1} \\
+&amp;= \frac{\exp\left( \frac{z v X}{k_B T} \right) - \exp\left( -\frac{z v X}{k_B T} \right)}{\exp\left( \frac{z v X}{k_B T} \right) + \exp\left( -\frac{z v X}{k_B T} \right)} \\
+&amp;= \tanh\left( \frac{z v X}{2 k_B T} \right)
+\end{aligned}
 \]</div>
 <p>これにより，目的の自己整合方程式が導出されました。</p>
 <p><strong>臨界温度 <span class="arithmatex">\(T_c\)</span> の決定</strong></p>
@@ -14620,7 +14644,7 @@ X = \frac{\exp\left( \frac{2 z v X}{k_B T} \right) - 1}{\exp\left( \frac{2 z v X
 \]</div>
 <p>この条件を満たすとき，合金はランダムに混ざり合った不規則相よりも，特定の副格子に特定の原子が集まった規則相の方が自由エネルギーが低く安定になります。したがって，相転移が起こる境界の臨界温度 <span class="arithmatex">\(T_c\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
-T_c = \frac{z v}{2 k_B}
+\finalanswer{T_c = \frac{z v}{2 k_B}}
 \]</div>
 
 

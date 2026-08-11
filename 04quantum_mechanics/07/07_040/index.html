@@ -14533,7 +14533,10 @@
 <h3 id="1">(1)</h3>
 <p>定義式 <span class="arithmatex">\(\hat{F}_z = -\frac{\partial \hat{V}}{\partial z}\)</span> にポテンシャルの表式を代入します。微分演算は空間座標 <span class="arithmatex">\(z\)</span> に対してのみ作用するため，スピン演算子は定数項として扱います。</p>
 <div class="arithmatex">\[
-\hat{F}_z = -\frac{\partial}{\partial z} \left( -\gamma \hat{S}_z B_z(z) \right) = \gamma \hat{S}_z \frac{\partial B_z(z)}{\partial z}
+\begin{aligned}
+\hat{F}_z &amp;= -\frac{\partial}{\partial z} \left( -\gamma \hat{S}_z B_z(z) \right) \\
+&amp;= \finalanswer{\gamma \hat{S}_z \frac{\partial B_z(z)}{\partial z}}
+\end{aligned}
 \]</div>
 <p>これが不均一磁場中において粒子が受ける力の演算子です。力がスピンの演算子を含んでいるため，受ける力の大きさと向きはスピンの状態に依存します。</p>
 <h3 id="2">(2)</h3>
@@ -14542,30 +14545,42 @@
 <li><strong>状態 <span class="arithmatex">\(|+\rangle\)</span> が受ける力</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{F}_z |+\rangle = \gamma \left( \hat{S}_z |+\rangle \right) \frac{\partial B_z}{\partial z} = \gamma \left( \frac{\hbar}{2} |+\rangle \right) \frac{\partial B_z}{\partial z} = \frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |+\rangle
+\begin{aligned}
+\hat{F}_z |+\rangle &amp;= \gamma \left( \hat{S}_z |+\rangle \right) \frac{\partial B_z}{\partial z} \\
+&amp;= \gamma \left( \frac{\hbar}{2} |+\rangle \right) \frac{\partial B_z}{\partial z} \\
+&amp;= \frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |+\rangle
+\end{aligned}
 \]</div>
-<p>したがって，受ける力は <span class="arithmatex">\(F_+ = \frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}\)</span> となります。</p>
+<p>したがって，受ける力は <span class="arithmatex">\(\finalanswer{F_+ = \frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}}\)</span> となります。</p>
 <ul>
 <li><strong>状態 <span class="arithmatex">\(|-\rangle\)</span> が受ける力</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{F}_z |-\rangle = \gamma \left( \hat{S}_z |-\rangle \right) \frac{\partial B_z}{\partial z} = \gamma \left( -\frac{\hbar}{2} |-\rangle \right) \frac{\partial B_z}{\partial z} = -\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |-\rangle
+\begin{aligned}
+\hat{F}_z |-\rangle &amp;= \gamma \left( \hat{S}_z |-\rangle \right) \frac{\partial B_z}{\partial z} \\
+&amp;= \gamma \left( -\frac{\hbar}{2} |-\rangle \right) \frac{\partial B_z}{\partial z} \\
+&amp;= \finalanswer{-\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |-\rangle}
+\end{aligned}
 \]</div>
-<p>したがって，受ける力は <span class="arithmatex">\(F_- = -\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}\)</span> となります。</p>
+<p>したがって，受ける力は <span class="arithmatex">\(\finalanswer{F_- = -\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}}\)</span> となります。</p>
 <p>古典力学では，粒子の持つ磁気モーメントの向きは連続的にあらゆる方向を向くことができるため，受ける力も連続的な分布をとり，スクリーン上の衝突位置は一本の線状に広がると予想されます。</p>
 <p>しかし量子力学では，力が <span class="arithmatex">\(\hat{S}_z\)</span> の固有値に対応する <span class="arithmatex">\(F_+\)</span> と <span class="arithmatex">\(F_-\)</span> のふたつの値しかとらないため，ビームは上下の2本に分裂し，スクリーン上には離散的な2つの点として記録されます。</p>
 <h3 id="3">(3)</h3>
 <p>進入させる初期状態を，ハミルトニアンおよび力演算子の固有状態である <span class="arithmatex">\(z\)</span> 軸の基底で展開します。</p>
 <div class="arithmatex">\[
-|\psi\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \frac{1}{\sqrt{2}} |+\rangle + \frac{1}{\sqrt{2}} |-\rangle
+\begin{aligned}
+|\psi\rangle &amp;= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \\
+&amp;= \frac{1}{\sqrt{2}} |+\rangle + \frac{1}{\sqrt{2}} |-\rangle
+\end{aligned}
 \]</div>
 <p>不均一磁場を通過する過程は，スピンの <span class="arithmatex">\(z\)</span> 成分を測定する行為そのものです。この状態ベクトルは，上向き状態と下向き状態を等しい重みで含んでいます。</p>
 <p>測定器を通過すると，状態 <span class="arithmatex">\(|+\rangle\)</span> の成分は (2) で求めた力 <span class="arithmatex">\(F_+\)</span> を受けて上側に曲げられ，状態 <span class="arithmatex">\(|-\rangle\)</span> の成分は力 <span class="arithmatex">\(F_-\)</span> を受けて下側に曲げられます。これにより，空間的な検出位置は上側と下側の2箇所に分裂します。</p>
 <p>それぞれの位置に粒子が到達する確率は，各固有状態の展開係数の絶対値の2乗で与えられます。</p>
-<ul>
-<li>上側，すなわちスピン上向きの位置での検出確率： <span class="arithmatex">\(P_+ = \left| \frac{1}{\sqrt{2}} \right|^2 = \frac{1}{2}\)</span></li>
-<li>下側，すなわちスピン下向きの位置での検出確率： <span class="arithmatex">\(P_- = \left| \frac{1}{\sqrt{2}} \right|^2 = \frac{1}{2}\)</span></li>
-</ul>
+<p>上側，すなわちスピン上向きの位置と，下側，すなわちスピン下向きの位置で検出され，それぞれの確率は</p>
+<div class="arithmatex">\[
+\finalanswer{P_+ = \frac{1}{2}, \qquad P_- = \frac{1}{2}}
+\]</div>
+<p>です。</p>
 <p>したがって，<span class="arithmatex">\(x\)</span> 軸上向きの状態にある粒子を <span class="arithmatex">\(z\)</span> 軸方向に測定すると，上向きと下向きがそれぞれ <span class="arithmatex">\(50\%\)</span> の確率で得られます。</p>
 
 

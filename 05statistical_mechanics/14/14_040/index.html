@@ -14541,7 +14541,10 @@
 <li><strong>消滅演算子の期待値</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \langle\xi|\hat{a}|\xi\rangle = \langle0| \hat{S}^\dagger(r) \hat{a} \hat{S}(r) |0\rangle = \langle0| \left( \hat{a} \cosh r - \hat{a}^\dagger \sinh r \right) |0\rangle
+\begin{aligned}
+\langle\xi|\hat{a}|\xi\rangle &amp;= \langle0| \hat{S}^\dagger(r) \hat{a} \hat{S}(r) |0\rangle \\
+&amp;= \langle0| \left( \hat{a} \cosh r - \hat{a}^\dagger \sinh r \right) |0\rangle
+\end{aligned}
 \]</div>
 <p>ここで， <span class="arithmatex">\(\hat{a}|0\rangle = 0\)</span> および <span class="arithmatex">\(\langle0|\hat{a}^\dagger = 0\)</span> であるため，期待値はゼロになります。</p>
 <div class="arithmatex">\[
@@ -14552,11 +14555,18 @@
   演算子の間に <span class="arithmatex">\(\hat{S}(r)\hat{S}^\dagger(r) = \hat{I}\)</span> を挿入します。</li>
 </ul>
 <div class="arithmatex">\[
-  \langle\xi|\hat{a}^2|\xi\rangle = \langle0| \hat{S}^\dagger(r) \hat{a} \hat{S}(r) \hat{S}^\dagger(r) \hat{a} \hat{S}(r) |0\rangle = \langle0| \left( \hat{a} \cosh r - \hat{a}^\dagger \sinh r \right) \left( \hat{a} \cosh r - \hat{a}^\dagger \sinh r \right) |0\rangle
+\begin{aligned}
+\langle\xi|\hat{a}^2|\xi\rangle &amp;= \langle0| \hat{S}^\dagger(r) \hat{a} \hat{S}(r) \hat{S}^\dagger(r) \hat{a} \hat{S}(r) |0\rangle \\
+&amp;= \langle0| \left( \hat{a} \cosh r - \hat{a}^\dagger \sinh r \right) \left( \hat{a} \cosh r - \hat{a}^\dagger \sinh r \right) |0\rangle
+\end{aligned}
 \]</div>
 <p>展開したとき，右側に <span class="arithmatex">\(\hat{a}\)</span> が来る項や左側に <span class="arithmatex">\(\hat{a}^\dagger\)</span> が来る項は真空条件により消滅します。残るのは <span class="arithmatex">\(-\hat{a}\hat{a}^\dagger \cosh r \sinh r\)</span> の項のみです。交換関係 <span class="arithmatex">\(\hat{a}\hat{a}^\dagger = \hat{a}^\dagger\hat{a} + 1\)</span> を適用します。</p>
 <div class="arithmatex">\[
-  \langle\xi|\hat{a}^2|\xi\rangle = -\cosh r \sinh r \langle0| \hat{a}\hat{a}^\dagger |0\rangle = -\cosh r \sinh r \langle0| \left( \hat{a}^\dagger\hat{a} + 1 \right) |0\rangle = -\cosh r \sinh r
+\begin{aligned}
+\langle\xi|\hat{a}^2|\xi\rangle &amp;= -\cosh r \sinh r \langle0| \hat{a}\hat{a}^\dagger |0\rangle \\
+&amp;= -\cosh r \sinh r \langle0| \left( \hat{a}^\dagger\hat{a} + 1 \right) |0\rangle \\
+&amp;= -\cosh r \sinh r
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>数演算子の期待値 <span class="arithmatex">\(\langle\xi|\hat{a}^\dagger\hat{a}|\xi\rangle\)</span></strong>
@@ -14567,7 +14577,10 @@
 \]</div>
 <p>真空条件により， <span class="arithmatex">\(-\hat{a}\hat{a}^\dagger \sinh^2 r\)</span> の項のみが残ります。</p>
 <div class="arithmatex">\[
-  \langle\xi|\hat{a}^\dagger\hat{a}|\xi\rangle = \sinh^2 r \langle0| \hat{a}\hat{a}^\dagger |0\rangle = \sinh^2 r
+\begin{aligned}
+\langle\xi|\hat{a}^\dagger\hat{a}|\xi\rangle &amp;= \sinh^2 r \langle0| \hat{a}\hat{a}^\dagger |0\rangle \\
+&amp;= \finalanswer{\sinh^2 r}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) の結果を用いて，位置と運動量の統計量を求めます。</p>
@@ -14576,7 +14589,7 @@
   演算子は <span class="arithmatex">\(\hat{a}\)</span> と <span class="arithmatex">\(\hat{a}^\dagger\)</span> の線形結合であり，それぞれの期待値が 0 であるため，位置と運動量の期待値も 0 になります。</li>
 </ul>
 <div class="arithmatex">\[
-  \langle\hat{x}\rangle = 0, \quad \langle\hat{p}\rangle = 0
+  \finalanswer{\langle\hat{x}\rangle = 0}, \quad \finalanswer{\langle\hat{p}\rangle = 0}
 \]</div>
 <ul>
 <li><strong>位置のゆらぎの2乗 <span class="arithmatex">\((\Delta x)^2\)</span></strong>
@@ -14591,7 +14604,10 @@
 \]</div>
 <p>双曲線関数の半角・倍角の公式 <span class="arithmatex">\(\cosh 2r = \cosh^2 r + \sinh^2 r = 2\sinh^2 r + 1\)</span> および <span class="arithmatex">\(\sinh 2r = 2\cosh r \sinh r\)</span> を適用してまとめます。</p>
 <div class="arithmatex">\[
-  (\Delta x)^2 = \frac{\hbar}{2m\omega} \left( \cosh 2r - \sinh 2r \right) = \frac{\hbar}{2m\omega} \exp(-2r)
+\begin{aligned}
+(\Delta x)^2 &amp;= \frac{\hbar}{2m\omega} \left( \cosh 2r - \sinh 2r \right) \\
+&amp;= \finalanswer{\frac{\hbar}{2m\omega} \exp(-2r)}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>運動量のゆらぎの2乗 <span class="arithmatex">\((\Delta p)^2\)</span></strong>
@@ -14601,12 +14617,20 @@
   \hat{p}^2 = -\frac{m\omega\hbar}{2} \left( \hat{a}^2 + (\hat{a}^\dagger)^2 - 2\hat{a}^\dagger\hat{a} - 1 \right)
 \]</div>
 <div class="arithmatex">\[
-  \langle\hat{p}^2\rangle = -\frac{m\omega\hbar}{2} \left( -2\cosh r \sinh r - 2\sinh^2 r - 1 \right) = \frac{m\omega\hbar}{2} \left( \sinh 2r + \cosh 2r \right) = \frac{m\omega\hbar}{2} \exp(2r)
+\begin{aligned}
+\langle\hat{p}^2\rangle &amp;= -\frac{m\omega\hbar}{2} \left( -2\cosh r \sinh r - 2\sinh^2 r - 1 \right) \\
+&amp;= \frac{m\omega\hbar}{2} \left( \sinh 2r + \cosh 2r \right) \\
+&amp;= \finalanswer{\frac{m\omega\hbar}{2} \exp(2r)}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた位置と運動量のゆらぎの積を計算します。</p>
 <div class="arithmatex">\[
-\Delta x \cdot \Delta p = \sqrt{\frac{\hbar}{2m\omega} \exp(-2r)} \cdot \sqrt{\frac{m\omega\hbar}{2} \exp(2r)} = \frac{\hbar}{2} \sqrt{\exp(-2r) \cdot \exp(2r)} = \frac{\hbar}{2}
+\begin{aligned}
+\Delta x \cdot \Delta p &amp;= \sqrt{\frac{\hbar}{2m\omega} \exp(-2r)} \cdot \sqrt{\frac{m\omega\hbar}{2} \exp(2r)} \\
+&amp;= \frac{\hbar}{2} \sqrt{\exp(-2r) \cdot \exp(2r)} \\
+&amp;= \finalanswer{\frac{\hbar}{2}}
+\end{aligned}
 \]</div>
 <p>ゆらぎの積はパラメータ <span class="arithmatex">\(r\)</span> の値に関わらず常に <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，ハイゼンベルクの不確定性関係の理論的最小限界を満たしています。</p>
 <p><strong>コヒーレント状態との違いの説明</strong></p>

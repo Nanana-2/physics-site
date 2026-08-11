@@ -14528,22 +14528,25 @@ Q(\alpha) = \frac{1}{\pi} \langle\alpha|\rho|\alpha\rangle
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 密度行列の非負定値性から <span class="arithmatex">\(Q(\alpha)\ge0\)</span> を示せ。</p>
-<p>(2) コヒーレント状態は完全性の類似として，以下の複素平面積分に関する関係式を満たす。</p>
+<p>(2) コヒーレント状態は，複素平面上で次の完全性関係を満たす。</p>
 <div class="arithmatex">\[
 \frac{1}{\pi} \int |\alpha\rangle\langle\alpha| d^2\alpha = \hat{I}
 \]</div>
 <p>ただし， <span class="arithmatex">\(d^2\alpha = d(\mathrm{Re}\alpha)d(\mathrm{Im}\alpha)\)</span> であり， <span class="arithmatex">\(\hat{I}\)</span> は単位行列である。密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> を用いて，伏見関数を複素平面全体で積分した値 <span class="arithmatex">\(\int Q(\alpha) d^2\alpha\)</span> が 1 になることを計算して導出せよ。</p>
-<p>(3) 伏見関数 <span class="arithmatex">\(Q(\alpha)\)</span> は，ウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> を位相空間上でガウス関数を用いて滑らかにぼかしたものに等しい。は以下の関係式が成り立つ。</p>
+<p>(3) 伏見関数 <span class="arithmatex">\(Q(\alpha)\)</span> は，ウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> を位相空間上でガウス関数により平滑化したものに等しく，次の関係が成り立つ。</p>
 <div class="arithmatex">\[
 Q(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( -\frac{(x - x')^2}{2\sigma^2} - \frac{(p - p')^2}{2\tau^2} \right) W(x', p') dx' dp'
 \]</div>
-<p>この構造を踏まえ，ウィグナー分布関数が負の値をとるのに対して，伏見関数が不確定性原理の限界を超えて常に 0 以上になる物理的な理由を，測定にともなうゆらぎの観点から説明せよ。</p>
+<p>この構造を踏まえ，ウィグナー分布関数が負の値をとり得る一方で，伏見関数が常に 0 以上になる理由を，不確定性原理が許す位相空間上の分解能と測定にともなうゆらぎの観点から説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>密度行列 <span class="arithmatex">\(\rho\)</span> は，純粋状態の確率混合 <span class="arithmatex">\(\rho = \sum_k p_k |\psi_k\rangle\langle\psi_k|\)</span> <span class="arithmatex">\(0 \le p_k \le 1\)</span> として表現されます。これを用いて，コヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> で挟んだ期待値を計算します。</p>
 <div class="arithmatex">\[
-\langle\alpha|\rho|\alpha\rangle = \sum_k p_k \langle\alpha|\psi_k\rangle\langle\psi_k|\alpha\rangle = \sum_k p_k |\langle\alpha|\psi_k\rangle|^2
+\begin{aligned}
+\langle\alpha|\rho|\alpha\rangle &amp;= \sum_k p_k \langle\alpha|\psi_k\rangle\langle\psi_k|\alpha\rangle \\
+&amp;= \sum_k p_k |\langle\alpha|\psi_k\rangle|^2
+\end{aligned}
 \]</div>
 <p>各量子状態の重なりを表す絶対値の2乗 <span class="arithmatex">\(|\langle\alpha|\psi_k\rangle|^2\)</span> は常に 0 以上であり，出現確率 <span class="arithmatex">\(p_k\)</span> も 0 以上です。したがって，それらの積の総和も必ず 0 以上になります。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14554,7 @@ Q(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \ex
 \]</div>
 <p>定義式の係数は <span class="arithmatex">\(\frac{1}{\pi} &gt; 0\)</span> であるため，伏見関数は複素平面の全域において負の値をとらないことが示されます。</p>
 <div class="arithmatex">\[
-Q(\alpha) \ge 0
+\finalanswer{Q(\alpha) \ge 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>伏見関数 <span class="arithmatex">\(Q(\alpha)\)</span> を複素平面全体で積分します。定義式を代入します。</p>
@@ -14564,11 +14567,14 @@ Q(\alpha) \ge 0
 \]</div>
 <p>大括弧の内部にコヒーレント状態の完全性の式を適用すると，この部分は単位行列 <span class="arithmatex">\(\hat{I}\)</span> に置き換わります。</p>
 <div class="arithmatex">\[
-\int Q(\alpha) d^2\alpha = \mathrm{Tr}(\rho \hat{I}) = \mathrm{Tr}(\rho)
+\begin{aligned}
+\int Q(\alpha) d^2\alpha &amp;= \mathrm{Tr}(\rho \hat{I}) \\
+&amp;= \mathrm{Tr}(\rho)
+\end{aligned}
 \]</div>
 <p>密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> より，積分値はちょうど 1 になります。</p>
 <div class="arithmatex">\[
-\int Q(\alpha) d^2\alpha = 1
+\finalanswer{\int Q(\alpha) d^2\alpha = 1}
 \]</div>
 <p>これにより，伏見関数は 0 以上かつ全積分が 1 という，古典的な確率分布関数としての数学的要件を満たすことが確かめられました。</p>
 <h3 id="3">(3)</h3>

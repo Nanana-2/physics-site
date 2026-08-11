@@ -14552,7 +14552,7 @@
 <p>物体には，<span class="arithmatex">\(x\)</span> 軸の正方向に重力 <span class="arithmatex">\(mg\)</span> が働き，負方向に抵抗力 <span class="arithmatex">\(kv^2\)</span> が働きます。
 したがって，運動方程式は以下のようになります。</p>
 <div class="arithmatex">\[
-m \frac{dv}{dt} = mg - kv^2
+\finalanswer{m \frac{dv}{dt} = mg - kv^2}
 \]</div>
 <p>十分に時間が経過すると，重力と抵抗力が釣り合って加速が止まり，速度は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> に近づきます。このとき <span class="arithmatex">\(\frac{dv}{dt} = 0\)</span> となるため，</p>
 <div class="arithmatex">\[
@@ -14560,7 +14560,7 @@ mg - k v_{\infty}^2 = 0
 \]</div>
 <p>が成り立ちます。これを <span class="arithmatex">\(v_{\infty} &gt; 0\)</span> について解くことで，終端速度が得られます。</p>
 <div class="arithmatex">\[
-v_{\infty} = \sqrt{\frac{mg}{k}}
+\finalanswer{v_{\infty} = \sqrt{\frac{mg}{k}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた終端速度 <span class="arithmatex">\(v_{\infty}\)</span> の関係式 <span class="arithmatex">\(k = \frac{mg}{v_{\infty}^2}\)</span> を運動方程式に代入して整理します。</p>
@@ -14584,7 +14584,7 @@ v_{\infty} \operatorname{artanh} \left( \frac{v}{v_{\infty}} \right) = gt
 \]</div>
 <p>となります。これを <span class="arithmatex">\(v\)</span> について解くことで，速度 <span class="arithmatex">\(v(t)\)</span> が求められます。</p>
 <div class="arithmatex">\[
-v(t) = v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t \right)
+\finalanswer{v(t) = v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>双曲線正接関数 <span class="arithmatex">\(\tanh y\)</span> の <span class="arithmatex">\(y \approx 0\)</span> におけるマクローリン展開は以下の通りです。</p>
@@ -14596,14 +14596,14 @@ v(t) = v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t \right)
 \begin{aligned}
 v(t) &amp;\approx v_{\infty} \left\{ \frac{g}{v_{\infty}} t - \frac{1}{3} \left( \frac{g}{v_{\infty}} t \right)^3 \right\} \\\\
 &amp;= gt - \frac{g^3}{3 v_{\infty}^2} t^3 \\\\
-&amp;= gt - \frac{kg^2}{3m} t^3
+&amp;= \finalanswer{gt - \frac{kg^2}{3m} t^3}
 \end{aligned}
 \]</div>
 <p>この速度の近似式を時間 <span class="arithmatex">\(t\)</span> で積分し，初期条件 <span class="arithmatex">\(x(0) = 0\)</span> を用いることで，位置 <span class="arithmatex">\(x(t)\)</span> の4次までの近似式が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 x(t) &amp;= \int_{0}^{t} v(t') dt' \\\\
-&amp;\approx \frac{1}{2}gt^2 - \frac{kg^2}{12m} t^4
+&amp;\approx \finalanswer{\frac{1}{2}gt^2 - \frac{kg^2}{12m} t^4}
 \end{aligned}
 \]</div>
 <p>空気抵抗がない場合の自由落下では，速度は <span class="arithmatex">\(v(t) = gt\)</span>，位置は <span class="arithmatex">\(x(t) = \frac{1}{2}gt^2\)</span> となります。
@@ -14619,7 +14619,7 @@ x(t) = \frac{v_{\infty}^2}{g} \left[ \ln \cosh \left( \frac{g}{v_{\infty}} t' \r
 \]</div>
 <p><span class="arithmatex">\(\cosh 0 = 1\)</span> より <span class="arithmatex">\(\ln \cosh 0 = 0\)</span> となるため，位置の厳密解は以下のようになります。</p>
 <div class="arithmatex">\[
-x(t) = \frac{v_{\infty}^2}{g} \ln \cosh \left( \frac{g}{v_{\infty}} t \right)
+\finalanswer{x(t) = \frac{v_{\infty}^2}{g} \ln \cosh \left( \frac{g}{v_{\infty}} t \right)}
 \]</div>
 <p>次に，<span class="arithmatex">\(t \to \infty\)</span> における漸近的な振る舞いを考えます。双曲線余弦関数の定義 <span class="arithmatex">\(\cosh y = \frac{e^y + e^{-y}}{2}\)</span> より，<span class="arithmatex">\(y \to \infty\)</span> のとき <span class="arithmatex">\(e^{-y} \to 0\)</span> となるため，</p>
 <div class="arithmatex">\[
@@ -14633,7 +14633,7 @@ x(t) = \frac{v_{\infty}^2}{g} \ln \cosh \left( \frac{g}{v_{\infty}} t \right)
 <div class="arithmatex">\[
 \begin{aligned}
 x(t) &amp;\approx \frac{v_{\infty}^2}{g} \left( \frac{g}{v_{\infty}} t - \ln 2 \right) \\\\
-&amp;= v_{\infty} t - \frac{v_{\infty}^2}{g} \ln 2
+&amp;= \finalanswer{v_{\infty} t - \frac{v_{\infty}^2}{g} \ln 2}
 \end{aligned}
 \]</div>
 <p>十分に時間が経過すると，物体は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> で等速運動するため，位置は <span class="arithmatex">\(v_{\infty}t\)</span> を主要項とする一次式に近づきます。</p>

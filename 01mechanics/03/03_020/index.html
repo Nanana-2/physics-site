@@ -14534,28 +14534,43 @@
 <p>後半の経路は， <span class="arithmatex">\(x = X\)</span> に固定されたままで <span class="arithmatex">\(y\)</span> が 0 から <span class="arithmatex">\(Y\)</span> まで変化する移動です。このとき <span class="arithmatex">\(dx = 0\)</span> であり，力の <span class="arithmatex">\(y\)</span> 成分は <span class="arithmatex">\(F_y = -ky\)</span> となります。</p>
 <p>それぞれの区間における仕事の和を計算します。</p>
 <div class="arithmatex">\[
-W_1 = \int_0^X F_x dx + \int_0^Y F_y dy = \int_0^X (-kx) dx + \int_0^Y (-ky) dy
+\begin{aligned}
+W_1 &amp;= \int_0^X F_x dx + \int_0^Y F_y dy \\
+&amp;= \int_0^X (-kx) dx + \int_0^Y (-ky) dy
+\end{aligned}
 \]</div>
 <p>定積分を実行します。</p>
 <div class="arithmatex">\[
-W_1 = \left[ - \frac{1}{2} k x^2 \right]_0^X + \left[ - \frac{1}{2} k y^2 \right]_0^Y = - \frac{1}{2} k X^2 - \frac{1}{2} k Y^2
+\begin{aligned}
+W_1 &amp;= \left[ - \frac{1}{2} k x^2 \right]_0^X + \left[ - \frac{1}{2} k y^2 \right]_0^Y \\
+&amp;= \finalanswer{- \frac{1}{2} k X^2 - \frac{1}{2} k Y^2}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>経路2では直線 <span class="arithmatex">\(y = \frac{Y}{X} x\)</span> に沿って動くため，微小変位の間には <span class="arithmatex">\(dy = \frac{Y}{X} dx\)</span> という関係が成り立ちます。仕事の線積分にこの関係式と力の成分を代入し，すべて <span class="arithmatex">\(x\)</span> の積分へと統合します。</p>
 <div class="arithmatex">\[
-W_2 = \int_{C} (F_x dx + F_y dy) = \int_0^X (-kx) dx + \int_0^X \left( -k \frac{Y}{X} x \right) \left( \frac{Y}{X} dx \right)
+\begin{aligned}
+W_2 &amp;= \int_{C} (F_x dx + F_y dy) \\
+&amp;= \int_0^X (-kx) dx + \int_0^X \left( -k \frac{Y}{X} x \right) \left( \frac{Y}{X} dx \right)
+\end{aligned}
 \]</div>
 <p>右辺の第2項の係数を整理してまとめます。</p>
 <div class="arithmatex">\[
-W_2 = \int_0^X (-kx) dx + \int_0^X \left( -k \frac{Y^2}{X^2} x \right) dx = \int_0^X -k \left( 1 + \frac{Y^2}{X^2} \right) x dx
+\begin{aligned}
+W_2 &amp;= \int_0^X (-kx) dx + \int_0^X \left( -k \frac{Y^2}{X^2} x \right) dx \\
+&amp;= \int_0^X -k \left( 1 + \frac{Y^2}{X^2} \right) x dx
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(x\)</span> について定積分を実行します。</p>
 <div class="arithmatex">\[
-W_2 = -k \left( 1 + \frac{Y^2}{X^2} \right) \left[ \frac{1}{2} x^2 \right]_0^X = -k \left( 1 + \frac{Y^2}{X^2} \right) \left( \frac{1}{2} X^2 \right)
+\begin{aligned}
+W_2 &amp;= -k \left( 1 + \frac{Y^2}{X^2} \right) \left[ \frac{1}{2} x^2 \right]_0^X \\
+&amp;= -k \left( 1 + \frac{Y^2}{X^2} \right) \left( \frac{1}{2} X^2 \right)
+\end{aligned}
 \]</div>
 <p>括弧を展開して整理します。</p>
 <div class="arithmatex">\[
-W_2 = - \frac{1}{2} k X^2 - \frac{1}{2} k Y^2
+\finalanswer{W_2 = - \frac{1}{2} k X^2 - \frac{1}{2} k Y^2}
 \]</div>
 <p>(1) と (2) の結果を比較すると <span class="arithmatex">\(W_1 = W_2\)</span> となり，仕事が経路に依存しないことが確認できます。</p>
 <h3 id="3">(3)</h3>
@@ -14574,7 +14589,10 @@ U(x,y) = -W = \frac{1}{2} k x^2 + \frac{1}{2} k y^2
 \]</div>
 <p>ここで，関係式 <span class="arithmatex">\(\boldsymbol{F} = -\nabla U\)</span> の右辺を成分ごとに書き下します。</p>
 <div class="arithmatex">\[
--\nabla U = \begin{pmatrix} -\frac{\partial U}{\partial x} \\ -\frac{\partial U}{\partial y} \end{pmatrix} = \begin{pmatrix} -kx \\ -ky \end{pmatrix}
+\begin{aligned}
+-\nabla U &amp;= \begin{pmatrix} -\frac{\partial U}{\partial x} \\ -\frac{\partial U}{\partial y} \end{pmatrix} \\
+&amp;= \finalanswer{\begin{pmatrix} -kx \\ -ky \end{pmatrix}}
+\end{aligned}
 \]</div>
 <p>この結果は，問題文で提示された力の成分表示と完全に一致します。これにより，保存力とそのポテンシャルエネルギーの間に偏微分を介した負の勾配関係が成り立っていることが示されます。</p>
 

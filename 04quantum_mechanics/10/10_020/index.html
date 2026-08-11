@@ -14553,14 +14553,14 @@
 \]</div>
 <p>展開すると，計16個の演算子の組み合わせが得られます。求める展開式は以下の通りです。</p>
 <div class="arithmatex">\[
-\hat{x}^4 = \left( \frac{\hbar}{2m\omega} \right)^2 \left[ \hat{a}^4 + \hat{a}^3\hat{a}^\dagger + \hat{a}^2\hat{a}\hat{a}^\dagger + \dots + (\hat{a}^\dagger)^4 \right]
+\finalanswer{\hat{x}^4 = \left( \frac{\hbar}{2m\omega} \right)^2 \left[ \hat{a}^4 + \hat{a}^3\hat{a}^\dagger + \hat{a}^2\hat{a}\hat{a}^\dagger + \dots + (\hat{a}^\dagger)^4 \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>固有状態 <span class="arithmatex">\(|n\rangle\)</span> は規格直交性 <span class="arithmatex">\(\langle n|m\rangle = \delta_{nm}\)</span> を満たしています。生成演算子は状態の量子数を 1 増やし，消滅演算子は 1 減らすため，演算子を作用させた後に元の状態 <span class="arithmatex">\(|n\rangle\)</span> との内積をとって値が 0 にならないためには，作用させる前後で全体の量子数の変化が差し引き 0 にならなければなりません。</p>
 <p>したがって，期待値が残るための条件は，4個の演算子の掛け算の中で消滅演算子 <span class="arithmatex">\(\hat{a}\)</span> と生成演算子 <span class="arithmatex">\(\hat{a}^\dagger\)</span> がそれぞれちょうど2回ずつ現れることとなります。</p>
 <p>16個の項の中から， <span class="arithmatex">\(\hat{a}\)</span> が2回， <span class="arithmatex">\(\hat{a}^\dagger\)</span> が2回含まれる組み合わせをすべて列挙すると，以下の 6通りの演算子が得られます。</p>
 <div class="arithmatex">\[
-\hat{a}^2(\hat{a}^\dagger)^2, \quad \hat{a}\hat{a}^\dagger\hat{a}\hat{a}^\dagger, \quad \hat{a}(\hat{a}^\dagger)^2\hat{a}, \quad \hat{a}^\dagger\hat{a}^2\hat{a}^\dagger, \quad \hat{a}^\dagger\hat{a}\hat{a}^\dagger\hat{a}, \quad (\hat{a}^\dagger)^2\hat{a}^2
+\finalanswer{\hat{a}^2(\hat{a}^\dagger)^2, \quad \hat{a}\hat{a}^\dagger\hat{a}\hat{a}^\dagger, \quad \hat{a}(\hat{a}^\dagger)^2\hat{a}, \quad \hat{a}^\dagger\hat{a}^2\hat{a}^\dagger, \quad \hat{a}^\dagger\hat{a}\hat{a}^\dagger\hat{a}, \quad (\hat{a}^\dagger)^2\hat{a}^2}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で選別した 6つの演算子の項について，状態 <span class="arithmatex">\(|n\rangle\)</span> に対する期待値を個別に計算します。演算子を右側から順番に状態へ作用させていきます。</p>
@@ -14571,7 +14571,10 @@
 \langle n| \hat{a}^2(\hat{a}^\dagger)^2 |n\rangle = \langle n| \hat{a}^2 \cdot \sqrt{n+1}\sqrt{n+2} |n+2\rangle
 \]</div>
 <div class="arithmatex">\[
-= \sqrt{n+1}\sqrt{n+2}\sqrt{n+2}\sqrt{n+1} \langle n|n\rangle = (n+1)(n+2)
+\begin{aligned}
+ &amp;= \sqrt{n+1}\sqrt{n+2}\sqrt{n+2}\sqrt{n+1} \langle n|n\rangle \\
+&amp;= (n+1)(n+2)
+\end{aligned}
 \]</div>
 <ul>
 <li>項2の計算</li>
@@ -14580,7 +14583,11 @@
 \langle n| \hat{a}\hat{a}^\dagger\hat{a}\hat{a}^\dagger |n\rangle = \langle n| \hat{a}\hat{a}^\dagger\hat{a} \sqrt{n+1} |n+1\rangle
 \]</div>
 <div class="arithmatex">\[
-= \langle n| \hat{a}\hat{a}^\dagger (n+1) |n\rangle = \langle n| \hat{a} (n+1)\sqrt{n+1} |n+1\rangle = (n+1)^2
+\begin{aligned}
+ &amp;= \langle n| \hat{a}\hat{a}^\dagger (n+1) |n\rangle \\
+&amp;= \langle n| \hat{a} (n+1)\sqrt{n+1} |n+1\rangle \\
+&amp;= (n+1)^2
+\end{aligned}
 \]</div>
 <ul>
 <li>項3の計算</li>
@@ -14598,7 +14605,10 @@
 \langle n| \hat{a}^\dagger\hat{a}^2\hat{a}^\dagger |n\rangle = \langle n| \hat{a}^\dagger\hat{a}^2 \sqrt{n+1} |n+1\rangle
 \]</div>
 <div class="arithmatex">\[
-= \langle n| \hat{a}^\dagger \sqrt{n+1}\sqrt{n+1}\sqrt{n} |n-1\rangle = n(n+1)
+\begin{aligned}
+ &amp;= \langle n| \hat{a}^\dagger \sqrt{n+1}\sqrt{n+1}\sqrt{n} |n-1\rangle \\
+&amp;= n(n+1)
+\end{aligned}
 \]</div>
 <ul>
 <li>項5の計算</li>
@@ -14607,7 +14617,11 @@
 \langle n| \hat{a}^\dagger\hat{a}\hat{a}^\dagger\hat{a} |n\rangle = \langle n| \hat{a}^\dagger\hat{a}\hat{a}^\dagger \sqrt{n} |n-1\rangle
 \]</div>
 <div class="arithmatex">\[
-= \langle n| \hat{a}^\dagger\hat{a} \sqrt{n}\sqrt{n} |n\rangle = \langle n| \hat{a}^\dagger n\sqrt{n} |n-1\rangle = n^2
+\begin{aligned}
+ &amp;= \langle n| \hat{a}^\dagger\hat{a} \sqrt{n}\sqrt{n} |n\rangle \\
+&amp;= \langle n| \hat{a}^\dagger n\sqrt{n} |n-1\rangle \\
+&amp;= n^2
+\end{aligned}
 \]</div>
 <ul>
 <li>項6の計算</li>
@@ -14651,7 +14665,7 @@ E_n^{(1)} = \lambda \left( \frac{\hbar}{2m\omega} \right)^2 \cdot 3(2n^2 + 2n + 
 \]</div>
 <p>数式を整理することで，求めるエネルギーの1次補正の式が得られます。</p>
 <div class="arithmatex">\[
-E_n^{(1)} = \frac{3\lambda\hbar^2}{4m^2\omega^2} (2n^2 + 2n + 1)
+\finalanswer{E_n^{(1)} = \frac{3\lambda\hbar^2}{4m^2\omega^2} (2n^2 + 2n + 1)}
 \]</div>
 <p>非調和摂動によるエネルギー補正の絶対値は，量子数 <span class="arithmatex">\(n\)</span> の2乗に比例して大きくなります。</p>
 

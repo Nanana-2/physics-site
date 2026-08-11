@@ -14535,7 +14535,10 @@ V(x) = -\alpha \delta(x)
 <h3 id="1">(1)</h3>
 <p>原点以外の領域における時間独立シュレーディンガー方程式は以下の通りです。</p>
 <div class="arithmatex">\[
--\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} = E \psi \implies \frac{d^2 \psi}{dx^2} = \kappa^2 \psi
+\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} &amp;= E \psi \implies \frac{d^2 \psi}{dx^2} \\
+&amp;= \kappa^2 \psi
+\end{aligned}
 \]</div>
 <p>この方程式の一般解は <span class="arithmatex">\(e^{\kappa x}\)</span> と <span class="arithmatex">\(e^{-\kappa x}\)</span> の線形結合です。無限遠で波動関数が 0 になるという条件から，各領域で以下の解が残ります。</p>
 <ul>
@@ -14558,7 +14561,7 @@ A_1 e^0 = A_2 e^0 \implies A_1 = A_2
 \]</div>
 <p>係数が等しくなるため，これを共通の定数 <span class="arithmatex">\(A\)</span> と置きます。絶対値の記号を用いることで，2つの領域の解を1つの式にまとめて書き表すことができます。</p>
 <div class="arithmatex">\[
-\psi(x) = A e^{-\kappa |x|}
+\finalanswer{\psi(x) = A e^{-\kappa |x|}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>シュレーディンガー方程式の各項を <span class="arithmatex">\(-\epsilon\)</span> から <span class="arithmatex">\(\epsilon\)</span> まで積分します。</p>
@@ -14575,7 +14578,7 @@ A_1 e^0 = A_2 e^0 \implies A_1 = A_2
 \]</div>
 <p>項を移項して整理することで，微分の跳び条件が得られます。</p>
 <div class="arithmatex">\[
-\left. \frac{d\psi}{dx} \right|_{+0} - \left. \frac{d\psi}{dx} \right|_{-0} = -\frac{2m\alpha}{\hbar^2} \psi(0)
+\finalanswer{\left. \frac{d\psi}{dx} \right|_{+0} - \left. \frac{d\psi}{dx} \right|_{-0} = -\frac{2m\alpha}{\hbar^2} \psi(0)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(1) で求めた波動関数から，原点のすぐ右側と左側における微分係数を計算します。</p>
@@ -14598,10 +14601,16 @@ A_1 e^0 = A_2 e^0 \implies A_1 = A_2
 \]</div>
 <p>この <span class="arithmatex">\(\kappa\)</span> の結果を定義式 <span class="arithmatex">\(\kappa^2 = -\frac{2mE}{\hbar^2}\)</span> に代入し，エネルギー <span class="arithmatex">\(E\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\left( \frac{m\alpha}{\hbar^2} \right)^2 = -\frac{2mE}{\hbar^2} \implies \frac{m^2 \alpha^2}{\hbar^4} = -\frac{2mE}{\hbar^2}
+\begin{aligned}
+\left( \frac{m\alpha}{\hbar^2} \right)^2 &amp;= -\frac{2mE}{\hbar^2} \implies \frac{m^2 \alpha^2}{\hbar^4} \\
+&amp;= -\frac{2mE}{\hbar^2}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-E = -\frac{\hbar^2}{2m} \cdot \frac{m^2 \alpha^2}{\hbar^4} = -\frac{m\alpha^2}{2\hbar^2}
+\begin{aligned}
+E &amp;= -\frac{\hbar^2}{2m} \cdot \frac{m^2 \alpha^2}{\hbar^4} \\
+&amp;= \finalanswer{-\frac{m\alpha^2}{2\hbar^2}}
+\end{aligned}
 \]</div>
 <p>これにより，引力的なデルタ関数ポテンシャルには，このエネルギーを持つ束縛状態が1つだけ存在することが導かれました。</p>
 

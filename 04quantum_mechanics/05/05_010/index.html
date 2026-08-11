@@ -14513,11 +14513,18 @@
 定義より <span class="arithmatex">\(\xi = \frac{x}{x_0}\)</span> であるため，逆の関係は <span class="arithmatex">\(x = x_0 \xi\)</span> であり，微分係数は <span class="arithmatex">\(\frac{d\xi}{dx} = \frac{1}{x_0}\)</span> です。</p>
 <p>1階微分は以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{d}{dx} = \frac{d\xi}{dx}\frac{d}{d\xi} = \frac{1}{x_0}\frac{d}{d\xi}
+\begin{aligned}
+\frac{d}{dx} &amp;= \frac{d\xi}{dx}\frac{d}{d\xi} \\
+&amp;= \frac{1}{x_0}\frac{d}{d\xi}
+\end{aligned}
 \]</div>
 <p>2階微分は，1階微分の操作を2回繰り返すことで得られます。 <span class="arithmatex">\(x_0\)</span> は定数であるため，微分の外へ出すことができます。</p>
 <div class="arithmatex">\[
-\frac{d^2}{dx^2} = \frac{d}{dx}\left(\frac{d}{dx}\right) = \frac{1}{x_0}\frac{d}{d\xi}\left(\frac{1}{x_0}\frac{d}{d\xi}\right) = \frac{1}{x_0^2}\frac{d^2}{d\xi^2}
+\begin{aligned}
+\frac{d^2}{dx^2} &amp;= \frac{d}{dx}\left(\frac{d}{dx}\right) \\
+&amp;= \frac{1}{x_0}\frac{d}{d\xi}\left(\frac{1}{x_0}\frac{d}{d\xi}\right) \\
+&amp;= \finalanswer{\frac{1}{x_0^2}\frac{d^2}{d\xi^2}}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>元のシュレーディンガー方程式の <span class="arithmatex">\(x\)</span> に <span class="arithmatex">\(x_0 \xi\)</span> を代入し， <span class="arithmatex">\(\frac{d^2}{dx^2}\)</span> に (1) の結果を代入します。</p>
@@ -14529,13 +14536,19 @@
 <li>第1項の係数：</li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{\hbar^2}{2m}\frac{1}{x_0^2} = -\frac{\hbar^2}{2m}\frac{m\omega}{\hbar} = -\frac{1}{2}\hbar\omega
+\begin{aligned}
+-\frac{\hbar^2}{2m}\frac{1}{x_0^2} &amp;= -\frac{\hbar^2}{2m}\frac{m\omega}{\hbar} \\
+&amp;= -\frac{1}{2}\hbar\omega
+\end{aligned}
 \]</div>
 <ul>
 <li>第2項のポテンシャル係数：</li>
 </ul>
 <div class="arithmatex">\[
-  \frac{1}{2}m\omega^2 x_0^2 = \frac{1}{2}m\omega^2 \left(\frac{\hbar}{m\omega}\right) = \frac{1}{2}\hbar\omega
+\begin{aligned}
+\frac{1}{2}m\omega^2 x_0^2 &amp;= \frac{1}{2}m\omega^2 \left(\frac{\hbar}{m\omega}\right) \\
+&amp;= \frac{1}{2}\hbar\omega
+\end{aligned}
 \]</div>
 <p>これらをもとの式に戻して整理します。各項の係数に共通して <span class="arithmatex">\(\frac{1}{2}\hbar\omega\)</span> が現れます。</p>
 <div class="arithmatex">\[
@@ -14550,7 +14563,7 @@
 \frac{d^2\psi}{d\xi^2} + \left(\frac{2E}{\hbar\omega} - \xi^2\right)\psi = 0
 \]</div>
 <div class="arithmatex">\[
-\frac{d^2\psi}{d\xi^2} + (\lambda - \xi^2)\psi = 0
+\finalanswer{\frac{d^2\psi}{d\xi^2} + (\lambda - \xi^2)\psi = 0}
 \]</div>
 <p>これにより，煩雑な物理定数がすべて消去され，空間の広がりとエネルギーの大きさがそれぞれ <span class="arithmatex">\(\xi\)</span> と <span class="arithmatex">\(\lambda\)</span> という純粋な数値として扱える標準形の方程式が導かれました。</p>
 

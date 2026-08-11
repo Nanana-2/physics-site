@@ -14543,7 +14543,10 @@ U = 9N k_B T \left( \frac{T}{T_D} \right)^3 \int_0^{T_D/T} \frac{x^3}{e^x - 1} d
 <h3 id="1">(1)</h3>
 <p>全モード数の条件式に状態密度 <span class="arithmatex">\(D(\nu)\)</span> の具体的な表現を代入して， <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\nu_D\)</span> までの積分を実行します。</p>
 <div class="arithmatex">\[
-\int_0^{\nu_D} \frac{12\pi V}{c^3} \nu^2 d\nu = \frac{12\pi V}{c^3} \left[ \frac{\nu^3}{3} \right]_0^{\nu_D} = \frac{4\pi V}{c^3} \nu_D^3
+\begin{aligned}
+\int_0^{\nu_D} \frac{12\pi V}{c^3} \nu^2 d\nu &amp;= \frac{12\pi V}{c^3} \left[ \frac{\nu^3}{3} \right]_0^{\nu_D} \\
+&amp;= \frac{4\pi V}{c^3} \nu_D^3
+\end{aligned}
 \]</div>
 <p>これが全体の自由度 <span class="arithmatex">\(3N\)</span> に一致するため，以下の等式が成り立ちます。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14554,7 @@ U = 9N k_B T \left( \frac{T}{T_D} \right)^3 \int_0^{T_D/T} \frac{x^3}{e^x - 1} d
 \]</div>
 <p>この式を <span class="arithmatex">\(\nu_D\)</span> について解くことで，デバイ振動数が導出されます。</p>
 <div class="arithmatex">\[
-\nu_D^3 = \frac{3N c^3}{4\pi V} \quad \implies \quad \nu_D = c \left( \frac{3N}{4\pi V} \right)^{1/3}
+\finalanswer{\nu_D^3 = \frac{3N c^3}{4\pi V} \quad \implies \quad \nu_D = c \left( \frac{3N}{4\pi V} \right)^{1/3}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) の等式より，音速と体積を含む定数項を <span class="arithmatex">\(\frac{12\pi V}{c^3} = \frac{9N}{\nu_D^3}\)</span> と書き換えることができます。これを元の状態密度の式に代入すると，指定された形式が得られます。</p>
@@ -14560,19 +14563,28 @@ D(\nu) = \frac{9N}{\nu_D^3} \nu^2
 \]</div>
 <p>この <span class="arithmatex">\(D(\nu)\)</span> を内部エネルギー <span class="arithmatex">\(U\)</span> の積分式に代入します。</p>
 <div class="arithmatex">\[
-U = \int_0^{\nu_D} \frac{h\nu}{e^{h\nu/k_B T} - 1} \left( \frac{9N}{\nu_D^3} \nu^2 \right) d\nu = \frac{9Nh}{\nu_D^3} \int_0^{\nu_D} \frac{\nu^3}{e^{h\nu/k_B T} - 1} d\nu
+\begin{aligned}
+U &amp;= \int_0^{\nu_D} \frac{h\nu}{e^{h\nu/k_B T} - 1} \left( \frac{9N}{\nu_D^3} \nu^2 \right) d\nu \\
+&amp;= \frac{9Nh}{\nu_D^3} \int_0^{\nu_D} \frac{\nu^3}{e^{h\nu/k_B T} - 1} d\nu
+\end{aligned}
 \]</div>
 <p>指定された変数変換 <span class="arithmatex">\(x = \frac{h\nu}{k_B T}\)</span> を行います。これにより， <span class="arithmatex">\(\nu = \frac{k_B T}{h} x\)</span> ， <span class="arithmatex">\(d\nu = \frac{k_B T}{h} dx\)</span> となります。積分の下限は <span class="arithmatex">\(0\)</span> のままであり，上限は <span class="arithmatex">\(\nu = \nu_D\)</span> のとき <span class="arithmatex">\(x = \frac{h\nu_D}{k_B T}\)</span> となります。ここでデバイ温度 <span class="arithmatex">\(T_D = \frac{h\nu_D}{k_B}\)</span> を用いると，積分上限は <span class="arithmatex">\(T_D/T\)</span> と書き表せます。これらを代入して整理します。</p>
 <div class="arithmatex">\[
-U = \frac{9Nh}{\nu_D^3} \int_0^{T_D/T} \frac{\left( \frac{k_B T}{h} x \right)^3}{e^x - 1} \left( \frac{k_B T}{h} dx \right) = \frac{9Nh}{\nu_D^3} \left( \frac{k_B T}{h} \right)^4 \int_0^{T_D/T} \frac{x^3}{e^x - 1} dx
+\begin{aligned}
+U &amp;= \frac{9Nh}{\nu_D^3} \int_0^{T_D/T} \frac{\left( \frac{k_B T}{h} x \right)^3}{e^x - 1} \left( \frac{k_B T}{h} dx \right) \\
+&amp;= \frac{9Nh}{\nu_D^3} \left( \frac{k_B T}{h} \right)^4 \int_0^{T_D/T} \frac{x^3}{e^x - 1} dx
+\end{aligned}
 \]</div>
 <p>外側の係数部分について， <span class="arithmatex">\(\nu_D = \frac{k_B T_D}{h}\)</span> を用いて <span class="arithmatex">\(\nu_D^3\)</span> を消去します。</p>
 <div class="arithmatex">\[
-\frac{9Nh}{\left( \frac{k_B T_D}{h} \right)^3} \left( \frac{k_B T}{h} \right)^4 = 9N \frac{h \cdot h^3}{k_B^3 T_D^3} \frac{k_B^4 T^4}{h^4} = 9N k_B T \left( \frac{T}{T_D} \right)^3
+\begin{aligned}
+\frac{9Nh}{\left( \frac{k_B T_D}{h} \right)^3} \left( \frac{k_B T}{h} \right)^4 &amp;= 9N \frac{h \cdot h^3}{k_B^3 T_D^3} \frac{k_B^4 T^4}{h^4} \\
+&amp;= 9N k_B T \left( \frac{T}{T_D} \right)^3
+\end{aligned}
 \]</div>
 <p>これを積分の式と組み合わせることで，目的の形式が導出されます。</p>
 <div class="arithmatex">\[
-U = 9N k_B T \left( \frac{T}{T_D} \right)^3 \int_0^{T_D/T} \frac{x^3}{e^x - 1} dx
+\finalanswer{U = 9N k_B T \left( \frac{T}{T_D} \right)^3 \int_0^{T_D/T} \frac{x^3}{e^x - 1} dx}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>低温極限 <span class="arithmatex">\(T \ll T_D\)</span> では，デバイ温度に比べて実際の温度が非常に低いため，比率 <span class="arithmatex">\(T_D/T\)</span> は非常に大きな値になります。したがって，積分の範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\infty\)</span> までとして近似できます。</p>
@@ -14583,7 +14595,10 @@ U \simeq 9N k_B T \left( \frac{T}{T_D} \right)^3 \cdot \frac{\pi^4}{15} = \frac{
 <p>この結果から，低温における格子の全エネルギーは温度の4乗<span class="arithmatex">\(T^4\)</span>に比例して変化することがわかります。これは光子気体である黒体放射のエネルギー密度が <span class="arithmatex">\(T^4\)</span> に比例するステファン・ボルツマンの法則と数学的に同じ仕組みです。</p>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，この内部エネルギーを温度 <span class="arithmatex">\(T\)</span> で微分することで得られます。</p>
 <div class="arithmatex">\[
-C_V = \frac{\partial U}{\partial T} \simeq \frac{3\pi^4 N k_B}{5 T_D^3} \cdot 4T^3 = \frac{12\pi^4 N k_B}{5} \left( \frac{T}{T_D} \right)^3
+\begin{aligned}
+C_V &amp;= \frac{\partial U}{\partial T} \simeq \frac{3\pi^4 N k_B}{5 T_D^3} \cdot 4T^3 \\
+&amp;= \finalanswer{\frac{12\pi^4 N k_B}{5} \left( \frac{T}{T_D} \right)^3}
+\end{aligned}
 \]</div>
 <p>したがって，デバイ模型による固体の熱容量は，低温領域において<strong>絶対温度の3乗<span class="arithmatex">\(T^3\)</span>に比例</strong>して緩やかにゼロへと向かうことが示されました。</p>
 <p>アインシュタイン模型の熱容量は低温で指数関数的に減少します。一方，デバイ模型には低振動数の音響フォノンが存在するため，低温で <span class="arithmatex">\(C_V\propto T^3\)</span> となり，絶縁体の測定結果を再現します。</p>

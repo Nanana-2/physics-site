@@ -14536,11 +14536,11 @@
 <li>最小値： <span class="arithmatex">\(| \frac{1}{2} - \frac{1}{2} | = 0\)</span></li>
 <li>最大値： <span class="arithmatex">\(\frac{1}{2} + \frac{1}{2} = 1\)</span></li>
 </ul>
-<p>したがって， <span class="arithmatex">\(J\)</span> がとり得る値は <span class="arithmatex">\(J = 1\)</span> および <span class="arithmatex">\(J = 0\)</span> のふたつです。</p>
+<p>したがって， <span class="arithmatex">\(J\)</span> がとり得る値は <span class="arithmatex">\(\finalanswer{J = 1, 0}\)</span> です。</p>
 <p>それぞれの <span class="arithmatex">\(J\)</span> に対応する <span class="arithmatex">\(M\)</span> の範囲は <span class="arithmatex">\(-J \le M \le J\)</span> であるため，以下のようになります。</p>
 <ul>
-<li><span class="arithmatex">\(J = 1\)</span> のとき： <span class="arithmatex">\(M = 1, 0, -1\)</span></li>
-<li><span class="arithmatex">\(J = 0\)</span> のとき： <span class="arithmatex">\(M = 0\)</span></li>
+<li><span class="arithmatex">\(J = 1\)</span> のとき： <span class="arithmatex">\(\finalanswer{M = 1, 0, -1}\)</span></li>
+<li><span class="arithmatex">\(J = 0\)</span> のとき： <span class="arithmatex">\(\finalanswer{M = 0}\)</span></li>
 </ul>
 <p>全体の状態で数えると， <span class="arithmatex">\(3 + 1 = 4\)</span> つの状態が存在します。これは元の直積基底の数である <span class="arithmatex">\(2 \times 2 = 4\)</span> と一致します。</p>
 <h3 id="2">(2)</h3>
@@ -14550,7 +14550,11 @@
 </ul>
 <p><span class="arithmatex">\(J = 1, M = 1\)</span> を作用規則の根号の式に代入します。</p>
 <div class="arithmatex">\[
-  \hat{J}_- |1, 1\rangle = \sqrt{1(1+1) - 1(1-1)} |1, 0\rangle = \sqrt{2 - 0} |1, 0\rangle = \sqrt{2} |1, 0\rangle
+\begin{aligned}
+\hat{J}_- |1, 1\rangle &amp;= \sqrt{1(1+1) - 1(1-1)} |1, 0\rangle \\
+&amp;= \sqrt{2 - 0} |1, 0\rangle \\
+&amp;= \sqrt{2} |1, 0\rangle
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>右辺の計算</strong></li>
@@ -14568,7 +14572,7 @@
 \sqrt{2} |1, 0\rangle = |-\frac{1}{2}, +\frac{1}{2}\rangle + |+\frac{1}{2}, -\frac{1}{2}\rangle
 \]</div>
 <div class="arithmatex">\[
-|1, 0\rangle = \frac{1}{\sqrt{2}} |-\frac{1}{2}, +\frac{1}{2}\rangle + \frac{1}{\sqrt{2}} |+\frac{1}{2}, -\frac{1}{2}\rangle
+\finalanswer{|1, 0\rangle = \frac{1}{\sqrt{2}} |-\frac{1}{2}, +\frac{1}{2}\rangle + \frac{1}{\sqrt{2}} |+\frac{1}{2}, -\frac{1}{2}\rangle}
 \]</div>
 <p>これが求める状態の展開式です。ふたつの直積基底に対する CG 係数は，ともに <span class="arithmatex">\(\frac{1}{\sqrt{2}}\)</span> になります。</p>
 <h3 id="3">(3)</h3>
@@ -14579,7 +14583,10 @@
 \]</div>
 <p>(2) で求めた状態 <span class="arithmatex">\(|1, 0\rangle\)</span> との直交条件を計算します。直積基底同士は互いに正規直交します。</p>
 <div class="arithmatex">\[
-\langle 1, 0|0, 0\rangle = \left( \frac{1}{\sqrt{2}} \langle -\frac{1}{2}, +\frac{1}{2}| + \frac{1}{\sqrt{2}} \langle +\frac{1}{2}, -\frac{1}{2}| \right) \left( A |+\frac{1}{2}, -\frac{1}{2}\rangle + B |-\frac{1}{2}, +\frac{1}{2}\rangle \right) = 0
+\begin{aligned}
+\langle 1, 0|0, 0\rangle &amp;= \left( \frac{1}{\sqrt{2}} \langle -\frac{1}{2}, +\frac{1}{2}| + \frac{1}{\sqrt{2}} \langle +\frac{1}{2}, -\frac{1}{2}| \right) \left( A |+\frac{1}{2}, -\frac{1}{2}\rangle + B |-\frac{1}{2}, +\frac{1}{2}\rangle \right) \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \frac{1}{\sqrt{2}} B + \frac{1}{\sqrt{2}} A = 0 \implies B = -A
@@ -14590,11 +14597,16 @@
 \]</div>
 <p>状態の規格化条件を課します。</p>
 <div class="arithmatex">\[
-\langle 0, 0|0, 0\rangle = |A|^2 + |-A|^2 = 2|A|^2 = 1 \implies |A|^2 = \frac{1}{2}
+\begin{aligned}
+\langle 0, 0|0, 0\rangle &amp;= |A|^2 + |-A|^2 \\
+&amp;= 2|A|^2 \\
+&amp;= 1 \implies |A|^2 \\
+&amp;= \frac{1}{2}
+\end{aligned}
 \]</div>
 <p>問題の指示より， <span class="arithmatex">\(|+\frac{1}{2}, -\frac{1}{2}\rangle\)</span> の係数である <span class="arithmatex">\(A\)</span> は正の実数とするため， <span class="arithmatex">\(A = \frac{1}{\sqrt{2}}\)</span> と定まります。自動的に <span class="arithmatex">\(B = -\frac{1}{\sqrt{2}}\)</span> となります。</p>
 <div class="arithmatex">\[
-|0, 0\rangle = \frac{1}{\sqrt{2}} |+\frac{1}{2}, -\frac{1}{2}\rangle - \frac{1}{\sqrt{2}} |-\frac{1}{2}, +\frac{1}{2}\rangle
+\finalanswer{|0, 0\rangle = \frac{1}{\sqrt{2}} |+\frac{1}{2}, -\frac{1}{2}\rangle - \frac{1}{\sqrt{2}} |-\frac{1}{2}, +\frac{1}{2}\rangle}
 \]</div>
 <p>このように，全角運動量が 1 の三重項状態は符号がプラスで対称になり， 0 の一重項状態は符号がマイナスで反対称になる組み合わせが導かれました。</p>
 

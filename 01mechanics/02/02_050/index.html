@@ -14527,7 +14527,7 @@
 <h3 id="1">(1)</h3>
 <p>質点の加速度は <span class="arithmatex">\(\frac{dv}{dt}\)</span> であるため，ニュートンの運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
-m \frac{dv}{dt} = F_0 e^{-kt}
+\finalanswer{m \frac{dv}{dt} = F_0 e^{-kt}}
 \]</div>
 <p>この式の両辺を質量 <span class="arithmatex">\(m\)</span> で割り算します。</p>
 <div class="arithmatex">\[
@@ -14535,30 +14535,44 @@ m \frac{dv}{dt} = F_0 e^{-kt}
 \]</div>
 <p>両辺を時刻 0 から <span class="arithmatex">\(t\)</span> まで時間積分します。初期速度が <span class="arithmatex">\(v(0) = 0\)</span> であることを考慮すると，左辺の積分は <span class="arithmatex">\(v(t)\)</span> となり，右辺の積分は次のようになります。</p>
 <div class="arithmatex">\[
-v(t) = \int_0^t \frac{F_0}{m} e^{-kt'} dt' = \frac{F_0}{m} \left[ - \frac{1}{k} e^{-kt'} \right]_0^t
+\begin{aligned}
+v(t) &amp;= \int_0^t \frac{F_0}{m} e^{-kt'} dt' \\
+&amp;= \frac{F_0}{m} \left[ - \frac{1}{k} e^{-kt'} \right]_0^t
+\end{aligned}
 \]</div>
 <p>大括弧の内部を展開して整理します。</p>
 <div class="arithmatex">\[
-v(t) = \frac{F_0}{mk} \left( 1 - e^{-kt} \right)
+\finalanswer{v(t) = \frac{F_0}{mk} \left( 1 - e^{-kt} \right)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>外力 <span class="arithmatex">\(F(t) = F_0 e^{-kt}\)</span> が時刻 0 から <span class="arithmatex">\(t\)</span> までの間に与えた力積 <span class="arithmatex">\(I(t)\)</span> を定義通りに計算します。</p>
 <div class="arithmatex">\[
-I(t) = \int_0^t F_0 e^{-kt'} dt' = F_0 \left[ - \frac{1}{k} e^{-kt'} \right]_0^t = \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\begin{aligned}
+I(t) &amp;= \int_0^t F_0 e^{-kt'} dt' \\
+&amp;= F_0 \left[ - \frac{1}{k} e^{-kt'} \right]_0^t \\
+&amp;= \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\end{aligned}
 \]</div>
 <p>次に，時刻 <span class="arithmatex">\(t\)</span> における質点の運動量を求めます。(1) で得られた速度の式に質量 <span class="arithmatex">\(m\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-p(t) = mv(t) = m \cdot \frac{F_0}{mk} \left( 1 - e^{-kt} \right) = \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\begin{aligned}
+p(t) &amp;= mv(t) \\
+&amp;= m \cdot \frac{F_0}{mk} \left( 1 - e^{-kt} \right) \\
+&amp;= \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\end{aligned}
 \]</div>
 <p>初期時刻において質点は静止しているため，初期運動量は <span class="arithmatex">\(p(0) = 0\)</span> です。したがって，運動量の変化量は次のようになります。</p>
 <div class="arithmatex">\[
-p(t) - p(0) = \frac{F_0}{k} \left( 1 - e^{-kt} \right)
+\finalanswer{p(t) - p(0) = \frac{F_0}{k} \left( 1 - e^{-kt} \right)}
 \]</div>
 <p>この結果は，求めた力積 <span class="arithmatex">\(I(t)\)</span> の式と完全に一致します。これにより，時間に依存する力が加わる場合であっても，力積が運動量の変化に等しいという関係性が成り立っていることが示されます。</p>
 <h3 id="3">(3)</h3>
 <p>速度は位置の時間微分 <span class="arithmatex">\(\frac{dx}{dt} = v(t)\)</span> であるため，(1) で得られた速度の式をさらに時間で積分します。初期位置が <span class="arithmatex">\(x(0) = 0\)</span> であることを考慮して等式を組み立てます。</p>
 <div class="arithmatex">\[
-x(t) = \int_0^t v(t') dt' = \int_0^t \frac{F_0}{mk} \left( 1 - e^{-kt'} \right) dt'
+\begin{aligned}
+x(t) &amp;= \int_0^t v(t') dt' \\
+&amp;= \int_0^t \frac{F_0}{mk} \left( 1 - e^{-kt'} \right) dt'
+\end{aligned}
 \]</div>
 <p>積分計算をそれぞれの項に分けて実行します。</p>
 <div class="arithmatex">\[
@@ -14570,7 +14584,7 @@ x(t) = \frac{F_0}{mk} \left( t + \frac{1}{k} e^{-kt} - \frac{1}{k} \right)
 \]</div>
 <p>括弧の内部を整理してまとめます。</p>
 <div class="arithmatex">\[
-x(t) = \frac{F_0}{mk} t - \frac{F_0}{mk^2} \left( 1 - e^{-kt} \right)
+\finalanswer{x(t) = \frac{F_0}{mk} t - \frac{F_0}{mk^2} \left( 1 - e^{-kt} \right)}
 \]</div>
 <p>これにより，指数関数的に減少する外力を受ける質点の，任意の時刻における位置の変化が求まります。</p>
 

@@ -14586,21 +14586,35 @@ m (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) = 0
 \]</div>
 <p>角度方向の式に <span class="arithmatex">\(r\)</span> をかけると，次のように整理できます。</p>
 <div class="arithmatex">\[
-m (r^2 \ddot{\theta} + 2 r \dot{r} \dot{\theta}) = \frac{d}{dt} (m r^2 \dot{\theta}) = 0
+\begin{aligned}
+m (r^2 \ddot{\theta} + 2 r \dot{r} \dot{\theta}) &amp;= \frac{d}{dt} (m r^2 \dot{\theta}) \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>これにより，角運動量の大きさ <span class="arithmatex">\(L = m r^2 \dot{\theta}\)</span> が時間的に変化しない一定の値であることが示されます。</p>
 <h3 id="2">(2)</h3>
 <p>動径の逆数 <span class="arithmatex">\(u = 1/r\)</span> の時間微分を計算します。</p>
 <div class="arithmatex">\[
-\dot{r} = \frac{d}{dt}\left(\frac{1}{u}\right) = -\frac{1}{u^2} \frac{du}{dt} = -\frac{1}{u^2} \dot{\theta} \frac{du}{d\theta}
+\begin{aligned}
+\dot{r} &amp;= \frac{d}{dt}\left(\frac{1}{u}\right) \\
+&amp;= -\frac{1}{u^2} \frac{du}{dt} \\
+&amp;= -\frac{1}{u^2} \dot{\theta} \frac{du}{d\theta}
+\end{aligned}
 \]</div>
 <p>角運動量保存則より <span class="arithmatex">\(\dot{\theta} = L u^2 / m\)</span> であるため，これを代入します。</p>
 <div class="arithmatex">\[
-\dot{r} = -\frac{1}{u^2} \left(\frac{L u^2}{m}\right) \frac{du}{d\theta} = -\frac{L}{m} \frac{du}{d\theta}
+\begin{aligned}
+\dot{r} &amp;= -\frac{1}{u^2} \left(\frac{L u^2}{m}\right) \frac{du}{d\theta} \\
+&amp;= -\frac{L}{m} \frac{du}{d\theta}
+\end{aligned}
 \]</div>
 <p>これをさらに時間で微分します。</p>
 <div class="arithmatex">\[
-\ddot{r} = \frac{d}{dt} \left(-\frac{L}{m} \frac{du}{d\theta}\right) = -\frac{L}{m} \dot{\theta} \frac{d^2u}{d\theta^2} = -\frac{L^2 u^2}{m^2} \frac{d^2u}{d\theta^2}
+\begin{aligned}
+\ddot{r} &amp;= \frac{d}{dt} \left(-\frac{L}{m} \frac{du}{d\theta}\right) \\
+&amp;= -\frac{L}{m} \dot{\theta} \frac{d^2u}{d\theta^2} \\
+&amp;= -\frac{L^2 u^2}{m^2} \frac{d^2u}{d\theta^2}
+\end{aligned}
 \]</div>
 <p>これらの結果を動径方向の運動方程式に代入します。</p>
 <div class="arithmatex">\[
@@ -14612,7 +14626,7 @@ m \left(-\frac{L^2 u^2}{m^2} \frac{d^2u}{d\theta^2}\right) - m \left(\frac{1}{u}
 \]</div>
 <p>両辺を <span class="arithmatex">\(-L^2 u^2 / m\)</span> で割ることで，目的の軌道方程式が得られます。</p>
 <div class="arithmatex">\[
-\frac{d^2u}{d\theta^2} + u = \frac{GMm^2}{L^2}
+\finalanswer{\frac{d^2u}{d\theta^2} + u = \frac{GMm^2}{L^2}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>微分方程式の一般解において，<span class="arithmatex">\(\theta_0 = 0\)</span> とおくと次のようになります。</p>
@@ -14621,7 +14635,10 @@ u = C \cos \theta + \frac{GMm^2}{L^2}
 \]</div>
 <p><span class="arithmatex">\(r = 1/u\)</span> であるため，動径 <span class="arithmatex">\(r\)</span> は次の形で表されます。</p>
 <div class="arithmatex">\[
-r = \frac{1}{\frac{GMm^2}{L^2} + C \cos \theta} = \frac{\frac{L^2}{GMm^2}}{1 + \frac{CL^2}{GMm^2} \cos \theta}
+\begin{aligned}
+r &amp;= \frac{1}{\frac{GMm^2}{L^2} + C \cos \theta} \\
+&amp;= \frac{\frac{L^2}{GMm^2}}{1 + \frac{CL^2}{GMm^2} \cos \theta}
+\end{aligned}
 \]</div>
 <p>ここで，半通径 <span class="arithmatex">\(p = L^2 / GMm^2\)</span> および離心率 <span class="arithmatex">\(e = CL^2 / GMm^2\)</span> を定義すると，軌道方程式は次のようになります。</p>
 <div class="arithmatex">\[
@@ -14645,7 +14662,7 @@ a &amp;= \frac{r_{\min} + r_{\max}}{2} \\\\
 \]</div>
 <p><span class="arithmatex">\(p\)</span> を元の物理定数で表した式を代入します。</p>
 <div class="arithmatex">\[
-a = \frac{L^2}{GMm^2 (1 - e^2)}
+\finalanswer{a = \frac{L^2}{GMm^2 (1 - e^2)}}
 \]</div>
 <p>これが求める軌道長半径の表現です。</p>
 <h3 id="4">(4)</h3>
@@ -14684,7 +14701,7 @@ A = \pi a^2 \sqrt{1 - e^2}
 \]</div>
 <p>両辺から <span class="arithmatex">\(L^2 / m^2\)</span> を消去し，<span class="arithmatex">\(T^2\)</span> について解きます。</p>
 <div class="arithmatex">\[
-T^2 = \frac{4\pi^2}{GM} a^3
+\finalanswer{T^2 = \frac{4\pi^2}{GM} a^3}
 \]</div>
 <p>これにより，公転周期の2乗 <span class="arithmatex">\(T^2\)</span> が軌道長半径の3乗 <span class="arithmatex">\(a^3\)</span> に比例するというケプラーの第3法則が導かれました。比例定数である <span class="arithmatex">\(4\pi^2 / GM\)</span> は，万有引力定数 <span class="arithmatex">\(G\)</span> と恒星の質量 <span class="arithmatex">\(M\)</span> のみによって定まり，惑星の質量 <span class="arithmatex">\(m\)</span> や軌道要素には依存しないことが示されました。</p>
 

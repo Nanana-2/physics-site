@@ -14533,7 +14533,7 @@ $$ </p>
 U = \int_0^\infty \epsilon D(\epsilon) f(\epsilon) d\epsilon
 \]</div>
 <p>にゾンマーフェルト展開を適用し，低温における <span class="arithmatex">\(U\)</span> を温度 <span class="arithmatex">\(T\)</span> の関数として導出せよ。展開式の第1項の積分を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\epsilon_F\)</span> の区間と <span class="arithmatex">\(\epsilon_F\)</span> から <span class="arithmatex">\(\mu\)</span> の区間に分割し，前問と同様の近似および絶対零度の内部エネルギー <span class="arithmatex">\(U(0) = \int_0^{\epsilon_F} \epsilon D(\epsilon) d\epsilon\)</span> を用いて整理せよ。</p>
-<p>(3) 前問の結果を温度 <span class="arithmatex">\(T\)</span> で微分することで，低温におけるフェルミ気体の定積熱容量 <span class="arithmatex">\(C_V\)</span> を求めよ。また，その温度依存性が古典理想気体の熱容量とどのように異なるか数式を基に説明せよ。</p>
+<p>(3) 前問の結果を温度 <span class="arithmatex">\(T\)</span> で微分することで，低温におけるフェルミ気体の定積熱容量 <span class="arithmatex">\(C_V\)</span> を求めよ。また，その温度依存性が古典理想気体の熱容量とどのように異なるか式を基に説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14555,7 +14555,7 @@ N \simeq \int_0^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 D'(\mu)
 \]</div>
 <p>この式を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解くことで，温度上昇に伴うフェルミエネルギーからのずれが導出されます。</p>
 <div class="arithmatex">\[
-\mu \simeq \epsilon_F - \frac{\pi^2}{6} k_B^2 T^2 \frac{D'(\epsilon_F)}{D(\epsilon_F)}
+\finalanswer{\mu \simeq \epsilon_F - \frac{\pi^2}{6} k_B^2 T^2 \frac{D'(\epsilon_F)}{D(\epsilon_F)}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>内部エネルギー <span class="arithmatex">\(U\)</span> の積分式に対して，<span class="arithmatex">\(H(\epsilon) = \epsilon D(\epsilon)\)</span> としてゾンマーフェルト展開を適用します。</p>
@@ -14583,12 +14583,16 @@ U \simeq \int_0^\mu \epsilon D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 \
 U \simeq U(0) - \frac{\pi^2}{6} k_B^2 T^2 \epsilon_F D'(\epsilon_F) + \frac{\pi^2}{6} k_B^2 T^2 \left( D(\epsilon_F) + \epsilon_F D'(\epsilon_F) \right)
 \]</div>
 <div class="arithmatex">\[
-U(T) \simeq U(0) + \frac{\pi^2}{6} k_B^2 T^2 D(\epsilon_F)
+\finalanswer{U(T) \simeq U(0) + \frac{\pi^2}{6} k_B^2 T^2 D(\epsilon_F)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U(T)\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分することで得られます。絶対零度のエネルギー <span class="arithmatex">\(U(0)\)</span> は定数であるため微分すると消去され，<span class="arithmatex">\(T^2\)</span> の微分から <span class="arithmatex">\(2T\)</span> が現れます。</p>
 <div class="arithmatex">\[
-C_V = \frac{\partial U}{\partial T} = \frac{\pi^2}{6} k_B^2 D(\epsilon_F) \cdot 2T = \frac{\pi^2}{3} k_B^2 D(\epsilon_F) T
+\begin{aligned}
+C_V &amp;= \frac{\partial U}{\partial T} \\
+&amp;= \frac{\pi^2}{6} k_B^2 D(\epsilon_F) \cdot 2T \\
+&amp;= \finalanswer{\frac{\pi^2}{3} k_B^2 D(\epsilon_F) T}
+\end{aligned}
 \]</div>
 <p>状態密度 <span class="arithmatex">\(D(\epsilon_F)\)</span> は温度に依存しない定数項であるため，低温におけるフェルミ気体の電子熱容量は<strong>絶対温度 <span class="arithmatex">\(T\)</span> に比例</strong>して直線的に減少していくことがわかります。</p>
 <p>古典理想気体では定積熱容量が温度によらず一定値をとりますが，フェルミ気体ではパウリの排他原理により，フェルミ面近傍のわずかな電子だけしか熱エネルギーを受け取れないため，系全体としてのエネルギー吸収能力が大きく制限されます。温度がゼロに近づくにつれて熱励起できる電子の数もゼロに近づくため，熱容量が温度に比例して <span class="arithmatex">\(0\)</span> へと向かい，熱力学第三法則の要請を満たしています。</p>

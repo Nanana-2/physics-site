@@ -14543,7 +14543,10 @@ z_1 = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \cdot S \cdot \int_0^H \exp(
 \]</div>
 <p><span class="arithmatex">\(z\)</span> に関する積分を実行します。</p>
 <div class="arithmatex">\[
-\int_0^H \exp(-\beta m g z) dz = \left[ -\frac{1}{\beta m g} \exp(-\beta m g z) \right]_0^H = \frac{1}{\beta m g} \left( 1 - \exp(-\beta m g H) \right)
+\begin{aligned}
+\int_0^H \exp(-\beta m g z) dz &amp;= \left[ -\frac{1}{\beta m g} \exp(-\beta m g z) \right]_0^H \\
+&amp;= \frac{1}{\beta m g} \left( 1 - \exp(-\beta m g H) \right)
+\end{aligned}
 \]</div>
 <p>したがって，1粒子分配関数は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14554,7 @@ z_1 = S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1
 \]</div>
 <p>外力がない<span class="arithmatex">\(g \to 0\)</span>の極限の1粒子分配関数 <span class="arithmatex">\(z_1^{(0)} = V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}\)</span> を基準として，マクローリン展開<span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span>を考えると，この式はきれいに外力なしの形に帰着します。系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> は，この <span class="arithmatex">\(z_1\)</span> を用いて以下のように構成されます。</p>
 <div class="arithmatex">\[
-Z_N = \frac{1}{N!} \left[ S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_B T} \right) \right) \right]^N
+\finalanswer{Z_N = \frac{1}{N!} \left[ S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_B T} \right) \right) \right]^N}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>1粒子が高さ <span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z+dz\)</span> にある確率 <span class="arithmatex">\(P(z)dz\)</span> はボルツマン因子に比例します。<span class="arithmatex">\(x,y\)</span> 方向は一様なので，<span class="arithmatex">\(z\)</span> 依存性だけを取り出します。</p>
@@ -14560,11 +14563,17 @@ P(z) dz = \frac{\exp(-\beta m g z) dz}{\int_0^H \exp(-\beta m g z) dz}
 \]</div>
 <p>系全体には <span class="arithmatex">\(N\)</span> 個の粒子が独立に存在するため，この高さの微小区間に存在する平均粒子数 <span class="arithmatex">\(d\langle N(z) \rangle\)</span> は，全粒子数 <span class="arithmatex">\(N\)</span> にこの確率を掛け合わせたものになります。</p>
 <div class="arithmatex">\[
-d\langle N(z) \rangle = N P(z) dz = N \frac{\exp(-\beta m g z)}{\int_0^H \exp(-\beta m g z) dz} dz
+\begin{aligned}
+d\langle N(z) \rangle &amp;= N P(z) dz \\
+&amp;= N \frac{\exp(-\beta m g z)}{\int_0^H \exp(-\beta m g z) dz} dz
+\end{aligned}
 \]</div>
 <p>単位体積あたりの粒子密度分布 <span class="arithmatex">\(\rho(z)\)</span> は，この粒子数を対応する微小体積 <span class="arithmatex">\(dV = S dz\)</span> で割ることで得られます。</p>
 <div class="arithmatex">\[
-\rho(z) = \frac{d\langle N(z) \rangle}{S dz} = \frac{N}{S} \frac{\exp(-\beta m g z)}{\int_0^H \exp(-\beta m g z) dz}
+\begin{aligned}
+\rho(z) &amp;= \frac{d\langle N(z) \rangle}{S dz} \\
+&amp;= \frac{N}{S} \frac{\exp(-\beta m g z)}{\int_0^H \exp(-\beta m g z) dz}
+\end{aligned}
 \]</div>
 <p>ここで，地表 <span class="arithmatex">\(z = 0\)</span> における粒子密度 <span class="arithmatex">\(\rho(0)\)</span> を求めると，分子の指数関数が 1 になるため，以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14572,7 +14581,10 @@ d\langle N(z) \rangle = N P(z) dz = N \frac{\exp(-\beta m g z)}{\int_0^H \exp(-\
 \]</div>
 <p>これを <span class="arithmatex">\(\rho(z)\)</span> の式に代入すると，</p>
 <div class="arithmatex">\[
-\rho(z) = \rho(0) \exp(-\beta m g z) = \rho(0) \exp\left( -\frac{m g z}{k_B T} \right)
+\begin{aligned}
+\rho(z) &amp;= \rho(0) \exp(-\beta m g z) \\
+&amp;= \finalanswer{\rho(0) \exp\left( -\frac{m g z}{k_B T} \right)}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた局所的な理想気体の状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_B T\)</span> に，(2) で求めた密度分布の式を直接代入します。</p>
@@ -14585,11 +14597,18 @@ P(z) = P(0) \exp\left( -\frac{m g z}{k_B T} \right)
 \]</div>
 <p>次に，この統計力学的な結果が流体力学の力学的平衡を満たしているかを確認するため， <span class="arithmatex">\(P(z)\)</span> を高さ <span class="arithmatex">\(z\)</span> で微分します。合成関数の微分により，指数の肩から <span class="arithmatex">\(-\frac{m g}{k_B T}\)</span> が前に降ります。</p>
 <div class="arithmatex">\[
-\frac{dP(z)}{dz} = P(0) \cdot \left( -\frac{m g}{k_B T} \right) \exp\left( -\frac{m g z}{k_B T} \right) = -\frac{m g}{k_B T} \left[ P(0) \exp\left( -\frac{m g z}{k_B T} \right) \right]
+\begin{aligned}
+\frac{dP(z)}{dz} &amp;= P(0) \cdot \left( -\frac{m g}{k_B T} \right) \exp\left( -\frac{m g z}{k_B T} \right) \\
+&amp;= -\frac{m g}{k_B T} \left[ P(0) \exp\left( -\frac{m g z}{k_B T} \right) \right]
+\end{aligned}
 \]</div>
 <p>括弧の中身は <span class="arithmatex">\(P(z)\)</span> そのものです。さらに状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_B T\)</span> を用いてこれを密度に戻します。</p>
 <div class="arithmatex">\[
-\frac{dP(z)}{dz} = -\frac{m g}{k_B T} P(z) = -\frac{m g}{k_B T} \left( \rho(z) k_B T \right) = -\rho(z) m g
+\begin{aligned}
+\frac{dP(z)}{dz} &amp;= -\frac{m g}{k_B T} P(z) \\
+&amp;= -\frac{m g}{k_B T} \left( \rho(z) k_B T \right) \\
+&amp;= \finalanswer{-\rho(z) m g}
+\end{aligned}
 \]</div>
 <p>これにより，統計力学のボルツマン分布から導いた気圧の式が，大気の微小要素にかかる上向きの圧力差と下向きの重力が釣り合っていることを示す流体力学の静水圧平衡の式を満たしていることが証明されました。</p>
 

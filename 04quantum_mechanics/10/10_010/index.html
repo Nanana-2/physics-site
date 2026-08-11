@@ -14552,7 +14552,7 @@ E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^2 + \dots
 </ul>
 <p>左辺から <span class="arithmatex">\(\lambda\)</span> の1次となる項を抽出し，右辺からも同様に1次の項を抽出して結びつけます。</p>
 <div class="arithmatex">\[
-  \hat{H}_0 |n^{(1)}\rangle + \hat{V} |n^{(0)}\rangle = E_n^{(0)} |n^{(1)}\rangle + E_n^{(1)} |n^{(0)}\rangle
+  \finalanswer{\hat{H}_0 |n^{(1)}\rangle + \hat{V} |n^{(0)}\rangle = E_n^{(0)} |n^{(1)}\rangle + E_n^{(1)} |n^{(0)}\rangle}
 \]</div>
 <p>これが求める1次の演算子方程式です。</p>
 <h3 id="2">(2)</h3>
@@ -14570,7 +14570,7 @@ E_n^{(0)} \langle n^{(0)} | n^{(1)}\rangle + \langle n^{(0)}| \hat{V} |n^{(0)}\r
 \]</div>
 <p>左右を入れ替えることで，エネルギーの1次補正の公式が得られます。</p>
 <div class="arithmatex">\[
-E_n^{(1)} = \langle n^{(0)}| \hat{V} |n^{(0)}\rangle
+\finalanswer{E_n^{(1)} = \langle n^{(0)}| \hat{V} |n^{(0)}\rangle}
 \]</div>
 <p>これにより，エネルギーの1次補正は，非摂動状態における摂動ハミルトニアンの期待値に一致することが示されました。</p>
 <h3 id="3">(3)</h3>
@@ -14588,7 +14588,10 @@ E_m^{(0)} \langle m^{(0)} | n^{(1)}\rangle + \langle m^{(0)}| \hat{V} |n^{(0)}\r
 \]</div>
 <p>ここで，1次の補正状態を展開式 <span class="arithmatex">\(|n^{(1)}\rangle = \sum_{k} c_k |k^{(0)}\rangle\)</span> に置き換えて右辺の内積部分を計算します。規格直交性により， <span class="arithmatex">\(k=m\)</span> の項だけが残ります。</p>
 <div class="arithmatex">\[
-\langle m^{(0)} | n^{(1)}\rangle = \sum_{k} c_k \langle m^{(0)} | k^{(0)}\rangle = c_m
+\begin{aligned}
+\langle m^{(0)} | n^{(1)}\rangle &amp;= \sum_{k} c_k \langle m^{(0)} | k^{(0)}\rangle \\
+&amp;= c_m
+\end{aligned}
 \]</div>
 <p>これを上の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14600,7 +14603,7 @@ c_m = \frac{\langle m^{(0)}| \hat{V} |n^{(0)}\rangle}{E_n^{(0)} - E_m^{(0)}}
 \]</div>
 <p>前提条件より <span class="arithmatex">\(c_n = \langle n^{(0)} | n^{(1)}\rangle = 0\)</span> であるため，補正状態の展開式は <span class="arithmatex">\(m \neq n\)</span> の和として書き下されます。係数 <span class="arithmatex">\(c_m\)</span> を代入することで，状態の1次補正の公式が完成します。</p>
 <div class="arithmatex">\[
-|n^{(1)}\rangle = \sum_{m \neq n} \frac{\langle m^{(0)}| \hat{V} |n^{(0)}\rangle}{E_n^{(0)} - E_m^{(0)}} |m^{(0)}\rangle
+\finalanswer{|n^{(1)}\rangle = \sum_{m \neq n} \frac{\langle m^{(0)}| \hat{V} |n^{(0)}\rangle}{E_n^{(0)} - E_m^{(0)}} |m^{(0)}\rangle}
 \]</div>
 
 

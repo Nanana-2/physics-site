@@ -14539,15 +14539,21 @@ N_{\mathrm{ex}} = \int_0^\infty \frac{D(\epsilon)}{\exp\left[ \beta(\epsilon - \
 <h3 id="1">(1)</h3>
 <p>励起状態の粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> の積分式に，具体的な状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> の表現を代入します。</p>
 <div class="arithmatex">\[
-N_{\mathrm{ex}} = \int_0^\infty \frac{\frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon}}{\exp\left[ \beta(\epsilon - \mu) \right] - 1} d\epsilon = \frac{2\pi V}{h^3} (2m)^{3/2} \int_0^\infty \frac{\sqrt{\epsilon}}{\exp\left[ \beta(\epsilon - \mu) \right] - 1} d\epsilon
+\begin{aligned}
+N_{\mathrm{ex}} &amp;= \int_0^\infty \frac{\frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon}}{\exp\left[ \beta(\epsilon - \mu) \right] - 1} d\epsilon \\
+&amp;= \frac{2\pi V}{h^3} (2m)^{3/2} \int_0^\infty \frac{\sqrt{\epsilon}}{\exp\left[ \beta(\epsilon - \mu) \right] - 1} d\epsilon
+\end{aligned}
 \]</div>
 <p>この積分を実行するため，変数を <span class="arithmatex">\(x = \beta \epsilon\)</span> に置換します。これにより <span class="arithmatex">\(\epsilon = \frac{x}{\beta}\)</span> ， <span class="arithmatex">\(d\epsilon = \frac{dx}{\beta}\)</span> となります。</p>
 <div class="arithmatex">\[
-N_{\mathrm{ex}} = \frac{2\pi V}{h^3} (2m)^{3/2} \int_0^\infty \frac{\sqrt{\frac{x}{\beta}}}{\exp(x - \beta \mu) - 1} \frac{dx}{\beta} = \frac{2\pi V}{h^3} \left( \frac{2m}{\beta} \right)^{3/2} \int_0^\infty \frac{\sqrt{\x}}{\exp(x - \beta \mu) - 1} dx
+\begin{aligned}
+N_{\mathrm{ex}} &amp;= \frac{2\pi V}{h^3} (2m)^{3/2} \int_0^\infty \frac{\sqrt{\frac{x}{\beta}}}{\exp(x - \beta \mu) - 1} \frac{dx}{\beta} \\
+&amp;= \frac{2\pi V}{h^3} \left( \frac{2m}{\beta} \right)^{3/2} \int_0^\infty \frac{\sqrt{\x}}{\exp(x - \beta \mu) - 1} dx
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入して係数を整理すると，励起状態の粒子数が温度と化学ポテンシャルを含む形で表されます。</p>
 <div class="arithmatex">\[
-N_{\mathrm{ex}}(T, \mu) = \frac{2\pi V}{h^3} (2m k_B T)^{3/2} \int_0^\infty \frac{\sqrt{x}}{\exp(x - \beta \mu) - 1} dx
+\finalanswer{N_{\mathrm{ex}}(T, \mu) = \frac{2\pi V}{h^3} (2m k_B T)^{3/2} \int_0^\infty \frac{\sqrt{x}}{\exp(x - \beta \mu) - 1} dx}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>ボース・アインシュタイン分布が破綻しないための制約から，化学ポテンシャルは基底状態エネルギーより低くなければならず， <span class="arithmatex">\(\mu &lt; 0\)</span> です。被積分関数の分母に注目すると， <span class="arithmatex">\(\mu\)</span> が負の値から 0 に近づくにつれて， <span class="arithmatex">\(\exp(x - \beta \mu)\)</span> は減少し，分母全体が小さくなります。分母が小さくなるということは，占有数は大きくなります。</p>
@@ -14560,7 +14566,7 @@ N_{\mathrm{ex}}^{\max}(T) = \frac{2\pi V}{h^3} (2m k_B T)^{3/2} \cdot \frac{\sqr
 \]</div>
 <p>係数の <span class="arithmatex">\(\pi\)</span> の指数をまとめます。 <span class="arithmatex">\(2\pi \cdot \frac{\sqrt{\pi}}{2} = \pi^{3/2}\)</span> です。これらを括弧の中に集約してすっきりと整理します。</p>
 <div class="arithmatex">\[
-N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}
+\finalanswer{N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}}
 \]</div>
 <p>ここで，熱的ド・ブロイ波長 <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> を用いると，この最大値は <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) = \zeta(3/2) \frac{V}{\lambda^3}\)</span> と表現することもできます。</p>
 <h3 id="3">(3)</h3>
@@ -14568,7 +14574,7 @@ N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m 
 <p>温度を臨界温度以下まで下げると，<span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) &lt; N\)</span> となります。</p>
 <p>連続積分には，離散的な基底状態 <span class="arithmatex">\(\epsilon=0\)</span> の占有数が含まれていません。したがって，粒子数保存則より</p>
 <div class="arithmatex">\[
-N_0=N-N_{\mathrm{ex}}^{\max}(T)
+\finalanswer{N_0=N-N_{\mathrm{ex}}^{\max}(T)}
 \]</div>
 <p>となります。</p>
 <p><span class="arithmatex">\(N_0\)</span> が粒子数 <span class="arithmatex">\(N\)</span> と同じオーダーになる現象がボース・アインシュタイン凝縮です。</p>

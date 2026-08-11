@@ -14549,18 +14549,24 @@ $$</p>
   ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} = E \psi \implies k = \sqrt{\frac{2mE}{\hbar^2}}
+\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} &amp;= E \psi \implies k \\
+&amp;= \sqrt{\frac{2mE}{\hbar^2}}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>領域 II：<span class="arithmatex">\(0 \le x \le a\)</span></strong>
   ポテンシャルは <span class="arithmatex">\(V(x) = -V_0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} - V_0 \psi_{\text{II}} = E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} = -\frac{2m(E + V_0)}{\hbar^2} \psi_{\text{II}}
+\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} - V_0 \psi_{\text{II}} &amp;= E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} \\
+&amp;= -\frac{2m(E + V_0)}{\hbar^2} \psi_{\text{II}}
+\end{aligned}
 \]</div>
 <p>これより，井戸の内部における波数 <span class="arithmatex">\(q\)</span> の表式が得られます。</p>
 <div class="arithmatex">\[
-  q = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}
+  \finalanswer{q = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>与えられた係数の比 <span class="arithmatex">\(\frac{A}{F}\)</span> から，その絶対値の2乗を計算して逆数をとることで透過確率 <span class="arithmatex">\(T\)</span> を求めます。</p>
@@ -14570,18 +14576,28 @@ $$</p>
 \]</div>
 <p>三角関数の相互関係 <span class="arithmatex">\(\cos^2(qa) = 1 - \sin^2(qa)\)</span> を用いて，サインのみの式に統一します。</p>
 <div class="arithmatex">\[
-\left| \frac{A}{F} \right|^2 = 1 - \sin^2(qa) + \frac{(k^2 + q^2)^2}{4k^2 q^2} \sin^2(qa) = 1 + \left[ \frac{(k^2 + q^2)^2 - 4k^2 q^2}{4k^2 q^2} \right] \sin^2(qa)
+\begin{aligned}
+\left| \frac{A}{F} \right|^2 &amp;= 1 - \sin^2(qa) + \frac{(k^2 + q^2)^2}{4k^2 q^2} \sin^2(qa) \\
+&amp;= 1 + \left[ \frac{(k^2 + q^2)^2 - 4k^2 q^2}{4k^2 q^2} \right] \sin^2(qa)
+\end{aligned}
 \]</div>
 <p>分子を展開して整理すると，因数分解の公式から引き算の2乗の形に変形できます。</p>
 <div class="arithmatex">\[
-(k^2 + q^2)^2 - 4k^2 q^2 = k^4 + 2k^2 q^2 + q^4 - 4k^2 q^2 = k^4 - 2k^2 q^2 + q^4 = (k^2 - q^2)^2
+\begin{aligned}
+(k^2 + q^2)^2 - 4k^2 q^2 &amp;= k^4 + 2k^2 q^2 + q^4 - 4k^2 q^2 \\
+&amp;= k^4 - 2k^2 q^2 + q^4 \\
+&amp;= (k^2 - q^2)^2
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \left| \frac{A}{F} \right|^2 = 1 + \frac{(k^2 - q^2)^2}{4k^2 q^2} \sin^2(qa)
 \]</div>
 <p>透過確率 <span class="arithmatex">\(T\)</span> はこの値の逆数となるため，以下のようになります。</p>
 <div class="arithmatex">\[
-T = \frac{|F|^2}{|A|^2} = \frac{1}{1 + \frac{(k^2 - q^2)^2}{4k^2 q^2} \sin^2(qa)}
+\begin{aligned}
+T &amp;= \frac{|F|^2}{|A|^2} \\
+&amp;= \finalanswer{\frac{1}{1 + \frac{(k^2 - q^2)^2}{4k^2 q^2} \sin^2(qa)}}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>透過確率 <span class="arithmatex">\(T\)</span> の式において，分母が 1 になるとき <span class="arithmatex">\(T = 1\)</span> となります。分母の第2項は常に 0 以上であるため，これが 0 になることが条件です。</p>
@@ -14595,10 +14611,13 @@ qa = n\pi \quad (n = 1, 2, 3, \dots)
 \]</div>
 <p>この関係式に (1) で求めた <span class="arithmatex">\(q\)</span> の定義式を代入し，エネルギー <span class="arithmatex">\(E\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\sqrt{\frac{2m(E + V_0)}{\hbar^2}} a = n\pi \implies \frac{2m(E + V_0)}{\hbar^2} a^2 = n^2 \pi^2
+\begin{aligned}
+\sqrt{\frac{2m(E + V_0)}{\hbar^2}} a &amp;= n\pi \implies \frac{2m(E + V_0)}{\hbar^2} a^2 \\
+&amp;= n^2 \pi^2
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-E + V_0 = \frac{n^2 \pi^2 \hbar^2}{2ma^2} \implies E = \frac{n^2 \pi^2 \hbar^2}{2ma^2} - V_0
+\finalanswer{E + V_0 = \frac{n^2 \pi^2 \hbar^2}{2ma^2} \implies E = \frac{n^2 \pi^2 \hbar^2}{2ma^2} - V_0}
 \]</div>
 <p>このエネルギーを持つ粒子が入射すると，井戸の左端と右端で反射した波が逆位相となって打ち消し合うため，粒子は100%透過します。</p>
 <p>これは，井戸の内部の幅 <span class="arithmatex">\(a\)</span> が，内部における波長 <span class="arithmatex">\(\lambda = \frac{2\pi}{q}\)</span> の半分 <span class="arithmatex">\(\frac{\lambda}{2}\)</span> の整数倍にぴったり一致して定在波を作っている状態に対応しています。</p>

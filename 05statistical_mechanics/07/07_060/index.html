@@ -14519,15 +14519,14 @@
 <h1 id="_1">パウリ常磁性</h1>
 <h2 id="_2">問題</h2>
 <p>金属中の自由電子ガスに外部から一様な磁場 <span class="arithmatex">\(B\)</span> を印加すると，電子が持つスピン磁気モーメントと磁場の相互作用によるゼーマン分裂により，磁場に平行なスピンを持つ電子と，反平行なスピンを持つ電子の間でエネルギー準位のずれが生じる。この結果，絶対零度においてもマクロな常磁性が現れる。この現象をパウリ常磁性と呼ぶ。</p>
-<p>電子のボーア磁子を <span class="arithmatex">\(\mu_B\)</span> <span class="arithmatex">\(\mu_B &gt; 0\)</span>とすると，磁場がないときの一粒子エネルギー <span class="arithmatex">\(\epsilon\)</span> は，磁場 <span class="arithmatex">\(B\)</span> の印加によってスピンの向きに応じて以下のように変化する。</p>
+<p>電子のボーア磁子を <span class="arithmatex">\(\mu_B\)</span>（<span class="arithmatex">\(\mu_B &gt; 0\)</span>）とすると，磁場がないときの一粒子エネルギー <span class="arithmatex">\(\epsilon\)</span> は，磁場 <span class="arithmatex">\(B\)</span> の印加によってスピンの向きに応じて以下のように変化する。</p>
 <ul>
 <li>磁場と平行なスピン： <span class="arithmatex">\(\epsilon_+ = \epsilon - \mu_B B\)</span></li>
 <li>磁場と反平行なスピン： <span class="arithmatex">\(\epsilon_- = \epsilon + \mu_B B\)</span></li>
 </ul>
 <p>磁場が十分に弱く，スピン分裂のエネルギーがフェルミエネルギーに比べて十分に小さい<span class="arithmatex">\(\mu_B B \ll \epsilon_F\)</span>と仮定して，以下の問いに答えよ。</p>
-<p>(1) 磁場 <span class="arithmatex">\(B\)</span> が印加されたとき，上向きスピンと下向きスピンのそれぞれの状態密度 <span class="arithmatex">\(D_+(\epsilon)\)</span> および <span class="arithmatex">\(D_-(\epsilon)\)</span> は，磁場がないときのスピン自由度を含まない全体の状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を用いてどのように表されるか表せ。</p>
+<p>(1) 磁場 <span class="arithmatex">\(B\)</span> が印加されたとき，上向きスピンと下向きスピンのそれぞれの状態密度 <span class="arithmatex">\(D_+(\epsilon)\)</span> および <span class="arithmatex">\(D_-(\epsilon)\)</span> を，磁場がないときの両方のスピンを含む全状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を用いて表せ。</p>
 <p>(2) 絶対零度において，上向きスピンと下向きスピンの電子は，それぞれ変化したエネルギー準位の底から共通の化学ポテンシャル <span class="arithmatex">\(\epsilon_F\)</span>まで隙間なく状態を占有する。
-ß
 上向きスピンの全電子数 <span class="arithmatex">\(N_+\)</span> と下向きスピンの全電子数 <span class="arithmatex">\(N_-\)</span> の差 <span class="arithmatex">\(\Delta N = N_+ - N_-\)</span> が，フェルミ面近傍の状態密度 <span class="arithmatex">\(D(\epsilon_F)\)</span> を用いて <span class="arithmatex">\(\Delta N \simeq D(\epsilon_F) \mu_B B\)</span> と近似できることを，積分の領域の図形的性質，またはテイラー展開の観点から示せ。</p>
 <p>(3) 系のマクロな総磁化 <span class="arithmatex">\(M\)</span> は，スピンの数差を用いて <span class="arithmatex">\(M = \mu_B \Delta N\)</span> と表される。(2) の結果を用いて，パウリ常磁性による磁化率 <span class="arithmatex">\(\chi = \frac{\mu_B \Delta N}{V B}\)</span> を導出せよ。また，この量子力学的な帯磁率が，古典的なスピンの常磁性とは異なり，絶対零度において温度に依存しない一定値をとる物理的な理由を説明せよ。</p>
 <hr />
@@ -14536,29 +14535,37 @@
 <p>磁場がないとき，1つの軌道状態には上向きと下向きのスピン状態は対称です。したがって，スピン1つの向きあたりが持つ本来の状態密度は，全体の半分<span class="arithmatex">\(\frac{1}{2}D(\epsilon)\)</span>です。</p>
 <p>磁場 <span class="arithmatex">\(B\)</span> が印加されると，上向きスピンはエネルギーが <span class="arithmatex">\(\mu_B B\)</span> だけ同じ量だけ引き下がり，下向きスピンは <span class="arithmatex">\(\mu_B B\)</span> だけ同じ量だけ引き上がります。これは，状態密度のグラフがエネルギー軸方向に平行移動することを意味します。</p>
 <p>したがって，それぞれの状態密度は以下のように表されます。</p>
-<ul>
-<li>上向きスピンの状態密度： <span class="arithmatex">\(D_+(\epsilon) = \frac{1}{2} D(\epsilon + \mu_B B)\)</span></li>
-<li>下向きスピンの状態密度： <span class="arithmatex">\(D_-(\epsilon) = \frac{1}{2} D(\epsilon - \mu_B B)\)</span></li>
-</ul>
+<div class="arithmatex">\[
+\finalanswer{D_+(\epsilon) = \frac{1}{2} D(\epsilon + \mu_B B)}, \qquad
+\finalanswer{D_-(\epsilon) = \frac{1}{2} D(\epsilon - \mu_B B)}
+\]</div>
 <h3 id="2">(2)</h3>
-<p>絶対零度におけるそれぞれのスピンの全粒子数は，エネルギー 0 から <span class="arithmatex">\(\epsilon_F\)</span> までの積分で与えられます。</p>
+<p>絶対零度におけるそれぞれのスピンの全粒子数は，ゼーマン分裂後の各バンドの底から共通の化学ポテンシャル <span class="arithmatex">\(\epsilon_F\)</span> までの積分で与えられます。</p>
 <div class="arithmatex">\[
-N_+ = \int_0^{\epsilon_F} D_+(\epsilon) d\epsilon = \int_0^{\epsilon_F} \frac{1}{2} D(\epsilon + \mu_B B) d\epsilon
+\begin{aligned}
+N_+ &amp;= \int_{-\mu_B B}^{\epsilon_F} D_+(\epsilon) d\epsilon \\
+&amp;= \frac{1}{2}\int_0^{\epsilon_F+\mu_B B} D(x) dx
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-N_- = \int_0^{\epsilon_F} D_-(\epsilon) d\epsilon = \int_0^{\epsilon_F} \frac{1}{2} D(\epsilon - \mu_B B) d\epsilon
+\begin{aligned}
+N_- &amp;= \int_{\mu_B B}^{\epsilon_F} D_-(\epsilon) d\epsilon \\
+&amp;= \frac{1}{2}\int_0^{\epsilon_F-\mu_B B} D(x) dx
+\end{aligned}
 \]</div>
-<p>ここで，積分の変数をそれぞれ <span class="arithmatex">\(\epsilon' = \epsilon + \mu_B B\)</span> および <span class="arithmatex">\(\epsilon'' = \epsilon - \mu_B B\)</span> と置換して積分の範囲を補正します。</p>
+<p>ここでは，それぞれ <span class="arithmatex">\(x=\epsilon+\mu_B B\)</span> および <span class="arithmatex">\(x=\epsilon-\mu_B B\)</span> と変数変換しました。2つの粒子数の差 <span class="arithmatex">\(\Delta N = N_+ - N_-\)</span> をとると，共通する積分区間が相殺され，フェルミ面近傍の区間だけが残ります。</p>
 <div class="arithmatex">\[
-N_+ = \frac{1}{2} \int_{\mu_B B}^{\epsilon_F + \mu_B B} D(x) dx, \quad N_- = \frac{1}{2} \int_{-\mu_B B}^{\epsilon_F - \mu_B B} D(x) dx
+\Delta N = \frac{1}{2} \int_{\epsilon_F - \mu_B B}^{\epsilon_F + \mu_B B} D(x) dx
 \]</div>
-<p>これら2つの粒子数の差 <span class="arithmatex">\(\Delta N = N_+ - N_-\)</span> を計算します。共通する <span class="arithmatex">\(\mu_B B\)</span> から <span class="arithmatex">\(\epsilon_F - \mu_B B\)</span> までの積分区間が相殺されるため，積分の残骸はフェルミ面近傍の両端の微小な区間だけになります。</p>
+<p>磁場が十分に弱いとき，積分区間の幅 <span class="arithmatex">\(2\mu_B B\)</span> は小さいため，状態密度をフェルミ面での値 <span class="arithmatex">\(D(\epsilon_F)\)</span> で近似できます。</p>
 <div class="arithmatex">\[
-\Delta N = \frac{1}{2} \left( \int_{\epsilon_F - \mu_B B}^{\epsilon_F + \mu_B B} D(x) dx - \int_{-\mu_B B}^{\mu_B B} D(x) dx \right)
-\]</div>
-<p>ここで，下限付近の第2項は，底のエネルギーが 0 付近で状態密度 <span class="arithmatex">\(D(x) \propto \sqrt{x}\)</span> がほぼ 0 に近いため無視できます。残ったフェルミ面付近の第1項は，幅が <span class="arithmatex">\(2\mu_B B\)</span> という非常に狭い領域であるため，状態密度をフェルミ面での定数値 <span class="arithmatex">\(D(\epsilon_F)\)</span> とみなして長方形の面積として近似計算できます。</p>
-<div class="arithmatex">\[
-\Delta N \simeq \frac{1}{2} \cdot D(\epsilon_F) \times \left[ (\epsilon_F + \mu_B B) - (\epsilon_F - \mu_B B) \right] = \frac{1}{2} D(\epsilon_F) \cdot 2\mu_B B = D(\epsilon_F) \mu_B B
+\begin{aligned}
+\Delta N
+&amp;\simeq \frac{1}{2} D(\epsilon_F)
+\left[(\epsilon_F + \mu_B B) - (\epsilon_F - \mu_B B)\right] \\
+&amp;= \frac{1}{2} D(\epsilon_F)\,2\mu_B B \\
+&amp;= \finalanswer{D(\epsilon_F)\mu_B B}
+\end{aligned}
 \]</div>
 <p>これにより，磁場によって上向きスピンの数が下向きスピンに比べてどれだけ多くなるかを表す近似式が示されました。</p>
 <h3 id="3">(3)</h3>
@@ -14572,7 +14579,10 @@ M \simeq \mu_B \cdot \left[ D(\epsilon_F) \mu_B B \right] = \mu_B^2 D(\epsilon_F
 \]</div>
 <p>ここで，三次元自由電子ガスのフェルミ面での状態密度は <span class="arithmatex">\(D(\epsilon_F) = \frac{3N}{2\epsilon_F}\)</span> と表されるため，これを代入して整理すると，パウリ常磁性の固有の帯磁率の式が完成します。</p>
 <div class="arithmatex">\[
-\chi = \frac{\mu_B^2}{V} \cdot \frac{3N}{2\epsilon_F} = \frac{3 \rho \mu_B^2}{2 \epsilon_F}
+\begin{aligned}
+\chi &amp;= \frac{\mu_B^2}{V} \cdot \frac{3N}{2\epsilon_F} \\
+&amp;= \finalanswer{\frac{3 \rho \mu_B^2}{2 \epsilon_F}}
+\end{aligned}
 \]</div>
 <p><strong>温度に依存しない物理的理由</strong></p>
 <p>孤立した磁気モーメントからなる古典的なスピン系では，磁化率はキュリーの法則により温度に反比例します。</p>

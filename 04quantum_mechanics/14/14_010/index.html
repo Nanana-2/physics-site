@@ -14528,11 +14528,17 @@
 <h3 id="1">(1)</h3>
 <p>対称操作を施した後の状態ベクトル <span class="arithmatex">\(|\psi' \rangle = \hat{U} |\psi \rangle\)</span> に対応するブラベクトルを求めます。ユニタリー演算子のエルミート共役をとる規則に従います。</p>
 <div class="arithmatex">\[
-\langle \psi' | = \left( \hat{U} |\psi \rangle \right)^\dagger = \langle \psi | \hat{U}^\dagger
+\begin{aligned}
+\langle \psi' | &amp;= \left( \hat{U} |\psi \rangle \right)^\dagger \\
+&amp;= \langle \psi | \hat{U}^\dagger
+\end{aligned}
 \]</div>
 <p>このブラベクトルとケットベクトルを用いて，変換後の状態における期待値の式を組み立てます。</p>
 <div class="arithmatex">\[
-\langle \psi' | \hat{A} | \psi' \rangle = \left( \langle \psi | \hat{U}^\dagger \right) \hat{A} \left( \hat{U} |\psi \rangle \right) = \langle \psi | \hat{U}^\dagger \hat{A} \hat{U} | \psi \rangle
+\begin{aligned}
+\langle \psi' | \hat{A} | \psi' \rangle &amp;= \left( \langle \psi | \hat{U}^\dagger \right) \hat{A} \left( \hat{U} |\psi \rangle \right) \\
+&amp;= \finalanswer{\langle \psi | \hat{U}^\dagger \hat{A} \hat{U} | \psi \rangle}
+\end{aligned}
 \]</div>
 <p>これが求める期待値の計算形式となります。</p>
 <h3 id="2">(2)</h3>
@@ -14546,22 +14552,36 @@
 \]</div>
 <p>物理的な見方を変えて，状態ベクトルを変化させずに演算子の方を変化させる立場をとる場合，変換後の有効的な演算子を <span class="arithmatex">\(\hat{A}'\)</span> と置くと，期待値の同等性から次の等式が結ばれます。</p>
 <div class="arithmatex">\[
-\langle \psi | \hat{A}' | \psi \rangle = \langle \psi' | \hat{A} | \psi' \rangle = \langle \psi | \hat{U}^\dagger \hat{A} \hat{U} | \psi \rangle
+\begin{aligned}
+\langle \psi | \hat{A}' | \psi \rangle &amp;= \langle \psi' | \hat{A} | \psi' \rangle \\
+&amp;= \langle \psi | \hat{U}^\dagger \hat{A} \hat{U} | \psi \rangle
+\end{aligned}
 \]</div>
 <p>ここから演算子同士の関係式 <span class="arithmatex">\(\hat{A}' = \hat{U} \hat{A} \hat{U}^\dagger\)</span> を導くことができます。これを提示された形式の通り，元の演算子 <span class="arithmatex">\(\hat{A}\)</span> について整理するため，式の左から <span class="arithmatex">\(\hat{U}^\dagger\)</span> を，右から <span class="arithmatex">\(\hat{U}\)</span> を掛け算します。ユニタリー演算子の性質 <span class="arithmatex">\(\hat{U}^\dagger \hat{U} = \hat{U}\hat{U}^\dagger = 1\)</span> を適用します。</p>
 <div class="arithmatex">\[
-\hat{U}^\dagger \hat{A}' \hat{U} = \hat{U}^\dagger \left( \hat{U} \hat{A} \hat{U}^\dagger \right) \hat{U} = \left( \hat{U}^\dagger \hat{U} \right) \hat{A} \left( \hat{U}^\dagger \hat{U} \right) = 1 \cdot \hat{A} \cdot 1 = \hat{A}
+\begin{aligned}
+\hat{U}^\dagger \hat{A}' \hat{U} &amp;= \hat{U}^\dagger \left( \hat{U} \hat{A} \hat{U}^\dagger \right) \hat{U} \\
+&amp;= \left( \hat{U}^\dagger \hat{U} \right) \hat{A} \left( \hat{U}^\dagger \hat{U} \right) \\
+&amp;= 1 \cdot \hat{A} \cdot 1 \\
+&amp;= \hat{A}
+\end{aligned}
 \]</div>
 <p>これにより，求めたい関係式 <span class="arithmatex">\(\hat{A} = \hat{U}^\dagger \hat{A}' \hat{U}\)</span> が示されました。</p>
 <p>また，この式を新しい演算子 <span class="arithmatex">\(\hat{A}'\)</span> について直接解くには，先ほどの関係式において，ユニタリー演算子の逆元がエルミート共役である性質 <span class="arithmatex">\(\hat{U}^{-1} = \hat{U}^\dagger\)</span> を考慮して並び替えます。</p>
 <div class="arithmatex">\[
-\hat{A}' = \hat{U} \hat{A} \hat{U}^\dagger = \hat{U} \hat{A} \hat{U}^{-1}
+\begin{aligned}
+\hat{A}' &amp;= \hat{U} \hat{A} \hat{U}^\dagger \\
+&amp;= \finalanswer{\hat{U} \hat{A} \hat{U}^{-1}}
+\end{aligned}
 \]</div>
 <p>これがユニタリー変換による演算子の標準的な変換則となります。</p>
 <h3 id="3">(3)</h3>
 <p>位置演算子の変換の式 <span class="arithmatex">\(\hat{x}' = \hat{T}(a) \hat{x} \hat{T}^\dagger(a)\)</span> の右側に，任意の位置固有状態 <span class="arithmatex">\(|x\rangle\)</span> を作用させてその振る舞いを調べます。並進演算子の性質から， <span class="arithmatex">\(\hat{T}^\dagger(a) = \hat{T}(-a)\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
-\hat{x}' |x\rangle = \hat{T}(a) \hat{x} \hat{T}^\dagger(a) |x\rangle = \hat{T}(a) \hat{x} \hat{T}(-a) |x\rangle
+\begin{aligned}
+\hat{x}' |x\rangle &amp;= \hat{T}(a) \hat{x} \hat{T}^\dagger(a) |x\rangle \\
+&amp;= \hat{T}(a) \hat{x} \hat{T}(-a) |x\rangle
+\end{aligned}
 \]</div>
 <p>負の方向への並進操作を固有状態に適用します。</p>
 <div class="arithmatex">\[
@@ -14581,7 +14601,7 @@
 \]</div>
 <p>この等式の右辺は，演算子の組み合わせ <span class="arithmatex">\((\hat{x} - a) |x\rangle\)</span> と同一です。すべての位置固有状態 <span class="arithmatex">\(|x\rangle\)</span> についてこの関係が満たされるため，完全系を挿入して足し合わせることで，演算子自体の等式へと拡張できます。</p>
 <div class="arithmatex">\[
-\hat{x}' = \hat{x} - a
+\finalanswer{\hat{x}' = \hat{x} - a}
 \]</div>
 <p>位置座標の基準を正の方向へ <span class="arithmatex">\(a\)</span> だけずらす対称操作を施したとき，位置を測る演算子は逆に <span class="arithmatex">\(a\)</span> だけ差し引いた値を出力する形式へと変換されることが数式で示されました。</p>
 

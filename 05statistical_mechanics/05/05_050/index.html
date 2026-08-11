@@ -14531,7 +14531,10 @@ Z_N = \frac{1}{N!} \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right
 <h3 id="1">(1)</h3>
 <p>分配関数 <span class="arithmatex">\(Z_N\)</span> を，温度 <span class="arithmatex">\(T\)</span> の代わりに逆温度 <span class="arithmatex">\(\beta\)</span> を用いて表します。 <span class="arithmatex">\(T = \frac{1}{k_B \beta}\)</span> を代入すると，以下のようになります。</p>
 <div class="arithmatex">\[
-Z_N = \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B \beta} \right)^{3/2} \right]^N = \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B} \right)^{3/2} \right]^N \beta^{-3N/2}
+\begin{aligned}
+Z_N &amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B \beta} \right)^{3/2} \right]^N \\
+&amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B} \right)^{3/2} \right]^N \beta^{-3N/2}
+\end{aligned}
 \]</div>
 <p>この式の自然対数をとります。</p>
 <div class="arithmatex">\[
@@ -14539,11 +14542,18 @@ Z_N = \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B \beta} \right)^{3/2} \r
 \]</div>
 <p>内部エネルギー <span class="arithmatex">\(U\)</span> を求めるため，この式を <span class="arithmatex">\(\beta\)</span> で偏微分します。第1項は <span class="arithmatex">\(\beta\)</span> を含まない定数項であるため，微分すると消滅します。</p>
 <div class="arithmatex">\[
-\frac{\partial \log Z_N}{\partial \beta} = 0 - \frac{3N}{2} \cdot \frac{\partial \log \beta}{\partial \beta} = -\frac{3N}{2\beta}
+\begin{aligned}
+\frac{\partial \log Z_N}{\partial \beta} &amp;= 0 - \frac{3N}{2} \cdot \frac{\partial \log \beta}{\partial \beta} \\
+&amp;= -\frac{3N}{2\beta}
+\end{aligned}
 \]</div>
 <p>この結果を内部エネルギーの定義式 <span class="arithmatex">\(U = -\frac{\partial \log Z_N}{\partial \beta}\)</span> に代入し，さらに <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて温度の表現に戻します。</p>
 <div class="arithmatex">\[
-U = - \left( -\frac{3N}{2\beta} \right) = \frac{3N}{2} k_B T = \frac{3}{2} N k_B T
+\begin{aligned}
+U &amp;= - \left( -\frac{3N}{2\beta} \right) \\
+&amp;= \frac{3N}{2} k_B T \\
+&amp;= \finalanswer{\frac{3}{2} N k_B T}
+\end{aligned}
 \]</div>
 <p>これにより，熱力学で知られる単原子分子理想気体の内部エネルギーの式が統計力学から導かれました。</p>
 <h3 id="2">(2)</h3>
@@ -14553,7 +14563,10 @@ C_V = \left( \frac{\partial U}{\partial T} \right)_{V, N}
 \]</div>
 <p>(1) で得られた <span class="arithmatex">\(U = \frac{3}{2} N k_B T\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分します。</p>
 <div class="arithmatex">\[
-C_V = \frac{\partial}{\partial T} \left( \frac{3}{2} N k_B T \right) = \frac{3}{2} N k_B
+\begin{aligned}
+C_V &amp;= \frac{\partial}{\partial T} \left( \frac{3}{2} N k_B T \right) \\
+&amp;= \finalanswer{\frac{3}{2} N k_B}
+\end{aligned}
 \]</div>
 <p>したがって，定積熱容量は <span class="arithmatex">\(\frac{3}{2}N k_B\)</span> です。</p>
 <h3 id="3">(3)</h3>
@@ -14564,7 +14577,10 @@ h = \frac{p_x^2}{2m} + \frac{p_y^2}{2m} + \frac{p_z^2}{2m}
 \]</div>
 <p><span class="arithmatex">\(N\)</span> 粒子系には二次形式の項が合計 <span class="arithmatex">\(3N\)</span> 個あります。したがって，</p>
 <div class="arithmatex">\[
-U = 3N \times \left( \frac{1}{2} k_B T \right) = \frac{3}{2} N k_B T
+\begin{aligned}
+U &amp;= 3N \times \left( \frac{1}{2} k_B T \right) \\
+&amp;= \finalanswer{\frac{3}{2} N k_B T}
+\end{aligned}
 \]</div>
 <p>これを温度で微分すると，<span class="arithmatex">\(C_V=3Nk_B/2\)</span> を得ます。</p>
 

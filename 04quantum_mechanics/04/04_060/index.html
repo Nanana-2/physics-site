@@ -14540,7 +14540,10 @@ T \approx \exp\left[ -\frac{2}{\hbar} \int \sqrt{2m[V(r) - E]} \, dr \right]
 <h3 id="1">(1)</h3>
 <p>アルファ粒子がクーロン障壁から抜け出す点 <span class="arithmatex">\(r_c\)</span> は，ポテンシャルエネルギーが粒子のエネルギー <span class="arithmatex">\(E\)</span> と一致する位置であるため，以下のように求まります。</p>
 <div class="arithmatex">\[
-\frac{2(Z-2)e^2}{4\pi\varepsilon_0 r_c} = E \implies r_c = \frac{2(Z-2)e^2}{4\pi\varepsilon_0 E}
+\begin{aligned}
+\frac{2(Z-2)e^2}{4\pi\varepsilon_0 r_c} &amp;= E \implies r_c \\
+&amp;= \frac{2(Z-2)e^2}{4\pi\varepsilon_0 E}
+\end{aligned}
 \]</div>
 <p>古典的に進入が禁止される領域は <span class="arithmatex">\(R\)</span> から <span class="arithmatex">\(r_c\)</span> までです。この領域における粒子に対する時間に依存しないシュレーディンガー方程式から，WKB近似の減衰因子であるガモフ因子 <span class="arithmatex">\(G\)</span> の積分を組み立てます。与えられた公式の積分範囲を適用します。</p>
 <div class="arithmatex">\[
@@ -14548,11 +14551,17 @@ G = \frac{1}{\hbar} \int_{R}^{r_c} \sqrt{2m[V(r) - E]} \, dr
 \]</div>
 <p>領域 <span class="arithmatex">\(r \ge R\)</span> におけるポテンシャルの形を代入し，共通因数を根号の外にくくり出します。</p>
 <div class="arithmatex">\[
-G = \frac{1}{\hbar} \int_{R}^{r_c} \sqrt{2m \left[ \frac{2(Z-2)e^2}{4\pi\varepsilon_0 r} - E \right]} \, dr = \frac{\sqrt{2mE}}{\hbar} \int_{R}^{r_c} \sqrt{\frac{2(Z-2)e^2}{4\pi\varepsilon_0 E} \cdot \frac{1}{r} - 1} \, dr
+\begin{aligned}
+G &amp;= \frac{1}{\hbar} \int_{R}^{r_c} \sqrt{2m \left[ \frac{2(Z-2)e^2}{4\pi\varepsilon_0 r} - E \right]} \, dr \\
+&amp;= \frac{\sqrt{2mE}}{\hbar} \int_{R}^{r_c} \sqrt{\frac{2(Z-2)e^2}{4\pi\varepsilon_0 E} \cdot \frac{1}{r} - 1} \, dr
+\end{aligned}
 \]</div>
 <p>ここで，最初に求めた <span class="arithmatex">\(r_c\)</span> の関係式を用いると，根号の中身が以下のように整理されます。</p>
 <div class="arithmatex">\[
-G = \frac{\sqrt{2mE}}{\hbar} \int_{R}^{r_c} \sqrt{\frac{r_c}{r} - 1} \, dr = \frac{\sqrt{2mE}}{\hbar} \sqrt{r_c} \int_{R}^{r_c} \sqrt{\frac{1}{r} - \frac{1}{r_c}} \, dr
+\begin{aligned}
+G &amp;= \frac{\sqrt{2mE}}{\hbar} \int_{R}^{r_c} \sqrt{\frac{r_c}{r} - 1} \, dr \\
+&amp;= \finalanswer{\frac{\sqrt{2mE}}{\hbar} \sqrt{r_c} \int_{R}^{r_c} \sqrt{\frac{1}{r} - \frac{1}{r_c}} \, dr}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>提示された積分結果と， <span class="arithmatex">\(\frac{R}{r_c} \ll 1\)</span> の近似を適用します。</p>
@@ -14573,7 +14582,7 @@ G \approx \frac{\sqrt{2mE}}{\hbar} \left( \frac{2(Z-2)e^2}{4\pi\varepsilon_0 E} 
 \]</div>
 <p>第1項のエネルギーの依存性は <span class="arithmatex">\(\frac{\sqrt{E}}{E} = \frac{1}{\sqrt{E}}\)</span> となり，第2項のエネルギーの依存性は <span class="arithmatex">\(\sqrt{E} \sqrt{r_c} = \sqrt{E} \frac{1}{\sqrt{E}} \times \text{定数}\)</span> となって消去されます。</p>
 <div class="arithmatex">\[
-G \approx \frac{\pi e^2 (Z-2)}{4\pi\varepsilon_0 \hbar} \sqrt{\frac{2m}{E}} - \frac{4}{\hbar} \sqrt{\frac{2m e^2 (Z-2) R}{4\pi\varepsilon_0}}
+\finalanswer{G \approx \frac{\pi e^2 (Z-2)}{4\pi\varepsilon_0 \hbar} \sqrt{\frac{2m}{E}} - \frac{4}{\hbar} \sqrt{\frac{2m e^2 (Z-2) R}{4\pi\varepsilon_0}}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の結果から，透過確率は <span class="arithmatex">\(T \approx e^{-2G}\)</span> で表されるため，崩壊確率 <span class="arithmatex">\(\lambda = \nu T\)</span> の自然対数をとると以下のようになります。</p>
@@ -14586,7 +14595,7 @@ G \approx \frac{\pi e^2 (Z-2)}{4\pi\varepsilon_0 \hbar} \sqrt{\frac{2m}{E}} - \f
 \]</div>
 <p>この式の前半の括弧と後半の括弧を，特定の原子核に対してそれぞれ定数 <span class="arithmatex">\(A, B\)</span> と置くことで，式を以下のように簡略化できます。</p>
 <div class="arithmatex">\[
-\ln \lambda = -\frac{A}{\sqrt{E}} + B
+\finalanswer{\ln \lambda = -\frac{A}{\sqrt{E}} + B}
 \]</div>
 <p>この関係式は，実験的に発見されていた，アルファ粒子のエネルギーが高いほどその原子核の寿命が非常に短くなるというガイガー・ヌッタルの法則の形そのものです。量子力学のトンネル効果を用いることで，指数関数に埋め込まれたエネルギー依存性が理論的に導かれ，実験事実が微視的に解明されました。</p>
 

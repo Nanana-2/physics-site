@@ -14535,17 +14535,23 @@
 \]</div>
 <p>デルタ関数の作用により， <span class="arithmatex">\(\boldsymbol{r}'\)</span> の空間積分を実行して <span class="arithmatex">\(\boldsymbol{r}' = \boldsymbol{r}\)</span> と置きます。このとき，デルタ関数の性質から <span class="arithmatex">\(\boldsymbol{k}' = \boldsymbol{k}\)</span> の項のみが抽出されるため，固有振動数は <span class="arithmatex">\(\omega_{\boldsymbol{k}'} = \omega_{\boldsymbol{k}}\)</span> となり，等式は次のように整理されます。</p>
 <div class="arithmatex">\[
-= \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} \left( \frac{1}{2V} + \frac{1}{2V} \right) = \frac{1}{V} \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}}
+\begin{aligned}
+ &amp;= \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} \left( \frac{1}{2V} + \frac{1}{2V} \right) \\
+&amp;= \frac{1}{V} \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}}
+\end{aligned}
 \]</div>
 <p>問題文に提示された空間積分の公式 <span class="arithmatex">\(\int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}\boldsymbol{k}'}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-= \frac{1}{V} \left( V \delta_{\boldsymbol{k}\boldsymbol{k}'} \right) = \delta_{\boldsymbol{k}\boldsymbol{k}'}
+\finalanswer{= \frac{1}{V} \left( V \delta_{\boldsymbol{k}\boldsymbol{k}'} \right) = \delta_{\boldsymbol{k}\boldsymbol{k}'}}
 \]</div>
 <p>これにより，演算子の交換関係が導出されました。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた交換関係において <span class="arithmatex">\(\boldsymbol{k} = \boldsymbol{k}'\)</span> と置いた式を変形します。</p>
 <div class="arithmatex">\[
-[\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}}^\dagger] = \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger - \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} = 1
+\begin{aligned}
+[\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}}^\dagger] &amp;= \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger - \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>この等式から，次の置き換え式を作ります。</p>
 <div class="arithmatex">\[
@@ -14561,7 +14567,7 @@
 \]</div>
 <p>係数の <span class="arithmatex">\(\frac{1}{2}\)</span> を分配し，粒子数演算子 <span class="arithmatex">\(\hat{n}_{\boldsymbol{k}} = \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-\hat{H} = \sum_{\boldsymbol{k}} \hbar \omega_{\boldsymbol{k}} \left( \hat{n}_{\boldsymbol{k}} + \frac{1}{2} \right)
+\finalanswer{\hat{H} = \sum_{\boldsymbol{k}} \hbar \omega_{\boldsymbol{k}} \left( \hat{n}_{\boldsymbol{k}} + \frac{1}{2} \right)}
 \]</div>
 <p>これにより，ハミルトニアンが粒子数演算子を用いた標準的な形式へと変形されました。</p>
 

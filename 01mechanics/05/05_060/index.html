@@ -14649,7 +14649,7 @@ m \ddot{x} = -kx - \gamma \dot{x} + F_0 \cos \omega t
 \]</div>
 <p>ここで，与えられた定義 <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span>，<span class="arithmatex">\(\beta = \frac{\gamma}{2m}\)</span>，<span class="arithmatex">\(f_0 = \frac{F_0}{m}\)</span> を代入すると，求める運動方程式が得られます。</p>
 <div class="arithmatex">\[
-\ddot{x} + 2\beta \dot{x} + \omega_0^2 x = f_0 \cos \omega t
+\finalanswer{\ddot{x} + 2\beta \dot{x} + \omega_0^2 x = f_0 \cos \omega t}
 \]</div>
 <hr />
 <h3 id="2">(2)</h3>
@@ -14668,11 +14668,17 @@ m \ddot{x} = -kx - \gamma \dot{x} + F_0 \cos \omega t
 <p>複素振幅を極形式 <span class="arithmatex">\(\bar{A}=Ae^{-i\phi}\)</span>，<span class="arithmatex">\(A&gt;0\)</span> で表すと，定常解は <span class="arithmatex">\(z(t)=Ae^{i(\omega t-\phi)}\)</span> となります。その実部は <span class="arithmatex">\(x(t)=A\cos(\omega t-\phi)\)</span> であり，仮定した式と一致します。</p>
 <p><span class="arithmatex">\(\bar{A} = A e^{-i\phi}\)</span> の絶対値をとることで，振幅 <span class="arithmatex">\(A\)</span> が得られます。</p>
 <div class="arithmatex">\[
-A = |\bar{A}| = \frac{f_0}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2}}
+\begin{aligned}
+A &amp;= |\bar{A}| \\
+&amp;= \frac{f_0}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2}}
+\end{aligned}
 \]</div>
 <p>次に，<span class="arithmatex">\(\bar{A}\)</span> の偏角を求めます。</p>
 <div class="arithmatex">\[
-e^{-i\phi} = \cos\phi - i\sin\phi = \frac{f_0 ( (\omega_0^2 - \omega^2) - 2i\beta\omega )}{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2} \cdot \frac{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2}}{f_0}
+\begin{aligned}
+e^{-i\phi} &amp;= \cos\phi - i\sin\phi \\
+&amp;= \frac{f_0 ( (\omega_0^2 - \omega^2) - 2i\beta\omega )}{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2} \cdot \frac{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2}}{f_0}
+\end{aligned}
 \]</div>
 <p>これより，<span class="arithmatex">\(\cos\phi\)</span> と <span class="arithmatex">\(\sin\phi\)</span> はそれぞれ以下のようになります。
 $$
@@ -14683,7 +14689,7 @@ $$</p>
 \]</div>
 <p><span class="arithmatex">\(\beta &gt; 0\)</span> かつ <span class="arithmatex">\(\omega &gt; 0\)</span> であるため，<span class="arithmatex">\(\sin\phi &gt; 0\)</span> であり，位相の遅れ <span class="arithmatex">\(\phi\)</span> は <span class="arithmatex">\(0 &lt; \phi &lt; \pi\)</span> の範囲にあります。したがって，<span class="arithmatex">\(\tan\phi = \frac{\sin\phi}{\cos\phi}\)</span> より，次式が得られます。</p>
 <div class="arithmatex">\[
-\tan\phi = \frac{2\beta\omega}{\omega_0^2 - \omega^2}
+\finalanswer{\tan\phi = \frac{2\beta\omega}{\omega_0^2 - \omega^2}}
 \]</div>
 <hr />
 <h3 id="3">(3)</h3>
@@ -14709,7 +14715,7 @@ g(u) &amp;= (\omega_0^2 - u)^2 + 4\beta^2 u \\\\
 \]</div>
 <p>この条件が満たされるとき，<span class="arithmatex">\(u=\omega_0^2-2\beta^2\)</span> で <span class="arithmatex">\(g(u)\)</span> は最小となり，<span class="arithmatex">\(A(\omega)\)</span> は最大となります。したがって，共鳴角振動数 <span class="arithmatex">\(\omega_r=\sqrt{u}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-\omega_r = \sqrt{\omega_0^2 - 2\beta^2}
+\finalanswer{\omega_r = \sqrt{\omega_0^2 - 2\beta^2}}
 \]</div>
 <p>減衰が小さい極限 <span class="arithmatex">\(\beta\to0\)</span> では，<span class="arithmatex">\(\omega_r\to\omega_0\)</span> となります。</p>
 <hr />
@@ -14726,12 +14732,15 @@ g(u) &amp;= (\omega_0^2 - u)^2 + 4\beta^2 u \\\\
 \]</div>
 <p>外力の角振動数が固有角振動数と一致すると，変位の位相は <span class="arithmatex">\(\frac{\pi}{2}\)</span> 遅れます。このとき速度は次のようになります。</p>
 <div class="arithmatex">\[
-v(t) = -A\omega_0 \sin(\omega_0 t - \frac{\pi}{2}) = A\omega_0 \cos\omega_0 t
+\begin{aligned}
+v(t) &amp;= -A\omega_0 \sin(\omega_0 t - \frac{\pi}{2}) \\
+&amp;= A\omega_0 \cos\omega_0 t
+\end{aligned}
 \]</div>
 <p>速度は外力と同位相になり，外力から系へエネルギーが供給されます。</p>
 <h4 id="iii-omega-to-infty">(iii) <span class="arithmatex">\(\omega \to \infty\)</span> のとき</h4>
 <div class="arithmatex">\[
-\cos\phi \to -1，\quad \sin\phi \to 0 \quad \implies \quad \phi \to \pi
+\finalanswer{\cos\phi \to -1，\quad \sin\phi \to 0 \quad \implies \quad \phi \to \pi}
 \]</div>
 <p>外力の振動が十分に速い場合，変位は外力と逆位相になります。高周波極限では慣性項が支配的となり，<span class="arithmatex">\(-m\omega^2x\approx F_0\cos\omega t\)</span> が成り立ちます。</p>
 

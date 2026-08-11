@@ -14544,7 +14544,7 @@ P_r \propto \Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)
 \]</div>
 <p>熱源のボルツマンエントロピーの定義 <span class="arithmatex">\(S_{\mathrm{B}} = k_B \log \Omega_{\mathrm{B}}\)</span> より， <span class="arithmatex">\(\Omega_{\mathrm{B}} = \exp\left( \frac{S_{\mathrm{B}}}{k_B} \right)\)</span> であるため，これを代入すると目的の比例関係が得られます。</p>
 <div class="arithmatex">\[
-P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
+\finalanswer{P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>熱浴のエントロピー関数 <span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> について，非常に小さい量 <span class="arithmatex">\(E_r\)</span> に関する1次のテイラー展開を行います。</p>
@@ -14561,12 +14561,16 @@ P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}}) - k_B \beta E_r}{k
 \]</div>
 <p>第1項の <span class="arithmatex">\(\exp[S_{\mathrm{B}}(E_{\mathrm{tot}})/k_B]\)</span> は，小さな系の状態 <span class="arithmatex">\(r\)</span> には一切依存しない全体系共通の定数項であるため，比例定数の中に吸収させることができます。これにより，小さな系の状態実現確率がボルツマン因子に比例することが導かれました。</p>
 <div class="arithmatex">\[
-P_r \propto \exp(-\beta E_r)
+\finalanswer{P_r \propto \exp(-\beta E_r)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の比例関係に規格化定数 <span class="arithmatex">\(C\)</span> を導入して <span class="arithmatex">\(P_r = C \exp(-\beta E_r)\)</span> とおき，全確率の和を 1 とします。</p>
 <div class="arithmatex">\[
-\sum_r P_r = C \sum_r \exp(-\beta E_r) = 1 \quad \implies \quad C = \frac{1}{\sum_r \exp(-\beta E_r)}
+\begin{aligned}
+\sum_r P_r &amp;= C \sum_r \exp(-\beta E_r) \\
+&amp;= 1 \quad \implies \quad C \\
+&amp;= \frac{1}{\sum_r \exp(-\beta E_r)}
+\end{aligned}
 \]</div>
 <p>分母の和を分配関数 <span class="arithmatex">\(Z(\beta) = \sum_r \exp(-\beta E_r)\)</span> と定義することで，カノニカル分布の確率公式が得られます。</p>
 <div class="arithmatex">\[
@@ -14574,19 +14578,28 @@ P_r = \frac{\exp(-\beta E_r)}{Z(\beta)}
 \]</div>
 <p>次に，小さな系の平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を定義から求めます。</p>
 <div class="arithmatex">\[
-\langle E \rangle = \sum_r P_r E_r = \frac{1}{Z} \sum_r E_r \exp(-\beta E_r)
+\begin{aligned}
+\langle E \rangle &amp;= \sum_r P_r E_r \\
+&amp;= \frac{1}{Z} \sum_r E_r \exp(-\beta E_r)
+\end{aligned}
 \]</div>
 <p>ここで，分配関数 <span class="arithmatex">\(Z(\beta)\)</span> を <span class="arithmatex">\(\beta\)</span> で偏微分してみます。指数の微分により，前に <span class="arithmatex">\(-E_r\)</span> が降りてきます。</p>
 <div class="arithmatex">\[
-\frac{\partial Z}{\partial \beta} = \sum_r (-E_r) \exp(-\beta E_r) = - \sum_r E_r \exp(-\beta E_r)
+\begin{aligned}
+\frac{\partial Z}{\partial \beta} &amp;= \sum_r (-E_r) \exp(-\beta E_r) \\
+&amp;= - \sum_r E_r \exp(-\beta E_r)
+\end{aligned}
 \]</div>
 <p>この関係を上の <span class="arithmatex">\(\langle E \rangle\)</span> の式に代入します。</p>
 <div class="arithmatex">\[
-\langle E \rangle = \frac{1}{Z} \left( -\frac{\partial Z}{\partial \beta} \right) = - \frac{1}{Z} \frac{\partial Z}{\partial \beta}
+\begin{aligned}
+\langle E \rangle &amp;= \frac{1}{Z} \left( -\frac{\partial Z}{\partial \beta} \right) \\
+&amp;= - \frac{1}{Z} \frac{\partial Z}{\partial \beta}
+\end{aligned}
 \]</div>
 <p>関数の微分公式 <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta}\)</span> を適用すると，求める対応関係が示されます。</p>
 <div class="arithmatex">\[
-\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
+\finalanswer{\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}}
 \]</div>
 
 

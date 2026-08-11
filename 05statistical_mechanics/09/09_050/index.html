@@ -14533,7 +14533,7 @@ G(r) \propto \frac{1}{r} \exp\left( -\frac{r}{\xi} \right)
 <div class="arithmatex">\[
 \chi_T \propto \int_0^\infty G(r) \cdot 4\pi r^2 dr
 \]</div>
-<p>通常の高温相における相関関数の形 <span class="arithmatex">\(G(r) = \frac{A}{r} \exp\left( -\frac{r}{\xi} \right)\)</span> 。ここで <span class="arithmatex">\(A\)</span> は正の定数であるをこの式に代入して積分を実行し，等温磁化率 <span class="arithmatex">\(\chi_T\)</span> が相関長 <span class="arithmatex">\(\xi\)</span> を用いてどのように表されるか導出せよ。ただし，定積分公式 <span class="arithmatex">\(\int_0^\infty x e^{-ax} dx = \frac{1}{a^2}\)</span> を用いてよい。</p>
+<p>通常の高温相における相関関数を <span class="arithmatex">\(G(r) = \frac{A}{r} \exp\left( -\frac{r}{\xi} \right)\)</span> とする。ただし，<span class="arithmatex">\(A\)</span> は正の定数である。これを代入して積分を実行し，等温磁化率 <span class="arithmatex">\(\chi_T\)</span> が相関長 <span class="arithmatex">\(\xi\)</span> を用いてどのように表されるか導出せよ。定積分公式 <span class="arithmatex">\(\int_0^\infty x e^{-ax} dx = \frac{1}{a^2}\)</span> を用いてよい。</p>
 <p>(3) 系の温度を下げていき，強磁性相転移の臨界温度 <span class="arithmatex">\(T_c\)</span> に近づけると，マクロな応答関数である等温磁化率が無限大に発散する<span class="arithmatex">\(\chi_T \to \infty\)</span>。(2) の結果に基づき，臨界点近傍において相関長 <span class="arithmatex">\(\xi\)</span> がどのような挙動を示すべきか述べよ。また，臨界点<span class="arithmatex">\(T = T_c\)</span>そのものにおいては，相関関数 <span class="arithmatex">\(G(r)\)</span> の指数減衰の形が崩れ，べき乗減衰<span class="arithmatex">\(G(r) \propto \frac{1}{r^{1+\eta}}\)</span>へと変化する。この変化が意味する系の微視的なパターンの特徴を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14541,7 +14541,7 @@ G(r) \propto \frac{1}{r} \exp\left( -\frac{r}{\xi} \right)
 <p>距離が相関長よりも十分に離れた極限<span class="arithmatex">\(r \gg \xi\)</span>を考えます。
 指数関数 <span class="arithmatex">\(\exp(-r/\xi)\)</span> は，分子が大きくなるにつれて非常に急速にゼロへと減衰するため，相関関数の値はゼロに漸近します。</p>
 <div class="arithmatex">\[
-\lim_{r \to \infty} G(r) = 0
+\finalanswer{\lim_{r \to \infty} G(r) = 0}
 \]</div>
 <p>相関関数の定義より，これは <span class="arithmatex">\(\langle s(\boldsymbol{r}_1) s(\boldsymbol{r}_2) \rangle = \langle s(\boldsymbol{r}_1) \rangle \langle s(\boldsymbol{r}_2) \rangle\)</span> が成り立つことを意味します。</p>
 <p>物理的には，2つのスピンが十分に離れると，一方のスピンが熱運動によってどちらを向くかという微視的な確率分布が，もう一方のスピンの向きに全く影響を与えなくなる状態を指します。すなわち，遠距離にある2点のスピンが統計的に独立であることを表しています。</p>
@@ -14552,16 +14552,19 @@ G(r) \propto \frac{1}{r} \exp\left( -\frac{r}{\xi} \right)
 \]</div>
 <p>ここで，与えられた定積分公式 <span class="arithmatex">\(\int_0^\infty x e^{-ax} dx = \frac{1}{a^2}\)</span> を適用します。この積分では <span class="arithmatex">\(a = \frac{1}{\xi}\)</span> に対応するため，以下のようになります。</p>
 <div class="arithmatex">\[
-\int_0^\infty r \exp\left( -\frac{r}{\xi} \right) dr = \frac{1}{\left(\frac{1}{\xi}\right)^2} = \xi^2
+\begin{aligned}
+\int_0^\infty r \exp\left( -\frac{r}{\xi} \right) dr &amp;= \frac{1}{\left(\frac{1}{\xi}\right)^2} \\
+&amp;= \xi^2
+\end{aligned}
 \]</div>
 <p>これを元の比例式に戻すことで，マクロな等温磁化率とミクロな相関長を結ぶ関係式が導出されます。</p>
 <div class="arithmatex">\[
-\chi_T \propto \xi^2
+\finalanswer{\chi_T \propto \xi^2}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の結果より，等温磁化率は相関長の2乗に比例します。</p>
 <div class="arithmatex">\[
-\chi_T \propto \xi^2
+\finalanswer{\chi_T \propto \xi^2}
 \]</div>
 <p>したがって，温度を臨界温度に近づけたときにマクロな磁化率が無限大に発散する<span class="arithmatex">\(\chi_T \to \infty\)</span>ということは，ミクロな空間スケールである<strong>相関長 <span class="arithmatex">\(\xi\)</span> も同様に無限大へと発散<span class="arithmatex">\(\xi \to \infty\)</span></strong>しなければならないことを意味します。</p>
 <p><strong>臨界点における微視的パターンの特徴</strong></p>

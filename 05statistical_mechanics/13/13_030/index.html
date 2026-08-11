@@ -14547,7 +14547,10 @@ i\hbar \frac{\partial}{\partial t} \langle x_1|\rho|x_2 \rangle = \langle x_1|\h
 \]</div>
 <p>右辺の各項に完全系 <span class="arithmatex">\(\int |x\rangle\langle x| dx = 1\)</span> を挿入し，与えられた演算子の位置表示を代入します。</p>
 <div class="arithmatex">\[
-\langle x_1|\hat{H}\rho|x_2 \rangle = \int \langle x_1| \left( \frac{\hat{p}^2}{2m} + V(\hat{x}) \right) |x \rangle \langle x|\rho|x_2 \rangle dx = \left( -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x_1^2} + V(x_1) \right) \rho(x_1, x_2, t)
+\begin{aligned}
+\langle x_1|\hat{H}\rho|x_2 \rangle &amp;= \int \langle x_1| \left( \frac{\hat{p}^2}{2m} + V(\hat{x}) \right) |x \rangle \langle x|\rho|x_2 \rangle dx \\
+&amp;= \left( -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x_1^2} + V(x_1) \right) \rho(x_1, x_2, t)
+\end{aligned}
 \]</div>
 <p>後半の項も同様に計算します。ハミルトニアンが右側から作用するため，微分は <span class="arithmatex">\(x_2\)</span> にかかります。</p>
 <div class="arithmatex">\[
@@ -14555,15 +14558,21 @@ i\hbar \frac{\partial}{\partial t} \langle x_1|\rho|x_2 \rangle = \langle x_1|\h
 \]</div>
 <p>これらをまとめると，求める位置表示の方程式が得られます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \rho}{\partial t} = -\frac{\hbar^2}{2m} \left( \frac{\partial^2}{\partial x_1^2} - \frac{\partial^2}{\partial x_2^2} \right) \rho + \big( V(x_1) - V(x_2) \big) \rho
+\finalanswer{i\hbar \frac{\partial \rho}{\partial t} = -\frac{\hbar^2}{2m} \left( \frac{\partial^2}{\partial x_1^2} - \frac{\partial^2}{\partial x_2^2} \right) \rho + \big( V(x_1) - V(x_2) \big) \rho}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>提示された微分演算子の関係式を用いて，右辺の2階微分部分を計算します。</p>
 <div class="arithmatex">\[
-\frac{\partial^2}{\partial x_1^2} = \left( \frac{1}{2}\frac{\partial}{\partial x} + \frac{\partial}{\partial y} \right)^2 = \frac{1}{4}\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial x \partial y} + \frac{\partial^2}{\partial y^2}
+\begin{aligned}
+\frac{\partial^2}{\partial x_1^2} &amp;= \left( \frac{1}{2}\frac{\partial}{\partial x} + \frac{\partial}{\partial y} \right)^2 \\
+&amp;= \frac{1}{4}\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial x \partial y} + \frac{\partial^2}{\partial y^2}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\frac{\partial^2}{\partial x_2^2} = \left( \frac{1}{2}\frac{\partial}{\partial x} - \frac{\partial}{\partial y} \right)^2 = \frac{1}{4}\frac{\partial^2}{\partial x^2} - \frac{\partial^2}{\partial x \partial y} + \frac{\partial^2}{\partial y^2}
+\begin{aligned}
+\frac{\partial^2}{\partial x_2^2} &amp;= \left( \frac{1}{2}\frac{\partial}{\partial x} - \frac{\partial}{\partial y} \right)^2 \\
+&amp;= \frac{1}{4}\frac{\partial^2}{\partial x^2} - \frac{\partial^2}{\partial x \partial y} + \frac{\partial^2}{\partial y^2}
+\end{aligned}
 \]</div>
 <p>この2つの式の差をとります。</p>
 <div class="arithmatex">\[
@@ -14571,7 +14580,7 @@ i\hbar \frac{\partial \rho}{\partial t} = -\frac{\hbar^2}{2m} \left( \frac{\part
 \]</div>
 <p>これを(1)の方程式に代入し，ポテンシャルの変数も <span class="arithmatex">\(x_1 = x + \frac{y}{2}\)</span> および <span class="arithmatex">\(x_2 = x - \frac{y}{2}\)</span> に変換します。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \rho}{\partial t} = -\frac{\hbar^2}{m} \frac{\partial^2 \rho}{\partial x \partial y} + \left( V\left(x + \frac{y}{2}\right) - V\left(x - \frac{y}{2}\right) \right) \rho
+\finalanswer{i\hbar \frac{\partial \rho}{\partial t} = -\frac{\hbar^2}{m} \frac{\partial^2 \rho}{\partial x \partial y} + \left( V\left(x + \frac{y}{2}\right) - V\left(x - \frac{y}{2}\right) \right) \rho}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた式全体に <span class="arithmatex">\(\frac{1}{\pi\hbar} \exp\left( -\frac{ipy}{\hbar} \right)\)</span> を掛けて <span class="arithmatex">\(y\)</span> で積分します。
@@ -14581,11 +14590,17 @@ i\hbar \frac{\partial \rho}{\partial t} = -\frac{\hbar^2}{m} \frac{\partial^2 \r
 \]</div>
 <p>右辺の運動エネルギー項を計算します。 <span class="arithmatex">\(y\)</span> に関する部分積分を実行し，微分を指数関数の側へ移します。</p>
 <div class="arithmatex">\[
--\frac{\hbar^2}{m} \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \frac{\partial^2 \rho}{\partial x \partial y} \exp\left( -\frac{ipy}{\hbar} \right) dy = \frac{\hbar^2}{m} \frac{\partial}{\partial x} \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \rho \cdot \left( -\frac{ip}{\hbar} \right) \exp\left( -\frac{ipy}{\hbar} \right) dy = -i\hbar \frac{p}{m} \frac{\partial W}{\partial x}
+\begin{aligned}
+-\frac{\hbar^2}{m} \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \frac{\partial^2 \rho}{\partial x \partial y} \exp\left( -\frac{ipy}{\hbar} \right) dy &amp;= \frac{\hbar^2}{m} \frac{\partial}{\partial x} \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \rho \cdot \left( -\frac{ip}{\hbar} \right) \exp\left( -\frac{ipy}{\hbar} \right) dy \\
+&amp;= -i\hbar \frac{p}{m} \frac{\partial W}{\partial x}
+\end{aligned}
 \]</div>
 <p>右辺のポテンシャル項を計算するため，マクローリン展開により <span class="arithmatex">\(y\)</span> のべき級数に展開します。</p>
 <div class="arithmatex">\[
-V\left(x + \frac{y}{2}\right) - V\left(x - \frac{y}{2}\right) = 2 \sum_{n:奇数} \frac{1}{n!} \frac{\partial^n V}{\partial x^n} \left( \frac{y}{2} \right)^n = \frac{\partial V}{\partial x} y + \frac{1}{24} \frac{\partial^3 V}{\partial x^3} y^3 + \dots
+\begin{aligned}
+V\left(x + \frac{y}{2}\right) - V\left(x - \frac{y}{2}\right) &amp;= 2 \sum_{n:奇数} \frac{1}{n!} \frac{\partial^n V}{\partial x^n} \left( \frac{y}{2} \right)^n \\
+&amp;= \frac{\partial V}{\partial x} y + \frac{1}{24} \frac{\partial^3 V}{\partial x^3} y^3 + \dots
+\end{aligned}
 \]</div>
 <p>この展開式を積分に代入します。フーリエ変換の性質から， <span class="arithmatex">\(y\)</span> を掛ける操作は運動量微分 <span class="arithmatex">\(i\hbar \frac{\partial}{\partial p}\)</span> に置き換わります。第1項のみを抜き出して計算すると以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14593,7 +14608,7 @@ V\left(x + \frac{y}{2}\right) - V\left(x - \frac{y}{2}\right) = 2 \sum_{n:奇数
 \]</div>
 <p>すべての項を合わせて両辺を <span class="arithmatex">\(i\hbar\)</span> で割ると，ウィグナー分布関数の時間発展方程式が得られます。</p>
 <div class="arithmatex">\[
-\frac{\partial W}{\partial t} + \frac{p}{m} \frac{\partial W}{\partial x} - \frac{\partial V}{\partial x} \frac{\partial W}{\partial p} - \sum_{n=3,5,\dots} \frac{(-1)^{\frac{n-1}{2}}}{n!} \left(\frac{\hbar}{2}\right)^{n-1} \frac{\partial^n V}{\partial x^n} \frac{\partial^n W}{\partial p^n} = 0
+\finalanswer{\frac{\partial W}{\partial t} + \frac{p}{m} \frac{\partial W}{\partial x} - \frac{\partial V}{\partial x} \frac{\partial W}{\partial p} - \sum_{n=3,5,\dots} \frac{(-1)^{\frac{n-1}{2}}}{n!} \left(\frac{\hbar}{2}\right)^{n-1} \frac{\partial^n V}{\partial x^n} \frac{\partial^n W}{\partial p^n} = 0}
 \]</div>
 <p>この式において <span class="arithmatex">\(\hbar \to 0\)</span> の極限をとると， <span class="arithmatex">\(\hbar\)</span> を含む総和の項がすべてゼロになります。残った項を整理すると，古典統計力学において位相空間の確率流の保存を表すリウヴィル方程式に一致します。</p>
 

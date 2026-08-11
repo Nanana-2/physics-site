@@ -14533,21 +14533,27 @@
 <h3 id="1">(1)</h3>
 <p>観測を行う前の段階では，1つの分子が左右どちらの領域に存在する確率は等しく，それぞれ <span class="arithmatex">\(\frac{1}{2}\)</span> の不確定性を持っています。したがって，初期のシャノンエントロピーは以下のようになります。</p>
 <div class="arithmatex">\[
-S_{\mathrm{init}} = -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = k_B \ln 2
+\begin{aligned}
+S_{\mathrm{init}} &amp;= -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
+&amp;= k_B \ln 2
+\end{aligned}
 \]</div>
 <p>悪魔が測定を行い，分子が特定の領域にいることを特定した直後は，分子の存在確率がその領域において 1 ，もう一方において 0 へと確定します。不確定性が消滅するため，測定後の分子のエントロピーはゼロになります。</p>
 <div class="arithmatex">\[
-S_{\mathrm{meas}} = -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) = 0
+\begin{aligned}
+S_{\mathrm{meas}} &amp;= -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>測定という行為によって，分子単体のエントロピーが <span class="arithmatex">\(k_B \ln 2\)</span> だけ減少したことがわかります。</p>
 <h3 id="2">(2)</h3>
 <p>悪魔は，分子がいない側の空の領域からピストンを中央まで等温準静的に押し込みます。このとき，ピストンが移動する空間は真空であるため，分子から受ける抵抗力は一切ありません。したがって，ピストンを動かすために外部から加えられるマクロな仕事 <span class="arithmatex">\(W\)</span> はゼロです。</p>
 <div class="arithmatex">\[
-W = 0
+\finalanswer{W = 0}
 \]</div>
 <p>分子は体積 <span class="arithmatex">\(V\)</span> から体積 <span class="arithmatex">\(V/2\)</span> へと等温縮小された状態になります。1分子の等温変化における内部エネルギー変化は <span class="arithmatex">\(\Delta U = 0\)</span> であるため，熱力学第一法則 <span class="arithmatex">\(\Delta U = W_{\mathrm{on}} - Q_{\mathrm{out}}\)</span> より，このシリンダー操作単体において熱浴へ放出される熱量 <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> もゼロとなります。</p>
 <div class="arithmatex">\[
-Q_{\mathrm{out}} = 0
+\finalanswer{Q_{\mathrm{out}} = 0}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>悪魔が測定データを保持したままの状態における，各部分系のエントロピー変化量を書き出します。</p>
@@ -14568,7 +14574,7 @@ Q_{\mathrm{erase}} \ge k_B T \ln 2
 <p>このデータ消去にともなう放熱により，熱浴のエントロピーが新たに <span class="arithmatex">\(\Delta S_{\mathrm{bath}} = \frac{Q_{\mathrm{erase}}}{T} \ge k_B \ln 2\)</span> だけ強制的に増大させられます。</p>
 <p>データ消去プロセスまでを含めたサイクル全体の最終的な全系エントロピー変化量を再計算します。</p>
 <div class="arithmatex">\[
-\Delta S_{\mathrm{cycle}} = \Delta S_{\mathrm{tot}} + \Delta S_{\mathrm{bath}} \ge 0 + k_B \ln 2 &gt; 0
+\finalanswer{\Delta S_{\mathrm{cycle}} = \Delta S_{\mathrm{tot}} + \Delta S_{\mathrm{bath}} \ge 0 + k_B \ln 2 &gt; 0}
 \]</div>
 <p>悪魔が分子から抽出した情報を利用して系をマクロに制御しても，蓄積した情報を廃棄する最終段階で，必ずそれ以上の熱エントロピーが熱浴側に排出される仕組みになっています。これにより，情報処理の全プロセスを考慮に含めると，マクスウェルの悪魔の動作は熱力学第二法則と整合することが示されました。</p>
 

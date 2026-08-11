@@ -14535,7 +14535,10 @@ m = \tanh\left[ \beta (z J m + B) \right]
 <h3 id="1">(1)</h3>
 <p>ハミルトニアンの中から，特定の1つのスピン <span class="arithmatex">\(s_i\)</span> が関与している相互作用と外部磁場の項を抜き出します。</p>
 <div class="arithmatex">\[
-H_i = -J \sum_{j (\text{nn of } i)} s_i s_j - B s_i = - \left( J \sum_{j (\text{nn of } i)} s_j + B \right) s_i
+\begin{aligned}
+H_i &amp;= -J \sum_{j (\text{nn of } i)} s_i s_j - B s_i \\
+&amp;= - \left( J \sum_{j (\text{nn of } i)} s_j + B \right) s_i
+\end{aligned}
 \]</div>
 <p>ここで <span class="arithmatex">\(\sum_{j (\text{nn of } i)}\)</span> はスピン <span class="arithmatex">\(s_i\)</span> に隣接する <span class="arithmatex">\(z\)</span> 個のスピンについての和です。平均場近似の仮定に従い，これらの隣接スピンをすべてその平均値 <span class="arithmatex">\(\langle s_j \rangle = m\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
@@ -14547,16 +14550,24 @@ H_i \simeq - (z J m + B) s_i
 \]</div>
 <p>この式を <span class="arithmatex">\(- B_{\mathrm{eff}} s_i\)</span> と比較することで，周囲のスピンが作る分子場 <span class="arithmatex">\(zJm\)</span> と外部磁場 <span class="arithmatex">\(B\)</span> が合わさった有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> の式が導出されます。</p>
 <div class="arithmatex">\[
-B_{\mathrm{eff}} = z J m + B
+\finalanswer{B_{\mathrm{eff}} = z J m + B}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> にさらされている1つの独立なスピン <span class="arithmatex">\(s_i = \pm 1\)</span> の分配関数 <span class="arithmatex">\(z_{\mathrm{single}}\)</span> は，以下のようになります。</p>
 <div class="arithmatex">\[
-z_{\mathrm{single}} = \sum_{s_i = \pm 1} \exp( \beta B_{\mathrm{eff}} s_i ) = e^{\beta B_{\mathrm{eff}}} + e^{-\beta B_{\mathrm{eff}}} = 2 \cosh( \beta B_{\mathrm{eff}} )
+\begin{aligned}
+z_{\mathrm{single}} &amp;= \sum_{s_i = \pm 1} \exp( \beta B_{\mathrm{eff}} s_i ) \\
+&amp;= e^{\beta B_{\mathrm{eff}}} + e^{-\beta B_{\mathrm{eff}}} \\
+&amp;= 2 \cosh( \beta B_{\mathrm{eff}} )
+\end{aligned}
 \]</div>
 <p>このスピンの平均値 <span class="arithmatex">\(\langle s_i \rangle\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\langle s_i \rangle = \frac{(+1) \cdot e^{\beta B_{\mathrm{eff}}} + (-1) \cdot e^{-\beta B_{\mathrm{eff}}}}{z_{\mathrm{single}}} = \frac{e^{\beta B_{\mathrm{eff}}} - e^{-\beta B_{\mathrm{eff}}}}{e^{\beta B_{\mathrm{eff}}} + e^{-\beta B_{\mathrm{eff}}}} = \tanh( \beta B_{\mathrm{eff}} )
+\begin{aligned}
+\langle s_i \rangle &amp;= \frac{(+1) \cdot e^{\beta B_{\mathrm{eff}}} + (-1) \cdot e^{-\beta B_{\mathrm{eff}}}}{z_{\mathrm{single}}} \\
+&amp;= \frac{e^{\beta B_{\mathrm{eff}}} - e^{-\beta B_{\mathrm{eff}}}}{e^{\beta B_{\mathrm{eff}}} + e^{-\beta B_{\mathrm{eff}}}} \\
+&amp;= \finalanswer{\tanh( \beta B_{\mathrm{eff}} )}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>格子全体の一様性から，中心スピンの平均値も周囲の平均磁化と一致するべき <span class="arithmatex">\(\langle s_i \rangle = m\)</span> という条件を課します。(2) の結果に (1) の有効磁場の表現を代入することで，目的の平均場方程式が得られます。</p>
@@ -14578,7 +14589,7 @@ m = \tanh\left[ \beta (z J m + B) \right]
 \]</div>
 <p>この不等式の境界を与える温度が，相転移が起こるキュリー温度 <span class="arithmatex">\(T_c\)</span> となります。</p>
 <div class="arithmatex">\[
-T_c = \frac{z J}{k_B}
+\finalanswer{T_c = \frac{z J}{k_B}}
 \]</div>
 <p>この結果により，平均場理論の枠組みでは，温度が <span class="arithmatex">\(T_c = \frac{z J}{k_B}\)</span> を下回るとスピンが自発的に一方向へ揃う相転移現象が再現されます。配位数 <span class="arithmatex">\(z\)</span> が大きいほど周囲からのサポートが強くなるため，より高い温度まで秩序を維持できる性質がこの数式に表れています。</p>
 

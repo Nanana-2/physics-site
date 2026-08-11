@@ -14536,7 +14536,10 @@ Z(\beta) = \text{Tr}\left[ e^{-\beta \hat{H}} \right] = \int_{-\infty}^{\infty} 
 <h3 id="1">(1)</h3>
 <p>実時間の時間発展演算子の指数部分に対して， <span class="arithmatex">\(t = -i\tau\)</span> を代入します。</p>
 <div class="arithmatex">\[
-e^{-i \hat{H} t / \hbar} = e^{-i \hat{H} (-i\tau) / \hbar} = e^{-\hat{H} \tau / \hbar}
+\begin{aligned}
+e^{-i \hat{H} t / \hbar} &amp;= e^{-i \hat{H} (-i\tau) / \hbar} \\
+&amp;= e^{-\hat{H} \tau / \hbar}
+\end{aligned}
 \]</div>
 <p>この演算子が，最終虚時間 <span class="arithmatex">\(\tau = \tau_f\)</span> において統計力学のボルツマン因子 <span class="arithmatex">\(e^{-\beta \hat{H}}\)</span> と一致するための等式を組み立てます。</p>
 <div class="arithmatex">\[
@@ -14544,7 +14547,7 @@ e^{-\hat{H} \tau_f / \hbar} = e^{-\beta \hat{H}}
 \]</div>
 <p>指数部分の係数を比較します。</p>
 <div class="arithmatex">\[
-\frac{\tau_f}{\hbar} = \beta \implies \tau_f = \hbar \beta
+\finalanswer{\frac{\tau_f}{\hbar} = \beta \implies \tau_f = \hbar \beta}
 \]</div>
 <p>したがって，求める最終虚時間の条件は <span class="arithmatex">\(\tau_f = \frac{\hbar}{k_{\text{B}} T}\)</span> となります。量子力学の虚時間の幅が，統計力学の逆温度に対応することが分かります。</p>
 <h3 id="2">(2)</h3>
@@ -14554,7 +14557,7 @@ e^{-\hat{H} \tau_f / \hbar} = e^{-\beta \hat{H}}
 \]</div>
 <p>分配関数の定義式は，この行列要素をすべての空間位置 <span class="arithmatex">\(x\)</span> について足し合わせる積分です。</p>
 <div class="arithmatex">\[
-Z(\beta) = \int_{-\infty}^{\infty} K_{\text{E}}(x, \hbar\beta; x, 0) dx
+\finalanswer{Z(\beta) = \int_{-\infty}^{\infty} K_{\text{E}}(x, \hbar\beta; x, 0) dx}
 \]</div>
 <p>この式の構造から，分配関数を計算するためには，始点の位置 <span class="arithmatex">\(x_i\)</span> と終点の位置 <span class="arithmatex">\(x_f\)</span> が同じ位置 <span class="arithmatex">\(x_i = x_f = x\)</span> でなければなりません。すなわち，虚時間において元の位置へと戻ってくる閉じた経路のみを対象とし，その虚時間の周期の長さを <span class="arithmatex">\(\tau_f = \hbar\beta\)</span> に設定した上で，すべての開始位置について全空間積分を実行するという条件を満たす必要があります。</p>
 <h3 id="3">(3)</h3>
@@ -14580,7 +14583,7 @@ Z(\beta) = \int_{-\infty}^{\infty} K_{\text{E}}(x, \hbar\beta; x, 0) dx
 <p>通常の経路積分における重み因子 <span class="arithmatex">\(e^{iS/\hbar}\)</span> は，虚時間においてはボルツマン因子の類似形である <span class="arithmatex">\(e^{-S_{\text{E}}/\hbar}\)</span> へと変化します。</p>
 <p>これに (2) の周期的境界条件 <span class="arithmatex">\(x(0) = x(\hbar\beta)\)</span> を組み合わせることで，正準分配関数の経路積分表示が以下のように完成します。</p>
 <div class="arithmatex">\[
-Z(\beta) = \int_{x(0)=x(\hbar\beta)} \mathcal{D}[x(\tau)] e^{- S_{\text{E}}[x(\tau)] / \hbar}
+\finalanswer{Z(\beta) = \int_{x(0)=x(\hbar\beta)} \mathcal{D}[x(\tau)] e^{- S_{\text{E}}[x(\tau)] / \hbar}}
 \]</div>
 
 

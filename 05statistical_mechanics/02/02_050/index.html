@@ -14540,7 +14540,7 @@ S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
 \]</div>
 <p>この式の自然対数をとり，各因子の積を和と差の形に展開します。</p>
 <div class="arithmatex">\[
-\log \Omega = N \log V + \frac{3N}{2} \log \pi + \frac{3N}{2} \log (2mE) - N \log h^3 - \log N! - \log \left(\frac{3N}{2}\right)!
+\log \Omega = \finalanswer{N \log V + \frac{3N}{2} \log \pi + \frac{3N}{2} \log (2mE)} - N \log h^3 - \log N! - \log \left(\frac{3N}{2}\right)!
 \]</div>
 <h3 id="2">(2)</h3>
 <p>展開した式の後ろ2項にある階乗の対数に対し，スターリングの公式をそれぞれ適用します。</p>
@@ -14563,11 +14563,14 @@ S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
 N \log V - N \log N = N \log \left( \frac{V}{N} \right)
 \]</div>
 <div class="arithmatex">\[
-\frac{3N}{2} \log (2mE) - \frac{3N}{2} \log \left(\frac{3N}{2}\right) = \frac{3N}{2} \log \left( \frac{2mE}{\frac{3N}{2}} \right) = \frac{3N}{2} \log \left( \frac{4mE}{3N} \right)
+\begin{aligned}
+\frac{3N}{2} \log (2mE) - \frac{3N}{2} \log \left(\frac{3N}{2}\right) &amp;= \frac{3N}{2} \log \left( \frac{2mE}{\frac{3N}{2}} \right) \\
+&amp;= \frac{3N}{2} \log \left( \frac{4mE}{3N} \right)
+\end{aligned}
 \]</div>
 <p>これらを元の式に戻し，残りの対数項 <span class="arithmatex">\(\log \pi\)</span> や <span class="arithmatex">\(\log h\)</span> も括弧の中にまとめます。</p>
 <div class="arithmatex">\[
-\log \Omega \simeq N \log \left( \frac{V}{N} \right) + \frac{3N}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2}N
+\finalanswer{\log \Omega \simeq N \log \left( \frac{V}{N} \right) + \frac{3N}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2}N}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた <span class="arithmatex">\(\log \Omega\)</span> にボルツマン定数 <span class="arithmatex">\(k_B\)</span> を掛け，共通因子 <span class="arithmatex">\(N\)</span> を括り出します。</p>
@@ -14576,7 +14579,7 @@ S(E, V, N) = N k_B \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \le
 \]</div>
 <p>この式はサッカー・テトロード方程式と呼ばれます。<span class="arithmatex">\(E,V,N\)</span> を同時に <span class="arithmatex">\(\lambda\)</span> 倍すると，対数内の <span class="arithmatex">\(V/N\)</span> と <span class="arithmatex">\(E/N\)</span> は変化せず，括弧の外の <span class="arithmatex">\(N\)</span> だけが <span class="arithmatex">\(\lambda N\)</span> になります。したがって，</p>
 <div class="arithmatex">\[
-S(\lambda E,\lambda V,\lambda N)=\lambda S(E,V,N)
+\finalanswer{S(\lambda E,\lambda V,\lambda N)=\lambda S(E,V,N)}
 \]</div>
 <p>が成り立ち，示量性を満たします。</p>
 

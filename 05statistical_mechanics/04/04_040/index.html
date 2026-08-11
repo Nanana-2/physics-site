@@ -14542,7 +14542,7 @@ Z(N) = \frac{1}{N!} \left( \frac{V}{\lambda^3} \right)^2 \quad \implies \quad Z(
 \]</div>
 <p>ここで， <span class="arithmatex">\(x = \exp(\beta \mu) Z_1\)</span> とおくと，この式は <span class="arithmatex">\(\sum_{N=0}^{\infty} \frac{x^N}{N!}\)</span> の形そのものになります。指数関数の展開公式を適用することで，大分配関数の閉じた表現が得られます。</p>
 <div class="arithmatex">\[
-\Xi = \exp(x) = \exp\left[ \exp(\beta \mu) Z_1 \right]
+\Xi = \exp(x) = \finalanswer{\exp\left[ \exp(\beta \mu) Z_1 \right]}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> を求めるため，(1) で得られた <span class="arithmatex">\(\Xi\)</span> の対数をとります。</p>
@@ -14555,15 +14555,24 @@ Z(N) = \frac{1}{N!} \left( \frac{V}{\lambda^3} \right)^2 \quad \implies \quad Z(
 \]</div>
 <p>大正準集団における平均粒子数の公式 <span class="arithmatex">\(\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}\)</span> にこれを代入します。</p>
 <div class="arithmatex">\[
-\langle N \rangle = \frac{1}{\beta} \cdot \beta \exp(\beta \mu) Z_1 = \exp(\beta \mu) Z_1
+\begin{aligned}
+\langle N \rangle &amp;= \frac{1}{\beta} \cdot \beta \exp(\beta \mu) Z_1 \\
+&amp;= \exp(\beta \mu) Z_1
+\end{aligned}
 \]</div>
 <p>次に，この式を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解きます。両辺の自然対数をとります。</p>
 <div class="arithmatex">\[
-\log \langle N \rangle = \beta \mu + \log Z_1 \quad \implies \quad \beta \mu = \log \left( \frac{\langle N \rangle}{Z_1} \right)
+\begin{aligned}
+\log \langle N \rangle &amp;= \beta \mu + \log Z_1 \quad \implies \quad \beta \mu \\
+&amp;= \log \left( \frac{\langle N \rangle}{Z_1} \right)
+\end{aligned}
 \]</div>
 <p>ここに <span class="arithmatex">\(Z_1 = \frac{V}{\lambda^3}\)</span> を代入し，平均粒子密度 <span class="arithmatex">\(\rho = \frac{\langle N \rangle}{V}\)</span> を用いて整理します。両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，化学ポテンシャルの式が求まります。</p>
 <div class="arithmatex">\[
-\mu = k_B T \log \left( \frac{\langle N \rangle \lambda^3}{V} \right) = k_B T \log \left( \rho \lambda^3 \right)
+\begin{aligned}
+\mu &amp;= k_B T \log \left( \frac{\langle N \rangle \lambda^3}{V} \right) \\
+&amp;= \finalanswer{k_B T \log \left( \rho \lambda^3 \right)}
+\end{aligned}
 \]</div>
 <p>この結果は，カノニカル分布で <span class="arithmatex">\(\mu = \frac{\partial F}{\partial N}\)</span> から求めた化学ポテンシャルと等しくなります。</p>
 <h3 id="3">(3)</h3>
@@ -14573,7 +14582,10 @@ J = -k_B T \exp(\beta \mu) Z_1
 \]</div>
 <p>熱力学における均一な系のオイラーの関係式から導かれる関係 <span class="arithmatex">\(J = -PV\)</span> と，上の統計力学的な <span class="arithmatex">\(J\)</span> の式を結びつけます。</p>
 <div class="arithmatex">\[
--PV = -k_B T \exp(\beta \mu) Z_1 \quad \implies \quad P = \frac{k_B T}{V} \exp(\beta \mu) Z_1
+\begin{aligned}
+-PV &amp;= -k_B T \exp(\beta \mu) Z_1 \quad \implies \quad P \\
+&amp;= \frac{k_B T}{V} \exp(\beta \mu) Z_1
+\end{aligned}
 \]</div>
 <p>(2)で得た <span class="arithmatex">\(\langle N \rangle = \exp(\beta \mu) Z_1\)</span> を圧力の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14581,7 +14593,7 @@ P = \frac{k_B T}{V} \langle N \rangle
 \]</div>
 <p>両辺に体積 <span class="arithmatex">\(V\)</span> を掛け合わせることで，理想気体の状態方程式が導出されます。</p>
 <div class="arithmatex">\[
-P V = \langle N \rangle k_B T
+\finalanswer{P V = \langle N \rangle k_B T}
 \]</div>
 <p>カノニカル分布では固定された粒子数 <span class="arithmatex">\(N\)</span> を用いて <span class="arithmatex">\(P V = N k_B T\)</span> と表されていた方程式が，粒子数が変動するグランドカノニカル分布においても，その平均値 <span class="arithmatex">\(\langle N \rangle\)</span> を用いることで全く同じ形式として再現されることが示されました。</p>
 

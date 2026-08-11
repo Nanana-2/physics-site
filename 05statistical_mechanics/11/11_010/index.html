@@ -14523,7 +14523,7 @@
 \frac{dP_i(t)}{dt} = \sum_{j \neq i} \left[ W(j \to i) P_j(t) - W(i \to j) P_i(t) \right]
 \]</div>
 <p>系が熱平衡状態に達したときの確率分布を <span class="arithmatex">\(P_i^{\mathrm{eq}}\)</span> とするとき，以下の問いに答えよ。</p>
-<p>(1) 状態 <span class="arithmatex">\(i\)</span> と状態 <span class="arithmatex">\(j\)</span> のあらゆるペアの間で，状態の移動による確率の正味の流れがゼロであるという条件を詳細釣り合い条件と呼ぶ。この詳細釣り合い条件を表す数式を， <span class="arithmatex">\(P_i^{\mathrm{eq}}, P_j^{\mathrm{eq}}, W(i \to j), W(j \to i)\)</span> を用いて述べよ。</p>
+<p>(1) 状態 <span class="arithmatex">\(i\)</span> と状態 <span class="arithmatex">\(j\)</span> のあらゆるペアの間で，状態の移動による確率の正味の流れがゼロであるという条件を詳細釣り合い条件と呼ぶ。この詳細釣り合い条件を表す式を， <span class="arithmatex">\(P_i^{\mathrm{eq}}, P_j^{\mathrm{eq}}, W(i \to j), W(j \to i)\)</span> を用いて述べよ。</p>
 <p>(2) (1) で表した詳細釣り合い条件が満たされているとき，マスター方程式の右辺が恒等的にゼロになり，平衡分布 <span class="arithmatex">\(P_i^{\mathrm{eq}}\)</span> が時間的に変化しない定常状態 <span class="arithmatex">\(\frac{dP_i^{\mathrm{eq}}}{dt} = 0\)</span> であることが保証されることを示せ。</p>
 <p>(3) <span class="arithmatex">\(P_i^{\mathrm{eq}} \propto \exp(-\beta E_i)\)</span> とする。詳細釣り合い条件から遷移速度の比 <span class="arithmatex">\(\frac{W(i \to j)}{W(j \to i)}\)</span> を，<span class="arithmatex">\(\Delta E = E_j - E_i\)</span> と <span class="arithmatex">\(\beta\)</span> を用いて表せ。また，メトロポリス法の遷移確率を求めよ。</p>
 <hr />
@@ -14531,7 +14531,7 @@
 <h3 id="1">(1)</h3>
 <p>詳細釣り合い条件とは，任意の2状態 <span class="arithmatex">\(i\)</span> と <span class="arithmatex">\(j\)</span> の間において， <span class="arithmatex">\(i\)</span> から <span class="arithmatex">\(j\)</span> への遷移によって失われる確率の流量と， <span class="arithmatex">\(j\)</span> から <span class="arithmatex">\(i\)</span> への遷移によって流れ込む確率の流量が，個別に厳密に釣り合っているという規則です。したがって，求める数式は以下の通りになります。</p>
 <div class="arithmatex">\[
-W(i \to j) P_i^{\mathrm{eq}} = W(j \to i) P_j^{\mathrm{eq}}
+\finalanswer{W(i \to j) P_i^{\mathrm{eq}} = W(j \to i) P_j^{\mathrm{eq}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>確率分布が平衡分布 <span class="arithmatex">\(P_i(t) = P_i^{\mathrm{eq}}\)</span> に達しているときのマスター方程式の右辺のシグマの内部に注目します。</p>
@@ -14544,7 +14544,10 @@ W(j \to i) P_j^{\mathrm{eq}} - W(i \to j) P_i^{\mathrm{eq}} = 0
 \]</div>
 <p>これをすべての <span class="arithmatex">\(j\)</span> について足し合わせても全体の和はゼロのままです。</p>
 <div class="arithmatex">\[
-\frac{dP_i^{\mathrm{eq}}}{dt} = \sum_{j \neq i} 0 = 0
+\begin{aligned}
+\frac{dP_i^{\mathrm{eq}}}{dt} &amp;= \sum_{j \neq i} 0 \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>これにより，詳細釣り合い条件が満たされているならば，その確率分布はマスター方程式に従って時間変化しない定常な分布として維持されることが示されました。詳細釣り合いは，系全体の確率が保存されるための十分条件となっています。</p>
 <h3 id="3">(3)</h3>
@@ -14554,7 +14557,11 @@ W(j \to i) P_j^{\mathrm{eq}} - W(i \to j) P_i^{\mathrm{eq}} = 0
 \]</div>
 <p>ここにカノニカル分布の確率 <span class="arithmatex">\(P_i^{\mathrm{eq}} = \frac{1}{Z} \exp(-\beta E_i)\)</span> を代入します。規格化定数である分配関数 <span class="arithmatex">\(Z\)</span> は分子分母で相殺されます。</p>
 <div class="arithmatex">\[
-\frac{W(i \to j)}{W(j \to i)} = \frac{\exp(-\beta E_j)}{\exp(-\beta E_i)} = \exp\left[ -\beta (E_j - E_i) \right] = \exp(-\beta \Delta E)
+\begin{aligned}
+\frac{W(i \to j)}{W(j \to i)} &amp;= \frac{\exp(-\beta E_j)}{\exp(-\beta E_i)} \\
+&amp;= \exp\left[ -\beta (E_j - E_i) \right] \\
+&amp;= \finalanswer{\exp(-\beta \Delta E)}
+\end{aligned}
 \]</div>
 <p>これが，カノニカル分布を熱平衡として実現するために遷移速度の比が満たすべき規則です。</p>
 <p><strong>メトロポリス法への応用</strong></p>

@@ -14534,7 +14534,11 @@ M_{fi} = \langle f | \hat{O} | i \rangle = \int \psi_f^*(\boldsymbol{r}) \hat{O}
 <p>ユニタリー演算子である空間反転操作の性質 <span class="arithmatex">\(\hat{I} \hat{I}^\dagger = 1\)</span> を用いて，各状態ベクトルへの作用を個別に計算します。</p>
 <p>終状態のブラベクトルに対する作用は以下のようになります。</p>
 <div class="arithmatex">\[
-\langle f | \hat{I}^\dagger = \left( \hat{I} | f \rangle \right)^\dagger = \left( P_f | f \rangle \right)^\dagger = P_f \langle f |
+\begin{aligned}
+\langle f | \hat{I}^\dagger &amp;= \left( \hat{I} | f \rangle \right)^\dagger \\
+&amp;= \left( P_f | f \rangle \right)^\dagger \\
+&amp;= P_f \langle f |
+\end{aligned}
 \]</div>
 <p>始状態のケットベクトルに対する作用は問題文の定義通り，以下の形式をとります。</p>
 <div class="arithmatex">\[
@@ -14542,11 +14546,15 @@ M_{fi} = \langle f | \hat{O} | i \rangle = \int \psi_f^*(\boldsymbol{r}) \hat{O}
 \]</div>
 <p>これら演算子の変換則をすべて全体の行列要素の式に代入します。パリティの値はすべて実数の定数であるため，演算の先頭へまとめて括り出すことができます。</p>
 <div class="arithmatex">\[
-M'_{fi} = \langle f | \hat{I}^\dagger \hat{O} \hat{I} | i \rangle = P_f \langle f | P_O \hat{O} P_i | i \rangle = P_f P_O P_i \langle f | \hat{O} | i \rangle
+\begin{aligned}
+M'_{fi} &amp;= \langle f | \hat{I}^\dagger \hat{O} \hat{I} | i \rangle \\
+&amp;= P_f \langle f | P_O \hat{O} P_i | i \rangle \\
+&amp;= P_f P_O P_i \langle f | \hat{O} | i \rangle
+\end{aligned}
 \]</div>
 <p>元の行列要素の定義 <span class="arithmatex">\(M_{fi} = \langle f | \hat{O} | i \rangle\)</span> を代入することで，求める変換後の式が得られます。</p>
 <div class="arithmatex">\[
-M'_{fi} = P_f P_O P_i M_{fi}
+\finalanswer{M'_{fi} = P_f P_O P_i M_{fi}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>全空間における積分の不変性 <span class="arithmatex">\(M'_{fi} = M_{fi}\)</span> に対し，(1) で求めた関係式を代入します。</p>
@@ -14568,7 +14576,7 @@ P_f P_O P_i = -1
 \]</div>
 <p>この数値を元の移行前の等式に代入すると， <span class="arithmatex">\(-M_{fi} = M_{fi}\)</span> となり，これを満たす実数は一意に以下に限られます。</p>
 <div class="arithmatex">\[
-2 M_{fi} = 0 \implies M_{fi} = 0
+\finalanswer{2 M_{fi} = 0 \implies M_{fi} = 0}
 \]</div>
 <p>したがって，パリティの積条件を満たさない遷移では行列要素が 0 となり，遷移は起こりません。</p>
 <h3 id="3">(3)</h3>
@@ -14579,7 +14587,7 @@ P_f P_O P_i = -1
 <p>したがって，電気双極子遷移演算子が持つパリティの数値は <span class="arithmatex">\(P_O = -1\)</span> と定まります。</p>
 <p>この数値を (2) で導出した選択則の条件式 <span class="arithmatex">\(P_f P_O P_i = 1\)</span> に代入します。</p>
 <div class="arithmatex">\[
-P_f \cdot -1 \cdot P_i = 1 \implies P_f P_i = -1
+\finalanswer{P_f \cdot -1 \cdot P_i = 1 \implies P_f P_i = -1}
 \]</div>
 <p>この積の等式が満たされるためには， <span class="arithmatex">\(P_f\)</span> と <span class="arithmatex">\(P_i\)</span> の符号が互いに異なっていなければなりません。すなわち，一方が 1 であれば他方は -1 である必要があります。</p>
 <p>したがって，電気双極子遷移が許容となるためには，始状態と終状態の間でパリティが必ず反転しなければならないという選択則が導かれます。この規則はラポルテの選択則として知られています。</p>

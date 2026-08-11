@@ -14524,7 +14524,10 @@
 \]</div>
 <p>次に，この関係式を用いて積 <span class="arithmatex">\(\hat{n}_k \hat{a}_k^\dagger\)</span> を変形します。定義通りに演算子を書き並べます。</p>
 <div class="arithmatex">\[
-\hat{n}_k \hat{a}_k^\dagger = \left( \hat{a}_k^\dagger \hat{a}_k \right) \hat{a}_k^\dagger = \hat{a}_k^\dagger \left( \hat{a}_k \hat{a}_k^\dagger \right)
+\begin{aligned}
+\hat{n}_k \hat{a}_k^\dagger &amp;= \left( \hat{a}_k^\dagger \hat{a}_k \right) \hat{a}_k^\dagger \\
+&amp;= \hat{a}_k^\dagger \left( \hat{a}_k \hat{a}_k^\dagger \right)
+\end{aligned}
 \]</div>
 <p>右側の括弧の内部に対し，先ほど求めた書き換え式 <span class="arithmatex">\(\hat{n}_k + 1\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14532,13 +14535,17 @@
 \]</div>
 <p>問題文に指定された形式 <span class="arithmatex">\(\hat{a}_k^\dagger \left( \hat{n}_k + \alpha \right)\)</span> と直接比較することにより，求める定数の数値は次のようになります。</p>
 <div class="arithmatex">\[
-\alpha = 1
+\finalanswer{\alpha = 1}
 \]</div>
 <p>この式は，生成演算子を左から掛けることで粒子数が 1 増加する性質を示しています。</p>
 <h3 id="2">(2)</h3>
 <p>フェルミオン系の同じ状態に対する生成演算子の反交換関係は次のように与えられています。</p>
 <div class="arithmatex">\[
-\{\hat{c}_k^\dagger, \hat{c}_k^\dagger\} = \hat{c}_k^\dagger \hat{c}_k^\dagger + \hat{c}_k^\dagger \hat{c}_k^\dagger = 2(\hat{c}_k^\dagger)^2 = 0
+\begin{aligned}
+\{\hat{c}_k^\dagger, \hat{c}_k^\dagger\} &amp;= \hat{c}_k^\dagger \hat{c}_k^\dagger + \hat{c}_k^\dagger \hat{c}_k^\dagger \\
+&amp;= 2(\hat{c}_k^\dagger)^2 \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>両辺を 2 で割り算することにより，同一状態への生成演算子の2乗は演算子として 0 になることが分かります。</p>
 <div class="arithmatex">\[
@@ -14546,7 +14553,11 @@
 \]</div>
 <p>この演算子の性質を粒子数状態 <span class="arithmatex">\(| n_k \rangle\)</span> に適用して計算します。</p>
 <div class="arithmatex">\[
-\hat{c}_k^\dagger \hat{c}_k^\dagger | n_k \rangle = (\hat{c}_k^\dagger)^2 | n_k \rangle = 0 | n_k \rangle = 0
+\begin{aligned}
+\hat{c}_k^\dagger \hat{c}_k^\dagger | n_k \rangle &amp;= (\hat{c}_k^\dagger)^2 | n_k \rangle \\
+&amp;= 0 | n_k \rangle \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>同一の状態にフェルミオンを2回続けて生成しようとすると，状態ベクトルそのものが厳密に 0（零ベクトル）となります。これは，いかなる状態から出発しても，同一の量子状態に 2 個以上のフェルミオンを配置した状態を作成すること自体が不可能であることを意味しており，パウリの排他原理の要請を数式として正確に表しています。</p>
 

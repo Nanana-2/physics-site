@@ -14564,7 +14564,7 @@ i\hbar \frac{d c_f(t)}{dt} e^{-i E_f t / \hbar} = \sum_{n} \langle f| \hat{V}(t)
 \]</div>
 <p>両辺に <span class="arithmatex">\(e^{i E_f t / \hbar}\)</span> を掛け算して左辺の指数関数を消去し，右辺の指数を 1つにまとめます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{d c_f(t)}{dt} = \sum_{n} \langle f| \hat{V}(t) |n\rangle e^{i (E_f - E_n) t / \hbar} c_n(t)
+\finalanswer{i\hbar \frac{d c_f(t)}{dt} = \sum_{n} \langle f| \hat{V}(t) |n\rangle e^{i (E_f - E_n) t / \hbar} c_n(t)}
 \]</div>
 <p>これにより，係数の時間発展を決める微分方程式が導かれました。</p>
 <h3 id="2">(2)</h3>
@@ -14578,7 +14578,7 @@ i\hbar \frac{d c_f(t)}{dt} \approx \langle f| \hat{V}(t) |i\rangle e^{i (E_f - E
 \]</div>
 <p>時刻 <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(t\)</span> まで両辺を時間積分します。初期状態は <span class="arithmatex">\(f \neq i\)</span> より <span class="arithmatex">\(c_f(0) = 0\)</span> です。積分の変数を <span class="arithmatex">\(t'\)</span> と書き改めます。</p>
 <div class="arithmatex">\[
-c_f(t) = \frac{1}{i\hbar} \int_{0}^{t} V_{fi}(t') e^{i \omega_{fi} t'} dt'
+\finalanswer{c_f(t) = \frac{1}{i\hbar} \int_{0}^{t} V_{fi}(t') e^{i \omega_{fi} t'} dt'}
 \]</div>
 <p>これが 1次摂動論における遷移振幅の基本公式です。</p>
 <h3 id="3">(3)</h3>
@@ -14588,22 +14588,39 @@ c_f(t) = \frac{V_{fi}}{i\hbar} \int_{0}^{t} e^{i \omega_{fi} t'} dt'
 \]</div>
 <p>指数関数の積分を実行します。</p>
 <div class="arithmatex">\[
-c_f(t) = \frac{V_{fi}}{i\hbar} \left[ \frac{e^{i \omega_{fi} t'}}{i \omega_{fi}} \right]_{0}^{t} = \frac{V_{fi}}{i\hbar \cdot i \omega_{fi}} \left( e^{i \omega_{fi} t} - 1 \right) = \frac{V_{fi}}{-\hbar \omega_{fi}} \left( e^{i \omega_{fi} t} - 1 \right)
+\begin{aligned}
+c_f(t) &amp;= \frac{V_{fi}}{i\hbar} \left[ \frac{e^{i \omega_{fi} t'}}{i \omega_{fi}} \right]_{0}^{t} \\
+&amp;= \frac{V_{fi}}{i\hbar \cdot i \omega_{fi}} \left( e^{i \omega_{fi} t} - 1 \right) \\
+&amp;= \frac{V_{fi}}{-\hbar \omega_{fi}} \left( e^{i \omega_{fi} t} - 1 \right)
+\end{aligned}
 \]</div>
 <p>遷移確率を求めるため，この遷移振幅の絶対値の2乗を計算します。</p>
 <div class="arithmatex">\[
-P_{i \to f}(t) = |c_f(t)|^2 = \frac{|V_{fi}|^2}{\hbar^2 \omega_{fi}^2} |e^{i \omega_{fi} t} - 1|^2
+\begin{aligned}
+P_{i \to f}(t) &amp;= |c_f(t)|^2 \\
+&amp;= \frac{|V_{fi}|^2}{\hbar^2 \omega_{fi}^2} |e^{i \omega_{fi} t} - 1|^2
+\end{aligned}
 \]</div>
 <p>絶対値の2乗の部分を展開します。オイラーの公式と三角関数の半角の公式を利用します。</p>
 <div class="arithmatex">\[
-|e^{i \omega_{fi} t} - 1|^2 = (e^{i \omega_{fi} t} - 1)(e^{-i \omega_{fi} t} - 1) = 1 - e^{i \omega_{fi} t} - e^{-i \omega_{fi} t} + 1
+\begin{aligned}
+|e^{i \omega_{fi} t} - 1|^2 &amp;= (e^{i \omega_{fi} t} - 1)(e^{-i \omega_{fi} t} - 1) \\
+&amp;= 1 - e^{i \omega_{fi} t} - e^{-i \omega_{fi} t} + 1
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-= 2 - 2\cos(\omega_{fi}t) = 2(1 - \cos(\omega_{fi}t)) = 4\sin^2\left(\frac{\omega_{fi}t}{2}\right)
+\begin{aligned}
+ &amp;= 2 - 2\cos(\omega_{fi}t) \\
+&amp;= 2(1 - \cos(\omega_{fi}t)) \\
+&amp;= 4\sin^2\left(\frac{\omega_{fi}t}{2}\right)
+\end{aligned}
 \]</div>
 <p>この結果を確率の式に戻して整理します。分母にある <span class="arithmatex">\(\omega_{fi}^2\)</span> を 4 と組み合わせて変形します。</p>
 <div class="arithmatex">\[
-P_{i \to f}(t) = \frac{|V_{fi}|^2}{\hbar^2} \frac{4\sin^2(\omega_{fi}t/2)}{\omega_{fi}^2} = \frac{|V_{fi}|^2}{\hbar^2} \frac{\sin^2(\omega_{fi}t/2)}{(\omega_{fi}/2)^2}
+\begin{aligned}
+P_{i \to f}(t) &amp;= \frac{|V_{fi}|^2}{\hbar^2} \frac{4\sin^2(\omega_{fi}t/2)}{\omega_{fi}^2} \\
+&amp;= \finalanswer{\frac{|V_{fi}|^2}{\hbar^2} \frac{\sin^2(\omega_{fi}t/2)}{(\omega_{fi}/2)^2}}
+\end{aligned}
 \]</div>
 <p>遷移確率にはシンク関数型の因子が含まれます。この因子は，時間とともにエネルギー保存則を満たす <span class="arithmatex">\(\omega_{fi} = 0\)</span> の近傍へ集中し，長時間極限ではフェルミの黄金律に対応します。</p>
 

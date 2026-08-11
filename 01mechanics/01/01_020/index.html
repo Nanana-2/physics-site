@@ -14532,7 +14532,11 @@
 <h3 id="2">(2)</h3>
 <p>(1) で得られた相対位置ベクトルの式を，時間 <span class="arithmatex">\(t\)</span> で微分します。微分の線形性より，次のようになります。</p>
 <div class="arithmatex">\[
-\boldsymbol{v}_{12} = \frac{d\boldsymbol{r}_{12}}{dt} = \frac{d}{dt} (\boldsymbol{r}_2 - \boldsymbol{r}_1) = \frac{d\boldsymbol{r}_2}{dt} - \frac{d\boldsymbol{r}_1}{dt}
+\begin{aligned}
+\boldsymbol{v}_{12} &amp;= \frac{d\boldsymbol{r}_{12}}{dt} \\
+&amp;= \frac{d}{dt} (\boldsymbol{r}_2 - \boldsymbol{r}_1) \\
+&amp;= \frac{d\boldsymbol{r}_2}{dt} - \frac{d\boldsymbol{r}_1}{dt}
+\end{aligned}
 \]</div>
 <p>それぞれの速度ベクトルの定義を代入します。</p>
 <div class="arithmatex">\[
@@ -14541,23 +14545,39 @@
 <h3 id="3">(3)</h3>
 <p>提示された具体的な速度ベクトルを (2) の結果に代入します。</p>
 <div class="arithmatex">\[
-\boldsymbol{v}_{12} = \begin{pmatrix} 0 \\ v \end{pmatrix} - \begin{pmatrix} u \\ 0 \end{pmatrix} = \begin{pmatrix} -u \\ v \end{pmatrix}
+\begin{aligned}
+\boldsymbol{v}_{12} &amp;= \begin{pmatrix} 0 \\ v \end{pmatrix} - \begin{pmatrix} u \\ 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} -u \\ v \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>これが任意の時刻における相対速度ベクトルです。
 次に，任意の時刻における相対位置ベクトルを求めます。各質点は等速度運動を行うため，位置ベクトルは次のようになります。</p>
 <div class="arithmatex">\[
-\boldsymbol{r}_1(t) = \begin{pmatrix} 0 \\ 0 \end{pmatrix} + \begin{pmatrix} u \\ 0 \end{pmatrix} t = \begin{pmatrix} ut \\ 0 \end{pmatrix}
+\begin{aligned}
+\boldsymbol{r}_1(t) &amp;= \begin{pmatrix} 0 \\ 0 \end{pmatrix} + \begin{pmatrix} u \\ 0 \end{pmatrix} t \\
+&amp;= \begin{pmatrix} ut \\ 0 \end{pmatrix}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{r}_2(t) = \begin{pmatrix} 0 \\ L \end{pmatrix} + \begin{pmatrix} 0 \\ v \end{pmatrix} t = \begin{pmatrix} 0 \\ L + vt \end{pmatrix}
+\begin{aligned}
+\boldsymbol{r}_2(t) &amp;= \begin{pmatrix} 0 \\ L \end{pmatrix} + \begin{pmatrix} 0 \\ v \end{pmatrix} t \\
+&amp;= \begin{pmatrix} 0 \\ L + vt \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>(1) の定義に従って相対位置ベクトルを求めます。</p>
 <div class="arithmatex">\[
-\boldsymbol{r}_{12}(t) = \begin{pmatrix} 0 \\ L + vt \end{pmatrix} - \begin{pmatrix} ut \\ 0 \end{pmatrix} = \begin{pmatrix} -ut \\ L + vt \end{pmatrix}
+\begin{aligned}
+\boldsymbol{r}_{12}(t) &amp;= \begin{pmatrix} 0 \\ L + vt \end{pmatrix} - \begin{pmatrix} ut \\ 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} -ut \\ L + vt \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>2つの質点の間隔の2乗を <span class="arithmatex">\(f(t) = |\boldsymbol{r}_{12}(t)|^2\)</span> と置きます。間隔が最小になるとき，その2乗も最小になります。</p>
 <div class="arithmatex">\[
-f(t) = (-ut)^2 + (L + vt)^2 = u^2 t^2 + L^2 + 2Lvt + v^2 t^2 = (u^2 + v^2) t^2 + 2Lvt + L^2
+\begin{aligned}
+f(t) &amp;= (-ut)^2 + (L + vt)^2 \\
+&amp;= u^2 t^2 + L^2 + 2Lvt + v^2 t^2 \\
+&amp;= (u^2 + v^2) t^2 + 2Lvt + L^2
+\end{aligned}
 \]</div>
 <p>この <span class="arithmatex">\(t\)</span> に関する2次関数を平方完成します。</p>
 <div class="arithmatex">\[

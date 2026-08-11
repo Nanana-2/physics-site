@@ -14540,7 +14540,10 @@
 \]</div>
 <p>各ベクトルを代入すると，次の結果を得ます。</p>
 <div class="arithmatex">\[
-\boldsymbol{N} = - M g l \boldsymbol{e}_Z \times \boldsymbol{e}_z = M g l \boldsymbol{e}_z \times \boldsymbol{e}_Z
+\begin{aligned}
+\boldsymbol{N} &amp;= - M g l \boldsymbol{e}_Z \times \boldsymbol{e}_z \\
+&amp;= \finalanswer{M g l \boldsymbol{e}_z \times \boldsymbol{e}_Z}
+\end{aligned}
 \]</div>
 <p>これにより，力のモーメント <span class="arithmatex">\(\boldsymbol{N}\)</span> は自転軸 <span class="arithmatex">\(\boldsymbol{e}_Z\)</span> と鉛直軸 <span class="arithmatex">\(\boldsymbol{e}_z\)</span> の両方に直交する方向を向いていることがわかります。</p>
 <h3 id="2">(2)</h3>
@@ -14558,7 +14561,10 @@
 \]</div>
 <p>この式に <span class="arithmatex">\(\boldsymbol{\Omega} = \Omega \boldsymbol{e}_z\)</span> および <span class="arithmatex">\(\boldsymbol{L} \approx I_3 \omega_3 \boldsymbol{e}_Z\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\frac{d\boldsymbol{L}}{dt} = (\Omega \boldsymbol{e}_z) \times (I_3 \omega_3 \boldsymbol{e}_Z) = I_3 \omega_3 \Omega \boldsymbol{e}_z \times \boldsymbol{e}_Z
+\begin{aligned}
+\frac{d\boldsymbol{L}}{dt} &amp;= (\Omega \boldsymbol{e}_z) \times (I_3 \omega_3 \boldsymbol{e}_Z) \\
+&amp;= I_3 \omega_3 \Omega \boldsymbol{e}_z \times \boldsymbol{e}_Z
+\end{aligned}
 \]</div>
 <p>運動方程式の左辺と右辺を比較します。小問(1)で求めた力のモーメント <span class="arithmatex">\(\boldsymbol{N}\)</span> と等置することにより，以下の関係式が得られます。</p>
 <div class="arithmatex">\[
@@ -14570,7 +14576,7 @@ I_3 \omega_3 \Omega = M g l
 \]</div>
 <p>これを歳差運動の角速度 <span class="arithmatex">\(\Omega\)</span> について解くことで，求める式が得られます。</p>
 <div class="arithmatex">\[
-\Omega = \frac{M g l}{I_3 \omega_3}
+\finalanswer{\Omega = \frac{M g l}{I_3 \omega_3}}
 \]</div>
 <p>この結果は，自転速度 <span class="arithmatex">\(\omega_3\)</span> が大きいほど，歳差運動の角速度 <span class="arithmatex">\(\Omega\)</span> は小さくなることを示しています。</p>
 <h3 id="3">(3)</h3>
@@ -14598,14 +14604,25 @@ V = M g l \cos\theta
 \]</div>
 <p>したがって，この系のラグランジアン <span class="arithmatex">\(L_{\text{lag}}\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-L_{\text{lag}} = T - V = \frac{1}{2} I_1 (\dot{\theta}^2 + \dot{\phi}^2 \sin^2\theta) + \frac{1}{2} I_3 (\dot{\phi} \cos\theta + \dot{\psi})^2 - M g l \cos\theta
+\begin{aligned}
+L_{\text{lag}} &amp;= T - V \\
+&amp;= \frac{1}{2} I_1 (\dot{\theta}^2 + \dot{\phi}^2 \sin^2\theta) + \frac{1}{2} I_3 (\dot{\phi} \cos\theta + \dot{\psi})^2 - M g l \cos\theta
+\end{aligned}
 \]</div>
 <p>ラグランジアンは <span class="arithmatex">\(\phi\)</span> および <span class="arithmatex">\(\psi\)</span> を明に合まないため，これらに共役な運動量は保存量となります。それぞれの保存量を <span class="arithmatex">\(p_\phi\)</span> および <span class="arithmatex">\(p_\psi\)</span> とします。</p>
 <div class="arithmatex">\[
-p_\psi = \frac{\partial L_{\text{lag}}}{\partial \dot{\psi}} = I_3 (\dot{\phi} \cos\theta + \dot{\psi}) = I_3 \omega_3
+\begin{aligned}
+p_\psi &amp;= \frac{\partial L_{\text{lag}}}{\partial \dot{\psi}} \\
+&amp;= I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \\
+&amp;= I_3 \omega_3
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-p_\phi = \frac{\partial L_{\text{lag}}}{\partial \dot{\phi}} = I_1 \dot{\phi} \sin^2\theta + I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \cos\theta = I_1 \dot{\phi} \sin^2\theta + I_3 \omega_3 \cos\theta
+\begin{aligned}
+p_\phi &amp;= \frac{\partial L_{\text{lag}}}{\partial \dot{\phi}} \\
+&amp;= I_1 \dot{\phi} \sin^2\theta + I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \cos\theta \\
+&amp;= I_1 \dot{\phi} \sin^2\theta + I_3 \omega_3 \cos\theta
+\end{aligned}
 \]</div>
 <p>ここで，オイラー・ラグランジュ方程式のうち， <span class="arithmatex">\(\theta\)</span> に関する方程式を考えます。</p>
 <div class="arithmatex">\[
@@ -14636,7 +14653,7 @@ I_1 \cos\theta \Omega^2 - I_3 \omega_3 \Omega + M g l = 0
 \]</div>
 <p>これを <span class="arithmatex">\(\Omega\)</span> について解くことで，以下の結果が得られます。</p>
 <div class="arithmatex">\[
-\Omega \approx \frac{M g l}{I_3 \omega_3}
+\finalanswer{\Omega \approx \frac{M g l}{I_3 \omega_3}}
 \]</div>
 <p>これは (2) で求めた歳差角速度と一致します。</p>
 

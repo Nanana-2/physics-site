@@ -14533,12 +14533,20 @@
 <h3 id="1">(1)</h3>
 <p>粒子の位置 <span class="arithmatex">\(X_n\)</span> の定義式から平均値を計算します。期待値の線形性を用います。</p>
 <div class="arithmatex">\[
-\langle X_n \rangle = \left\langle \sum_{i=1}^n \Delta x_i \right\rangle = \sum_{i=1}^n \langle \Delta x_i \rangle = \sum_{i=1}^n 0 = 0
+\begin{aligned}
+\langle X_n \rangle &amp;= \left\langle \sum_{i=1}^n \Delta x_i \right\rangle \\
+&amp;= \sum_{i=1}^n \langle \Delta x_i \rangle \\
+&amp;= \sum_{i=1}^n 0 \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <p>左右への移動確率が対称であるため，平均位置は常に原点から動きません。
 次に，平均二乗変位 <span class="arithmatex">\(\langle X_n^2 \rangle\)</span> を計算するために，総和の2乗を展開します。</p>
 <div class="arithmatex">\[
-\langle X_n^2 \rangle = \left\langle \left( \sum_{i=1}^n \Delta x_i \right) \left( \sum_{j=1}^n \Delta j \right) \right\rangle = \sum_{i=1}^n \sum_{j=1}^n \langle \Delta x_i \Delta x_j \rangle
+\begin{aligned}
+\langle X_n^2 \rangle &amp;= \left\langle \left( \sum_{i=1}^n \Delta x_i \right) \left( \sum_{j=1}^n \Delta j \right) \right\rangle \\
+&amp;= \sum_{i=1}^n \sum_{j=1}^n \langle \Delta x_i \Delta x_j \rangle
+\end{aligned}
 \]</div>
 <p>この二重和を，同じステップの項 <span class="arithmatex">\(i = j\)</span> と，異なるステップの項 <span class="arithmatex">\(i \neq j\)</span> に分離します。</p>
 <div class="arithmatex">\[
@@ -14546,13 +14554,19 @@
 \]</div>
 <p>各ステップの2乗平均は <span class="arithmatex">\(\langle (\Delta x_i)^2 \rangle = a^2\)</span> です。また，異なるステップ間には相関がないため， <span class="arithmatex">\(i \neq j\)</span> のとき <span class="arithmatex">\(\langle \Delta x_i \Delta x_j \rangle = 0\)</span> となり，第2項の和はすべて消去されます。</p>
 <div class="arithmatex">\[
-\langle X_n^2 \rangle = \sum_{i=1}^n a^2 + 0 = n a^2
+\begin{aligned}
+\langle X_n^2 \rangle &amp;= \sum_{i=1}^n a^2 + 0 \\
+&amp;= \finalanswer{n a^2}
+\end{aligned}
 \]</div>
 <p>これにより，平均二乗変位がステップ数 <span class="arithmatex">\(n\)</span> に比例することが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>時刻 <span class="arithmatex">\(t\)</span> までに踏んだステップ数は <span class="arithmatex">\(n = \frac{t}{\Delta t}\)</span> です。これを (1) の結果に代入します。</p>
 <div class="arithmatex">\[
-\langle X_n^2 \rangle = \left( \frac{t}{\Delta t} \right) a^2 = \left( \frac{a^2}{\Delta t} \right) t
+\begin{aligned}
+\langle X_n^2 \rangle &amp;= \left( \frac{t}{\Delta t} \right) a^2 \\
+&amp;= \left( \frac{a^2}{\Delta t} \right) t
+\end{aligned}
 \]</div>
 <p>この微視的なモデルから得られた時間依存性と，マクロな拡散現象におけるアインシュタインの関係式 <span class="arithmatex">\(\langle x^2 \rangle = 2 D t\)</span> を等置します。</p>
 <div class="arithmatex">\[
@@ -14560,12 +14574,12 @@
 \]</div>
 <p>両辺を <span class="arithmatex">\(2t\)</span> で割ることで，微視的なステップのサイズと時間間隔によって決まる拡散係数 <span class="arithmatex">\(D\)</span> の表現が導出されます。</p>
 <div class="arithmatex">\[
-D = \frac{a^2}{2 \Delta t}
+\finalanswer{D = \frac{a^2}{2 \Delta t}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた拡散方程式を満たし，全空間での積分値が粒子数 <span class="arithmatex">\(N\)</span> に規格化されるガウス分布型の解は以下の通りです。</p>
 <div class="arithmatex">\[
-\rho(x, t) = \frac{N}{\sqrt{4\pi D t}} \exp\left( -\frac{x^2}{4D t} \right)
+\finalanswer{\rho(x, t) = \frac{N}{\sqrt{4\pi D t}} \exp\left( -\frac{x^2}{4D t} \right)}
 \]</div>
 <p><strong>密度分布の形状変化についての説明</strong></p>
 <p>この関数の時間依存性から，以下の特徴が読み取れます。</p>

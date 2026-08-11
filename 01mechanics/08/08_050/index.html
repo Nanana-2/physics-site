@@ -14550,32 +14550,49 @@ $$</p>
 \]</div>
 <p>外積の線形性を用いることで，この項は次のように整理できます。</p>
 <div class="arithmatex">\[
-\sum_{i=1}^3 B_i \left( \boldsymbol{\omega} \times \boldsymbol{e}_i \right) = \boldsymbol{\omega} \times \left( \sum_{i=1}^3 B_i \boldsymbol{e}_i \right) = \boldsymbol{\omega} \times \boldsymbol{B}
+\begin{aligned}
+\sum_{i=1}^3 B_i \left( \boldsymbol{\omega} \times \boldsymbol{e}_i \right) &amp;= \boldsymbol{\omega} \times \left( \sum_{i=1}^3 B_i \boldsymbol{e}_i \right) \\
+&amp;= \boldsymbol{\omega} \times \boldsymbol{B}
+\end{aligned}
 \]</div>
 <p>これらを合わせることで，求める時間微分の変換公式が導出されます。</p>
 <div class="arithmatex">\[
-\frac{d\boldsymbol{B}}{dt} = \frac{d'\boldsymbol{B}}{dt} + \boldsymbol{\omega} \times \boldsymbol{B}
+\finalanswer{\frac{d\boldsymbol{B}}{dt} = \frac{d'\boldsymbol{B}}{dt} + \boldsymbol{\omega} \times \boldsymbol{B}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>小問(1)で得られた変換公式を，物体の位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に適用します。これにより，慣性系における速度 <span class="arithmatex">\(\boldsymbol{v}\)</span> と，回転系における速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> の関係が得られます。
 $$
-\boldsymbol{v} = \frac{d\boldsymbol{r}}{dt} = \frac{d'\boldsymbol{r}}{dt} + \boldsymbol{\omega} \times \boldsymbol{r} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}
+\begin{aligned}
+\boldsymbol{v} &amp;= \frac{d\boldsymbol{r}}{dt} \
+&amp;= \frac{d'\boldsymbol{r}}{dt} + \boldsymbol{\omega} \times \boldsymbol{r} \
+&amp;= \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}
+\end{aligned}
 $$
 次に，慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a} = d\boldsymbol{v}/dt\)</span> を求めるため，この速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> に対して再度変換公式を適用します。
 $$
-\boldsymbol{a} = \frac{d\boldsymbol{v}}{dt} = \frac{d'\boldsymbol{v}}{dt} + \boldsymbol{\omega} \times \boldsymbol{v}
+\begin{aligned}
+\boldsymbol{a} &amp;= \frac{d\boldsymbol{v}}{dt} \
+&amp;= \frac{d'\boldsymbol{v}}{dt} + \boldsymbol{\omega} \times \boldsymbol{v}
+\end{aligned}
 $$
 ここで，右辺の第1項に <span class="arithmatex">\(\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}\)</span> を代入します。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> が時間的に一定であることに注意すると，次のようになります。
 $$
-\frac{d'\boldsymbol{v}}{dt} = \frac{d'}{dt} \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) = \frac{d'\boldsymbol{v}'}{dt} + \boldsymbol{\omega} \times \frac{d'\boldsymbol{r}}{dt} = \boldsymbol{a}' + \boldsymbol{\omega} \times \boldsymbol{v}'
+\begin{aligned}
+\frac{d'\boldsymbol{v}}{dt} &amp;= \frac{d'}{dt} \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) \
+&amp;= \frac{d'\boldsymbol{v}'}{dt} + \boldsymbol{\omega} \times \frac{d'\boldsymbol{r}}{dt} \
+&amp;= \boldsymbol{a}' + \boldsymbol{\omega} \times \boldsymbol{v}'
+\end{aligned}
 $$
 同様に，右辺の第2項に <span class="arithmatex">\(\boldsymbol{v}\)</span> の表現を代入します。
 $$
-\boldsymbol{\omega} \times \boldsymbol{v} = \boldsymbol{\omega} \times \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) = \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
+\begin{aligned}
+\boldsymbol{\omega} \times \boldsymbol{v} &amp;= \boldsymbol{\omega} \times \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) \
+&amp;= \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
+\end{aligned}
 $$
 これら2つの項を足し合わせることで，慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a}\)</span> と，回転系における物理量との関係式が得られます。
 $$
-\boldsymbol{a} = \boldsymbol{a}' + 2 \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
+\finalanswer{\boldsymbol{a} = \boldsymbol{a}' + 2 \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)}
 $$</p>
 <h3 id="3">(3)</h3>
 <p>慣性系における運動方程式 <span class="arithmatex">\(\boldsymbol{F} = m \boldsymbol{a}\)</span> に，小問(2)で得られた加速度の関係式を代入します。
@@ -14594,7 +14611,7 @@ $$
 <p>ステーション内で物体が静止しているときは <span class="arithmatex">\(\boldsymbol{v}'=\boldsymbol{0}\)</span> であり，コリオリ力は働きません。したがって，慣性力は遠心力だけです。</p>
 <p>ここで，回転軸から物体へ向かって，回転軸に垂直に引いたベクトルを <span class="arithmatex">\(\boldsymbol{r}_{\perp}\)</span> とします。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> と位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の関係から，遠心力は次のように書き直すことができます。
 $$
-- m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right) = m \omega^2 \boldsymbol{r}_{\perp}
+\finalanswer{- m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right) = m \omega^2 \boldsymbol{r}_{\perp}}
 $$
 この式は，遠心力が常に回転軸から遠ざかる外向きに働き，その大きさが回転軸からの距離に比例することを示しています。</p>
 <p>宇宙ステーションの内壁を床とみなすと，外向きの遠心力は物体を床へ押し付ける向きに働きます。そのため，回転系内の観測者には重力に相当する力として感じられます。</p>

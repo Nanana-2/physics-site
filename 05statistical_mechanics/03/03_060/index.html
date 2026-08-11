@@ -14542,21 +14542,33 @@
 \]</div>
 <p>同様に，分配関数 <span class="arithmatex">\(Z\)</span> を <span class="arithmatex">\(\beta\)</span> で2階微分します。各項の指数部分から再び <span class="arithmatex">\(-E_i\)</span> が前に降りてくるため，以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 Z}{\partial \beta^2} = \frac{\partial}{\partial \beta} \left( -\sum_i E_i \exp(-\beta E_i) \right) = \sum_i E_i^2 \exp(-\beta E_i)
+\begin{aligned}
+\frac{\partial^2 Z}{\partial \beta^2} &amp;= \frac{\partial}{\partial \beta} \left( -\sum_i E_i \exp(-\beta E_i) \right) \\
+&amp;= \sum_i E_i^2 \exp(-\beta E_i)
+\end{aligned}
 \]</div>
 <p>この両辺を <span class="arithmatex">\(Z\)</span> で割ると，右辺はエネルギーの2乗平均 <span class="arithmatex">\(\langle E^2 \rangle\)</span> の定義式そのものになります。</p>
 <div class="arithmatex">\[
-\frac{1}{Z} \frac{\partial^2 Z}{\partial \beta^2} = \frac{1}{Z} \sum_i E_i^2 \exp(-\beta E_i) = \langle E^2 \rangle
+\begin{aligned}
+\frac{1}{Z} \frac{\partial^2 Z}{\partial \beta^2} &amp;= \frac{1}{Z} \sum_i E_i^2 \exp(-\beta E_i) \\
+&amp;= \finalanswer{\langle E^2 \rangle}
+\end{aligned}
 \]</div>
 <p>これにより，目的の式が示されました。</p>
 <h3 id="2">(2)</h3>
 <p>分配関数の対数 <span class="arithmatex">\(\log Z\)</span> を <span class="arithmatex">\(\beta\)</span> で2階微分します。1階微分の結果は以下の通りです。</p>
 <div class="arithmatex">\[
-\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta} = -\langle E \rangle
+\begin{aligned}
+\frac{\partial \log Z}{\partial \beta} &amp;= \frac{1}{Z} \frac{\partial Z}{\partial \beta} \\
+&amp;= -\langle E \rangle
+\end{aligned}
 \]</div>
 <p>この式をさらに <span class="arithmatex">\(\beta\)</span> で微分します。商の微分公式を適用します。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 \log Z}{\partial \beta^2} = \frac{\partial}{\partial \beta} \left( \frac{1}{Z} \frac{\partial Z}{\partial \beta} \right) = \frac{\frac{\partial^2 Z}{\partial \beta^2} \cdot Z - \frac{\partial Z}{\partial \beta} \cdot \frac{\partial Z}{\partial \beta}}{Z^2}
+\begin{aligned}
+\frac{\partial^2 \log Z}{\partial \beta^2} &amp;= \frac{\partial}{\partial \beta} \left( \frac{1}{Z} \frac{\partial Z}{\partial \beta} \right) \\
+&amp;= \frac{\frac{\partial^2 Z}{\partial \beta^2} \cdot Z - \frac{\partial Z}{\partial \beta} \cdot \frac{\partial Z}{\partial \beta}}{Z^2}
+\end{aligned}
 \]</div>
 <p>右辺の分数式を2つの項に分割して整理します。</p>
 <div class="arithmatex">\[
@@ -14564,11 +14576,14 @@
 \]</div>
 <p>ここで，第1項は (1) より <span class="arithmatex">\(\langle E^2 \rangle\)</span> であり，第2項の括弧内は <span class="arithmatex">\(-\langle E \rangle\)</span> です。これらを代入します。</p>
 <div class="arithmatex">\[
-\frac{\partial^2 \log Z}{\partial \beta^2} = \langle E^2 \rangle - (-\langle E \rangle)^2 = \langle E^2 \rangle - \langle E \rangle^2
+\begin{aligned}
+\frac{\partial^2 \log Z}{\partial \beta^2} &amp;= \langle E^2 \rangle - (-\langle E \rangle)^2 \\
+&amp;= \langle E^2 \rangle - \langle E \rangle^2
+\end{aligned}
 \]</div>
 <p>左辺と右辺を入れ替えることで，エネルギーの分散と対数2階微分の関係式が導出されます。</p>
 <div class="arithmatex">\[
-\langle (E - \langle E \rangle)^2 \rangle = \frac{\partial^2 \log Z}{\partial \beta^2}
+\finalanswer{\langle (E - \langle E \rangle)^2 \rangle = \frac{\partial^2 \log Z}{\partial \beta^2}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>定積熱容量 <span class="arithmatex">\(C_V = \frac{\partial \langle E \rangle}{\partial T}\)</span> に対し，温度微分を逆温度微分に変換します。</p>
@@ -14577,11 +14592,14 @@ C_V = -\frac{1}{k_B T^2} \frac{\partial \langle E \rangle}{\partial \beta}
 \]</div>
 <p>(2) の途中で導いた <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-C_V = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta} \left( -\frac{\partial \log Z}{\partial \beta} \right) = \frac{1}{k_B T^2} \frac{\partial^2 \log Z}{\partial \beta^2}
+\begin{aligned}
+C_V &amp;= -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta} \left( -\frac{\partial \log Z}{\partial \beta} \right) \\
+&amp;= \frac{1}{k_B T^2} \frac{\partial^2 \log Z}{\partial \beta^2}
+\end{aligned}
 \]</div>
 <p>この式の右辺に，(2) で得られた分散の表現を代入します。</p>
 <div class="arithmatex">\[
-C_V = \frac{1}{k_B T^2} \langle (E - \langle E \rangle)^2 \rangle
+\finalanswer{C_V = \frac{1}{k_B T^2} \langle (E - \langle E \rangle)^2 \rangle}
 \]</div>
 <p>この式より，定積熱容量はエネルギーの分散に比例します。</p>
 

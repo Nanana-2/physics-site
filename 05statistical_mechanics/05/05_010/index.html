@@ -14541,7 +14541,10 @@ z_1 = \frac{V}{h^3} \left( \int_{-\infty}^{\infty} \exp\left( -\frac{\beta p^2}{
 \]</div>
 <p>これを3乗の項に代入することで，1粒子分配関数 <span class="arithmatex">\(z_1\)</span> が求まります。</p>
 <div class="arithmatex">\[
-z_1 = \frac{V}{h^3} \left( \sqrt{\frac{2\pi m}{\beta}} \right)^3 = V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}
+\begin{aligned}
+z_1 &amp;= \frac{V}{h^3} \left( \sqrt{\frac{2\pi m}{\beta}} \right)^3 \\
+&amp;= \finalanswer{V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}}
+\end{aligned}
 \]</div>
 <p>熱的ド・ブロイ波長を <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> と定義すると，<span class="arithmatex">\(z_1 = \frac{V}{\lambda^3}\)</span> と表せます。</p>
 <h3 id="2">(2)</h3>
@@ -14551,7 +14554,11 @@ Z_N = \frac{1}{N!} (z_1)^N
 \]</div>
 <p>ここで，もし誤って <span class="arithmatex">\(1/N!\)</span> の補正因子を忘れた場合の分配関数を <span class="arithmatex">\(Z_N^{\mathrm{wrong}} = (z_1)^N\)</span> とおき，これに対応する自由エネルギー <span class="arithmatex">\(F^{\mathrm{wrong}} = -k_B T \log Z_N^{\mathrm{wrong}}\)</span> を計算します。</p>
 <div class="arithmatex">\[
-F^{\mathrm{wrong}} = -k_B T \log (z_1)^N = -N k_B T \log z_1 = -N k_B T \log \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right]
+\begin{aligned}
+F^{\mathrm{wrong}} &amp;= -k_B T \log (z_1)^N \\
+&amp;= -N k_B T \log z_1 \\
+&amp;= -N k_B T \log \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right]
+\end{aligned}
 \]</div>
 <p>系のマクロな大きさを <span class="arithmatex">\(\alpha\)</span> 倍にする操作<span class="arithmatex">\(V \to \alpha V, N \to \alpha N\)</span>を考えます。もし <span class="arithmatex">\(F\)</span> が示量性を持つならば，変形後の自由エネルギーは <span class="arithmatex">\(\alpha F\)</span> になるはずです。実際に上の式に代入してみます。</p>
 <div class="arithmatex">\[
@@ -14559,13 +14566,19 @@ F^{\mathrm{wrong}}(\alpha V, \alpha N) = -\alpha N k_B T \log \left[ \alpha V \l
 \]</div>
 <p>対数の性質<span class="arithmatex">\(\log(\alpha X) = \log \alpha + \log X\)</span>を用いて展開します。</p>
 <div class="arithmatex">\[
-F^{\mathrm{wrong}}(\alpha V, \alpha N) = -\alpha N k_B T \log \alpha - \alpha N k_B T \log \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right] = -\alpha N k_B T \log \alpha + \alpha F^{\mathrm{wrong}}(V, N)
+\begin{aligned}
+F^{\mathrm{wrong}}(\alpha V, \alpha N) &amp;= -\alpha N k_B T \log \alpha - \alpha N k_B T \log \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right] \\
+&amp;= \finalanswer{-\alpha N k_B T \log \alpha + \alpha F^{\mathrm{wrong}}(V, N)}
+\end{aligned}
 \]</div>
 <p>右辺に <span class="arithmatex">\(-\alpha N k_B T \log \alpha\)</span> が残るため，<span class="arithmatex">\(F^{\mathrm{wrong}}(\alpha V, \alpha N) \neq \alpha F^{\mathrm{wrong}}(V, N)\)</span> となり，示量性を満たしません。</p>
 <h3 id="3">(3)</h3>
 <p>正しい分配関数 <span class="arithmatex">\(Z_N = \frac{1}{N!} (z_1)^N\)</span> を用いて自由エネルギー <span class="arithmatex">\(F = -k_B T \log Z_N\)</span> を計算します。</p>
 <div class="arithmatex">\[
-F = -k_B T \log \left[ \frac{1}{N!} (z_1)^N \right] = -k_B T \left[ N \log z_1 - \log N! \right]
+\begin{aligned}
+F &amp;= -k_B T \log \left[ \frac{1}{N!} (z_1)^N \right] \\
+&amp;= -k_B T \left[ N \log z_1 - \log N! \right]
+\end{aligned}
 \]</div>
 <p>ここにスターリングの近似公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14581,7 +14594,10 @@ F = -N k_B T \left[ \log \left( \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \rig
 F(\alpha V, \alpha N) = -\alpha N k_B T \left[ \log \left( \frac{\alpha V}{\alpha N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right) + 1 \right]
 \]</div>
 <div class="arithmatex">\[
-F(\alpha V, \alpha N) = -\alpha N k_B T \left[ \log \left( \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right) + 1 \right] = \alpha F(V, N)
+\begin{aligned}
+F(\alpha V, \alpha N) &amp;= -\alpha N k_B T \left[ \log \left( \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right) + 1 \right] \\
+&amp;= \finalanswer{\alpha F(V, N)}
+\end{aligned}
 \]</div>
 <p>括弧内は系の大きさに依存しないため，自由エネルギー <span class="arithmatex">\(F\)</span> は粒子数 <span class="arithmatex">\(N\)</span> に比例し，示量性を満たします。</p>
 

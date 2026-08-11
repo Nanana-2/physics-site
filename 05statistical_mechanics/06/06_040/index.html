@@ -14532,7 +14532,10 @@
 <h3 id="1">(1)</h3>
 <p>状態 <span class="arithmatex">\(k\)</span> の大分配関数 <span class="arithmatex">\(\Xi_k\)</span> は，とり得るすべての占有数 <span class="arithmatex">\(n_k = 0, 1, 2, \dots\)</span> に対するギブズ因子の総和として定義されます。</p>
 <div class="arithmatex">\[
-\Xi_k = \sum_{n_k=0}^{\infty} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] = \sum_{n_k=0}^{\infty} \left( \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)^{n_k}
+\begin{aligned}
+\Xi_k &amp;= \sum_{n_k=0}^{\infty} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] \\
+&amp;= \sum_{n_k=0}^{\infty} \left( \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)^{n_k}
+\end{aligned}
 \]</div>
 <p>この式は，公比が <span class="arithmatex">\(x = \exp\left[ -\beta(\epsilon_k - \mu) \right]\)</span> の無限等比級数です。この級数が正しく有限の値に収束するためには，公比の絶対値が <span class="arithmatex">\(1\)</span> より小さくなければなりません<span class="arithmatex">\(x &lt; 1\)</span>。 <span class="arithmatex">\(\beta &gt; 0\)</span> であるため，指数関数の肩が負であること，すなわち以下の条件が必要となります。</p>
 <div class="arithmatex">\[
@@ -14540,7 +14543,7 @@
 \]</div>
 <p>この不等式は，系に存在するすべての量子状態 <span class="arithmatex">\(k\)</span> について成り立たなければなりません。したがって，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> は，系の中で最も低いエネルギーを持つ基底状態のエネルギー <span class="arithmatex">\(\epsilon_0\)</span> よりも必ず小さくなければならないという強い制約が課されます。</p>
 <div class="arithmatex">\[
-\mu &lt; \epsilon_0
+\finalanswer{\mu &lt; \epsilon_0}
 \]</div>
 <p>もし <span class="arithmatex">\(\mu \ge \epsilon_0\)</span> になってしまうと，特定の状態に無限に粒子が吸い込まれて大分配関数が定義できなくなり，熱平衡状態が破綻してしまいます。</p>
 <h3 id="2">(2)</h3>
@@ -14557,7 +14560,10 @@
 \frac{\partial \log \Xi_k}{\partial \mu} = - \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \cdot \left( - \frac{\partial}{\partial \mu} \beta(\epsilon_k - \mu) \right) \cdot \exp\left[ -\beta(\epsilon_k - \mu) \right]
 \]</div>
 <div class="arithmatex">\[
-\frac{\partial \log \Xi_k}{\partial \mu} = - \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \cdot \left( -\beta \exp\left[ -\beta(\epsilon_k - \mu) \right] \right) = \frac{\beta \exp\left[ -\beta(\epsilon_k - \mu) \right]}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]}
+\begin{aligned}
+\frac{\partial \log \Xi_k}{\partial \mu} &amp;= - \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \cdot \left( -\beta \exp\left[ -\beta(\epsilon_k - \mu) \right] \right) \\
+&amp;= \frac{\beta \exp\left[ -\beta(\epsilon_k - \mu) \right]}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]}
+\end{aligned}
 \]</div>
 <p>この結果に公式通り <span class="arithmatex">\(\frac{1}{\beta}\)</span> を掛けることで，平均占有数の式が得られます。</p>
 <div class="arithmatex">\[
@@ -14565,7 +14571,7 @@
 \]</div>
 <p>分母と分子に <span class="arithmatex">\(\exp\left[ \beta(\epsilon_k - \mu) \right]\)</span> を掛けて整理すると，目的のボース・アインシュタイン分布関数が導出されます。</p>
 <div class="arithmatex">\[
-\langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] - 1}
+\finalanswer{\langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] - 1}}
 \]</div>
 <p>ボース分布では分母が <span class="arithmatex">\(\exp[\beta(\epsilon_k-\mu)]-1\)</span> となります。</p>
 <h3 id="3">(3)</h3>
@@ -14579,7 +14585,7 @@
 \]</div>
 <p>したがって，</p>
 <div class="arithmatex">\[
-\langle n_0 \rangle \simeq \frac{1}{\beta(\epsilon_0 - \mu)} \to \infty
+\finalanswer{\langle n_0 \rangle \simeq \frac{1}{\beta(\epsilon_0 - \mu)} \to \infty}
 \]</div>
 <p><span class="arithmatex">\(\langle n_0\rangle\)</span> は <span class="arithmatex">\(1/\delta\)</span> に比例して発散します。</p>
 

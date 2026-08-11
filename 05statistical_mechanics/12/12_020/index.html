@@ -14546,18 +14546,22 @@
 \]</div>
 <p>これを行列表示すると，対角成分のみが残り，非対角成分はゼロになります。</p>
 <div class="arithmatex">\[
-  \rho_A = \frac{1}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
+  \finalanswer{\rho_A = \frac{1}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}}
 \]</div>
 <ul>
 <li><strong>状態Bの密度行列 <span class="arithmatex">\(\rho_B\)</span></strong>
   状態Bは単一の状態ベクトル <span class="arithmatex">\(|+x\rangle\)</span> で指定されるため，その射影演算子がそのまま密度行列になります。</li>
 </ul>
 <div class="arithmatex">\[
-  \rho_B = |+x\rangle\langle+x| = \frac{1}{2}(|+\rangle + |-\rangle)(\langle+| + \langle-|) = \frac{1}{2}\Big( |+\rangle\langle+| + |+\rangle\langle-| + |-\rangle\langle+| + |-\rangle\langle-| \Big)
+\begin{aligned}
+\rho_B &amp;= |+x\rangle\langle+x| \\
+&amp;= \frac{1}{2}(|+\rangle + |-\rangle)(\langle+| + \langle-|) \\
+&amp;= \finalanswer{\frac{1}{2}\Big( |+\rangle\langle+| + |+\rangle\langle-| + |-\rangle\langle+| + |-\rangle\langle-| \Big)}
+\end{aligned}
 \]</div>
 <p>これを行列表示すると，非対角成分にも値が現れます。</p>
 <div class="arithmatex">\[
-  \rho_B = \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}
+  \finalanswer{\rho_B = \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた行列の2乗とトレースをそれぞれ計算します。</p>
@@ -14565,22 +14569,36 @@
 <li><strong>状態Aについて</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \rho_A^2 = \left[ \frac{1}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \right]^2 = \frac{1}{4} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
+\begin{aligned}
+\rho_A^2 &amp;= \left[ \frac{1}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \right]^2 \\
+&amp;= \frac{1}{4} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>対角成分の和をとります。</p>
 <div class="arithmatex">\[
-  \mathrm{Tr}(\rho_A^2) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2} &lt; 1
+\begin{aligned}
+\mathrm{Tr}(\rho_A^2) &amp;= \frac{1}{4} + \frac{1}{4} \\
+&amp;= \finalanswer{\frac{1}{2} &lt; 1}
+\end{aligned}
 \]</div>
 <p>値が 1 よりも小さいため，<strong>状態Aは混合状態</strong>であると判定されます。</p>
 <ul>
 <li><strong>状態Bについて</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \rho_B^2 = \left[ \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} \right]^2 = \frac{1}{4} \begin{pmatrix} 1+1 &amp; 1+1 \\ 1+1 &amp; 1+1 \end{pmatrix} = \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} = \rho_B
+\begin{aligned}
+\rho_B^2 &amp;= \left[ \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} \right]^2 \\
+&amp;= \frac{1}{4} \begin{pmatrix} 1+1 &amp; 1+1 \\ 1+1 &amp; 1+1 \end{pmatrix} \\
+&amp;= \frac{1}{2} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} \\
+&amp;= \rho_B
+\end{aligned}
 \]</div>
 <p>対角成分の和をとります。</p>
 <div class="arithmatex">\[
-  \mathrm{Tr}(\rho_B^2) = \frac{1}{2} + \frac{1}{2} = 1
+\begin{aligned}
+\mathrm{Tr}(\rho_B^2) &amp;= \frac{1}{2} + \frac{1}{2} \\
+&amp;= \finalanswer{1}
+\end{aligned}
 \]</div>
 <p>値がちょうど 1 になるため，<strong>状態Bは純粋状態</strong>であると判定されます。</p>
 <p>状態Aと状態Bは，どちらも上向きと下向きが <span class="arithmatex">\(1/2\)</span> ずつの割合で観測される点では一見似ていますが，状態Bには位相情報が非対角成分として保存されているため，純粋状態としての性質を維持しています。</p>
@@ -14602,7 +14620,11 @@
 \]</div>
 <p>これら2つの成分を足し合わせ，前方の係数 <span class="arithmatex">\(1/4\)</span> を掛けます。 <span class="arithmatex">\(2P_z\)</span> と <span class="arithmatex">\(-2P_z\)</span> は相殺されます。</p>
 <div class="arithmatex">\[
-\mathrm{Tr}(\rho^2) = \frac{1}{4} \Big( 2 + 2P_x^2 + 2P_y^2 + 2P_z^2 \Big) = \frac{1}{2} (1 + P_x^2 + P_y^2 + P_z^2) = \frac{1}{2} (1 + |\boldsymbol{P}|^2)
+\begin{aligned}
+\mathrm{Tr}(\rho^2) &amp;= \frac{1}{4} \Big( 2 + 2P_x^2 + 2P_y^2 + 2P_z^2 \Big) \\
+&amp;= \frac{1}{2} (1 + P_x^2 + P_y^2 + P_z^2) \\
+&amp;= \frac{1}{2} (1 + |\boldsymbol{P}|^2)
+\end{aligned}
 \]</div>
 <p>これがブロッホベクトルの大きさを用いたトレースの表現です。この式から，ブロッホ球の満たすべき条件が決まります。</p>
 <ul>
@@ -14610,7 +14632,12 @@
   <span class="arithmatex">\(\mathrm{Tr}(\rho^2) = 1\)</span> が条件です。</li>
 </ul>
 <div class="arithmatex">\[
-  \frac{1}{2} (1 + |\boldsymbol{P}|^2) = 1 \implies 1 + |\boldsymbol{P}|^2 = 2 \implies |\boldsymbol{P}|^2 = 1 \implies |\boldsymbol{P}| = 1
+\begin{aligned}
+\finalanswer{\frac{1}{2} (1 + |\boldsymbol{P}|^2)} &amp;= 1 \implies 1 + |\boldsymbol{P}|^2 \\
+&amp;= 2 \implies |\boldsymbol{P}|^2 \\
+&amp;= 1 \implies |\boldsymbol{P}| \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>ブロッホ球上では，純粋状態はブロッホ球の<strong>最表面</strong>に対応します。</p>
 <ul>
@@ -14618,7 +14645,7 @@
   <span class="arithmatex">\(\mathrm{Tr}(\rho^2) &lt; 1\)</span> が条件です。</li>
 </ul>
 <div class="arithmatex">\[
-  \frac{1}{2} (1 + |\boldsymbol{P}|^2) &lt; 1 \implies 1 + |\boldsymbol{P}|^2 &lt; 2 \implies |\boldsymbol{P}|^2 &lt; 1 \implies |\boldsymbol{P}| &lt; 1
+  \finalanswer{\frac{1}{2} (1 + |\boldsymbol{P}|^2) &lt; 1 \implies 1 + |\boldsymbol{P}|^2 &lt; 2 \implies |\boldsymbol{P}|^2 &lt; 1 \implies |\boldsymbol{P}| &lt; 1}
 \]</div>
 <p>ブロッホ球上では，混合状態はブロッホ球の<strong>内部</strong>に対応します。</p>
 

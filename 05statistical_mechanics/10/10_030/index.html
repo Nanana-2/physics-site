@@ -14539,20 +14539,30 @@ Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} P(s_1, s_2) P(s_2, s_3) \dots P(s_N, 
 <li><span class="arithmatex">\(s_i = 1, s_{i+1} = 1\)</span> のとき</li>
 </ul>
 <p>$$
-  P(1, 1) = \exp[ \beta J (1)(1) + \frac{\beta B}{2} (1 + 1) ] = \exp( \beta J + \beta B )
-  $$</p>
+\begin{aligned}
+P(1, 1) &amp;= \exp[ \beta J (1)(1) + \frac{\beta B}{2} (1 + 1) ] \
+&amp;= \exp( \beta J + \beta B )
+\end{aligned}
+$$</p>
 <ul>
 <li><span class="arithmatex">\(s_i = -1, s_{i+1} = -1\)</span> のとき</li>
 </ul>
 <p>$$
-  P(-1, -1) = \exp[ \beta J (-1)(-1) + \frac{\beta B}{2} (-1 - 1) ] = \exp( \beta J - \beta B )
-  $$</p>
+\begin{aligned}
+P(-1, -1) &amp;= \exp[ \beta J (-1)(-1) + \frac{\beta B}{2} (-1 - 1) ] \
+&amp;= \exp( \beta J - \beta B )
+\end{aligned}
+$$</p>
 <ul>
 <li><span class="arithmatex">\(s_i = 1, s_{i+1} = -1\)</span> および <span class="arithmatex">\(s_i = -1, s_{i+1} = 1\)</span> のとき</li>
 </ul>
 <p>$$
-  P(1, -1) = P(-1, 1) = \exp[ \beta J (1)(-1) + \frac{\beta B}{2} (1 - 1) ] = \exp( -\beta J )
-  $$</p>
+\begin{aligned}
+P(1, -1) &amp;= P(-1, 1) \
+&amp;= \exp[ \beta J (1)(-1) + \frac{\beta B}{2} (1 - 1) ] \
+&amp;= \finalanswer{\exp( -\beta J )}
+\end{aligned}
+$$</p>
 <p>これらを行列の形に配置することで，求める転送行列が得られます。</p>
 <div class="arithmatex">\[
 P = \begin{pmatrix}
@@ -14586,7 +14596,7 @@ e^{2\beta J} \cosh^2(\beta B) - e^{2\beta J} + e^{-2\beta J} = e^{2\beta J} \sin
 \]</div>
 <p>周期境界条件のもとでの分配関数は，行列の積の性質から各固有値の <span class="arithmatex">\(N\)</span> 乗の和に一致します。</p>
 <div class="arithmatex">\[
-Z = \mathrm{Tr}(P^N) = \lambda_+^N + \lambda_-^N
+Z = \mathrm{Tr}(P^N) = \finalanswer{\lambda_+^N + \lambda_-^N}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>2つの固有値を比較すると，ルートの前にプラスがついている <span class="arithmatex">\(\lambda_+\)</span> の方が常に大きな値をとります。したがって， <span class="arithmatex">\(N \to \infty\)</span> の極限では <span class="arithmatex">\(\left( \frac{\lambda_-}{\lambda_+} \right)^N \to 0\)</span> となるため，分配関数は <span class="arithmatex">\(\lambda_+^N\)</span> の項が支配的になります。</p>
@@ -14595,7 +14605,11 @@ Z = \lambda_+^N \left[ 1 + \left( \frac{\lambda_-}{\lambda_+} \right)^N \right] 
 \]</div>
 <p>外部磁場がない状態 <span class="arithmatex">\(B = 0\)</span> のとき， <span class="arithmatex">\(\cosh(0) = 1\)</span> ， <span class="arithmatex">\(\sinh(0) = 0\)</span> となるため，最大固有値は以下の通りです。</p>
 <div class="arithmatex">\[
-\lambda_+ = e^{\beta J} + \sqrt{0 + e^{-2\beta J}} = e^{\beta J} + e^{-\beta J} = 2 \cosh(\beta J)
+\begin{aligned}
+\lambda_+ &amp;= e^{\beta J} + \sqrt{0 + e^{-2\beta J}} \\
+&amp;= e^{\beta J} + e^{-\beta J} \\
+&amp;= 2 \cosh(\beta J)
+\end{aligned}
 \]</div>
 <p>このときの1スピンあたりの自由エネルギー <span class="arithmatex">\(f\)</span> が求まります。</p>
 <div class="arithmatex">\[
@@ -14605,11 +14619,14 @@ f = -k_B T \log \left[ 2 \cosh(\beta J) \right]
 <p>有限温度 <span class="arithmatex">\(T &gt; 0\)</span> において，最大固有値 <span class="arithmatex">\(\lambda_+\)</span> は磁場 <span class="arithmatex">\(B\)</span> の関数として常に解析的であり，微分不連続な点は存在しません。</p>
 <p>1スピンあたりの磁化 <span class="arithmatex">\(M\)</span> は，自由エネルギーを外部磁場 <span class="arithmatex">\(B\)</span> で微分することで得られます。</p>
 <div class="arithmatex">\[
-M = -\frac{\partial f}{\partial B} = k_B T \frac{1}{\lambda_+} \frac{\partial \lambda_+}{\partial B}
+\begin{aligned}
+M &amp;= -\frac{\partial f}{\partial B} \\
+&amp;= k_B T \frac{1}{\lambda_+} \frac{\partial \lambda_+}{\partial B}
+\end{aligned}
 \]</div>
 <p>ここで， <span class="arithmatex">\(\lambda_+\)</span> を <span class="arithmatex">\(B\)</span> で偏微分すると， <span class="arithmatex">\(\sinh(\beta B)\)</span> の項が外に出るため， <span class="arithmatex">\(B = 0\)</span> を代入した瞬間に微分値は厳密にゼロになります。</p>
 <div class="arithmatex">\[
-\left. \frac{\partial \lambda_+}{\partial B} \right|_{B=0} = 0 \implies M = 0
+\finalanswer{\left. \frac{\partial \lambda_+}{\partial B} \right|_{B=0} = 0 \implies M = 0}
 \]</div>
 <p>外部磁場を無限に小さくしていったときに残る自発磁化がゼロであるため，有限温度ではスピンが自発的に揃う長距離秩序は形成されません。</p>
 <p>物理的には，一次元という低い次元性においては，スピンの並びを1箇所反転させて無秩序な境界を作るために必要なエネルギーが，相互作用 <span class="arithmatex">\(J\)</span> だけの有限な値で済むのに対し，反転する位置の選び方によるエントロピーの得が大きくなるためです。</p>

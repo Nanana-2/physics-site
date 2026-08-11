@@ -14531,7 +14531,7 @@
 <h3 id="1">(1)</h3>
 <p>部分系1と部分系2は互いに独立であるため，全体の微視的状態数 <span class="arithmatex">\(\Omega_{\mathrm{tot}}(E_1)\)</span> は，それぞれの部分系がとりうる状態数の積として与えられます。エネルギー保存則 <span class="arithmatex">\(E_2 = E - E_1\)</span> を考慮すると，以下のように表されます。</p>
 <div class="arithmatex">\[
-\Omega_{\mathrm{tot}}(E_1) = \Omega_1(E_1) \cdot \Omega_2(E - E_1)
+\finalanswer{\Omega_{\mathrm{tot}}(E_1) = \Omega_1(E_1) \cdot \Omega_2(E - E_1)}
 \]</div>
 <p>この関係式をボルツマンのエントロピー公式 <span class="arithmatex">\(S = k_B \log \Omega\)</span> に代入し，対数の性質を用いて展開します。</p>
 <div class="arithmatex">\[
@@ -14542,19 +14542,22 @@ S_{\mathrm{tot}}(E_1) = k_B \log \Omega_1(E_1) + k_B \log \Omega_2(E - E_1)
 \]</div>
 <p>各項はそれぞれ部分系1および部分系2のエントロピーの定義そのものであるため，全エントロピーは各部分系のエントロピーの和として表されることが示されました。</p>
 <div class="arithmatex">\[
-S_{\mathrm{tot}}(E_1) = S_1(E_1) + S_2(E_2)
+\finalanswer{S_{\mathrm{tot}}(E_1) = S_1(E_1) + S_2(E_2)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>全エントロピー <span class="arithmatex">\(S_{\mathrm{tot}}(E_1)\)</span> が最大値をとるとき，<span class="arithmatex">\(E_1\)</span> に関する1階微分は 0 となります。エネルギーの全微分が <span class="arithmatex">\(dE_2 = -dE_1\)</span> であることに注意して微分を実行します。</p>
 <div class="arithmatex">\[
-\frac{dS_{\mathrm{tot}}}{dE_1} = \frac{dS_1(E_1)}{dE_1} + \frac{dS_2(E_2)}{dE_2} \frac{dE_2}{dE_1} = 0
+\begin{aligned}
+\frac{dS_{\mathrm{tot}}}{dE_1} &amp;= \frac{dS_1(E_1)}{dE_1} + \frac{dS_2(E_2)}{dE_2} \frac{dE_2}{dE_1} \\
+&amp;= 0
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \frac{dS_1(E_1)}{dE_1} - \frac{dS_2(E_2)}{dE_2} = 0
 \]</div>
 <p>したがって，エントロピー最大原理から導かれる平衡条件は以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{dS_1(E_1)}{dE_1} = \frac{dS_2(E_2)}{dE_2}
+\finalanswer{\frac{dS_1(E_1)}{dE_1} = \frac{dS_2(E_2)}{dE_2}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>統計力学において，熱力学的な温度 <span class="arithmatex">\(T\)</span> はエントロピーのエネルギー微分を用いて以下のように定義されます。</p>
@@ -14567,7 +14570,7 @@ S_{\mathrm{tot}}(E_1) = S_1(E_1) + S_2(E_2)
 \]</div>
 <p>両辺の逆数をとることで，最終的に以下の関係が得られます。</p>
 <div class="arithmatex">\[
-T_1 = T_2
+\finalanswer{T_1 = T_2}
 \]</div>
 <p>したがって，全エントロピーが最大となる平衡状態では，両部分系の温度が等しくなります。</p>
 

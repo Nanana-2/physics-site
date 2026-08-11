@@ -14548,7 +14548,10 @@
 \]</div>
 <p>左辺のダミー変数を <span class="arithmatex">\(n-1 = m\)</span> と置き換えて整理すると， <span class="arithmatex">\(\sum_{m=0}^{\infty} c_{m+1} \sqrt{m+1} |m\rangle\)</span> となります。両辺の各基底 <span class="arithmatex">\(|n\rangle\)</span> の係数を比較することで，以下の漸化式が得られます。</p>
 <div class="arithmatex">\[
-c_{n+1} \sqrt{n+1} = \alpha c_n \implies c_{n+1} = \frac{\alpha}{\sqrt{n+1}} c_n
+\begin{aligned}
+c_{n+1} \sqrt{n+1} &amp;= \alpha c_n \implies c_{n+1} \\
+&amp;= \frac{\alpha}{\sqrt{n+1}} c_n
+\end{aligned}
 \]</div>
 <p>この漸化式を基底状態の係数 <span class="arithmatex">\(c_0\)</span> から順に繰り返し適用します。</p>
 <ul>
@@ -14562,7 +14565,11 @@ c_n = \frac{\alpha^n}{\sqrt{n!}} c_0
 \]</div>
 <p>次に，規格化条件 <span class="arithmatex">\(\langle\alpha|\alpha\rangle = 1\)</span> から定数 <span class="arithmatex">\(c_0\)</span> を決定します。数状態の直交性 <span class="arithmatex">\(\langle n|m\rangle = \delta_{nm}\)</span> を利用します。</p>
 <div class="arithmatex">\[
-\langle\alpha|\alpha\rangle = \sum_{n=0}^{\infty} |c_n|^2 = |c_0|^2 \sum_{n=0}^{\infty} \frac{(|\alpha|^2)^n}{n!} = 1
+\begin{aligned}
+\langle\alpha|\alpha\rangle &amp;= \sum_{n=0}^{\infty} |c_n|^2 \\
+&amp;= |c_0|^2 \sum_{n=0}^{\infty} \frac{(|\alpha|^2)^n}{n!} \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>中央の総和部分は，指数関数のマクローリン展開 <span class="arithmatex">\(\exp(|\alpha|^2)\)</span> そのものです。</p>
 <div class="arithmatex">\[
@@ -14570,36 +14577,50 @@ c_n = \frac{\alpha^n}{\sqrt{n!}} c_0
 \]</div>
 <p>位相の自由度をゼロと選ぶと， <span class="arithmatex">\(c_0 = \exp\left( -\frac{1}{2}|\alpha|^2 \right)\)</span> と決定されます。これを元の式に戻すことで，求める数状態展開の式が得られます。</p>
 <div class="arithmatex">\[
-c_n = \exp\left( -\frac{1}{2}|\alpha|^2 \right) \frac{\alpha^n}{\sqrt{n!}}
+\finalanswer{c_n = \exp\left( -\frac{1}{2}|\alpha|^2 \right) \frac{\alpha^n}{\sqrt{n!}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた展開係数の絶対値を2乗し，出現確率 <span class="arithmatex">\(P_n\)</span> を計算します。</p>
 <div class="arithmatex">\[
-P_n = |c_n|^2 = \left| \exp\left( -\frac{1}{2}|\alpha|^2 \right) \frac{\alpha^n}{\sqrt{n!}} \right|^2 = \exp(-|\alpha|^2) \frac{(|\alpha|^2)^n}{n!}
+\begin{aligned}
+P_n &amp;= |c_n|^2 \\
+&amp;= \left| \exp\left( -\frac{1}{2}|\alpha|^2 \right) \frac{\alpha^n}{\sqrt{n!}} \right|^2 \\
+&amp;= \exp(-|\alpha|^2) \frac{(|\alpha|^2)^n}{n!}
+\end{aligned}
 \]</div>
 <p>ここで，実数の定数として <span class="arithmatex">\(\lambda = |\alpha|^2\)</span> を導入し，式を書き換えます。</p>
 <div class="arithmatex">\[
-P_n = \frac{\lambda^n}{n!} \exp(-\lambda)
+\finalanswer{P_n = \frac{\lambda^n}{n!} \exp(-\lambda)}
 \]</div>
-<p>この数式は，統計学におけるランダムな独立事象の発生数を表すポアソン分布の定義式そのものです。これにより，コヒーレント状態に含まれる光子数やエネルギー量子数が，マクロな統計流体と同じ確率分布に従っていることが示されました。</p>
+<p>この式は，統計学における独立事象の発生数を表すポアソン分布の定義式そのものです。これにより，コヒーレント状態に含まれる光子数やエネルギー量子数が，古典的な独立事象の発生数と同じ確率分布に従うことが示されました。</p>
 <h3 id="3">(3)</h3>
 <p>コヒーレント状態に対する各演算子の作用は，固有値方程式 <span class="arithmatex">\(\hat{a}|\alpha\rangle = \alpha|\alpha\rangle\)</span> および，その共役関係であるブラベクトルへの作用 <span class="arithmatex">\(\langle\alpha|\hat{a}^\dagger = \langle\alpha|\alpha^*\)</span> を利用して計算します。</p>
 <ul>
 <li><strong>位置の期待値 <span class="arithmatex">\(\langle\hat{x}\rangle\)</span></strong></li>
 </ul>
 <p>$$
-  \langle\hat{x}\rangle = \sqrt{\frac{\hbar}{2m\omega}} \langle\alpha| \left( \hat{a} + \hat{a}^\dagger \right) |\alpha\rangle = \sqrt{\frac{\hbar}{2m\omega}} \left( \langle\alpha|\hat{a}|\alpha\rangle + \langle\alpha|\hat{a}^\dagger|\alpha\rangle \right) = \sqrt{\frac{\hbar}{2m\omega}} \left( \alpha + \alpha^* \right)
-  $$</p>
+\begin{aligned}
+\langle\hat{x}\rangle &amp;= \sqrt{\frac{\hbar}{2m\omega}} \langle\alpha| \left( \hat{a} + \hat{a}^\dagger \right) |\alpha\rangle \
+&amp;= \sqrt{\frac{\hbar}{2m\omega}} \left( \langle\alpha|\hat{a}|\alpha\rangle + \langle\alpha|\hat{a}^\dagger|\alpha\rangle \right) \
+&amp;= \sqrt{\frac{\hbar}{2m\omega}} \left( \alpha + \alpha^* \right)
+\end{aligned}
+$$</p>
 <ul>
 <li><strong>2乗の期待値 <span class="arithmatex">\(\langle\hat{x}^2\rangle\)</span></strong></li>
 </ul>
 <p>演算子の積を展開します。消滅演算子が右側，生成演算子が左側に配置されるように，交換関係 <span class="arithmatex">\(\hat{a}\hat{a}^\dagger = \hat{a}^\dagger\hat{a} + 1\)</span> を用いて順序を整理します。</p>
 <div class="arithmatex">\[
-  (\hat{a} + \hat{a}^\dagger)^2 = \hat{a}^2 + \hat{a}\hat{a}^\dagger + \hat{a}^\dagger\hat{a} + (\hat{a}^\dagger)^2 = \hat{a}^2 + 2\hat{a}^\dagger\hat{a} + (\hat{a}^\dagger)^2 + 1
+\begin{aligned}
+(\hat{a} + \hat{a}^\dagger)^2 &amp;= \hat{a}^2 + \hat{a}\hat{a}^\dagger + \hat{a}^\dagger\hat{a} + (\hat{a}^\dagger)^2 \\
+&amp;= \hat{a}^2 + 2\hat{a}^\dagger\hat{a} + (\hat{a}^\dagger)^2 + 1
+\end{aligned}
 \]</div>
 <p>この演算子をコヒーレント状態のブラケットで挟みます。各演算子がそれぞれの固有値に置き換わります。</p>
 <div class="arithmatex">\[
-  \langle\alpha| (\hat{a} + \hat{a}^\dagger)^2 |\alpha\rangle = \alpha^2 + 2\alpha^*\alpha + (\alpha^*)^2 + 1 = (\alpha + \alpha^*)^2 + 1
+\begin{aligned}
+\langle\alpha| (\hat{a} + \hat{a}^\dagger)^2 |\alpha\rangle &amp;= \alpha^2 + 2\alpha^*\alpha + (\alpha^*)^2 + 1 \\
+&amp;= (\alpha + \alpha^*)^2 + 1
+\end{aligned}
 \]</div>
 <p>係数を掛け合わせて全体の期待値をまとめます。</p>
 <div class="arithmatex">\[
@@ -14607,7 +14628,11 @@ P_n = \frac{\lambda^n}{n!} \exp(-\lambda)
 \]</div>
 <p>これらを用いて，位置のゆらぎの2乗を計算します。定数項のみが残ります。</p>
 <div class="arithmatex">\[
-(\Delta x)^2 = \langle\hat{x}^2\rangle - \langle\hat{x}\rangle^2 = \frac{\hbar}{2m\omega} \left[ (\alpha + \alpha^*)^2 + 1 \right] - \frac{\hbar}{2m\omega} (\alpha + \alpha^*)^2 = \frac{\hbar}{2m\omega}
+\begin{aligned}
+(\Delta x)^2 &amp;= \langle\hat{x}^2\rangle - \langle\hat{x}\rangle^2 \\
+&amp;= \frac{\hbar}{2m\omega} \left[ (\alpha + \alpha^*)^2 + 1 \right] - \frac{\hbar}{2m\omega} (\alpha + \alpha^*)^2 \\
+&amp;= \frac{\hbar}{2m\omega}
+\end{aligned}
 \]</div>
 <p>運動量についても，同様に整理してゆらぎの2乗を計算すると，以下の結果が得られます。</p>
 <div class="arithmatex">\[
@@ -14615,10 +14640,16 @@ P_n = \frac{\lambda^n}{n!} \exp(-\lambda)
 \]</div>
 <p>求める位置と運動量のゆらぎの積を計算します。平方根をとって掛け合わせます。</p>
 <div class="arithmatex">\[
-\Delta x = \sqrt{\frac{\hbar}{2m\omega}}, \quad \Delta p = \sqrt{\frac{m\omega\hbar}{2}}
+\begin{aligned}
+\Delta x &amp;= \sqrt{\frac{\hbar}{2m\omega}}, \quad \Delta p \\
+&amp;= \sqrt{\frac{m\omega\hbar}{2}}
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\Delta x \cdot \Delta p = \sqrt{\frac{\hbar}{2m\omega}} \cdot \sqrt{\frac{m\omega\hbar}{2}} = \frac{\hbar}{2}
+\begin{aligned}
+\Delta x \cdot \Delta p &amp;= \sqrt{\frac{\hbar}{2m\omega}} \cdot \sqrt{\frac{m\omega\hbar}{2}} \\
+&amp;= \finalanswer{\frac{\hbar}{2}}
+\end{aligned}
 \]</div>
 <p>この積の値は，複素数 <span class="arithmatex">\(\alpha\)</span> の値に依存せず，常に不確定性原理の理論的最小下限である <span class="arithmatex">\(\frac{\hbar}{2}\)</span> に一致します。</p>
 <p>したがって，コヒーレント状態は任意の振幅において量子力学的な広がりが最も小さく抑えられた，非常に古典的な性質を維持した波束であることが確かめられました。</p>

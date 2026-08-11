@@ -14568,7 +14568,7 @@ I \omega_0 - 0 = J h
 \]</div>
 <p>これを <span class="arithmatex">\(\omega_0\)</span> について解くことで，撃力直後の角速度 <span class="arithmatex">\(\omega_0\)</span> が求まります。</p>
 <div class="arithmatex">\[
-\omega_0 = \frac{5 J h}{2 M R^2}
+\finalanswer{\omega_0 = \frac{5 J h}{2 M R^2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>球体が滑ることなくただちに純粋な転がり運動を開始するための条件は，球体の最下点の速度が <span class="arithmatex">\(0\)</span> になることです。最下点の速度 <span class="arithmatex">\(v_{\text{bottom}}\)</span> は，並進速度 <span class="arithmatex">\(v_0\)</span> と回転による速度 <span class="arithmatex">\(R \omega_0\)</span> を用いて以下のように表されます。</p>
@@ -14589,7 +14589,7 @@ v_0 = R \omega_0
 \]</div>
 <p>これを <span class="arithmatex">\(h\)</span> について解くことで，ただちに転がり運動を開始する条件となる高さが求まります。</p>
 <div class="arithmatex">\[
-h = \frac{2}{5}R
+\finalanswer{h = \frac{2}{5}R}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(h = \frac{1}{2}R\)</span> のとき，小問(1)の結果から，撃力直後の重心速度 <span class="arithmatex">\(v_0\)</span> と角速度 <span class="arithmatex">\(\omega_0\)</span> はそれぞれ以下のようになります。</p>
@@ -14601,7 +14601,11 @@ v_0 = \frac{J}{M}
 \]</div>
 <p>このとき，最下点の初期速度は以下のようになります。</p>
 <div class="arithmatex">\[
-v_{\text{bottom}}(0) = v_0 - R \omega_0 = \frac{J}{M} - \frac{5 J}{4 M} = -\frac{J}{4 M}
+\begin{aligned}
+v_{\text{bottom}}(0) &amp;= v_0 - R \omega_0 \\
+&amp;= \frac{J}{M} - \frac{5 J}{4 M} \\
+&amp;= -\frac{J}{4 M}
+\end{aligned}
 \]</div>
 <p>最下点の速度が負であるため，最下点は床に対して負方向へ滑っています。したがって，動摩擦力 <span class="arithmatex">\(f\)</span> は正方向に働きます。垂直抗力は <span class="arithmatex">\(N=Mg\)</span> であるため，動摩擦力の大きさは次のようになります。</p>
 <div class="arithmatex">\[
@@ -14628,7 +14632,10 @@ I \frac{d \omega}{d t} = - f R = - \mu M g R
 \]</div>
 <p>これを初期条件 <span class="arithmatex">\(\omega(0) = \omega_0\)</span> のもとで積分すると，時間 <span class="arithmatex">\(t\)</span> における角速度 <span class="arithmatex">\(\omega(t)\)</span> が得られます。</p>
 <div class="arithmatex">\[
-\omega(t) = \omega_0 - \frac{5 \mu g}{2 R} t = \frac{5 J}{4 M R} - \frac{5 \mu g}{2 R} t
+\begin{aligned}
+\omega(t) &amp;= \omega_0 - \frac{5 \mu g}{2 R} t \\
+&amp;= \finalanswer{\frac{5 J}{4 M R} - \frac{5 \mu g}{2 R} t}
+\end{aligned}
 \]</div>
 <h3 id="4">(4)</h3>
 <p>球体が滑るのをやめて純粋な転がり運動に移行する時刻 <span class="arithmatex">\(t_1\)</span> では，滑りなしの条件 <span class="arithmatex">\(v(t_1) = R \omega(t_1)\)</span> が満たされます。小問(3)で求めた <span class="arithmatex">\(v(t)\)</span> と <span class="arithmatex">\(\omega(t)\)</span> をこの条件式に代入します。</p>
@@ -14655,7 +14662,7 @@ t_1 = \frac{J}{14 \mu M g}
 \begin{aligned}
 v_1 &amp;= \frac{J}{M} + \mu g \left( \frac{J}{14 \mu M g} \right) \\\\
 &amp;= \frac{J}{M} + \frac{J}{14 M} \\\\
-&amp;= \frac{15 J}{14 M}
+&amp;= \finalanswer{\frac{15 J}{14 M}}
 \end{aligned}
 \]</div>
 <p>このように，撃力を加える高さが基準となる <span class="arithmatex">\(\frac{2}{5}R\)</span> より高い位置である場合，初期の滑りに対して床からの摩擦力が推進力として働き，純粋な転がり運動に移行した後の速度は撃力直後の重心速度よりも速くなります。</p>

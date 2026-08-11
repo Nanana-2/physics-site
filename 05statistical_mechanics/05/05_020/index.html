@@ -14525,13 +14525,16 @@ Z_N = \frac{1}{N!} (z_1)^N = \frac{1}{N!} \left[ V \left( \frac{2\pi m k_B T}{h^
 <p>この分配関数を出発点として，以下の問いに答えよ。</p>
 <p>(1) 系のヘルムホルツ自由エネルギー <span class="arithmatex">\(F = -k_B T \log Z_N\)</span> を求めよ。ただし，スターリングの近似公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を用いて， <span class="arithmatex">\(\log Z_N\)</span> を整理した形で表すこと。</p>
 <p>(2) 熱力学における自由エネルギーの全微分関係式 <span class="arithmatex">\(dF = -S dT - P dV + \mu dN\)</span> を基にして，系の圧力 <span class="arithmatex">\(P\)</span> を <span class="arithmatex">\(F\)</span> の体積微分として定義せよ。</p>
-<p>(3) (1) と (2) の結果を用いて，系の圧力 <span class="arithmatex">\(P\)</span> を具体的に計算し，理想気体の状態方程式 <span class="arithmatex">\(P V = N k_B T\)</span> が導出されることを示せ。</p>
+<p>(3) (1) と (2) の結果を用いて，系の圧力 <span class="arithmatex">\(P\)</span> を計算し，理想気体の状態方程式 <span class="arithmatex">\(P V = N k_B T\)</span> が導出されることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>分配関数 <span class="arithmatex">\(Z_N\)</span> の自然対数をとります。積と商の性質を用いて各項を展開します。</p>
 <div class="arithmatex">\[
-\log Z_N = \log \left[ \frac{1}{N!} (z_1)^N \right] = N \log z_1 - \log N!
+\begin{aligned}
+\log Z_N &amp;= \log \left[ \frac{1}{N!} (z_1)^N \right] \\
+&amp;= N \log z_1 - \log N!
+\end{aligned}
 \]</div>
 <p>ここにスターリングの近似公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
@@ -14543,14 +14546,14 @@ Z_N = \frac{1}{N!} (z_1)^N = \frac{1}{N!} \left[ V \left( \frac{2\pi m k_B T}{h^
 \]</div>
 <p>ヘルムホルツ自由エネルギーの定義 <span class="arithmatex">\(F = -k_B T \log Z_N\)</span> にこれを掛け合わせることで，求める自由エネルギーの式が得られます。</p>
 <div class="arithmatex">\[
-F = -N k_B T \log \left[ \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right] - N k_B T
+\finalanswer{F = -N k_B T \log \left[ \frac{V}{N} \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right] - N k_B T}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> の全微分関係式 <span class="arithmatex">\(dF = -S dT - P dV + \mu dN\)</span> に注目します。
 ここで，温度 <span class="arithmatex">\(T\)</span> と粒子数 <span class="arithmatex">\(N\)</span> を一定に保ったまま<span class="arithmatex">\(dT = 0, dN = 0\)</span>体積を微小変化させたときの自由エネルギーの変化を考えると， <span class="arithmatex">\(dF = -P dV\)</span> となります。</p>
 <p>したがって，系のマクロな圧力 <span class="arithmatex">\(P\)</span> は，自由エネルギー <span class="arithmatex">\(F\)</span> の定温・定粒子数での体積偏微分として以下のように定義されます。</p>
 <div class="arithmatex">\[
-P = -\left( \frac{\partial F}{\partial V} \right)_{T, N}
+\finalanswer{P = -\left( \frac{\partial F}{\partial V} \right)_{T, N}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で定義した圧力の式に，(1) で求めた自由エネルギー <span class="arithmatex">\(F\)</span> の表現を代入して体積 <span class="arithmatex">\(V\)</span> で偏微分します。
@@ -14560,7 +14563,11 @@ F = -N k_B T \left\{ \log V + \log \left[ \frac{1}{N} \left( \frac{2\pi m k_B T}
 \]</div>
 <p>この式を <span class="arithmatex">\(V\)</span> で偏微分します。 <span class="arithmatex">\(\log V\)</span> の微分は <span class="arithmatex">\(\frac{1}{V}\)</span> となり，それ以外の項はすべて消滅します。</p>
 <div class="arithmatex">\[
-\left( \frac{\partial F}{\partial V} \right)_{T, N} = -N k_B T \cdot \frac{\partial \log V}{\partial V} = -N k_B T \cdot \frac{1}{V} = -\frac{N k_B T}{V}
+\begin{aligned}
+\left( \frac{\partial F}{\partial V} \right)_{T, N} &amp;= -N k_B T \cdot \frac{\partial \log V}{\partial V} \\
+&amp;= -N k_B T \cdot \frac{1}{V} \\
+&amp;= -\frac{N k_B T}{V}
+\end{aligned}
 \]</div>
 <p>この結果を圧力の定義式 <span class="arithmatex">\(P = -\left( \frac{\partial F}{\partial V} \right)_{T, N}\)</span> に代入します。</p>
 <div class="arithmatex">\[
@@ -14568,7 +14575,7 @@ P = - \left( -\frac{N k_B T}{V} \right) = \frac{N k_B T}{V}
 \]</div>
 <p>両辺に体積 <span class="arithmatex">\(V\)</span> を掛けると，理想気体の状態方程式を得ます。</p>
 <div class="arithmatex">\[
-P V = N k_B T
+\finalanswer{P V = N k_B T}
 \]</div>
 
 

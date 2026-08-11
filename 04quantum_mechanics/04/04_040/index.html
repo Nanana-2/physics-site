@@ -14556,7 +14556,7 @@ J(x, t) = \frac{\hbar}{2mi} \left[ \left( \psi^* e^{iEt/\hbar} \right) \left( \f
 \]</div>
 <p>各項において，時間の指数因子の積は <span class="arithmatex">\(e^{iEt/\hbar} e^{-iEt/\hbar} = e^0 = 1\)</span> となって相殺されます。したがって，時間は式から消去され，空間成分のみの式となります。</p>
 <div class="arithmatex">\[
-J(x) = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \psi \right)
+\finalanswer{J(x) = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \psi \right)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>領域 I の波動関数 <span class="arithmatex">\(\psi_{\text{I}}(x) = A e^{ik_1 x} + B e^{-ik_1 x}\)</span> を用いて計算します。複素共役および微分は以下の通りです。</p>
@@ -14581,38 +14581,57 @@ J(x) = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \ps
 \]</div>
 <p>これらの差をとると，位置に依存する交差項 <span class="arithmatex">\(e^{\pm 2ik_1 x}\)</span> は相殺されます。</p>
 <div class="arithmatex">\[
-\psi_{\text{I}}^* \frac{d\psi_{\text{I}}}{dx} - \frac{d\psi_{\text{I}}^*}{dx} \psi_{\text{I}} = \left( ik_1 |A|^2 - ik_1 |B|^2 \right) - \left( -ik_1 |A|^2 + ik_1 |B|^2 \right) = 2ik_1 |A|^2 - 2ik_1 |B|^2
+\begin{aligned}
+\psi_{\text{I}}^* \frac{d\psi_{\text{I}}}{dx} - \frac{d\psi_{\text{I}}^*}{dx} \psi_{\text{I}} &amp;= \left( ik_1 |A|^2 - ik_1 |B|^2 \right) - \left( -ik_1 |A|^2 + ik_1 |B|^2 \right) \\
+&amp;= 2ik_1 |A|^2 - 2ik_1 |B|^2
+\end{aligned}
 \]</div>
 <p>全体の係数 <span class="arithmatex">\(\frac{\hbar}{2mi}\)</span> を掛けます。分母分子の <span class="arithmatex">\(2i\)</span> が消去されます。</p>
 <div class="arithmatex">\[
-J_{\text{I}} = \frac{\hbar}{2mi} \left( 2ik_1 |A|^2 - 2ik_1 |B|^2 \right) = \frac{\hbar k_1}{m} |A|^2 - \frac{\hbar k_1}{m} |B|^2
+\begin{aligned}
+J_{\text{I}} &amp;= \frac{\hbar}{2mi} \left( 2ik_1 |A|^2 - 2ik_1 |B|^2 \right) \\
+&amp;= \frac{\hbar k_1}{m} |A|^2 - \frac{\hbar k_1}{m} |B|^2
+\end{aligned}
 \]</div>
 <p>この結果を右向きの流れを正として分離すると，以下のようになります。</p>
 <div class="arithmatex">\[
 J_{\text{in}} = \frac{\hbar k_1}{m} |A|^2, \quad J_{\text{ref}} = -\frac{\hbar k_1}{m} |B|^2 \implies |J_{\text{ref}}| = \frac{\hbar k_1}{m} |B|^2
 \]</div>
 <div class="arithmatex">\[
-J_{\text{I}} = J_{\text{in}} - |J_{\text{ref}}|
+\finalanswer{J_{\text{I}} = J_{\text{in}} - |J_{\text{ref}}|}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>領域 II の波動関数 <span class="arithmatex">\(\psi_{\text{II}}(x) = C e^{ik_2 x}\)</span> を用いて同様に計算します。項が1つだけなので交差項は現れません。</p>
 <div class="arithmatex">\[
-J_{\text{trans}} = J_{\text{II}} = \frac{\hbar}{2mi} \left[ \left( C^* e^{-ik_2 x} \right) \left( ik_2 C e^{ik_2 x} \right) - \left( -ik_2 C^* e^{-ik_2 x} \right) \left( C e^{ik_2 x} \right) \right]
+\begin{aligned}
+J_{\text{trans}} &amp;= J_{\text{II}} \\
+&amp;= \frac{\hbar}{2mi} \left[ \left( C^* e^{-ik_2 x} \right) \left( ik_2 C e^{ik_2 x} \right) - \left( -ik_2 C^* e^{-ik_2 x} \right) \left( C e^{ik_2 x} \right) \right]
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-= \frac{\hbar}{2mi} \left( ik_2 |C|^2 + ik_2 |C|^2 \right) = \frac{\hbar}{2mi} \left( 2ik_2 |C|^2 \right) = \frac{\hbar k_2}{m} |C|^2
+\begin{aligned}
+ &amp;= \frac{\hbar}{2mi} \left( ik_2 |C|^2 + ik_2 |C|^2 \right) \\
+&amp;= \frac{\hbar}{2mi} \left( 2ik_2 |C|^2 \right) \\
+&amp;= \frac{\hbar k_2}{m} |C|^2
+\end{aligned}
 \]</div>
 <p>定常状態では，連続の式 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} + \frac{\partial J}{\partial x} = 0\)</span> の時間微分項が 0 になるため， <span class="arithmatex">\(\frac{dJ}{dx} = 0\)</span> となります。これは，確率流密度 <span class="arithmatex">\(J(x)\)</span> が場所によらず全空間で一定の定数であることを意味します。したがって，領域 I の流密度と領域 II の流密度は等しくなければなりません。</p>
 <div class="arithmatex">\[
-J_{\text{I}} = J_{\text{II}} \implies J_{\text{in}} - |J_{\text{ref}}| = J_{\text{trans}}
+\begin{aligned}
+J_{\text{I}} &amp;= J_{\text{II}} \implies J_{\text{in}} - |J_{\text{ref}}| \\
+&amp;= J_{\text{trans}}
+\end{aligned}
 \]</div>
 <p>この方程式の両辺を，入射する流れの強さ <span class="arithmatex">\(J_{\text{in}}\)</span> で割り算します。</p>
 <div class="arithmatex">\[
-\frac{J_{\text{in}}}{J_{\text{in}}} - \frac{|J_{\text{ref}}|}{J_{\text{in}}} = \frac{J_{\text{trans}}}{J_{\text{in}}} \implies 1 - R = T
+\begin{aligned}
+\frac{J_{\text{in}}}{J_{\text{in}}} - \frac{|J_{\text{ref}}|}{J_{\text{in}}} &amp;= \frac{J_{\text{trans}}}{J_{\text{in}}} \implies 1 - R \\
+&amp;= T
+\end{aligned}
 \]</div>
 <p>項を右辺に移項して整理します。</p>
 <div class="arithmatex">\[
-R + T = 1
+\finalanswer{R + T = 1}
 \]</div>
 <p>これにより，入射した粒子の確率の流れが，途中のポテンシャル形状の詳細に関わらず，反射流と透過流に保存規則を持って分配されることが一般的に示されました。</p>
 

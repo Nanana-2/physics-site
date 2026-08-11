@@ -14517,10 +14517,16 @@
 \]</div>
 <p>ここで，固有値方程式 <span class="arithmatex">\(\hat{A} \psi(x) = a \psi(x)\)</span> をそれぞれの辺に適用します。右辺の括弧の中身については，複素共役をとるため <span class="arithmatex">\((a \psi(x))^* = a^* \psi^*(x)\)</span> となることに注意します。</p>
 <div class="arithmatex">\[
-\text{左辺} = \int_{-\infty}^{\infty} \psi^*(x) \big[ a \psi(x) \big] dx = a \int_{-\infty}^{\infty} \psi^*(x) \psi(x) dx
+\begin{aligned}
+\text{左辺} &amp;= \int_{-\infty}^{\infty} \psi^*(x) \big[ a \psi(x) \big] dx \\
+&amp;= a \int_{-\infty}^{\infty} \psi^*(x) \psi(x) dx
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\text{右辺} = \int_{-\infty}^{\infty} \big[ a \psi(x) \big]^* \psi(x) dx = a^* \int_{-\infty}^{\infty} \psi^*(x) \psi(x) dx
+\begin{aligned}
+\text{右辺} &amp;= \int_{-\infty}^{\infty} \big[ a \psi(x) \big]^* \psi(x) dx \\
+&amp;= a^* \int_{-\infty}^{\infty} \psi^*(x) \psi(x) dx
+\end{aligned}
 \]</div>
 <p>これらをもとの等式に戻して整理します。</p>
 <div class="arithmatex">\[
@@ -14532,7 +14538,7 @@ a \int_{-\infty}^{\infty} |\psi(x)|^2 dx = a^* \int_{-\infty}^{\infty} |\psi(x)|
 \]</div>
 <p>固有関数 <span class="arithmatex">\(\psi(x)\)</span> はゼロではない関数であり，その全空間での確率密度の積分値は正の値を持ちます。したがって，上記の等式が成り立つためには，前方の括弧がゼロでなければなりません。</p>
 <div class="arithmatex">\[
-a - a^* = 0 \implies a = a^*
+\finalanswer{a - a^* = 0 \implies a = a^*}
 \]</div>
 <p>複素数が自身の複素共役と等しいという条件から，エルミート演算子の固有値 <span class="arithmatex">\(a\)</span> は必ず実数であることが示されました。</p>
 <h3 id="2">(2)</h3>
@@ -14542,10 +14548,16 @@ a - a^* = 0 \implies a = a^*
 \]</div>
 <p>それぞれの固有値方程式 <span class="arithmatex">\(\hat{A} \psi_1(x) = a_1 \psi_1(x)\)</span> および <span class="arithmatex">\(\hat{A} \psi_2(x) = a_2 \psi_2(x)\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\text{左辺} = \int_{-\infty}^{\infty} \psi_1^*(x) \big[ a_2 \psi_2(x) \big] dx = a_2 \int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx
+\begin{aligned}
+\text{左辺} &amp;= \int_{-\infty}^{\infty} \psi_1^*(x) \big[ a_2 \psi_2(x) \big] dx \\
+&amp;= a_2 \int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\text{右辺} = \int_{-\infty}^{\infty} \big[ a_1 \psi_1(x) \big]^* \psi_2(x) dx = a_1^* \int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx
+\begin{aligned}
+\text{右辺} &amp;= \int_{-\infty}^{\infty} \big[ a_1 \psi_1(x) \big]^* \psi_2(x) dx \\
+&amp;= a_1^* \int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx
+\end{aligned}
 \]</div>
 <p>(1) の結果より，物理量の固有値はすべて実数であるため， <span class="arithmatex">\(a_1^* = a_1\)</span> です。これらを用いて等式を組み立てます。</p>
 <div class="arithmatex">\[
@@ -14558,7 +14570,7 @@ a_2 \int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx = a_1 \int_{-\infty}^{\inft
 <p>問題の前提条件より，2つの固有値は互いに異なる <span class="arithmatex">\(a_1 \neq a_2\)</span> ため，前方の大括弧の値はゼロになりません <span class="arithmatex">\(a_2 - a_1 \neq 0\)</span>。</p>
 <p>したがって，等式を満たすためには積分値そのものがゼロでなければなりません。</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx = 0
+\finalanswer{\int_{-\infty}^{\infty} \psi_1^*(x) \psi_2(x) dx = 0}
 \]</div>
 <p>これにより，エルミート演算子の異なる固有値に属する固有関数は，互いに直交することが示されました。</p>
 

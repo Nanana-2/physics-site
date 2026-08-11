@@ -14534,7 +14534,10 @@
 <h3 id="1">(1)</h3>
 <p>時間変化しない固定された単位ベクトル <span class="arithmatex">\(\boldsymbol{i}, \boldsymbol{j}\)</span> に対し，極座標の単位ベクトルは角度 <span class="arithmatex">\(\theta\)</span> のみを介して時間に依存します。合成関数の微分公式を適用して時間微分を計算します。</p>
 <div class="arithmatex">\[
-\frac{d\boldsymbol{e}_r}{dt} = \frac{d\boldsymbol{e}_r}{d\theta} \frac{d\theta}{dt} = (-\boldsymbol{i} \sin\theta + \boldsymbol{j} \cos\theta) \dot{\theta}
+\begin{aligned}
+\frac{d\boldsymbol{e}_r}{dt} &amp;= \frac{d\boldsymbol{e}_r}{d\theta} \frac{d\theta}{dt} \\
+&amp;= (-\boldsymbol{i} \sin\theta + \boldsymbol{j} \cos\theta) \dot{\theta}
+\end{aligned}
 \]</div>
 <p>括弧の内部は方位角方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_\theta\)</span> そのものであるため，次のようになります。</p>
 <div class="arithmatex">\[
@@ -14542,7 +14545,11 @@
 \]</div>
 <p>同様に，もう一方の単位ベクトルについても計算します。</p>
 <div class="arithmatex">\[
-\frac{d\boldsymbol{e}_\theta}{dt} = \frac{d\boldsymbol{e}_\theta}{d\theta} \frac{d\theta}{dt} = (-\boldsymbol{i} \cos\theta - \boldsymbol{j} \sin\theta) \dot{\theta} = -(\boldsymbol{i} \cos\theta + \boldsymbol{j} \sin\theta) \dot{\theta}
+\begin{aligned}
+\frac{d\boldsymbol{e}_\theta}{dt} &amp;= \frac{d\boldsymbol{e}_\theta}{d\theta} \frac{d\theta}{dt} \\
+&amp;= (-\boldsymbol{i} \cos\theta - \boldsymbol{j} \sin\theta) \dot{\theta} \\
+&amp;= -(\boldsymbol{i} \cos\theta + \boldsymbol{j} \sin\theta) \dot{\theta}
+\end{aligned}
 \]</div>
 <p>括弧の内部は動径方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_r\)</span> であるため，次のようになります。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14558,10 @@
 <h3 id="2">(2)</h3>
 <p>位置ベクトル <span class="arithmatex">\(\boldsymbol{r} = r \boldsymbol{e}_r\)</span> の両辺を時間 <span class="arithmatex">\(t\)</span> で微分します。積の微分公式を適用すると次のようになります。</p>
 <div class="arithmatex">\[
-\boldsymbol{v} = \frac{d\boldsymbol{r}}{dt} = \frac{dr}{dt} \boldsymbol{e}_r + r \frac{d\boldsymbol{e}_r}{dt}
+\begin{aligned}
+\boldsymbol{v} &amp;= \frac{d\boldsymbol{r}}{dt} \\
+&amp;= \frac{dr}{dt} \boldsymbol{e}_r + r \frac{d\boldsymbol{e}_r}{dt}
+\end{aligned}
 \]</div>
 <p>ここに (1) の結果である <span class="arithmatex">\(\frac{d\boldsymbol{e}_r}{dt} = \dot{\theta} \boldsymbol{e}_\theta\)</span> を代入し，時間微分をドット記号で表現します。</p>
 <div class="arithmatex">\[
@@ -14567,7 +14577,10 @@ v_\theta = r \dot{\theta}
 <h3 id="3">(3)</h3>
 <p>(2) で得られた速度ベクトル <span class="arithmatex">\(\boldsymbol{v} = \dot{r} \boldsymbol{e}_r + r \dot{\theta} \boldsymbol{e}_\theta\)</span> を時間 <span class="arithmatex">\(t\)</span> でさらに微分します。和の各項に対して積の微分公式を適用します。</p>
 <div class="arithmatex">\[
-\boldsymbol{a} = \frac{d\boldsymbol{v}}{dt} = \left( \ddot{r} \boldsymbol{e}_r + \dot{r} \frac{d\boldsymbol{e}_r}{dt} \right) + \left( \dot{r} \dot{\theta} \boldsymbol{e}_\theta + r \ddot{\theta} \boldsymbol{e}_\theta + r \dot{\theta} \frac{d\boldsymbol{e}_\theta}{dt} \right)
+\begin{aligned}
+\boldsymbol{a} &amp;= \frac{d\boldsymbol{v}}{dt} \\
+&amp;= \left( \ddot{r} \boldsymbol{e}_r + \dot{r} \frac{d\boldsymbol{e}_r}{dt} \right) + \left( \dot{r} \dot{\theta} \boldsymbol{e}_\theta + r \ddot{\theta} \boldsymbol{e}_\theta + r \dot{\theta} \frac{d\boldsymbol{e}_\theta}{dt} \right)
+\end{aligned}
 \]</div>
 <p>この式に (1) で求めた単位ベクトルの微分式をそれぞれ代入します。</p>
 <div class="arithmatex">\[

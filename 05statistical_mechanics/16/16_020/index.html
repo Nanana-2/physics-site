@@ -14545,17 +14545,26 @@
 \]</div>
 <p>各部分系の基底は正規直交条件 <span class="arithmatex">\(\langle j_{\mathrm{A}}|i_{\mathrm{A}}\rangle = \delta_{ji}\)</span> および <span class="arithmatex">\(\langle j_{\mathrm{B}}|i_{\mathrm{B}}\rangle = \delta_{ji}\)</span> を満たすため， <span class="arithmatex">\(i=j\)</span> の項だけが残ります。</p>
 <div class="arithmatex">\[
-\langle\Psi|\Psi\rangle = \sum_{i=1}^{d} \lambda_i^2 = 1
+\begin{aligned}
+\langle\Psi|\Psi\rangle &amp;= \sum_{i=1}^{d} \lambda_i^2 \\
+&amp;= \finalanswer{1}
+\end{aligned}
 \]</div>
 <p>したがって，シュミット係数の2乗の総和は 1 になります。</p>
 <h3 id="2">(2)</h3>
 <p>全密度行列 <span class="arithmatex">\(\rho = |\Psi\rangle\langle\Psi|\)</span> を展開します。</p>
 <div class="arithmatex">\[
-\rho = \left( \sum_{i=1}^{d} \lambda_i |i_{\mathrm{A}}\rangle \otimes |i_{\mathrm{B}}\rangle \right) \left( \sum_{j=1}^{d} \lambda_j \langle j_{\mathrm{A}}| \otimes \langle j_{\mathrm{B}}| \right) = \sum_{i,j} \lambda_i \lambda_j |i_{\mathrm{A}}\rangle\langle j_{\mathrm{A}}| \otimes |i_{\mathrm{B}}\rangle\langle j_{\mathrm{B}}|
+\begin{aligned}
+\rho &amp;= \left( \sum_{i=1}^{d} \lambda_i |i_{\mathrm{A}}\rangle \otimes |i_{\mathrm{B}}\rangle \right) \left( \sum_{j=1}^{d} \lambda_j \langle j_{\mathrm{A}}| \otimes \langle j_{\mathrm{B}}| \right) \\
+&amp;= \sum_{i,j} \lambda_i \lambda_j |i_{\mathrm{A}}\rangle\langle j_{\mathrm{A}}| \otimes |i_{\mathrm{B}}\rangle\langle j_{\mathrm{B}}|
+\end{aligned}
 \]</div>
 <p>系Bについての部分トレースをとります。系Bの基底 <span class="arithmatex">\(\{|k_{\mathrm{B}}\rangle\}\)</span> で挟んで和をとります。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{A}} = \sum_{k=1}^{d_{\mathrm{B}}} \langle k_{\mathrm{B}}|\rho|k_{\mathrm{B}}\rangle = \sum_{i,j} \lambda_i \lambda_j |i_{\mathrm{A}}\rangle\langle j_{\mathrm{A}}| \sum_{k=1}^{d_{\mathrm{B}}} \langle k_{\mathrm{B}}|i_{\mathrm{B}}\rangle\langle j_{\mathrm{B}}|k_{\mathrm{B}}\rangle
+\begin{aligned}
+\rho_{\mathrm{A}} &amp;= \sum_{k=1}^{d_{\mathrm{B}}} \langle k_{\mathrm{B}}|\rho|k_{\mathrm{B}}\rangle \\
+&amp;= \sum_{i,j} \lambda_i \lambda_j |i_{\mathrm{A}}\rangle\langle j_{\mathrm{A}}| \sum_{k=1}^{d_{\mathrm{B}}} \langle k_{\mathrm{B}}|i_{\mathrm{B}}\rangle\langle j_{\mathrm{B}}|k_{\mathrm{B}}\rangle
+\end{aligned}
 \]</div>
 <p>直交条件 <span class="arithmatex">\(\langle k_{\mathrm{B}}|i_{\mathrm{B}}\rangle = \delta_{ki}\)</span> および <span class="arithmatex">\(\langle j_{\mathrm{B}}|k_{\mathrm{B}}\rangle = \delta_{jk}\)</span> より， <span class="arithmatex">\(i=j=k\)</span> となる項だけが残ります。</p>
 <div class="arithmatex">\[
@@ -14563,16 +14572,19 @@
 \]</div>
 <p>これが系Aの縮約密度行列です。この行列の2乗を計算します。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{A}}^2 = \left( \sum_{i=1}^{d} \lambda_i^2 |i_{\mathrm{A}}\rangle\langle i_{\mathrm{A}}| \right) \left( \sum_{j=1}^{d} \lambda_j^2 |j_{\mathrm{A}}\rangle\langle j_{\mathrm{A}}| \right) = \sum_{i=1}^{d} \lambda_i^4 |i_{\mathrm{A}}\rangle\langle i_{\mathrm{A}}|
+\begin{aligned}
+\rho_{\mathrm{A}}^2 &amp;= \left( \sum_{i=1}^{d} \lambda_i^2 |i_{\mathrm{A}}\rangle\langle i_{\mathrm{A}}| \right) \left( \sum_{j=1}^{d} \lambda_j^2 |j_{\mathrm{A}}\rangle\langle j_{\mathrm{A}}| \right) \\
+&amp;= \sum_{i=1}^{d} \lambda_i^4 |i_{\mathrm{A}}\rangle\langle i_{\mathrm{A}}|
+\end{aligned}
 \]</div>
 <p>このトレースをとることで，純粋度を表す式が得られます。</p>
 <div class="arithmatex">\[
-\mathrm{Tr}(\rho_{\mathrm{A}}^2) = \sum_{i=1}^{d} \lambda_i^4
+\finalanswer{\mathrm{Tr}(\rho_{\mathrm{A}}^2) = \sum_{i=1}^{d} \lambda_i^4}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた2つの状態を順に調べます。</p>
 <ul>
-<li><strong>状態1:</strong></li>
+<li><strong>【状態1】</strong></li>
 </ul>
 <p>$$
   |\Psi_1\rangle = \frac{1}{2}|0_{\mathrm{A}} 0_{\mathrm{B}}\rangle + \frac{\sqrt{3}}{2}|0_{\mathrm{A}} 1_{\mathrm{B}}\rangle
@@ -14591,7 +14603,7 @@
   $$</p>
 <p>このとき，系Aの純粋度は <span class="arithmatex">\(\mathrm{Tr}(\rho_{\mathrm{A}}^2) = 1^4 = 1\)</span> となり，部分系が純粋状態を保っているため，量子もつれはありません。</p>
 <ul>
-<li><strong>状態2:</strong></li>
+<li><strong>【状態2】</strong></li>
 </ul>
 <p>$$
   |\Psi_2\rangle = \frac{1}{\sqrt{2}}|0_{\mathrm{A}} 1_{\mathrm{B}}\rangle + \frac{1}{\sqrt{2}}|1_{\mathrm{A}} 0_{\mathrm{B}}\rangle
@@ -14602,7 +14614,11 @@
 \]</div>
 <p>このときの系Aの純粋度を計算します。</p>
 <div class="arithmatex">\[
-  \mathrm{Tr}(\rho_{\mathrm{A}}^2) = \left(\frac{1}{\sqrt{2}}\right)^4 + \left(\frac{1}{\sqrt{2}}\right)^4 = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}
+\begin{aligned}
+\mathrm{Tr}(\rho_{\mathrm{A}}^2) &amp;= \left(\frac{1}{\sqrt{2}}\right)^4 + \left(\frac{1}{\sqrt{2}}\right)^4 \\
+&amp;= \frac{1}{4} + \frac{1}{4} \\
+&amp;= \finalanswer{\frac{1}{2}}
+\end{aligned}
 \]</div>
 <p>純粋度の値が 1 よりも減少して混合状態になっていることから，全系において2つの部分系の間に独立に分離できない関係が成立しています。したがって，状態2に量子もつれが存在します。</p>
 

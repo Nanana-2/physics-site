@@ -14535,7 +14535,10 @@
 \]</div>
 <p>ここで，位置の時間微分は速度ベクトルの各成分 <span class="arithmatex">\(v_x, v_y, v_z\)</span> に相当します。また，各座標による偏微分はグラディエントの成分に相当します。これらをベクトルの内積としてまとめます。</p>
 <div class="arithmatex">\[
-\frac{dU}{dt} = \begin{pmatrix} \frac{\partial U}{\partial x} \\ \frac{\partial U}{\partial y} \\ \frac{\partial U}{\partial z} \end{pmatrix} \cdot \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix} = \nabla U \cdot \boldsymbol{v}
+\begin{aligned}
+\frac{dU}{dt} &amp;= \begin{pmatrix} \frac{\partial U}{\partial x} \\ \frac{\partial U}{\partial y} \\ \frac{\partial U}{\partial z} \end{pmatrix} \cdot \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix} \\
+&amp;= \finalanswer{\nabla U \cdot \boldsymbol{v}}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>力学的エネルギーの総和 <span class="arithmatex">\(E = K + U\)</span> の両辺を時間 <span class="arithmatex">\(t\)</span> で微分します。</p>
@@ -14544,21 +14547,30 @@
 \]</div>
 <p>この式に，問題文で提示された運動エネルギー定理の等式 <span class="arithmatex">\(\frac{dK}{dt} = \boldsymbol{F} \cdot \boldsymbol{v}\)</span> と，(1) で得られたポテンシャルエネルギーの時間微分 <span class="arithmatex">\(\frac{dU}{dt} = \nabla U \cdot \boldsymbol{v}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\frac{dE}{dt} = (\boldsymbol{F} \cdot \boldsymbol{v}) + (\nabla U \cdot \boldsymbol{v}) = (\boldsymbol{F} + \nabla U) \cdot \boldsymbol{v}
+\begin{aligned}
+\frac{dE}{dt} &amp;= (\boldsymbol{F} \cdot \boldsymbol{v}) + (\nabla U \cdot \boldsymbol{v}) \\
+&amp;= (\boldsymbol{F} + \nabla U) \cdot \boldsymbol{v}
+\end{aligned}
 \]</div>
 <p>ここで，保存力の定義式 <span class="arithmatex">\(\boldsymbol{F} = -\nabla U\)</span> を移項すると <span class="arithmatex">\(\boldsymbol{F} + \nabla U = 0\)</span> となります。これを上の等式に代入します。</p>
 <div class="arithmatex">\[
-\frac{dE}{dt} = 0 \cdot \boldsymbol{v} = 0
+\frac{dE}{dt} = 0 \cdot \boldsymbol{v} = \finalanswer{0}
 \]</div>
 <p>時間微分が 0 であることは，運動の前後において力学的エネルギーの総和 <span class="arithmatex">\(E\)</span> が変化せず，一定の値に保たれることを意味します。これが力学的エネルギー保存則です。</p>
 <h3 id="3">(3)</h3>
 <p>初期状態における力学的エネルギーの総和 <span class="arithmatex">\(E_0\)</span> を計算します。時刻 <span class="arithmatex">\(t=0\)</span> では位置が <span class="arithmatex">\(x = x_0\)</span> であり，静止状態から放したため速度は <span class="arithmatex">\(v = 0\)</span> です。</p>
 <div class="arithmatex">\[
-E_0 = \frac{1}{2} m \cdot 0^2 + \frac{1}{2} k x_0^2 = \frac{1}{2} k x_0^2
+\begin{aligned}
+E_0 &amp;= \frac{1}{2} m \cdot 0^2 + \frac{1}{2} k x_0^2 \\
+&amp;= \frac{1}{2} k x_0^2
+\end{aligned}
 \]</div>
 <p>次に，ばねが自然長の位置 <span class="arithmatex">\(x = 0\)</span> を通過するときにおける力学的エネルギーの総和 <span class="arithmatex">\(E_1\)</span> を計算します。このときの速度の大きさを <span class="arithmatex">\(v_{\text{max}}\)</span> とします。</p>
 <div class="arithmatex">\[
-E_1 = \frac{1}{2} m v_{\text{max}}^2 + \frac{1}{2} k \cdot 0^2 = \frac{1}{2} m v_{\text{max}}^2
+\begin{aligned}
+E_1 &amp;= \frac{1}{2} m v_{\text{max}}^2 + \frac{1}{2} k \cdot 0^2 \\
+&amp;= \frac{1}{2} m v_{\text{max}}^2
+\end{aligned}
 \]</div>
 <p>(2) で導出した力学的エネルギー保存則より，運動の途中であってもエネルギーの総和は等しく保たれるため， <span class="arithmatex">\(E_0 = E_1\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
@@ -14570,7 +14582,7 @@ v_{\text{max}}^2 = \frac{k}{m} x_0^2
 \]</div>
 <p>速度の大きさは正の実数であるため，平方根をとることで次のようになります。</p>
 <div class="arithmatex">\[
-v_{\text{max}} = x_0 \sqrt{\frac{k}{m}}
+\finalanswer{v_{\text{max}} = x_0 \sqrt{\frac{k}{m}}}
 \]</div>
 <p>これにより，ポテンシャルエネルギーがすべて運動エネルギーへと変換された瞬間の速度の大きさが求まります。</p>
 

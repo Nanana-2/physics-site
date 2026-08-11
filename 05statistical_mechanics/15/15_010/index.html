@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">密度行列のエントロピー</h1>
 <h2 id="_2">問題</h2>
-<p>密度行列を <span class="arithmatex">\(\rho\)</span> とするとき，フォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> は以下の数式で定義される。</p>
+<p>密度行列を <span class="arithmatex">\(\rho\)</span> とするとき，フォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> は以下で定義される。</p>
 <div class="arithmatex">\[
 S = -k_B \mathrm{Tr}(\rho \ln \rho)
 \]</div>
@@ -14547,13 +14547,19 @@ S = -k_B \sum_n \langle n| p_n \ln p_n |n\rangle
 \]</div>
 <p><span class="arithmatex">\(p_n \ln p_n\)</span> はスカラー量であるため積分の外へ括り出すことができます。基底の規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> を適用します。</p>
 <div class="arithmatex">\[
-S = -k_B \sum_n p_n \ln p_n \langle n|n\rangle = -k_B \sum_n p_n \ln p_n
+\begin{aligned}
+S &amp;= -k_B \sum_n p_n \ln p_n \langle n|n\rangle \\
+&amp;= \finalanswer{-k_B \sum_n p_n \ln p_n}
+\end{aligned}
 \]</div>
 <p>これにより，行列のトレースで定義された式が，対角化を行うことで各状態の出現確率 <span class="arithmatex">\(p_n\)</span> に関する和の形式に書き換わることが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>純粋状態の密度行列 <span class="arithmatex">\(\rho = |\psi\rangle\langle\psi|\)</span> に対して固有値方程式を考えます。状態ベクトル <span class="arithmatex">\(|\psi\rangle\)</span> 自身を作用させてみます。</p>
 <div class="arithmatex">\[
-\rho |\psi\rangle = \big( |\psi\rangle\langle\psi| \big) |\psi\rangle = |\psi\rangle \langle\psi|\psi\rangle
+\begin{aligned}
+\rho |\psi\rangle &amp;= \big( |\psi\rangle\langle\psi| \big) |\psi\rangle \\
+&amp;= |\psi\rangle \langle\psi|\psi\rangle
+\end{aligned}
 \]</div>
 <p>規格化条件 <span class="arithmatex">\(\langle\psi|\psi\rangle = 1\)</span> より，以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14570,7 +14576,7 @@ S = -k_B \Big( 1 \cdot \ln 1 + 0 \cdot \ln 0 + 0 \cdot \ln 0 + \dots \Big)
 \]</div>
 <p><span class="arithmatex">\(\ln 1 = 0\)</span> であり，また <span class="arithmatex">\(0\)</span> に対応する項は極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \ln x = 0\)</span> によりすべて <span class="arithmatex">\(0\)</span> となります。</p>
 <div class="arithmatex">\[
-S = -k_B \Big( 0 + 0 + \dots \Big) = 0
+S = -k_B \Big( 0 + 0 + \dots \Big) = \finalanswer{0}
 \]</div>
 <p>量子状態が判明しており，情報の欠落や統計的なゆらぎが存在しない純粋状態では，フォン・ノイマンエントロピーが厳密に 0 になることが示されました。</p>
 <h3 id="3">(3)</h3>
@@ -14580,7 +14586,12 @@ p_1 = \frac{1}{2}, \quad p_2 = \frac{1}{2}
 \]</div>
 <p>(1) の式に代入して計算します。</p>
 <div class="arithmatex">\[
-S = -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = -k_B \cdot \ln \frac{1}{2} = -k_B \big( -\ln 2 \big) = k_B \ln 2
+\begin{aligned}
+S &amp;= -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
+&amp;= -k_B \cdot \ln \frac{1}{2} \\
+&amp;= -k_B \big( -\ln 2 \big) \\
+&amp;= k_B \ln 2
+\end{aligned}
 \]</div>
 <p>次に，これを一般の <span class="arithmatex">\(d\)</span> 次元量子系の最大混合状態へと拡張します。このときの密度行列は各対角成分に <span class="arithmatex">\(\frac{1}{d}\)</span> が <span class="arithmatex">\(d\)</span> 個並ぶため，固有値分布はすべて等確率となります。</p>
 <div class="arithmatex">\[
@@ -14588,7 +14599,12 @@ p_n = \frac{1}{d} \quad (\text{ただし } n = 1, 2, \dots, d)
 \]</div>
 <p>展開式に代入し，同じ値を持つ <span class="arithmatex">\(d\)</span> 個の項を足し合わせます。</p>
 <div class="arithmatex">\[
-S = -k_B \sum_{n=1}^{d} \frac{1}{d} \ln \frac{1}{d} = -k_B \cdot d \left( \frac{1}{d} \ln \frac{1}{d} \right) = -k_B \ln \frac{1}{d} = k_B \ln d
+\begin{aligned}
+S &amp;= -k_B \sum_{n=1}^{d} \frac{1}{d} \ln \frac{1}{d} \\
+&amp;= -k_B \cdot d \left( \frac{1}{d} \ln \frac{1}{d} \right) \\
+&amp;= -k_B \ln \frac{1}{d} \\
+&amp;= \finalanswer{k_B \ln d}
+\end{aligned}
 \]</div>
 <p>一般の最大混合状態におけるフォン・ノイマンエントロピーは <span class="arithmatex">\(S = k_B \ln d\)</span> となります。この数式から，取り得る量子状態の次元数 <span class="arithmatex">\(d\)</span> が大きくなればなるほど，系の状態に関する不確定性が対数関数的に増大し，エントロピーの値が大きくなる関係性が得られます。</p>
 

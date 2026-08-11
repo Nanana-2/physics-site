@@ -14536,11 +14536,14 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 <h3 id="1">(1)</h3>
 <p>与えられたポテンシャルの各成分 <span class="arithmatex">\(A_x = -B_0 y\)</span> ， <span class="arithmatex">\(A_y = 0\)</span> をハミルトニアンの式に代入します。</p>
 <div class="arithmatex">\[
-\hat{H} = \frac{1}{2m} \left[ (\hat{p}_x - q(-B_0 y))^2 + (\hat{p}_y - 0)^2 \right] = \frac{1}{2m} \left[ (\hat{p}_x + qB_0 y)^2 + \hat{p}_y^2 \right]
+\begin{aligned}
+\hat{H} &amp;= \frac{1}{2m} \left[ (\hat{p}_x - q(-B_0 y))^2 + (\hat{p}_y - 0)^2 \right] \\
+&amp;= \frac{1}{2m} \left[ (\hat{p}_x + qB_0 y)^2 + \hat{p}_y^2 \right]
+\end{aligned}
 \]</div>
 <p>括弧を展開して整理します。</p>
 <div class="arithmatex">\[
-\hat{H} = \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (\hat{p}_x + qB_0 y)^2
+\finalanswer{\hat{H} = \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (\hat{p}_x + qB_0 y)^2}
 \]</div>
 <p>これがランドウゲージを用いたときの一様磁場中のハミルトニアンです。</p>
 <h3 id="2">(2)</h3>
@@ -14551,7 +14554,10 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 \]</div>
 <p>ハミルトニアンの中には <span class="arithmatex">\(x\)</span> という変数が明示的に含まれていないため， <span class="arithmatex">\(x\)</span> での偏微分を行う演算子 <span class="arithmatex">\(\hat{p}_x\)</span> は，ハミルトニアンのすべての項と入れ替えることができます。</p>
 <div class="arithmatex">\[
-[\hat{H}, \, \hat{p}_x] = \hat{H}\hat{p}_x - \hat{p}_x\hat{H} = 0
+\begin{aligned}
+[\hat{H}, \, \hat{p}_x] &amp;= \hat{H}\hat{p}_x - \hat{p}_x\hat{H} \\
+&amp;= \finalanswer{0}
+\end{aligned}
 \]</div>
 <p>交換子が 0 になるため， <span class="arithmatex">\(\hat{p}_x\)</span> はハミルトニアンと可換であることが示されました。これは， <span class="arithmatex">\(x\)</span> 方向の運動量が保存量であることを意味します。</p>
 <h3 id="3">(3)</h3>
@@ -14572,11 +14578,14 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (qB_0)^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y) = \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2} m \left(\frac{qB_0}{m}\right)^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y)
 $$
 $$
-= \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2} m \omega_c^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y) = E \chi(y)
+\begin{aligned}
+ &amp;= \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2} m \omega_c^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y) \\
+&amp;= E \chi(y)
+\end{aligned}
 \]</div>
 <p>この式は，ばね定数 <span class="arithmatex">\(m\omega_c^2\)</span> を持つ1次元調和振動子の形と一致しています。振動の中心位置となる座標を <span class="arithmatex">\(y_0\)</span> と置くと，数式の形から中心位置は以下のように求まります。</p>
 <div class="arithmatex">\[
-y_0 = -\frac{p_x}{qB_0}
+\finalanswer{y_0 = -\frac{p_x}{qB_0}}
 \]</div>
 <p>荷電粒子の運動は，<span class="arithmatex">\(x\)</span> 方向の運動量で決まる位置 <span class="arithmatex">\(y_0\)</span> を中心とした，角振動数 <span class="arithmatex">\(\omega_c\)</span> の調和振動子に対応します。</p>
 

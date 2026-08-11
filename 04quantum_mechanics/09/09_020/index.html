@@ -14546,7 +14546,11 @@
 \]</div>
 <p>第1項のナブラ演算子を積の微分公式に則って展開します。 <span class="arithmatex">\(\Lambda = \frac{q}{\hbar}\chi\)</span> より， <span class="arithmatex">\(\boldsymbol{\nabla}\Lambda = \frac{q}{\hbar}\boldsymbol{\nabla}\chi\)</span> です。</p>
 <div class="arithmatex">\[
-\boldsymbol{\nabla}(e^{i\Lambda}\psi) = (\boldsymbol{\nabla}e^{i\Lambda})\psi + e^{i\Lambda}(\boldsymbol{\nabla}\psi) = \left( i\boldsymbol{\nabla}\Lambda e^{i\Lambda} \right)\psi + e^{i\Lambda}(\boldsymbol{\nabla}\psi) = i \frac{q}{\hbar}(\boldsymbol{\nabla}\chi) e^{i\Lambda}\psi + e^{i\Lambda}\boldsymbol{\nabla}\psi
+\begin{aligned}
+\boldsymbol{\nabla}(e^{i\Lambda}\psi) &amp;= (\boldsymbol{\nabla}e^{i\Lambda})\psi + e^{i\Lambda}(\boldsymbol{\nabla}\psi) \\
+&amp;= \left( i\boldsymbol{\nabla}\Lambda e^{i\Lambda} \right)\psi + e^{i\Lambda}(\boldsymbol{\nabla}\psi) \\
+&amp;= i \frac{q}{\hbar}(\boldsymbol{\nabla}\chi) e^{i\Lambda}\psi + e^{i\Lambda}\boldsymbol{\nabla}\psi
+\end{aligned}
 \]</div>
 <p>この結果に <span class="arithmatex">\(-i\hbar\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
@@ -14558,21 +14562,30 @@ q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi - i\hbar e^{i\Lambda}\boldsymbol{\nab
 \]</div>
 <p>第1項と第4項の <span class="arithmatex">\(q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi\)</span> が互いに相殺します。残った項から共通因数である <span class="arithmatex">\(e^{i\Lambda}\)</span> を前方に括り出します。</p>
 <div class="arithmatex">\[
-- i\hbar e^{i\Lambda}\boldsymbol{\nabla}\psi - q\boldsymbol{A}e^{i\Lambda}\psi = e^{i\Lambda} \left( -i\hbar \boldsymbol{\nabla} - q\boldsymbol{A} \right) \psi = e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \psi
+\begin{aligned}
+- i\hbar e^{i\Lambda}\boldsymbol{\nabla}\psi - q\boldsymbol{A}e^{i\Lambda}\psi &amp;= e^{i\Lambda} \left( -i\hbar \boldsymbol{\nabla} - q\boldsymbol{A} \right) \psi \\
+&amp;= \finalanswer{e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \psi}
+\end{aligned}
 \]</div>
 <p>これにより，等式が成立することが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた等式は，新ポテンシャルを含む演算子を <span class="arithmatex">\(\psi'\)</span> に作用させると，位相因子 <span class="arithmatex">\(e^{i\Lambda}\)</span> がそのまま左側に抜け出て，演算子自体は旧ポテンシャルの形に変化することを示しています。この演算子をもう一度左から作用させます。</p>
 <div class="arithmatex">\[
-\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' = \left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \left[ \left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \psi' \right] = \left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \left[ e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \psi \right]
+\begin{aligned}
+\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' &amp;= \left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \left[ \left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \psi' \right] \\
+&amp;= \left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \left[ e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \psi \right]
+\end{aligned}
 \]</div>
 <p>ここで，新しく変形された波動関数の塊を <span class="arithmatex">\(\tilde{\psi} = \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \psi\)</span> とみなすと，式全体の構造は (1) と全く同一になります。したがって，再度同様の規則が適用されます。</p>
 <div class="arithmatex">\[
-\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \left[ e^{i\Lambda} \tilde{\psi} \right] = e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \tilde{\psi} = e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \psi
+\begin{aligned}
+\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right) \left[ e^{i\Lambda} \tilde{\psi} \right] &amp;= e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right) \tilde{\psi} \\
+&amp;= e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \psi
+\end{aligned}
 \]</div>
 <p>両辺を <span class="arithmatex">\(2m\)</span> で割り算することにより，求める関係式が導かれます。</p>
 <div class="arithmatex">\[
-\frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' = e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \right] \psi
+\finalanswer{\frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' = e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \right] \psi}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>新ハミルトニアンによるシュレーディンガー方程式の各辺を個別に計算します。</p>
@@ -14581,7 +14594,11 @@ q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi - i\hbar e^{i\Lambda}\boldsymbol{\nab
 </ul>
 <p><span class="arithmatex">\(\psi' = e^{i\Lambda}\psi\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。積の微分公式および <span class="arithmatex">\(\frac{\partial \Lambda}{\partial t} = \frac{q}{\hbar}\frac{\partial \chi}{\partial t}\)</span> を使用します。</p>
 <div class="arithmatex">\[
-  i\hbar \frac{\partial \psi'}{\partial t} = i\hbar \frac{\partial}{\partial t}(e^{i\Lambda}\psi) = i\hbar \left( i \frac{\partial \Lambda}{\partial t} e^{i\Lambda}\psi + e^{i\Lambda}\frac{\partial \psi}{\partial t} \right) = -i\hbar \left( \frac{q}{\hbar}\frac{\partial \chi}{\partial t} \right) e^{i\Lambda}\psi + i\hbar e^{i\Lambda}\frac{\partial \psi}{\partial t}
+\begin{aligned}
+i\hbar \frac{\partial \psi'}{\partial t} &amp;= i\hbar \frac{\partial}{\partial t}(e^{i\Lambda}\psi) \\
+&amp;= i\hbar \left( i \frac{\partial \Lambda}{\partial t} e^{i\Lambda}\psi + e^{i\Lambda}\frac{\partial \psi}{\partial t} \right) \\
+&amp;= -i\hbar \left( \frac{q}{\hbar}\frac{\partial \chi}{\partial t} \right) e^{i\Lambda}\psi + i\hbar e^{i\Lambda}\frac{\partial \psi}{\partial t}
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\hbar\)</span> を約分して整理します。</p>
 <div class="arithmatex">\[
@@ -14592,19 +14609,28 @@ q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi - i\hbar e^{i\Lambda}\boldsymbol{\nab
 </ul>
 <p><span class="arithmatex">\(\hat{H}'\psi'\)</span> を展開し， (2) の結果と <span class="arithmatex">\(\phi' = \phi - \frac{\partial \chi}{\partial t}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-  \hat{H}'\psi' = \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' + q\phi'\psi' = e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \right] \psi + q\left( \phi - \frac{\partial \chi}{\partial t} \right) e^{i\Lambda}\psi
+\begin{aligned}
+\hat{H}'\psi' &amp;= \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' + q\phi'\psi' \\
+&amp;= e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \right] \psi + q\left( \phi - \frac{\partial \chi}{\partial t} \right) e^{i\Lambda}\psi
+\end{aligned}
 \]</div>
 <p>共通因数である <span class="arithmatex">\(e^{i\Lambda}\)</span> を括り出します。</p>
 <div class="arithmatex">\[
-  \hat{H}'\psi' = e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \psi + q\phi\psi - q\frac{\partial \chi}{\partial t}\psi \right] = e^{i\Lambda} \left( \hat{H}\psi - q\frac{\partial \chi}{\partial t}\psi \right)
+\begin{aligned}
+\hat{H}'\psi' &amp;= e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \psi + q\phi\psi - q\frac{\partial \chi}{\partial t}\psi \right] \\
+&amp;= e^{i\Lambda} \left( \hat{H}\psi - q\frac{\partial \chi}{\partial t}\psi \right)
+\end{aligned}
 \]</div>
 <p>方程式の左辺と右辺を結び付け，両辺に共通して存在する <span class="arithmatex">\(e^{i\Lambda}\)</span> を消去します。</p>
 <div class="arithmatex">\[
-e^{i\Lambda} \left( i\hbar \frac{\partial \psi}{\partial t} - q\frac{\partial \chi}{\partial t} \right) = e^{i\Lambda} \left( \hat{H}\psi - q\frac{\partial \chi}{\partial t}\psi \right) \implies i\hbar \frac{\partial \psi}{\partial t} - q\frac{\partial \chi}{\partial t} = \hat{H}\psi - q\frac{\partial \chi}{\partial t}
+\begin{aligned}
+e^{i\Lambda} \left( i\hbar \frac{\partial \psi}{\partial t} - q\frac{\partial \chi}{\partial t} \right) &amp;= e^{i\Lambda} \left( \hat{H}\psi - q\frac{\partial \chi}{\partial t}\psi \right) \implies i\hbar \frac{\partial \psi}{\partial t} - q\frac{\partial \chi}{\partial t} \\
+&amp;= \hat{H}\psi - q\frac{\partial \chi}{\partial t}
+\end{aligned}
 \]</div>
 <p>両辺の末尾にある <span class="arithmatex">\(-q\frac{\partial \chi}{\partial t}\)</span> が相殺します。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi
+\finalanswer{i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi}
 \]</div>
 <p>これは変換前のシュレーディンガー方程式と同じ形です。したがって，電磁ポテンシャルのゲージ変換と同時に波動関数の位相を変換すれば，方程式と観測量は不変に保たれます。</p>
 

@@ -14542,26 +14542,41 @@ P_i = \frac{\exp(-\beta E_i)}{Z}
 \]</div>
 <p>このとき，全確率の総和を計算すると以下のようになり，正しく <span class="arithmatex">\(1\)</span> に規格化されていることが確かめられます。</p>
 <div class="arithmatex">\[
-\sum_i P_i = \sum_i \frac{\exp(-\beta E_i)}{Z} = \frac{1}{Z} \sum_i \exp(-\beta E_i) = \frac{1}{Z} \times Z = 1
+\begin{aligned}
+\sum_i P_i &amp;= \sum_i \frac{\exp(-\beta E_i)}{Z} \\
+&amp;= \frac{1}{Z} \sum_i \exp(-\beta E_i) \\
+&amp;= \frac{1}{Z} \times Z \\
+&amp;= \finalanswer{1}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は，各状態のエネルギー <span class="arithmatex">\(E_i\)</span> にその出現確率 <span class="arithmatex">\(P_i\)</span> を掛けて，すべての状態について足し合わせたものであるため，定義式は以下のようになります。</p>
 <div class="arithmatex">\[
-\langle E \rangle = \sum_i P_i E_i = \frac{1}{Z} \sum_i E_i \exp(-\beta E_i)
+\begin{aligned}
+\langle E \rangle &amp;= \sum_i P_i E_i \\
+&amp;= \frac{1}{Z} \sum_i E_i \exp(-\beta E_i)
+\end{aligned}
 \]</div>
 <p>ここで，合成関数の微分公式 <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta}\)</span> を用いて，分配関数の対数微分を計算します。問題文で与えられた <span class="arithmatex">\(\frac{\partial Z}{\partial \beta}\)</span> の式を代入します。</p>
 <div class="arithmatex">\[
--\frac{\partial \log Z}{\partial \beta} = - \frac{1}{Z} \frac{\partial Z}{\partial \beta} = - \frac{1}{Z} \left( -\sum_i E_i \exp(-\beta E_i) \right) = \frac{1}{Z} \sum_i E_i \exp(-\beta E_i)
+\begin{aligned}
+-\frac{\partial \log Z}{\partial \beta} &amp;= - \frac{1}{Z} \frac{\partial Z}{\partial \beta} \\
+&amp;= - \frac{1}{Z} \left( -\sum_i E_i \exp(-\beta E_i) \right) \\
+&amp;= \frac{1}{Z} \sum_i E_i \exp(-\beta E_i)
+\end{aligned}
 \]</div>
 <p>この右辺は平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> の定義式に等しいため，以下の関係式を得ます。</p>
 <div class="arithmatex">\[
-\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
+\finalanswer{\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>統計力学的な自由エネルギーの定義 <span class="arithmatex">\(F = -k_B T \log Z\)</span> を変形すると， <span class="arithmatex">\(\log Z = -\frac{F}{k_B T}\)</span> となります。また，逆温度の定義から <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> であるため， <span class="arithmatex">\(\frac{\partial}{\partial \beta} = \frac{\partial}{\partial (1/k_B T)} = k_B \frac{\partial}{\partial (1/T)}\)</span> が成り立ちます。</p>
 <p>これらを (2) で得られた平均エネルギーの式に代入します。</p>
 <div class="arithmatex">\[
-\langle E \rangle = -\frac{\partial \log Z}{\partial \beta} = - \left( k_B \frac{\partial}{\partial (1/T)} \right) \left( -\frac{F}{k_B T} \right)
+\begin{aligned}
+\langle E \rangle &amp;= -\frac{\partial \log Z}{\partial \beta} \\
+&amp;= - \left( k_B \frac{\partial}{\partial (1/T)} \right) \left( -\frac{F}{k_B T} \right)
+\end{aligned}
 \]</div>
 <p>分母と分子の定数 <span class="arithmatex">\(k_B\)</span> が相殺され，マイナス同士でプラスになります。</p>
 <div class="arithmatex">\[
@@ -14569,7 +14584,7 @@ P_i = \frac{\exp(-\beta E_i)}{Z}
 \]</div>
 <p>この右辺は，熱力学におけるギブズ・ヘルムホルツの式によって内部エネルギー <span class="arithmatex">\(U\)</span> を与える偏微分そのものです。</p>
 <div class="arithmatex">\[
-U = \left( \frac{\partial (F/T)}{\partial (1/T)} \right)_{V, N}
+\finalanswer{U = \left( \frac{\partial (F/T)}{\partial (1/T)} \right)_{V, N}}
 \]</div>
 <p>したがって，アンサンブル平均として求めた <span class="arithmatex">\(\langle E \rangle\)</span> は，熱力学的な内部エネルギー <span class="arithmatex">\(U\)</span> と等しくなります。</p>
 

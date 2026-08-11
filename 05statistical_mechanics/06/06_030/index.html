@@ -14532,7 +14532,11 @@
 <h3 id="1">(1)</h3>
 <p>状態 <span class="arithmatex">\(k\)</span> のとり得る微視的状態は，粒子が存在しない状態<span class="arithmatex">\(n_k = 0\)</span>，エネルギー <span class="arithmatex">\(0\)</span>と，粒子が1個存在する状態<span class="arithmatex">\(n_k = 1\)</span>，エネルギー <span class="arithmatex">\(\epsilon_k\)</span>の2通りのみです。大正準集団における状態 <span class="arithmatex">\(k\)</span> の大分配関数 <span class="arithmatex">\(\Xi_k\)</span> は，これら2つの状態のギブズ因子の和として計算されます。</p>
 <div class="arithmatex">\[
-\Xi_k = \sum_{n_k=0}^{1} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] = \exp(0) + \exp\left[ -\beta(\epsilon_k - \mu) \right] = 1 + \exp\left[ -\beta(\epsilon_k - \mu) \right]
+\begin{aligned}
+\Xi_k &amp;= \sum_{n_k=0}^{1} \exp\left[ -\beta(\epsilon_k - \mu) n_k \right] \\
+&amp;= \exp(0) + \exp\left[ -\beta(\epsilon_k - \mu) \right] \\
+&amp;= \finalanswer{1 + \exp\left[ -\beta(\epsilon_k - \mu) \right]}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>得られた大分配関数 <span class="arithmatex">\(\Xi_k\)</span> の自然対数をとり，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> で偏微分します。合成関数の微分により，指数の肩にある <span class="arithmatex">\(\mu\)</span> の係数 <span class="arithmatex">\(\beta\)</span> が前に降ります。</p>
@@ -14548,7 +14552,7 @@
 \]</div>
 <p>分母と分子を <span class="arithmatex">\(\exp\left[ -\beta(\epsilon_k - \mu) \right]\)</span> で割って整理すると，フェルミ・ディラック分布関数が導出されます。</p>
 <div class="arithmatex">\[
-\langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] + 1}
+\finalanswer{\langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] + 1}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><strong>絶対零度<span class="arithmatex">\(T \to 0\)</span>の極限</strong>
@@ -14569,7 +14573,11 @@
 <p><strong>有限温度<span class="arithmatex">\(T &gt; 0\)</span>のとき</strong>
 <span class="arithmatex">\(\epsilon_k=\mu\)</span> では指数が0となり，<span class="arithmatex">\(\exp(0)=1\)</span> なので，</p>
 <div class="arithmatex">\[
-\langle n_k \rangle = \frac{1}{\exp(0) + 1} = \frac{1}{1 + 1} = \frac{1}{2}
+\begin{aligned}
+\langle n_k \rangle &amp;= \frac{1}{\exp(0) + 1} \\
+&amp;= \frac{1}{1 + 1} \\
+&amp;= \finalanswer{\frac{1}{2}}
+\end{aligned}
 \]</div>
 <p>したがって，<span class="arithmatex">\(T&gt;0\)</span> では <span class="arithmatex">\(\epsilon_k=\mu\)</span> における平均占有数は <span class="arithmatex">\(1/2\)</span> です。</p>
 

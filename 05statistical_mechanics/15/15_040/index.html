@@ -14540,14 +14540,21 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 \]</div>
 <p>フォン・ノイマンエントロピーの定義式に代入します。トレースの巡回対称性 <span class="arithmatex">\(\mathrm{Tr}(\hat{A}\hat{B}\hat{C}) = \mathrm{Tr}(\hat{C}\hat{A}\hat{B})\)</span> および，ユニタリー条件 <span class="arithmatex">\(\hat{U}^\dagger(t)\hat{U}(t) = \hat{I}\)</span> を利用します。</p>
 <div class="arithmatex">\[
-S\big(\rho_{\mathrm{tot}}(t)\big) = -k_B \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger \ln\big(\hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger\big) \right) = -k_B \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \right)
+\begin{aligned}
+S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_B \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger \ln\big(\hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger\big) \right) \\
+&amp;= -k_B \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \right)
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
-S\big(\rho_{\mathrm{tot}}(t)\big) = -k_B \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \hat{U} \right) = -k_B \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \right) = S\big(\rho_{\mathrm{tot}}(0)\big)
+\begin{aligned}
+S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_B \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \hat{U} \right) \\
+&amp;= -k_B \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \right) \\
+&amp;= S\big(\rho_{\mathrm{tot}}(0)\big)
+\end{aligned}
 \]</div>
 <p>初期状態は直交する独立な2つの系の直積状態 <span class="arithmatex">\(\rho(0) \otimes \rho_{\mathrm{eq, B}}\)</span> であるため，対数関数の性質からエントロピーはそれぞれの和に分解されます。</p>
 <div class="arithmatex">\[
-S\big(\rho_{\mathrm{tot}}(t)\big) = S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big)
+\finalanswer{S\big(\rho_{\mathrm{tot}}(t)\big) = S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big)}
 \]</div>
 <p>これが求める時刻 <span class="arithmatex">\(t\)</span> における全系のエントロピーの式です。全系全体としては情報量が保存されていることがわかります。</p>
 <h3 id="2">(2)</h3>
@@ -14557,7 +14564,10 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 \]</div>
 <p>右辺の第1項に，(1) で求めた関係式 </p>
 <div class="arithmatex">\[
-\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \ln \rho_{\mathrm{tot}}(t) \right) = -\frac{1}{k_B} S\big(\rho_{\mathrm{tot}}(t)\big) = -\frac{1}{k_B} \left( S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big) \right)
+\begin{aligned}
+\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \ln \rho_{\mathrm{tot}}(t) \right) &amp;= -\frac{1}{k_B} S\big(\rho_{\mathrm{tot}}(t)\big) \\
+&amp;= -\frac{1}{k_B} \left( S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big) \right)
+\end{aligned}
 \]</div>
 <p>を代入します。</p>
 <p>右辺の第2項の対数部分を展開します。直積状態の対数は和の形式に分離されます。</p>
@@ -14566,10 +14576,17 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 \]</div>
 <p>これを第2項のトレースに代入し，各部分系への部分トレースの操作 <span class="arithmatex">\(\mathrm{Tr} = \mathrm{Tr}_{\mathrm{sys}}\mathrm{Tr}_{\mathrm{B}}\)</span> を実行します。</p>
 <div class="arithmatex">\[
--\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \ln\rho(t) \otimes \hat{I}_{\mathrm{B}} ] \right) = -\mathrm{Tr}_{\mathrm{sys}}\left( \mathrm{Tr}_{\mathrm{B}}[\rho_{\mathrm{tot}}(t)] \ln\rho(t) \right) = -\mathrm{Tr}_{\mathrm{sys}}\left( \rho(t) \ln\rho(t) \right) = \frac{1}{k_B} S\big(\rho(t)\big)
+\begin{aligned}
+-\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \ln\rho(t) \otimes \hat{I}_{\mathrm{B}} ] \right) &amp;= -\mathrm{Tr}_{\mathrm{sys}}\left( \mathrm{Tr}_{\mathrm{B}}[\rho_{\mathrm{tot}}(t)] \ln\rho(t) \right) \\
+&amp;= -\mathrm{Tr}_{\mathrm{sys}}\left( \rho(t) \ln\rho(t) \right) \\
+&amp;= \frac{1}{k_B} S\big(\rho(t)\big)
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
--\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \hat{I}_{\mathrm{sys}} \otimes \ln\rho_{\mathrm{eq, B}} ] \right) = -\mathrm{Tr}_{\mathrm{B}}\left( \mathrm{Tr}_{\mathrm{sys}}[\rho_{\mathrm{tot}}(t)] \ln\rho_{\mathrm{eq, B}} \right) = -\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \ln\rho_{\mathrm{eq, B}} \right)
+\begin{aligned}
+-\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \hat{I}_{\mathrm{sys}} \otimes \ln\rho_{\mathrm{eq, B}} ] \right) &amp;= -\mathrm{Tr}_{\mathrm{B}}\left( \mathrm{Tr}_{\mathrm{sys}}[\rho_{\mathrm{tot}}(t)] \ln\rho_{\mathrm{eq, B}} \right) \\
+&amp;= -\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \ln\rho_{\mathrm{eq, B}} \right)
+\end{aligned}
 \]</div>
 <p>熱浴の平衡状態の対数式 <span class="arithmatex">\(\ln\rho_{\mathrm{eq, B}} = -\beta \hat{H}_{\mathrm{B}} - \ln Z_{\mathrm{B}} \cdot \hat{I}_{\mathrm{B}}\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14581,7 +14598,7 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 \]</div>
 <p>これら得られたすべての項を足し合わせると， <span class="arithmatex">\(S\big(\rho_{\mathrm{eq, B}}\big)\)</span> の項が相殺し，目的の形式が導出されます。</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{1}{k_B} S\big(\rho(t)\big) - \frac{1}{k_B} S\big(\rho(0)\big) + \beta \left( \mathrm{Tr}_{\mathrm{B}}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}_{\mathrm{B}}\big(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}\big) \right)
+D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \finalanswer{\frac{1}{k_B} S\big(\rho(t)\big) - \frac{1}{k_B} S\big(\rho(0)\big)} + \beta \left( \mathrm{Tr}_{\mathrm{B}}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}_{\mathrm{B}}\big(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}\big) \right)
 \]</div>
 <p>式全体から共通因数の <span class="arithmatex">\(1/k_B\)</span> を除いて整理したものが，提示された数式に等しくなります。</p>
 <h3 id="3">(3)</h3>
@@ -14599,7 +14616,7 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 \]</div>
 <p>両辺に正の定数である <span class="arithmatex">\(k_B\)</span> を掛け算して移項します。</p>
 <div class="arithmatex">\[
-\Delta S \ge \frac{Q}{T}
+\finalanswer{\Delta S \ge \frac{Q}{T}}
 \]</div>
 <p>この数式は，マクロ熱力学において熱平衡から外れた変化が起きる際のエントロピー変化を規定するクラウジウスの不等式そのものです。</p>
 <p>全系のユニタリー性を保ったまま，部分系を切り離したことによる情報の相関を計算することで，熱力学第二法則の不等式が導かれることが示されました。</p>

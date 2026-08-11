@@ -14547,21 +14547,30 @@ S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx
 \]</div>
 <p>これらを方程式に代入することにより，求める運動方程式が導かれます。</p>
 <div class="arithmatex">\[
-m \frac{d^2x}{d\tau^2} - \frac{dV(x)}{dx} = 0 \implies m \frac{d^2x}{d\tau^2} = +\frac{dV(x)}{dx}
+\begin{aligned}
+m \frac{d^2x}{d\tau^2} - \frac{dV(x)}{dx} &amp;= 0 \implies m \frac{d^2x}{d\tau^2} \\
+&amp;= +\frac{dV(x)}{dx}
+\end{aligned}
 \]</div>
 <p>右辺の符号が正になっていることは，虚時間空間において粒子が受ける有効的な力が，通常のポテンシャルの坂を上る方向へと反転していることを意味します。</p>
 <p>この系におけるエネルギー保存則の式を速度について整理します。</p>
 <div class="arithmatex">\[
-\frac{1}{2}m \left(\frac{dx}{d\tau}\right)^2 = E_{\text{E}} + V(x) \implies \left(\frac{dx}{d\tau}\right)^2 = \frac{2}{m}(E_{\text{E}} + V(x))
+\begin{aligned}
+\frac{1}{2}m \left(\frac{dx}{d\tau}\right)^2 &amp;= E_{\text{E}} + V(x) \implies \left(\frac{dx}{d\tau}\right)^2 \\
+&amp;= \frac{2}{m}(E_{\text{E}} + V(x))
+\end{aligned}
 \]</div>
 <p>両辺の平方根をとることで，虚時間における速度の式が得られます。</p>
 <div class="arithmatex">\[
-\frac{dx}{d\tau} = \sqrt{\frac{2}{m}(E_{\text{E}} + V(x))}
+\finalanswer{\frac{dx}{d\tau} = \sqrt{\frac{2}{m}(E_{\text{E}} + V(x))}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>ユークリッド作用の定義式にエネルギー保存則の関係式 <span class="arithmatex">\(\frac{1}{2}m (\frac{dx}{d\tau})^2 = E_{\text{E}} + V(x)\)</span> を代入して，速度の項を消去します。</p>
 <div class="arithmatex">\[
-S_{\text{E}} = \int_{\tau_i}^{\tau_f} \left[ \left( E_{\text{E}} + V(x) \right) + V(x) \right] d\tau = \int_{\tau_i}^{\tau_f} \left[ E_{\text{E}} + 2V(x) \right] d\tau
+\begin{aligned}
+S_{\text{E}} &amp;= \int_{\tau_i}^{\tau_f} \left[ \left( E_{\text{E}} + V(x) \right) + V(x) \right] d\tau \\
+&amp;= \int_{\tau_i}^{\tau_f} \left[ E_{\text{E}} + 2V(x) \right] d\tau
+\end{aligned}
 \]</div>
 <p>ここで，問題文に提示された境界条件のエネルギー設定 <span class="arithmatex">\(E_{\text{E}} = -E\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14569,7 +14578,10 @@ S_{\text{E}} = \int_{\tau_i}^{\tau_f} \left[ 2V(x) - E \right] d\tau
 \]</div>
 <p>積分変数を虚時間 <span class="arithmatex">\(\tau\)</span> から位置 <span class="arithmatex">\(x\)</span> へと変換するため， <span class="arithmatex">\(d\tau = \frac{d\tau}{dx} dx = \left(\frac{dx}{d\tau}\right)^{-1} dx\)</span> の関係を用います。 (1) の速度の式に <span class="arithmatex">\(E_{\text{E}} = -E\)</span> を代入したものを適用します。</p>
 <div class="arithmatex">\[
-d\tau = \frac{1}{\sqrt{\frac{2}{m}(V(x) - E)}} dx = \sqrt{\frac{m}{2(V(x) - E)}} dx
+\begin{aligned}
+d\tau &amp;= \frac{1}{\sqrt{\frac{2}{m}(V(x) - E)}} dx \\
+&amp;= \sqrt{\frac{m}{2(V(x) - E)}} dx
+\end{aligned}
 \]</div>
 <p>これを作用の積分式に代入し，積分範囲を対応する位置 <span class="arithmatex">\(x_a\)</span> から <span class="arithmatex">\(x_b\)</span> までへと変更します。</p>
 <div class="arithmatex">\[
@@ -14581,12 +14593,12 @@ S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{\frac{m [2V(x) - E]^2}{2(V(x) - E)}} dx
 \]</div>
 <p>通常のトンネル効果の解の軌道においては，粒子の反転点での運動を停留作用で結ぶため，ポテンシャルとエネルギーの差の寄与が支配的になります。経路積分の厳密なエネルギー殻への射影手続きを考慮すると，余剰な相殺項が整理され，次のシンプルな形式が導かれます。</p>
 <div class="arithmatex">\[
-S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx
+\finalanswer{S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めたユークリッド作用の積分表現を，問題文で与えられた確率の指数因子の式へとそのまま代入します。</p>
 <div class="arithmatex">\[
-T \propto \exp\left( -\frac{2}{\hbar} S_{\text{E}} \right) = \exp\left( -\frac{2}{\hbar} \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx \right)
+\finalanswer{T \propto \exp\left( -\frac{2}{\hbar} S_{\text{E}} \right) = \exp\left( -\frac{2}{\hbar} \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx \right)}
 \]</div>
 <p>この指数関数の内部にある積分因数は，波動関数が障壁内部で減衰していく度合いを決定する局所的な減衰定数 <span class="arithmatex">\(\kappa(x) = \frac{\sqrt{2m(V(x)-E)}}{\hbar}\)</span> を用いて， <span class="arithmatex">\(\exp\left( -2 \int \kappa(x) dx \right)\)</span> と書き直すことができます。</p>
 <p>この結果は，WKB近似による透過係数の指数因子と一致します。</p>

@@ -14543,12 +14543,15 @@ J(x, t) = \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Ps
 \]</div>
 <p>両辺を <span class="arithmatex">\(-i\hbar\)</span> で割る，または符号を整理することで， <span class="arithmatex">\(\Psi^*\)</span> の時間変化の方程式が得られます。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \Psi^*}{\partial t} = \frac{\hbar^2}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} - V(x)\Psi^*
+\finalanswer{i\hbar \frac{\partial \Psi^*}{\partial t} = \frac{\hbar^2}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} - V(x)\Psi^*}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>積の微分公式を用いて，確率密度 <span class="arithmatex">\(\rho = \Psi^*\Psi\)</span> の時間偏微分を展開します。</p>
 <div class="arithmatex">\[
-\frac{\partial \rho}{\partial t} = \frac{\partial}{\partial t}(\Psi^*\Psi) = \frac{\partial \Psi^*}{\partial t}\Psi + \Psi^*\frac{\partial \Psi}{\partial t}
+\begin{aligned}
+\frac{\partial \rho}{\partial t} &amp;= \frac{\partial}{\partial t}(\Psi^*\Psi) \\
+&amp;= \frac{\partial \Psi^*}{\partial t}\Psi + \Psi^*\frac{\partial \Psi}{\partial t}
+\end{aligned}
 \]</div>
 <p>ここで，元のシュレーディンガー方程式より </p>
 <div class="arithmatex">\[
@@ -14567,7 +14570,7 @@ i\hbar \frac{\partial \Psi^*}{\partial t} = \frac{\hbar^2}{2m} \frac{\partial^2 
 \]</div>
 <p>ポテンシャルを含む項 <span class="arithmatex">\(V\Psi^*\Psi\)</span> が互いに打ち消し合って消去されます。係数を整理すると以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{\partial \rho}{\partial t} = \frac{\hbar}{2mi} \left( \frac{\partial^2 \Psi^*}{\partial x^2}\Psi - \Psi^*\frac{\partial^2 \Psi}{\partial x^2} \right)
+\finalanswer{\frac{\partial \rho}{\partial t} = \frac{\hbar}{2mi} \left( \frac{\partial^2 \Psi^*}{\partial x^2}\Psi - \Psi^*\frac{\partial^2 \Psi}{\partial x^2} \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた式の括弧の内部について，空間微分 <span class="arithmatex">\(\frac{\partial}{\partial x}\)</span> を外側にくくり出す変形を考えます。積の微分公式の引き算を計算してみます。</p>
@@ -14584,11 +14587,14 @@ i\hbar \frac{\partial \Psi^*}{\partial t} = \frac{\hbar^2}{2m} \frac{\partial^2 
 \]</div>
 <p>微分の外側にある係数を括弧の内部に入れると，提示された確率流密度 <span class="arithmatex">\(J(x, t)\)</span> の定義そのものになります。</p>
 <div class="arithmatex">\[
-\frac{\partial \rho}{\partial t} = -\frac{\partial}{\partial x} \left[ \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) \right] = -\frac{\partial J}{\partial x}
+\begin{aligned}
+\frac{\partial \rho}{\partial t} &amp;= -\frac{\partial}{\partial x} \left[ \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) \right] \\
+&amp;= -\frac{\partial J}{\partial x}
+\end{aligned}
 \]</div>
 <p>この項を左辺に移項することで，確率の局所的な保存を表す連続の式が得られます。</p>
 <div class="arithmatex">\[
-\frac{\partial \rho}{\partial t} + \frac{\partial J}{\partial x} = 0
+\finalanswer{\frac{\partial \rho}{\partial t} + \frac{\partial J}{\partial x} = 0}
 \]</div>
 
 

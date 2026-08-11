@@ -14529,18 +14529,24 @@
 \]</div>
 <p>定数の係数 <span class="arithmatex">\(\frac{i}{\hbar}\)</span> を前方に整理します。</p>
 <div class="arithmatex">\[
-\frac{d\hat{A}_H(t)}{dt} = \frac{i}{\hbar} \hat{U}^\dagger \hat{H} \hat{A}_S \hat{U} + \hat{U}^\dagger \left( \frac{\partial \hat{A}_S}{\partial t} \right) \hat{U} - \frac{i}{\hbar} \hat{U}^\dagger \hat{A}_S \hat{H} \hat{U}
+\finalanswer{\frac{d\hat{A}_H(t)}{dt} = \frac{i}{\hbar} \hat{U}^\dagger \hat{H} \hat{A}_S \hat{U} + \hat{U}^\dagger \left( \frac{\partial \hat{A}_S}{\partial t} \right) \hat{U} - \frac{i}{\hbar} \hat{U}^\dagger \hat{A}_S \hat{H} \hat{U}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた式の第1項と第3項の共通因数に注目して変形します。</p>
 <p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> は自身の指数関数である時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = e^{-\frac{i}{\hbar}\hat{H}t}\)</span> と交換するため， <span class="arithmatex">\(\hat{H}\hat{U}^\dagger = \hat{U}^\dagger\hat{H}\)</span> および <span class="arithmatex">\(\hat{H}\hat{U} = \hat{U}\hat{H}\)</span> が成り立ちます。</p>
 <p>これを利用して，第1項の <span class="arithmatex">\(\hat{U}^\dagger \hat{H}\)</span> の部分を <span class="arithmatex">\(\hat{H} \hat{U}^\dagger\)</span> に書き換えます。</p>
 <div class="arithmatex">\[
-\text{第1項} = \frac{i}{\hbar} \hat{H} \hat{U}^\dagger \hat{A}_S \hat{U} = \frac{i}{\hbar} \hat{H} \hat{A}_H(t)
+\begin{aligned}
+\text{第1項} &amp;= \frac{i}{\hbar} \hat{H} \hat{U}^\dagger \hat{A}_S \hat{U} \\
+&amp;= \frac{i}{\hbar} \hat{H} \hat{A}_H(t)
+\end{aligned}
 \]</div>
 <p>同様に，第3項の <span class="arithmatex">\(\hat{H}\hat{U}\)</span> の部分を <span class="arithmatex">\(\hat{U}\hat{H}\)</span> に書き換えます。</p>
 <div class="arithmatex">\[
-\text{第3項} = -\frac{i}{\hbar} \hat{U}^\dagger \hat{A}_S \hat{U} \hat{H} = -\frac{i}{\hbar} \hat{A}_H(t) \hat{H}
+\begin{aligned}
+\text{第3項} &amp;= -\frac{i}{\hbar} \hat{U}^\dagger \hat{A}_S \hat{U} \hat{H} \\
+&amp;= -\frac{i}{\hbar} \hat{A}_H(t) \hat{H}
+\end{aligned}
 \]</div>
 <p>これらを (1) の式に戻して，共通の係数 <span class="arithmatex">\(\frac{i}{\hbar}\)</span> でくくります。また，中央の項を問題の指定通り <span class="arithmatex">\(\frac{\partial \hat{A}_H}{\partial t}\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
@@ -14548,7 +14554,7 @@
 \]</div>
 <p>括弧の内部は，ハミルトニアンとハイゼンベルク演算子の交換子 <span class="arithmatex">\([\hat{H}, \hat{A}_H(t)]\)</span> そのものです。したがって，以下の方程式が導かれます。</p>
 <div class="arithmatex">\[
-\frac{d\hat{A}_H(t)}{dt} = \frac{i}{\hbar} [\hat{H}, \hat{A}_H(t)] + \frac{\partial \hat{A}_H(t)}{\partial t}
+\finalanswer{\frac{d\hat{A}_H(t)}{dt} = \frac{i}{\hbar} [\hat{H}, \hat{A}_H(t)] + \frac{\partial \hat{A}_H(t)}{\partial t}}
 \]</div>
 <p>物理量が明示的に時間に依存しない場合 <span class="arithmatex">\(\frac{\partial \hat{A}_S}{\partial t} = 0\)</span>，右辺第2項は消え，ハミルトニアンとの交換関係だけで時間発展が決定されます。</p>
 

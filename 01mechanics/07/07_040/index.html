@@ -14559,17 +14559,23 @@
 <p>と表されます。</p>
 <p>したがって，惑星の運動エネルギー <span class="arithmatex">\(T\)</span> は
 $$
-T = \frac{1}{2} m \boldsymbol{v}^2 = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 )
+\begin{aligned}
+T &amp;= \frac{1}{2} m \boldsymbol{v}^2 \
+&amp;= \finalanswer{\frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 )}
+\end{aligned}
 $$
 となります。</p>
 <p>また，恒星から受ける万有引力によるポテンシャルエネルギー <span class="arithmatex">\(U\)</span> は，無限遠を基準とすると
 $$
-U(r) = -\frac{GMm}{r}
+\finalanswer{U(r) = -\frac{GMm}{r}}
 $$</p>
 <p>です。</p>
 <p>これらより，系のラグランジアン <span class="arithmatex">\(\mathcal{L}\)</span> は</p>
 <div class="arithmatex">\[
-\mathcal{L} = T - U = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) + \frac{GMm}{r}
+\begin{aligned}
+\mathcal{L} &amp;= T - U \\
+&amp;= \finalanswer{\frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) + \frac{GMm}{r}}
+\end{aligned}
 \]</div>
 <p>と書き表されます。
 このラグランジアンには座標 <span class="arithmatex">\(\theta\)</span> が明示的に含まれていないため， <span class="arithmatex">\(\theta\)</span> は循環座標です。
@@ -14584,13 +14590,16 @@ $$</p>
 <p>が得られます。</p>
 <p>括弧の中身は惑星の角運動量の大きさ <span class="arithmatex">\(L\)</span> に等しいため</p>
 <div class="arithmatex">\[
-L = m r^2 \dot{\theta} = \text{const.}
+\finalanswer{L = m r^2 \dot{\theta} = \text{const.}}
 \]</div>
 <p>となり，運動を通じて角運動量が保存されることが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>系の全エネルギー <span class="arithmatex">\(E\)</span> は，運動エネルギーとポテンシャルエネルギーの和として</p>
 <div class="arithmatex">\[
-E = T + U = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) - \frac{GMm}{r}
+\begin{aligned}
+E &amp;= T + U \\
+&amp;= \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) - \frac{GMm}{r}
+\end{aligned}
 \]</div>
 <p>と与えられます。</p>
 <p>(1) で得られた角運動量保存則より， <span class="arithmatex">\(\dot{\theta} = \frac{L}{m r^2}\)</span> であるため，これをエネルギーの式に代入します。</p>
@@ -14608,7 +14617,7 @@ U_{eff}(r) = \frac{L^2}{2 m r^2} - \frac{GMm}{r}
 \]</div>
 <p>このとき，全エネルギーの式は</p>
 <div class="arithmatex">\[
-E = \frac{1}{2} m \dot{r}^2 + U_{eff}(r)
+\finalanswer{E = \frac{1}{2} m \dot{r}^2 + U_{eff}(r)}
 \]</div>
 <p>と簡潔に表されます。</p>
 <p>有効ポテンシャルの第1項は遠心力に対応する障壁であり，中心力源への衝突を防ぐ効果を持ちます。
@@ -14620,7 +14629,7 @@ E = \frac{1}{2} m \dot{r}^2 + U_{eff}(r)
 \]</div>
 <p>この方程式を <span class="arithmatex">\(r\)</span> について解くことで，極小値を与える半径 <span class="arithmatex">\(r_0\)</span> が求まります。</p>
 <div class="arithmatex">\[
-r_0 = \frac{L^2}{G M m^2}
+\finalanswer{r_0 = \frac{L^2}{G M m^2}}
 \]</div>
 <p>惑星の初期状態が <span class="arithmatex">\(r = r_0\)</span> かつ <span class="arithmatex">\(\dot{r} = 0\)</span> であるとき，惑星は常に <span class="arithmatex">\(\dot{r} = 0\)</span> を保ち，半径 <span class="arithmatex">\(r_0\)</span> の円軌道を運動します。
 この円軌道における全エネルギー <span class="arithmatex">\(E_0\)</span> は， <span class="arithmatex">\(\dot{r} = 0\)</span> として有効ポテンシャルに <span class="arithmatex">\(r_0\)</span> を代入することで得られます。</p>
@@ -14629,7 +14638,7 @@ r_0 = \frac{L^2}{G M m^2}
 E_0 &amp;= U_{eff}(r_0) \\\\
 &amp;= \frac{L^2}{2 m} \left( \frac{G M m^2}{L^2} \right)^2 - G M m \left( \frac{G M m^2}{L^2} \right) \\\\
 &amp;= \frac{G^2 M^2 m^3}{2 L^2} - \frac{G^2 M^2 m^3}{L^2} \\\\
-&amp;= -\frac{G^2 M^2 m^3}{2 L^2}
+&amp;= \finalanswer{-\frac{G^2 M^2 m^3}{2 L^2}}
 \end{aligned}
 \]</div>
 <p>これが円軌道における惑星の全エネルギーです。</p>
@@ -14644,7 +14653,7 @@ E \ge U_{eff}(r)
 <p>有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> のグラフにおいて，エネルギーが負の一定値をとる直線 <span class="arithmatex">\(y = E\)</span> は，グラフと2つの交点 <span class="arithmatex">\(r_{min}\)</span> および <span class="arithmatex">\(r_{max}\)</span> を持ちます。</p>
 <p>惑星が運動できる領域は</p>
 <div class="arithmatex">\[
-r_{min} \le r \le r_{max}
+\finalanswer{r_{min} \le r \le r_{max}}
 \]</div>
 <p>の範囲に制限されます。</p>
 <p>このとき，惑星は恒星から無限に遠ざかることも，原点に向かって落下することもなく，有限の領域に閉じ込められた有界な運動をします。
@@ -14654,7 +14663,7 @@ r_{min} \le r \le r_{max}
 <p>十分大きな <span class="arithmatex">\(r\)</span> の領域では，常に <span class="arithmatex">\(E &gt; U_{eff}(r)\)</span> が満たされます。
 したがって，運動可能な領域は</p>
 <div class="arithmatex">\[
-r \ge r_{min}
+\finalanswer{r \ge r_{min}}
 \]</div>
 <p>となり，上限が存在しません。</p>
 <p>これは，無限に遠い宇宙空間から飛来した惑星が，恒星に最も接近する距離 <span class="arithmatex">\(r_{min}\)</span> まで近づいた後，再び無限の彼方へと去っていく非有界な運動を表します。

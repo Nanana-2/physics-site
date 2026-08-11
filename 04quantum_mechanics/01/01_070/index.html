@@ -14563,11 +14563,14 @@ I(\alpha) = \int_{-\infty}^{\infty} \psi^*(x) \left( \alpha \Delta \hat{x} + i \
 \]</div>
 <p>ここで， <span class="arithmatex">\([\Delta \hat{x}, \Delta \hat{p}] = [\hat{x}, \hat{p}] = i\hbar\)</span> であるため，これを代入します。</p>
 <div class="arithmatex">\[
-= \alpha^2 (\Delta \hat{x})^2 - i\alpha (i\hbar) + (\Delta \hat{p})^2 = \alpha^2 (\Delta \hat{x})^2 + \hbar \alpha + (\Delta \hat{p})^2
+\begin{aligned}
+ &amp;= \alpha^2 (\Delta \hat{x})^2 - i\alpha (i\hbar) + (\Delta \hat{p})^2 \\
+&amp;= \alpha^2 (\Delta \hat{x})^2 + \hbar \alpha + (\Delta \hat{p})^2
+\end{aligned}
 \]</div>
 <p>これをもとの積分に戻し，各項の期待値をとります。 <span class="arithmatex">\(I(\alpha) \ge 0\)</span> より，以下の不等式が得られます。</p>
 <div class="arithmatex">\[
-\sigma_x^2 \alpha^2 + \hbar \alpha + \sigma_p^2 \ge 0
+\finalanswer{\sigma_x^2 \alpha^2 + \hbar \alpha + \sigma_p^2 \ge 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) の <span class="arithmatex">\(\alpha\)</span> に関する二次不等式が，すべてのアナログな実数 <span class="arithmatex">\(\alpha\)</span> で常に 0 以上となるためには，この二次方程式の判別式 <span class="arithmatex">\(D\)</span> が 0 以下でなければなりません。</p>
@@ -14579,7 +14582,7 @@ D = (-\hbar)^2 - 4 \cdot \sigma_x^2 \cdot \sigma_p^2 \le 0
 \]</div>
 <p>両辺の正の平方根をとります。</p>
 <div class="arithmatex">\[
-2\sigma_x \sigma_p \ge \hbar \implies \sigma_x \sigma_p \ge \frac{\hbar}{2}
+\finalanswer{2\sigma_x \sigma_p \ge \hbar \implies \sigma_x \sigma_p \ge \frac{\hbar}{2}}
 \]</div>
 <p>これにより，ハイゼンベルクの不確定性関係が導かれました。</p>
 <h3 id="3">(3)</h3>
@@ -14589,7 +14592,10 @@ D = (-\hbar)^2 - 4 \cdot \sigma_x^2 \cdot \sigma_p^2 \le 0
 \]</div>
 <p>両者の積をとります。</p>
 <div class="arithmatex">\[
-\sigma_x \sigma_p = \sigma_x \cdot \frac{\hbar}{2\sigma_x} = \frac{\hbar}{2}
+\begin{aligned}
+\sigma_x \sigma_p &amp;= \sigma_x \cdot \frac{\hbar}{2\sigma_x} \\
+&amp;= \finalanswer{\frac{\hbar}{2}}
+\end{aligned}
 \]</div>
 <p><strong>結果の説明</strong></p>
 <p>計算された不確定性の積は <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，(2) で導いた不確定性関係の不等式の絶対的な下限値に一致します。このことから，ガウス波束は位置と運動量の両方のばらつきを同時に最も小さく抑えた状態であることが確認できます。</p>

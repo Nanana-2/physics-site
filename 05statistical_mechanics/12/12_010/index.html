@@ -14548,11 +14548,14 @@
 \]</div>
 <p>トレースの線形性を用いて，定数である確率 <span class="arithmatex">\(p_i\)</span> とともに入れ物を1つのトレースにまとめます。</p>
 <div class="arithmatex">\[
-\langle\hat{A}\rangle = \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle\langle\psi_i|\hat{A} \right) = \mathrm{Tr}\left( \left[ \sum_i p_i |\psi_i\rangle\langle\psi_i| \right] \hat{A} \right)
+\begin{aligned}
+\langle\hat{A}\rangle &amp;= \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle\langle\psi_i|\hat{A} \right) \\
+&amp;= \mathrm{Tr}\left( \left[ \sum_i p_i |\psi_i\rangle\langle\psi_i| \right] \hat{A} \right)
+\end{aligned}
 \]</div>
 <p>大括弧の内部は密度行列 <span class="arithmatex">\(\rho\)</span> の定義そのものであるため，求める式が導出されます。</p>
 <div class="arithmatex">\[
-\langle\hat{A}\rangle = \mathrm{Tr}(\rho \hat{A})
+\finalanswer{\langle\hat{A}\rangle = \mathrm{Tr}(\rho \hat{A})}
 \]</div>
 <h3 id="2">(2)</h3>
 <ul>
@@ -14560,8 +14563,11 @@
   密度行列の定義式全体のトレースをとります。</li>
 </ul>
 <p>$$
-  \mathrm{Tr}(\rho) = \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) = \sum_i p_i \mathrm{Tr}(|\psi_i\rangle \langle\psi_i|)
-  $$</p>
+\begin{aligned}
+\mathrm{Tr}(\rho) &amp;= \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) \
+&amp;= \sum_i p_i \mathrm{Tr}(|\psi_i\rangle \langle\psi_i|)
+\end{aligned}
+$$</p>
 <p>状態の規格化条件より， <span class="arithmatex">\(\mathrm{Tr}(|\psi_i\rangle \langle\psi_i|) = \langle\psi_i|\psi_i\rangle = 1\)</span> となるため，以下のようになります。</p>
 <p>$$
   \mathrm{Tr}(\rho) = \sum_i p_i \cdot 1 = \sum_i p_i
@@ -14572,8 +14578,13 @@
   密度行列の随伴演算子を計算します。積の共役の規則 <span class="arithmatex">\((|a\rangle\langle b|)^\dagger = |b\rangle\langle a|\)</span> を適用します。確率は実数 <span class="arithmatex">\(p_i^* = p_i\)</span> です。</li>
 </ul>
 <p>$$
-  \rho^\dagger = \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right)^\dagger = \sum_i p_i (|\psi_i\rangle \langle\psi_i|)^\dagger = \sum_i p_i |\psi_i\rangle \langle\psi_i| = \rho
-  $$</p>
+\begin{aligned}
+\rho^\dagger &amp;= \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right)^\dagger \
+&amp;= \sum_i p_i (|\psi_i\rangle \langle\psi_i|)^\dagger \
+&amp;= \sum_i p_i |\psi_i\rangle \langle\psi_i| \
+&amp;= \finalanswer{\rho}
+\end{aligned}
+$$</p>
 <p>したがって，密度行列は常にエルミート演算子となります。</p>
 <h3 id="3">(3)</h3>
 <ul>
@@ -14581,14 +14592,17 @@
 </ul>
 <p>定義式に基底 <span class="arithmatex">\(\langle n|\)</span> と <span class="arithmatex">\(|n\rangle\)</span> を挟んで計算します。</p>
 <p>$$
-  \rho_{nn} = \langle n| \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) |n\rangle = \sum_i p_i |\langle n|\psi_i\rangle|^2
-  $$</p>
+\begin{aligned}
+\rho_{nn} &amp;= \langle n| \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) |n\rangle \
+&amp;= \sum_i p_i |\langle n|\psi_i\rangle|^2
+\end{aligned}
+$$</p>
 <p><span class="arithmatex">\(|\langle n|\psi_i\rangle|^2\)</span> は状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> にある系において状態 <span class="arithmatex">\(|n\rangle\)</span> が観測される量子力学的な確率です。これに出現確率 <span class="arithmatex">\(p_i\)</span> を掛けて全状態について足し合わせているため， <span class="arithmatex">\(\rho_{nn}\)</span> は<strong>系全体において状態 <span class="arithmatex">\(|n\rangle\)</span> が見出されるマクロな存在確率</strong>を表します。</p>
 <ul>
 <li><strong>非対角成分 <span class="arithmatex">\(\rho_{nm}\)</span> <span class="arithmatex">\(n \neq m\)</span> の物理的意味</strong></li>
 </ul>
 <p>$$
-  \rho_{nm} = \sum_i p_i \langle n|\psi_i\rangle \langle\psi_i|m\rangle
+  \finalanswer{\rho_{nm} = \sum_i p_i \langle n|\psi_i\rangle \langle\psi_i|m\rangle}
   $$</p>
 <p>これは，状態 <span class="arithmatex">\(|n\rangle\)</span> と状態 <span class="arithmatex">\(|m\rangle\)</span> の間の量子力学的な位相の相関を表しており，<strong>量子コヒーレンス</strong>と呼ばれます。純粋状態では各状態の位相が揃っているため非対角成分が残りますが，古典的な確率でランダムに混ざり合った混合状態では，位相の相殺が起こるため，非対角成分はゼロに近づいていきます。</p>
 

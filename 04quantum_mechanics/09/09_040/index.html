@@ -14560,17 +14560,20 @@
 \]</div>
 <p>したがって，エネルギー固有値は調和振動子のエネルギー量子化の公式がそのまま適用されます。</p>
 <div class="arithmatex">\[
-E_n = \hbar \omega_c \left( n + \frac{1}{2} \right) \quad (n = 0, \, 1, \, 2, \, \dots)
+\finalanswer{E_n = \hbar \omega_c \left( n + \frac{1}{2} \right) \quad (n = 0, \, 1, \, 2, \, \dots)}
 \]</div>
 <p>この離散的なエネルギー準位 <span class="arithmatex">\(E_n\)</span> がランダウ準位です。エネルギーの間隔は常に <span class="arithmatex">\(\hbar \omega_c\)</span> で一定となります。</p>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(x\)</span> 方向の波動関数は <span class="arithmatex">\(e^{i p_x x / \hbar}\)</span> という平面波の形を持っています。これに周期境界条件 <span class="arithmatex">\(\psi(x + L_x, y) = \psi(x, y)\)</span> を適用します。</p>
 <div class="arithmatex">\[
-e^{i p_x (x + L_x) / \hbar} = e^{i p_x x / \hbar} \implies e^{i p_x L_x / \hbar} = 1
+\begin{aligned}
+e^{i p_x (x + L_x) / \hbar} &amp;= e^{i p_x x / \hbar} \implies e^{i p_x L_x / \hbar} \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>指数関数の周期性から，指数の肩にある値が <span class="arithmatex">\(2\pi\)</span> の整数倍にならなければなりません。整数を <span class="arithmatex">\(k\)</span> と置きます。</p>
 <div class="arithmatex">\[
-\frac{p_x L_x}{\hbar} = 2\pi k \implies p_x = \frac{2\pi\hbar}{L_x} k \quad (k = 0, \, \pm 1, \, \pm 2, \, \dots)
+\finalanswer{\frac{p_x L_x}{\hbar} = 2\pi k \implies p_x = \frac{2\pi\hbar}{L_x} k \quad (k = 0, \, \pm 1, \, \pm 2, \, \dots)}
 \]</div>
 <p>これが <span class="arithmatex">\(x\)</span> 方向の運動量に課される量子化条件です。</p>
 <h3 id="3">(3)</h3>
@@ -14588,16 +14591,22 @@ y_0 = -\frac{2\pi\hbar}{qB_0 L_x} k
 \]</div>
 <p>もとの整数 <span class="arithmatex">\(k\)</span> の表記に戻すと，取り得る範囲は以下の不等式で表されます。</p>
 <div class="arithmatex">\[
--\frac{qB_0 L_x L_y}{2\pi\hbar} \leq k \leq 0
+\finalanswer{-\frac{qB_0 L_x L_y}{2\pi\hbar} \leq k \leq 0}
 \]</div>
 <h3 id="4">(4)</h3>
 <p>(3) で求めた範囲に含まれる整数 <span class="arithmatex">\(k\)</span> の個数が，そのまま同じエネルギー <span class="arithmatex">\(E_n\)</span> を共有する状態の数，すなわち縮退度 <span class="arithmatex">\(N\)</span> に対応します。上限の 0 から下限の値を引き算し，境界の分として 1 を加えます。領域の面積 <span class="arithmatex">\(S = L_x L_y\)</span> を代入します。</p>
 <div class="arithmatex">\[
-N = 0 - \left( -\frac{qB_0 L_x L_y}{2\pi\hbar} \right) = \frac{qB_0 S}{2\pi\hbar}
+\begin{aligned}
+N &amp;= 0 - \left( -\frac{qB_0 L_x L_y}{2\pi\hbar} \right) \\
+&amp;= \frac{qB_0 S}{2\pi\hbar}
+\end{aligned}
 \]</div>
 <p>この数式を問題文の指示通りに変形します。全磁通が <span class="arithmatex">\(\Phi = B_0 S\)</span> であり，磁束量子が <span class="arithmatex">\(\Phi_0 = \frac{2\pi\hbar}{q}\)</span> であるため，これらを縮退度の式に当てはめます。</p>
 <div class="arithmatex">\[
-N = \frac{B_0 S}{\frac{2\pi\hbar}{q}} = \frac{\Phi}{\Phi_0}
+\begin{aligned}
+N &amp;= \frac{B_0 S}{\frac{2\pi\hbar}{q}} \\
+&amp;= \finalanswer{\frac{\Phi}{\Phi_0}}
+\end{aligned}
 \]</div>
 <p>計算結果より，1つのランダウ準位に属する状態の総数は，そのサンプルの面内を通過する全磁束が，量子力学的な最小単位である磁束量子をいくつ含むかという比率に一致することが示されました。</p>
 

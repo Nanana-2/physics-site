@@ -14537,7 +14537,10 @@
 <h3 id="1">(1)</h3>
 <p>対称状態 <span class="arithmatex">\(\psi_+(x) = C_+ \big[ \phi_R(x) + \phi_L(x) \big]\)</span> の規格化条件を課します。</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} |\psi_+(x)|^2 dx = |C_+|^2 \int_{-\infty}^{\infty} \big[ \phi_R^*(x) + \phi_L^*(x) \big] \big[ \phi_R(x) + \phi_L(x) \big] dx = 1
+\begin{aligned}
+\int_{-\infty}^{\infty} |\psi_+(x)|^2 dx &amp;= |C_+|^2 \int_{-\infty}^{\infty} \big[ \phi_R^*(x) + \phi_L^*(x) \big] \big[ \phi_R(x) + \phi_L(x) \big] dx \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>括弧を展開して，それぞれの積分項に分けます。</p>
 <div class="arithmatex">\[
@@ -14545,34 +14548,52 @@
 \]</div>
 <p>問題の仮定より，各関数は規格化されているため最初の2項は 1 となり，互いにほぼ直交しているため交差項は 0 とみなせます。</p>
 <div class="arithmatex">\[
-|C_+|^2 \big[ 1 + 1 + 0 + 0 \big] = 1 \implies 2|C_+|^2 = 1 \implies C_+ = \frac{1}{\sqrt{2}}
+\begin{aligned}
+|C_+|^2 \big[ 1 + 1 + 0 + 0 \big] &amp;= 1 \implies 2|C_+|^2 \\
+&amp;= 1 \implies C_+ \\
+&amp;= \frac{1}{\sqrt{2}}
+\end{aligned}
 \]</div>
 <p>反対称状態 <span class="arithmatex">\(\psi_-(x)\)</span> についても同様に展開します。交差項の符号がマイナスになりますが，直交性の仮定によりその項は消去されます。</p>
 <div class="arithmatex">\[
-|C_-|^2 \big[ 1 + 1 - 0 - 0 \big] = 1 \implies 2|C_-|^2 = 1 \implies C_- = \frac{1}{\sqrt{2}}
+\finalanswer{|C_-|^2 \big[ 1 + 1 - 0 - 0 \big] = 1 \implies 2|C_-|^2 = 1 \implies C_- = \frac{1}{\sqrt{2}}}
 \]</div>
 <p>したがって，求める規格化定数はともに <span class="arithmatex">\(C_+ = C_- = \frac{1}{\sqrt{2}}\)</span> となります。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた規格化定数を用いて，対称状態のエネルギー期待値 <span class="arithmatex">\(E_+\)</span> を展開します。</p>
 <div class="arithmatex">\[
-E_+ = \langle \psi_+ | \hat{H} | \psi_+ \rangle = \frac{1}{2} \big( \langle \phi_R | + \langle \phi_L | \big) \hat{H} \big( | \phi_R \rangle + | \phi_L \rangle \big)
+\begin{aligned}
+E_+ &amp;= \langle \psi_+ | \hat{H} | \psi_+ \rangle \\
+&amp;= \frac{1}{2} \big( \langle \phi_R | + \langle \phi_L | \big) \hat{H} \big( | \phi_R \rangle + | \phi_L \rangle \big)
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 = \frac{1}{2} \big[ \langle \phi_R | \hat{H} | \phi_R \rangle + \langle \phi_L | \hat{H} | \phi_L \rangle + \langle \phi_L | \hat{H} | \phi_R \rangle + \langle \phi_R | \hat{H} | \phi_L \rangle \big]
 \]</div>
 <p>定義された行列要素 <span class="arithmatex">\(\alpha\)</span> と <span class="arithmatex">\(\beta\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-E_+ = \frac{1}{2} \big[ \alpha + \alpha + \beta + \beta \big] = \frac{1}{2} (2\alpha + 2\beta) = \alpha + \beta
+\begin{aligned}
+E_+ &amp;= \frac{1}{2} \big[ \alpha + \alpha + \beta + \beta \big] \\
+&amp;= \frac{1}{2} (2\alpha + 2\beta) \\
+&amp;= \alpha + \beta
+\end{aligned}
 \]</div>
 <p>同様に，反対称状態のエネルギー期待値 <span class="arithmatex">\(E_-\)</span> を展開します。交差項のブラケットにマイナスの符号がつきます。</p>
 <div class="arithmatex">\[
-E_- = \langle \psi_- | \hat{H} | \psi_- \rangle = \frac{1}{2} \big( \langle \phi_R | - \langle \phi_L | \big) \hat{H} \big( | \phi_R \rangle - | \phi_L \rangle \big)
+\begin{aligned}
+E_- &amp;= \langle \psi_- | \hat{H} | \psi_- \rangle \\
+&amp;= \frac{1}{2} \big( \langle \phi_R | - \langle \phi_L | \big) \hat{H} \big( | \phi_R \rangle - | \phi_L \rangle \big)
+\end{aligned}
 \]</div>
 <div class="arithmatex">\[
 = \frac{1}{2} \big[ \langle \phi_R | \hat{H} | \phi_R \rangle + \langle \phi_L | \hat{H} | \phi_L \rangle - \langle \phi_L | \hat{H} | \phi_R \rangle - \langle \phi_R | \hat{H} | \phi_L \rangle \big]
 \]</div>
 <div class="arithmatex">\[
-E_- = \frac{1}{2} \big[ \alpha + \alpha - \beta - \beta \big] = \frac{1}{2} (2\alpha - 2\beta) = \alpha - \beta
+\begin{aligned}
+E_- &amp;= \frac{1}{2} \big[ \alpha + \alpha - \beta - \beta \big] \\
+&amp;= \frac{1}{2} (2\alpha - 2\beta) \\
+&amp;= \finalanswer{\alpha - \beta}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(\beta &lt; 0\)</span> の条件における2つのエネルギーの大小を比較します。</p>
@@ -14583,7 +14604,12 @@ E_- = \frac{1}{2} \big[ \alpha + \alpha - \beta - \beta \big] = \frac{1}{2} (2\a
 <p>したがって，対称状態のエネルギー <span class="arithmatex">\(E_+\)</span> の方が低くなります。これは，対称状態の波動関数が井戸の間の障壁領域でゼロにならない有限の値を持つため，運動エネルギーの増加が抑えられることに対応しています。</p>
 <p>2つのエネルギー準位の差 <span class="arithmatex">\(\Delta E\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\Delta E = E_- - E_+ = (\alpha - \beta) - (\alpha + \beta) = -2\beta = 2|\beta|
+\begin{aligned}
+\Delta E &amp;= E_- - E_+ \\
+&amp;= (\alpha - \beta) - (\alpha + \beta) \\
+&amp;= -2\beta \\
+&amp;= \finalanswer{2|\beta|}
+\end{aligned}
 \]</div>
 <p>この結果から，本来は同じエネルギー <span class="arithmatex">\(\alpha\)</span> を持っていた2つの独立した状態が，障壁を通り抜ける確率に由来する相互作用 <span class="arithmatex">\(\beta\)</span> によって結びつくことで，間隔 <span class="arithmatex">\(2|\beta|\)</span> だけ離れた2つの準位に分裂することが示されました。</p>
 

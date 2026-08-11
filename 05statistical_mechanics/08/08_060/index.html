@@ -14547,7 +14547,10 @@ u(T) = \frac{\hbar}{\pi^2 c^3} \int_0^\infty \left( \frac{k_B T}{\hbar} x \right
 \]</div>
 <p>温度 <span class="arithmatex">\(T\)</span> や物理定数の項を積分の外へ括り出します。</p>
 <div class="arithmatex">\[
-u(T) = \frac{\hbar}{\pi^2 c^3} \left( \frac{k_B T}{\hbar} \right)^4 \int_0^\infty \frac{x^3}{e^x - 1} dx = \frac{k_B^4 T^4}{\pi^2 c^3 \hbar^3} \int_0^\infty \frac{x^3}{e^x - 1} dx
+\begin{aligned}
+u(T) &amp;= \frac{\hbar}{\pi^2 c^3} \left( \frac{k_B T}{\hbar} \right)^4 \int_0^\infty \frac{x^3}{e^x - 1} dx \\
+&amp;= \frac{k_B^4 T^4}{\pi^2 c^3 \hbar^3} \int_0^\infty \frac{x^3}{e^x - 1} dx
+\end{aligned}
 \]</div>
 <p>ここで与えられた定積分公式 </p>
 <div class="arithmatex">\[
@@ -14555,17 +14558,23 @@ u(T) = \frac{\hbar}{\pi^2 c^3} \left( \frac{k_B T}{\hbar} \right)^4 \int_0^\inft
 \]</div>
 <p>を代入します。</p>
 <div class="arithmatex">\[
-u(T) = \frac{k_B^4 T^4}{\pi^2 c^3 \hbar^3} \cdot \frac{\pi^4}{15} = \frac{\pi^2 k_B^4}{15 c^3 \hbar^3} T^4
+\begin{aligned}
+u(T) &amp;= \frac{k_B^4 T^4}{\pi^2 c^3 \hbar^3} \cdot \frac{\pi^4}{15} \\
+&amp;= \finalanswer{\frac{\pi^2 k_B^4}{15 c^3 \hbar^3} T^4}
+\end{aligned}
 \]</div>
 <p>この結果により，電磁波の全エネルギー密度 <span class="arithmatex">\(u(T)\)</span> が絶対温度の4乗<span class="arithmatex">\(T^4\)</span>に比例することが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>与えられた関係式 <span class="arithmatex">\(I(T) = \frac{c}{4} u(T)\)</span> に，(1) で求めた <span class="arithmatex">\(u(T)\)</span> の式を代入します。</p>
 <div class="arithmatex">\[
-I(T) = \frac{c}{4} \left( \frac{\pi^2 k_B^4}{15 c^3 \hbar^3} T^4 \right) = \left( \frac{\pi^2 k_B^4}{60 c^2 \hbar^3} \right) T^4
+\begin{aligned}
+I(T) &amp;= \frac{c}{4} \left( \frac{\pi^2 k_B^4}{15 c^3 \hbar^3} T^4 \right) \\
+&amp;= \left( \frac{\pi^2 k_B^4}{60 c^2 \hbar^3} \right) T^4
+\end{aligned}
 \]</div>
 <p>この式は，放射強度 <span class="arithmatex">\(I(T)\)</span> が絶対温度の4乗に比例するというステファン・ボルツマンの法則を表しています。比例係数を <span class="arithmatex">\(\sigma\)</span> と置くことで， <span class="arithmatex">\(I(T) = \sigma T^4\)</span> の形になります。したがって，ステファン・ボルツマン定数 <span class="arithmatex">\(\sigma\)</span> の具体的な構成は以下の通りです。</p>
 <div class="arithmatex">\[
-\sigma = \frac{\pi^2 k_B^4}{60 c^2 \hbar^3}
+\finalanswer{\sigma = \frac{\pi^2 k_B^4}{60 c^2 \hbar^3}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>物体全体から単位時間あたりに放射される総エネルギー <span class="arithmatex">\(E\)</span> は，単位表面積あたりの放射強度 <span class="arithmatex">\(I(T)\)</span> に，物体の全表面積 <span class="arithmatex">\(S\)</span> を掛け合わせたものになります。</p>
@@ -14574,7 +14583,11 @@ E = S \cdot I(T) = \sigma S T^4
 \]</div>
 <p>問題の条件より，形状の変化にともなって表面積 <span class="arithmatex">\(S\)</span> は元の 4 倍になります。また，絶対温度 <span class="arithmatex">\(T\)</span> は元の 2 倍になります。変化前の表面積を <span class="arithmatex">\(S_0\)</span>，温度を <span class="arithmatex">\(T_0\)</span> とすると，変化後の総エネルギー <span class="arithmatex">\(E\)</span> は以下のように計算できます。</p>
 <div class="arithmatex">\[
-E = \sigma (4 S_0) (2 T_0)^4 = \sigma (4 S_0) (16 T_0^4) = 64 \cdot (\sigma S_0 T_0^4)
+\begin{aligned}
+E &amp;= \sigma (4 S_0) (2 T_0)^4 \\
+&amp;= \sigma (4 S_0) (16 T_0^4) \\
+&amp;= \finalanswer{64 \cdot (\sigma S_0 T_0^4)}
+\end{aligned}
 \]</div>
 <p>したがって，放射される総エネルギーは <span class="arithmatex">\(4\times2^4=64\)</span> 倍になります。</p>
 

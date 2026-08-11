@@ -14540,11 +14540,17 @@
 \]</div>
 <p>ここで，運動量演算子を空間微分 <span class="arithmatex">\(\hat{\boldsymbol{p}} = -i\hbar\boldsymbol{\nabla}\)</span> として任意の波動関数 <span class="arithmatex">\(\psi\)</span> に作用させたときの積の微分則を計算します。</p>
 <div class="arithmatex">\[
-\hat{\boldsymbol{p}} \cdot \left( \hat{\boldsymbol{A}} \psi \right) = -i\hbar \boldsymbol{\nabla} \cdot \left( \hat{\boldsymbol{A}} \psi \right) = -i\hbar \left( \boldsymbol{\nabla} \cdot \hat{\boldsymbol{A}} \right) \psi - i\hbar \hat{\boldsymbol{A}} \cdot \left( \boldsymbol{\nabla} \psi \right)
+\begin{aligned}
+\hat{\boldsymbol{p}} \cdot \left( \hat{\boldsymbol{A}} \psi \right) &amp;= -i\hbar \boldsymbol{\nabla} \cdot \left( \hat{\boldsymbol{A}} \psi \right) \\
+&amp;= -i\hbar \left( \boldsymbol{\nabla} \cdot \hat{\boldsymbol{A}} \right) \psi - i\hbar \hat{\boldsymbol{A}} \cdot \left( \boldsymbol{\nabla} \psi \right)
+\end{aligned}
 \]</div>
 <p>クーロンゲージの条件 <span class="arithmatex">\(\boldsymbol{\nabla} \cdot \hat{\boldsymbol{A}} = 0\)</span> により，第1項は 0 となります。第2項は演算子の順序を入れ替えたものに等しくなります。</p>
 <div class="arithmatex">\[
-= 0 + \hat{\boldsymbol{A}} \cdot \left( -i\hbar \boldsymbol{\nabla} \psi \right) = \hat{\boldsymbol{A}} \cdot \left( \hat{\boldsymbol{p}} \psi \right)
+\begin{aligned}
+ &amp;= 0 + \hat{\boldsymbol{A}} \cdot \left( -i\hbar \boldsymbol{\nabla} \psi \right) \\
+&amp;= \hat{\boldsymbol{A}} \cdot \left( \hat{\boldsymbol{p}} \psi \right)
+\end{aligned}
 \]</div>
 <p>したがって，演算子として <span class="arithmatex">\(\hat{\boldsymbol{p}} \cdot \hat{\boldsymbol{A}} = \hat{\boldsymbol{A}} \cdot \hat{\boldsymbol{p}}\)</span> が厳密に成り立ちます。これをもとの展開式に代入して整理します。</p>
 <div class="arithmatex">\[
@@ -14556,7 +14562,7 @@
 \]</div>
 <p>粒子のみの項を除く，相互作用を表す第1次の摂動ハミルトニアンは以下の通りに出現します。</p>
 <div class="arithmatex">\[
-\hat{H}_{\text{int}} = - \frac{q}{m} \hat{\boldsymbol{A}}(\boldsymbol{r}) \cdot \hat{\boldsymbol{p}}
+\finalanswer{\hat{H}_{\text{int}} = - \frac{q}{m} \hat{\boldsymbol{A}}(\boldsymbol{r}) \cdot \hat{\boldsymbol{p}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた相互作用ハミルトニアンの式に，量子化されたベクトルポテンシャル演算子の展開式を代入します。</p>
@@ -14566,7 +14572,7 @@
 <p>この演算子を初期状態 <span class="arithmatex">\(|i, n\rangle\)</span> に作用させ，最終状態 <span class="arithmatex">\(\langle f, n-1|\)</span> との内積をとります。電磁場の状態に対する生成消滅演算子の作用を個別に計算します。光子を1個減少させる遷移であるため，消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}', \lambda'}\)</span> を含む項のみが，電磁場の内積 <span class="arithmatex">\(\langle n-1 | \hat{a}_{\boldsymbol{k}', \lambda'} | n \rangle = \sqrt{\times} = \sqrt{n} \delta_{\boldsymbol{k}, \boldsymbol{k}'} \delta_{\lambda, \lambda'}\)</span> として生き残ります。生成演算子の項は，状態が <span class="arithmatex">\(|n+1\rangle\)</span> になるため，最終状態 <span class="arithmatex">\(|n-1\rangle\)</span> と直交して 0 となります。</p>
 <p>デルタ関数の条件から，和の記号の変数が特定のモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> へと固定されます。電磁場部分の計算を完了して整理すると，行列要素は以下のようになります。</p>
 <div class="arithmatex">\[
-\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} C_{\boldsymbol{k}} \sqrt{n} \langle f | e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \hat{\boldsymbol{p}} | i \rangle
+\finalanswer{\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} C_{\boldsymbol{k}} \sqrt{n} \langle f | e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \hat{\boldsymbol{p}} | i \rangle}
 \]</div>
 <p>残る因子は，物質の初期状態と最終状態の間の行列要素です。</p>
 <h3 id="3">(3)</h3>
@@ -14576,7 +14582,7 @@
 \]</div>
 <p>偏極ベクトルは空間座標に依存しないため，行列要素の積分の外へ出すことができます。これをもとの全体の行列要素の式に代入します。定数の表現も合わせて書き下します。</p>
 <div class="arithmatex">\[
-\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} \sqrt{\frac{\hbar n}{2\epsilon_0 \omega_{\boldsymbol{k}} L^3}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \langle f | \hat{\boldsymbol{p}} | i \rangle
+\finalanswer{\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} \sqrt{\frac{\hbar n}{2\epsilon_0 \omega_{\boldsymbol{k}} L^3}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \langle f | \hat{\boldsymbol{p}} | i \rangle}
 \]</div>
 <p>これにより，1光子の吸収遷移確率の大きさを決定する，長波長近似のもとでの相互作用の行列要素の数式が求まりました。</p>
 

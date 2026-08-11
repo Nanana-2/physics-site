@@ -14549,16 +14549,27 @@
 \]</div>
 <p>正準交換関係 <span class="arithmatex">\([ \hat{x}, \hat{p} ] = i\hbar\)</span> および <span class="arithmatex">\([ \hat{p}, \hat{x} ] = -i\hbar\)</span> を代入します。</p>
 <div class="arithmatex">\[
-[ \hat{a}, \hat{a}^\dagger ] = \frac{m\omega}{2\hbar} \left( -\frac{i}{m\omega}(i\hbar) + \frac{i}{m\omega}(-i\hbar) \right) = \frac{m\omega}{2\hbar} \left( \frac{\hbar}{m\omega} + \frac{\hbar}{m\omega} \right) = \frac{m\omega}{2\hbar} \cdot \frac{2\hbar}{m\omega} = 1
+\begin{aligned}
+[ \hat{a}, \hat{a}^\dagger ] &amp;= \frac{m\omega}{2\hbar} \left( -\frac{i}{m\omega}(i\hbar) + \frac{i}{m\omega}(-i\hbar) \right) \\
+&amp;= \frac{m\omega}{2\hbar} \left( \frac{\hbar}{m\omega} + \frac{\hbar}{m\omega} \right) \\
+&amp;= \frac{m\omega}{2\hbar} \cdot \frac{2\hbar}{m\omega} \\
+&amp;= 1
+\end{aligned}
 \]</div>
 <p>求める交換関係 <span class="arithmatex">\([ \hat{a}, \hat{a}^\dagger ] = 1\)</span> が得られました。</p>
 <p>次に，演算子の積 <span class="arithmatex">\(\hat{a}^\dagger\hat{a}\)</span> を展開します。</p>
 <div class="arithmatex">\[
-\hat{a}^\dagger\hat{a} = \frac{m\omega}{2\hbar} \left( \hat{x} - \frac{i}{m\omega}\hat{p} \right) \left( \hat{x} + \frac{i}{m\omega}\hat{p} \right) = \frac{m\omega}{2\hbar} \left( \hat{x}^2 + \frac{1}{m^2\omega^2}\hat{p}^2 + \frac{i}{m\omega}(\hat{x}\hat{p} - \hat{p}\hat{x}) \right)
+\begin{aligned}
+\hat{a}^\dagger\hat{a} &amp;= \frac{m\omega}{2\hbar} \left( \hat{x} - \frac{i}{m\omega}\hat{p} \right) \left( \hat{x} + \frac{i}{m\omega}\hat{p} \right) \\
+&amp;= \frac{m\omega}{2\hbar} \left( \hat{x}^2 + \frac{1}{m^2\omega^2}\hat{p}^2 + \frac{i}{m\omega}(\hat{x}\hat{p} - \hat{p}\hat{x}) \right)
+\end{aligned}
 \]</div>
 <p>括弧の第3項に交換関係 <span class="arithmatex">\(\hat{x}\hat{p} - \hat{p}\hat{x} = [ \hat{x}, \hat{p} ] = i\hbar\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-\hat{a}^\dagger\hat{a} = \frac{m\omega}{2\hbar} \left( \hat{x}^2 + \frac{1}{m^2\omega^2}\hat{p}^2 - \frac{\hbar}{m\omega} \right) = \frac{1}{\hbar\omega} \left( \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2\hat{x}^2 \right) - \frac{1}{2}
+\begin{aligned}
+\hat{a}^\dagger\hat{a} &amp;= \frac{m\omega}{2\hbar} \left( \hat{x}^2 + \frac{1}{m^2\omega^2}\hat{p}^2 - \frac{\hbar}{m\omega} \right) \\
+&amp;= \frac{1}{\hbar\omega} \left( \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2\hat{x}^2 \right) - \frac{1}{2}
+\end{aligned}
 \]</div>
 <p>大括弧の内部は元のハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> そのものです。</p>
 <div class="arithmatex">\[
@@ -14566,39 +14577,66 @@
 \]</div>
 <p>この式を <span class="arithmatex">\(\hat{H}\)</span> について解くように移項することで，求めるハミルトニアンの対角化表現が導かれます。</p>
 <div class="arithmatex">\[
-\hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right)
+\finalanswer{\hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>演算子 <span class="arithmatex">\(\hat{N}\)</span> と各演算子の交換関係をあらかじめ計算しておきます。</p>
 <ul>
 <li>
-<p>$$[ \hat{N}, \hat{a}^\dagger ] = [ \hat{a}^\dagger\hat{a}, \hat{a}^\dagger ] = \hat{a}^\dagger [ \hat{a}, \hat{a}^\dagger ] = \hat{a}^\dagger \cdot 1 = \hat{a}^\dagger
-  $$</p>
+<p>$$
+\begin{aligned}
+[ \hat{N}, \hat{a}^\dagger ] &amp;= [ \hat{a}^\dagger\hat{a}, \hat{a}^\dagger ] \
+&amp;= \hat{a}^\dagger [ \hat{a}, \hat{a}^\dagger ] \
+&amp;= \hat{a}^\dagger \cdot 1 \
+&amp;= \hat{a}^\dagger
+\end{aligned}
+$$</p>
 </li>
 <li>
 <p>$$
-  [ \hat{N}, \hat{a} ] = [ \hat{a}^\dagger\hat{a}, \hat{a} ] = [ \hat{a}^\dagger, \hat{a} ] \hat{a} = -1 \cdot \hat{a} = -\hat{a}
-  $$</p>
+\begin{aligned}
+[ \hat{N}, \hat{a} ] &amp;= [ \hat{a}^\dagger\hat{a}, \hat{a} ] \
+&amp;= [ \hat{a}^\dagger, \hat{a} ] \hat{a} \
+&amp;= -1 \cdot \hat{a} \
+&amp;= -\hat{a}
+\end{aligned}
+$$</p>
 </li>
 </ul>
 <p>これらを用いて，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> に対する <span class="arithmatex">\(\hat{N}\)</span> の作用を計算します。交換関係の定義 <span class="arithmatex">\(\hat{N}\hat{a}^\dagger = \hat{a}^\dagger\hat{N} + [ \hat{N}, \hat{a}^\dagger ]\)</span> を利用します。</p>
 <div class="arithmatex">\[
-\hat{N} \big( \hat{a}^\dagger|n\rangle \big) = \left( \hat{a}^\dagger\hat{N} + \hat{a}^\dagger \right) |n\rangle = \hat{a}^\dagger \hat{N}|n\rangle + \hat{a}^\dagger|n\rangle
+\begin{aligned}
+\hat{N} \big( \hat{a}^\dagger|n\rangle \big) &amp;= \left( \hat{a}^\dagger\hat{N} + \hat{a}^\dagger \right) |n\rangle \\
+&amp;= \hat{a}^\dagger \hat{N}|n\rangle + \hat{a}^\dagger|n\rangle
+\end{aligned}
 \]</div>
 <p>数状態の固有値関係式 <span class="arithmatex">\(\hat{N}|n\rangle = n|n\rangle\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\hat{N} \big( \hat{a}^\dagger|n\rangle \big) = \hat{a}^\dagger (n|n\rangle) + \hat{a}^\dagger|n\rangle = (n+1) \big( \hat{a}^\dagger|n\rangle \big)
+\begin{aligned}
+\hat{N} \big( \hat{a}^\dagger|n\rangle \big) &amp;= \hat{a}^\dagger (n|n\rangle) + \hat{a}^\dagger|n\rangle \\
+&amp;= \finalanswer{(n+1) \big( \hat{a}^\dagger|n\rangle \big)}
+\end{aligned}
 \]</div>
 <p>これにより， <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> は数演算子の固有値が <span class="arithmatex">\(n+1\)</span> の固有状態であることが確かめられました。</p>
 <p>同様に，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> に対する作用を計算します。 <span class="arithmatex">\(\hat{N}\hat{a} = \hat{a}\hat{N} + [ \hat{N}, \hat{a} ] = \hat{a}\hat{N} - \hat{a}\)</span> を利用します。</p>
 <div class="arithmatex">\[
-\hat{N} \big( \hat{a}|n\rangle \big) = \left( \hat{a}\hat{N} - \hat{a} \right) |n\rangle = \hat{a} \hat{N}|n\rangle - \hat{a}|n\rangle = \hat{a} (n|n\rangle) - \hat{a}|n\rangle = (n-1) \big( \hat{a}|n\rangle \big)
+\begin{aligned}
+\hat{N} \big( \hat{a}|n\rangle \big) &amp;= \left( \hat{a}\hat{N} - \hat{a} \right) |n\rangle \\
+&amp;= \hat{a} \hat{N}|n\rangle - \hat{a}|n\rangle \\
+&amp;= \hat{a} (n|n\rangle) - \hat{a}|n\rangle \\
+&amp;= \finalanswer{(n-1) \big( \hat{a}|n\rangle \big)}
+\end{aligned}
 \]</div>
 <p>これにより， <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は数演算子の固有値が <span class="arithmatex">\(n-1\)</span> の固有状態であることが確かめられました。</p>
 <h3 id="3">(3)</h3>
 <p>(2) の結果より， <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> は状態 <span class="arithmatex">\(|n+1\rangle\)</span> に比例し， <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は状態 <span class="arithmatex">\(|n-1\rangle\)</span> に比例することがわかります。それぞれの正確な係数を規格化条件から決定します。</p>
 <div class="arithmatex">\[
-\big( \hat{a}|n\rangle \big)^\dagger \big( \hat{a}|n\rangle \big) = \langle n| \hat{a}^\dagger \hat{a} |n\rangle = \langle n| \hat{N} |n\rangle = n \langle n|n\rangle = n
+\begin{aligned}
+\big( \hat{a}|n\rangle \big)^\dagger \big( \hat{a}|n\rangle \big) &amp;= \langle n| \hat{a}^\dagger \hat{a} |n\rangle \\
+&amp;= \langle n| \hat{N} |n\rangle \\
+&amp;= n \langle n|n\rangle \\
+&amp;= n
+\end{aligned}
 \]</div>
 <p>したがって，規格化された状態としての関係式は以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14606,11 +14644,19 @@
 \]</div>
 <p>同様に，生成演算子についても計算します。交換関係 <span class="arithmatex">\(\hat{a}\hat{a}^\dagger = \hat{a}^\dagger\hat{a} + 1 = \hat{N} + 1\)</span> を利用します。</p>
 <div class="arithmatex">\[
-\big( \hat{a}^\dagger|n\rangle \big)^\dagger \big( \hat{a}^\dagger|n\rangle \big) = \langle n| \hat{a} \hat{a}^\dagger |n\rangle = \langle n| (\hat{N} + 1) |n\rangle = (n+1) \langle n|n\rangle = n+1
+\begin{aligned}
+\big( \hat{a}^\dagger|n\rangle \big)^\dagger \big( \hat{a}^\dagger|n\rangle \big) &amp;= \langle n| \hat{a} \hat{a}^\dagger |n\rangle \\
+&amp;= \langle n| (\hat{N} + 1) |n\rangle \\
+&amp;= (n+1) \langle n|n\rangle \\
+&amp;= n+1
+\end{aligned}
 \]</div>
 <p>したがって，規格化された状態としての関係式は以下のようになります。</p>
 <div class="arithmatex">\[
-\hat{a}^\dagger|n\rangle = \sqrt{n+1} |n+1\rangle \implies |n+1\rangle = \frac{1}{\sqrt{n+1}} \hat{a}^\dagger |n\rangle
+\begin{aligned}
+\hat{a}^\dagger|n\rangle &amp;= \sqrt{n+1} |n+1\rangle \implies |n+1\rangle \\
+&amp;= \frac{1}{\sqrt{n+1}} \hat{a}^\dagger |n\rangle
+\end{aligned}
 \]</div>
 <p>このステップを基底状態 <span class="arithmatex">\(|0\rangle\)</span> から順に繰り返し適用します。</p>
 <ul>
@@ -14620,7 +14666,7 @@
 </ul>
 <p>これらを一般化して <span class="arithmatex">\(n\)</span> 番目の状態についてまとめると，分母に階乗の平方根が現れ，目的の数状態表現が導出されます。</p>
 <div class="arithmatex">\[
-|n\rangle = \frac{(\hat{a}^\dagger)^n}{\sqrt{n!}} |0\rangle
+\finalanswer{|n\rangle = \frac{(\hat{a}^\dagger)^n}{\sqrt{n!}} |0\rangle}
 \]</div>
 
 

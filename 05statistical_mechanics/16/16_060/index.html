@@ -14560,7 +14560,7 @@
 \]</div>
 <p>ここで，提示されたクラウス演算子の定義 <span class="arithmatex">\(\hat{M}_k(t) = \langle e_k| \hat{U}(t) |e_0\rangle\)</span> を適用します。そのエルミート共役は <span class="arithmatex">\(\hat{M}_k^\dagger(t) = \langle e_0| \hat{U}^\dagger(t) |e_k\rangle\)</span> となります。これらを代入することで，目的のクラウス展開が導出されます。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{S}}(t) = \sum_k \hat{M}_k(t) \rho_{\mathrm{S}}(0) \hat{M}_k^\dagger(t)
+\finalanswer{\rho_{\mathrm{S}}(t) = \sum_k \hat{M}_k(t) \rho_{\mathrm{S}}(0) \hat{M}_k^\dagger(t)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>クラウス演算子の定義式を左辺の和の形式に代入します。</p>
@@ -14573,15 +14573,21 @@
 \]</div>
 <p>これをつなぎ合わせることで，環境の自由度が消去されます。</p>
 <div class="arithmatex">\[
-\sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) = \langle e_0| \hat{U}^\dagger(t) \hat{I}_{\mathrm{E}} \hat{U}(t) |e_0\rangle = \langle e_0| \hat{U}^\dagger(t) \hat{U}(t) |e_0\rangle
+\begin{aligned}
+\sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) &amp;= \langle e_0| \hat{U}^\dagger(t) \hat{I}_{\mathrm{E}} \hat{U}(t) |e_0\rangle \\
+&amp;= \langle e_0| \hat{U}^\dagger(t) \hat{U}(t) |e_0\rangle
+\end{aligned}
 \]</div>
 <p>全系のハミルトニアンによる時間発展はユニタリーであるため， <span class="arithmatex">\(\hat{U}^\dagger(t) \hat{U}(t) = \hat{I}_{\mathrm{tot}} = \hat{I}_{\mathrm{S}} \otimes \hat{I}_{\mathrm{E}}\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
-\sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) = \langle e_0| \big( \hat{I}_{\mathrm{S}} \otimes \hat{I}_{\mathrm{E}} \big) |e_0\rangle = \hat{I}_{\mathrm{S}} \langle e_0|e_0\rangle
+\begin{aligned}
+\sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) &amp;= \langle e_0| \big( \hat{I}_{\mathrm{S}} \otimes \hat{I}_{\mathrm{E}} \big) |e_0\rangle \\
+&amp;= \hat{I}_{\mathrm{S}} \langle e_0|e_0\rangle
+\end{aligned}
 \]</div>
 <p>基底の規格化条件 <span class="arithmatex">\(\langle e_0|e_0\rangle = 1\)</span> より，対象系Sの単位行列だけが残ります。</p>
 <div class="arithmatex">\[
-\sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) = \hat{I}_{\mathrm{S}}
+\finalanswer{\sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) = \hat{I}_{\mathrm{S}}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(1) の公式に従い，与えられた2つの行列の項を計算して足し合わせます。</p>
@@ -14592,7 +14598,10 @@
   \hat{M}_0 \rho_{\mathrm{S}}(0) \hat{M}_0^\dagger = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix} \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \rho_{10} &amp; \rho_{11} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix}
 \]</div>
 <div class="arithmatex">\[
-  = \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; \sqrt{1-\gamma}\rho_{11} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix} = \begin{pmatrix} \rho_{00} &amp; \sqrt{1-\gamma}\rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; (1-\gamma)\rho_{11} \end{pmatrix}
+\begin{aligned}
+ &amp;= \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; \sqrt{1-\gamma}\rho_{11} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix} \\
+&amp;= \begin{pmatrix} \rho_{00} &amp; \sqrt{1-\gamma}\rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; (1-\gamma)\rho_{11} \end{pmatrix}
+\end{aligned}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(\hat{M}_1 \rho_{\mathrm{S}}(0) \hat{M}_1^\dagger\)</span> の計算</strong></li>
@@ -14601,17 +14610,25 @@
   \hat{M}_1 \rho_{\mathrm{S}}(0) \hat{M}_1^\dagger = \begin{pmatrix} 0 &amp; \sqrt{\gamma} \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \rho_{10} &amp; \rho_{11} \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ \sqrt{\gamma} &amp; 0 \end{pmatrix}
 \]</div>
 <div class="arithmatex">\[
-  = \begin{pmatrix} \sqrt{\gamma}\rho_{10} &amp; \sqrt{\gamma}\rho_{11} \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ \sqrt{\gamma} &amp; 0 \end{pmatrix} = \begin{pmatrix} \gamma\rho_{11} &amp; 0 \\ 0 &amp; 0 \end{pmatrix}
+\begin{aligned}
+ &amp;= \begin{pmatrix} \sqrt{\gamma}\rho_{10} &amp; \sqrt{\gamma}\rho_{11} \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ \sqrt{\gamma} &amp; 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} \gamma\rho_{11} &amp; 0 \\ 0 &amp; 0 \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>これら2つの行列の各要素を足し合わせることで，時刻 <span class="arithmatex">\(t\)</span> における密度行列 <span class="arithmatex">\(\rho_{\mathrm{S}}(t)\)</span> が求まります。</p>
-<div class="arithmatex">\[
-\rho_{\mathrm{S}}(t) = \begin{pmatrix} \rho_{00} + \gamma\rho_{11} &amp; \sqrt{1-\gamma}\rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; (1-\gamma)\rho_{11} \end{pmatrix}
-\]</div>
+<p>$$</p>
+<p>\finalanswer{\rho_{\mathrm{S}}(t) =
+\begin{pmatrix}
+\rho_{00} + \gamma\rho_{11} &amp; \sqrt{1-\gamma}\rho_{01} \
+\sqrt{1-\gamma}\rho_{10} &amp; (1-\gamma)\rho_{11}
+\end{pmatrix}}</p>
+<p>$$</p>
 <p><strong>物理的現象の説明</strong></p>
 <p>十分に時間が経過して周囲への散逸が進んだ極限 <span class="arithmatex">\(\gamma = 1\)</span> を考えます。上記の行列式に <span class="arithmatex">\(\gamma = 1\)</span> を代入すると以下のようになります。</p>
-<div class="arithmatex">\[
-\rho_{\mathrm{S}}(\infty) = \begin{pmatrix} \rho_{00} + \rho_{11} &amp; 0 \\ 0 &amp; 0 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}
-\]</div>
+<p>$$</p>
+<p>\finalanswer{\rho_{\mathrm{S}}(\infty) =
+\begin{pmatrix} 1 &amp; 0 \ 0 &amp; 0 \end{pmatrix}}</p>
+<p>$$</p>
 <ul>
 <li><strong>散逸</strong>: 上準位の存在確率を表す <span class="arithmatex">\(\rho_{11}\)</span> が 0 に減少する一方で，下準位の確率が <span class="arithmatex">\(\rho_{00} + \rho_{11} = 1\)</span> へと変化しています。これは，系が持っていたエネルギーが環境へとすべて逃げていき，基底状態へと落ち切る散逸プロセスに対応します。</li>
 <li><strong>デコヒーレンス</strong>: 量子力学的な複素位相の干渉効果を表す非対角項 <span class="arithmatex">\(\sqrt{1-\gamma}\rho_{01}\)</span> が， <span class="arithmatex">\(\gamma=1\)</span> によって0 へと消滅しています。環境との微視的な相互作用により，系単体のコヒーレンスが消失するデコヒーレンスプロセスが数学的に確認できます。</li>

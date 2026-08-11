@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">ボルツマン方程式とマクロ保存則</h1>
 <h2 id="_2">問題</h2>
-<p>外力が働かない <span class="arithmatex">\(\boldsymbol{F} = 0\)</span>3次元空間における一粒子分布関数 <span class="arithmatex">\(f(\boldsymbol{r}, \boldsymbol{p}, t)\)</span> のボルツマン方程式を考える。粒子の質量を <span class="arithmatex">\(m\)</span> とすると，方程式は以下の通りである。</p>
+<p>外力が働かない <span class="arithmatex">\(\boldsymbol{F} = 0\)</span> の3次元空間における一粒子分布関数 <span class="arithmatex">\(f(\boldsymbol{r}, \boldsymbol{p}, t)\)</span> のボルツマン方程式を考える。粒子の質量を <span class="arithmatex">\(m\)</span> とすると，方程式は以下の通りである。</p>
 <div class="arithmatex">\[
 \frac{\partial f}{\partial t} + \frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} f = \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}}
 \]</div>
@@ -14547,15 +14547,21 @@ n(\boldsymbol{r}, t)\boldsymbol{u}(\boldsymbol{r}, t) = \int \frac{\boldsymbol{p
 <p>問題文の条件より，右辺の衝突項の積分はゼロになります。
 左辺第1項について，時間微分 <span class="arithmatex">\(\frac{\partial}{\partial t}\)</span> と運動量積分 <span class="arithmatex">\(\int d^3p\)</span> の順序を交換し，数密度 <span class="arithmatex">\(n\)</span> の定義式を適用します。</p>
 <div class="arithmatex">\[
-\int \frac{\partial f}{\partial t} d^3p = \frac{\partial}{\partial t} \int f d^3p = \frac{\partial n}{\partial t}
+\begin{aligned}
+\int \frac{\partial f}{\partial t} d^3p &amp;= \frac{\partial}{\partial t} \int f d^3p \\
+&amp;= \frac{\partial n}{\partial t}
+\end{aligned}
 \]</div>
 <p>左辺第2項について，空間微分 <span class="arithmatex">\(\nabla_{\boldsymbol{r}}\)</span> を積分の外へ括り出します。運動量変数 <span class="arithmatex">\(\boldsymbol{p}\)</span> は位置座標 <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存しないため，微分の外へ出すことができます。粒子流束密度の定義式を適用します。</p>
 <div class="arithmatex">\[
-\int \left( \frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} f \right) d^3p = \nabla_{\boldsymbol{r}} \cdot \int \frac{\boldsymbol{p}}{m} f d^3p = \nabla_{\boldsymbol{r}} \cdot (n \boldsymbol{u})
+\begin{aligned}
+\int \left( \frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} f \right) d^3p &amp;= \nabla_{\boldsymbol{r}} \cdot \int \frac{\boldsymbol{p}}{m} f d^3p \\
+&amp;= \nabla_{\boldsymbol{r}} \cdot (n \boldsymbol{u})
+\end{aligned}
 \]</div>
 <p>これらを組み合わせることで，マクロな連続の式が導出されます。</p>
 <div class="arithmatex">\[
-\frac{\partial n}{\partial t} + \nabla_{\boldsymbol{r}} \cdot (n \boldsymbol{u}) = 0
+\finalanswer{\frac{\partial n}{\partial t} + \nabla_{\boldsymbol{r}} \cdot (n \boldsymbol{u}) = 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>ボルツマン方程式の両辺に <span class="arithmatex">\(p_i\)</span> を掛けて積分します。</p>
@@ -14565,7 +14571,10 @@ n(\boldsymbol{r}, t)\boldsymbol{u}(\boldsymbol{r}, t) = \int \frac{\boldsymbol{p
 <p>運動量保存則より右辺はゼロになります。
 左辺第1項は，質量の定数 <span class="arithmatex">\(m\)</span> を補うために全体に <span class="arithmatex">\(m\)</span> を掛け算することを念頭に置いて変形します。</p>
 <div class="arithmatex">\[
-\int p_i \frac{\partial f}{\partial t} d^3p = \frac{\partial}{\partial t} \int p_i f d^3p = \frac{\partial}{\partial t} (m n u_i)
+\begin{aligned}
+\int p_i \frac{\partial f}{\partial t} d^3p &amp;= \frac{\partial}{\partial t} \int p_i f d^3p \\
+&amp;= \frac{\partial}{\partial t} (m n u_i)
+\end{aligned}
 \]</div>
 <p>左辺第2項の内積の形を成分表示 <span class="arithmatex">\(\frac{\boldsymbol{p}}{m} \cdot \nabla_{\boldsymbol{r}} = \sum_j \frac{p_j}{m} \frac{\partial}{\partial x_j}\)</span> に展開し，微分を積分の外へ出します。</p>
 <div class="arithmatex">\[
@@ -14577,7 +14586,7 @@ n(\boldsymbol{r}, t)\boldsymbol{u}(\boldsymbol{r}, t) = \int \frac{\boldsymbol{p
 \]</div>
 <p>各項を合わせることで，目的の運動量保存則の基礎式が得られます。</p>
 <div class="arithmatex">\[
-\frac{\partial}{\partial t} (m n u_i) + \sum_{j} \frac{\partial}{\partial x_j} \Pi_{ij} = 0
+\finalanswer{\frac{\partial}{\partial t} (m n u_i) + \sum_{j} \frac{\partial}{\partial x_j} \Pi_{ij} = 0}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>与えられた近似関係式 <span class="arithmatex">\(\Pi_{ij} = m n u_i u_j + P \delta_{ij}\)</span> を (2) の式に代入します。</p>
@@ -14602,7 +14611,7 @@ m n \left( \frac{\partial u_i}{\partial t} + \sum_j u_j \frac{\partial u_i}{\par
 \]</div>
 <p>両辺をマクロな質量密度 <span class="arithmatex">\(\rho = m n\)</span> で割ることで，完全流体の運動を表すオイラー方程式の成分表示が導出されます。</p>
 <div class="arithmatex">\[
-\frac{\partial u_i}{\partial t} + \sum_j u_j \frac{\partial u_i}{\partial x_j} = - \frac{1}{\rho} \frac{\partial P}{\partial x_i}
+\finalanswer{\frac{\partial u_i}{\partial t} + \sum_j u_j \frac{\partial u_i}{\partial x_j} = - \frac{1}{\rho} \frac{\partial P}{\partial x_i}}
 \]</div>
 
 

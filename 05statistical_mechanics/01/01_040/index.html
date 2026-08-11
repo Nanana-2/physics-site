@@ -14531,12 +14531,15 @@
 <h3 id="1">(1)</h3>
 <p><span class="arithmatex">\(N\)</span> 個の区別可能な粒子の中から，左側の領域に入る <span class="arithmatex">\(n\)</span> 個の粒子を選ぶ組合せの数が，指定された配置の微視的状態数 <span class="arithmatex">\(\Omega(n)\)</span> に対応します。したがって，求める状態数は二項係数を用いて以下のように表されます。</p>
 <div class="arithmatex">\[
-\Omega(n) = \frac{N!}{n!(N-n)!}
+\finalanswer{\Omega(n) = \frac{N!}{n!(N-n)!}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>ボルツマンのエントロピー公式に (1) の結果を代入し，対数の性質を用いて展開します。</p>
 <div class="arithmatex">\[
-S(n) = k_B \log \left[ \frac{N!}{n!(N-n)!} \right] = k_B \left[ \log N! - \log n! - \log (N-n)! \right]
+\begin{aligned}
+S(n) &amp;= k_B \log \left[ \frac{N!}{n!(N-n)!} \right] \\
+&amp;= k_B \left[ \log N! - \log n! - \log (N-n)! \right]
+\end{aligned}
 \]</div>
 <p>ここで，各項にスターリングの公式を適用します。</p>
 <div class="arithmatex">\[
@@ -14544,7 +14547,7 @@ S(n) \simeq k_B \left[ (N \log N - N) - (n \log n - n) - \{ (N-n) \log (N-n) - (
 \]</div>
 <p>括弧内の定数項 <span class="arithmatex">\(-N + n + (N-n) = 0\)</span> となって相殺されるため，エントロピーは以下のようになります。</p>
 <div class="arithmatex">\[
-S(n) \simeq k_B \left[ N \log N - n \log n - (N-n) \log (N-n) \right]
+\finalanswer{S(n) \simeq k_B \left[ N \log N - n \log n - (N-n) \log (N-n) \right]}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>エントロピー <span class="arithmatex">\(S(n)\)</span> が最大となる条件を調べるため，<span class="arithmatex">\(n\)</span> に関する1階微分を計算して 0 とおきます。</p>
@@ -14552,20 +14555,25 @@ S(n) \simeq k_B \left[ N \log N - n \log n - (N-n) \log (N-n) \right]
 \frac{dS(n)}{dn} = k_B \left[ - \left( \log n + n \cdot \frac{1}{n} \right) - \left( - \log (N-n) + (N-n) \cdot \frac{1}{N-n} \cdot (-1) \right) \right]
 \]</div>
 <div class="arithmatex">\[
-\frac{dS(n)}{dn} = k_B \left[ - \log n - 1 + \log (N-n) + 1 \right] = k_B \log \left( \frac{N-n}{n} \right)
+\begin{aligned}
+\frac{dS(n)}{dn} &amp;= k_B \left[ - \log n - 1 + \log (N-n) + 1 \right] \\
+&amp;= k_B \log \left( \frac{N-n}{n} \right)
+\end{aligned}
 \]</div>
 <p>極値をとる条件 <span class="arithmatex">\(\frac{dS(n)}{dn} = 0\)</span> より，以下の関係式が得られます。</p>
 <div class="arithmatex">\[
 \frac{N-n}{n} = 1
 \]</div>
 <div class="arithmatex">\[
-n = \frac{N}{2}
+\finalanswer{n = \frac{N}{2}}
 \]</div>
 <p>2階微分を計算すると <span class="arithmatex">\(\frac{d^2S}{dn^2} = -k_B \left( \frac{1}{n} + \frac{1}{N-n} \right) &lt; 0\)</span> となるため，<span class="arithmatex">\(n = N/2\)</span> のときにエントロピーは確かに最大値をとります。</p>
 <p><span class="arithmatex">\(n=N/2\)</span> におけるエントロピーと2階微分は</p>
 <div class="arithmatex">\[
-S\left(\frac{N}{2}\right)=Nk_B\log 2,\qquad
-\left.\frac{d^2S}{dn^2}\right|_{n=N/2}=-\frac{4k_B}{N}
+\begin{aligned}
+S\left(\frac{N}{2}\right) &amp;= Nk_B\log 2,\qquad \left.\frac{d^2S}{dn^2}\right|_{n=N/2} \\
+&amp;= -\frac{4k_B}{N}
+\end{aligned}
 \]</div>
 <p>です。したがって，<span class="arithmatex">\(n=N/2+\delta n\)</span> として2次まで展開すると，</p>
 <div class="arithmatex">\[

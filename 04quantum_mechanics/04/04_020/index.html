@@ -14548,7 +14548,10 @@ T \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}
   ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} = E \psi \implies \frac{d^2 \psi}{dx^2} = -\frac{2mE}{\hbar^2} \psi
+\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} &amp;= E \psi \implies \frac{d^2 \psi}{dx^2} \\
+&amp;= -\frac{2mE}{\hbar^2} \psi
+\end{aligned}
 \]</div>
 <p>これより，定数 <span class="arithmatex">\(k\)</span> の表式が得られます。</p>
 <div class="arithmatex">\[
@@ -14559,11 +14562,14 @@ T \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}
   ポテンシャルは <span class="arithmatex">\(V(x) = V_0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-  -\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} + V_0 \psi_{\text{II}} = E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} = \frac{2m(V_0 - E)}{\hbar^2} \psi_{\text{II}}
+\begin{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} + V_0 \psi_{\text{II}} &amp;= E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} \\
+&amp;= \frac{2m(V_0 - E)}{\hbar^2} \psi_{\text{II}}
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(E &lt; V_0\)</span> であるため，根号の中身は正となります。これにより定数 <span class="arithmatex">\(\kappa\)</span> の表式が得られます。</p>
 <div class="arithmatex">\[
-  \kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}
+  \finalanswer{\kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>各境界における接続条件を書き下します。それぞれの微分は <span class="arithmatex">\(\psi_{\text{I}}'(x) = ikAe^{ikx} - ikBe^{-ikx}\)</span> ， <span class="arithmatex">\(\psi_{\text{II}}'(x) = -\kappa Ce^{-\kappa x} + \kappa De^{\kappa x}\)</span> ， <span class="arithmatex">\(\psi_{\text{III}}'(x) = ikFe^{ikx}\)</span> です。</p>
@@ -14583,7 +14589,7 @@ T \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}
   C e^{-\kappa a} + D e^{\kappa a} = F e^{ika} \quad \cdots \text{③}
 \]</div>
 <div class="arithmatex">\[
-  \kappa(-C e^{-\kappa a} + D e^{\kappa a}) = ikF e^{ika} \quad \cdots \text{④}
+  \finalanswer{\kappa(-C e^{-\kappa a} + D e^{\kappa a}) = ikF e^{ika} \quad \cdots \text{④}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(\kappa a \gg 1\)</span> の近似を適用します。このとき，障壁の右端 <span class="arithmatex">\(x=a\)</span> では <span class="arithmatex">\(e^{\kappa a}\)</span> の項が支配的になり， <span class="arithmatex">\(e^{-\kappa a}\)</span> の項は無視できます。また，障壁内部での減衰が大きいため，係数 <span class="arithmatex">\(D\)</span> の寄与自体も小さくなり，境界 <span class="arithmatex">\(x=0\)</span> では <span class="arithmatex">\(D \approx 0\)</span> とみなせます。</p>
@@ -14600,7 +14606,10 @@ ik(A - B) = -\kappa C
 \]</div>
 <p>次に，境界 <span class="arithmatex">\(x = a\)</span> の③式，④式を考えます。<span class="arithmatex">\(D\)</span> の項を残し，<span class="arithmatex">\(e^{-\kappa a}\)</span> の項を右辺の <span class="arithmatex">\(F\)</span> と結びつけます。③式と④式を連立させて <span class="arithmatex">\(D\)</span> について解くと，以下の関係が得られます。</p>
 <div class="arithmatex">\[
-2D e^{\kappa a} = F e^{ika} \left( 1 + \frac{ik}{\kappa} \right) \implies D = \frac{\kappa + ik}{2\kappa} e^{ika - \kappa a} F
+\begin{aligned}
+2D e^{\kappa a} &amp;= F e^{ika} \left( 1 + \frac{ik}{\kappa} \right) \implies D \\
+&amp;= \frac{\kappa + ik}{2\kappa} e^{ika - \kappa a} F
+\end{aligned}
 \]</div>
 <p>さらに，途中の領域 II 全体を繋ぐために，本来の接続条件から得られる <span class="arithmatex">\(C\)</span> と <span class="arithmatex">\(D\)</span> の関係 <span class="arithmatex">\(D \approx C e^{-2\kappa a} \cdot \frac{\kappa - ik}{\kappa + ik}\)</span> を考慮して， <span class="arithmatex">\(A\)</span> から <span class="arithmatex">\(F\)</span> への減衰を評価します。厳密な展開を近似すると，係数 <span class="arithmatex">\(F\)</span> は <span class="arithmatex">\(C\)</span> に対して <span class="arithmatex">\(e^{-\kappa a}\)</span> の割合で減少する形に結びつきます。</p>
 <div class="arithmatex">\[
@@ -14616,7 +14625,7 @@ F e^{ika} \approx \frac{2\kappa}{\kappa - ik} \left( \frac{2k}{k + i\kappa} \rig
 \]</div>
 <p>したがって，透過確率 <span class="arithmatex">\(T\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-T = \frac{|F|^2}{|A|^2} \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}
+\finalanswer{T = \frac{|F|^2}{|A|^2} \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}}
 \]</div>
 <p>この結果から，粒子が障壁を通り抜ける確率は，障壁の幅 <span class="arithmatex">\(a\)</span> が大きくなるにつれて指数関数的に急激に減少することが分かります。</p>
 

@@ -14521,7 +14521,11 @@
 \]</div>
 <p>この定積分を実行します。</p>
 <div class="arithmatex">\[
-\int_{0}^{\infty} e^{-2\alpha x} dx = \left[ -\frac{1}{2\alpha} e^{-2\alpha x} \right]_{0}^{\infty} = 0 - \left( -\frac{1}{2\alpha} \cdot 1 \right) = \frac{1}{2\alpha}
+\begin{aligned}
+\int_{0}^{\infty} e^{-2\alpha x} dx &amp;= \left[ -\frac{1}{2\alpha} e^{-2\alpha x} \right]_{0}^{\infty} \\
+&amp;= 0 - \left( -\frac{1}{2\alpha} \cdot 1 \right) \\
+&amp;= \frac{1}{2\alpha}
+\end{aligned}
 \]</div>
 <p>これをもとの規格化条件の式に代入します。</p>
 <div class="arithmatex">\[
@@ -14529,12 +14533,15 @@
 \]</div>
 <p><span class="arithmatex">\(N &gt; 0\)</span> より，求める規格化定数は以下のようになります。</p>
 <div class="arithmatex">\[
-N = \sqrt{\alpha}
+\finalanswer{N = \sqrt{\alpha}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>粒子が指定された領域 <span class="arithmatex">\([-L, L]\)</span> に見出される確率 <span class="arithmatex">\(P\)</span> は，その範囲における確率密度の積分で計算されます。</p>
 <div class="arithmatex">\[
-P = \int_{-L}^{L} |\psi(x)|^2 dx = \int_{-\frac{1}{2\alpha}}^{\frac{1}{2\alpha}} \alpha e^{-2\alpha |x|} dx
+\begin{aligned}
+P &amp;= \int_{-L}^{L} |\psi(x)|^2 dx \\
+&amp;= \int_{-\frac{1}{2\alpha}}^{\frac{1}{2\alpha}} \alpha e^{-2\alpha |x|} dx
+\end{aligned}
 \]</div>
 <p>(1) と同様に偶関数の性質を利用して，積分範囲を正の領域のみに絞って 2 倍にします。</p>
 <div class="arithmatex">\[
@@ -14542,7 +14549,10 @@ P = 2\alpha \int_{0}^{\frac{1}{2\alpha}} e^{-2\alpha x} dx
 \]</div>
 <p>定積分を実行します。</p>
 <div class="arithmatex">\[
-P = 2\alpha \left[ -\frac{1}{2\alpha} e^{-2\alpha x} \right]_{0}^{\frac{1}{2\alpha}} = -1 \cdot \left( e^{-2\alpha \cdot \frac{1}{2\alpha}} - e^{0} \right)
+\begin{aligned}
+P &amp;= 2\alpha \left[ -\frac{1}{2\alpha} e^{-2\alpha x} \right]_{0}^{\frac{1}{2\alpha}} \\
+&amp;= -1 \cdot \left( e^{-2\alpha \cdot \frac{1}{2\alpha}} - e^{0} \right)
+\end{aligned}
 \]</div>
 <p>指数部分を整理します。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14561,7 @@ P = -\left( e^{-1} - 1 \right) = 1 - \frac{1}{e}
 <p>これが確率 <span class="arithmatex">\(P\)</span> の明示式です。</p>
 <p>次に， <span class="arithmatex">\(e \approx 2.718\)</span> を代入して数値を計算します。</p>
 <div class="arithmatex">\[
-P \approx 1 - \frac{1}{2.718} \approx 1 - 0.3679 = 0.6321
+\finalanswer{P \approx 1 - \frac{1}{2.718} \approx 1 - 0.3679 = 0.6321}
 \]</div>
 <p>百分率に直すと約 63.2% となります。したがって，粒子がこの領域に存在する確率は約 63% です。</p>
 

@@ -14512,11 +14512,14 @@
 \]</div>
 <p>これを用いて行列 <span class="arithmatex">\(\boldsymbol{A} = \boldsymbol{M}^{-1}\boldsymbol{K}\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\boldsymbol{A} = \begin{pmatrix} \frac{1}{m_1} &amp; 0 \\ 0 &amp; \frac{1}{m_2} \end{pmatrix} \begin{pmatrix} k_1 + k_2 &amp; -k_2 \\ -k_2 &amp; k_2 + k_3 \end{pmatrix} = \begin{pmatrix} \frac{k_1 + k_2}{m_1} &amp; -\frac{k_2}{m_1} \\ -\frac{k_2}{m_2} &amp; \frac{k_2 + k_3}{m_2} \end{pmatrix}
+\begin{aligned}
+\boldsymbol{A} &amp;= \begin{pmatrix} \frac{1}{m_1} &amp; 0 \\ 0 &amp; \frac{1}{m_2} \end{pmatrix} \begin{pmatrix} k_1 + k_2 &amp; -k_2 \\ -k_2 &amp; k_2 + k_3 \end{pmatrix} \\
+&amp;= \begin{pmatrix} \frac{k_1 + k_2}{m_1} &amp; -\frac{k_2}{m_1} \\ -\frac{k_2}{m_2} &amp; \frac{k_2 + k_3}{m_2} \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>与えられた条件 <span class="arithmatex">\(m_1 = m_2 = m\)</span> ， <span class="arithmatex">\(k_1 = k_3 = k\)</span> ， <span class="arithmatex">\(k_2 = 2k\)</span> を代入します。成分は次のようになります。</p>
 <div class="arithmatex">\[
-\boldsymbol{A} = \frac{k}{m} \begin{pmatrix} 3 &amp; -2 \\ -2 &amp; 3 \end{pmatrix}
+\finalanswer{\boldsymbol{A} = \frac{k}{m} \begin{pmatrix} 3 &amp; -2 \\ -2 &amp; 3 \end{pmatrix}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>行列 <span class="arithmatex">\(\boldsymbol{A}\)</span> の固有値を求めます。 <span class="arithmatex">\(\frac{k}{m} = \alpha\)</span> と置き，固有値方程式 <span class="arithmatex">\(\det(\boldsymbol{A} - \lambda \boldsymbol{E}) = 0\)</span> を計算します。</p>
@@ -14536,14 +14539,17 @@
 \]</div>
 <p>関係式 <span class="arithmatex">\(\boldsymbol{x} = \boldsymbol{P}\boldsymbol{u}\)</span> を成分で書き下します。</p>
 <div class="arithmatex">\[
-\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix} \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} = \begin{pmatrix} u_1 + u_2 \\ u_1 - u_2 \end{pmatrix}
+\begin{aligned}
+\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} &amp;= \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix} \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \\
+&amp;= \begin{pmatrix} u_1 + u_2 \\ u_1 - u_2 \end{pmatrix}
+\end{aligned}
 \]</div>
 <p>この連立方程式を基準座標 <span class="arithmatex">\(\boldsymbol{u}\)</span> について解くことで，求める線形結合の表現が得られます。</p>
 <div class="arithmatex">\[
 u_1 = \frac{x_1 + x_2}{2}
 \]</div>
 <div class="arithmatex">\[
-u_2 = \frac{x_1 - x_2}{2}
+\finalanswer{u_2 = \frac{x_1 - x_2}{2}}
 \]</div>
 
 

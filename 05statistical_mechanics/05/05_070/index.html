@@ -14554,17 +14554,24 @@ f(r) \simeq -\frac{\phi(r)}{k_B T}
 </ul>
 <p>したがって， <span class="arithmatex">\(f\)</span> 関数は以下のようになります。</p>
 <div class="arithmatex">\[
-f(r) = \begin{cases} -1 &amp; (r &lt; \sigma) \\ 0 &amp; (r \ge \sigma) \end{cases}
+\finalanswer{f(r) = \begin{cases} -1 &amp; (r &lt; \sigma) \\ 0 &amp; (r \ge \sigma) \end{cases}}
 \]</div>
 <p>この結果を第2ビリアル係数の積分式に代入します。 <span class="arithmatex">\(r \ge \sigma\)</span> の領域は被積分関数が 0 になるため，積分の範囲は <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\sigma\)</span> までに縮小されます。</p>
 <div class="arithmatex">\[
-B_2^{\mathrm{HS}} = -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr = \frac{1}{2} \cdot 4\pi \left[ \frac{r^3}{3} \right]_0^\sigma = \frac{2\pi \sigma^3}{3}
+\begin{aligned}
+B_2^{\mathrm{HS}} &amp;= -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr \\
+&amp;= \frac{1}{2} \cdot 4\pi \left[ \frac{r^3}{3} \right]_0^\sigma \\
+&amp;= \finalanswer{\frac{2\pi \sigma^3}{3}}
+\end{aligned}
 \]</div>
 <p>この結果 <span class="arithmatex">\(B_2^{\mathrm{HS}} = \frac{2\pi \sigma^3}{3}\)</span> は，1つの粒子の体積 <span class="arithmatex">\(v_0 = \frac{4}{3}\pi \left(\frac{\sigma}{2}\right)^3 = \frac{\pi \sigma^3}{6}\)</span> のちょうど 4 倍<span class="arithmatex">\(4v_0\)</span>に相当します。これは統計力学において，粒子同士が重なり合えないことによって生じる排除体積の効果を表しています。</p>
 <h3 id="2">(2)</h3>
 <p>引力領域<span class="arithmatex">\(r \ge \sigma\)</span>では，分子間引力が熱エネルギーに比べて十分に弱い<span class="arithmatex">\(|\phi(r)| \ll k_B T\)</span>という条件が与えられています。したがって， <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> の近似公式を <span class="arithmatex">\(x = -\frac{\phi(r)}{k_B T}\)</span> として適用できます。</p>
 <div class="arithmatex">\[
-f(r) = \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1 \simeq \left( 1 - \frac{\phi(r)}{k_B T} \right) - 1 = -\frac{\phi(r)}{k_B T}
+\begin{aligned}
+f(r) &amp;= \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1 \simeq \left( 1 - \frac{\phi(r)}{k_B T} \right) - 1 \\
+&amp;= -\frac{\phi(r)}{k_B T}
+\end{aligned}
 \]</div>
 <p>これにより，引力領域での近似式が示されました。</p>
 <p>次に，全体の第2ビリアル係数の積分を，斥力領域<span class="arithmatex">\(0 \le r &lt; \sigma\)</span>と引力領域<span class="arithmatex">\(r \ge \sigma\)</span>の2つに分割して計算します。</p>
@@ -14585,7 +14592,7 @@ a = 2\pi \int_\sigma^\infty r^2 |\phi(r)| dr
 \]</div>
 <p>これらを組み合わせることで，第2ビリアル係数が目的の形式に整理されました。</p>
 <div class="arithmatex">\[
-B_2(T) = b - \frac{a}{k_B T}
+\finalanswer{B_2(T) = b - \frac{a}{k_B T}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた <span class="arithmatex">\(B_2(T)\)</span> を，密度 <span class="arithmatex">\(\rho = N/V\)</span> を用いたビリアル展開の第2項までの式に代入します。</p>
@@ -14606,7 +14613,7 @@ P + \frac{a N^2}{V^2} \simeq \frac{N k_B T}{V} \cdot \frac{1}{1 - \frac{N b}{V}}
 \]</div>
 <p>両辺に分母の <span class="arithmatex">\((V - N b)\)</span> を掛け合わせます。</p>
 <div class="arithmatex">\[
-\left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_B T
+\finalanswer{\left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_B T}
 \]</div>
 <p>これにより，分子間相互作用を考慮したクラスター展開から導いたビリアル展開の式が，熱力学・唯物的な考察から提案されたファン・デル・ワールスの状態方程式を低密度極限において再現することが証明されました。</p>
 

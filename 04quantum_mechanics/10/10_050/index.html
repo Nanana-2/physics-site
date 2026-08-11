@@ -14557,7 +14557,7 @@
 \]</div>
 <p>先頭の 2つの括弧の塊は，問題文で定義された <span class="arithmatex">\(\hat{H}_0(Z)\)</span> に一致します。残りの項から共通因数 <span class="arithmatex">\((Z - 2)\)</span> を括り出すことで，求める形式が導かれます。</p>
 <div class="arithmatex">\[
-\hat{H} = \hat{H}_0(Z) + (Z - 2)\left(\frac{1}{r_1} + \frac{1}{r_2}\right) + \frac{1}{|\boldsymbol{r}_1 - \boldsymbol{r}_2|}
+\finalanswer{\hat{H} = \hat{H}_0(Z) + (Z - 2)\left(\frac{1}{r_1} + \frac{1}{r_2}\right) + \frac{1}{|\boldsymbol{r}_1 - \boldsymbol{r}_2|}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で変形した各項の期待値を，試行波動関数を用いて計算します。</p>
@@ -14566,14 +14566,21 @@
 </ul>
 <p>試行波動関数 <span class="arithmatex">\(\Psi\)</span> は，電荷 <span class="arithmatex">\(Z\)</span> を持つ独立な 2つの水素様原子ハミルトニアンの固有状態の積です。それぞれの電子について固有値 <span class="arithmatex">\(-Z^2/2\)</span> が得られるため，足し合わせると以下のようになります。</p>
 <div class="arithmatex">\[
-\langle \Psi | \hat{H}_0(Z) | \Psi \rangle = -\frac{Z^2}{2} - \frac{Z^2}{2} = -Z^2
+\begin{aligned}
+\langle \Psi | \hat{H}_0(Z) | \Psi \rangle &amp;= -\frac{Z^2}{2} - \frac{Z^2}{2} \\
+&amp;= -Z^2
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>ポテンシャル補正項の期待値</strong></li>
 </ul>
 <p>提示された公式 <span class="arithmatex">\(\langle \frac{1}{r_1} \rangle = Z\)</span> を適用します。電子1と電子2は対称であるため，両者の期待値は同じです。</p>
 <div class="arithmatex">\[
-\langle \Psi | (Z - 2)\left(\frac{1}{r_1} + \frac{1}{r_2}\right) | \Psi \rangle = (Z - 2)(Z + Z) = 2Z(Z - 2) = 2Z^2 - 4Z
+\begin{aligned}
+\langle \Psi | (Z - 2)\left(\frac{1}{r_1} + \frac{1}{r_2}\right) | \Psi \rangle &amp;= (Z - 2)(Z + Z) \\
+&amp;= 2Z(Z - 2) \\
+&amp;= 2Z^2 - 4Z
+\end{aligned}
 \]</div>
 <ul>
 <li><strong>電子間反発項の期待値</strong></li>
@@ -14588,7 +14595,10 @@
 \]</div>
 <p><span class="arithmatex">\(Z\)</span> の次数ごとにまとめます。</p>
 <div class="arithmatex">\[
-\langle H \rangle = Z^2 - \left( 4 - \frac{5}{8} \right)Z = Z^2 - \frac{27}{8}Z
+\begin{aligned}
+\langle H \rangle &amp;= Z^2 - \left( 4 - \frac{5}{8} \right)Z \\
+&amp;= \finalanswer{Z^2 - \frac{27}{8}Z}
+\end{aligned}
 \]</div>
 <p>これが <span class="arithmatex">\(Z\)</span> の関数として表された全エネルギーの期待値です。</p>
 <h3 id="3">(3)</h3>
@@ -14603,11 +14613,15 @@ Z_0 = \frac{27}{16} = 1.6875
 <p>元の原子核の電荷である 2 よりも小さな値になっており，もう一方の電子の存在によって原子核の電荷が遮蔽されている性質が数値として現れます。</p>
 <p>この <span class="arithmatex">\(Z_0\)</span> の値をエネルギーの式に代入して，基底状態エネルギーの近似値を計算します。</p>
 <div class="arithmatex">\[
-E_{\text{var}} = \left( \frac{27}{16} \right)^2 - \frac{27}{8}\left( \frac{27}{16} \right) = \left( \frac{27}{16} \right)^2 - 2\left( \frac{27}{16} \right)^2 = -\left( \frac{27}{16} \right)^2
+\begin{aligned}
+E_{\text{var}} &amp;= \left( \frac{27}{16} \right)^2 - \frac{27}{8}\left( \frac{27}{16} \right) \\
+&amp;= \left( \frac{27}{16} \right)^2 - 2\left( \frac{27}{16} \right)^2 \\
+&amp;= -\left( \frac{27}{16} \right)^2
+\end{aligned}
 \]</div>
 <p>分子と分母をそれぞれ 2乗します。</p>
 <div class="arithmatex">\[
-E_{\text{var}} = -\frac{729}{256} \approx -2.8477
+\finalanswer{E_{\text{var}} = -\frac{729}{256} \approx -2.8477}
 \]</div>
 <p>これが，原子単位系で表したヘリウム原子の基底状態エネルギーの変分近似値です。</p>
 

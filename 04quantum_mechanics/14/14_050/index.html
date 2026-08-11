@@ -14571,34 +14571,34 @@
 <p>各対称操作による座標の変換規則を，行列とベクトルの積の形式に表します。</p>
 <p>恒等操作 <span class="arithmatex">\(\hat{E}\)</span> は成分を変更しないため，単位行列となります。</p>
 <div class="arithmatex">\[
-D(\hat{E}) = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
+\finalanswer{D(\hat{E}) = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}}
 \]</div>
 <p>2回回転操作 <span class="arithmatex">\(\hat{C}_2\)</span> は <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(y\)</span> の符号を反転させるため，以下のようになります。</p>
 <div class="arithmatex">\[
-D(\hat{C}_2) = \begin{pmatrix} -1 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
+\finalanswer{D(\hat{C}_2) = \begin{pmatrix} -1 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}}
 \]</div>
 <p><span class="arithmatex">\(xz\)</span> 鏡映操作 <span class="arithmatex">\(\hat{\sigma}_v\)</span> は <span class="arithmatex">\(y\)</span> の符号のみを反転させます。</p>
 <div class="arithmatex">\[
-D(\hat{\sigma}_v) = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
+\finalanswer{D(\hat{\sigma}_v) = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}}
 \]</div>
 <p><span class="arithmatex">\(yz\)</span> 鏡映操作 <span class="arithmatex">\(\hat{\sigma}_v'\)</span> は <span class="arithmatex">\(x\)</span> の符号のみを反転させます。</p>
 <div class="arithmatex">\[
-D(\hat{\sigma}_v') = \begin{pmatrix} -1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
+\finalanswer{D(\hat{\sigma}_v') = \begin{pmatrix} -1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた4つの表現行列は，すべて非対角成分が 0 であり，対角化されています。これは，各座標成分 <span class="arithmatex">\(x, y, z\)</span> が他の成分と混ざり合うことなく，個別に独立して変換されていることを意味します。</p>
 <p>したがって，3次元表現 <span class="arithmatex">\(D(g)\)</span> は，1行1列のブロック3つへと直和分解されます。それぞれの対角成分を抽出することで，各関数が従う1次元表現の数値が以下の通りに得られます。</p>
 <p><span class="arithmatex">\(x\)</span> 成分の従う表現 <span class="arithmatex">\(D^{(1)}(g)\)</span> の値は，行列の (1,1) 成分を順に並べたものです。</p>
 <div class="arithmatex">\[
-D^{(1)}(\hat{E}) = 1, \quad D^{(1)}(\hat{C}_2) = -1, \quad D^{(1)}(\hat{\sigma}_v) = 1, \quad D^{(1)}(\hat{\sigma}_v') = -1
+\finalanswer{D^{(1)}(\hat{E}) = 1, \quad D^{(1)}(\hat{C}_2) = -1, \quad D^{(1)}(\hat{\sigma}_v) = 1, \quad D^{(1)}(\hat{\sigma}_v') = -1}
 \]</div>
 <p><span class="arithmatex">\(y\)</span> 成分の従う表現 <span class="arithmatex">\(D^{(2)}(g)\)</span> の値は，行列の (2,2) 成分を順に並べたものです。</p>
 <div class="arithmatex">\[
-D^{(2)}(\hat{E}) = 1, \quad D^{(2)}(\hat{C}_2) = -1, \quad D^{(2)}(\hat{\sigma}_v) = -1, \quad D^{(2)}(\hat{\sigma}_v') = 1
+\finalanswer{D^{(2)}(\hat{E}) = 1, \quad D^{(2)}(\hat{C}_2) = -1, \quad D^{(2)}(\hat{\sigma}_v) = -1, \quad D^{(2)}(\hat{\sigma}_v') = 1}
 \]</div>
 <p><span class="arithmatex">\(z\)</span> 成分の従う表現 <span class="arithmatex">\(D^{(3)}(g)\)</span> の値は，行列の (3,3) 成分を順に並べたものです。</p>
 <div class="arithmatex">\[
-D^{(3)}(\hat{E}) = 1, \quad D^{(3)}(\hat{C}_2) = 1, \quad D^{(3)}(\hat{\sigma}_v) = 1, \quad D^{(3)}(\hat{\sigma}_v') = 1
+\finalanswer{D^{(3)}(\hat{E}) = 1, \quad D^{(3)}(\hat{C}_2) = 1, \quad D^{(3)}(\hat{\sigma}_v) = 1, \quad D^{(3)}(\hat{\sigma}_v') = 1}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた各関数の変換数値の並びを，問題文に与えられた <span class="arithmatex">\(C_{2v}\)</span> 点群の文字表の各行と比較します。</p>
@@ -14609,7 +14609,7 @@ D^{(3)}(\hat{E}) = 1, \quad D^{(3)}(\hat{C}_2) = 1, \quad D^{(3)}(\hat{\sigma}_v
 </ul>
 <p>以上の比較により，各座標関数が属する既約表現の分類は以下の通りに確定します。</p>
 <div class="arithmatex">\[
-x \in B_1, \quad y \in B_2, \quad z \in A_1
+\finalanswer{x \in B_1, \quad y \in B_2, \quad z \in A_1}
 \]</div>
 
 

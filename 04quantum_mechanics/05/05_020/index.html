@@ -14537,19 +14537,28 @@
 <p>指数関数の微分公式および合成関数の微分公式を用いて計算します。</p>
 <p>1階微分は以下のようになります。</p>
 <div class="arithmatex">\[
-\frac{d\psi}{d\xi} = A \cdot (-2\alpha \xi) e^{-\alpha \xi^2} = -2\alpha \xi \psi(\xi)
+\begin{aligned}
+\frac{d\psi}{d\xi} &amp;= A \cdot (-2\alpha \xi) e^{-\alpha \xi^2} \\
+&amp;= -2\alpha \xi \psi(\xi)
+\end{aligned}
 \]</div>
 <p>2階微分は，積の微分公式を適用して計算します。</p>
 <div class="arithmatex">\[
-\frac{d^2\psi}{d\xi^2} = \frac{d}{d\xi} \left[ -2\alpha \xi \psi(\xi) \right] = -2\alpha \psi(\xi) - 2\alpha \xi \frac{d\psi}{d\xi}
+\begin{aligned}
+\frac{d^2\psi}{d\xi^2} &amp;= \frac{d}{d\xi} \left[ -2\alpha \xi \psi(\xi) \right] \\
+&amp;= -2\alpha \psi(\xi) - 2\alpha \xi \frac{d\psi}{d\xi}
+\end{aligned}
 \]</div>
 <p>ここに1階微分の結果 <span class="arithmatex">\(\frac{d\psi}{d\xi} = -2\alpha \xi \psi(\xi)\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\frac{d^2\psi}{d\xi^2} = -2\alpha \psi(\xi) - 2\alpha \xi \left[ -2\alpha \xi \psi(\xi) \right] = -2\alpha \psi(\xi) + 4\alpha^2 \xi^2 \psi(\xi)
+\begin{aligned}
+\frac{d^2\psi}{d\xi^2} &amp;= -2\alpha \psi(\xi) - 2\alpha \xi \left[ -2\alpha \xi \psi(\xi) \right] \\
+&amp;= -2\alpha \psi(\xi) + 4\alpha^2 \xi^2 \psi(\xi)
+\end{aligned}
 \]</div>
 <p>共通因数である <span class="arithmatex">\(\psi(\xi)\)</span> でまとめます。</p>
 <div class="arithmatex">\[
-\frac{d^2\psi}{d\xi^2} = (4\alpha^2 \xi^2 - 2\alpha)\psi(\xi)
+\finalanswer{\frac{d^2\psi}{d\xi^2} = (4\alpha^2 \xi^2 - 2\alpha)\psi(\xi)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) の結果を無次元化された方程式に代入します。</p>
@@ -14570,7 +14579,7 @@
 <p><span class="arithmatex">\(\alpha &gt; 0\)</span> であるため， <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> と定まります。
 * 定数項より：</p>
 <div class="arithmatex">\[
-  \lambda - 2\alpha = 0 \implies \lambda = 2\alpha
+  \finalanswer{\lambda - 2\alpha = 0 \implies \lambda = 2\alpha}
 \]</div>
 <p>求めた <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> を代入すると， <span class="arithmatex">\(\lambda = 1\)</span> と定まります。</p>
 <h3 id="3">(3)</h3>
@@ -14582,7 +14591,10 @@ E = \frac{\hbar\omega}{2} \cdot 1 = \frac{1}{2}\hbar\omega
 <p>このエネルギーは，量子力学的な調和振動子が最低でも持っていなければならないエネルギーであり，零点エネルギーと呼ばれます。</p>
 <p>次に波動関数について， <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> と <span class="arithmatex">\(\xi^2 = \frac{m\omega}{\hbar}x^2\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\psi(x) = A e^{-\frac{1}{2}\left(\frac{m\omega}{\hbar}x^2\right)} = A e^{-\frac{m\omega}{2\hbar}x^2}
+\begin{aligned}
+\psi(x) &amp;= A e^{-\frac{1}{2}\left(\frac{m\omega}{\hbar}x^2\right)} \\
+&amp;= \finalanswer{A e^{-\frac{m\omega}{2\hbar}x^2}}
+\end{aligned}
 \]</div>
 <p>これにより，ポテンシャルの中心付近に粒子が存在する確率が最も高く，中心から離れるにつれて確率が急速に減少するガウス型の基底状態波動関数が得られました。</p>
 

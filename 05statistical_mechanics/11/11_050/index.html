@@ -14547,7 +14547,7 @@ v(t) \exp\left(\frac{\gamma}{m}t\right) - v(0) = \frac{1}{m} \int_0^t R(s) \exp\
 \]</div>
 <p>両辺に <span class="arithmatex">\(\exp\left(-\frac{\gamma}{m}t\right)\)</span> を掛けて整理することで，求める速度の一般解が得られます。</p>
 <div class="arithmatex">\[
-v(t) = v(0) \exp\left(-\frac{\gamma}{m}t\right) + \frac{1}{m} \int_0^t R(s) \exp\left( -\frac{\gamma}{m}(t - s) \right) ds
+\finalanswer{v(t) = v(0) \exp\left(-\frac{\gamma}{m}t\right) + \frac{1}{m} \int_0^t R(s) \exp\left( -\frac{\gamma}{m}(t - s) \right) ds}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた <span class="arithmatex">\(v(t)\)</span> の式を2乗し，全体の熱平均をとります。</p>
@@ -14564,7 +14564,11 @@ v(t) = v(0) \exp\left(-\frac{\gamma}{m}t\right) + \frac{1}{m} \int_0^t R(s) \exp
 \]</div>
 <p>残った指数関数の積分を実行します。</p>
 <div class="arithmatex">\[
-\int_0^t ds \, e^{-\frac{2\gamma}{m}(t - s)} = e^{-\frac{2\gamma}{m}t} \left[ \frac{m}{2\gamma} e^{\frac{2\gamma}{m}s} \right]_0^t = e^{-\frac{2\gamma}{m}t} \cdot \frac{m}{2\gamma} \left( e^{\frac{2\gamma}{m}t} - 1 \right) = \frac{m}{2\gamma} \left( 1 - e^{-\frac{2\gamma}{m}t} \right)
+\begin{aligned}
+\int_0^t ds \, e^{-\frac{2\gamma}{m}(t - s)} &amp;= e^{-\frac{2\gamma}{m}t} \left[ \frac{m}{2\gamma} e^{\frac{2\gamma}{m}s} \right]_0^t \\
+&amp;= e^{-\frac{2\gamma}{m}t} \cdot \frac{m}{2\gamma} \left( e^{\frac{2\gamma}{m}t} - 1 \right) \\
+&amp;= \frac{m}{2\gamma} \left( 1 - e^{-\frac{2\gamma}{m}t} \right)
+\end{aligned}
 \]</div>
 <p>これを元の式に戻して整理すると，速度の2乗平均の式が導出されます。</p>
 <div class="arithmatex">\[
@@ -14572,7 +14576,7 @@ v(t) = v(0) \exp\left(-\frac{\gamma}{m}t\right) + \frac{1}{m} \int_0^t R(s) \exp
 \]</div>
 <p>ここで十分時間が経過した長時間極限 <span class="arithmatex">\(t \to \infty\)</span> をとると，負の指数関数項はすべてゼロに向かって減衰します。</p>
 <div class="arithmatex">\[
-\lim_{t \to \infty} \langle v(t)^2 \rangle = \frac{k_B T}{m}
+\finalanswer{\lim_{t \to \infty} \langle v(t)^2 \rangle = \frac{k_B T}{m}}
 \]</div>
 <p>この式の両辺に <span class="arithmatex">\(\frac{1}{2}m\)</span> を掛けると <span class="arithmatex">\(\frac{1}{2}m \langle v^2 \rangle = \frac{1}{2}k_B T\)</span> となり，流体分子との衝突のバランスによって，マクロな温度が保証する等配分則のエネルギー状態へ正しく緩和していくことが確認できます。</p>
 <h3 id="3">(3)</h3>
@@ -14602,7 +14606,7 @@ m \frac{d}{dt}\langle xv \rangle - k_B T = -\frac{\gamma}{2} \frac{d}{dt}\langle
 \]</div>
 <p>これにより，物質の拡散のしやすさと，運動するときの引きずられにくさが，熱運動の媒介によって結びついていることを示すアインシュタインの関係式が導出されます。</p>
 <div class="arithmatex">\[
-D = \frac{k_B T}{\gamma}
+\finalanswer{D = \frac{k_B T}{\gamma}}
 \]</div>
 
 

@@ -14550,7 +14550,7 @@
 \]</div>
 <p>系Bの直交条件により，非対角項はすべて 0 になり，対角項の系Bの成分が内積によって消去されます。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{A}}(\theta) = \cos^2\theta |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| + \sin^2\theta |1_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}|
+\finalanswer{\rho_{\mathrm{A}}(\theta) = \cos^2\theta |0_{\mathrm{A}}\rangle\langle 0_{\mathrm{A}}| + \sin^2\theta |1_{\mathrm{A}}\rangle\langle 1_{\mathrm{A}}|}
 \]</div>
 <p>これを行列形式で書き表すと以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14563,7 +14563,7 @@ p_0 = \cos^2\theta, \quad p_1 = \sin^2\theta
 \]</div>
 <p>フォン・ノイマンエントロピーの定義式にこれらの固有値を代入します。</p>
 <div class="arithmatex">\[
-E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2\theta) \right)
+\finalanswer{E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2\theta) \right)}
 \]</div>
 <p>これが求めるエンタングルメントエントロピーの式です。</p>
 <h3 id="3">(3)</h3>
@@ -14573,8 +14573,12 @@ E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2
 </ul>
 <p><span class="arithmatex">\(\cos^2 0 = 1, \sin^2 0 = 0\)</span> となります。</p>
 <p>$$
-  E(0) = -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) = -k_B (0 + 0) = 0
-  $$</p>
+\begin{aligned}
+E(0) &amp;= -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) \
+&amp;= -k_B (0 + 0) \
+&amp;= 0
+\end{aligned}
+$$</p>
 <p><strong>状態の説明</strong>: </p>
 <p>エントロピーが 0 であるため，系Aと系Bの間に量子もつれは一切存在しません。実際，元の状態は <span class="arithmatex">\(|\Psi(0)\rangle = |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\)</span> という単一の積状態に固定されています。</p>
 <ul>
@@ -14582,8 +14586,12 @@ E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2
 </ul>
 <p><span class="arithmatex">\(\cos^2 \frac{\pi}{4} = \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}, \sin^2 \frac{\pi}{4} = \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}\)</span> となります。</p>
 <p>$$
-  E\left(\frac{\pi}{4}\right) = -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) = -k_B \ln \frac{1}{2} = k_B \ln 2
-  $$</p>
+\begin{aligned}
+E\left(\frac{\pi}{4}\right) &amp;= -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \
+&amp;= -k_B \ln \frac{1}{2} \
+&amp;= k_B \ln 2
+\end{aligned}
+$$</p>
 <p><strong>状態の説明</strong>: </p>
 <p>2次元量子系においてエントロピーが最大値の <span class="arithmatex">\(k_B \ln 2\)</span> に達しているため，系Aと系Bの間には最も強い量子もつれが形成されています。元の状態はベル状態 <span class="arithmatex">\(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)</span> に相当します。</p>
 <ul>
@@ -14591,8 +14599,12 @@ E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2
 </ul>
 <p><span class="arithmatex">\(\cos^2 \frac{\pi}{2} = 0, \sin^2 \frac{\pi}{2} = 1\)</span> となります。</p>
 <p>$$
-  E\left(\frac{\pi}{2}\right) = -k_B \left( 0 \cdot \ln 0 + 1 \cdot \ln 1 \right) = -k_B (0 + 0) = 0
-  $$</p>
+\begin{aligned}
+E\left(\frac{\pi}{2}\right) &amp;= -k_B \left( 0 \cdot \ln 0 + 1 \cdot \ln 1 \right) \
+&amp;= -k_B (0 + 0) \
+&amp;= \finalanswer{0}
+\end{aligned}
+$$</p>
 <p><strong>状態の説明</strong>: </p>
 <p><span class="arithmatex">\(\theta = 0\)</span> のときと同様にエントロピーが 0 に減少しているため，系Aと系Bの間に量子もつれはありません。元の状態は基底が入れ替わっただけの単一の積状態 <span class="arithmatex">\(|\Psi(\frac{\pi}{2})\rangle = |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle\)</span> となっています。</p>
 
