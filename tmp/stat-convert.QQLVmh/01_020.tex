@@ -1,0 +1,42 @@
+% Web source: docs/05statistical_mechanics/01/01_020.md
+\addcontentsline{toc}{section}{1-2　二項分布と大数の法則}
+
+\begin{mondai}{1-2}{二項分布と大数の法則}{基本}
+独立な $N$ 個の二状態系からなる系を考える。状態Aのエネルギーを 0，状態Bのエネルギーを $\epsilon > 0$ とする。各二状態系は状態Aを確率 $p$，状態Bを確率 $1-p$ でとるものとする。系全体で状態Bをとる粒子の数を $n$ とするとき，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 状態Bをとる粒子数がちょうど $n$ 個となる確率 $P(n)$ を，二項分布の形で表せ。
+
+  \item $n$ の期待値 $\langle n \rangle$ と分散 $\sigma_n^2$ を $N$ と $p$ を用いて求めよ。
+
+  \item $N\to\infty$ における相対揺らぎ $\sigma_n / \langle n \rangle$ の極限を求めよ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+独立な $N$ 個の試行において，特定の状態が $n$ 回現れる確率は，二項分布により以下のように与えられます。
+\begin{equation*}
+P(n) = \binom{N}{n} p^{N-n} (1-p)^n
+\end{equation*}
+ただし，ここでは状態Aが確率 $p$ で選ばれることを前提としています。
+
+\solutionpart{(2)}
+二項分布の性質より，期待値と分散は以下のように計算されます。
+\begin{equation*}
+\langle n \rangle = N(1-p)
+\end{equation*}
+\begin{equation*}
+\sigma_n^2 = Np(1-p)
+\end{equation*}
+
+\solutionpart{(3)}
+相対揺らぎを計算すると，次のようになります。
+\begin{equation*}
+\frac{\sigma_n}{\langle n \rangle} = \frac{\sqrt{Np(1-p)}}{N(1-p)} = \sqrt{\frac{p}{N(1-p)}}
+\end{equation*}
+$N \to \infty$ では，相対揺らぎは $1/\sqrt{N}$ に比例して0へ収束します。したがって，粒子数が十分に多い系では，$n$ の観測値は平均値の近くに集中します。
+
+\end{solutionparts}

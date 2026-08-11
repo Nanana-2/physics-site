@@ -1,0 +1,52 @@
+% Web source: docs/05statistical_mechanics/01/01_010.md
+\addcontentsline{toc}{section}{1-1　離散確率分布の平均と分散}
+
+\begin{mondai}{1-1}{離散確率分布の平均と分散}{基本}
+ある統計的な系を考える。この系は3つの異なる微視的状態 $i=1, 2, 3$ をとり，それぞれの状態が実現する確率は以下のように与えられているものとする。
+\begin{equation*}
+P_1 = \frac{1}{2}, \quad P_2 = \frac{1}{3}, \quad P_3 = \frac{1}{6}
+\end{equation*}
+各状態における物理量 $A$ の値が，それぞれ $A_1 = 1, A_2 = 2, A_3 = 3$ であるとき，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 物理量 $A$ の期待値 $\langle A \rangle$ を求めよ。
+
+  \item 物理量 $A$ の二乗の期待値 $\langle A^2 \rangle$ を求めよ。
+
+  \item 物理量 $A$ の分散 $\sigma_A^2 = \langle A^2 \rangle - \langle A \rangle^2$ および標準偏差 $\sigma_A$ を求めよ。
+
+  \item 統計力学において期待値が平衡状態での物理的観測値に対応することの意義について簡潔に述べよ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+期待値の定義式 $\langle A \rangle = \sum_i P_i A_i$ に値を代入します。
+\begin{equation*}
+\langle A \rangle = \frac{1}{2} \times 1 + \frac{1}{3} \times 2 + \frac{1}{6} \times 3 = \frac{1}{2} + \frac{2}{3} + \frac{1}{2} = \frac{5}{3}
+\end{equation*}
+よって，期待値は $5/3$ です。
+
+\solutionpart{(2)}
+二乗の期待値は $\langle A^2 \rangle = \sum_i P_i A_i^2$ として計算されます。
+\begin{equation*}
+\langle A^2 \rangle = \frac{1}{2} \times 1^2 + \frac{1}{3} \times 2^2 + \frac{1}{6} \times 3^2 = \frac{1}{2} + \frac{4}{3} + \frac{9}{6} = \frac{3 + 8 + 9}{6} = \frac{10}{3}
+\end{equation*}
+よって，二乗の期待値は $10/3$ です。
+
+\solutionpart{(3)}
+分散は期待値の性質を用いて $\sigma_A^2 = \langle A^2 \rangle - \langle A \rangle^2$ と計算できます。
+\begin{equation*}
+\sigma_A^2 = \frac{10}{3} - \left( \frac{5}{3} \right)^2 = \frac{30}{9} - \frac{25}{9} = \frac{5}{9}
+\end{equation*}
+標準偏差 $\sigma_A$ は分散の平方根をとることで得られます。
+\begin{equation*}
+\sigma_A = \sqrt{\frac{5}{9}} = \frac{\sqrt{5}}{3}
+\end{equation*}
+
+\solutionpart{(4)}
+統計力学では，系がとりうる微視的状態に確率分布を割り当て，巨視的な観測量をアンサンブル平均として定義します。粒子数が十分に多いとき，物理量は平均値の近くに集中します。
+
+\end{solutionparts}

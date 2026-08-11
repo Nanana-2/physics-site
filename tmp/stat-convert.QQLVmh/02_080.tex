@@ -1,0 +1,87 @@
+% Web source: docs/05statistical_mechanics/02/02_080.md
+\addcontentsline{toc}{section}{2-8　ミクロカノニカル分布からカノニカル分布への導出}
+
+\begin{mondai}{2-8}{ミクロカノニカル分布からカノニカル分布への導出}{発展}
+エネルギー $E_{\mathrm{tot}}$ の孤立した全体系を考え，ミクロカノニカルアンサンブルで扱う。全体系を注目する小さな系と，それを取り囲む十分に大きな熱浴に分ける。小さな系の微視的状態を $r$，そのエネルギーを $E_r$ とし，熱浴のエネルギーを $E_{\mathrm{B}}$ とする。全体のエネルギー保存則 $E_r + E_{\mathrm{B}} = E_{\mathrm{tot}}$ が成り立ち，熱浴の微視的状態数を $\Omega_{\mathrm{B}}(E_{\mathrm{B}})$ とするとき，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 全体系には等重率の原理が適用できる。小さな系がエネルギー $E_r$ の状態 $r$ にあるとき，全体系がとりうる微視的状態数が熱浴の状態数 $\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)$ に等しくなる理由を説明せよ。また，小さな系が状態 $r$ をとる確率 $P_r$ が，熱浴のエントロピー $S_{\mathrm{B}}$ を用いて
+  \begin{equation*}
+  \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
+  \end{equation*}
+  に比例することを示せ。
+
+  \item 熱浴は小さな系に比べて十分に大きく，$E_r \ll E_{\mathrm{tot}}$ が成り立つ。熱浴のエントロピー $S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)$ を $E_r = 0$ のまわりで1次までテイラー展開し，熱力学的な逆温度
+  \begin{equation*}
+  \beta = \frac{1}{k_B T} = \frac{1}{k_B} \frac{\partial S_{\mathrm{B}}}{\partial E_{\mathrm{B}}}
+  \end{equation*}
+  を用いて，確率 $P_r$ がボルツマン因子 $\exp(-\beta E_r)$ に比例することを導出せよ。
+
+  \item 全確率の規格化条件 $\sum_r P_r = 1$ を用いて，小さな系のカノニカル分布を導け。また，この確率分布において系の平均エネルギー $\langle E \rangle$ が，分配関数 $Z(\beta) = \sum_r \exp(-\beta E_r)$ の対数微分
+  \begin{equation*}
+  \langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
+  \end{equation*}
+  として表せることを示せ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+全体系は孤立系であるため，許される微視的状態は等しい確率で現れます。小さな系をエネルギー $E_r$ の状態 $r$ に固定すると，全体系の状態数は，残された熱浴がエネルギー $E_{\mathrm{tot}}-E_r$ でとりうる状態数 $\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)$ に等しくなります。
+\par
+小さな系が状態 $r$ をとる確率 $P_r$ は，対応する熱浴の状態数に比例するため，
+\begin{equation*}
+P_r \propto \Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)
+\end{equation*}
+熱源のボルツマンエントロピーの定義 $S_{\mathrm{B}} = k_B \log \Omega_{\mathrm{B}}$ より， $\Omega_{\mathrm{B}} = \exp\left( \dfrac{S_{\mathrm{B}}}{k_B} \right)$ であるため，これを代入すると目的の比例関係が得られます。
+\begin{equation*}
+P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
+\end{equation*}
+
+\solutionpart{(2)}
+熱浴のエントロピー関数 $S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)$ について，非常に小さい量 $E_r$ に関する1次のテイラー展開を行います。
+\begin{equation*}
+S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r) \simeq S_{\mathrm{B}}(E_{\mathrm{tot}}) - \left. \frac{\partial S_{\mathrm{B}}}{\partial E_{\mathrm{B}}} \right|_{E_{\mathrm{B}} = E_{\mathrm{tot}}} E_r
+\end{equation*}
+熱浴の熱力学的な逆温度の定義 $\dfrac{\partial S_{\mathrm{B}}}{\partial E_{\mathrm{B}}} = \dfrac{1}{T} = k_B \beta$ を代入します。
+\begin{equation*}
+S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r) \simeq S_{\mathrm{B}}(E_{\mathrm{tot}}) - k_B \beta E_r
+\end{equation*}
+この展開結果を (1) の確率の比例式に代入します。
+\begin{equation*}
+P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}}) - k_B \beta E_r}{k_B} \right] = \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}})}{k_B} \right] \cdot \exp(-\beta E_r)
+\end{equation*}
+第1項の $\exp[S_{\mathrm{B}}(E_{\mathrm{tot}})/k_B]$ は，小さな系の状態 $r$ には一切依存しない全体系共通の定数項であるため，比例定数の中に吸収させることができます。これにより，小さな系の状態実現確率がボルツマン因子に比例することが導かれました。
+\begin{equation*}
+P_r \propto \exp(-\beta E_r)
+\end{equation*}
+
+\solutionpart{(3)}
+(2) の比例関係に規格化定数 $C$ を導入して $P_r = C \exp(-\beta E_r)$ とおき，全確率の和を 1 とします。
+\begin{equation*}
+\sum_r P_r = C \sum_r \exp(-\beta E_r) = 1 \quad \implies \quad C = \frac{1}{\sum_r \exp(-\beta E_r)}
+\end{equation*}
+分母の和を分配関数 $Z(\beta) = \sum_r \exp(-\beta E_r)$ と定義することで，カノニカル分布の確率公式が得られます。
+\begin{equation*}
+P_r = \frac{\exp(-\beta E_r)}{Z(\beta)}
+\end{equation*}
+次に，小さな系の平均エネルギー $\langle E \rangle$ を定義から求めます。
+\begin{equation*}
+\langle E \rangle = \sum_r P_r E_r = \frac{1}{Z} \sum_r E_r \exp(-\beta E_r)
+\end{equation*}
+ここで，分配関数 $Z(\beta)$ を $\beta$ で偏微分してみます。指数の微分により，前に $-E_r$ が降りてきます。
+\begin{equation*}
+\frac{\partial Z}{\partial \beta} = \sum_r (-E_r) \exp(-\beta E_r) = - \sum_r E_r \exp(-\beta E_r)
+\end{equation*}
+この関係を上の $\langle E \rangle$ の式に代入します。
+\begin{equation*}
+\langle E \rangle = \frac{1}{Z} \left( -\frac{\partial Z}{\partial \beta} \right) = - \frac{1}{Z} \frac{\partial Z}{\partial \beta}
+\end{equation*}
+関数の微分公式 $\dfrac{\partial \log Z}{\partial \beta} = \dfrac{1}{Z} \dfrac{\partial Z}{\partial \beta}$ を適用すると，求める対応関係が示されます。
+\begin{equation*}
+\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
+\end{equation*}
+
+\end{solutionparts}

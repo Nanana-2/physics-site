@@ -1,0 +1,71 @@
+% Web source: docs/05statistical_mechanics/02/02_060.md
+\addcontentsline{toc}{section}{2-6　古典的理想気体のエントロピーと示量性}
+
+\begin{mondai}{2-6}{古典的理想気体のエントロピーと示量性}{標準}
+古典的な理想気体の位相空間体積 $\Gamma(E)$ を用いて得られるエントロピーは，同種粒子の不可区別性を考慮しない場合，以下の形式となる。
+\begin{equation*}
+S_{\mathrm{classical}}(E, V, N) = N k_B \left[ \log V + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right]
+\end{equation*}
+この式を出発点として，熱力学的なエントロピーの性質に関する以下の問いに答えよ。
+
+\begin{enumerate}
+  \item $V \to \lambda V, E \to \lambda E, N \to \lambda N$ として系の巨視的な大きさを $\lambda$ 倍したとき，エントロピー $S_{\mathrm{classical}}$ がどのように変化するか求めよ。その結果が，系の大きさを $\lambda$ 倍するとエントロピーも $\lambda$ 倍になるという示量性を満たさないことを示せ。
+
+  \item 体積 $V$，エネルギー $E$，粒子数 $N$ が等しい同種気体を二つ用意し，隔壁を取り除いて混合する。混合後の状態を体積 $2V$，エネルギー $2E$，粒子数 $2N$ として，
+  \begin{equation*}
+  \Delta S=S_{\mathrm{classical}}(2E,2V,2N)-2S_{\mathrm{classical}}(E,V,N)
+  \end{equation*}
+  を求めよ。また，同種気体の混合前後で巨視的状態が変化しないことと，得られた結果が矛盾することを確認せよ。
+
+  \item 同種粒子の不可区別性を表す補正因子 $1/N!$ を状態数に掛ける。スターリングの公式を用いて補正後のエントロピーを求め，(1)の示量性と(2)の混合エントロピーの問題が解消されることを示せ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+$V \to \lambda V, E \to \lambda E, N \to \lambda N$ としたときのエントロピー $S_{\mathrm{classical}}^\prime$ を計算します。
+\begin{equation*}
+S_{\mathrm{classical}}^\prime = (\lambda N) k_B \left[ \log (\lambda V) + \frac{3}{2} \log \left( \frac{4\pi m (\lambda E)}{3(\lambda N)} \right) + \frac{3}{2} \right]
+\end{equation*}
+対数の中にある $\lambda E / \lambda N$ の $\lambda$ は相殺されますが，$\log (\lambda V)$ の部分は $\log V + \log \lambda$ と展開されます。
+\begin{equation*}
+S_{\mathrm{classical}}^\prime = \lambda \cdot N k_B \left[ \log V + \log \lambda + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right]
+\end{equation*}
+\begin{equation*}
+S_{\mathrm{classical}}^\prime = \lambda S_{\mathrm{classical}} + \lambda N k_B \log \lambda
+\end{equation*}
+右辺に $\lambda N k_B \log \lambda$ が残るため，$S_{\mathrm{classical}}^\prime \neq \lambda S_{\mathrm{classical}}$ となり，示量性を満たしません。
+
+\solutionpart{(2)}
+混合後のエントロピーは
+\begin{equation*}
+S_{\mathrm{classical}}(2E,2V,2N)
+=2Nk_B\left[\log(2V)+\frac{3}{2}\log\left(\frac{4\pi mE}{3N}\right)+\frac{3}{2}\right]
+\end{equation*}
+です。混合前の全エントロピーを引くと，
+\begin{equation*}
+\Delta S=2Nk_B\log 2
+\end{equation*}
+を得ます。同種気体では隔壁を取り除いても巨視的状態は変化しないため，本来は $\Delta S=0$ でなければなりません。したがって，粒子を区別して数えた古典的状態数は余分なエントロピーを与えています。
+
+\solutionpart{(3)}
+粒子が互いに区別できないことを補正するため，状態数に $1/N!$ を掛けます。これにより，エントロピーには $\Delta S = k_B \log (1/N!) = -k_B \log N!$ という補正項が加わります。スターリングの公式 $\log N! \simeq N \log N - N$ を適用してこれを展開します。
+\begin{equation*}
+S_{\mathrm{corrected}} = S_{\mathrm{classical}} - k_B (N \log N - N)
+\end{equation*}
+\begin{equation*}
+S_{\mathrm{corrected}} = N k_B \left[ \log V + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right] - N k_B \log N + N k_B
+\end{equation*}
+第1項の $\log V$ と補正項の $-\log N$ を結合させます。
+\begin{equation*}
+S_{\mathrm{corrected}} = N k_B \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{5}{2} \right]
+\end{equation*}
+補正後のエントロピーでは，系の大きさを $\lambda$ 倍すると，対数の中の比は $(\lambda V)/(\lambda N) = V/N$ および $(\lambda E)/(\lambda N) = E/N$ となります。したがって，全体の係数である $N$ だけが $\lambda N$ となり，以下の関係が成り立ちます。
+\begin{equation*}
+S_{\mathrm{corrected}}^\prime = \lambda S_{\mathrm{corrected}}
+\end{equation*}
+また，補正後の式を用いて(2)と同じ差を計算すると $\Delta S=0$ となります。
+
+\end{solutionparts}

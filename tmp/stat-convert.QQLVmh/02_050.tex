@@ -1,0 +1,77 @@
+% Web source: docs/05statistical_mechanics/02/02_050.md
+\addcontentsline{toc}{section}{2-5　サッカー・テトロード方程式}
+
+\begin{mondai}{2-5}{サッカー・テトロード方程式}{発展}
+互いに区別できない質量 $m$ の古典的単原子理想気体 $N$ 粒子系を考える。体積を $V$，全エネルギーを $E$ とし，ミクロカノニカル分布で扱う。位相空間では，一つの微視的状態が占める体積を3次元 $N$ 粒子系について $h^{3N}$ とし，同種粒子の不可区別性により状態数を $1/N!$ 倍する。したがって，系全体の微視的状態数 $\Omega(E, V, N)$ は，エネルギー $E$ 以下の位相空間体積 $\Gamma(E)$ を用いて $\Omega \simeq \dfrac{1}{N! h^{3N}} \Gamma(E)$ と近似できる。以下の問いに答えよ。
+
+\begin{enumerate}
+  \item $3N$ 次元超球の体積を用いた位相空間体積は以下のように与えられる。
+  \begin{equation*}
+  \Gamma(E) = V^N \frac{\pi^{3N/2}}{\left(\frac{3N}{2}\right)!} (2mE)^{3N/2}
+  \end{equation*}
+  これを用いて，量子論的な補正を取り入れた全状態数 $\Omega$ の対数 $\log \Omega$ を書き下せ。
+
+  \item $N$ が非常に大きい熱力学極限において，$\log N!$ および $\left(\dfrac{3N}{2}\right)!$ の項にスターリングの公式 $\log X! \simeq X \log X - X$ を適用し，$\log \Omega$ を $N$ に比例する形へ整理せよ。
+
+  \item ボルツマンエントロピー $S = k_B \log \Omega$ を求め，次の形へ整理せよ。
+  \begin{equation*}
+  S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
+  +\frac{3}{2}\log\left(\frac{4\pi mE}{3Nh^2}\right)+\frac{5}{2}\right]
+  \end{equation*}
+  さらに，$E,V,N$ を同時に $\lambda$ 倍したとき，$S$ も $\lambda$ 倍となることを示せ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+$h^{3N}$ による規格化と不可区別性の因子 $1/N!$ を考慮すると，状態数 $\Omega$ は
+\begin{equation*}
+\Omega = \frac{1}{N! h^{3N}} V^N \frac{\pi^{3N/2}}{\left(\frac{3N}{2}\right)!} (2mE)^{3N/2}
+\end{equation*}
+この式の自然対数をとり，各因子の積を和と差の形に展開します。
+\begin{equation*}
+\log \Omega = N \log V + \frac{3N}{2} \log \pi + \frac{3N}{2} \log (2mE) - N \log h^3 - \log N! - \log \left(\frac{3N}{2}\right)!
+\end{equation*}
+
+\solutionpart{(2)}
+展開した式の後ろ2項にある階乗の対数に対し，スターリングの公式をそれぞれ適用します。
+\begin{equation*}
+\log N! \simeq N \log N - N
+\end{equation*}
+\begin{equation*}
+\log \left(\frac{3N}{2}\right)! \simeq \frac{3N}{2} \log \left(\frac{3N}{2}\right) - \frac{3N}{2}
+\end{equation*}
+これらを (1) の式に代入し，マイナスの符号に注意して整理します。
+\begin{equation*}
+\log \Omega \simeq N \log V + \frac{3N}{2} \log \pi + \frac{3N}{2} \log (2mE) - 3N \log h - (N \log N - N) - \left[ \frac{3N}{2} \log \left(\frac{3N}{2}\right) - \frac{3N}{2} \right]
+\end{equation*}
+定数項を集めつつ，対数の引数を整理していきます。
+\begin{equation*}
+\log \Omega \simeq N \log V - N \log N + \frac{3N}{2} \log (2mE) - \frac{3N}{2} \log \left(\frac{3N}{2}\right) + \frac{3N}{2} \log \pi - 3N \log h + N + \frac{3N}{2}
+\end{equation*}
+ここで，第1項と第2項，および第3項と第4項をそれぞれ対数の性質を用いて結合させます。
+\begin{equation*}
+N \log V - N \log N = N \log \left( \frac{V}{N} \right)
+\end{equation*}
+\begin{equation*}
+\frac{3N}{2} \log (2mE) - \frac{3N}{2} \log \left(\frac{3N}{2}\right) = \frac{3N}{2} \log \left( \frac{2mE}{\frac{3N}{2}} \right) = \frac{3N}{2} \log \left( \frac{4mE}{3N} \right)
+\end{equation*}
+これらを元の式に戻し，残りの対数項 $\log \pi$ や $\log h$ も括弧の中にまとめます。
+\begin{equation*}
+\log \Omega \simeq N \log \left( \frac{V}{N} \right) + \frac{3N}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2}N
+\end{equation*}
+
+\solutionpart{(3)}
+(2) で得られた $\log \Omega$ にボルツマン定数 $k_B$ を掛け，共通因子 $N$ を括り出します。
+\begin{equation*}
+S(E, V, N) = N k_B \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2} \right]
+\end{equation*}
+この式はサッカー・テトロード方程式と呼ばれます。$E,V,N$ を同時に $\lambda$ 倍すると，対数内の $V/N$ と $E/N$ は変化せず，括弧の外の $N$ だけが $\lambda N$ になります。したがって，
+\begin{equation*}
+S(\lambda E,\lambda V,\lambda N)=\lambda S(E,V,N)
+\end{equation*}
+が成り立ち，示量性を満たします。
+
+\end{solutionparts}

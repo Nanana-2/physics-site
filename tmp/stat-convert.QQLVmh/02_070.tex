@@ -1,0 +1,92 @@
+% Web source: docs/05statistical_mechanics/02/02_070.md
+\addcontentsline{toc}{section}{2-7　ゴム紐の統計力学とフックの法則}
+
+\begin{mondai}{2-7}{ゴム紐の統計力学とフックの法則}{標準}
+長さ $a$ の微小なセグメント $N$ 個を一直線につないだ高分子の模型を考える。各セグメントは右向き $+a$ または左向き $-a$ のいずれかをとる。右向きのセグメント数を $N_+$，左向きのセグメント数を $N_-$ とするとき，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 高分子全体の左端から右端までの長さを $L$ とする。$N_+$ と $N_-$ を用いて，全セグメント数 $N$ および全体の長さ $L$ を表す関係式をそれぞれ示せ。また，これらから $N_+$ を $N, L, a$ を用いて表せ。
+
+  \item 高分子の長さが $L$ であるとき，セグメントの配置の総数である微視的状態数 $\Omega(L)$ を $N$ と $N_+$ の階乗を用いて表せ。また，$N \gg 1, N_\pm \gg 1$ としてスターリングの公式 $\log X! \simeq X \log X - X$ を適用し，ボルツマンエントロピー $S(L) = k_B \log \Omega(L)$ を $N, N_+, N_-$ を用いて表せ。
+
+  \item 長さ $L$ の高分子を外力によって一定温度 $T$ で引っ張る。復元力としての張力 $f$ は，熱力学的関係式 $f = -T \left( \dfrac{\partial S}{\partial L} \right)_T$ で与えられる。この関係式と連鎖律 $\dfrac{\partial S}{\partial L} = \dfrac{\partial N_+}{\partial L} \dfrac{\partial S}{\partial N_+}$ を用いて，張力 $f$ を $L$ の関数として求めよ。
+
+  \item 高分子の自然長を $L=0$ とし，伸びが $L \ll Na$ を満たすと仮定する。このとき，(3)で得られた張力の式を $L/Na$ の1次まで展開せよ。$\log(1+x) \simeq x$ を用いて，張力 $f$ がフックの法則 $f = k L$ に従うことを示し，ばね定数 $k$ を $k_B, T, N, a$ を用いて表せ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+全セグメント数は右向きと左向きのセグメントの和であり，ゴム紐全体の長さ $L$ はそれぞれの向きが打ち消し合った正味の長さになります。
+\begin{equation*}
+N = N_+ + N_-
+\end{equation*}
+\begin{equation*}
+L = a N_+ - a N_- = a(N_+ - N_-)
+\end{equation*}
+2つ目の式に $N_- = N - N_+$ を代入して整理します。
+\begin{equation*}
+L = a(N_+ - (N - N_+)) = a(2N_+ - N) \quad \implies \quad \frac{L}{a} = 2N_+ - N
+\end{equation*}
+これを $N_+$ について解くことで，以下の関係式が得られます。
+\begin{equation*}
+N_+ = \frac{N}{2} + \frac{L}{2a}
+\end{equation*}
+同様に， $N_-$ についても以下の関係が成り立ちます。
+\begin{equation*}
+N_- = \frac{N}{2} - \frac{L}{2a}
+\end{equation*}
+
+\solutionpart{(2)}
+区別可能な $N$ 個 of セグメントから，右向きになる $N_+$ 個を選ぶ組合せの数が微視的状態数 $\Omega(L)$ に対応します。
+\begin{equation*}
+\Omega(L) = \frac{N!}{N_+! N_-!}
+\end{equation*}
+この対数をとり，スターリングの公式を適用して展開します。
+\begin{equation*}
+\log \Omega(L) = \log N! - \log N_+! - \log N_-!
+\end{equation*}
+\begin{equation*}
+\log \Omega(L) \simeq (N \log N - N) - (N_+ \log N_+ - N_+) - (N_- \log N_- - N_-)
+\end{equation*}
+定数項 $-N + N_+ + N_- = 0$ となって消去されるため，ボルツマンの定数 $k_B$ を掛けたエントロピーの表現は以下のようになります。
+\begin{equation*}
+S(L) \simeq k_B \left( N \log N - N_+ \log N_+ - N_- \log N_- \right)
+\end{equation*}
+
+\solutionpart{(3)}
+エントロピー $S$ を $N_+$ で偏微分します。この際， $N_- = N - N_+$ であるため $\dfrac{\partial N_-}{\partial N_+} = -1$ となることに注意します。
+\begin{equation*}
+\frac{\partial S}{\partial N_+} = k_B \left[ - (\log N_+ + 1) - (\log N_- + 1)(-1) \right] = -k_B \log \left( \frac{N_+}{N_-} \right)
+\end{equation*}
+また，(1) の結果より $\dfrac{\partial N_+}{\partial L} = \dfrac{1}{2a}$ です。これらを用いて，長さ $L$ によるエントロピーの微分を連鎖律から計算します。
+\begin{equation*}
+\frac{\partial S}{\partial L} = \frac{\partial N_+}{\partial L} \frac{\partial S}{\partial N_+} = \frac{1}{2a} \left[ -k_B \log \left( \frac{N_+}{N_-} \right) \right] = -\frac{k_B}{2a} \log \left( \frac{\frac{N}{2} + \frac{L}{2a}}{\frac{N}{2} - \frac{L}{2a}} \right) = -\frac{k_B}{2a} \log \left( \frac{1 + \frac{L}{Na}}{1 - \frac{L}{Na}} \right)
+\end{equation*}
+与えられた張力の定義式 $f = -T \dfrac{\partial S}{\partial L}$ にこれを代入します。
+\begin{equation*}
+f = \frac{k_B T}{2a} \log \left( \frac{1 + \frac{L}{Na}}{1 - \frac{L}{Na}} \right)
+\end{equation*}
+
+\solutionpart{(4)}
+対数の性質 $\log(A/B) = \log A - \log B$ を用いて，(3)で得られた張力の式を分解します。
+\begin{equation*}
+f = \frac{k_B T}{2a} \left[ \log \left( 1 + \frac{L}{Na} \right) - \log \left( 1 - \frac{L}{Na} \right) \right]
+\end{equation*}
+ここで $L \ll Na$ より $\dfrac{L}{Na} \ll 1$ であるため，近似式 $\log(1+x) \simeq x$ をそれぞれの項に適用します。
+\begin{equation*}
+\log \left( 1 + \frac{L}{Na} \right) \simeq \frac{L}{Na}, \quad \log \left( 1 - \frac{L}{Na} \right) \simeq -\frac{L}{Na}
+\end{equation*}
+これらを張力の式に代入して整理します。
+\begin{equation*}
+f \simeq \frac{k_B T}{2a} \left[ \frac{L}{Na} - \left( -\frac{L}{Na} \right) \right] = \frac{k_B T}{2a} \left( \frac{2L}{Na} \right) = \left( \frac{k_B T}{N a^2} \right) L
+\end{equation*}
+これにより，張力 $f$ はフックの法則 $f = k L$ に従います。ばね定数 $k$ は
+\begin{equation*}
+k = \frac{k_B T}{N a^2}
+\end{equation*}
+この復元力は，高分子を引き伸ばすとセグメントの配置数が減少することに由来します。また，得られたばね定数は温度 $T$ に比例します。
+
+\end{solutionparts}

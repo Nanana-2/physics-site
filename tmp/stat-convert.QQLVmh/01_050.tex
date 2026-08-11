@@ -1,0 +1,76 @@
+% Web source: docs/05statistical_mechanics/01/01_050.md
+\addcontentsline{toc}{section}{1-5　二準位系の状態数とエントロピー}
+
+\begin{mondai}{1-5}{二準位系の状態数とエントロピー}{標準}
+エネルギーが $0$ の基底状態と，エネルギーが $\epsilon > 0$ の励起状態からなる二準位系を考える。この系は，互いに区別可能な $N$ 個の独立な粒子からなる。全エネルギーが $E$ であるマクロな状態について，以下の問いに答えよ。ただし，$E = M\epsilon$ とし，$M$ は $0 \le M \le N$ を満たす整数とする。
+
+\begin{enumerate}
+  \item 全エネルギーが $E$ であるとき，励起状態にある粒子の数 $M$ を $E$ と $\epsilon$ を用いて表せ。また，このマクロな状態に対応する微視的状態数 $\Omega(E)$ を $N$ と $M$ の階乗を用いて表せ。
+
+  \item 粒子数 $N$ および励起粒子数 $M$ が非常に大きいとき，ボルツマンのエントロピー公式 $S(E) = k_B \log \Omega(E)$ にスターリングの公式を適用し，系がもつエントロピー $S(E)$ を $N$ と $M$ を用いて表せ。
+
+  \item (2)で得られたエントロピーの式において，励起粒子数の割合を $x = M/N$ と定義する。ここで $0 \le x \le 1$ である。1粒子あたりのエントロピー $s(x) = S/N$ を $x$ の関数として表し，その関数が最大値をとる $x$ の値と，そのときの $s(x)$ の値を求めよ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+1つの励起粒子がもつエネルギーは $\epsilon$ であり，基底状態の粒子のエネルギーは $0$ であるため，系の全エネルギー $E$ は励起状態にある粒子の数 $M$ に比例します。したがって，励起粒子数 $M$ は以下のように決まります。
+\begin{equation*}
+M = \frac{E}{\epsilon}
+\end{equation*}
+区別可能な $N$ 個の粒子から，励起状態をとる $M$ 個の粒子を選ぶ組合せの数が，全エネルギー $E$ に対応する微視的状態数 $\Omega(E)$ になります。
+\begin{equation*}
+\Omega(E) = \frac{N!}{M!(N-M)!}
+\end{equation*}
+
+\solutionpart{(2)}
+ボルツマンのエントロピー公式に (1) の状態数を代入し，対数の性質を用いて展開します。
+\begin{equation*}
+S(E) = k_B \log \left[ \frac{N!}{M!(N-M)!} \right] = k_B \left[ \log N! - \log M! - \log (N-M)! \right]
+\end{equation*}
+各項にスターリングの公式 $\log X! \simeq X \log X - X$ を適用します。
+\begin{equation*}
+S(E) \simeq k_B \left[ (N \log N - N) - (M \log M - M) - \{ (N-M) \log (N-M) - (N-M) \} \right]
+\end{equation*}
+括弧内の定数項 $-N + M + (N-M) = 0$ となって相殺されるため，求めるエントロピーは以下のようになります。
+\begin{equation*}
+S(E) \simeq k_B \left[ N \log N - M \log M - (N-M) \log (N-M) \right]
+\end{equation*}
+
+\solutionpart{(3)}
+(2) で得られたエントロピー全体の式を $N$ で割り，1粒子あたりのエントロピー $s(x) = S/N$ を構成します。式の各項に $x = M/N$ を導入するため，変形を行います。
+\begin{equation*}
+s(x) = k_B \left[ \log N - \frac{M}{N} \log M - \left( 1 - \frac{M}{N} \right) \log (N-M) \right]
+\end{equation*}
+\begin{equation*}
+s(x) = k_B \left[ \log N - x \log (Nx) - (1-x) \log \{N(1-x)\} \right]
+\end{equation*}
+対数の積を和に分解して整理します。
+\begin{equation*}
+s(x) = k_B \left[ \log N - x (\log N + \log x) - (1-x) (\log N + \log (1-x)) \right]
+\end{equation*}
+\begin{equation*}
+s(x) = k_B \left[ \log N - x \log N - x \log x - \log N + x \log N - (1-x) \log (1-x) \right]
+\end{equation*}
+$\log N$ を含む項がすべて相殺され，以下のようになります。
+\begin{equation*}
+s(x) = -k_B \left[ x \log x + (1-x) \log (1-x) \right]
+\end{equation*}
+この関数 $s(x)$ が最大となる条件を調べるため，$x$ について微分を行います。
+\begin{equation*}
+\frac{ds(x)}{dx} = -k_B \left[ (\log x + 1) - (\log (1-x) + 1) \right] = -k_B \log \left( \frac{x}{1-x} \right)
+\end{equation*}
+極値条件 $\dfrac{ds(x)}{dx} = 0$ より，以下の関係が得られます。
+\begin{equation*}
+\frac{x}{1-x} = 1 \quad \implies \quad x = \frac{1}{2}
+\end{equation*}
+2階微分は $\dfrac{d^2s}{dx^2} = -k_B \left( \dfrac{1}{x} + \dfrac{1}{1-x} \right) < 0$ となるため，$x = 1/2$ で $s(x)$ は確かに最大値をとります。このときの最大値を計算すると，以下のようになります。
+\begin{equation*}
+s\left(\frac{1}{2}\right) = -k_B \left[ \frac{1}{2} \log \left(\frac{1}{2}\right) + \frac{1}{2} \log \left(\frac{1}{2}\right) \right] = -k_B \log \left(\frac{1}{2}\right) = k_B \log 2
+\end{equation*}
+したがって，粒子全体のちょうど半分が励起状態にあるときにエントロピーは最大となり，そのときの1粒子あたりのエントロピーは $k_B \log 2$ となります。
+
+\end{solutionparts}

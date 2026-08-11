@@ -1,0 +1,57 @@
+% Web source: docs/05statistical_mechanics/02/02_020.md
+\addcontentsline{toc}{section}{2-2　ミクロカノニカル分布のエントロピー}
+
+\begin{mondai}{2-2}{ミクロカノニカル分布のエントロピー}{基本}
+エネルギー $E$，体積 $V$，粒子数 $N$ が指定された孤立系を考える。エネルギーが $E$ から $E + \delta E$ の範囲にある微視的状態の総数を $\Omega(E, V, N)$ とする。ここで $\delta E$ は巨視的には十分小さく，微視的には多数の準位を含むエネルギー幅である。この状態数を用いて，統計力学的なエントロピーを以下のように定義する。
+\begin{equation*}
+S(E, V, N) = k_B \log \Omega(E, V, N)
+\end{equation*}
+この定義に基づいて，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 熱力学の第一法則から得られる基本関係式より，エントロピーの全微分は
+  \begin{equation*}
+  dS = \frac{1}{T} dE + \frac{P}{T} dV - \frac{\mu}{T} dN
+  \end{equation*}
+  と表される。これより，絶対温度 $T$，圧力 $P$，化学ポテンシャル $\mu$ を，エントロピー $S$ の偏微分を用いてそれぞれ表せ。
+
+  \item 体積 $V$ や粒子数 $N$ を一定に保ったまま，系のエネルギー $E$ が増加したとき，通常の物理系では状態数 $\Omega$ およびエントロピー $S$ はどのように変化するか。その変化に伴う絶対温度 $T$ の符号について，(1)の偏微分の式を用いて考察せよ。
+
+  \item ミクロカノニカル分布において，マクロな熱力学量がエントロピーの偏微分を通じてミクロな状態数 $\Omega$ の振る舞いとどのように結びついているか，その物理的な意義を述べよ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+エントロピー $S(E, V, N)$ は $E, V, N$ の関数です。数学的な全微分の式は以下のように書き下すことができます。
+\begin{equation*}
+dS = \left( \frac{\partial S}{\partial E} \right)_{V, N} dE + \left( \frac{\partial S}{\partial V} \right)_{E, N} dV + \left( \frac{\partial S}{\partial N} \right)_{E, V} dN
+\end{equation*}
+この式と，熱力学から得られる基本関係式
+\begin{equation*}
+dS = \frac{1}{T} dE + \frac{P}{T} dV - \frac{\mu}{T} dN
+\end{equation*}
+の各係数を比較することにより，それぞれの熱力学量は以下のようにエントロピーの偏微分で表されます。
+\begin{equation*}
+\frac{1}{T} = \left( \frac{\partial S}{\partial E} \right)_{V, N}
+\end{equation*}
+\begin{equation*}
+P = T \left( \frac{\partial S}{\partial V} \right)_{E, N}
+\end{equation*}
+\begin{equation*}
+\mu = -T \left( \frac{\partial S}{\partial N} \right)_{E, V}
+\end{equation*}
+
+\solutionpart{(2)}
+理想気体などでは，エネルギー $E$ が増加すると位相空間の体積が広がるため，微視的状態数 $\Omega$ は単調に増加します。したがって，エントロピー $S$ も単調に増加します。 したがって，エネルギー微分は正の値をとります。
+\begin{equation*}
+\left( \frac{\partial S}{\partial E} \right)_{V, N} > 0
+\end{equation*}
+(1) で導いた関係式 $\dfrac{1}{T} = \left( \dfrac{\partial S}{\partial E} \right)_{V, N}$ より，この微分が正であれば $T>0$ となります。
+
+\solutionpart{(3)}
+以上より，微視的状態数 $\Omega$ の対数を偏微分することで，温度や圧力などの熱力学量を求められます。
+
+\end{solutionparts}

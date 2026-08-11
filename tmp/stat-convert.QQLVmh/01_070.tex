@@ -1,0 +1,49 @@
+% Web source: docs/05statistical_mechanics/01/01_070.md
+\addcontentsline{toc}{section}{1-7　負温度をもつ二準位系}
+
+\begin{mondai}{1-7}{負温度をもつ二準位系}{発展}
+互いに区別可能で独立な $N$ 個の粒子からなる系を考える。各粒子は，エネルギー $0$ の基底状態と，エネルギー $\epsilon > 0$ の励起状態のいずれかをとる。系の全エネルギーが $E$ であるマクロな状態について，以下の問いに答えよ。ただし，$E = M\epsilon$ とし，$M$ は $0 \le M \le N$ を満たす整数とする。粒子数 $N$ および励起粒子数 $M$ は十分に大きく，スターリングの公式が適用できるものとする。
+
+\begin{enumerate}
+  \item 1粒子あたりのエネルギーを $u = E/N$ と定義する。ここで $0 \le u \le \epsilon$ である。この系のボルツマンエントロピー $S(E)$ を $N$，$u$，$\epsilon$ を用いて表せ。
+
+  \item 熱力学的な絶対温度 $T$ は，エントロピーのエネルギー微分を用いて $\dfrac{1}{T} = \dfrac{dS}{dE}$ と定義される。温度の逆数 $\beta = \dfrac{1}{k_B T}$ を $u$ と $\epsilon$ の関数として求めよ。
+
+  \item 1粒子あたりのエネルギー $u$ が $\dfrac{\epsilon}{2} < u < \epsilon$ の範囲にあるとき，絶対温度 $T$ の符号を求めよ。このような状態が通常の理想気体などでは現れず，エネルギーに上限がある二準位系においてのみ実現しうる理由を，エントロピーとエネルギーの関係に着目して説明せよ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+励起状態にある粒子の数 $M$ は $M = E/\epsilon = Nu/\epsilon$ と表されます。区別可能な $N$ 個の粒子から $M$ 個の励起粒子を選ぶ微視的状態数は $\Omega = \dfrac{N!}{M!(N-M)!}$ です。 ボルツマンのエントロピー公式 $S = k_B \log \Omega$ にスターリングの公式 $\log X! \simeq X \log X - X$ を適用して整理すると，以下のようになります。
+\begin{equation*}
+S(E) = -k_B \left[ M \log \left(\frac{M}{N}\right) + (N-M) \log \left(\frac{N-M}{N}\right) \right]
+\end{equation*}
+ここで，$\dfrac{M}{N} = \dfrac{u}{\epsilon}$ および $\dfrac{N-M}{N} = 1 - \dfrac{u}{\epsilon}$ を代入します。
+\begin{equation*}
+S(u) = -N k_B \left[ \frac{u}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \log \left(1 - \frac{u}{\epsilon}\right) \right]
+\end{equation*}
+
+\solutionpart{(2)}
+逆温度 $\beta = \dfrac{1}{k_B T}$ を求めるため，エントロピー $S$ を全エネルギー $E$ で微分します。連鎖律 $\dfrac{dS}{dE} = \dfrac{1}{N} \dfrac{dS}{du}$ を用います。
+\begin{equation*}
+\frac{dS}{du} = -N k_B \left[ \frac{1}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \frac{u}{\epsilon} \cdot \frac{\epsilon}{u} \cdot \frac{1}{\epsilon} - \frac{1}{\epsilon} \log \left(1 - \frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \cdot \frac{\epsilon}{\epsilon - u} \cdot \left(-\frac{1}{\epsilon}\right) \right]
+\end{equation*}
+\begin{equation*}
+\frac{dS}{du} = -\frac{N k_B}{\epsilon} \left[ \log \left(\frac{u}{\epsilon}\right) + 1 - \log \left(1 - \frac{u}{\epsilon}\right) - 1 \right] = -\frac{N k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right)
+\end{equation*}
+これより，$\dfrac{1}{T} = \dfrac{1}{N} \dfrac{dS}{du}$ を用いて $\beta$ を計算します。
+\begin{equation*}
+\beta = \frac{1}{k_B T} = \frac{1}{k_B} \left( -\frac{k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) \right) = -\frac{1}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) = \frac{1}{\epsilon} \log \left( \frac{\epsilon - u}{u} \right)
+\end{equation*}
+
+\solutionpart{(3)}
+$u > \dfrac{\epsilon}{2}$ のとき，分母と分子の大小関係は $u > \epsilon - u$ となります。したがって，対数の中身は $\dfrac{\epsilon - u}{u} < 1$ となり，その自然対数は負の値をとります。 このとき，(2) の結果から $\beta < 0$，したがって $T < 0$ となります。
+\par
+通常の理想気体では運動エネルギーに上限がなく，エネルギー $E$ の増加とともに状態数は単調に増加するため，$dS/dE>0$ となります。
+\par
+一方，二準位系では各粒子のエネルギーに上限 $\epsilon$ があります。$u=\epsilon/2$ でエントロピーは最大となり，$u>\epsilon/2$ ではエネルギーの増加に伴ってエントロピーが減少するため，$dS/dE<0$ となります。この領域で負温度が現れます。
+
+\end{solutionparts}

@@ -1,0 +1,68 @@
+% Web source: docs/05statistical_mechanics/01/01_060.md
+\addcontentsline{toc}{section}{1-6　エントロピー最大原理}
+
+\begin{mondai}{1-6}{エントロピー最大原理}{標準}
+全エネルギー $E$，全粒子数 $N$ が一定に保たれた孤立多体系を考える。この系は，熱的に接触している部分系1と部分系2に分割されている。それぞれの粒子数を $N_1, N_2$ とし，エネルギーを $E_1, E_2$ とする。全体のエネルギー保存則 $E_1 + E_2 = E$ が成り立つ。各部分系の微視的状態数を $\Omega_1(E_1)$, $\Omega_2(E_2)$ とするとき，以下の問いに答えよ。
+
+\begin{enumerate}
+  \item 複合系全体がエネルギー分配 $E_1$ をとるときの全微視的状態数 $\Omega_{\mathrm{tot}}(E_1)$ を，$\Omega_1(E_1)$ と $\Omega_2(E_2)$ を用いて表せ。また，全体のボルツマンエントロピー $S_{\mathrm{tot}}(E_1)$ が，加法性により各部分系のエントロピー $S_1(E_1)$, $S_2(E_2)$ の和として表されることを示せ。
+
+  \item 孤立系において最も実現確率が高い熱平衡状態では，全エントロピー $S_{\mathrm{tot}}$ が最大化される。$S_{\mathrm{tot}}(E_1)$ を $E_1$ について微分することにより，エントロピー最大条件から導かれるマクロな平衡条件を求めよ。
+
+  \item 熱力学における温度 $T$ と統計力学的なエントロピーの定義式との関係
+  \begin{equation*}
+  \frac{1}{T} = \frac{\partial S}{\partial E}
+  \end{equation*}
+  を用いることで，(2)で導いた平衡条件が，両部分系の温度が等しい熱平衡状態を意味することを説明せよ。
+\end{enumerate}
+\end{mondai}
+
+\solutionheading
+\begin{solutionparts}
+
+\solutionpart{(1)}
+部分系1と部分系2は互いに独立であるため，全体の微視的状態数 $\Omega_{\mathrm{tot}}(E_1)$ は，それぞれの部分系がとりうる状態数の積として与えられます。エネルギー保存則 $E_2 = E - E_1$ を考慮すると，以下のように表されます。
+\begin{equation*}
+\Omega_{\mathrm{tot}}(E_1) = \Omega_1(E_1) \cdot \Omega_2(E - E_1)
+\end{equation*}
+この関係式をボルツマンのエントロピー公式 $S = k_B \log \Omega$ に代入し，対数の性質を用いて展開します。
+\begin{equation*}
+S_{\mathrm{tot}}(E_1) = k_B \log \left[ \Omega_1(E_1) \cdot \Omega_2(E - E_1) \right]
+\end{equation*}
+\begin{equation*}
+S_{\mathrm{tot}}(E_1) = k_B \log \Omega_1(E_1) + k_B \log \Omega_2(E - E_1)
+\end{equation*}
+各項はそれぞれ部分系1および部分系2のエントロピーの定義そのものであるため，全エントロピーは各部分系のエントロピーの和として表されることが示されました。
+\begin{equation*}
+S_{\mathrm{tot}}(E_1) = S_1(E_1) + S_2(E_2)
+\end{equation*}
+
+\solutionpart{(2)}
+全エントロピー $S_{\mathrm{tot}}(E_1)$ が最大値をとるとき，$E_1$ に関する1階微分は 0 となります。エネルギーの全微分が $dE_2 = -dE_1$ であることに注意して微分を実行します。
+\begin{equation*}
+\frac{dS_{\mathrm{tot}}}{dE_1} = \frac{dS_1(E_1)}{dE_1} + \frac{dS_2(E_2)}{dE_2} \frac{dE_2}{dE_1} = 0
+\end{equation*}
+\begin{equation*}
+\frac{dS_1(E_1)}{dE_1} - \frac{dS_2(E_2)}{dE_2} = 0
+\end{equation*}
+したがって，エントロピー最大原理から導かれる平衡条件は以下のようになります。
+\begin{equation*}
+\frac{dS_1(E_1)}{dE_1} = \frac{dS_2(E_2)}{dE_2}
+\end{equation*}
+
+\solutionpart{(3)}
+統計力学において，熱力学的な温度 $T$ はエントロピーのエネルギー微分を用いて以下のように定義されます。
+\begin{equation*}
+\frac{1}{T} = \left( \frac{\partial S}{\partial E} \right)_{N, V}
+\end{equation*}
+この定義を (2) で得られたエントロピー最大化の条件に適用すると，左辺は部分系1の温度の逆数 $1/T_1$ を表し，右辺は部分系2の温度の逆数 $1/T_2$ を表すことになります。
+\begin{equation*}
+\frac{1}{T_1} = \frac{1}{T_2}
+\end{equation*}
+両辺の逆数をとることで，最終的に以下の関係が得られます。
+\begin{equation*}
+T_1 = T_2
+\end{equation*}
+したがって，全エントロピーが最大となる平衡状態では，両部分系の温度が等しくなります。
+
+\end{solutionparts}
