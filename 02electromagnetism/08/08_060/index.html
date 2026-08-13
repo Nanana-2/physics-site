@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">遅延ポテンシャル</h1>
 <h2 id="_2">問題</h2>
-<p>時間変化する局在電荷密度 <span class="arithmatex">\(\rho(\boldsymbol{r}',t)\)</span> と電流密度 <span class="arithmatex">\(\boldsymbol{j}(\boldsymbol{r}',t)\)</span> が作る遅延ポテンシャルを，</p>
+<p>時間変化する局在電荷密度 <span class="arithmatex">\(\rho(\boldsymbol{r}',t)\)</span> と電流密度 <span class="arithmatex">\(\boldsymbol{j}(\boldsymbol{r}',t)\)</span> が作る遅延ポテンシャルを</p>
 <div class="arithmatex">\[
 \phi(\boldsymbol{r},t)
 =\frac{1}{4\pi\varepsilon_0}
@@ -14535,7 +14535,7 @@ t_r=t-\frac{|\boldsymbol{r}-\boldsymbol{r}'|}{c}
 \]</div>
 <p>とする。</p>
 <p>(1) 遅延時刻 <span class="arithmatex">\(t_r\)</span> の意味を説明せよ。源が原点近傍の大きさ <span class="arithmatex">\(a\)</span> の領域に局在し，観測距離が <span class="arithmatex">\(r\gg a\)</span> であるとき，<span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|\simeq r\)</span> とする最低次近似からポテンシャルが時刻 <span class="arithmatex">\(t-r/c\)</span> の源に依存することを示せ。</p>
-<p>(2) 電気双極子モーメント <span class="arithmatex">\(\boldsymbol{p}(t)\)</span> をもつ点状源を，分布の意味で，</p>
+<p>(2) 電気双極子モーメント <span class="arithmatex">\(\boldsymbol{p}(t)\)</span> をもつ点状源を，分布の意味で</p>
 <div class="arithmatex">\[
 \rho(\boldsymbol{r},t)
 =-\boldsymbol{p}(t)\cdot\boldsymbol{\nabla}\delta^3(\boldsymbol{r}),
@@ -14548,26 +14548,26 @@ t_r=t-\frac{|\boldsymbol{r}-\boldsymbol{r}'|}{c}
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>源の位置 <span class="arithmatex">\(\boldsymbol{r}'\)</span> で時刻 <span class="arithmatex">\(t_r\)</span> に生じた変化が，距離 <span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|\)</span> を速度 <span class="arithmatex">\(c\)</span> で進み，観測時刻 <span class="arithmatex">\(t\)</span> に到達します。したがって，</p>
+<p>源の位置 <span class="arithmatex">\(\boldsymbol{r}'\)</span> で時刻 <span class="arithmatex">\(t_r\)</span> に生じた変化が，距離 <span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|\)</span> を速度 <span class="arithmatex">\(c\)</span> で進み，観測時刻 <span class="arithmatex">\(t\)</span> に到達します。したがって</p>
 <div class="arithmatex">\[
 t-t_r=\frac{|\boldsymbol{r}-\boldsymbol{r}'|}{c}
 \]</div>
-<p>です。遠方の最低次では分母と遅延時刻を，</p>
+<p>です。遠方の最低次では分母と遅延時刻を</p>
 <div class="arithmatex">\[
 |\boldsymbol{r}-\boldsymbol{r}'|\simeq r,
 \qquad
 t_r\simeq t-\frac{r}{c}
 \]</div>
-<p>とできます。たとえばベクトルポテンシャルは，</p>
+<p>とできます。たとえばベクトルポテンシャルは</p>
 <div class="arithmatex">\[
-\boldsymbol{A}(\boldsymbol{r},t)
+\finalanswer{\boldsymbol{A}(\boldsymbol{r},t)
 \simeq\frac{\mu_0}{4\pi r}
 \int\boldsymbol{j}
-\left(\boldsymbol{r}',t-\frac{r}{c}\right)dV'
+\left(\boldsymbol{r}',t-\frac{r}{c}\right)dV'}
 \]</div>
 <p>となり，観測点の場が同時刻 <span class="arithmatex">\(t\)</span> ではなく過去の源で決まることが分かります。</p>
 <h3 id="2">(2)</h3>
-<p>時間微分と空間発散を計算すると，</p>
+<p>時間微分と空間発散を計算すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{\partial\rho}{\partial t}
@@ -14588,26 +14588,26 @@ t_r\simeq t-\frac{r}{c}
 \int\frac{\dot{\boldsymbol{p}}(t_r)
 \delta^3(\boldsymbol{r}')}
 {|\boldsymbol{r}-\boldsymbol{r}'|}\,dV' \\
-&amp;=\frac{\mu_0}{4\pi r}
+&amp;=\finalanswer{\frac{\mu_0}{4\pi r}}
 \dot{\boldsymbol{p}}\left(t-\frac{r}{c}\right).
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>双極子モーメントの時間微分は，</p>
+<p>双極子モーメントの時間微分は</p>
 <div class="arithmatex">\[
 \dot{\boldsymbol{p}}(t)
 =-\omega p_0\sin\omega t\boldsymbol{e}_z
 \]</div>
-<p>です。したがって，</p>
+<p>です。したがって</p>
 <div class="arithmatex">\[
 \boldsymbol{A}(\boldsymbol{r},t)
 =-\frac{\mu_0\omega p_0}{4\pi r}
 \sin\left[\omega\left(t-\frac{r}{c}\right)\right]
 \boldsymbol{e}_z
 \]</div>
-<p>となります。原点での同じ時間変化に比べ，位相は，</p>
+<p>となります。原点での同じ時間変化に比べ，位相は</p>
 <div class="arithmatex">\[
-\Delta\varphi=\frac{\omega r}{c}=kr
+\finalanswer{\Delta\varphi=\frac{\omega r}{c}=kr}
 \]</div>
 <p>だけ遅れます。<span class="arithmatex">\(\omega\to0\)</span> では <span class="arithmatex">\(\dot{\boldsymbol{p}}\to0\)</span> なので <span class="arithmatex">\(\boldsymbol{A}\to\boldsymbol{0}\)</span> です。静止した電気双極子は静電ポテンシャルを作りますが，定常電流に対応するベクトルポテンシャルは作りません。</p>
 

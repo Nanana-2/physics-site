@@ -14540,7 +14540,7 @@
 
 <h1 id="_1">ガウスの法則の基本的な適用</h1>
 <h2 id="_2">問題</h2>
-<p>真空中の静電場について，対称性の高い電荷分布が作る電場を求める。閉曲面 <span class="arithmatex">\(S\)</span> が囲む電荷を <span class="arithmatex">\(Q_{\mathrm{in}}\)</span> とすると，ガウスの法則は，</p>
+<p>真空中の静電場について，対称性の高い電荷分布が作る電場を求める。閉曲面 <span class="arithmatex">\(S\)</span> が囲む電荷を <span class="arithmatex">\(Q_{\mathrm{in}}\)</span> とすると，ガウスの法則は</p>
 <div class="arithmatex">\[
 \oint_S\boldsymbol{E}\cdot d\boldsymbol{S}
 =\frac{Q_{\mathrm{in}}}{\varepsilon_0}
@@ -14554,7 +14554,7 @@
 <h3 id="_4">使用する考え方</h3>
 <p>閉曲面 <span class="arithmatex">\(S\)</span> を貫く電気力線の流束は，その内部の全電荷 <span class="arithmatex">\(Q_{\mathrm{in}}\)</span> によって決まります。</p>
 <div class="arithmatex">\[
-\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}=\frac{Q_{\mathrm{in}}}{\varepsilon_0}
+\finalanswer{\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}=\frac{Q_{\mathrm{in}}}{\varepsilon_0}}
 \]</div>
 <p>電場の向きが面上で分かり，さらに大きさが一定となる面を選ぶと積分を実行できます。球対称なら球面，円筒対称なら同軸円筒，平面対称なら平面を底面にもつ薄い円柱が適しています。</p>
 <h3 id="1">(1)</h3>
@@ -14562,12 +14562,12 @@
 <div class="arithmatex">\[
 E(r)4\pi r^2=0
 \]</div>
-<p>したがって <span class="arithmatex">\(\boldsymbol{E}=\boldsymbol{0}\)</span> です。<span class="arithmatex">\(r&gt;R\)</span> では全電荷 <span class="arithmatex">\(Q\)</span> を囲むので，</p>
+<p>したがって <span class="arithmatex">\(\boldsymbol{E}=\boldsymbol{0}\)</span> です。<span class="arithmatex">\(r&gt;R\)</span> では全電荷 <span class="arithmatex">\(Q\)</span> を囲むので</p>
 <div class="arithmatex">\[
 E(r)4\pi r^2=\frac{Q}{\varepsilon_0}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{E}(r)=\frac{Q}{4\pi\varepsilon_0r^2}\boldsymbol{e}_r
+\finalanswer{\boldsymbol{E}(r)=\frac{Q}{4\pi\varepsilon_0r^2}\boldsymbol{e}_r}
 \]</div>
 <p>となります。</p>
 <h3 id="2">(2)</h3>
@@ -14578,9 +14578,9 @@ E(r)2\pi rL=\frac{\rho\pi r^2L}{\varepsilon_0}
 <div class="arithmatex">\[
 \boldsymbol{E}(r)=\frac{\rho r}{2\varepsilon_0}\boldsymbol{e}_r
 \]</div>
-<p><span class="arithmatex">\(r&gt;R\)</span> では内部電荷が <span class="arithmatex">\(\rho\pi R^2L\)</span> となるため，</p>
+<p><span class="arithmatex">\(r&gt;R\)</span> では内部電荷が <span class="arithmatex">\(\rho\pi R^2L\)</span> となるため</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(r)=\frac{\rho R^2}{2\varepsilon_0r}\boldsymbol{e}_r
+\finalanswer{\boldsymbol{E}(r)=\frac{\rho R^2}{2\varepsilon_0r}\boldsymbol{e}_r}
 \]</div>
 <p>です。二つの式は <span class="arithmatex">\(r=R\)</span> で連続につながります。</p>
 <h3 id="3">(3)</h3>
@@ -14588,7 +14588,7 @@ E(r)2\pi rL=\frac{\rho\pi r^2L}{\varepsilon_0}
 <div class="arithmatex">\[
 2ES=\frac{\sigma S}{\varepsilon_0}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(z)=
 \begin{cases}
@@ -14598,22 +14598,22 @@ E(r)2\pi rL=\frac{\rho\pi r^2L}{\varepsilon_0}
 \]</div>
 <p>となります。正の面電荷から両側へ離れる向きに電場が生じます。</p>
 <p><strong>(1)の境界条件の確認</strong></p>
-<p>球殻の直外と直内の電場をそれぞれ <span class="arithmatex">\(E_{\mathrm{out}}\)</span>，<span class="arithmatex">\(E_{\mathrm{in}}\)</span> とします。表面の小領域 <span class="arithmatex">\(S\)</span> をまたぐ薄い円柱をとると，側面からの流束は厚さをゼロにする極限で消えます。ガウスの法則は，</p>
+<p>球殻の直外と直内の電場をそれぞれ <span class="arithmatex">\(E_{\mathrm{out}}\)</span>，<span class="arithmatex">\(E_{\mathrm{in}}\)</span> とします。表面の小領域 <span class="arithmatex">\(S\)</span> をまたぐ薄い円柱をとると，側面からの流束は厚さをゼロにする極限で消えます。ガウスの法則は</p>
 <div class="arithmatex">\[
 \left(E_{\mathrm{out}}-E_{\mathrm{in}}\right)S
 =\frac{\sigma_sS}{\varepsilon_0}
 \]</div>
-<p>となります。(1) より，</p>
+<p>となります。(1) より</p>
 <div class="arithmatex">\[
 E_{\mathrm{out}}=\frac{Q}{4\pi\varepsilon_0R^2},
 \qquad
 E_{\mathrm{in}}=0
 \]</div>
-<p>なので，</p>
+<p>なので</p>
 <div class="arithmatex">\[
-E_{\mathrm{out}}-E_{\mathrm{in}}
+\finalanswer{E_{\mathrm{out}}-E_{\mathrm{in}}
 =\frac{Q}{4\pi\varepsilon_0R^2}
-=\frac{\sigma_s}{\varepsilon_0}
+=\frac{\sigma_s}{\varepsilon_0}}
 \]</div>
 <p>です。表面電荷がある場所では電場そのものは不連続ですが，その跳びは表面電荷密度によって正確に決まります。</p>
 

@@ -14518,11 +14518,11 @@
 
 <h1 id="_1">交流回路と複素インピーダンス</h1>
 <h2 id="_2">問題</h2>
-<p>抵抗 <span class="arithmatex">\(R\)</span>，自己インダクタンス <span class="arithmatex">\(L\)</span> のコイル，静電容量 <span class="arithmatex">\(C\)</span> のコンデンサーを直列に接続し，角振動数 <span class="arithmatex">\(\omega\)</span> の交流電圧，</p>
+<p>抵抗 <span class="arithmatex">\(R\)</span>，自己インダクタンス <span class="arithmatex">\(L\)</span> のコイル，静電容量 <span class="arithmatex">\(C\)</span> のコンデンサーを直列に接続し，角振動数 <span class="arithmatex">\(\omega\)</span> の交流電圧</p>
 <div class="arithmatex">\[
 v(t)=V_0\cos\omega t
 \]</div>
-<p>を加える。複素表示では電圧を <span class="arithmatex">\(\tilde{V}=V_0\)</span>，電流を <span class="arithmatex">\(\tilde{I}\)</span> とし，各素子のインピーダンスを，</p>
+<p>を加える。複素表示では電圧を <span class="arithmatex">\(\tilde{V}=V_0\)</span>，電流を <span class="arithmatex">\(\tilde{I}\)</span> とし，各素子のインピーダンスを</p>
 <div class="arithmatex">\[
 Z_R=R,
 \qquad
@@ -14531,13 +14531,13 @@ Z_L=i\omega L,
 Z_C=\frac{1}{i\omega C}
 \]</div>
 <p>とする。実際の電流は <span class="arithmatex">\(i(t)=\operatorname{Re}[\tilde{I}e^{i\omega t}]\)</span> である。</p>
-<p>(1) 直列回路の合成インピーダンス <span class="arithmatex">\(Z(\omega)\)</span> を求めよ。<span class="arithmatex">\(\tilde{I}=\tilde{V}/Z\)</span> から電流振幅 <span class="arithmatex">\(I_0\)</span> と，電圧に対する電流の位相差 <span class="arithmatex">\(\delta\)</span> を求め，</p>
+<p>(1) 直列回路の合成インピーダンス <span class="arithmatex">\(Z(\omega)\)</span> を求めよ。<span class="arithmatex">\(\tilde{I}=\tilde{V}/Z\)</span> から電流振幅 <span class="arithmatex">\(I_0\)</span> と，電圧に対する電流の位相差 <span class="arithmatex">\(\delta\)</span> を求め</p>
 <div class="arithmatex">\[
 i(t)=I_0\cos(\omega t-\delta)
 \]</div>
 <p>の形で表せ。</p>
 <p>(2) 電流振幅が最大となる共振角振動数 <span class="arithmatex">\(\omega_0\)</span> を求めよ。共振時の <span class="arithmatex">\(Z\)</span>，<span class="arithmatex">\(I_0\)</span>，位相差 <span class="arithmatex">\(\delta\)</span> を示せ。また <span class="arithmatex">\(\omega&lt;\omega_0\)</span> と <span class="arithmatex">\(\omega&gt;\omega_0\)</span> で電流が電圧より進むか遅れるか判定せよ。</p>
-<p>(3) 一周期平均の消費電力を，</p>
+<p>(3) 一周期平均の消費電力を</p>
 <div class="arithmatex">\[
 \overline{P}
 =\frac{1}{2}V_0I_0\cos\delta
@@ -14551,14 +14551,14 @@ i(t)=I_0\cos(\omega t-\delta)
 Z(\omega)
 =R+i\omega L+\frac{1}{i\omega C}
 \]</div>
-<p><span class="arithmatex">\(1/i=-i\)</span> より，</p>
+<p><span class="arithmatex">\(1/i=-i\)</span> より</p>
 <div class="arithmatex">\[
 Z(\omega)
 =R+i\left(
 \omega L-\frac{1}{\omega C}
 \right)
 \]</div>
-<p>です。絶対値は，</p>
+<p>です。絶対値は</p>
 <div class="arithmatex">\[
 |Z|
 =\sqrt{
@@ -14567,40 +14567,40 @@ R^2+\left(
 \right)^2
 }
 \]</div>
-<p>なので，</p>
+<p>なので</p>
 <div class="arithmatex">\[
 I_0=\frac{V_0}{|Z|}
 \]</div>
-<p>です。インピーダンスの偏角を <span class="arithmatex">\(\delta\)</span> とすると，</p>
+<p>です。インピーダンスの偏角を <span class="arithmatex">\(\delta\)</span> とすると</p>
 <div class="arithmatex">\[
 \tan\delta
 =\frac{\omega L-1/(\omega C)}{R}
 \]</div>
-<p>となります。<span class="arithmatex">\(\tilde{I}=\tilde{V}/Z\)</span> なので，電流の位相は電圧より <span class="arithmatex">\(\delta\)</span> だけ小さく，</p>
+<p>となります。<span class="arithmatex">\(\tilde{I}=\tilde{V}/Z\)</span> なので，電流の位相は電圧より <span class="arithmatex">\(\delta\)</span> だけ小さく</p>
 <div class="arithmatex">\[
-i(t)=I_0\cos(\omega t-\delta)
+\finalanswer{i(t)=I_0\cos(\omega t-\delta)}
 \]</div>
 <p>です。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(I_0\)</span> が最大になるには <span class="arithmatex">\(|Z|\)</span> が最小になればよく，虚部がゼロとなる条件は，</p>
+<p><span class="arithmatex">\(I_0\)</span> が最大になるには <span class="arithmatex">\(|Z|\)</span> が最小になればよく，虚部がゼロとなる条件は</p>
 <div class="arithmatex">\[
 \omega_0L-\frac{1}{\omega_0C}=0
 \]</div>
-<p>です。したがって，</p>
+<p>です。したがって</p>
 <div class="arithmatex">\[
 \omega_0=\frac{1}{\sqrt{LC}}
 \]</div>
-<p>となります。共振時は，</p>
+<p>となります。共振時は</p>
 <div class="arithmatex">\[
-Z(\omega_0)=R,
+\finalanswer{Z(\omega_0)=R,
 \qquad
 I_0(\omega_0)=\frac{V_0}{R},
 \qquad
-\delta=0
+\delta=0}
 \]</div>
 <p>です。<span class="arithmatex">\(\omega&lt;\omega_0\)</span> では虚部が負で <span class="arithmatex">\(\delta&lt;0\)</span> なので，<span class="arithmatex">\(i(t)=I_0\cos(\omega t-\delta)\)</span> は電圧より進みます。<span class="arithmatex">\(\omega&gt;\omega_0\)</span> では <span class="arithmatex">\(\delta&gt;0\)</span> なので電流は遅れます。</p>
 <h3 id="3">(3)</h3>
-<p><span class="arithmatex">\(\cos\delta=R/|Z|\)</span> であり，<span class="arithmatex">\(V_0=I_0|Z|\)</span> なので，</p>
+<p><span class="arithmatex">\(\cos\delta=R/|Z|\)</span> であり，<span class="arithmatex">\(V_0=I_0|Z|\)</span> なので</p>
 <div class="arithmatex">\[
 \overline{P}
 =\frac{1}{2}V_0I_0\cos\delta
@@ -14612,10 +14612,10 @@ I_0(\omega_0)=\frac{V_0}{R},
 \frac{R}{|Z|}
 =\frac{1}{2}I_0^2R
 \]</div>
-<p>となります。コイルとコンデンサーは一周期平均ではエネルギーを消費せず，抵抗だけが実電力を消費します。共振時は，</p>
+<p>となります。コイルとコンデンサーは一周期平均ではエネルギーを消費せず，抵抗だけが実電力を消費します。共振時は</p>
 <div class="arithmatex">\[
-\overline{P}_{\mathrm{res}}
-=\frac{V_0^2}{2R}
+\finalanswer{\overline{P}_{\mathrm{res}}
+=\frac{V_0^2}{2R}}
 \]</div>
 <p>です。</p>
 

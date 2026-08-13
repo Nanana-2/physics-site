@@ -14518,12 +14518,12 @@
 
 <h1 id="_1">分極ベクトルと束縛電荷</h1>
 <h2 id="_2">問題</h2>
-<p>半径 <span class="arithmatex">\(R\)</span> の誘電体球内に，位置に依存する分極，</p>
+<p>半径 <span class="arithmatex">\(R\)</span> の誘電体球内に，位置に依存する分極</p>
 <div class="arithmatex">\[
 \boldsymbol{P}(\boldsymbol{r})=\alpha\boldsymbol{r}
 \]</div>
 <p>が生じている。<span class="arithmatex">\(\alpha\)</span> は正の定数であり，球外では <span class="arithmatex">\(\boldsymbol{P}=\boldsymbol{0}\)</span> とする。自由電荷は存在しない。</p>
-<p>束縛体積電荷密度と束縛表面電荷密度は，</p>
+<p>束縛体積電荷密度と束縛表面電荷密度は</p>
 <div class="arithmatex">\[
 \rho_b=-\boldsymbol{\nabla}\cdot\boldsymbol{P},
 \qquad
@@ -14536,7 +14536,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>束縛体積電荷密度は <span class="arithmatex">\(\rho_b=-\nabla\cdot\boldsymbol{P}\)</span> です。デカルト座標で，</p>
+<p>束縛体積電荷密度は <span class="arithmatex">\(\rho_b=-\nabla\cdot\boldsymbol{P}\)</span> です。デカルト座標で</p>
 <div class="arithmatex">\[
 \nabla\cdot\boldsymbol{P}
 =\alpha\left(
@@ -14545,7 +14545,7 @@
 +\frac{\partial z}{\partial z}
 \right)=3\alpha
 \]</div>
-<p>なので，</p>
+<p>なので</p>
 <div class="arithmatex">\[
 \rho_b=-3\alpha
 \]</div>
@@ -14555,14 +14555,14 @@
 <div class="arithmatex">\[
 \sigma_b=\boldsymbol{P}\cdot\boldsymbol{e}_r=\alpha R
 \]</div>
-<p>体積電荷と表面電荷の総量は，</p>
+<p>体積電荷と表面電荷の総量は</p>
 <div class="arithmatex">\[
 Q_b^{\mathrm{vol}}=-3\alpha\frac{4\pi R^3}{3}
 =-4\pi\alpha R^3
 \]</div>
 <div class="arithmatex">\[
-Q_b^{\mathrm{surf}}=\alpha R\,4\pi R^2
-=4\pi\alpha R^3
+\finalanswer{Q_b^{\mathrm{surf}}=\alpha R\,4\pi R^2
+=4\pi\alpha R^3}
 \]</div>
 <p>です。両者の和はゼロになります。</p>
 <h3 id="2">(2)</h3>
@@ -14570,18 +14570,25 @@ Q_b^{\mathrm{surf}}=\alpha R\,4\pi R^2
 <div class="arithmatex">\[
 E(r)4\pi r^2=\frac{-4\pi\alpha r^3}{\varepsilon_0}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(r)=-\frac{\alpha r}{\varepsilon_0}\boldsymbol{e}_r,
 \qquad r&lt;R
 \]</div>
-<p>です。<span class="arithmatex">\(r&gt;R\)</span> では全束縛電荷がゼロで球対称なので，</p>
+<p>です。<span class="arithmatex">\(r&gt;R\)</span> では全束縛電荷がゼロで球対称なので</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(r)=\boldsymbol{0},\qquad r&gt;R
 \]</div>
 <p>となります。</p>
+<p>表面直外と直内の法線電場の差は</p>
+<div class="arithmatex">\[
+\finalanswer{E_r(R^+)-E_r(R^-)
+=0-\left(-\frac{\alpha R}{\varepsilon_0}\right)
+=\frac{\sigma_b}{\varepsilon_0}}
+\]</div>
+<p>となり，表面電荷による境界条件と一致します。</p>
 <h3 id="3">(3)</h3>
-<p>球外では電場がゼロなので <span class="arithmatex">\(\phi_{\mathrm{out}}=0\)</span> です。球内では，</p>
+<p>球外では電場がゼロなので <span class="arithmatex">\(\phi_{\mathrm{out}}=0\)</span> です。球内では</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \phi(r)-\phi(R)
@@ -14592,10 +14599,10 @@ E(r)4\pi r^2=\frac{-4\pi\alpha r^3}{\varepsilon_0}
 &amp;=\frac{\alpha}{2\varepsilon_0}(r^2-R^2).
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\phi(R)=0\)</span> なので，</p>
+<p><span class="arithmatex">\(\phi(R)=0\)</span> なので</p>
 <div class="arithmatex">\[
-\phi_{\mathrm{in}}(r)
-=\frac{\alpha}{2\varepsilon_0}(r^2-R^2)
+\finalanswer{\phi_{\mathrm{in}}(r)
+=\frac{\alpha}{2\varepsilon_0}(r^2-R^2)}
 \]</div>
 <p>となります。<span class="arithmatex">\(r=R\)</span> で内外の電位はともにゼロです。</p>
 

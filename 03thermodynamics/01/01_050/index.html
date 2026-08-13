@@ -14521,13 +14521,13 @@
 <p>物質量 <span class="arithmatex">\(n\)</span> の理想気体を考える。定積モル比熱を <span class="arithmatex">\(C_V\)</span> ，定圧モル比熱を <span class="arithmatex">\(C_P\)</span> とし，気体定数を <span class="arithmatex">\(R\)</span> とする。状態変化に伴う温度変化を <span class="arithmatex">\(\Delta T\)</span> とするとき，内部エネルギー変化は変化の経路によらず <span class="arithmatex">\(\Delta U = n C_V \Delta T\)</span> と表される。以下の問いに答えよ。</p>
 <p>(1) 体積を一定に保ったまま，理想気体の温度を <span class="arithmatex">\(\Delta T\)</span> だけ上昇させた。このとき，気体が外部にする仕事 <span class="arithmatex">\(W_V\)</span> を求めよ。また，熱力学第一法則を用いて，気体が吸収した熱量 <span class="arithmatex">\(Q_V\)</span> を <span class="arithmatex">\(n, C_V, \Delta T\)</span> を用いて表せ。</p>
 <p>(2) 圧力を一定に保ったまま，理想気体の温度を <span class="arithmatex">\(\Delta T\)</span> だけ上昇させた。このとき，気体が外部にする仕事 <span class="arithmatex">\(W_P\)</span> を <span class="arithmatex">\(n, R, \Delta T\)</span> を用いて表せ。また，熱力学第一法則を用いて，気体が吸収した熱量 <span class="arithmatex">\(Q_P\)</span> を <span class="arithmatex">\(n, C_V, R, \Delta T\)</span> を用いて表せ。</p>
-<p>(3) 定圧変化において気体が吸収する熱量は，定圧モル比熱を用いて <span class="arithmatex">\(Q_P = n C_P \Delta T\)</span> とも表される。 (2) の結果と比較することにより， <span class="arithmatex">\(C_P\)</span> 恒等式（マイヤーの関係式）を導出せよ。</p>
+<p>(3) 定圧変化において気体が吸収する熱量は，定圧モル比熱を用いて <span class="arithmatex">\(Q_P = n C_P \Delta T\)</span> とも表される。 (2) の結果と比較し，マイヤーの関係式を導出せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>定積変化においては体積が一定に保たれるため，体積変化量は <span class="arithmatex">\(dV = 0\)</span> です。仕事の定義式 <span class="arithmatex">\(W = \int P dV\)</span> より，気体が外部にする仕事は次のようになります。</p>
 <div class="arithmatex">\[
-W_V = 0
+\finalanswer{W_V = 0}
 \]</div>
 <p>熱力学第一法則 <span class="arithmatex">\(\Delta U = Q_V - W_V\)</span> に， <span class="arithmatex">\(W_V = 0\)</span> および内部エネルギー変化の式 <span class="arithmatex">\(\Delta U = n C_V \Delta T\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14535,7 +14535,7 @@ n C_V \Delta T = Q_V - 0
 \]</div>
 <p>したがって，求める吸収熱量は次の通りです。</p>
 <div class="arithmatex">\[
-Q_V = n C_V \Delta T
+\finalanswer{Q_V = n C_V \Delta T}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>定圧変化においては圧力 <span class="arithmatex">\(P\)</span> が一定に保たれます。気体が外部にする仕事は <span class="arithmatex">\(W_P = \int_{V_1}^{V_2} P dV = P(V_2 - V_1) = P \Delta V\)</span> となります。</p>
@@ -14545,7 +14545,7 @@ P V_1 = n R T_1, \quad P V_2 = n R T_2
 \]</div>
 <p>両式の差を計算することで，圧力と体積変化の積を温度変化に置き換えます。</p>
 <div class="arithmatex">\[
-W_P = P(V_2 - V_1) = nR(T_2 - T_1) = nR \Delta T
+W_P = P(V_2 - V_1) = nR(T_2 - T_1) = \finalanswer{nR \Delta T}
 \]</div>
 <p>次に，熱力学第一法則の式を吸収熱量について整理します。</p>
 <div class="arithmatex">\[
@@ -14553,7 +14553,7 @@ Q_P = \Delta U + W_P
 \]</div>
 <p>この式に，内部エネルギー変化 <span class="arithmatex">\(\Delta U = n C_V \Delta T\)</span> と，いま求めた仕事 <span class="arithmatex">\(W_P = nR \Delta T\)</span> をそれぞれ代入します。</p>
 <div class="arithmatex">\[
-Q_P = n C_V \Delta T + nR \Delta T = n (C_V + R) \Delta T
+Q_P = n C_V \Delta T + nR \Delta T = \finalanswer{n (C_V + R) \Delta T}
 \]</div>
 <p>これが求める定圧変化の吸収熱量の式です。</p>
 <h3 id="3">(3)</h3>
@@ -14563,7 +14563,7 @@ n C_P \Delta T = n (C_V + R) \Delta T
 \]</div>
 <p>両辺にある共通の因数 <span class="arithmatex">\(n \Delta T\)</span> で割り算をします。</p>
 <div class="arithmatex">\[
-C_P = C_V + R
+\finalanswer{C_P = C_V + R}
 \]</div>
 <p>これにより，定圧モル比熱と定積モル比熱の間に成り立つマイヤーの関係式が導出されました。</p>
 

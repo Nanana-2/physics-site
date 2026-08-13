@@ -14518,11 +14518,11 @@
 
 <h1 id="_1">渦電流とエネルギー散逸</h1>
 <h2 id="_2">問題</h2>
-<p>半径 <span class="arithmatex">\(R\)</span>，長さ <span class="arithmatex">\(\ell\)</span> の一様な円柱導体を考える。円柱軸を <span class="arithmatex">\(z\)</span> 軸とし，電気伝導率を <span class="arithmatex">\(\sigma\)</span> とする。円柱全体に一様な磁場，</p>
+<p>半径 <span class="arithmatex">\(R\)</span>，長さ <span class="arithmatex">\(\ell\)</span> の一様な円柱導体を考える。円柱軸を <span class="arithmatex">\(z\)</span> 軸とし，電気伝導率を <span class="arithmatex">\(\sigma\)</span> とする。円柱全体に一様な磁場</p>
 <div class="arithmatex">\[
 \boldsymbol{B}(t)=\beta t\,\boldsymbol{e}_z
 \]</div>
-<p>を加える。<span class="arithmatex">\(\beta&gt;0\)</span> とし，導体が作る磁場による逆作用は無視する。円筒対称性より誘導電場と電流密度を，</p>
+<p>を加える。<span class="arithmatex">\(\beta&gt;0\)</span> とし，導体が作る磁場による逆作用は無視する。円筒対称性より誘導電場と電流密度を</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(r)=E_\varphi(r)\boldsymbol{e}_\varphi,
 \qquad
@@ -14535,35 +14535,35 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>半径 <span class="arithmatex">\(r\)</span> の経路が囲む磁束は，</p>
+<p>半径 <span class="arithmatex">\(r\)</span> の経路が囲む磁束は</p>
 <div class="arithmatex">\[
 \Phi_B(t)=\beta t\,\pi r^2
 \]</div>
-<p>です。ファラデーの法則より，</p>
+<p>です。ファラデーの法則より</p>
 <div class="arithmatex">\[
 E_\varphi(r)2\pi r
 =-\frac{d\Phi_B}{dt}
 =-\beta\pi r^2
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 E_\varphi(r)=-\frac{\beta r}{2}
 \]</div>
-<p>です。局所オーム則から，</p>
+<p>です。局所オーム則から</p>
 <div class="arithmatex">\[
-j_\varphi(r)
-=-\frac{\sigma\beta r}{2}
+\finalanswer{j_\varphi(r)
+=-\frac{\sigma\beta r}{2}}
 \]</div>
 <p>となります。負の方位角方向，すなわち <span class="arithmatex">\(+z\)</span> から見て時計回りです。この電流は増加する <span class="arithmatex">\(+z\)</span> 方向磁場を打ち消す <span class="arithmatex">\(-z\)</span> 方向磁場を作ります。</p>
 <h3 id="2">(2)</h3>
-<p>発熱率密度は，</p>
+<p>発熱率密度は</p>
 <div class="arithmatex">\[
 p(r)=\sigma E_\varphi(r)^2
 =\frac{\sigma\beta^2r^2}{4}
 \]</div>
-<p>です。円柱全体で積分すると，</p>
+<p>です。円柱全体で積分すると</p>
 <p>半径 <span class="arithmatex">\(r\)</span>，厚さ <span class="arithmatex">\(dr\)</span> の円筒殻の体積要素は
-<span class="arithmatex">\(dV=2\pi r\ell\,dr\)</span> です。したがって，</p>
+<span class="arithmatex">\(dV=2\pi r\ell\,dr\)</span> です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
 P
@@ -14575,19 +14575,19 @@ P
 \int_0^Rr^3\,dr \\
 &amp;=\frac{\pi\sigma\beta^2\ell}{2}
 \left[\frac{r^4}{4}\right]_0^R \\
-&amp;=\frac{\pi\sigma\beta^2\ell R^4}{8}.
+&amp;=\finalanswer{\frac{\pi\sigma\beta^2\ell R^4}{8}}.
 \end{aligned}
 \]</div>
 <p>となります。</p>
 <h3 id="3">(3)</h3>
-<p>発熱率は時間によらず一定なので，</p>
+<p>発熱率は時間によらず一定なので</p>
 <div class="arithmatex">\[
-W=PT
-=\frac{\pi\sigma\beta^2\ell R^4T}{8}
+\finalanswer{W=PT
+=\frac{\pi\sigma\beta^2\ell R^4T}{8}}
 \]</div>
-<p>です。<span class="arithmatex">\(P\propto R^4\)</span> なので，半径を2倍にすると，</p>
+<p>です。<span class="arithmatex">\(P\propto R^4\)</span> なので，半径を2倍にすると</p>
 <div class="arithmatex">\[
-\frac{P(2R)}{P(R)}=2^4=16
+\finalanswer{\frac{P(2R)}{P(R)}=2^4=16}
 \]</div>
 <p>倍になります。導体を細く分割すると大きな半径を回る渦電流経路が断たれ，損失を大幅に減らせます。</p>
 

@@ -14518,12 +14518,12 @@
 
 <h1 id="_1">ラプラス方程式の変数分離</h1>
 <h2 id="_2">問題</h2>
-<p><span class="arithmatex">\(xy\)</span> 平面上の長方形領域 <span class="arithmatex">\(0&lt;x&lt;a\)</span>，<span class="arithmatex">\(0&lt;y&lt;b\)</span> に電荷がなく，電位 <span class="arithmatex">\(\phi(x,y)\)</span> はラプラス方程式，</p>
+<p><span class="arithmatex">\(xy\)</span> 平面上の長方形領域 <span class="arithmatex">\(0&lt;x&lt;a\)</span>，<span class="arithmatex">\(0&lt;y&lt;b\)</span> に電荷がなく，電位 <span class="arithmatex">\(\phi(x,y)\)</span> はラプラス方程式</p>
 <div class="arithmatex">\[
 \frac{\partial^2\phi}{\partial x^2}
 +\frac{\partial^2\phi}{\partial y^2}=0
 \]</div>
-<p>を満たす。境界条件を，</p>
+<p>を満たす。境界条件を</p>
 <div class="arithmatex">\[
 \phi(0,y)=\phi(a,y)=\phi(x,0)=0,
 \qquad
@@ -14537,52 +14537,52 @@
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>変数分離では，<span class="arithmatex">\(x\)</span> だけの関数と <span class="arithmatex">\(y\)</span> だけの関数の和がすべての <span class="arithmatex">\(x,y\)</span> でゼロになるため，それぞれを同じ定数に等置します。<span class="arithmatex">\(x=0,a\)</span> でゼロとなる正弦関数を得るため，<span class="arithmatex">\(X''/X\)</span> 側の分離定数を負の値 <span class="arithmatex">\(-k^2\)</span> に選びます。</p>
-<p>積の形をラプラス方程式へ代入すると，</p>
+<p>積の形をラプラス方程式へ代入すると</p>
 <div class="arithmatex">\[
 X''(x)Y(y)+X(x)Y''(y)=0
 \]</div>
-<p>です。<span class="arithmatex">\(XY\)</span> で割ると，</p>
+<p>です。<span class="arithmatex">\(XY\)</span> で割ると</p>
 <div class="arithmatex">\[
 \frac{X''}{X}=-\frac{Y''}{Y}=-k^2
 \]</div>
-<p>となるため，</p>
+<p>となるため</p>
 <div class="arithmatex">\[
 X''+k^2X=0,
 \qquad
 Y''-k^2Y=0
 \]</div>
-<p>を得ます。<span class="arithmatex">\(X(0)=X(a)=0\)</span> を満たす非自明な解は，</p>
+<p>を得ます。<span class="arithmatex">\(X(0)=X(a)=0\)</span> を満たす非自明な解は</p>
 <div class="arithmatex">\[
-k_n=\frac{n\pi}{a},
+\finalanswer{k_n=\frac{n\pi}{a},
 \qquad
 X_n(x)=\sin\frac{n\pi x}{a},
-\qquad n=1,2,\ldots
+\qquad n=1,2,\ldots}
 \]</div>
 <p>です。</p>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(x\)</span> 方向の境界条件を満たす解は，各固有関数を重ね合わせたフーリエ正弦級数になります。次に <span class="arithmatex">\(y=0\)</span> の条件で双曲線余弦の項を除き，最後に <span class="arithmatex">\(y=b\)</span> の境界値と係数を比較します。</p>
-<p><span class="arithmatex">\(Y\)</span> の一般解は <span class="arithmatex">\(Y=A\sinh ky+B\cosh ky\)</span> です。<span class="arithmatex">\(y=0\)</span> で電位がゼロなので <span class="arithmatex">\(B=0\)</span> です。したがって一般には，</p>
+<p><span class="arithmatex">\(Y\)</span> の一般解は <span class="arithmatex">\(Y=A\sinh ky+B\cosh ky\)</span> です。<span class="arithmatex">\(y=0\)</span> で電位がゼロなので <span class="arithmatex">\(B=0\)</span> です。したがって一般には</p>
 <div class="arithmatex">\[
 \phi(x,y)=\sum_{n=1}^{\infty}A_n
 \sinh\frac{n\pi y}{a}
 \sin\frac{n\pi x}{a}
 \]</div>
-<p>となります。上辺の境界値は <span class="arithmatex">\(n=1\)</span> の固有関数だけを含むため，</p>
+<p>となります。上辺の境界値は <span class="arithmatex">\(n=1\)</span> の固有関数だけを含むため</p>
 <div class="arithmatex">\[
 A_1\sinh\frac{\pi b}{a}=V_0,
 \qquad A_n=0quad n\ge2
 \]</div>
-<p>です。よって，</p>
+<p>です。よって</p>
 <div class="arithmatex">\[
-\phi(x,y)=V_0
+\finalanswer{\phi(x,y)=V_0
 \frac{\sinh(\pi y/a)}{\sinh(\pi b/a)}
-\sin\frac{\pi x}{a}
+\sin\frac{\pi x}{a}}
 \]</div>
 <p>を得ます。すべての境界値を満たすラプラス方程式の解は一意です。</p>
 <p>この問題では上辺の電位が最初から <span class="arithmatex">\(n=1\)</span> の正弦関数になっているため，一つのモードだけで解が完成します。一般の境界関数なら，直交関係を用いて複数の <span class="arithmatex">\(A_n\)</span> を求めます。</p>
 <h3 id="3">(3)</h3>
 <p>電場は電位の負の勾配です。まず領域内の電位を偏微分し，その後で <span class="arithmatex">\(y=b\)</span> を代入します。表面電荷密度では，導体から領域内へ向く法線を使うため，<span class="arithmatex">\(E_y\)</span> にもう一つ負号が付くことに注意します。</p>
-<p>偏微分を実行すると，</p>
+<p>偏微分を実行すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 E_x(x,y)
@@ -14595,14 +14595,14 @@ E_y(x,y)
 \sin\frac{\pi x}{a}.
 \end{aligned}
 \]</div>
-<p>上辺で領域内へ向く法線は <span class="arithmatex">\(-\boldsymbol{e}_y\)</span> なので，</p>
+<p>上辺で領域内へ向く法線は <span class="arithmatex">\(-\boldsymbol{e}_y\)</span> なので</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \sigma_s(x)
 &amp;=\varepsilon_0\boldsymbol{E}(x,b^-)
 \cdot(-\boldsymbol{e}_y) \\
 &amp;=-\varepsilon_0E_y(x,b^-) \\
-&amp;=\frac{\pi\varepsilon_0V_0}{a}
+&amp;=\finalanswer{\frac{\pi\varepsilon_0V_0}{a}}
 \coth\frac{\pi b}{a}
 \sin\frac{\pi x}{a}.
 \end{aligned}

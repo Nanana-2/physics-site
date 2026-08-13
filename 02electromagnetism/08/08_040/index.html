@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p><span class="arithmatex">\(z=+d/2\)</span> に点電荷 <span class="arithmatex">\(+q\)</span>，<span class="arithmatex">\(z=-d/2\)</span> に点電荷 <span class="arithmatex">\(-q\)</span> を置く。双極子モーメントを <span class="arithmatex">\(\boldsymbol{p}=qd\boldsymbol{e}_z\)</span> と定義する。観測点は球座標 <span class="arithmatex">\((r,\theta,\varphi)\)</span> で表し，<span class="arithmatex">\(r\gg d\)</span> とする。</p>
 <p>(1) 二電荷が作る厳密な電位を書け。<span class="arithmatex">\(d/r\)</span> の一次まで展開し，遠方電位 <span class="arithmatex">\(\phi_{\mathrm{dip}}(r,\theta)\)</span> を <span class="arithmatex">\(p=qd\)</span> で表せ。無限遠を電位の基準とする。</p>
-<p>(2) 球座標で軸対称な電位から電場を求める式，</p>
+<p>(2) 球座標で軸対称な電位から電場を求める式</p>
 <div class="arithmatex">\[
 E_r=-\frac{\partial\phi}{\partial r},
 \qquad
@@ -14531,18 +14531,18 @@ E_\theta=-\frac{1}{r}\frac{\partial\phi}{\partial\theta}
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>二つの電荷までの距離を <span class="arithmatex">\(r_+\)</span> と <span class="arithmatex">\(r_-\)</span> とすると，</p>
+<p>二つの電荷までの距離を <span class="arithmatex">\(r_+\)</span> と <span class="arithmatex">\(r_-\)</span> とすると</p>
 <div class="arithmatex">\[
 \phi=\frac{q}{4\pi\varepsilon_0}
 \left(\frac{1}{r_+}-\frac{1}{r_-}\right)
 \]</div>
-<p>です。遠方では，</p>
+<p>です。遠方では</p>
 <div class="arithmatex">\[
 r_\pm
 =\sqrt{r^2+\frac{d^2}{4}\mp rd\cos\theta}
 \simeq r\left(1\mp\frac{d\cos\theta}{2r}\right)
 \]</div>
-<p>なので，<span class="arithmatex">\((1+x)^{-1}\simeq1-x\)</span> を用いると，</p>
+<p>なので，<span class="arithmatex">\((1+x)^{-1}\simeq1-x\)</span> を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{1}{r_+}
@@ -14553,15 +14553,15 @@ r_\pm
 \left(1-\frac{d\cos\theta}{2r}\right).
 \end{aligned}
 \]</div>
-<p>差をとれば，</p>
+<p>差をとれば</p>
 <div class="arithmatex">\[
-\phi_{\mathrm{dip}}(r,\theta)
+\finalanswer{\phi_{\mathrm{dip}}(r,\theta)
 =\frac{qd\cos\theta}{4\pi\varepsilon_0r^2}
-=\frac{p\cos\theta}{4\pi\varepsilon_0r^2}
+=\frac{p\cos\theta}{4\pi\varepsilon_0r^2}}
 \]</div>
 <p>となります。</p>
 <h3 id="2">(2)</h3>
-<p>偏微分を一段ずつ計算すると，</p>
+<p>偏微分を一段ずつ計算すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 E_r
@@ -14574,20 +14574,20 @@ E_\theta
 =\frac{p\sin\theta}{4\pi\varepsilon_0r^3}.
 \end{aligned}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{E}_{\mathrm{dip}}
+\finalanswer{\boldsymbol{E}_{\mathrm{dip}}
 =\frac{p}{4\pi\varepsilon_0r^3}
 (2\cos\theta\boldsymbol{e}_r
-+\sin\theta\boldsymbol{e}_\theta)
++\sin\theta\boldsymbol{e}_\theta)}
 \]</div>
 <p>です。<span class="arithmatex">\(+z\)</span> 軸上では <span class="arithmatex">\(\theta=0\)</span> なので <span class="arithmatex">\(+z\)</span> 方向，大きさ <span class="arithmatex">\(2p/(4\pi\varepsilon_0r^3)\)</span> です。赤道面では <span class="arithmatex">\(\theta=\pi/2\)</span> で <span class="arithmatex">\(\boldsymbol{e}_\theta=-\boldsymbol{e}_z\)</span> なので，<span class="arithmatex">\(-z\)</span> 方向，大きさ <span class="arithmatex">\(p/(4\pi\varepsilon_0r^3)\)</span> です。</p>
 <h3 id="3">(3)</h3>
-<p>内積と外積から，</p>
+<p>内積と外積から</p>
 <div class="arithmatex">\[
-U(\alpha)=-pE_0\cos\alpha,
+\finalanswer{U(\alpha)=-pE_0\cos\alpha,
 \qquad
-|\boldsymbol{\tau}|=pE_0\sin\alpha
+|\boldsymbol{\tau}|=pE_0\sin\alpha}
 \]</div>
 <p>となります。<span class="arithmatex">\(U\)</span> は <span class="arithmatex">\(\alpha=0\)</span> で最小，<span class="arithmatex">\(\alpha=\pi\)</span> で最大です。したがって双極子が外部電場と平行な配置が安定であり，トルクはずれを小さくする向きに働きます。</p>
 

@@ -14543,12 +14543,12 @@
 <p>静磁場をベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A}\)</span> により <span class="arithmatex">\(\boldsymbol{B}=\nabla\times\boldsymbol{A}\)</span> と表す。</p>
 <p>(1) ベクトル解析の恒等式 <span class="arithmatex">\(\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\boldsymbol{A})=0\)</span> を用い，<span class="arithmatex">\(\boldsymbol{\nabla}\cdot\boldsymbol{B}=0\)</span> が自動的に満たされることを示せ。</p>
 <p>(2) 任意のスカラー関数 <span class="arithmatex">\(\chi(\boldsymbol{r})\)</span> による変換後のポテンシャルを <span class="arithmatex">\(\boldsymbol{A}'=\boldsymbol{A}+\boldsymbol{\nabla}\chi\)</span> とする。<span class="arithmatex">\(\boldsymbol{\nabla}\times\boldsymbol{\nabla}\chi=\boldsymbol{0}\)</span> を用いて <span class="arithmatex">\(\boldsymbol{B}'=\boldsymbol{B}\)</span> を示し，クーロンゲージの条件を <span class="arithmatex">\(\boldsymbol{A}\)</span> の式で示せ。</p>
-<p>(3) 一様磁場 <span class="arithmatex">\(\boldsymbol{B}=B\boldsymbol{e}_z\)</span> に対し，</p>
+<p>(3) 一様磁場 <span class="arithmatex">\(\boldsymbol{B}=B\boldsymbol{e}_z\)</span> に対し</p>
 <div class="arithmatex">\[
 \boldsymbol{A}=\frac{1}{2}\boldsymbol{B}\times\boldsymbol{r}
 \]</div>
 <p>がベクトルポテンシャルであり，クーロンゲージを満たすことを確かめよ。さらに <span class="arithmatex">\(\chi=Bxy/2\)</span> のゲージ変換を施して <span class="arithmatex">\(\boldsymbol{A}'=Bx\boldsymbol{e}_y\)</span> を導き，両者が同じ磁場を与えることを確認せよ。</p>
-<p>(4) <span class="arithmatex">\(z\)</span> 軸を流れる無限直線電流 <span class="arithmatex">\(I\)</span> に対し，<span class="arithmatex">\(r_0\)</span> を任意の基準長として，</p>
+<p>(4) <span class="arithmatex">\(z\)</span> 軸を流れる無限直線電流 <span class="arithmatex">\(I\)</span> に対し，<span class="arithmatex">\(r_0\)</span> を任意の基準長として</p>
 <div class="arithmatex">\[
 \boldsymbol{A}(r)=-\frac{\mu_0I}{2\pi}\log\frac{r}{r_0}\boldsymbol{e}_z
 \]</div>
@@ -14556,74 +14556,74 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>回転の発散は恒等的にゼロです。したがって，</p>
+<p>回転の発散は恒等的にゼロです。したがって</p>
 <div class="arithmatex">\[
-\nabla\cdot\boldsymbol{B}
-=\nabla\cdot(\nabla\times\boldsymbol{A})=0
+\finalanswer{\nabla\cdot\boldsymbol{B}
+=\nabla\cdot(\nabla\times\boldsymbol{A})=0}
 \]</div>
 <p>となり，磁力線に始点と終点がないことが表されます。</p>
 <h3 id="2">(2)</h3>
-<p>ゲージ変換は，</p>
+<p>ゲージ変換は</p>
 <div class="arithmatex">\[
 \boldsymbol{A}'=\boldsymbol{A}+\nabla\chi
 \]</div>
-<p>です。勾配の回転はゼロなので，</p>
+<p>です。勾配の回転はゼロなので</p>
 <div class="arithmatex">\[
 \nabla\times\boldsymbol{A}'
 =\nabla\times\boldsymbol{A}
 +\nabla\times\nabla\chi
 =\boldsymbol{B}
 \]</div>
-<p>となります。クーロンゲージは，</p>
+<p>となります。クーロンゲージは</p>
 <div class="arithmatex">\[
-\nabla\cdot\boldsymbol{A}=0
+\finalanswer{\nabla\cdot\boldsymbol{A}=0}
 \]</div>
 <p>という条件です。</p>
 <h3 id="3">(3)</h3>
-<p><span class="arithmatex">\(\boldsymbol{r}=x\boldsymbol{e}_x+y\boldsymbol{e}_y+z\boldsymbol{e}_z\)</span> より，</p>
+<p><span class="arithmatex">\(\boldsymbol{r}=x\boldsymbol{e}_x+y\boldsymbol{e}_y+z\boldsymbol{e}_z\)</span> より</p>
 <div class="arithmatex">\[
 \boldsymbol{A}
 =-\frac{By}{2}\boldsymbol{e}_x
 +\frac{Bx}{2}\boldsymbol{e}_y
 \]</div>
-<p>です。成分を微分すると，</p>
+<p>です。成分を微分すると</p>
 <div class="arithmatex">\[
-\nabla\times\boldsymbol{A}
+\finalanswer{\nabla\times\boldsymbol{A}
 =\left(
 \frac{\partial A_y}{\partial x}
 -\frac{\partial A_x}{\partial y}
 \right)\boldsymbol{e}_z
-=B\boldsymbol{e}_z
+=B\boldsymbol{e}_z}
 \]</div>
 <p>となります。また <span class="arithmatex">\(\partial A_x/\partial x+\partial A_y/\partial y=0\)</span> なので，クーロンゲージも満たします。</p>
 <h3 id="4">(4)</h3>
-<p>円筒座標で <span class="arithmatex">\(A_z\)</span> だけが <span class="arithmatex">\(r\)</span> に依存するとき，</p>
+<p>円筒座標で <span class="arithmatex">\(A_z\)</span> だけが <span class="arithmatex">\(r\)</span> に依存するとき</p>
 <div class="arithmatex">\[
 B_\varphi=-\frac{\partial A_z}{\partial r}
 \]</div>
-<p>です。与えられた式を微分すると，</p>
+<p>です。与えられた式を微分すると</p>
 <div class="arithmatex">\[
 \boldsymbol{B}(r)
 =\frac{\mu_0I}{2\pi r}\boldsymbol{e}_\varphi
 \]</div>
 <p>となり，ビオ・サバールの法則やアンペールの法則から得られる磁場と一致します。<span class="arithmatex">\(r_0\)</span> の変更は <span class="arithmatex">\(\boldsymbol{A}\)</span> に定数ベクトルを加えるだけで，磁場を変えません。</p>
 <p><strong>別のゲージへの変換</strong></p>
-<p>スカラー関数の勾配は，</p>
+<p>スカラー関数の勾配は</p>
 <div class="arithmatex">\[
 \nabla\chi=\frac{By}{2}\boldsymbol{e}_x
 +\frac{Bx}{2}\boldsymbol{e}_y
 \]</div>
-<p>です。(3) の <span class="arithmatex">\(\boldsymbol{A}\)</span> に加えると，</p>
+<p>です。(3) の <span class="arithmatex">\(\boldsymbol{A}\)</span> に加えると</p>
 <div class="arithmatex">\[
 \boldsymbol{A}'
 =\boldsymbol{A}+\nabla\chi
 =Bx\boldsymbol{e}_y
 \]</div>
-<p>となります。その回転は，</p>
+<p>となります。その回転は</p>
 <div class="arithmatex">\[
-\nabla\times\boldsymbol{A}'
+\finalanswer{\nabla\times\boldsymbol{A}'
 =\frac{\partial(Bx)}{\partial x}\boldsymbol{e}_z
-=B\boldsymbol{e}_z
+=B\boldsymbol{e}_z}
 \]</div>
 <p>であり，元と同じ一様磁場です。</p>
 

@@ -14518,23 +14518,23 @@
 
 <h1 id="_1">電流密度と連続の式</h1>
 <h2 id="_2">問題</h2>
-<p>空間内を移動する電荷の保存則を，電荷密度と電流密度を用いて記述する。時刻 <span class="arithmatex">\(t\)</span>，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> における単位体積当たりの電荷を <span class="arithmatex">\(\rho(\boldsymbol{r},t)\)</span> とする。また，向きをもつ微小面 <span class="arithmatex">\(d\boldsymbol{S}\)</span> を単位時間に通過する電荷を，</p>
+<p>空間内を移動する電荷の保存則を，電荷密度と電流密度を用いて記述する。時刻 <span class="arithmatex">\(t\)</span>，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> における単位体積当たりの電荷を <span class="arithmatex">\(\rho(\boldsymbol{r},t)\)</span> とする。また，向きをもつ微小面 <span class="arithmatex">\(d\boldsymbol{S}\)</span> を単位時間に通過する電荷を</p>
 <div class="arithmatex">\[
 dI=\boldsymbol{j}(\boldsymbol{r},t)\cdot d\boldsymbol{S}
 \]</div>
 <p>と表し，この式によって電流密度 <span class="arithmatex">\(\boldsymbol{j}\)</span> を定義する。<span class="arithmatex">\(d\boldsymbol{S}\)</span> の向きは考えている領域の外向きとする。</p>
-<p>はじめに，空間に固定された体積 <span class="arithmatex">\(V\)</span> と，それを囲む閉曲面 <span class="arithmatex">\(S\)</span> を考える。体積内の全電荷は，</p>
+<p>はじめに，空間に固定された体積 <span class="arithmatex">\(V\)</span> と，それを囲む閉曲面 <span class="arithmatex">\(S\)</span> を考える。体積内の全電荷は</p>
 <div class="arithmatex">\[
 Q_V(t)=\int_V\rho(\boldsymbol{r},t)\,dV
 \]</div>
-<p>である。また，ベクトル場に対する発散定理，</p>
+<p>である。また，ベクトル場に対する発散定理</p>
 <div class="arithmatex">\[
 \oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 =\int_V\nabla\cdot\boldsymbol{j}\,dV
 \]</div>
 <p>を用いてよい。</p>
 <p>(1) 閉曲面から外へ流出する電流が正になるという符号の約束に注意して，体積 <span class="arithmatex">\(V\)</span> に対する電荷保存則を積分の形で表せ。続いて発散定理を用い，局所的な電荷保存則である連続の式を導出せよ。得られた式の二つの項がそれぞれ何を表すか説明せよ。</p>
-<p>(2) 半径 <span class="arithmatex">\(R\)</span> の球内に電荷が一様に分布している。球内の電荷密度が，</p>
+<p>(2) 半径 <span class="arithmatex">\(R\)</span> の球内に電荷が一様に分布している。球内の電荷密度が</p>
 <div class="arithmatex">\[
 \rho(t)=\rho_0e^{-t/\tau}
 \]</div>
@@ -14543,12 +14543,12 @@ Q_V(t)=\int_V\rho(\boldsymbol{r},t)\,dV
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>閉曲面を外向きに通過する単位時間当たりの電荷は，</p>
+<p>閉曲面を外向きに通過する単位時間当たりの電荷は</p>
 <div class="arithmatex">\[
 I_{\mathrm{out}}=\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 \]</div>
 <p>です。外へ正電荷が流れ出れば体積内の電荷は減るため，両者には負号が付きます。</p>
-<p>これを発散定理まで一続きに変形すると，</p>
+<p>これを発散定理まで一続きに変形すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{d}{dt}\int_V\rho\,dV
@@ -14566,8 +14566,8 @@ I_{\mathrm{out}}=\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 <p>第一行が電荷保存則の積分形です。体積 <span class="arithmatex">\(V\)</span> は空間に固定されているので，第二行では左辺の時間微分を積分の内側へ移し，右辺へ発散定理を適用しました。</p>
 <p>この関係は任意の形と大きさの体積 <span class="arithmatex">\(V\)</span> で成立するため，被積分関数そのものがゼロでなければなりません。</p>
 <div class="arithmatex">\[
-\frac{\partial\rho}{\partial t}
-+\nabla\cdot\boldsymbol{j}=0
+\finalanswer{\frac{\partial\rho}{\partial t}
++\nabla\cdot\boldsymbol{j}=0}
 \]</div>
 <p>第一項は一点近傍に蓄えられた電荷の時間変化率です。第二項はその点近傍から外へ出ていく電流の正味の割合です。外向き流出が正なら電荷密度は減少するため，二項の和がゼロになります。</p>
 <h3 id="2">(2)</h3>
@@ -14575,25 +14575,25 @@ I_{\mathrm{out}}=\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 <div class="arithmatex">\[
 \boldsymbol{j}(r,t)=j_r(r,t)\boldsymbol{e}_r
 \]</div>
-<p>動径方向だけをもつベクトル場の発散は，</p>
+<p>動径方向だけをもつベクトル場の発散は</p>
 <div class="arithmatex">\[
 \nabla\cdot\boldsymbol{j}
 =\frac{1}{r^2}\frac{\partial}{\partial r}
 \left(r^2j_r\right)
 \]</div>
-<p>です。一方，電荷密度の時間微分は，</p>
+<p>です。一方，電荷密度の時間微分は</p>
 <div class="arithmatex">\[
 \frac{\partial\rho}{\partial t}
 =-\frac{\rho_0}{\tau}e^{-t/\tau}
 =-\frac{\rho(t)}{\tau}
 \]</div>
-<p>となります。連続の式へ代入すると，</p>
+<p>となります。連続の式へ代入すると</p>
 <div class="arithmatex">\[
 \frac{1}{r^2}\frac{\partial}{\partial r}
 \left(r^2j_r\right)
 =\frac{\rho(t)}{\tau}
 \]</div>
-<p>です。中心から半径 <span class="arithmatex">\(r\)</span> まで積分すると，</p>
+<p>です。中心から半径 <span class="arithmatex">\(r\)</span> まで積分すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \int_0^r
@@ -14608,48 +14608,48 @@ r^2j_r(r,t)
 \end{aligned}
 \]</div>
 <p>最後の行では，中心で <span class="arithmatex">\(j_r\)</span> が有限なら <span class="arithmatex">\(r'^2j_r\to0\)</span> となることを用いました。これは不定積分で現れる積分定数を <span class="arithmatex">\(C=0\)</span> と決めることに相当します。</p>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 \boldsymbol{j}(r,t)
 =\frac{\rho_0r}{3\tau}e^{-t/\tau}\boldsymbol{e}_r,
 \qquad r&lt;R
 \]</div>
-<p>です。球面から流出する全電流は，</p>
+<p>です。球面から流出する全電流は</p>
 <div class="arithmatex">\[
 I_{\mathrm{out}}
 =4\pi R^2j_r(R,t)
 =\frac{4\pi R^3}{3\tau}\rho_0e^{-t/\tau}
 \]</div>
-<p>となります。球内の全電荷は，</p>
+<p>となります。球内の全電荷は</p>
 <div class="arithmatex">\[
 Q(t)=\frac{4\pi R^3}{3}\rho_0e^{-t/\tau}
 \]</div>
-<p>なので，</p>
+<p>なので</p>
 <div class="arithmatex">\[
--\frac{dQ}{dt}
+\finalanswer{-\frac{dQ}{dt}
 =\frac{4\pi R^3}{3\tau}\rho_0e^{-t/\tau}
-=I_{\mathrm{out}}
+=I_{\mathrm{out}}}
 \]</div>
 <p>です。局所的な連続の式から得た電流が，球全体の電荷保存も満たしています。</p>
 <h3 id="3">(3)</h3>
-<p>導線を垂直に横切る断面では，電流密度と面積要素が平行です。したがって，</p>
+<p>導線を垂直に横切る断面では，電流密度と面積要素が平行です。したがって</p>
 <div class="arithmatex">\[
 I=\int_A\boldsymbol{j}\cdot d\boldsymbol{S}
 =jA
 \]</div>
-<p>となります。定常状態では導線の途中に電荷が蓄積しないため，どの断面を通る電流も同じ <span class="arithmatex">\(I\)</span> です。よって，</p>
+<p>となります。定常状態では導線の途中に電荷が蓄積しないため，どの断面を通る電流も同じ <span class="arithmatex">\(I\)</span> です。よって</p>
 <div class="arithmatex">\[
 j=\frac{I}{A}
 \]</div>
-<p>です。半径 <span class="arithmatex">\(a\)</span> と <span class="arithmatex">\(b\)</span> の円形断面では，</p>
+<p>です。半径 <span class="arithmatex">\(a\)</span> と <span class="arithmatex">\(b\)</span> の円形断面では</p>
 <div class="arithmatex">\[
 j_a=\frac{I}{\pi a^2},
 \qquad
 j_b=\frac{I}{\pi b^2}
 \]</div>
-<p>となり，</p>
+<p>となり</p>
 <div class="arithmatex">\[
-\frac{j_a}{j_b}=\frac{b^2}{a^2}
+\finalanswer{\frac{j_a}{j_b}=\frac{b^2}{a^2}}
 \]</div>
 <p>です。細い部分では単位時間に同じ量の電荷をより小さな面積へ通す必要があるため，電流密度が大きくなります。</p>
 

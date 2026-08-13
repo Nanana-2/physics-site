@@ -14543,7 +14543,7 @@
 <p>幅 <span class="arithmatex">\(w\)</span>，長さ <span class="arithmatex">\(L\)</span>，板間距離 <span class="arithmatex">\(d\)</span> の平行板コンデンサーを考える。厚さ <span class="arithmatex">\(d\)</span>，比誘電率 <span class="arithmatex">\(\kappa&gt;1\)</span> の誘電体板を，コンデンサーの長さ方向へ距離 <span class="arithmatex">\(x\)</span> だけ挿入する。<span class="arithmatex">\(0&lt;x&lt;L\)</span> とし，端効果と摩擦を無視する。<span class="arithmatex">\(x\)</span> が増える向き，すなわち誘電体が内部へ引き込まれる向きを力の正方向とする。</p>
 <p>(1) 真空部分と誘電体部分を並列コンデンサーとみなし，静電容量 <span class="arithmatex">\(C(x)\)</span> を求めよ。</p>
 <p>(2) コンデンサーを電位差 <span class="arithmatex">\(V\)</span> の理想電池へ接続する。電位差一定での有効ポテンシャルが <span class="arithmatex">\(-C(x)V^2/2\)</span> であることを用い，正方向の力 <span class="arithmatex">\(F_V(x)\)</span> を求めよ。</p>
-<p>(3) 電位差一定では板間電場の大きさを <span class="arithmatex">\(E=V/d\)</span> と近似できる。真空部分と誘電体部分の電場エネルギー密度をそれぞれ，</p>
+<p>(3) 電位差一定では板間電場の大きさを <span class="arithmatex">\(E=V/d\)</span> と近似できる。真空部分と誘電体部分の電場エネルギー密度をそれぞれ</p>
 <div class="arithmatex">\[
 u_{\mathrm{vac}}=\frac{1}{2}\varepsilon_0E^2,
 \qquad
@@ -14554,25 +14554,25 @@ u_{\mathrm{die}}=\frac{1}{2}\kappa\varepsilon_0E^2
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>誘電体部分の面積は <span class="arithmatex">\(wx\)</span>，真空部分の面積は <span class="arithmatex">\(w(L-x)\)</span> です。二つの静電容量を加えると，</p>
+<p>誘電体部分の面積は <span class="arithmatex">\(wx\)</span>，真空部分の面積は <span class="arithmatex">\(w(L-x)\)</span> です。二つの静電容量を加えると</p>
 <div class="arithmatex">\[
 C(x)=\frac{\kappa\varepsilon_0wx}{d}
 +\frac{\varepsilon_0w(L-x)}{d}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
-C(x)=\frac{\varepsilon_0w}{d}
-\left[L+(\kappa-1)x\right]
+\finalanswer{C(x)=\frac{\varepsilon_0w}{d}
+\left[L+(\kappa-1)x\right]}
 \]</div>
 <p>です。</p>
 <h3 id="2">(2)</h3>
-<p>電位差一定では，電池の仕事を含めた力学的なポテンシャルは <span class="arithmatex">\(-C(x)V^2/2\)</span> です。よって内向きを正とする力は，</p>
+<p>電位差一定では，電池の仕事を含めた力学的なポテンシャルは <span class="arithmatex">\(-C(x)V^2/2\)</span> です。よって内向きを正とする力は</p>
 <div class="arithmatex">\[
 F_V(x)=\frac{1}{2}V^2\frac{dC}{dx}
 \]</div>
-<p>となります。(1) を微分すると，</p>
+<p>となります。(1) を微分すると</p>
 <div class="arithmatex">\[
-F_V(x)=\frac{\varepsilon_0(\kappa-1)wV^2}{2d}
+\finalanswer{F_V(x)=\frac{\varepsilon_0(\kappa-1)wV^2}{2d}}
 \]</div>
 <p>です。<span class="arithmatex">\(\kappa&gt;1\)</span> なので，誘電体はコンデンサー内部へ引き込まれます。</p>
 <h3 id="3">(3)</h3>
@@ -14582,27 +14582,27 @@ F_V(x)=\frac{\varepsilon_0(\kappa-1)wV^2}{2d}
 =u_{\mathrm{die}}-u_{\mathrm{vac}}
 =\frac{1}{2}(\kappa-1)\varepsilon_0E^2
 \]</div>
-<p>電場 <span class="arithmatex">\(E=V/d\)</span> を代入すると，</p>
+<p>電場 <span class="arithmatex">\(E=V/d\)</span> を代入すると</p>
 <div class="arithmatex">\[
 \Delta p
 =\frac{\varepsilon_0(\kappa-1)V^2}{2d^2}
 \]</div>
-<p>です。圧力に誘電体先端の断面積 <span class="arithmatex">\(wd\)</span> を掛けると，</p>
+<p>です。圧力に誘電体先端の断面積 <span class="arithmatex">\(wd\)</span> を掛けると</p>
 <div class="arithmatex">\[
-F_p=\Delta p\,wd
-=\frac{\varepsilon_0(\kappa-1)wV^2}{2d}
+\finalanswer{F_p=\Delta p\,wd
+=\frac{\varepsilon_0(\kappa-1)wV^2}{2d}}
 \]</div>
 <p>となります。これは (2) で求めた <span class="arithmatex">\(F_V(x)\)</span> と一致します。<span class="arithmatex">\(\kappa&gt;1\)</span> より <span class="arithmatex">\(\Delta p&gt;0\)</span> なので，力の向きは問題文で定めた正方向，すなわち誘電体をコンデンサー内部へ引き込む向きです。</p>
 <h3 id="4">(4)</h3>
-<p>電荷一定では <span class="arithmatex">\(U_Q(x)=Q^2/[2C(x)]\)</span> なので，</p>
+<p>電荷一定では <span class="arithmatex">\(U_Q(x)=Q^2/[2C(x)]\)</span> なので</p>
 <div class="arithmatex">\[
 F_Q(x)=-\frac{dU_Q}{dx}
 =\frac{Q^2}{2C(x)^2}\frac{dC}{dx}
 \]</div>
-<p>です。(1) の容量を代入すると，</p>
+<p>です。(1) の容量を代入すると</p>
 <div class="arithmatex">\[
-F_Q(x)=\frac{Q^2d(\kappa-1)}
-{2\varepsilon_0w[L+(\kappa-1)x]^2}
+\finalanswer{F_Q(x)=\frac{Q^2d(\kappa-1)}
+{2\varepsilon_0w[L+(\kappa-1)x]^2}}
 \]</div>
 <p>となります。挿入が進むと容量が増えて電場が弱くなるため，電荷一定の場合の力は減少します。</p>
 

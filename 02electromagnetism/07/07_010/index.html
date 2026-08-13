@@ -14519,7 +14519,7 @@
 <h1 id="_1">変位電流とアンペール・マクスウェルの法則</h1>
 <h2 id="_2">問題</h2>
 <p>半径 <span class="arithmatex">\(R\)</span> の円形極板をもつ平行板コンデンサーを，時間に依存する電流 <span class="arithmatex">\(I(t)\)</span> で充電する。端効果を無視し，極板間の電場は一様で <span class="arithmatex">\(+z\)</span> 方向を向くとする。極板の面積を <span class="arithmatex">\(S=\pi R^2\)</span>，極板上の電荷を <span class="arithmatex">\(Q(t)\)</span> とし，<span class="arithmatex">\(I(t)=dQ/dt\)</span> と定義する。極板間は真空である。</p>
-<p>アンペール・マクスウェルの法則を，閉曲線 <span class="arithmatex">\(C\)</span> とそれを縁にもつ面 <span class="arithmatex">\(S_C\)</span> に対して，</p>
+<p>アンペール・マクスウェルの法則を，閉曲線 <span class="arithmatex">\(C\)</span> とそれを縁にもつ面 <span class="arithmatex">\(S_C\)</span> に対して</p>
 <div class="arithmatex">\[
 \oint_C\boldsymbol{B}\cdot d\boldsymbol{l}
 =\mu_0 I_{\mathrm{c}}(S_C)
@@ -14533,13 +14533,13 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>極板の表面電荷密度は <span class="arithmatex">\(\sigma_s=Q/S\)</span> です。平行板間の電場と電束は，</p>
+<p>極板の表面電荷密度は <span class="arithmatex">\(\sigma_s=Q/S\)</span> です。平行板間の電場と電束は</p>
 <div class="arithmatex">\[
 E(t)=\frac{Q(t)}{\varepsilon_0S},
 \qquad
 \Phi_E(t)=E(t)S=\frac{Q(t)}{\varepsilon_0}
 \]</div>
-<p>となります。したがって，変位電流は，</p>
+<p>となります。したがって，変位電流は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 I_{\mathrm{d}}
@@ -14547,12 +14547,12 @@ I_{\mathrm{d}}
 &amp;=\varepsilon_0\frac{d}{dt}
 \left(\frac{Q}{\varepsilon_0}\right) \\
 &amp;=\frac{dQ}{dt} \\
-&amp;=I(t).
+&amp;=\finalanswer{I(t)}.
 \end{aligned}
 \]</div>
 <p>極板間には電荷の実際の移動はありませんが，時間変化する電束が伝導電流と同じ大きさで磁場を作ります。</p>
 <h3 id="2">(2)</h3>
-<p>半径 <span class="arithmatex">\(r\)</span> の円が囲む面積は <span class="arithmatex">\(\pi r^2\)</span> です。電場が一様なので，この面を貫く電束と変位電流は，</p>
+<p>半径 <span class="arithmatex">\(r\)</span> の円が囲む面積は <span class="arithmatex">\(\pi r^2\)</span> です。電場が一様なので，この面を貫く電束と変位電流は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \Phi_E(r,t)
@@ -14563,7 +14563,7 @@ I_{\mathrm{d}}(r,t)
 &amp;=\frac{r^2}{R^2}I(t).
 \end{aligned}
 \]</div>
-<p>円周上では磁場の大きさが一定で，<span class="arithmatex">\(d\boldsymbol{l}=r\,d\varphi\boldsymbol{e}_\varphi\)</span> です。よって，</p>
+<p>円周上では磁場の大きさが一定で，<span class="arithmatex">\(d\boldsymbol{l}=r\,d\varphi\boldsymbol{e}_\varphi\)</span> です。よって</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \oint_{C_r}\boldsymbol{B}\cdot d\boldsymbol{l}
@@ -14572,20 +14572,20 @@ I_{\mathrm{d}}(r,t)
 &amp;=\mu_0I(t)\frac{r^2}{R^2}.
 \end{aligned}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{B}(r,t)
+\finalanswer{\boldsymbol{B}(r,t)
 =\frac{\mu_0I(t)r}{2\pi R^2}\boldsymbol{e}_\varphi,
-\qquad r&lt;R
+\qquad r&lt;R}
 \]</div>
 <p>です。向きは <span class="arithmatex">\(+z\)</span> 方向の電流に対する右ねじの向きです。</p>
 <h3 id="3">(3)</h3>
-<p><span class="arithmatex">\(r&gt;R\)</span> では経路が全極板面を囲むので，電束から得られる変位電流は <span class="arithmatex">\(I_{\mathrm{d}}=I(t)\)</span> です。したがって，</p>
+<p><span class="arithmatex">\(r&gt;R\)</span> では経路が全極板面を囲むので，電束から得られる変位電流は <span class="arithmatex">\(I_{\mathrm{d}}=I(t)\)</span> です。したがって</p>
 <div class="arithmatex">\[
-2\pi rB_\varphi=\mu_0I(t),
+\finalanswer{2\pi rB_\varphi=\mu_0I(t),
 \qquad
 \boldsymbol{B}(r,t)
-=\frac{\mu_0I(t)}{2\pi r}\boldsymbol{e}_\varphi
+=\frac{\mu_0I(t)}{2\pi r}\boldsymbol{e}_\varphi}
 \]</div>
 <p>となります。導線を横切る面では <span class="arithmatex">\(I_{\mathrm{c}}=I(t)\)</span>，電束変化はゼロです。一方，極板間へ張り出す面では <span class="arithmatex">\(I_{\mathrm{c}}=0\)</span>，<span class="arithmatex">\(I_{\mathrm{d}}=I(t)\)</span> です。したがって両者の右辺はともに <span class="arithmatex">\(\mu_0I(t)\)</span> です。</p>
 <p>変位電流項を含まない法則では，前者は <span class="arithmatex">\(\mu_0I(t)\)</span>，後者はゼロとなります。同じ閉曲線に異なる結果を与える矛盾は，時間変化する電場を磁場の源として加えることで解消されます。</p>

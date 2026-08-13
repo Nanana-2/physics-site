@@ -14518,14 +14518,14 @@
 
 <h1 id="_1">ファラデーの電磁誘導の法則</h1>
 <h2 id="_2">問題</h2>
-<p>面積 <span class="arithmatex">\(S\)</span>，巻数 <span class="arithmatex">\(N\)</span> の平面コイルを考える。コイル面の正の単位法線を <span class="arithmatex">\(\boldsymbol{n}=\boldsymbol{e}_z\)</span> とし，正の周回方向は <span class="arithmatex">\(+z\)</span> 方向から見て反時計回りとする。コイルを貫く磁束と誘導起電力は，</p>
+<p>面積 <span class="arithmatex">\(S\)</span>，巻数 <span class="arithmatex">\(N\)</span> の平面コイルを考える。コイル面の正の単位法線を <span class="arithmatex">\(\boldsymbol{n}=\boldsymbol{e}_z\)</span> とし，正の周回方向は <span class="arithmatex">\(+z\)</span> 方向から見て反時計回りとする。コイルを貫く磁束と誘導起電力は</p>
 <div class="arithmatex">\[
 \Phi_B(t)=\int_S\boldsymbol{B}\cdot d\boldsymbol{S},
 \qquad
 \mathcal{E}(t)=-N\frac{d\Phi_B}{dt}
 \]</div>
 <p>で与えられる。</p>
-<p>コイル面内で一様な磁場が，</p>
+<p>コイル面内で一様な磁場が</p>
 <div class="arithmatex">\[
 \boldsymbol{B}(t)
 =\left(B_0+\alpha t\right)\boldsymbol{e}_z
@@ -14537,23 +14537,23 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>磁場はコイル面に垂直で一様なので，</p>
+<p>磁場はコイル面に垂直で一様なので</p>
 <div class="arithmatex">\[
 \Phi_B(t)=\left(B_0+\alpha t\right)S
 \]</div>
-<p>です。よって，</p>
+<p>です。よって</p>
 <div class="arithmatex">\[
-\mathcal{E}(t)
+\finalanswer{\mathcal{E}(t)
 =-N\frac{d\Phi_B}{dt}
-=-N\alpha S
+=-N\alpha S}
 \]</div>
 <p>となります。<span class="arithmatex">\(\alpha&gt;0\)</span> なら <span class="arithmatex">\(+z\)</span> 方向の磁束が増加します。レンツの法則より，誘導電流は <span class="arithmatex">\(-z\)</span> 方向の磁場を作る時計回り，すなわち負の周回方向です。<span class="arithmatex">\(\alpha&lt;0\)</span> なら <span class="arithmatex">\(+z\)</span> 方向の磁束が減少するため，誘導電流は反時計回りの正方向です。</p>
 <h3 id="2">(2)</h3>
-<p>オームの法則より，</p>
+<p>オームの法則より</p>
 <div class="arithmatex">\[
 I(t)=-\frac{N\alpha S}{R}
 \]</div>
-<p>で一定です。したがって，</p>
+<p>で一定です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
 Q_{\mathrm{tr}}
@@ -14563,7 +14563,7 @@ Q_{\mathrm{tr}}
 &amp;=-\frac{N\alpha ST}{R}.
 \end{aligned}
 \]</div>
-<p>です。ジュール熱は，</p>
+<p>です。ジュール熱は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 W_R
@@ -14571,16 +14571,16 @@ W_R
 &amp;=\int_0^T
 \left(\frac{N^2\alpha^2S^2}{R^2}\right)R\,dt \\
 &amp;=\frac{N^2\alpha^2S^2}{R}[t]_0^T \\
-&amp;=\frac{N^2\alpha^2S^2}{R}T.
+&amp;=\finalanswer{\frac{N^2\alpha^2S^2}{R}T}.
 \end{aligned}
 \]</div>
 <p>となります。熱は電流の向きによらないため <span class="arithmatex">\(\alpha^2\)</span> に比例します。</p>
 <h3 id="3">(3)</h3>
-<p>一般の磁束変化に対して，</p>
+<p>一般の磁束変化に対して</p>
 <div class="arithmatex">\[
 I(t)=-\frac{N}{R}\frac{d\Phi_B}{dt}
 \]</div>
-<p>です。時間積分すると，</p>
+<p>です。時間積分すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 Q_{\mathrm{tr}}
@@ -14592,10 +14592,10 @@ Q_{\mathrm{tr}}
 \left(\Phi_{B,f}-\Phi_{B,i}\right).
 \end{aligned}
 \]</div>
-<p>となります。初期磁場と最終磁場が一様なら，</p>
+<p>となります。初期磁場と最終磁場が一様なら</p>
 <div class="arithmatex">\[
-Q_{\mathrm{tr}}
-=-\frac{NS}{R}\left(B_1-B_0\right)
+\finalanswer{Q_{\mathrm{tr}}
+=-\frac{NS}{R}\left(B_1-B_0\right)}
 \]</div>
 <p>です。途中の時間変化には依存しません。</p>
 

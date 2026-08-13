@@ -14594,10 +14594,10 @@
 \]</div>
 <p>よって，コリオリ力 <span class="arithmatex">\(\mathbf{F}_c\)</span> の各成分は次の通りです。</p>
 <div class="arithmatex">\[
-F_{cx} = 2m \Omega \dot{y} \sin\theta
+F_{cx} = -2m \Omega \dot{y} \sin\theta
 \]</div>
 <div class="arithmatex">\[
-F_{cy} = 2m \Omega \left( \dot{z} \cos\theta - \dot{x} \sin\theta \right)
+F_{cy} = 2m \Omega \left( \dot{z} \cos\theta + \dot{x} \sin\theta \right)
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{F_{cz} = -2m \Omega \dot{y} \cos\theta}
@@ -14635,86 +14635,86 @@ T_y \approx -mg \frac{y}{L}
 \]</div>
 <p>さらに，問題文の指示通り，鉛直方向の速度 <span class="arithmatex">\(\dot{z}\)</span> を無視すると，コリオリ力の水平成分は次のように簡略化されます。
 $$
-F_{cx} \approx 2m \Omega \dot{y} \sin\theta
+F_{cx} \approx -2m \Omega \dot{y} \sin\theta
 $$</p>
 <div class="arithmatex">\[
-F_{cy} \approx -2m \Omega \dot{x} \sin\theta
+F_{cy} \approx 2m \Omega \dot{x} \sin\theta
 \]</div>
 <p>これらをまとめると，水平方向の運動方程式の各成分は次のようになります。</p>
 <div class="arithmatex">\[
-m \ddot{x} = -mg \frac{x}{L} + 2m \Omega \dot{y} \sin\theta
+m \ddot{x} = -mg \frac{x}{L} - 2m \Omega \dot{y} \sin\theta
 \]</div>
 <div class="arithmatex">\[
-m \ddot{y} = -mg \frac{y}{L} - 2m \Omega \dot{x} \sin\theta
+m \ddot{y} = -mg \frac{y}{L} + 2m \Omega \dot{x} \sin\theta
 \]</div>
 <p>両辺を質量 <span class="arithmatex">\(m\)</span> で割り，単振り子の固有振動数 <span class="arithmatex">\(\omega_0 = \sqrt{g/L}\)</span> および自転角速度の鉛直成分 <span class="arithmatex">\(\omega_z = \Omega \sin\theta\)</span> を導入すると，求める運動方程式が得られます。</p>
 <div class="arithmatex">\[
-\ddot{x} = -\omega_0^2 x + 2\omega_z \dot{y}
+\ddot{x} = -\omega_0^2 x - 2\omega_z \dot{y}
 \]</div>
 <div class="arithmatex">\[
-\finalanswer{\ddot{y} = -\omega_0^2 y - 2\omega_z \dot{x}}
+\finalanswer{\ddot{y} = -\omega_0^2 y + 2\omega_z \dot{x}}
 \]</div>
 <h3 id="4">(4)</h3>
 <p>得られた2つの運動方程式を統合するため，複素変数 <span class="arithmatex">\(\zeta = x + iy\)</span> を定義します。</p>
 <p><span class="arithmatex">\(x\)</span> 成分の方程式に，<span class="arithmatex">\(y\)</span> 成分の方程式に虚数単位 <span class="arithmatex">\(i\)</span> を掛けたものを加算します。</p>
 <div class="arithmatex">\[
-\ddot{x} + i\ddot{y} = -\omega_0^2 (x + iy) + 2\omega_z (\dot{y} - i\dot{x})
+\ddot{x} + i\ddot{y} = -\omega_0^2 (x + iy) + 2\omega_z (-\dot{y} + i\dot{x})
 \]</div>
 <p>右辺の第2項は次のように変形できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-2\omega_z (\dot{y} - i\dot{x}) &amp;= -2i\omega_z (\dot{x} + i\dot{y}) \\
-&amp;= -2i\omega_z \dot{\zeta}
+2\omega_z (-\dot{y} + i\dot{x}) &amp;= 2i\omega_z (\dot{x} + i\dot{y}) \\
+&amp;= 2i\omega_z \dot{\zeta}
 \end{aligned}
 \]</div>
 <p>したがって，複素変数 <span class="arithmatex">\(\zeta\)</span> に関する2階線形同次微分方程式が得られます。</p>
 <div class="arithmatex">\[
-\ddot{\zeta} + 2i\omega_z \dot{\zeta} + \omega_0^2 \zeta = 0
+\ddot{\zeta} - 2i\omega_z \dot{\zeta} + \omega_0^2 \zeta = 0
 \]</div>
 <p>この微分方程式の解を <span class="arithmatex">\(\zeta(t) = e^{rt}\)</span> と仮定して代入すると，特性方程式は次のようになります。</p>
 <div class="arithmatex">\[
-r^2 + 2i\omega_z r + \omega_0^2 = 0
+r^2 - 2i\omega_z r + \omega_0^2 = 0
 \]</div>
 <p>これを <span class="arithmatex">\(r\)</span> について解くために，平方完成を行います。</p>
 <div class="arithmatex">\[
-(r + i\omega_z)^2 + \omega_z^2 + \omega_0^2 = 0
+(r - i\omega_z)^2 + \omega_z^2 + \omega_0^2 = 0
 \]</div>
 <div class="arithmatex">\[
-(r + i\omega_z)^2 = -(\omega_0^2 + \omega_z^2)
+(r - i\omega_z)^2 = -(\omega_0^2 + \omega_z^2)
 \]</div>
 <p><span class="arithmatex">\(\omega_z\ll\omega_0\)</span> であるため，根号内では <span class="arithmatex">\(\omega_0^2+\omega_z^2\approx\omega_0^2\)</span> と近似できます。</p>
 <div class="arithmatex">\[
-(r + i\omega_z)^2 \approx -\omega_0^2
+(r - i\omega_z)^2 \approx -\omega_0^2
 \]</div>
 <div class="arithmatex">\[
-r + i\omega_z \approx \pm i\omega_0
+r - i\omega_z \approx \pm i\omega_0
 \]</div>
 <div class="arithmatex">\[
-r \approx -i\omega_z \pm i\omega_0
+r \approx i\omega_z \pm i\omega_0
 \]</div>
 <p>これより，複素微分方程式の一般解は，2つの複素任意定数 <span class="arithmatex">\(A\)</span> および <span class="arithmatex">\(B\)</span> を用いて次のように求められます。
 $$
-\finalanswer{\zeta(t) = e^{-i\omega_z t} \left( A e^{i\omega_0 t} + B e^{-i\omega_0 t} \right)}
+\finalanswer{\zeta(t) = e^{i\omega_z t} \left( A e^{i\omega_0 t} + B e^{-i\omega_0 t} \right)}
 $$</p>
 <h3 id="5">(5)</h3>
 <p>初期条件 <span class="arithmatex">\(t = 0\)</span> において <span class="arithmatex">\(\zeta(0) = a\)</span> および <span class="arithmatex">\(\dot{\zeta}(0) = 0\)</span> を適用します。</p>
 <p>一般解を時間微分すると次の式になります。</p>
 <div class="arithmatex">\[
-\dot{\zeta}(t) = -i\omega_z \zeta(t) + e^{-i\omega_z t} \left( i\omega_0 A e^{i\omega_0 t} - i\omega_0 B e^{-i\omega_0 t} \right)
+\dot{\zeta}(t) = i\omega_z \zeta(t) + e^{i\omega_z t} \left( i\omega_0 A e^{i\omega_0 t} - i\omega_0 B e^{-i\omega_0 t} \right)
 \]</div>
 <p>初期条件を代入すると，次の2つの関係式が得られます。
 $$
-A + B = a</p>
-<p>$$</p>
+A + B = a
+$$</p>
 <div class="arithmatex">\[
--i\omega_z (A + B) + i\omega_0 (A - B) = 0
+i\omega_z (A + B) + i\omega_0 (A - B) = 0
 \]</div>
 <p>第2式に第1式を代入して整理します。</p>
 <div class="arithmatex">\[
-i\omega_0 (A - B) = i\omega_z a
+i\omega_0 (A - B) = -i\omega_z a
 \]</div>
 <div class="arithmatex">\[
-A - B = \frac{\omega_z}{\omega_0} a
+A - B = -\frac{\omega_z}{\omega_0} a
 \]</div>
 <p><span class="arithmatex">\(\omega_z\ll\omega_0\)</span> であるため右辺を0とみなすと，<span class="arithmatex">\(A\approx B\)</span> です。これと <span class="arithmatex">\(A+B=a\)</span> から次の近似解が得られます。</p>
 <div class="arithmatex">\[
@@ -14722,21 +14722,21 @@ A \approx B \approx \frac{a}{2}
 \]</div>
 <p>この結果を一般解に代入します。</p>
 <div class="arithmatex">\[
-\zeta(t) \approx e^{-i\omega_z t} \left( \frac{a}{2} e^{i\omega_0 t} + \frac{a}{2} e^{-i\omega_0 t} \right) = a e^{-i\omega_z t} \cos(\omega_0 t)
+\zeta(t) \approx e^{i\omega_z t} \left( \frac{a}{2} e^{i\omega_0 t} + \frac{a}{2} e^{-i\omega_0 t} \right) = a e^{i\omega_z t} \cos(\omega_0 t)
 \]</div>
-<p>オイラーの公式 <span class="arithmatex">\(e^{-i\omega_z t} = \cos(\omega_z t) - i\sin(\omega_z t)\)</span> を用いて，実部と虚部に分解します。</p>
+<p>オイラーの公式 <span class="arithmatex">\(e^{i\omega_z t} = \cos(\omega_z t) + i\sin(\omega_z t)\)</span> を用いて，実部と虚部に分解します。</p>
 <div class="arithmatex">\[
 x(t) \approx a \cos(\omega_z t) \cos(\omega_0 t)
 \]</div>
 <div class="arithmatex">\[
-y(t) \approx -a \sin(\omega_z t) \cos(\omega_0 t)
+y(t) \approx a \sin(\omega_z t) \cos(\omega_0 t)
 \]</div>
 <p>この軌道は，振り子が短い周期 <span class="arithmatex">\(T_0 = 2\pi / \omega_0\)</span> で単振動を行いながら，その振動面が非常に長い周期でゆっくりと回転していることを表しています。</p>
-<p>振動面の回転角速度は，複素平面上での回転因子 <span class="arithmatex">\(e^{-i\omega_z t}\)</span> から次のように求まります。</p>
+<p>振動面の回転角速度は，複素平面上での回転因子 <span class="arithmatex">\(e^{i\omega_z t}\)</span> から次のように求まります。</p>
 <div class="arithmatex">\[
 \omega_z = \Omega \sin\theta
 \]</div>
-<p>回転の向きは，負の符号がついていることから，北半球においては上空から見て時計回りであることが分かります。
+<p><span class="arithmatex">\(x\)</span> 軸を北向き，<span class="arithmatex">\(y\)</span> 軸を東向きにとっているため，<span class="arithmatex">\(e^{i\omega_z t}\)</span> が表す正の回転は，北半球では上空から見て時計回りに対応します。
 振動面が <span class="arithmatex">\(2\pi\)</span> 回転する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
 <div class="arithmatex">\[
 \begin{aligned}

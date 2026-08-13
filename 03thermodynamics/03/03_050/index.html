@@ -14522,7 +14522,7 @@
 <ul>
 <li>状態 1 から 2：温度 <span class="arithmatex">\(T_{\text{H}}\)</span> のもとでの等温膨張。体積が <span class="arithmatex">\(V_1\)</span> から <span class="arithmatex">\(V_2\)</span> へ膨張する。</li>
 <li>状態 2 から 3：定積冷却。体積を <span class="arithmatex">\(V_2\)</span> に保ったまま，温度が <span class="arithmatex">\(T_{\text{H}}\)</span> から <span class="arithmatex">\(T_{\text{C}}\)</span> へ下降する。</li>
-<li>状態 3 から 4：温度 <span class="arithmatex">\(T_{\text{C}}\)</span> のもとでの等温圧縮。体積が <span class="arithmatex">\(V_2\)</span> から <span class="arithmatex">\(V_1\)</span> へ圧縮する。</li>
+<li>状態 3 から 4：温度 <span class="arithmatex">\(T_{\text{C}}\)</span> のもとでの等温圧縮。体積が <span class="arithmatex">\(V_2\)</span> から <span class="arithmatex">\(V_1\)</span> へ減少する。</li>
 <li>状態 4 から 1：定積加熱。体積を <span class="arithmatex">\(V_1\)</span> に保ったまま，温度が <span class="arithmatex">\(T_{\text{C}}\)</span> から <span class="arithmatex">\(T_{\text{H}}\)</span> へ上昇する。</li>
 </ul>
 <p>内部に熱を蓄えることができる理想的な再生器を備えている場合と，備えていない場合について，以下の問いに答えよ。</p>
@@ -14535,15 +14535,15 @@
 <p>各定積過程において気体は仕事をしないため，熱量は内部エネルギー変化と等しくなります。</p>
 <p>状態 4 から 1 の定積加熱過程で外部から吸収する熱量は次のようになります。</p>
 <div class="arithmatex">\[
-Q_{41} = n C_V (T_{\text{H}} - T_{\text{C}})
+\finalanswer{Q_{41} = n C_V (T_{\text{H}} - T_{\text{C}})}
 \]</div>
 <p>状態 2 から 3 の定積冷却過程で外部に放出する熱量は次のようになります。</p>
 <div class="arithmatex">\[
-Q_{23} = n C_V (T_{\text{H}} - T_{\text{C}})
+\finalanswer{Q_{23} = n C_V (T_{\text{H}} - T_{\text{C}})}
 \]</div>
 <p>再生器がない場合，外部から熱を吸収するプロセスは，等温膨張過程 1 から 2 と，定積加熱過程 4 から 1 の 2 つ存在します。等温膨張において高温熱源から吸収する熱量を <span class="arithmatex">\(Q_{12} = n R T_{\text{H}} \ln \frac{V_2}{V_1}\)</span> とすると，外部から吸収する総熱量 <span class="arithmatex">\(Q_{\text{in}}\)</span> はこれらの和となります。</p>
 <div class="arithmatex">\[
-Q_{\text{in}} = Q_{12} + Q_{41} = n R T_{\text{H}} \ln \frac{V_2}{V_1} + n C_V (T_{\text{H}} - T_{\text{C}})
+Q_{\text{in}} = Q_{12} + Q_{41} = \finalanswer{n R T_{\text{H}} \ln \frac{V_2}{V_1} + n C_V (T_{\text{H}} - T_{\text{C}})}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>1 サイクルあたりに気体が外部にする正味の仕事 <span class="arithmatex">\(W\)</span> を求めます。定積過程の仕事は 0 であるため，仕事は 2 つの等温過程の和となります。等温圧縮過程 3 から 4 で外部からされる仕事の大きさを差し引くことで計算します。</p>
@@ -14556,7 +14556,7 @@ W = n R T_{\text{H}} \ln \frac{V_2}{V_1} - n R T_{\text{C}} \ln \frac{V_2}{V_1} 
 \]</div>
 <p>分子と分母の共通因数 <span class="arithmatex">\(n\)</span> を約分します。</p>
 <div class="arithmatex">\[
-\eta_{\text{no}} = \frac{R (T_{\text{H}} - T_{\text{C}}) \ln r}{R T_{\text{H}} \ln r + C_V (T_{\text{H}} - T_{\text{C}})}
+\finalanswer{\eta_{\text{no}} = \frac{R (T_{\text{H}} - T_{\text{C}}) \ln r}{R T_{\text{H}} \ln r + C_V (T_{\text{H}} - T_{\text{C}})}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>理想的な再生器がある場合，定積加熱過程 4 から 1 で必要な熱量 <span class="arithmatex">\(Q_{41}\)</span> は，あらかじめ再生器に蓄えられていた熱量 <span class="arithmatex">\(Q_{23}\)</span> によって完全に賄われます。したがって，この過程で外部の高温熱源から追加で吸収する熱量は 0 となります。</p>
@@ -14570,7 +14570,7 @@ Q_{\text{in, reg}} = Q_{12} = n R T_{\text{H}} \ln \frac{V_2}{V_1}
 \]</div>
 <p>分子と分母の共通因数である <span class="arithmatex">\(n R \ln \frac{V_2}{V_1}\)</span> をすべて約分して消去します。</p>
 <div class="arithmatex">\[
-\eta_{\text{reg}} = \frac{T_{\text{H}} - T_{\text{C}}}{T_{\text{H}}} = 1 - \frac{T_{\text{C}}}{T_{\text{H}}}
+\eta_{\text{reg}} = \frac{T_{\text{H}} - T_{\text{C}}}{T_{\text{H}}} = \finalanswer{1 - \frac{T_{\text{C}}}{T_{\text{H}}}}
 \]</div>
 <p>定積過程の間で熱を内部回収することにより，外部との熱交換が等温過程のみに限定されるため，熱効率がカルノー効率と完全に一致するようになります。</p>
 

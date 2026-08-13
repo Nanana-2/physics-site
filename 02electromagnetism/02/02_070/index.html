@@ -14520,11 +14520,11 @@
 <h2 id="_2">問題</h2>
 <p>真空中に置かれた二種類のコンデンサーを比較する。真空の誘電率を <span class="arithmatex">\(\varepsilon_0\)</span> とする。</p>
 <p>第一のコンデンサーは，半径 <span class="arithmatex">\(a\)</span> の内側導体球と，内半径 <span class="arithmatex">\(b\)</span> の外側導体球殻からなる同心球コンデンサーである。第二のコンデンサーは，半径 <span class="arithmatex">\(a\)</span> の内側円柱導体と，内半径 <span class="arithmatex">\(b\)</span> の外側円筒導体からなる長さ <span class="arithmatex">\(L\)</span> の同軸円筒コンデンサーである。いずれも <span class="arithmatex">\(0&lt;a&lt;b\)</span> とし，内側導体に電荷 <span class="arithmatex">\(+Q\)</span>，外側導体に電荷 <span class="arithmatex">\(-Q\)</span> を与える。円筒では <span class="arithmatex">\(L\gg b\)</span> として端効果を無視する。</p>
-<p>内側導体と外側導体の電位をそれぞれ <span class="arithmatex">\(V_{\mathrm{in}}\)</span>，<span class="arithmatex">\(V_{\mathrm{out}}\)</span> とし，正の電位差を，</p>
+<p>内側導体と外側導体の電位をそれぞれ <span class="arithmatex">\(V_{\mathrm{in}}\)</span>，<span class="arithmatex">\(V_{\mathrm{out}}\)</span> とし，正の電位差を</p>
 <div class="arithmatex">\[
 V=V_{\mathrm{in}}-V_{\mathrm{out}}
 \]</div>
-<p>と定義する。静電容量は <span class="arithmatex">\(C=Q/V\)</span> とする。電場の向きは内側導体から外側導体へ向く向きを正とする。閉曲面 <span class="arithmatex">\(S\)</span> に対するガウスの法則，</p>
+<p>と定義する。静電容量は <span class="arithmatex">\(C=Q/V\)</span> とする。電場の向きは内側導体から外側導体へ向く向きを正とする。閉曲面 <span class="arithmatex">\(S\)</span> に対するガウスの法則</p>
 <div class="arithmatex">\[
 \oint_S\boldsymbol{E}\cdot d\boldsymbol{S}
 =\frac{Q_{\mathrm{in}}}{\varepsilon_0}
@@ -14542,13 +14542,13 @@ V=V_{\mathrm{in}}-V_{\mathrm{out}}
 =E_{\mathrm{sph}}(r)4\pi r^2
 =\frac{Q}{\varepsilon_0}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 \boldsymbol{E}_{\mathrm{sph}}(r)
 =\frac{Q}{4\pi\varepsilon_0r^2}\boldsymbol{e}_r,
 \qquad a&lt;r&lt;b
 \]</div>
-<p>です。電場は内側から外側へ向き，その向きへ進むと電位は低下します。定義した正の電位差は，</p>
+<p>です。電場は内側から外側へ向き，その向きへ進むと電位は低下します。定義した正の電位差は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 V_{\mathrm{sph}}
@@ -14562,16 +14562,16 @@ V_{\mathrm{sph}}
 \left(\frac{1}{a}-\frac{1}{b}\right).
 \end{aligned}
 \]</div>
-<p>となります。よって，</p>
+<p>となります。よって</p>
 <div class="arithmatex">\[
 C_{\mathrm{sph}}
 =\frac{Q}{V_{\mathrm{sph}}}
 =4\pi\varepsilon_0\frac{ab}{b-a}
 \]</div>
-<p>です。外側導体を無限遠へ移すと，</p>
+<p>です。外側導体を無限遠へ移すと</p>
 <div class="arithmatex">\[
-\lim_{b\to\infty}C_{\mathrm{sph}}
-=4\pi\varepsilon_0a
+\finalanswer{\lim_{b\to\infty}C_{\mathrm{sph}}
+=4\pi\varepsilon_0a}
 \]</div>
 <p>となり，半径 <span class="arithmatex">\(a\)</span> の孤立導体球の静電容量と一致します。</p>
 <h3 id="2">(2)</h3>
@@ -14580,13 +14580,13 @@ C_{\mathrm{sph}}
 E_{\mathrm{cyl}}(r)2\pi rL
 =\frac{Q}{\varepsilon_0}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 \boldsymbol{E}_{\mathrm{cyl}}(r)
 =\frac{Q}{2\pi\varepsilon_0Lr}\boldsymbol{e}_r,
 \qquad a&lt;r&lt;b
 \]</div>
-<p>です。内側と外側の電位差は，</p>
+<p>です。内側と外側の電位差は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 V_{\mathrm{cyl}}
@@ -14599,20 +14599,20 @@ V_{\mathrm{cyl}}
 \log\frac{b}{a}.
 \end{aligned}
 \]</div>
-<p>となります。よって全静電容量は，</p>
+<p>となります。よって全静電容量は</p>
 <div class="arithmatex">\[
 C_{\mathrm{cyl}}
 =\frac{2\pi\varepsilon_0L}{\log(b/a)}
 \]</div>
-<p>です。単位長さ当たりでは，</p>
+<p>です。単位長さ当たりでは</p>
 <div class="arithmatex">\[
-\frac{C_{\mathrm{cyl}}}{L}
-=\frac{2\pi\varepsilon_0}{\log(b/a)}
+\finalanswer{\frac{C_{\mathrm{cyl}}}{L}
+=\frac{2\pi\varepsilon_0}{\log(b/a)}}
 \]</div>
 <p>となります。端効果を無視したため，容量は長さ <span class="arithmatex">\(L\)</span> に比例します。</p>
 <h3 id="3">(3)</h3>
 <p>同心球コンデンサーでは体積要素が <span class="arithmatex">\(dV=4\pi r^2dr\)</span> です。電場が存在する <span class="arithmatex">\(a&lt;r&lt;b\)</span> だけを積分します。</p>
-<p>球殻の体積要素まで含めて整理すると，</p>
+<p>球殻の体積要素まで含めて整理すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 U_{\mathrm{sph}}
@@ -14630,7 +14630,7 @@ U_{\mathrm{sph}}
 \left(\frac{1}{a}-\frac{1}{b}\right).
 \end{aligned}
 \]</div>
-<p>です。(1) の容量を用いると，</p>
+<p>です。(1) の容量を用いると</p>
 <div class="arithmatex">\[
 U_{\mathrm{sph}}=\frac{Q^2}{2C_{\mathrm{sph}}}
 \]</div>
@@ -14653,9 +14653,9 @@ U_{\mathrm{cyl}}
 \log\frac{b}{a}.
 \end{aligned}
 \]</div>
-<p>です。(2) の容量を用いれば，</p>
+<p>です。(2) の容量を用いれば</p>
 <div class="arithmatex">\[
-U_{\mathrm{cyl}}=\frac{Q^2}{2C_{\mathrm{cyl}}}
+\finalanswer{U_{\mathrm{cyl}}=\frac{Q^2}{2C_{\mathrm{cyl}}}}
 \]</div>
 <p>となります。</p>
 <p>静電平衡にある導体内部では電場がゼロなので，エネルギー密度もゼロです。また，内外の導体に等量反対符号の電荷を与え，端効果を無視した理想化では外側導体より外の電場もゼロです。したがってエネルギー積分は二導体間だけで十分です。</p>

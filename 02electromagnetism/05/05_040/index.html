@@ -14519,14 +14519,14 @@
 <h1 id="_1">磁性体境界面での境界条件</h1>
 <h2 id="_2">問題</h2>
 <p>透磁率 <span class="arithmatex">\(\mu_1\)</span> の媒質1と透磁率 <span class="arithmatex">\(\mu_2\)</span> の媒質2が平面境界で接している。媒質1から媒質2へ向く単位法線を <span class="arithmatex">\(\boldsymbol{n}\)</span> とする。境界直前と直後の磁場を <span class="arithmatex">\(\boldsymbol{H}_1,\boldsymbol{H}_2\)</span>，磁束密度を <span class="arithmatex">\(\boldsymbol{B}_1,\boldsymbol{B}_2\)</span> とし，<span class="arithmatex">\(\boldsymbol{B}_i=\mu_i\boldsymbol{H}_i\)</span> とする。</p>
-<p>磁束に対するガウスの法則と自由電流に対するアンペールの法則は，</p>
+<p>磁束に対するガウスの法則と自由電流に対するアンペールの法則は</p>
 <div class="arithmatex">\[
 \oint_S\boldsymbol{B}\cdot d\boldsymbol{S}=0,
 \qquad
 \oint_C\boldsymbol{H}\cdot d\boldsymbol{l}=I_{f,\mathrm{enc}}
 \]</div>
 <p>である。境界には自由表面電流 <span class="arithmatex">\(\boldsymbol{K}_f\)</span> が流れ得る。</p>
-<p>(1) 境界をまたぐ薄い円柱を用い，法線成分 <span class="arithmatex">\(B_{2n}-B_{1n}\)</span> を求めよ。続いて境界をまたぐ微小長方形経路を用い，</p>
+<p>(1) 境界をまたぐ薄い円柱を用い，法線成分 <span class="arithmatex">\(B_{2n}-B_{1n}\)</span> を求めよ。続いて境界をまたぐ微小長方形経路を用い</p>
 <div class="arithmatex">\[
 \boldsymbol{n}\times
 \left(\boldsymbol{H}_2-\boldsymbol{H}_1\right)
@@ -14541,16 +14541,16 @@
 <div class="arithmatex">\[
 (B_{2n}-B_{1n})S=0
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 B_{2n}=B_{1n}
 \]</div>
 <p>です。磁束密度の法線成分は常に連続です。</p>
-<p>次に，境界に平行な辺の長さを <span class="arithmatex">\(\Delta l\)</span> とする微小長方形を考えます。経路が囲む自由表面電流は，向きを含めて <span class="arithmatex">\(\boldsymbol{K}_f\)</span> で表されます。ベクトル形の境界条件は，</p>
+<p>次に，境界に平行な辺の長さを <span class="arithmatex">\(\Delta l\)</span> とする微小長方形を考えます。経路が囲む自由表面電流は，向きを含めて <span class="arithmatex">\(\boldsymbol{K}_f\)</span> で表されます。ベクトル形の境界条件は</p>
 <div class="arithmatex">\[
-\boldsymbol{n}\times
+\finalanswer{\boldsymbol{n}\times
 \left(\boldsymbol{H}_2-\boldsymbol{H}_1\right)
-=\boldsymbol{K}_f
+=\boldsymbol{K}_f}
 \]</div>
 <p>です。自由表面電流があれば，<span class="arithmatex">\(\boldsymbol{H}\)</span> の接線成分は不連続になります。</p>
 <h3 id="2">(2)</h3>
@@ -14558,23 +14558,23 @@ B_{2n}=B_{1n}
 <div class="arithmatex">\[
 H_{2t}=H_{1t}
 \]</div>
-<p>また法線磁束密度の連続性から，</p>
+<p>また法線磁束密度の連続性から</p>
 <div class="arithmatex">\[
 \mu_2H_{2n}=\mu_1H_{1n}
 \]</div>
-<p>です。したがって，</p>
+<p>です。したがって</p>
 <div class="arithmatex">\[
-\frac{\tan\theta_2}{\tan\theta_1}
+\finalanswer{\frac{\tan\theta_2}{\tan\theta_1}
 =\frac{H_{2t}/H_{2n}}{H_{1t}/H_{1n}}
-=\frac{\mu_2}{\mu_1}
+=\frac{\mu_2}{\mu_1}}
 \]</div>
 <p>となります。</p>
 <h3 id="3">(3)</h3>
-<p>媒質1では <span class="arithmatex">\(\theta_1=45^\circ\)</span> なので，</p>
+<p>媒質1では <span class="arithmatex">\(\theta_1=45^\circ\)</span> なので</p>
 <div class="arithmatex">\[
 H_{1n}=H_{1t}=\frac{H_0}{\sqrt{2}}
 \]</div>
-<p>です。境界条件より，</p>
+<p>です。境界条件より</p>
 <div class="arithmatex">\[
 H_{2t}=\frac{H_0}{\sqrt{2}}
 \]</div>
@@ -14583,7 +14583,7 @@ H_{2n}
 =\frac{\mu_1}{\mu_2}H_{1n}
 =\frac{H_0}{4\sqrt{2}}
 \]</div>
-<p>となります。したがって，</p>
+<p>となります。したがって</p>
 <div class="arithmatex">\[
 \tan\theta_2
 =\frac{H_{2t}}{H_{2n}}=4
@@ -14591,11 +14591,11 @@ H_{2n}
 <div class="arithmatex">\[
 \theta_2=\tan^{-1}4
 \]</div>
-<p>です。大きさは，</p>
+<p>です。大きさは</p>
 <div class="arithmatex">\[
-H_2
+\finalanswer{H_2
 =\sqrt{H_{2n}^2+H_{2t}^2}
-=\frac{\sqrt{17}}{4\sqrt{2}}H_0
+=\frac{\sqrt{17}}{4\sqrt{2}}H_0}
 \]</div>
 <p>となります。</p>
 

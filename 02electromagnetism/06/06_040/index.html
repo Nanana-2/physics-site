@@ -14518,18 +14518,18 @@
 
 <h1 id="rl">自己誘導とRL回路</h1>
 <h2 id="_1">問題</h2>
-<p>抵抗 <span class="arithmatex">\(R&gt;0\)</span> と自己インダクタンス <span class="arithmatex">\(L&gt;0\)</span> のコイルを直列に接続する。コイルを流れる電流を <span class="arithmatex">\(I(t)\)</span> とし，正方向を電源の正極から抵抗，コイルへ流れる向きとする。コイルの自己誘導起電力は，</p>
+<p>抵抗 <span class="arithmatex">\(R&gt;0\)</span> と自己インダクタンス <span class="arithmatex">\(L&gt;0\)</span> のコイルを直列に接続する。コイルを流れる電流を <span class="arithmatex">\(I(t)\)</span> とし，正方向を電源の正極から抵抗，コイルへ流れる向きとする。コイルの自己誘導起電力は</p>
 <div class="arithmatex">\[
 \mathcal{E}_L=-L\frac{dI}{dt}
 \]</div>
 <p>である。時定数を <span class="arithmatex">\(\tau=L/R\)</span> と定義する。</p>
-<p>(1) 時刻 <span class="arithmatex">\(t=0\)</span> に直流電圧 <span class="arithmatex">\(V_0&gt;0\)</span> の理想電源へ接続する。接続前は <span class="arithmatex">\(I(0)=0\)</span> である。回路方程式，</p>
+<p>(1) 時刻 <span class="arithmatex">\(t=0\)</span> に直流電圧 <span class="arithmatex">\(V_0&gt;0\)</span> の理想電源へ接続する。接続前は <span class="arithmatex">\(I(0)=0\)</span> である。回路方程式</p>
 <div class="arithmatex">\[
 L\frac{dI}{dt}+RI=V_0
 \]</div>
 <p>を解き，<span class="arithmatex">\(I_{\mathrm{on}}(t)\)</span> を求めよ。<span class="arithmatex">\(t=\tau\)</span> における電流と，<span class="arithmatex">\(t\to\infty\)</span> の定常電流 <span class="arithmatex">\(I_\infty\)</span> を求めよ。</p>
 <p>(2) 十分に定常状態へ達した後，電源を外して抵抗とコイルだけの閉回路へ切り替え，切替時刻を新たに <span class="arithmatex">\(t=0\)</span> とする。初期電流 <span class="arithmatex">\(I(0)=I_\infty\)</span> のもとで <span class="arithmatex">\(I_{\mathrm{off}}(t)\)</span> を求めよ。</p>
-<p>(3) 投入過程において，電源の仕事率 <span class="arithmatex">\(P_{\mathrm{src}}=V_0I\)</span>，抵抗の発熱率 <span class="arithmatex">\(P_R=RI^2\)</span>，コイルの磁気エネルギー <span class="arithmatex">\(U_L=LI^2/2\)</span> が，</p>
+<p>(3) 投入過程において，電源の仕事率 <span class="arithmatex">\(P_{\mathrm{src}}=V_0I\)</span>，抵抗の発熱率 <span class="arithmatex">\(P_R=RI^2\)</span>，コイルの磁気エネルギー <span class="arithmatex">\(U_L=LI^2/2\)</span> が</p>
 <div class="arithmatex">\[
 P_{\mathrm{src}}
 =P_R+\frac{dU_L}{dt}
@@ -14538,36 +14538,36 @@ P_{\mathrm{src}}
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
-<p>微分方程式を，</p>
+<p>微分方程式を</p>
 <div class="arithmatex">\[
 \frac{dI}{dt}+\frac{R}{L}I=\frac{V_0}{L}
 \]</div>
-<p>と書きます。定常解は <span class="arithmatex">\(I_\infty=V_0/R\)</span> です。初期条件を満たす解は，</p>
+<p>と書きます。定常解は <span class="arithmatex">\(I_\infty=V_0/R\)</span> です。初期条件を満たす解は</p>
 <div class="arithmatex">\[
 I_{\mathrm{on}}(t)
 =\frac{V_0}{R}
 \left(1-e^{-t/\tau}\right)
 \]</div>
-<p>となります。<span class="arithmatex">\(t=\tau\)</span> では，</p>
+<p>となります。<span class="arithmatex">\(t=\tau\)</span> では</p>
 <div class="arithmatex">\[
-I_{\mathrm{on}}(\tau)
-=\frac{V_0}{R}\left(1-e^{-1}\right)
+\finalanswer{I_{\mathrm{on}}(\tau)
+=\frac{V_0}{R}\left(1-e^{-1}\right)}
 \]</div>
 <p>であり，<span class="arithmatex">\(t\to\infty\)</span> で <span class="arithmatex">\(I_\infty=V_0/R\)</span> へ近づきます。</p>
 <h3 id="2">(2)</h3>
-<p>電源を外した後の方程式は，</p>
+<p>電源を外した後の方程式は</p>
 <div class="arithmatex">\[
 L\frac{dI}{dt}+RI=0
 \]</div>
-<p>です。変数分離すると，</p>
+<p>です。変数分離すると</p>
 <div class="arithmatex">\[
 \frac{dI}{I}=-\frac{R}{L}\,dt
 \]</div>
-<p>なので，</p>
+<p>なので</p>
 <div class="arithmatex">\[
-I_{\mathrm{off}}(t)
+\finalanswer{I_{\mathrm{off}}(t)
 =I_\infty e^{-t/\tau}
-=\frac{V_0}{R}e^{-t/\tau}
+=\frac{V_0}{R}e^{-t/\tau}}
 \]</div>
 <p>となります。</p>
 <h3 id="3">(3)</h3>
@@ -14575,14 +14575,14 @@ I_{\mathrm{off}}(t)
 <div class="arithmatex">\[
 LI\frac{dI}{dt}+RI^2=V_0I
 \]</div>
-<p>第一項は，</p>
+<p>第一項は</p>
 <div class="arithmatex">\[
 LI\frac{dI}{dt}
 =\frac{d}{dt}\left(\frac{1}{2}LI^2\right)
 =\frac{dU_L}{dt}
 \]</div>
 <p>なので，目的のエネルギー収支が得られます。</p>
-<p>遮断直後の磁気エネルギーは <span class="arithmatex">\(U_L(0)=LI_\infty^2/2\)</span> です。抵抗で発生する全熱量は，</p>
+<p>遮断直後の磁気エネルギーは <span class="arithmatex">\(U_L(0)=LI_\infty^2/2\)</span> です。抵抗で発生する全熱量は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 W_R
@@ -14594,10 +14594,10 @@ W_R
 &amp;=RI_\infty^2\frac{\tau}{2}.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\tau=L/R\)</span> より，</p>
+<p><span class="arithmatex">\(\tau=L/R\)</span> より</p>
 <div class="arithmatex">\[
-W_R=\frac{1}{2}LI_\infty^2
-=U_L(0)
+\finalanswer{W_R=\frac{1}{2}LI_\infty^2
+=U_L(0)}
 \]</div>
 <p>となります。</p>
 

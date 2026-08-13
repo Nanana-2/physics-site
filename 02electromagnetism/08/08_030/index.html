@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">多重極展開</h1>
 <h2 id="_2">問題</h2>
-<p>原点近傍の有限領域に局在した電荷密度 <span class="arithmatex">\(\rho(\boldsymbol{r}')\)</span> が作る遠方の電位を考える。観測点を <span class="arithmatex">\(\boldsymbol{r}=r\boldsymbol{n}\)</span> とし，<span class="arithmatex">\(r\gg|\boldsymbol{r}'|\)</span> とする。展開式，</p>
+<p>原点近傍の有限領域に局在した電荷密度 <span class="arithmatex">\(\rho(\boldsymbol{r}')\)</span> が作る遠方の電位を考える。観測点を <span class="arithmatex">\(\boldsymbol{r}=r\boldsymbol{n}\)</span> とし，<span class="arithmatex">\(r\gg|\boldsymbol{r}'|\)</span> とする。展開式</p>
 <div class="arithmatex">\[
 \frac{1}{|\boldsymbol{r}-\boldsymbol{r}'|}
 =\frac{1}{r}
@@ -14527,7 +14527,7 @@
 +O(r^{-4})
 \]</div>
 <p>を用いてよい。</p>
-<p>(1) 全電荷 <span class="arithmatex">\(Q\)</span>，電気双極子モーメント <span class="arithmatex">\(\boldsymbol{p}\)</span>，四重極モーメント <span class="arithmatex">\(Q_{ij}\)</span> を，</p>
+<p>(1) 全電荷 <span class="arithmatex">\(Q\)</span>，電気双極子モーメント <span class="arithmatex">\(\boldsymbol{p}\)</span>，四重極モーメント <span class="arithmatex">\(Q_{ij}\)</span> を</p>
 <div class="arithmatex">\[
 Q=\int\rho\,dV',
 \qquad
@@ -14549,7 +14549,7 @@ Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij})\,dV'
 &amp;=\frac{1}{4\pi\varepsilon_0}
 \int\frac{\rho(\boldsymbol{r}')}
 {|\boldsymbol{r}-\boldsymbol{r}'|}\,dV' \\
-&amp;=\frac{1}{4\pi\varepsilon_0}
+&amp;=\finalanswer{\frac{1}{4\pi\varepsilon_0}}
 \left[
 \frac{Q}{r}
 +\frac{\boldsymbol{p}\cdot\boldsymbol{n}}{r^2}
@@ -14562,7 +14562,7 @@ Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij})\,dV'
 <p>四重極項では，<span class="arithmatex">\(3(\boldsymbol{n}\cdot\boldsymbol{r}')^2-r'^2\)</span> を成分表示すると <span class="arithmatex">\((3x_i'x_j'-r'^2\delta_{ij})n_in_j\)</span> となります。このため二つの添字について和をとる形が現れます。</p>
 <h3 id="2">(2)</h3>
 <p>まず低次のモーメントを調べます。原点の電荷は全電荷には寄与しますが，位置ベクトルがゼロなので双極子以上のモーメントには寄与しません。<span class="arithmatex">\(z=\pm a\)</span> の二電荷は対称なので，双極子項が打ち消し合います。</p>
-<p>全電荷と双極子モーメントは，</p>
+<p>全電荷と双極子モーメントは</p>
 <div class="arithmatex">\[
 \begin{aligned}
 Q&amp;=q+q-2q=0, \\
@@ -14585,18 +14585,18 @@ Q&amp;=q+q-2q=0, \\
 +\frac{a^2(3\cos^2\theta-1)}{2r^3}\right)
 -\frac{2}{r}
 \right] \\
-&amp;=\frac{qa^2}{4\pi\varepsilon_0r^3}
+&amp;=\finalanswer{\frac{qa^2}{4\pi\varepsilon_0r^3}}
 (3\cos^2\theta-1).
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>軸上と赤道面では，</p>
+<p>軸上と赤道面では</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \phi(r,0)
 &amp;=\frac{2qa^2}{4\pi\varepsilon_0r^3}, \\
 \phi(r,\pi/2)
-&amp;=-\frac{qa^2}{4\pi\varepsilon_0r^3}.
+&amp;=\finalanswer{-\frac{qa^2}{4\pi\varepsilon_0r^3}}.
 \end{aligned}
 \]</div>
 <p>軸上では正，赤道面では負です。四重極電位は <span class="arithmatex">\(r^{-3}\)</span> で減衰し，電場は空間微分を一回とるため <span class="arithmatex">\(r^{-4}\)</span> で減衰します。単極子場の <span class="arithmatex">\(r^{-2}\)</span>，双極子場の <span class="arithmatex">\(r^{-3}\)</span> より速い減衰です。</p>

@@ -14496,7 +14496,7 @@
 
 <h1 id="_1">状態量と経路依存量</h1>
 <h2 id="_2">問題</h2>
-<p>熱力学における物理量は，系の状態だけで一意に決まる状態量と，状態の変化経路に依存する経路依存量に分類される。いま，ある流体系の圧力を <span class="arithmatex">\(P\)</span> ，体積を <span class="arithmatex">\(V\)</span> とし，微小な変化に伴う仕事の微少量を <span class="arithmatex">\(d'W = P dV\)</span> ，熱量の微少量を <span class="arithmatex">\(d'Q\)</span> とする。熱力学第一法則により，内部エネルギーの微小変化 <span class="arithmatex">\(dU\)</span> は次のように表される。</p>
+<p>熱力学における物理量は，系の状態だけで一意に決まる状態量と，状態の変化経路に依存する経路依存量に分類される。いま，ある流体系の圧力を <span class="arithmatex">\(P\)</span> ，体積を <span class="arithmatex">\(V\)</span> とし，微小な変化に伴う仕事を <span class="arithmatex">\(d'W = P dV\)</span> ，熱量を <span class="arithmatex">\(d'Q\)</span> とする。熱力学第一法則により，内部エネルギーの微小変化 <span class="arithmatex">\(dU\)</span> は次のように表される。</p>
 <div class="arithmatex">\[
 dU = d'Q - d'W
 \]</div>
@@ -14510,7 +14510,7 @@ dU = d'Q - d'W
 <div class="arithmatex">\[
 \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}
 \]</div>
-<p>仕事の微少量 <span class="arithmatex">\(d'W = P dV\)</span> を 2 変数 <span class="arithmatex">\(V, T\)</span> の微小形式として書き直します。 <span class="arithmatex">\(dT\)</span> の項の係数は 0 です。</p>
+<p>仕事 <span class="arithmatex">\(d'W = P dV\)</span> を 2 変数 <span class="arithmatex">\(V, T\)</span> の微分形式として書き直します。 <span class="arithmatex">\(dT\)</span> の項の係数は 0 です。</p>
 <div class="arithmatex">\[
 d'W = P(V, T) dV + 0 \cdot dT
 \]</div>
@@ -14520,7 +14520,7 @@ d'W = P(V, T) dV + 0 \cdot dT
 \]</div>
 <p>一般に，気体の圧力は温度によって変化するため， <span class="arithmatex">\(\left(\frac{\partial P}{\partial T}\right)_V \neq 0\)</span> です。したがって，次の不等式が成り立ちます。</p>
 <div class="arithmatex">\[
-\left(\frac{\partial P}{\partial T}\right)_V \neq \frac{\partial 0}{\partial V}
+\finalanswer{\left(\frac{\partial P}{\partial T}\right)_V \neq \frac{\partial 0}{\partial V}}
 \]</div>
 <p>偏微分の可換性の条件を満たさないため， <span class="arithmatex">\(d'W\)</span> は完全微分形式ではなく，経路に依存する物理量です。</p>
 <h3 id="2">(2)</h3>
@@ -14535,7 +14535,7 @@ U_{\text{B}} - U_{\text{A}} = Q_2 - W_2
 \]</div>
 <p>両式の左辺は同一の量 <span class="arithmatex">\(U_{\text{B}} - U_{\text{A}}\)</span> を表しているため，右辺同士は等しくなります。したがって，求める関係式は次の通りです。</p>
 <div class="arithmatex">\[
-Q_1 - W_1 = Q_2 - W_2
+\finalanswer{Q_1 - W_1 = Q_2 - W_2}
 \]</div>
 <p>熱量 <span class="arithmatex">\(Q\)</span> と仕事 <span class="arithmatex">\(W\)</span> はそれぞれ経路依存量ですが，その差である <span class="arithmatex">\(Q - W\)</span> は変化の経路に依存しない一定の値をとります。</p>
 

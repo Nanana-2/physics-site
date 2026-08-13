@@ -14521,7 +14521,7 @@
 <p>基準となる慣性座標系の原点 O から見た質点1の位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}_1\)</span> ，質点2の位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}_2\)</span> とする。質点1から見た質点2の相対位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}_{12}\)</span> と定義する。以下の問いに答えよ。</p>
 <p>(1) 質点1から見た質点2の相対位置ベクトル <span class="arithmatex">\(\boldsymbol{r}_{12}\)</span> を， <span class="arithmatex">\(\boldsymbol{r}_1\)</span> と <span class="arithmatex">\(\boldsymbol{r}_2\)</span> を用いて表せ。</p>
 <p>(2) 質点1の速度ベクトルを <span class="arithmatex">\(\boldsymbol{v}_1 = \frac{d\boldsymbol{r}_1}{dt}\)</span> ，質点2の速度ベクトルを <span class="arithmatex">\(\boldsymbol{v}_2 = \frac{d\boldsymbol{r}_2}{dt}\)</span> とする。質点1から見た質点2の相対速度ベクトル <span class="arithmatex">\(\boldsymbol{v}_{12} = \frac{d\boldsymbol{r}_{12}}{dt}\)</span> を， <span class="arithmatex">\(\boldsymbol{v}_1\)</span> と <span class="arithmatex">\(\boldsymbol{v}_2\)</span> を用いて表せ。</p>
-<p>(3) 質点1が速度 <span class="arithmatex">\(\boldsymbol{v}_1 = \begin{pmatrix} u \\ 0 \end{pmatrix}\)</span> で一定の運動を行っており，質点2が速度 <span class="arithmatex">\(\boldsymbol{v}_2 = \begin{pmatrix} 0 \\ v \end{pmatrix}\)</span> で一定の運動を行っている場合を想定する。初期時刻 <span class="arithmatex">\(t=0\)</span> における各質点の間隔を <span class="arithmatex">\(L\)</span> とし，それぞれの初期位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}_1(0) = \begin{pmatrix} 0 \\ 0 \end{pmatrix}\)</span> ， <span class="arithmatex">\(\boldsymbol{r}_2(0) = \begin{pmatrix} 0 \\ L \end{pmatrix}\)</span> とする。任意の時刻 <span class="arithmatex">\(t\)</span> における相対速度ベクトル <span class="arithmatex">\(\boldsymbol{v}_{12}\)</span> を求めよ。また，2つの質点の間隔が最小となる時刻 <span class="arithmatex">\(t_{\text{min}}\)</span> を <span class="arithmatex">\(u, v, L\)</span> を用いて表せ。</p>
+<p>(3) <span class="arithmatex">\(u&gt;0\)</span>，<span class="arithmatex">\(v&gt;0\)</span> とする。質点1が速度 <span class="arithmatex">\(\boldsymbol{v}_1 = \begin{pmatrix} u \\ 0 \end{pmatrix}\)</span> で，質点2が速度 <span class="arithmatex">\(\boldsymbol{v}_2 = \begin{pmatrix} 0 \\ -v \end{pmatrix}\)</span> で等速度運動をしている。初期時刻 <span class="arithmatex">\(t=0\)</span> における各質点の間隔を <span class="arithmatex">\(L&gt;0\)</span> とし，それぞれの初期位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}_1(0) = \begin{pmatrix} 0 \\ 0 \end{pmatrix}\)</span>，<span class="arithmatex">\(\boldsymbol{r}_2(0) = \begin{pmatrix} 0 \\ L \end{pmatrix}\)</span> とする。任意の時刻 <span class="arithmatex">\(t\)</span> における相対速度ベクトル <span class="arithmatex">\(\boldsymbol{v}_{12}\)</span> を求めよ。また，<span class="arithmatex">\(t\geq0\)</span> において2つの質点の間隔が最小となる時刻 <span class="arithmatex">\(t_{\text{min}}\)</span> を <span class="arithmatex">\(u, v, L\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14546,8 +14546,8 @@
 <p>提示された具体的な速度ベクトルを (2) の結果に代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{v}_{12} &amp;= \begin{pmatrix} 0 \\ v \end{pmatrix} - \begin{pmatrix} u \\ 0 \end{pmatrix} \\
-&amp;= \begin{pmatrix} -u \\ v \end{pmatrix}
+\boldsymbol{v}_{12} &amp;= \begin{pmatrix} 0 \\ -v \end{pmatrix} - \begin{pmatrix} u \\ 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} -u \\ -v \end{pmatrix}
 \end{aligned}
 \]</div>
 <p>これが任意の時刻における相対速度ベクトルです。
@@ -14560,34 +14560,34 @@
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{r}_2(t) &amp;= \begin{pmatrix} 0 \\ L \end{pmatrix} + \begin{pmatrix} 0 \\ v \end{pmatrix} t \\
-&amp;= \begin{pmatrix} 0 \\ L + vt \end{pmatrix}
+\boldsymbol{r}_2(t) &amp;= \begin{pmatrix} 0 \\ L \end{pmatrix} + \begin{pmatrix} 0 \\ -v \end{pmatrix} t \\
+&amp;= \begin{pmatrix} 0 \\ L - vt \end{pmatrix}
 \end{aligned}
 \]</div>
 <p>(1) の定義に従って相対位置ベクトルを求めます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{r}_{12}(t) &amp;= \begin{pmatrix} 0 \\ L + vt \end{pmatrix} - \begin{pmatrix} ut \\ 0 \end{pmatrix} \\
-&amp;= \begin{pmatrix} -ut \\ L + vt \end{pmatrix}
+\boldsymbol{r}_{12}(t) &amp;= \begin{pmatrix} 0 \\ L - vt \end{pmatrix} - \begin{pmatrix} ut \\ 0 \end{pmatrix} \\
+&amp;= \begin{pmatrix} -ut \\ L - vt \end{pmatrix}
 \end{aligned}
 \]</div>
 <p>2つの質点の間隔の2乗を <span class="arithmatex">\(f(t) = |\boldsymbol{r}_{12}(t)|^2\)</span> と置きます。間隔が最小になるとき，その2乗も最小になります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-f(t) &amp;= (-ut)^2 + (L + vt)^2 \\
-&amp;= u^2 t^2 + L^2 + 2Lvt + v^2 t^2 \\
-&amp;= (u^2 + v^2) t^2 + 2Lvt + L^2
+f(t) &amp;= (-ut)^2 + (L - vt)^2 \\
+&amp;= u^2 t^2 + L^2 - 2Lvt + v^2 t^2 \\
+&amp;= (u^2 + v^2) t^2 - 2Lvt + L^2
 \end{aligned}
 \]</div>
 <p>この <span class="arithmatex">\(t\)</span> に関する2次関数を平方完成します。</p>
 <div class="arithmatex">\[
-f(t) = (u^2 + v^2) \left( t + \frac{Lv}{u^2 + v^2} \right)^2 + L^2 - \frac{L^2 v^2}{u^2 + v^2}
+f(t) = (u^2 + v^2) \left( t - \frac{Lv}{u^2 + v^2} \right)^2 + L^2 - \frac{L^2 v^2}{u^2 + v^2}
 \]</div>
 <p>実数の2乗の項が 0 になるときに全体の関数値が最小になります。したがって，間隔が最小となる時刻は次のようになります。</p>
 <div class="arithmatex">\[
-t_{\text{min}} = - \frac{Lv}{u^2 + v^2}
+t_{\text{min}} = \finalanswer{\frac{Lv}{u^2 + v^2}}
 \]</div>
-<p>実際の物理的な状況において，時刻 <span class="arithmatex">\(t\)</span> は 0 以上を想定するため， <span class="arithmatex">\(u, v, L\)</span> が正の値であるならば，この結果は過去の時刻においてすでに間隔が最小であったことを示します。</p>
+<p><span class="arithmatex">\(u,v,L&gt;0\)</span> より，この時刻は <span class="arithmatex">\(t\geq0\)</span> の範囲に含まれます。</p>
 
 
 

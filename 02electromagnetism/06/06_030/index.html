@@ -14518,12 +14518,12 @@
 
 <h1 id="_1">時間変化する磁場が作る誘導電場</h1>
 <h2 id="_2">問題</h2>
-<p>半径 <span class="arithmatex">\(R\)</span> の円柱領域 <span class="arithmatex">\(r&lt;R\)</span> に，<span class="arithmatex">\(z\)</span> 方向の一様磁場，</p>
+<p>半径 <span class="arithmatex">\(R\)</span> の円柱領域 <span class="arithmatex">\(r&lt;R\)</span> に，<span class="arithmatex">\(z\)</span> 方向の一様磁場</p>
 <div class="arithmatex">\[
 \boldsymbol{B}(t)=B(t)\boldsymbol{e}_z
 \]</div>
 <p>が存在し，<span class="arithmatex">\(r&gt;R\)</span> では磁場をゼロとする。円柱は <span class="arithmatex">\(z\)</span> 方向に十分長く，系は円筒対称である。誘導電場を <span class="arithmatex">\(\boldsymbol{E}(r,t)=E_\varphi(r,t)\boldsymbol{e}_\varphi\)</span> とする。正の周回方向を <span class="arithmatex">\(+z\)</span> から見て反時計回りとする。</p>
-<p>マクスウェル・ファラデー方程式の積分形は，</p>
+<p>マクスウェル・ファラデー方程式の積分形は</p>
 <div class="arithmatex">\[
 \oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
 =-\frac{d}{dt}
@@ -14536,7 +14536,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p><span class="arithmatex">\(r&lt;R\)</span> では円形経路が囲む面全体に磁場があります。面積要素を <span class="arithmatex">\(dS=2\pi s\,ds\)</span> として磁束を計算すると，</p>
+<p><span class="arithmatex">\(r&lt;R\)</span> では円形経路が囲む面全体に磁場があります。面積要素を <span class="arithmatex">\(dS=2\pi s\,ds\)</span> として磁束を計算すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \Phi_B(r,t)
@@ -14545,7 +14545,7 @@
 &amp;=B(t)\pi r^2.
 \end{aligned}
 \]</div>
-<p>円周上では <span class="arithmatex">\(\boldsymbol{E}=E_\varphi\boldsymbol{e}_\varphi\)</span>，<span class="arithmatex">\(d\boldsymbol{l}=r\,d\varphi\boldsymbol{e}_\varphi\)</span> なので，ファラデーの法則の左辺も，</p>
+<p>円周上では <span class="arithmatex">\(\boldsymbol{E}=E_\varphi\boldsymbol{e}_\varphi\)</span>，<span class="arithmatex">\(d\boldsymbol{l}=r\,d\varphi\boldsymbol{e}_\varphi\)</span> なので，ファラデーの法則の左辺も</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
@@ -14553,20 +14553,20 @@
 &amp;=2\pi rE_\varphi.
 \end{aligned}
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
 2\pi rE_\varphi(r,t)
 =-\frac{d}{dt}\left[B(t)\pi r^2\right]
 \]</div>
-<p>したがって，</p>
+<p>したがって</p>
 <div class="arithmatex">\[
-E_\varphi(r,t)
+\finalanswer{E_\varphi(r,t)
 =-\frac{r}{2}\frac{dB}{dt},
-\qquad r&lt;R
+\qquad r&lt;R}
 \]</div>
 <p>です。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(r&gt;R\)</span> では磁場が存在する面積は <span class="arithmatex">\(\pi R^2\)</span> だけです。<span class="arithmatex">\(R&lt;s&lt;r\)</span> の部分では <span class="arithmatex">\(B=0\)</span> なので，</p>
+<p><span class="arithmatex">\(r&gt;R\)</span> では磁場が存在する面積は <span class="arithmatex">\(\pi R^2\)</span> だけです。<span class="arithmatex">\(R&lt;s&lt;r\)</span> の部分では <span class="arithmatex">\(B=0\)</span> なので</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \Phi_B(r,t)
@@ -14575,34 +14575,34 @@ E_\varphi(r,t)
 &amp;=B(t)\pi R^2.
 \end{aligned}
 \]</div>
-<p>よって，</p>
+<p>よって</p>
 <div class="arithmatex">\[
 2\pi rE_\varphi(r,t)
 =-\frac{d}{dt}\left[B(t)\pi R^2\right]
 \]</div>
-<p>よって，</p>
+<p>よって</p>
 <div class="arithmatex">\[
 E_\varphi(r,t)
 =-\frac{R^2}{2r}\frac{dB}{dt},
 \qquad r&gt;R
 \]</div>
-<p>となります。<span class="arithmatex">\(r=R\)</span> ではどちらも，</p>
+<p>となります。<span class="arithmatex">\(r=R\)</span> ではどちらも</p>
 <div class="arithmatex">\[
-E_\varphi(R,t)
-=-\frac{R}{2}\frac{dB}{dt}
+\finalanswer{E_\varphi(R,t)
+=-\frac{R}{2}\frac{dB}{dt}}
 \]</div>
 <p>となり連続です。</p>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(dB/dt=\beta&gt;0\)</span> なので <span class="arithmatex">\(E_\varphi&lt;0\)</span> です。誘導電場と正電荷への力は，<span class="arithmatex">\(+z\)</span> から見て時計回りを向きます。</p>
-<p><span class="arithmatex">\(r&lt;R\)</span> では，</p>
+<p><span class="arithmatex">\(r&lt;R\)</span> では</p>
 <div class="arithmatex">\[
 W=qE_\varphi2\pi r
 =-q\pi r^2\beta
 \]</div>
-<p>です。<span class="arithmatex">\(r&gt;R\)</span> では，</p>
+<p>です。<span class="arithmatex">\(r&gt;R\)</span> では</p>
 <div class="arithmatex">\[
-W=qE_\varphi2\pi r
-=-q\pi R^2\beta
+\finalanswer{W=qE_\varphi2\pi r
+=-q\pi R^2\beta}
 \]</div>
 <p>となります。外側では経路半径を広げても，囲む磁束変化が一定なので一周の仕事は変化しません。</p>
 

@@ -14519,7 +14519,7 @@
 <h1 id="_1">静電場の境界条件</h1>
 <h2 id="_2">問題</h2>
 <p><span class="arithmatex">\(z=0\)</span> を境界面として，<span class="arithmatex">\(z&lt;0\)</span> を誘電率 <span class="arithmatex">\(\varepsilon_1\)</span> の媒質1，<span class="arithmatex">\(z&gt;0\)</span> を誘電率 <span class="arithmatex">\(\varepsilon_2\)</span> の媒質2とする。境界面上の自由表面電荷密度を <span class="arithmatex">\(\sigma_f\)</span> とし，境界直上と直下の電場をそれぞれ <span class="arithmatex">\(\boldsymbol{E}_2\)</span>，<span class="arithmatex">\(\boldsymbol{E}_1\)</span> とする。境界面に沿う成分を添字 <span class="arithmatex">\(t\)</span>，媒質1から媒質2へ向く法線成分を添字 <span class="arithmatex">\(n\)</span> で表す。</p>
-<p>線形媒質では <span class="arithmatex">\(\boldsymbol{D}_i=\varepsilon_i\boldsymbol{E}_i\)</span> とする。静電場の閉曲線積分と自由電荷に対するガウスの法則，</p>
+<p>線形媒質では <span class="arithmatex">\(\boldsymbol{D}_i=\varepsilon_i\boldsymbol{E}_i\)</span> とする。静電場の閉曲線積分と自由電荷に対するガウスの法則</p>
 <div class="arithmatex">\[
 \oint_C\boldsymbol{E}\cdot d\boldsymbol{l}=0,
 \qquad
@@ -14532,84 +14532,84 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>静電場は保存力場なので，任意の閉曲線 <span class="arithmatex">\(C\)</span> に対して，</p>
+<p>静電場は保存力場なので，任意の閉曲線 <span class="arithmatex">\(C\)</span> に対して</p>
 <div class="arithmatex">\[
 \oint_C\boldsymbol{E}\cdot d\boldsymbol{l}=0
 \]</div>
-<p>が成り立ちます。境界面に平行な辺の長さを <span class="arithmatex">\(\Delta l\)</span> とし，境界面に垂直な辺の長さをゼロへ近づけます。垂直な二辺の寄与は消え，平行な二辺から，</p>
+<p>が成り立ちます。境界面に平行な辺の長さを <span class="arithmatex">\(\Delta l\)</span> とし，境界面に垂直な辺の長さをゼロへ近づけます。垂直な二辺の寄与は消え，平行な二辺から</p>
 <div class="arithmatex">\[
 E_{2t}\Delta l-E_{1t}\Delta l=0
 \]</div>
-<p>を得ます。したがって，</p>
+<p>を得ます。したがって</p>
 <div class="arithmatex">\[
 E_{2t}=E_{1t}
 \]</div>
 <p>です。この条件は電位が境界面上で連続であることに対応します。</p>
 <p><strong>法線成分の境界条件</strong></p>
-<p>底面積を <span class="arithmatex">\(S\)</span> とする薄い円柱を境界面にまたがせます。高さをゼロへ近づけると側面の流束は消えます。自由電荷に対するガウスの法則より，</p>
+<p>底面積を <span class="arithmatex">\(S\)</span> とする薄い円柱を境界面にまたがせます。高さをゼロへ近づけると側面の流束は消えます。自由電荷に対するガウスの法則より</p>
 <div class="arithmatex">\[
 (D_{2n}-D_{1n})S=\sigma_fS
 \]</div>
-<p>したがって，法線成分の境界条件は，</p>
+<p>したがって，法線成分の境界条件は</p>
 <div class="arithmatex">\[
 D_{2n}-D_{1n}=\sigma_f
 \]</div>
-<p>です。線形等方媒質では，</p>
+<p>です。線形等方媒質では</p>
 <div class="arithmatex">\[
-\varepsilon_2E_{2n}-\varepsilon_1E_{1n}=\sigma_f
+\finalanswer{\varepsilon_2E_{2n}-\varepsilon_1E_{1n}=\sigma_f}
 \]</div>
 <p>と表せます。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(\sigma_f=0\)</span> のとき，(1) の二つの境界条件より，</p>
+<p><span class="arithmatex">\(\sigma_f=0\)</span> のとき，(1) の二つの境界条件より</p>
 <div class="arithmatex">\[
 E_{2t}=E_{1t},\qquad
 \varepsilon_2E_{2n}=\varepsilon_1E_{1n}
 \]</div>
-<p>です。角度を法線から測っているので <span class="arithmatex">\(\tan\theta_i=E_{it}/E_{in}\)</span> です。したがって，</p>
+<p>です。角度を法線から測っているので <span class="arithmatex">\(\tan\theta_i=E_{it}/E_{in}\)</span> です。したがって</p>
 <div class="arithmatex">\[
-\frac{\tan\theta_2}{\tan\theta_1}
+\finalanswer{\frac{\tan\theta_2}{\tan\theta_1}
 =\frac{E_{2t}/E_{2n}}{E_{1t}/E_{1n}}
-=\frac{\varepsilon_2}{\varepsilon_1}
+=\frac{\varepsilon_2}{\varepsilon_1}}
 \]</div>
 <p>となります。誘電率の大きい媒質側ほど，電場は境界面に平行な向きへ傾きます。</p>
 <h3 id="3">(3)</h3>
 <p>静電平衡にある導体内部では <span class="arithmatex">\(\boldsymbol{E}_1=\boldsymbol{0}\)</span> です。したがって接線成分の境界条件から，真空側でも <span class="arithmatex">\(E_{2t}=0\)</span> となります。導体表面は等電位面であり，電場は表面に垂直です。</p>
-<p>導体表面の自由表面電荷密度を <span class="arithmatex">\(\sigma_f\)</span> とすると，法線成分の境界条件は，</p>
+<p>導体表面の自由表面電荷密度を <span class="arithmatex">\(\sigma_f\)</span> とすると，法線成分の境界条件は</p>
 <div class="arithmatex">\[
 \varepsilon_0E_{2n}-0=\sigma_f
 \]</div>
-<p>です。よって表面直外では，</p>
+<p>です。よって表面直外では</p>
 <div class="arithmatex">\[
 \boldsymbol{E}_2=\frac{\sigma_f}{\varepsilon_0}\boldsymbol{n}
 \]</div>
 <p>となります。ここで <span class="arithmatex">\(\boldsymbol{n}\)</span> は導体から真空へ向く単位法線ベクトルです。<span class="arithmatex">\(\sigma_f&lt;0\)</span> なら電場は導体へ向きます。</p>
 <p><strong>具体例</strong></p>
-<p>接線成分の連続性と法線方向の電束密度の連続性から，</p>
+<p>接線成分の連続性と法線方向の電束密度の連続性から</p>
 <div class="arithmatex">\[
 E_{2t}=E_{1t},
 \qquad
 \varepsilon_2E_{2n}=\varepsilon_1E_{1n}
 \]</div>
-<p>です。<span class="arithmatex">\(\theta_1=45^\circ\)</span> なので，</p>
+<p>です。<span class="arithmatex">\(\theta_1=45^\circ\)</span> なので</p>
 <div class="arithmatex">\[
 E_{1t}=E_{1n}=\frac{E_1}{\sqrt{2}}
 \]</div>
-<p>となります。<span class="arithmatex">\(\varepsilon_2=2\varepsilon_1\)</span> を用いると，</p>
+<p>となります。<span class="arithmatex">\(\varepsilon_2=2\varepsilon_1\)</span> を用いると</p>
 <div class="arithmatex">\[
 E_{2t}=\frac{E_1}{\sqrt{2}},
 \qquad
 E_{2n}=\frac{E_1}{2\sqrt{2}}
 \]</div>
-<p>です。したがって，</p>
+<p>です。したがって</p>
 <div class="arithmatex">\[
 \tan\theta_2=\frac{E_{2t}}{E_{2n}}=2,
 \qquad
 \theta_2=\tan^{-1}2
 \]</div>
-<p>となります。大きさは，</p>
+<p>となります。大きさは</p>
 <div class="arithmatex">\[
-E_2=\sqrt{E_{2t}^2+E_{2n}^2}
-=\frac{\sqrt{10}}{4}E_1
+\finalanswer{E_2=\sqrt{E_{2t}^2+E_{2n}^2}
+=\frac{\sqrt{10}}{4}E_1}
 \]</div>
 <p>です。誘電率の大きい媒質へ入ると，電場は境界面に近い方向へ曲がります。</p>
 

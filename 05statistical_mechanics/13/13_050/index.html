@@ -14528,15 +14528,15 @@ W(x, p) = \frac{1}{\pi\hbar} \left( 2R^2 - 1 \right) \exp\left( -R^2 \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 提示されたウィグナー分布関数 <span class="arithmatex">\(W(x, p)\)</span> について，位相空間の原点 <span class="arithmatex">\(x = 0, p = 0\)</span> における値を求めよ。また，この関数が負の値をとる位相空間上の領域を <span class="arithmatex">\(R\)</span> の不等式で表せ。</p>
-<p>(2) 伏見関数 <span class="arithmatex">\(Q(x, p)\)</span> は，上記の <span class="arithmatex">\(W(x, p)\)</span> に対して以下の積分変換を施すことで得られる。</p>
+<p>(2) 伏見関数 <span class="arithmatex">\(Q_{xp}(x, p)\)</span> は，上記の <span class="arithmatex">\(W(x, p)\)</span> に対して以下の積分変換を施すことで得られる。</p>
 <div class="arithmatex">\[
-Q(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( - \frac{(x - x')^2}{x_0^2} - \frac{(p - p')^2}{p_0^2} \right) W(x', p') dx' dp'
+Q_{xp}(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( - \frac{(x - x')^2}{x_0^2} - \frac{(p - p')^2}{p_0^2} \right) W(x', p') dx' dp'
 \]</div>
 <p>この積分を実行すると，伏見関数の形は以下のようになる。</p>
 <div class="arithmatex">\[
-Q(x, p) = \frac{1}{2\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
+Q_{xp}(x, p) = \frac{1}{4\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
 \]</div>
-<p>この伏見関数 <span class="arithmatex">\(Q(x, p)\)</span> について，位相空間上の任意の点における値が常に 0 以上であることを式から示せ。また，原点 <span class="arithmatex">\(x = 0, p = 0\)</span> における値を求めよ。</p>
+<p>ここで <span class="arithmatex">\(Q_{xp}(x,p)\)</span> は <span class="arithmatex">\(dx\,dp\)</span> に関して規格化され，<span class="arithmatex">\(\int Q_{xp}(x,p)dx\,dp=1\)</span> を満たす。この伏見関数について，位相空間上の任意の点における値が常に 0 以上であることを式から示せ。また，原点 <span class="arithmatex">\(x = 0, p = 0\)</span> における値を求めよ。</p>
 <p>(3) (1) と (2) の結果を比較せよ。同じ量子状態を対象にしているにもかかわらず，原点付近においてウィグナー分布関数には負の谷が現れ，伏見関数では値が 0 となって負の領域が消失する物理的な仕組みを，ガウスフィルターによる平滑化の効果と関連付けて説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14557,16 +14557,16 @@ W(0, 0) &amp;= \frac{1}{\pi\hbar} \left( 2 \cdot 0 - 1 \right) \exp\left( 0 \rig
 <h3 id="2">(2)</h3>
 <p>与えられた伏見関数の式に注目します。</p>
 <div class="arithmatex">\[
-Q(x, p) = \frac{1}{2\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
+Q_{xp}(x, p) = \frac{1}{4\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
 \]</div>
 <p>定数係数は正であり，指数関数部分も常に正です。残る変数部分は座標の2乗の和である <span class="arithmatex">\(R^2 \ge 0\)</span> です。すべての因数が 0 以上であるため，位相空間の全域において以下の不等式が満たされます。</p>
 <div class="arithmatex">\[
-Q(x, p) \ge 0
+Q_{xp}(x, p) \ge 0
 \]</div>
 <p>次に，原点 <span class="arithmatex">\(x = 0, p = 0\)</span> を代入します。 <span class="arithmatex">\(R^2 = 0\)</span> となるため，式全体に掛け算されて結果は 0 になります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-Q(0, 0) &amp;= \frac{1}{2\pi\hbar} \cdot 0 \cdot \exp\left( 0 \right) \\
+Q_{xp}(0, 0) &amp;= \frac{1}{4\pi\hbar} \cdot 0 \cdot \exp\left( 0 \right) \\
 &amp;= \finalanswer{0}
 \end{aligned}
 \]</div>

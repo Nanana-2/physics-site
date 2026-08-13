@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">ポアソン方程式とラプラス方程式</h1>
 <h2 id="_2">問題</h2>
-<p>静電場における電位を <span class="arithmatex">\(\phi\)</span>，電場を <span class="arithmatex">\(\boldsymbol{E}\)</span>，体積電荷密度を <span class="arithmatex">\(\rho\)</span> とする。電位が満たすポアソン方程式と，電荷のない領域で成り立つラプラス方程式は，それぞれ，</p>
+<p>静電場における電位を <span class="arithmatex">\(\phi\)</span>，電場を <span class="arithmatex">\(\boldsymbol{E}\)</span>，体積電荷密度を <span class="arithmatex">\(\rho\)</span> とする。電位が満たすポアソン方程式と，電荷のない領域で成り立つラプラス方程式は，それぞれ</p>
 <div class="arithmatex">\[
 \boldsymbol{\nabla}^2\phi
 =-\frac{\rho}{\varepsilon_0},
@@ -14534,36 +14534,36 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>系は <span class="arithmatex">\(y,z\)</span> に依存しないため，ラプラシアンは <span class="arithmatex">\(x\)</span> に関する2階微分だけになります。帯電層内では <span class="arithmatex">\(\rho=\rho_0\)</span> なので，ポアソン方程式は，</p>
+<p>系は <span class="arithmatex">\(y,z\)</span> に依存しないため，ラプラシアンは <span class="arithmatex">\(x\)</span> に関する2階微分だけになります。帯電層内では <span class="arithmatex">\(\rho=\rho_0\)</span> なので，ポアソン方程式は</p>
 <div class="arithmatex">\[
 \frac{d^2\phi}{dx^2}
 =-\frac{\rho_0}{\varepsilon_0},
 \qquad |x|&lt;a
 \]</div>
-<p>です。帯電層外では <span class="arithmatex">\(\rho=0\)</span> なので，ラプラス方程式は，</p>
+<p>です。帯電層外では <span class="arithmatex">\(\rho=0\)</span> なので，ラプラス方程式は</p>
 <div class="arithmatex">\[
 \frac{d^2\phi}{dx^2}=0,
 \qquad |x|&gt;a
 \]</div>
 <p>となります。</p>
-<p>電荷分布は <span class="arithmatex">\(x=0\)</span> に関して対称なので，電位は偶関数，電場は奇関数です。したがって中心では，</p>
+<p>電荷分布は <span class="arithmatex">\(x=0\)</span> に関して対称なので，電位は偶関数，電場は奇関数です。したがって中心では</p>
 <div class="arithmatex">\[
 \left.\frac{d\phi}{dx}\right|_{x=0}=0
 \]</div>
-<p>となります。また問題文で選んだ電位基準より，</p>
+<p>となります。また問題文で選んだ電位基準より</p>
 <div class="arithmatex">\[
 \phi(0)=0
 \]</div>
-<p>です。<span class="arithmatex">\(x=\pm a\)</span> に面電荷がないため，電位と法線電場は連続です。<span class="arithmatex">\(E_x=-d\phi/dx\)</span> なので，境界条件は，</p>
+<p>です。<span class="arithmatex">\(x=\pm a\)</span> に面電荷がないため，電位と法線電場は連続です。<span class="arithmatex">\(E_x=-d\phi/dx\)</span> なので，境界条件は</p>
 <div class="arithmatex">\[
-\phi(a^-)=\phi(a^+),
+\finalanswer{\phi(a^-)=\phi(a^+),
 \qquad
 \left.\frac{d\phi}{dx}\right|_{a^-}
-=\left.\frac{d\phi}{dx}\right|_{a^+}
+=\left.\frac{d\phi}{dx}\right|_{a^+}}
 \]</div>
 <p>です。<span class="arithmatex">\(x=-a\)</span> でも同じ連続条件が成り立ちます。これらの条件によって各領域の積分定数が一意に決まります。</p>
 <h3 id="2">(2)</h3>
-<p>帯電層内のポアソン方程式は，</p>
+<p>帯電層内のポアソン方程式は</p>
 <div class="arithmatex">\[
 \frac{d^2\phi}{dx^2}=-\frac{\rho_0}{\varepsilon_0}
 \]</div>
@@ -14579,25 +14579,25 @@
 &amp;=-\frac{\rho_0x^2}{2\varepsilon_0}+C_1x+C_2.
 \end{aligned}
 \]</div>
-<p>となります。対称性より <span class="arithmatex">\(d\phi/dx=0\)</span> が <span class="arithmatex">\(x=0\)</span> で成り立つため <span class="arithmatex">\(C_1=0\)</span> です。また，<span class="arithmatex">\(\phi(0)=0\)</span> より <span class="arithmatex">\(C_2=0\)</span> です。したがって，</p>
+<p>となります。対称性より <span class="arithmatex">\(d\phi/dx=0\)</span> が <span class="arithmatex">\(x=0\)</span> で成り立つため <span class="arithmatex">\(C_1=0\)</span> です。また，<span class="arithmatex">\(\phi(0)=0\)</span> より <span class="arithmatex">\(C_2=0\)</span> です。したがって</p>
 <div class="arithmatex">\[
 \phi(x)=-\frac{\rho_0x^2}{2\varepsilon_0},\qquad |x|&lt;a
 \]</div>
 <p>です。</p>
 <p><strong>層外の電位</strong></p>
-<p>帯電層の外では <span class="arithmatex">\(d^2\phi/dx^2=0\)</span> なので，電位は <span class="arithmatex">\(x\)</span> の一次関数です。系は <span class="arithmatex">\(x=0\)</span> に関して対称であるため，<span class="arithmatex">\(|x|\)</span> を用いて表せます。<span class="arithmatex">\(x=a\)</span> における内側の電位とその微分は，</p>
+<p>帯電層の外では <span class="arithmatex">\(d^2\phi/dx^2=0\)</span> なので，電位は <span class="arithmatex">\(x\)</span> の一次関数です。系は <span class="arithmatex">\(x=0\)</span> に関して対称であるため，<span class="arithmatex">\(|x|\)</span> を用いて表せます。<span class="arithmatex">\(x=a\)</span> における内側の電位とその微分は</p>
 <div class="arithmatex">\[
 \phi(a)=-\frac{\rho_0a^2}{2\varepsilon_0},\qquad
 \left.\frac{d\phi}{dx}\right|_{x=a}=-\frac{\rho_0a}{\varepsilon_0}
 \]</div>
-<p>です。これらに連続につながる外側の解は，</p>
+<p>です。これらに連続につながる外側の解は</p>
 <div class="arithmatex">\[
 \phi(x)=-\frac{\rho_0a}{\varepsilon_0}|x|
 +\frac{\rho_0a^2}{2\varepsilon_0},\qquad |x|&gt;a
 \]</div>
 <p>となります。帯電層は無限に広いため，無限遠で電位をゼロには選べません。ここでは中心を電位の基準にしています。</p>
 <p><strong>電場との整合性</strong></p>
-<p>電場は <span class="arithmatex">\(\boldsymbol{E}=-(d\phi/dx)\boldsymbol{e}_x\)</span> です。よって，</p>
+<p>電場は <span class="arithmatex">\(\boldsymbol{E}=-(d\phi/dx)\boldsymbol{e}_x\)</span> です。よって</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(x)=
 \begin{cases}
@@ -14605,22 +14605,22 @@
 \dfrac{\rho_0a}{\varepsilon_0}\operatorname{sgn}(x)\boldsymbol{e}_x,&amp;|x|&gt;a
 \end{cases}
 \]</div>
-<p>となります。中心面をまたぐ底面積 <span class="arithmatex">\(S\)</span>，両端が <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(-x\)</span> にある直方体をガウス面に選ぶと，<span class="arithmatex">\(|x|&lt;a\)</span> では，</p>
+<p>となります。中心面をまたぐ底面積 <span class="arithmatex">\(S\)</span>，両端が <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(-x\)</span> にある直方体をガウス面に選ぶと，<span class="arithmatex">\(|x|&lt;a\)</span> では</p>
 <div class="arithmatex">\[
-2E(x)S=\frac{\rho_0(2xS)}{\varepsilon_0}
+\finalanswer{2E(x)S=\frac{\rho_0(2xS)}{\varepsilon_0}}
 \]</div>
 <p>です。<span class="arithmatex">\(x&gt;a\)</span> では囲む電荷を <span class="arithmatex">\(2a\rho_0S\)</span> とすれば，同じ結果が得られます。</p>
 <h3 id="3">(3)</h3>
-<p>一次元のガウスの法則は，</p>
+<p>一次元のガウスの法則は</p>
 <div class="arithmatex">\[
 \frac{dE}{dx}=\frac{\rho(x)}{\varepsilon_0}
 \]</div>
-<p>です。中心から <span class="arithmatex">\(x\)</span> まで積分し，対称性による <span class="arithmatex">\(E(0)=0\)</span> を用いると，</p>
+<p>です。中心から <span class="arithmatex">\(x\)</span> まで積分し，対称性による <span class="arithmatex">\(E(0)=0\)</span> を用いると</p>
 <div class="arithmatex">\[
 E(x)=\frac{1}{\varepsilon_0}
 \int_0^x\rho(x')\,dx'
 \]</div>
-<p>となります。偶関数の電荷分布に対して，この電場は奇関数です。さらに <span class="arithmatex">\(E=-d\phi/dx\)</span> と <span class="arithmatex">\(\phi(0)=0\)</span> を用いると，</p>
+<p>となります。偶関数の電荷分布に対して，この電場は奇関数です。さらに <span class="arithmatex">\(E=-d\phi/dx\)</span> と <span class="arithmatex">\(\phi(0)=0\)</span> を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \phi(x)
@@ -14629,14 +14629,14 @@ E(x)=\frac{1}{\varepsilon_0}
 \int_0^x ds\int_0^s\rho(x')\,dx'.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(x&gt;0\)</span> では積分領域が <span class="arithmatex">\(0\le x'\le s\le x\)</span> です。先に <span class="arithmatex">\(s\)</span> で積分する順序へ交換すると <span class="arithmatex">\(0\le x'\le x\)</span>，<span class="arithmatex">\(x'\le s\le x\)</span> となるので，</p>
+<p><span class="arithmatex">\(x&gt;0\)</span> では積分領域が <span class="arithmatex">\(0\le x'\le s\le x\)</span> です。先に <span class="arithmatex">\(s\)</span> で積分する順序へ交換すると <span class="arithmatex">\(0\le x'\le x\)</span>，<span class="arithmatex">\(x'\le s\le x\)</span> となるので</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \phi(x)
 &amp;=-\frac{1}{\varepsilon_0}
 \int_0^x\rho(x')
 \left(\int_{x'}^x ds\right)dx' \\
-&amp;=-\frac{1}{\varepsilon_0}
+&amp;=\finalanswer{-\frac{1}{\varepsilon_0}}
 \int_0^x(x-x')\rho(x')\,dx',
 \qquad x&gt;0.
 \end{aligned}

@@ -14519,7 +14519,7 @@
 <h1 id="_1">接地導体球と点電荷の鏡像法</h1>
 <h2 id="_2">問題</h2>
 <p>半径 <span class="arithmatex">\(R\)</span> の導体球を原点中心に置いて接地する。<span class="arithmatex">\(z\)</span> 軸上の <span class="arithmatex">\(z=a\)</span> に点電荷 <span class="arithmatex">\(q&gt;0\)</span> を置く。ただし <span class="arithmatex">\(a&gt;R\)</span> である。球外領域 <span class="arithmatex">\(r&gt;R\)</span> の電位は球面でゼロ，無限遠でゼロとする。</p>
-<p>鏡像電荷を <span class="arithmatex">\(z=b\)</span> に置く電荷 <span class="arithmatex">\(q'\)</span> とし，</p>
+<p>鏡像電荷を <span class="arithmatex">\(z=b\)</span> に置く電荷 <span class="arithmatex">\(q'\)</span> とし</p>
 <div class="arithmatex">\[
 b=\frac{R^2}{a},
 \qquad
@@ -14532,18 +14532,18 @@ q'=-\frac{R}{a}q
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>二つの電荷までの距離を，</p>
+<p>二つの電荷までの距離を</p>
 <div class="arithmatex">\[
 d_a=\sqrt{r^2+a^2-2ar\cos\theta},
 \qquad
 d_b=\sqrt{r^2+b^2-2br\cos\theta}
 \]</div>
-<p>とすると，球外電位は，</p>
+<p>とすると，球外電位は</p>
 <div class="arithmatex">\[
 \phi(r,\theta)=\frac{1}{4\pi\varepsilon_0}
 \left(\frac{q}{d_a}+\frac{q'}{d_b}\right)
 \]</div>
-<p>です。<span class="arithmatex">\(r=R\)</span> と <span class="arithmatex">\(b=R^2/a\)</span> を代入すると，</p>
+<p>です。<span class="arithmatex">\(r=R\)</span> と <span class="arithmatex">\(b=R^2/a\)</span> を代入すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 d_b^2
@@ -14553,15 +14553,15 @@ d_b^2
 &amp;=\frac{R^2}{a^2}d_a^2.
 \end{aligned}
 \]</div>
-<p>したがって <span class="arithmatex">\(d_b=(R/a)d_a\)</span> です。よって，</p>
+<p>したがって <span class="arithmatex">\(d_b=(R/a)d_a\)</span> です。よって</p>
 <div class="arithmatex">\[
-\frac{q}{d_a}+\frac{q'}{d_b}
+\finalanswer{\frac{q}{d_a}+\frac{q'}{d_b}
 =\frac{q}{d_a}
--\frac{qR/a}{(R/a)d_a}=0
+-\frac{qR/a}{(R/a)d_a}=0}
 \]</div>
 <p>となり，接地境界条件を満たします。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(E_r=-\partial\phi/\partial r\)</span> を計算し，<span class="arithmatex">\(r=R\)</span> を代入して整理すると，</p>
+<p><span class="arithmatex">\(E_r=-\partial\phi/\partial r\)</span> を計算し，<span class="arithmatex">\(r=R\)</span> を代入して整理すると</p>
 <div class="arithmatex">\[
 \sigma_s(\theta)
 =-\frac{q(a^2-R^2)}{4\pi R}
@@ -14579,7 +14579,7 @@ Q_{\mathrm{ind}}
 {(a^2+R^2-2aR\cos\theta)^{3/2}}.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(u=a^2+R^2-2aR\cos\theta\)</span> と置くと <span class="arithmatex">\(du=2aR\sin\theta\,d\theta\)</span> で，端点は <span class="arithmatex">\((a-R)^2\)</span> と <span class="arithmatex">\((a+R)^2\)</span> です。したがって，</p>
+<p><span class="arithmatex">\(u=a^2+R^2-2aR\cos\theta\)</span> と置くと <span class="arithmatex">\(du=2aR\sin\theta\,d\theta\)</span> で，端点は <span class="arithmatex">\((a-R)^2\)</span> と <span class="arithmatex">\((a+R)^2\)</span> です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
 Q_{\mathrm{ind}}
@@ -14587,21 +14587,21 @@ Q_{\mathrm{ind}}
 \int_{(a-R)^2}^{(a+R)^2}u^{-3/2}\,du \\
 &amp;=-\frac{q(a^2-R^2)}{4a}
 [-2u^{-1/2}]_{(a-R)^2}^{(a+R)^2} \\
-&amp;=-\frac{qR}{a}=q'.
+&amp;=\finalanswer{-\frac{qR}{a}=q'}.
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>実電荷に働く力は鏡像電荷が作る電場から求められます。二電荷間の距離は，</p>
+<p>実電荷に働く力は鏡像電荷が作る電場から求められます。二電荷間の距離は</p>
 <div class="arithmatex">\[
 a-b=a-\frac{R^2}{a}=\frac{a^2-R^2}{a}
 \]</div>
-<p>です。したがって，</p>
+<p>です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
 F_z
 &amp;=\frac{1}{4\pi\varepsilon_0}
 \frac{qq'}{(a-b)^2} \\
-&amp;=-\frac{1}{4\pi\varepsilon_0}
+&amp;=\finalanswer{-\frac{1}{4\pi\varepsilon_0}}
 \frac{q^2Ra}{(a^2-R^2)^2}.
 \end{aligned}
 \]</div>

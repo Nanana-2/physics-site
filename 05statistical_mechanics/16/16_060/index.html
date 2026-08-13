@@ -14616,22 +14616,22 @@
 \end{aligned}
 \]</div>
 <p>これら2つの行列の各要素を足し合わせることで，時刻 <span class="arithmatex">\(t\)</span> における密度行列 <span class="arithmatex">\(\rho_{\mathrm{S}}(t)\)</span> が求まります。</p>
-<p>$$</p>
-<p>\finalanswer{\rho_{\mathrm{S}}(t) =
+<div class="arithmatex">\[
+\finalanswer{\rho_{\mathrm{S}}(t) =
 \begin{pmatrix}
-\rho_{00} + \gamma\rho_{11} &amp; \sqrt{1-\gamma}\rho_{01} \
+\rho_{00} + \gamma\rho_{11} &amp; \sqrt{1-\gamma}\rho_{01} \\
 \sqrt{1-\gamma}\rho_{10} &amp; (1-\gamma)\rho_{11}
-\end{pmatrix}}</p>
-<p>$$</p>
+\end{pmatrix}}
+\]</div>
 <p><strong>物理的現象の説明</strong></p>
 <p>十分に時間が経過して周囲への散逸が進んだ極限 <span class="arithmatex">\(\gamma = 1\)</span> を考えます。上記の行列式に <span class="arithmatex">\(\gamma = 1\)</span> を代入すると以下のようになります。</p>
-<p>$$</p>
-<p>\finalanswer{\rho_{\mathrm{S}}(\infty) =
-\begin{pmatrix} 1 &amp; 0 \ 0 &amp; 0 \end{pmatrix}}</p>
-<p>$$</p>
+<div class="arithmatex">\[
+\finalanswer{\rho_{\mathrm{S}}(\infty) =
+\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}}
+\]</div>
 <ul>
-<li><strong>散逸</strong>: 上準位の存在確率を表す <span class="arithmatex">\(\rho_{11}\)</span> が 0 に減少する一方で，下準位の確率が <span class="arithmatex">\(\rho_{00} + \rho_{11} = 1\)</span> へと変化しています。これは，系が持っていたエネルギーが環境へとすべて逃げていき，基底状態へと落ち切る散逸プロセスに対応します。</li>
-<li><strong>デコヒーレンス</strong>: 量子力学的な複素位相の干渉効果を表す非対角項 <span class="arithmatex">\(\sqrt{1-\gamma}\rho_{01}\)</span> が， <span class="arithmatex">\(\gamma=1\)</span> によって0 へと消滅しています。環境との微視的な相互作用により，系単体のコヒーレンスが消失するデコヒーレンスプロセスが数学的に確認できます。</li>
+<li><strong>散逸</strong>：上準位の存在確率を表す <span class="arithmatex">\(\rho_{11}\)</span> が 0 に減少する一方で，下準位の確率が <span class="arithmatex">\(\rho_{00} + \rho_{11} = 1\)</span> へと変化しています。これは，系が持っていたエネルギーが環境へとすべて逃げていき，基底状態へと落ち切る散逸プロセスに対応します。</li>
+<li><strong>デコヒーレンス</strong>：量子力学的な複素位相の干渉効果を表す非対角項 <span class="arithmatex">\(\sqrt{1-\gamma}\rho_{01}\)</span> が， <span class="arithmatex">\(\gamma=1\)</span> によって0 へと消滅しています。環境との微視的な相互作用により，系単体のコヒーレンスが消失するデコヒーレンスプロセスが数学的に確認できます。</li>
 </ul>
 
 

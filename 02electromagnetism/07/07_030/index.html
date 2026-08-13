@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">電磁波の波動方程式</h1>
 <h2 id="_2">問題</h2>
-<p>電荷と電流が存在しない真空中で，電場と磁場は，</p>
+<p>電荷と電流が存在しない真空中で，電場と磁場は</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \nabla\cdot\boldsymbol{E}&amp;=0,
@@ -14528,7 +14528,7 @@
 \frac{\partial\boldsymbol{E}}{\partial t}
 \end{aligned}
 \]</div>
-<p>を満たす。ベクトル恒等式，</p>
+<p>を満たす。ベクトル恒等式</p>
 <div class="arithmatex">\[
 \nabla\times(\nabla\times\boldsymbol{A})
 =\nabla(\nabla\cdot\boldsymbol{A})-\nabla^2\boldsymbol{A}
@@ -14540,8 +14540,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>目標は，電場だけを含む方程式を作ることです。そのため，まずファラデーの法則に回転を作用させ，右辺に現れる <span class="arithmatex">\(\nabla\times\boldsymbol{B}\)</span> をアンペール・マクスウェルの法則で電場の時間微分へ置き換えます。</p>
-<p>ファラデーの法則の回転をとると，</p>
+<p>ファラデーの法則の回転をとると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \nabla\times(\nabla\times\boldsymbol{E})
@@ -14551,7 +14550,7 @@
 \frac{\partial^2\boldsymbol{E}}{\partial t^2}.
 \end{aligned}
 \]</div>
-<p>第二行ではアンペール・マクスウェルの法則を用いました。一方，恒等式と <span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> より，</p>
+<p>第二行ではアンペール・マクスウェルの法則を用いました。一方，恒等式と <span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> より</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \nabla\times(\nabla\times\boldsymbol{E})
@@ -14559,11 +14558,11 @@
 &amp;=-\nabla^2\boldsymbol{E}.
 \end{aligned}
 \]</div>
-<p>両者を等置して負号を消すと，</p>
+<p>両者を等置して負号を消すと</p>
 <div class="arithmatex">\[
-\nabla^2\boldsymbol{E}
+\finalanswer{\nabla^2\boldsymbol{E}
 -\mu_0\varepsilon_0
-\frac{\partial^2\boldsymbol{E}}{\partial t^2}=0
+\frac{\partial^2\boldsymbol{E}}{\partial t^2}=0}
 \]</div>
 <p>を得ます。</p>
 <h3 id="2">(2)</h3>
@@ -14578,22 +14577,22 @@
 \frac{\partial^2\boldsymbol{B}}{\partial t^2}.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> より左辺は <span class="arithmatex">\(-\nabla^2\boldsymbol{B}\)</span> なので，</p>
+<p><span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> より左辺は <span class="arithmatex">\(-\nabla^2\boldsymbol{B}\)</span> なので</p>
 <div class="arithmatex">\[
 \nabla^2\boldsymbol{B}
 -\mu_0\varepsilon_0
 \frac{\partial^2\boldsymbol{B}}{\partial t^2}=0
 \]</div>
-<p>となります。一般形と係数を比較すると，</p>
+<p>となります。一般形と係数を比較すると</p>
 <div class="arithmatex">\[
-\frac{1}{v^2}=\mu_0\varepsilon_0,
+\finalanswer{\frac{1}{v^2}=\mu_0\varepsilon_0,
 \qquad
-v=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c
+v=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c}
 \]</div>
 <p>です。</p>
 <h3 id="3">(3)</h3>
 <p>平面波が波動方程式の解であるためには，空間微分から生じる <span class="arithmatex">\(k^2\)</span> と時間微分から生じる <span class="arithmatex">\(\omega^2\)</span> の係数が一致しなければなりません。この条件が分散関係です。</p>
-<p>空間と時間について二回微分すると，</p>
+<p>空間と時間について二回微分すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{\partial^2\boldsymbol{E}}{\partial z^2}
@@ -14604,7 +14603,7 @@ v=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c
 =-\omega^2\boldsymbol{E}.
 \end{aligned}
 \]</div>
-<p>波動方程式へ代入すると，</p>
+<p>波動方程式へ代入すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 -k^2\boldsymbol{E}
@@ -14612,10 +14611,10 @@ v=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c
 \omega^2&amp;=\frac{k^2}{\mu_0\varepsilon_0}.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\omega&gt;0\)</span>，<span class="arithmatex">\(k&gt;0\)</span> より，</p>
+<p><span class="arithmatex">\(\omega&gt;0\)</span>，<span class="arithmatex">\(k&gt;0\)</span> より</p>
 <div class="arithmatex">\[
-\frac{\omega}{k}
-=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c
+\finalanswer{\frac{\omega}{k}
+=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c}
 \]</div>
 <p>となります。真空中では周波数によらず同じ位相速度で伝わります。</p>
 

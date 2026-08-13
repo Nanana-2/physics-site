@@ -14552,12 +14552,17 @@ T_{\text{c}} = \frac{8a}{27bR}
 \]</div>
 <p>最後に，得られた臨界体積と臨界温度の値を元の状態方程式に代入して，臨界圧力を計算します。</p>
 <div class="arithmatex">\[
-P_{\text{c}} = \frac{R \left(\frac{8a}{27bR}\right)}{3b - b} - \frac{a}{(3b)^2} = \frac{8a}{27b(2b)} - \frac{a}{9b^2} = \frac{4a}{27b^2} - \frac{3a}{27b^2} = \frac{a}{27b^2}
+P_{\text{c}} = \frac{R \left(\frac{8a}{27bR}\right)}{3b - b} - \frac{a}{(3b)^2} = \frac{8a}{27b(2b)} - \frac{a}{9b^2} = \frac{4a}{27b^2} - \frac{3a}{27b^2} = \finalanswer{\frac{a}{27b^2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>温度を臨界温度に固定した状態で，圧力 <span class="arithmatex">\(P\)</span> を臨界体積のまわりでテイラー展開します。</p>
 <div class="arithmatex">\[
-P(v) = P(v_{\text{c}}) + \left( \frac{\partial P}{\partial v} \right)_{T_{\text{c}}, v_{\text{c}}} (v - v_{\text{c}}) + \frac{1}{2} \left( \frac{\partial^2 P}{\partial v^2} \right)_{T_{\text{c}}, v_{\text{c}}} (v - v_{\text{c}})^2 + \frac{1}{6} \left( \frac{\partial^3 P}{\partial v^3} \right)_{T_{\text{c}}, v_{\text{c}}} (v - v_{\text{c}})^3 + \dots
+\begin{aligned}
+P(v)={}&amp;P(v_{\text{c}})
++\left(\frac{\partial P}{\partial v}\right)_{T_{\text{c}},v_{\text{c}}}(v-v_{\text{c}}) \\
+&amp;+\frac{1}{2}\left(\frac{\partial^2P}{\partial v^2}\right)_{T_{\text{c}},v_{\text{c}}}(v-v_{\text{c}})^2 \\
+&amp;+\frac{1}{6}\left(\frac{\partial^3P}{\partial v^3}\right)_{T_{\text{c}},v_{\text{c}}}(v-v_{\text{c}})^3+\cdots
+\end{aligned}
 \]</div>
 <p>臨界点の定義式より， $P(v_{\text{c}}) = P_{\text{c}} $ であり，1階偏微分および2階偏微分の値は 0 となります。したがって，右辺の第2項と第3項は消去されます。</p>
 <div class="arithmatex">\[
@@ -14577,7 +14582,7 @@ P - P_{\text{c}} \approx - \frac{a}{486b^5} (v - v_{\text{c}})^3
 \]</div>
 <p>問題文に提示された比例関係 <span class="arithmatex">\(P - P_{\text{c}} \propto -(v - v_{\text{c}})^\delta\)</span> と比較すると，べき乗の指数は 3 であることがわかります。したがって，臨界指数は次のように決定されます。</p>
 <div class="arithmatex">\[
-\delta = 3
+\finalanswer{\delta = 3}
 \]</div>
 
 

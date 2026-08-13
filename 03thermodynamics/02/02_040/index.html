@@ -14496,50 +14496,28 @@
 
 <h1 id="_1">比熱の関係式</h1>
 <h2 id="_2">問題</h2>
-<p>物質量 <span class="arithmatex">\(n\)</span> の理想気体を考える。独立な状態変数として温度 <span class="arithmatex">\(T\)</span> と体積 <span class="arithmatex">\(V\)</span> を選ぶとき，熱力学第一法則から導かれるエンタルピー <span class="arithmatex">\(H = U + PV\)</span> の全微分は，定圧熱容量 <span class="arithmatex">\(C_P\)</span> と定積熱容量 <span class="arithmatex">\(C_V\)</span> ，および気体定数 <span class="arithmatex">\(R\)</span> を用いて記述される。以下の問いに答えよ。</p>
-<p>(1) 理想気体の内部エネルギー変化が <span class="arithmatex">\(dU = C_V dT\)</span> と表され，状態方程式が <span class="arithmatex">\(PV = nRT\)</span> であることを利用して，エンタルピーの微小変化 <span class="arithmatex">\(dH\)</span> を <span class="arithmatex">\(dT\)</span> と <span class="arithmatex">\(dV\)</span> の形式で書き下せ。さらに，状態方程式の微分形式から <span class="arithmatex">\(dV\)</span> を <span class="arithmatex">\(dT\)</span> と <span class="arithmatex">\(dP\)</span> で置き換えることにより，次の等式を導け。</p>
+<p>物質量 <span class="arithmatex">\(n\)</span> の理想気体を考える。エンタルピーを <span class="arithmatex">\(H=U+PV\)</span> とし，系全体の定積熱容量と定圧熱容量をそれぞれ <span class="arithmatex">\(C_V,C_P\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) <span class="arithmatex">\(dU=C_VdT\)</span> と状態方程式 <span class="arithmatex">\(PV=nRT\)</span> を用いて，エンタルピーの微小変化が次式で表されることを示せ。</p>
 <div class="arithmatex">\[
-dH = (C_V + nR) dT + \frac{nRT}{P} dP
+dH = (C_V + nR) dT
 \]</div>
-<p>(2) エンタルピーを独立変数 <span class="arithmatex">\(T, P\)</span> の関数 <span class="arithmatex">\(H(T, P)\)</span> とみなすとき，定圧熱容量の定義は <span class="arithmatex">\(C_P = \left(\frac{\partial H}{\partial T}\right)_P\)</span> である。 (1) で得られた <span class="arithmatex">\(dH\)</span> の式から偏微分係数 <span class="arithmatex">\(\left(\frac{\partial H}{\partial T}\right)_P\)</span> を抽出し，マイヤーの関係式 <span class="arithmatex">\(C_P - C_V = nR\)</span> を導出せよ。また，比熱比 <span class="arithmatex">\(\partial = \frac{C_P}{C_V}\)</span> を用いて， <span class="arithmatex">\(C_V\)</span> と <span class="arithmatex">\(C_P\)</span> をそれぞれ <span class="arithmatex">\(n, R, \partial\)</span> を用いて表せ。</p>
+<p>(2) エンタルピーを <span class="arithmatex">\(H(T,P)\)</span> とみなし，<span class="arithmatex">\(C_P=\left(\frac{\partial H}{\partial T}\right)_P\)</span> と定義する。 (1) の結果からマイヤーの関係式 <span class="arithmatex">\(C_P-C_V=nR\)</span> を導出せよ。また，比熱比 <span class="arithmatex">\(\gamma=C_P/C_V\)</span> を用いて，<span class="arithmatex">\(C_V\)</span> と <span class="arithmatex">\(C_P\)</span> をそれぞれ <span class="arithmatex">\(n,R,\gamma\)</span> で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>エンタルピーの定義式 <span class="arithmatex">\(H = U + PV\)</span> の全微分を計算します。</p>
+<p>エンタルピーの定義式 <span class="arithmatex">\(H=U+PV\)</span> を微分します。</p>
 <div class="arithmatex">\[
 dH = dU + d(PV) = dU + P dV + V dP
 \]</div>
-<p>理想気体の性質より <span class="arithmatex">\(dU = C_V dT\)</span> を代入します。</p>
+<p>理想気体では <span class="arithmatex">\(dU=C_VdT\)</span> であり，状態方程式の微分から <span class="arithmatex">\(d(PV)=nR\,dT\)</span> です。したがって，</p>
 <div class="arithmatex">\[
-dH = C_V dT + P dV + V dP \quad \cdots \text{式1}
+dH = C_VdT+nR\,dT
 \]</div>
-<p>次に，理想気体の状態方程式 <span class="arithmatex">\(PV = nRT\)</span> の全微分をとります。</p>
+<p>すなわち，</p>
 <div class="arithmatex">\[
-P dV + V dP = nR dT
+\finalanswer{dH=(C_V+nR)dT}
 \]</div>
-<p>この式を <span class="arithmatex">\(P dV\)</span> について整理します。</p>
-<div class="arithmatex">\[
-P dV = nR dT - V dP
-\]</div>
-<p>この関係を式1の第 2 項に代入します。</p>
-<div class="arithmatex">\[
-dH = C_V dT + (nR dT - V dP) + V dP = (C_V + nR) dT
-\]</div>
-<p>ここで，独立変数を <span class="arithmatex">\(T, P\)</span> に統一するため，状態方程式から <span class="arithmatex">\(V = \frac{nRT}{P}\)</span> を用いて，本来の全微分形式における <span class="arithmatex">\(dP\)</span> の依存性を明示的に残す変形を行います。式1に対して，状態方程式から得られる <span class="arithmatex">\(dV\)</span> の微分形式を直接代入します。</p>
-<div class="arithmatex">\[
-dV = \frac{nR}{P} dT - \frac{nRT}{P^2} dP
-\]</div>
-<p>これを式1に代入して整理します。</p>
-<div class="arithmatex">\[
-dH = C_V dT + P \left( \frac{nR}{P} dT - \frac{nRT}{P^2} dP \right) + V dP
-\]</div>
-<div class="arithmatex">\[
-dH = C_V dT + nR dT - \frac{nRT}{P} dP + \frac{nRT}{P} dP
-\]</div>
-<p>独立変数の微小量 <span class="arithmatex">\(dT, dP\)</span> ごとに係数をまとめます。</p>
-<div class="arithmatex">\[
-dH = (C_V + nR) dT + \frac{nRT}{P} dP
-\]</div>
+<p>となります。理想気体のエンタルピーは温度だけに依存します。</p>
 <h3 id="2">(2)</h3>
 <p>関数 <span class="arithmatex">\(H(T, P)\)</span> の全微分は一般に次のように書き表されます。</p>
 <div class="arithmatex">\[
@@ -14555,22 +14533,22 @@ C_P = C_V + nR
 \]</div>
 <p>左辺の <span class="arithmatex">\(C_V\)</span> を移行することで，目的のマイヤーの関係式が導かれます。</p>
 <div class="arithmatex">\[
-C_P - C_V = nR
+\finalanswer{C_P - C_V = nR}
 \]</div>
-<p>次に，比熱比の定義 <span class="arithmatex">\(\partial = \frac{C_P}{C_V}\)</span> より <span class="arithmatex">\(C_P = \partial C_V\)</span> と置きます。これをマイヤーの関係式に代入します。</p>
+<p>次に，比熱比の定義 <span class="arithmatex">\(\gamma=C_P/C_V\)</span> より <span class="arithmatex">\(C_P=\gamma C_V\)</span> と置きます。これをマイヤーの関係式に代入します。</p>
 <div class="arithmatex">\[
-\partial C_V - C_V = nR
+\gamma C_V-C_V=nR
 \]</div>
 <div class="arithmatex">\[
-(\partial - 1) C_V = nR
+(\gamma-1)C_V=nR
 \]</div>
-<p>両辺を <span class="arithmatex">\(\partial - 1\)</span> で割り算します。</p>
+<p>したがって，</p>
 <div class="arithmatex">\[
-C_V = \frac{nR}{\partial - 1}
+\finalanswer{C_V=\frac{nR}{\gamma-1}}
 \]</div>
-<p>この結果を <span class="arithmatex">\(C_P = \partial C_V\)</span> に代入します。</p>
+<p>また，<span class="arithmatex">\(C_P=\gamma C_V\)</span> より，</p>
 <div class="arithmatex">\[
-C_P = \frac{\partial nR}{\partial - 1}
+\finalanswer{C_P=\frac{\gamma nR}{\gamma-1}}
 \]</div>
 <p>これにより，各熱容量が比熱比を用いて表されました。</p>
 

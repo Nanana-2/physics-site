@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">点電荷が作る電場と電位</h1>
 <h2 id="_2">問題</h2>
-<p>真空中の静電場を考える。真空の誘電率を <span class="arithmatex">\(\varepsilon_0\)</span> とし，無限遠における電位をゼロとする。位置 <span class="arithmatex">\(\boldsymbol{r}'\)</span> にある点電荷 <span class="arithmatex">\(q\)</span> が位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> に作る電場は，クーロンの法則，</p>
+<p>真空中の静電場を考える。真空の誘電率を <span class="arithmatex">\(\varepsilon_0\)</span> とし，無限遠における電位をゼロとする。位置 <span class="arithmatex">\(\boldsymbol{r}'\)</span> にある点電荷 <span class="arithmatex">\(q\)</span> が位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> に作る電場は，クーロンの法則</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(\boldsymbol{r})
 =\frac{q}{4\pi\varepsilon_0}
@@ -14540,7 +14540,7 @@
 <p><span class="arithmatex">\(q&gt;0\)</span> なら外向き，<span class="arithmatex">\(q&lt;0\)</span> なら内向きです。</p>
 <p><strong>電位の導出</strong></p>
 <p>球対称性より電位は <span class="arithmatex">\(r\)</span> だけの関数です。したがって <span class="arithmatex">\(E_r=-d\phi/dr\)</span> を積分します。</p>
-<p>積分変数を <span class="arithmatex">\(r'\)</span> とし，<span class="arithmatex">\(\int r'^{-2}dr'=-r'^{-1}\)</span> を用いると，</p>
+<p>積分変数を <span class="arithmatex">\(r'\)</span> とし，<span class="arithmatex">\(\int r'^{-2}dr'=-r'^{-1}\)</span> を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \phi(r)-\phi(\infty)
@@ -14550,13 +14550,13 @@
 &amp;=\frac{q}{4\pi\varepsilon_0 r}.
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\phi(\infty)=0\)</span> を用いたので，</p>
+<p><span class="arithmatex">\(\phi(\infty)=0\)</span> を用いたので</p>
 <div class="arithmatex">\[
-\phi(r)=\frac{q}{4\pi\varepsilon_0 r}
+\finalanswer{\phi(r)=\frac{q}{4\pi\varepsilon_0 r}}
 \]</div>
 <p>が得られます。</p>
 <h3 id="2">(2)</h3>
-<p>二つの電荷から点 <span class="arithmatex">\(P\)</span> までの距離はいずれも <span class="arithmatex">\(\sqrt{a^2+y^2}\)</span> です。それぞれの電場を足すと，<span class="arithmatex">\(x\)</span> 成分は対称性によって打ち消し合います。一方，<span class="arithmatex">\(y\)</span> 成分は加わるため，</p>
+<p>二つの電荷から点 <span class="arithmatex">\(P\)</span> までの距離はいずれも <span class="arithmatex">\(\sqrt{a^2+y^2}\)</span> です。それぞれの電場を足すと，<span class="arithmatex">\(x\)</span> 成分は対称性によって打ち消し合います。一方，<span class="arithmatex">\(y\)</span> 成分は加わるため</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(0,y,0)
 =\frac{q}{4\pi\varepsilon_0}\frac{(-a,y,0)+(a,y,0)}{(a^2+y^2)^{3/2}}
@@ -14567,30 +14567,30 @@
 \phi(0,y,0)=\frac{2q}{4\pi\varepsilon_0\sqrt{a^2+y^2}}
 \]</div>
 <p><strong>遠方での振る舞い</strong></p>
-<p><span class="arithmatex">\(|y|\gg a\)</span> では <span class="arithmatex">\(a^2+y^2\simeq y^2\)</span> と近似できます。したがって，</p>
+<p><span class="arithmatex">\(|y|\gg a\)</span> では <span class="arithmatex">\(a^2+y^2\simeq y^2\)</span> と近似できます。したがって</p>
 <div class="arithmatex">\[
 \phi(0,y,0)\simeq\frac{2q}{4\pi\varepsilon_0|y|}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{E}(0,y,0)\simeq
-\frac{2q}{4\pi\varepsilon_0}\frac{y}{|y|^3}\boldsymbol{e}_y
+\finalanswer{\boldsymbol{E}(0,y,0)\simeq
+\frac{2q}{4\pi\varepsilon_0}\frac{y}{|y|^3}\boldsymbol{e}_y}
 \]</div>
 <p>となります。これは原点に点電荷 <span class="arithmatex">\(2q\)</span> を置いたときの電位と電場です。遠方からは電荷間の距離 <span class="arithmatex">\(2a\)</span> を分解できず，全電荷が主要な寄与を与えます。</p>
 <h3 id="3">(3)</h3>
-<p>二つの電荷から観測点までの距離は，正電荷から <span class="arithmatex">\(x-a\)</span>，負電荷から <span class="arithmatex">\(x+a\)</span> です。重ね合わせにより，</p>
+<p>二つの電荷から観測点までの距離は，正電荷から <span class="arithmatex">\(x-a\)</span>，負電荷から <span class="arithmatex">\(x+a\)</span> です。重ね合わせにより</p>
 <div class="arithmatex">\[
 \phi(x)=\frac{q}{4\pi\varepsilon_0}
 \left(\frac{1}{x-a}-\frac{1}{x+a}\right)
 \]</div>
-<p>となります。通分すると，</p>
+<p>となります。通分すると</p>
 <div class="arithmatex">\[
 \phi(x)=\frac{q}{4\pi\varepsilon_0}
 \frac{2a}{x^2-a^2}
 \]</div>
-<p>です。<span class="arithmatex">\(x\gg a\)</span> では <span class="arithmatex">\(x^2-a^2\simeq x^2\)</span> なので，</p>
+<p>です。<span class="arithmatex">\(x\gg a\)</span> では <span class="arithmatex">\(x^2-a^2\simeq x^2\)</span> なので</p>
 <div class="arithmatex">\[
-\phi(x)\simeq\frac{2qa}{4\pi\varepsilon_0x^2}
-=\frac{p}{4\pi\varepsilon_0x^2}
+\finalanswer{\phi(x)\simeq\frac{2qa}{4\pi\varepsilon_0x^2}
+=\frac{p}{4\pi\varepsilon_0x^2}}
 \]</div>
 <p>となります。同符号の二電荷では全電荷がゼロでないため電位の主要項は <span class="arithmatex">\(1/x\)</span> でした。双極子では全電荷がゼロでその項が打ち消され，電位はより速い <span class="arithmatex">\(1/x^2\)</span> で減衰します。</p>
 

@@ -14527,20 +14527,20 @@
 <h3 id="1">(1)</h3>
 <p>実電荷と鏡像電荷が作る電位を重ね合わせます。</p>
 <div class="arithmatex">\[
-\phi(\rho,z)=\frac{q}{4\pi\varepsilon_0}
+\finalanswer{\phi(\rho,z)=\frac{q}{4\pi\varepsilon_0}
 \left[
 \frac{1}{\sqrt{\rho^2+(z-a)^2}}
 -\frac{1}{\sqrt{\rho^2+(z+a)^2}}
-\right]
+\right]}
 \]</div>
 <p><span class="arithmatex">\(z=0\)</span> では二つの距離が等しいため <span class="arithmatex">\(\phi(\rho,0)=0\)</span> です。この電位は <span class="arithmatex">\(z&gt;0\)</span> でポアソン方程式と接地境界条件を満たすため，一意性定理によって実際の解です。</p>
 <h3 id="2">(2)</h3>
-<p>表面直外の法線電場は <span class="arithmatex">\(E_z=-\partial\phi/\partial z\)</span> の <span class="arithmatex">\(z=0\)</span> における値です。微分すると，</p>
+<p>表面直外の法線電場は <span class="arithmatex">\(E_z=-\partial\phi/\partial z\)</span> の <span class="arithmatex">\(z=0\)</span> における値です。微分すると</p>
 <div class="arithmatex">\[
 E_z(\rho,0)
 =-\frac{qa}{2\pi\varepsilon_0(\rho^2+a^2)^{3/2}}
 \]</div>
-<p>となります。導体表面では <span class="arithmatex">\(\sigma_s=\varepsilon_0E_z\)</span> なので，</p>
+<p>となります。導体表面では <span class="arithmatex">\(\sigma_s=\varepsilon_0E_z\)</span> なので</p>
 <div class="arithmatex">\[
 \sigma_s(\rho)
 =-\frac{qa}{2\pi(\rho^2+a^2)^{3/2}}
@@ -14548,7 +14548,7 @@ E_z(\rho,0)
 <p>です。</p>
 <p><strong>誘導電荷の総量</strong></p>
 <p>面積要素は <span class="arithmatex">\(dS=2\pi\rho\,d\rho\)</span> です。</p>
-<p><span class="arithmatex">\(u=\rho^2+a^2\)</span> と置くと <span class="arithmatex">\(du=2\rho\,d\rho\)</span> であり，積分範囲は <span class="arithmatex">\(u=a^2\)</span> から <span class="arithmatex">\(\infty\)</span> へ変わります。したがって，</p>
+<p><span class="arithmatex">\(u=\rho^2+a^2\)</span> と置くと <span class="arithmatex">\(du=2\rho\,d\rho\)</span> であり，積分範囲は <span class="arithmatex">\(u=a^2\)</span> から <span class="arithmatex">\(\infty\)</span> へ変わります。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
 Q_{\mathrm{ind}}
@@ -14559,7 +14559,7 @@ Q_{\mathrm{ind}}
 &amp;=-\frac{qa}{2}
 \left[-2u^{-1/2}\right]_{a^2}^{\infty} \\
 &amp;=-qa\left(0+\frac{1}{a}\right) \\
-&amp;=-q.
+&amp;=\finalanswer{-q}.
 \end{aligned}
 \]</div>
 <p>となります。</p>
@@ -14572,7 +14572,7 @@ Q_{\mathrm{ind}}
 \]</div>
 <p>力は導体平面へ向かう引力です。</p>
 <p><strong>力から求める仕事</strong></p>
-<p>高さ <span class="arithmatex">\(z\)</span> での力を用いると，</p>
+<p>高さ <span class="arithmatex">\(z\)</span> での力を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 W_{\mathrm{ext}}
@@ -14582,10 +14582,10 @@ W_{\mathrm{ext}}
 &amp;=-\frac{q^2}{16\pi\varepsilon_0a}.
 \end{aligned}
 \]</div>
-<p>です。鏡像電荷が実電荷位置に作る電位は <span class="arithmatex">\(-q/(8\pi\varepsilon_0a)\)</span> なので，</p>
+<p>です。鏡像電荷が実電荷位置に作る電位は <span class="arithmatex">\(-q/(8\pi\varepsilon_0a)\)</span> なので</p>
 <div class="arithmatex">\[
-U=\frac{1}{2}q\phi_{\mathrm{image}}
-=-\frac{q^2}{16\pi\varepsilon_0a}
+\finalanswer{U=\frac{1}{2}q\phi_{\mathrm{image}}
+=-\frac{q^2}{16\pi\varepsilon_0a}}
 \]</div>
 <p>と一致します。鏡像電荷は独立な実電荷ではなく，実電荷の移動とともに誘導される電荷分布です。この誘導過程を数えるため係数 <span class="arithmatex">\(1/2\)</span> が必要です。</p>
 
