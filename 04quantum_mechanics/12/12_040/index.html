@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14549,7 +14549,7 @@ K(x_f, t; x_i, 0) = \int_{-\infty}^{\infty} \langle x_f | e^{-i \hat{p}^2 t / 2m
 K(x_f, t; x_i, 0) = \int_{-\infty}^{\infty} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{i p x_f / \hbar} \right) e^{-i p^2 t / 2m\hbar} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{-i p x_i / \hbar} \right) dp
 \]</div>
 <div class="arithmatex">\[
-= \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} e^{- \frac{i t}{2m\hbar} p^2 + \frac{i(x_f - x_i)}{\hbar} p } dp
+K(x_f, t; x_i, 0) = \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} e^{- \frac{i t}{2m\hbar} p^2 + \frac{i(x_f - x_i)}{\hbar} p } dp
 \]</div>
 <p>提示されたガウス積分公式を適用するため，係数を <span class="arithmatex">\(A = \frac{i t}{2m\hbar}\)</span> ， <span class="arithmatex">\(B = \frac{i(x_f - x_i)}{\hbar}\)</span> と置きます。</p>
 <div class="arithmatex">\[
@@ -14576,7 +14576,7 @@ K(x_f, t; x_i, 0) &amp;= \frac{1}{2\pi\hbar} \sqrt{\frac{2\pi m\hbar}{i t}} e^{\
 \psi(x_f, t) = \int_{-\infty}^{\infty} \left( \sqrt{\frac{m}{2\pi i \hbar t}} e^{\frac{i m (x_f - x_i)^2}{2\hbar t}} \right) \left( \frac{1}{2\pi \Delta^2} \right)^{1/4} e^{-x_i^2 / 4\Delta^2} dx_i
 \]</div>
 <div class="arithmatex">\[
-= \sqrt{\frac{m}{2\pi i \hbar t}} \left( \frac{1}{2\pi \Delta^2} \right)^{1/4} \int_{-\infty}^{\infty} e^{\frac{i m}{2\hbar t} (x_f^2 - 2x_f x_i + x_i^2) - \frac{1}{4\Delta^2} x_i^2} dx_i
+\psi(x_f, t) = \sqrt{\frac{m}{2\pi i \hbar t}} \left( \frac{1}{2\pi \Delta^2} \right)^{1/4} \int_{-\infty}^{\infty} e^{\frac{i m}{2\hbar t} (x_f^2 - 2x_f x_i + x_i^2) - \frac{1}{4\Delta^2} x_i^2} dx_i
 \]</div>
 <p>被積分関数の指数部分について，積分変数 <span class="arithmatex">\(x_i\)</span> のべき順に整理します。</p>
 <div class="arithmatex">\[

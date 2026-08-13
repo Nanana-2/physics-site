@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14570,54 +14570,54 @@ Z &amp;= 2 \cdot \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} \\
 <li><strong>非対角成分の比較</strong></li>
 </ul>
 <p>右辺の非対角成分はゼロであるため， <span class="arithmatex">\(P_x - i P_y = 0\)</span> および <span class="arithmatex">\(P_x + i P_y = 0\)</span> が同時に成り立ちます。これにより以下の結果が得られます。</p>
-<p>$$
-  \finalanswer{P_x = 0}, \qquad \finalanswer{P_y = 0}
-  $$</p>
+<div class="arithmatex">\[
+\finalanswer{P_x = 0}, \qquad \finalanswer{P_y = 0}
+\]</div>
 <ul>
 <li><strong>対角成分の比較</strong>
   1行1列成分を比較します。</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-\frac{1}{2} (1 + P_z) &amp;= \frac{\exp(-\beta \epsilon)}{2 \cosh(\beta \epsilon)} \implies 1 + P_z \
+\frac{1}{2} (1 + P_z) &amp;= \frac{\exp(-\beta \epsilon)}{2 \cosh(\beta \epsilon)} \implies 1 + P_z \\
 &amp;= \frac{\exp(-\beta \epsilon)}{\cosh(\beta \epsilon)}
 \end{aligned}
-$$</p>
-<p>$$
+\]</div>
+<div class="arithmatex">\[
 \begin{aligned}
-P_z &amp;= \frac{\exp(-\beta \epsilon)}{\cosh(\beta \epsilon)} - 1 \
+P_z &amp;= \frac{\exp(-\beta \epsilon)}{\cosh(\beta \epsilon)} - 1 \\
 &amp;= \frac{\exp(-\beta \epsilon) - \cosh(\beta \epsilon)}{\cosh(\beta \epsilon)}
 \end{aligned}
-$$</p>
+\]</div>
 <p>分子の <span class="arithmatex">\(\cosh(\beta \epsilon)\)</span> を指数の形に展開して整理します。</p>
-<p>$$
-  \exp(-\beta \epsilon) - \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} = \frac{\exp(-\beta \epsilon) - \exp(\beta \epsilon)}{2}
-  $$</p>
+<div class="arithmatex">\[
+\exp(-\beta \epsilon) - \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} = \frac{\exp(-\beta \epsilon) - \exp(\beta \epsilon)}{2}
+\]</div>
 <p>したがって， <span class="arithmatex">\(P_z\)</span> は以下のようになります。</p>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-P_z &amp;= \frac{\frac{\exp(-\beta \epsilon) - \exp(\beta \epsilon)}{2}}{\cosh(\beta \epsilon)} \
-&amp;= \frac{-\sinh(\beta \epsilon)}{\cosh(\beta \epsilon)} \
+P_z &amp;= \frac{\frac{\exp(-\beta \epsilon) - \exp(\beta \epsilon)}{2}}{\cosh(\beta \epsilon)} \\
+&amp;= \frac{-\sinh(\beta \epsilon)}{\cosh(\beta \epsilon)} \\
 &amp;= \finalanswer{-\tanh(\beta \epsilon)}
 \end{aligned}
-$$</p>
+\]</div>
 <p>求める熱平衡状態のブロッホベクトルは <span class="arithmatex">\(\boldsymbol{P} = (0, 0, -\tanh(\beta \epsilon))\)</span> です。</p>
 <p><strong>温度極限におけるブロッホベクトル</strong></p>
 <ul>
 <li><strong>絶対零度極限 <span class="arithmatex">\(\beta \to \infty\)</span> のとき</strong></li>
 </ul>
 <p>ハイパボリックタンジェントの極限は <span class="arithmatex">\(\lim_{x \to \infty} \tanh x = 1\)</span> となるため，ベクトルの成分は以下のようになります。</p>
-<p>$$
-  \finalanswer{\boldsymbol{P} \to (0, 0, -1)}
-  $$</p>
+<div class="arithmatex">\[
+\finalanswer{\boldsymbol{P} \to (0, 0, -1)}
+\]</div>
 <p>ベクトルの大きさは <span class="arithmatex">\(|\boldsymbol{P}| = 1\)</span> となり，ブロッホ球の<strong>最下端の表面</strong>に到達します。これは系が最もエネルギーの低い基底状態に移った状態を意味します。</p>
 <ul>
 <li><strong>無限高熱極限 <span class="arithmatex">\(\beta \to 0\)</span> のとき</strong></li>
 </ul>
 <p><span class="arithmatex">\(\tanh 0 = 0\)</span> であるため，ベクトルの成分は以下のようになります。</p>
-<p>$$
-  \finalanswer{\boldsymbol{P} \to (0, 0, 0)}
-  $$</p>
+<div class="arithmatex">\[
+\finalanswer{\boldsymbol{P} \to (0, 0, 0)}
+\]</div>
 <p>ベクトルの大きさは <span class="arithmatex">\(|\boldsymbol{P}| = 0\)</span> となり，ブロッホ球の<strong>真中心</strong>に位置します。これはすべての量子状態が等しい確率でランダムに混ざり合い，位相情報を持たない最大混合状態に対応します。</p>
 
 

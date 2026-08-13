@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14535,28 +14535,26 @@
 <h3 id="1">(1)</h3>
 <p>ケットベクトルからブラベクトルを作る際，各基底ベクトルは対応するブラ基底に置き換わり，その係数は複素共役になります。</p>
 <ul>
-<li>
-<p><strong><span class="arithmatex">\(\langle\psi|\)</span> の導出</strong>
-  <span class="arithmatex">\(|\psi\rangle\)</span> の係数はどちらも実数であるため，係数は変化しません。
-  $$
-  \langle\psi| = \frac{1}{\sqrt{5}} \langle 0| + \frac{2}{\sqrt{5}} \langle 1|
-  $$</p>
-</li>
-<li>
-<p><strong><span class="arithmatex">\(\langle\phi|\)</span> の導出</strong>
-  <span class="arithmatex">\(|1\rangle\)</span> の係数である虚数単位 <span class="arithmatex">\(i\)</span> の符号が反転して <span class="arithmatex">\(-i\)</span> となります。
-  $$
-  \finalanswer{\langle\phi| = \frac{1}{\sqrt{2}} \langle 0| - \frac{i}{\sqrt{2}} \langle 1|}
-  $$</p>
-</li>
+<li><strong><span class="arithmatex">\(\langle\psi|\)</span> の導出</strong>
+  <span class="arithmatex">\(|\psi\rangle\)</span> の係数はどちらも実数であるため，係数は変化しません。</li>
 </ul>
+<div class="arithmatex">\[
+\langle\psi| = \frac{1}{\sqrt{5}} \langle 0| + \frac{2}{\sqrt{5}} \langle 1|
+\]</div>
+<ul>
+<li><strong><span class="arithmatex">\(\langle\phi|\)</span> の導出</strong>
+  <span class="arithmatex">\(|1\rangle\)</span> の係数である虚数単位 <span class="arithmatex">\(i\)</span> の符号が反転して <span class="arithmatex">\(-i\)</span> となります。</li>
+</ul>
+<div class="arithmatex">\[
+\finalanswer{\langle\phi| = \frac{1}{\sqrt{2}} \langle 0| - \frac{i}{\sqrt{2}} \langle 1|}
+\]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた <span class="arithmatex">\(\langle\phi|\)</span> と，与えられた <span class="arithmatex">\(|\psi\rangle\)</span> の内積を計算します。分配法則を用いて展開します。</p>
 <div class="arithmatex">\[
 \langle\phi|\psi\rangle = \left( \frac{1}{\sqrt{2}} \langle 0| - \frac{i}{\sqrt{2}} \langle 1| \right) \left( \frac{1}{\sqrt{5}} |0\rangle + \frac{2}{\sqrt{5}} |1\rangle \right)
 \]</div>
 <div class="arithmatex">\[
-= \frac{1}{\sqrt{10}} \langle 0|0\rangle + \frac{2}{\sqrt{10}} \langle 0|1\rangle - \frac{i}{\sqrt{10}} \langle 1|0\rangle - \frac{2i}{\sqrt{10}} \langle 1|1\rangle
+\langle\phi|\psi\rangle = \frac{1}{\sqrt{10}} \langle 0|0\rangle + \frac{2}{\sqrt{10}} \langle 0|1\rangle - \frac{i}{\sqrt{10}} \langle 1|0\rangle - \frac{2i}{\sqrt{10}} \langle 1|1\rangle
 \]</div>
 <p>基底の正規直交条件 <span class="arithmatex">\(\langle 0|0\rangle = \langle 1|1\rangle = 1\)</span>，<span class="arithmatex">\(\langle 0|1\rangle = \langle 1|0\rangle = 0\)</span> を代入します。</p>
 <div class="arithmatex">\[

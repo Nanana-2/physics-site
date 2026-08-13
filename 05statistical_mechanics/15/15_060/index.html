@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14585,31 +14585,31 @@ I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln P(x_i, y_j) - \sum_{i=1}
 <li><strong>第1項</strong>
   結合エントロピーの定義式 <span class="arithmatex">\(H(X, Y) = -\sum_{i,j} P(x_i, y_j) \ln P(x_i, y_j)\)</span> の符号を反転させた形そのものです。</li>
 </ul>
-<p>$$
-  \text{第1項} = -H(X, Y)
-  $$</p>
+<div class="arithmatex">\[
+\text{第1項} = -H(X, Y)
+\]</div>
 <ul>
 <li><strong>第2項</strong>
   <span class="arithmatex">\(\ln P_X(x_i)\)</span> は添字 <span class="arithmatex">\(j\)</span> を持たないため， <span class="arithmatex">\(j\)</span> に関する内側の総和の外へ括り出すことができます。</li>
 </ul>
-<p>$$
-  \text{第2項} = -\sum_{i=1}^{n} \ln P_X(x_i) \left( \sum_{j=1}^{m} P(x_i, y_j) \right)
-  $$</p>
+<div class="arithmatex">\[
+\text{第2項} = -\sum_{i=1}^{n} \ln P_X(x_i) \left( \sum_{j=1}^{m} P(x_i, y_j) \right)
+\]</div>
 <p>括弧の内部は周辺確率の定義式 <span class="arithmatex">\(\sum_{j=1}^{m} P(x_i, y_j) = P_X(x_i)\)</span> に置き換わります。</p>
-<p>$$
-  \text{第2項} = -\sum_{i=1}^{n} P_X(x_i) \ln P_X(x_i) = H(X)
-  $$</p>
+<div class="arithmatex">\[
+\text{第2項} = -\sum_{i=1}^{n} P_X(x_i) \ln P_X(x_i) = H(X)
+\]</div>
 <ul>
 <li><strong>第3項</strong>
   同様に， <span class="arithmatex">\(\ln P_Y(y_j)\)</span> を添字 <span class="arithmatex">\(i\)</span> に関する総和の外へ括り出します。</li>
 </ul>
-<p>$$
-  \text{第3項} = -\sum_{j=1}^{m} \ln P_Y(y_j) \left( \sum_{i=1}^{n} P(x_i, y_j) \right)
-  $$</p>
+<div class="arithmatex">\[
+\text{第3項} = -\sum_{j=1}^{m} \ln P_Y(y_j) \left( \sum_{i=1}^{n} P(x_i, y_j) \right)
+\]</div>
 <p>括弧の内部を周辺確率の定義式 <span class="arithmatex">\(\sum_{i=1}^{n} P(x_i, y_j) = P_Y(y_j)\)</span> に置き換えます。</p>
-<p>$$
-  \text{第3項} = -\sum_{j=1}^{m} P_Y(y_j) \ln P_Y(y_j) = H(Y)
-  $$</p>
+<div class="arithmatex">\[
+\text{第3項} = -\sum_{j=1}^{m} P_Y(y_j) \ln P_Y(y_j) = H(Y)
+\]</div>
 <p>これら3つの結果を足し合わせることで，目的の関係式が導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{I(X; Y) = H(X) + H(Y) - H(X, Y)}
@@ -14619,21 +14619,21 @@ I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln P(x_i, y_j) - \sum_{i=1}
 <ul>
 <li><strong><span class="arithmatex">\(X\)</span> の周辺確率</strong></li>
 </ul>
-<p>$$
-  P_X(0) = P(0,0) + P(0,1) = \frac{1}{2} + 0 = \frac{1}{2}
-  $$</p>
-<p>$$
-  P_X(1) = P(1,0) + P(1,1) = 0 + \frac{1}{2} = \frac{1}{2}
-  $$</p>
+<div class="arithmatex">\[
+P_X(0) = P(0,0) + P(0,1) = \frac{1}{2} + 0 = \frac{1}{2}
+\]</div>
+<div class="arithmatex">\[
+P_X(1) = P(1,0) + P(1,1) = 0 + \frac{1}{2} = \frac{1}{2}
+\]</div>
 <ul>
 <li><strong><span class="arithmatex">\(Y\)</span> の周辺確率</strong></li>
 </ul>
-<p>$$
-  P_Y(0) = P(0,0) + P(1,0) = \frac{1}{2} + 0 = \frac{1}{2}
-  $$</p>
-<p>$$
-  P_Y(1) = P(0,1) + P(1,1) = 0 + \frac{1}{2} = \finalanswer{\frac{1}{2}}
-  $$</p>
+<div class="arithmatex">\[
+P_Y(0) = P(0,0) + P(1,0) = \frac{1}{2} + 0 = \frac{1}{2}
+\]</div>
+<div class="arithmatex">\[
+P_Y(1) = P(0,1) + P(1,1) = 0 + \frac{1}{2} = \finalanswer{\frac{1}{2}}
+\]</div>
 <p>各周辺エントロピーを計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}

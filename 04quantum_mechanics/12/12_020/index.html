@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14545,7 +14545,7 @@ K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}
 K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| e^{-i \hat{H} \epsilon / \hbar} e^{-i \hat{H} \epsilon / \hbar} \cdots e^{-i \hat{H} \epsilon / \hbar} \right| x_i \right\rangle
 \]</div>
 <div class="arithmatex">\[
-= \int \cdots \int \langle x_f | e^{-i \hat{H} \epsilon / \hbar} | x_{N-1} \rangle \langle x_{N-1} | e^{-i \hat{H} \epsilon / \hbar} | x_{N-2} \rangle \cdots \langle x_1 | e^{-i \hat{H} \epsilon / \hbar} | x_i \rangle dx_1 \cdots dx_{N-1}
+K(x_f, t_f; x_i, t_i) = \int \cdots \int \langle x_f | e^{-i \hat{H} \epsilon / \hbar} | x_{N-1} \rangle \langle x_{N-1} | e^{-i \hat{H} \epsilon / \hbar} | x_{N-2} \rangle \cdots \langle x_1 | e^{-i \hat{H} \epsilon / \hbar} | x_i \rangle dx_1 \cdots dx_{N-1}
 \]</div>
 <p>境界の条件を <span class="arithmatex">\(x_0 = x_i\)</span> ， <span class="arithmatex">\(x_N = x_f\)</span> と書き換えて，総乗の記号 <span class="arithmatex">\(\prod\)</span> でまとめます。</p>
 <div class="arithmatex">\[
@@ -14563,10 +14563,10 @@ K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| e^{-i \hat{H} \epsilon / \hbar} 
 \]</div>
 <p>演算子 <span class="arithmatex">\(\hat{p}\)</span> を固有値 <span class="arithmatex">\(p_j\)</span> に変え，平面波の関数を代入します。</p>
 <div class="arithmatex">\[
-= \int_{-\infty}^{\infty} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{i p_j x_j / \hbar} \right) e^{-i p_j^2 \epsilon / 2m\hbar} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{-i p_j x_{j-1} / \hbar} \right) dp_j
+\langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle = \int_{-\infty}^{\infty} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{i p_j x_j / \hbar} \right) e^{-i p_j^2 \epsilon / 2m\hbar} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{-i p_j x_{j-1} / \hbar} \right) dp_j
 \]</div>
 <div class="arithmatex">\[
-= \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} e^{- \frac{i\epsilon}{2m\hbar} p_j^2 + \frac{i(x_j - x_{j-1})}{\hbar} p_j } dp_j
+\langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle = \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} e^{- \frac{i\epsilon}{2m\hbar} p_j^2 + \frac{i(x_j - x_{j-1})}{\hbar} p_j } dp_j
 \]</div>
 <p>提示された公式を適用するため，係数を <span class="arithmatex">\(A = \frac{i\epsilon}{2m\hbar}\)</span> ， <span class="arithmatex">\(B = \frac{i(x_j - x_{j-1})}{\hbar}\)</span> と置きます。</p>
 <div class="arithmatex">\[

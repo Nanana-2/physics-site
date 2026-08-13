@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14551,19 +14551,19 @@ e^{ikz} \approx \sum_{l=0}^{\infty} \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\p
 \]</div>
 <p>内側の括弧にある内向き球面波の項 <span class="arithmatex">\(-(-1)^l e^{-ikr}\)</span> は，引き算によって相殺されて消去されます。</p>
 <div class="arithmatex">\[
-= \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\pi}{2} + 2\delta_l)} - e^{i(kr - \frac{l\pi}{2})} \right] P_l(\cos\theta)
+\psi_l(r, \theta) - [e^{ikz}]_l = \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\pi}{2} + 2\delta_l)} - e^{i(kr - \frac{l\pi}{2})} \right] P_l(\cos\theta)
 \]</div>
 <p>指数関数の共通部分である <span class="arithmatex">\(e^{i(kr - \frac{l\pi}{2})} = e^{ikr} e^{-i\frac{l\pi}{2}}\)</span> を括り出します。</p>
 <div class="arithmatex">\[
-= \frac{2l+1}{2ikr} e^{ikr} e^{-i\frac{l\pi}{2}} \left( e^{2i\delta_l} - 1 \right) P_l(\cos\theta)
+\psi_l(r, \theta) - [e^{ikz}]_l = \frac{2l+1}{2ikr} e^{ikr} e^{-i\frac{l\pi}{2}} \left( e^{2i\delta_l} - 1 \right) P_l(\cos\theta)
 \]</div>
 <p>ここで，提示されたオイラーの公式の変形関係 <span class="arithmatex">\(e^{2i\delta_l} - 1 = 2i e^{i\delta_l} \sin\delta_l\)</span> を代入します。</p>
 <div class="arithmatex">\[
-= \frac{2l+1}{2ikr} e^{ikr} e^{-i\frac{l\pi}{2}} \left( 2i e^{i\delta_l} \sin\delta_l \right) P_l(\cos\theta)
+\psi_l(r, \theta) - [e^{ikz}]_l = \frac{2l+1}{2ikr} e^{ikr} e^{-i\frac{l\pi}{2}} \left( 2i e^{i\delta_l} \sin\delta_l \right) P_l(\cos\theta)
 \]</div>
 <p>分母と分子にある <span class="arithmatex">\(2i\)</span> を約分し， <span class="arithmatex">\(r\)</span> に依存する部分をまとめます。</p>
 <div class="arithmatex">\[
-= \frac{2l+1}{k} e^{-i\frac{l\pi}{2}} e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \frac{e^{ikr}}{r}
+\psi_l(r, \theta) - [e^{ikz}]_l = \frac{2l+1}{k} e^{-i\frac{l\pi}{2}} e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \frac{e^{ikr}}{r}
 \]</div>
 <p>これをすべての <span class="arithmatex">\(l\)</span> について足し合わせることで，求める散乱波の展開式が得られます。</p>
 <div class="arithmatex">\[

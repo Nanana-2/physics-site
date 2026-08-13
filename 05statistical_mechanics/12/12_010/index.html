@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14562,48 +14562,48 @@
 <li><strong>トレースの性質 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> の導出</strong>
   密度行列の定義式全体のトレースをとります。</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-\mathrm{Tr}(\rho) &amp;= \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) \
+\mathrm{Tr}(\rho) &amp;= \mathrm{Tr}\left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) \\
 &amp;= \sum_i p_i \mathrm{Tr}(|\psi_i\rangle \langle\psi_i|)
 \end{aligned}
-$$</p>
+\]</div>
 <p>状態の規格化条件より， <span class="arithmatex">\(\mathrm{Tr}(|\psi_i\rangle \langle\psi_i|) = \langle\psi_i|\psi_i\rangle = 1\)</span> となるため，以下のようになります。</p>
-<p>$$
-  \mathrm{Tr}(\rho) = \sum_i p_i \cdot 1 = \sum_i p_i
-  $$</p>
+<div class="arithmatex">\[
+\mathrm{Tr}(\rho) = \sum_i p_i \cdot 1 = \sum_i p_i
+\]</div>
 <p>全確率の保存則 <span class="arithmatex">\(\sum_i p_i = 1\)</span> より， <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> が満たされます。</p>
 <ul>
 <li><strong>エルミート性の導出</strong>
   密度行列の随伴演算子を計算します。積の共役の規則 <span class="arithmatex">\((|a\rangle\langle b|)^\dagger = |b\rangle\langle a|\)</span> を適用します。確率は実数 <span class="arithmatex">\(p_i^* = p_i\)</span> です。</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-\rho^\dagger &amp;= \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right)^\dagger \
-&amp;= \sum_i p_i (|\psi_i\rangle \langle\psi_i|)^\dagger \
-&amp;= \sum_i p_i |\psi_i\rangle \langle\psi_i| \
+\rho^\dagger &amp;= \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right)^\dagger \\
+&amp;= \sum_i p_i (|\psi_i\rangle \langle\psi_i|)^\dagger \\
+&amp;= \sum_i p_i |\psi_i\rangle \langle\psi_i| \\
 &amp;= \finalanswer{\rho}
 \end{aligned}
-$$</p>
+\]</div>
 <p>したがって，密度行列は常にエルミート演算子となります。</p>
 <h3 id="3">(3)</h3>
 <ul>
 <li><strong>対角成分 <span class="arithmatex">\(\rho_{nn}\)</span> の物理的意味</strong></li>
 </ul>
 <p>定義式に基底 <span class="arithmatex">\(\langle n|\)</span> と <span class="arithmatex">\(|n\rangle\)</span> を挟んで計算します。</p>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-\rho_{nn} &amp;= \langle n| \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) |n\rangle \
+\rho_{nn} &amp;= \langle n| \left( \sum_i p_i |\psi_i\rangle \langle\psi_i| \right) |n\rangle \\
 &amp;= \sum_i p_i |\langle n|\psi_i\rangle|^2
 \end{aligned}
-$$</p>
+\]</div>
 <p><span class="arithmatex">\(|\langle n|\psi_i\rangle|^2\)</span> は状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> にある系において状態 <span class="arithmatex">\(|n\rangle\)</span> が観測される量子力学的な確率です。これに出現確率 <span class="arithmatex">\(p_i\)</span> を掛けて全状態について足し合わせているため， <span class="arithmatex">\(\rho_{nn}\)</span> は<strong>系全体において状態 <span class="arithmatex">\(|n\rangle\)</span> が見出されるマクロな存在確率</strong>を表します。</p>
 <ul>
 <li><strong>非対角成分 <span class="arithmatex">\(\rho_{nm}\)</span> <span class="arithmatex">\(n \neq m\)</span> の物理的意味</strong></li>
 </ul>
-<p>$$
-  \finalanswer{\rho_{nm} = \sum_i p_i \langle n|\psi_i\rangle \langle\psi_i|m\rangle}
-  $$</p>
+<div class="arithmatex">\[
+\finalanswer{\rho_{nm} = \sum_i p_i \langle n|\psi_i\rangle \langle\psi_i|m\rangle}
+\]</div>
 <p>これは，状態 <span class="arithmatex">\(|n\rangle\)</span> と状態 <span class="arithmatex">\(|m\rangle\)</span> の間の量子力学的な位相の相関を表しており，<strong>量子コヒーレンス</strong>と呼ばれます。純粋状態では各状態の位相が揃っているため非対角成分が残りますが，古典的な確率でランダムに混ざり合った混合状態では，位相の相殺が起こるため，非対角成分はゼロに近づいていきます。</p>
 
 

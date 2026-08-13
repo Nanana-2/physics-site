@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14538,31 +14538,31 @@ Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} P(s_1, s_2) P(s_2, s_3) \dots P(s_N, 
 <ul>
 <li><span class="arithmatex">\(s_i = 1, s_{i+1} = 1\)</span> のとき</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-P(1, 1) &amp;= \exp[ \beta J (1)(1) + \frac{\beta B}{2} (1 + 1) ] \
+P(1, 1) &amp;= \exp[ \beta J (1)(1) + \frac{\beta B}{2} (1 + 1) ] \\
 &amp;= \exp( \beta J + \beta B )
 \end{aligned}
-$$</p>
+\]</div>
 <ul>
 <li><span class="arithmatex">\(s_i = -1, s_{i+1} = -1\)</span> のとき</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-P(-1, -1) &amp;= \exp[ \beta J (-1)(-1) + \frac{\beta B}{2} (-1 - 1) ] \
+P(-1, -1) &amp;= \exp[ \beta J (-1)(-1) + \frac{\beta B}{2} (-1 - 1) ] \\
 &amp;= \exp( \beta J - \beta B )
 \end{aligned}
-$$</p>
+\]</div>
 <ul>
 <li><span class="arithmatex">\(s_i = 1, s_{i+1} = -1\)</span> および <span class="arithmatex">\(s_i = -1, s_{i+1} = 1\)</span> のとき</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-P(1, -1) &amp;= P(-1, 1) \
-&amp;= \exp[ \beta J (1)(-1) + \frac{\beta B}{2} (1 - 1) ] \
+P(1, -1) &amp;= P(-1, 1) \\
+&amp;= \exp[ \beta J (1)(-1) + \frac{\beta B}{2} (1 - 1) ] \\
 &amp;= \finalanswer{\exp( -\beta J )}
 \end{aligned}
-$$</p>
+\]</div>
 <p>これらを行列の形に配置することで，求める転送行列が得られます。</p>
 <div class="arithmatex">\[
 P = \begin{pmatrix}

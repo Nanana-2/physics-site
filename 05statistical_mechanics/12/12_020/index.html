@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14521,11 +14521,11 @@
 <p>量子化軸上向きのスピン状態を <span class="arithmatex">\(|+\rangle\)</span> ，下向きのスピン状態を <span class="arithmatex">\(|-\rangle\)</span> とする。これらは正規直交系 <span class="arithmatex">\(\langle +|+\rangle = \langle -|-\rangle = 1, \langle +|-\rangle = 0\)</span> をなす。この2つの基底を用いて構成された，以下の2つの異なる量子統計集団を考える。</p>
 <ul>
 <li><strong>状態A</strong>：確率 <span class="arithmatex">\(1/2\)</span> で <span class="arithmatex">\(|+\rangle\)</span> をとり，確率 <span class="arithmatex">\(1/2\)</span> で <span class="arithmatex">\(|-\rangle\)</span> をとる古典的な確率混合状態。</li>
-<li><strong>状態B</strong>：2つの状態の量子力学的な重ね合わせによって作られた単一のパウリ <span class="arithmatex">\(x\)</span> 上向き状態 </li>
+<li><strong>状態B</strong>：2つの状態の量子力学的な重ね合わせによって作られた単一のパウリ <span class="arithmatex">\(x\)</span> 上向き状態</li>
 </ul>
-<p>$$
-  |+x\rangle = \frac{1}{\sqrt{2}}(|+\rangle + |-\rangle)
-  $$</p>
+<div class="arithmatex">\[
+|+x\rangle = \frac{1}{\sqrt{2}}(|+\rangle + |-\rangle)
+\]</div>
 <p>それぞれの状態の密度行列を <span class="arithmatex">\(\rho_A, \rho_B\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) 状態Aおよび状態Bの密度行列 <span class="arithmatex">\(\rho_A, \rho_B\)</span> を，基底 <span class="arithmatex">\(\{|+\rangle, |-\rangle\}\)</span> で行列表示せよ。</p>
 <p>(2) 状態Aおよび状態Bのそれぞれについて，密度行列の2乗 <span class="arithmatex">\(\rho^2\)</span> を計算し，その対角和 <span class="arithmatex">\(\mathrm{Tr}(\rho^2)\)</span> の値を求めよ。この結果から，どちらが純粋状態であり，どちらが混合状態であるかを判定せよ。</p>
@@ -14608,12 +14608,12 @@
 \rho^2 = \frac{1}{4} \begin{pmatrix} 1 + P_z &amp; P_x - i P_y \\ P_x + i P_y &amp; 1 - P_z \end{pmatrix} \begin{pmatrix} 1 + P_z &amp; P_x - i P_y \\ P_x + i P_y &amp; 1 - P_z \end{pmatrix}
 \]</div>
 <p>トレースを求めるために，2乗した行列の対角成分のみを抜き出して計算します。
-* 1行1列成分： </p>
+* 1行1列成分：</p>
 <div class="arithmatex">\[
   (1+P_z)^2 + (P_x - i P_y)(P_x + i P_y) = 1 + 2P_z + P_z^2 + P_x^2 + P_y^2
 \]</div>
 <ul>
-<li>2行2列成分： </li>
+<li>2行2列成分：</li>
 </ul>
 <div class="arithmatex">\[
   (P_x + i P_y)(P_x - i P_y) + (1-P_z)^2 = P_x^2 + P_y^2 + 1 - 2P_z + P_z^2

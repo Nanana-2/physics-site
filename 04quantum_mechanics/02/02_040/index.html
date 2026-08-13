@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14504,7 +14504,7 @@ A_{11} = \langle 1|\hat{A}|1\rangle = 2, \quad A_{12} = \langle 1|\hat{A}|2\rang
 <div class="arithmatex">\[
 A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\rangle = 2
 \]</div>
-<p>このとき，演算子 <span class="arithmatex">\(\hat{A}\)</span> は行列形式で </p>
+<p>このとき，演算子 <span class="arithmatex">\(\hat{A}\)</span> は行列形式で</p>
 <div class="arithmatex">\[
 \hat{A} \to \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix}
 \]</div>
@@ -14529,16 +14529,16 @@ A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\ran
 <div class="arithmatex">\[
 \langle 1|\psi\rangle = \frac{1}{\sqrt{2}}, \quad \langle 2|\psi\rangle = \frac{i}{\sqrt{2}}
 \]</div>
-<p>これらに対応する複素共役の項は以下のようになります。
-$$
+<p>これらに対応する複素共役の項は以下のようになります。</p>
+<div class="arithmatex">\[
 \langle \psi|1\rangle = \frac{1}{\sqrt{2}}, \quad \langle \psi|2\rangle = -\frac{i}{\sqrt{2}}
-$$</p>
+\]</div>
 <p>2重和の4つの項を書き下して計算します。</p>
 <div class="arithmatex">\[
 \langle A \rangle = \langle \psi|1\rangle A_{11} \langle 1|\psi\rangle + \langle \psi|1\rangle A_{12} \langle 2|\psi\rangle + \langle \psi|2\rangle A_{21} \langle 1|\psi\rangle + \langle \psi|2\rangle A_{22} \langle 2|\psi\rangle
 \]</div>
 <div class="arithmatex">\[
-= \left( \frac{1}{\sqrt{2}} \right) \cdot 2 \cdot \left( \frac{1}{\sqrt{2}} \right) + \left( \frac{1}{\sqrt{2}} \right) \cdot i \cdot \left( \frac{i}{\sqrt{2}} \right) + \left( -\frac{i}{\sqrt{2}} \right) \cdot (-i) \cdot \left( \frac{1}{\sqrt{2}} \right) + \left( -\frac{i}{\sqrt{2}} \right) \cdot 2 \cdot \left( \frac{i}{\sqrt{2}} \right)
+\langle A \rangle = \left( \frac{1}{\sqrt{2}} \right) \cdot 2 \cdot \left( \frac{1}{\sqrt{2}} \right) + \left( \frac{1}{\sqrt{2}} \right) \cdot i \cdot \left( \frac{i}{\sqrt{2}} \right) + \left( -\frac{i}{\sqrt{2}} \right) \cdot (-i) \cdot \left( \frac{1}{\sqrt{2}} \right) + \left( -\frac{i}{\sqrt{2}} \right) \cdot 2 \cdot \left( \frac{i}{\sqrt{2}} \right)
 \]</div>
 <p>各項の積を計算します。 <span class="arithmatex">\(i^2 = -1\)</span> に注意します。</p>
 <div class="arithmatex">\[
@@ -14548,7 +14548,7 @@ $$</p>
 &amp;= \finalanswer{1}
 \end{aligned}
 \]</div>
-<p>したがって，求める期待値は 1 となります。これは通常のベクトルと行列の積 </p>
+<p>したがって，求める期待値は 1 となります。これは通常のベクトルと行列の積</p>
 <div class="arithmatex">\[
 \begin{pmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{i}{\sqrt{2}} \end{pmatrix} \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{i}{\sqrt{2}} \end{pmatrix}
 \]</div>

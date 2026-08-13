@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14512,7 +14512,7 @@
 \hat{a}_{\boldsymbol{k}'}^\dagger = \int d\boldsymbol{r}' \, e^{i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( \sqrt{\frac{\omega_{\boldsymbol{k}'}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}') - \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}'}}} \hat{\pi}(\boldsymbol{r}') \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 与えられた <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}'}^\dagger\)</span> の式を用いて，交換関係 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger]\)</span> を計算せよ。場演算子の正準交換関係を代入し，空間積分を実行することで，等式 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \delta_{\boldsymbol{k}\boldsymbol{k}'}\)</span> を導出せよ。ただし，空間積分の公式 </p>
+<p>(1) 与えられた <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}'}^\dagger\)</span> の式を用いて，交換関係 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger]\)</span> を計算せよ。場演算子の正準交換関係を代入し，空間積分を実行することで，等式 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \delta_{\boldsymbol{k}\boldsymbol{k}'}\)</span> を導出せよ。ただし，空間積分の公式</p>
 <div class="arithmatex">\[
 \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}\boldsymbol{k}'}
 \]</div>
@@ -14527,11 +14527,11 @@
 \]</div>
 <p>交換関係の性質を用いて括弧内部を展開します。同じ場同士の交換関係は 0 になるため，異なる場が交差する項だけが残ります。</p>
 <div class="arithmatex">\[
-= \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( -\frac{i\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V\hbar} [\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] + \frac{i\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V\hbar} [\hat{\pi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] \right)
+[\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( -\frac{i\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V\hbar} [\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] + \frac{i\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V\hbar} [\hat{\pi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] \right)
 \]</div>
 <p>問題文に与えられた正準交換関係 <span class="arithmatex">\([\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] = i\hbar \delta(\boldsymbol{r} - \boldsymbol{r}')\)</span> および <span class="arithmatex">\([\hat{\pi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] = -i\hbar \delta(\boldsymbol{r} - \boldsymbol{r}')\)</span> を代入します。</p>
 <div class="arithmatex">\[
-= \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( \frac{\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') + \frac{\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') \right)
+[\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( \frac{\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') + \frac{\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') \right)
 \]</div>
 <p>デルタ関数の作用により， <span class="arithmatex">\(\boldsymbol{r}'\)</span> の空間積分を実行して <span class="arithmatex">\(\boldsymbol{r}' = \boldsymbol{r}\)</span> と置きます。このとき，デルタ関数の性質から <span class="arithmatex">\(\boldsymbol{k}' = \boldsymbol{k}\)</span> の項のみが抽出されるため，固有振動数は <span class="arithmatex">\(\omega_{\boldsymbol{k}'} = \omega_{\boldsymbol{k}}\)</span> となり，等式は次のように整理されます。</p>
 <div class="arithmatex">\[

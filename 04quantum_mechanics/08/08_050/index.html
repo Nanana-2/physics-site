@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14587,9 +14587,9 @@
 <p>この行列の固有値を <span class="arithmatex">\(\lambda\)</span> と置き，特性方程式を計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\begin{vmatrix} -\lambda &amp; \alpha \\ \alpha &amp; -\lambda \end{vmatrix} &amp;= 0 \implies \lambda^2 - \alpha^2 \\
-&amp;= 0 \implies \lambda \\
-&amp;= \pm \alpha
+\begin{vmatrix} -\lambda &amp; \alpha \\ \alpha &amp; -\lambda \end{vmatrix}
+&amp;=\lambda^2-\alpha^2=0, \\
+\lambda&amp;=\pm\alpha
 \end{aligned}
 \]</div>
 <p>したがって，固有値は <span class="arithmatex">\(\lambda = \alpha\)</span> および <span class="arithmatex">\(\lambda = -\alpha\)</span> です。</p>
@@ -14599,9 +14599,10 @@
 </ul>
 <div class="arithmatex">\[
 \begin{aligned}
-\begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} &amp;= \alpha \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} \implies \alpha c_2 \\
-&amp;= \alpha c_1 \implies c_1 \\
-&amp;= c_2
+\begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix}
+\begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
+&amp;=\alpha\begin{pmatrix} c_1 \\ c_2 \end{pmatrix}, \\
+c_1&amp;=c_2
 \end{aligned}
 \]</div>
 <p>規格化条件 <span class="arithmatex">\(2|c_1|^2 = 1\)</span> より，固有状態は以下のようになります。</p>
@@ -14613,9 +14614,10 @@
 </ul>
 <div class="arithmatex">\[
 \begin{aligned}
-\begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} &amp;= -\alpha \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} \implies \alpha c_2 \\
-&amp;= - \alpha c_1 \implies c_2 \\
-&amp;= -c_1
+\begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix}
+\begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
+&amp;=-\alpha\begin{pmatrix} c_1 \\ c_2 \end{pmatrix}, \\
+c_2&amp;=-c_1
 \end{aligned}
 \]</div>
 <p>同様に規格化を行い，固有状態は以下のようになります。</p>

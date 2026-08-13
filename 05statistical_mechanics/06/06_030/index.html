@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14559,16 +14559,18 @@
 <span class="arithmatex">\(\beta \to \infty\)</span> では，指数 <span class="arithmatex">\(\beta(\epsilon_k-\mu)\)</span> の符号により極限が分かれます。</p>
 <ul>
 <li><span class="arithmatex">\(\epsilon_k &lt; \mu\)</span> のとき：
-  <span class="arithmatex">\(\epsilon_k - \mu &lt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to -\infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(-\infty) = 0\)</span> となり，平均占有数は最大値である 1 に収束します。
-  $$
-  \langle n_k \rangle \to \frac{1}{0 + 1} = 1
-  $$</li>
-<li><span class="arithmatex">\(\epsilon_k &gt; \mu\)</span> のとき：
-  <span class="arithmatex">\(\epsilon_k - \mu &gt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to \infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(\infty) = \infty\)</span> となり，分母が無限大に発散するため，平均占有数は 0 に収束します。
-  $$
-  \langle n_k \rangle \to \frac{1}{\infty + 1} = 0
-  $$</li>
+  <span class="arithmatex">\(\epsilon_k - \mu &lt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to -\infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(-\infty) = 0\)</span> となり，平均占有数は最大値である 1 に収束します。</li>
 </ul>
+<div class="arithmatex">\[
+\langle n_k \rangle \to \frac{1}{0 + 1} = 1
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\epsilon_k &gt; \mu\)</span> のとき：
+  <span class="arithmatex">\(\epsilon_k - \mu &gt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to \infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(\infty) = \infty\)</span> となり，分母が無限大に発散するため，平均占有数は 0 に収束します。</li>
+</ul>
+<div class="arithmatex">\[
+\langle n_k \rangle \to \frac{1}{\infty + 1} = 0
+\]</div>
 <p>物理的には，絶対零度においてフェルミ粒子はパウリの排他原理を満たしながら，エネルギーの低い準位から順に隙間なく1個ずつ詰まっていき， <span class="arithmatex">\(\epsilon_k = \mu\)</span> の境界を境にして，それより高いエネルギーの状態には1つも粒子が入らなくなります。このときの境界の化学ポテンシャルをフェルミエネルギーと呼び，グラフの形状は境界で 1 から 0 へ垂直にステップ状に飛び降りる階段関数になります。</p>
 <p><strong>有限温度<span class="arithmatex">\(T &gt; 0\)</span>のとき</strong>
 <span class="arithmatex">\(\epsilon_k=\mu\)</span> では指数が0となり，<span class="arithmatex">\(\exp(0)=1\)</span> なので，</p>

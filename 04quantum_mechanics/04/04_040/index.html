@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14538,7 +14538,7 @@ J(x) = \frac{\hbar}{2mi} \left( \psi^* \frac{d\psi}{dx} - \frac{d\psi^*}{dx} \ps
 \]</div>
 <p>(2) 領域 I の波動関数 <span class="arithmatex">\(\psi_{\text{I}}(x)\)</span> から確率流密度 <span class="arithmatex">\(J_{\text{I}}\)</span> を計算せよ。</p>
 <p>これを <span class="arithmatex">\(J_{\text{I}} = J_{\text{in}} - |J_{\text{ref}}|\)</span> と分け， <span class="arithmatex">\(J_{\text{in}}\)</span> と <span class="arithmatex">\(J_{\text{ref}}\)</span> を求めよ。</p>
-<p>(3) 領域 II の波動関数 <span class="arithmatex">\(\psi_{\text{II}}(x)\)</span> から透過波の確率流密度 <span class="arithmatex">\(J_{\text{trans}} = J_{\text{II}}\)</span> を計算せよ。また，時間依存シュレーディンガー方程式から導かれる連続の式 </p>
+<p>(3) 領域 II の波動関数 <span class="arithmatex">\(\psi_{\text{II}}(x)\)</span> から透過波の確率流密度 <span class="arithmatex">\(J_{\text{trans}} = J_{\text{II}}\)</span> を計算せよ。また，時間依存シュレーディンガー方程式から導かれる連続の式</p>
 <div class="arithmatex">\[
 \frac{\partial \rho}{\partial t} + \frac{\partial J}{\partial x} = 0,\quad \rho = |\Psi|^2
 \]</div>
@@ -14571,13 +14571,13 @@ J(x, t) = \frac{\hbar}{2mi} \left[ \left( \psi^* e^{iEt/\hbar} \right) \left( \f
 \psi_{\text{I}}^* \frac{d\psi_{\text{I}}}{dx} = \left( A^* e^{-ik_1 x} + B^* e^{ik_1 x} \right) \left( ik_1 A e^{ik_1 x} - ik_1 B e^{-ik_1 x} \right)
 \]</div>
 <div class="arithmatex">\[
-= ik_1 |A|^2 - ik_1 A^* B e^{-2ik_1 x} + ik_1 B^* A e^{2ik_1 x} - ik_1 |B|^2
+\psi_{\text{I}}^* \frac{d\psi_{\text{I}}}{dx} = ik_1 |A|^2 - ik_1 A^* B e^{-2ik_1 x} + ik_1 B^* A e^{2ik_1 x} - ik_1 |B|^2
 \]</div>
 <div class="arithmatex">\[
 \frac{d\psi_{\text{I}}^*}{dx} \psi_{\text{I}} = \left( -ik_1 A^* e^{-ik_1 x} + ik_1 B^* e^{ik_1 x} \right) \left( A e^{ik_1 x} + B e^{-ik_1 x} \right)
 \]</div>
 <div class="arithmatex">\[
-= -ik_1 |A|^2 - ik_1 A^* B e^{-2ik_1 x} + ik_1 B^* A e^{2ik_1 x} + ik_1 |B|^2
+\frac{d\psi_{\text{I}}^*}{dx} \psi_{\text{I}} = -ik_1 |A|^2 - ik_1 A^* B e^{-2ik_1 x} + ik_1 B^* A e^{2ik_1 x} + ik_1 |B|^2
 \]</div>
 <p>これらの差をとると，位置に依存する交差項 <span class="arithmatex">\(e^{\pm 2ik_1 x}\)</span> は相殺されます。</p>
 <div class="arithmatex">\[

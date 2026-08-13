@@ -25,7 +25,7 @@
     
     
       
-        <title>ファンデルワールス気体の状態方程式 - 大学物理の問題集</title>
+        <title>ファンデルワールス気体の低密度展開 - 大学物理の問題集</title>
       
     
     
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ファンデルワールス気体の状態方程式
+              ファンデルワールス気体の低密度展開
             
           </span>
         </div>
@@ -5185,7 +5185,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -5203,7 +5203,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -5267,6 +5267,17 @@
     <span class="md-ellipsis">
       
         (2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (3)
       
     </span>
   </a>
@@ -14460,6 +14471,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (3)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14494,87 +14516,70 @@
 
 
 
-<h1 id="_1">ファンデルワールス気体の状態方程式</h1>
+<h1 id="_1">ファンデルワールス気体の低密度展開</h1>
 <h2 id="_2">問題</h2>
-<p>分子自体の体積による排除体積効果と，分子間に働く引力の影響を補正した物質量 <span class="arithmatex">\(n\)</span> の実在気体の状態方程式として，次のファンデルワールス状態方程式を考える。</p>
+<p>1モルのファンデルワールス気体を考える。圧力を <span class="arithmatex">\(P\)</span>，モル体積を <span class="arithmatex">\(v\)</span>，温度を <span class="arithmatex">\(T\)</span> とすると，状態方程式は</p>
 <div class="arithmatex">\[
-\left( P + \frac{an^2}{V^2} \right) (V - nb) = nRT
+P=\frac{RT}{v-b}-\frac{a}{v^2}
 \]</div>
-<p>ここで <span class="arithmatex">\(a, b\)</span> は気体の種類ごとに定まる正の定数， <span class="arithmatex">\(R\)</span> は気体定数である。以下の問いに答えよ。</p>
-<p>(1) 状態方程式を展開して <span class="arithmatex">\(P\)</span> について整理し，圧力関数 <span class="arithmatex">\(P(V, T, n)\)</span> を求めよ。</p>
-<p>(2) 温度 <span class="arithmatex">\(T\)</span> がある特定の臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> に等しいとき， <span class="arithmatex">\(P\)</span>-<span class="arithmatex">\(V\)</span> 曲線上の臨界点において，体積変化に対する圧力の 1 階偏微分と 2 階偏微分が同時に 0 となる。すなわち，次の 2 つの条件が満たされる。</p>
+<p>で与えられる。ここで <span class="arithmatex">\(a,b\)</span> は正の定数，<span class="arithmatex">\(R\)</span> は気体定数である。また，圧縮因子を</p>
 <div class="arithmatex">\[
-\left( \frac{\partial P}{\partial V} \right)_T = 0, \quad \left( \frac{\partial^2 P}{\partial V^2} \right)_T = 0
+Z=\frac{Pv}{RT}
 \]</div>
-<p>これらの条件を用いて，臨界体積 <span class="arithmatex">\(V_{\text{c}}\)</span> および臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> を <span class="arithmatex">\(a, b, n, R\)</span> を用いて表せ。</p>
+<p>と定義する。以下の問いに答えよ。</p>
+<p>(1) 低密度領域 <span class="arithmatex">\(b/v\ll1\)</span> において，<span class="arithmatex">\(1/(v-b)\)</span> を <span class="arithmatex">\(1/v\)</span> の2次まで展開し，圧力を</p>
+<div class="arithmatex">\[
+P=\frac{RT}{v}+\frac{RTb-a}{v^2}+O\!\left(\frac{1}{v^3}\right)
+\]</div>
+<p>と表せ。</p>
+<p>(2) (1) の結果から圧縮因子を</p>
+<div class="arithmatex">\[
+Z=1+\frac{B_2(T)}{v}+O\!\left(\frac{1}{v^2}\right)
+\]</div>
+<p>と表し，第2ビリアル係数 <span class="arithmatex">\(B_2(T)\)</span> を求めよ。</p>
+<p>(3) 第2ビリアル係数が0となる温度をボイル温度 <span class="arithmatex">\(T_{\mathrm B}\)</span> と呼ぶ。<span class="arithmatex">\(T_{\mathrm B}\)</span> を求め，<span class="arithmatex">\(T&gt;T_{\mathrm B}\)</span> と <span class="arithmatex">\(T&lt;T_{\mathrm B}\)</span> で，低密度領域における圧力が理想気体の圧力より大きいか小さいかを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>与えられたファンデルワールス状態方程式の両辺を <span class="arithmatex">\((V - nb)\)</span> で割り算します。</p>
+<p><span class="arithmatex">\(1/(v-b)\)</span> を次のように変形します。</p>
 <div class="arithmatex">\[
-P + \frac{an^2}{V^2} = \frac{nRT}{V - nb}
+\frac{1}{v-b}
+=\frac{1}{v}\frac{1}{1-b/v}
 \]</div>
-<p>左辺の第 2 項を右辺へ移行します。</p>
+<p><span class="arithmatex">\(b/v\ll1\)</span> なので，<span class="arithmatex">\(1/(1-x)=1+x+x^2+O(x^3)\)</span> を用いると</p>
 <div class="arithmatex">\[
-\finalanswer{P = \frac{nRT}{V - nb} - \frac{an^2}{V^2}}
+\frac{1}{v-b}
+=\frac{1}{v}\left\{1+\frac{b}{v}+\frac{b^2}{v^2}
++O\!\left[\left(\frac{b}{v}\right)^3\right]\right\}
 \]</div>
-<p>これが求める圧力関数の形式です。</p>
+<p>となります。状態方程式へ代入し，<span class="arithmatex">\(1/v\)</span> の2次まで残すと</p>
+<div class="arithmatex">\[
+\finalanswer{P=\frac{RT}{v}+\frac{RTb-a}{v^2}
++O\!\left(\frac{1}{v^3}\right)}
+\]</div>
+<p>を得ます。第1項は理想気体の圧力であり，第2項が排除体積と分子間引力による最低次の補正です。</p>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた圧力の等式を，温度 <span class="arithmatex">\(T\)</span> を一定に保ったまま体積 <span class="arithmatex">\(V\)</span> で偏微分します。第 1 項は分数関数の微分，第 2 項はべき関数の微分を適用します。</p>
+<p>(1) の式に <span class="arithmatex">\(v/(RT)\)</span> を掛けます。</p>
 <div class="arithmatex">\[
-\left( \frac{\partial P}{\partial V} \right)_T = -\frac{nRT}{(V - nb)^2} + \frac{2an^2}{V^3}
+Z=\frac{Pv}{RT}
+=1+\frac{1}{v}\left(b-\frac{a}{RT}\right)
++O\!\left(\frac{1}{v^2}\right)
 \]</div>
-<p>臨界点における第 1 の条件 <span class="arithmatex">\(\left( \frac{\partial P}{\partial V} \right)_T = 0\)</span> より，次の等式が得られます。</p>
+<p>したがって，第2ビリアル係数は</p>
 <div class="arithmatex">\[
-\frac{nRT_{\text{c}}}{(V_{\text{c}} - nb)^2} = \frac{2an^2}{V_{\text{c}}^3} \quad \cdots \text{(A)}
+\finalanswer{B_2(T)=b-\frac{a}{RT}}
 \]</div>
-<p>次に，さらにもう一度 <span class="arithmatex">\(V\)</span> で偏微分を行って 2 階偏微分係数を計算します。</p>
+<p>です。<span class="arithmatex">\(b\)</span> は排除体積による正の補正，<span class="arithmatex">\(-a/(RT)\)</span> は分子間引力による負の補正を表します。</p>
+<h3 id="3">(3)</h3>
+<p><span class="arithmatex">\(B_2(T_{\mathrm B})=0\)</span> より</p>
 <div class="arithmatex">\[
-\left( \frac{\partial^2 P}{\partial V^2} \right)_T = \frac{2nRT}{(V - nb)^3} - \frac{6an^2}{V^4}
+b-\frac{a}{RT_{\mathrm B}}=0
 \]</div>
-<p>臨界点における第 2 の条件 <span class="arithmatex">\(\left( \frac{\partial^2 P}{\partial V^2} \right)_T = 0\)</span> より，次の等式が得られます。</p>
+<p>となるため，ボイル温度は</p>
 <div class="arithmatex">\[
-\frac{2nRT_{\text{c}}}{(V_{\text{c}} - nb)^3} = \frac{6an^2}{V_{\text{c}}^4} \quad \cdots \text{(B)}
+\finalanswer{T_{\mathrm B}=\frac{a}{Rb}}
 \]</div>
-<p>式 (B) の両辺を式 (A) の両辺でそれぞれ割り算します。左辺同士，右辺同士の分数を整理します。</p>
-<div class="arithmatex">\[
-\frac{\frac{2nRT_{\text{c}}}{(V_{\text{c}} - nb)^3}}{\frac{nRT_{\text{c}}}{(V_{\text{c}} - nb)^2}} = \frac{\frac{6an^2}{V_{\text{c}}^4}}{\frac{2an^2}{V_{\text{c}}^3}}
-\]</div>
-<p>共通の因子を約分して簡略化します。</p>
-<div class="arithmatex">\[
-\frac{2}{V_{\text{c}} - nb} = \frac{3}{V_{\text{c}}}
-\]</div>
-<p>たすき掛けの乗算を行って <span class="arithmatex">\(V_{\text{c}}\)</span> について解きます。</p>
-<div class="arithmatex">\[
-2V_{\text{c}} = 3(V_{\text{c}} - nb)
-\]</div>
-<div class="arithmatex">\[
-2V_{\text{c}} = 3V_{\text{c}} - 3nb
-\]</div>
-<div class="arithmatex">\[
-V_{\text{c}} = 3nb
-\]</div>
-<p>これが求める臨界体積の式です。</p>
-<p>この結果 <span class="arithmatex">\(V_{\text{c}} = 3nb\)</span> を式 (A) に代入して臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> を求めます。</p>
-<div class="arithmatex">\[
-\frac{nRT_{\text{c}}}{(3nb - nb)^2} = \frac{2an^2}{(3nb)^3}
-\]</div>
-<div class="arithmatex">\[
-\frac{nRT_{\text{c}}}{(2nb)^2} = \frac{2an^2}{27n^3b^3}
-\]</div>
-<p>分母を展開して整理します。</p>
-<div class="arithmatex">\[
-\frac{nRT_{\text{c}}}{4n^2b^2} = \frac{2a}{27nb^3}
-\]</div>
-<p>両辺に <span class="arithmatex">\(4n^2b^2\)</span> を掛け算します。</p>
-<div class="arithmatex">\[
-nRT_{\text{c}} = \frac{8an^2b^2}{27nb^3} = \frac{8an}{27b}
-\]</div>
-<p>両辺を <span class="arithmatex">\(nR\)</span> で割り算します。</p>
-<div class="arithmatex">\[
-\finalanswer{T_{\text{c}} = \frac{8a}{27bR}}
-\]</div>
-<p>これが求める臨界温度の式です。</p>
+<p>です。<span class="arithmatex">\(T&gt;T_{\mathrm B}\)</span> では <span class="arithmatex">\(B_2(T)&gt;0\)</span> なので <span class="arithmatex">\(Z&gt;1\)</span> となり，圧力は理想気体より大きくなります。<span class="arithmatex">\(T&lt;T_{\mathrm B}\)</span> では <span class="arithmatex">\(B_2(T)&lt;0\)</span> なので <span class="arithmatex">\(Z&lt;1\)</span> となり，圧力は理想気体より小さくなります。ボイル温度では，低密度領域における第2ビリアル係数までの補正が打ち消し合います。</p>
 
 
 
@@ -14598,7 +14603,7 @@ nRT_{\text{c}} = \frac{8an^2b^2}{27nb^3} = \frac{8an}{27b}
     
       
     
-    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="ファンデルワールス気体の状態方程式｜大学物理の問題集">
+    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="ファンデルワールス気体の低密度展開｜大学物理の問題集">
       <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
       <div class="page-share__buttons">
         <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">

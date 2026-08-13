@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14557,16 +14557,16 @@ W(x, p) * = \frac{1}{\pi\hbar} \int_{\infty}^{-\infty} \psi\left(x - \frac{u}{2}
 <p>積分のダミー変数を <span class="arithmatex">\(u\)</span> から <span class="arithmatex">\(y\)</span> に書き直すと，これは元の <span class="arithmatex">\(W(x, p)\)</span> の定義式と一致します。したがって， <span class="arithmatex">\(W(x, p)^* = W(x, p)\)</span> が成り立ち，ウィグナー分布関数は位相空間の全域で必ず実数値をとることが示されました。</p>
 <h3 id="2">(2)</h3>
 <p>干渉項 <span class="arithmatex">\(W_{\mathrm{int}}(x, p)\)</span> の被積分関数にある2つの大括弧の指数部分を展開してまとめます。
-* 第1項の分子： </p>
-<p>$$
-  (x + y/2 - x_0)^2 + (x - y/2 + x_0)^2 = 2x^2 + 2x_0^2 - 4xx_0 + \frac{y^2}{2}
-  $$</p>
+* 第1項の分子：</p>
+<div class="arithmatex">\[
+(x + y/2 - x_0)^2 + (x - y/2 + x_0)^2 = 2x^2 + 2x_0^2 - 4xx_0 + \frac{y^2}{2}
+\]</div>
 <ul>
-<li>第2項の分子： 
-  $$
-  (x + y/2 + x_0)^2 + (x - y/2 - x_0)^2 = 2x^2 + 2x_0^2 + 4xx_0 + \frac{y^2}{2}
-  $$</li>
+<li>第2項の分子：</li>
 </ul>
+<div class="arithmatex">\[
+(x + y/2 + x_0)^2 + (x - y/2 - x_0)^2 = 2x^2 + 2x_0^2 + 4xx_0 + \frac{y^2}{2}
+\]</div>
 <p>これらを <span class="arithmatex">\(4\sigma^2\)</span> で割った形で指数関数に戻し， <span class="arithmatex">\(y\)</span> に依存しない共通の塊を積分の外へ括り出します。</p>
 <div class="arithmatex">\[
 W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \exp\left( -\frac{2x^2 + 2x_0^2}{4\sigma^2} \right) \left[ \exp\left( \frac{4xx_0}{4\sigma^2} \right) + \exp\left( -\frac{4xx_0}{4\sigma^2} \right) \right] \int_{-\infty}^{\infty} \exp\left( -\frac{y^2}{8\sigma^2} \right) \exp\left( -\frac{ipy}{\hbar} \right) dy

@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14580,20 +14580,20 @@ C_V = 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{\exp(T_E/T)}{[\exp(T_E/T) - 1]
 <li><strong>高温極限<span class="arithmatex">\(T \gg T_E\)</span></strong>
   変数が非常に小さくなるため，分母の指数関数を <span class="arithmatex">\(\exp(T_E/T) \simeq 1 + \frac{T_E}{T}\)</span> と近似し，分子の指数関数は 1 とみなせます。</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{aligned}
-C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left[ \left( 1 + \frac{T_E}{T} \right) - 1 \right]^2} &amp;= 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left( \frac{T_E}{T} \right)^2} \
+C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left[ \left( 1 + \frac{T_E}{T} \right) - 1 \right]^2} &amp;= 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{1}{\left( \frac{T_E}{T} \right)^2} \\
 &amp;= 3N k_B
 \end{aligned}
-$$</p>
+\]</div>
 <p>これにより，高温側では量子効果が薄れ，古典論によるデュロン・プティの法則が正しく再現されることが示されました。</p>
 <ul>
 <li><strong>低温極限<span class="arithmatex">\(T \ll T_E\)</span></strong>
   変数が非常に大きくなるため，分母の括弧内では <span class="arithmatex">\(\exp(T_E/T) \gg 1\)</span> となり， <span class="arithmatex">\(-1\)</span> の存在を無視できます。</li>
 </ul>
-<p>$$
-  \finalanswer{C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{\exp(T_E/T)}{\left[ \exp(T_E/T) \right]^2} = 3N k_B \left( \frac{T_E}{T} \right)^2 \exp\left( -\frac{T_E}{T} \right)}
-  $$</p>
+<div class="arithmatex">\[
+\finalanswer{C_V \simeq 3N k_B \left( \frac{T_E}{T} \right)^2 \frac{\exp(T_E/T)}{\left[ \exp(T_E/T) \right]^2} = 3N k_B \left( \frac{T_E}{T} \right)^2 \exp\left( -\frac{T_E}{T} \right)}
+\]</div>
 <p>指数関数 <span class="arithmatex">\(\exp(-T_E/T)\)</span> が多項式因子より速くゼロへ近づくため，熱容量は指数関数的に減少します。実際の固体では低温で <span class="arithmatex">\(C_V\propto T^3\)</span> となるため，この違いは振動数を一定としたアインシュタイン模型の限界を示します。</p>
 
 

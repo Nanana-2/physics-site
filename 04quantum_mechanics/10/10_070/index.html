@@ -5172,7 +5172,7 @@
   <span class="md-ellipsis">
     
   
-    ファンデルワールス気体の状態方程式
+    ファンデルワールス気体の低密度展開
   
 
     
@@ -14545,14 +14545,14 @@ i\hbar \frac{d c_f(t)}{dt} = \sum_{n} \langle f| \hat{V}(t) |n\rangle e^{i (E_f 
 i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = i\hbar \sum_{n} \left[ \frac{d c_n(t)}{dt} e^{-i E_n t / \hbar} |n\rangle + c_n(t) \left( -\frac{i E_n}{\hbar} \right) e^{-i E_n t / \hbar} |n\rangle \right]
 \]</div>
 <div class="arithmatex">\[
-= i\hbar \sum_{n} \frac{d c_n(t)}{dt} e^{-i E_n t / \hbar} |n\rangle + \sum_{n} E_n c_n(t) e^{-i E_n t / \hbar} |n\rangle
+i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = i\hbar \sum_{n} \frac{d c_n(t)}{dt} e^{-i E_n t / \hbar} |n\rangle + \sum_{n} E_n c_n(t) e^{-i E_n t / \hbar} |n\rangle
 \]</div>
 <p>次に，右辺に展開式を代入します。 <span class="arithmatex">\(\hat{H}(t) = \hat{H}_0 + \hat{V}(t)\)</span> であり， <span class="arithmatex">\(\hat{H}_0 |n\rangle = E_n |n\rangle\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
 \hat{H}(t) |\psi(t)\rangle = (\hat{H}_0 + \hat{V}(t)) \sum_{n} c_n(t) e^{-i E_n t / \hbar} |n\rangle
 \]</div>
 <div class="arithmatex">\[
-= \sum_{n} E_n c_n(t) e^{-i E_n t / \hbar} |n\rangle + \sum_{n} \hat{V}(t) c_n(t) e^{-i E_n t / \hbar} |n\rangle
+\hat{H}(t) |\psi(t)\rangle = \sum_{n} E_n c_n(t) e^{-i E_n t / \hbar} |n\rangle + \sum_{n} \hat{V}(t) c_n(t) e^{-i E_n t / \hbar} |n\rangle
 \]</div>
 <p>左辺と右辺を等号で結ぶと，双方に共通して存在する <span class="arithmatex">\(\sum_{n} E_n c_n(t) e^{-i E_n t / \hbar} |n\rangle\)</span> の項が引き算によって消去されます。</p>
 <div class="arithmatex">\[
