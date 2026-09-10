@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「ポテンシャルの展開と安定平衡」に関する演習問題です。仕事とエネルギー保存則の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/03/03_070/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="ポテンシャルの展開と安定平衡" />
+    <meta property="og:description" content="力学の「ポテンシャルの展開と安定平衡」に関する演習問題です。仕事とエネルギー保存則の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/03/03_070/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ポテンシャルの展開と安定平衡" />
+    <meta name="twitter:description" content="力学の「ポテンシャルの展開と安定平衡」に関する演習問題です。仕事とエネルギー保存則の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14529,10 +14541,10 @@ U(x) = U_0 \left\{ \left( \frac{a}{x} \right)^{12} - 2 \left( \frac{a}{x} \right
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>一次元運動における力とポテンシャルの関係式 <span class="arithmatex">\(F(x) = -\frac{dU(x)}{dx}\)</span> に基づき，与えられた関数を微分します。</p>
+<p>一次元運動における力とポテンシャルの関係式 <span class="arithmatex">\(F(x) = -\dfrac{dU(x)}{dx}\)</span> に基づき，与えられた関数を微分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{dU}{dx} &amp;= U_0 \left\{ -12 \frac{a^{12}}{x^{13}} + 12 \frac{a^6}{x^7} \right\} \\
+\frac{dU}{dx} &amp;= U_0 \left\{ -12 \frac{a^{12}}{x^{13}} + 12 \frac{a^6}{x^7} \right\} \\\\
 &amp;= \frac{12 U_0}{x} \left\{ - \left( \frac{a}{x} \right)^{12} + \left( \frac{a}{x} \right)^6 \right\}
 \end{aligned}
 \]</div>
@@ -14567,7 +14579,7 @@ U(a) = U_0 (1 - 2) = -U_0
 <p>この 2 階微分の式に平衡点 <span class="arithmatex">\(x = a\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\left. \frac{d^2U}{dx^2} \right|_{x=a} &amp;= U_0 \left\{ \frac{156}{a^2} - \frac{84}{a^2} \right\} \\
+\left. \frac{d^2U}{dx^2} \right|_{x=a} &amp;= U_0 \left\{ \frac{156}{a^2} - \frac{84}{a^2} \right\} \\\\
 &amp;= \frac{72 U_0}{a^2}
 \end{aligned}
 \]</div>
@@ -14580,14 +14592,14 @@ U(a) = U_0 (1 - 2) = -U_0
 <div class="arithmatex">\[
 U(\xi) \approx \frac{36 U_0}{a^2} \xi^2
 \]</div>
-<p>この形式は，有効なばね定数を <span class="arithmatex">\(k_{\text{eff}}\)</span> と置いたときの弾性エネルギーの式 <span class="arithmatex">\(\frac{1}{2} k_{\text{eff}} \xi^2\)</span> と全く同じ構造を持っています。両者の係数を比較します。</p>
+<p>この形式は，有効なばね定数を <span class="arithmatex">\(k_{\text{eff}}\)</span> と置いたときの弾性エネルギーの式 <span class="arithmatex">\(\dfrac{1}{2} k_{\text{eff}} \xi^2\)</span> と全く同じ構造を持っています。両者の係数を比較します。</p>
 <div class="arithmatex">\[
 \frac{1}{2} k_{\text{eff}} = \frac{36 U_0}{a^2}
 \]</div>
 <div class="arithmatex">\[
 k_{\text{eff}} = \frac{72 U_0}{a^2}
 \]</div>
-<p>調和振動子の角振動数の公式 <span class="arithmatex">\(\omega = \sqrt{\frac{k}{m}}\)</span> に，この見かけのばね定数を代入します。</p>
+<p>調和振動子の角振動数の公式 <span class="arithmatex">\(\omega = \sqrt{\dfrac{k}{m}}\)</span> に，この見かけのばね定数を代入します。</p>
 <div class="arithmatex">\[
 \omega = \sqrt{\frac{k_{\text{eff}}}{m}} = \sqrt{\frac{72 U_0}{m a^2}}
 \]</div>

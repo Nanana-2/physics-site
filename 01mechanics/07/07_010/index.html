@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「角運動量保存則の導出」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/07/07_010/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="角運動量保存則の導出" />
+    <meta property="og:description" content="力学の「角運動量保存則の導出」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/07/07_010/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="角運動量保存則の導出" />
+    <meta name="twitter:description" content="力学の「角運動量保存則の導出」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14541,12 +14553,12 @@
 <h1 id="_1">角運動量保存則の導出</h1>
 <h2 id="_2">問題</h2>
 <p>原点に固定された恒星のまわりを，質量 <span class="arithmatex">\(m\)</span> の探査機が運動している。探査機には，恒星と探査機を結ぶ直線方向の中心力が働き，その大きさは両者の距離のみに依存するものとする。</p>
-<p>3次元空間の座標原点に恒星が存在し，時刻 <span class="arithmatex">\(t\)</span> における探査機の位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}(t)\)</span>，質量を <span class="arithmatex">\(m\)</span>，速度ベクトルを <span class="arithmatex">\(\boldsymbol{v}(t) = \frac{d\boldsymbol{r}}{dt}\)</span> とする。恒星が探査機に及ぼす万有引力 <span class="arithmatex">\(\boldsymbol{F}(\boldsymbol{r})\)</span> は，距離 <span class="arithmatex">\(r = |\boldsymbol{r}|\)</span> の関数 <span class="arithmatex">\(f(r)\)</span> を用いて以下のように表される。</p>
+<p>3次元空間の座標原点に恒星が存在し，時刻 <span class="arithmatex">\(t\)</span> における探査機の位置ベクトルを <span class="arithmatex">\(\boldsymbol{r}(t)\)</span>，質量を <span class="arithmatex">\(m\)</span>，速度ベクトルを <span class="arithmatex">\(\boldsymbol{v}(t) = \dfrac{d\boldsymbol{r}}{dt}\)</span> とする。恒星が探査機に及ぼす万有引力 <span class="arithmatex">\(\boldsymbol{F}(\boldsymbol{r})\)</span> は，距離 <span class="arithmatex">\(r = |\boldsymbol{r}|\)</span> の関数 <span class="arithmatex">\(f(r)\)</span> を用いて以下のように表される。</p>
 <div class="arithmatex">\[
 \boldsymbol{F}(\boldsymbol{r}) = f(r) \frac{\boldsymbol{r}}{r}
 \]</div>
 <p>(1) 探査機の運動方程式を示し，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> と探査機に働く力 <span class="arithmatex">\(\boldsymbol{F}\)</span> の外積であるトルク <span class="arithmatex">\(\boldsymbol{N} = \boldsymbol{r} \times \boldsymbol{F}\)</span> が常に零ベクトルになることを示せ。</p>
-<p>(2) 探査機の角運動量 <span class="arithmatex">\(\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}\)</span> を定義する。ここで <span class="arithmatex">\(\boldsymbol{p} = m\boldsymbol{v}\)</span> は運動量ベクトルである。角運動量の時間微分 <span class="arithmatex">\(\frac{d\boldsymbol{L}}{dt}\)</span> を計算し，(1) の結果を用いて，角運動量ベクトル <span class="arithmatex">\(\boldsymbol{L}\)</span> が時間的に変化しない定ベクトルであることを示せ。</p>
+<p>(2) 探査機の角運動量 <span class="arithmatex">\(\boldsymbol{L} = \boldsymbol{r} \times \boldsymbol{p}\)</span> を定義する。ここで <span class="arithmatex">\(\boldsymbol{p} = m\boldsymbol{v}\)</span> は運動量ベクトルである。角運動量の時間微分 <span class="arithmatex">\(\dfrac{d\boldsymbol{L}}{dt}\)</span> を計算し，(1) の結果を用いて，角運動量ベクトル <span class="arithmatex">\(\boldsymbol{L}\)</span> が時間的に変化しない定ベクトルであることを示せ。</p>
 <p>(3) 角運動量 <span class="arithmatex">\(\boldsymbol{L}\)</span> が一定であることから，探査機の軌道が <span class="arithmatex">\(\boldsymbol{L}\)</span> に垂直な同一平面内にあることを示せ。</p>
 <p>(4) 探査機の位置を極座標 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(\theta\)</span> を用いて表す。軌道平面内での面積速度が一定であることを，角運動量の大きさ <span class="arithmatex">\(L = |\boldsymbol{L}|\)</span> を用いて示せ。</p>
 <hr />
@@ -14559,8 +14571,8 @@
 <p>このとき，探査機に働くトルク <span class="arithmatex">\(\boldsymbol{N}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{N} &amp;= \boldsymbol{r} \times \boldsymbol{F} \\
-&amp;= \boldsymbol{r} \times \left( f(r) \frac{\boldsymbol{r}}{r} \right) \\
+\boldsymbol{N} &amp;= \boldsymbol{r} \times \boldsymbol{F} \\\\
+&amp;= \boldsymbol{r} \times \left( f(r) \frac{\boldsymbol{r}}{r} \right) \\\\
 &amp;= \frac{f(r)}{r} (\boldsymbol{r} \times \boldsymbol{r})
 \end{aligned}
 \]</div>
@@ -14577,18 +14589,18 @@
 &amp;= \frac{d\boldsymbol{r}}{dt} \times \boldsymbol{p} + \boldsymbol{r} \times \frac{d\boldsymbol{p}}{dt}
 \end{aligned}
 \]</div>
-<p>ここで，右辺の第1項に <span class="arithmatex">\(\frac{d\boldsymbol{r}}{dt} = \boldsymbol{v}\)</span> および <span class="arithmatex">\(\boldsymbol{p} = m\boldsymbol{v}\)</span> を代入すると，速度ベクトル同士の外積が現れます。</p>
+<p>ここで，右辺の第1項に <span class="arithmatex">\(\dfrac{d\boldsymbol{r}}{dt} = \boldsymbol{v}\)</span> および <span class="arithmatex">\(\boldsymbol{p} = m\boldsymbol{v}\)</span> を代入すると，速度ベクトル同士の外積が現れます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d\boldsymbol{r}}{dt} \times \boldsymbol{p} &amp;= \boldsymbol{v} \times (m\boldsymbol{v}) \\
-&amp;= m (\boldsymbol{v} \times \boldsymbol{v}) \\
+\frac{d\boldsymbol{r}}{dt} \times \boldsymbol{p} &amp;= \boldsymbol{v} \times (m\boldsymbol{v}) \\\\
+&amp;= m (\boldsymbol{v} \times \boldsymbol{v}) \\\\
 &amp;= \boldsymbol{0}
 \end{aligned}
 \]</div>
 <p>また，右辺の第2項には運動方程式を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{r} \times \frac{d\boldsymbol{p}}{dt} &amp;= \boldsymbol{r} \times \boldsymbol{F} \\
+\boldsymbol{r} \times \frac{d\boldsymbol{p}}{dt} &amp;= \boldsymbol{r} \times \boldsymbol{F} \\\\
 &amp;= \boldsymbol{N}
 \end{aligned}
 \]</div>
@@ -14601,7 +14613,7 @@
 <p>角運動量ベクトル <span class="arithmatex">\(\boldsymbol{L}\)</span> と，位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の内積を考えます。外積の性質から，外積によって作られるベクトルは元の二つのベクトルの両方に直交します。したがって，以下の関係が常に成り立ちます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{r} \cdot \boldsymbol{L} &amp;= \boldsymbol{r} \cdot (\boldsymbol{r} \times \boldsymbol{p}) \\
+\boldsymbol{r} \cdot \boldsymbol{L} &amp;= \boldsymbol{r} \cdot (\boldsymbol{r} \times \boldsymbol{p}) \\\\
 &amp;= \finalanswer{0}
 \end{aligned}
 \]</div>
@@ -14630,7 +14642,7 @@ L = m r^2 \frac{d\theta}{dt}
 <div class="arithmatex">\[
 dS = \frac{1}{2} r^2 d\theta
 \]</div>
-<p>両辺を <span class="arithmatex">\(dt\)</span> で割ることで，単位時間あたりに掃き分ける面積である面積速度が得られます。</p>
+<p>両辺を <span class="arithmatex">\(dt\)</span> で割ることで，単位時間あたりに掃き分ける面積である面積速度が導かれます。</p>
 <div class="arithmatex">\[
 \frac{dS}{dt} = \frac{1}{2} r^2 \frac{d\theta}{dt}
 \]</div>

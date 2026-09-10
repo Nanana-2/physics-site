@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「慣性モーメントの導出」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/09/09_010/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="慣性モーメントの導出" />
+    <meta property="og:description" content="力学の「慣性モーメントの導出」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/09/09_010/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="慣性モーメントの導出" />
+    <meta name="twitter:description" content="力学の「慣性モーメントの導出」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14569,7 +14581,7 @@ I_1 &amp;= \int_{-L/2}^{L/2} \rho_1 x^2 dx \\\\
 &amp;= \finalanswer{\frac{1}{12} M L^2}
 \end{aligned}
 \]</div>
-<p>これより，一様な細い棒の中心まわりの慣性モーメントは <span class="arithmatex">\(I_1 = \frac{1}{12} M L^2\)</span> です。</p>
+<p>これより，一様な細い棒の中心まわりの慣性モーメントは <span class="arithmatex">\(I_1 = \dfrac{1}{12} M L^2\)</span> です。</p>
 <h3 id="2">(2)</h3>
 <p>一様な薄い円盤の面密度を <span class="arithmatex">\(\rho_2\)</span> とおくと，円盤の面積は <span class="arithmatex">\(\pi R^2\)</span> であるため</p>
 <div class="arithmatex">\[
@@ -14592,14 +14604,13 @@ I_2 &amp;= \int_{0}^{R} 2 \pi \rho_2 r^3 dr \\\\
 &amp;= \finalanswer{\frac{1}{2} M R^2}
 \end{aligned}
 \]</div>
-<p>これより，一様な薄い円盤の中心軸まわりの慣性モーメントは <span class="arithmatex">\(I_2 = \frac{1}{2} M R^2\)</span> です。</p>
+<p>これより，一様な薄い円盤の中心軸まわりの慣性モーメントは <span class="arithmatex">\(I_2 = \dfrac{1}{2} M R^2\)</span> です。</p>
 <h3 id="3">(3)</h3>
-<p>一様な球の体積密度を <span class="arithmatex">\(\rho_3\)</span> とおくと，球の体積は <span class="arithmatex">\(\frac{4}{3} \pi R^3\)</span> であるため</p>
+<p>一様な球の体積密度を <span class="arithmatex">\(\rho_3\)</span> とおくと，球の体積は <span class="arithmatex">\(\dfrac{4}{3} \pi R^3\)</span> であるため</p>
 <div class="arithmatex">\[
 \rho_3 = \frac{3 M}{4 \pi R^3}
 \]</div>
-<p>となります。球の中心を原点とし，回転軸を <span class="arithmatex">\(z\)</span> 軸に選びます。<span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z + dz\)</span> の位置において，軸に垂直な平面で球をスライスした厚さ <span class="arithmatex">\(dz\)</span> の微小な円盤を考えます。
-三平方の定理より，この微小円盤の半径 <span class="arithmatex">\(r(z)\)</span> は</p>
+<p>となります。球の中心を原点とし，回転軸を <span class="arithmatex">\(z\)</span> 軸に選びます。<span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z + dz\)</span> の位置において，軸に垂直な平面で球をスライスした厚さ <span class="arithmatex">\(dz\)</span> の微小な円盤を考えます。三平方の定理より，この微小円盤の半径 <span class="arithmatex">\(r(z)\)</span> は</p>
 <div class="arithmatex">\[
 r(z) = \sqrt{R^2 - z^2}
 \]</div>
@@ -14607,9 +14618,12 @@ r(z) = \sqrt{R^2 - z^2}
 <div class="arithmatex">\[
 dm = \rho_3 \pi (R^2 - z^2) dz
 \]</div>
-<p>と表されます。小問(2)の結果より，質量 <span class="arithmatex">\(m\)</span>，半径 <span class="arithmatex">\(r\)</span> の一様な円盤の中心軸まわりの慣性モーメントは <span class="arithmatex">\(\frac{1}{2} m r^2\)</span> です。したがって，この微小円盤のスライスの慣性モーメント <span class="arithmatex">\(dI_3\)</span> は</p>
+<p>と表されます。小問(2)の結果より，質量 <span class="arithmatex">\(m\)</span>，半径 <span class="arithmatex">\(r\)</span> の一様な円盤の中心軸まわりの慣性モーメントは <span class="arithmatex">\(\dfrac{1}{2} m r^2\)</span> です。したがって，この微小円盤のスライスの慣性モーメント <span class="arithmatex">\(dI_3\)</span> は</p>
 <div class="arithmatex">\[
-dI_3 = \frac{1}{2} dm r(z)^2 = \frac{1}{2} \rho_3 \pi (R^2 - z^2)^2 dz
+\begin{aligned}
+dI_3 &amp;= \frac{1}{2} dm r(z)^2 \\\\
+&amp;= \frac{1}{2} \rho_3 \pi (R^2 - z^2)^2 dz
+\end{aligned}
 \]</div>
 <p>となります。球全体にわたってこれを足し合わせるため，<span class="arithmatex">\(z\)</span> を <span class="arithmatex">\(-R\)</span> から <span class="arithmatex">\(R\)</span> まで積分します。被積分関数は偶関数であるため，積分範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(R\)</span> までの2倍に変換して計算します。</p>
 <div class="arithmatex">\[
@@ -14625,7 +14639,7 @@ I_3 &amp;= \int_{-R}^{R} \frac{1}{2} \rho_3 \pi (R^2 - z^2)^2 dz \\\\
 <div class="arithmatex">\[
 I_3 = \frac{3 M}{4 \pi R^3} \pi R^5 \frac{8}{15} = \finalanswer{\frac{2}{5} M R^2}
 \]</div>
-<p>これより，一様な球の中心を通る軸まわりの慣性モーメントは <span class="arithmatex">\(I_3 = \frac{2}{5} M R^2\)</span> です。</p>
+<p>これより，一様な球の中心を通る軸まわりの慣性モーメントは <span class="arithmatex">\(I_3 = \dfrac{2}{5} M R^2\)</span> です。</p>
 <h3 id="4">(4)</h3>
 <p>棒の長さが <span class="arithmatex">\(L = 2R\)</span> のとき，棒の慣性モーメント <span class="arithmatex">\(I_1\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[

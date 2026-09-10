@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「回転座標系の運動方程式」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/08/08_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="回転座標系の運動方程式" />
+    <meta property="og:description" content="力学の「回転座標系の運動方程式」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/08/08_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="回転座標系の運動方程式" />
+    <meta name="twitter:description" content="力学の「回転座標系の運動方程式」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14551,11 +14563,11 @@
 <p>外積の線形性を用いることで，この項は次のように整理できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\sum_{i=1}^3 B_i \left( \boldsymbol{\omega} \times \boldsymbol{e}_i \right) &amp;= \boldsymbol{\omega} \times \left( \sum_{i=1}^3 B_i \boldsymbol{e}_i \right) \\
+\sum_{i=1}^3 B_i \left( \boldsymbol{\omega} \times \boldsymbol{e}_i \right) &amp;= \boldsymbol{\omega} \times \left( \sum_{i=1}^3 B_i \boldsymbol{e}_i \right) \\\\
 &amp;= \boldsymbol{\omega} \times \boldsymbol{B}
 \end{aligned}
 \]</div>
-<p>これらを合わせることで，求める時間微分の変換公式を得ます。</p>
+<p>これらを合わせることで，求める時間微分の変換公式が導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{d\boldsymbol{B}}{dt} = \frac{d'\boldsymbol{B}}{dt} + \boldsymbol{\omega} \times \boldsymbol{B}}
 \]</div>
@@ -14563,30 +14575,30 @@
 <p>小問(1)で得られた変換公式を，物体の位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に適用します。これにより，慣性系における速度 <span class="arithmatex">\(\boldsymbol{v}\)</span> と，回転系における速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> の関係が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{v} &amp;= \frac{d\boldsymbol{r}}{dt} \\
-&amp;= \frac{d'\boldsymbol{r}}{dt} + \boldsymbol{\omega} \times \boldsymbol{r} \\
+\boldsymbol{v} &amp;= \frac{d\boldsymbol{r}}{dt} \\\\
+&amp;= \frac{d'\boldsymbol{r}}{dt} + \boldsymbol{\omega} \times \boldsymbol{r} \\\\
 &amp;= \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}
 \end{aligned}
 \]</div>
 <p>次に，慣性系における加速度 <span class="arithmatex">\(\boldsymbol{a} = d\boldsymbol{v}/dt\)</span> を求めるため，この速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> に対して再度変換公式を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{a} &amp;= \frac{d\boldsymbol{v}}{dt} \\
+\boldsymbol{a} &amp;= \frac{d\boldsymbol{v}}{dt} \\\\
 &amp;= \frac{d'\boldsymbol{v}}{dt} + \boldsymbol{\omega} \times \boldsymbol{v}
 \end{aligned}
 \]</div>
 <p>ここで，右辺の第1項に <span class="arithmatex">\(\boldsymbol{v} = \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r}\)</span> を代入します。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> が時間的に一定であることに注意すると，次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d'\boldsymbol{v}}{dt} &amp;= \frac{d'}{dt} \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) \\
-&amp;= \frac{d'\boldsymbol{v}'}{dt} + \boldsymbol{\omega} \times \frac{d'\boldsymbol{r}}{dt} \\
+\frac{d'\boldsymbol{v}}{dt} &amp;= \frac{d'}{dt} \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) \\\\
+&amp;= \frac{d'\boldsymbol{v}'}{dt} + \boldsymbol{\omega} \times \frac{d'\boldsymbol{r}}{dt} \\\\
 &amp;= \boldsymbol{a}' + \boldsymbol{\omega} \times \boldsymbol{v}'
 \end{aligned}
 \]</div>
 <p>同様に，右辺の第2項に <span class="arithmatex">\(\boldsymbol{v}\)</span> の表現を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{\omega} \times \boldsymbol{v} &amp;= \boldsymbol{\omega} \times \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) \\
+\boldsymbol{\omega} \times \boldsymbol{v} &amp;= \boldsymbol{\omega} \times \left( \boldsymbol{v}' + \boldsymbol{\omega} \times \boldsymbol{r} \right) \\\\
 &amp;= \boldsymbol{\omega} \times \boldsymbol{v}' + \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
 \end{aligned}
 \]</div>
@@ -14604,9 +14616,7 @@
 m \boldsymbol{a}' = \boldsymbol{F} - 2 m \boldsymbol{\omega} \times \boldsymbol{v}' - m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)
 \]</div>
 <p>これが回転座標系における物体の運動方程式です。</p>
-<p>この方程式の右辺に現れる見かけの力は，それぞれ以下のように定義されます。
-- 速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に比例する力 <span class="arithmatex">\(-2 m \boldsymbol{\omega} \times \boldsymbol{v}'\)</span> を，コリオリの力と呼びます。
-- 位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力 <span class="arithmatex">\(-m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)\)</span> を，遠心力と呼びます。</p>
+<p>この方程式の右辺に現れる見かけの力は，それぞれ以下のように定義されます。 - 速度 <span class="arithmatex">\(\boldsymbol{v}'\)</span> に比例する力 <span class="arithmatex">\(-2 m \boldsymbol{\omega} \times \boldsymbol{v}'\)</span> を，コリオリの力と呼びます。 - 位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> に依存する力 <span class="arithmatex">\(-m \boldsymbol{\omega} \times \left( \boldsymbol{\omega} \times \boldsymbol{r} \right)\)</span> を，遠心力と呼びます。</p>
 <p>次に，この遠心力が人工重力として機能する理由を説明します。</p>
 <p>ステーション内で物体が静止しているときは <span class="arithmatex">\(\boldsymbol{v}'=\boldsymbol{0}\)</span> であり，コリオリ力は働きません。したがって，慣性力は遠心力だけです。</p>
 <p>ここで，回転軸から物体へ向かって，回転軸に垂直に引いたベクトルを <span class="arithmatex">\(\boldsymbol{r}_{\perp}\)</span> とします。角速度ベクトル <span class="arithmatex">\(\boldsymbol{\omega}\)</span> と位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の関係から，遠心力は次のように書き直すことができます。</p>

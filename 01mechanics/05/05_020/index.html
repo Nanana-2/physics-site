@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「単振り子の微小振動」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/05/05_020/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="単振り子の微小振動" />
+    <meta property="og:description" content="力学の「単振り子の微小振動」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/05/05_020/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="単振り子の微小振動" />
+    <meta name="twitter:description" content="力学の「単振り子の微小振動」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14519,9 +14531,7 @@
 <h1 id="_1">単振り子の微小振動</h1>
 <h2 id="_2">問題</h2>
 <p>一様な重力場中で，天井の固定点 <span class="arithmatex">\(O\)</span> から長さ <span class="arithmatex">\(l\)</span> の軽く伸びない糸で質量 <span class="arithmatex">\(m\)</span> の質点を吊り下げた単振り子を考える。重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。</p>
-<p>鉛直線とおもりの紐がなす角度を <span class="arithmatex">\(\theta\)</span> とし，反時計回りを正の方向とする。
-おもりが最下点にある状態を <span class="arithmatex">\(\theta = 0\)</span> とし，この位置をポテンシャルエネルギーの基準とする。
-以下の問いに答えよ。</p>
+<p>鉛直線とおもりの紐がなす角度を <span class="arithmatex">\(\theta\)</span> とし，反時計回りを正の方向とする。おもりが最下点にある状態を <span class="arithmatex">\(\theta = 0\)</span> とし，この位置をポテンシャルエネルギーの基準とする。以下の問いに答えよ。</p>
 <p>(1) おもりの速度の大きさ <span class="arithmatex">\(v\)</span> および高さを <span class="arithmatex">\(\theta\)</span> とその時間微分 <span class="arithmatex">\(\dot{\theta}\)</span> を用いて表し，系のラグランジアン <span class="arithmatex">\(L(\theta, \dot{\theta})\)</span> を求めよ。</p>
 <p>(2) ラグランジュの運動方程式</p>
 <div class="arithmatex">\[
@@ -14532,9 +14542,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>おもりの運動を極座標系のように考えます。
-固定点 <span class="arithmatex">\(O\)</span> を原点とし，鉛直下向きを <span class="arithmatex">\(y\)</span> 軸の正方向，水平右向きを <span class="arithmatex">\(x\)</span> 軸の正方向とします。
-このとき，おもりの位置座標 <span class="arithmatex">\((x, y)\)</span> は，角 <span class="arithmatex">\(\theta\)</span> を用いて次のように表されます。</p>
+<p>おもりの運動を極座標系のように考えます。固定点 <span class="arithmatex">\(O\)</span> を原点とし，鉛直下向きを <span class="arithmatex">\(y\)</span> 軸の正方向，水平右向きを <span class="arithmatex">\(x\)</span> 軸の正方向とします。このとき，おもりの位置座標 <span class="arithmatex">\((x, y)\)</span> は，角 <span class="arithmatex">\(\theta\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
 x = l \sin \theta
 \]</div>
@@ -14551,8 +14559,8 @@ y = l \cos \theta
 <p>したがって，おもりの速度の2乗 <span class="arithmatex">\(v^2\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-v^2 &amp;= \dot{x}^2 + \dot{y}^2 \\
-&amp;= l^2 \dot{\theta}^2 (\cos^2 \theta + \sin^2 \theta) \\
+v^2 &amp;= \dot{x}^2 + \dot{y}^2 \\\\
+&amp;= l^2 \dot{\theta}^2 (\cos^2 \theta + \sin^2 \theta) \\\\
 &amp;= l^2 \dot{\theta}^2
 \end{aligned}
 \]</div>
@@ -14560,9 +14568,7 @@ v^2 &amp;= \dot{x}^2 + \dot{y}^2 \\
 <div class="arithmatex">\[
 K = \frac{1}{2} m v^2 = \frac{1}{2} m l^2 \dot{\theta}^2
 \]</div>
-<p>一方，ポテンシャルエネルギー <span class="arithmatex">\(U\)</span> を考えます。
-最下点 <span class="arithmatex">\(\theta = 0\)</span> の高さを 0 としたため，おもりの高さは <span class="arithmatex">\(l-y = l(1-\cos\theta)\)</span> となります。
-したがって，ポテンシャルエネルギー <span class="arithmatex">\(U\)</span> は次のようになります。</p>
+<p>一方，ポテンシャルエネルギー <span class="arithmatex">\(U\)</span> を考えます。最下点 <span class="arithmatex">\(\theta = 0\)</span> の高さを 0 としたため，おもりの高さは <span class="arithmatex">\(l-y = l(1-\cos\theta)\)</span> となります。したがって，ポテンシャルエネルギー <span class="arithmatex">\(U\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 U = mgl(1 - \cos \theta)
 \]</div>
@@ -14571,8 +14577,7 @@ U = mgl(1 - \cos \theta)
 L = K - U = \finalanswer{\frac{1}{2} m l^2 \dot{\theta}^2 - mgl(1 - \cos \theta)}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で求めたラグランジアン <span class="arithmatex">\(L\)</span> を，ラグランジュの運動方程式に代入します。
-まず，<span class="arithmatex">\(\dot{\theta}\)</span> による偏微分を計算します。</p>
+<p>(1) で求めたラグランジアン <span class="arithmatex">\(L\)</span> を，ラグランジュの運動方程式に代入します。まず，<span class="arithmatex">\(\dot{\theta}\)</span> による偏微分を計算します。</p>
 <div class="arithmatex">\[
 \frac{\partial L}{\partial \dot{\theta}} = m l^2 \dot{\theta}
 \]</div>
@@ -14604,12 +14609,11 @@ m l^2 \ddot{\theta} + mgl \sin \theta &amp;= 0
 <div class="arithmatex">\[
 \ddot{\theta} + \omega^2 \theta = 0
 \]</div>
-<p>と同じ形です。したがって，微小振動の範囲では単振動となります。
-角振動数 <span class="arithmatex">\(\omega\)</span> は，係数の比較により次のように求まります。</p>
+<p>と同じ形です。したがって，微小振動の範囲では単振動となります。角振動数 <span class="arithmatex">\(\omega\)</span> は，係数の比較により次のように求まります。</p>
 <div class="arithmatex">\[
 \omega = \sqrt{\frac{g}{l}}
 \]</div>
-<p>また，周期 <span class="arithmatex">\(T\)</span> は角振動数 <span class="arithmatex">\(\omega\)</span> との間にある関係式 <span class="arithmatex">\(T = \frac{2\pi}{\omega}\)</span> から，次のように得られます。</p>
+<p>また，周期 <span class="arithmatex">\(T\)</span> は角振動数 <span class="arithmatex">\(\omega\)</span> との間にある関係式 <span class="arithmatex">\(T = \dfrac{2\pi}{\omega}\)</span> から，次のように導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{T = 2\pi \sqrt{\frac{l}{g}}}
 \]</div>

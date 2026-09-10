@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「放物運動と到達距離」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/01/01_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="放物運動と到達距離" />
+    <meta property="og:description" content="力学の「放物運動と到達距離」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/01/01_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="放物運動と到達距離" />
+    <meta name="twitter:description" content="力学の「放物運動と到達距離」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14527,10 +14539,10 @@
 <h3 id="1">(1)</h3>
 <p>質点は鉛直下向きに大きさ <span class="arithmatex">\(g\)</span> の重力加速度のみを受けるため，加速度の各成分は次のようになります。</p>
 <div class="arithmatex">\[
-a_x = 0
+\finalanswer{a_x = 0}
 \]</div>
 <div class="arithmatex">\[
-a_y = -g
+\finalanswer{a_y = -g}
 \]</div>
 <p>初期条件として，時刻 <span class="arithmatex">\(t=0\)</span> での位置は <span class="arithmatex">\(x(0) = 0, y(0) = 0\)</span> であり，速度の初期成分は <span class="arithmatex">\(v_x(0) = v_0 \cos\theta, v_y(0) = v_0 \sin\theta\)</span> です。加速度を時間で積分することにより，任意の時刻における速度成分が得られます。</p>
 <div class="arithmatex">\[
@@ -14544,20 +14556,20 @@ a_y = -g
 \finalanswer{x(t) = v_0 t \cos\theta}
 \]</div>
 <div class="arithmatex">\[
-\finalanswer{y(t) = v_0 t \sin\theta - \frac{1}{2} gt^2}
+\finalanswer{y(t) = v_0 t \sin\theta - \dfrac{1}{2} gt^2}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>水平方向の位置の式 <span class="arithmatex">\(x = v_0 t \cos\theta\)</span> を，時間について整理します。</p>
 <div class="arithmatex">\[
-t = \frac{x}{v_0 \cos\theta}
+t = \dfrac{x}{v_0 \cos\theta}
 \]</div>
-<p>この時間の表現を，鉛直方向の位置の式 <span class="arithmatex">\(y = v_0 t \sin\theta - \frac{1}{2} gt^2\)</span> に代入します。</p>
+<p>この時間の表現を，鉛直方向の位置の式 <span class="arithmatex">\(y = v_0 t \sin\theta - \dfrac{1}{2} gt^2\)</span> に代入します。</p>
 <div class="arithmatex">\[
-y = v_0 \left( \frac{x}{v_0 \cos\theta} \right) \sin\theta - \frac{1}{2} g \left( \frac{x}{v_0 \cos\theta} \right)^2
+y = v_0 \left( \dfrac{x}{v_0 \cos\theta} \right) \sin\theta - \dfrac{1}{2} g \left( \dfrac{x}{v_0 \cos\theta} \right)^2
 \]</div>
-<p>分母分子の初速度 <span class="arithmatex">\(v_0\)</span> を約分し，三角関数の関係式 <span class="arithmatex">\(\frac{\sin\theta}{\cos\theta} = \tan\theta\)</span> を適用して式を整理します。</p>
+<p>分母分子の初速度 <span class="arithmatex">\(v_0\)</span> を約分し，三角関数の関係式 <span class="arithmatex">\(\dfrac{\sin\theta}{\cos\theta} = \tan\theta\)</span> を適用して式を整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{y = x \tan\theta - \frac{g}{2 v_0^2 \cos^2\theta} x^2}
+\finalanswer{y = x \tan\theta - \dfrac{g}{2 v_0^2 \cos^2\theta} x^2}
 \]</div>
 <p>これが求める軌道方程式であり， <span class="arithmatex">\(x\)</span> の2次関数として表されるため軌跡が放物線になることがわかります。</p>
 <h3 id="3">(3)</h3>
@@ -14567,31 +14579,35 @@ v_0 \sin\theta - gt_1 = 0
 \]</div>
 <p>この式から，最高点に達する時刻が求まります。</p>
 <div class="arithmatex">\[
-\finalanswer{t_1 = \frac{v_0 \sin\theta}{g}}
+\finalanswer{t_1 = \dfrac{v_0 \sin\theta}{g}}
 \]</div>
 <p>この時刻 <span class="arithmatex">\(t_1\)</span> を位置成分 <span class="arithmatex">\(y(t)\)</span> の式に代入することで，最高点の高さが得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-y_{\text{max}} &amp;= v_0 \left( \frac{v_0 \sin\theta}{g} \right) \sin\theta - \frac{1}{2} g \left( \frac{v_0 \sin\theta}{g} \right)^2 \\
-&amp;= \frac{v_0^2 \sin^2\theta}{g} - \frac{v_0^2 \sin^2\theta}{2g} \\
-&amp;= \finalanswer{\frac{v_0^2 \sin^2\theta}{2g}}
+y_{\text{max}}
+&amp;= v_0\left(\dfrac{v_0\sin\theta}{g}\right)\sin\theta
+-\dfrac{1}{2}g\left(\dfrac{v_0\sin\theta}{g}\right)^2 \\\\
+&amp;= \dfrac{v_0^2\sin^2\theta}{g}
+-\dfrac{v_0^2\sin^2\theta}{2g} \\\\
+&amp;= \finalanswer{\dfrac{v_0^2\sin^2\theta}{2g}}
 \end{aligned}
 \]</div>
 <p>軌道の対称性より，再び地面に着地するまでの全飛行時間 <span class="arithmatex">\(t_2\)</span> は，最高点に達する時刻のちょうど2倍になります。</p>
 <div class="arithmatex">\[
-\finalanswer{t_2 = 2t_1 = \frac{2v_0 \sin\theta}{g}}
+t_2 = 2t_1 = \finalanswer{\dfrac{2v_0 \sin\theta}{g}}
 \]</div>
 <p>水平到達距離 <span class="arithmatex">\(x_{\text{max}}\)</span> は，この全飛行時間 <span class="arithmatex">\(t_2\)</span> のときにおける水平方向の位置 <span class="arithmatex">\(x(t_2)\)</span> として計算できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-x_{\text{max}} &amp;= v_0 (t_2) \cos\theta \\
-&amp;= v_0 \left( \frac{2v_0 \sin\theta}{g} \right) \cos\theta \\
-&amp;= \frac{v_0^2 \cdot 2 \sin\theta \cos\theta}{g}
+x_{\text{max}}
+&amp;= v_0t_2\cos\theta \\\\
+&amp;= v_0\left(\dfrac{2v_0\sin\theta}{g}\right)\cos\theta \\\\
+&amp;= \dfrac{2v_0^2\sin\theta\cos\theta}{g}
 \end{aligned}
 \]</div>
 <p>三角関数の2倍角の公式 <span class="arithmatex">\(2 \sin\theta \cos\theta = \sin 2\theta\)</span> を適用して式をまとめます。</p>
 <div class="arithmatex">\[
-\finalanswer{x_{\text{max}} = \frac{v_0^2 \sin 2\theta}{g}}
+\finalanswer{x_{\text{max}} = \dfrac{v_0^2 \sin 2\theta}{g}}
 \]</div>
 
 

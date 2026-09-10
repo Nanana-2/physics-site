@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「斜面上の束縛運動と摩擦」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/02/02_010/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="斜面上の束縛運動と摩擦" />
+    <meta property="og:description" content="力学の「斜面上の束縛運動と摩擦」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/02/02_010/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="斜面上の束縛運動と摩擦" />
+    <meta name="twitter:description" content="力学の「斜面上の束縛運動と摩擦」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14518,17 +14530,16 @@
 
 <h1 id="_1">斜面上の束縛運動と摩擦</h1>
 <h2 id="_2">問題</h2>
-<p>水平面に対して角度 <span class="arithmatex">\(0 &lt; \theta &lt; \frac{\pi}{2}\)</span> だけ傾いた粗い斜面上に，質量 <span class="arithmatex">\(m\)</span> の小物体を置く。</p>
+<p>水平面に対して角度 <span class="arithmatex">\(0 &lt; \theta &lt; \dfrac{\pi}{2}\)</span> だけ傾いた粗い斜面上に，質量 <span class="arithmatex">\(m\)</span> の小物体を置く。</p>
 <p>斜面に沿って下る向きに <span class="arithmatex">\(x\)</span> 軸をとり，斜面に垂直で物体から離れる向きに <span class="arithmatex">\(y\)</span> 軸をとる。重力加速度の大きさを <span class="arithmatex">\(g\)</span>，静止摩擦係数を <span class="arithmatex">\(\mu\)</span>，動摩擦係数を <span class="arithmatex">\(\mu'&lt;\mu\)</span> とする。</p>
 <p>時刻 <span class="arithmatex">\(t = 0\)</span> において，原点 <span class="arithmatex">\(x = 0\)</span> に静止させた物体から静かに手を離す。以下の問いに答えよ。</p>
 <p>(1) 物体が自発的に滑り始めるための傾斜角 <span class="arithmatex">\(\theta\)</span> に関する条件を，静止摩擦係数 <span class="arithmatex">\(\mu\)</span> を用いて表せ。</p>
-<p>(2) 角度 <span class="arithmatex">\(\theta\)</span> が (1) で求めた条件を満たしているとき，物体は滑り始める。滑り始めた後の <span class="arithmatex">\(x\)</span> 方向の運動方程式を，速度 <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> に関する1階微分方程式として表せ。また，この運動における物体の加速度を求めよ。</p>
+<p>(2) 角度 <span class="arithmatex">\(\theta\)</span> が (1) で求めた条件を満たしているとき，物体は滑り始める。滑り始めた後の <span class="arithmatex">\(x\)</span> 方向の運動方程式を，速度 <span class="arithmatex">\(v(t) = \dfrac{dx}{dt}\)</span> に関する1階微分方程式として表せ。また，この運動における物体の加速度を求めよ。</p>
 <p>(3) 初期条件 <span class="arithmatex">\(v(0) = 0\)</span> および <span class="arithmatex">\(x(0) = 0\)</span> のもとで，(2) の微分方程式を解き，時刻 <span class="arithmatex">\(t\)</span> における物体の速度 <span class="arithmatex">\(v(t)\)</span> および位置 <span class="arithmatex">\(x(t)\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>物体が斜面上で静止しているとき，物体に作用する力は，重力 <span class="arithmatex">\(mg\)</span>，斜面からの垂直抗力 <span class="arithmatex">\(N\)</span>，および静止摩擦力 <span class="arithmatex">\(f\)</span> です。
-<span class="arithmatex">\(y\)</span> 方向の力のつり合いより，垂直抗力 <span class="arithmatex">\(N\)</span> は以下のように求まります。</p>
+<p>物体が斜面上で静止しているとき，物体に作用する力は，重力 <span class="arithmatex">\(mg\)</span>，斜面からの垂直抗力 <span class="arithmatex">\(N\)</span>，および静止摩擦力 <span class="arithmatex">\(f\)</span> です。 <span class="arithmatex">\(y\)</span> 方向の力のつり合いより，垂直抗力 <span class="arithmatex">\(N\)</span> は以下のように求まります。</p>
 <div class="arithmatex">\[
 N - m g \cos \theta = 0
 \]</div>
@@ -14557,14 +14568,13 @@ m g \sin \theta &gt; \mu m g \cos \theta
 <div class="arithmatex">\[
 f' = \mu' N = \mu' m g \cos \theta
 \]</div>
-<p>動摩擦力は物体の運動を妨げる向きに働くため，<span class="arithmatex">\(x\)</span> 軸の負の向きに作用します。
-したがって，滑り出した後の <span class="arithmatex">\(x\)</span> 方向の運動方程式は次のようになります。</p>
+<p>動摩擦力は物体の運動を妨げる向きに働くため，<span class="arithmatex">\(x\)</span> 軸の負の向きに作用します。したがって，滑り出した後の <span class="arithmatex">\(x\)</span> 方向の運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{m \frac{dv}{dt} = m g \sin \theta - \mu' m g \cos \theta}
+\finalanswer{m \dfrac{dv}{dt} = m g \sin \theta - \mu' m g \cos \theta}
 \]</div>
 <p>両辺を質量 <span class="arithmatex">\(m\)</span> で割ることで，速度 <span class="arithmatex">\(v(t)\)</span> に関する1階微分方程式が得られます。</p>
 <div class="arithmatex">\[
-\frac{dv}{dt} = g (\sin \theta - \mu' \cos \theta)
+\finalanswer{\dfrac{dv}{dt} = g (\sin \theta - \mu' \cos \theta)}
 \]</div>
 <p>この式の右辺は時間 <span class="arithmatex">\(t\)</span> に依存しない定数であるため，物体の加速度 <span class="arithmatex">\(a\)</span> は一定となります。したがって，求める加速度 <span class="arithmatex">\(a\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
@@ -14574,25 +14584,23 @@ f' = \mu' N = \mu' m g \cos \theta
 <h3 id="3">(3)</h3>
 <p>(2) で得られた微分方程式は，両辺を時間 <span class="arithmatex">\(t\)</span> で直接積分することで解くことができます。</p>
 <div class="arithmatex">\[
-\frac{dv}{dt} = a
+\dfrac{dv}{dt} = a
 \]</div>
 <p>両辺を <span class="arithmatex">\(t\)</span> について積分すると，積分定数を <span class="arithmatex">\(C_1\)</span> として，以下のようになります。</p>
 <div class="arithmatex">\[
 v(t) = a t + C_1
 \]</div>
-<p>初期条件 <span class="arithmatex">\(v(0) = 0\)</span> を代入すると， <span class="arithmatex">\(C_1 = 0\)</span> と定まります。
-したがって，時刻 <span class="arithmatex">\(t\)</span> における物体の速度 <span class="arithmatex">\(v(t)\)</span> は以下のように求まります。</p>
+<p>初期条件 <span class="arithmatex">\(v(0) = 0\)</span> を代入すると， <span class="arithmatex">\(C_1 = 0\)</span> と定まります。したがって，時刻 <span class="arithmatex">\(t\)</span> における物体の速度 <span class="arithmatex">\(v(t)\)</span> は以下のように求まります。</p>
 <div class="arithmatex">\[
 \finalanswer{v(t) = g (\sin \theta - \mu' \cos \theta) t}
 \]</div>
-<p>次に，位置 <span class="arithmatex">\(x(t)\)</span> は速度の定義 <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> より，速度を時間 <span class="arithmatex">\(t\)</span> でさらに積分することで得られます。</p>
+<p>次に，位置 <span class="arithmatex">\(x(t)\)</span> は速度の定義 <span class="arithmatex">\(v(t) = \dfrac{dx}{dt}\)</span> より，速度を時間 <span class="arithmatex">\(t\)</span> でさらに積分することで得られます。</p>
 <div class="arithmatex">\[
-x(t) = \int v(t) dt = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2 + C_2
+x(t) = \int v(t) dt = \dfrac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2 + C_2
 \]</div>
-<p>ここで <span class="arithmatex">\(C_2\)</span> は積分定数です。初期条件 <span class="arithmatex">\(x(0) = 0\)</span> を代入すると， <span class="arithmatex">\(C_2 = 0\)</span> と定まります。
-したがって，時刻 <span class="arithmatex">\(t\)</span> における物体の位置 <span class="arithmatex">\(x(t)\)</span> は以下のようになります。</p>
+<p>ここで <span class="arithmatex">\(C_2\)</span> は積分定数です。初期条件 <span class="arithmatex">\(x(0) = 0\)</span> を代入すると， <span class="arithmatex">\(C_2 = 0\)</span> と定まります。したがって，時刻 <span class="arithmatex">\(t\)</span> における物体の位置 <span class="arithmatex">\(x(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{x(t) = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2}
+\finalanswer{x(t) = \dfrac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2}
 \]</div>
 <p>したがって，物体は加速度 <span class="arithmatex">\(g (\sin \theta - \mu' \cos \theta)\)</span> の等加速度運動を行います。</p>
 

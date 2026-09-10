@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「回転運動とエネルギー」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/09/09_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="回転運動とエネルギー" />
+    <meta property="og:description" content="力学の「回転運動とエネルギー」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/09/09_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="回転運動とエネルギー" />
+    <meta name="twitter:description" content="力学の「回転運動とエネルギー」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14541,24 +14553,19 @@
 <h1 id="_1">回転運動とエネルギー</h1>
 <h2 id="_2">問題</h2>
 <p>内半径 <span class="arithmatex">\(R\)</span> の固定円筒の内面を，質量 <span class="arithmatex">\(M\)</span>，半径 <span class="arithmatex">\(r\)</span> の一様な固体円柱が滑らずに転がる。両円筒の中心軸は水平で，互いに平行とする。重力加速度の大きさを <span class="arithmatex">\(g\)</span> とする。</p>
-<p>固定円筒の中心から鉛直下向きに引いた線を基準とし，固体円柱の重心位置を角度 <span class="arithmatex">\(\theta\)</span> で表す。重心が最下点にあるとき <span class="arithmatex">\(\theta=0\)</span> とする。重心は半径 <span class="arithmatex">\(R-r\)</span> の円軌道上を運動する。また，固体円柱の重心まわりの慣性モーメントは <span class="arithmatex">\(I=\frac{1}{2}Mr^2\)</span> である。</p>
-<p>(1) 固体円柱が角速度 <span class="arithmatex">\(\dot{\theta} = \frac{d\theta}{dt}\)</span> で運動しているとき，固体円柱の重心のまわりの自転角速度 <span class="arithmatex">\(\omega\)</span> を，<span class="arithmatex">\(\dot{\theta}\)</span>，および半径 <span class="arithmatex">\(R\)</span> と <span class="arithmatex">\(r\)</span> を用いて表せ。</p>
+<p>固定円筒の中心から鉛直下向きに引いた線を基準とし，固体円柱の重心位置を角度 <span class="arithmatex">\(\theta\)</span> で表す。重心が最下点にあるとき <span class="arithmatex">\(\theta=0\)</span> とする。重心は半径 <span class="arithmatex">\(R-r\)</span> の円軌道上を運動する。また，固体円柱の重心まわりの慣性モーメントは <span class="arithmatex">\(I=\dfrac{1}{2}Mr^2\)</span> である。</p>
+<p>(1) 固体円柱が角速度 <span class="arithmatex">\(\dot{\theta} = \dfrac{d\theta}{dt}\)</span> で運動しているとき，固体円柱の重心のまわりの自転角速度 <span class="arithmatex">\(\omega\)</span> を，<span class="arithmatex">\(\dot{\theta}\)</span>，および半径 <span class="arithmatex">\(R\)</span> と <span class="arithmatex">\(r\)</span> を用いて表せ。</p>
 <p>(2) 固体円柱の運動エネルギー <span class="arithmatex">\(T\)</span> を，重心の並進運動エネルギーと重心のまわりの回転運動エネルギーの和として表し，これらを <span class="arithmatex">\(\dot{\theta}\)</span> を用いて整理せよ。</p>
 <p>(3) 固体円柱が <span class="arithmatex">\(\theta = \theta_0\)</span> の位置から静止した状態から転がり始めたとする。ここで <span class="arithmatex">\(\theta_0\)</span> は <span class="arithmatex">\(0\)</span> より大きく <span class="arithmatex">\(\pi/2\)</span> より小さい角度とする。力学的エネルギー保存則を用いて，任意の角度 <span class="arithmatex">\(\theta\)</span> における重心の速度の大きさ <span class="arithmatex">\(v\)</span> を求めよ。</p>
 <p>(4) 固体円柱が最下点 <span class="arithmatex">\(\theta = 0\)</span> を通過するとき，固定円筒の内壁から受ける垂直抗力の大きさ <span class="arithmatex">\(N\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>固体円柱が滑ることなく転がるとき，固定円筒の内壁との接触点において，固体円柱の相対速度は <span class="arithmatex">\(0\)</span> になります。
-固定円筒の中心から見た固体円柱の重心の運動を考えます。
-重心は半径 <span class="arithmatex">\(R - r\)</span> の円軌道上を角速度 <span class="arithmatex">\(\dot{\theta}\)</span> で運動するため，重心の速度の大きさ <span class="arithmatex">\(v\)</span> は次のように表されます。</p>
+<p>固体円柱が滑ることなく転がるとき，固定円筒の内壁との接触点において，固体円柱の相対速度は <span class="arithmatex">\(0\)</span> になります。固定円筒の中心から見た固体円柱の重心の運動を考えます。重心は半径 <span class="arithmatex">\(R - r\)</span> の円軌道上を角速度 <span class="arithmatex">\(\dot{\theta}\)</span> で運動するため，重心の速度の大きさ <span class="arithmatex">\(v\)</span> は次のように表されます。</p>
 <div class="arithmatex">\[
 v = (R - r) \dot{\theta}
 \]</div>
-<p>ここで，固体円柱の自転角速度を <span class="arithmatex">\(\omega\)</span> とします。
-固体円柱の自転による重心に対する接触点の相対速度の大きさは <span class="arithmatex">\(r \omega\)</span> です。
-滑りなしの条件は，接触点における重心運動と自転による速度の和が 0 になることを意味します。
-したがって，次の関係式が成り立ちます。</p>
+<p>ここで，固体円柱の自転角速度を <span class="arithmatex">\(\omega\)</span> とします。固体円柱の自転による重心に対する接触点の相対速度の大きさは <span class="arithmatex">\(r \omega\)</span> です。滑りなしの条件は，接触点における重心運動と自転による速度の和が 0 になることを意味します。したがって，次の関係式が成り立ちます。</p>
 <div class="arithmatex">\[
 v - r \omega = 0
 \]</div>
@@ -14575,28 +14582,26 @@ T = T_{\text{trans}} + T_{\text{rot}}
 <div class="arithmatex">\[
 T_{\text{trans}} = \frac{1}{2} M v^2 = \frac{1}{2} M (R - r)^2 \dot{\theta}^2
 \]</div>
-<p>また，重心のまわりの回転運動エネルギー <span class="arithmatex">\(T_{\text{rot}}\)</span> は，慣性モーメント <span class="arithmatex">\(I = \frac{1}{2} M r^2\)</span> と自転角速度 <span class="arithmatex">\(\omega\)</span> を用いて以下のように書けます。</p>
+<p>また，重心のまわりの回転運動エネルギー <span class="arithmatex">\(T_{\text{rot}}\)</span> は，慣性モーメント <span class="arithmatex">\(I = \dfrac{1}{2} M r^2\)</span> と自転角速度 <span class="arithmatex">\(\omega\)</span> を用いて以下のように書けます。</p>
 <div class="arithmatex">\[
 T_{\text{rot}} = \frac{1}{2} I \omega^2 = \frac{1}{2} \left( \frac{1}{2} M r^2 \right) \omega^2
 \]</div>
-<p>これに (1) で求めた <span class="arithmatex">\(\omega = \frac{R - r}{r} \dot{\theta}\)</span> を代入すると，次のようになります。</p>
+<p>これに (1) で求めた <span class="arithmatex">\(\omega = \dfrac{R - r}{r} \dot{\theta}\)</span> を代入すると，次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-T_{\text{rot}} &amp;= \frac{1}{4} M r^2 \left( \frac{R - r}{r} \dot{\theta} \right)^2 \\
+T_{\text{rot}} &amp;= \frac{1}{4} M r^2 \left( \frac{R - r}{r} \dot{\theta} \right)^2 \\\\
 &amp;= \frac{1}{4} M (R - r)^2 \dot{\theta}^2
 \end{aligned}
 \]</div>
 <p>したがって，全運動エネルギー <span class="arithmatex">\(T\)</span> は並進と回転の運動エネルギーを足し合わせることで，以下のように整理されます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-T &amp;= \frac{1}{2} M (R - r)^2 \dot{\theta}^2 + \frac{1}{4} M (R - r)^2 \dot{\theta}^2 \\
+T &amp;= \frac{1}{2} M (R - r)^2 \dot{\theta}^2 + \frac{1}{4} M (R - r)^2 \dot{\theta}^2 \\\\
 &amp;= \finalanswer{\frac{3}{4} M (R - r)^2 \dot{\theta}^2}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>系の力学的エネルギーが保存されることを利用します。
-固体円柱の重心が最下点 <span class="arithmatex">\(\theta = 0\)</span> にあるときを位置エネルギーの基準面とします。
-角度 <span class="arithmatex">\(\theta\)</span> における重心の最下点からの高さ <span class="arithmatex">\(h\)</span> は次のようになります。</p>
+<p>系の力学的エネルギーが保存されることを利用します。固体円柱の重心が最下点 <span class="arithmatex">\(\theta = 0\)</span> にあるときを位置エネルギーの基準面とします。角度 <span class="arithmatex">\(\theta\)</span> における重心の最下点からの高さ <span class="arithmatex">\(h\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
 h = (R - r) - (R - r) \cos\theta = (R - r) (1 - \cos\theta)
 \]</div>
@@ -14636,8 +14641,7 @@ v^2 = \frac{4}{3} g (R - r) (\cos\theta - \cos\theta_0)
 <div class="arithmatex">\[
 v_0^2 = \frac{4}{3} g (R - r) (1 - \cos\theta_0)
 \]</div>
-<p>最下点における固体円柱の重心の運動に注目します。
-重心は半径 <span class="arithmatex">\(R-r\)</span> の円軌道上を運動します。最下点における鉛直上向きの運動方程式は，垂直抗力 <span class="arithmatex">\(N\)</span> と重力 <span class="arithmatex">\(Mg\)</span> を用いて次のように表されます。</p>
+<p>最下点における固体円柱の重心の運動に注目します。重心は半径 <span class="arithmatex">\(R-r\)</span> の円軌道上を運動します。最下点における鉛直上向きの運動方程式は，垂直抗力 <span class="arithmatex">\(N\)</span> と重力 <span class="arithmatex">\(Mg\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
 M \frac{v_0^2}{R - r} = N - M g
 \]</div>
@@ -14659,8 +14663,7 @@ N = M g \left( 1 + \frac{4}{3} (1 - \cos\theta_0) \right)
 <div class="arithmatex">\[
 \finalanswer{N = M g \left( \frac{7 - 4 \cos\theta_0}{3} \right)}
 \]</div>
-<p>これが最下点において固体円柱が受ける垂直抗力の大きさです。
-以上が最下点で受ける垂直抗力です。</p>
+<p>これが最下点において固体円柱が受ける垂直抗力の大きさです。以上が最下点で受ける垂直抗力です。</p>
 
 
 

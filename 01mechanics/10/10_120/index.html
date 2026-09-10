@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「ハミルトン・ヤコビ方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/10/10_120/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="ハミルトン・ヤコビ方程式" />
+    <meta property="og:description" content="力学の「ハミルトン・ヤコビ方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/10/10_120/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ハミルトン・ヤコビ方程式" />
+    <meta name="twitter:description" content="力学の「ハミルトン・ヤコビ方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14496,7 +14508,7 @@
 
 <h1 id="_1">ハミルトン・ヤコビ方程式</h1>
 <h2 id="_2">問題</h2>
-<p>質量 <span class="arithmatex">\(m\)</span> の質点がポテンシャルエネルギー <span class="arithmatex">\(U(q)\)</span> のもとで1次元運動をおこなっている。この系のハミルトニアンは <span class="arithmatex">\(H(q, p) = \frac{p^2}{2m} + U(q)\)</span> である。ハミルトン・ヤコビの理論において，新ハミルトニアンが 0 になるような変数変換の母関数として作用 <span class="arithmatex">\(S(q, E, t)\)</span> を導入する。このとき，運動量とハミルトニアンは </p>
+<p>質量 <span class="arithmatex">\(m\)</span> の質点がポテンシャルエネルギー <span class="arithmatex">\(U(q)\)</span> のもとで1次元運動をおこなっている。この系のハミルトニアンは <span class="arithmatex">\(H(q, p) = \dfrac{p^2}{2m} + U(q)\)</span> である。ハミルトン・ヤコビの理論において，新ハミルトニアンが 0 になるような変数変換の母関数として作用 <span class="arithmatex">\(S(q, E, t)\)</span> を導入する。このとき，運動量とハミルトニアンは</p>
 <div class="arithmatex">\[
 p = \frac{\partial S}{\partial q} ， H = -\frac{\partial S}{\partial t}
 \]</div>
@@ -14506,15 +14518,15 @@ p = \frac{\partial S}{\partial q} ， H = -\frac{\partial S}{\partial t}
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>ハミルトン・ヤコビの理論では，変換後のハミルトニアンを 0 とする変数変換を構成します。このとき，母関数である作用 <span class="arithmatex">\(S\)</span> は，元のハミルトニアン <span class="arithmatex">\(H(q, p)\)</span> において一般化運動量 <span class="arithmatex">\(p\)</span> を <span class="arithmatex">\(\frac{\partial S}{\partial q}\)</span> に置き換え，それが <span class="arithmatex">\(-\frac{\partial S}{\partial t}\)</span> に等しくなるという偏微分方程式を満たします。</p>
+<p>ハミルトン・ヤコビの理論では，変換後のハミルトニアンを 0 とする変数変換を構成します。このとき，母関数である作用 <span class="arithmatex">\(S\)</span> は，元のハミルトニアン <span class="arithmatex">\(H(q, p)\)</span> において一般化運動量 <span class="arithmatex">\(p\)</span> を <span class="arithmatex">\(\dfrac{\partial S}{\partial q}\)</span> に置き換え，それが <span class="arithmatex">\(-\dfrac{\partial S}{\partial t}\)</span> に等しくなるという偏微分方程式を満たします。</p>
 <div class="arithmatex">\[
 H\left(q, \frac{\partial S}{\partial q}\right) + \frac{\partial S}{\partial t} = 0
 \]</div>
-<p>与えられた系のハミルトニアン <span class="arithmatex">\(H = \frac{p^2}{2m} + U(q)\)</span> にこの関係を適用します。</p>
+<p>与えられた系のハミルトニアン <span class="arithmatex">\(H = \dfrac{p^2}{2m} + U(q)\)</span> にこの関係を適用します。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{1}{2m} \left( \frac{\partial S}{\partial q} \right)^2 + U(q) + \frac{\partial S}{\partial t} = 0}
 \]</div>
-<p>これにより，求めるハミルトン・ヤコビ方程式を得ます。</p>
+<p>これにより，求めるハミルトン・ヤコビ方程式が導出されます。</p>
 <h3 id="2">(2)</h3>
 <p>時間変化を分離する式 <span class="arithmatex">\(S(q, E, t) = W(q, E) - Et\)</span> を，先ほど得られた方程式に代入します。それぞれの偏微分は次のようになります。</p>
 <div class="arithmatex">\[

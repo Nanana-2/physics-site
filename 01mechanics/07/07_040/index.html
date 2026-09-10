@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「有効ポテンシャル」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/07/07_040/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="有効ポテンシャル" />
+    <meta property="og:description" content="力学の「有効ポテンシャル」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/07/07_040/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="有効ポテンシャル" />
+    <meta name="twitter:description" content="力学の「有効ポテンシャル」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14541,14 +14553,10 @@
 <h1 id="_1">有効ポテンシャル</h1>
 <h2 id="_2">問題</h2>
 <p>質量 <span class="arithmatex">\(M\)</span> の恒星を原点に固定し，その周囲を質量 <span class="arithmatex">\(m\)</span> の惑星が万有引力によって運動している。惑星の運動面に極座標 <span class="arithmatex">\(r\)</span>，<span class="arithmatex">\(\theta\)</span> を導入し，万有引力定数を <span class="arithmatex">\(G\)</span> とする。</p>
-<p>(1) 惑星の運動エネルギー <span class="arithmatex">\(T\)</span> および万有引力によるポテンシャルエネルギー <span class="arithmatex">\(U\)</span> を極座標 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(\theta\)</span>，およびそれらの時間微分 <span class="arithmatex">\(\dot{r}\)</span> と <span class="arithmatex">\(\dot{\theta}\)</span> を用いて表せ。
-また，ラグランジアンを構成することにより， <span class="arithmatex">\(\theta\)</span> が循環座標であることを示し，角運動量が保存することを示せ。</p>
-<p>(2) 惑星の全エネルギー <span class="arithmatex">\(E\)</span> は，保存量である角運動量の大きさ <span class="arithmatex">\(L\)</span> を用いることで，動径方向の座標 <span class="arithmatex">\(r\)</span> とその時間微分 <span class="arithmatex">\(\dot{r}\)</span> のみを含む式に変形できる。
-この全エネルギーの式を導き，動径方向の一次元運動に関する有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> を定義せよ。</p>
-<p>(3) 有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> が極小値をとる半径 <span class="arithmatex">\(r_0\)</span> を <span class="arithmatex">\(G\)</span>， <span class="arithmatex">\(M\)</span>， <span class="arithmatex">\(m\)</span>， <span class="arithmatex">\(L\)</span> を用いて表せ。
-さらに，惑星が半径 <span class="arithmatex">\(r_0\)</span> の円軌道を運動するときの全エネルギー <span class="arithmatex">\(E_0\)</span> を求めよ。</p>
-<p>(4) 惑星の全エネルギー <span class="arithmatex">\(E\)</span> の値によって運動の領域がどのように制限されるかを考える。
-全エネルギーが <span class="arithmatex">\(E_0 \le E &lt; 0\)</span> の範囲にある場合，および <span class="arithmatex">\(E \ge 0\)</span> の場合について，有効ポテンシャルの性質に基づいて動径 <span class="arithmatex">\(r\)</span> のとり得る範囲をそれぞれ論じよ。</p>
+<p>(1) 惑星の運動エネルギー <span class="arithmatex">\(T\)</span> および万有引力によるポテンシャルエネルギー <span class="arithmatex">\(U\)</span> を極座標 <span class="arithmatex">\(r\)</span> と <span class="arithmatex">\(\theta\)</span>，およびそれらの時間微分 <span class="arithmatex">\(\dot{r}\)</span> と <span class="arithmatex">\(\dot{\theta}\)</span> を用いて表せ。また，ラグランジアンを構成することにより， <span class="arithmatex">\(\theta\)</span> が循環座標であることを示し，角運動量が保存することを示せ。</p>
+<p>(2) 惑星の全エネルギー <span class="arithmatex">\(E\)</span> は，保存量である角運動量の大きさ <span class="arithmatex">\(L\)</span> を用いることで，動径方向の座標 <span class="arithmatex">\(r\)</span> とその時間微分 <span class="arithmatex">\(\dot{r}\)</span> のみを含む式に変形できる。この全エネルギーの式を導き，動径方向の一次元運動に関する有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> を定義せよ。</p>
+<p>(3) 有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> が極小値をとる半径 <span class="arithmatex">\(r_0\)</span> を <span class="arithmatex">\(G\)</span>， <span class="arithmatex">\(M\)</span>， <span class="arithmatex">\(m\)</span>， <span class="arithmatex">\(L\)</span> を用いて表せ。さらに，惑星が半径 <span class="arithmatex">\(r_0\)</span> の円軌道を運動するときの全エネルギー <span class="arithmatex">\(E_0\)</span> を求めよ。</p>
+<p>(4) 惑星の全エネルギー <span class="arithmatex">\(E\)</span> の値によって運動の領域がどのように制限されるかを考える。全エネルギーが <span class="arithmatex">\(E_0 \le E &lt; 0\)</span> の範囲にある場合，および <span class="arithmatex">\(E \ge 0\)</span> の場合について，有効ポテンシャルの性質に基づいて動径 <span class="arithmatex">\(r\)</span> のとり得る範囲をそれぞれ論じよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14560,7 +14568,7 @@
 <p>したがって，惑星の運動エネルギー <span class="arithmatex">\(T\)</span> は</p>
 <div class="arithmatex">\[
 \begin{aligned}
-T &amp;= \frac{1}{2} m \boldsymbol{v}^2 \\
+T &amp;= \frac{1}{2} m \boldsymbol{v}^2 \\\\
 &amp;= \finalanswer{\frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 )}
 \end{aligned}
 \]</div>
@@ -14573,22 +14581,24 @@ T &amp;= \frac{1}{2} m \boldsymbol{v}^2 \\
 <p>これらより，系のラグランジアン <span class="arithmatex">\(\mathcal{L}\)</span> は</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\mathcal{L} &amp;= T - U \\
+\mathcal{L} &amp;= T - U \\\\
 &amp;= \finalanswer{\frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) + \frac{GMm}{r}}
 \end{aligned}
 \]</div>
-<p>と書き表されます。
-このラグランジアンには座標 <span class="arithmatex">\(\theta\)</span> が明示的に含まれていないため， <span class="arithmatex">\(\theta\)</span> は循環座標です。
-ラグランジュの運動方程式</p>
+<p>と書き表されます。このラグランジアンには座標 <span class="arithmatex">\(\theta\)</span> が明示的に含まれていないため， <span class="arithmatex">\(\theta\)</span> は循環座標です。ラグランジュの運動方程式</p>
 <div class="arithmatex">\[
 \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathcal{L}}{\partial \theta} = 0
 \]</div>
-<p>において， <span class="arithmatex">\(\frac{\partial \mathcal{L}}{\partial \theta} = 0\)</span> であることから</p>
+<p>において， <span class="arithmatex">\(\dfrac{\partial \mathcal{L}}{\partial \theta} = 0\)</span> であることから</p>
 <div class="arithmatex">\[
 \frac{d}{dt} \left( m r^2 \dot{\theta} \right) = 0
 \]</div>
 <p>が得られます。</p>
 <p>括弧の中身は惑星の角運動量の大きさ <span class="arithmatex">\(L\)</span> に等しいため</p>
+<div class="arithmatex">\[
+L = m r^2 \dot{\theta} = \text{const.}
+\]</div>
+<p>すなわち，</p>
 <div class="arithmatex">\[
 \finalanswer{L = m r^2 \dot{\theta} = \text{const.}}
 \]</div>
@@ -14599,7 +14609,7 @@ T &amp;= \frac{1}{2} m \boldsymbol{v}^2 \\
 E = T + U = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) - \frac{GMm}{r}
 \]</div>
 <p>と与えられます。</p>
-<p>(1) で得られた角運動量保存則より， <span class="arithmatex">\(\dot{\theta} = \frac{L}{m r^2}\)</span> であるため，これをエネルギーの式に代入します。</p>
+<p>(1) で得られた角運動量保存則より， <span class="arithmatex">\(\dot{\theta} = \dfrac{L}{m r^2}\)</span> であるため，これをエネルギーの式に代入します。</p>
 <div class="arithmatex">\[
 E = \frac{1}{2} m \dot{r}^2 + \frac{1}{2} m r^2 \left( \frac{L}{m r^2} \right)^2 - \frac{GMm}{r}
 \]</div>
@@ -14617,8 +14627,7 @@ U_{eff}(r) = \frac{L^2}{2 m r^2} - \frac{GMm}{r}
 \finalanswer{E = \frac{1}{2} m \dot{r}^2 + U_{eff}(r)}
 \]</div>
 <p>と簡潔に表されます。</p>
-<p>有効ポテンシャルの第1項は遠心力に対応する障壁であり，中心力源への衝突を防ぐ効果を持ちます。
-第2項は引き合う万有引力を表します。</p>
+<p>有効ポテンシャルの第1項は遠心力に対応する障壁であり，中心力源への衝突を防ぐ効果を持ちます。第2項は引き合う万有引力を表します。</p>
 <h3 id="3">(3)</h3>
 <p>有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> が極小値をとる動径 <span class="arithmatex">\(r_0\)</span> では，その一階微分が <span class="arithmatex">\(0\)</span> になります。</p>
 <div class="arithmatex">\[
@@ -14628,8 +14637,7 @@ U_{eff}(r) = \frac{L^2}{2 m r^2} - \frac{GMm}{r}
 <div class="arithmatex">\[
 \finalanswer{r_0 = \frac{L^2}{G M m^2}}
 \]</div>
-<p>惑星の初期状態が <span class="arithmatex">\(r = r_0\)</span> かつ <span class="arithmatex">\(\dot{r} = 0\)</span> であるとき，惑星は常に <span class="arithmatex">\(\dot{r} = 0\)</span> を保ち，半径 <span class="arithmatex">\(r_0\)</span> の円軌道を運動します。
-この円軌道における全エネルギー <span class="arithmatex">\(E_0\)</span> は， <span class="arithmatex">\(\dot{r} = 0\)</span> として有効ポテンシャルに <span class="arithmatex">\(r_0\)</span> を代入することで得られます。</p>
+<p>惑星の初期状態が <span class="arithmatex">\(r = r_0\)</span> かつ <span class="arithmatex">\(\dot{r} = 0\)</span> であるとき，惑星は常に <span class="arithmatex">\(\dot{r} = 0\)</span> を保ち，半径 <span class="arithmatex">\(r_0\)</span> の円軌道を運動します。この円軌道における全エネルギー <span class="arithmatex">\(E_0\)</span> は， <span class="arithmatex">\(\dot{r} = 0\)</span> として有効ポテンシャルに <span class="arithmatex">\(r_0\)</span> を代入することで得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 E_0 &amp;= U_{eff}(r_0) \\\\
@@ -14644,27 +14652,27 @@ E_0 &amp;= U_{eff}(r_0) \\\\
 <div class="arithmatex">\[
 E \ge U_{eff}(r)
 \]</div>
-<p>という不等式が成り立たなければなりません。
-これにより，惑星が進入できる空間の領域が制限されます。</p>
-<p><span class="arithmatex">\(E_0 \le E &lt; 0\)</span> の場合：</p>
+<p>という不等式が成り立たなければなりません。これにより，惑星が進入できる空間の領域が制限されます。</p>
+<p><strong><span class="arithmatex">\(E_0 \le E &lt; 0\)</span> の場合</strong></p>
 <p>有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> のグラフにおいて，エネルギーが負の一定値をとる直線 <span class="arithmatex">\(y = E\)</span> は，グラフと2つの交点 <span class="arithmatex">\(r_{min}\)</span> および <span class="arithmatex">\(r_{max}\)</span> を持ちます。</p>
 <p>惑星が運動できる領域は</p>
 <div class="arithmatex">\[
 \finalanswer{r_{min} \le r \le r_{max}}
 \]</div>
 <p>の範囲に制限されます。</p>
-<p>このとき，惑星は恒星から無限に遠ざかることも，原点に向かって落下することもなく，有限の領域に閉じ込められた有界な運動をします。
-実際の宇宙空間におけるこの運動は楕円軌道に対応し， <span class="arithmatex">\(r_{min}\)</span> は近地点距離， <span class="arithmatex">\(r_{max}\)</span> は遠地点距離に対応します。</p>
-<p><span class="arithmatex">\(E \ge 0\)</span> の場合：</p>
+<p>このとき，惑星は恒星から無限に遠ざかることも，原点に向かって落下することもなく，有限の領域に閉じ込められた有界な運動をします。実際の宇宙空間におけるこの運動は楕円軌道に対応し， <span class="arithmatex">\(r_{min}\)</span> は近地点距離， <span class="arithmatex">\(r_{max}\)</span> は遠地点距離に対応します。</p>
+<p><strong><span class="arithmatex">\(E \ge 0\)</span> の場合</strong></p>
 <p>エネルギーが <span class="arithmatex">\(0\)</span> 以上であるとき，直線 <span class="arithmatex">\(y = E\)</span> と有効ポテンシャル <span class="arithmatex">\(U_{eff}(r)\)</span> のグラフの交点は，小さな <span class="arithmatex">\(r\)</span> の領域における <span class="arithmatex">\(r_{min}\)</span> の1つのみとなります。</p>
-<p>十分大きな <span class="arithmatex">\(r\)</span> の領域では，常に <span class="arithmatex">\(E &gt; U_{eff}(r)\)</span> が満たされます。
-したがって，運動可能な領域は</p>
+<p>十分大きな <span class="arithmatex">\(r\)</span> の領域では，常に <span class="arithmatex">\(E &gt; U_{eff}(r)\)</span> が満たされます。したがって，運動可能な領域は</p>
 <div class="arithmatex">\[
 \finalanswer{r \ge r_{min}}
 \]</div>
 <p>となり，上限が存在しません。</p>
 <p>これは，無限に遠い宇宙空間から飛来した惑星が，恒星に最も接近する距離 <span class="arithmatex">\(r_{min}\)</span> まで近づいた後，再び無限遠へ向かう非有界な運動を表します。</p>
-<p><span class="arithmatex">\(E=0\)</span> では <span class="arithmatex">\(r\to\infty\)</span> のとき <span class="arithmatex">\(U_{eff}(r)\to0\)</span> かつ <span class="arithmatex">\(\dot r\to0\)</span> となり，軌道は束縛運動と脱出軌道の境界にあたる放物線です。<span class="arithmatex">\(E&gt;0\)</span> では無限遠でも有限の速さをもち，軌道は双曲線となります。</p>
+<p><strong><span class="arithmatex">\(E = 0\)</span> のとき</strong></p>
+<p><span class="arithmatex">\(r\to\infty\)</span> のとき <span class="arithmatex">\(U_{eff}(r)\to0\)</span> かつ <span class="arithmatex">\(\dot r\to0\)</span> となり，軌道は束縛運動と脱出軌道の境界にあたる放物線です。</p>
+<p><strong><span class="arithmatex">\(E &gt; 0\)</span> のとき</strong></p>
+<p>無限遠でも有限の速さをもち，軌道は双曲線となります。</p>
 
 
 

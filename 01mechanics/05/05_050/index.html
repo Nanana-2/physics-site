@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「振動エネルギーの減衰」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/05/05_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="振動エネルギーの減衰" />
+    <meta property="og:description" content="力学の「振動エネルギーの減衰」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/05/05_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="振動エネルギーの減衰" />
+    <meta name="twitter:description" content="力学の「振動エネルギーの減衰」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14546,14 +14558,13 @@
 <div class="arithmatex">\[
 E(t) = \frac{1}{2}m \dot{x}^2 + \frac{1}{2}kx^2
 \]</div>
-<p>の時間変化率 <span class="arithmatex">\(\frac{dE}{dt}\)</span> を求めよ。また，抵抗力がエネルギーに及ぼす影響を説明せよ。</p>
-<p>(2) <span class="arithmatex">\(\gamma=\frac{c}{2m}\)</span>，<span class="arithmatex">\(\omega_0=\sqrt{\frac{k}{m}}\)</span> とし，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> の場合を考える。この条件は，振幅の変化が1周期の間では小さいことを意味する。変位を</p>
+<p>の時間変化率 <span class="arithmatex">\(\dfrac{dE}{dt}\)</span> を求めよ。また，抵抗力がエネルギーに及ぼす影響を説明せよ。</p>
+<p>(2) <span class="arithmatex">\(\gamma=\dfrac{c}{2m}\)</span>，<span class="arithmatex">\(\omega_0=\sqrt{\dfrac{k}{m}}\)</span> とし，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> の場合を考える。この条件は，振幅の変化が1周期の間では小さいことを意味する。変位を</p>
 <div class="arithmatex">\[
 x(t) = A e^{-\gamma t} \cos(\omega t + \phi)
 \]</div>
 <p>と表す。ただし <span class="arithmatex">\(\omega=\sqrt{\omega_0^2-\gamma^2}\)</span> である。<span class="arithmatex">\(\omega\approx\omega_0\)</span> とし，<span class="arithmatex">\(\gamma/\omega_0\)</span> に比例する項を無視して速度 <span class="arithmatex">\(v(t)=\dot{x}(t)\)</span> を求めよ。</p>
-<p>(3) 振動の1周期 <span class="arithmatex">\(T = \frac{2\pi}{\omega_0}\)</span> の時間スケールにおいて，減衰因子 <span class="arithmatex">\(e^{-2\gamma t}\)</span> はほぼ一定とみなすことができる。この近似のもとで，運動エネルギー <span class="arithmatex">\(K(t) = \frac{1}{2}m \dot{x}^2\)</span> とポテンシャルエネルギー <span class="arithmatex">\(U(t) = \frac{1}{2}kx^2\)</span> の1周期にわたる時間平均 <span class="arithmatex">\(\langle K(t) \rangle\)</span> および <span class="arithmatex">\(\langle U(t) \rangle\)</span> をそれぞれ求めよ。
-なお，任意の時間関数 <span class="arithmatex">\(f(t)\)</span> の時間平均は以下で定義される。</p>
+<p>(3) 振動の1周期 <span class="arithmatex">\(T = \dfrac{2\pi}{\omega_0}\)</span> の時間スケールにおいて，減衰因子 <span class="arithmatex">\(e^{-2\gamma t}\)</span> はほぼ一定とみなすことができる。この近似のもとで，運動エネルギー <span class="arithmatex">\(K(t) = \dfrac{1}{2}m \dot{x}^2\)</span> とポテンシャルエネルギー <span class="arithmatex">\(U(t) = \dfrac{1}{2}kx^2\)</span> の1周期にわたる時間平均 <span class="arithmatex">\(\langle K(t) \rangle\)</span> および <span class="arithmatex">\(\langle U(t) \rangle\)</span> をそれぞれ求めよ。なお，任意の時間関数 <span class="arithmatex">\(f(t)\)</span> の時間平均は以下で定義される。</p>
 <div class="arithmatex">\[
 \langle f(t) \rangle = \frac{1}{T} \int_{t}^{t+T} f(t') dt'
 \]</div>
@@ -14584,14 +14595,13 @@ kx \dot{x} = \frac{d}{dt} \left( \frac{1}{2} k x^2 \right)
 <div class="arithmatex">\[
 \finalanswer{\frac{dE}{dt} = -c \dot{x}^2}
 \]</div>
-<p><span class="arithmatex">\(c&gt;0\)</span> かつ <span class="arithmatex">\(\dot{x}^2\geq0\)</span> であるため，常に <span class="arithmatex">\(\frac{dE}{dt}\leq0\)</span> が成り立ちます。これは，抵抗力 <span class="arithmatex">\(-c\dot{x}\)</span> が質点に負の仕事をし，力学的エネルギーを減少させることを意味します。</p>
+<p><span class="arithmatex">\(c&gt;0\)</span> かつ <span class="arithmatex">\(\dot{x}^2\geq0\)</span> であるため，常に <span class="arithmatex">\(\dfrac{dE}{dt}\leq0\)</span> が成り立ちます。これは，抵抗力 <span class="arithmatex">\(-c\dot{x}\)</span> が質点に負の仕事をし，力学的エネルギーを減少させることを意味します。</p>
 <h3 id="2">(2)</h3>
 <p>変位の式 <span class="arithmatex">\(x(t) = A e^{-\gamma t} \cos(\omega t + \phi)\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分します。積の微分公式を用いると，速度は以下のようになります。</p>
 <div class="arithmatex">\[
 \dot{x}(t) = -\gamma A e^{-\gamma t} \cos(\omega t + \phi) - \omega A e^{-\gamma t} \sin(\omega t + \phi)
 \]</div>
-<p>ここで <span class="arithmatex">\(\gamma\ll\omega_0\)</span> より，<span class="arithmatex">\(\omega\approx\omega_0\)</span> とします。また，第1項は第2項に比べて <span class="arithmatex">\(\gamma/\omega_0\)</span> の程度だけ小さいため無視します。
-したがって，<span class="arithmatex">\(\gamma\)</span> の1次以上の微小項を無視することで，速度 <span class="arithmatex">\(v(t)\)</span> は以下のように簡略化されます。</p>
+<p>ここで <span class="arithmatex">\(\gamma\ll\omega_0\)</span> より，<span class="arithmatex">\(\omega\approx\omega_0\)</span> とします。また，第1項は第2項に比べて <span class="arithmatex">\(\gamma/\omega_0\)</span> の程度だけ小さいため無視します。したがって，<span class="arithmatex">\(\gamma\)</span> の1次以上の微小項を無視することで，速度 <span class="arithmatex">\(v(t)\)</span> は以下のように簡略化されます。</p>
 <div class="arithmatex">\[
 \finalanswer{v(t) = \dot{x}(t) \approx -\omega_0 A e^{-\gamma t} \sin(\omega_0 t + \phi)}
 \]</div>
@@ -14609,7 +14619,7 @@ K(t) \approx \frac{1}{2} k A^2 e^{-2\gamma t} \sin^2(\omega_0 t + \phi)
 U(t) = \frac{1}{2} k x^2 \approx \frac{1}{2} k A^2 e^{-2\gamma t} \cos^2(\omega_0 t + \phi)
 \]</div>
 <p>となります。</p>
-<p>1周期 <span class="arithmatex">\(T = \frac{2\pi}{\omega_0}\)</span> の間，減衰因子 <span class="arithmatex">\(e^{-2\gamma t}\)</span> はほぼ一定とみなせるため，時間平均をとる積分計算の際，この因子を積分の外にくくり出すことができます。</p>
+<p>1周期 <span class="arithmatex">\(T = \dfrac{2\pi}{\omega_0}\)</span> の間，減衰因子 <span class="arithmatex">\(e^{-2\gamma t}\)</span> はほぼ一定とみなせるため，時間平均をとる積分計算の際，この因子を積分の外にくくり出すことができます。</p>
 <p>三角関数の1周期にわたる時間平均について，以下の公式が成り立ちます。</p>
 <div class="arithmatex">\[
 \frac{1}{T} \int_{t}^{t+T} \sin^2(\omega_0 t' + \phi) dt' = \frac{1}{2}
@@ -14621,7 +14631,7 @@ U(t) = \frac{1}{2} k x^2 \approx \frac{1}{2} k A^2 e^{-2\gamma t} \cos^2(\omega_
 <div class="arithmatex">\[
 \begin{aligned}
 \langle K(t) \rangle &amp;\approx \frac{1}{2} k A^2 e^{-2\gamma t} \cdot \frac{1}{T} \int_{t}^{t+T} \sin^2(\omega_0 t' + \phi) dt' \\\\
-&amp;= \finalanswer{\frac{1}{4} k A^2 e^{-2\gamma t}}
+&amp;= \frac{1}{4} k A^2 e^{-2\gamma t}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
@@ -14635,16 +14645,16 @@ U(t) = \frac{1}{2} k x^2 \approx \frac{1}{2} k A^2 e^{-2\gamma t} \cos^2(\omega_
 <p>(3)の結果を足し合わせることで，時間平均された全力学的エネルギー <span class="arithmatex">\(\langle E(t) \rangle\)</span> が求まります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\langle E(t) \rangle &amp;= \langle K(t) \rangle + \langle U(t) \rangle \\
-&amp;= \frac{1}{4} k A^2 e^{-2\gamma t} + \frac{1}{4} k A^2 e^{-2\gamma t} \\
-&amp;= \finalanswer{\frac{1}{2} k A^2 e^{-2\gamma t}}
+\langle E(t) \rangle &amp;= \langle K(t) \rangle + \langle U(t) \rangle \\\\
+&amp;= \frac{1}{4} k A^2 e^{-2\gamma t} + \frac{1}{4} k A^2 e^{-2\gamma t} \\\\
+&amp;= \frac{1}{2} k A^2 e^{-2\gamma t}
 \end{aligned}
 \]</div>
 <p>この両辺を時間 <span class="arithmatex">\(t\)</span> で微分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{d\langle E(t) \rangle}{dt} &amp;= \frac{d}{dt} \left( \frac{1}{2} k A^2 e^{-2\gamma t} \right) \\\\
-&amp;= -2\gamma \left( \frac{1}{2} k A^2 e^{-2\gamma t} \right) \\\\
+&amp;= -2\gamma \left( \finalanswer{\frac{1}{2} k A^2 e^{-2\gamma t}} \right) \\\\
 &amp;= -2\gamma \langle E(t) \rangle
 \end{aligned}
 \]</div>
@@ -14652,7 +14662,7 @@ U(t) = \frac{1}{2} k x^2 \approx \frac{1}{2} k A^2 e^{-2\gamma t} \cos^2(\omega_
 <div class="arithmatex">\[
 \finalanswer{\frac{d\langle E \rangle}{dt} = -2\gamma \langle E \rangle}
 \]</div>
-<p>この微分方程式の解は，初期時刻 <span class="arithmatex">\(t=0\)</span> における平均エネルギーを <span class="arithmatex">\(\langle E(0) \rangle = \frac{1}{2} k A^2\)</span> とすると，次のように与えられます。</p>
+<p>この微分方程式の解は，初期時刻 <span class="arithmatex">\(t=0\)</span> における平均エネルギーを <span class="arithmatex">\(\langle E(0) \rangle = \dfrac{1}{2} k A^2\)</span> とすると，次のように与えられます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle E(t) \rangle = \langle E(0) \rangle e^{-2\gamma t}}
 \]</div>

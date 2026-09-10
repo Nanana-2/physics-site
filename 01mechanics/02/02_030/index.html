@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「速度比例抵抗を受ける落下」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/02/02_030/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="速度比例抵抗を受ける落下" />
+    <meta property="og:description" content="力学の「速度比例抵抗を受ける落下」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/02/02_030/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="速度比例抵抗を受ける落下" />
+    <meta name="twitter:description" content="力学の「速度比例抵抗を受ける落下」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14541,82 +14553,83 @@
 <h1 id="_1">速度比例抵抗を受ける落下</h1>
 <h2 id="_2">問題</h2>
 <p>質量 <span class="arithmatex">\(m\)</span> の雨粒を質点とみなし，重力加速度 <span class="arithmatex">\(g\)</span> の一様な重力場中を鉛直下向きに落下する運動を考える。空気抵抗の大きさは雨粒の速度に比例し，比例定数を <span class="arithmatex">\(k&gt;0\)</span> とする。</p>
-<p>鉛直下向きを <span class="arithmatex">\(y\)</span> 軸の正の向きにとり，雨粒が落下を開始した時刻を <span class="arithmatex">\(t = 0\)</span>，初期位置を <span class="arithmatex">\(y(0) = 0\)</span>，初期速度を <span class="arithmatex">\(v(0) = 0\)</span> と定義する。ただし，速度は <span class="arithmatex">\(v(t) = \frac{dy}{dt}\)</span> である。</p>
+<p>鉛直下向きを <span class="arithmatex">\(y\)</span> 軸の正の向きにとり，雨粒が落下を開始した時刻を <span class="arithmatex">\(t = 0\)</span>，初期位置を <span class="arithmatex">\(y(0) = 0\)</span>，初期速度を <span class="arithmatex">\(v(0) = 0\)</span> と定義する。ただし，速度は <span class="arithmatex">\(v(t) = \dfrac{dy}{dt}\)</span> である。</p>
 <p>(1) 時刻 <span class="arithmatex">\(t\)</span> における雨粒の運動方程式を，速度 <span class="arithmatex">\(v(t)\)</span> とその時間微分を用いて表せ。</p>
 <p>(2) (1) で得られた運動方程式を変数分離法で解き，速度 <span class="arithmatex">\(v(t)\)</span> を <span class="arithmatex">\(t, m, g, k\)</span> を用いて表せ。</p>
-<p>(3) 終端速度 <span class="arithmatex">\(v_{\infty} = \lim_{t \to \infty} v(t)\)</span> を求めよ。また，運動方程式で加速度を 0 として得られる速度と一致することを示せ。</p>
+<p>(3) 終端速度 <span class="arithmatex">\(v_{\infty} = \displaystyle\lim_{t \to \infty} v(t)\)</span> を求めよ。また，運動方程式で加速度を 0 として得られる速度と一致することを示せ。</p>
 <p>(4) 初期条件 <span class="arithmatex">\(y(0) = 0\)</span> のもとで，雨粒の位置 <span class="arithmatex">\(y(t)\)</span> を <span class="arithmatex">\(t, m, g, k\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>雨粒には，<span class="arithmatex">\(y\)</span> 軸正方向に重力 <span class="arithmatex">\(mg\)</span>，負方向に空気抵抗 <span class="arithmatex">\(-kv(t)\)</span> が作用します。
-したがって，雨粒の運動方程式は次のようになります。</p>
+<p>雨粒には，<span class="arithmatex">\(y\)</span> 軸正方向に重力 <span class="arithmatex">\(mg\)</span>，負方向に空気抵抗 <span class="arithmatex">\(-kv(t)\)</span> が作用します。したがって，雨粒の運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{m \frac{dv}{dt} = mg - kv}
+\finalanswer{m \dfrac{dv}{dt} = mg - kv}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた運動方程式は，速度 <span class="arithmatex">\(v\)</span> に関する1階の常微分方程式です。以下のように変数分離します。</p>
 <div class="arithmatex">\[
-\frac{dv}{dt} = -\frac{k}{m} \left( v - \frac{mg}{k} \right)
+\dfrac{dv}{dt} = -\dfrac{k}{m} \left( v - \dfrac{mg}{k} \right)
 \]</div>
-<p>両辺を <span class="arithmatex">\(v - \frac{mg}{k}\)</span> で割り，両辺を <span class="arithmatex">\(t\)</span> で積分します。</p>
+<p>両辺を <span class="arithmatex">\(v - \dfrac{mg}{k}\)</span> で割り，両辺を <span class="arithmatex">\(t\)</span> で積分します。</p>
 <div class="arithmatex">\[
-\int \frac{dv}{v - \frac{mg}{k}} = -\int \frac{k}{m} dt
+\int \dfrac{dv}{v - \dfrac{mg}{k}} = -\int \dfrac{k}{m} dt
 \]</div>
 <p>この積分を実行すると，積分定数を <span class="arithmatex">\(C_1\)</span> として次のようになります。</p>
 <div class="arithmatex">\[
-\ln \left| v - \frac{mg}{k} \right| = -\frac{k}{m} t + C_1
+\ln \left| v - \dfrac{mg}{k} \right| = -\dfrac{k}{m} t + C_1
 \]</div>
 <p>対数の定義から，次のように変形できます。</p>
 <div class="arithmatex">\[
-v - \frac{mg}{k} = \pm e^{C_1} e^{-\frac{k}{m} t}
+v - \dfrac{mg}{k} = \pm e^{C_1} e^{-\frac{k}{m} t}
 \]</div>
 <p>ここで <span class="arithmatex">\(\pm e^{C_1}\)</span> を新たな定数 <span class="arithmatex">\(C\)</span> と置くと，次のように表せます。</p>
 <div class="arithmatex">\[
-v(t) = \frac{mg}{k} + C e^{-\frac{k}{m} t}
+v(t) = \dfrac{mg}{k} + C e^{-\frac{k}{m} t}
 \]</div>
 <p>初期条件である <span class="arithmatex">\(t = 0\)</span> のとき <span class="arithmatex">\(v(0) = 0\)</span> を上式に代入して，定数 <span class="arithmatex">\(C\)</span> を決定します。</p>
 <div class="arithmatex">\[
-0 = \frac{mg}{k} + C \implies C = -\frac{mg}{k}
+0 = \dfrac{mg}{k} + C \implies C = -\dfrac{mg}{k}
 \]</div>
 <p>これをもとの式に代入することで，求める速度 <span class="arithmatex">\(v(t)\)</span> が以下のように得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{v(t) = \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} t} \right)}
+\finalanswer{v(t) = \dfrac{mg}{k} \left( 1 - e^{-\frac{k}{m} t} \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(t \to \infty\)</span> では <span class="arithmatex">\(e^{-\frac{k}{m} t}\)</span> が 0 に収束するため，終端速度は次のようになります。</p>
 <div class="arithmatex">\[
-v_{\infty} = \lim_{t \to \infty} v(t) = \frac{mg}{k}
+v_{\infty} = \displaystyle\lim_{t \to \infty} v(t) = \finalanswer{\dfrac{mg}{k}}
 \]</div>
 <p>次に，運動方程式から直接終端速度を導きます。</p>
-<p>終端速度では加速度が 0 になります。すなわち，運動方程式において <span class="arithmatex">\(\frac{dv}{dt} = 0\)</span> とおくと，以下の関係式が得られます。</p>
+<p>終端速度では加速度が 0 になります。すなわち，運動方程式において <span class="arithmatex">\(\dfrac{dv}{dt} = 0\)</span> とおくと，以下の関係式が得られます。</p>
 <div class="arithmatex">\[
 0 = mg - kv
 \]</div>
 <p>これを <span class="arithmatex">\(v\)</span> について解くと，以下のようになります。</p>
 <div class="arithmatex">\[
-v = \finalanswer{\frac{mg}{k}}
+v = \dfrac{mg}{k}
 \]</div>
 <p>これは極限から求めた <span class="arithmatex">\(v_{\infty}\)</span> と一致します。このとき，重力と空気抵抗がつり合っています。</p>
 <h3 id="4">(4)</h3>
-<p>速度 <span class="arithmatex">\(v(t)\)</span> は位置 <span class="arithmatex">\(y(t)\)</span> の時間微分 <span class="arithmatex">\(v(t) = \frac{dy}{dt}\)</span> であるため，位置 <span class="arithmatex">\(y(t)\)</span> は <span class="arithmatex">\(v(t)\)</span> を時間で積分することで求められます。</p>
+<p>速度 <span class="arithmatex">\(v(t)\)</span> は位置 <span class="arithmatex">\(y(t)\)</span> の時間微分 <span class="arithmatex">\(v(t) = \dfrac{dy}{dt}\)</span> であるため，位置 <span class="arithmatex">\(y(t)\)</span> は <span class="arithmatex">\(v(t)\)</span> を時間で積分することで求められます。</p>
 <p>初期条件 <span class="arithmatex">\(y(0) = 0\)</span> を用いると，時刻 <span class="arithmatex">\(t\)</span> における位置 <span class="arithmatex">\(y(t)\)</span> は以下の定積分で表されます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-y(t) &amp;= \int_0^t v(\tau) d\tau \\
-&amp;= \int_0^t \frac{mg}{k} \left( 1 - e^{-\frac{k}{m} \tau} \right) d\tau
+y(t)
+&amp;= \int_0^t v(\tau) d\tau \\\\
+&amp;= \int_0^t \dfrac{mg}{k}
+\left( 1 - e^{-\frac{k}{m} \tau} \right) d\tau
 \end{aligned}
 \]</div>
 <p>この積分を実行します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-y(t) &amp;= \frac{mg}{k} \left( t + \frac{m}{k} e^{-\frac{k}{m} t} - \frac{m}{k} \right) \\\\
-&amp;= \frac{mg}{k} t - \frac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)
+y(t) &amp;= \dfrac{mg}{k} \left( t + \dfrac{m}{k} e^{-\frac{k}{m} t} - \dfrac{m}{k} \right) \\\\
+&amp;= \dfrac{mg}{k} t - \dfrac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)
 \end{aligned}
 \]</div>
 <p>したがって，求める雨粒の位置 <span class="arithmatex">\(y(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{y(t) = \frac{mg}{k} t - \frac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)}
+\finalanswer{y(t) = \dfrac{mg}{k} t - \dfrac{m^2 g}{k^2} \left( 1 - e^{-\frac{k}{m} t} \right)}
 \]</div>
 <p>となります。</p>
 

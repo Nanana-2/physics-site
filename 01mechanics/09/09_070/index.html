@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「コマの歳差運動」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/09/09_070/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="コマの歳差運動" />
+    <meta property="og:description" content="力学の「コマの歳差運動」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/09/09_070/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="コマの歳差運動" />
+    <meta name="twitter:description" content="力学の「コマの歳差運動」に関する演習問題です。剛体の力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14541,7 +14553,7 @@
 <p>各ベクトルを代入すると，次の結果を得ます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{N} &amp;= - M g l \boldsymbol{e}_Z \times \boldsymbol{e}_z \\
+\boldsymbol{N} &amp;= - M g l \boldsymbol{e}_Z \times \boldsymbol{e}_z \\\\
 &amp;= \finalanswer{M g l \boldsymbol{e}_z \times \boldsymbol{e}_Z}
 \end{aligned}
 \]</div>
@@ -14562,7 +14574,7 @@
 <p>この式に <span class="arithmatex">\(\boldsymbol{\Omega} = \Omega \boldsymbol{e}_z\)</span> および <span class="arithmatex">\(\boldsymbol{L} \approx I_3 \omega_3 \boldsymbol{e}_Z\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d\boldsymbol{L}}{dt} &amp;= (\Omega \boldsymbol{e}_z) \times (I_3 \omega_3 \boldsymbol{e}_Z) \\
+\frac{d\boldsymbol{L}}{dt} &amp;= (\Omega \boldsymbol{e}_z) \times (I_3 \omega_3 \boldsymbol{e}_Z) \\\\
 &amp;= I_3 \omega_3 \Omega \boldsymbol{e}_z \times \boldsymbol{e}_Z
 \end{aligned}
 \]</div>
@@ -14570,7 +14582,7 @@
 <div class="arithmatex">\[
 I_3 \omega_3 \Omega \boldsymbol{e}_z \times \boldsymbol{e}_Z = M g l \boldsymbol{e}_z \times \boldsymbol{e}_Z
 \]</div>
-<p>この等式が任意の <span class="arithmatex">\(\boldsymbol{e}_z \times \boldsymbol{e}_Z\)</span> について成り立つためには，係数が等しくなければなりません。したがって，以下の関係が得られます。</p>
+<p>この等式が任意の <span class="arithmatex">\(\boldsymbol{e}_z \times \boldsymbol{e}_Z\)</span> について成り立つためには，係数が等しくなければなりません。したがって，以下の関係が導かれます。</p>
 <div class="arithmatex">\[
 I_3 \omega_3 \Omega = M g l
 \]</div>
@@ -14605,22 +14617,22 @@ V = M g l \cos\theta
 <p>したがって，この系のラグランジアン <span class="arithmatex">\(L_{\text{lag}}\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-L_{\text{lag}} &amp;= T - V \\
+L_{\text{lag}} &amp;= T - V \\\\
 &amp;= \frac{1}{2} I_1 (\dot{\theta}^2 + \dot{\phi}^2 \sin^2\theta) + \frac{1}{2} I_3 (\dot{\phi} \cos\theta + \dot{\psi})^2 - M g l \cos\theta
 \end{aligned}
 \]</div>
 <p>ラグランジアンは <span class="arithmatex">\(\phi\)</span> および <span class="arithmatex">\(\psi\)</span> を明に合まないため，これらに共役な運動量は保存量となります。それぞれの保存量を <span class="arithmatex">\(p_\phi\)</span> および <span class="arithmatex">\(p_\psi\)</span> とします。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-p_\psi &amp;= \frac{\partial L_{\text{lag}}}{\partial \dot{\psi}} \\
-&amp;= I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \\
+p_\psi &amp;= \frac{\partial L_{\text{lag}}}{\partial \dot{\psi}} \\\\
+&amp;= I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \\\\
 &amp;= I_3 \omega_3
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
-p_\phi &amp;= \frac{\partial L_{\text{lag}}}{\partial \dot{\phi}} \\
-&amp;= I_1 \dot{\phi} \sin^2\theta + I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \cos\theta \\
+p_\phi &amp;= \frac{\partial L_{\text{lag}}}{\partial \dot{\phi}} \\\\
+&amp;= I_1 \dot{\phi} \sin^2\theta + I_3 (\dot{\phi} \cos\theta + \dot{\psi}) \cos\theta \\\\
 &amp;= I_1 \dot{\phi} \sin^2\theta + I_3 \omega_3 \cos\theta
 \end{aligned}
 \]</div>

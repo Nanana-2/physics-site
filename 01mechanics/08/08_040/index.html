@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「コリオリ力の影響」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/08/08_040/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="コリオリ力の影響" />
+    <meta property="og:description" content="力学の「コリオリ力の影響」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/08/08_040/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="コリオリ力の影響" />
+    <meta name="twitter:description" content="力学の「コリオリ力の影響」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14553,8 +14565,7 @@
 <div class="arithmatex">\[
 m \frac{d^2 \boldsymbol{r}}{dt^2} = \boldsymbol{F} - 2m (\boldsymbol{\omega} \times \boldsymbol{v}) - m \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \boldsymbol{r})
 \]</div>
-<p>摩擦を無視しているため，水平方向の実在の力は <span class="arithmatex">\(\boldsymbol{F}=\boldsymbol{0}\)</span> です。
-角速度ベクトルは <span class="arithmatex">\(\boldsymbol{\omega} = (0, 0, \omega)\)</span>，位置ベクトルは <span class="arithmatex">\(\boldsymbol{r} = (x, y, 0)\)</span>，相対速度ベクトルは <span class="arithmatex">\(\boldsymbol{v} = (\dot{x}, \dot{y}, 0)\)</span> と表されます。</p>
+<p>摩擦を無視しているため，水平方向の実在の力は <span class="arithmatex">\(\boldsymbol{F}=\boldsymbol{0}\)</span> です。角速度ベクトルは <span class="arithmatex">\(\boldsymbol{\omega} = (0, 0, \omega)\)</span>，位置ベクトルは <span class="arithmatex">\(\boldsymbol{r} = (x, y, 0)\)</span>，相対速度ベクトルは <span class="arithmatex">\(\boldsymbol{v} = (\dot{x}, \dot{y}, 0)\)</span> と表されます。</p>
 <p>まず，コリオリ力 <span class="arithmatex">\(\boldsymbol{F}_{\text{cor}} = -2m (\boldsymbol{\omega} \times \boldsymbol{v})\)</span> を計算します。外積の部分は以下のようになります。</p>
 <div class="arithmatex">\[
 \boldsymbol{\omega} \times \boldsymbol{v} = (-\omega \dot{y}, \omega \dot{x}, 0)
@@ -14582,8 +14593,7 @@ m \frac{d^2 \boldsymbol{r}}{dt^2} = \boldsymbol{F} - 2m (\boldsymbol{\omega} \ti
 \finalanswer{\ddot{y} = \omega^2 y - 2\omega \dot{x}}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>複素数 <span class="arithmatex">\(z = x + iy\)</span> を時間で微分すると，<span class="arithmatex">\(\dot{z} = \dot{x} + i\dot{y}\)</span> および <span class="arithmatex">\(\ddot{z} = \ddot{x} + i\ddot{y}\)</span> となります。
-(1) で求めた運動方程式の <span class="arithmatex">\(y\)</span> 成分の式に <span class="arithmatex">\(i\)</span> を掛け， <span class="arithmatex">\(x\)</span> 成分の式と足し合わせます。</p>
+<p>複素数 <span class="arithmatex">\(z = x + iy\)</span> を時間で微分すると，<span class="arithmatex">\(\dot{z} = \dot{x} + i\dot{y}\)</span> および <span class="arithmatex">\(\ddot{z} = \ddot{x} + i\ddot{y}\)</span> となります。 (1) で求めた運動方程式の <span class="arithmatex">\(y\)</span> 成分の式に <span class="arithmatex">\(i\)</span> を掛け， <span class="arithmatex">\(x\)</span> 成分の式と足し合わせます。</p>
 <div class="arithmatex">\[
 \ddot{x} + i\ddot{y} = \omega^2 (x + iy) + 2\omega (\dot{y} - i\dot{x})
 \]</div>
@@ -14600,8 +14610,7 @@ m \frac{d^2 \boldsymbol{r}}{dt^2} = \boldsymbol{F} - 2m (\boldsymbol{\omega} \ti
 \finalanswer{\ddot{z} + 2i\omega \dot{z} - \omega^2 z = 0}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた微分方程式は，定数係数を持つ二階の線形同次微分方程式です。
-この方程式を解くために，特性方程式を立てます。</p>
+<p>(2) で得られた微分方程式は，定数係数を持つ二階の線形同次微分方程式です。この方程式を解くために，特性方程式を立てます。</p>
 <div class="arithmatex">\[
 \lambda^2 + 2i\omega \lambda - \omega^2 = 0
 \]</div>
@@ -14609,12 +14618,11 @@ m \frac{d^2 \boldsymbol{r}}{dt^2} = \boldsymbol{F} - 2m (\boldsymbol{\omega} \ti
 <div class="arithmatex">\[
 (\lambda + i\omega)^2 = 0
 \]</div>
-<p>したがって，重解 <span class="arithmatex">\(\lambda = -i\omega\)</span> を得ます。
-重解を持つ場合の微分方程式の一般解は，任意の複素定数 <span class="arithmatex">\(C_1\)</span> および <span class="arithmatex">\(C_2\)</span> を用いて次のように表されます。</p>
+<p>したがって，重解 <span class="arithmatex">\(\lambda = -i\omega\)</span> を得ます。重解を持つ場合の微分方程式の一般解は，任意の複素定数 <span class="arithmatex">\(C_1\)</span> および <span class="arithmatex">\(C_2\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
 z(t) = (C_1 + C_2 t) e^{-i\omega t}
 \]</div>
-<p>初期条件を適用します。時刻 <span class="arithmatex">\(t = 0\)</span> において <span class="arithmatex">\(z(0) = 0\)</span> であることから，次の関係が得られます。</p>
+<p>初期条件を適用します。時刻 <span class="arithmatex">\(t = 0\)</span> において <span class="arithmatex">\(z(0) = 0\)</span> であることから，次の関係が導かれます。</p>
 <div class="arithmatex">\[
 C_1 = 0
 \]</div>
@@ -14642,24 +14650,21 @@ x(t) = v_0 t \cos \omega t
 \finalanswer{y(t) = -v_0 t \sin \omega t}
 \]</div>
 <h3 id="4">(4)</h3>
-<p>慣性座標系 <span class="arithmatex">\(O-XY\)</span> から見ると，小球には一切の力が働きません。
-したがって，小球は慣性法則に従い等速直線運動を行います。
-時刻 <span class="arithmatex">\(t = 0\)</span> において，小球は原点にあり，その速度は <span class="arithmatex">\(X\)</span> 軸の正の向きに大きさが <span class="arithmatex">\(v_0\)</span> であるため，慣性系における運動方程式の解は次のようになります。</p>
+<p>慣性座標系 <span class="arithmatex">\(O-XY\)</span> から見ると，小球には一切の力が働きません。したがって，小球は慣性法則に従い等速直線運動を行います。時刻 <span class="arithmatex">\(t = 0\)</span> において，小球は原点にあり，その速度は <span class="arithmatex">\(X\)</span> 軸の正の向きに大きさが <span class="arithmatex">\(v_0\)</span> であるため，慣性系における運動方程式の解は次のようになります。</p>
 <div class="arithmatex">\[
 X(t) = v_0 t
 \]</div>
 <div class="arithmatex">\[
 Y(t) = 0
 \]</div>
-<p>時刻 <span class="arithmatex">\(t\)</span> において，回転座標系 <span class="arithmatex">\(O-xy\)</span> は慣性座標系 <span class="arithmatex">\(O-XY\)</span> に対して反時計回りに角度 <span class="arithmatex">\(\omega t\)</span> だけ回転しています。
-したがって，慣性系における位置 <span class="arithmatex">\((X, Y)\)</span> から回転系における位置 <span class="arithmatex">\((x, y)\)</span> への座標変換は，角度 <span class="arithmatex">\(\omega t\)</span> だけ時計回りに回転させる変換に対応し，以下のように表されます。</p>
+<p>時刻 <span class="arithmatex">\(t\)</span> において，回転座標系 <span class="arithmatex">\(O-xy\)</span> は慣性座標系 <span class="arithmatex">\(O-XY\)</span> に対して反時計回りに角度 <span class="arithmatex">\(\omega t\)</span> だけ回転しています。したがって，慣性系における位置 <span class="arithmatex">\((X, Y)\)</span> から回転系における位置 <span class="arithmatex">\((x, y)\)</span> への座標変換は，角度 <span class="arithmatex">\(\omega t\)</span> だけ時計回りに回転させる変換に対応し，以下のように表されます。</p>
 <div class="arithmatex">\[
-\begin{pmatrix} x \\ y \end{pmatrix} =
- \begin{pmatrix}
- \cos \omega t &amp; \sin \omega t \\
-  -\sin \omega t &amp; \cos \omega t 
-  \end{pmatrix} \begin{pmatrix} X \\ Y 
-  \end{pmatrix}
+\begin{pmatrix} x \\\\ y \end{pmatrix} =
+\begin{pmatrix}
+\cos \omega t &amp; \sin \omega t \\\\
+-\sin \omega t &amp; \cos \omega t
+\end{pmatrix} \begin{pmatrix} X \\\\ Y
+\end{pmatrix}
 \]</div>
 <p>この関係式に <span class="arithmatex">\(X = v_0 t\)</span> および <span class="arithmatex">\(Y = 0\)</span> を代入します。</p>
 <div class="arithmatex">\[

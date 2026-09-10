@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「エネルギー積分による運動の解析」に関する演習問題です。仕事とエネルギー保存則の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/03/03_060/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="エネルギー積分による運動の解析" />
+    <meta property="og:description" content="力学の「エネルギー積分による運動の解析」に関する演習問題です。仕事とエネルギー保存則の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/03/03_060/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="エネルギー積分による運動の解析" />
+    <meta name="twitter:description" content="力学の「エネルギー積分による運動の解析」に関する演習問題です。仕事とエネルギー保存則の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14523,9 +14535,9 @@
 \frac{1}{2} m \left( \frac{dx}{dt} \right)^2 + U(x) = E
 \]</div>
 <p>この関係式を時間と位置に関する微分方程式とみなして処理をおこなう。以下の問いに答えよ。</p>
-<p>(1) 力学的エネルギー保存則の式を速度 <span class="arithmatex">\(\frac{dx}{dt}\)</span> について解き，速度を位置 <span class="arithmatex">\(x\)</span> の関数として表せ。ただし，質点が <span class="arithmatex">\(x\)</span> 軸の正の方向に運動している状態を想定し，符号は正を選択せよ。</p>
+<p>(1) 力学的エネルギー保存則の式を速度 <span class="arithmatex">\(\dfrac{dx}{dt}\)</span> について解き，速度を位置 <span class="arithmatex">\(x\)</span> の関数として表せ。ただし，質点が <span class="arithmatex">\(x\)</span> 軸の正の方向に運動している状態を想定し，符号は正を選択せよ。</p>
 <p>(2) (1) で得られた式を変数分離法によって変形し，質点が位置 <span class="arithmatex">\(x_{\text{A}}\)</span> から位置 <span class="arithmatex">\(x_{\text{B}}\)</span> まで移動するのに要する時間 <span class="arithmatex">\(T\)</span> を，ポテンシャル関数を用いた定積分の形式で表せ。</p>
-<p>(3) 具体的な例として，原点 O に引きつけられる中心力によるポテンシャル <span class="arithmatex">\(U(x) = \frac{1}{2} k x^2\)</span> を想定する。ここで <span class="arithmatex">\(k\)</span> は正の定数である。力学的エネルギーの総和が <span class="arithmatex">\(E\)</span> であるとき，質点が原点 <span class="arithmatex">\(x=0\)</span> から出発して初めて転回点に到達するまでに要する時間を，積分を実行することによって求めよ。</p>
+<p>(3) 具体的な例として，原点 O に引きつけられる中心力によるポテンシャル <span class="arithmatex">\(U(x) = \dfrac{1}{2} k x^2\)</span> を想定する。ここで <span class="arithmatex">\(k\)</span> は正の定数である。力学的エネルギーの総和が <span class="arithmatex">\(E\)</span> であるとき，質点が原点 <span class="arithmatex">\(x=0\)</span> から出発して初めて転回点に到達するまでに要する時間を，積分を実行することによって求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14555,14 +14567,14 @@
 \finalanswer{T = \int_{x_{\text{A}}}^{x_{\text{B}}} \frac{dx}{\sqrt{\frac{2}{m} \{E - U(x)\}}}}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>具体的なポテンシャル <span class="arithmatex">\(U(x) = \frac{1}{2} k x^2\)</span> を代入します。まず，移動の終点となる転回点の位置を求めます。転回点では速度が 0 になるため， <span class="arithmatex">\(U(x) = E\)</span> より座標は次のようになります。</p>
+<p>具体的なポテンシャル <span class="arithmatex">\(U(x) = \dfrac{1}{2} k x^2\)</span> を代入します。まず，移動の終点となる転回点の位置を求めます。転回点では速度が 0 になるため， <span class="arithmatex">\(U(x) = E\)</span> より座標は次のようになります。</p>
 <div class="arithmatex">\[
 \frac{1}{2} k x^2 = E
 \]</div>
 <div class="arithmatex">\[
 x = \sqrt{\frac{2E}{k}}
 \]</div>
-<p>始点を <span class="arithmatex">\(x_{\text{A}} = 0\)</span> ，終点を <span class="arithmatex">\(x_{\text{B}} = \sqrt{\frac{2E}{k}}\)</span> として (2) の積分公式に組み込みます。</p>
+<p>始点を <span class="arithmatex">\(x_{\text{A}} = 0\)</span> ，終点を <span class="arithmatex">\(x_{\text{B}} = \sqrt{\dfrac{2E}{k}}\)</span> として (2) の積分公式に組み込みます。</p>
 <div class="arithmatex">\[
 T = \int_0^{\sqrt{\frac{2E}{k}}} \frac{dx}{\sqrt{\frac{2}{m} \left( E - \frac{1}{2} k x^2 \right)}}
 \]</div>
@@ -14570,7 +14582,7 @@ T = \int_0^{\sqrt{\frac{2E}{k}}} \frac{dx}{\sqrt{\frac{2}{m} \left( E - \frac{1}
 <div class="arithmatex">\[
 T = \sqrt{\frac{m}{k}} \int_0^{\sqrt{\frac{2E}{k}}} \frac{dx}{\sqrt{\frac{2E}{k} - x^2}}
 \]</div>
-<p>この定積分を実行するため，変数変換 <span class="arithmatex">\(x = \sqrt{\frac{2E}{k}} \sin\theta\)</span> をおこないます。微小要素の変換は <span class="arithmatex">\(dx = \sqrt{\frac{2E}{k}} \cos\theta d\theta\)</span> となり，積分の範囲は <span class="arithmatex">\(0 \le x \le \sqrt{\frac{2E}{k}}\)</span> に対応して <span class="arithmatex">\(0 \le \theta \le \frac{\pi}{2}\)</span> となります。これらを代入します。</p>
+<p>この定積分を実行するため，変数変換 <span class="arithmatex">\(x = \sqrt{\dfrac{2E}{k}} \sin\theta\)</span> をおこないます。微小要素の変換は <span class="arithmatex">\(dx = \sqrt{\dfrac{2E}{k}} \cos\theta d\theta\)</span> となり，積分の範囲は <span class="arithmatex">\(0 \le x \le \sqrt{\dfrac{2E}{k}}\)</span> に対応して <span class="arithmatex">\(0 \le \theta \le \dfrac{\pi}{2}\)</span> となります。これらを代入します。</p>
 <div class="arithmatex">\[
 T = \sqrt{\frac{m}{k}} \int_0^{\frac{\pi}{2}} \frac{\sqrt{\frac{2E}{k}} \cos\theta d\theta}{\sqrt{\frac{2E}{k} \left( 1 - \sin^2\theta \right)}}
 \]</div>
@@ -14578,7 +14590,7 @@ T = \sqrt{\frac{m}{k}} \int_0^{\frac{\pi}{2}} \frac{\sqrt{\frac{2E}{k}} \cos\the
 <div class="arithmatex">\[
 T = \sqrt{\frac{m}{k}} \int_0^{\frac{\pi}{2}} d\theta
 \]</div>
-<p>この残された積分は極めて単純であり，値は <span class="arithmatex">\(\frac{\pi}{2}\)</span> となります。</p>
+<p>この残された積分は極めて単純であり，値は <span class="arithmatex">\(\dfrac{\pi}{2}\)</span> となります。</p>
 <div class="arithmatex">\[
 \finalanswer{T = \frac{\pi}{2} \sqrt{\frac{m}{k}}}
 \]</div>

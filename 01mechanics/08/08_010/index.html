@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「加速系での運動方程式」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/08/08_010/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="加速系での運動方程式" />
+    <meta property="og:description" content="力学の「加速系での運動方程式」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/08/08_010/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="加速系での運動方程式" />
+    <meta name="twitter:description" content="力学の「加速系での運動方程式」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14551,8 +14563,7 @@
 <h3 id="1">(1)</h3>
 <p>慣性系において，おもりにはたらく力は鉛直下向きの重力 <span class="arithmatex">\(mg\)</span> と，糸に沿って支点に向かう張力 <span class="arithmatex">\(S\)</span> です。</p>
 <p>糸がおもりに及ぼす張力は，おもりから支点へと向かう方向にはたらきます。おもりの位置から支点への方向は，鉛直上向きから角度 <span class="arithmatex">\(\theta\)</span> だけ傾いた方向となります。</p>
-<p>したがって，張力 <span class="arithmatex">\(S\)</span> の水平成分は左向きに <span class="arithmatex">\(S \sin \theta\)</span>，鉛直成分は上向きに <span class="arithmatex">\(S \cos \theta\)</span> となります。
-これより，慣性系におけるおもりの運動方程式の <span class="arithmatex">\(x\)</span> 成分および <span class="arithmatex">\(y\)</span> 成分は，それぞれ以下のようになります。</p>
+<p>したがって，張力 <span class="arithmatex">\(S\)</span> の水平成分は左向きに <span class="arithmatex">\(S \sin \theta\)</span>，鉛直成分は上向きに <span class="arithmatex">\(S \cos \theta\)</span> となります。これより，慣性系におけるおもりの運動方程式の <span class="arithmatex">\(x\)</span> 成分および <span class="arithmatex">\(y\)</span> 成分は，それぞれ以下のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{d^2 x}{dt^2} = -S \sin \theta}
 \]</div>
@@ -14609,13 +14620,15 @@ S \cos \theta_0 - mg = 0
 <p>電車の加速度 <span class="arithmatex">\(\alpha\)</span> が正のとき，<span class="arithmatex">\(\tan \theta_0\)</span> は負の値となり，おもりは電車の進行方向とは逆の左側へ傾いてつりあいます。</p>
 <p>このおもりには，鉛直下向きの重力 <span class="arithmatex">\(mg\)</span> と，水平左向きの慣性力 <span class="arithmatex">\(m\alpha\)</span> が同時にはたらいています。これら2つの力の合力の大きさ <span class="arithmatex">\(F_{\text{eff}}\)</span> は，三平方の定理より以下のようになります。</p>
 <div class="arithmatex">\[
-F_{\text{eff}} = \sqrt{(mg)^2 + (m\alpha)^2} = \finalanswer{m\sqrt{g^2 + \alpha^2}}
+\begin{aligned}
+F_{\text{eff}} &amp;= \sqrt{(mg)^2 + (m\alpha)^2} \\\\
+&amp;= \finalanswer{m\sqrt{g^2 + \alpha^2}}
+\end{aligned}
 \]</div>
 <p>この合力の向きは，鉛直下向きから電車の進行方向とは逆向きに角度 <span class="arithmatex">\(\theta_0\)</span> だけ傾いた方向となります。加速系においては，この合力があたかも新しい重力のように作用するため，これを見かけの重力と呼びます。</p>
 <h3 id="4">(4)</h3>
 <p>加速系において，おもりは支点を中心とした半径 <span class="arithmatex">\(L\)</span> の円運動を行います。おもりのつりあいの位置からの角度のずれを <span class="arithmatex">\(\phi = \theta - \theta_0\)</span> とします。</p>
-<p>おもりに作用する力として，大きさが <span class="arithmatex">\(m\sqrt{g^2 + \alpha^2}\)</span> で，鉛直下向きから角度 <span class="arithmatex">\(\theta_0\)</span> だけ傾いた方向を向く見かけの重力を考えます。
-この見かけの重力の方向を基準にすると，糸がその基準方向からなす角度は <span class="arithmatex">\(\phi\)</span> となります。</p>
+<p>おもりに作用する力として，大きさが <span class="arithmatex">\(m\sqrt{g^2 + \alpha^2}\)</span> で，鉛直下向きから角度 <span class="arithmatex">\(\theta_0\)</span> だけ傾いた方向を向く見かけの重力を考えます。この見かけの重力の方向を基準にすると，糸がその基準方向からなす角度は <span class="arithmatex">\(\phi\)</span> となります。</p>
 <p>おもりの円運動の接線方向における運動方程式を立てると，見かけの重力の接線成分が復元力となるため，以下の式が成り立ちます。</p>
 <div class="arithmatex">\[
 mL \frac{d^2 \phi}{dt^2} = -m\sqrt{g^2 + \alpha^2} \sin \phi
@@ -14626,11 +14639,14 @@ mL \frac{d^2 \phi}{dt^2} = -m\sqrt{g^2 + \alpha^2} \sin \phi
 \]</div>
 <p>この式は，おもりが角振動数 <span class="arithmatex">\(\omega\)</span> の単振動を行うことを示しています。角振動数 <span class="arithmatex">\(\omega\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\omega = \sqrt{\frac{\sqrt{g^2 + \alpha^2}}{L}}
+\finalanswer{\omega = \sqrt{\frac{\sqrt{g^2 + \alpha^2}}{L}}}
 \]</div>
 <p>したがって，この加速系における微小振動の周期 <span class="arithmatex">\(T\)</span> は，次の式で与えられます。</p>
 <div class="arithmatex">\[
-T = \frac{2\pi}{\omega} = \finalanswer{2\pi \sqrt{\frac{L}{\sqrt{g^2 + \alpha^2}}}}
+\begin{aligned}
+T &amp;= \frac{2\pi}{\omega} \\\\
+&amp;= \finalanswer{2\pi \sqrt{\frac{L}{\sqrt{g^2 + \alpha^2}}}}
+\end{aligned}
 \]</div>
 <p>この結果は，静止系における単振り子の周期公式の重力加速度 <span class="arithmatex">\(g\)</span> を，見かけの重力加速度 <span class="arithmatex">\(g' = \sqrt{g^2 + \alpha^2}\)</span> に置き換えたものに一致しています。</p>
 

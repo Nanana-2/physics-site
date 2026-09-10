@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「位相空間と軌道」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/10/10_090/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="位相空間と軌道" />
+    <meta property="og:description" content="力学の「位相空間と軌道」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/10/10_090/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="位相空間と軌道" />
+    <meta name="twitter:description" content="力学の「位相空間と軌道」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14542,9 +14554,8 @@ H(x, p) = \frac{p^2}{2m} + \frac{1}{2}kx^2
 \finalanswer{\frac{x^2}{\frac{2E}{k}} + \frac{p^2}{2mE} = 1}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた方程式の形式は，平面幾何学における楕円の標準方程式 <span class="arithmatex">\(\frac{x^2}{a^2} + \frac{p^2}{b^2} = 1\)</span> に一致します。したがって，位相空間において描かれる図形は楕円になります。</p>
-<p>この楕円と各座標軸との交点を計算します。
-<span class="arithmatex">\(p = 0\)</span> と置くことで， <span class="arithmatex">\(x\)</span> 軸との交点座標が得られます。</p>
+<p>(1) で得られた方程式の形式は，平面幾何学における楕円の標準方程式 <span class="arithmatex">\(\dfrac{x^2}{a^2} + \dfrac{p^2}{b^2} = 1\)</span> に一致します。したがって，位相空間において描かれる図形は楕円になります。</p>
+<p>この楕円と各座標軸との交点を計算します。 <span class="arithmatex">\(p = 0\)</span> と置くことで， <span class="arithmatex">\(x\)</span> 軸との交点座標が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{x = \pm \sqrt{\frac{2E}{k}}}
 \]</div>
@@ -14553,16 +14564,14 @@ H(x, p) = \frac{p^2}{2m} + \frac{1}{2}kx^2
 \finalanswer{p = \pm \sqrt{2mE}}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>位相空間上の点が移動する方向を調べるため，ハミルトンの正準方程式を利用します。位置 <span class="arithmatex">\(x\)</span> が正の領域にある代表点に着目します。
-正準方程式の運動量変化に関する式は次の通りです。</p>
+<p>位相空間上の点が移動する方向を調べるため，ハミルトンの正準方程式を利用します。位置 <span class="arithmatex">\(x\)</span> が正の領域にある代表点に着目します。正準方程式の運動量変化に関する式は次の通りです。</p>
 <div class="arithmatex">\[
 \dot{p} = -\frac{\partial H}{\partial x} = -kx
 \]</div>
 <p><span class="arithmatex">\(x &gt; 0\)</span> かつ <span class="arithmatex">\(k &gt; 0\)</span> であるため，運動量の時間微分は負になります。これは， <span class="arithmatex">\(x\)</span> 軸の上半面において，時間が進むと運動量 <span class="arithmatex">\(p\)</span> の値が減少することを意味し，点の下向きの移動を示します。</p>
-<p>次に，運動量 <span class="arithmatex">\(p\)</span> が正の領域にある代表点に着目します。
-正準方程式の位置変化に関する式は次の通りです。</p>
+<p>次に，運動量 <span class="arithmatex">\(p\)</span> が正の領域にある代表点に着目します。正準方程式の位置変化に関する式は次の通りです。</p>
 <div class="arithmatex">\[
-\dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m}
+\finalanswer{\dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m}}
 \]</div>
 <p><span class="arithmatex">\(p &gt; 0\)</span> かつ <span class="arithmatex">\(m &gt; 0\)</span> であるため，位置の時間微分は正になります。これは， <span class="arithmatex">\(p\)</span> 軸の右半面において，時間が進むと位置 <span class="arithmatex">\(x\)</span> の値が増加することを意味し，点の右向きの移動を示します。</p>
 <p>これらの移動の方向を横軸 <span class="arithmatex">\(x\)</span> ，縦軸 <span class="arithmatex">\(p\)</span> の座標平面上に組み合わせると，楕円上の運動は時計回りの循環軌道になることが定まります。</p>

@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「単振動の基本」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/05/05_010/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="単振動の基本" />
+    <meta property="og:description" content="力学の「単振動の基本」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/05/05_010/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="単振動の基本" />
+    <meta name="twitter:description" content="力学の「単振動の基本」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14521,7 +14533,7 @@
 <p>水平で摩擦のない床の上に質量 <span class="arithmatex">\(m\)</span> の質点を置き，ばね定数 <span class="arithmatex">\(k&gt;0\)</span> の軽いばねで壁につなぐ。ばねが自然長となる質点の位置を <span class="arithmatex">\(x=0\)</span> とする。</p>
 <p>このとき，以下の問いに答えよ。</p>
 <p>(1) 質点が位置 <span class="arithmatex">\(x\)</span> にあるとき，ばねから受ける力と運動方程式を示せ。</p>
-<p>(2) <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> とする。初期条件 <span class="arithmatex">\(x(0)=A&gt;0\)</span>，<span class="arithmatex">\(\dot{x}(0)=0\)</span> のもとで運動方程式を解き，位置 <span class="arithmatex">\(x(t)\)</span> を求めよ。</p>
+<p>(2) <span class="arithmatex">\(\omega_0 = \sqrt{\dfrac{k}{m}}\)</span> とする。初期条件 <span class="arithmatex">\(x(0)=A&gt;0\)</span>，<span class="arithmatex">\(\dot{x}(0)=0\)</span> のもとで運動方程式を解き，位置 <span class="arithmatex">\(x(t)\)</span> を求めよ。</p>
 <p>(3) 速度 <span class="arithmatex">\(v(t)\)</span> と加速度 <span class="arithmatex">\(a(t)\)</span> を求めよ。また，<span class="arithmatex">\(|v(t)|\)</span> と <span class="arithmatex">\(|a(t)|\)</span> が最大となる位置をそれぞれ答えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14530,13 +14542,12 @@
 <div class="arithmatex">\[
 F = -kx
 \]</div>
-<p>この力は常に変位 <span class="arithmatex">\(x\)</span> とは逆向きに働きます。
-ニュートンの運動方程式 <span class="arithmatex">\(m \frac{d^2 x}{dt^2} = F\)</span> にこの力を代入すると，求める運動方程式は以下のようになります。</p>
+<p>この力は常に変位 <span class="arithmatex">\(x\)</span> とは逆向きに働きます。ニュートンの運動方程式 <span class="arithmatex">\(m \dfrac{d^2 x}{dt^2} = F\)</span> にこの力を代入すると，求める運動方程式は以下のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{d^2 x}{d t^2} = -kx}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた運動方程式の両辺を <span class="arithmatex">\(m\)</span> で割り，<span class="arithmatex">\(\omega_0^2 = \frac{k}{m}\)</span> を代入して整理すると，次の定数係数の2階線形同次微分方程式が得られます。</p>
+<p>(1) で得られた運動方程式の両辺を <span class="arithmatex">\(m\)</span> で割り，<span class="arithmatex">\(\omega_0^2 = \dfrac{k}{m}\)</span> を代入して整理すると，次の定数係数の2階線形同次微分方程式が得られます。</p>
 <div class="arithmatex">\[
 \frac{d^2 x}{d t^2} + \omega_0^2 x = 0
 \]</div>
@@ -14548,17 +14559,23 @@ x(t) = C_1 \cos \omega_0 t + C_2 \sin \omega_0 t
 <div class="arithmatex">\[
 v(t) = \frac{dx}{dt} = -C_1 \omega_0 \sin \omega_0 t + C_2 \omega_0 \cos \omega_0 t
 \]</div>
-<p>次に，初期条件 <span class="arithmatex">\(x(0)=A\)</span>，<span class="arithmatex">\(v(0)=0\)</span> から定数 <span class="arithmatex">\(C_1\)</span>，<span class="arithmatex">\(C_2\)</span> を決定します。
-まず <span class="arithmatex">\(x(0) = A\)</span> より，以下の関係が成り立ちます。</p>
+<p>次に，初期条件 <span class="arithmatex">\(x(0)=A\)</span>，<span class="arithmatex">\(v(0)=0\)</span> から定数 <span class="arithmatex">\(C_1\)</span>，<span class="arithmatex">\(C_2\)</span> を決定します。まず <span class="arithmatex">\(x(0) = A\)</span> より，以下の関係が成り立ちます。</p>
 <div class="arithmatex">\[
-x(0) = C_1 \cos 0 + C_2 \sin 0 = C_1 = A
+\begin{aligned}
+x(0) &amp;= C_1 \cos 0 + C_2 \sin 0 \\\\
+&amp;= C_1 \\\\
+&amp;= A
+\end{aligned}
 \]</div>
 <p>また，<span class="arithmatex">\(v(0) = 0\)</span> より，以下の関係が成り立ちます。</p>
 <div class="arithmatex">\[
-v(0) = -C_1 \omega_0 \sin 0 + C_2 \omega_0 \cos 0 = C_2 \omega_0 = 0
+\begin{aligned}
+v(0) &amp;= -C_1 \omega_0 \sin 0 + C_2 \omega_0 \cos 0 \\\\
+&amp;= C_2 \omega_0 \\\\
+&amp;= 0
+\end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\omega_0 &gt; 0\)</span> であるため，<span class="arithmatex">\(C_2 = 0\)</span> と決定されます。
-これらを一般解に代入すると，求める位置 <span class="arithmatex">\(x(t)\)</span> は以下のようになります。</p>
+<p><span class="arithmatex">\(\omega_0 &gt; 0\)</span> であるため，<span class="arithmatex">\(C_2 = 0\)</span> と決定されます。これらを一般解に代入すると，求める位置 <span class="arithmatex">\(x(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{x(t) = A \cos \omega_0 t}
 \]</div>
@@ -14566,11 +14583,11 @@ v(0) = -C_1 \omega_0 \sin 0 + C_2 \omega_0 \cos 0 = C_2 \omega_0 = 0
 <p>(2) で求めた位置 <span class="arithmatex">\(x(t) = A \cos \omega_0 t\)</span> を時間 <span class="arithmatex">\(t\)</span> で順次微分することにより，速度 <span class="arithmatex">\(v(t)\)</span> と加速度 <span class="arithmatex">\(a(t)\)</span> を求めることができます。</p>
 <p>速度 <span class="arithmatex">\(v(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{v(t) = -A \omega_0 \sin \omega_0 t}
+v(t) = \frac{dx}{dt} = \finalanswer{-A \omega_0 \sin \omega_0 t}
 \]</div>
 <p>さらに微分を進めることで，加速度 <span class="arithmatex">\(a(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{a(t) = -A \omega_0^2 \cos \omega_0 t}
+a(t) = \frac{d^2 x}{dt^2} = \finalanswer{-A \omega_0^2 \cos \omega_0 t}
 \]</div>
 <p>次に，速度と加速度の大きさが最大となる位置を検討します。</p>
 <p>速さ <span class="arithmatex">\(|v(t)|\)</span> は以下のように表されます。</p>
@@ -14579,9 +14596,9 @@ v(0) = -C_1 \omega_0 \sin 0 + C_2 \omega_0 \cos 0 = C_2 \omega_0 = 0
 \]</div>
 <p><span class="arithmatex">\(|\sin \omega_0 t| = 1\)</span> となるときに速さは最大値 <span class="arithmatex">\(A \omega_0\)</span> をとります。このとき，<span class="arithmatex">\(\cos \omega_0 t = 0\)</span> となるため，質点の位置は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{x = 0}
+x = 0
 \]</div>
-<p>すなわち，速さが最大となるのは質点が平衡点 <span class="arithmatex">\(x=0\)</span> を通過するときです。</p>
+<p>すなわち，速さが最大となるのは質点が平衡点 <span class="arithmatex">\(\finalanswer{x=0}\)</span> を通過するときです。</p>
 <p>一方で，加速度の大きさ <span class="arithmatex">\(|a(t)|\)</span> は以下のように表されます。</p>
 <div class="arithmatex">\[
 |a(t)| = A \omega_0^2 |\cos \omega_0 t|

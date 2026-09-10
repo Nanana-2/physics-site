@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「極座標における速度と加速度」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/01/01_030/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="極座標における速度と加速度" />
+    <meta property="og:description" content="力学の「極座標における速度と加速度」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/01/01_030/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="極座標における速度と加速度" />
+    <meta name="twitter:description" content="力学の「極座標における速度と加速度」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14526,7 +14538,7 @@
 <div class="arithmatex">\[
 \boldsymbol{e}_\theta = -\boldsymbol{i} \sin\theta + \boldsymbol{j} \cos\theta
 \]</div>
-<p>これらの単位ベクトルの時間微分 <span class="arithmatex">\(\frac{d\boldsymbol{e}_r}{dt}\)</span> および <span class="arithmatex">\(\frac{d\boldsymbol{e}_\theta}{dt}\)</span> を計算し， <span class="arithmatex">\(\boldsymbol{e}_r, \boldsymbol{e}_\theta\)</span> および角速度 <span class="arithmatex">\(\dot{\theta} = \frac{d\theta}{dt}\)</span> を用いて表せ。</p>
+<p>これらの単位ベクトルの時間微分 <span class="arithmatex">\(\dfrac{d\boldsymbol{e}_r}{dt}\)</span> および <span class="arithmatex">\(\dfrac{d\boldsymbol{e}_\theta}{dt}\)</span> を計算し， <span class="arithmatex">\(\boldsymbol{e}_r, \boldsymbol{e}_\theta\)</span> および角速度 <span class="arithmatex">\(\dot{\theta} = \dfrac{d\theta}{dt}\)</span> を用いて表せ。</p>
 <p>(2) 位置ベクトル <span class="arithmatex">\(\boldsymbol{r} = r \boldsymbol{e}_r\)</span> を時間 <span class="arithmatex">\(t\)</span> で微分することにより，速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> を求めよ。また，動径方向成分 <span class="arithmatex">\(v_r\)</span> と方位角方向成分 <span class="arithmatex">\(v_\theta\)</span> をそれぞれ示せ。</p>
 <p>(3) 速度ベクトル <span class="arithmatex">\(\boldsymbol{v}\)</span> をさらに時間 <span class="arithmatex">\(t\)</span> で微分することにより，加速度ベクトル <span class="arithmatex">\(\boldsymbol{a}\)</span> を求めよ。また，動径方向成分 <span class="arithmatex">\(a_r\)</span> と方位角方向成分 <span class="arithmatex">\(a_\theta\)</span> をそれぞれ示せ。</p>
 <hr />
@@ -14535,35 +14547,39 @@
 <p>時間変化しない固定された単位ベクトル <span class="arithmatex">\(\boldsymbol{i}, \boldsymbol{j}\)</span> に対し，極座標の単位ベクトルは角度 <span class="arithmatex">\(\theta\)</span> のみを介して時間に依存します。合成関数の微分公式を適用して時間微分を計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d\boldsymbol{e}_r}{dt} &amp;= \frac{d\boldsymbol{e}_r}{d\theta} \frac{d\theta}{dt} \\
-&amp;= (-\boldsymbol{i} \sin\theta + \boldsymbol{j} \cos\theta) \dot{\theta}
+\dfrac{d\boldsymbol{e}_r}{dt}
+&amp;= \dfrac{d\boldsymbol{e}_r}{d\theta}\dfrac{d\theta}{dt} \\\\
+&amp;= (-\boldsymbol{i}\sin\theta+\boldsymbol{j}\cos\theta)\dot{\theta}
 \end{aligned}
 \]</div>
 <p>括弧の内部は方位角方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_\theta\)</span> そのものであるため，次のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{\frac{d\boldsymbol{e}_r}{dt} = \dot{\theta} \boldsymbol{e}_\theta}
+\finalanswer{\dfrac{d\boldsymbol{e}_r}{dt} = \dot{\theta} \boldsymbol{e}_\theta}
 \]</div>
 <p>同様に，もう一方の単位ベクトルについても計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d\boldsymbol{e}_\theta}{dt} &amp;= \frac{d\boldsymbol{e}_\theta}{d\theta} \frac{d\theta}{dt} \\
-&amp;= (-\boldsymbol{i} \cos\theta - \boldsymbol{j} \sin\theta) \dot{\theta} \\
-&amp;= -(\boldsymbol{i} \cos\theta + \boldsymbol{j} \sin\theta) \dot{\theta}
+\dfrac{d\boldsymbol{e}_\theta}{dt}
+&amp;= \dfrac{d\boldsymbol{e}_\theta}{d\theta}\dfrac{d\theta}{dt} \\\\
+&amp;= (-\boldsymbol{i}\cos\theta-\boldsymbol{j}\sin\theta)\dot{\theta} \\\\
+&amp;= -(\boldsymbol{i}\cos\theta+\boldsymbol{j}\sin\theta)\dot{\theta}
 \end{aligned}
 \]</div>
 <p>括弧の内部は動径方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_r\)</span> であるため，次のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{\frac{d\boldsymbol{e}_\theta}{dt} = -\dot{\theta} \boldsymbol{e}_r}
+\finalanswer{\dfrac{d\boldsymbol{e}_\theta}{dt} = -\dot{\theta} \boldsymbol{e}_r}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>位置ベクトル <span class="arithmatex">\(\boldsymbol{r} = r \boldsymbol{e}_r\)</span> の両辺を時間 <span class="arithmatex">\(t\)</span> で微分します。積の微分公式を適用すると次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{v} &amp;= \frac{d\boldsymbol{r}}{dt} \\
-&amp;= \frac{dr}{dt} \boldsymbol{e}_r + r \frac{d\boldsymbol{e}_r}{dt}
+\boldsymbol{v}
+&amp;= \dfrac{d\boldsymbol{r}}{dt} \\\\
+&amp;= \dfrac{dr}{dt} \boldsymbol{e}_r
++ r \dfrac{d\boldsymbol{e}_r}{dt}
 \end{aligned}
 \]</div>
-<p>ここに (1) の結果である <span class="arithmatex">\(\frac{d\boldsymbol{e}_r}{dt} = \dot{\theta} \boldsymbol{e}_\theta\)</span> を代入し，時間微分をドット記号で表現します。</p>
+<p>ここに (1) の結果である <span class="arithmatex">\(\dfrac{d\boldsymbol{e}_r}{dt} = \dot{\theta} \boldsymbol{e}_\theta\)</span> を代入し，時間微分をドット記号で表現します。</p>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{v} = \dot{r} \boldsymbol{e}_r + r \dot{\theta} \boldsymbol{e}_\theta}
 \]</div>
@@ -14578,17 +14594,30 @@
 <p>(2) で得られた速度ベクトル <span class="arithmatex">\(\boldsymbol{v} = \dot{r} \boldsymbol{e}_r + r \dot{\theta} \boldsymbol{e}_\theta\)</span> を時間 <span class="arithmatex">\(t\)</span> でさらに微分します。和の各項に対して積の微分公式を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\boldsymbol{a} &amp;= \frac{d\boldsymbol{v}}{dt} \\
-&amp;= \left( \ddot{r} \boldsymbol{e}_r + \dot{r} \frac{d\boldsymbol{e}_r}{dt} \right) + \left( \dot{r} \dot{\theta} \boldsymbol{e}_\theta + r \ddot{\theta} \boldsymbol{e}_\theta + r \dot{\theta} \frac{d\boldsymbol{e}_\theta}{dt} \right)
+\boldsymbol{a}
+&amp;= \dfrac{d\boldsymbol{v}}{dt} \\\\
+&amp;= \left(\ddot{r}\boldsymbol{e}_r
++\dot{r}\dfrac{d\boldsymbol{e}_r}{dt}\right)
++\left(\dot{r}\dot{\theta}\boldsymbol{e}_\theta
++r\ddot{\theta}\boldsymbol{e}_\theta
++r\dot{\theta}\dfrac{d\boldsymbol{e}_\theta}{dt}\right)
 \end{aligned}
 \]</div>
 <p>この式に (1) で求めた単位ベクトルの微分式をそれぞれ代入します。</p>
 <div class="arithmatex">\[
-\boldsymbol{a} = \ddot{r} \boldsymbol{e}_r + \dot{r} (\dot{\theta} \boldsymbol{e}_\theta) + \dot{r} \dot{\theta} \boldsymbol{e}_\theta + r \ddot{\theta} \boldsymbol{e}_\theta + r \dot{\theta} (-\dot{\theta} \boldsymbol{e}_r)
+\boldsymbol{a}
+= \ddot{r}\boldsymbol{e}_r
++ \dot{r}(\dot{\theta}\boldsymbol{e}_\theta)
++ \dot{r}\dot{\theta}\boldsymbol{e}_\theta
++ r\ddot{\theta}\boldsymbol{e}_\theta
++ r\dot{\theta}(-\dot{\theta}\boldsymbol{e}_r)
 \]</div>
 <p>動径方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_r\)</span> を含む項と，方位角方向の単位ベクトル <span class="arithmatex">\(\boldsymbol{e}_\theta\)</span> を含む項に整理してまとめます。</p>
 <div class="arithmatex">\[
-\boldsymbol{a} = (\ddot{r} - r \dot{\theta}^2) \boldsymbol{e}_r + (\dot{r} \dot{\theta} + \dot{r} \dot{\theta} + r \ddot{\theta}) \boldsymbol{e}_\theta
+\boldsymbol{a}
+= (\ddot{r}-r\dot{\theta}^2)\boldsymbol{e}_r
++(\dot{r}\dot{\theta}+\dot{r}\dot{\theta}
++r\ddot{\theta})\boldsymbol{e}_\theta
 \]</div>
 <p>等しい項を足し合わせて式を簡潔にします。</p>
 <div class="arithmatex">\[

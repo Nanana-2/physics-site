@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「時間に依存する外力を受ける運動」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/02/02_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="時間に依存する外力を受ける運動" />
+    <meta property="og:description" content="力学の「時間に依存する外力を受ける運動」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/02/02_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="時間に依存する外力を受ける運動" />
+    <meta name="twitter:description" content="力学の「時間に依存する外力を受ける運動」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14525,7 +14537,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>質点の加速度は <span class="arithmatex">\(\frac{dv}{dt}\)</span> であるため，ニュートンの運動方程式は次のようになります。</p>
+<p>質点の加速度は <span class="arithmatex">\(\dfrac{dv}{dt}\)</span> であるため，ニュートンの運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{dv}{dt} = F_0 e^{-kt}}
 \]</div>
@@ -14536,7 +14548,7 @@
 <p>両辺を時刻 0 から <span class="arithmatex">\(t\)</span> まで時間積分します。初期速度が <span class="arithmatex">\(v(0) = 0\)</span> であることを考慮すると，左辺の積分は <span class="arithmatex">\(v(t)\)</span> となり，右辺の積分は次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-v(t) &amp;= \int_0^t \frac{F_0}{m} e^{-kt'} dt' \\
+v(t) &amp;= \int_0^t \frac{F_0}{m} e^{-kt'} dt' \\\\
 &amp;= \frac{F_0}{m} \left[ - \frac{1}{k} e^{-kt'} \right]_0^t
 \end{aligned}
 \]</div>
@@ -14548,16 +14560,16 @@ v(t) &amp;= \int_0^t \frac{F_0}{m} e^{-kt'} dt' \\
 <p>外力 <span class="arithmatex">\(F(t) = F_0 e^{-kt}\)</span> が時刻 0 から <span class="arithmatex">\(t\)</span> までの間に与えた力積 <span class="arithmatex">\(I(t)\)</span> を定義通りに計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-I(t) &amp;= \int_0^t F_0 e^{-kt'} dt' \\
-&amp;= F_0 \left[ - \frac{1}{k} e^{-kt'} \right]_0^t \\
+I(t) &amp;= \int_0^t F_0 e^{-kt'} dt' \\\\
+&amp;= F_0 \left[ - \frac{1}{k} e^{-kt'} \right]_0^t \\\\
 &amp;= \frac{F_0}{k} \left( 1 - e^{-kt} \right)
 \end{aligned}
 \]</div>
 <p>次に，時刻 <span class="arithmatex">\(t\)</span> における質点の運動量を求めます。(1) で得られた速度の式に質量 <span class="arithmatex">\(m\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-p(t) &amp;= mv(t) \\
-&amp;= m \cdot \frac{F_0}{mk} \left( 1 - e^{-kt} \right) \\
+p(t) &amp;= mv(t) \\\\
+&amp;= m \cdot \frac{F_0}{mk} \left( 1 - e^{-kt} \right) \\\\
 &amp;= \frac{F_0}{k} \left( 1 - e^{-kt} \right)
 \end{aligned}
 \]</div>
@@ -14567,7 +14579,7 @@ p(t) &amp;= mv(t) \\
 \]</div>
 <p>この結果は，求めた力積 <span class="arithmatex">\(I(t)\)</span> の式と一致します。これにより，時間に依存する力が加わる場合であっても，力積が運動量の変化に等しいという関係性が成り立っていることが示されます。</p>
 <h3 id="3">(3)</h3>
-<p>速度は位置の時間微分 <span class="arithmatex">\(\frac{dx}{dt} = v(t)\)</span> であるため，(1) で得られた速度の式をさらに時間で積分します。初期位置が <span class="arithmatex">\(x(0) = 0\)</span> であることを考慮して等式を組み立てます。</p>
+<p>速度は位置の時間微分 <span class="arithmatex">\(\dfrac{dx}{dt} = v(t)\)</span> であるため，(1) で得られた速度の式をさらに時間で積分します。初期位置が <span class="arithmatex">\(x(0) = 0\)</span> であることを考慮して等式を組み立てます。</p>
 <div class="arithmatex">\[
 x(t) = \int_0^t v(t') dt' = \int_0^t \frac{F_0}{mk} \left( 1 - e^{-kt'} \right) dt'
 \]</div>
@@ -14575,7 +14587,7 @@ x(t) = \int_0^t v(t') dt' = \int_0^t \frac{F_0}{mk} \left( 1 - e^{-kt'} \right) 
 <div class="arithmatex">\[
 x(t) = \frac{F_0}{mk} \left[ t' + \frac{1}{k} e^{-kt'} \right]_0^t
 \]</div>
-<p>大括弧の内部に上限 <span class="arithmatex">\(t\)</span> と下限 0 をそれぞれ代入します。下限の 0 を代入したとき，指数関数の項は <span class="arithmatex">\(e^0 = 1\)</span> となるため， <span class="arithmatex">\(\frac{1}{k}\)</span> の値が残ることに注意して展開します。</p>
+<p>大括弧の内部に上限 <span class="arithmatex">\(t\)</span> と下限 0 をそれぞれ代入します。下限の 0 を代入したとき，指数関数の項は <span class="arithmatex">\(e^0 = 1\)</span> となるため， <span class="arithmatex">\(\dfrac{1}{k}\)</span> の値が残ることに注意して展開します。</p>
 <div class="arithmatex">\[
 x(t) = \frac{F_0}{mk} \left( t + \frac{1}{k} e^{-kt} - \frac{1}{k} \right)
 \]</div>

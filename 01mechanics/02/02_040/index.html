@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「二乗抵抗を受ける運動」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/02/02_040/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="二乗抵抗を受ける運動" />
+    <meta property="og:description" content="力学の「二乗抵抗を受ける運動」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/02/02_040/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="二乗抵抗を受ける運動" />
+    <meta name="twitter:description" content="力学の「二乗抵抗を受ける運動」に関する演習問題です。運動方程式と力学の基本の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14549,88 +14561,89 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>物体には，<span class="arithmatex">\(x\)</span> 軸の正方向に重力 <span class="arithmatex">\(mg\)</span> が働き，負方向に抵抗力 <span class="arithmatex">\(kv^2\)</span> が働きます。
-したがって，運動方程式は以下のようになります。</p>
+<p>物体には，<span class="arithmatex">\(x\)</span> 軸の正方向に重力 <span class="arithmatex">\(mg\)</span> が働き，負方向に抵抗力 <span class="arithmatex">\(kv^2\)</span> が働きます。したがって，運動方程式は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{m \frac{dv}{dt} = mg - kv^2}
+\finalanswer{m \dfrac{dv}{dt} = mg - kv^2}
 \]</div>
-<p>十分に時間が経過すると，重力と抵抗力が釣り合って加速が止まり，速度は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> に近づきます。このとき <span class="arithmatex">\(\frac{dv}{dt} = 0\)</span> となるため，</p>
+<p>十分に時間が経過すると，重力と抵抗力が釣り合って加速が止まり，速度は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> に近づきます。このとき <span class="arithmatex">\(\dfrac{dv}{dt} = 0\)</span> となるため，</p>
 <div class="arithmatex">\[
 mg - k v_{\infty}^2 = 0
 \]</div>
 <p>が成り立ちます。これを <span class="arithmatex">\(v_{\infty} &gt; 0\)</span> について解くことで，終端速度が得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{v_{\infty} = \sqrt{\frac{mg}{k}}}
+\finalanswer{v_{\infty} = \sqrt{\dfrac{mg}{k}}}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で求めた終端速度 <span class="arithmatex">\(v_{\infty}\)</span> の関係式 <span class="arithmatex">\(k = \frac{mg}{v_{\infty}^2}\)</span> を運動方程式に代入して整理します。</p>
+<p>(1) で求めた終端速度 <span class="arithmatex">\(v_{\infty}\)</span> の関係式 <span class="arithmatex">\(k = \dfrac{mg}{v_{\infty}^2}\)</span> を運動方程式に代入して整理します。</p>
 <div class="arithmatex">\[
-\frac{dv}{dt} = g \left( 1 - \frac{v^2}{v_{\infty}^2} \right)
+\dfrac{dv}{dt} = g \left( 1 - \dfrac{v^2}{v_{\infty}^2} \right)
 \]</div>
 <p>この微分方程式を変数分離します。</p>
 <div class="arithmatex">\[
-\frac{dv}{1 - \left(\frac{v}{v_{\infty}}\right)^2} = g dt
+\dfrac{dv}{1 - \left(\dfrac{v}{v_{\infty}}\right)^2} = g dt
 \]</div>
 <p>両辺を積分します。初期条件 <span class="arithmatex">\(v(0) = 0\)</span> を考慮すると，</p>
 <div class="arithmatex">\[
-\int_{0}^{v} \frac{dv'}{1 - \left(\frac{v'}{v_{\infty}}\right)^2} = \int_{0}^{t} g dt'
+\int_{0}^{v} \dfrac{dv'}{1 - \left(\dfrac{v'}{v_{\infty}}\right)^2} = \int_{0}^{t} g dt'
 \]</div>
-<p>左辺の積分を実行するために，<span class="arithmatex">\(v' = v_{\infty} \tanh \theta\)</span> と置換します。<span class="arithmatex">\(dv' = v_{\infty} \frac{1}{\cosh^2 \theta} d\theta\)</span> および <span class="arithmatex">\(1 - \tanh^2 \theta = \frac{1}{\cosh^2 \theta}\)</span> であることを利用すると，</p>
+<p>左辺の積分を実行するために，<span class="arithmatex">\(v' = v_{\infty} \tanh \theta\)</span> と置換します。<span class="arithmatex">\(dv' = v_{\infty} \dfrac{1}{\cosh^2 \theta} d\theta\)</span> および <span class="arithmatex">\(1 - \tanh^2 \theta = \dfrac{1}{\cosh^2 \theta}\)</span> であることを利用すると，</p>
 <div class="arithmatex">\[
 \int_{0}^{\operatorname{artanh}(v/v_{\infty})} v_{\infty} d\theta = gt
 \]</div>
 <div class="arithmatex">\[
-v_{\infty} \operatorname{artanh} \left( \frac{v}{v_{\infty}} \right) = gt
+v_{\infty} \operatorname{artanh} \left( \dfrac{v}{v_{\infty}} \right) = gt
 \]</div>
 <p>となります。これを <span class="arithmatex">\(v\)</span> について解くことで，速度 <span class="arithmatex">\(v(t)\)</span> が求められます。</p>
 <div class="arithmatex">\[
-\finalanswer{v(t) = v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t \right)}
+\finalanswer{v(t) = v_{\infty} \tanh \left( \dfrac{g}{v_{\infty}} t \right)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>双曲線正接関数 <span class="arithmatex">\(\tanh y\)</span> の <span class="arithmatex">\(y \approx 0\)</span> におけるマクローリン展開は以下の通りです。</p>
 <div class="arithmatex">\[
-\tanh y = y - \frac{1}{3}y^3 + O(y^5)
+\tanh y = y - \dfrac{1}{3}y^3 + O(y^5)
 \]</div>
-<p>これに <span class="arithmatex">\(y = \frac{g}{v_{\infty}} t\)</span> を代入して，速度 <span class="arithmatex">\(v(t)\)</span> を <span class="arithmatex">\(t\)</span> の3次の項まで近似します。</p>
+<p>これに <span class="arithmatex">\(y = \dfrac{g}{v_{\infty}} t\)</span> を代入して，速度 <span class="arithmatex">\(v(t)\)</span> を <span class="arithmatex">\(t\)</span> の3次の項まで近似します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-v(t) &amp;\approx v_{\infty} \left\{ \frac{g}{v_{\infty}} t - \frac{1}{3} \left( \frac{g}{v_{\infty}} t \right)^3 \right\} \\\\
-&amp;= gt - \frac{g^3}{3 v_{\infty}^2} t^3 \\\\
-&amp;= \finalanswer{gt - \frac{kg^2}{3m} t^3}
+v(t) &amp;\approx v_{\infty} \left\{ \dfrac{g}{v_{\infty}} t - \dfrac{1}{3} \left( \dfrac{g}{v_{\infty}} t \right)^3 \right\} \\\\
+&amp;= gt - \dfrac{g^3}{3 v_{\infty}^2} t^3 \\\\
+&amp;= \finalanswer{gt - \dfrac{kg^2}{3m} t^3}
 \end{aligned}
 \]</div>
 <p>この速度の近似式を時間 <span class="arithmatex">\(t\)</span> で積分し，初期条件 <span class="arithmatex">\(x(0) = 0\)</span> を用いることで，位置 <span class="arithmatex">\(x(t)\)</span> の4次までの近似式が得られます。</p>
 <div class="arithmatex">\[
-x(t) = \int_{0}^{t} v(t') dt' \approx \finalanswer{\frac{1}{2}gt^2 - \frac{kg^2}{12m} t^4}
+\begin{aligned}
+x(t) &amp;= \int_{0}^{t} v(t') dt' \\\\
+&amp;\approx \finalanswer{\dfrac{1}{2}gt^2 - \dfrac{kg^2}{12m} t^4}
+\end{aligned}
 \]</div>
-<p>空気抵抗がない場合の自由落下では，速度は <span class="arithmatex">\(v(t) = gt\)</span>，位置は <span class="arithmatex">\(x(t) = \frac{1}{2}gt^2\)</span> となります。
-落下開始直後は自由落下の式が支配的であり，抵抗力による補正は速度では <span class="arithmatex">\(t^3\)</span>，位置では <span class="arithmatex">\(t^4\)</span> から現れます。</p>
+<p>空気抵抗がない場合の自由落下では，速度は <span class="arithmatex">\(v(t) = gt\)</span>，位置は <span class="arithmatex">\(x(t) = \dfrac{1}{2}gt^2\)</span> となります。落下開始直後は自由落下の式が支配的であり，抵抗力による補正は速度では <span class="arithmatex">\(t^3\)</span>，位置では <span class="arithmatex">\(t^4\)</span> から現れます。</p>
 <h3 id="4">(4)</h3>
 <p>速度 <span class="arithmatex">\(v(t)\)</span> をさらに時間積分して，位置 <span class="arithmatex">\(x(t)\)</span> の厳密解を求めます。</p>
 <div class="arithmatex">\[
-x(t) = \int_{0}^{t} v_{\infty} \tanh \left( \frac{g}{v_{\infty}} t' \right) dt'
+x(t) = \int_{0}^{t} v_{\infty} \tanh \left( \dfrac{g}{v_{\infty}} t' \right) dt'
 \]</div>
 <p>与えられた積分公式 <span class="arithmatex">\(\int \tanh \theta d\theta = \ln \cosh \theta + C\)</span> を用いると，</p>
 <div class="arithmatex">\[
-x(t) = \frac{v_{\infty}^2}{g} \left[ \ln \cosh \left( \frac{g}{v_{\infty}} t' \right) \right]_{0}^{t}
+x(t) = \dfrac{v_{\infty}^2}{g} \left[ \ln \cosh \left( \dfrac{g}{v_{\infty}} t' \right) \right]_{0}^{t}
 \]</div>
 <p><span class="arithmatex">\(\cosh 0 = 1\)</span> より <span class="arithmatex">\(\ln \cosh 0 = 0\)</span> となるため，位置の厳密解は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{x(t) = \frac{v_{\infty}^2}{g} \ln \cosh \left( \frac{g}{v_{\infty}} t \right)}
+\finalanswer{x(t) = \dfrac{v_{\infty}^2}{g} \ln \cosh \left( \dfrac{g}{v_{\infty}} t \right)}
 \]</div>
-<p>次に，<span class="arithmatex">\(t \to \infty\)</span> における漸近的な振る舞いを考えます。双曲線余弦関数の定義 <span class="arithmatex">\(\cosh y = \frac{e^y + e^{-y}}{2}\)</span> より，<span class="arithmatex">\(y \to \infty\)</span> のとき <span class="arithmatex">\(e^{-y} \to 0\)</span> となるため，</p>
+<p>次に，<span class="arithmatex">\(t \to \infty\)</span> における漸近的な振る舞いを考えます。双曲線余弦関数の定義 <span class="arithmatex">\(\cosh y = \dfrac{e^y + e^{-y}}{2}\)</span> より，<span class="arithmatex">\(y \to \infty\)</span> のとき <span class="arithmatex">\(e^{-y} \to 0\)</span> となるため，</p>
 <div class="arithmatex">\[
-\cosh y \approx \frac{e^y}{2}
+\cosh y \approx \dfrac{e^y}{2}
 \]</div>
 <p>と近似できます。これを用いて <span class="arithmatex">\(\ln \cosh y\)</span> を近似すると，</p>
 <div class="arithmatex">\[
-\ln \cosh y \approx \ln \left( \frac{e^y}{2} \right) = y - \ln 2
+\ln \cosh y \approx \ln \left( \dfrac{e^y}{2} \right) = y - \ln 2
 \]</div>
-<p>となります。この関係を <span class="arithmatex">\(y = \frac{g}{v_{\infty}} t\)</span> に適用すると，<span class="arithmatex">\(t \to \infty\)</span> における <span class="arithmatex">\(x(t)\)</span> の漸近式が得られます。</p>
+<p>となります。この関係を <span class="arithmatex">\(y = \dfrac{g}{v_{\infty}} t\)</span> に適用すると，<span class="arithmatex">\(t \to \infty\)</span> における <span class="arithmatex">\(x(t)\)</span> の漸近式が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-x(t) &amp;\approx \frac{v_{\infty}^2}{g} \left( \frac{g}{v_{\infty}} t - \ln 2 \right) \\\\
-&amp;= \finalanswer{v_{\infty} t - \frac{v_{\infty}^2}{g} \ln 2}
+x(t) &amp;\approx \dfrac{v_{\infty}^2}{g} \left( \dfrac{g}{v_{\infty}} t - \ln 2 \right) \\\\
+&amp;= \finalanswer{v_{\infty} t - \dfrac{v_{\infty}^2}{g} \ln 2}
 \end{aligned}
 \]</div>
 <p>十分に時間が経過すると，物体は終端速度 <span class="arithmatex">\(v_{\infty}\)</span> で等速運動するため，位置は <span class="arithmatex">\(v_{\infty}t\)</span> に比例する形へ近づきます。</p>

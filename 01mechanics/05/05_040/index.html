@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「減衰振動の分類」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/05/05_040/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="減衰振動の分類" />
+    <meta property="og:description" content="力学の「減衰振動の分類」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/05/05_040/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="減衰振動の分類" />
+    <meta name="twitter:description" content="力学の「減衰振動の分類」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14541,7 +14553,7 @@
 <h1 id="_1">減衰振動の分類</h1>
 <h2 id="_2">問題</h2>
 <p>水平面上で，ばね定数 <span class="arithmatex">\(k&gt;0\)</span> の軽いばねに取り付けられた質量 <span class="arithmatex">\(m\)</span> の質点を考える。ばねが自然長となる位置を <span class="arithmatex">\(x=0\)</span> とする。質点には，ばねの復元力に加えて速度に比例する抵抗力 <span class="arithmatex">\(-\gamma\dot{x}\)</span> が働くものとする。ただし <span class="arithmatex">\(\gamma&gt;0\)</span> である。</p>
-<p>(1) 運動方程式を示し，<span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span> および <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いて以下の形に整理せよ。</p>
+<p>(1) 運動方程式を示し，<span class="arithmatex">\(\gamma_0 = \dfrac{\gamma}{2m}\)</span> および <span class="arithmatex">\(\omega_0 = \sqrt{\dfrac{k}{m}}\)</span> を用いて以下の形に整理せよ。</p>
 <div class="arithmatex">\[
 \ddot{x} + 2\gamma_0 \dot{x} + \omega_0^2 x = 0
 \]</div>
@@ -14559,7 +14571,7 @@ m \ddot{x} = -kx - \gamma \dot{x}
 <div class="arithmatex">\[
 \ddot{x} + \frac{\gamma}{m} \dot{x} + \frac{k}{m} x = 0
 \]</div>
-<p>ここで，与えられた定数 <span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span>，<span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いると，<span class="arithmatex">\(\frac{\gamma}{m} = 2\gamma_0\)</span>，<span class="arithmatex">\(\frac{k}{m} = \omega_0^2\)</span> となるため，運動方程式は以下の通りに整理されます。</p>
+<p>ここで，与えられた定数 <span class="arithmatex">\(\gamma_0 = \dfrac{\gamma}{2m}\)</span>，<span class="arithmatex">\(\omega_0 = \sqrt{\dfrac{k}{m}}\)</span> を用いると，<span class="arithmatex">\(\dfrac{\gamma}{m} = 2\gamma_0\)</span>，<span class="arithmatex">\(\dfrac{k}{m} = \omega_0^2\)</span> となるため，運動方程式は以下の通りに整理されます。</p>
 <div class="arithmatex">\[
 \finalanswer{\ddot{x} + 2\gamma_0 \dot{x} + \omega_0^2 x = 0}
 \]</div>
@@ -14577,17 +14589,14 @@ m \ddot{x} = -kx - \gamma \dot{x}
 \finalanswer{\lambda = -\gamma_0 \pm \sqrt{\gamma_0^2 - \omega_0^2}}
 \]</div>
 <p>根号の中身 <span class="arithmatex">\(\gamma_0^2-\omega_0^2\)</span> の符号によって，以下の3つに分かれます。</p>
-<ol>
-<li><strong><span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span></strong>
-   特性根は共役複素数となり，振幅を減らしながら振動します。この運動を減衰振動と呼びます。</li>
-<li><strong><span class="arithmatex">\(\gamma_0=\omega_0\)</span></strong>
-   特性方程式は重解 <span class="arithmatex">\(\lambda=-\gamma_0\)</span> を持ちます。振動せずに平衡点へ戻り，この条件を臨界減衰と呼びます。</li>
-<li><strong><span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span></strong>
-   特性根は異なる2つの負の実数となり，振動せずに平衡点へ近づきます。この運動を過減衰と呼びます。</li>
-</ol>
+<p><strong><span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span> の場合</strong></p>
+<p>特性根は共役複素数となり，振幅を減らしながら振動します。この運動を減衰振動と呼びます。</p>
+<p><strong><span class="arithmatex">\(\gamma_0=\omega_0\)</span> の場合</strong></p>
+<p>特性方程式は重解 <span class="arithmatex">\(\lambda=-\gamma_0\)</span> を持ちます。振動せずに平衡点へ戻り，この条件を臨界減衰と呼びます。</p>
+<p><strong><span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span> の場合</strong></p>
+<p>特性根は異なる2つの負の実数となり，振動せずに平衡点へ近づきます。この運動を過減衰と呼びます。</p>
 <h3 id="3">(3)</h3>
-<p><span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span> の場合を考えます。
-このとき，<span class="arithmatex">\(\sqrt{\gamma_0^2 - \omega_0^2} = \sqrt{-1(\omega_0^2 - \gamma_0^2)} = i \omega\)</span> とおくことができます。ここで <span class="arithmatex">\(i\)</span> は虚数単位であり，<span class="arithmatex">\(\omega\)</span> は以下で定義される減衰振動の角振動数です。</p>
+<p><span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span> の場合を考えます。このとき，<span class="arithmatex">\(\sqrt{\gamma_0^2 - \omega_0^2} = \sqrt{-1(\omega_0^2 - \gamma_0^2)} = i \omega\)</span> とおくことができます。ここで <span class="arithmatex">\(i\)</span> は虚数単位であり，<span class="arithmatex">\(\omega\)</span> は以下で定義される減衰振動の角振動数です。</p>
 <div class="arithmatex">\[
 \omega = \sqrt{\omega_0^2 - \gamma_0^2}
 \]</div>
@@ -14625,8 +14634,8 @@ x(t) = x_0 \sqrt{1 + \left(\frac{\gamma_0}{\omega}\right)^2} e^{-\gamma_0 t} \co
 <p>振幅は <span class="arithmatex">\(e^{-\gamma_0t}\)</span> に比例して減少します。質点は原点を通過しながら往復し，最終的に <span class="arithmatex">\(x=0\)</span> で静止します。</p>
 <h3 id="4">(4)</h3>
 <p>次に，臨界減衰および過減衰の場合の解を求めます。</p>
-<p><strong><span class="arithmatex">\(\gamma_0=\omega_0\)</span> の場合</strong>
-特性方程式が重解 <span class="arithmatex">\(\lambda = -\gamma_0\)</span> を持つため，一般解は任意定数 <span class="arithmatex">\(C_1, C_2\)</span> を用いて以下のように表されます。</p>
+<p><strong><span class="arithmatex">\(\gamma_0=\omega_0\)</span> の場合</strong></p>
+<p>特性方程式が重解 <span class="arithmatex">\(\lambda = -\gamma_0\)</span> を持つため，一般解は任意定数 <span class="arithmatex">\(C_1, C_2\)</span> を用いて以下のように表されます。</p>
 <div class="arithmatex">\[
 x(t) = (C_1 + C_2 t) e^{-\gamma_0 t}
 \]</div>
@@ -14645,8 +14654,8 @@ x(0) = C_1 = x_0
 <div class="arithmatex">\[
 \finalanswer{x(t) = x_0 (1 + \gamma_0 t) e^{-\gamma_0 t}}
 \]</div>
-<p><strong><span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span> の場合</strong>
-<span class="arithmatex">\(\beta=\sqrt{\gamma_0^2-\omega_0^2}&gt;0\)</span> とおくと，特性方程式の解は <span class="arithmatex">\(\lambda=-\gamma_0\pm\beta\)</span> となり，一般解は次のように表されます。</p>
+<p><strong><span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span> の場合</strong></p>
+<p><span class="arithmatex">\(\beta=\sqrt{\gamma_0^2-\omega_0^2}&gt;0\)</span> とおくと，特性方程式の解は <span class="arithmatex">\(\lambda=-\gamma_0\pm\beta\)</span> となり，一般解は次のように表されます。</p>
 <div class="arithmatex">\[
 x(t) = e^{-\gamma_0 t} \left( D_1 e^{\beta t} + D_2 e^{-\beta t} \right)
 \]</div>
@@ -14660,7 +14669,7 @@ x(0) = D_1 + D_2 = x_0
 \]</div>
 <div class="arithmatex">\[
 \begin{gathered}
-\dot{x}(0)=-\gamma_0(D_1+D_2)+\beta(D_1-D_2)=0 \\
+\dot{x}(0)=-\gamma_0(D_1+D_2)+\beta(D_1-D_2)=0 \\\\
 \Longrightarrow\quad \beta(D_1-D_2)=\gamma_0x_0
 \end{gathered}
 \]</div>

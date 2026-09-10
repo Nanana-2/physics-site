@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「オイラー・ラグランジュ方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/10/10_020/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="オイラー・ラグランジュ方程式" />
+    <meta property="og:description" content="力学の「オイラー・ラグランジュ方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/10/10_020/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="オイラー・ラグランジュ方程式" />
+    <meta name="twitter:description" content="力学の「オイラー・ラグランジュ方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14496,7 +14508,7 @@
 
 <h1 id="_1">オイラー・ラグランジュ方程式</h1>
 <h2 id="_2">問題</h2>
-<p>時間 <span class="arithmatex">\(t_1\)</span> から <span class="arithmatex">\(t_2\)</span> までの間における力学系の運動を考える。系の一般化座標を <span class="arithmatex">\(q\)</span> ，一般化速度を <span class="arithmatex">\(\dot{q}\)</span> とし，ラグランジアンを <span class="arithmatex">\(L(q, \dot{q}, t)\)</span> とする。ハミルトンの原理に基づき，実際の運動軌道は作用積分 </p>
+<p>時間 <span class="arithmatex">\(t_1\)</span> から <span class="arithmatex">\(t_2\)</span> までの間における力学系の運動を考える。系の一般化座標を <span class="arithmatex">\(q\)</span> ，一般化速度を <span class="arithmatex">\(\dot{q}\)</span> とし，ラグランジアンを <span class="arithmatex">\(L(q, \dot{q}, t)\)</span> とする。ハミルトンの原理に基づき，実際の運動軌道は作用積分</p>
 <div class="arithmatex">\[
 S = \int_{t_1}^{t_2} L(q, \dot{q}, t) dt
 \]</div>
@@ -14509,7 +14521,7 @@ S = \int_{t_1}^{t_2} L(q, \dot{q}, t) dt
 <p>実際の軌道 <span class="arithmatex">\(q(t)\)</span> を <span class="arithmatex">\(q(t) + \delta q(t)\)</span> に変化させたときの，作用積分 <span class="arithmatex">\(S\)</span> の変化量の主要部である第1変分 <span class="arithmatex">\(\delta S\)</span> を計算します。ラグランジアン <span class="arithmatex">\(L(q, \dot{q}, t)\)</span> の変分を考えると次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\delta S &amp;= \int_{t_1}^{t_2} \delta L dt \\
+\delta S &amp;= \int_{t_1}^{t_2} \delta L dt \\\\
 &amp;= \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q} \delta q + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} \right) dt
 \end{aligned}
 \]</div>
@@ -14518,7 +14530,7 @@ S = \int_{t_1}^{t_2} L(q, \dot{q}, t) dt
 \finalanswer{\int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q} \delta q + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} \right) dt = 0}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) の等式の右側の項にある速度の変分は，位置の変分の時間微分に相当するため， <span class="arithmatex">\(\delta \dot{q} = \frac{d}{dt}(\delta q)\)</span> と書き換えることができます。この項を含む部分に部分積分を適用します。</p>
+<p>(1) の等式の右側の項にある速度の変分は，位置の変分の時間微分に相当するため， <span class="arithmatex">\(\delta \dot{q} = \dfrac{d}{dt}(\delta q)\)</span> と書き換えることができます。この項を含む部分に部分積分を適用します。</p>
 <div class="arithmatex">\[
 \int_{t_1}^{t_2} \frac{\partial L}{\partial \dot{q}} \frac{d}{dt}(\delta q) dt = \left[ \frac{\partial L}{\partial \dot{q}} \delta q \right]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \delta q dt
 \]</div>
@@ -14534,7 +14546,7 @@ S = \int_{t_1}^{t_2} L(q, \dot{q}, t) dt
 <div class="arithmatex">\[
 \frac{\partial L}{\partial q} - \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) = 0
 \]</div>
-<p>符号を反転させて整理することにより，求めるオイラー・ラグランジュ方程式を得ます。</p>
+<p>符号を反転させて整理することにより，求めるオイラー・ラグランジュ方程式が導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = 0}
 \]</div>

@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「ラザフォード散乱」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/07/07_070/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="ラザフォード散乱" />
+    <meta property="og:description" content="力学の「ラザフォード散乱」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/07/07_070/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ラザフォード散乱" />
+    <meta name="twitter:description" content="力学の「ラザフォード散乱」に関する演習問題です。中心力場と軌道運動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14561,13 +14573,12 @@ E = \frac{1}{2} m v_0^2
 <div class="arithmatex">\[
 L = m v_0 b
 \]</div>
-<p>次に，時間を消去して軌道の式を導くために，<span class="arithmatex">\(u = 1/r\)</span> という変数変換を行います。
-時間微分を <span class="arithmatex">\(\theta\)</span> による微分に変換すると</p>
+<p>次に，時間を消去して軌道の式を導くために，<span class="arithmatex">\(u = 1/r\)</span> という変数変換を行います。時間微分を <span class="arithmatex">\(\theta\)</span> による微分に変換すると</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\dot{r} &amp;= \frac{dr}{d\theta} \dot{\theta} \\
-&amp;= \frac{d}{d\theta} \left( \frac{1}{u} \right) \frac{L}{m r^2} \\
-&amp;= -\frac{1}{u^2} \frac{du}{d\theta} \frac{L u^2}{m} \\
+\dot{r} &amp;= \frac{dr}{d\theta} \dot{\theta} \\\\
+&amp;= \frac{d}{d\theta} \left( \frac{1}{u} \right) \frac{L}{m r^2} \\\\
+&amp;= -\frac{1}{u^2} \frac{du}{d\theta} \frac{L u^2}{m} \\\\
 &amp;= -\frac{L}{m} \frac{du}{d\theta}
 \end{aligned}
 \]</div>
@@ -14612,8 +14623,8 @@ A - B u - u^2 = \left( A + \frac{B^2}{4} \right) - \left( u + \frac{B}{2} \right
 <p>ここで，新たな定数 <span class="arithmatex">\(C\)</span> を以下のように定義します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-C &amp;= \sqrt{A + \frac{B^2}{4}} \\
-&amp;= \sqrt{\frac{2mE}{L^2} + \frac{m^2 K^2}{L^4}} \\
+C &amp;= \sqrt{A + \frac{B^2}{4}} \\\\
+&amp;= \sqrt{\frac{2mE}{L^2} + \frac{m^2 K^2}{L^4}} \\\\
 &amp;= \frac{mK}{L^2} \sqrt{1 + \frac{2EL^2}{mK^2}}
 \end{aligned}
 \]</div>
@@ -14621,16 +14632,14 @@ C &amp;= \sqrt{A + \frac{B^2}{4}} \\
 <div class="arithmatex">\[
 \finalanswer{\epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}}}
 \]</div>
-<p>と定義すると，<span class="arithmatex">\(C = \epsilon B / 2\)</span> と表せます。
-このとき，積分は次のように実行できます。</p>
+<p>と定義すると，<span class="arithmatex">\(C = \epsilon B / 2\)</span> と表せます。このとき，積分は次のように実行できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\theta &amp;= -\int \frac{du}{\sqrt{C^2 - \left( u + \frac{B}{2} \right)^2}} \\
+\theta &amp;= -\int \frac{du}{\sqrt{C^2 - \left( u + \frac{B}{2} \right)^2}} \\\\
 &amp;= \arccos \left( \frac{u + \frac{B}{2}}{C} \right)
 \end{aligned}
 \]</div>
-<p>積分定数は最近接点 <span class="arithmatex">\(\theta = 0\)</span> で <span class="arithmatex">\(u\)</span> が最大値 <span class="arithmatex">\(C - B/2\)</span> をとる条件から <span class="arithmatex">\(0\)</span> となります。
-これを <span class="arithmatex">\(u\)</span> について解くと</p>
+<p>積分定数は最近接点 <span class="arithmatex">\(\theta = 0\)</span> で <span class="arithmatex">\(u\)</span> が最大値 <span class="arithmatex">\(C - B/2\)</span> をとる条件から <span class="arithmatex">\(0\)</span> となります。これを <span class="arithmatex">\(u\)</span> について解くと</p>
 <div class="arithmatex">\[
 u + \frac{B}{2} = C \cos \theta
 \]</div>
@@ -14641,7 +14650,7 @@ u = \frac{mK}{L^2} \left( \epsilon \cos \theta - 1 \right)
 <div class="arithmatex">\[
 \finalanswer{r(\theta) = \frac{\frac{L^2}{mK}}{\epsilon \cos \theta - 1}}
 \]</div>
-<p>パラメータを <span class="arithmatex">\(p = L^2 / (mK)\)</span> とおくと，求める軌道方程式</p>
+<p>パラメータを <span class="arithmatex">\(\finalanswer{p = L^2 / (mK)}\)</span> とおくと，求める軌道方程式</p>
 <div class="arithmatex">\[
 \finalanswer{r(\theta) = \frac{p}{\epsilon \cos \theta - 1}}
 \]</div>
@@ -14654,7 +14663,7 @@ E = \frac{1}{2} m v_0^2 &gt; 0
 <div class="arithmatex">\[
 \finalanswer{\epsilon = \sqrt{1 + \frac{2EL^2}{mK^2}} &gt; 1}
 \]</div>
-<p>したがって，この軌道は原点を外側の焦点とする双曲線です。</p>
+<p>したがって，この軌道は原点を外側の焦点とする<strong>双曲線</strong>です。</p>
 <h3 id="3">(3)</h3>
 <p>粒子が無限遠に飛び去る極限 <span class="arithmatex">\(r \to \infty\)</span> においては，<span class="arithmatex">\(u \to 0\)</span> となります。</p>
 <p>軌道方程式より，このとき角度は次の条件を満たす極限値 <span class="arithmatex">\(\theta_\infty\)</span> に近づきます。</p>
@@ -14666,30 +14675,29 @@ E = \frac{1}{2} m v_0^2 &gt; 0
 \cos \theta_\infty = \frac{1}{\epsilon}
 \]</div>
 <p>です。</p>
-<p>粒子は <span class="arithmatex">\(\theta = -\theta_\infty\)</span> の方向から進入し，最近接点を経て <span class="arithmatex">\(\theta = \theta_\infty\)</span> の方向へと去っていきます。
-軌道は最近接点を通る軸に関して対称であるため，散乱角 <span class="arithmatex">\(\theta_s\)</span> との間に次の関係が成り立ちます。</p>
+<p>粒子は <span class="arithmatex">\(\theta = -\theta_\infty\)</span> の方向から進入し，最近接点を経て <span class="arithmatex">\(\theta = \theta_\infty\)</span> の方向へと去っていきます。軌道は最近接点を通る軸に関して対称であるため，散乱角 <span class="arithmatex">\(\theta_s\)</span> との間に次の関係が成り立ちます。</p>
 <div class="arithmatex">\[
 \theta_s = \pi - 2\theta_\infty
 \]</div>
 <p>これを変形すると <span class="arithmatex">\(\theta_\infty = (\pi - \theta_s)/2\)</span> となり，先ほどの式に代入することで次の関係が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\cos \left( \frac{\pi - \theta_s}{2} \right) &amp;= \sin \left( \frac{\theta_s}{2} \right) \\
+\cos \left( \frac{\pi - \theta_s}{2} \right) &amp;= \sin \left( \frac{\theta_s}{2} \right) \\\\
 &amp;= \frac{1}{\epsilon}
 \end{aligned}
 \]</div>
 <p>三角関数の関係から，散乱角の半角の余接は次のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\cot^2 \left( \frac{\theta_s}{2} \right) &amp;= \frac{1}{\sin^2 \left( \frac{\theta_s}{2} \right)} - 1 \\
-&amp;= \epsilon^2 - 1 \\
+\cot^2 \left( \frac{\theta_s}{2} \right) &amp;= \frac{1}{\sin^2 \left( \frac{\theta_s}{2} \right)} - 1 \\\\
+&amp;= \epsilon^2 - 1 \\\\
 &amp;= \frac{2EL^2}{mK^2}
 \end{aligned}
 \]</div>
-<p>ここに，(1)で求めた <span class="arithmatex">\(E = \frac{1}{2} m v_0^2\)</span> および <span class="arithmatex">\(L = m v_0 b\)</span> を代入します。</p>
+<p>ここに，(1)で求めた <span class="arithmatex">\(E = \dfrac{1}{2} m v_0^2\)</span> および <span class="arithmatex">\(L = m v_0 b\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\cot^2 \left( \frac{\theta_s}{2} \right) &amp;= \frac{2 \left( \frac{1}{2} m v_0^2 \right) \left( m v_0 b \right)^2}{m K^2} \\
+\cot^2 \left( \frac{\theta_s}{2} \right) &amp;= \frac{2 \left( \frac{1}{2} m v_0^2 \right) \left( m v_0 b \right)^2}{m K^2} \\\\
 &amp;= \left( \frac{m v_0^2 b}{K} \right)^2
 \end{aligned}
 \]</div>
@@ -14697,7 +14705,7 @@ E = \frac{1}{2} m v_0^2 &gt; 0
 <div class="arithmatex">\[
 \cot \left( \frac{\theta_s}{2} \right) = \frac{m v_0^2 b}{K}
 \]</div>
-<p>これを衝突パラメータ <span class="arithmatex">\(b\)</span> について解くことで，目的の関係式を得ます。</p>
+<p>これを衝突パラメータ <span class="arithmatex">\(b\)</span> について解くことで，目的の関係式が導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{b = \frac{K}{m v_0^2} \cot \frac{\theta_s}{2}}
 \]</div>

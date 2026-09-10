@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「重心系で見る衝突」に関する演習問題です。運動量・力積・衝突の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/04/04_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="重心系で見る衝突" />
+    <meta property="og:description" content="力学の「重心系で見る衝突」に関する演習問題です。運動量・力積・衝突の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/04/04_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="重心系で見る衝突" />
+    <meta name="twitter:description" content="力学の「重心系で見る衝突」に関する演習問題です。運動量・力積・衝突の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14537,22 +14549,22 @@
 <p>(1) の速度変換の関係式を，各質点の衝突前の速度に適用して重心系での運動量を組み立てます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\tilde{\boldsymbol{P}} &amp;= m_1 (\boldsymbol{v}_1 - \boldsymbol{v}_{\text{G}}) + m_2 (\boldsymbol{v}_2 - \boldsymbol{v}_{\text{G}}) \\
+\tilde{\boldsymbol{P}} &amp;= m_1 (\boldsymbol{v}_1 - \boldsymbol{v}_{\text{G}}) + m_2 (\boldsymbol{v}_2 - \boldsymbol{v}_{\text{G}}) \\\\
 &amp;= m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2 - (m_1 + m_2) \boldsymbol{v}_{\text{G}}
 \end{aligned}
 \]</div>
 <p>この式に (1) で定義した重心速度ベクトルの式を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\tilde{\boldsymbol{P}} &amp;= m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2 - (m_1 + m_2) \left( \frac{m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2}{m_1 + m_2} \right) \\
-&amp;= m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2 - (m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2) \\
-&amp;= \finalanswer{\mathbf{0}}
+\tilde{\boldsymbol{P}} &amp;= m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2 - (m_1 + m_2) \left( \frac{m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2}{m_1 + m_2} \right) \\\\
+&amp;= m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2 - (m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2) \\\\
+&amp;= \mathbf{0}
 \end{aligned}
 \]</div>
 <p>これにより，重心系における衝突前の全運動量は必ず零ベクトルになります。</p>
 <p>外力が働かないため，重心系であっても運動量保存則が成り立ちます。衝突後の全運動量を <span class="arithmatex">\(\tilde{\boldsymbol{P}}'\)</span> とすると， <span class="arithmatex">\(\tilde{\boldsymbol{P}}' = \tilde{\boldsymbol{P}} = \mathbf{0}\)</span> となるため，衝突後の各質点の運動量ベクトルの間には次の等式が成り立ちます。</p>
 <div class="arithmatex">\[
-m_1 \tilde{\boldsymbol{v}}'_1 + m_2 \tilde{\boldsymbol{v}}'_2 = \mathbf{0}
+m_1 \tilde{\boldsymbol{v}}'_1 + m_2 \tilde{\boldsymbol{v}}'_2 = \finalanswer{\mathbf{0}}
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{m_1 \tilde{\boldsymbol{v}}'_1 = -m_2 \tilde{\boldsymbol{v}}'_2}
@@ -14561,7 +14573,7 @@ m_1 \tilde{\boldsymbol{v}}'_1 + m_2 \tilde{\boldsymbol{v}}'_2 = \mathbf{0}
 <h3 id="3">(3)</h3>
 <p>弾性衝突では運動エネルギーの総和が保存されます。重心系における力学的エネルギー保存則の等式を書き下します。</p>
 <div class="arithmatex">\[
-\frac{1}{2} m_1 \tilde{v}_1^2 + \frac{1}{2} m_2 \tilde{v}_2^2 = \frac{1}{2} m_1 {\tilde{v}'_1}^2 + \frac{1}{2} m_2 {\tilde{v}'_2}^2
+\frac{1}{2} m_1 \tilde{v}_1^2 + \frac{1}{2} m_2 \tilde{v}_2^2 = \frac{1}{2} m_1 (\tilde{v}'_1)^2 + \frac{1}{2} m_2 (\tilde{v}'_2)^2
 \]</div>
 <p>(2) の結果より，衝突前は <span class="arithmatex">\(m_1 \tilde{\boldsymbol{v}}_1 = -m_2 \tilde{\boldsymbol{v}}_2\)</span> であり，衝突後は <span class="arithmatex">\(m_1 \tilde{\boldsymbol{v}}'_1 = -m_2 \tilde{\boldsymbol{v}}'_2\)</span> です。それぞれのベクトルの大きさを比較することで，次の関係が得られます。</p>
 <div class="arithmatex">\[
@@ -14572,15 +14584,15 @@ m_1 \tilde{\boldsymbol{v}}'_1 + m_2 \tilde{\boldsymbol{v}}'_2 = \mathbf{0}
 \]</div>
 <p>これらの関係式をエネルギー保存則の等式に代入して，質点2の速度の大きさをすべて消去します。</p>
 <div class="arithmatex">\[
-\frac{1}{2} m_1 \tilde{v}_1^2 + \frac{1}{2} m_2 \left( \frac{m_1}{m_2} \tilde{v}_1 \right)^2 = \frac{1}{2} m_1 {\tilde{v}'_1}^2 + \frac{1}{2} m_2 \left( \frac{m_1}{m_2} \tilde{v}'_1 \right)^2
+\frac{1}{2} m_1 \tilde{v}_1^2 + \frac{1}{2} m_2 \left( \frac{m_1}{m_2} \tilde{v}_1 \right)^2 = \frac{1}{2} m_1 (\tilde{v}'_1)^2 + \frac{1}{2} m_2 \left( \frac{m_1}{m_2} \tilde{v}'_1 \right)^2
 \]</div>
 <p>両辺の共通因数を整理してまとめます。</p>
 <div class="arithmatex">\[
-\frac{1}{2} m_1 \left( 1 + \frac{m_1}{m_2} \right) \tilde{v}_1^2 = \frac{1}{2} m_1 \left( 1 + \frac{m_1}{m_2} \right) {\tilde{v}'_1}^2
+\frac{1}{2} m_1 \left( 1 + \frac{m_1}{m_2} \right) \tilde{v}_1^2 = \frac{1}{2} m_1 \left( 1 + \frac{m_1}{m_2} \right) (\tilde{v}'_1)^2
 \]</div>
 <p>両辺の正の係数は共通しているため，約分して消去することができます。</p>
 <div class="arithmatex">\[
-\tilde{v}_1^2 = {\tilde{v}'_1}^2
+\tilde{v}_1^2 = (\tilde{v}'_1)^2
 \]</div>
 <p>速度の大きさは正の実数であるため，平方根をとることで次のようになります。</p>
 <div class="arithmatex">\[
@@ -14589,12 +14601,12 @@ m_1 \tilde{\boldsymbol{v}}'_1 + m_2 \tilde{\boldsymbol{v}}'_2 = \mathbf{0}
 <p>この結果を先ほどの比の式に代入すれば，もう一方の質点についても同様の結果を得ます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\tilde{v}'_2 &amp;= \frac{m_1}{m_2} \tilde{v}'_1 \\
-&amp;= \frac{m_1}{m_2} \tilde{v}_1 \\
+\tilde{v}'_2 &amp;= \frac{m_1}{m_2} \tilde{v}'_1 \\\\
+&amp;= \frac{m_1}{m_2} \tilde{v}_1 \\\\
 &amp;= \finalanswer{\tilde{v}_2}
 \end{aligned}
 \]</div>
-<p>したがって，重心系では各質点の速度の向きは変化しますが，速度の大きさは衝突の前後で変わりません。</p>
+<p>これにより，重心系から見た弾性衝突の記述においては，各質点の速度の向きは散乱角に応じて変化するものの，速度の大きさ自体は衝突の前後で全く変化しないという極めて単純な法則性が示されます。</p>
 
 
 

@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「正準方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/10/10_080/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="正準方程式" />
+    <meta property="og:description" content="力学の「正準方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/10/10_080/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="正準方程式" />
+    <meta name="twitter:description" content="力学の「正準方程式」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14537,22 +14549,21 @@ H(x, p) = \frac{p^2}{2m} + \frac{1}{2}kx^2
 \finalanswer{\dot{p} = -\frac{\partial H}{\partial q}}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>調和振動子のハミルトニアン <span class="arithmatex">\(H(x, p) = \frac{p^2}{2m} + \frac{1}{2}kx^2\)</span> を各変数で偏微分します。
-正準方程式の1番目の式に <span class="arithmatex">\(q = x\)</span> を適用し，運動量 <span class="arithmatex">\(p\)</span> で偏微分をおこないます。</p>
+<p>調和振動子のハミルトニアン <span class="arithmatex">\(H(x, p) = \dfrac{p^2}{2m} + \dfrac{1}{2}kx^2\)</span> を各変数で偏微分します。正準方程式の1番目の式に <span class="arithmatex">\(q = x\)</span> を適用し，運動量 <span class="arithmatex">\(p\)</span> で偏微分をおこないます。</p>
 <div class="arithmatex">\[
-\dot{x} = \frac{\partial H}{\partial p} = \frac{2p}{2m} = \frac{p}{m}
+\finalanswer{\dot{x} = \frac{\partial H}{\partial p} = \frac{2p}{2m} = \frac{p}{m}}
 \]</div>
 <p>正準方程式の2番目の式に <span class="arithmatex">\(q = x\)</span> を適用し，位置 <span class="arithmatex">\(x\)</span> で偏微分をおこなって符号を反転させます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\dot{p} &amp;= -\frac{\partial H}{\partial x} \\
-&amp;= -\frac{2kx}{2} \\
+\dot{p} &amp;= -\frac{\partial H}{\partial x} \\\\
+&amp;= -\frac{2kx}{2} \\\\
 &amp;= \finalanswer{-kx}
 \end{aligned}
 \]</div>
 <p>これにより，求める正準方程式の組が得られます。</p>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた1番目の式 <span class="arithmatex">\(\dot{x} = \frac{p}{m}\)</span> の両辺を時間 <span class="arithmatex">\(t\)</span> でさらに1回微分します。質量 <span class="arithmatex">\(m\)</span> は時間変化しない定数です。</p>
+<p>(2) で得られた1番目の式 <span class="arithmatex">\(\dot{x} = \dfrac{p}{m}\)</span> の両辺を時間 <span class="arithmatex">\(t\)</span> でさらに1回微分します。質量 <span class="arithmatex">\(m\)</span> は時間変化しない定数です。</p>
 <div class="arithmatex">\[
 \ddot{x} = \frac{\dot{p}}{m}
 \]</div>
@@ -14560,7 +14571,7 @@ H(x, p) = \frac{p^2}{2m} + \frac{1}{2}kx^2
 <div class="arithmatex">\[
 \ddot{x} = \frac{-kx}{m}
 \]</div>
-<p>両辺に <span class="arithmatex">\(\frac{k}{m}x\)</span> を足し合わせて形を整えることにより，ニュートン力学における単振動の運動方程式と同じ形式の2階微分方程式を得ます。</p>
+<p>両辺に <span class="arithmatex">\(\dfrac{k}{m}x\)</span> を足し合わせて形を整えることにより，ニュートン力学における単振動の運動方程式と同じ形式の2階微分方程式が導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{\ddot{x} + \frac{k}{m}x = 0}
 \]</div>

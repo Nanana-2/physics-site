@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「フーコーの振り子」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/08/08_060/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="フーコーの振り子" />
+    <meta property="og:description" content="力学の「フーコーの振り子」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/08/08_060/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="フーコーの振り子" />
+    <meta name="twitter:description" content="力学の「フーコーの振り子」に関する演習問題です。並進加速系と回転座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14573,8 +14585,7 @@
 <h3 id="1">(1)</h3>
 <p>北緯 <span class="arithmatex">\(\theta\)</span> の地点では，地球の自転軸は北向きの水平線から仰角 <span class="arithmatex">\(\theta\)</span> の方向を向きます。</p>
 <p>局所座標系では，北向きが <span class="arithmatex">\(x\)</span> 軸，東向きが <span class="arithmatex">\(y\)</span> 軸，鉛直下向きが <span class="arithmatex">\(z\)</span> 軸です。</p>
-<p>したがって，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> は，北向きに <span class="arithmatex">\(\Omega \cos\theta\)</span>，鉛直上向きに <span class="arithmatex">\(\Omega \sin\theta\)</span> の成分を持ちます。
-鉛直下向きが <span class="arithmatex">\(z\)</span> 軸の正方向であるため，鉛直上向きは <span class="arithmatex">\(z\)</span> 軸の負方向に対応します。東向きである <span class="arithmatex">\(y\)</span> 軸方向の成分は <span class="arithmatex">\(0\)</span> です。</p>
+<p>したがって，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> は，北向きに <span class="arithmatex">\(\Omega \cos\theta\)</span>，鉛直上向きに <span class="arithmatex">\(\Omega \sin\theta\)</span> の成分を持ちます。鉛直下向きが <span class="arithmatex">\(z\)</span> 軸の正方向であるため，鉛直上向きは <span class="arithmatex">\(z\)</span> 軸の負方向に対応します。東向きである <span class="arithmatex">\(y\)</span> 軸方向の成分は <span class="arithmatex">\(0\)</span> です。</p>
 <p>以上の位置関係から，自転角速度ベクトル <span class="arithmatex">\(\mathbf{\Omega}\)</span> の各成分は次のように表されます。</p>
 <div class="arithmatex">\[
 \finalanswer{\mathbf{\Omega} = (\Omega \cos\theta, 0, -\Omega \sin\theta)}
@@ -14586,7 +14597,7 @@
 \]</div>
 <p>外積の各成分を計算します。</p>
 <div class="arithmatex">\[
-\mathbf{\Omega} \times \mathbf{v} = \det \begin{pmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ \Omega \cos\theta &amp; 0 &amp; -\Omega \sin\theta \\ \dot{x} &amp; \dot{y} &amp; \dot{z} \end{pmatrix}
+\mathbf{\Omega} \times \mathbf{v} = \det \begin{pmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\\\ \Omega \cos\theta &amp; 0 &amp; -\Omega \sin\theta \\\\ \dot{x} &amp; \dot{y} &amp; \dot{z} \end{pmatrix}
 \]</div>
 <p>これを展開すると，次のようになります。</p>
 <div class="arithmatex">\[
@@ -14603,8 +14614,7 @@
 \finalanswer{F_{cz} = -2m \Omega \dot{y} \cos\theta}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>振り子の長さ <span class="arithmatex">\(L\)</span> に比べて，水平方向の変位 <span class="arithmatex">\(x, y\)</span> が十分に小さいという微小振動の近似を考えます。
-重りの位置 <span class="arithmatex">\((x, y, z)\)</span> について，糸の長さの拘束条件は次の通りです。</p>
+<p>振り子の長さ <span class="arithmatex">\(L\)</span> に比べて，水平方向の変位 <span class="arithmatex">\(x, y\)</span> が十分に小さいという微小振動の近似を考えます。重りの位置 <span class="arithmatex">\((x, y, z)\)</span> について，糸の長さの拘束条件は次の通りです。</p>
 <div class="arithmatex">\[
 x^2 + y^2 + z^2 = L^2
 \]</div>
@@ -14662,7 +14672,10 @@ m \ddot{y} = -mg \frac{y}{L} + 2m \Omega \dot{x} \sin\theta
 \]</div>
 <p>右辺の第2項は次のように変形できます。</p>
 <div class="arithmatex">\[
-2\omega_z (-\dot{y} + i\dot{x}) = 2i\omega_z (\dot{x} + i\dot{y}) = 2i\omega_z \dot{\zeta}
+\begin{aligned}
+2\omega_z (-\dot{y} + i\dot{x}) &amp;= 2i\omega_z (\dot{x} + i\dot{y}) \\\\
+&amp;= 2i\omega_z \dot{\zeta}
+\end{aligned}
 \]</div>
 <p>したがって，複素変数 <span class="arithmatex">\(\zeta\)</span> に関する2階線形同次微分方程式が得られます。</p>
 <div class="arithmatex">\[
@@ -14731,12 +14744,14 @@ y(t) \approx a \sin(\omega_z t) \cos(\omega_0 t)
 <p>この軌道は，振り子が短い周期 <span class="arithmatex">\(T_0 = 2\pi / \omega_0\)</span> で単振動を行いながら，その振動面が非常に長い周期でゆっくりと回転していることを表しています。</p>
 <p>振動面の回転角速度は，複素平面上での回転因子 <span class="arithmatex">\(e^{i\omega_z t}\)</span> から次のように求まります。</p>
 <div class="arithmatex">\[
-\omega_z = \Omega \sin\theta
+\finalanswer{\omega_z = \Omega \sin\theta}
 \]</div>
-<p><span class="arithmatex">\(x\)</span> 軸を北向き，<span class="arithmatex">\(y\)</span> 軸を東向きにとっているため，<span class="arithmatex">\(e^{i\omega_z t}\)</span> が表す正の回転は，北半球では上空から見て時計回りに対応します。
-振動面が <span class="arithmatex">\(2\pi\)</span> 回転する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
+<p><span class="arithmatex">\(x\)</span> 軸を北向き，<span class="arithmatex">\(y\)</span> 軸を東向きにとっているため，<span class="arithmatex">\(e^{i\omega_z t}\)</span> が表す正の回転は，北半球では上空から見て時計回りに対応します。振動面が <span class="arithmatex">\(2\pi\)</span> 回転する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
 <div class="arithmatex">\[
-T = \frac{2\pi}{\omega_z} = \finalanswer{\frac{2\pi}{\Omega \sin\theta}}
+\begin{aligned}
+T &amp;= \frac{2\pi}{\omega_z} \\\\
+&amp;= \finalanswer{\frac{2\pi}{\Omega \sin\theta}}
+\end{aligned}
 \]</div>
 <p>地球の自転周期を <span class="arithmatex">\(T_{\text{earth}} = 2\pi / \Omega\)</span> とすると，周期は <span class="arithmatex">\(T = T_{\text{earth}} / \sin\theta\)</span> と表されます。</p>
 <p>北極と赤道の場合を確認します。</p>

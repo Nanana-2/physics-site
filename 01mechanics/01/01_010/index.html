@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「等加速度運動の一般解」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/01/01_010/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="等加速度運動の一般解" />
+    <meta property="og:description" content="力学の「等加速度運動の一般解」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/01/01_010/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="等加速度運動の一般解" />
+    <meta name="twitter:description" content="力学の「等加速度運動の一般解」に関する演習問題です。運動学と座標系の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14540,98 +14552,93 @@
 
 <h1 id="_1">等加速度運動の一般解</h1>
 <h2 id="_2">問題</h2>
-<p>質量 <span class="arithmatex">\(m\)</span> の無人探査機が，宇宙空間を一直線上に運動している。軌道に沿って <span class="arithmatex">\(x\)</span> 軸をとり，探査機は <span class="arithmatex">\(x\)</span> 軸の正方向に一定の推進力 <span class="arithmatex">\(F_0\)</span> を受けるものとする。</p>
-<p>時刻 <span class="arithmatex">\(t = 0\)</span> において，探査機は原点 <span class="arithmatex">\(x = 0\)</span> を速度 <span class="arithmatex">\(v_0&gt;0\)</span> で通過した。探査機を質点とみなし，以下の問いに答えよ。</p>
-<p>(1) 探査機の位置を <span class="arithmatex">\(x(t)\)</span>，速度を <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> とするとき，運動方程式を示せ。</p>
-<p>(2) (1) で得られた運動方程式を，速度 <span class="arithmatex">\(v(t)\)</span> に関する1階微分方程式とみなす。初期条件 <span class="arithmatex">\(v(0) = v_0\)</span> のもとでこの微分方程式を解き，速度 <span class="arithmatex">\(v(t)\)</span> を時間の関数として求めよ。</p>
-<p>(3) (2) の結果と <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> の関係を用いて，位置 <span class="arithmatex">\(x(t)\)</span> に関する微分方程式を立てよ。これを初期条件 <span class="arithmatex">\(x(0) = 0\)</span> のもとで解き，位置 <span class="arithmatex">\(x(t)\)</span> を時間の関数として求めよ。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> の無人探査機が，宇宙空間を一直線上に運動している。軌道に沿って <span class="arithmatex">\(x\)</span> 軸をとり，探査機は <span class="arithmatex">\(x\)</span> 軸の正方向に一定の推進力 <span class="arithmatex">\(F_0\)</span> を受けるものとする。時刻 <span class="arithmatex">\(t=0\)</span> において，探査機は原点 <span class="arithmatex">\(x=0\)</span> を速度 <span class="arithmatex">\(v_0&gt;0\)</span> で通過した。探査機を質点とみなし，以下の問いに答えよ。</p>
+<p>(1) 探査機の位置を <span class="arithmatex">\(x(t)\)</span>，速度を<span class="arithmatex">\(v(t)=\dfrac{dx}{dt}\)</span> とするとき，運動方程式を示せ。</p>
+<p>(2) (1) で得られた運動方程式を，速度 <span class="arithmatex">\(v(t)\)</span> に関する1階微分方程式とみなす。初期条件 <span class="arithmatex">\(v(0)=v_0\)</span> のもとでこの微分方程式を解き，速度 <span class="arithmatex">\(v(t)\)</span> を時間の関数として求めよ。</p>
+<p>(3) (2) の結果と <span class="arithmatex">\(v(t)=\dfrac{dx}{dt}\)</span> の関係を用いて，位置 <span class="arithmatex">\(x(t)\)</span> に関する微分方程式を立てよ。これを初期条件 <span class="arithmatex">\(x(0)=0\)</span> のもとで解き，位置 <span class="arithmatex">\(x(t)\)</span> を時間の関数として求めよ。</p>
 <p>(4) 探査機が原点から距離 <span class="arithmatex">\(L&gt;0\)</span> だけ進んだときの速度 <span class="arithmatex">\(v_L\)</span> を，<span class="arithmatex">\(m\)</span>，<span class="arithmatex">\(F_0\)</span>，<span class="arithmatex">\(v_0\)</span>，<span class="arithmatex">\(L\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>運動方程式より，質量と加速度の積は物体に働く外力に等しくなります。加速度は <span class="arithmatex">\(\frac{d^2x}{dt^2}\)</span> または <span class="arithmatex">\(\frac{dv}{dt}\)</span> と表されます。</p>
-<p>探査機に働く外力は <span class="arithmatex">\(x\)</span> 軸正の向きに一定の力 <span class="arithmatex">\(F_0\)</span> であるため，求める運動方程式は以下のようになります。</p>
+<p>運動方程式より，質量と加速度の積は物体に働く外力に等しくなります。加速度は <span class="arithmatex">\(\dfrac{d^2x}{dt^2}\)</span> または <span class="arithmatex">\(\dfrac{dv}{dt}\)</span> と表されます。探査機に働く外力は <span class="arithmatex">\(x\)</span> 軸正の向きに一定の力 <span class="arithmatex">\(F_0\)</span> であるため，求める運動方程式は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{m \frac{d^2x}{dt^2} = F_0}
+\finalanswer{m\dfrac{d^2x}{dt^2}=F_0}
 \]</div>
 <p>あるいは，速度 <span class="arithmatex">\(v\)</span> を用いて以下のように表すこともできます。</p>
 <div class="arithmatex">\[
-\finalanswer{m \frac{dv}{dt} = F_0}
+\finalanswer{m\dfrac{dv}{dt}=F_0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた運動方程式の両辺を <span class="arithmatex">\(m&gt;0\)</span> で割ると，次のようになります。</p>
 <div class="arithmatex">\[
-\frac{dv}{dt} = \frac{F_0}{m}
+\dfrac{dv}{dt}=\dfrac{F_0}{m}
 \]</div>
 <p>この方程式は，両辺を時間 <span class="arithmatex">\(t\)</span> で積分することにより解くことができます。</p>
 <div class="arithmatex">\[
-v(t) = \int \frac{F_0}{m} dt = \frac{F_0}{m} t + C_1
+v(t)=\int\dfrac{F_0}{m}\,dt=\dfrac{F_0}{m}t+C_1
 \]</div>
-<p>ここで <span class="arithmatex">\(C_1\)</span> は積分定数です。
-初期条件 <span class="arithmatex">\(v(0) = v_0\)</span> を代入すると，</p>
+<p>ここで <span class="arithmatex">\(C_1\)</span> は積分定数です。初期条件 <span class="arithmatex">\(v(0)=v_0\)</span> を代入すると，</p>
 <div class="arithmatex">\[
-v(0) = \frac{F_0}{m} \cdot 0 + C_1 = v_0
+v(0)=\dfrac{F_0}{m}\cdot 0+C_1=v_0
 \]</div>
-<p>となり， <span class="arithmatex">\(C_1 = v_0\)</span> が得られます。
-したがって，速度 <span class="arithmatex">\(v(t)\)</span> の時間依存性は以下のように求まります。</p>
+<p>となり，<span class="arithmatex">\(C_1=v_0\)</span> が得られます。したがって，速度 <span class="arithmatex">\(v(t)\)</span> の時間依存性は以下のように求まります。</p>
 <div class="arithmatex">\[
-\finalanswer{v(t) = v_0 + \frac{F_0}{m} t}
+\finalanswer{v(t)=v_0+\dfrac{F_0}{m}t}
 \]</div>
-<p>加速度は一定値 <span class="arithmatex">\(a = \frac{F_0}{m}\)</span> です。</p>
+<p>加速度は一定値 <span class="arithmatex">\(a=\dfrac{F_0}{m}\)</span> です。</p>
 <h3 id="3">(3)</h3>
-<p>速度と位置の関係式 <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> に (2) の結果を代入すると，次の1階微分方程式が得られます。</p>
+<p>速度と位置の関係式 <span class="arithmatex">\(v(t)=\dfrac{dx}{dt}\)</span> に (2) の結果を代入すると，次の1階微分方程式が得られます。</p>
 <div class="arithmatex">\[
-\frac{dx}{dt} = v_0 + \frac{F_0}{m} t
+\dfrac{dx}{dt}=v_0+\dfrac{F_0}{m}t
 \]</div>
 <p>この方程式の両辺を時間 <span class="arithmatex">\(t\)</span> で積分します。</p>
 <div class="arithmatex">\[
-x(t) = \int \left( v_0 + \frac{F_0}{m} t \right) dt = v_0 t + \frac{F_0}{2m} t^2 + C_2
+x(t) = \int\left(v_0+\dfrac{F_0}{m}t\right)dt = v_0t+\dfrac{F_0}{2m}t^2+C_2
 \]</div>
-<p>ここで <span class="arithmatex">\(C_2\)</span> は積分定数です。
-初期条件 <span class="arithmatex">\(x(0) = 0\)</span> を代入すると，</p>
+<p>ここで <span class="arithmatex">\(C_2\)</span> は積分定数です。初期条件 <span class="arithmatex">\(x(0)=0\)</span> を代入すると，</p>
 <div class="arithmatex">\[
-x(0) = v_0 \cdot 0 + \frac{F_0}{2m} \cdot 0^2 + C_2 = 0
+x(0)=v_0\cdot 0+\dfrac{F_0}{2m}\cdot 0^2+C_2=0
 \]</div>
-<p>となり， <span class="arithmatex">\(C_2 = 0\)</span> が得られます。
-したがって，位置 <span class="arithmatex">\(x(t)\)</span> の時間依存性は以下のように求まります。</p>
+<p>となり，<span class="arithmatex">\(C_2=0\)</span> が得られます。したがって，位置 <span class="arithmatex">\(x(t)\)</span> の時間依存性は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{x(t) = v_0 t + \frac{F_0}{2m} t^2}
+\finalanswer{x(t)=v_0t+\dfrac{F_0}{2m}t^2}
 \]</div>
-<p>これは一定加速度 <span class="arithmatex">\(a = \frac{F_0}{m}\)</span> の等加速度運動を表します。</p>
+<p>これは一定加速度 <span class="arithmatex">\(a=\dfrac{F_0}{m}\)</span> の等加速度運動を表します。</p>
 <h3 id="4">(4)</h3>
-<p>探査機が距離 <span class="arithmatex">\(L\)</span> だけ進んだときの時刻を <span class="arithmatex">\(t_L\)</span> とします。このとき，<span class="arithmatex">\(x(t_L) = L\)</span> が成り立ちます。(3) の結果より，次の関係式が得られます。</p>
+<p>探査機が距離 <span class="arithmatex">\(L\)</span> だけ進んだときの時刻を <span class="arithmatex">\(t_L\)</span> とします。このとき，<span class="arithmatex">\(x(t_L)=L\)</span> が成り立ちます。(3) の結果より，次の関係式が得られます。</p>
 <div class="arithmatex">\[
-v_0 t_L + \frac{F_0}{2m} t_L^2 = L
+v_0t_L+\dfrac{F_0}{2m}t_L^2=L
 \]</div>
-<p>速度と位置の式から時刻 <span class="arithmatex">\(t\)</span> を消去します。</p>
-<p>(2) より，時刻 <span class="arithmatex">\(t\)</span> における速度 <span class="arithmatex">\(v(t)\)</span> の式から <span class="arithmatex">\(t\)</span> を孤立させます。</p>
+<p>速度と位置の式から時刻 <span class="arithmatex">\(t\)</span> を消去します。(2) より，時刻 <span class="arithmatex">\(t\)</span> における速度 <span class="arithmatex">\(v(t)\)</span> の式から <span class="arithmatex">\(t\)</span> を孤立させます。</p>
 <div class="arithmatex">\[
-t = \frac{m}{F_0} (v(t) - v_0)
+t=\dfrac{m}{F_0}\bigl(v(t)-v_0\bigr)
 \]</div>
 <p>この式を (3) の位置の式に代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-x(t) &amp;= v_0 \left\{ \frac{m}{F_0} (v(t) - v_0) \right\} + \frac{F_0}{2m} \left\{ \frac{m}{F_0} (v(t) - v_0) \right\}^2 \\\\
-&amp;= \frac{m v_0}{F_0} (v(t) - v_0) + \frac{m}{2F_0} (v(t) - v_0)^2 \\\\
-&amp;= \frac{m}{2F_0} (v(t) - v_0) \left\{ 2v_0 + (v(t) - v_0) \right\} \\\\
-&amp;= \frac{m}{2F_0} (v(t) - v_0)(v(t) + v_0) \\\\
-&amp;= \frac{m}{2F_0} (v(t)^2 - v_0^2)
+x(t)
+&amp;=v_0\left\{\dfrac{m}{F_0}\bigl(v(t)-v_0\bigr)\right\}
++\dfrac{F_0}{2m}
+\left\{\dfrac{m}{F_0}\bigl(v(t)-v_0\bigr)\right\}^2 \\\\
+&amp;=\dfrac{mv_0}{F_0}\bigl(v(t)-v_0\bigr)
++\dfrac{m}{2F_0}\bigl(v(t)-v_0\bigr)^2 \\\\
+&amp;=\dfrac{m}{2F_0}\bigl(v(t)-v_0\bigr)
+\left\{2v_0+\bigl(v(t)-v_0\bigr)\right\} \\\\
+&amp;=\dfrac{m}{2F_0}\bigl(v(t)-v_0\bigr)\bigl(v(t)+v_0\bigr) \\\\
+&amp;=\dfrac{m}{2F_0}\bigl(v(t)^2-v_0^2\bigr).
 \end{aligned}
 \]</div>
 <p>この式を整理すると，以下の関係式が得られます。</p>
 <div class="arithmatex">\[
-v(t)^2 - v_0^2 = \frac{2F_0}{m} x(t)
+v(t)^2-v_0^2=\dfrac{2F_0}{m}x(t)
 \]</div>
-<p>探査機が位置 <span class="arithmatex">\(x(t_L) = L\)</span> に達したときの速度を <span class="arithmatex">\(v_L = v(t_L)\)</span> とすると，</p>
+<p>探査機が位置 <span class="arithmatex">\(x(t_L)=L\)</span> に達したときの速度を <span class="arithmatex">\(v_L=v(t_L)\)</span> とすると，</p>
 <div class="arithmatex">\[
-v_L^2 - v_0^2 = \frac{2F_0 L}{m}
+v_L^2=v_0^2+\dfrac{2F_0L}{m}
 \]</div>
+<p>探査機は正の向きの力を受け続けて加速するため，<span class="arithmatex">\(v_L&gt;0\)</span> です。したがって，平方根の正の値を採用することで，求める速度 <span class="arithmatex">\(v_L\)</span> は以下のように得られます。</p>
 <div class="arithmatex">\[
-v_L^2 = v_0^2 + \frac{2F_0 L}{m}
-\]</div>
-<p>探査機は正の向きの力を受け続けて加速するため，<span class="arithmatex">\(v_L &gt; 0\)</span> です。したがって，平方根の正の値を採用することで，求める速度 <span class="arithmatex">\(v_L\)</span> は以下のように得られます。</p>
-<div class="arithmatex">\[
-\finalanswer{v_L = \sqrt{v_0^2 + \frac{2F_0 L}{m}}}
+\finalanswer{v_L=\sqrt{v_0^2+\dfrac{2F_0L}{m}}}
 \]</div>
 
 

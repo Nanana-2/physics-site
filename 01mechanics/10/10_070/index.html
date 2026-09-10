@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「ルジャンドル変換とハミルトニアン」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/10/10_070/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="ルジャンドル変換とハミルトニアン" />
+    <meta property="og:description" content="力学の「ルジャンドル変換とハミルトニアン」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/10/10_070/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ルジャンドル変換とハミルトニアン" />
+    <meta name="twitter:description" content="力学の「ルジャンドル変換とハミルトニアン」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14496,7 +14508,7 @@
 
 <h1 id="_1">ルジャンドル変換とハミルトニアン</h1>
 <h2 id="_2">問題</h2>
-<p>質量 <span class="arithmatex">\(m\)</span> の質点が1次元 <span class="arithmatex">\(x\)</span> 軸上を運動しており，位置 <span class="arithmatex">\(x\)</span> のみに依存するポテンシャルエネルギー <span class="arithmatex">\(U(x)\)</span> を持っている。この系のラグランジアンは </p>
+<p>質量 <span class="arithmatex">\(m\)</span> の質点が1次元 <span class="arithmatex">\(x\)</span> 軸上を運動しており，位置 <span class="arithmatex">\(x\)</span> のみに依存するポテンシャルエネルギー <span class="arithmatex">\(U(x)\)</span> を持っている。この系のラグランジアンは</p>
 <div class="arithmatex">\[
 L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - U(x)
 \]</div>
@@ -14508,11 +14520,11 @@ L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - U(x)
 <h3 id="1">(1)</h3>
 <p>一般化運動量 <span class="arithmatex">\(p\)</span> は，ラグランジアンを一般化速度 <span class="arithmatex">\(\dot{x}\)</span> で偏微分したものとして定義されます。定義式は次の通りです。</p>
 <div class="arithmatex">\[
-\finalanswer{p = \frac{\partial L}{\partial \dot{x}}=m\dot{x}}
+p = \frac{\partial L}{\partial \dot{x}}
 \]</div>
-<p>与えられたラグランジアン <span class="arithmatex">\(L = \frac{1}{2}m\dot{x}^2 - U(x)\)</span> を <span class="arithmatex">\(\dot{x}\)</span> で偏微分します。ポテンシャル項は <span class="arithmatex">\(\dot{x}\)</span> を含まないため微分すると 0 になります。</p>
+<p>与えられたラグランジアン <span class="arithmatex">\(L = \dfrac{1}{2}m\dot{x}^2 - U(x)\)</span> を <span class="arithmatex">\(\dot{x}\)</span> で偏微分します。ポテンシャル項は <span class="arithmatex">\(\dot{x}\)</span> を含まないため微分すると 0 になります。</p>
 <div class="arithmatex">\[
-p = m\dot{x}
+p = \finalanswer{m\dot{x}}
 \]</div>
 <p>この式を速度 <span class="arithmatex">\(\dot{x}\)</span> について解きます。両辺を質量 <span class="arithmatex">\(m\)</span> で割り算することにより，次の表現が得られます。</p>
 <div class="arithmatex">\[
@@ -14522,12 +14534,12 @@ p = m\dot{x}
 <p>ルジャンドル変換によるハミルトニアンの定義式に変数を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-H &amp;= p\dot{x} - L \\
-&amp;= p\dot{x} - \left\{ \frac{1}{2}m\dot{x}^2 - U(x) \right\} \\
+H &amp;= p\dot{x} - L \\\\
+&amp;= p\dot{x} - \left\{ \frac{1}{2}m\dot{x}^2 - U(x) \right\} \\\\
 &amp;= p\dot{x} - \frac{1}{2}m\dot{x}^2 + U(x)
 \end{aligned}
 \]</div>
-<p>この段階では，式の中に速度 <span class="arithmatex">\(\dot{x}\)</span> が残っています。ハミルトン力学では位置 <span class="arithmatex">\(x\)</span> と運動量 <span class="arithmatex">\(p\)</span> を独立変数として扱う必要があるため， (1) で求めた <span class="arithmatex">\(\dot{x} = \frac{p}{m}\)</span> を式中のすべての <span class="arithmatex">\(\dot{x}\)</span> に代入して消去します。</p>
+<p>この段階では，式の中に速度 <span class="arithmatex">\(\dot{x}\)</span> が残っています。ハミルトン力学では位置 <span class="arithmatex">\(x\)</span> と運動量 <span class="arithmatex">\(p\)</span> を独立変数として扱う必要があるため， (1) で求めた <span class="arithmatex">\(\dot{x} = \dfrac{p}{m}\)</span> を式中のすべての <span class="arithmatex">\(\dot{x}\)</span> に代入して消去します。</p>
 <div class="arithmatex">\[
 H = p \left( \frac{p}{m} \right) - \frac{1}{2}m \left( \frac{p}{m} \right)^2 + U(x)
 \]</div>
@@ -14539,7 +14551,7 @@ H = \frac{p^2}{m} - \frac{p^2}{2m} + U(x)
 <div class="arithmatex">\[
 H = \frac{2p^2 - p^2}{2m} + U(x) = \frac{p^2}{2m} + U(x)
 \]</div>
-<p>これにより，変数が <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(p\)</span> に統一されたハミルトニアンを得ます。</p>
+<p>これにより，変数が <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(p\)</span> に統一されたハミルトニアンが導出されます。</p>
 <div class="arithmatex">\[
 \finalanswer{H(x, p) = \frac{p^2}{2m} + U(x)}
 \]</div>

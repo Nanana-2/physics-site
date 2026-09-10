@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「質量変化系とロケット方程式」に関する演習問題です。運動量・力積・衝突の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/04/04_070/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="質量変化系とロケット方程式" />
+    <meta property="og:description" content="力学の「質量変化系とロケット方程式」に関する演習問題です。運動量・力積・衝突の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/04/04_070/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="質量変化系とロケット方程式" />
+    <meta name="twitter:description" content="力学の「質量変化系とロケット方程式」に関する演習問題です。運動量・力積・衝突の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14555,7 +14567,7 @@ v = v_0 + u \ln \left( \frac{m_0}{m} \right)
 <div class="arithmatex">\[
 m \frac{dv}{dt} = -u \frac{dm}{dt} - mg
 \]</div>
-<p>(4) 重力場中において，ロケットの質量放出率が一定値 <span class="arithmatex">\(r = - \frac{dm}{dt} &gt; 0\)</span> であるとする。初期条件を <span class="arithmatex">\(t=0\)</span> で <span class="arithmatex">\(m(0)=m_0\)</span>，<span class="arithmatex">\(v(0)=v_0\)</span> とするとき，時刻 <span class="arithmatex">\(t\)</span> におけるロケットの速度 <span class="arithmatex">\(v(t)\)</span> を求めよ。</p>
+<p>(4) 重力場中において，ロケットの質量放出率が一定値 <span class="arithmatex">\(r = - \dfrac{dm}{dt} &gt; 0\)</span> であるとする。初期条件を <span class="arithmatex">\(t=0\)</span> で <span class="arithmatex">\(m(0)=m_0\)</span>，<span class="arithmatex">\(v(0)=v_0\)</span> とするとき，時刻 <span class="arithmatex">\(t\)</span> におけるロケットの速度 <span class="arithmatex">\(v(t)\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14570,7 +14582,11 @@ P(t+dt) = (m + dm)(v + dv) + (-dm)(v - u)
 \]</div>
 <p>となります。この式を展開すると，</p>
 <div class="arithmatex">\[
-P(t+dt) = mv + m dv + v dm + dm dv - v dm + u dm = mv + m dv + u dm + dm dv
+\begin{aligned}
+P(t+dt) &amp;= mv + m dv + v dm + dm dv - v dm + u dm
+\\\\
+&amp;= mv + m dv + u dm + dm dv
+\end{aligned}
 \]</div>
 <p>が得られます。</p>
 <p>外力が働かないため，系全体の運動量について <span class="arithmatex">\(P(t) = P(t+dt)\)</span> が成り立ちます。</p>
@@ -14584,7 +14600,7 @@ m dv + u dm + dm dv = 0
 <div class="arithmatex">\[
 m dv + u dm = 0
 \]</div>
-<p>となります。両辺を微小時間 <span class="arithmatex">\(dt\)</span> で割ることで，求める微分方程式が得られます。</p>
+<p>となります。両辺を微小時間 <span class="arithmatex">\(dt\)</span> で割ることで，求める微分方程式が導かれます。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{dv}{dt} = -u \frac{dm}{dt}}
 \]</div>
@@ -14601,8 +14617,8 @@ dv = -u \frac{dm}{m}
 <div class="arithmatex">\[
 \begin{aligned}
 v - v_0
-&amp;= -u \Big[ \ln m' \Big]_{m_0}^{m} \\
-&amp;= -u \left( \ln m - \ln m_0 \right) \\
+&amp;= -u \Big[ \ln m' \Big]_{m_0}^{m} \\\\
+&amp;= -u \left( \ln m - \ln m_0 \right) \\\\
 &amp;= -u \ln \left( \frac{m}{m_0} \right)
 \end{aligned}
 \]</div>
@@ -14623,23 +14639,27 @@ P(t+dt) - P(t) = F dt = -mg dt
 <div class="arithmatex">\[
 m dv + u dm = -mg dt
 \]</div>
-<p>が得られます。両辺を <span class="arithmatex">\(dt\)</span> で割ることで，重力がある場合のロケットの運動方程式が得られます。</p>
+<p>が得られます。両辺を <span class="arithmatex">\(dt\)</span> で割ることで，重力がある場合のロケットの運動方程式が導かれます。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{dv}{dt} = -u \frac{dm}{dt} - mg}
 \]</div>
-<p>この式は，通常の運動方程式 <span class="arithmatex">\(m a = F\)</span> の形をしており，右辺第1項の <span class="arithmatex">\(-u \frac{dm}{dt}\)</span> はロケットがガスを噴射することによって得る推進力を表しています。</p>
+<p>この式は，通常の運動方程式 <span class="arithmatex">\(m a = F\)</span> の形をしており，右辺第1項の <span class="arithmatex">\(-u \dfrac{dm}{dt}\)</span> はロケットがガスを噴射することによって得る推進力を表しています。</p>
 <h3 id="4">(4)</h3>
-<p>質量放出率が一定値 <span class="arithmatex">\(r = - \frac{dm}{dt} &gt; 0\)</span> であることから，時刻 <span class="arithmatex">\(t\)</span> におけるロケットの質量 <span class="arithmatex">\(m(t)\)</span> は以下のように表されます。</p>
+<p>質量放出率が一定値 <span class="arithmatex">\(r = - \dfrac{dm}{dt} &gt; 0\)</span> であることから，時刻 <span class="arithmatex">\(t\)</span> におけるロケットの質量 <span class="arithmatex">\(m(t)\)</span> は以下のように表されます。</p>
 <div class="arithmatex">\[
 m(t) = m_0 - rt
 \]</div>
-<p>この関係式と <span class="arithmatex">\(\frac{dm}{dt} = -r\)</span> を (3) の運動方程式に代入します。</p>
+<p>この関係式と <span class="arithmatex">\(\dfrac{dm}{dt} = -r\)</span> を (3) の運動方程式に代入します。</p>
 <div class="arithmatex">\[
 m \frac{dv}{dt} = ur - mg
 \]</div>
 <p>両辺を <span class="arithmatex">\(m\)</span> で割ると，</p>
 <div class="arithmatex">\[
-\frac{dv}{dt} = \frac{ur}{m} - g = \frac{ur}{m_0 - rt} - g
+\begin{aligned}
+\frac{dv}{dt}
+&amp;= \frac{ur}{m} - g \\\\
+&amp;= \frac{ur}{m_0 - rt} - g
+\end{aligned}
 \]</div>
 <p>となります。この微分方程式を，初期条件 <span class="arithmatex">\(t=0\)</span> で <span class="arithmatex">\(v(0)=v_0\)</span> のもとで時間 <span class="arithmatex">\(t\)</span> について積分します。</p>
 <div class="arithmatex">\[
@@ -14649,8 +14669,8 @@ m \frac{dv}{dt} = ur - mg
 <div class="arithmatex">\[
 \begin{aligned}
 v - v_0
-&amp;= \left[ -u \ln(m_0 - rt') - gt' \right]_{0}^{t} \\
-&amp;= -u \ln(m_0 - rt) - gt + u \ln m_0 \\
+&amp;= \left[ -u \ln(m_0 - rt') - gt' \right]_{0}^{t} \\\\
+&amp;= -u \ln(m_0 - rt) - gt + u \ln m_0 \\\\
 &amp;= u \ln \left( \frac{m_0}{m_0 - rt} \right) - gt
 \end{aligned}
 \]</div>

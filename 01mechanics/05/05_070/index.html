@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「Q値と共鳴特性」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/05/05_070/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="Q値と共鳴特性" />
+    <meta property="og:description" content="力学の「Q値と共鳴特性」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/05/05_070/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Q値と共鳴特性" />
+    <meta name="twitter:description" content="力学の「Q値と共鳴特性」に関する演習問題です。単振動・減衰振動・強制振動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14525,7 +14537,7 @@ Q = \frac{\omega_0}{2\gamma}
 \]</div>
 <p>と定義する。以下の問いに答えよ。</p>
 <p>(1) 外力がない場合を考える。変位は角振動数を <span class="arithmatex">\(\omega_0\)</span> とみなせる速さで振動し，振幅は <span class="arithmatex">\(e^{-\gamma t}\)</span> に比例して減少する。</p>
-<p>力学的エネルギー <span class="arithmatex">\(E(t)\)</span> の時間変化率を求めよ。また，<span class="arithmatex">\(Q\gg1\)</span> のとき，1周期 <span class="arithmatex">\(T\approx\frac{2\pi}{\omega_0}\)</span> の間に失われるエネルギーの割合が以下のように表されることを示せ。ただし，<span class="arithmatex">\(\Delta E=E(t)-E(t+T)\)</span> とする。</p>
+<p>力学的エネルギー <span class="arithmatex">\(E(t)\)</span> の時間変化率を求めよ。また，<span class="arithmatex">\(Q\gg1\)</span> のとき，1周期 <span class="arithmatex">\(T\approx\dfrac{2\pi}{\omega_0}\)</span> の間に失われるエネルギーの割合が以下のように表されることを示せ。ただし，<span class="arithmatex">\(\Delta E=E(t)-E(t+T)\)</span> とする。</p>
 <div class="arithmatex">\[
 \frac{\Delta E}{E} \approx \frac{2\pi}{Q}
 \]</div>
@@ -14543,18 +14555,20 @@ Q = \frac{\omega_0}{2\gamma}
 <div class="arithmatex">\[
 m \ddot{x} = -kx - b\dot{x}
 \]</div>
-<p>ここで，<span class="arithmatex">\(\dot{x} = \frac{dx}{dt}\)</span>，<span class="arithmatex">\(\ddot{x} = \frac{d^2x}{dt^2}\)</span> です。
-系の力学的エネルギー <span class="arithmatex">\(E(t)\)</span> は，運動エネルギーとポテンシャルエネルギーの和として定義されます。</p>
+<p>ここで，<span class="arithmatex">\(\dot{x} = \dfrac{dx}{dt}\)</span>，<span class="arithmatex">\(\ddot{x} = \dfrac{d^2x}{dt^2}\)</span> です。系の力学的エネルギー <span class="arithmatex">\(E(t)\)</span> は，運動エネルギーとポテンシャルエネルギーの和として定義されます。</p>
 <div class="arithmatex">\[
 E(t) = \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2
 \]</div>
 <p>この時間微分を求めます。</p>
 <div class="arithmatex">\[
-\frac{dE}{dt} = m\dot{x}\ddot{x} + kx\dot{x} = \dot{x} (m\ddot{x} + kx)
+\begin{aligned}
+\frac{dE}{dt} &amp;= m\dot{x}\ddot{x} + kx\dot{x} \\\\
+&amp;= \dot{x} (m\ddot{x} + kx)
+\end{aligned}
 \]</div>
 <p>運動方程式 <span class="arithmatex">\(m\ddot{x} + kx = -b\dot{x}\)</span> を代入すると，以下を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{\frac{dE}{dt} = -b\dot{x}^2 = -2m\gamma \dot{x}^2 \le 0}
+\frac{dE}{dt} = -b\dot{x}^2 = -2m\gamma \dot{x}^2 \le 0
 \]</div>
 <p>これは，抵抗力によって力学的エネルギーが常に散逸していることを示しています。</p>
 <p>次に，<span class="arithmatex">\(\gamma\ll\omega_0\)</span> のときの1周期あたりのエネルギー減少率を求めます。このとき，変位 <span class="arithmatex">\(x(t)\)</span> は近似的に次のように表されます。</p>
@@ -14573,10 +14587,12 @@ E(t) &amp;= \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2 \\\\
 &amp;= \frac{1}{2} m \omega_0^2 A_0^2 e^{-2\gamma t}
 \end{aligned}
 \]</div>
-<p>したがって，エネルギーは <span class="arithmatex">\(E(t) = E_0 e^{-2\gamma t}\)</span> のように指数関数的に減少します。
-1 周期 <span class="arithmatex">\(T = \frac{2\pi}{\omega_0}\)</span> の間におけるエネルギーの減少 <span class="arithmatex">\(\Delta E\)</span> は以下の通りです。</p>
+<p>したがって，エネルギーは <span class="arithmatex">\(E(t) = E_0 e^{-2\gamma t}\)</span> のように指数関数的に減少します。 1 周期 <span class="arithmatex">\(T = \dfrac{2\pi}{\omega_0}\)</span> の間におけるエネルギーの減少 <span class="arithmatex">\(\Delta E\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
-\Delta E = E(t) - E(t+T) = E(t) \left( 1 - e^{-2\gamma T} \right)
+\begin{aligned}
+\Delta E &amp;= E(t) - E(t+T) \\\\
+&amp;= E(t) \left( 1 - e^{-2\gamma T} \right)
+\end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\gamma T\ll1\)</span> であるため，<span class="arithmatex">\(e^{-x}\approx1-x\)</span> を用いると，</p>
 <div class="arithmatex">\[
@@ -14585,11 +14601,11 @@ E(t) &amp;= \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2 \\\\
 <p>これより，1 周期あたりのエネルギー散逸率は以下のように求まります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{\Delta E}{E} \approx 2\gamma T &amp;= 2\gamma \left( \frac{2\pi}{\omega_0} \right) \\
+\frac{\Delta E}{E} \approx 2\gamma T &amp;= 2\gamma \left( \frac{2\pi}{\omega_0} \right) \\\\
 &amp;= \frac{4\pi \gamma}{\omega_0}
 \end{aligned}
 \]</div>
-<p>Q値の定義 <span class="arithmatex">\(Q = \frac{\omega_0}{2\gamma}\)</span> を用いると，この式は以下のように書き換えられます。</p>
+<p>Q値の定義 <span class="arithmatex">\(Q = \dfrac{\omega_0}{2\gamma}\)</span> を用いると，この式は以下のように書き換えられます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{\Delta E}{E} \approx \frac{2\pi}{Q}}
 \]</div>
@@ -14611,11 +14627,10 @@ m \ddot{x} = -kx - b\dot{x} + F_0 \cos(\omega t)
 <div class="arithmatex">\[
 \tilde{A} = \frac{f_0}{(\omega_0^2 - \omega^2) + 2i\gamma\omega}
 \]</div>
-<p>求める定常解 <span class="arithmatex">\(x(t)\)</span> は，複素解 <span class="arithmatex">\(z(t)\)</span> の実部 <span class="arithmatex">\(\operatorname{Re}[z(t)]\)</span> です。
-実数振幅 <span class="arithmatex">\(A(\omega)\)</span> は複素振幅の絶対値 <span class="arithmatex">\(|\tilde{A}|\)</span> に一致するため，以下のように計算できます。</p>
+<p>求める定常解 <span class="arithmatex">\(x(t)\)</span> は，複素解 <span class="arithmatex">\(z(t)\)</span> の実部 <span class="arithmatex">\(\operatorname{Re}[z(t)]\)</span> です。実数振幅 <span class="arithmatex">\(A(\omega)\)</span> は複素振幅の絶対値 <span class="arithmatex">\(|\tilde{A}|\)</span> に一致するため，以下のように計算できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-A(\omega) &amp;= |\tilde{A}| \\
+A(\omega) &amp;= |\tilde{A}| \\\\
 &amp;= \finalanswer{\frac{f_0}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2}}}
 \end{aligned}
 \]</div>
@@ -14625,14 +14640,14 @@ A(\omega) &amp;= |\tilde{A}| \\
 <div class="arithmatex">\[
 \finalanswer{A(\omega_0) = \frac{f_0}{2\gamma\omega_0}}
 \]</div>
-<p>次に，系の平均エネルギー <span class="arithmatex">\(\langle E(\omega) \rangle\)</span> は振幅の 2 乗 <span class="arithmatex">\(A(\omega)^2\)</span> に比例するため，平均エネルギーが共鳴時の半分になる条件は，振幅が共鳴時の <span class="arithmatex">\(\frac{1}{\sqrt{2}}\)</span> になる条件と同値です。</p>
+<p>次に，系の平均エネルギー <span class="arithmatex">\(\langle E(\omega) \rangle\)</span> は振幅の 2 乗 <span class="arithmatex">\(A(\omega)^2\)</span> に比例するため，平均エネルギーが共鳴時の半分になる条件は，振幅が共鳴時の <span class="arithmatex">\(\dfrac{1}{\sqrt{2}}\)</span> になる条件と同値です。</p>
 <div class="arithmatex">\[
 A(\omega)^2 = \frac{1}{2} A(\omega_0)^2
 \]</div>
 <p>振幅の式を代入すると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{f_0^2}{(\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2} &amp;= \frac{1}{2} \left( \frac{f_0}{2\gamma\omega_0} \right)^2 \\
+\frac{f_0^2}{(\omega_0^2 - \omega^2)^2 + 4\gamma^2\omega^2} &amp;= \frac{1}{2} \left( \frac{f_0}{2\gamma\omega_0} \right)^2 \\\\
 &amp;= \frac{f_0^2}{8\gamma^2\omega_0^2}
 \end{aligned}
 \]</div>
@@ -14662,9 +14677,9 @@ A(\omega)^2 = \frac{1}{2} A(\omega_0)^2
 \]</div>
 <p>したがって，半値全幅 <span class="arithmatex">\(\Delta\omega\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{\Delta \omega \approx 2\gamma}
+\Delta \omega = \omega_+ - \omega_- \approx \finalanswer{2\gamma}
 \]</div>
-<p>この関係式の両辺を <span class="arithmatex">\(\omega_0\)</span> で割り，Q値の定義 <span class="arithmatex">\(Q = \frac{\omega_0}{2\gamma}\)</span> を用いて整理します。</p>
+<p>この関係式の両辺を <span class="arithmatex">\(\omega_0\)</span> で割り，Q値の定義 <span class="arithmatex">\(Q = \dfrac{\omega_0}{2\gamma}\)</span> を用いて整理します。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{\Delta \omega}{\omega_0} \approx \frac{2\gamma}{\omega_0} = \frac{1}{Q}}
 \]</div>

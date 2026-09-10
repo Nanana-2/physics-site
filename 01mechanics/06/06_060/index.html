@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「分散関係と波の伝播」に関する演習問題です。連成振動と小振動の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/06/06_060/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="分散関係と波の伝播" />
+    <meta property="og:description" content="力学の「分散関係と波の伝播」に関する演習問題です。連成振動と小振動の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/06/06_060/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="分散関係と波の伝播" />
+    <meta name="twitter:description" content="力学の「分散関係と波の伝播」に関する演習問題です。連成振動と小振動の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14523,8 +14535,8 @@
 m \ddot{y}_n = k (y_{n+1} - 2y_n + y_{n-1})
 \]</div>
 <p>この格子を伝わる波の性質を調べるため，以下の問いに答えよ。</p>
-<p>(1) 波動解 <span class="arithmatex">\(y_n = A e^{i(k_x na - \omega t)}\)</span> を運動方程式に代入することにより，角振動数 <span class="arithmatex">\(\omega\)</span> と波数 <span class="arithmatex">\(k_x\)</span> の間に成り立つ分散関係 <span class="arithmatex">\(\omega = 2 \sqrt{\frac{k}{m}} \sin \frac{k_x a}{2}\)</span> を導出せよ。ただし， <span class="arithmatex">\(k_x &gt; 0\)</span> および <span class="arithmatex">\(\omega &gt; 0\)</span> とし，波数の範囲は <span class="arithmatex">\(0 \le k_x \le \frac{\pi}{a}\)</span> を考えるものとする。</p>
-<p>(2) 位相速度 <span class="arithmatex">\(v_{\text{p}} = \frac{\omega}{k_x}\)</span> および群速度 <span class="arithmatex">\(v_{\text{g}} = \frac{d\omega}{dk_x}\)</span> をそれぞれ <span class="arithmatex">\(m, k, a, k_x\)</span> を用いて表せ。</p>
+<p>(1) 波動解 <span class="arithmatex">\(y_n = A e^{i(k_x na - \omega t)}\)</span> を運動方程式に代入することにより，角振動数 <span class="arithmatex">\(\omega\)</span> と波数 <span class="arithmatex">\(k_x\)</span> の間に成り立つ分散関係 <span class="arithmatex">\(\omega = 2 \sqrt{\dfrac{k}{m}} \sin \dfrac{k_x a}{2}\)</span> を導出せよ。ただし， <span class="arithmatex">\(k_x &gt; 0\)</span> および <span class="arithmatex">\(\omega &gt; 0\)</span> とし，波数の範囲は <span class="arithmatex">\(0 \le k_x \le \dfrac{\pi}{a}\)</span> を考えるものとする。</p>
+<p>(2) 位相速度 <span class="arithmatex">\(v_{\text{p}} = \dfrac{\omega}{k_x}\)</span> および群速度 <span class="arithmatex">\(v_{\text{g}} = \dfrac{d\omega}{dk_x}\)</span> をそれぞれ <span class="arithmatex">\(m, k, a, k_x\)</span> を用いて表せ。</p>
 <p>(3) 波長が格子間隔に比べて十分に長い長波長極限 <span class="arithmatex">\(k_x \to 0\)</span> を考える。この極限において，位相速度と群速度がともに一定値に収束し，互いに等しくなることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14549,14 +14561,14 @@ y_{n-1} = A e^{i\{k_x (n-1)a - \omega t\}} = y_n e^{-ik_x a}
 <div class="arithmatex">\[
 -m \omega^2 = k (2 \cos k_x a - 2) = -2k (1 - \cos k_x a)
 \]</div>
-<p>三角関数の半角の公式 <span class="arithmatex">\(1 - \cos k_x a = 2 \sin^2 \frac{k_x a}{2}\)</span> を適用します。</p>
+<p>三角関数の半角の公式 <span class="arithmatex">\(1 - \cos k_x a = 2 \sin^2 \dfrac{k_x a}{2}\)</span> を適用します。</p>
 <div class="arithmatex">\[
 -m \omega^2 = -4k \sin^2 \frac{k_x a}{2}
 \]</div>
 <div class="arithmatex">\[
 \omega^2 = \frac{4k}{m} \sin^2 \frac{k_x a}{2}
 \]</div>
-<p>設定された範囲において <span class="arithmatex">\(\omega &gt; 0\)</span> および <span class="arithmatex">\(\sin \frac{k_x a}{2} \ge 0\)</span> であるため，両辺の平方根をとることで求める分散関係が得られます。</p>
+<p>設定された範囲において <span class="arithmatex">\(\omega &gt; 0\)</span> および <span class="arithmatex">\(\sin \dfrac{k_x a}{2} \ge 0\)</span> であるため，両辺の平方根をとることで求める分散関係が導かれます。</p>
 <div class="arithmatex">\[
 \finalanswer{\omega = 2 \sqrt{\frac{k}{m}} \sin \frac{k_x a}{2}}
 \]</div>
@@ -14568,7 +14580,7 @@ v_{\text{p}} = \frac{\omega}{k_x} = \frac{2}{k_x} \sqrt{\frac{k}{m}} \sin \frac{
 <p>群速度 <span class="arithmatex">\(v_{\text{g}}\)</span> は分散関係を波数 <span class="arithmatex">\(k_x\)</span> で微分することで求まります。合成関数の微分法を用います。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-v_{\text{g}} &amp;= \frac{d\omega}{dk_x} \\
+v_{\text{g}} &amp;= \frac{d\omega}{dk_x} \\\\
 &amp;= 2 \sqrt{\frac{k}{m}} \cdot \left( \cos \frac{k_x a}{2} \right) \cdot \frac{a}{2}
 \end{aligned}
 \]</div>
@@ -14581,14 +14593,14 @@ v_{\text{g}} &amp;= \frac{d\omega}{dk_x} \\
 <p>マクローリン展開の近似式 <span class="arithmatex">\(\sin \theta \approx \theta\)</span> を位相速度の式に適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\lim_{k_x \to 0} v_{\text{p}} &amp;= \lim_{k_x \to 0} \frac{2}{k_x} \sqrt{\frac{k}{m}} \left( \frac{k_x a}{2} \right) \\
+\lim_{k_x \to 0} v_{\text{p}} &amp;= \lim_{k_x \to 0} \frac{2}{k_x} \sqrt{\frac{k}{m}} \left( \frac{k_x a}{2} \right) \\\\
 &amp;= a \sqrt{\frac{k}{m}}
 \end{aligned}
 \]</div>
 <p>次に，群速度の式において <span class="arithmatex">\(\cos 0 = 1\)</span> となる性質を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\lim_{k_x \to 0} v_{\text{g}} &amp;= a \sqrt{\frac{k}{m}} \cdot 1 \\
+\lim_{k_x \to 0} v_{\text{g}} &amp;= a \sqrt{\frac{k}{m}} \cdot 1 \\\\
 &amp;= \finalanswer{a \sqrt{\frac{k}{m}}}
 \end{aligned}
 \]</div>

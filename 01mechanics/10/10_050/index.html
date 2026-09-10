@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="力学の「循環座標と保存量」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。">
+      
       
       
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/01mechanics/10/10_050/">
@@ -71,6 +73,16 @@
     
   
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="循環座標と保存量" />
+    <meta property="og:description" content="力学の「循環座標と保存量」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/01mechanics/10/10_050/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="循環座標と保存量" />
+    <meta name="twitter:description" content="力学の「循環座標と保存量」に関する演習問題です。解析力学の問題文と解答・解説を掲載しています。" />
+  
 
   </head>
   
@@ -14496,8 +14508,8 @@
 
 <h1 id="_1">循環座標と保存量</h1>
 <h2 id="_2">問題</h2>
-<p>ある力学系のラグランジアンが <span class="arithmatex">\(L(q_1, q_2, \dots, q_n, \dot{q}_1, \dot{q}_2, \dots, \dot{q}_n, t)\)</span> で与えられている。一般化座標 <span class="arithmatex">\(q_i\)</span> のうち，特定の座標 <span class="arithmatex">\(q_k\)</span> がラグランジアンの式中に明示的に含まれない，すなわち <span class="arithmatex">\(\frac{\partial L}{\partial q_k} = 0\)</span> が成り立つとき，この座標 <span class="arithmatex">\(q_k\)</span> を循環座標と呼ぶ。以下の問いに答えよ。</p>
-<p>(1) 循環座標 <span class="arithmatex">\(q_k\)</span> に対する共役運動量は <span class="arithmatex">\(p_k = \frac{\partial L}{\partial \dot{q}_k}\)</span> と定義される。オイラー・ラグランジュ方程式を用いることで，循環座標に対応する共役運動量 <span class="arithmatex">\(p_k\)</span> が時間の経過に関わらず一定の値に保たれることを証明せよ。</p>
+<p>ある力学系のラグランジアンが <span class="arithmatex">\(L(q_1, q_2, \dots, q_n, \dot{q}_1, \dot{q}_2, \dots, \dot{q}_n, t)\)</span> で与えられている。一般化座標 <span class="arithmatex">\(q_i\)</span> のうち，特定の座標 <span class="arithmatex">\(q_k\)</span> がラグランジアンの式中に明示的に含まれない，すなわち <span class="arithmatex">\(\dfrac{\partial L}{\partial q_k} = 0\)</span> が成り立つとき，この座標 <span class="arithmatex">\(q_k\)</span> を循環座標と呼ぶ。以下の問いに答えよ。</p>
+<p>(1) 循環座標 <span class="arithmatex">\(q_k\)</span> に対する共役運動量は <span class="arithmatex">\(p_k = \dfrac{\partial L}{\partial \dot{q}_k}\)</span> と定義される。オイラー・ラグランジュ方程式を用いることで，循環座標に対応する共役運動量 <span class="arithmatex">\(p_k\)</span> が時間の経過に関わらず一定の値に保たれることを証明せよ。</p>
 <p>(2) 2次元平面内を運動する質量 <span class="arithmatex">\(m\)</span> の質点の運動を考える。中心力ポテンシャル <span class="arithmatex">\(U(r)\)</span> のみが作用しているとき，極座標 <span class="arithmatex">\(r, \theta\)</span> を用いた系のラグランジアンは次のように表される。</p>
 <div class="arithmatex">\[
 L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U(r)
@@ -14518,7 +14530,7 @@ L = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - U(r)
 <div class="arithmatex">\[
 \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_k} \right) = 0
 \]</div>
-<p>括弧の内部は共役運動量の定義式 <span class="arithmatex">\(p_k = \frac{\partial L}{\partial \dot{q}_k}\)</span> そのものであるため，式は次のように書き換えられます。</p>
+<p>括弧の内部は共役運動量の定義式 <span class="arithmatex">\(p_k = \dfrac{\partial L}{\partial \dot{q}_k}\)</span> そのものであるため，式は次のように書き換えられます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{d}{dt} p_k = 0}
 \]</div>
