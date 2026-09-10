@@ -54,6 +54,7 @@ extra_javascript:
 
 hooks:
   - hooks/problem_index.py
+  - hooks/seo_metadata.py
   - hooks/subject_sitemaps.py
 
 not_in_nav: |
