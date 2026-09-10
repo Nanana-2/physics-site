@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14515,11 +14515,11 @@ C_P - C_V = T \left( \frac{\partial P}{\partial T} \right)_V \left( \frac{\parti
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>提示された循環関係式について，両辺に <span class="arithmatex">\(\left( \frac{\partial V}{\partial T} \right)_P\)</span> を掛け算します。偏微分の逆数の関係 <span class="arithmatex">\(\left( \frac{\partial T}{\partial V} \right)_P \left( \frac{\partial V}{\partial T} \right)_P = 1\)</span> を用いると，式は次のようになります。</p>
+<p>循環関係式に，偏微分の逆数の関係 <span class="arithmatex">\(\left( \frac{\partial T}{\partial V} \right)_P \left( \frac{\partial V}{\partial T} \right)_P = 1\)</span> を用いると，次式を得ます。</p>
 <div class="arithmatex">\[
 \left( \frac{\partial P}{\partial T} \right)_V \left( \frac{\partial V}{\partial P} \right)_T = - \left( \frac{\partial V}{\partial T} \right)_P
 \]</div>
-<p>この等式を，求めたい偏微分 <span class="arithmatex">\(\left( \frac{\partial P}{\partial T} \right)_V\)</span> について整理します。両辺を <span class="arithmatex">\(\left( \frac{\partial V}{\partial P} \right)_T\)</span> で割り算します。</p>
+<p>これを <span class="arithmatex">\(\left( \frac{\partial P}{\partial T} \right)_V\)</span> について解くと，</p>
 <div class="arithmatex">\[
 \finalanswer{\left( \frac{\partial P}{\partial T} \right)_V = - \frac{\left( \frac{\partial V}{\partial T} \right)_P}{\left( \frac{\partial V}{\partial P} \right)_T}}
 \]</div>
@@ -14527,7 +14527,14 @@ C_P - C_V = T \left( \frac{\partial P}{\partial T} \right)_V \left( \frac{\parti
 <h3 id="2">(2)</h3>
 <p>(1) で得られた偏微分の表現を，定圧熱容量と定積熱容量の差の式に代入します。</p>
 <div class="arithmatex">\[
-C_P - C_V = T \left[ - \frac{\left( \frac{\partial V}{\partial T} \right)_P}{\left( \frac{\partial V}{\partial P} \right)_T} \right] \left( \frac{\partial V}{\partial T} \right)_P = - T \frac{\left[ \left( \frac{\partial V}{\partial T} \right)_P \right]^2}{\left( \frac{\partial V}{\partial P} \right)_T}
+\begin{aligned}
+C_P-C_V
+&amp;=T\left[-\frac{\left(\frac{\partial V}{\partial T}\right)_P}
+{\left(\frac{\partial V}{\partial P}\right)_T}\right]
+\left(\frac{\partial V}{\partial T}\right)_P \\
+&amp;=-T\frac{\left[\left(\frac{\partial V}{\partial T}\right)_P\right]^2}
+{\left(\frac{\partial V}{\partial P}\right)_T}
+\end{aligned}
 \]</div>
 <p>ここで，問題文で提示された等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span> と熱膨張率 <span class="arithmatex">\(\alpha\)</span> の定義式を変形し，それぞれの偏微分項について整理します。</p>
 <div class="arithmatex">\[
@@ -14540,11 +14547,11 @@ C_P - C_V = T \left[ - \frac{\left( \frac{\partial V}{\partial T} \right)_P}{\le
 <div class="arithmatex">\[
 C_P - C_V = - T \frac{(V \alpha)^2}{- V \kappa_T}
 \]</div>
-<p>分子を展開し，分母分子にある体積 <span class="arithmatex">\(V\)</span> を約分して整理します。分母分子のマイナス符号は互いに相殺されます。</p>
+<p>体積 <span class="arithmatex">\(V\)</span> と符号を整理すると，</p>
 <div class="arithmatex">\[
-C_P - C_V = \frac{T V^2 \alpha^2}{V \kappa_T} = \finalanswer{\frac{T V \alpha^2}{\kappa_T}}
+C_P-C_V = \frac{TV^2\alpha^2}{V\kappa_T} = \finalanswer{\frac{TV\alpha^2}{\kappa_T}}
 \]</div>
-<p>この関係式により，実験的に直接測定することが難しい定積熱容量を，測定が容易な定圧熱容量，熱膨張率，等温圧縮率の測定値から算出することが可能になります。</p>
+<p>この関係式により，実験的に直接測定することが難しい定積熱容量を，測定が容易な定圧熱容量，熱膨張率，等温圧縮率の測定値から計算することが可能になります。</p>
 
 
 

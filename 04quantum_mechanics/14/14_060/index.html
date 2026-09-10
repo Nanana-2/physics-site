@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14527,38 +14527,29 @@
 \hat{R} | \psi_i \rangle = \sum_{j=1}^{d} | \psi_j \rangle D_{ji}(\hat{R})
 \]</div>
 <p>この <span class="arithmatex">\(d\)</span> 行 <span class="arithmatex">\(d\)</span> 列の正方行列 <span class="arithmatex">\(D(\hat{R})\)</span> が，群 <span class="arithmatex">\(G\)</span> の表現行列の定義である積の保存則 <span class="arithmatex">\(D(\hat{A}\hat{B}) = D(\hat{A})D(\hat{B})\)</span> を満たすことを，連続する対称操作 <span class="arithmatex">\(\hat{A}\hat{B} | \psi_i \rangle\)</span> の計算を実行することで証明せよ。</p>
-<p>(3) 固有状態のセットが作るこの <span class="arithmatex">\(d\)</span> 次元の表現 <span class="arithmatex">\(D(\hat{R})\)</span> がこれ以上分解できない既約表現であるとき，エネルギー準位の縮退度 <span class="arithmatex">\(d\)</span> と既約表現の次元数の間にはどのような関係が成り立つか，数式あるいは等号を用いて答えよ。</p>
+<p>(3) 固有状態のセットが作るこの <span class="arithmatex">\(d\)</span> 次元の表現 <span class="arithmatex">\(D(\hat{R})\)</span> がこれ以上分解できない既約表現であるとき，エネルギー準位の縮退度 <span class="arithmatex">\(d\)</span> と既約表現の次元数の間にはどのような関係が成り立つか，式あるいは等号を用いて答えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>ハミルトニアンを新しい状態 <span class="arithmatex">\(\hat{R} | \psi_i \rangle\)</span> に左から作用させて固有値を評価します。</p>
 <div class="arithmatex">\[
-\hat{H} \left( \hat{R} | \psi_i \rangle \right) = \left( \hat{H} \hat{R} \right) | \psi_i \rangle
-\]</div>
-<p>問題文より，ハミルトニアンと対称操作演算子は可換であるため，演算子の順序を <span class="arithmatex">\(\hat{H}\hat{R} = \hat{R}\hat{H}\)</span> と入れ替えることができます。</p>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \left( \hat{R} \hat{H} \right) | \psi_i \rangle \\
-&amp;= \hat{R} \left( \hat{H} | \psi_i \rangle \right)
+\hat{H}\left(\hat{R}|\psi_i\rangle\right)
+&amp;=\left(\hat{H}\hat{R}\right)|\psi_i\rangle \\
+&amp;=\left(\hat{R}\hat{H}\right)|\psi_i\rangle \\
+&amp;=\hat{R}\left(\hat{H}|\psi_i\rangle\right) \\
+&amp;=E\left(\hat{R}|\psi_i\rangle\right)
 \end{aligned}
 \]</div>
-<p>ここで， <span class="arithmatex">\(| \psi_i \rangle\)</span> はエネルギー固有値 <span class="arithmatex">\(E\)</span> の固有状態であるため， <span class="arithmatex">\(\hat{H} | \psi_i \rangle = E | \psi_i \rangle\)</span> を代入します。固有値 <span class="arithmatex">\(E\)</span> は単なる実数の定数であるため，演算子の前に引き出すことが可能です。</p>
-<div class="arithmatex">\[
-\finalanswer{= \hat{R} \left( E | \psi_i \rangle \right) = E \left( \hat{R} | \psi_i \rangle \right)}
-\]</div>
+<p>2行目では <span class="arithmatex">\([\hat H,\hat R]=0\)</span> を，最終行では <span class="arithmatex">\(\hat H|\psi_i\rangle=E|\psi_i\rangle\)</span> を用いました。</p>
 <p>以上より，<span class="arithmatex">\(\hat{H}(\hat{R}|\psi_i\rangle) = E(\hat{R}|\psi_i\rangle)\)</span> となります。したがって，対称操作後の状態も同じエネルギー固有値 <span class="arithmatex">\(E\)</span> を持ちます。</p>
 <h3 id="2">(2)</h3>
 <p>2つの対称操作 <span class="arithmatex">\(\hat{B}\)</span> と <span class="arithmatex">\(\hat{A}\)</span> を順番に作用させたときの状態の変化を計算します。まず，右側の <span class="arithmatex">\(\hat{B}\)</span> から作用させて問題文の展開式を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\hat{A} \hat{B} | \psi_i \rangle &amp;= \hat{A} \left( \hat{B} | \psi_i \rangle \right) \\
-&amp;= \hat{A} \sum_{j=1}^{d} | \psi_j \rangle D_{ji}(\hat{B})
-\end{aligned}
-\]</div>
-<p>和の記号と行列要素の定数を演算子の左側へ括り出し，残った状態 <span class="arithmatex">\(| \psi_j \rangle\)</span> に対して改めて操作 <span class="arithmatex">\(\hat{A}\)</span> を作用させます。ここでもう一度展開式を適用しますが，和の変数を区別するために新しい添字 <span class="arithmatex">\(k\)</span> を導入します。</p>
-<div class="arithmatex">\[
-\begin{aligned}
- &amp;= \sum_{j=1}^{d} \left( \hat{A} | \psi_j \rangle \right) D_{ji}(\hat{B}) \\
+\hat{A}\hat{B}|\psi_i\rangle
+&amp;=\hat{A}\sum_{j=1}^{d}|\psi_j\rangle D_{ji}(\hat B) \\
+&amp;= \sum_{j=1}^{d} \left( \hat{A} | \psi_j \rangle \right) D_{ji}(\hat{B}) \\
 &amp;= \sum_{j=1}^{d} \left( \sum_{k=1}^{d} | \psi_k \rangle D_{kj}(\hat{A}) \right) D_{ji}(\hat{B})
 \end{aligned}
 \]</div>
@@ -14570,7 +14561,7 @@
 <div class="arithmatex">\[
 \left(\hat{A} \hat{B}\right) | \psi_i \rangle = \sum_{k=1}^{d} | \psi_k \rangle D_{ki}(\hat{A}\hat{B})
 \]</div>
-<p>これら2つの式は，同一の操作による展開を表しているため，固有状態 <span class="arithmatex">\(| \psi_k \rangle\)</span> の各係数は厳密に一致しなければなりません。</p>
+<p>これら2つの式は同じ操作による展開なので，固有状態 <span class="arithmatex">\(|\psi_k\rangle\)</span> の各係数を比較します。</p>
 <div class="arithmatex">\[
 D_{ki}(\hat{A}\hat{B}) = \sum_{j=1}^{d} D_{kj}(\hat{A}) D_{ji}(\hat{B})
 \]</div>

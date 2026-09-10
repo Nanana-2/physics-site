@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14533,7 +14533,7 @@
 \]</div>
 <p>を導け。複素平面波を代入し，<span class="arithmatex">\(k^2=\mu\varepsilon\omega^2+i\mu\sigma\omega\)</span> を示せ。</p>
 <p>(2) 良導体条件 <span class="arithmatex">\(\sigma\gg\varepsilon\omega\)</span> のもとで <span class="arithmatex">\(k\)</span> を求めよ。<span class="arithmatex">\(k_r\)</span> と <span class="arithmatex">\(\alpha\)</span> が等しくなることを示し，表皮深さを <span class="arithmatex">\(\delta=1/\alpha\)</span> と定義して求めよ。</p>
-<p>(3) 実際の電場を実数表示し，振幅が深さ <span class="arithmatex">\(z\)</span> とともにどのように減衰するか示せ。深さ <span class="arithmatex">\(z=\delta\)</span> と <span class="arithmatex">\(z=3\delta\)</span> における振幅比を求め，周波数を4倍にしたときの表皮深さの変化を示せ。</p>
+<p>(3) 実際の電場を実数表示し，振幅が深さ <span class="arithmatex">\(z\)</span> とともにどのように減衰するか示せ。また，表皮深さ <span class="arithmatex">\(\delta\)</span> の物理的な意味を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14544,7 +14544,7 @@
 &amp;=-\frac{\partial}{\partial t}
 (\nabla\times\boldsymbol{B}) \\
 &amp;=-\mu\sigma\frac{\partial\boldsymbol{E}}{\partial t}
--\mu\varepsilon\frac{\partial^2\boldsymbol{E}}{\partial t^2}.
+-\mu\varepsilon\frac{\partial^2\boldsymbol{E}}{\partial t^2}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> とベクトル恒等式を用いて，左辺を実際に変形します。</p>
@@ -14554,7 +14554,7 @@
 &amp;=\nabla(\nabla\cdot\boldsymbol{E})
 -\nabla^2\boldsymbol{E} \\
 &amp;=\nabla 0-\nabla^2\boldsymbol{E} \\
-&amp;=-\nabla^2\boldsymbol{E}.
+&amp;=-\nabla^2\boldsymbol{E}
 \end{aligned}
 \]</div>
 <p>この結果と直前に求めた右辺を等置すると</p>
@@ -14569,7 +14569,7 @@
 \frac{\partial^2\boldsymbol{E}}{\partial t^2}
 -\mu\sigma
 \frac{\partial\boldsymbol{E}}{\partial t}
-&amp;=0.
+&amp;=0
 \end{aligned}
 \]</div>
 <p>第一項は空間的な変化，第二項は波としての時間変化，第三項は伝導電流による減衰を表します。</p>
@@ -14577,7 +14577,7 @@
 <div class="arithmatex">\[
 \begin{aligned}
 -k^2+\mu\varepsilon\omega^2+i\mu\sigma\omega&amp;=0, \\
-k^2&amp;=\finalanswer{\mu\varepsilon\omega^2+i\mu\sigma\omega}.
+k^2&amp;=\finalanswer{\mu\varepsilon\omega^2+i\mu\sigma\omega}
 \end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
@@ -14587,11 +14587,7 @@ k^2\simeq i\mu\sigma\omega
 \]</div>
 <p>です。<span class="arithmatex">\(i=e^{i\pi/2}\)</span> の平方根をとると</p>
 <div class="arithmatex">\[
-\begin{aligned}
-k
-&amp;\simeq\sqrt{\mu\sigma\omega}\,e^{i\pi/4} \\
-&amp;=\sqrt{\frac{\mu\sigma\omega}{2}}(1+i).
-\end{aligned}
+k \simeq \sqrt{\mu\sigma\omega}\,e^{i\pi/4} = \sqrt{\frac{\mu\sigma\omega}{2}}(1+i)
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
@@ -14609,21 +14605,15 @@ e^{i(kz-\omega t)}
 \]</div>
 <p>です。<span class="arithmatex">\(E_0\)</span> を実数に選べば，実際の電場は</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(z,t)
+\finalanswer{\boldsymbol{E}(z,t)
 =E_0e^{-z/\delta}
-\cos(k_rz-\omega t)\boldsymbol{e}_x
+\cos(k_rz-\omega t)\boldsymbol{e}_x}
 \]</div>
-<p>となります。振幅比は</p>
+<p>となります。深さ <span class="arithmatex">\(z\)</span> における振幅は表面での振幅の <span class="arithmatex">\(e^{-z/\delta}\)</span> 倍です。特に <span class="arithmatex">\(z=\delta\)</span> では</p>
 <div class="arithmatex">\[
-\frac{E_{\mathrm{amp}}(\delta)}{E_0}=e^{-1},
-\qquad
-\frac{E_{\mathrm{amp}}(3\delta)}{E_0}=e^{-3}
+\finalanswer{\frac{E_{\mathrm{amp}}(\delta)}{E_0}=e^{-1}}
 \]</div>
-<p>です。また <span class="arithmatex">\(\delta\propto\omega^{-1/2}\)</span> なので，周波数を4倍にすると</p>
-<div class="arithmatex">\[
-\finalanswer{\delta'=\frac{\delta}{\sqrt{4}}=\frac{\delta}{2}}
-\]</div>
-<p>となり，高周波ほど導体表面の浅い領域に電流が集中します。</p>
+<p>となります。したがって，<span class="arithmatex">\(\delta\)</span> は振幅が表面の <span class="arithmatex">\(1/e\)</span> まで減少する深さです。また <span class="arithmatex">\(\delta\propto\omega^{-1/2}\)</span> であるため，高周波ほど電場と電流は導体表面に近い領域へ集中します。</p>
 
 
 

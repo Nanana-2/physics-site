@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14533,29 +14533,27 @@
 <div class="arithmatex">\[
 \finalanswer{\Omega_{\mathrm{tot}}(E_1) = \Omega_1(E_1) \cdot \Omega_2(E - E_1)}
 \]</div>
-<p>この関係式をボルツマンのエントロピー公式 <span class="arithmatex">\(S = k_B \log \Omega\)</span> に代入し，対数の性質を用いて展開します。</p>
-<div class="arithmatex">\[
-S_{\mathrm{tot}}(E_1) = k_B \log \left[ \Omega_1(E_1) \cdot \Omega_2(E - E_1) \right]
-\]</div>
-<div class="arithmatex">\[
-S_{\mathrm{tot}}(E_1) = k_B \log \Omega_1(E_1) + k_B \log \Omega_2(E - E_1)
-\]</div>
-<p>各項はそれぞれ部分系1および部分系2のエントロピーの定義そのものであるため，全エントロピーは各部分系のエントロピーの和として表されることが示されました。</p>
-<div class="arithmatex">\[
-\finalanswer{S_{\mathrm{tot}}(E_1) = S_1(E_1) + S_2(E_2)}
-\]</div>
-<h3 id="2">(2)</h3>
-<p>全エントロピー <span class="arithmatex">\(S_{\mathrm{tot}}(E_1)\)</span> が最大値をとるとき，<span class="arithmatex">\(E_1\)</span> に関する1階微分は 0 となります。エネルギーの全微分が <span class="arithmatex">\(dE_2 = -dE_1\)</span> であることに注意して微分を実行します。</p>
+<p>この関係式をボルツマンのエントロピー公式 <span class="arithmatex">\(S = k_{\text{B}} \log \Omega\)</span> に代入し，対数の性質を用いて展開します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{dS_{\mathrm{tot}}}{dE_1} &amp;= \frac{dS_1(E_1)}{dE_1} + \frac{dS_2(E_2)}{dE_2} \frac{dE_2}{dE_1} \\
-&amp;= 0
+S_{\mathrm{tot}}(E_1)
+&amp;=k_{\text{B}}\log\left[\Omega_1(E_1)\Omega_2(E-E_1)\right] \\
+&amp;=k_{\text{B}}\log\Omega_1(E_1)+k_{\text{B}}\log\Omega_2(E-E_1) \\
+&amp;=\finalanswer{S_1(E_1)+S_2(E_2)}
 \end{aligned}
 \]</div>
+<p>各項はそれぞれ部分系1および部分系2のエントロピーです。</p>
+<h3 id="2">(2)</h3>
+<p>エネルギー保存則から <span class="arithmatex">\(dE_2/dE_1=-1\)</span> であるため，</p>
 <div class="arithmatex">\[
-\frac{dS_1(E_1)}{dE_1} - \frac{dS_2(E_2)}{dE_2} = 0
+\begin{aligned}
+\frac{dS_{\mathrm{tot}}}{dE_1}
+&amp;=\frac{dS_1(E_1)}{dE_1}
++\frac{dS_2(E_2)}{dE_2}\frac{dE_2}{dE_1} \\
+&amp;=\frac{dS_1(E_1)}{dE_1}-\frac{dS_2(E_2)}{dE_2}
+\end{aligned}
 \]</div>
-<p>したがって，エントロピー最大原理から導かれる平衡条件は以下のようになります。</p>
+<p>熱平衡では <span class="arithmatex">\(S_{\mathrm{tot}}\)</span> が最大となるので，この微分を0とおくと</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{dS_1(E_1)}{dE_1} = \frac{dS_2(E_2)}{dE_2}}
 \]</div>

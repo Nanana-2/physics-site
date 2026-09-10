@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14537,7 +14537,7 @@ E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^2 + \dots
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>全ハミルトニアンの固有値方程式に，それぞれのべき級数展開の式をそのまま代入します。</p>
+<p>全ハミルトニアンの固有値方程式に，それぞれのべき級数展開を代入します。</p>
 <div class="arithmatex">\[
 (\hat{H}_0 + \lambda \hat{V}) \left( |n^{(0)}\rangle + \lambda |n^{(1)}\rangle + \dots \right) = \left( E_n^{(0)} + \lambda E_n^{(1)} + \dots \right) \left( |n^{(0)}\rangle + \lambda |n^{(1)}\rangle + \dots \right)
 \]</div>
@@ -14546,11 +14546,11 @@ E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^2 + \dots
 <div class="arithmatex">\[
   \hat{H}_0 |n^{(0)}\rangle = E_n^{(0)} |n^{(0)}\rangle
 \]</div>
-<p>これは非摂動の固有値方程式そのものです。</p>
+<p>これは非摂動の固有値方程式です。</p>
 <ul>
 <li><strong><span class="arithmatex">\(\lambda^1\)</span> の項</strong></li>
 </ul>
-<p>左辺から <span class="arithmatex">\(\lambda\)</span> の1次となる項を抽出し，右辺からも同様に1次の項を抽出して結びつけます。</p>
+<p>両辺で <span class="arithmatex">\(\lambda\)</span> の1次の項を比較します。</p>
 <div class="arithmatex">\[
   \finalanswer{\hat{H}_0 |n^{(1)}\rangle + \hat{V} |n^{(0)}\rangle = E_n^{(0)} |n^{(1)}\rangle + E_n^{(1)} |n^{(0)}\rangle}
 \]</div>
@@ -14564,7 +14564,7 @@ E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^2 + \dots
 <div class="arithmatex">\[
 E_n^{(0)} \langle n^{(0)} | n^{(1)}\rangle + \langle n^{(0)}| \hat{V} |n^{(0)}\rangle = E_n^{(0)} \langle n^{(0)} | n^{(1)}\rangle + E_n^{(1)} \langle n^{(0)} | n^{(0)}\rangle
 \]</div>
-<p>両辺の第1項にある <span class="arithmatex">\(E_n^{(0)} \langle n^{(0)} | n^{(1)}\rangle\)</span> は共通しているため，引き算によって消去されます。また，非摂動状態は規格化されているため <span class="arithmatex">\(\langle n^{(0)} | n^{(0)}\rangle = 1\)</span> です。</p>
+<p>両辺から共通する第1項 <span class="arithmatex">\(E_n^{(0)} \langle n^{(0)} | n^{(1)}\rangle\)</span> を引きます。また，非摂動状態は規格化されているため <span class="arithmatex">\(\langle n^{(0)} | n^{(0)}\rangle = 1\)</span> です。</p>
 <div class="arithmatex">\[
 \langle n^{(0)}| \hat{V} |n^{(0)}\rangle = E_n^{(1)}
 \]</div>
@@ -14588,10 +14588,7 @@ E_m^{(0)} \langle m^{(0)} | n^{(1)}\rangle + \langle m^{(0)}| \hat{V} |n^{(0)}\r
 \]</div>
 <p>ここで，1次の補正状態を展開式 <span class="arithmatex">\(|n^{(1)}\rangle = \sum_{k} c_k |k^{(0)}\rangle\)</span> に置き換えて右辺の内積部分を計算します。規格直交性により， <span class="arithmatex">\(k=m\)</span> の項だけが残ります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle m^{(0)} | n^{(1)}\rangle &amp;= \sum_{k} c_k \langle m^{(0)} | k^{(0)}\rangle \\
-&amp;= c_m
-\end{aligned}
+\langle m^{(0)} | n^{(1)}\rangle = \sum_{k} c_k \langle m^{(0)} | k^{(0)}\rangle = c_m
 \]</div>
 <p>これを上の式に代入します。</p>
 <div class="arithmatex">\[

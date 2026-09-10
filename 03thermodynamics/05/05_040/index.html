@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,8 +14518,7 @@
 
 <h1 id="_1">熱力学ポテンシャルの自然変数</h1>
 <h2 id="_2">問題</h2>
-<p>熱力学体系を記述する4つの熱力学ポテンシャルについて，それぞれの全微分形式を導出し，微視的な状態の変化に連動する自然な変数の組み合わせを整理する。
-熱力学第一法則の微分形式 <span class="arithmatex">\(dU = T dS - P dV\)</span> を基本式として，以下の問いに答えよ。</p>
+<p>熱力学第一法則の微分形式 <span class="arithmatex">\(dU = T dS - P dV\)</span> を基本式として，以下の問いに答えよ。</p>
 <p>(1) エンタルピー <span class="arithmatex">\(H = U + PV\)</span> の全微分 <span class="arithmatex">\(dH\)</span> を計算し， <span class="arithmatex">\(dS\)</span> と <span class="arithmatex">\(dP\)</span> を用いた形式で表せ。また，この式からエンタルピーの自然な変数が <span class="arithmatex">\(S\)</span> と <span class="arithmatex">\(P\)</span> であることを示せ。</p>
 <p>(2) ヘルムホルツ自由エネルギー <span class="arithmatex">\(F = U - TS\)</span> の全微分 <span class="arithmatex">\(dF\)</span> を計算し， <span class="arithmatex">\(dT\)</span> と <span class="arithmatex">\(dV\)</span> を用いた形式で表せ。また，この式からヘルムホルツ自由エネルギーの自然な変数が <span class="arithmatex">\(T\)</span> と <span class="arithmatex">\(V\)</span> であることを示せ。</p>
 <p>(3) ギブズ自由エネルギー <span class="arithmatex">\(G = H - TS\)</span> の全微分 <span class="arithmatex">\(dG\)</span> を計算し， <span class="arithmatex">\(dT\)</span> と <span class="arithmatex">\(dP\)</span> を用いた形式で表せ。また，この式からギブズ自由エネルギーの自然な変数が <span class="arithmatex">\(T\)</span> と <span class="arithmatex">\(P\)</span> であることを示せ。</p>
@@ -14534,7 +14533,7 @@ dH = dU + P dV + V dP
 <div class="arithmatex">\[
 dH = (T dS - P dV) + P dV + V dP
 \]</div>
-<p>右辺の <span class="arithmatex">\(P dV\)</span> の項が互いに相殺されます。式を整理すると次のようになります。</p>
+<p>右辺の <span class="arithmatex">\(P\,dV\)</span> の項は符号が逆なので，和は 0 です。残りを整理すると</p>
 <div class="arithmatex">\[
 \finalanswer{dH = T dS + V dP}
 \]</div>
@@ -14548,7 +14547,7 @@ dF = dU - T dS - S dT
 <div class="arithmatex">\[
 dF = (T dS - P dV) - T dS - S dT
 \]</div>
-<p>右辺の <span class="arithmatex">\(T dS\)</span> の項が互いに相殺されます。式を整理すると次のようになります。</p>
+<p>右辺の <span class="arithmatex">\(T\,dS\)</span> の項は符号が逆なので，和は 0 です。残りを整理すると</p>
 <div class="arithmatex">\[
 \finalanswer{dF = -P dV - S dT}
 \]</div>
@@ -14562,7 +14561,7 @@ dG = dH - T dS - S dT
 <div class="arithmatex">\[
 dG = (T dS + V dP) - T dS - S dT
 \]</div>
-<p>右辺の <span class="arithmatex">\(T dS\)</span> の項が互いに相殺されます。式を整理すると次のようになります。</p>
+<p>右辺の <span class="arithmatex">\(T\,dS\)</span> の項は符号が逆なので，和は 0 です。残りを整理すると</p>
 <div class="arithmatex">\[
 \finalanswer{dG = V dP - S dT}
 \]</div>

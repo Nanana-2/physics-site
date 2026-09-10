@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,38 +14520,38 @@
 <h2 id="_2">問題</h2>
 <p>互いに区別可能で独立な <span class="arithmatex">\(N\)</span> 個の粒子からなる系を考える。各粒子は，エネルギー <span class="arithmatex">\(0\)</span> の基底状態と，エネルギー <span class="arithmatex">\(\epsilon &gt; 0\)</span> の励起状態のいずれかをとる。系の全エネルギーが <span class="arithmatex">\(E\)</span> であるマクロな状態について，以下の問いに答えよ。ただし，<span class="arithmatex">\(E = M\epsilon\)</span> とし，<span class="arithmatex">\(M\)</span> は <span class="arithmatex">\(0 \le M \le N\)</span> を満たす整数とする。粒子数 <span class="arithmatex">\(N\)</span> および励起粒子数 <span class="arithmatex">\(M\)</span> は十分に大きく，スターリングの公式が適用できるものとする。</p>
 <p>(1) 1粒子あたりのエネルギーを <span class="arithmatex">\(u = E/N\)</span> と定義する。ここで <span class="arithmatex">\(0 \le u \le \epsilon\)</span> である。この系のボルツマンエントロピー <span class="arithmatex">\(S(E)\)</span> を <span class="arithmatex">\(N\)</span>，<span class="arithmatex">\(u\)</span>，<span class="arithmatex">\(\epsilon\)</span> を用いて表せ。</p>
-<p>(2) 熱力学的な絶対温度 <span class="arithmatex">\(T\)</span> は，エントロピーのエネルギー微分を用いて <span class="arithmatex">\(\frac{1}{T} = \frac{dS}{dE}\)</span> と定義される。温度の逆数 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を <span class="arithmatex">\(u\)</span> と <span class="arithmatex">\(\epsilon\)</span> の関数として求めよ。</p>
+<p>(2) 熱力学的な絶対温度 <span class="arithmatex">\(T\)</span> は，エントロピーのエネルギー微分を用いて <span class="arithmatex">\(\frac{1}{T} = \frac{dS}{dE}\)</span> と定義される。温度の逆数 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を <span class="arithmatex">\(u\)</span> と <span class="arithmatex">\(\epsilon\)</span> の関数として求めよ。</p>
 <p>(3) 1粒子あたりのエネルギー <span class="arithmatex">\(u\)</span> が <span class="arithmatex">\(\frac{\epsilon}{2} &lt; u &lt; \epsilon\)</span> の範囲にあるとき，絶対温度 <span class="arithmatex">\(T\)</span> の符号を求めよ。このような状態が通常の理想気体などでは現れず，エネルギーに上限がある二準位系においてのみ実現しうる理由を，エントロピーとエネルギーの関係に着目して説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>励起状態にある粒子の数 <span class="arithmatex">\(M\)</span> は <span class="arithmatex">\(M = E/\epsilon = Nu/\epsilon\)</span> と表されます。区別可能な <span class="arithmatex">\(N\)</span> 個の粒子から <span class="arithmatex">\(M\)</span> 個の励起粒子を選ぶ微視的状態数は <span class="arithmatex">\(\Omega = \frac{N!}{M!(N-M)!}\)</span> です。
-ボルツマンのエントロピー公式 <span class="arithmatex">\(S = k_B \log \Omega\)</span> にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用して整理すると，以下のようになります。</p>
+ボルツマンのエントロピー公式 <span class="arithmatex">\(S = k_{\text{B}} \log \Omega\)</span> にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用して整理すると，以下のようになります。</p>
 <div class="arithmatex">\[
-S(E) = -k_B \left[ M \log \left(\frac{M}{N}\right) + (N-M) \log \left(\frac{N-M}{N}\right) \right]
+S(E) = -k_{\text{B}} \left[ M \log \left(\frac{M}{N}\right) + (N-M) \log \left(\frac{N-M}{N}\right) \right]
 \]</div>
 <p>ここで，<span class="arithmatex">\(\frac{M}{N} = \frac{u}{\epsilon}\)</span> および <span class="arithmatex">\(\frac{N-M}{N} = 1 - \frac{u}{\epsilon}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{S(u) = -N k_B \left[ \frac{u}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \log \left(1 - \frac{u}{\epsilon}\right) \right]}
+\finalanswer{S(u) = -N k_{\text{B}} \left[ \frac{u}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \log \left(1 - \frac{u}{\epsilon}\right) \right]}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を求めるため，エントロピー <span class="arithmatex">\(S\)</span> を全エネルギー <span class="arithmatex">\(E\)</span> で微分します。連鎖律 <span class="arithmatex">\(\frac{dS}{dE} = \frac{1}{N} \frac{dS}{du}\)</span> を用います。</p>
-<div class="arithmatex">\[
-\frac{dS}{du} = -N k_B \left[ \frac{1}{\epsilon} \log \left(\frac{u}{\epsilon}\right) + \frac{u}{\epsilon} \cdot \frac{\epsilon}{u} \cdot \frac{1}{\epsilon} - \frac{1}{\epsilon} \log \left(1 - \frac{u}{\epsilon}\right) + \left(1 - \frac{u}{\epsilon}\right) \cdot \frac{\epsilon}{\epsilon - u} \cdot \left(-\frac{1}{\epsilon}\right) \right]
-\]</div>
+<p>逆温度 <span class="arithmatex">\(\beta = 1/(k_{\text{B}}T)\)</span> を求めるため，まず <span class="arithmatex">\(S\)</span> を <span class="arithmatex">\(u\)</span> で微分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{dS}{du} &amp;= -\frac{N k_B}{\epsilon} \left[ \log \left(\frac{u}{\epsilon}\right) + 1 - \log \left(1 - \frac{u}{\epsilon}\right) - 1 \right] \\
-&amp;= -\frac{N k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right)
+\frac{dS}{du}
+&amp;=-\frac{Nk_{\text{B}}}{\epsilon}
+\left[\log\left(\frac{u}{\epsilon}\right)
+-\log\left(1-\frac{u}{\epsilon}\right)\right] \\
+&amp;=-\frac{Nk_{\text{B}}}{\epsilon}\log\left(\frac{u}{\epsilon-u}\right)
 \end{aligned}
 \]</div>
-<p>これより，<span class="arithmatex">\(\frac{1}{T} = \frac{1}{N} \frac{dS}{du}\)</span> を用いて <span class="arithmatex">\(\beta\)</span> を計算します。</p>
+<p>ここで <span class="arithmatex">\(u=E/N\)</span> なので，<span class="arithmatex">\(dS/dE=(1/N)dS/du\)</span> です。したがって，</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\beta &amp;= \frac{1}{k_B T} \\
-&amp;= \frac{1}{k_B} \left( -\frac{k_B}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) \right) \\
-&amp;= -\frac{1}{\epsilon} \log \left( \frac{u}{\epsilon - u} \right) \\
-&amp;= \finalanswer{\frac{1}{\epsilon} \log \left( \frac{\epsilon - u}{u} \right)}
+\beta
+&amp;=\frac{1}{k_{\text{B}}}\frac{dS}{dE}
+=\frac{1}{Nk_{\text{B}}}\frac{dS}{du} \\
+&amp;=\finalanswer{\frac{1}{\epsilon}\log\left(\frac{\epsilon-u}{u}\right)}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>

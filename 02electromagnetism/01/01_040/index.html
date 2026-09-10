@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14524,7 +14524,7 @@
 =\frac{Q_{\mathrm{in}}}{\varepsilon_0}
 \]</div>
 <p>を用いてよい。</p>
-<p>(1) 球に含まれる全電荷 <span class="arithmatex">\(Q\)</span> を求めよ。半径 <span class="arithmatex">\(r\)</span> の同心球面へガウスの法則を適用し，<span class="arithmatex">\(E(r)\)</span> を <span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> に分けて求めよ。</p>
+<p>(1) 全電荷を <span class="arithmatex">\(Q=4\pi\rho R^3/3\)</span> とする。半径 <span class="arithmatex">\(r\)</span> の同心球面へガウスの法則を適用し，<span class="arithmatex">\(E(r)\)</span> を <span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> に分けて求めよ。</p>
 <p>(2) 無限遠を基準とし，電位 <span class="arithmatex">\(\phi(r)\)</span> を <span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> に分けて求めよ。また，中心電位 <span class="arithmatex">\(\phi(0)\)</span> を求めよ。</p>
 <p>(3) 電荷分布を無限遠から少しずつ組み立てるのに必要な静電エネルギーを <span class="arithmatex">\(U\)</span> とする。</p>
 <div class="arithmatex">\[
@@ -14536,9 +14536,8 @@ U=\frac{1}{2}\int \rho\phi\,dV
 <h3 id="1">(1)</h3>
 <p>一様な体積電荷密度に球の体積を掛けます。</p>
 <div class="arithmatex">\[
-Q=\rho\frac{4\pi R^3}{3}
+\finalanswer{Q=\rho\frac{4\pi R^3}{3}}
 \]</div>
-<p><strong>球内外の電場</strong></p>
 <p>半径 <span class="arithmatex">\(r\)</span> の同心球面をガウス面とします。<span class="arithmatex">\(r&lt;R\)</span> でガウス面が囲む電荷は</p>
 <div class="arithmatex">\[
 Q_{\mathrm{in}}=\rho\frac{4\pi r^3}{3}
@@ -14549,7 +14548,7 @@ E(r)4\pi r^2=\frac{1}{\varepsilon_0}\rho\frac{4\pi r^3}{3}
 \]</div>
 <p>したがって，球内では</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(r)=\frac{\rho r}{3\varepsilon_0}\boldsymbol{e}_r
+\finalanswer{\boldsymbol{E}(r)=\frac{\rho r}{3\varepsilon_0}\boldsymbol{e}_r}
 \]</div>
 <p>となります。<span class="arithmatex">\(r&gt;R\)</span> では全電荷 <span class="arithmatex">\(Q\)</span> を囲むので</p>
 <div class="arithmatex">\[
@@ -14560,15 +14559,14 @@ E(r)4\pi r^2=\frac{1}{\varepsilon_0}\rho\frac{4\pi r^3}{3}
 <h3 id="2">(2)</h3>
 <p>球外の電場は原点に点電荷 <span class="arithmatex">\(Q\)</span> がある場合と同じです。よって</p>
 <div class="arithmatex">\[
-\phi(r)=\frac{Q}{4\pi\varepsilon_0r}
-=\frac{\rho R^3}{3\varepsilon_0r},\qquad r\ge R
+\finalanswer{\phi(r)=\frac{Q}{4\pi\varepsilon_0r}
+=\frac{\rho R^3}{3\varepsilon_0r},\qquad r\ge R}
 \]</div>
 <p>となります。球表面では</p>
 <div class="arithmatex">\[
 \phi(R)=\frac{\rho R^2}{3\varepsilon_0}
 \]</div>
 <p>です。</p>
-<p><strong>球内の電位</strong></p>
 <p>球内では，表面の電位から電場を積分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14576,12 +14574,12 @@ E(r)4\pi r^2=\frac{1}{\varepsilon_0}\rho\frac{4\pi r^3}{3}
 &amp;=-\int_R^r\frac{\rho r'}{3\varepsilon_0}\,dr' \\
 &amp;=-\frac{\rho}{3\varepsilon_0}
 \left[\frac{r'^2}{2}\right]_R^r \\
-&amp;=\frac{\rho}{6\varepsilon_0}(R^2-r^2).
+&amp;=\frac{\rho}{6\varepsilon_0}(R^2-r^2)
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\phi(R)=\rho R^2/(3\varepsilon_0)\)</span> を加えると</p>
 <div class="arithmatex">\[
-\phi(r)=\frac{\rho}{6\varepsilon_0}\left(3R^2-r^2\right),\qquad r\le R
+\finalanswer{\phi(r)=\frac{\rho}{6\varepsilon_0}\left(3R^2-r^2\right),\qquad r\le R}
 \]</div>
 <p>となります。<span class="arithmatex">\(r=R\)</span> を代入すると球外の電位と一致します。また，球内では <span class="arithmatex">\(r\)</span> が小さいほど電位が高く，中心で</p>
 <div class="arithmatex">\[
@@ -14603,7 +14601,7 @@ U
 \left[R^2r^3-\frac{r^5}{5}\right]_0^R \\
 &amp;=\frac{\pi\rho^2}{3\varepsilon_0}
 \left(R^5-\frac{R^5}{5}\right) \\
-&amp;=\frac{4\pi\rho^2R^5}{15\varepsilon_0}.
+&amp;=\frac{4\pi\rho^2R^5}{15\varepsilon_0}
 \end{aligned}
 \]</div>
 <p>となります。<span class="arithmatex">\(Q=4\pi\rho R^3/3\)</span> を代入して整理すれば</p>

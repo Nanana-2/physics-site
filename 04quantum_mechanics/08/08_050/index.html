@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14543,10 +14543,7 @@
 <h3 id="1">(1)</h3>
 <p>交換関係 <span class="arithmatex">\([\hat{L}_z, \, \hat{K}_z]\)</span> を計算します。与えられた交換関係において，同一の成分同士の交換子は 0 になります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-[\hat{L}_z, \, \hat{K}_z] &amp;= \hat{L}_z \hat{K}_z - \hat{K}_z \hat{L}_z \\
-&amp;= 0
-\end{aligned}
+[\hat{L}_z, \, \hat{K}_z] = \hat{L}_z \hat{K}_z - \hat{K}_z \hat{L}_z = \finalanswer{0}
 \]</div>
 <p>この可換性を用いて，状態 <span class="arithmatex">\(\hat{K}_z |1, 0\rangle\)</span> に演算子 <span class="arithmatex">\(\hat{L}_z\)</span> を作用させます。状態 <span class="arithmatex">\(|1, 0\rangle\)</span> は <span class="arithmatex">\(\hat{L}_z\)</span> の固有値 0 の固有状態であるため， <span class="arithmatex">\(\hat{L}_z |1, 0\rangle = 0\)</span> です。</p>
 <div class="arithmatex">\[
@@ -14568,28 +14565,21 @@
 \]</div>
 <p>定数 <span class="arithmatex">\(\alpha\)</span> は実数であるため，複素共役をとっても値は変化しません。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle 0, 0 | \hat{K}_z | 1, 0 \rangle^* &amp;= \alpha^* \\
-&amp;= \finalanswer{\alpha}
-\end{aligned}
+\langle 0, 0 | \hat{K}_z | 1, 0 \rangle^* = \alpha^* = \finalanswer{\alpha}
 \]</div>
 <p>これより，求める行列要素は <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \alpha\)</span> となります。</p>
 <h3 id="3">(3)</h3>
-<p>基底ベクトルを最初を <span class="arithmatex">\(|0, 0\rangle\)</span> ，2番目を <span class="arithmatex">\(|1, 0\rangle\)</span> とする順序で並べ，演算子 <span class="arithmatex">\(\hat{K}_z\)</span> の行列要素を決定します。
-* 1行1列目：パリティが等しい状態間の行列要素であるため，<span class="arithmatex">\(\langle 0, 0 | \hat{K}_z | 0, 0 \rangle = 0\)</span>
-* 2行2列目：同様に，<span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 1, 0 \rangle = 0\)</span>
-* 1行2列目： <span class="arithmatex">\(\langle 0, 0 | \hat{K}_z | 1, 0 \rangle = \alpha\)</span>
-* 2行1列目： <span class="arithmatex">\(\langle 1, 0 | \hat{K}_z | 0, 0 \rangle = \alpha\)</span></p>
+<p>基底を <span class="arithmatex">\(|0,0\rangle\)</span>，<span class="arithmatex">\(|1,0\rangle\)</span> の順に並べます。対角成分はパリティが等しい状態間の行列要素なので 0 です。非対角成分はどちらも <span class="arithmatex">\(\alpha\)</span> です。</p>
 <p>これらを行列形式にまとめます。</p>
 <div class="arithmatex">\[
-\hat{K}_z = \begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix}
+\finalanswer{\hat{K}_z = \begin{pmatrix} 0 &amp; \alpha \\ \alpha &amp; 0 \end{pmatrix}}
 \]</div>
 <p>この行列の固有値を <span class="arithmatex">\(\lambda\)</span> と置き，特性方程式を計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \begin{vmatrix} -\lambda &amp; \alpha \\ \alpha &amp; -\lambda \end{vmatrix}
 &amp;=\lambda^2-\alpha^2=0, \\
-\lambda&amp;=\pm\alpha
+\lambda&amp;=\finalanswer{\pm\alpha}
 \end{aligned}
 \]</div>
 <p>したがって，固有値は <span class="arithmatex">\(\lambda = \alpha\)</span> および <span class="arithmatex">\(\lambda = -\alpha\)</span> です。</p>
@@ -14607,7 +14597,7 @@ c_1&amp;=c_2
 \]</div>
 <p>規格化条件 <span class="arithmatex">\(2|c_1|^2 = 1\)</span> より，固有状態は以下のようになります。</p>
 <div class="arithmatex">\[
-  |\phi_+\rangle = \frac{1}{\sqrt{2}} |0, 0\rangle + \frac{1}{\sqrt{2}} |1, 0\rangle
+  \finalanswer{|\phi_+\rangle = \frac{1}{\sqrt{2}} |0, 0\rangle + \frac{1}{\sqrt{2}} |1, 0\rangle}
 \]</div>
 <ul>
 <li><strong>固有値 <span class="arithmatex">\(\lambda = -\alpha\)</span> のとき</strong></li>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14543,7 +14543,7 @@
 \]</div>
 <p>同一の演算子の交換子は 0 であり，問題文に与えられた交換関係から <span class="arithmatex">\([\hat{a}^\dagger, \hat{a}] = -1\)</span> となります。</p>
 <div class="arithmatex">\[
-[\hat{N}, \hat{a}] = 0 + (-1) \hat{a} = -\hat{a}
+\finalanswer{[\hat{N}, \hat{a}] = -\hat{a}}
 \]</div>
 <p>同様に，生成演算子 <span class="arithmatex">\(\hat{a}^\dagger\)</span> との交換子を計算します。</p>
 <div class="arithmatex">\[
@@ -14554,22 +14554,17 @@
 \]</div>
 <p>条件 <span class="arithmatex">\([\hat{a}, \hat{a}^\dagger] = 1\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-[\hat{N}, \hat{a}^\dagger] &amp;= \hat{a}^\dagger (1) + 0 \\
-&amp;= \finalanswer{\hat{a}^\dagger}
-\end{aligned}
+[\hat{N}, \hat{a}^\dagger] = \hat{a}^\dagger (1) + 0 = \finalanswer{\hat{a}^\dagger}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> に光子数演算子 <span class="arithmatex">\(\hat{N}\)</span> を左から掛け算します。 (1) で求めた関係式 <span class="arithmatex">\([\hat{N}, \hat{a}^\dagger] = \hat{N}\hat{a}^\dagger - \hat{a}^\dagger\hat{N} = \hat{a}^\dagger\)</span> より，積の順序を <span class="arithmatex">\(\hat{N}\hat{a}^\dagger = \hat{a}^\dagger\hat{N} + \hat{a}^\dagger\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
-\hat{N} \left( \hat{a}^\dagger |n\rangle \right) = \left( \hat{a}^\dagger \hat{N} + \hat{a}^\dagger \right) |n\rangle
-\]</div>
-<p>右側の固有状態に対して演算子 <span class="arithmatex">\(\hat{N}\)</span> を作用させ，固有値 <span class="arithmatex">\(n\)</span> に変換します。</p>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \hat{a}^\dagger \left( \hat{N}|n\rangle \right) + \hat{a}^\dagger |n\rangle \\
+\hat{N}\left(\hat a^\dagger|n\rangle\right)
+&amp;=\left(\hat a^\dagger\hat N+\hat a^\dagger\right)|n\rangle \\
+&amp;= \hat{a}^\dagger \left( \hat{N}|n\rangle \right) + \hat{a}^\dagger |n\rangle \\
 &amp;= \hat{a}^\dagger (n|n\rangle) + \hat{a}^\dagger |n\rangle \\
-&amp;= (n+1) \hat{a}^\dagger |n\rangle
+&amp;= \finalanswer{(n+1) \hat{a}^\dagger |n\rangle}
 \end{aligned}
 \]</div>
 <p>この式は，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> が光子数演算子の固有状態であり，その固有値が <span class="arithmatex">\(n+1\)</span> に変化したことを示しています。</p>
@@ -14581,7 +14576,7 @@
 &amp;= \finalanswer{(n-1) \hat{a} |n\rangle}
 \end{aligned}
 \]</div>
-<p>この結果より，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は固有値 <span class="arithmatex">\(n-1\)</span> を持つ固有状態であることが導かれます。</p>
+<p>この結果より，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は固有値 <span class="arithmatex">\(n-1\)</span> を持つ固有状態であることがわかります。</p>
 <h3 id="3">(3)</h3>
 <p>状態のノルムを計算します。生成消滅演算子の共役関係により， <span class="arithmatex">\(\hat{a}|n\rangle = c_- |n-1\rangle\)</span> のブラベクトルは <span class="arithmatex">\(\langle n|\hat{a}^\dagger = c_-^* \langle n-1|\)</span> となります。規格化条件 <span class="arithmatex">\(\langle n-1|n-1\rangle = 1\)</span> を用います。</p>
 <div class="arithmatex">\[
@@ -14591,7 +14586,7 @@
 &amp;= |c_-|^2
 \end{aligned}
 \]</div>
-<p>一方で，左辺は光子数演算子そのものの期待値計算であるため，固有値 <span class="arithmatex">\(n\)</span> を用いて次のように計算されます。</p>
+<p>一方，左辺は光子数演算子の期待値なので，固有値 <span class="arithmatex">\(n\)</span> を用いて次のように計算できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle n| \hat{a}^\dagger \hat{a} |n\rangle &amp;= \langle n| \hat{N} |n\rangle \\
@@ -14602,14 +14597,11 @@
 \]</div>
 <p>両辺を比較することで，消滅演算子の係数の絶対値が求まります。</p>
 <div class="arithmatex">\[
-|c_-|^2 = n \implies |c_-| = \sqrt{n}
+\finalanswer{|c_-| = \sqrt{n}}
 \]</div>
 <p>続いて，生成演算子の作用によるノルムを計算します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle n| \hat{a} \hat{a}^\dagger |n\rangle &amp;= |c_+|^2 \langle n+1|n+1\rangle \\
-&amp;= |c_+|^2
-\end{aligned}
+\langle n| \hat{a} \hat{a}^\dagger |n\rangle = |c_+|^2 \langle n+1|n+1\rangle = |c_+|^2
 \]</div>
 <p>左辺の演算子の順序を交換関係 <span class="arithmatex">\(\hat{a}\hat{a}^\dagger = \hat{a}^\dagger\hat{a} + 1 = \hat{N} + 1\)</span> を用いて並び替えます。</p>
 <div class="arithmatex">\[
@@ -14621,9 +14613,15 @@
 \]</div>
 <p>これらを結ぶことで，生成演算子の係数の絶対値が得られます。</p>
 <div class="arithmatex">\[
-|c_+|^2 = n+1 \implies |c_+| = \sqrt{n+1}
+\finalanswer{|c_+| = \sqrt{n+1}}
 \]</div>
-<p>各演算子の位相因子を正の実数に選ぶと，よく知られた関係式 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle = \sqrt{n+1}|n+1\rangle\)</span> および <span class="arithmatex">\(\hat{a}|n\rangle = \sqrt{n}|n-1\rangle\)</span> が定まります。</p>
+<p>各演算子の位相因子を正の実数に選ぶと，</p>
+<div class="arithmatex">\[
+\finalanswer{\hat{a}^\dagger|n\rangle = \sqrt{n+1}|n+1\rangle},
+\qquad
+\finalanswer{\hat{a}|n\rangle = \sqrt{n}|n-1\rangle}
+\]</div>
+<p>となります。</p>
 <p>ハミルトニアンの固有値は，光子数演算子の固有値 <span class="arithmatex">\(n\)</span> を代入することで直接的に得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,7 +14525,7 @@
 \epsilon = \frac{h^2}{8mL^2}(n_x^2 + n_y^2)
 \]</div>
 <p>と表される。この関係を用いて，エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下となる状態の総数 <span class="arithmatex">\(N(\epsilon)\)</span> を求めよ。さらに，これをエネルギー <span class="arithmatex">\(\epsilon\)</span> で微分することで二次元系の状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を導出し，それがエネルギーに依存しない定数となることを示せ。</p>
-<p>(2) 温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> のもとで，励起状態に存在する全粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> は以下の連続積分で与えられる。</p>
+<p>(2) 温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> のもとで，励起状態に存在する全粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> は以下の連続積分で与えられる。</p>
 <div class="arithmatex">\[
 N_{\mathrm{ex}} = \int_0^\infty \frac{D(\epsilon)}{\exp\left[ \beta(\epsilon - \mu) \right] - 1} d\epsilon
 \]</div>
@@ -14550,10 +14550,7 @@ N(\epsilon) &amp;= \frac{1}{4} \pi R^2 \\
 \]</div>
 <p>状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> はこの総数関数をエネルギー <span class="arithmatex">\(\epsilon\)</span> で微分することで得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-D(\epsilon) &amp;= \frac{dN(\epsilon)}{d\epsilon} \\
-&amp;= \finalanswer{\frac{2\pi m S}{h^2}}
-\end{aligned}
+D(\epsilon) = \frac{dN(\epsilon)}{d\epsilon} = \finalanswer{\frac{2\pi m S}{h^2}}
 \]</div>
 <p>エネルギー <span class="arithmatex">\(\epsilon\)</span> への依存性が微分によって消えたため，二次元理想気体の状態密度はエネルギーによらず常に一定値をとることが示されました。以降，この定数を <span class="arithmatex">\(D_0 = \frac{2\pi m S}{h^2}\)</span> と置きます。</p>
 <h3 id="2">(2)</h3>
@@ -14574,7 +14571,7 @@ N_{\mathrm{ex}} = D_0 \left[ \frac{1}{\beta} \log \left( 1 - \exp\left[ -\beta(\
 <div class="arithmatex">\[
 \begin{aligned}
 N_{\mathrm{ex}} &amp;= 0 - \frac{D_0}{\beta} \log \left( 1 - \exp(\beta \mu) \right) \\
-&amp;= \finalanswer{-k_B T D_0 \log \left( 1 - \exp(\beta \mu) \right)}
+&amp;= \finalanswer{-k_{\text{B}} T D_0 \log \left( 1 - \exp(\beta \mu) \right)}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
@@ -14589,7 +14586,7 @@ N_{\mathrm{ex}} &amp;= 0 - \frac{D_0}{\beta} \log \left( 1 - \exp(\beta \mu) \ri
 \]</div>
 <p>対数関数 <span class="arithmatex">\(\log(x)\)</span> は引数 <span class="arithmatex">\(x\)</span> が <span class="arithmatex">\(0\)</span> に近づくとき <span class="arithmatex">\(-\infty\)</span> へと発散する性質を持ちます。式全体にはマイナス符号がついているため，励起状態の粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> は正の無限大へと発散します。</p>
 <div class="arithmatex">\[
-\finalanswer{N_{\mathrm{ex}} \to -k_B T D_0 \times (-\infty) = +\infty}
+\finalanswer{N_{\mathrm{ex}} \to -k_{\text{B}} T D_0 \times (-\infty) = +\infty}
 \]</div>
 <p><strong>ボース・アインシュタイン凝縮が起こらない理由</strong></p>
 <p>三次元系で凝縮が発生した根本的な原因は，励起状態に入る粒子数が有限の上限を持ち，残りの粒子が基底状態を占有するためでした。</p>

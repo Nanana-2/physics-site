@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p>古典的な理想気体の位相空間体積 <span class="arithmatex">\(\Gamma(E)\)</span> を用いて得られるエントロピーは，同種粒子の不可区別性を考慮しない場合，以下の形式となる。</p>
 <div class="arithmatex">\[
-S_{\mathrm{classical}}(E, V, N) = N k_B \left[ \log V + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right]
+S_{\mathrm{classical}}(E, V, N) = N k_{\text{B}} \left[ \log V + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right]
 \]</div>
 <p>この式を出発点として，熱力学的なエントロピーの性質に関する以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(V \to \lambda V, E \to \lambda E, N \to \lambda N\)</span> として系の巨視的な大きさを <span class="arithmatex">\(\lambda\)</span> 倍したとき，エントロピー <span class="arithmatex">\(S_{\mathrm{classical}}\)</span> がどのように変化するか求めよ。その結果が，系の大きさを <span class="arithmatex">\(\lambda\)</span> 倍するとエントロピーも <span class="arithmatex">\(\lambda\)</span> 倍になるという示量性を満たさないことを示せ。</p>
@@ -14535,38 +14535,38 @@ S_{\mathrm{classical}}(E, V, N) = N k_B \left[ \log V + \frac{3}{2} \log \left( 
 <h3 id="1">(1)</h3>
 <p><span class="arithmatex">\(V \to \lambda V, E \to \lambda E, N \to \lambda N\)</span> としたときのエントロピー <span class="arithmatex">\(S_{\mathrm{classical}}^\prime\)</span> を計算します。</p>
 <div class="arithmatex">\[
-S_{\mathrm{classical}}^\prime = (\lambda N) k_B \left[ \log (\lambda V) + \frac{3}{2} \log \left( \frac{4\pi m (\lambda E)}{3(\lambda N)} \right) + \frac{3}{2} \right]
+S_{\mathrm{classical}}^\prime = (\lambda N) k_{\text{B}} \left[ \log (\lambda V) + \frac{3}{2} \log \left( \frac{4\pi m (\lambda E)}{3(\lambda N)} \right) + \frac{3}{2} \right]
 \]</div>
-<p>対数の中にある <span class="arithmatex">\(\lambda E / \lambda N\)</span> の <span class="arithmatex">\(\lambda\)</span> は相殺されますが，<span class="arithmatex">\(\log (\lambda V)\)</span> の部分は <span class="arithmatex">\(\log V + \log \lambda\)</span> と展開されます。</p>
+<p>対数内の <span class="arithmatex">\(\lambda E / \lambda N\)</span> は <span class="arithmatex">\(E/N\)</span> になります。一方，<span class="arithmatex">\(\log (\lambda V)=\log V+\log\lambda\)</span> です。</p>
 <div class="arithmatex">\[
-S_{\mathrm{classical}}^\prime = \lambda \cdot N k_B \left[ \log V + \log \lambda + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right]
+S_{\mathrm{classical}}^\prime = \lambda \cdot N k_{\text{B}} \left[ \log V + \log \lambda + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right]
 \]</div>
 <div class="arithmatex">\[
-\finalanswer{S_{\mathrm{classical}}^\prime = \lambda S_{\mathrm{classical}} + \lambda N k_B \log \lambda}
+\finalanswer{S_{\mathrm{classical}}^\prime = \lambda S_{\mathrm{classical}} + \lambda N k_{\text{B}} \log \lambda}
 \]</div>
-<p>右辺に <span class="arithmatex">\(\lambda N k_B \log \lambda\)</span> が残るため，<span class="arithmatex">\(S_{\mathrm{classical}}^\prime \neq \lambda S_{\mathrm{classical}}\)</span> となり，示量性を満たしません。</p>
+<p>右辺に <span class="arithmatex">\(\lambda N k_{\text{B}} \log \lambda\)</span> が残るため，<span class="arithmatex">\(S_{\mathrm{classical}}^\prime \neq \lambda S_{\mathrm{classical}}\)</span> となり，示量性を満たしません。</p>
 <h3 id="2">(2)</h3>
 <p>混合後のエントロピーは</p>
 <div class="arithmatex">\[
 S_{\mathrm{classical}}(2E,2V,2N)
-=2Nk_B\left[\log(2V)+\frac{3}{2}\log\left(\frac{4\pi mE}{3N}\right)+\frac{3}{2}\right]
+=2Nk_{\text{B}}\left[\log(2V)+\frac{3}{2}\log\left(\frac{4\pi mE}{3N}\right)+\frac{3}{2}\right]
 \]</div>
 <p>です。混合前の全エントロピーを引くと，</p>
 <div class="arithmatex">\[
-\finalanswer{\Delta S=2Nk_B\log 2}
+\finalanswer{\Delta S=2Nk_{\text{B}}\log 2}
 \]</div>
 <p>を得ます。同種気体では隔壁を取り除いても巨視的状態は変化しないため，本来は <span class="arithmatex">\(\Delta S=0\)</span> でなければなりません。したがって，粒子を区別して数えた古典的状態数は余分なエントロピーを与えています。</p>
 <h3 id="3">(3)</h3>
-<p>粒子が互いに区別できないことを補正するため，状態数に <span class="arithmatex">\(1/N!\)</span> を掛けます。これにより，エントロピーには <span class="arithmatex">\(\Delta S = k_B \log (1/N!) = -k_B \log N!\)</span> という補正項が加わります。スターリングの公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を適用してこれを展開します。</p>
+<p>粒子が互いに区別できないことを補正するため，状態数に <span class="arithmatex">\(1/N!\)</span> を掛けます。これにより，エントロピーには <span class="arithmatex">\(\Delta S = k_{\text{B}} \log (1/N!) = -k_{\text{B}} \log N!\)</span> という補正項が加わります。スターリングの公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を適用してこれを展開します。</p>
 <div class="arithmatex">\[
-S_{\mathrm{corrected}} = S_{\mathrm{classical}} - k_B (N \log N - N)
+S_{\mathrm{corrected}} = S_{\mathrm{classical}} - k_{\text{B}} (N \log N - N)
 \]</div>
 <div class="arithmatex">\[
-S_{\mathrm{corrected}} = N k_B \left[ \log V + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right] - N k_B \log N + N k_B
+S_{\mathrm{corrected}} = N k_{\text{B}} \left[ \log V + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{3}{2} \right] - N k_{\text{B}} \log N + N k_{\text{B}}
 \]</div>
-<p>第1項の <span class="arithmatex">\(\log V\)</span> と補正項の <span class="arithmatex">\(-\log N\)</span> を結合させます。</p>
+<p>第1項の <span class="arithmatex">\(\log V\)</span> と補正項の <span class="arithmatex">\(-\log N\)</span> をまとめます。</p>
 <div class="arithmatex">\[
-S_{\mathrm{corrected}} = N k_B \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{5}{2} \right]
+S_{\mathrm{corrected}} = N k_{\text{B}} \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N} \right) + \frac{5}{2} \right]
 \]</div>
 <p>補正後のエントロピーでは，系の大きさを <span class="arithmatex">\(\lambda\)</span> 倍すると，対数の中の比は <span class="arithmatex">\((\lambda V)/(\lambda N) = V/N\)</span> および <span class="arithmatex">\((\lambda E)/(\lambda N) = E/N\)</span> となります。したがって，全体の係数である <span class="arithmatex">\(N\)</span> だけが <span class="arithmatex">\(\lambda N\)</span> となり，以下の関係が成り立ちます。</p>
 <div class="arithmatex">\[

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14516,7 +14516,7 @@ h_{ij} &amp;= \langle i | \hat{h} | j \rangle \\
 \]</div>
 <p>基底ベクトルの互いの直交性 <span class="arithmatex">\(\langle i | j \rangle = \delta_{ij}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-h_{ij} = \varepsilon_j \delta_{ij}
+\finalanswer{h_{ij} = \varepsilon_j \delta_{ij}}
 \]</div>
 <p>この結果を，第二量子化された演算子の定義式に代入します。</p>
 <div class="arithmatex">\[
@@ -14525,11 +14525,11 @@ h_{ij} = \varepsilon_j \delta_{ij}
 &amp;= \sum_{i, j} \varepsilon_j \delta_{ij} \hat{a}_i^\dagger \hat{a}_j
 \end{aligned}
 \]</div>
-<p>クロネッカーのデルタの性質により，添字 <span class="arithmatex">\(j\)</span> に関する和の計算において <span class="arithmatex">\(j=i\)</span> の項だけが生き残ります。</p>
+<p>クロネッカーのデルタの性質により，添字 <span class="arithmatex">\(j\)</span> に関する和は <span class="arithmatex">\(j=i\)</span> の項だけになります。</p>
 <div class="arithmatex">\[
 \finalanswer{\hat{H} = \sum_{i} \varepsilon_i \hat{a}_i^\dagger \hat{a}_i}
 \]</div>
-<p>これにより，対角化された基底における多粒子系ハミルトニアンの第二量子化表示が導かれました。</p>
+<p>これにより，対角化された基底における多粒子系ハミルトニアンの第二量子化表示が得られます。</p>
 <h3 id="2">(2)</h3>
 <p>投影演算子 <span class="arithmatex">\(\hat{P}_k = | k \rangle \langle k |\)</span> の行列要素を定義通りに書き下します。</p>
 <div class="arithmatex">\[
@@ -14540,24 +14540,24 @@ h_{ij} = \varepsilon_j \delta_{ij}
 \]</div>
 <p>ここでも基底の直交性を利用して，ブラとケットの内積をそれぞれクロネッカーのデルタに置き換えます。</p>
 <div class="arithmatex">\[
-\left( P_k \right)_{ij} = \delta_{ik} \delta_{kj}
+\finalanswer{\left( P_k \right)_{ij} = \delta_{ik} \delta_{kj}}
 \]</div>
-<p>この結果を第二量子化の定義式にはめ込み，演算子 <span class="arithmatex">\(\hat{N}_k\)</span> を構築します。</p>
+<p>この結果を用いて，粒子数演算子 <span class="arithmatex">\(\hat{N}_k\)</span> を定義します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{N}_k &amp;= \sum_{i, j} \left( P_k \right)_{ij} \hat{a}_i^\dagger \hat{a}_j \\
 &amp;= \sum_{i, j} \delta_{ik} \delta_{kj} \hat{a}_i^\dagger \hat{a}_j
 \end{aligned}
 \]</div>
-<p>まず，添字 <span class="arithmatex">\(i\)</span> に関する和を計算すると， <span class="arithmatex">\(\delta_{ik}\)</span> の作用によって <span class="arithmatex">\(i=k\)</span> の項のみが抽出されます。</p>
+<p>まず，添字 <span class="arithmatex">\(i\)</span> に関する和を計算すると， <span class="arithmatex">\(\delta_{ik}\)</span> によって <span class="arithmatex">\(i=k\)</span> となります。</p>
 <div class="arithmatex">\[
 \hat{N}_k = \sum_{j} \delta_{kj} \hat{a}_k^\dagger \hat{a}_j
 \]</div>
-<p>続いて，添字 <span class="arithmatex">\(j\)</span> に関する和を計算すると， <span class="arithmatex">\(\delta_{kj}\)</span> の作用によって <span class="arithmatex">\(j=k\)</span> の項のみが抽出されます。</p>
+<p>続いて，添字 <span class="arithmatex">\(j\)</span> に関する和を計算すると， <span class="arithmatex">\(\delta_{kj}\)</span> によって <span class="arithmatex">\(j=k\)</span> となります。</p>
 <div class="arithmatex">\[
 \finalanswer{\hat{N}_k = \hat{a}_k^\dagger \hat{a}_k}
 \]</div>
-<p>以上の二段階の選別により，投影演算子の第二量子化が粒子数演算子そのものになることが導出されました。</p>
+<p>以上より，投影演算子を第二量子化すると粒子数演算子になることが分かります。</p>
 
 
 

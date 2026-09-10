@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14536,21 +14536,19 @@
 <div class="arithmatex">\[
 \frac{1}{2} \int d\boldsymbol{r} \left[ c^2 (\boldsymbol{\nabla}\hat{\phi})^2 + \left(\frac{mc^2}{\hbar}\right)^2 \hat{\phi}^2 \right]
 \]</div>
-<p>空間微分によって <span class="arithmatex">\(\boldsymbol{\nabla} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} = i\boldsymbol{k} e^{i\boldsymbol{k}\cdot\boldsymbol{r}}\)</span> が得られます。これらを展開して同様に空間積分を処理すると，次の等式が導かれます。</p>
+<p>空間微分によって <span class="arithmatex">\(\boldsymbol{\nabla} e^{i\boldsymbol{k}\cdot\boldsymbol{r}} = i\boldsymbol{k} e^{i\boldsymbol{k}\cdot\boldsymbol{r}}\)</span> が得られます。これらを展開して同様に空間積分を処理すると，次の等式が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 H_\phi
-&amp;\equiv\frac{1}{2}\int d^3r\left[c^2(\boldsymbol{\nabla}\hat{\phi})^2
-+\left(\frac{mc^2}{\hbar}\right)^2\hat{\phi}^2\right] \\
-&amp;=\sum_{\boldsymbol{k}}\frac{\hbar}{4V\omega_{\boldsymbol{k}}}
-\left[c^2\boldsymbol{k}^2+\left(\frac{mc^2}{\hbar}\right)^2\right]V \\
+&amp;\equiv\frac12\int d^3r\left[c^2(\boldsymbol\nabla\hat\phi)^2
++\left(\frac{mc^2}{\hbar}\right)^2\hat\phi^2\right] \\
+&amp;=\sum_{\boldsymbol k}\frac{\hbar}{4\omega_{\boldsymbol k}}
+\left[c^2\boldsymbol k^2+\left(\frac{mc^2}{\hbar}\right)^2\right] \\
 &amp;\quad\times\Bigl(
-\hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}}
-+\hat{a}_{\boldsymbol{k}}\hat{a}_{\boldsymbol{k}}^\dagger \\
-&amp;\qquad
-+\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{\boldsymbol{k}}
-+\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger
-\Bigr).
+\hat a_{\boldsymbol k}\hat a_{-\boldsymbol k}
++\hat a_{\boldsymbol k}\hat a_{\boldsymbol k}^\dagger
++\hat a_{\boldsymbol k}^\dagger\hat a_{\boldsymbol k}
++\hat a_{\boldsymbol k}^\dagger\hat a_{-\boldsymbol k}^\dagger\Bigr)
 \end{aligned}
 \]</div>
 <p>ここで，問題文に与えられた関係式 <span class="arithmatex">\(c^2\boldsymbol{k}^2 + (mc^2/\hbar)^2 = \omega_{\boldsymbol{k}}^2\)</span> を代入して係数を約分します。</p>
@@ -14560,15 +14558,14 @@ H_\phi
 &amp;=\sum_{\boldsymbol{k}}\frac{\hbar\omega_{\boldsymbol{k}}}{4}
 \Bigl(
 \hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}}
-+\hat{a}_{\boldsymbol{k}}\hat{a}_{\boldsymbol{k}}^\dagger \\
-&amp;\qquad
++\hat{a}_{\boldsymbol{k}}\hat{a}_{\boldsymbol{k}}^\dagger
 +\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{\boldsymbol{k}}
 +\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger
-\Bigr).
+\Bigr)
 \end{aligned}
 \]</div>
 <p>(1) で求めた運動量項の結果と，この空間項の結果を足し合わせます。</p>
-<p>符号の異なる演算子の組み合わせ <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger\)</span> が完全に相殺されて消去されます。</p>
+<p>演算子の組み合わせ <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}\hat{a}_{-\boldsymbol{k}}\)</span> と <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}}^\dagger\hat{a}_{-\boldsymbol{k}}^\dagger\)</span> を含む項は，符号が逆なので，その和は 0 です。</p>
 <p>残った共通の項をまとめると，指定された次の形式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\hat{H} = \sum_{\boldsymbol{k}} \frac{1}{2} \hbar \omega_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}} \hat{a}_{\boldsymbol{k}}^\dagger + \hat{a}_{\boldsymbol{k}}^\dagger \hat{a}_{\boldsymbol{k}} \right)}

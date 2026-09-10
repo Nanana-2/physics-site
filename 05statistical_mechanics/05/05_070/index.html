@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,10 +14520,10 @@
 <h2 id="_2">問題</h2>
 <p>実在気体では分子間に引力や斥力が働く。状態方程式を数密度 <span class="arithmatex">\(\rho=N/V\)</span> のべき級数として表すビリアル展開を考える。</p>
 <div class="arithmatex">\[
-\frac{P}{k_B T} = \rho + B_2(T) \rho^2 + B_3(T) \rho^3 + \dots
+\frac{P}{k_{\text{B}} T} = \rho + B_2(T) \rho^2 + B_3(T) \rho^3 + \dots
 \]</div>
 <p>ここで <span class="arithmatex">\(B_2(T)\)</span> は第2ビリアル係数， <span class="arithmatex">\(B_3(T)\)</span> は第3ビリアル係数であり，これらは温度のみの関数である。</p>
-<p>2粒子間の中心力ポテンシャルを <span class="arithmatex">\(\phi(r)\)</span> とし，メイヤー関数を <span class="arithmatex">\(f(r)=\exp[-\phi(r)/(k_BT)]-1\)</span> と定義する。第2ビリアル係数は</p>
+<p>2粒子間の中心力ポテンシャルを <span class="arithmatex">\(\phi(r)\)</span> とし，メイヤー関数を <span class="arithmatex">\(f(r)=\exp[-\phi(r)/(k_{\text{B}}T)]-1\)</span> と定義する。第2ビリアル係数は</p>
 <div class="arithmatex">\[
 B_2(T) = -\frac{1}{2} \int_0^\infty 4\pi r^2 f(r) dr
 \]</div>
@@ -14533,21 +14533,21 @@ B_2(T) = -\frac{1}{2} \int_0^\infty 4\pi r^2 f(r) dr
 \phi(r) = \begin{cases} \infty &amp; (r &lt; \sigma) \\ 0 &amp; (r \ge \sigma) \end{cases}
 \]</div>
 <p>このときのメイヤーの <span class="arithmatex">\(f\)</span> 関数を <span class="arithmatex">\(r &lt; \sigma\)</span> と <span class="arithmatex">\(r \ge \sigma\)</span> のそれぞれの領域について求めよ。また，これを用いて硬い球モデルの第2ビリアル係数 <span class="arithmatex">\(B_2^{\mathrm{HS}}\)</span> を計算せよ。</p>
-<p>(2) 硬い球の斥力に加えて，<span class="arithmatex">\(r\ge\sigma\)</span> で <span class="arithmatex">\(\phi(r)&lt;0\)</span> かつ <span class="arithmatex">\(|\phi(r)|\ll k_BT\)</span> を満たす弱い引力が働く模型を考える。</p>
+<p>(2) 硬い球の斥力に加えて，<span class="arithmatex">\(r\ge\sigma\)</span> で <span class="arithmatex">\(\phi(r)&lt;0\)</span> かつ <span class="arithmatex">\(|\phi(r)|\ll k_{\text{B}}T\)</span> を満たす弱い引力が働く模型を考える。</p>
 <p>引力領域 <span class="arithmatex">\(r\ge\sigma\)</span> において，<span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span> を用いて</p>
 <div class="arithmatex">\[
-f(r) \simeq -\frac{\phi(r)}{k_B T}
+f(r) \simeq -\frac{\phi(r)}{k_{\text{B}} T}
 \]</div>
-<p>と近似できることを示せ。また，<span class="arithmatex">\(B_2(T) = b - \frac{a}{k_B T}\)</span> と表し，正の定数 <span class="arithmatex">\(a,b\)</span> をポテンシャルの積分で定義せよ。</p>
-<p>(3) (2) の結果を <span class="arithmatex">\(\frac{P}{k_B T} \simeq \rho + B_2(T) \rho^2\)</span> に代入し，<span class="arithmatex">\(\rho=N/V\)</span> を用いて，ファン・デル・ワールス方程式の低密度展開</p>
+<p>と近似できることを示せ。また，<span class="arithmatex">\(B_2(T) = b - \frac{a}{k_{\text{B}} T}\)</span> と表し，正の定数 <span class="arithmatex">\(a,b\)</span> をポテンシャルの積分で定義せよ。</p>
+<p>(3) (2) の結果を <span class="arithmatex">\(\frac{P}{k_{\text{B}} T} \simeq \rho + B_2(T) \rho^2\)</span> に代入し，<span class="arithmatex">\(\rho=N/V\)</span> を用いて，ファン・デル・ワールス方程式の低密度展開</p>
 <div class="arithmatex">\[
-\left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_B T
+\left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_{\text{B}} T
 \]</div>
 <p>と一致することを確かめよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>メイヤー関数 <span class="arithmatex">\(f(r) = \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1\)</span> に硬い球ポテンシャルを代入します。</p>
+<p>メイヤー関数 <span class="arithmatex">\(f(r) = \exp\left( -\frac{\phi(r)}{k_{\text{B}} T} \right) - 1\)</span> に硬い球ポテンシャルを代入します。</p>
 <ul>
 <li><span class="arithmatex">\(r &lt; \sigma\)</span> のとき， <span class="arithmatex">\(\phi(r) = \infty\)</span> より <span class="arithmatex">\(\exp(-\infty) = 0\)</span> となるため， <span class="arithmatex">\(f(r) = 0 - 1 = -1\)</span></li>
 <li><span class="arithmatex">\(r \ge \sigma\)</span> のとき， <span class="arithmatex">\(\phi(r) = 0\)</span> より <span class="arithmatex">\(\exp(0) = 1\)</span> となるため， <span class="arithmatex">\(f(r) = 1 - 1 = 0\)</span></li>
@@ -14566,17 +14566,18 @@ B_2^{\mathrm{HS}} &amp;= -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr \\
 \]</div>
 <p>この結果 <span class="arithmatex">\(B_2^{\mathrm{HS}} = \frac{2\pi \sigma^3}{3}\)</span> は，1つの粒子の体積 <span class="arithmatex">\(v_0 = \frac{4}{3}\pi \left(\frac{\sigma}{2}\right)^3 = \frac{\pi \sigma^3}{6}\)</span> のちょうど 4 倍<span class="arithmatex">\(4v_0\)</span>に相当します。これは統計力学において，粒子同士が重なり合えないことによって生じる排除体積の効果を表しています。</p>
 <h3 id="2">(2)</h3>
-<p>引力領域<span class="arithmatex">\(r \ge \sigma\)</span>では，分子間引力が熱エネルギーに比べて十分に弱い<span class="arithmatex">\(|\phi(r)| \ll k_B T\)</span>という条件が与えられています。したがって， <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> の近似公式を <span class="arithmatex">\(x = -\frac{\phi(r)}{k_B T}\)</span> として適用できます。</p>
+<p>引力領域<span class="arithmatex">\(r \ge \sigma\)</span>では，分子間引力が熱エネルギーに比べて十分に弱い<span class="arithmatex">\(|\phi(r)| \ll k_{\text{B}} T\)</span>という条件が与えられています。したがって， <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> の近似公式を <span class="arithmatex">\(x = -\frac{\phi(r)}{k_{\text{B}} T}\)</span> として適用できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-f(r) &amp;= \exp\left( -\frac{\phi(r)}{k_B T} \right) - 1 \simeq \left( 1 - \frac{\phi(r)}{k_B T} \right) - 1 \\
-&amp;= -\frac{\phi(r)}{k_B T}
+f(r) &amp;= \exp\left( -\frac{\phi(r)}{k_{\text{B}} T} \right) - 1 \\
+&amp;\simeq \left( 1 - \frac{\phi(r)}{k_{\text{B}} T} \right) - 1 \\
+&amp;= -\frac{\phi(r)}{k_{\text{B}} T}
 \end{aligned}
 \]</div>
 <p>これにより，引力領域での近似式が示されました。</p>
 <p>次に，全体の第2ビリアル係数の積分を，斥力領域<span class="arithmatex">\(0 \le r &lt; \sigma\)</span>と引力領域<span class="arithmatex">\(r \ge \sigma\)</span>の2つに分割して計算します。</p>
 <div class="arithmatex">\[
-B_2(T) = -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr - \frac{1}{2} \int_\sigma^\infty 4\pi r^2 \left( -\frac{\phi(r)}{k_B T} \right) dr
+B_2(T) = -\frac{1}{2} \int_0^\sigma 4\pi r^2 (-1) dr - \frac{1}{2} \int_\sigma^\infty 4\pi r^2 \left( -\frac{\phi(r)}{k_{\text{B}} T} \right) dr
 \]</div>
 <p>第1項は (1) で計算した硬い球による排除体積効果そのものであり，これを正の定数 <span class="arithmatex">\(b\)</span> とおきます。</p>
 <div class="arithmatex">\[
@@ -14584,7 +14585,7 @@ b = \frac{2\pi \sigma^3}{3}
 \]</div>
 <p>第2項のマイナス符号を整理し，温度に依存しない積分の塊を正の定数 <span class="arithmatex">\(a\)</span> として微分の外に括り出します。 <span class="arithmatex">\(\phi(r) &lt; 0\)</span> であるため， <span class="arithmatex">\(- \phi(r) = |\phi(r)| &gt; 0\)</span> となり， <span class="arithmatex">\(a\)</span> は正の値になります。</p>
 <div class="arithmatex">\[
-B_2(T) = b - \frac{1}{k_B T} \left[ \frac{1}{2} \int_\sigma^\infty 4\pi r^2 (-\phi(r)) dr \right]
+B_2(T) = b - \frac{1}{k_{\text{B}} T} \left[ \frac{1}{2} \int_\sigma^\infty 4\pi r^2 (-\phi(r)) dr \right]
 \]</div>
 <p>ここで，括弧内部を定数 <span class="arithmatex">\(a\)</span> として以下のように定義します。</p>
 <div class="arithmatex">\[
@@ -14592,28 +14593,32 @@ a = 2\pi \int_\sigma^\infty r^2 |\phi(r)| dr
 \]</div>
 <p>これらを組み合わせることで，第2ビリアル係数が目的の形式に整理されました。</p>
 <div class="arithmatex">\[
-\finalanswer{B_2(T) = b - \frac{a}{k_B T}}
+\finalanswer{B_2(T) = b - \frac{a}{k_{\text{B}} T}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られた <span class="arithmatex">\(B_2(T)\)</span> を，密度 <span class="arithmatex">\(\rho = N/V\)</span> を用いたビリアル展開の第2項までの式に代入します。</p>
 <div class="arithmatex">\[
-\frac{P}{k_B T} \simeq \rho + \left( b - \frac{a}{k_B T} \right) \rho^2
+\frac{P}{k_{\text{B}} T} \simeq \rho + \left( b - \frac{a}{k_{\text{B}} T} \right) \rho^2
 \]</div>
-<p>両辺に <span class="arithmatex">\(k_B T\)</span> を掛け合わせ， <span class="arithmatex">\(\rho = N/V\)</span> を代入して展開します。</p>
+<p>両辺に <span class="arithmatex">\(k_{\text{B}} T\)</span> を掛け合わせ， <span class="arithmatex">\(\rho = N/V\)</span> を代入して展開します。</p>
 <div class="arithmatex">\[
-P = \frac{N k_B T}{V} + b k_B T \frac{N^2}{V^2} - \frac{a N^2}{V^2}
+P = \frac{N k_{\text{B}} T}{V} + b k_{\text{B}} T \frac{N^2}{V^2} - \frac{a N^2}{V^2}
 \]</div>
 <p>この式を，ファン・デル・ワールスの状態方程式と直接比較するため，少し変形します。まず， <span class="arithmatex">\(- \frac{a N^2}{V^2}\)</span> の項を左辺に移項します。</p>
 <div class="arithmatex">\[
-P + \frac{a N^2}{V^2} = \frac{N k_B T}{V} \left( 1 + \frac{N b}{V} \right)
+P + \frac{a N^2}{V^2} = \frac{N k_{\text{B}} T}{V} \left( 1 + \frac{N b}{V} \right)
 \]</div>
 <p>ここで，低密度の条件から <span class="arithmatex">\(\frac{N b}{V} \ll 1\)</span> であるため，近似公式 <span class="arithmatex">\(\frac{1}{1-x} \simeq 1 + x\)</span> の逆の変形<span class="arithmatex">\(1+x \simeq \frac{1}{1-x}\)</span>を右辺の括弧に適用します。</p>
 <div class="arithmatex">\[
-P + \frac{a N^2}{V^2} \simeq \frac{N k_B T}{V} \cdot \frac{1}{1 - \frac{N b}{V}} = \frac{N k_B T}{V - N b}
+\begin{aligned}
+P + \frac{a N^2}{V^2}
+&amp;\simeq \frac{N k_{\text{B}} T}{V} \cdot \frac{1}{1 - \frac{N b}{V}} \\
+&amp;= \frac{N k_{\text{B}} T}{V - N b}
+\end{aligned}
 \]</div>
 <p>両辺に分母の <span class="arithmatex">\((V - N b)\)</span> を掛け合わせます。</p>
 <div class="arithmatex">\[
-\finalanswer{\left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_B T}
+\finalanswer{\left( P + \frac{a N^2}{V^2} \right) (V - N b) = N k_{\text{B}} T}
 \]</div>
 <p>これにより，分子間相互作用を考慮したクラスター展開から導いたビリアル展開の式が，熱力学・唯物的な考察から提案されたファン・デル・ワールスの状態方程式を低密度極限において再現することが証明されました。</p>
 

@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4041,17 +4013,6 @@
     <span class="md-ellipsis">
       
         (2)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
       
     </span>
   </a>
@@ -4951,7 +4912,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14471,17 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14538,8 +14516,7 @@
 =-\frac{dM_z}{dr}\boldsymbol{e}_\varphi
 \]</div>
 <p>を用いてよい。円柱内部の <span class="arithmatex">\(\boldsymbol{j}_b(r)\)</span> を求めよ。また，側面 <span class="arithmatex">\(r=R\)</span> と二つの端面における <span class="arithmatex">\(\boldsymbol{K}_b\)</span> を求めよ。</p>
-<p>(2) <span class="arithmatex">\(z\)</span> 軸を含む半平面を考える。方位角方向の束縛体積電流はこの半平面を垂直に貫く。円柱の単位長さ当たりに，半径 <span class="arithmatex">\(r'\)</span> から <span class="arithmatex">\(r'+dr'\)</span> の範囲を流れる電流を <span class="arithmatex">\(dI_b/\ell=j_{b,\varphi}(r')\,dr'\)</span> とする。<span class="arithmatex">\(r'=0\)</span> から <span class="arithmatex">\(R\)</span> まで積分して <span class="arithmatex">\(I_b^{\mathrm{vol}}/\ell\)</span> を求め，磁化の差 <span class="arithmatex">\(M_z(0)-M_z(R)\)</span> と一致することを示せ。</p>
-<p>(3) 次に一様磁化 <span class="arithmatex">\(\boldsymbol{M}=M_0\boldsymbol{e}_z\)</span> をもつ十分に長い円柱を考える。この場合の <span class="arithmatex">\(\boldsymbol{j}_b\)</span> と側面の <span class="arithmatex">\(\boldsymbol{K}_b\)</span> を求めよ。側面電流が単位長さ当たり巻数 <span class="arithmatex">\(n\)</span>，電流 <span class="arithmatex">\(I\)</span> の理想ソレノイドの表面電流 <span class="arithmatex">\(nI\)</span> と同じ役割をもつことから，円柱内部と外部の磁束密度 <span class="arithmatex">\(\boldsymbol{B}\)</span> を求めよ。</p>
+<p>(2) 次に一様磁化 <span class="arithmatex">\(\boldsymbol{M}=M_0\boldsymbol{e}_z\)</span> をもつ十分に長い円柱を考える。この場合の <span class="arithmatex">\(\boldsymbol{j}_b\)</span> と側面の <span class="arithmatex">\(\boldsymbol{K}_b\)</span> を求めよ。理想ソレノイドとの対応を用いて，円柱内部と外部の磁束密度 <span class="arithmatex">\(\boldsymbol{B}\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14550,9 +14527,9 @@
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{j}_b(r)
+\finalanswer{\boldsymbol{j}_b(r)
 =\frac{2M_0r}{R^2}\boldsymbol{e}_\varphi,
-\qquad r&lt;R
+\qquad r&lt;R}
 \]</div>
 <p>です。側面の外向き法線は <span class="arithmatex">\(\boldsymbol{n}=\boldsymbol{e}_r\)</span> ですが，<span class="arithmatex">\(M_z(R)=0\)</span> なので</p>
 <div class="arithmatex">\[
@@ -14562,34 +14539,17 @@
 \]</div>
 <p>です。上端面と下端面の法線はそれぞれ <span class="arithmatex">\(\boldsymbol{e}_z\)</span> と <span class="arithmatex">\(-\boldsymbol{e}_z\)</span> です。磁化と法線が平行または反平行なので，端面でも <span class="arithmatex">\(\boldsymbol{K}_b=\boldsymbol{0}\)</span> となります。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(z\)</span> 軸を含む半平面を考えると，方位角方向の電流密度はこの面を垂直に貫きます。円柱の単位長さ当たりに流れる束縛電流は</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\frac{I_b^{\mathrm{vol}}}{\ell}
-&amp;=\int_0^Rj_{b,\varphi}(r)\,dr \\
-&amp;=\int_0^R\frac{2M_0r}{R^2}\,dr \\
-&amp;=\frac{2M_0}{R^2}
-\left[\frac{r^2}{2}\right]_0^R \\
-&amp;=M_0.
-\end{aligned}
-\]</div>
-<p>となります。一方</p>
-<div class="arithmatex">\[
-\finalanswer{M_z(0)-M_z(R)=M_0-0=M_0}
-\]</div>
-<p>なので一致します。磁化が半径方向に変化すると，隣接する微小電流ループが完全には打ち消し合わず，体積磁化電流として残ります。</p>
-<h3 id="3">(3)</h3>
 <p>一様磁化では空間微分がゼロなので</p>
 <div class="arithmatex">\[
-\boldsymbol{j}_b
+\finalanswer{\boldsymbol{j}_b
 =\boldsymbol{\nabla}\times\boldsymbol{M}
-=\boldsymbol{0}
+=\boldsymbol{0}}
 \]</div>
 <p>です。側面では</p>
 <div class="arithmatex">\[
-\boldsymbol{K}_b
+\finalanswer{\boldsymbol{K}_b
 =M_0\boldsymbol{e}_z\times\boldsymbol{e}_r
-=M_0\boldsymbol{e}_\varphi
+=M_0\boldsymbol{e}_\varphi}
 \]</div>
 <p>となります。これは方位角方向へ流れる表面電流です。理想ソレノイドの表面電流密度 <span class="arithmatex">\(K=nI\)</span> と比較すると <span class="arithmatex">\(nI=M_0\)</span> に対応します。したがって</p>
 <div class="arithmatex">\[

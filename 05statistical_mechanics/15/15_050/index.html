@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,36 +14522,35 @@
 <div class="arithmatex">\[
 \sum_{i=1}^{n} p_i = 1
 \]</div>
-<p>このとき，離散確率分布 <span class="arithmatex">\(\{p_i\}\)</span> に対するシャノンエントロピー <span class="arithmatex">\(H\)</span> は，底がネイピア数 <span class="arithmatex">\(\exp\)</span> の自然対数 <span class="arithmatex">\(\ln\)</span> を用いて以下のように定義される。</p>
+<p>このとき，離散確率分布 <span class="arithmatex">\(\{p_i\}\)</span> に対するシャノンエントロピー <span class="arithmatex">\(H\)</span> は，底がネイピア数 <span class="arithmatex">\(\exp\)</span> の自然対数 <span class="arithmatex">\(\log\)</span> を用いて以下のように定義される。</p>
 <div class="arithmatex">\[
-H = -\sum_{i=1}^{n} p_i \ln p_i
+H = -\sum_{i=1}^{n} p_i \log p_i
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(p_1=p\)</span>，<span class="arithmatex">\(p_2=1-p\)</span> とする。<span class="arithmatex">\(H(p)\)</span> と，<span class="arithmatex">\(H\)</span> が最大となる <span class="arithmatex">\(p\)</span> を求めよ。</p>
-<p>(2) <span class="arithmatex">\(p_k=1\)</span>，<span class="arithmatex">\(p_i=0\)</span> <span class="arithmatex">\(i\ne k\)</span> のとき，<span class="arithmatex">\(H\)</span> を求めよ。</p>
-<p>(3) 凸関数の性質に関する数学的関係式として，以下のイェンセンの不等式が知られている。</p>
-<p>関数 <span class="arithmatex">\(f(x)\)</span> が上に凸であるとき，確率の重み <span class="arithmatex">\(p_i\)</span> を用いた平均値について <span class="arithmatex">\(f\left(\sum_i p_i x_i\right) \ge \sum_i p_i f(x_i)\)</span> が成り立つ。</p>
-<p>イェンセンの不等式を用いて <span class="arithmatex">\(H\le\ln n\)</span> を示せ。</p>
+<p>(2) <span class="arithmatex">\(p_k=1\)</span>，<span class="arithmatex">\(i\ne k\)</span> に対して <span class="arithmatex">\(p_i=0\)</span> のとき，<span class="arithmatex">\(H\)</span> を求めよ。</p>
+<p>(3) 対数関数に対するイェンセンの不等式</p>
+<div class="arithmatex">\[
+\sum_i p_i\log x_i\le\log\left(\sum_i p_i x_i\right)
+\]</div>
+<p>を用いて，<span class="arithmatex">\(H\le\log n\)</span> を示せ。また，等号が成立する条件を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p><span class="arithmatex">\(n=2\)</span> のとき，確率分布は <span class="arithmatex">\(p_1 = p, p_2 = 1-p\)</span> となります。これを定義式に代入します。</p>
 <div class="arithmatex">\[
-H(p) = -p \ln p - (1-p) \ln(1-p)
+\finalanswer{H(p) = -p \log p - (1-p) \log(1-p)}
 \]</div>
 <p>この関数を <span class="arithmatex">\(p\)</span> について1階微分します。積の微分公式を適用します。</p>
 <div class="arithmatex">\[
-\frac{dH(p)}{dp} = -\left( \ln p + p \cdot \frac{1}{p} \right) - \left( -\ln(1-p) + (1-p) \cdot \frac{-1}{1-p} \right)
+\frac{dH(p)}{dp} = -\left( \log p + p \cdot \frac{1}{p} \right) - \left( -\log(1-p) + (1-p) \cdot \frac{-1}{1-p} \right)
 \]</div>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dH(p)}{dp} &amp;= -\ln p - 1 + \ln(1-p) + 1 \\
-&amp;= \ln\left( \frac{1-p}{p} \right)
-\end{aligned}
+\frac{dH(p)}{dp} = -\log p - 1 + \log(1-p) + 1 = \log\left( \frac{1-p}{p} \right)
 \]</div>
 <p>極値をとる条件として，この微分値をゼロと置きます。</p>
 <div class="arithmatex">\[
-\ln\left( \frac{1-p}{p} \right) = 0 \implies \frac{1-p}{p} = 1
+\log\left( \frac{1-p}{p} \right) = 0 \implies \frac{1-p}{p} = 1
 \]</div>
 <p>この方程式を <span class="arithmatex">\(p\)</span> について解きます。</p>
 <div class="arithmatex">\[
@@ -14561,76 +14560,28 @@ H(p) = -p \ln p - (1-p) \ln(1-p)
 <h3 id="2">(2)</h3>
 <p>特定の1つの成分が <span class="arithmatex">\(p_k = 1\)</span> であり，それ以外が <span class="arithmatex">\(p_i = 0\)</span> である確率分布を定義式に代入します。総和の各項を展開します。</p>
 <div class="arithmatex">\[
-H = -\left( 0 \cdot \ln 0 + \dots + 1 \cdot \ln 1 + \dots + 0 \cdot \ln 0 \right)
+H = -\left( 0 \cdot \log 0 + \dots + 1 \cdot \log 1 + \dots + 0 \cdot \log 0 \right)
 \]</div>
-<p>自然対数 <span class="arithmatex">\(\ln 1\)</span> の値は 0 です。また，確率が 0 である他のすべての項については，提示された極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \ln x = 0\)</span> が適用されます。</p>
+<p>自然対数 <span class="arithmatex">\(\log 1\)</span> の値は 0 です。また，確率が 0 である他のすべての項については，提示された極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \log x = 0\)</span> が適用されます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-H &amp;= -(0 + \dots + 1 \cdot 0 + \dots + 0) \\
-&amp;= \finalanswer{0}
-\end{aligned}
+H = -(0 + \dots + 1 \cdot 0 + \dots + 0) = \finalanswer{0}
 \]</div>
 <p>結果が特定の状態に必ず見出されるような，不確定性が存在しない確率分布においては，シャノンエントロピーの値が 0 になることが示されました。</p>
 <h3 id="3">(3)</h3>
-<p>関数 <span class="arithmatex">\(f(x) = -x \ln x\)</span> の一階微分と二階微分を順に計算します。</p>
+<p>確率が正である事象の個数を <span class="arithmatex">\(m\)</span> とし，それらについて <span class="arithmatex">\(x_i=1/p_i\)</span> と置きます。確率0の項は <span class="arithmatex">\(p_i\log p_i=0\)</span> なので，エントロピーの和から除いて構いません。問題文の不等式を適用すると，</p>
 <div class="arithmatex">\[
-f'(x) = -\ln x - 1
+H=\sum_{p_i&gt;0}p_i\log\left(\frac{1}{p_i}\right)
+\le\log\left(\sum_{p_i&gt;0}p_i\frac{1}{p_i}\right)
 \]</div>
+<p>右辺の和は，</p>
 <div class="arithmatex">\[
-f''(x) = -\frac{1}{x}
+\sum_{p_i&gt;0}p_i\frac{1}{p_i}=m\le n
 \]</div>
-<p>変数 <span class="arithmatex">\(x\)</span> は確率変数の定義域より <span class="arithmatex">\(x &gt; 0\)</span> であるため，二階微分の値は常に負 <span class="arithmatex">\(f''(x) &lt; 0\)</span> となります。二階微分が負であることは，関数 <span class="arithmatex">\(f(x)\)</span> がその領域において上に凸であることを意味します。</p>
-<p>次に，イェンセンの不等式 <span class="arithmatex">\(f\left(\sum_{i=1}^{n} p_i x_i\right) \ge \sum_{i=1}^{n} p_i f(x_i)\)</span> に対して，指定された変数 <span class="arithmatex">\(x_i = \frac{1}{n p_i}\)</span> を代入します。</p>
-<p>まず，不等式の左辺の括弧の内部を計算します。</p>
+<p>したがって，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\sum_{i=1}^{n} p_i x_i &amp;= \sum_{i=1}^{n} p_i \left( \frac{1}{n p_i} \right) \\
-&amp;= \sum_{i=1}^{n} \frac{1}{n} \\
-&amp;= n \cdot \frac{1}{n} \\
-&amp;= 1
-\end{aligned}
+\finalanswer{H \le \log n}
 \]</div>
-<p>したがって，左辺の全体の形は <span class="arithmatex">\(f(1) = -1 \cdot \ln 1 = 0\)</span> となります。</p>
-<p>続いて，不等式の右辺を展開します。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\sum_{i=1}^{n} p_i f(x_i) &amp;= \sum_{i=1}^{n} p_i \left( -\frac{1}{n p_i} \ln\left( \frac{1}{n p_i} \right) \right) \\
-&amp;= -\frac{1}{n} \sum_{i=1}^{n} \ln\left( \frac{1}{n p_i} \right)
-\end{aligned}
-\]</div>
-<p>対数関数の性質 <span class="arithmatex">\(\ln\left(\frac{1}{A}\right) = -\ln A\)</span> を用いて括弧の内部を反転させます。</p>
-<div class="arithmatex">\[
-\begin{aligned}
--\frac{1}{n} \sum_{i=1}^{n} \left( -\ln(n p_i) \right) &amp;= \frac{1}{n} \sum_{i=1}^{n} \big( \ln n + \ln p_i \big) \\
-&amp;= \frac{1}{n} \left( n \ln n + \sum_{i=1}^{n} \ln p_i \right) \\
-&amp;= \ln n + \frac{1}{n} \sum_{i=1}^{n} \ln p_i
-\end{aligned}
-\]</div>
-<p>これでは直接シャノンエントロピーの形が抽出できないため，イェンセンの不等式を直接 <span class="arithmatex">\(f(x) = -x \ln x\)</span> の関数そのものに対して，平均の変数を <span class="arithmatex">\(x_i = p_i\)</span> ではなく，直接シャノンエントロピーの定義へ結びつくように再整理します。</p>
-<p>シャノンエントロピーの式は以下の通りです。</p>
-<div class="arithmatex">\[
-H = \sum_{i=1}^{n} p_i \left( -\ln p_i \right)
-\]</div>
-<p>ここで，もう1つの凸関数の性質である単一の対数関数 <span class="arithmatex">\(g(x) = -\ln x\)</span> に注目し，これに対するイェンセンの不等式 <span class="arithmatex">\(\sum_i p_i g(x_i) \ge g\left(\sum_i p_i x_i\right)\)</span> を適用します。変数として <span class="arithmatex">\(x_i = \frac{1}{p_i}\)</span> を代入します。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\sum_{i=1}^{n} p_i \left( -\ln \frac{1}{p_i} \right) &amp;= \sum_{i=1}^{n} p_i \ln p_i \\
-&amp;= -H
-\end{aligned}
-\]</div>
-<p>この関係の下に凸な関数の不等式を適用すると，以下のようになります。</p>
-<div class="arithmatex">\[
-H = \sum_{i=1}^{n} p_i \ln\left(\frac{1}{p_i}\right) \le \ln\left( \sum_{i=1}^{n} p_i \cdot \frac{1}{p_i} \right)
-\]</div>
-<p>右辺の対数の内部の総和を計算します。</p>
-<div class="arithmatex">\[
-\sum_{i=1}^{n} p_i \cdot \frac{1}{p_i} = \sum_{i=1}^{n} 1 = n
-\]</div>
-<p>これを不等式に戻すことで，目的の上限式が導出されます。</p>
-<div class="arithmatex">\[
-\finalanswer{H \le \ln n}
-\]</div>
-<p>これにより，シャノンエントロピーは事象の数 <span class="arithmatex">\(n\)</span> の対数を超えることができず，すべての事象が等確率 <span class="arithmatex">\(p_i = \frac{1}{n}\)</span> のときに最大値 <span class="arithmatex">\(\ln n\)</span> に達することが数学的に示されました。</p>
+<p>等号 <span class="arithmatex">\(H=\log n\)</span> が成立するには <span class="arithmatex">\(m=n\)</span> であり，さらに対数関数の狭義凹性から <span class="arithmatex">\(x_i=1/p_i\)</span> がすべて等しくなければなりません。規格化条件と合わせると，その条件は <span class="arithmatex">\(p_i=1/n\)</span> です。したがって，シャノンエントロピーは一様分布のときに最大値 <span class="arithmatex">\(\log n\)</span> をとります。</p>
 
 
 

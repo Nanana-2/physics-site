@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,16 +14525,24 @@ L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}m\omega^2 x^2
 \]</div>
 <p>時刻 <span class="arithmatex">\(\tau = 0\)</span> から <span class="arithmatex">\(\tau = t\)</span> までの運動を考える。始点条件 <span class="arithmatex">\(x(0) = x_i\)</span> および終点条件 <span class="arithmatex">\(x(t) = x_f\)</span> を満たし，古典的な運動方程式 <span class="arithmatex">\(\ddot{x} + \omega^2 x = 0\)</span> に従う古典経路を <span class="arithmatex">\(x_{\text{cl}}(\tau)\)</span> と置く。以下の問いに答えよ。</p>
 <p>(1) 運動方程式の一般解 <span class="arithmatex">\(x_{\text{cl}}(\tau) = A \sin\omega\tau + B \cos\omega\tau\)</span> に対し，始点と終点の境界条件を適用することで，係数 <span class="arithmatex">\(A\)</span> と <span class="arithmatex">\(B\)</span> を <span class="arithmatex">\(x_i, x_f, \omega, t\)</span> を用いて表せ。</p>
-<p>(2) 古典経路に対する作用は <span class="arithmatex">\(S_{\text{cl}} = \int_{0}^{t} L(x_{\text{cl}}, \dot{x}_{\text{cl}}) d\tau\)</span> で定義される。部分積分を実行することで，この作用の積分が以下の形式に簡略化されることを示せ。</p>
+<p>(2) 古典経路に対する作用を</p>
+<div class="arithmatex">\[
+S_{\text{cl}}=\int_{0}^{t}L(x_{\text{cl}},\dot{x}_{\text{cl}})\,d\tau
+\]</div>
+<p>と定義する。部分積分を実行することで，この作用の積分が以下の形式に簡略化されることを示せ。</p>
 <div class="arithmatex">\[
 S_{\text{cl}} = \frac{1}{2}m \left[ x_{\text{cl}}(\tau) \dot{x}_{\text{cl}}(\tau) \right]_{0}^{t}
 \]</div>
 <p>さらに，(1) で得られた解を代入して整理することにより，古典作用の形状を導出せよ。</p>
 <p>(3) 任意の経路を古典経路からのずれ <span class="arithmatex">\(y(\tau)\)</span> を用いて <span class="arithmatex">\(x(\tau) = x_{\text{cl}}(\tau) + y(\tau)\)</span> と表すと，全体の作用は <span class="arithmatex">\(S[x] = S_{\text{cl}} + S_0[y]\)</span> と分離される。これにより，全体の伝播核は次のように書き換えられる。</p>
 <div class="arithmatex">\[
-K(x_f, t; x_i, 0) = F(t) e^{i S_{\text{cl}} / \hbar}
+K(x_f, t; x_i, 0) = F(t) \exp\left(i S_{\text{cl}} / \hbar\right)
 \]</div>
-<p>ここで <span class="arithmatex">\(F(t) = \int \mathcal{D}[y] e^{i S_0[y] / \hbar}\)</span> は，端点に依存せず時間 <span class="arithmatex">\(t\)</span> のみに依存する関数である。自由粒子の極限 <span class="arithmatex">\(\omega \to 0\)</span> において，伝播核が自由粒子の伝播核 <span class="arithmatex">\(\sqrt{\frac{m}{2\pi i \hbar t}} e^{i m(x_f - x_i)^2 / 2\hbar t}\)</span> に一致すべきであるという対応原理を利用して，未知の関数 <span class="arithmatex">\(F(t)\)</span> の形を決定せよ。</p>
+<p>ここで</p>
+<div class="arithmatex">\[
+F(t)=\int\mathcal{D}[y]\exp\left(iS_0[y]/\hbar\right)
+\]</div>
+<p>は，端点に依存せず時間 <span class="arithmatex">\(t\)</span> のみに依存する関数である。自由粒子の極限 <span class="arithmatex">\(\omega \to 0\)</span> において，伝播核が自由粒子の伝播核 <span class="arithmatex">\(\sqrt{\frac{m}{2\pi i \hbar t}} \exp\left(i m(x_f - x_i)^2 / 2\hbar t\right)\)</span> に一致すべきであるという対応原理を利用して，未知の関数 <span class="arithmatex">\(F(t)\)</span> の形を決定せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14564,7 +14572,7 @@ S_{\text{cl}} = \int_{0}^{t} \left( \frac{1}{2}m\dot{x}_{\text{cl}}^2 - \frac{1}
 <div class="arithmatex">\[
 S_{\text{cl}} = \left[ \frac{1}{2}m x_{\text{cl}} \dot{x}_{\text{cl}} \right]_{0}^{t} - \frac{1}{2}m \int_{0}^{t} x_{\text{cl}} \left( \ddot{x}_{\text{cl}} + \omega^2 x_{\text{cl}} \right) d\tau
 \]</div>
-<p>古典経路は運動方程式 <span class="arithmatex">\(\ddot{x}_{\text{cl}} + \omega^2 x_{\text{cl}} = 0\)</span> を満たすため，積分項は 0 となり消去されます。よって，提示された次の簡略化された形式が成り立ちます。</p>
+<p>古典経路は運動方程式 <span class="arithmatex">\(\ddot{x}_{\text{cl}} + \omega^2 x_{\text{cl}} = 0\)</span> を満たすため，積分項は 0 です。よって，次の形に整理できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 S_{\text{cl}} &amp;= \frac{1}{2}m \left[ x_{\text{cl}}(t) \dot{x}_{\text{cl}}(t) - x_{\text{cl}}(0) \dot{x}_{\text{cl}}(0) \right] \\
@@ -14600,7 +14608,7 @@ S_{\text{cl}} = \frac{1}{2}m\omega \left[ \frac{(x_f - x_i \cos\omega t)(x_f \co
 <div class="arithmatex">\[
 \text{分子} = (x_i^2 + x_f^2)\cos\omega t - x_i x_f - x_i x_f (\cos^2\omega t + \sin^2\omega t)
 \]</div>
-<p>三角関数の関係式 <span class="arithmatex">\(\cos^2\omega t + \sin^2\omega t = 1\)</span> より，分子の後半は <span class="arithmatex">\(-2x_i x_f\)</span> となります。これらをまとめることで，求める古典作用の式が導かれます。</p>
+<p>三角関数の関係式 <span class="arithmatex">\(\cos^2\omega t + \sin^2\omega t = 1\)</span> より，分子の後半は <span class="arithmatex">\(-2x_i x_f\)</span> となります。これらをまとめることで，求める古典作用の式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{S_{\text{cl}} = \frac{m\omega}{2\sin\omega t} \left[ (x_i^2 + x_f^2)\cos\omega t - 2x_i x_f \right]}
 \]</div>
@@ -14614,11 +14622,11 @@ S_{\text{cl}} = \frac{1}{2}m\omega \left[ \frac{(x_f - x_i \cos\omega t)(x_f \co
 \]</div>
 <p>この極限形を全体の伝播核の式にあてはめます。</p>
 <div class="arithmatex">\[
-\lim_{\omega \to 0} K(x_f, t; x_i, 0) = \left( \lim_{\omega \to 0} F(t) \right) e^{\frac{i m(x_f - x_i)^2}{2\hbar t}}
+\lim_{\omega \to 0} K(x_f, t; x_i, 0) = \left( \lim_{\omega \to 0} F(t) \right) \exp\left(\frac{i m(x_f - x_i)^2}{2\hbar t}\right)
 \]</div>
 <p>これが自由粒子の伝播核と一致しなければなりません。</p>
 <div class="arithmatex">\[
-\left( \lim_{\omega \to 0} F(t) \right) e^{\frac{i m(x_f - x_i)^2}{2\hbar t}} = \sqrt{\frac{m}{2\pi i \hbar t}} e^{\frac{i m(x_f - x_i)^2}{2\hbar t}}
+\left( \lim_{\omega \to 0} F(t) \right) \exp\left(\frac{i m(x_f - x_i)^2}{2\hbar t}\right) = \sqrt{\frac{m}{2\pi i \hbar t}} \exp\left(\frac{i m(x_f - x_i)^2}{2\hbar t}\right)
 \]</div>
 <p>両辺を比較すると，関数 <span class="arithmatex">\(F(t)\)</span> の <span class="arithmatex">\(\omega \to 0\)</span> での極限値が決定されます。</p>
 <div class="arithmatex">\[

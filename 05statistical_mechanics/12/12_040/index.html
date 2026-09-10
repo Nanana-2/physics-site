@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14569,7 +14569,7 @@ i\hbar \frac{d\rho(t)}{dt} = \hat{H} \left( \sum_k p_k |\psi_k(t)\rangle \langle
 <div class="arithmatex">\[
 i\hbar \frac{d\rho(t)}{dt} = \hat{H}\rho(t) - \rho(t)\hat{H}
 \]</div>
-<p>右辺を交換子の記号を用いてまとめることで，フォン・ノイマン方程式が導出されます。</p>
+<p>右辺を交換子の記号を用いてまとめることで，フォン・ノイマン方程式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{i\hbar \frac{d\rho(t)}{dt} = [\hat{H}, \rho(t)]}
 \]</div>
@@ -14578,15 +14578,15 @@ i\hbar \frac{d\rho(t)}{dt} = \hat{H}\rho(t) - \rho(t)\hat{H}
 まず，ユニタリー時間発展演算子 <span class="arithmatex">\(\hat{U}(t) = \exp\left(-\frac{i\hat{H}t}{\hbar}\right)\)</span> の時間微分は以下の通りです。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d\hat{U}(t)}{dt} &amp;= -\frac{i\hat{H}}{\hbar} \hat{U}(t) \implies i\hbar \frac{d\hat{U}(t)}{dt} \\
-&amp;= \hat{H}\hat{U}(t)
+\frac{d\hat{U}(t)}{dt}&amp;=-\frac{i\hat H}{\hbar}\hat U(t), \\
+i\hbar\frac{d\hat U(t)}{dt}&amp;=\hat H\hat U(t)
 \end{aligned}
 \]</div>
 <p>同様に，そのエルミート共役 <span class="arithmatex">\(\hat{U}^\dagger(t) = \exp\left(\frac{i\hat{H}t}{\hbar}\right)\)</span> の時間微分は以下のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{d\hat{U}^\dagger(t)}{dt} &amp;= \frac{i\hat{H}}{\hbar} \hat{U}^\dagger(t) \implies i\hbar \frac{d\hat{U}^\dagger(t)}{dt} \\
-&amp;= -\hat{U}^\dagger(t)\hat{H}
+\frac{d\hat{U}^\dagger(t)}{dt}&amp;=\frac{i\hat H}{\hbar}\hat U^\dagger(t), \\
+i\hbar\frac{d\hat U^\dagger(t)}{dt}&amp;=-\hat U^\dagger(t)\hat H
 \end{aligned}
 \]</div>
 <p>定数行列 <span class="arithmatex">\(\rho(0)\)</span> を挟んだ微分公式を適用し，両辺に <span class="arithmatex">\(i\hbar\)</span> を掛けます。</p>
@@ -14599,10 +14599,7 @@ i\hbar \frac{d\rho(t)}{dt} = \hat{H}\hat{U}(t) \rho(0) \hat{U}^\dagger(t) - \hat
 \]</div>
 <p>右辺の各項において， <span class="arithmatex">\(\hat{U}(t) \rho(0) \hat{U}^\dagger(t)\)</span> を元の <span class="arithmatex">\(\rho(t)\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-i\hbar \frac{d\rho(t)}{dt} &amp;= \hat{H}\rho(t) - \rho(t)\hat{H} \\
-&amp;= \finalanswer{[\hat{H}, \rho(t)]}
-\end{aligned}
+i\hbar \frac{d\rho(t)}{dt} = \hat{H}\rho(t) - \rho(t)\hat{H} = \finalanswer{[\hat{H}, \rho(t)]}
 \]</div>
 <p>微分方程式を満たすことが確認できました。また， <span class="arithmatex">\(t=0\)</span> を代入すると <span class="arithmatex">\(\hat{U}(0) = I\)</span> となり初期条件も満たします。したがって，密度行列の時間発展はハミルトニアンによるユニタリー変換として表されることが示されました。</p>
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14542,23 +14542,10 @@
 \hat{S}_n = \frac{\hbar}{2} \left[ \sin\theta\cos\phi \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + \sin\theta\sin\phi \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} + \cos\theta \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \right]
 \]</div>
 <p>行列の各要素ごとに成分をまとめます。</p>
-<ul>
-<li>1行1列目： <span class="arithmatex">\(\cos\theta\)</span></li>
-<li>2行2列目： <span class="arithmatex">\(-\cos\theta\)</span></li>
-<li>1行2列目：</li>
-</ul>
-<div class="arithmatex">\[
-\sin\theta\cos\phi - i\sin\theta\sin\phi = \sin\theta(\cos\phi - i\sin\phi)
-\]</div>
-<ul>
-<li>2行1列目：</li>
-</ul>
-<div class="arithmatex">\[
-\finalanswer{\sin\theta\cos\phi + i\sin\theta\sin\phi = \sin\theta(\cos\phi + i\sin\phi)}
-\]</div>
+<p>対角成分は，1行1列成分が <span class="arithmatex">\(\cos\theta\)</span>，2行2列成分が <span class="arithmatex">\(-\cos\theta\)</span> です。非対角成分はそれぞれ <span class="arithmatex">\(\sin\theta(\cos\phi-i\sin\phi)\)</span>，<span class="arithmatex">\(\sin\theta(\cos\phi+i\sin\phi)\)</span> となります。</p>
 <p>オイラーの公式 <span class="arithmatex">\(\cos\phi \pm i\sin\phi = e^{\pm i\phi}\)</span> を適用して整理します。</p>
 <div class="arithmatex">\[
-\hat{S}_n = \frac{\hbar}{2} \begin{pmatrix} \cos\theta &amp; \sin\theta e^{-i\phi} \\ \sin\theta e^{i\phi} &amp; -\cos\theta \end{pmatrix}
+\finalanswer{\hat{S}_n = \frac{\hbar}{2} \begin{pmatrix} \cos\theta &amp; \sin\theta e^{-i\phi} \\ \sin\theta e^{i\phi} &amp; -\cos\theta \end{pmatrix}}
 \]</div>
 <p>これが <span class="arithmatex">\(\boldsymbol{n}\)</span> 方向のスピン演算子の行列表現です。</p>
 <h3 id="2">(2)</h3>
@@ -14571,20 +14558,21 @@
 \]</div>
 <p>展開して整理します。 <span class="arithmatex">\(e^{-i\phi}e^{i\phi} = 1\)</span> であり，三角関数の公式 <span class="arithmatex">\(\cos^2\theta + \sin^2\theta = 1\)</span> を用います。</p>
 <div class="arithmatex">\[
-\begin{aligned}
--\cos^2\theta + \lambda'^2 - \sin^2\theta &amp;= 0 \implies \lambda'^2 \\
-&amp;= \cos^2\theta + \sin^2\theta \\
-&amp;= 1 \implies \lambda' \\
-&amp;= \pm 1
-\end{aligned}
+-\cos^2\theta+\lambda'^2-\sin^2\theta=0
 \]</div>
-<p>元の係数 <span class="arithmatex">\(\frac{\hbar}{2}\)</span> を掛け直すことで，固有値は <span class="arithmatex">\(\lambda = \pm\frac{\hbar}{2}\)</span> と求まります。スピンはどの方向を測っても，その軸に対して上向きか下向きのふたつの値しかとり得ないことが示されました。</p>
+<p>したがって</p>
+<div class="arithmatex">\[
+\lambda'^2=\cos^2\theta+\sin^2\theta=1,
+\qquad \lambda'=\pm1
+\]</div>
+<p>元の係数 <span class="arithmatex">\(\frac{\hbar}{2}\)</span> を掛け直すと，固有値は</p>
+<div class="arithmatex">\[
+\finalanswer{\lambda=\pm\frac{\hbar}{2}}
+\]</div>
+<p>となります。</p>
 <p>次に， <span class="arithmatex">\(\lambda' = +1\)</span> に対する固有ベクトル <span class="arithmatex">\(\begin{pmatrix} a \\ b \end{pmatrix}\)</span> を求めます。行列の1行目の関係式を書き出します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-(\cos\theta - 1)a + \sin\theta e^{-i\phi}b &amp;= 0 \implies \sin\theta e^{-i\phi}b \\
-&amp;= (1 - \cos\theta)a
-\end{aligned}
+\sin\theta e^{-i\phi}b=(1-\cos\theta)a
 \]</div>
 <p>ここで，半角の公式 <span class="arithmatex">\(1 - \cos\theta = 2\sin^2\frac{\theta}{2}\)</span> および倍角の公式 <span class="arithmatex">\(\sin\theta = 2\sin\frac{\theta}{2}\cos\frac{\theta}{2}\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14592,10 +14580,7 @@
 \]</div>
 <p>両辺を <span class="arithmatex">\(2\sin\frac{\theta}{2}\)</span> で割り算して整理します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\cos\frac{\theta}{2} e^{-i\phi}b &amp;= \sin\frac{\theta}{2}a \implies b \\
-&amp;= e^{i\phi} \frac{\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} a
-\end{aligned}
+b=e^{i\phi}\frac{\sin(\theta/2)}{\cos(\theta/2)}a
 \]</div>
 <p>比率を保つように <span class="arithmatex">\(a = \cos\frac{\theta}{2}\)</span> と置くと， <span class="arithmatex">\(b = e^{i\phi}\sin\frac{\theta}{2}\)</span> となります。
 このベクトルの大きさを確認します。</p>
@@ -14603,12 +14588,12 @@
 \begin{aligned}
 |a|^2 + |b|^2 &amp;= \cos^2\frac{\theta}{2} + |e^{i\phi}|^2\sin^2\frac{\theta}{2} \\
 &amp;= \cos^2\frac{\theta}{2} + \sin^2\frac{\theta}{2} \\
-&amp;= \finalanswer{1}
+&amp;= 1
 \end{aligned}
 \]</div>
-<p>すでに大きさは 1 に規格化されているため，固有状態の形が以下のように導かれました。</p>
+<p>すでに大きさは 1 に規格化されているため，固有状態の形が以下のように得られます。</p>
 <div class="arithmatex">\[
-|\boldsymbol{n}, +\rangle = \begin{pmatrix} \cos\frac{\theta}{2} \\ e^{i\phi} \sin\frac{\theta}{2} \end{pmatrix}
+\finalanswer{|\boldsymbol{n}, +\rangle = \begin{pmatrix} \cos\frac{\theta}{2} \\ e^{i\phi} \sin\frac{\theta}{2} \end{pmatrix}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>量子力学の測定規則に従い，現在の状態 <span class="arithmatex">\(|+\rangle\)</span> が測定したい状態 <span class="arithmatex">\(|\boldsymbol{n}, +\rangle\)</span> に含まれている割合を計算します。
@@ -14626,10 +14611,7 @@
 \]</div>
 <p>確率はこの値の絶対値の2乗で与えられます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-P_+ &amp;= |\langle \boldsymbol{n}, +|+\rangle|^2 \\
-&amp;= \finalanswer{\cos^2\frac{\theta}{2}}
-\end{aligned}
+P_+ = |\langle \boldsymbol{n}, +|+\rangle|^2 = \finalanswer{\cos^2\frac{\theta}{2}}
 \]</div>
 <p>半角の公式を用いて書き直すと <span class="arithmatex">\(P_+ = \frac{1 + \cos\theta}{2}\)</span> となります。例えば <span class="arithmatex">\(\theta = 0\)</span> であれば確率は 1 となり， <span class="arithmatex">\(\theta = \pi\)</span> であれば確率は 0 となり， <span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> であれば確率は <span class="arithmatex">\(\frac{1}{2}\)</span> となることが分かります。</p>
 

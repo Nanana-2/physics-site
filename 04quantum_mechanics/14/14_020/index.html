@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,9 +14520,9 @@
 <h2 id="_2">問題</h2>
 <p>ある対称操作を表すユニタリー演算子がハミルトニアンと可換である場合，その系には対応する対称性が存在し，同時にその対称性の生成元となる物理量が時間の経過に対して不変に保たれる。</p>
 <p>ハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とし，ある連続的な対称操作の微小変換を表すエルミート演算子を <span class="arithmatex">\(\hat{G}\)</span> とする。このとき，微小なパラメータ <span class="arithmatex">\(\delta \theta\)</span> に対して，ユニタリー対称操作演算子は <span class="arithmatex">\(\hat{U} = 1 - \frac{i}{\hbar} \hat{G} \delta \theta\)</span> と表される。以下の問いに答えよ。</p>
-<p>(1) ハミルトニアンがこの対称操作に対して不変である条件は，変換後のハミルトニアン <span class="arithmatex">\(\hat{H}' = \hat{U} \hat{H} \hat{U}^\dagger\)</span> が元の <span class="arithmatex">\(\hat{H}\)</span> と厳密に一致すること，すなわち <span class="arithmatex">\(\hat{U} \hat{H} \hat{U}^\dagger = \hat{H}\)</span> である。 <span class="arithmatex">\(\delta \theta\)</span> の1次の微小項まで考慮することにより，この対称性の条件がハミルトニアンと生成元 <span class="arithmatex">\(\hat{G}\)</span> の交換関係 <span class="arithmatex">\([\hat{H}, \hat{G}] = 0\)</span> にまとめられることを示せ。</p>
+<p>(1) ハミルトニアンがこの対称操作に対して不変である条件は，変換後のハミルトニアン <span class="arithmatex">\(\hat{H}' = \hat{U} \hat{H} \hat{U}^\dagger\)</span> が元の <span class="arithmatex">\(\hat{H}\)</span> に等しいこと，すなわち <span class="arithmatex">\(\hat{U} \hat{H} \hat{U}^\dagger = \hat{H}\)</span> である。 <span class="arithmatex">\(\delta \theta\)</span> の1次の項まで考え，この条件がハミルトニアンと生成元 <span class="arithmatex">\(\hat{G}\)</span> の交換関係 <span class="arithmatex">\([\hat{H}, \hat{G}] = 0\)</span> と書けることを示せ。</p>
 <p>(2) ハイゼンベルク運動方程式によると，任意の演算子 <span class="arithmatex">\(\hat{A}\)</span> の時間微分は <span class="arithmatex">\(\frac{d\hat{A}}{dt} = \frac{1}{i\hbar} [\hat{A}, \hat{H}]\)</span> で与えられる。 (1) の対称性の条件が満たされているとき，生成元である物理量 <span class="arithmatex">\(\hat{G}\)</span> の期待値が時間的に変化しない保存量になることを証明せよ。</p>
-<p>(3) 3次元空間における微小な空間並進の生成元は運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{p}}\)</span> であり，微小な空間回転の生成元は角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}\)</span> である。ハミルトニアンが空間の全方向への並進および回転に対して不変であるとき，この系においてどのような物理量が保存されるか，それぞれ数式を用いてベクトル形式で答えよ。</p>
+<p>(3) 3次元空間における微小な空間並進の生成元は運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{p}}\)</span> であり，微小な空間回転の生成元は角運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{L}}\)</span> である。ハミルトニアンが空間の全方向への並進および回転に対して不変であるとき，この系においてどのような物理量が保存されるか，それぞれ式を用いてベクトル形式で答えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14538,7 +14538,7 @@
 <div class="arithmatex">\[
 \hat{H} - \frac{i}{\hbar} \hat{G} \hat{H} \delta \theta = \hat{H} - \frac{i}{\hbar} \hat{H} \hat{G} \delta \theta
 \]</div>
-<p>両辺に共通する <span class="arithmatex">\(\hat{H}\)</span> を相殺し，全体の符号と係数を整理します。</p>
+<p>両辺から共通する <span class="arithmatex">\(\hat{H}\)</span> の項を引き，全体の符号と係数を整理します。</p>
 <div class="arithmatex">\[
 \hat{G} \hat{H} \delta \theta = \hat{H} \hat{G} \delta \theta
 \]</div>
@@ -14546,7 +14546,7 @@
 <div class="arithmatex">\[
 \hat{H} \hat{G} - \hat{G} \hat{H} = 0
 \]</div>
-<p>左辺は交換子の定義そのものであるため，求めるべき次の交換関係が導かれます。</p>
+<p>左辺を交換子で書けば，次の関係が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{[\hat{H}, \hat{G}] = 0}
 \]</div>

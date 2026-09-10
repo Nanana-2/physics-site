@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">フェルミ・ディラック分布</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の環境下にある非相互作用の理想フェルミ粒子系を考える。ある単一粒子量子状態 <span class="arithmatex">\(k\)</span> に着目すると，その準位のエネルギーは <span class="arithmatex">\(\epsilon_k\)</span> であり，パウリの排他原理によってこの状態の占有数 <span class="arithmatex">\(n_k\)</span> は <span class="arithmatex">\(0\)</span> または <span class="arithmatex">\(1\)</span> のいずれかの値しかとることができない。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の環境下にある非相互作用の理想フェルミ粒子系を考える。ある単一粒子量子状態 <span class="arithmatex">\(k\)</span> に着目すると，その準位のエネルギーは <span class="arithmatex">\(\epsilon_k\)</span> であり，パウリの排他原理によってこの状態の占有数 <span class="arithmatex">\(n_k\)</span> は <span class="arithmatex">\(0\)</span> または <span class="arithmatex">\(1\)</span> のいずれかの値しかとることができない。</p>
 <p>グランドカノニカルアンサンブルの枠組みを用いると，系全体の粒子間の相互作用がないため，各量子状態 <span class="arithmatex">\(k\)</span> を独立した開いた系とみなして扱うことができる。以下の問いに答えよ。</p>
 <p>(1) 状態 <span class="arithmatex">\(k\)</span> に対する大分配関数 <span class="arithmatex">\(\Xi_k(\beta, \mu)\)</span> を求めよ。</p>
 <p>(2) 状態 <span class="arithmatex">\(k\)</span> の平均占有数 <span class="arithmatex">\(\langle n_k \rangle\)</span> を大分配関数の対数微分公式 <span class="arithmatex">\(\langle n_k \rangle = \frac{1}{\beta} \frac{\partial \log \Xi_k}{\partial \mu}\)</span> を用いて計算し，フェルミ・ディラック分布関数を導出せよ。</p>
@@ -14550,7 +14550,7 @@
 <div class="arithmatex">\[
 \langle n_k \rangle = \frac{\exp\left[ -\beta(\epsilon_k - \mu) \right]}{1 + \exp\left[ -\beta(\epsilon_k - \mu) \right]}
 \]</div>
-<p>分母と分子を <span class="arithmatex">\(\exp\left[ -\beta(\epsilon_k - \mu) \right]\)</span> で割って整理すると，フェルミ・ディラック分布関数が導出されます。</p>
+<p>分母と分子を <span class="arithmatex">\(\exp\left[ -\beta(\epsilon_k - \mu) \right]\)</span> で割って整理すると，フェルミ・ディラック分布関数を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] + 1}}
 \]</div>
@@ -14562,14 +14562,16 @@
   <span class="arithmatex">\(\epsilon_k - \mu &lt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to -\infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(-\infty) = 0\)</span> となり，平均占有数は最大値である 1 に収束します。</li>
 </ul>
 <div class="arithmatex">\[
-\langle n_k \rangle \to \frac{1}{0 + 1} = 1
+\finalanswer{\langle n_k \rangle \to 1
+\qquad (\epsilon_k&lt;\mu)}
 \]</div>
 <ul>
 <li><span class="arithmatex">\(\epsilon_k &gt; \mu\)</span> のとき：
   <span class="arithmatex">\(\epsilon_k - \mu &gt; 0\)</span> であるため， <span class="arithmatex">\(\beta(\epsilon_k - \mu) \to \infty\)</span> となります。したがって， <span class="arithmatex">\(\exp(\infty) = \infty\)</span> となり，分母が無限大に発散するため，平均占有数は 0 に収束します。</li>
 </ul>
 <div class="arithmatex">\[
-\langle n_k \rangle \to \frac{1}{\infty + 1} = 0
+\finalanswer{\langle n_k \rangle \to 0
+\qquad (\epsilon_k&gt;\mu)}
 \]</div>
 <p>物理的には，絶対零度においてフェルミ粒子はパウリの排他原理を満たしながら，エネルギーの低い準位から順に隙間なく1個ずつ詰まっていき， <span class="arithmatex">\(\epsilon_k = \mu\)</span> の境界を境にして，それより高いエネルギーの状態には1つも粒子が入らなくなります。このときの境界の化学ポテンシャルをフェルミエネルギーと呼び，グラフの形状は境界で 1 から 0 へ垂直にステップ状に飛び降りる階段関数になります。</p>
 <p><strong>有限温度<span class="arithmatex">\(T &gt; 0\)</span>のとき</strong>

@@ -3683,34 +3683,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4973,7 +4945,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11186,7 +11186,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14594,10 +14594,10 @@
 \]</div>
 <p>よって，コリオリ力 <span class="arithmatex">\(\mathbf{F}_c\)</span> の各成分は次の通りです。</p>
 <div class="arithmatex">\[
-F_{cx} = -2m \Omega \dot{y} \sin\theta
+\finalanswer{F_{cx} = -2m \Omega \dot{y} \sin\theta}
 \]</div>
 <div class="arithmatex">\[
-F_{cy} = 2m \Omega \left( \dot{z} \cos\theta + \dot{x} \sin\theta \right)
+\finalanswer{F_{cy} = 2m \Omega \left( \dot{z} \cos\theta + \dot{x} \sin\theta \right)}
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{F_{cz} = -2m \Omega \dot{y} \cos\theta}
@@ -14608,10 +14608,10 @@ F_{cy} = 2m \Omega \left( \dot{z} \cos\theta + \dot{x} \sin\theta \right)
 <div class="arithmatex">\[
 x^2 + y^2 + z^2 = L^2
 \]</div>
-<p>これより，鉛直方向の位置 <span class="arithmatex">\(z\)</span> は次のように近似できます。
-$$
+<p>これより，鉛直方向の位置 <span class="arithmatex">\(z\)</span> は次のように近似できます。</p>
+<div class="arithmatex">\[
 z = \sqrt{L^2 - (x^2 + y^2)} \approx L
-$$</p>
+\]</div>
 <p>糸の張力を <span class="arithmatex">\(\mathbf{T}\)</span> とします。張力は常に支持点である原点を向くため，その方向ベクトルは <span class="arithmatex">\((-x, -y, -z)\)</span> となります。張力の大きさを <span class="arithmatex">\(T\)</span> とすると，各成分は次のように表されます。</p>
 <div class="arithmatex">\[
 T_x = -T \frac{x}{L}
@@ -14633,10 +14633,10 @@ T_x \approx -mg \frac{x}{L}
 <div class="arithmatex">\[
 T_y \approx -mg \frac{y}{L}
 \]</div>
-<p>さらに，問題文の指示通り，鉛直方向の速度 <span class="arithmatex">\(\dot{z}\)</span> を無視すると，コリオリ力の水平成分は次のように簡略化されます。
-$$
+<p>さらに，問題文の指示通り，鉛直方向の速度 <span class="arithmatex">\(\dot{z}\)</span> を無視すると，コリオリ力の水平成分は次のように簡略化されます。</p>
+<div class="arithmatex">\[
 F_{cx} \approx -2m \Omega \dot{y} \sin\theta
-$$</p>
+\]</div>
 <div class="arithmatex">\[
 F_{cy} \approx 2m \Omega \dot{x} \sin\theta
 \]</div>
@@ -14649,7 +14649,7 @@ m \ddot{y} = -mg \frac{y}{L} + 2m \Omega \dot{x} \sin\theta
 \]</div>
 <p>両辺を質量 <span class="arithmatex">\(m\)</span> で割り，単振り子の固有振動数 <span class="arithmatex">\(\omega_0 = \sqrt{g/L}\)</span> および自転角速度の鉛直成分 <span class="arithmatex">\(\omega_z = \Omega \sin\theta\)</span> を導入すると，求める運動方程式が得られます。</p>
 <div class="arithmatex">\[
-\ddot{x} = -\omega_0^2 x - 2\omega_z \dot{y}
+\finalanswer{\ddot{x} = -\omega_0^2 x - 2\omega_z \dot{y}}
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{\ddot{y} = -\omega_0^2 y + 2\omega_z \dot{x}}
@@ -14662,10 +14662,7 @@ m \ddot{y} = -mg \frac{y}{L} + 2m \Omega \dot{x} \sin\theta
 \]</div>
 <p>右辺の第2項は次のように変形できます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-2\omega_z (-\dot{y} + i\dot{x}) &amp;= 2i\omega_z (\dot{x} + i\dot{y}) \\
-&amp;= 2i\omega_z \dot{\zeta}
-\end{aligned}
+2\omega_z (-\dot{y} + i\dot{x}) = 2i\omega_z (\dot{x} + i\dot{y}) = 2i\omega_z \dot{\zeta}
 \]</div>
 <p>したがって，複素変数 <span class="arithmatex">\(\zeta\)</span> に関する2階線形同次微分方程式が得られます。</p>
 <div class="arithmatex">\[
@@ -14692,20 +14689,20 @@ r - i\omega_z \approx \pm i\omega_0
 <div class="arithmatex">\[
 r \approx i\omega_z \pm i\omega_0
 \]</div>
-<p>これより，複素微分方程式の一般解は，2つの複素任意定数 <span class="arithmatex">\(A\)</span> および <span class="arithmatex">\(B\)</span> を用いて次のように求められます。
-$$
+<p>これより，複素微分方程式の一般解は，2つの複素任意定数 <span class="arithmatex">\(A\)</span> および <span class="arithmatex">\(B\)</span> を用いて次のように求められます。</p>
+<div class="arithmatex">\[
 \finalanswer{\zeta(t) = e^{i\omega_z t} \left( A e^{i\omega_0 t} + B e^{-i\omega_0 t} \right)}
-$$</p>
+\]</div>
 <h3 id="5">(5)</h3>
 <p>初期条件 <span class="arithmatex">\(t = 0\)</span> において <span class="arithmatex">\(\zeta(0) = a\)</span> および <span class="arithmatex">\(\dot{\zeta}(0) = 0\)</span> を適用します。</p>
 <p>一般解を時間微分すると次の式になります。</p>
 <div class="arithmatex">\[
 \dot{\zeta}(t) = i\omega_z \zeta(t) + e^{i\omega_z t} \left( i\omega_0 A e^{i\omega_0 t} - i\omega_0 B e^{-i\omega_0 t} \right)
 \]</div>
-<p>初期条件を代入すると，次の2つの関係式が得られます。
-$$
+<p>初期条件を代入すると，次の2つの関係式が得られます。</p>
+<div class="arithmatex">\[
 A + B = a
-$$</p>
+\]</div>
 <div class="arithmatex">\[
 i\omega_z (A + B) + i\omega_0 (A - B) = 0
 \]</div>
@@ -14739,10 +14736,7 @@ y(t) \approx a \sin(\omega_z t) \cos(\omega_0 t)
 <p><span class="arithmatex">\(x\)</span> 軸を北向き，<span class="arithmatex">\(y\)</span> 軸を東向きにとっているため，<span class="arithmatex">\(e^{i\omega_z t}\)</span> が表す正の回転は，北半球では上空から見て時計回りに対応します。
 振動面が <span class="arithmatex">\(2\pi\)</span> 回転する周期 <span class="arithmatex">\(T\)</span> は次の通りです。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-T &amp;= \frac{2\pi}{\omega_z} \\
-&amp;= \finalanswer{\frac{2\pi}{\Omega \sin\theta}}
-\end{aligned}
+T = \frac{2\pi}{\omega_z} = \finalanswer{\frac{2\pi}{\Omega \sin\theta}}
 \]</div>
 <p>地球の自転周期を <span class="arithmatex">\(T_{\text{earth}} = 2\pi / \Omega\)</span> とすると，周期は <span class="arithmatex">\(T = T_{\text{earth}} / \sin\theta\)</span> と表されます。</p>
 <p>北極と赤道の場合を確認します。</p>

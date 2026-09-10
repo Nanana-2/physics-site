@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">電流密度と連続の式</h1>
 <h2 id="_2">問題</h2>
-<p>空間内を移動する電荷の保存則を，電荷密度と電流密度を用いて記述する。時刻 <span class="arithmatex">\(t\)</span>，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> における単位体積当たりの電荷を <span class="arithmatex">\(\rho(\boldsymbol{r},t)\)</span> とする。また，向きをもつ微小面 <span class="arithmatex">\(d\boldsymbol{S}\)</span> を単位時間に通過する電荷を</p>
+<p>空間内を移動する電荷の保存則を，電荷密度と電流密度を用いて考える。時刻 <span class="arithmatex">\(t\)</span>，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> における単位体積当たりの電荷を <span class="arithmatex">\(\rho(\boldsymbol{r},t)\)</span> とする。また，向きをもつ微小面 <span class="arithmatex">\(d\boldsymbol{S}\)</span> を単位時間に通過する電荷を</p>
 <div class="arithmatex">\[
 dI=\boldsymbol{j}(\boldsymbol{r},t)\cdot d\boldsymbol{S}
 \]</div>
@@ -14533,13 +14533,13 @@ Q_V(t)=\int_V\rho(\boldsymbol{r},t)\,dV
 =\int_V\nabla\cdot\boldsymbol{j}\,dV
 \]</div>
 <p>を用いてよい。</p>
-<p>(1) 閉曲面から外へ流出する電流が正になるという符号の約束に注意して，体積 <span class="arithmatex">\(V\)</span> に対する電荷保存則を積分の形で表せ。続いて発散定理を用い，局所的な電荷保存則である連続の式を導出せよ。得られた式の二つの項がそれぞれ何を表すか説明せよ。</p>
+<p>(1) 体積 <span class="arithmatex">\(V\)</span> に対する電荷保存則を積分形で表し，発散定理を用いて連続の式を導出せよ。</p>
 <p>(2) 半径 <span class="arithmatex">\(R\)</span> の球内に電荷が一様に分布している。球内の電荷密度が</p>
 <div class="arithmatex">\[
 \rho(t)=\rho_0e^{-t/\tau}
 \]</div>
-<p>に従って減少し，失われた電荷は球対称な電流として外向きに流れるとする。球の中心で電流密度が有限であるという条件を用いて，<span class="arithmatex">\(r&lt;R\)</span> における電流密度 <span class="arithmatex">\(\boldsymbol{j}(r,t)\)</span> を連続の式から求めよ。さらに，球面を通過する全電流が球内全電荷の減少率と一致することを確かめよ。</p>
-<p>(3) 十分に時間が経過して電荷密度が時間変化しない定常電流では，連続の式が <span class="arithmatex">\(\nabla\cdot\boldsymbol{j}=0\)</span> となる。断面積が位置によって緩やかに変化する一本の導線に定常電流 <span class="arithmatex">\(I\)</span> が流れているとき，断面内で電流密度が一様であるとして <span class="arithmatex">\(j\)</span> と断面積 <span class="arithmatex">\(A\)</span> の関係を求めよ。半径が <span class="arithmatex">\(a\)</span> の断面と <span class="arithmatex">\(b\)</span> の断面で電流密度を比較し，細い部分ほど電流密度が大きくなる理由を電荷保存の観点から説明せよ。</p>
+<p>に従って減少し，失われた電荷は球対称な電流として外向きに流れるとする。球の中心で電流密度が有限であるという条件を用いて，<span class="arithmatex">\(r&lt;R\)</span> における電流密度 <span class="arithmatex">\(\boldsymbol{j}(r,t)\)</span> を連続の式から求めよ。</p>
+<p>(3) 十分に時間が経過して電荷密度が時間変化しない定常電流では，連続の式が <span class="arithmatex">\(\nabla\cdot\boldsymbol{j}=0\)</span> となる。断面積が位置によって緩やかに変化する一本の導線に定常電流 <span class="arithmatex">\(I\)</span> が流れているとき，断面内で電流密度が一様であるとして <span class="arithmatex">\(j\)</span> と断面積 <span class="arithmatex">\(A\)</span> の関係を求めよ。半径が <span class="arithmatex">\(a\)</span> の断面と <span class="arithmatex">\(b\)</span> の断面で電流密度を比較せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14560,7 +14560,7 @@ I_{\mathrm{out}}=\oint_S\boldsymbol{j}\cdot d\boldsymbol{S}
 \frac{\partial\rho}{\partial t}
 +\nabla\cdot\boldsymbol{j}
 \right)dV
-&amp;=0.
+&amp;=0
 \end{aligned}
 \]</div>
 <p>第一行が電荷保存則の積分形です。体積 <span class="arithmatex">\(V\)</span> は空間に固定されているので，第二行では左辺の時間微分を積分の内側へ移し，右辺へ発散定理を適用しました。</p>
@@ -14604,15 +14604,15 @@ r^2j_r(r,t)-\lim_{r'\to0}r'^2j_r(r',t)
 &amp;=\frac{\rho(t)}{\tau}
 \left[\frac{r'^3}{3}\right]_0^r \\
 r^2j_r(r,t)
-&amp;=\frac{\rho(t)r^3}{3\tau}.
+&amp;=\frac{\rho(t)r^3}{3\tau}
 \end{aligned}
 \]</div>
 <p>最後の行では，中心で <span class="arithmatex">\(j_r\)</span> が有限なら <span class="arithmatex">\(r'^2j_r\to0\)</span> となることを用いました。これは不定積分で現れる積分定数を <span class="arithmatex">\(C=0\)</span> と決めることに相当します。</p>
 <p>したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{j}(r,t)
+\finalanswer{\boldsymbol{j}(r,t)
 =\frac{\rho_0r}{3\tau}e^{-t/\tau}\boldsymbol{e}_r,
-\qquad r&lt;R
+\qquad r&lt;R}
 \]</div>
 <p>です。球面から流出する全電流は</p>
 <div class="arithmatex">\[
@@ -14639,7 +14639,7 @@ I=\int_A\boldsymbol{j}\cdot d\boldsymbol{S}
 \]</div>
 <p>となります。定常状態では導線の途中に電荷が蓄積しないため，どの断面を通る電流も同じ <span class="arithmatex">\(I\)</span> です。よって</p>
 <div class="arithmatex">\[
-j=\frac{I}{A}
+\finalanswer{j=\frac{I}{A}}
 \]</div>
 <p>です。半径 <span class="arithmatex">\(a\)</span> と <span class="arithmatex">\(b\)</span> の円形断面では</p>
 <div class="arithmatex">\[

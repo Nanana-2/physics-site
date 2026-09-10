@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14542,7 +14542,7 @@ A \Delta x \frac{\partial n(x, t)}{\partial t} = J(x, t) A - J(x + \Delta x, t) 
 <div class="arithmatex">\[
 \frac{\partial n(x, t)}{\partial t} = - \frac{J(x + \Delta x, t) - J(x, t)}{\Delta x}
 \]</div>
-<p>ここで，空間の刻み幅を無限に小さくする極限 <span class="arithmatex">\(\Delta x \to 0\)</span> をとることで，右辺の分数が微分の定義式そのものになります。これにより，求める連続の式が導出されます。</p>
+<p>ここで，空間の刻み幅を無限に小さくする極限 <span class="arithmatex">\(\Delta x \to 0\)</span> をとることで，右辺の分数が微分の定義式そのものになります。これにより，求める連続の式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{\partial n}{\partial t} = - \frac{\partial J}{\partial x} \quad \implies \quad \frac{\partial n}{\partial t} + \frac{\partial J}{\partial x} = 0}
 \]</div>
@@ -14551,7 +14551,7 @@ A \Delta x \frac{\partial n(x, t)}{\partial t} = J(x, t) A - J(x + \Delta x, t) 
 <div class="arithmatex">\[
 \frac{\partial n}{\partial t} = - \frac{\partial}{\partial x} \left( -D \frac{\partial n}{\partial x} \right)
 \]</div>
-<p>拡散係数 <span class="arithmatex">\(D\)</span> が空間的に一様であるとすると， <span class="arithmatex">\(D\)</span> を微分の外へ括り出すことができます。マイナス記号同士が相殺されるため，濃度に関する2階偏微分方程式である拡散方程式が導かれます。</p>
+<p>拡散係数 <span class="arithmatex">\(D\)</span> が空間的に一様であるとすると，<span class="arithmatex">\(D\)</span> を微分の外へ括り出せます。2つの負号により全体の符号は正となるため，拡散方程式は</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{\partial n}{\partial t} = D \frac{\partial^2 n}{\partial x^2}}
 \]</div>
@@ -14561,14 +14561,14 @@ A \Delta x \frac{\partial n(x, t)}{\partial t} = J(x, t) A - J(x + \Delta x, t) 
 \finalanswer{n(x, t) = \frac{N}{\sqrt{4\pi D t}} \exp\left( -\frac{x^2}{4D t} \right)}
 \]</div>
 <p><strong>空間的な形状の特徴についての説明</strong></p>
-<p>この解の数式から，濃度分布の空間プロファイルには以下の明確な特徴が存在します。</p>
+<p>この解から，濃度分布には次の特徴が読み取れます。</p>
 <ul>
 <li><strong>関数の種類</strong>
   位置 <span class="arithmatex">\(x\)</span> に関する依存性は <span class="arithmatex">\(\exp(-x^2 / \sigma^2)\)</span> の形を含んでいるため，空間的には原点 <span class="arithmatex">\(x = 0\)</span> を中心として左右に対称な<strong>ガウス分布</strong>の形状を描きます。</li>
 <li><strong>形状の時間変化</strong>
   時間の経過に伴って，指数の分母にある幅のスケール <span class="arithmatex">\(\sqrt{4Dt}\)</span> が大きくなっていくため，分布の横幅は徐々に広がっていきます。それと同時に，全空間での積分値を一定に保つ必要があるため，原点における中央のピークの高さ <span class="arithmatex">\(\frac{N}{\sqrt{4\pi D t}}\)</span> は時間の経過とともに平坦に低下します。</li>
 </ul>
-<p>これは，熱運動によるランダムな移動の積み重ねによって，最初は1箇所に集まっていた粒子が，空間全体へと滑らかに，かつ均一に広がっていくマクロな拡散プロセスの実態を数学的に表現しています。</p>
+<p>これは，熱運動によるランダムな移動の積み重ねによって，最初は1箇所に集まっていた粒子が，空間全体へと滑らかに，かつ均一に広がっていくマクロな拡散プロセスの実態を表現しています。</p>
 
 
 

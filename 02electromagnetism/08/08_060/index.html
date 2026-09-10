@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,7 +14534,7 @@
 t_r=t-\frac{|\boldsymbol{r}-\boldsymbol{r}'|}{c}
 \]</div>
 <p>とする。</p>
-<p>(1) 遅延時刻 <span class="arithmatex">\(t_r\)</span> の意味を説明せよ。源が原点近傍の大きさ <span class="arithmatex">\(a\)</span> の領域に局在し，観測距離が <span class="arithmatex">\(r\gg a\)</span> であるとき，<span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|\simeq r\)</span> とする最低次近似からポテンシャルが時刻 <span class="arithmatex">\(t-r/c\)</span> の源に依存することを示せ。</p>
+<p>(1) 源が原点近傍の大きさ <span class="arithmatex">\(a\)</span> の領域に局在し，観測距離が <span class="arithmatex">\(r\gg a\)</span> であるとする。<span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|\simeq r\)</span> とする最低次近似を用い，ポテンシャルが時刻 <span class="arithmatex">\(t-r/c\)</span> の源に依存することを示せ。</p>
 <p>(2) 電気双極子モーメント <span class="arithmatex">\(\boldsymbol{p}(t)\)</span> をもつ点状源を，分布の意味で</p>
 <div class="arithmatex">\[
 \rho(\boldsymbol{r},t)
@@ -14544,7 +14544,7 @@ t_r=t-\frac{|\boldsymbol{r}-\boldsymbol{r}'|}{c}
 =\dot{\boldsymbol{p}}(t)\delta^3(\boldsymbol{r})
 \]</div>
 <p>と表す。連続の式 <span class="arithmatex">\(\partial\rho/\partial t+\nabla\cdot\boldsymbol{j}=0\)</span> を満たすことを示せ。さらにベクトルポテンシャルを求めよ。</p>
-<p>(3) <span class="arithmatex">\(\boldsymbol{p}(t)=p_0\cos\omega t\boldsymbol{e}_z\)</span> とする。距離 <span class="arithmatex">\(r\)</span> の観測点における <span class="arithmatex">\(\boldsymbol{A}(\boldsymbol{r},t)\)</span> を実数表示し，原点での振動に対する位相の遅れを求めよ。静的極限 <span class="arithmatex">\(\omega\to0\)</span> で <span class="arithmatex">\(\boldsymbol{A}\)</span> がどうなるか説明せよ。</p>
+<p>(3) <span class="arithmatex">\(\boldsymbol{p}(t)=p_0\cos\omega t\boldsymbol{e}_z\)</span> とする。距離 <span class="arithmatex">\(r\)</span> の観測点における <span class="arithmatex">\(\boldsymbol{A}(\boldsymbol{r},t)\)</span> を実数表示し，原点での振動に対する位相の遅れを求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14556,7 +14556,7 @@ t-t_r=\frac{|\boldsymbol{r}-\boldsymbol{r}'|}{c}
 <div class="arithmatex">\[
 |\boldsymbol{r}-\boldsymbol{r}'|\simeq r,
 \qquad
-t_r\simeq t-\frac{r}{c}
+\finalanswer{t_r\simeq t-\frac{r}{c}}
 \]</div>
 <p>とできます。たとえばベクトルポテンシャルは</p>
 <div class="arithmatex">\[
@@ -14577,10 +14577,10 @@ t_r\simeq t-\frac{r}{c}
 &amp;=\boldsymbol{\nabla}\cdot
 \left[\dot{\boldsymbol{p}}(t)\delta^3(\boldsymbol{r})\right] \\
 &amp;=\dot{\boldsymbol{p}}(t)
-\cdot\boldsymbol{\nabla}\delta^3(\boldsymbol{r}).
+\cdot\boldsymbol{\nabla}\delta^3(\boldsymbol{r})
 \end{aligned}
 \]</div>
-<p>和はゼロなので，局所的な電荷保存を満たします。電流密度を遅延ポテンシャルへ代入すると，デルタ関数によって <span class="arithmatex">\(\boldsymbol{r}'=\boldsymbol{0}\)</span> だけが寄与します。</p>
+<p>和はゼロなので，局所的な電荷保存を満たします。電流密度を遅延ポテンシャルへ代入すると，デルタ関数によって <span class="arithmatex">\(\boldsymbol{r}'=\boldsymbol{0}\)</span> の値だけが残ります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \boldsymbol{A}(\boldsymbol{r},t)
@@ -14588,8 +14588,8 @@ t_r\simeq t-\frac{r}{c}
 \int\frac{\dot{\boldsymbol{p}}(t_r)
 \delta^3(\boldsymbol{r}')}
 {|\boldsymbol{r}-\boldsymbol{r}'|}\,dV' \\
-&amp;=\finalanswer{\frac{\mu_0}{4\pi r}}
-\dot{\boldsymbol{p}}\left(t-\frac{r}{c}\right).
+&amp;=\finalanswer{\frac{\mu_0}{4\pi r}
+\dot{\boldsymbol{p}}\left(t-\frac{r}{c}\right)}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
@@ -14600,10 +14600,10 @@ t_r\simeq t-\frac{r}{c}
 \]</div>
 <p>です。したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{A}(\boldsymbol{r},t)
+\finalanswer{\boldsymbol{A}(\boldsymbol{r},t)
 =-\frac{\mu_0\omega p_0}{4\pi r}
 \sin\left[\omega\left(t-\frac{r}{c}\right)\right]
-\boldsymbol{e}_z
+\boldsymbol{e}_z}
 \]</div>
 <p>となります。原点での同じ時間変化に比べ，位相は</p>
 <div class="arithmatex">\[
@@ -14707,13 +14707,13 @@ t_r\simeq t-\frac{r}{c}
         
         
           
-          <a href="../08_070/" class="md-footer__link md-footer__link--next" aria-label="Next: 電気双極子放射">
+          <a href="../08_070/" class="md-footer__link md-footer__link--next" aria-label="Next: 電気双極子の放射場">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                電気双極子放射
+                電気双極子の放射場
               </div>
             </div>
             <div class="md-footer__button md-icon">

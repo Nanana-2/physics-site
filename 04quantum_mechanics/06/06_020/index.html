@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14547,12 +14547,8 @@
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{L}_- \hat{L}_+ &amp;= (\hat{L}_x - i\hat{L}_y)(\hat{L}_x + i\hat{L}_y) \\
-&amp;= \hat{L}_x^2 + i\hat{L}_x \hat{L}_y - i\hat{L}_y \hat{L}_x + \hat{L}_y^2
-\end{aligned}
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
- &amp;= \hat{L}_x^2 + \hat{L}_y^2 + i(\hat{L}_x \hat{L}_y - \hat{L}_y \hat{L}_x) \\
+&amp;= \hat{L}_x^2 + i\hat{L}_x \hat{L}_y - i\hat{L}_y \hat{L}_x + \hat{L}_y^2 \\
+&amp;= \hat{L}_x^2 + \hat{L}_y^2 + i(\hat{L}_x \hat{L}_y - \hat{L}_y \hat{L}_x) \\
 &amp;= \hat{L}_x^2 + \hat{L}_y^2 + i[\hat{L}_x, \hat{L}_y]
 \end{aligned}
 \]</div>
@@ -14589,27 +14585,31 @@
 \]</div>
 <p>状態ベクトルは 0 ではないため，係数の括弧の中身が 0 になります。これより <span class="arithmatex">\(\hat{L}^2\)</span> の固有値が決定します。</p>
 <div class="arithmatex">\[
-\lambda = l(l+1)\hbar^2
+\finalanswer{\lambda = l(l+1)\hbar^2}
 \]</div>
 <p>次に，これ以上 <span class="arithmatex">\(m\)</span> の値を下げることができない最小の状態 <span class="arithmatex">\(|l, m_{\text{min}}\rangle\)</span> に対して <span class="arithmatex">\(\hat{L}_- |l, m_{\text{min}}\rangle = 0\)</span> と置き，左から <span class="arithmatex">\(\hat{L}_+\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\hat{L}_+ \hat{L}_- |l, m_{\text{min}}\rangle &amp;= 0 \implies (\hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z) |l, m_{\text{min}}\rangle \\
-&amp;= 0
-\end{aligned}
+\begin{gathered}
+\hat L_+\hat L_-|l,m_{\text{min}}\rangle=0 \\
+\Longrightarrow\quad
+(\hat L^2-\hat L_z^2+\hbar\hat L_z)|l,m_{\text{min}}\rangle=0
+\end{gathered}
 \]</div>
 <p>すでに求めた <span class="arithmatex">\(\lambda = l(l+1)\hbar^2\)</span> と，固有値 <span class="arithmatex">\(m_{\text{min}}\hbar\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-l(l+1)\hbar^2 - m_{\text{min}}^2\hbar^2 + m_{\text{min}}\hbar^2 &amp;= 0 \implies l^2 + l - m_{\text{min}}^2 + m_{\text{min}} \\
-&amp;= 0
-\end{aligned}
+l(l+1)\hbar^2-m_{\text{min}}^2\hbar^2+m_{\text{min}}\hbar^2=0
+\quad\Longrightarrow\quad
+l^2+l-m_{\text{min}}^2+m_{\text{min}}=0
 \]</div>
 <p>因数分解して整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{(l + m_{\text{min}})(l - m_{\text{min}}) + (l + m_{\text{min}}) = 0 \implies (l + m_{\text{min}})(l - m_{\text{min}} + 1) = 0}
+(l + m_{\text{min}})(l - m_{\text{min}} + 1) = 0
 \]</div>
-<p><span class="arithmatex">\(m_{\text{min}}\)</span> は最大値 <span class="arithmatex">\(l\)</span> 以下の値をとるため，第2項の括弧が 0 になることはありません。したがって第1項の括弧が 0 になり， <span class="arithmatex">\(m_{\text{min}} = -l\)</span> が定まります。</p>
+<p><span class="arithmatex">\(m_{\text{min}}\)</span> は最大値 <span class="arithmatex">\(l\)</span> 以下の値をとるため，第2因子は 0 になりません。したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{m_{\text{min}}=-l}
+\]</div>
+<p>となります。</p>
 <p>昇降演算子の作用によって <span class="arithmatex">\(m\)</span> は 1 ずつ変化するため，最大値から最小値までの間には整数回のステップが存在します。これにより， <span class="arithmatex">\(m\)</span> の範囲は <span class="arithmatex">\(-l\)</span> から <span class="arithmatex">\(l\)</span> までの等間隔な領域に制限されることが示されました。</p>
 
 

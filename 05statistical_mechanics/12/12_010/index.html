@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">密度行列の性質</h1>
 <h2 id="_2">問題</h2>
-<p>ある系において，規格化された量子状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> <span class="arithmatex">\(\langle\psi_i|\psi_i\rangle = 1\)</span> が，それぞれ古典的な確率 <span class="arithmatex">\(p_i\)</span> で実現している統計的集団を考える。ただし，全確率の保存則 <span class="arithmatex">\(\sum_i p_i = 1\)</span> <span class="arithmatex">\(0 \le p_i \le 1\)</span> を満たすものとする。</p>
+<p>ある系において，規格化された量子状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> が，それぞれ古典的な確率 <span class="arithmatex">\(p_i\)</span> で実現する統計的集団を考える。ただし，<span class="arithmatex">\(\langle\psi_i|\psi_i\rangle=1\)</span>，<span class="arithmatex">\(0\le p_i\le1\)</span>，<span class="arithmatex">\(\sum_i p_i=1\)</span> とする。</p>
 <p>この混合状態を統一的に表すため，以下の<strong>密度行列</strong> <span class="arithmatex">\(\rho\)</span> を導入する。</p>
 <div class="arithmatex">\[
 \rho = \sum_i p_i |\psi_i\rangle \langle\psi_i|
@@ -14534,7 +14534,7 @@
 <li>密度行列のトレースが常に 1 になること <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> を，確率の保存則を用いて示せ。</li>
 <li>密度行列がエルミート演算子であること <span class="arithmatex">\(\rho^\dagger = \rho\)</span> を，定義式から示せ。</li>
 </ul>
-<p>(3) 状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> が互いに直交する完全正規直交系 <span class="arithmatex">\(\{|n\rangle\}\)</span> である場合を考える。このとき，密度行列の行列表現における対角成分 <span class="arithmatex">\(\rho_{nn} = \langle n|\rho|n\rangle\)</span> および，非対角成分 <span class="arithmatex">\(\rho_{nm} = \langle n|\rho|m\rangle\)</span> <span class="arithmatex">\(n \neq m\)</span> が持つ物理的な意味をそれぞれ述べよ。</p>
+<p>(3) 任意の完全正規直交基底 <span class="arithmatex">\(\{|n\rangle\}\)</span> を用いて密度行列を表示する。このとき，対角成分 <span class="arithmatex">\(\rho_{nn}=\langle n|\rho|n\rangle\)</span> と，<span class="arithmatex">\(n\neq m\)</span> に対する非対角成分 <span class="arithmatex">\(\rho_{nm}=\langle n|\rho|m\rangle\)</span> が持つ物理的な意味をそれぞれ述べよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14553,7 +14553,7 @@
 &amp;= \mathrm{Tr}\left( \left[ \sum_i p_i |\psi_i\rangle\langle\psi_i| \right] \hat{A} \right)
 \end{aligned}
 \]</div>
-<p>大括弧の内部は密度行列 <span class="arithmatex">\(\rho\)</span> の定義そのものであるため，求める式が導出されます。</p>
+<p>大括弧の内部は密度行列 <span class="arithmatex">\(\rho\)</span> の定義そのものであるため，求める式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle\hat{A}\rangle = \mathrm{Tr}(\rho \hat{A})}
 \]</div>
@@ -14570,7 +14570,7 @@
 \]</div>
 <p>状態の規格化条件より， <span class="arithmatex">\(\mathrm{Tr}(|\psi_i\rangle \langle\psi_i|) = \langle\psi_i|\psi_i\rangle = 1\)</span> となるため，以下のようになります。</p>
 <div class="arithmatex">\[
-\mathrm{Tr}(\rho) = \sum_i p_i \cdot 1 = \sum_i p_i
+\finalanswer{\mathrm{Tr}(\rho)=\sum_i p_i=1}
 \]</div>
 <p>全確率の保存則 <span class="arithmatex">\(\sum_i p_i = 1\)</span> より， <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> が満たされます。</p>
 <ul>
@@ -14597,14 +14597,14 @@
 &amp;= \sum_i p_i |\langle n|\psi_i\rangle|^2
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(|\langle n|\psi_i\rangle|^2\)</span> は状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> にある系において状態 <span class="arithmatex">\(|n\rangle\)</span> が観測される量子力学的な確率です。これに出現確率 <span class="arithmatex">\(p_i\)</span> を掛けて全状態について足し合わせているため， <span class="arithmatex">\(\rho_{nn}\)</span> は<strong>系全体において状態 <span class="arithmatex">\(|n\rangle\)</span> が見出されるマクロな存在確率</strong>を表します。</p>
+<p><span class="arithmatex">\(|\langle n|\psi_i\rangle|^2\)</span> は，状態 <span class="arithmatex">\(|\psi_i\rangle\)</span> にある系を基底 <span class="arithmatex">\(\{|n\rangle\}\)</span> で測定したときに <span class="arithmatex">\(|n\rangle\)</span> を得る確率です。したがって，<span class="arithmatex">\(\rho_{nn}\)</span> は統計的集団に対する測定で状態 <span class="arithmatex">\(|n\rangle\)</span> が得られる確率を表します。</p>
 <ul>
-<li><strong>非対角成分 <span class="arithmatex">\(\rho_{nm}\)</span> <span class="arithmatex">\(n \neq m\)</span> の物理的意味</strong></li>
+<li><strong>非対角成分 <span class="arithmatex">\(\rho_{nm}\)</span>（<span class="arithmatex">\(n\neq m\)</span>）の物理的意味</strong></li>
 </ul>
 <div class="arithmatex">\[
 \finalanswer{\rho_{nm} = \sum_i p_i \langle n|\psi_i\rangle \langle\psi_i|m\rangle}
 \]</div>
-<p>これは，状態 <span class="arithmatex">\(|n\rangle\)</span> と状態 <span class="arithmatex">\(|m\rangle\)</span> の間の量子力学的な位相の相関を表しており，<strong>量子コヒーレンス</strong>と呼ばれます。純粋状態では各状態の位相が揃っているため非対角成分が残りますが，古典的な確率でランダムに混ざり合った混合状態では，位相の相殺が起こるため，非対角成分はゼロに近づいていきます。</p>
+<p>非対角成分は，選んだ基底における状態 <span class="arithmatex">\(|n\rangle\)</span> と <span class="arithmatex">\(|m\rangle\)</span> の間の量子コヒーレンスを表します。純粋状態か混合状態かにかかわらず，その値は基底に依存します。密度行列を対角化する固有基底では非対角成分は0になりますが，一般の基底では混合状態でも非零になり得ます。</p>
 
 
 

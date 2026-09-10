@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -12514,17 +12514,6 @@
     <span class="md-ellipsis">
       
         (2)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
       
     </span>
   </a>
@@ -14471,17 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14520,10 +14498,10 @@
 <h2 id="_2">問題</h2>
 <p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある空洞内部の単位体積あたりのエネルギー密度分布 <span class="arithmatex">\(u(\omega, T)\)</span> は，以下のプランクの放射公式で与えられる。</p>
 <div class="arithmatex">\[
-u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1}
+u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_{\text{B}} T} \right] - 1}
 \]</div>
 <p>空洞内部に存在するすべての振動数の電磁波を足し合わせた，全体のエネルギー密度を <span class="arithmatex">\(u(T) = \int_0^\infty u(\omega, T) d\omega\)</span> と置く。以下の問いに答えよ。</p>
-<p>(1) 全エネルギー密度 <span class="arithmatex">\(u(T)\)</span> の積分を実行するため，変数変換 <span class="arithmatex">\(x = \frac{\hbar \omega}{k_B T}\)</span> を行え。これにより， <span class="arithmatex">\(u(T)\)</span> が絶対温度 <span class="arithmatex">\(T\)</span> の4乗に比例することを示せ。ただし，必要であれば定積分公式</p>
+<p>(1) 全エネルギー密度 <span class="arithmatex">\(u(T)\)</span> の積分を実行するため，変数変換 <span class="arithmatex">\(x = \frac{\hbar \omega}{k_{\text{B}} T}\)</span> を行え。これにより， <span class="arithmatex">\(u(T)\)</span> が絶対温度 <span class="arithmatex">\(T\)</span> の4乗に比例することを示せ。ただし，必要であれば定積分公式</p>
 <div class="arithmatex">\[
 \int_0^\infty \frac{x^3}{e^x - 1} dx = \frac{\pi^4}{15}
 \]</div>
@@ -14532,64 +14510,47 @@ u(\omega, T) = \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar 
 <div class="arithmatex">\[
 I(T) = \frac{c}{4} u(T)
 \]</div>
-<p>(1) の結果をこの式に代入し，放射強度 <span class="arithmatex">\(I(T)\)</span> が <span class="arithmatex">\(I(T) = \sigma T^4\)</span> の形で表されることを示せ。また，ステファン・ボルツマン定数と呼ばれる比例係数 <span class="arithmatex">\(\sigma\)</span> を，物理定数 <span class="arithmatex">\(\hbar, c, k_B\)</span> を用いた式で表せ。</p>
-<p>(3) ある一辺の長さが2倍になった立方体形状の黒体，このとき表面積は4倍になる，を考える。この物体の絶対温度を2倍に引き上げたとき，この物体全体の表面から単位時間あたりに放射される総エネルギーは，温度を上げる前に比べて何倍になるか計算せよ。</p>
+<p>(1) の結果をこの式に代入し，放射強度 <span class="arithmatex">\(I(T)\)</span> が <span class="arithmatex">\(I(T) = \sigma T^4\)</span> の形で表されることを示せ。また，ステファン・ボルツマン定数と呼ばれる比例係数 <span class="arithmatex">\(\sigma\)</span> を，物理定数 <span class="arithmatex">\(\hbar, c, k_{\text{B}}\)</span> を用いた式で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>全エネルギー密度 <span class="arithmatex">\(u(T)\)</span> の定義式にプランクの公式を代入します。</p>
-<div class="arithmatex">\[
-u(T) = \int_0^\infty \frac{\hbar \omega^3}{\pi^2 c^3} \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1} d\omega
-\]</div>
-<p>指定された変数変換 <span class="arithmatex">\(x = \frac{\hbar \omega}{k_B T}\)</span> を行います。これにより， <span class="arithmatex">\(\omega = \frac{k_B T}{\hbar} x\)</span> ， <span class="arithmatex">\(d\omega = \frac{k_B T}{\hbar} dx\)</span> となり，積分の範囲は <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\infty\)</span> で変わりません。これらを代入して整理します。</p>
-<div class="arithmatex">\[
-u(T) = \frac{\hbar}{\pi^2 c^3} \int_0^\infty \left( \frac{k_B T}{\hbar} x \right)^3 \frac{1}{e^x - 1} \left( \frac{k_B T}{\hbar} dx \right)
-\]</div>
-<p>温度 <span class="arithmatex">\(T\)</span> や物理定数の項を積分の外へ括り出します。</p>
+<p>変数変換 <span class="arithmatex">\(x=\hbar\omega/(k_{\text{B}}T)\)</span> により，<span class="arithmatex">\(\omega=(k_{\text{B}}T/\hbar)x\)</span>，<span class="arithmatex">\(d\omega=(k_{\text{B}}T/\hbar)dx\)</span> です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
-u(T) &amp;= \frac{\hbar}{\pi^2 c^3} \left( \frac{k_B T}{\hbar} \right)^4 \int_0^\infty \frac{x^3}{e^x - 1} dx \\
-&amp;= \frac{k_B^4 T^4}{\pi^2 c^3 \hbar^3} \int_0^\infty \frac{x^3}{e^x - 1} dx
+u(T)
+&amp;=\int_0^\infty\frac{\hbar\omega^3}{\pi^2c^3}
+\frac{d\omega}{e^{\hbar\omega/(k_{\text{B}}T)}-1} \\
+&amp;=\frac{\hbar}{\pi^2c^3}
+\left(\frac{k_{\text{B}}T}{\hbar}\right)^4
+\int_0^\infty\frac{x^3}{e^x-1}\,dx \\
+&amp;= \frac{k_{\text{B}}^4 T^4}{\pi^2 c^3 \hbar^3} \int_0^\infty \frac{x^3}{e^x - 1} dx
 \end{aligned}
 \]</div>
 <p>ここで与えられた定積分公式</p>
 <div class="arithmatex">\[
 \int_0^\infty \frac{x^3}{e^x - 1} dx = \frac{\pi^4}{15}
 \]</div>
-<p>を代入します。</p>
+<p>を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
-u(T) &amp;= \frac{k_B^4 T^4}{\pi^2 c^3 \hbar^3} \cdot \frac{\pi^4}{15} \\
-&amp;= \finalanswer{\frac{\pi^2 k_B^4}{15 c^3 \hbar^3} T^4}
+u(T)
+&amp;= \frac{k_{\text{B}}^4 T^4}{\pi^2 c^3 \hbar^3} \cdot \frac{\pi^4}{15} \\
+&amp;= \finalanswer{\frac{\pi^2 k_{\text{B}}^4}{15 c^3 \hbar^3} T^4}
 \end{aligned}
 \]</div>
 <p>この結果により，電磁波の全エネルギー密度 <span class="arithmatex">\(u(T)\)</span> が絶対温度の4乗<span class="arithmatex">\(T^4\)</span>に比例することが示されました。</p>
 <h3 id="2">(2)</h3>
-<p>与えられた関係式 <span class="arithmatex">\(I(T) = \frac{c}{4} u(T)\)</span> に，(1) で求めた <span class="arithmatex">\(u(T)\)</span> の式を代入します。</p>
+<p>(1) の結果と <span class="arithmatex">\(I(T)=cu(T)/4\)</span> から</p>
 <div class="arithmatex">\[
 \begin{aligned}
-I(T) &amp;= \frac{c}{4} \left( \frac{\pi^2 k_B^4}{15 c^3 \hbar^3} T^4 \right) \\
-&amp;= \left( \frac{\pi^2 k_B^4}{60 c^2 \hbar^3} \right) T^4
+I(T) &amp;= \frac{c}{4} \left( \frac{\pi^2 k_{\text{B}}^4}{15 c^3 \hbar^3} T^4 \right) \\
+&amp;= \left( \frac{\pi^2 k_{\text{B}}^4}{60 c^2 \hbar^3} \right) T^4
 \end{aligned}
 \]</div>
 <p>この式は，放射強度 <span class="arithmatex">\(I(T)\)</span> が絶対温度の4乗に比例するというステファン・ボルツマンの法則を表しています。比例係数を <span class="arithmatex">\(\sigma\)</span> と置くことで， <span class="arithmatex">\(I(T) = \sigma T^4\)</span> の形になります。したがって，ステファン・ボルツマン定数 <span class="arithmatex">\(\sigma\)</span> の具体的な構成は以下の通りです。</p>
 <div class="arithmatex">\[
-\finalanswer{\sigma = \frac{\pi^2 k_B^4}{60 c^2 \hbar^3}}
+\finalanswer{\sigma = \frac{\pi^2 k_{\text{B}}^4}{60 c^2 \hbar^3}}
 \]</div>
-<h3 id="3">(3)</h3>
-<p>物体全体から単位時間あたりに放射される総エネルギー <span class="arithmatex">\(E\)</span> は，単位表面積あたりの放射強度 <span class="arithmatex">\(I(T)\)</span> に，物体の全表面積 <span class="arithmatex">\(S\)</span> を掛け合わせたものになります。</p>
-<div class="arithmatex">\[
-E = S \cdot I(T) = \sigma S T^4
-\]</div>
-<p>問題の条件より，形状の変化にともなって表面積 <span class="arithmatex">\(S\)</span> は元の 4 倍になります。また，絶対温度 <span class="arithmatex">\(T\)</span> は元の 2 倍になります。変化前の表面積を <span class="arithmatex">\(S_0\)</span>，温度を <span class="arithmatex">\(T_0\)</span> とすると，変化後の総エネルギー <span class="arithmatex">\(E\)</span> は以下のように計算できます。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-E &amp;= \sigma (4 S_0) (2 T_0)^4 \\
-&amp;= \sigma (4 S_0) (16 T_0^4) \\
-&amp;= \finalanswer{64 \cdot (\sigma S_0 T_0^4)}
-\end{aligned}
-\]</div>
-<p>したがって，放射される総エネルギーは <span class="arithmatex">\(4\times2^4=64\)</span> 倍になります。</p>
 
 
 

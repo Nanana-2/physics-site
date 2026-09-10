@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11186,7 +11186,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14597,7 +14597,7 @@ i \frac{dc_2(t)}{dt} = \omega_0 c_2(t) + G e^{-i\omega_0 t} c_1(t)
 <div class="arithmatex">\[
 i \frac{d}{dt} \left( b_2(t) e^{-i\omega_0 t} \right) = i \frac{db_2(t)}{dt} e^{-i\omega_0 t} + \omega_0 b_2(t) e^{-i\omega_0 t}
 \]</div>
-<p>これを第2式に代入すると，右辺の第1項と相殺します。</p>
+<p>これを第2式に代入すると，右辺の第1項との和は 0 です。</p>
 <div class="arithmatex">\[
 i \frac{db_2(t)}{dt} e^{-i\omega_0 t} + \omega_0 b_2(t) e^{-i\omega_0 t} = \omega_0 b_2(t) e^{-i\omega_0 t} + G e^{-i\omega_0 t} c_1(t)
 \]</div>
@@ -14652,24 +14652,24 @@ i \frac{d}{dt} \begin{pmatrix} c_1(t) \\ \tilde{c}_2(t) \end{pmatrix} = \begin{p
 <h3 id="4">(4)</h3>
 <p>行列 <span class="arithmatex">\(M\)</span> の特性方程式 <span class="arithmatex">\(\det(M - \lambda I) = 0\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\begin{vmatrix} -\lambda &amp; G \\ G &amp; \Delta - \lambda \end{vmatrix} &amp;= 0 \implies \lambda^2 - \Delta \lambda - G^2 \\
-&amp;= 0
-\end{aligned}
+\begin{gathered}
+\begin{vmatrix}-\lambda&amp;G\\G&amp;\Delta-\lambda\end{vmatrix}=0 \\
+\Longrightarrow\quad \lambda^2-\Delta\lambda-G^2=0
+\end{gathered}
 \]</div>
 <p>解の公式より，固有値は以下のように求まります。</p>
 <div class="arithmatex">\[
 \finalanswer{\lambda_\pm = \frac{\Delta \pm \sqrt{\Delta^2 + 4G^2}}{2}}
 \]</div>
-<p>根号の中身に提示された有効ラビ角振動数 <span class="arithmatex">\(\Omega = \sqrt{\Delta^2 + 4G^2}\)</span> を代入することで，固有値は <span class="arithmatex">\(\lambda_\pm = \frac{\Delta \pm \Omega}{2}\)</span> と導出されます。</p>
+<p>根号の中身に提示された有効ラビ角振動数 <span class="arithmatex">\(\Omega = \sqrt{\Delta^2 + 4G^2}\)</span> を代入することで，固有値は <span class="arithmatex">\(\lambda_\pm = \frac{\Delta \pm \Omega}{2}\)</span> と得られます。</p>
 <h3 id="5">(5)</h3>
-<p>(3) の連立関係式から <span class="arithmatex">\(c_1\)</span> に関する2階微分方程式を組み立てます。</p>
+<p>(3) の第1式を時間で微分し，両辺に <span class="arithmatex">\(i\)</span> を掛けます。第2式と <span class="arithmatex">\(G\tilde c_2=i\,dc_1/dt\)</span> を順に用いると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
-i \frac{d^2c_1}{dt^2} &amp;= G \frac{d\tilde{c}_2}{dt} \implies -\frac{d^2c_1}{dt^2} \\
-&amp;= G \left( i \frac{d\tilde{c}_2}{dt} \right) \\
-&amp;= G \left( \Delta \tilde{c}_2 + G c_1 \right) \\
-&amp;= \Delta \left( i \frac{dc_1}{dt} \right) + G^2 c_1
+-\frac{d^2c_1}{dt^2}
+&amp;=iG\frac{d\tilde c_2}{dt} \\
+&amp;=G(\Delta\tilde c_2+Gc_1) \\
+&amp;=i\Delta\frac{dc_1}{dt}+G^2c_1
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[

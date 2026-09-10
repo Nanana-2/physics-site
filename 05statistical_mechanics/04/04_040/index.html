@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,17 +14518,18 @@
 
 <h1 id="_1">理想気体の大分配関数</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の粒子浴および熱浴と接触している古典的な単原子分子理想気体系を考える。質量 <span class="arithmatex">\(m\)</span> の粒子 <span class="arithmatex">\(N\)</span> 個からなるカノニカル分布での分配関数 <span class="arithmatex">\(Z(N)\)</span> は，量子力学的な不可区別性の補正因子 <span class="arithmatex">\(1/N!\)</span> を含めて以下のように与えられる。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の粒子浴および熱浴と接触している古典的な単原子分子理想気体系を考える。質量 <span class="arithmatex">\(m\)</span> の粒子 <span class="arithmatex">\(N\)</span> 個からなるカノニカル分布での分配関数 <span class="arithmatex">\(Z(N)\)</span> は，量子力学的な不可区別性の補正因子 <span class="arithmatex">\(1/N!\)</span> を含めて以下のように与えられる。</p>
 <div class="arithmatex">\[
-Z(N) = \frac{1}{N!} \left( \frac{V}{\lambda^3} \right)^2 \quad \implies \quad Z(N) = \frac{1}{N!} \left( Z_1 \right)^N
+Z(N)=\frac{1}{N!}\left(\frac{V}{\lambda^3}\right)^N
+=\frac{1}{N!}(Z_1)^N
 \]</div>
-<p>ここで <span class="arithmatex">\(Z_1 = \frac{V}{\lambda^3}\)</span> は1粒子分配関数であり， <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> は熱的ド・ブロイ波長である。大正準集団における大分配関数 <span class="arithmatex">\(\Xi\)</span> の定義式 <span class="arithmatex">\(\Xi = \sum_{N=0}^{\infty} \exp(\beta \mu N) Z(N)\)</span> を出発点として，以下の問いに答えよ。</p>
+<p>ここで <span class="arithmatex">\(Z_1 = \frac{V}{\lambda^3}\)</span> は1粒子分配関数であり， <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_{\text{B}} T}}\)</span> は熱的ド・ブロイ波長である。大正準集団における大分配関数 <span class="arithmatex">\(\Xi\)</span> の定義式 <span class="arithmatex">\(\Xi = \sum_{N=0}^{\infty} \exp(\beta \mu N) Z(N)\)</span> を出発点として，以下の問いに答えよ。</p>
 <p>(1) 指数関数のマクローリン展開公式 <span class="arithmatex">\(\sum_{N=0}^{\infty} \frac{x^N}{N!} = \exp(x)\)</span> を用いることで，理想気体の大分配関数 <span class="arithmatex">\(\Xi\)</span> が以下のように簡潔な形に表されることを示せ。</p>
 <div class="arithmatex">\[
 \Xi = \exp\left[ \exp(\beta \mu) Z_1 \right]
 \]</div>
 <p>(2) (1) で得られた大分配関数から，大正準集団における平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> を計算せよ。また，その結果を <span class="arithmatex">\(\mu\)</span> について解くことで，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> を平均粒子密度 <span class="arithmatex">\(\rho = \langle N \rangle / V\)</span> を用いた式として表せ。</p>
-<p>(3) グランドポテンシャル <span class="arithmatex">\(J = -k_B T \log \Xi\)</span> と熱力学的な関係式 <span class="arithmatex">\(J = -PV\)</span> を用いて，系の圧力 <span class="arithmatex">\(P\)</span> を表す式を導け。また，(2) で求めた平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> の関係式を代入することにより，カノニカル分布と同様に，大正準集団においても理想気体の状態方程式 <span class="arithmatex">\(P V = \langle N \rangle k_B T\)</span> が自然に導出されることを確かめよ。</p>
+<p>(3) グランドポテンシャル <span class="arithmatex">\(J = -k_{\text{B}} T \log \Xi\)</span> と熱力学的な関係式 <span class="arithmatex">\(J = -PV\)</span> を用いて，系の圧力 <span class="arithmatex">\(P\)</span> を表す式を導け。また，(2) で求めた平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> の関係式を代入することにより，カノニカル分布と同様に，大正準集団においても理想気体の状態方程式 <span class="arithmatex">\(P V = \langle N \rangle k_{\text{B}} T\)</span> が自然に導出されることを確かめよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14557,45 +14558,39 @@ Z(N) = \frac{1}{N!} \left( \frac{V}{\lambda^3} \right)^2 \quad \implies \quad Z(
 <div class="arithmatex">\[
 \begin{aligned}
 \langle N \rangle &amp;= \frac{1}{\beta} \cdot \beta \exp(\beta \mu) Z_1 \\
-&amp;= \exp(\beta \mu) Z_1
+&amp;= \finalanswer{\exp(\beta \mu) Z_1}
 \end{aligned}
 \]</div>
 <p>次に，この式を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解きます。両辺の自然対数をとります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\log \langle N \rangle &amp;= \beta \mu + \log Z_1 \quad \implies \quad \beta \mu \\
-&amp;= \log \left( \frac{\langle N \rangle}{Z_1} \right)
-\end{aligned}
+\beta\mu=\log\left(\frac{\langle N\rangle}{Z_1}\right)
 \]</div>
 <p>ここに <span class="arithmatex">\(Z_1 = \frac{V}{\lambda^3}\)</span> を代入し，平均粒子密度 <span class="arithmatex">\(\rho = \frac{\langle N \rangle}{V}\)</span> を用いて整理します。両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，化学ポテンシャルの式が求まります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\mu &amp;= k_B T \log \left( \frac{\langle N \rangle \lambda^3}{V} \right) \\
-&amp;= \finalanswer{k_B T \log \left( \rho \lambda^3 \right)}
+\mu &amp;= k_{\text{B}} T \log \left( \frac{\langle N \rangle \lambda^3}{V} \right) \\
+&amp;= \finalanswer{k_{\text{B}} T \log \left( \rho \lambda^3 \right)}
 \end{aligned}
 \]</div>
 <p>この結果は，カノニカル分布で <span class="arithmatex">\(\mu = \frac{\partial F}{\partial N}\)</span> から求めた化学ポテンシャルと等しくなります。</p>
 <h3 id="3">(3)</h3>
-<p>統計力学におけるグランドポテンシャルの定義 <span class="arithmatex">\(J = -k_B T \log \Xi\)</span> に，(2) で求めた <span class="arithmatex">\(\log \Xi = \exp(\beta \mu) Z_1\)</span> を代入します。</p>
+<p>統計力学におけるグランドポテンシャルの定義 <span class="arithmatex">\(J = -k_{\text{B}} T \log \Xi\)</span> に，(2) で求めた <span class="arithmatex">\(\log \Xi = \exp(\beta \mu) Z_1\)</span> を代入します。</p>
 <div class="arithmatex">\[
-J = -k_B T \exp(\beta \mu) Z_1
+J = -k_{\text{B}} T \exp(\beta \mu) Z_1
 \]</div>
 <p>熱力学における均一な系のオイラーの関係式から導かれる関係 <span class="arithmatex">\(J = -PV\)</span> と，上の統計力学的な <span class="arithmatex">\(J\)</span> の式を結びつけます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
--PV &amp;= -k_B T \exp(\beta \mu) Z_1 \quad \implies \quad P \\
-&amp;= \frac{k_B T}{V} \exp(\beta \mu) Z_1
-\end{aligned}
+P=\frac{k_{\text{B}}T}{V}\exp(\beta\mu)Z_1
 \]</div>
 <p>(2)で得た <span class="arithmatex">\(\langle N \rangle = \exp(\beta \mu) Z_1\)</span> を圧力の式に代入します。</p>
 <div class="arithmatex">\[
-P = \frac{k_B T}{V} \langle N \rangle
+P = \frac{k_{\text{B}} T}{V} \langle N \rangle
 \]</div>
-<p>両辺に体積 <span class="arithmatex">\(V\)</span> を掛け合わせることで，理想気体の状態方程式が導出されます。</p>
+<p>両辺に体積 <span class="arithmatex">\(V\)</span> を掛け合わせることで，理想気体の状態方程式を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{P V = \langle N \rangle k_B T}
+\finalanswer{P V = \langle N \rangle k_{\text{B}} T}
 \]</div>
-<p>カノニカル分布では固定された粒子数 <span class="arithmatex">\(N\)</span> を用いて <span class="arithmatex">\(P V = N k_B T\)</span> と表されていた方程式が，粒子数が変動するグランドカノニカル分布においても，その平均値 <span class="arithmatex">\(\langle N \rangle\)</span> を用いることで全く同じ形式として再現されることが示されました。</p>
+<p>カノニカル分布では固定された粒子数 <span class="arithmatex">\(N\)</span> を用いて <span class="arithmatex">\(P V = N k_{\text{B}} T\)</span> と表されていた方程式が，粒子数が変動するグランドカノニカル分布においても，その平均値 <span class="arithmatex">\(\langle N \rangle\)</span> を用いることで全く同じ形式として再現されることが示されました。</p>
 
 
 

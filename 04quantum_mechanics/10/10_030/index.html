@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14551,11 +14551,11 @@ V_{12} = \langle 1^{(0)}| \hat{V} |2^{(0)}\rangle, \quad V_{21} = \langle 2^{(0)
 <div class="arithmatex">\[
 |n\rangle = |n^{(0)}\rangle + |n^{(1)}\rangle, \quad E_n = E^{(0)} + E^{(1)}
 \]</div>
-<p>これらを代入して 1次の微小量に関する関係式を抽出します。</p>
+<p>これらを代入し，微小量の1次の項を比較します。</p>
 <div class="arithmatex">\[
 \hat{H}_0 |n^{(1)}\rangle + \hat{V} |n^{(0)}\rangle = E^{(0)} |n^{(1)}\rangle + E^{(1)} |n^{(0)}\rangle
 \]</div>
-<p>この方程式の全体に対し，左から <span class="arithmatex">\(\langle 1^{(0)}|\)</span> および <span class="arithmatex">\(\langle 2^{(0)}|\)</span> をそれぞれ掛け算します。エルミート性により <span class="arithmatex">\(\langle 1^{(0)}| \hat{H}_0 = E^{(0)} \langle 1^{(0)}|\)</span> となるため， <span class="arithmatex">\(\hat{H}_0\)</span> を含む項と右辺の <span class="arithmatex">\(E^{(0)}\)</span> を含む項が互いに相殺します。残る式は以下の 2つです。</p>
+<p>この方程式に左から <span class="arithmatex">\(\langle 1^{(0)}|\)</span> および <span class="arithmatex">\(\langle 2^{(0)}|\)</span> をそれぞれ掛けます。エルミート性により <span class="arithmatex">\(\langle 1^{(0)}| \hat{H}_0 = E^{(0)} \langle 1^{(0)}|\)</span> であるため，両辺から同じ項を引くと，次の2式が残ります。</p>
 <div class="arithmatex">\[
 \langle 1^{(0)}| \hat{V} |n^{(0)}\rangle = E^{(1)} \langle 1^{(0)} | n^{(0)}\rangle
 \]</div>
@@ -14569,7 +14569,7 @@ c_1 V_{11} + c_2 V_{12} = E^{(1)} c_1
 <div class="arithmatex">\[
 \finalanswer{c_1 V_{21} + c_2 V_{22} = E^{(1)} c_2}
 \]</div>
-<p>この 2つの連立方程式を行列とベクトルの積の形式にまとめることで，提示された通りの固有値方程式が導かれます。</p>
+<p>この 2つの連立方程式を行列とベクトルの積の形式にまとめることで，提示された通りの固有値方程式が得られます。</p>
 <div class="arithmatex">\[
 \begin{pmatrix} V_{11} &amp; V_{12} \\ V_{21} &amp; V_{22} \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = E^{(1)} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
 \]</div>
@@ -14591,12 +14591,9 @@ E^{(1)} = \frac{(V_{11} + V_{22}) \pm \sqrt{(V_{11} + V_{22})^2 - 4(V_{11}V_{22}
 \]</div>
 <p>ルートの内部を展開して整理します。</p>
 <div class="arithmatex">\[
-(V_{11} + V_{22})^2 - 4V_{11}V_{22} + 4V_{12}^2 = V_{11}^2 + 2V_{11}V_{22} + V_{22}^2 - 4V_{11}V_{22} + 4V_{12}^2
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= V_{11}^2 - 2V_{11}V_{22} + V_{22}^2 + 4V_{12}^2 \\
-&amp;= (V_{11} - V_{22})^2 + 4V_{12}^2
+&amp;(V_{11}+V_{22})^2-4V_{11}V_{22}+4V_{12}^2 \\
+&amp;\qquad=(V_{11}-V_{22})^2+4V_{12}^2
 \end{aligned}
 \]</div>
 <p>これを公式に戻すことで，求めるエネルギーの1次補正の解が得られます。</p>
@@ -14623,7 +14620,7 @@ E^{(1)} &amp;= \frac{1}{2}(0) \pm \frac{1}{2}\sqrt{(0)^2 + 4v^2} \\
 \]</div>
 <p>上の行を計算すると <span class="arithmatex">\(v c_2 = v c_1\)</span> となり， <span class="arithmatex">\(c_1 = c_2\)</span> が得られます。規格化条件 <span class="arithmatex">\(|c_1|^2 + |c_2|^2 = 1\)</span> より，係数ベクトルは以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\finalanswer{\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(E^{(1)} = -v\)</span> のとき</strong>
@@ -14634,7 +14631,7 @@ E^{(1)} &amp;= \frac{1}{2}(0) \pm \frac{1}{2}\sqrt{(0)^2 + 4v^2} \\
 \]</div>
 <p>上の行を計算すると <span class="arithmatex">\(v c_2 = -v c_1\)</span> となり， <span class="arithmatex">\(c_2 = -c_1\)</span> が得られます。規格化を行うことで，係数ベクトルは以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix}
+\finalanswer{\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix}}
 \]</div>
 <p>摂動ハミルトニアンの非対角成分によって縮退した状態が混合し，固有値が上下に分かれて縮退が解けます。</p>
 

@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14527,14 +14527,14 @@
 <div class="arithmatex">\[
 L\frac{dI}{dt}+RI=V_0
 \]</div>
-<p>を解き，<span class="arithmatex">\(I_{\mathrm{on}}(t)\)</span> を求めよ。<span class="arithmatex">\(t=\tau\)</span> における電流と，<span class="arithmatex">\(t\to\infty\)</span> の定常電流 <span class="arithmatex">\(I_\infty\)</span> を求めよ。</p>
+<p>を解き，<span class="arithmatex">\(I_{\mathrm{on}}(t)\)</span> と定常電流 <span class="arithmatex">\(I_\infty\)</span> を求めよ。</p>
 <p>(2) 十分に定常状態へ達した後，電源を外して抵抗とコイルだけの閉回路へ切り替え，切替時刻を新たに <span class="arithmatex">\(t=0\)</span> とする。初期電流 <span class="arithmatex">\(I(0)=I_\infty\)</span> のもとで <span class="arithmatex">\(I_{\mathrm{off}}(t)\)</span> を求めよ。</p>
 <p>(3) 投入過程において，電源の仕事率 <span class="arithmatex">\(P_{\mathrm{src}}=V_0I\)</span>，抵抗の発熱率 <span class="arithmatex">\(P_R=RI^2\)</span>，コイルの磁気エネルギー <span class="arithmatex">\(U_L=LI^2/2\)</span> が</p>
 <div class="arithmatex">\[
 P_{\mathrm{src}}
 =P_R+\frac{dU_L}{dt}
 \]</div>
-<p>を満たすことを示せ。遮断後に初期磁気エネルギーがすべて抵抗で散逸することも積分で確認せよ。</p>
+<p>を満たすことを示せ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14544,9 +14544,9 @@ P_{\mathrm{src}}
 \]</div>
 <p>と書きます。定常解は <span class="arithmatex">\(I_\infty=V_0/R\)</span> です。初期条件を満たす解は</p>
 <div class="arithmatex">\[
-I_{\mathrm{on}}(t)
+\finalanswer{I_{\mathrm{on}}(t)
 =\frac{V_0}{R}
-\left(1-e^{-t/\tau}\right)
+\left(1-e^{-t/\tau}\right)}
 \]</div>
 <p>となります。<span class="arithmatex">\(t=\tau\)</span> では</p>
 <div class="arithmatex">\[
@@ -14591,7 +14591,7 @@ W_R
 \int_0^\infty e^{-2t/\tau}\,dt \\
 &amp;=RI_\infty^2
 \left[-\frac{\tau}{2}e^{-2t/\tau}\right]_0^\infty \\
-&amp;=RI_\infty^2\frac{\tau}{2}.
+&amp;=RI_\infty^2\frac{\tau}{2}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\tau=L/R\)</span> より</p>

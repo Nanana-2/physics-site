@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14566,10 +14566,7 @@
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(x\)</span> 方向の波動関数は <span class="arithmatex">\(e^{i p_x x / \hbar}\)</span> という平面波の形を持っています。これに周期境界条件 <span class="arithmatex">\(\psi(x + L_x, y) = \psi(x, y)\)</span> を適用します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-e^{i p_x (x + L_x) / \hbar} &amp;= e^{i p_x x / \hbar} \implies e^{i p_x L_x / \hbar} \\
-&amp;= 1
-\end{aligned}
+e^{i p_x (x + L_x) / \hbar} = e^{i p_x x / \hbar} \implies e^{i p_x L_x / \hbar} = 1
 \]</div>
 <p>指数関数の周期性から，指数の肩にある値が <span class="arithmatex">\(2\pi\)</span> の整数倍にならなければなりません。整数を <span class="arithmatex">\(k\)</span> と置きます。</p>
 <div class="arithmatex">\[
@@ -14577,7 +14574,7 @@ e^{i p_x (x + L_x) / \hbar} &amp;= e^{i p_x x / \hbar} \implies e^{i p_x L_x / \
 \]</div>
 <p>これが <span class="arithmatex">\(x\)</span> 方向の運動量に課される量子化条件です。</p>
 <h3 id="3">(3)</h3>
-<p>振動の中心位置の数式 <span class="arithmatex">\(y_0 = -\frac{p_x}{qB_0}\)</span> に， (2) で得られた <span class="arithmatex">\(p_x\)</span> の制限を代入します。</p>
+<p>振動の中心位置の式 <span class="arithmatex">\(y_0 = -\frac{p_x}{qB_0}\)</span> に， (2) で得られた <span class="arithmatex">\(p_x\)</span> の制限を代入します。</p>
 <div class="arithmatex">\[
 y_0 = -\frac{2\pi\hbar}{qB_0 L_x} k
 \]</div>
@@ -14596,17 +14593,11 @@ y_0 = -\frac{2\pi\hbar}{qB_0 L_x} k
 <h3 id="4">(4)</h3>
 <p>(3) で求めた範囲に含まれる整数 <span class="arithmatex">\(k\)</span> の個数が，そのまま同じエネルギー <span class="arithmatex">\(E_n\)</span> を共有する状態の数，すなわち縮退度 <span class="arithmatex">\(N\)</span> に対応します。上限の 0 から下限の値を引き算し，境界の分として 1 を加えます。領域の面積 <span class="arithmatex">\(S = L_x L_y\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-N &amp;= 0 - \left( -\frac{qB_0 L_x L_y}{2\pi\hbar} \right) \\
-&amp;= \frac{qB_0 S}{2\pi\hbar}
-\end{aligned}
+N = 0 - \left( -\frac{qB_0 L_x L_y}{2\pi\hbar} \right) = \frac{qB_0 S}{2\pi\hbar}
 \]</div>
-<p>この数式を問題文の指示通りに変形します。全磁通が <span class="arithmatex">\(\Phi = B_0 S\)</span> であり，磁束量子が <span class="arithmatex">\(\Phi_0 = \frac{2\pi\hbar}{q}\)</span> であるため，これらを縮退度の式に当てはめます。</p>
+<p>この式を問題文の指示通りに変形します。全磁通が <span class="arithmatex">\(\Phi = B_0 S\)</span> であり，磁束量子が <span class="arithmatex">\(\Phi_0 = \frac{2\pi\hbar}{q}\)</span> であるため，これらを縮退度の式に当てはめます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-N &amp;= \frac{B_0 S}{\frac{2\pi\hbar}{q}} \\
-&amp;= \finalanswer{\frac{\Phi}{\Phi_0}}
-\end{aligned}
+N = \frac{B_0 S}{\frac{2\pi\hbar}{q}} = \finalanswer{\frac{\Phi}{\Phi_0}}
 \]</div>
 <p>計算結果より，1つのランダウ準位に属する状態の総数は，そのサンプルの面内を通過する全磁束が，量子力学的な最小単位である磁束量子をいくつ含むかという比率に一致することが示されました。</p>
 

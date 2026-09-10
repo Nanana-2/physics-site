@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">不確定性関係</h1>
 <h2 id="_2">問題</h2>
-<p>量子力学では，位置と運動量を同時に正確に決めることはできない。この制限をハイゼンベルクの不確定性関係と呼ぶ。</p>
+<p>量子力学では，位置と運動量を同時に定めることはできない。この制限をハイゼンベルクの不確定性関係と呼ぶ。</p>
 <p>位置演算子を <span class="arithmatex">\(\hat{x}\)</span>，運動量演算子を <span class="arithmatex">\(\hat{p}\)</span> とし，その交換関係を <span class="arithmatex">\([\hat{x}, \hat{p}] = i\hbar\)</span> とする。ある状態における各物理量の演算子からのずれを <span class="arithmatex">\(\Delta \hat{x} = \hat{x} - \langle x \rangle\)</span>，<span class="arithmatex">\(\Delta \hat{p} = \hat{p} - \langle p \rangle\)</span> と定義する。</p>
 <p>以下の問いに答えよ。</p>
 <p>(1) 任意の規格化された波動関数 <span class="arithmatex">\(\psi(x)\)</span> と，任意の実数 <span class="arithmatex">\(\alpha\)</span> に対して，以下の積分は常に非負となる。</p>
@@ -14563,17 +14563,15 @@ I(\alpha) = \int_{-\infty}^{\infty} \psi^*(x) \left( \alpha \Delta \hat{x} + i \
 \]</div>
 <p>ここで， <span class="arithmatex">\([\Delta \hat{x}, \Delta \hat{p}] = [\hat{x}, \hat{p}] = i\hbar\)</span> であるため，これを代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
- &amp;= \alpha^2 (\Delta \hat{x})^2 - i\alpha (i\hbar) + (\Delta \hat{p})^2 \\
-&amp;= \alpha^2 (\Delta \hat{x})^2 + \hbar \alpha + (\Delta \hat{p})^2
-\end{aligned}
+\alpha^2(\Delta\hat x)^2-i\alpha(i\hbar)+(\Delta\hat p)^2
+=\alpha^2(\Delta\hat x)^2+\hbar\alpha+(\Delta\hat p)^2
 \]</div>
 <p>これをもとの積分に戻し，各項の期待値をとります。 <span class="arithmatex">\(I(\alpha) \ge 0\)</span> より，以下の不等式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\sigma_x^2 \alpha^2 + \hbar \alpha + \sigma_p^2 \ge 0}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) の <span class="arithmatex">\(\alpha\)</span> に関する二次不等式が，すべてのアナログな実数 <span class="arithmatex">\(\alpha\)</span> で常に 0 以上となるためには，この二次方程式の判別式 <span class="arithmatex">\(D\)</span> が 0 以下でなければなりません。</p>
+<p>(1) の <span class="arithmatex">\(\alpha\)</span> に関する二次不等式が，任意の実数 <span class="arithmatex">\(\alpha\)</span> に対して 0 以上となるためには，この二次方程式の判別式 <span class="arithmatex">\(D\)</span> が 0 以下でなければなりません。</p>
 <div class="arithmatex">\[
 D = (-\hbar)^2 - 4 \cdot \sigma_x^2 \cdot \sigma_p^2 \le 0
 \]</div>
@@ -14584,18 +14582,15 @@ D = (-\hbar)^2 - 4 \cdot \sigma_x^2 \cdot \sigma_p^2 \le 0
 <div class="arithmatex">\[
 \finalanswer{2\sigma_x \sigma_p \ge \hbar \implies \sigma_x \sigma_p \ge \frac{\hbar}{2}}
 \]</div>
-<p>これにより，ハイゼンベルクの不確定性関係が導かれました。</p>
+<p>これにより，ハイゼンベルクの不確定性関係が得られます。</p>
 <h3 id="3">(3)</h3>
 <p>与えられた運動量の分散 <span class="arithmatex">\(\sigma_p^2 = \frac{\hbar^2}{4\sigma_x^2}\)</span> を用いて，不確定性の積 <span class="arithmatex">\(\sigma_x \sigma_p\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\sigma_p = \sqrt{\frac{\hbar^2}{4\sigma_x^2}} = \frac{\hbar}{2\sigma_x}
+\finalanswer{\sigma_p = \frac{\hbar}{2\sigma_x}}
 \]</div>
 <p>両者の積をとります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\sigma_x \sigma_p &amp;= \sigma_x \cdot \frac{\hbar}{2\sigma_x} \\
-&amp;= \finalanswer{\frac{\hbar}{2}}
-\end{aligned}
+\sigma_x \sigma_p = \sigma_x \cdot \frac{\hbar}{2\sigma_x} = \finalanswer{\frac{\hbar}{2}}
 \]</div>
 <p><strong>結果の説明</strong></p>
 <p>計算された不確定性の積は <span class="arithmatex">\(\frac{\hbar}{2}\)</span> となり，(2) で導いた不確定性関係の不等式の絶対的な下限値に一致します。このことから，ガウス波束は位置と運動量の両方のばらつきを同時に最も小さく抑えた状態であることが確認できます。</p>

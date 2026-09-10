@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p>エネルギーが <span class="arithmatex">\(0\)</span> の基底状態と，エネルギーが <span class="arithmatex">\(\epsilon &gt; 0\)</span> の励起状態からなる二準位系を考える。この系は，互いに区別可能な <span class="arithmatex">\(N\)</span> 個の独立な粒子からなる。全エネルギーが <span class="arithmatex">\(E\)</span> であるマクロな状態について，以下の問いに答えよ。ただし，<span class="arithmatex">\(E = M\epsilon\)</span> とし，<span class="arithmatex">\(M\)</span> は <span class="arithmatex">\(0 \le M \le N\)</span> を満たす整数とする。</p>
 <p>(1) 全エネルギーが <span class="arithmatex">\(E\)</span> であるとき，励起状態にある粒子の数 <span class="arithmatex">\(M\)</span> を <span class="arithmatex">\(E\)</span> と <span class="arithmatex">\(\epsilon\)</span> を用いて表せ。また，このマクロな状態に対応する微視的状態数 <span class="arithmatex">\(\Omega(E)\)</span> を <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(M\)</span> の階乗を用いて表せ。</p>
-<p>(2) 粒子数 <span class="arithmatex">\(N\)</span> および励起粒子数 <span class="arithmatex">\(M\)</span> が非常に大きいとき，ボルツマンのエントロピー公式 <span class="arithmatex">\(S(E) = k_B \log \Omega(E)\)</span> にスターリングの公式を適用し，系がもつエントロピー <span class="arithmatex">\(S(E)\)</span> を <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(M\)</span> を用いて表せ。</p>
+<p>(2) 粒子数 <span class="arithmatex">\(N\)</span> および励起粒子数 <span class="arithmatex">\(M\)</span> が非常に大きいとき，ボルツマンのエントロピー公式 <span class="arithmatex">\(S(E) = k_{\text{B}} \log \Omega(E)\)</span> にスターリングの公式を適用し，系がもつエントロピー <span class="arithmatex">\(S(E)\)</span> を <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(M\)</span> を用いて表せ。</p>
 <p>(3) (2)で得られたエントロピーの式において，励起粒子数の割合を <span class="arithmatex">\(x = M/N\)</span> と定義する。ここで <span class="arithmatex">\(0 \le x \le 1\)</span> である。1粒子あたりのエントロピー <span class="arithmatex">\(s(x) = S/N\)</span> を <span class="arithmatex">\(x\)</span> の関数として表し，その関数が最大値をとる <span class="arithmatex">\(x\)</span> の値と，そのときの <span class="arithmatex">\(s(x)\)</span> の値を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14537,57 +14537,50 @@
 <p>ボルツマンのエントロピー公式に (1) の状態数を代入し，対数の性質を用いて展開します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S(E) &amp;= k_B \log \left[ \frac{N!}{M!(N-M)!} \right] \\
-&amp;= k_B \left[ \log N! - \log M! - \log (N-M)! \right]
+S(E) &amp;= k_{\text{B}} \log \left[ \frac{N!}{M!(N-M)!} \right] \\
+&amp;= k_{\text{B}} \left[ \log N! - \log M! - \log (N-M)! \right]
 \end{aligned}
 \]</div>
 <p>各項にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用します。</p>
 <div class="arithmatex">\[
-S(E) \simeq k_B \left[ (N \log N - N) - (M \log M - M) - \{ (N-M) \log (N-M) - (N-M) \} \right]
+S(E) \simeq k_{\text{B}} \left[ (N \log N - N) - (M \log M - M) - \{ (N-M) \log (N-M) - (N-M) \} \right]
 \]</div>
-<p>括弧内の定数項 <span class="arithmatex">\(-N + M + (N-M) = 0\)</span> となって相殺されるため，求めるエントロピーは以下のようになります。</p>
+<p>括弧内の定数項は <span class="arithmatex">\(-N+M+(N-M)=0\)</span> なので，求めるエントロピーは</p>
 <div class="arithmatex">\[
-\finalanswer{S(E) \simeq k_B \left[ N \log N - M \log M - (N-M) \log (N-M) \right]}
+\finalanswer{S(E) \simeq k_{\text{B}} \left[ N \log N - M \log M - (N-M) \log (N-M) \right]}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) で得られたエントロピー全体の式を <span class="arithmatex">\(N\)</span> で割り，1粒子あたりのエントロピー <span class="arithmatex">\(s(x) = S/N\)</span> を構成します。式の各項に <span class="arithmatex">\(x = M/N\)</span> を導入するため，変形を行います。</p>
 <div class="arithmatex">\[
-s(x) = k_B \left[ \log N - \frac{M}{N} \log M - \left( 1 - \frac{M}{N} \right) \log (N-M) \right]
-\]</div>
-<div class="arithmatex">\[
-s(x) = k_B \left[ \log N - x \log (Nx) - (1-x) \log \{N(1-x)\} \right]
-\]</div>
-<p>対数の積を和に分解して整理します。</p>
-<div class="arithmatex">\[
-s(x) = k_B \left[ \log N - x (\log N + \log x) - (1-x) (\log N + \log (1-x)) \right]
-\]</div>
-<div class="arithmatex">\[
-s(x) = k_B \left[ \log N - x \log N - x \log x - \log N + x \log N - (1-x) \log (1-x) \right]
-\]</div>
-<p><span class="arithmatex">\(\log N\)</span> を含む項がすべて相殺され，以下のようになります。</p>
-<div class="arithmatex">\[
-\finalanswer{s(x) = -k_B \left[ x \log x + (1-x) \log (1-x) \right]}
+\begin{aligned}
+s(x)
+&amp;=k_{\text{B}}\left[\log N-x\log(Nx)-(1-x)\log\{N(1-x)\}\right] \\
+&amp;=k_{\text{B}}\left[\log N-x(\log N+\log x)
+ -(1-x)\{\log N+\log(1-x)\}\right] \\
+&amp;=\finalanswer{-k_{\text{B}}\left[x\log x+(1-x)\log(1-x)\right]}
+\end{aligned}
 \]</div>
 <p>この関数 <span class="arithmatex">\(s(x)\)</span> が最大となる条件を調べるため，<span class="arithmatex">\(x\)</span> について微分を行います。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{ds(x)}{dx} &amp;= -k_B \left[ (\log x + 1) - (\log (1-x) + 1) \right] \\
-&amp;= -k_B \log \left( \frac{x}{1-x} \right)
+\frac{ds(x)}{dx} &amp;= -k_{\text{B}} \left[ (\log x + 1) - (\log (1-x) + 1) \right] \\
+&amp;= -k_{\text{B}} \log \left( \frac{x}{1-x} \right)
 \end{aligned}
 \]</div>
-<p>極値条件 <span class="arithmatex">\(\frac{ds(x)}{dx} = 0\)</span> より，以下の関係が得られます。</p>
+<p>極値条件 <span class="arithmatex">\(ds/dx=0\)</span> より，</p>
 <div class="arithmatex">\[
-\frac{x}{1-x} = 1 \quad \implies \quad \finalanswer{x = \frac{1}{2}}
+\frac{x}{1-x}=1 \quad \Longrightarrow \quad \finalanswer{x=\frac{1}{2}}
 \]</div>
-<p>2階微分は <span class="arithmatex">\(\frac{d^2s}{dx^2} = -k_B \left( \frac{1}{x} + \frac{1}{1-x} \right) &lt; 0\)</span> となるため，<span class="arithmatex">\(x = 1/2\)</span> で <span class="arithmatex">\(s(x)\)</span> は確かに最大値をとります。このときの最大値を計算すると，以下のようになります。</p>
+<p>2階微分は <span class="arithmatex">\(\frac{d^2s}{dx^2} = -k_{\text{B}} \left( \frac{1}{x} + \frac{1}{1-x} \right) &lt; 0\)</span> となるため，<span class="arithmatex">\(x = 1/2\)</span> で <span class="arithmatex">\(s(x)\)</span> は確かに最大値をとります。このときの最大値を計算すると，以下のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-s\left(\frac{1}{2}\right) &amp;= -k_B \left[ \frac{1}{2} \log \left(\frac{1}{2}\right) + \frac{1}{2} \log \left(\frac{1}{2}\right) \right] \\
-&amp;= -k_B \log \left(\frac{1}{2}\right) \\
-&amp;= \finalanswer{k_B \log 2}
+s\left(\frac{1}{2}\right)
+&amp;=-k_{\text{B}}\left[\frac{1}{2}\log\left(\frac{1}{2}\right)
++\frac{1}{2}\log\left(\frac{1}{2}\right)\right] \\
+&amp;=\finalanswer{k_{\text{B}}\log 2}
 \end{aligned}
 \]</div>
-<p>したがって，粒子全体のちょうど半分が励起状態にあるときにエントロピーは最大となり，そのときの1粒子あたりのエントロピーは <span class="arithmatex">\(k_B \log 2\)</span> となります。</p>
+<p>したがって，粒子全体のちょうど半分が励起状態にあるときにエントロピーは最大となり，そのときの1粒子あたりのエントロピーは <span class="arithmatex">\(k_{\text{B}} \log 2\)</span> となります。</p>
 
 
 

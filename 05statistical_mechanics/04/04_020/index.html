@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">大分配関数</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の粒子浴および熱浴と接触している体積 <span class="arithmatex">\(V\)</span> の開いた系を考える。系に含まれる粒子数 <span class="arithmatex">\(N\)</span> は <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\infty\)</span> までの整数値をとり，粒子数が <span class="arithmatex">\(N\)</span> であるときの系の微視的状態を <span class="arithmatex">\(i\)</span>，そのエネルギーを <span class="arithmatex">\(E_{i,N}\)</span> とする。この統計集団における確率の規格化因子である大分配関数 <span class="arithmatex">\(\Xi\)</span> は以下のように定義される。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の粒子浴および熱浴と接触している体積 <span class="arithmatex">\(V\)</span> の開いた系を考える。系に含まれる粒子数 <span class="arithmatex">\(N\)</span> は <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\infty\)</span> までの整数値をとり，粒子数が <span class="arithmatex">\(N\)</span> であるときの系の微視的状態を <span class="arithmatex">\(i\)</span>，そのエネルギーを <span class="arithmatex">\(E_{i,N}\)</span> とする。この統計集団における確率の規格化因子である大分配関数 <span class="arithmatex">\(\Xi\)</span> は以下のように定義される。</p>
 <div class="arithmatex">\[
 \Xi(\beta, V, \mu) = \sum_{N=0}^{\infty} \sum_{i} \exp\left[ -\beta (E_{i,N} - \mu N) \right]
 \]</div>
@@ -14528,7 +14528,7 @@
 <div class="arithmatex">\[
 \langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}
 \]</div>
-<p>(3) グランドポテンシャル <span class="arithmatex">\(J=-k_BT\log\Xi\)</span> と全微分関係式</p>
+<p>(3) グランドポテンシャル <span class="arithmatex">\(J=-k_{\text{B}}T\log\Xi\)</span> と全微分関係式</p>
 <div class="arithmatex">\[
 dJ=-S\,dT-P\,dV-N\,d\mu
 \]</div>
@@ -14563,7 +14563,7 @@ dJ=-S\,dT-P\,dV-N\,d\mu
 <div class="arithmatex">\[
 \frac{\partial \log \Xi}{\partial \mu} = \beta \langle N \rangle
 \]</div>
-<p>両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，目的の式が導出されました。</p>
+<p>両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，目的の式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}}
 \]</div>
@@ -14572,14 +14572,14 @@ dJ=-S\,dT-P\,dV-N\,d\mu
 <div class="arithmatex">\[
 N = -\left( \frac{\partial J}{\partial \mu} \right)_{T, V}
 \]</div>
-<p>ここに統計力学によるグランドポテンシャルの定義式 <span class="arithmatex">\(J = -k_B T \log \Xi\)</span> を代入します。偏微分を行う際，温度 <span class="arithmatex">\(T\)</span> は定数として扱えるため微分の外に出すことができます。</p>
+<p>ここに統計力学によるグランドポテンシャルの定義式 <span class="arithmatex">\(J = -k_{\text{B}} T \log \Xi\)</span> を代入します。偏微分を行う際，温度 <span class="arithmatex">\(T\)</span> は定数として扱えるため微分の外に出すことができます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-N &amp;= -\left( \frac{\partial (-k_B T \log \Xi)}{\partial \mu} \right)_{T, V} \\
-&amp;= k_B T \frac{\partial \log \Xi}{\partial \mu}
+N &amp;= -\left( \frac{\partial (-k_{\text{B}} T \log \Xi)}{\partial \mu} \right)_{T, V} \\
+&amp;= k_{\text{B}} T \frac{\partial \log \Xi}{\partial \mu}
 \end{aligned}
 \]</div>
-<p>逆温度の定義 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> より <span class="arithmatex">\(k_B T = \frac{1}{\beta}\)</span> であるため，この式は以下のように書き換えられます。</p>
+<p>逆温度の定義 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> より <span class="arithmatex">\(k_{\text{B}} T = \frac{1}{\beta}\)</span> であるため，この式は以下のように書き換えられます。</p>
 <div class="arithmatex">\[
 \finalanswer{N = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}}
 \]</div>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11056,7 +11056,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,9 +14522,9 @@
 <div class="arithmatex">\[
 H(x_1, x_2, \dots, x_f) = A x_1^2 + H^\prime(x_2, \dots, x_f)
 \]</div>
-<p>この系が温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> の熱浴と熱平衡状態にあるとき，以下の問いに答えよ。ただし，変数 <span class="arithmatex">\(x_1\)</span> のとりうる値の範囲は <span class="arithmatex">\(-\infty\)</span> から <span class="arithmatex">\(+\infty\)</span> までとする。</p>
+<p>この系が温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> の熱浴と熱平衡状態にあるとき，以下の問いに答えよ。ただし，変数 <span class="arithmatex">\(x_1\)</span> のとりうる値の範囲は <span class="arithmatex">\(-\infty\)</span> から <span class="arithmatex">\(+\infty\)</span> までとする。</p>
 <p>(1) 古典統計力学における分配関数 <span class="arithmatex">\(Z\)</span> は，位相空間の連続積分として定義される。この積分が <span class="arithmatex">\(x_1\)</span> に関する部分と残りの変数に関する部分に積の形で分離できることを示せ。さらに， <span class="arithmatex">\(\int_{-\infty}^{\infty} \exp(-\beta A x_1^2) dx_1 = \sqrt{\frac{\pi}{\beta A}}\)</span> を用いて， <span class="arithmatex">\(\log Z\)</span> の式を導出せよ。</p>
-<p>(2) (1) の結果を用いて，ハミルトニアンの二次形式の項が担う平均エネルギー <span class="arithmatex">\(\langle A x_1^2 \rangle = -\frac{\partial \log Z_{x_1}}{\partial \beta}\)</span> を計算し，これが <span class="arithmatex">\(k_B T / 2\)</span> になることを示せ。</p>
+<p>(2) (1) の結果を用いて，ハミルトニアンの二次形式の項が担う平均エネルギー <span class="arithmatex">\(\langle A x_1^2 \rangle = -\frac{\partial \log Z_{x_1}}{\partial \beta}\)</span> を計算し，これが <span class="arithmatex">\(k_{\text{B}} T / 2\)</span> になることを示せ。</p>
 <p>(3) このエネルギー等分配則を，3次元空間にある質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体 <span class="arithmatex">\(N\)</span> 粒子系と，<span class="arithmatex">\(N\)</span> 個の独立な古典的3次元調和振動子系にそれぞれ適用せよ。各系について，ハミルトニアンに含まれる二次形式の項の総数を求め，全平均エネルギーおよび定積熱容量 <span class="arithmatex">\(C_V\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14543,10 +14543,7 @@ Z = Z_{x_1} \cdot Z^\prime
 \]</div>
 <p>与えられたガウス積分の公式を <span class="arithmatex">\(Z_{x_1}\)</span> に適用します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-Z_{x_1} &amp;= \sqrt{\frac{\pi}{\beta A}} \\
-&amp;= \left( \frac{\pi}{A} \right)^{1/2} \beta^{-1/2}
-\end{aligned}
+Z_{x_1} = \sqrt{\frac{\pi}{\beta A}} = \left( \frac{\pi}{A} \right)^{1/2} \beta^{-1/2}
 \]</div>
 <p>全体の分配関数の対数をとると，積の性質から和の形に展開できます。</p>
 <div class="arithmatex">\[
@@ -14564,11 +14561,11 @@ Z_{x_1} &amp;= \sqrt{\frac{\pi}{\beta A}} \\
 &amp;= \frac{1}{2} \cdot \frac{1}{\beta}
 \end{aligned}
 \]</div>
-<p>ここに <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入します。</p>
+<p>ここに <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle A x_1^2 \rangle = \frac{1}{2} k_B T}
+\finalanswer{\langle A x_1^2 \rangle = \frac{1}{2} k_{\text{B}} T}
 \]</div>
-<p>これにより，ハミルトニアンの中で二次形式で表される独立な自由度1つあたり，平均して <span class="arithmatex">\(k_B T / 2\)</span> のエネルギーが等分に割り振られるという，エネルギー等分配則が示されました。</p>
+<p>これにより，ハミルトニアンの中で二次形式で表される独立な自由度1つあたり，平均して <span class="arithmatex">\(k_{\text{B}} T / 2\)</span> のエネルギーが等分に割り振られるという，エネルギー等分配則が示されました。</p>
 <h3 id="3">(3)</h3>
 <p><strong>古典的単原子理想気体 <span class="arithmatex">\(N\)</span> 粒子系</strong>
 各粒子のハミルトニアンは，運動量のみの二次形式で表されます。</p>
@@ -14578,17 +14575,11 @@ H = \sum_{i=1}^N \left( \frac{p_{xi}^2}{2m} + \frac{p_{yi}^2}{2m} + \frac{p_{zi}
 <p>1粒子あたり二次形式の項が3個あり，<span class="arithmatex">\(N\)</span> 粒子全体では合計 <span class="arithmatex">\(3N\)</span> 個です。
 エネルギー等分配則を適用すると，全平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle E \rangle &amp;= 3N \times \frac{1}{2}k_B T \\
-&amp;= \finalanswer{\frac{3}{2}N k_B T}
-\end{aligned}
+\langle E \rangle = 3N \times \frac{1}{2}k_{\text{B}} T = \finalanswer{\frac{3}{2}N k_{\text{B}} T}
 \]</div>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，このエネルギーを温度 <span class="arithmatex">\(T\)</span> で微分して求まります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-C_V &amp;= \frac{\partial \langle E \rangle}{\partial T} \\
-&amp;= \finalanswer{\frac{3}{2}N k_B}
-\end{aligned}
+C_V = \frac{\partial \langle E \rangle}{\partial T} = \finalanswer{\frac{3}{2}N k_{\text{B}}}
 \]</div>
 <p><strong>古典的3次元調和振動子 <span class="arithmatex">\(N\)</span> 粒子系</strong>
 各振動子は，運動エネルギーに加えて位置のポテンシャルエネルギーも二次形式で持ちます。</p>
@@ -14598,16 +14589,13 @@ H = \sum_{i=1}^N \left( \frac{p_{xi}^2}{2m} + \frac{p_{yi}^2}{2m} + \frac{p_{zi}
 <p>1つの3次元振動子には運動量に関する3項と位置に関する3項があり，<span class="arithmatex">\(N\)</span> 個の振動子全体では二次形式の項が合計 <span class="arithmatex">\(6N\)</span> 個あります。
 エネルギー等分配則を適用すると，全平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\langle E \rangle = 6N \times \frac{1}{2}k_B T = \finalanswer{3N k_B T}
+\langle E \rangle = 6N \times \frac{1}{2}k_{\text{B}} T = \finalanswer{3N k_{\text{B}} T}
 \]</div>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，同様に温度 <span class="arithmatex">\(T\)</span> で微分して求まります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-C_V &amp;= \frac{\partial \langle E \rangle}{\partial T} \\
-&amp;= \finalanswer{3N k_B}
-\end{aligned}
+C_V = \frac{\partial \langle E \rangle}{\partial T} = \finalanswer{3N k_{\text{B}}}
 \]</div>
-<p>この固体振動子の定積熱容量が温度によらず <span class="arithmatex">\(3N k_B\)</span> となる結果は，デュロン・プティの法則に対応します。</p>
+<p>この固体振動子の定積熱容量が温度によらず <span class="arithmatex">\(3N k_{\text{B}}\)</span> となる結果は，デュロン・プティの法則に対応します。</p>
 
 
 

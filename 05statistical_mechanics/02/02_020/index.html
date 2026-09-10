@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -10902,17 +10902,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -11164,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14471,17 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14520,7 +14498,7 @@
 <h2 id="_2">問題</h2>
 <p>エネルギー <span class="arithmatex">\(E\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> が指定された孤立系を考える。エネルギーが <span class="arithmatex">\(E\)</span> から <span class="arithmatex">\(E + \delta E\)</span> の範囲にある微視的状態の総数を <span class="arithmatex">\(\Omega(E, V, N)\)</span> とする。ここで <span class="arithmatex">\(\delta E\)</span> は巨視的には十分小さく，微視的には多数の準位を含むエネルギー幅である。この状態数を用いて，統計力学的なエントロピーを以下のように定義する。</p>
 <div class="arithmatex">\[
-S(E, V, N) = k_B \log \Omega(E, V, N)
+S(E, V, N) = k_{\text{B}} \log \Omega(E, V, N)
 \]</div>
 <p>この定義に基づいて，以下の問いに答えよ。</p>
 <p>(1) 熱力学の第一法則から得られる基本関係式より，エントロピーの全微分は</p>
@@ -14529,7 +14507,6 @@ dS = \frac{1}{T} dE + \frac{P}{T} dV - \frac{\mu}{T} dN
 \]</div>
 <p>と表される。これより，絶対温度 <span class="arithmatex">\(T\)</span>，圧力 <span class="arithmatex">\(P\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> を，エントロピー <span class="arithmatex">\(S\)</span> の偏微分を用いてそれぞれ表せ。</p>
 <p>(2) 体積 <span class="arithmatex">\(V\)</span> や粒子数 <span class="arithmatex">\(N\)</span> を一定に保ったまま，系のエネルギー <span class="arithmatex">\(E\)</span> が増加したとき，通常の物理系では状態数 <span class="arithmatex">\(\Omega\)</span> およびエントロピー <span class="arithmatex">\(S\)</span> はどのように変化するか。その変化に伴う絶対温度 <span class="arithmatex">\(T\)</span> の符号について，(1)の偏微分の式を用いて考察せよ。</p>
-<p>(3) ミクロカノニカル分布において，マクロな熱力学量がエントロピーの偏微分を通じてミクロな状態数 <span class="arithmatex">\(\Omega\)</span> の振る舞いとどのように結びついているか，その物理的な意義を述べよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14558,8 +14535,6 @@ dS = \frac{1}{T} dE + \frac{P}{T} dV - \frac{\mu}{T} dN
 \finalanswer{\left( \frac{\partial S}{\partial E} \right)_{V, N} &gt; 0}
 \]</div>
 <p>(1) で導いた関係式 <span class="arithmatex">\(\frac{1}{T} = \left( \frac{\partial S}{\partial E} \right)_{V, N}\)</span> より，この微分が正であれば <span class="arithmatex">\(T&gt;0\)</span> となります。</p>
-<h3 id="3">(3)</h3>
-<p>以上より，微視的状態数 <span class="arithmatex">\(\Omega\)</span> の対数を偏微分することで，温度や圧力などの熱力学量を求められます。</p>
 
 
 

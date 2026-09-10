@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">マクスウェル速度分布</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にある質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体粒子を考え，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。1粒子の位置を <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span>，速度を <span class="arithmatex">\(\boldsymbol{v} = (v_x, v_y, v_z)\)</span> とすると，ハミルトニアンは</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にある質量 <span class="arithmatex">\(m\)</span> の古典的単原子理想気体粒子を考え，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。1粒子の位置を <span class="arithmatex">\(\boldsymbol{r} = (x, y, z)\)</span>，速度を <span class="arithmatex">\(\boldsymbol{v} = (v_x, v_y, v_z)\)</span> とすると，ハミルトニアンは</p>
 <div class="arithmatex">\[
 h = \frac{1}{2}m\boldsymbol{v}^2 = \frac{1}{2}m(v_x^2 + v_y^2 + v_z^2)
 \]</div>
@@ -14533,45 +14533,48 @@ h = \frac{1}{2}m\boldsymbol{v}^2 = \frac{1}{2}m(v_x^2 + v_y^2 + v_z^2)
 <p>確率密度関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> はボルツマン因子に比例するため，規格化定数を <span class="arithmatex">\(C\)</span> とおくと以下のように表せます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-P(\boldsymbol{v}) &amp;= C \exp\left[ -\frac{m(v_x^2 + v_y^2 + v_z^2)}{2k_B T} \right] \\
-&amp;= C \exp\left( -\frac{m v_x^2}{2k_B T} \right) \exp\left( -\frac{m v_y^2}{2k_B T} \right) \exp\left( -\frac{m v_z^2}{2k_B T} \right)
+P(\boldsymbol{v}) &amp;= C \exp\left[ -\frac{m(v_x^2 + v_y^2 + v_z^2)}{2k_{\text{B}} T} \right] \\
+&amp;= C \exp\left( -\frac{m v_x^2}{2k_{\text{B}} T} \right) \exp\left( -\frac{m v_y^2}{2k_{\text{B}} T} \right) \exp\left( -\frac{m v_z^2}{2k_{\text{B}} T} \right)
 \end{aligned}
 \]</div>
 <p>規格化条件から定数 <span class="arithmatex">\(C\)</span> を決定します。積分は3つの独立なガウス積分の積に分離できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_x dv_y dv_z &amp;= C \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_B T} \right) dv \right)^3 \\
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_x dv_y dv_z &amp;= C \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_{\text{B}} T} \right) dv \right)^3 \\
 &amp;= 1
 \end{aligned}
 \]</div>
-<p>ガウス積分の公式を <span class="arithmatex">\(a = \frac{m}{2k_B T}\)</span> として適用します。</p>
+<p>ガウス積分の公式を <span class="arithmatex">\(a = \frac{m}{2k_{\text{B}} T}\)</span> として適用します。</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_B T} \right) dv = \sqrt{\frac{2\pi k_B T}{m}}
+\int_{-\infty}^{\infty} \exp\left( -\frac{m v^2}{2k_{\text{B}} T} \right) dv = \sqrt{\frac{2\pi k_{\text{B}} T}{m}}
 \]</div>
 <p>これを代入して <span class="arithmatex">\(C\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-C \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^3 &amp;= 1 \quad \implies \quad C \\
-&amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2}
-\end{aligned}
+C=\left(\frac{m}{2\pi k_{\text{B}}T}\right)^{3/2}
 \]</div>
 <p>したがって，3次元マクスウェル速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{P(\boldsymbol{v}) = \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m\boldsymbol{v}^2}{2k_B T} \right)}
+\finalanswer{P(\boldsymbol{v}) = \left( \frac{m}{2\pi k_{\text{B}} T} \right)^{3/2} \exp\left( -\frac{m\boldsymbol{v}^2}{2k_{\text{B}} T} \right)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(x\)</span> 成分の速度分布 <span class="arithmatex">\(f(v_x)\)</span> を得るため，<span class="arithmatex">\(v_y,v_z\)</span> について全空間で積分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-f(v_x) &amp;= \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} P(\boldsymbol{v}) dv_y dv_z \\
-&amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2} \exp\left( -\frac{m v_x^2}{2k_B T} \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_y^2}{2k_B T} \right) dv_y \right) \left( \int_{-\infty}^{\infty} \exp\left( -\frac{m v_z^2}{2k_B T} \right) dv_z \right)
+f(v_x)
+&amp;=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+P(\boldsymbol v)\,dv_y\,dv_z \\
+&amp;=\left(\frac{m}{2\pi k_{\text{B}}T}\right)^{3/2}
+\exp\left(-\frac{mv_x^2}{2k_{\text{B}}T}\right) \\
+&amp;\quad\times\prod_{i=y,z}
+\left[\int_{-\infty}^{\infty}
+\exp\left(-\frac{mv_i^2}{2k_{\text{B}}T}\right)dv_i\right]
 \end{aligned}
 \]</div>
-<p>(1) と同様に <span class="arithmatex">\(v_y,v_z\)</span> を積分すると，それぞれ <span class="arithmatex">\(\sqrt{\frac{2\pi k_B T}{m}}\)</span> を与えるため，係数を整理して</p>
+<p>(1) と同様に <span class="arithmatex">\(v_y,v_z\)</span> を積分すると，それぞれ <span class="arithmatex">\(\sqrt{\frac{2\pi k_{\text{B}} T}{m}}\)</span> を与えるため，係数を整理して</p>
 <div class="arithmatex">\[
 \begin{aligned}
-f(v_x) &amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2} \left( \sqrt{\frac{2\pi k_B T}{m}} \right)^2 \exp\left( -\frac{m v_x^2}{2k_B T} \right) \\
-&amp;= \finalanswer{\sqrt{\frac{m}{2\pi k_B T}} \exp\left( -\frac{m v_x^2}{2k_B T} \right)}
+f(v_x) &amp;= \left( \frac{m}{2\pi k_{\text{B}} T} \right)^{3/2} \left( \sqrt{\frac{2\pi k_{\text{B}} T}{m}} \right)^2 \exp\left( -\frac{m v_x^2}{2k_{\text{B}} T} \right) \\
+&amp;= \finalanswer{\sqrt{\frac{m}{2\pi k_{\text{B}} T}} \exp\left( -\frac{m v_x^2}{2k_{\text{B}} T} \right)}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(f(v_x)\)</span> は偶関数なので，</p>
@@ -14580,31 +14583,28 @@ f(v_x) &amp;= \left( \frac{m}{2\pi k_B T} \right)^{3/2} \left( \sqrt{\frac{2\pi 
 \]</div>
 <p>です。また，ガウス積分を用いると，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle v_x^2\rangle &amp;= \int_{-\infty}^{\infty}v_x^2f(v_x)\,dv_x \\
-&amp;= \frac{k_BT}{m}
-\end{aligned}
+\langle v_x^2\rangle = \int_{-\infty}^{\infty}v_x^2f(v_x)\,dv_x = \frac{k_{\text{B}}T}{m}
 \]</div>
 <p>を得ます。</p>
 <h3 id="3">(3)</h3>
 <p>速さ <span class="arithmatex">\(v\)</span> は速度空間における原点からの距離です。速さが <span class="arithmatex">\(v\)</span> から <span class="arithmatex">\(v+dv\)</span> の範囲にある領域の体積は <span class="arithmatex">\(4\pi v^2dv\)</span> です。</p>
-<p>したがって，方向を区別せず速さのみに注目した分布関数 <span class="arithmatex">\(F(v)dv\)</span> は，3次元速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> にこの球殻の体積要素を掛け合わせることで導出されます。</p>
+<p>したがって，方向を区別せず速さのみに注目した分布関数 <span class="arithmatex">\(F(v)dv\)</span> は，3次元速度分布関数 <span class="arithmatex">\(P(\boldsymbol{v})\)</span> にこの球殻の体積要素を掛け合わせることで得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 F(v) dv &amp;= P(\boldsymbol{v}) \cdot 4\pi v^2 dv \\
-&amp;= 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right) dv
+&amp;= 4\pi \left( \frac{m}{2\pi k_{\text{B}} T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_{\text{B}} T} \right) dv
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
-F(v) = 4\pi \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_B T} \right)
+\finalanswer{F(v) = 4\pi \left( \frac{m}{2\pi k_{\text{B}} T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2k_{\text{B}} T} \right)}
 \]</div>
 <p><span class="arithmatex">\(F(v)\)</span> を微分すると，<span class="arithmatex">\(v&gt;0\)</span> における極値条件は</p>
 <div class="arithmatex">\[
-\frac{d}{dv}\log F(v)=\frac{2}{v}-\frac{mv}{k_BT}=0
+\frac{d}{dv}\log F(v)=\frac{2}{v}-\frac{mv}{k_{\text{B}}T}=0
 \]</div>
 <p>となります。したがって，最確速度は</p>
 <div class="arithmatex">\[
-\finalanswer{v_{\mathrm{mp}}=\sqrt{\frac{2k_BT}{m}}}
+\finalanswer{v_{\mathrm{mp}}=\sqrt{\frac{2k_{\text{B}}T}{m}}}
 \]</div>
 <p>です。</p>
 

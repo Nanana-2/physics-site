@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14519,7 +14519,7 @@
 <h1 id="_1">エネルギー揺らぎ</h1>
 <h2 id="_2">問題</h2>
 <p>温度 <span class="arithmatex">\(T\)</span> の熱浴と平衡にある，体積 <span class="arithmatex">\(V\)</span>，全粒子数 <span class="arithmatex">\(N\)</span> のカノニカル系を考える。この系の微視的状態を <span class="arithmatex">\(s\)</span> とし，状態 <span class="arithmatex">\(s\)</span> が持つエネルギーを <span class="arithmatex">\(E_s\)</span> とする。</p>
-<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，系が状態 <span class="arithmatex">\(s\)</span> をとる確率 <span class="arithmatex">\(P_s\)</span> は，分配関数 <span class="arithmatex">\(Z(\beta) = \sum_s \exp(-\beta E_s)\)</span> を用いて <span class="arithmatex">\(P_s = \frac{1}{Z(\beta)} \exp(-\beta E_s)\)</span> と表される。</p>
+<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とすると，系が状態 <span class="arithmatex">\(s\)</span> をとる確率 <span class="arithmatex">\(P_s\)</span> は，分配関数 <span class="arithmatex">\(Z(\beta) = \sum_s \exp(-\beta E_s)\)</span> を用いて <span class="arithmatex">\(P_s = \frac{1}{Z(\beta)} \exp(-\beta E_s)\)</span> と表される。</p>
 <p>系のエネルギーの平均値を <span class="arithmatex">\(\langle E \rangle\)</span>，エネルギーの分散を <span class="arithmatex">\(\langle (\Delta E)^2 \rangle = \langle (E - \langle E \rangle)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) エネルギーの平均値 <span class="arithmatex">\(\langle E \rangle = \sum_s E_s P_s\)</span> が，分配関数の対数微分を用いて以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
@@ -14577,7 +14577,7 @@
 <p>一方で，エネルギーの2乗平均 <span class="arithmatex">\(\langle E^2 \rangle\)</span> は，分配関数を <span class="arithmatex">\(\beta\)</span> で2階微分することに対応します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{\partial^2 Z}{\partial \beta^2} &amp;= \sum_s E_s^2 \exp(-\beta E_s) \quad \implies \quad \langle E^2 \rangle \\
+\langle E^2 \rangle
 &amp;= \sum_s E_s^2 \frac{\exp(-\beta E_s)}{Z} \\
 &amp;= \frac{1}{Z} \frac{\partial^2 Z}{\partial \beta^2}
 \end{aligned}
@@ -14592,17 +14592,17 @@
 \]</div>
 <p>これにより，統計的な分散が分配関数の2階対数微分，あるいは平均エネルギーの <span class="arithmatex">\(\beta\)</span> 微分として書き表せることが示されました。</p>
 <h3 id="3">(3)</h3>
-<p>関係式 <span class="arithmatex">\(\langle (\Delta E)^2 \rangle = -\frac{\partial \langle E \rangle}{\partial \beta}\)</span> に対して，温度 <span class="arithmatex">\(T\)</span> を経由する合成関数の微分を実行します。 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> より， <span class="arithmatex">\(\frac{\partial T}{\partial \beta} = -k_B T^2\)</span> です。</p>
+<p>関係式 <span class="arithmatex">\(\langle (\Delta E)^2 \rangle = -\frac{\partial \langle E \rangle}{\partial \beta}\)</span> に対して，温度 <span class="arithmatex">\(T\)</span> を経由する合成関数の微分を実行します。 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> より， <span class="arithmatex">\(\frac{\partial T}{\partial \beta} = -k_{\text{B}} T^2\)</span> です。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle (\Delta E)^2 \rangle &amp;= -\frac{\partial \langle E \rangle}{\partial T} \frac{\partial T}{\partial \beta} \\
-&amp;= -\frac{\partial \langle E \rangle}{\partial T} \left( -k_B T^2 \right) \\
-&amp;= k_B T^2 \frac{\partial \langle E \rangle}{\partial T}
+&amp;= -\frac{\partial \langle E \rangle}{\partial T} \left( -k_{\text{B}} T^2 \right) \\
+&amp;= k_{\text{B}} T^2 \frac{\partial \langle E \rangle}{\partial T}
 \end{aligned}
 \]</div>
 <p>定積熱容量の定義 <span class="arithmatex">\(C_V = \frac{\partial \langle E \rangle}{\partial T}\)</span> を代入すると，揺らぎと熱容量を結ぶ基本公式が得られます。</p>
 <div class="arithmatex">\[
-\langle (\Delta E)^2 \rangle = k_B T^2 C_V
+\langle (\Delta E)^2 \rangle = k_{\text{B}} T^2 C_V
 \]</div>
 <p><strong>マクロな系における揺らぎの見積もり</strong></p>
 <p>系のマクロな性質を調べるため，粒子数 <span class="arithmatex">\(N\)</span> に対する各物理量のスケーリングを考えます。
@@ -14612,14 +14612,14 @@
 \]</div>
 <p>(3) の結果より，エネルギーの分散は <span class="arithmatex">\(\langle (\Delta E)^2 \rangle \propto N\)</span> となり，その平方根である標準偏差は <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーになります。</p>
 <div class="arithmatex">\[
-\sqrt{\langle (\Delta E)^2 \rangle} = \sqrt{k_B T^2 C_V} \propto \sqrt{N}
+\sqrt{\langle (\Delta E)^2 \rangle} = \sqrt{k_{\text{B}} T^2 C_V} \propto \sqrt{N}
 \]</div>
 <p>したがって，平均値に対する揺らぎの割合を示す相対揺らぎは，以下のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle} \propto \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}}}
 \]</div>
 <p>粒子数が <span class="arithmatex">\(N \sim 10^{23}\)</span> であるマクロな系では，この値は <span class="arithmatex">\(\frac{1}{\sqrt{10^{23}}} \sim 10^{-11}\)</span> 程度となり，非常に小さな値です。</p>
-<p>この結果は，微視的にはエネルギーが絶えず揺らいでいるカノニカル分布であっても，マクロな視点ではエネルギーが平均値の周囲に非常に鋭く集中し，実質的にエネルギーが一定であるミクロカノニカル分布と一致した熱力学的挙動を示すことを数学的に裏付けています。</p>
+<p>この結果は，微視的にはエネルギーが絶えず揺らいでいるカノニカル分布であっても，マクロな視点ではエネルギーが平均値の周囲に非常に鋭く集中し，実質的にエネルギーが一定であるミクロカノニカル分布と一致した熱力学的挙動を示すことを裏付けています。</p>
 
 
 

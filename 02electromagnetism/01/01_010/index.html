@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14526,19 +14526,18 @@
 {|\boldsymbol{r}-\boldsymbol{r}'|^3}
 \]</div>
 <p>で与えられる。複数の電荷がある場合には，各電荷が作る電場をベクトルとして加え，電位をスカラーとして加える重ね合わせの原理が成り立つ。</p>
-<p>(1) 点電荷 <span class="arithmatex">\(q\)</span> を原点に置く。クーロンの法則から位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の点における電場を求め，正電荷と負電荷で向きがどう変わるか説明せよ。続いて <span class="arithmatex">\(\boldsymbol{E}=-\nabla\phi\)</span> を用いて，無限遠を基準とする電位を求めよ。</p>
-<p>(2) <span class="arithmatex">\(x=a\)</span> と <span class="arithmatex">\(x=-a\)</span> に同じ点電荷 <span class="arithmatex">\(q\)</span> を一つずつ置く。<span class="arithmatex">\(y\)</span> 軸上の点 <span class="arithmatex">\(P=(0,y,0)\)</span> における合成電場 <span class="arithmatex">\(\boldsymbol{E}(0,y,0)\)</span> と合成電位 <span class="arithmatex">\(\phi(0,y,0)\)</span> を求めよ。さらに <span class="arithmatex">\(|y|\gg a\)</span> における主要項を求めよ。</p>
-<p>(3) 配置を変え，<span class="arithmatex">\(x=a\)</span> に <span class="arithmatex">\(+q\)</span>，<span class="arithmatex">\(x=-a\)</span> に <span class="arithmatex">\(-q\)</span> を置く。<span class="arithmatex">\(x\)</span> 軸上の <span class="arithmatex">\(x&gt;a\)</span> における電位を求め，<span class="arithmatex">\(x\gg a\)</span> で主要項まで展開せよ。電気双極子モーメントの大きさ <span class="arithmatex">\(p=2qa\)</span> を用いて結果を表し，(2) の同符号電荷の場合と電位の距離依存性が異なる理由を説明せよ。</p>
+<p>(1) 点電荷 <span class="arithmatex">\(q\)</span> を原点に置く。位置ベクトル <span class="arithmatex">\(\boldsymbol{r}\)</span> の点における電場と，無限遠を基準とする電位を求めよ。</p>
+<p>(2) <span class="arithmatex">\(x=a\)</span> と <span class="arithmatex">\(x=-a\)</span> に同じ点電荷 <span class="arithmatex">\(q\)</span> を一つずつ置く。<span class="arithmatex">\(y\)</span> 軸上の点 <span class="arithmatex">\(P=(0,y,0)\)</span> における合成電場 <span class="arithmatex">\(\boldsymbol{E}(0,y,0)\)</span> と合成電位 <span class="arithmatex">\(\phi(0,y,0)\)</span> を求めよ。</p>
+<p>(3) 配置を変え，<span class="arithmatex">\(x=a\)</span> に <span class="arithmatex">\(+q\)</span>，<span class="arithmatex">\(x=-a\)</span> に <span class="arithmatex">\(-q\)</span> を置く。<span class="arithmatex">\(x\)</span> 軸上の <span class="arithmatex">\(x&gt;a\)</span> における電位を求め，<span class="arithmatex">\(x\gg a\)</span> で最初に残る項まで展開せよ。電気双極子モーメントの大きさ <span class="arithmatex">\(p=2qa\)</span> を用いて結果を表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>原点から観測点までの距離を <span class="arithmatex">\(r=|\boldsymbol{r}|\)</span>，動径方向の単位ベクトルを <span class="arithmatex">\(\boldsymbol{e}_r=\boldsymbol{r}/r\)</span> とします。クーロンの法則より，電場は動径方向を向きます。</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(\boldsymbol{r})=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\boldsymbol{e}_r
-=\frac{q}{4\pi\varepsilon_0}\frac{\boldsymbol{r}}{r^3}
+\finalanswer{\boldsymbol{E}(\boldsymbol{r})=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\boldsymbol{e}_r
+=\frac{q}{4\pi\varepsilon_0}\frac{\boldsymbol{r}}{r^3}}
 \]</div>
 <p><span class="arithmatex">\(q&gt;0\)</span> なら外向き，<span class="arithmatex">\(q&lt;0\)</span> なら内向きです。</p>
-<p><strong>電位の導出</strong></p>
 <p>球対称性より電位は <span class="arithmatex">\(r\)</span> だけの関数です。したがって <span class="arithmatex">\(E_r=-d\phi/dr\)</span> を積分します。</p>
 <p>積分変数を <span class="arithmatex">\(r'\)</span> とし，<span class="arithmatex">\(\int r'^{-2}dr'=-r'^{-1}\)</span> を用いると</p>
 <div class="arithmatex">\[
@@ -14547,7 +14546,7 @@
 &amp;=-\int_{\infty}^{r}\frac{q}{4\pi\varepsilon_0 r'^2}\,dr' \\
 &amp;=-\frac{q}{4\pi\varepsilon_0}
 \left[-\frac{1}{r'}\right]_{\infty}^{r} \\
-&amp;=\frac{q}{4\pi\varepsilon_0 r}.
+&amp;=\frac{q}{4\pi\varepsilon_0 r}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\phi(\infty)=0\)</span> を用いたので</p>
@@ -14556,26 +14555,25 @@
 \]</div>
 <p>が得られます。</p>
 <h3 id="2">(2)</h3>
-<p>二つの電荷から点 <span class="arithmatex">\(P\)</span> までの距離はいずれも <span class="arithmatex">\(\sqrt{a^2+y^2}\)</span> です。それぞれの電場を足すと，<span class="arithmatex">\(x\)</span> 成分は対称性によって打ち消し合います。一方，<span class="arithmatex">\(y\)</span> 成分は加わるため</p>
+<p>二つの電荷から点 <span class="arithmatex">\(P\)</span> までの距離はいずれも <span class="arithmatex">\(\sqrt{a^2+y^2}\)</span> です。それぞれの電場を足すと，対称性により <span class="arithmatex">\(x\)</span> 成分の和は 0 です。一方，<span class="arithmatex">\(y\)</span> 成分は同符号なので</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(0,y,0)
+\finalanswer{\boldsymbol{E}(0,y,0)
 =\frac{q}{4\pi\varepsilon_0}\frac{(-a,y,0)+(a,y,0)}{(a^2+y^2)^{3/2}}
-=\frac{2qy}{4\pi\varepsilon_0(a^2+y^2)^{3/2}}\boldsymbol{e}_y
+=\frac{2qy}{4\pi\varepsilon_0(a^2+y^2)^{3/2}}\boldsymbol{e}_y}
 \]</div>
-<p>となります。電位はスカラー量なので，二つの寄与をそのまま加えます。</p>
+<p>となります。電位はスカラー量なので，二つの電荷が作る電位をそのまま加えます。</p>
 <div class="arithmatex">\[
-\phi(0,y,0)=\frac{2q}{4\pi\varepsilon_0\sqrt{a^2+y^2}}
+\finalanswer{\phi(0,y,0)=\frac{2q}{4\pi\varepsilon_0\sqrt{a^2+y^2}}}
 \]</div>
-<p><strong>遠方での振る舞い</strong></p>
 <p><span class="arithmatex">\(|y|\gg a\)</span> では <span class="arithmatex">\(a^2+y^2\simeq y^2\)</span> と近似できます。したがって</p>
 <div class="arithmatex">\[
-\phi(0,y,0)\simeq\frac{2q}{4\pi\varepsilon_0|y|}
+\finalanswer{\phi(0,y,0)\simeq\frac{2q}{4\pi\varepsilon_0|y|}}
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{E}(0,y,0)\simeq
 \frac{2q}{4\pi\varepsilon_0}\frac{y}{|y|^3}\boldsymbol{e}_y}
 \]</div>
-<p>となります。これは原点に点電荷 <span class="arithmatex">\(2q\)</span> を置いたときの電位と電場です。遠方からは電荷間の距離 <span class="arithmatex">\(2a\)</span> を分解できず，全電荷が主要な寄与を与えます。</p>
+<p>となります。これは原点に点電荷 <span class="arithmatex">\(2q\)</span> を置いたときの電位と電場です。遠方では電荷間の距離 <span class="arithmatex">\(2a\)</span> を区別できず，全電荷で決まる項が最初に残ります。</p>
 <h3 id="3">(3)</h3>
 <p>二つの電荷から観測点までの距離は，正電荷から <span class="arithmatex">\(x-a\)</span>，負電荷から <span class="arithmatex">\(x+a\)</span> です。重ね合わせにより</p>
 <div class="arithmatex">\[
@@ -14592,7 +14590,7 @@
 \finalanswer{\phi(x)\simeq\frac{2qa}{4\pi\varepsilon_0x^2}
 =\frac{p}{4\pi\varepsilon_0x^2}}
 \]</div>
-<p>となります。同符号の二電荷では全電荷がゼロでないため電位の主要項は <span class="arithmatex">\(1/x\)</span> でした。双極子では全電荷がゼロでその項が打ち消され，電位はより速い <span class="arithmatex">\(1/x^2\)</span> で減衰します。</p>
+<p>となります。同符号の二電荷では全電荷がゼロでないため，電位の最初の項は <span class="arithmatex">\(1/x\)</span> に比例しました。双極子では全電荷がゼロなので <span class="arithmatex">\(1/x\)</span> の項は 0 となり，電位はより速い <span class="arithmatex">\(1/x^2\)</span> で減衰します。</p>
 
 
 

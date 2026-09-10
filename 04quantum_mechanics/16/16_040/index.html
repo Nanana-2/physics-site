@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14515,7 +14515,7 @@ v_{ijkl} = \langle i, j | \hat{v} | k, l \rangle
 <div class="arithmatex">\[
 \hat{v} | \boldsymbol{r}_3, \boldsymbol{r}_4 \rangle = v(\boldsymbol{r}_3 - \boldsymbol{r}_4) | \boldsymbol{r}_3, \boldsymbol{r}_4 \rangle
 \]</div>
-<p>この式をブラベクトルと結合させます。</p>
+<p>この式の左からブラベクトルを作用させます。</p>
 <div class="arithmatex">\[
 \langle \boldsymbol{r}_1, \boldsymbol{r}_2 | \hat{v} | \boldsymbol{r}_3, \boldsymbol{r}_4 \rangle = v(\boldsymbol{r}_3 - \boldsymbol{r}_4) \langle \boldsymbol{r}_1, \boldsymbol{r}_2 | \boldsymbol{r}_3, \boldsymbol{r}_4 \rangle
 \]</div>
@@ -14523,7 +14523,7 @@ v_{ijkl} = \langle i, j | \hat{v} | k, l \rangle
 <div class="arithmatex">\[
 \langle \boldsymbol{r}_1, \boldsymbol{r}_2 | \boldsymbol{r}_3, \boldsymbol{r}_4 \rangle = \delta(\boldsymbol{r}_1 - \boldsymbol{r}_3) \delta(\boldsymbol{r}_2 - \boldsymbol{r}_4)
 \]</div>
-<p>これらをまとめることで，求める行列要素の式が導かれます。</p>
+<p>これらをまとめることで，求める行列要素の式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{v_{\boldsymbol{r}_1 \boldsymbol{r}_2 \boldsymbol{r}_3 \boldsymbol{r}_4} = v(\boldsymbol{r}_3 - \boldsymbol{r}_4) \delta(\boldsymbol{r}_1 - \boldsymbol{r}_3) \delta(\boldsymbol{r}_2 - \boldsymbol{r}_4)}
 \]</div>
@@ -14532,11 +14532,11 @@ v_{ijkl} = \langle i, j | \hat{v} | k, l \rangle
 <div class="arithmatex">\[
 \hat{V} = \frac{1}{2} \int d\boldsymbol{r}_1 d\boldsymbol{r}_2 d\boldsymbol{r}_3 d\boldsymbol{r}_4 \, v(\boldsymbol{r}_3 - \boldsymbol{r}_4) \delta(\boldsymbol{r}_1 - \boldsymbol{r}_3) \delta(\boldsymbol{r}_2 - \boldsymbol{r}_4) \hat{\psi}^\dagger(\boldsymbol{r}_1) \hat{\psi}^\dagger(\boldsymbol{r}_2) \hat{\psi}(\boldsymbol{r}_4) \hat{\psi}(\boldsymbol{r}_3)
 \]</div>
-<p>まず，デルタ関数 <span class="arithmatex">\(\delta(\boldsymbol{r}_1 - \boldsymbol{r}_3)\)</span> を含む <span class="arithmatex">\(\boldsymbol{r}_1\)</span> の積分を実行します。この選別作用により，式中の <span class="arithmatex">\(\boldsymbol{r}_1\)</span> がすべて <span class="arithmatex">\(\boldsymbol{r}_3\)</span> へと置き換わります。</p>
+<p>まず，デルタ関数 <span class="arithmatex">\(\delta(\boldsymbol{r}_1 - \boldsymbol{r}_3)\)</span> を含む <span class="arithmatex">\(\boldsymbol{r}_1\)</span> の積分を計算します。デルタ関数の性質により，式中の <span class="arithmatex">\(\boldsymbol{r}_1\)</span> を <span class="arithmatex">\(\boldsymbol{r}_3\)</span> に置き換えられます。</p>
 <div class="arithmatex">\[
 \hat{V} = \frac{1}{2} \int d\boldsymbol{r}_2 d\boldsymbol{r}_3 d\boldsymbol{r}_4 \, v(\boldsymbol{r}_3 - \boldsymbol{r}_4) \delta(\boldsymbol{r}_2 - \boldsymbol{r}_4) \hat{\psi}^\dagger(\boldsymbol{r}_3) \hat{\psi}^\dagger(\boldsymbol{r}_2) \hat{\psi}(\boldsymbol{r}_4) \hat{\psi}(\boldsymbol{r}_3)
 \]</div>
-<p>続いて，デルタ関数 <span class="arithmatex">\(\delta(\boldsymbol{r}_2 - \boldsymbol{r}_4)\)</span> を含む <span class="arithmatex">\(\boldsymbol{r}_2\)</span> の積分を実行します。この選別作用により，式中の <span class="arithmatex">\(\boldsymbol{r}_2\)</span> がすべて <span class="arithmatex">\(\boldsymbol{r}_4\)</span> へと置き換わります。</p>
+<p>続いて，デルタ関数 <span class="arithmatex">\(\delta(\boldsymbol{r}_2 - \boldsymbol{r}_4)\)</span> を含む <span class="arithmatex">\(\boldsymbol{r}_2\)</span> の積分を計算します。同様に，式中の <span class="arithmatex">\(\boldsymbol{r}_2\)</span> を <span class="arithmatex">\(\boldsymbol{r}_4\)</span> に置き換えられます。</p>
 <div class="arithmatex">\[
 \hat{V} = \frac{1}{2} \int d\boldsymbol{r}_3 d\boldsymbol{r}_4 \, v(\boldsymbol{r}_3 - \boldsymbol{r}_4) \hat{\psi}^\dagger(\boldsymbol{r}_3) \hat{\psi}^\dagger(\boldsymbol{r}_4) \hat{\psi}(\boldsymbol{r}_4) \hat{\psi}(\boldsymbol{r}_3)
 \]</div>
@@ -14544,7 +14544,7 @@ v_{ijkl} = \langle i, j | \hat{v} | k, l \rangle
 <div class="arithmatex">\[
 \finalanswer{\hat{V} = \frac{1}{2} \int d\boldsymbol{r} d\boldsymbol{r}' \, v(\boldsymbol{r} - \boldsymbol{r}') \hat{\psi}^\dagger(\boldsymbol{r}) \hat{\psi}^\dagger(\boldsymbol{r}') \hat{\psi}(\boldsymbol{r}') \hat{\psi}(\boldsymbol{r})}
 \]</div>
-<p>これにより，位置表示における二体相互作用の第二量子化表示が導出されました。この等式は，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> と <span class="arithmatex">\(\boldsymbol{r}'\)</span> から粒子をそれぞれ1個ずつ消滅させ，両者の一体ポテンシャルを掛け算した後，再び同じ位置に粒子を1個ずつ生成する物理過程の全空間における総和を意味しています。</p>
+<p>これにより，位置表示における二体相互作用の第二量子化表示が得られます。この等式は，位置 <span class="arithmatex">\(\boldsymbol{r}\)</span> と <span class="arithmatex">\(\boldsymbol{r}'\)</span> から粒子をそれぞれ1個ずつ消滅させ，両者の一体ポテンシャルを掛け算した後，再び同じ位置に粒子を1個ずつ生成する物理過程の全空間における総和を意味しています。</p>
 
 
 

@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14533,24 +14533,24 @@ d\boldsymbol{E}
 {|\boldsymbol{r}-\boldsymbol{r}'|^3}\,dq
 \]</div>
 <p>で与えられる。線電荷密度を <span class="arithmatex">\(\lambda\)</span>，面電荷密度を <span class="arithmatex">\(\sigma\)</span> とすると，線上と面上の微小電荷はそれぞれ <span class="arithmatex">\(dq=\lambda\,dl\)</span>，<span class="arithmatex">\(dq=\sigma\,dS\)</span> である。</p>
-<p>(1) 円環の線電荷密度 <span class="arithmatex">\(\lambda\)</span> と，方位角 <span class="arithmatex">\(\varphi\)</span> から <span class="arithmatex">\(\varphi+d\varphi\)</span> までの微小部分がもつ電荷 <span class="arithmatex">\(dq\)</span> を求めよ。円環全体が軸上の点 <span class="arithmatex">\(P\)</span> に作る電場 <span class="arithmatex">\(\boldsymbol{E}(z)\)</span> を求めよ。</p>
+<p>(1) 線電荷密度を <span class="arithmatex">\(\lambda=Q/(2\pi R)\)</span> とする。方位角 <span class="arithmatex">\(\varphi\)</span> から <span class="arithmatex">\(\varphi+d\varphi\)</span> までの微小部分がもつ電荷を <span class="arithmatex">\(dq=\lambda R\,d\varphi\)</span> と表し，円環全体が軸上の点 <span class="arithmatex">\(P\)</span> に作る電場 <span class="arithmatex">\(\boldsymbol{E}(z)\)</span> を求めよ。</p>
 <p>(2) 次に，面電荷密度 <span class="arithmatex">\(\sigma\)</span> が一様な半径 <span class="arithmatex">\(R\)</span> の薄い円板を考える。円板を同心円環へ分割し，軸上電場</p>
 <div class="arithmatex">\[
 \boldsymbol{E}(z)
 \]</div>
 <p>と，無限遠を基準とする軸上電位 <span class="arithmatex">\(\phi(z)\)</span> を求めよ。</p>
-<p>(3) (2) の結果について，<span class="arithmatex">\(z\gg R\)</span> と <span class="arithmatex">\(R\gg z\)</span> の極限を求め，それぞれの結果を説明せよ。</p>
+<p>(3) (2) の結果について，<span class="arithmatex">\(z\gg R\)</span> と <span class="arithmatex">\(R\gg z\)</span> の極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>電荷 <span class="arithmatex">\(Q\)</span> が長さ <span class="arithmatex">\(2\pi R\)</span> の円周上に一様に分布しているため，線電荷密度は</p>
 <div class="arithmatex">\[
-\lambda=\frac{Q}{2\pi R}
+\finalanswer{\lambda=\frac{Q}{2\pi R}}
 \]</div>
 <p>です。円環の微小部分の長さは <span class="arithmatex">\(dl=R\,d\varphi\)</span> なので</p>
 <div class="arithmatex">\[
-dq=\lambda R\,d\varphi
-=\frac{Q}{2\pi}\,d\varphi
+\finalanswer{dq=\lambda R\,d\varphi
+=\frac{Q}{2\pi}\,d\varphi}
 \]</div>
 <p>となります。</p>
 <p>観測点の位置ベクトルは <span class="arithmatex">\(\boldsymbol{r}=z\boldsymbol{e}_z\)</span> です。電荷要素から観測点へ向かうベクトルは</p>
@@ -14583,7 +14583,7 @@ d\boldsymbol{E}
 \qquad
 \int_0^{2\pi}\sin\varphi\,d\varphi=0
 \]</div>
-<p>なので，両成分は消えます。これは円環上の各電荷要素に対して，中心軸を挟んだ反対側に横成分を打ち消す電荷要素が存在することに対応します。</p>
+<p>なので，両成分は 0 です。これは円環上の各電荷要素に対して，中心軸を挟んだ反対側に，逆向きの横成分をもつ電荷要素が存在するためです。</p>
 <p><span class="arithmatex">\(z\)</span> 成分は円環上のすべての電荷要素について同符号です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14594,7 +14594,7 @@ E_z
 &amp;=\frac{1}{4\pi\varepsilon_0}
 \frac{z}{(R^2+z^2)^{3/2}}
 \frac{Q}{2\pi}[\varphi]_0^{2\pi} \\
-&amp;=\frac{Qz}{4\pi\varepsilon_0(R^2+z^2)^{3/2}}.
+&amp;=\frac{Qz}{4\pi\varepsilon_0(R^2+z^2)^{3/2}}
 \end{aligned}
 \]</div>
 <p>したがって，ベクトルとしては</p>
@@ -14632,7 +14632,7 @@ E_z
 &amp;=\frac{\sigma z}{2\varepsilon_0}
 \left(
 \frac{1}{z}-\frac{1}{\sqrt{R^2+z^2}}
-\right).
+\right)
 \end{aligned}
 \]</div>
 <p>となります。<span class="arithmatex">\(z&gt;0\)</span> を用いて整理すれば</p>
@@ -14661,7 +14661,7 @@ d\phi
 &amp;=\frac{\sigma}{2\varepsilon_0}
 \left[\sqrt{u}\right]_{z^2}^{R^2+z^2} \\
 &amp;=\frac{\sigma}{2\varepsilon_0}
-\left(\sqrt{R^2+z^2}-z\right).
+\left(\sqrt{R^2+z^2}-z\right)
 \end{aligned}
 \]</div>
 <p>最後の行では <span class="arithmatex">\(z&gt;0\)</span> より <span class="arithmatex">\(\sqrt{z^2}=z\)</span> を用いました。したがって</p>

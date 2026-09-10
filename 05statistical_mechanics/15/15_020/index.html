@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,7 +14525,7 @@
 \]</div>
 <p>ラグランジュの未定乗数法を用いて，最大化すべき目的関数 <span class="arithmatex">\(I(\{p_n\}, \alpha, \beta)\)</span> を以下のように定義する。</p>
 <div class="arithmatex">\[
-I(\{p_n\}, \alpha, \beta) = -\sum_n p_n \ln p_n - \alpha \left( \sum_n p_n - 1 \right) - \beta \left( \sum_n p_n E_n - U \right)
+I(\{p_n\}, \alpha, \beta) = -\sum_n p_n \log p_n - \alpha \left( \sum_n p_n - 1 \right) - \beta \left( \sum_n p_n E_n - U \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(\frac{\partial I}{\partial p_k}=0\)</span> から <span class="arithmatex">\(p_k\)</span> を求めよ。</p>
@@ -14533,7 +14533,7 @@ I(\{p_n\}, \alpha, \beta) = -\sum_n p_n \ln p_n - \alpha \left( \sum_n p_n - 1 \
 p_k = \exp(-1 - \alpha) \exp(-\beta E_k)
 \]</div>
 <p>(2) 規格化条件から <span class="arithmatex">\(p_k\)</span> を分配関数 <span class="arithmatex">\(Z=\sum_n e^{-\beta E_n}\)</span> で表せ。また，密度行列 <span class="arithmatex">\(\rho\)</span> を <span class="arithmatex">\(\hat{H}\)</span> と <span class="arithmatex">\(Z\)</span> で表せ。</p>
-<p>(3) (2) の結果から，<span class="arithmatex">\(F=-k_BT\ln Z\)</span> が次の関係を満たすことを示せ。</p>
+<p>(3) (2) の結果から，<span class="arithmatex">\(F=-k_{\text{B}}T\log Z\)</span> が次の関係を満たすことを示せ。</p>
 <div class="arithmatex">\[
 F = U - TS
 \]</div>
@@ -14543,8 +14543,8 @@ F = U - TS
 <p>目的関数 <span class="arithmatex">\(I(\{p_n\}, \alpha, \beta)\)</span> の各項について， <span class="arithmatex">\(p_k\)</span> による偏微分を実行します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{\partial}{\partial p_k} \left( -\sum_n p_n \ln p_n \right) &amp;= -\ln p_k - p_k \cdot \frac{1}{p_k} \\
-&amp;= -\ln p_k - 1
+\frac{\partial}{\partial p_k} \left( -\sum_n p_n \log p_n \right) &amp;= -\log p_k - p_k \cdot \frac{1}{p_k} \\
+&amp;= -\log p_k - 1
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
@@ -14555,18 +14555,15 @@ F = U - TS
 \]</div>
 <p>これらを足し合わせてゼロと置きます。</p>
 <div class="arithmatex">\[
--\ln p_k - 1 - \alpha - \beta E_k = 0
+-\log p_k - 1 - \alpha - \beta E_k = 0
 \]</div>
 <p>対数項について整理します。</p>
 <div class="arithmatex">\[
-\ln p_k = -1 - \alpha - \beta E_k
+\log p_k = -1 - \alpha - \beta E_k
 \]</div>
-<p>両辺の指数をとることで，求める確率の表現が導かれます。</p>
+<p>両辺の指数をとることで，求める確率の表現が得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-p_k &amp;= \exp(-1 - \alpha - \beta E_k) \\
-&amp;= \finalanswer{\exp(-1 - \alpha) \exp(-\beta E_k)}
-\end{aligned}
+p_k = \exp(-1 - \alpha - \beta E_k) = \finalanswer{\exp(-1 - \alpha) \exp(-\beta E_k)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>すべての状態について確率の総和をとり，これが 1 に等しいという条件を課します。</p>
@@ -14583,7 +14580,7 @@ p_k &amp;= \exp(-1 - \alpha - \beta E_k) \\
 \]</div>
 <p>これを (1) の式に戻すことで，カノニカル分布の固有値分布が得られます。</p>
 <div class="arithmatex">\[
-p_k = \frac{\exp(-\beta E_k)}{Z}
+\finalanswer{p_k = \frac{\exp(-\beta E_k)}{Z}}
 \]</div>
 <p>この固有値を対角成分に持つ密度行列 <span class="arithmatex">\(\rho\)</span> は，ハミルトニアンの固有基底において <span class="arithmatex">\(\rho = \sum_n p_n |n\rangle\langle n|\)</span> と表されるため，演算子形式の指数関数を用いて以下のように直接的にまとめることができます。</p>
 <div class="arithmatex">\[
@@ -14592,35 +14589,32 @@ p_k = \frac{\exp(-\beta E_k)}{Z}
 <h3 id="3">(3)</h3>
 <p>シャノンエントロピーの式に，固有値 <span class="arithmatex">\(p_n = \frac{\exp(-\beta E_n)}{Z}\)</span> を代入します。対数部分を分割します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\ln p_n &amp;= \ln \left( \frac{\exp(-\beta E_n)}{Z} \right) \\
-&amp;= -\beta E_n - \ln Z
-\end{aligned}
+\log p_n = \log \left( \frac{\exp(-\beta E_n)}{Z} \right) = -\beta E_n - \log Z
 \]</div>
 <p>これをエントロピーの定義式に適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S &amp;= -k_B \sum_n p_n \left( -\beta E_n - \ln Z \right) \\
-&amp;= k_B \beta \sum_n p_n E_n + k_B \ln Z \sum_n p_n
+S &amp;= -k_{\text{B}} \sum_n p_n \left( -\beta E_n - \log Z \right) \\
+&amp;= k_{\text{B}} \beta \sum_n p_n E_n + k_{\text{B}} \log Z \sum_n p_n
 \end{aligned}
 \]</div>
 <p>ここで，束縛条件であるエネルギー期待値の定義 <span class="arithmatex">\(\sum_n p_n E_n = U\)</span> と，規格化条件 <span class="arithmatex">\(\sum_n p_n = 1\)</span> をそれぞれの項に代入します。</p>
 <div class="arithmatex">\[
-S = k_B \beta U + k_B \ln Z
+S = k_{\text{B}} \beta U + k_{\text{B}} \log Z
 \]</div>
-<p>逆温度と絶対温度の関係 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入して式を整理します。</p>
+<p>逆温度と絶対温度の関係 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を代入して式を整理します。</p>
 <div class="arithmatex">\[
-S = \frac{U}{T} + k_B \ln Z
+S = \frac{U}{T} + k_{\text{B}} \log Z
 \]</div>
 <p>両辺に <span class="arithmatex">\(T\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-TS = U + k_B T \ln Z
+TS = U + k_{\text{B}} T \log Z
 \]</div>
-<p>ヘルムホルツの自由エネルギーの統計力学的な定義式 <span class="arithmatex">\(F = -k_B T \ln Z \implies k_B T \ln Z = -F\)</span> を右辺の第2項に代入します。</p>
+<p>ヘルムホルツの自由エネルギーの統計力学的な定義式 <span class="arithmatex">\(F = -k_{\text{B}} T \log Z \implies k_{\text{B}} T \log Z = -F\)</span> を右辺の第2項に代入します。</p>
 <div class="arithmatex">\[
 TS = U - F
 \]</div>
-<p>この式を <span class="arithmatex">\(F\)</span> について解くように移項することで，マクロ熱力学における基本関係式が導出されます。</p>
+<p>この式を <span class="arithmatex">\(F\)</span> について解くように移項することで，マクロ熱力学における基本関係式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{F = U - TS}
 \]</div>

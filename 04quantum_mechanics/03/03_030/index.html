@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14538,7 +14538,15 @@
 <div class="arithmatex">\[
 \hat{P} f(-x) = f(-(-x)) = f(x)
 \]</div>
-<p>任意の関数に対して <span class="arithmatex">\(\hat{P}^2 = \hat{I}\)</span> が成り立つため， <span class="arithmatex">\(\hat{P}\)</span> の固有値を <span class="arithmatex">\(\lambda\)</span> とすると， <span class="arithmatex">\(\lambda^2 = 1\)</span> という関係が課されます。これを解くと <span class="arithmatex">\(\lambda = \pm 1\)</span> となります。</p>
+<p>任意の関数に対して次の関係が成り立ちます。</p>
+<div class="arithmatex">\[
+\finalanswer{\hat{P}^2=\hat{I}}
+\]</div>
+<p><span class="arithmatex">\(\hat{P}\)</span> の固有値を <span class="arithmatex">\(\lambda\)</span> とすると，<span class="arithmatex">\(\lambda^2=1\)</span> であるため，</p>
+<div class="arithmatex">\[
+\finalanswer{\lambda=\pm1}
+\]</div>
+<p>となります。</p>
 <ul>
 <li><strong><span class="arithmatex">\(\lambda = 1\)</span> の場合</strong></li>
 </ul>
@@ -14550,16 +14558,13 @@
 <li><strong><span class="arithmatex">\(\lambda = -1\)</span> の場合</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{P} \psi(x) = \psi(-x) = \finalanswer{-\psi(x)}
+  \hat{P} \psi(x) = \psi(-x) = -\psi(x)
 \]</div>
 <p>これは符号が反転する関数であり，奇関数の定義に一致します。</p>
 <h3 id="2">(2)</h3>
 <p>演算子の積 <span class="arithmatex">\(\hat{H}\hat{P}\)</span> を任意の関数 <span class="arithmatex">\(f(x)\)</span> に作用させます。右側の演算子から順に適用します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\hat{H}\hat{P} f(x) &amp;= \hat{H} f(-x) \\
-&amp;= -\frac{\hbar^2}{2m} \frac{d^2 f(-x)}{dx^2} + V(x) f(-x)
-\end{aligned}
+\hat{H}\hat{P} f(x) = \hat{H} f(-x) = -\frac{\hbar^2}{2m} \frac{d^2 f(-x)}{dx^2} + V(x) f(-x)
 \]</div>
 <p>合成関数の微分法則により， <span class="arithmatex">\(x\)</span> による2階微分は符号が2回反転するため，元の微分と同じ形になります。</p>
 <div class="arithmatex">\[

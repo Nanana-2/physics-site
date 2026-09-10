@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14540,7 +14540,7 @@
 <div class="arithmatex">\[
 \langle \Psi | \frac{1}{r_1} | \Psi \rangle = Z, \quad \langle \Psi | \frac{1}{|\boldsymbol{r}_1 - \boldsymbol{r}_2|} | \Psi \rangle = \frac{5}{8}Z
 \]</div>
-<p>(3) 得られた期待値 <span class="arithmatex">\(\langle H \rangle\)</span> を最少にする最適な有効核電荷 <span class="arithmatex">\(Z_0\)</span> を求めよ。また，そのときのエネルギーの近似値 <span class="arithmatex">\(E_{\text{var}}\)</span> を算出せよ。</p>
+<p>(3) 得られた期待値 <span class="arithmatex">\(\langle H \rangle\)</span> を最小にする有効核電荷 <span class="arithmatex">\(Z_0\)</span> と，そのときのエネルギー <span class="arithmatex">\(E_{\text{var}}\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14555,7 +14555,7 @@
 <div class="arithmatex">\[
 \hat{H} = \left( -\frac{1}{2}\boldsymbol{\nabla}_1^2 - \frac{Z}{r_1} \right) + \left( -\frac{1}{2}\boldsymbol{\nabla}_2^2 - \frac{Z}{r_2} \right) + \frac{Z - 2}{r_1} + \frac{Z - 2}{r_2} + \frac{1}{|\boldsymbol{r}_1 - \boldsymbol{r}_2|}
 \]</div>
-<p>先頭の 2つの括弧の塊は，問題文で定義された <span class="arithmatex">\(\hat{H}_0(Z)\)</span> に一致します。残りの項から共通因数 <span class="arithmatex">\((Z - 2)\)</span> を括り出すことで，求める形式が導かれます。</p>
+<p>先頭の 2つの括弧の塊は，問題文で定義された <span class="arithmatex">\(\hat{H}_0(Z)\)</span> に一致します。残りの項から共通因数 <span class="arithmatex">\((Z - 2)\)</span> を括り出すことで，求める形式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\hat{H} = \hat{H}_0(Z) + (Z - 2)\left(\frac{1}{r_1} + \frac{1}{r_2}\right) + \frac{1}{|\boldsymbol{r}_1 - \boldsymbol{r}_2|}}
 \]</div>
@@ -14566,10 +14566,7 @@
 </ul>
 <p>試行波動関数 <span class="arithmatex">\(\Psi\)</span> は，電荷 <span class="arithmatex">\(Z\)</span> を持つ独立な 2つの水素様原子ハミルトニアンの固有状態の積です。それぞれの電子について固有値 <span class="arithmatex">\(-Z^2/2\)</span> が得られるため，足し合わせると以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle \Psi | \hat{H}_0(Z) | \Psi \rangle &amp;= -\frac{Z^2}{2} - \frac{Z^2}{2} \\
-&amp;= -Z^2
-\end{aligned}
+\langle \Psi | \hat{H}_0(Z) | \Psi \rangle = -\frac{Z^2}{2} - \frac{Z^2}{2} = -Z^2
 \]</div>
 <ul>
 <li><strong>ポテンシャル補正項の期待値</strong></li>
@@ -14595,10 +14592,7 @@
 \]</div>
 <p><span class="arithmatex">\(Z\)</span> の次数ごとにまとめます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle H \rangle &amp;= Z^2 - \left( 4 - \frac{5}{8} \right)Z \\
-&amp;= \finalanswer{Z^2 - \frac{27}{8}Z}
-\end{aligned}
+\langle H \rangle = Z^2 - \left( 4 - \frac{5}{8} \right)Z = \finalanswer{Z^2 - \frac{27}{8}Z}
 \]</div>
 <p>これが <span class="arithmatex">\(Z\)</span> の関数として表された全エネルギーの期待値です。</p>
 <h3 id="3">(3)</h3>
@@ -14608,7 +14602,7 @@
 \]</div>
 <p>この 1次方程式を解くことで，最適な有効核電荷 <span class="arithmatex">\(Z_0\)</span> が求まります。</p>
 <div class="arithmatex">\[
-Z_0 = \frac{27}{16} = 1.6875
+\finalanswer{Z_0 = \frac{27}{16} = 1.6875}
 \]</div>
 <p>元の原子核の電荷である 2 よりも小さな値になっており，もう一方の電子の存在によって原子核の電荷が遮蔽されている性質が数値として現れます。</p>
 <p>この <span class="arithmatex">\(Z_0\)</span> の値をエネルギーの式に代入して，基底状態エネルギーの近似値を計算します。</p>

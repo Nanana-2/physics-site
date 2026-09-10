@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,7 +14525,7 @@
 <p>巨視的な容器ではエネルギー準位の間隔が狭いため，和を積分で近似できる。単位エネルギー幅あたりの状態数を表す状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> について，以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(n_x,n_y,n_z\)</span> を座標軸とする数空間において，エネルギーが <span class="arithmatex">\(\epsilon\)</span> 以下となる領域が半径 <span class="arithmatex">\(R = \frac{2L}{h}\sqrt{2m\epsilon}\)</span> の球の第1八分体に対応することを示せ。スピン自由度を考えず，状態数 <span class="arithmatex">\(N(\epsilon)\)</span> を <span class="arithmatex">\(V,m,h,\epsilon\)</span> で表せ。</p>
 <p>(2) 状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> は，総数関数 <span class="arithmatex">\(N(\epsilon)\)</span> のエネルギー微分 <span class="arithmatex">\(D(\epsilon) = \frac{dN(\epsilon)}{d\epsilon}\)</span> として定義される。三次元空間における自由粒子の状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を求め，それがエネルギーの何乗に比例するかを示せ。</p>
-<p>(3) 粒子のスピン自由度を <span class="arithmatex">\(g = 2\)</span> と置く。このスピン自由度を考慮したとき，前問で得られた量子理想気体のグランドポテンシャル <span class="arithmatex">\(\Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)\)</span> の状態の和 <span class="arithmatex">\(\sum_k\)</span> を，状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を用いたエネルギー積分へと書き換えよ。</p>
+<p>(3) 粒子のスピン自由度を <span class="arithmatex">\(g = 2\)</span> と置く。このスピン自由度を考慮したとき，前問で得られた量子理想気体のグランドポテンシャル <span class="arithmatex">\(\Omega = \pm k_{\text{B}} T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)\)</span> の状態の和 <span class="arithmatex">\(\sum_k\)</span> を，状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> を用いたエネルギー積分へと書き換えよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14568,12 +14568,12 @@ D(\epsilon) &amp;= \frac{dN(\epsilon)}{d\epsilon} \\
 \]</div>
 <p>この規則を全体のグランドポテンシャル <span class="arithmatex">\(\Omega\)</span> の式に適用し，(2) の結果を代入します。</p>
 <div class="arithmatex">\[
-\Omega = \pm g k_B T \int_0^\infty D(\epsilon) \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon
+\Omega = \pm g k_{\text{B}} T \int_0^\infty D(\epsilon) \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon
 \]</div>
 <div class="arithmatex">\[
-\finalanswer{\Omega = \pm \frac{4\pi V}{h^3} (2m)^{3/2} k_B T \int_0^\infty \sqrt{\epsilon} \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon}
+\finalanswer{\Omega = \pm \frac{4\pi V}{h^3} (2m)^{3/2} k_{\text{B}} T \int_0^\infty \sqrt{\epsilon} \log \left( 1 \pm \exp\left[ -\beta(\epsilon - \mu) \right] \right) d\epsilon}
 \]</div>
-<p>この積分形式に変形することで，理想フェルミ気体の圧力や，理想ボース気体のボース凝縮といった複雑な量子統計力学の具体的な熱力学量の計算を数学的に進めることが可能になります。</p>
+<p>この積分形式に変形することで，理想フェルミ気体の圧力や，理想ボース気体のボース凝縮といった複雑な量子統計力学の具体的な熱力学量の計算を進めることが可能になります。</p>
 
 
 

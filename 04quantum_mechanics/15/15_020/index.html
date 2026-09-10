@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14524,7 +14524,7 @@
 \]</div>
 <p>この方程式を満たす波動関数 <span class="arithmatex">\(\psi\)</span> と，その複素共役 <span class="arithmatex">\(\psi^*\)</span> に対して，確率の保存則に類似した連続の式 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \boldsymbol{j} = 0\)</span> を導出する。以下の問いに答えよ。</p>
 <p>(1) クライン・ゴルドン方程式の全体に左から <span class="arithmatex">\(\psi^*\)</span> を掛け算した式を書き下せ。また，元の方程式の複素共役をとった式に左から <span class="arithmatex">\(\psi\)</span> を掛け算した式を書き下せ。</p>
-<p>(2) (1) で得られた2つの式の差を計算し，定数因数を整理することで，時間微分の項と空間微分の湧き出し項の和の形式に変形せよ。これにより，連続の式を満たす密度 <span class="arithmatex">\(\rho\)</span> および流束密度ベクトル <span class="arithmatex">\(\boldsymbol{j}\)</span> の数式表現を <span class="arithmatex">\(\psi, \psi^*\)</span> を用いて導出せよ。ただし，全体の係数は非相対論的極限において通常の確率流束密度に一致するよう， <span class="arithmatex">\(i\hbar / (2m)\)</span> の因子を適切に掛け算せよ。</p>
+<p>(2) (1) で得られた2つの式の差をとり，時間微分項と空間微分項の和に整理せよ。連続の式を満たす密度 <span class="arithmatex">\(\rho\)</span> と流束密度 <span class="arithmatex">\(\boldsymbol{j}\)</span> を <span class="arithmatex">\(\psi,\psi^*\)</span> を用いて表せ。ただし，非相対論的極限で通常の確率流束密度に一致するよう，全体に <span class="arithmatex">\(i\hbar/(2m)\)</span> を掛けるものとする。</p>
 <p>(3) (2) で導出した密度 <span class="arithmatex">\(\rho\)</span> の式に，平面波解 <span class="arithmatex">\(\psi(\boldsymbol{r}, t) = N e^{i(\boldsymbol{p} \cdot \boldsymbol{r} - Et)/\hbar}\)</span> を代入して <span class="arithmatex">\(\rho\)</span> を計算せよ。ただし <span class="arithmatex">\(N\)</span> は規格化定数である。得られた結果に基づき，相対論的なエネルギー <span class="arithmatex">\(E\)</span> が負の値をとるときに <span class="arithmatex">\(\rho\)</span> の符号がどのようになるかを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14542,7 +14542,7 @@
 \finalanswer{\frac{1}{c^2} \psi \frac{\partial^2 \psi^*}{\partial t^2} - \psi \boldsymbol{\nabla}^2 \psi^* + \left( \frac{mc}{\hbar} \right)^2 \psi \psi^* = 0}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で作成した最初の式から2番目の式を差し引きます。質量を含む第3項は同一の形式であるため，相殺されて消去されます。</p>
+<p>(1) で得た最初の式から2番目の式を引きます。質量を含む第3項は同じなので，差は 0 です。</p>
 <div class="arithmatex">\[
 \frac{1}{c^2} \left( \psi^* \frac{\partial^2 \psi}{\partial t^2} - \psi \frac{\partial^2 \psi^*}{\partial t^2} \right) - \left( \psi^* \boldsymbol{\nabla}^2 \psi - \psi \boldsymbol{\nabla}^2 \psi^* \right) = 0
 \]</div>
@@ -14561,7 +14561,7 @@
 <div class="arithmatex">\[
 \frac{\partial}{\partial t} \left[ \frac{i\hbar}{2mc^2} \left( \psi^* \frac{\partial \psi}{\partial t} - \psi \frac{\partial \psi^*}{\partial t} \right) \right] + \boldsymbol{\nabla} \cdot \left[ - \frac{i\hbar}{2m} \left( \psi^* \boldsymbol{\nabla} \psi - \psi \boldsymbol{\nabla} \psi^* \right) \right] = 0
 \]</div>
-<p>この式を連続の式 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \boldsymbol{j} = 0\)</span> と比較することで，求めるべき密度と流束密度が以下のように導出されます。</p>
+<p>この式を連続の式 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \boldsymbol{j} = 0\)</span> と比較することで，求めるべき密度と流束密度が以下のように得られます。</p>
 <div class="arithmatex">\[
 \rho = \frac{i\hbar}{2mc^2} \left( \psi^* \frac{\partial \psi}{\partial t} - \psi \frac{\partial \psi^*}{\partial t} \right)
 \]</div>
@@ -14594,7 +14594,7 @@
 \finalanswer{\rho = \frac{E}{mc^2} |N|^2}
 \]</div>
 <p>規格化定数の絶対値の2乗および質量は常に正の実数です。したがって，密度の符号は粒子のエネルギー <span class="arithmatex">\(E\)</span> の符号に直接比例します。</p>
-<p>相対論的な負のエネルギー解 <span class="arithmatex">\(E &lt; 0\)</span> をとるとき，計算される密度 <span class="arithmatex">\(\rho\)</span> の値は <strong>負の値</strong> となります。通常の量子力学における確率密度は常に正定値でなければならないため，クライン・ゴルドン方程式における <span class="arithmatex">\(\rho\)</span> は単一粒子の確率密度としては解釈できないという問題が数式から示されました。</p>
+<p>相対論的な負のエネルギー解 <span class="arithmatex">\(E &lt; 0\)</span> をとるとき，計算される密度 <span class="arithmatex">\(\rho\)</span> の値は <strong>負の値</strong> となります。通常の量子力学における確率密度は常に正定値でなければならないため，クライン・ゴルドン方程式における <span class="arithmatex">\(\rho\)</span> は単一粒子の確率密度としては解釈できないという問題が式から示されました。</p>
 
 
 

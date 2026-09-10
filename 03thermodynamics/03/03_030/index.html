@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14535,10 +14535,10 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>定積過程においては体積変化に伴う仕事が発生しないため，熱力学第一法則により，やりとりされる熱量は内部エネルギー変化に完全に一致します。</p>
+<p>定積過程においては体積変化に伴う仕事が発生しないため，熱力学第一法則により，やりとりされる熱量は内部エネルギー変化に一致します。</p>
 <p>状態 2 から 3 は定積加熱であり，温度が <span class="arithmatex">\(T_2\)</span> から <span class="arithmatex">\(T_3\)</span> へ上昇するため，吸収熱量 <span class="arithmatex">\(Q_{\text{in}}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-Q_{\text{in}} = n C_V (T_3 - T_2)
+\finalanswer{Q_{\text{in}} = n C_V (T_3 - T_2)}
 \]</div>
 <p>状態 4 から 1 は定積冷却であり，温度が <span class="arithmatex">\(T_4\)</span> から <span class="arithmatex">\(T_1\)</span> へ下降するため，正の値として定義される放出熱量 <span class="arithmatex">\(Q_{\text{out}}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
@@ -14551,7 +14551,7 @@ T_1 V_1^{\gamma-1} = T_2 V_2^{\gamma-1}
 \]</div>
 <p>この式を温度の比について整理し，圧縮比 <span class="arithmatex">\(r = \frac{V_1}{V_2}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\frac{T_1}{T_2} = \left( \frac{V_2}{V_1} \right)^{\gamma-1} = \left( \frac{1}{r} \right)^{\gamma-1} = \frac{1}{r^{\gamma-1}} \quad \cdots \text{式A}
+\frac{T_1}{T_2} = \left( \frac{V_2}{V_1} \right)^{\gamma-1} = \frac{1}{r^{\gamma-1}}
 \]</div>
 <p>状態 3 から 4 は断熱膨張過程です。同様に関係式を適用します。</p>
 <div class="arithmatex">\[
@@ -14559,9 +14559,9 @@ T_3 V_2^{\gamma-1} = T_4 V_1^{\gamma-1}
 \]</div>
 <p>この式も同様に温度の比について整理し，圧縮比の定義を適用します。</p>
 <div class="arithmatex">\[
-\frac{T_4}{T_3} = \left( \frac{V_2}{V_1} \right)^{\gamma-1} = \frac{1}{r^{\gamma-1}} \quad \cdots \text{式B}
+\frac{T_4}{T_3} = \left( \frac{V_2}{V_1} \right)^{\gamma-1} = \frac{1}{r^{\gamma-1}}
 \]</div>
-<p>式Aと式Bより，次の等価関係が得られます。</p>
+<p>以上の二つの関係式より，</p>
 <div class="arithmatex">\[
 \frac{T_1}{T_2} = \frac{T_4}{T_3} = \finalanswer{\frac{1}{r^{\gamma-1}}}
 \]</div>
@@ -14574,11 +14574,11 @@ T_3 V_2^{\gamma-1} = T_4 V_1^{\gamma-1}
 <div class="arithmatex">\[
 \eta = 1 - \frac{T_1 \left( \frac{T_4}{T_1} - 1 \right)}{T_2 \left( \frac{T_3}{T_2} - 1 \right)}
 \]</div>
-<p>ここで，(2) で導出した等号関係 <span class="arithmatex">\(\frac{T_1}{T_2} = \frac{T_4}{T_3}\)</span> の両辺に <span class="arithmatex">\(\frac{T_3}{T_1}\)</span> を掛け算して変形すると， <span class="arithmatex">\(\frac{T_3}{T_2} = \frac{T_4}{T_1}\)</span> という関係が得られます。これにより，括弧内部の項が分子と分母で完全に一致するため，これらを約分して消去することができます。</p>
+<p>ここで，(2) で導出した等号関係 <span class="arithmatex">\(\frac{T_1}{T_2} = \frac{T_4}{T_3}\)</span> の両辺に <span class="arithmatex">\(\frac{T_3}{T_1}\)</span> を掛け算して変形すると， <span class="arithmatex">\(\frac{T_3}{T_2} = \frac{T_4}{T_1}\)</span> という関係が得られます。これにより，括弧内部の項が分子と分母で一致するため，これらを約分して消去することができます。</p>
 <div class="arithmatex">\[
 \eta = 1 - \frac{T_1}{T_2}
 \]</div>
-<p>この式に対し，(2) の式Aの結果を代入します。</p>
+<p>ここに，(2) で得た <span class="arithmatex">\(T_1/T_2=1/r^{\gamma-1}\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \finalanswer{\eta = 1 - \frac{1}{r^{\gamma-1}}}
 \]</div>

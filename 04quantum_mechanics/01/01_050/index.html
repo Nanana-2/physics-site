@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14569,7 +14569,7 @@ J(x, t) = \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Ps
 <div class="arithmatex">\[
 \frac{\partial \rho}{\partial t} = \frac{1}{i\hbar} \left[ \frac{\hbar^2}{2m}\left( \frac{\partial^2 \Psi^*}{\partial x^2}\Psi - \Psi^*\frac{\partial^2 \Psi}{\partial x^2} \right) - V\Psi^*\Psi + V\Psi^*\Psi \right]
 \]</div>
-<p>ポテンシャルを含む項 <span class="arithmatex">\(V\Psi^*\Psi\)</span> が互いに打ち消し合って消去されます。係数を整理すると以下のようになります。</p>
+<p>ポテンシャルを含む2項は符号が逆なので，その和は 0 です。係数を整理すると</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{\partial \rho}{\partial t} = \frac{\hbar}{2mi} \left( \frac{\partial^2 \Psi^*}{\partial x^2}\Psi - \Psi^*\frac{\partial^2 \Psi}{\partial x^2} \right)}
 \]</div>
@@ -14578,7 +14578,7 @@ J(x, t) = \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Ps
 <div class="arithmatex">\[
 \frac{\partial}{\partial x} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) = \left( \frac{\partial \Psi^*}{\partial x}\frac{\partial \Psi}{\partial x} + \Psi^*\frac{\partial^2 \Psi}{\partial x^2} \right) - \left( \frac{\partial \Psi}{\partial x}\frac{\partial \Psi^*}{\partial x} + \Psi\frac{\partial^2 \Psi^*}{\partial x^2} \right)
 \]</div>
-<p>一次微分の積の項である <span class="arithmatex">\(\frac{\partial \Psi^*}{\partial x}\frac{\partial \Psi}{\partial x}\)</span> が共通して現れるため，相殺されます。</p>
+<p>一次微分の積 <span class="arithmatex">\(\frac{\partial \Psi^*}{\partial x}\frac{\partial \Psi}{\partial x}\)</span> は両式に共通するため，差をとると 0 になります。</p>
 <div class="arithmatex">\[
 \frac{\partial}{\partial x} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) = \Psi^*\frac{\partial^2 \Psi}{\partial x^2} - \Psi\frac{\partial^2 \Psi^*}{\partial x^2}
 \]</div>
@@ -14586,7 +14586,7 @@ J(x, t) = \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Ps
 <div class="arithmatex">\[
 \frac{\partial \rho}{\partial t} = -\frac{\hbar}{2mi} \frac{\partial}{\partial x} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right)
 \]</div>
-<p>微分の外側にある係数を括弧の内部に入れると，提示された確率流密度 <span class="arithmatex">\(J(x, t)\)</span> の定義そのものになります。</p>
+<p>微分の外側にある係数を括弧内に入れると，提示された確率流密度 <span class="arithmatex">\(J(x, t)\)</span> の定義と一致します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{\partial \rho}{\partial t} &amp;= -\frac{\partial}{\partial x} \left[ \frac{\hbar}{2mi} \left( \Psi^* \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^*}{\partial x} \right) \right] \\

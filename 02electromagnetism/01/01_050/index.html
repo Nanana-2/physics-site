@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p>真空中に置かれた無限に広がる電荷分布を考える。閉曲面 <span class="arithmatex">\(S\)</span> に対するガウスの法則 <span class="arithmatex">\(\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}=Q_{\mathrm{in}}/\varepsilon_0\)</span> を用いてよい。端の影響は存在せず，電荷密度は一様である。</p>
 <p>(1) <span class="arithmatex">\(z\)</span> 軸上に正の線電荷密度 <span class="arithmatex">\(\lambda\)</span> が分布している。軸から距離 <span class="arithmatex">\(r\)</span> の電場を <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{line}}(r)=E_{\mathrm{line}}(r)\boldsymbol{e}_r\)</span> とする。半径 <span class="arithmatex">\(r\)</span>，長さ <span class="arithmatex">\(L\)</span> の同軸円筒をガウス面として <span class="arithmatex">\(E_{\mathrm{line}}(r)\)</span> を求めよ。さらに <span class="arithmatex">\(\phi_{\mathrm{line}}(r_0)=0\)</span> を基準として電位 <span class="arithmatex">\(\phi_{\mathrm{line}}(r)\)</span> を求め，<span class="arithmatex">\(\phi(\infty)=0\)</span> を選べない理由を説明せよ。</p>
-<p>(2) <span class="arithmatex">\(xy\)</span> 平面上に正の面電荷密度 <span class="arithmatex">\(\sigma\)</span> が分布している。電場を <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{plane}}(z)\)</span> とし，平面をまたぐ底面積 <span class="arithmatex">\(S\)</span> の薄い円柱から <span class="arithmatex">\(z&gt;0\)</span> と <span class="arithmatex">\(z&lt;0\)</span> の値を求めよ。<span class="arithmatex">\(E_{\mathrm{line}}(r)\)</span> が距離とともに減少する一方，<span class="arithmatex">\(|\boldsymbol{E}_{\mathrm{plane}}|\)</span> が一定となる理由を説明せよ。</p>
+<p>(2) <span class="arithmatex">\(xy\)</span> 平面上に正の面電荷密度 <span class="arithmatex">\(\sigma\)</span> が分布している。電場を <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{plane}}(z)\)</span> とし，平面をまたぐ底面積 <span class="arithmatex">\(S\)</span> の薄い円柱から <span class="arithmatex">\(z&gt;0\)</span> と <span class="arithmatex">\(z&lt;0\)</span> の値を求めよ。</p>
 <p>(3) <span class="arithmatex">\(z=-d/2\)</span> に面電荷密度 <span class="arithmatex">\(+\sigma\)</span> の平面を，<span class="arithmatex">\(z=d/2\)</span> に面電荷密度 <span class="arithmatex">\(-\sigma\)</span> の平面を置く。合成電場を <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{pair}}(z)\)</span> とし，三領域 <span class="arithmatex">\(z&lt;-d/2\)</span>，<span class="arithmatex">\(-d/2&lt;z&lt;d/2\)</span>，<span class="arithmatex">\(z&gt;d/2\)</span> で求めよ。二平面の電位を <span class="arithmatex">\(V_+\)</span>，<span class="arithmatex">\(V_-\)</span> とし，正の電位差 <span class="arithmatex">\(\Delta V=V_+-V_-\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14541,24 +14541,23 @@ E(r)2\pi rL=\frac{\lambda L}{\varepsilon_0}
 \]</div>
 <p>です。したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(z)=
+\finalanswer{\boldsymbol{E}(z)=
 \begin{cases}
 \dfrac{\sigma}{2\varepsilon_0}\boldsymbol{e}_z,&amp;z&gt;0,\\\\
 -\dfrac{\sigma}{2\varepsilon_0}\boldsymbol{e}_z,&amp;z&lt;0
-\end{cases}
+\end{cases}}
 \]</div>
 <p>となります。電場の大きさが距離に依存しない点が線電荷の場合との違いです。</p>
 <h3 id="3">(3)</h3>
-<p>正の平面が作る電場は平面から離れる向き，負の平面が作る電場は平面へ向かう向きです。二平面の外側では二つの電場が打ち消し合い，内側ではともに <span class="arithmatex">\(+z\)</span> 方向を向いて加わります。</p>
+<p>正の平面が作る電場は平面から離れる向き，負の平面が作る電場は平面へ向かう向きです。二平面の外側では二つの電場の和は 0 となり，内側ではともに <span class="arithmatex">\(+z\)</span> 方向を向いて加わります。</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(z)=
+\finalanswer{\boldsymbol{E}(z)=
 \begin{cases}
 \boldsymbol{0},&amp;z&lt;-d/2,\\\\
 \dfrac{\sigma}{\varepsilon_0}\boldsymbol{e}_z,&amp;-d/2&lt;z&lt;d/2,\\\\
 \boldsymbol{0},&amp;z&gt;d/2
-\end{cases}
+\end{cases}}
 \]</div>
-<p><strong>二平面間の電位差</strong></p>
 <p>正の平面と負の平面の電位をそれぞれ <span class="arithmatex">\(V_+\)</span>，<span class="arithmatex">\(V_-\)</span> とします。二平面間では電場が一定なので</p>
 <p>積分経路を <span class="arithmatex">\(+x\)</span> 方向にとると <span class="arithmatex">\(d\boldsymbol{l}=dx\,\boldsymbol{e}_x\)</span> であり，板間では <span class="arithmatex">\(\boldsymbol{E}=(\sigma/\varepsilon_0)\boldsymbol{e}_x\)</span> です。したがって</p>
 <div class="arithmatex">\[
@@ -14569,15 +14568,14 @@ V_--V_+
 \frac{\sigma}{\varepsilon_0}\,dx \\
 &amp;=-\frac{\sigma}{\varepsilon_0}
 \left[x\right]_{-d/2}^{d/2} \\
-&amp;=-\frac{\sigma d}{\varepsilon_0}.
+&amp;=-\frac{\sigma d}{\varepsilon_0}
 \end{aligned}
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-V_+-V_-=\frac{\sigma d}{\varepsilon_0}
+\finalanswer{V_+-V_-=\frac{\sigma d}{\varepsilon_0}}
 \]</div>
 <p>です。電場の向きに進むと電位が下がるため，正に帯電した平面の電位の方が高くなります。</p>
-<p><strong>線電荷の電位</strong></p>
 <p>線電荷から外向きに電場が生じるため，二点間の電位差は</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14587,8 +14585,8 @@ V_+-V_-=\frac{\sigma d}{\varepsilon_0}
 \left[\log r'\right]_{r_0}^{r} \\
 &amp;=-\frac{\lambda}{2\pi\varepsilon_0}
 \log\frac{r}{r_0} \\
-&amp;=\finalanswer{\frac{\lambda}{2\pi\varepsilon_0}}
-\log\frac{r_0}{r}.
+&amp;=\finalanswer{\frac{\lambda}{2\pi\varepsilon_0}
+\log\frac{r_0}{r}}
 \end{aligned}
 \]</div>
 <p>基準として <span class="arithmatex">\(\phi(r_0)=0\)</span> を選べば，左辺は <span class="arithmatex">\(\phi(r)\)</span> になります。</p>

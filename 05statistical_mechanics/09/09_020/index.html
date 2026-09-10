@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14519,15 +14519,15 @@
 <h1 id="_1">粒子数揺らぎ</h1>
 <h2 id="_2">問題</h2>
 <p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が指定されたグランドカノニカル系を考える。</p>
-<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とすると，系全体の微視的状態が大分配関数 <span class="arithmatex">\(\Xi(\beta, V, \mu) = \sum_N \sum_s \exp\left[ -\beta (E_{s,N} - \mu N) \right]\)</span> で制御されるとき，全粒子数 <span class="arithmatex">\(N\)</span> の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> および分散 <span class="arithmatex">\(\langle (\Delta N)^2 \rangle = \langle N^2 \rangle - \langle N \rangle^2\)</span> について，以下の問いに答えよ。</p>
-<p>(1) 粒子数の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> が，大分配関数の化学ポテンシャル <span class="arithmatex">\(\mu\)</span> による偏微分，あるいは大カノニカルポテンシャル <span class="arithmatex">\(\Phi = -k_B T \log \Xi\)</span> を用いて以下のように表されることを示せ。</p>
+<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とすると，系全体の微視的状態が大分配関数 <span class="arithmatex">\(\Xi(\beta, V, \mu) = \sum_N \sum_s \exp\left[ -\beta (E_{s,N} - \mu N) \right]\)</span> で制御されるとき，全粒子数 <span class="arithmatex">\(N\)</span> の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> および分散 <span class="arithmatex">\(\langle (\Delta N)^2 \rangle = \langle N^2 \rangle - \langle N \rangle^2\)</span> について，以下の問いに答えよ。</p>
+<p>(1) 粒子数の平均値 <span class="arithmatex">\(\langle N \rangle\)</span> が，大分配関数の化学ポテンシャル <span class="arithmatex">\(\mu\)</span> による偏微分，あるいは大カノニカルポテンシャル <span class="arithmatex">\(\Phi = -k_{\text{B}} T \log \Xi\)</span> を用いて以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
 \langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu} = -\frac{\partial \Phi}{\partial \mu}
 \]</div>
 <p>(2) (1) で得られた平均値 <span class="arithmatex">\(\langle N \rangle\)</span> の式を，さらに <span class="arithmatex">\(\mu\)</span> で微分せよ。これにより，粒子数の分散 <span class="arithmatex">\(\langle (\Delta N)^2 \rangle\)</span> が，平均粒子数の化学ポテンシャル微分に比例することを示せ。</p>
 <p>(3) 粒子数の揺らぎの式は，熱力学的な関係式を用いることで，系の等温圧縮率 <span class="arithmatex">\(\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T\)</span> と結びつき，以下のように書き換えられることが知られている。</p>
 <div class="arithmatex">\[
-\langle (\Delta N)^2 \rangle = \frac{k_B T \langle N \rangle^2}{V} \kappa_T
+\langle (\Delta N)^2 \rangle = \frac{k_{\text{B}} T \langle N \rangle^2}{V} \kappa_T
 \]</div>
 <p>この関係式に基づき，マクロな系<span class="arithmatex">\(\langle N \rangle \sim 10^{23}\)</span>における粒子数の相対揺らぎ <span class="arithmatex">\(\frac{\sqrt{\langle (\Delta N)^2 \rangle}}{\langle N \rangle}\)</span> の大きさを等温圧縮率が有限な通常の相において見積もれ。また，気液臨界点などで等温圧縮率が異常に増大するとき，粒子数の揺らぎがマクロにどのような現象を引き起こすか説明せよ。</p>
 <hr />
@@ -14558,7 +14558,7 @@ P_{s,N} = \frac{\exp\left[ -\beta(E_{s,N} - \mu N) \right]}{\Xi}
 &amp;= \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}
 \end{aligned}
 \]</div>
-<p>また，大カノニカルポテンシャルの定義 <span class="arithmatex">\(\Phi = -k_B T \log \Xi = -\frac{1}{\beta} \log \Xi\)</span> を用いると， <span class="arithmatex">\(\log \Xi = -\beta \Phi\)</span> となるため，これを <span class="arithmatex">\(\mu\)</span> で微分することで，もう一つの等式も示されます。</p>
+<p>また，大カノニカルポテンシャルの定義 <span class="arithmatex">\(\Phi = -k_{\text{B}} T \log \Xi = -\frac{1}{\beta} \log \Xi\)</span> を用いると， <span class="arithmatex">\(\log \Xi = -\beta \Phi\)</span> となるため，これを <span class="arithmatex">\(\mu\)</span> で微分することで，もう一つの等式も示されます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle N \rangle &amp;= \frac{1}{\beta} \frac{\partial (-\beta \Phi)}{\partial \mu} \\
@@ -14590,14 +14590,14 @@ P_{s,N} = \frac{\exp\left[ -\beta(E_{s,N} - \mu N) \right]}{\Xi}
 \]</div>
 <p>両辺を <span class="arithmatex">\(\beta\)</span> で割ることで，粒子数の揺らぎが，化学ポテンシャルの変化に対する粒子数のマクロな応答係数に比例するという関係式が得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle (\Delta N)^2 \rangle = k_B T \frac{\partial \langle N \rangle}{\partial \mu}}
+\finalanswer{\langle (\Delta N)^2 \rangle = k_{\text{B}} T \frac{\partial \langle N \rangle}{\partial \mu}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>通常の相において，粒子数に依存するスケーリングを評価します。平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> および体積 <span class="arithmatex">\(V\)</span> は示量性変数であり，その比である密度は一定であるため， <span class="arithmatex">\(\langle N \rangle \propto V\)</span> です。
 与えられた圧縮率を用いた式より，粒子数の分散のオーダーを求めます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\langle (\Delta N)^2 \rangle &amp;= \frac{k_B T \langle N \rangle^2}{V} \kappa_T \propto \frac{\langle N \rangle^2}{\langle N \rangle} \\
+\langle (\Delta N)^2 \rangle &amp;= \frac{k_{\text{B}} T \langle N \rangle^2}{V} \kappa_T \propto \frac{\langle N \rangle^2}{\langle N \rangle} \\
 &amp;= \langle N \rangle
 \end{aligned}
 \]</div>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,71 +14518,77 @@
 
 <h1 id="_1">スクイーズド状態のウィグナー分布</h1>
 <h2 id="_2">問題</h2>
-<p>質量 <span class="arithmatex">\(m\)</span> ，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子において，無次元化された位置座標 <span class="arithmatex">\(X = \frac{x}{x_0}\)</span> および，無次元化された運動量座標 <span class="arithmatex">\(P = \frac{p}{p_0}\)</span> を導入する。</p>
-<p>スクイージングパラメータを <span class="arithmatex">\(r\)</span> とするとき，スクイーズド真空状態 <span class="arithmatex">\(|\xi\rangle\)</span> の位置表示の波動関数 <span class="arithmatex">\(\psi_\xi(X)\)</span> は，以下のガウス型波束で与えられる。</p>
+<p>質量 <span class="arithmatex">\(m\)</span>，角振動数 <span class="arithmatex">\(\omega\)</span> の1次元調和振動子について</p>
 <div class="arithmatex">\[
-\psi_\xi(X) = \left( \frac{\exp(2r)}{\pi} \right)^{1/4} \exp\left( -\frac{1}{2} \exp(2r) X^2 \right)
+x_0=\sqrt{\frac{\hbar}{m\omega}},\qquad
+p_0=\sqrt{m\hbar\omega}
 \]</div>
-<p>この波動関数に対する無次元化された位相空間上のウィグナー分布関数の定義式は以下の通りである。</p>
+<p>とおき，無次元変数 <span class="arithmatex">\(X=x/x_0\)</span>，<span class="arithmatex">\(P=p/p_0\)</span> を導入する。スクイージングパラメータ <span class="arithmatex">\(r\)</span> が実数であるスクイーズド真空状態の位置表示を</p>
 <div class="arithmatex">\[
-W(X, P) = \frac{1}{\pi} \int_{-\infty}^{\infty} \psi_\xi^*\left(X + \frac{Y}{2}\right) \psi_\xi\left(X - \frac{Y}{2}\right) \exp\left( -i2PY \right) dy
+\psi_r(X)=\left(\frac{e^{2r}}{\pi}\right)^{1/4}
+\exp\left(-\frac12e^{2r}X^2\right)
 \]</div>
-<p>ただし， <span class="arithmatex">\(Y\)</span> も無次元化された相対座標である。以下の問いに答えよ。</p>
-<p>(1) 波動関数 <span class="arithmatex">\(\psi_\xi(X)\)</span> を定義式に代入し，<span class="arithmatex">\(Y\)</span> の積分を実行する直前の式まで整理せよ。</p>
-<p>(2) <span class="arithmatex">\(Y\)</span> の積分を実行し，<span class="arithmatex">\(W(X,P)\)</span> を求めよ。</p>
+<p>とする。無次元化されたウィグナー分布を</p>
+<div class="arithmatex">\[
+W(X,P)=\frac{1}{2\pi}\int_{-\infty}^{\infty}
+\psi_r^*\left(X+\frac{Y}{2}\right)
+\psi_r\left(X-\frac{Y}{2}\right)e^{-iPY}\,dY
+\]</div>
+<p>で定義する。以下の問いに答えよ。</p>
+<p>(1) 波動関数を定義式に代入し，<span class="arithmatex">\(Y\)</span> の積分を行う直前まで整理せよ。</p>
+<p>(2) <span class="arithmatex">\(Y\)</span> の積分を行い，<span class="arithmatex">\(W(X,P)\)</span> を求めよ。</p>
 <p>(3) <span class="arithmatex">\(W(X,P)\)</span> の等高線を求め，<span class="arithmatex">\(r=0\)</span> と <span class="arithmatex">\(r&gt;0\)</span> で形状を比較せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>与えられた波動関数 <span class="arithmatex">\(\psi_\xi(X)\)</span> をウィグナー分布関数の定義式に代入します。前方の定数係数は <span class="arithmatex">\(\left( \frac{\exp(2r)}{\pi} \right)^{1/4}\)</span> の2乗より， <span class="arithmatex">\(\sqrt{\frac{\exp(2r)}{\pi}}\)</span> となります。</p>
+<p>波動関数の積に現れる二次式は</p>
 <div class="arithmatex">\[
-W(X, P) = \frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \int_{-\infty}^{\infty} \exp\left( -\frac{1}{2} \exp(2r) \left(X + \frac{Y}{2}\right)^2 - \frac{1}{2} \exp(2r) \left(X - \frac{Y}{2}\right)^2 \right) \exp\left( -i2PY \right) dY
+\left(X+\frac{Y}{2}\right)^2+
+\left(X-\frac{Y}{2}\right)^2
+=2X^2+\frac{Y^2}{2}
 \]</div>
-<p>大きな指数関数の内部にある大括弧を展開してまとめます。</p>
+<p>です。したがって</p>
 <div class="arithmatex">\[
-\left(X + \frac{Y}{2}\right)^2 + \left(X - \frac{Y}{2}\right)^2 = 2X^2 + \frac{Y^2}{2}
+\finalanswer{
+W(X,P)=\frac{e^r}{2\pi\sqrt{\pi}}e^{-e^{2r}X^2}
+\int_{-\infty}^{\infty}
+\exp\left(-\frac14e^{2r}Y^2-iPY\right)dY
+}
 \]</div>
-<p>これに係数 <span class="arithmatex">\(-\frac{1}{2} \exp(2r)\)</span> を掛け算し，残りの駆動項 <span class="arithmatex">\(-i2PY\)</span> と合わせます。 <span class="arithmatex">\(Y\)</span> に依存しない <span class="arithmatex">\(X\)</span> の項を積分の外へ括り出すことで，積分実行直前の式が得られます。</p>
-<div class="arithmatex">\[
-W(X, P) = \finalanswer{\frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \exp\left( -\exp(2r)X^2 \right)} \int_{-\infty}^{\infty} \exp\left( -\frac{1}{4}\exp(2r)Y^2 - i2PY \right) dY
-\]</div>
+<p>となります。</p>
 <h3 id="2">(2)</h3>
-<p>積分の内部にある <span class="arithmatex">\(Y\)</span> の二次式を平方完成します。</p>
+<p>ガウス積分</p>
 <div class="arithmatex">\[
--\left( \frac{1}{4}\exp(2r)Y^2 + i2PY \right) = -\frac{1}{4}\exp(2r) \left( Y + \frac{i4P}{\exp(2r)} \right)^2 - \frac{4P^2}{\exp(2r)}
+\int_{-\infty}^{\infty}e^{-aY^2-iPY}\,dY
+=\sqrt{\frac{\pi}{a}}\exp\left(-\frac{P^2}{4a}\right)
 \]</div>
-<p>この変形を式に適用し， <span class="arithmatex">\(Y\)</span> を含まない定数項をさらに積分の外へ出します。</p>
+<p>に <span class="arithmatex">\(a=e^{2r}/4\)</span> を代入すると</p>
 <div class="arithmatex">\[
-W(X, P) = \frac{1}{\pi} \sqrt{\frac{\exp(2r)}{\pi}} \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right) \int_{-\infty}^{\infty} \exp\left( -\frac{1}{4}\exp(2r) \left( Y + i4P\exp(-2r) \right)^2 \right) dY
+\int_{-\infty}^{\infty}
+\exp\left(-\frac14e^{2r}Y^2-iPY\right)dY
+=2\sqrt{\pi}e^{-r}\exp\left(-e^{-2r}P^2\right)
 \]</div>
-<p>積分部分に対してガウス積分の公式を適用します。係数は <span class="arithmatex">\(a = \frac{1}{4}\exp(2r)\)</span> であるため，積分の値は以下のように求まります。</p>
+<p>です。よって</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\sqrt{\frac{\pi}{\frac{1}{4}\exp(2r)}} &amp;= \sqrt{\frac{4\pi}{\exp(2r)}} \\
-&amp;= 2\sqrt{\pi}\exp(-r)
-\end{aligned}
+\finalanswer{
+W(X,P)=\frac{1}{\pi}
+\exp\left(-e^{2r}X^2-e^{-2r}P^2\right)
+}
 \]</div>
-<p>これを前方の係数と掛け合わせます。前方の定数部分は <span class="arithmatex">\(\frac{1}{\pi} \frac{\exp(r)}{\sqrt{\pi}} = \frac{\exp(r)}{\pi\sqrt{\pi}}\)</span> です。</p>
-<div class="arithmatex">\[
-W(X, P) = \frac{\exp(r)}{\pi\sqrt{\pi}} \cdot 2\sqrt{\pi}\exp(-r) \cdot \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right)
-\]</div>
-<p>定数因数が相殺して整理されます。無次元変数を元の実変数 <span class="arithmatex">\(x, p\)</span> に戻す前の，スクイーズド真空状態に対するウィグナー分布関数の最終的な関数形が得られます。</p>
-<div class="arithmatex">\[
-\finalanswer{W(X, P) = \frac{2}{\pi} \exp\left( -\exp(2r)X^2 - \exp(-2r)4P^2 \right)}
-\]</div>
+<p>となります。</p>
 <h3 id="3">(3)</h3>
-<p>(2) で求めた関数において， <span class="arithmatex">\(W(X, P) = \text{定数}\)</span> と置くことは，指数の内部の値を一定にすることと同値です。したがって，等高線が満たすべき代数方程式は以下の通りです。</p>
+<p><span class="arithmatex">\(W(X,P)\)</span> が一定となる点は</p>
 <div class="arithmatex">\[
-\exp(2r)X^2 + \exp(-2r)4P^2 = C \quad (\text{ただし } C \text{ は正の定数})
+e^{2r}X^2+e^{-2r}P^2=C
 \]</div>
-<p>この方程式の両辺を <span class="arithmatex">\(C\)</span> で割り算します。</p>
+<p>を満たします。したがって，等高線は</p>
 <div class="arithmatex">\[
-\finalanswer{\frac{X^2}{\left(\sqrt{C}\exp(-r)\right)^2} + \frac{P^2}{\left(\frac{\sqrt{C}}{2}\exp(r)\right)^2} = 1}
+\finalanswer{
+\frac{X^2}{\left(\sqrt{C}e^{-r}\right)^2}
++\frac{P^2}{\left(\sqrt{C}e^r\right)^2}=1
+}
 \]</div>
-<p>この数式は，2次元平面における楕円の方程式そのものです。</p>
-<p><strong>コヒーレント状態との形状比較</strong></p>
-<p><span class="arithmatex">\(r=0\)</span> のコヒーレント状態においては，方程式が <span class="arithmatex">\(X^2 + 4P^2 = C\)</span> となり，等高線は位相空間上で縦横の広がりが等方的な正円を描きます。</p>
-<p>これに対し， <span class="arithmatex">\(r &gt; 0\)</span> のスクイーズド状態では， <span class="arithmatex">\(X\)</span> 方向の分母が <span class="arithmatex">\(\exp(-r)\)</span> 倍に縮小し， <span class="arithmatex">\(P\)</span> 方向の分母が <span class="arithmatex">\(\exp(r)\)</span> 倍に拡大します。これにより，等高線の形状は位置 <span class="arithmatex">\(X\)</span> 軸方向に押しつぶされ，運動量 <span class="arithmatex">\(P\)</span> 軸方向に長く引き伸ばされた楕円形へと変形します。楕円の短軸は位置方向，長軸は運動量方向に対応しており，不確定性のバランスが特定の軸方向に偏っている構造が，位相空間上のプロファイルの変化として現れます。</p>
+<p>で表されます。<span class="arithmatex">\(r=0\)</span> では <span class="arithmatex">\(X^2+P^2=C\)</span> となり，等高線は円です。<span class="arithmatex">\(r&gt;0\)</span> では <span class="arithmatex">\(X\)</span> 方向の半径が <span class="arithmatex">\(e^{-r}\)</span> 倍，<span class="arithmatex">\(P\)</span> 方向の半径が <span class="arithmatex">\(e^r\)</span> 倍となるため，位置方向に狭く，運動量方向に広い楕円になります。</p>
 
 
 

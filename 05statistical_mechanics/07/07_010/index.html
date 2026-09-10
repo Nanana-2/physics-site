@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14531,10 +14531,7 @@ N(\epsilon) = \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon^{3/2}
 <h3 id="1">(1)</h3>
 <p>絶対零度では，エネルギーが <span class="arithmatex">\(\epsilon_F\)</span> 以下の状態はすべて占有数 1 となり， <span class="arithmatex">\(\epsilon_F\)</span> より高い状態の占有数は 0 になります。したがって，スピン自由度 <span class="arithmatex">\(g = 2\)</span> を掛け合わせた状態の総数が，系の全粒子数 <span class="arithmatex">\(N\)</span> に等しくなります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-g N(\epsilon_F) &amp;= N \quad \implies \quad 2 \cdot \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon_F^{3/2} \\
-&amp;= N
-\end{aligned}
+2 \cdot \frac{4\pi V}{3h^3} (2m)^{3/2} \epsilon_F^{3/2}=N
 \]</div>
 <p>係数を整理して，体積 <span class="arithmatex">\(V\)</span> を右辺に移項して数密度 <span class="arithmatex">\(\rho = N/V\)</span> を作ります。</p>
 <div class="arithmatex">\[
@@ -14564,17 +14561,17 @@ g N(\epsilon_F) &amp;= N \quad \implies \quad 2 \cdot \frac{4\pi V}{3h^3} (2m)^{
 <div class="arithmatex">\[
 \frac{\hbar^2}{2m} \left( 3\pi^2 \rho \right)^{2/3} = \frac{\hbar^2 k_F^2}{2m}
 \]</div>
-<p>両辺の共通係数である <span class="arithmatex">\(\frac{\hbar^2}{2m}\)</span> を相殺します。</p>
+<p>両辺を共通係数 <span class="arithmatex">\(\frac{\hbar^2}{2m}\)</span> で割ります。</p>
 <div class="arithmatex">\[
 k_F^2 = \left( 3\pi^2 \rho \right)^{2/3}
 \]</div>
-<p>両辺の平方根をとることで，フェルミ波数 <span class="arithmatex">\(k_F\)</span> の式が簡潔な形で導出されます。</p>
+<p>両辺の平方根をとることで，フェルミ波数 <span class="arithmatex">\(k_F\)</span> の式が簡潔な形で得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{k_F = \left( 3\pi^2 \rho \right)^{1/3}}
 \]</div>
 <p>この結果から，波数空間において占有されている領域は，半径 <span class="arithmatex">\(k_F\)</span> の球を形成することがわかります。この球体のことをフェルミ面，またはフェルミ球と呼びます。</p>
 <h3 id="3">(3)</h3>
-<p>(1) および (2) の数式に注目すると，フェルミエネルギーは密度の <span class="arithmatex">\(2/3\)</span> 乗に比例<span class="arithmatex">\(\epsilon_F \propto \rho^{2/3}\)</span>し，フェルミ波数は密度の <span class="arithmatex">\(1/3\)</span> 乗に比例<span class="arithmatex">\(k_F \propto \rho^{1/3}\)</span>しています。したがって，電子密度 <span class="arithmatex">\(\rho\)</span> が大きい金属ほど，フェルミエネルギーやフェルミ波数は<strong>大きくなります</strong>。</p>
+<p>(1)，(2) より，フェルミエネルギーは <span class="arithmatex">\(\epsilon_F\propto\rho^{2/3}\)</span>，フェルミ波数は <span class="arithmatex">\(k_F\propto\rho^{1/3}\)</span> を満たします。したがって，電子密度 <span class="arithmatex">\(\rho\)</span> が大きいほど，フェルミエネルギーとフェルミ波数は<strong>大きくなります</strong>。</p>
 <p><strong>絶対零度で粒子が運動エネルギーを持つ物理的理由</strong></p>
 <p>古典理想気体では，絶対零度において粒子の運動エネルギーはゼロになります。</p>
 <p>しかしフェルミ粒子の場合，波動関数の反対称性に由来するパウリの排他原理というパウリの排他原理が支配しています。これにより，1つの軌道状態にはスピンを考慮しても最大で2個の粒子しか入ることができません。</p>

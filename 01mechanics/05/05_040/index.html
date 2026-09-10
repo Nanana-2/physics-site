@@ -3672,34 +3672,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14541,10 +14541,10 @@
 <h1 id="_1">減衰振動の分類</h1>
 <h2 id="_2">問題</h2>
 <p>水平面上で，ばね定数 <span class="arithmatex">\(k&gt;0\)</span> の軽いばねに取り付けられた質量 <span class="arithmatex">\(m\)</span> の質点を考える。ばねが自然長となる位置を <span class="arithmatex">\(x=0\)</span> とする。質点には，ばねの復元力に加えて速度に比例する抵抗力 <span class="arithmatex">\(-\gamma\dot{x}\)</span> が働くものとする。ただし <span class="arithmatex">\(\gamma&gt;0\)</span> である。</p>
-<p>(1) 運動方程式を示し，<span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span> および <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いて以下の形に整理せよ。
-$$
+<p>(1) 運動方程式を示し，<span class="arithmatex">\(\gamma_0 = \frac{\gamma}{2m}\)</span> および <span class="arithmatex">\(\omega_0 = \sqrt{\frac{k}{m}}\)</span> を用いて以下の形に整理せよ。</p>
+<div class="arithmatex">\[
 \ddot{x} + 2\gamma_0 \dot{x} + \omega_0^2 x = 0
-$$</p>
+\]</div>
 <p>(2) <span class="arithmatex">\(x(t) = e^{\lambda t}\)</span> として特性方程式とその解 <span class="arithmatex">\(\lambda\)</span> を求めよ。また，<span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span>，<span class="arithmatex">\(\gamma_0=\omega_0\)</span>，<span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span> の3つの場合について，運動が振動するかどうかを述べよ。</p>
 <p>(3) <span class="arithmatex">\(\gamma_0&lt;\omega_0\)</span> の場合について，初期条件 <span class="arithmatex">\(x(0)=x_0&gt;0\)</span>，<span class="arithmatex">\(\dot{x}(0)=0\)</span> のもとで <span class="arithmatex">\(x(t)\)</span> を求めよ。</p>
 <p>(4) <span class="arithmatex">\(\gamma_0=\omega_0\)</span> および <span class="arithmatex">\(\gamma_0&gt;\omega_0\)</span> の場合について，(3) と同じ初期条件のもとで <span class="arithmatex">\(x(t)\)</span> を求めよ。また，いずれも振動せず平衡点へ近づくことを説明せよ。</p>
@@ -14659,11 +14659,10 @@ x(t) = e^{-\gamma_0 t} \left( D_1 e^{\beta t} + D_2 e^{-\beta t} \right)
 x(0) = D_1 + D_2 = x_0
 \]</div>
 <div class="arithmatex">\[
-\begin{aligned}
-\dot{x}(0) &amp;= -\gamma_0 (D_1 + D_2) + \beta (D_1 - D_2) \\
-&amp;= 0 \implies \beta (D_1 - D_2) \\
-&amp;= \gamma_0 x_0
-\end{aligned}
+\begin{gathered}
+\dot{x}(0)=-\gamma_0(D_1+D_2)+\beta(D_1-D_2)=0 \\
+\Longrightarrow\quad \beta(D_1-D_2)=\gamma_0x_0
+\end{gathered}
 \]</div>
 <p>これらの連立方程式から <span class="arithmatex">\(D_1, D_2\)</span> を求めます。</p>
 <div class="arithmatex">\[

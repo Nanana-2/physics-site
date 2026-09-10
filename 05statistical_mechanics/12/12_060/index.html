@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">二準位系の密度行列</h1>
 <h2 id="_2">問題</h2>
-<p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が，エネルギー固有値 <span class="arithmatex">\(\pm \epsilon\)</span> <span class="arithmatex">\(\epsilon &gt; 0\)</span> を電子の持つパウリ行列 <span class="arithmatex">\(\sigma_z\)</span> を用いて以下のように表される二準位系を考える。</p>
+<p>パウリ行列 <span class="arithmatex">\(\sigma_z\)</span> を用いてハミルトニアンが次式で表される二準位系を考える。ただし，エネルギー固有値は <span class="arithmatex">\(\pm\epsilon\)</span>，<span class="arithmatex">\(\epsilon&gt;0\)</span> とする。</p>
 <div class="arithmatex">\[
 \hat{H} = \epsilon \sigma_z = \begin{pmatrix} \epsilon &amp; 0 \\ 0 &amp; -\epsilon \end{pmatrix}
 \]</div>
@@ -14539,10 +14539,7 @@
 \]</div>
 <p>分配関数 <span class="arithmatex">\(Z\)</span> はこの行列のトレースとして与えられます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-Z &amp;= \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big) \\
-&amp;= \exp(-\beta \epsilon) + \exp(\beta \epsilon)
-\end{aligned}
+Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big) = \exp(-\beta \epsilon) + \exp(\beta \epsilon)
 \]</div>
 <p>双曲線関数の定義式 <span class="arithmatex">\(\cosh x = \frac{\exp(x) + \exp(-x)}{2}\)</span> を適用するため，分母分子の係数を調整します。</p>
 <div class="arithmatex">\[
@@ -14553,13 +14550,13 @@ Z &amp;= 2 \cdot \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} \\
 \]</div>
 <h3 id="2">(2)</h3>
 <p>カノニカル密度行列の定義式 <span class="arithmatex">\(\rho = \frac{1}{Z} \exp(-\beta \hat{H})\)</span> に，これまでの結果を代入します。</p>
-<p>$$</p>
-<p>\finalanswer{\rho = \frac{1}{2 \cosh(\beta \epsilon)}
+<div class="arithmatex">\[
+\finalanswer{\rho = \frac{1}{2 \cosh(\beta \epsilon)}
 \begin{pmatrix}
-\exp(-\beta \epsilon) &amp; 0 \
+\exp(-\beta \epsilon) &amp; 0 \\
 0 &amp; \exp(\beta \epsilon)
-\end{pmatrix}}</p>
-<p>$$</p>
+\end{pmatrix}}
+\]</div>
 <p>これが求める熱平衡状態の行列表現です。エネルギーの固有基底をそのまま用いているため，非対角成分はすべてゼロの対角行列となります。</p>
 <h3 id="3">(3)</h3>
 <p>(2) で求めた熱平衡状態の密度行列と，ブロッホベクトルを用いた一般的な表現の行列の各成分を直接比較します。</p>
@@ -14579,8 +14576,8 @@ Z &amp;= 2 \cdot \frac{\exp(\beta \epsilon) + \exp(-\beta \epsilon)}{2} \\
 </ul>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{1}{2} (1 + P_z) &amp;= \frac{\exp(-\beta \epsilon)}{2 \cosh(\beta \epsilon)} \implies 1 + P_z \\
-&amp;= \frac{\exp(-\beta \epsilon)}{\cosh(\beta \epsilon)}
+\frac{1}{2}(1+P_z)&amp;=\frac{\exp(-\beta\epsilon)}{2\cosh(\beta\epsilon)}, \\
+1+P_z&amp;=\frac{\exp(-\beta\epsilon)}{\cosh(\beta\epsilon)}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[

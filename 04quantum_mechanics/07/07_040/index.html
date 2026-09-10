@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14541,9 +14541,6 @@
 <p>これが不均一磁場中において粒子が受ける力の演算子です。力がスピンの演算子を含んでいるため，受ける力の大きさと向きはスピンの状態に依存します。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で求めた力演算子を，それぞれの固有状態に作用させて固有値を求めます。</p>
-<ul>
-<li><strong>状態 <span class="arithmatex">\(|+\rangle\)</span> が受ける力</strong></li>
-</ul>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{F}_z |+\rangle &amp;= \gamma \left( \hat{S}_z |+\rangle \right) \frac{\partial B_z}{\partial z} \\
@@ -14551,18 +14548,23 @@
 &amp;= \frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |+\rangle
 \end{aligned}
 \]</div>
-<p>したがって，受ける力は <span class="arithmatex">\(\finalanswer{F_+ = \frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}}\)</span> となります。</p>
-<ul>
-<li><strong>状態 <span class="arithmatex">\(|-\rangle\)</span> が受ける力</strong></li>
-</ul>
+<p>したがって，状態 <span class="arithmatex">\(|+\rangle\)</span> が受ける力は</p>
+<div class="arithmatex">\[
+\finalanswer{F_+=\frac{\hbar\gamma}{2}\frac{\partial B_z}{\partial z}}
+\]</div>
+<p>です。同様に状態 <span class="arithmatex">\(|-\rangle\)</span> について</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{F}_z |-\rangle &amp;= \gamma \left( \hat{S}_z |-\rangle \right) \frac{\partial B_z}{\partial z} \\
 &amp;= \gamma \left( -\frac{\hbar}{2} |-\rangle \right) \frac{\partial B_z}{\partial z} \\
-&amp;= \finalanswer{-\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |-\rangle}
+&amp;=-\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z} |-\rangle
 \end{aligned}
 \]</div>
-<p>したがって，受ける力は <span class="arithmatex">\(\finalanswer{F_- = -\frac{\hbar \gamma}{2} \frac{\partial B_z}{\partial z}}\)</span> となります。</p>
+<p>なので</p>
+<div class="arithmatex">\[
+\finalanswer{F_-=-\frac{\hbar\gamma}{2}\frac{\partial B_z}{\partial z}}
+\]</div>
+<p>となります。</p>
 <p>古典力学では，粒子の持つ磁気モーメントの向きは連続的にあらゆる方向を向くことができるため，受ける力も連続的な分布をとり，スクリーン上の衝突位置は一本の線状に広がると予想されます。</p>
 <p>しかし量子力学では，力が <span class="arithmatex">\(\hat{S}_z\)</span> の固有値に対応する <span class="arithmatex">\(F_+\)</span> と <span class="arithmatex">\(F_-\)</span> のふたつの値しかとらないため，ビームは上下の2本に分裂し，スクリーン上には離散的な2つの点として記録されます。</p>
 <h3 id="3">(3)</h3>

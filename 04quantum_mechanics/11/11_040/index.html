@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14556,15 +14556,15 @@ u_0(r) = A \sin(kr + \delta_0)
 \finalanswer{\sin\delta_0 \approx -k a}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>問題文の冒頭で与えられた全断面積の展開式において， <span class="arithmatex">\(l=0\)</span> の項だけを抽出した近似式を組み立てます。</p>
+<p>問題文の冒頭で与えられた全断面積の展開式で <span class="arithmatex">\(l=0\)</span> の項だけを残します。</p>
 <div class="arithmatex">\[
 \sigma \approx \frac{4\pi}{k^2} (2 \cdot 0 + 1) \sin^2\delta_0 = \frac{4\pi}{k^2} \sin^2\delta_0
 \]</div>
-<p>この式に対し， (1) で算出した <span class="arithmatex">\(\sin\delta_0 \approx -k a\)</span> を代入します。</p>
+<p>この式に対し， (1) で計算した <span class="arithmatex">\(\sin\delta_0 \approx -k a\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \sigma \approx \frac{4\pi}{k^2} (-k a)^2 = \frac{4\pi}{k^2} \cdot k^2 a^2
 \]</div>
-<p>分母と分子にある <span class="arithmatex">\(k^2\)</span> が掛け算によって相殺され，消去されます。</p>
+<p>分母と分子の <span class="arithmatex">\(k^2\)</span> を約分します。</p>
 <div class="arithmatex">\[
 \finalanswer{\sigma = 4\pi a^2}
 \]</div>
@@ -14580,7 +14580,7 @@ kR + \delta_0 = 0
 \]</div>
 <p>これを移項することで，位相シフトの式が決まります。</p>
 <div class="arithmatex">\[
-\delta_0 = -kR
+\finalanswer{\delta_0 = -kR}
 \]</div>
 <p>この結果を散乱長の定義式に代入します。 <span class="arithmatex">\(k \to 0\)</span> の極限では <span class="arithmatex">\(\delta_0 \to 0\)</span> となるため， <span class="arithmatex">\(\tan\delta_0 \approx \delta_0\)</span> が成り立ちます。</p>
 <div class="arithmatex">\[
@@ -14592,21 +14592,18 @@ kR + \delta_0 = 0
 \]</div>
 <p>両辺の符号を反転させることで，散乱長が求まります。</p>
 <div class="arithmatex">\[
-a = R
+\finalanswer{a = R}
 \]</div>
 <p>この硬い球のモデルにおいては，散乱長は球の物理的な半径そのものに一致します。</p>
 <p>得られた散乱長を (2) の全断面積の公式に代入します。</p>
 <div class="arithmatex">\[
-\sigma = 4\pi R^2
+\finalanswer{\sigma = 4\pi R^2}
 \]</div>
 <p>古典力学における球の断面積は，粒子が球の影に衝突する領域の面積に等しいため， <span class="arithmatex">\(\sigma_{\text{classical}} = \pi R^2\)</span> と表されます。量子力学的な全断面積と古典的な断面積の比率を計算します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{\sigma}{\sigma_{\text{classical}}} &amp;= \frac{4\pi R^2}{\pi R^2} \\
-&amp;= \finalanswer{4}
-\end{aligned}
+\frac{\sigma}{\sigma_{\text{classical}}} = \frac{4\pi R^2}{\pi R^2} = \finalanswer{4}
 \]</div>
-<p>したがって，低エネルギー極限における全断面積は，古典的な断面積の 4 倍になります。これは，波長が非常に長い量子力学的な粒子にとっては，球の前面だけでなく，波の回り込みによる干渉効果が全方位への散乱強度を強める働きをすることに起因します。</p>
+<p>したがって，低エネルギー極限における全断面積は，古典的な断面積の 4 倍になります。</p>
 
 
 

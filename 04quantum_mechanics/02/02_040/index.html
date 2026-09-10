@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14512,7 +14512,7 @@ A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\ran
 <p>(1) この系のある状態ベクトルが <span class="arithmatex">\(|\psi\rangle = \frac{1}{\sqrt{2}} |1\rangle + \frac{i}{\sqrt{2}} |2\rangle\)</span> と与えられている。この状態における物理量 <span class="arithmatex">\(\hat{A}\)</span> の期待値 <span class="arithmatex">\(\langle A \rangle = \langle \psi|\hat{A}|\psi\rangle\)</span> を，完全性関係 <span class="arithmatex">\(\sum_{n=1,2} |n\rangle\langle n| = \hat{I}\)</span> を利用して計算せよ。</p>
 <p>(2) 演算子 <span class="arithmatex">\(\hat{A}\)</span> の固有値方程式 <span class="arithmatex">\(\hat{A}|\phi\rangle = \lambda |\phi\rangle\)</span> を考える。状態ベクトルを <span class="arithmatex">\(|\phi\rangle = c_1 |1\rangle + c_2 |2\rangle\)</span> として基底展開し，これが以下の行列の固有値問題に等しくなることを示せ。また，この系の2つの固有値 <span class="arithmatex">\(\lambda\)</span> を求めよ。</p>
 <div class="arithmatex">\[
-\begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \lambda \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
+\finalanswer{\begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \lambda \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}}
 \]</div>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14542,11 +14542,9 @@ A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\ran
 \]</div>
 <p>各項の積を計算します。 <span class="arithmatex">\(i^2 = -1\)</span> に注意します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
- &amp;= \frac{2}{2} + \frac{-1}{2} + \frac{-1}{2} + \frac{2}{2} \\
-&amp;= 1 - \frac{1}{2} - \frac{1}{2} + 1 \\
-&amp;= \finalanswer{1}
-\end{aligned}
+\langle A\rangle
+=1-\frac12-\frac12+1
+=\finalanswer{1}
 \]</div>
 <p>したがって，求める期待値は 1 となります。これは通常のベクトルと行列の積</p>
 <div class="arithmatex">\[
@@ -14572,10 +14570,11 @@ A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\ran
 <li><strong>1つ目の式</strong></li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle 1|\hat{A} \left( |1\rangle\langle 1| + |2\rangle\langle 2| \right) |\phi\rangle &amp;= \lambda c_1 \implies \langle 1|\hat{A}|1\rangle c_1 + \langle 1|\hat{A}|2\rangle c_2 \\
-&amp;= \lambda c_1
-\end{aligned}
+\begin{gathered}
+\langle1|\hat A\left(|1\rangle\langle1|+|2\rangle\langle2|\right)|\phi\rangle=\lambda c_1 \\
+\Longrightarrow\quad
+\langle1|\hat A|1\rangle c_1+\langle1|\hat A|2\rangle c_2=\lambda c_1
+\end{gathered}
 \]</div>
 <p>行列要素を代入します。</p>
 <div class="arithmatex">\[
@@ -14585,32 +14584,33 @@ A_{21} = \langle 2|\hat{A}|1\rangle = -i, \quad A_{22} = \langle 2|\hat{A}|2\ran
 <li><strong>2つ目の式</strong></li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle 2|\hat{A} \left( |1\rangle\langle 1| + |2\rangle\langle 2| \right) |\phi\rangle &amp;= \lambda c_2 \implies \langle 2|\hat{A}|1\rangle c_1 + \langle 2|\hat{A}|2\rangle c_2 \\
-&amp;= \lambda c_2
-\end{aligned}
+\begin{gathered}
+\langle2|\hat A\left(|1\rangle\langle1|+|2\rangle\langle2|\right)|\phi\rangle=\lambda c_2 \\
+\Longrightarrow\quad
+\langle2|\hat A|1\rangle c_1+\langle2|\hat A|2\rangle c_2=\lambda c_2
+\end{gathered}
 \]</div>
 <p>行列要素を代入します。</p>
 <div class="arithmatex">\[
   -ic_1 + 2c_2 = \lambda c_2
 \]</div>
-<p>この連立方程式をベクトルの表記にまとめることで，提示された行列の固有値問題の方程式が導かれます。</p>
+<p>この連立方程式をベクトルの表記にまとめることで，提示された行列の固有値問題の方程式が得られます。</p>
 <div class="arithmatex">\[
 \begin{pmatrix} 2 &amp; i \\ -i &amp; 2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \lambda \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
 \]</div>
 <p>この行列の固有値を求めるため，特性方程式 <span class="arithmatex">\(\det(\hat{A} - \lambda \hat{I}) = 0\)</span> を解きます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\begin{vmatrix} 2-\lambda &amp; i \\ -i &amp; 2-\lambda \end{vmatrix} &amp;= 0 \implies (2-\lambda)^2 - (i)(-i) \\
-&amp;= 0
-\end{aligned}
+\begin{gathered}
+\begin{vmatrix}2-\lambda&amp;i\\-i&amp;2-\lambda\end{vmatrix}=0 \\
+\Longrightarrow\quad (2-\lambda)^2-(i)(-i)=0
+\end{gathered}
 \]</div>
 <div class="arithmatex">\[
 (2-\lambda)^2 - 1 = 0 \implies (2-\lambda)^2 = 1
 \]</div>
 <p>平方根をとることで， <span class="arithmatex">\(\lambda\)</span> の値が求まります。</p>
 <div class="arithmatex">\[
-\finalanswer{2-\lambda = \pm 1 \implies \lambda = 2 \mp 1}
+\finalanswer{\lambda = 1,\ 3}
 \]</div>
 <p>したがって，求める固有値は <span class="arithmatex">\(\lambda = 1, 3\)</span> となります。</p>
 

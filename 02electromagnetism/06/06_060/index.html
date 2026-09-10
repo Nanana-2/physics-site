@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14529,9 +14529,9 @@
 \boldsymbol{j}(r)=j_\varphi(r)\boldsymbol{e}_\varphi
 \]</div>
 <p>とする。局所オーム則は <span class="arithmatex">\(\boldsymbol{j}=\sigma\boldsymbol{E}\)</span> である。</p>
-<p>(1) 半径 <span class="arithmatex">\(r&lt;R\)</span> の円形経路へファラデーの法則を適用し，<span class="arithmatex">\(E_\varphi(r)\)</span> と <span class="arithmatex">\(j_\varphi(r)\)</span> を求めよ。電流の向きを示し，レンツの法則と整合することを説明せよ。</p>
+<p>(1) 半径 <span class="arithmatex">\(r&lt;R\)</span> の円形経路へファラデーの法則を適用し，<span class="arithmatex">\(E_\varphi(r)\)</span> と <span class="arithmatex">\(j_\varphi(r)\)</span> を求めよ。電流の向きも示せ。</p>
 <p>(2) 単位体積当たりのジュール発熱率 <span class="arithmatex">\(p(r)=\boldsymbol{j}\cdot\boldsymbol{E}\)</span> を求めよ。体積要素 <span class="arithmatex">\(dV=2\pi r\ell\,dr\)</span> を用いて円柱全体の発熱率 <span class="arithmatex">\(P\)</span> を積分し，<span class="arithmatex">\(\sigma,\beta,R,\ell\)</span> で表せ。</p>
-<p>(3) 磁場が <span class="arithmatex">\(0&lt;t&lt;T\)</span> の間だけ一定の割合 <span class="arithmatex">\(\beta\)</span> で増加する。生じる全ジュール熱 <span class="arithmatex">\(W=PT\)</span> を求めよ。円柱半径を2倍にしたとき <span class="arithmatex">\(P\)</span> が何倍になるか求め，渦電流損失を小さくするため導体を細く分割する理由を説明せよ。</p>
+<p>(3) 磁場が <span class="arithmatex">\(0&lt;t&lt;T\)</span> の間だけ一定の割合 <span class="arithmatex">\(\beta\)</span> で増加する。生じる全ジュール熱 <span class="arithmatex">\(W\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14547,19 +14547,19 @@ E_\varphi(r)2\pi r
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-E_\varphi(r)=-\frac{\beta r}{2}
+\finalanswer{E_\varphi(r)=-\frac{\beta r}{2}}
 \]</div>
 <p>です。局所オーム則から</p>
 <div class="arithmatex">\[
 \finalanswer{j_\varphi(r)
 =-\frac{\sigma\beta r}{2}}
 \]</div>
-<p>となります。負の方位角方向，すなわち <span class="arithmatex">\(+z\)</span> から見て時計回りです。この電流は増加する <span class="arithmatex">\(+z\)</span> 方向磁場を打ち消す <span class="arithmatex">\(-z\)</span> 方向磁場を作ります。</p>
+<p>となります。負の方位角方向，すなわち <span class="arithmatex">\(+z\)</span> から見て時計回りです。この電流が作る磁場は <span class="arithmatex">\(-z\)</span> 方向であり，<span class="arithmatex">\(+z\)</span> 方向の磁束の増加を妨げます。</p>
 <h3 id="2">(2)</h3>
 <p>発熱率密度は</p>
 <div class="arithmatex">\[
-p(r)=\sigma E_\varphi(r)^2
-=\frac{\sigma\beta^2r^2}{4}
+\finalanswer{p(r)=\sigma E_\varphi(r)^2
+=\frac{\sigma\beta^2r^2}{4}}
 \]</div>
 <p>です。円柱全体で積分すると</p>
 <p>半径 <span class="arithmatex">\(r\)</span>，厚さ <span class="arithmatex">\(dr\)</span> の円筒殻の体積要素は
@@ -14575,7 +14575,7 @@ P
 \int_0^Rr^3\,dr \\
 &amp;=\frac{\pi\sigma\beta^2\ell}{2}
 \left[\frac{r^4}{4}\right]_0^R \\
-&amp;=\finalanswer{\frac{\pi\sigma\beta^2\ell R^4}{8}}.
+&amp;=\finalanswer{\frac{\pi\sigma\beta^2\ell R^4}{8}}
 \end{aligned}
 \]</div>
 <p>となります。</p>
@@ -14585,11 +14585,7 @@ P
 \finalanswer{W=PT
 =\frac{\pi\sigma\beta^2\ell R^4T}{8}}
 \]</div>
-<p>です。<span class="arithmatex">\(P\propto R^4\)</span> なので，半径を2倍にすると</p>
-<div class="arithmatex">\[
-\finalanswer{\frac{P(2R)}{P(R)}=2^4=16}
-\]</div>
-<p>倍になります。導体を細く分割すると大きな半径を回る渦電流経路が断たれ，損失を大幅に減らせます。</p>
+<p>です。</p>
 
 
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14535,10 +14535,10 @@ V(x) = -\alpha \delta(x)
 <h3 id="1">(1)</h3>
 <p>原点以外の領域における時間独立シュレーディンガー方程式は以下の通りです。</p>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} &amp;= E \psi \implies \frac{d^2 \psi}{dx^2} \\
-&amp;= \kappa^2 \psi
-\end{aligned}
+\begin{gathered}
+-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi \\
+\Longrightarrow\quad \frac{d^2\psi}{dx^2}=\kappa^2\psi
+\end{gathered}
 \]</div>
 <p>この方程式の一般解は <span class="arithmatex">\(e^{\kappa x}\)</span> と <span class="arithmatex">\(e^{-\kappa x}\)</span> の線形結合です。無限遠で波動関数が 0 になるという条件から，各領域で以下の解が残ります。</p>
 <ul>
@@ -14546,14 +14546,14 @@ V(x) = -\alpha \delta(x)
 </ul>
 <p><span class="arithmatex">\(x \to -\infty\)</span> で有限であるために，指数増加の項を選択します。</p>
 <div class="arithmatex">\[
-  \psi_{-}(x) = A_1 e^{\kappa x}
+  \finalanswer{\psi_{-}(x) = A_1 e^{\kappa x}}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(x &gt; 0\)</span> の領域</strong></li>
 </ul>
 <p><span class="arithmatex">\(x \to \infty\)</span> で有限であるために，指数減少の項を選択します。</p>
 <div class="arithmatex">\[
-  \psi_{+}(x) = A_2 e^{-\kappa x}
+  \finalanswer{\psi_{+}(x) = A_2 e^{-\kappa x}}
 \]</div>
 <p>原点 <span class="arithmatex">\(x = 0\)</span> における連続性の条件 <span class="arithmatex">\(\psi_{-}(0) = \psi_{+}(0)\)</span> を課します。</p>
 <div class="arithmatex">\[
@@ -14568,7 +14568,7 @@ A_1 e^0 = A_2 e^0 \implies A_1 = A_2
 <div class="arithmatex">\[
 -\frac{\hbar^2}{2m} \int_{-\epsilon}^{\epsilon} \frac{d^2 \psi}{dx^2} dx + \int_{-\epsilon}^{\epsilon} [-\alpha \delta(x)] \psi(x) dx = E \int_{-\epsilon}^{\epsilon} \psi(x) dx
 \]</div>
-<p>それぞれの積分を実行します。第1項は1階微分の差になり，第2項はデルタ関数の性質から原点における値が抽出されます。</p>
+<p>それぞれの積分を計算します。第1項は1階微分の差となり，第2項はデルタ関数の性質から原点における波動関数の値となります。</p>
 <div class="arithmatex">\[
 -\frac{\hbar^2}{2m} \left[ \left. \frac{d\psi}{dx} \right|_{\epsilon} - \left. \frac{d\psi}{dx} \right|_{-\epsilon} \right] - \alpha \psi(0) = E \int_{-\epsilon}^{\epsilon} \psi(x) dx
 \]</div>
@@ -14601,10 +14601,9 @@ A_1 e^0 = A_2 e^0 \implies A_1 = A_2
 \]</div>
 <p>この <span class="arithmatex">\(\kappa\)</span> の結果を定義式 <span class="arithmatex">\(\kappa^2 = -\frac{2mE}{\hbar^2}\)</span> に代入し，エネルギー <span class="arithmatex">\(E\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\left( \frac{m\alpha}{\hbar^2} \right)^2 &amp;= -\frac{2mE}{\hbar^2} \implies \frac{m^2 \alpha^2}{\hbar^4} \\
-&amp;= -\frac{2mE}{\hbar^2}
-\end{aligned}
+\left(\frac{m\alpha}{\hbar^2}\right)^2=-\frac{2mE}{\hbar^2}
+\quad\Longrightarrow\quad
+\frac{m^2\alpha^2}{\hbar^4}=-\frac{2mE}{\hbar^2}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14612,7 +14611,7 @@ E &amp;= -\frac{\hbar^2}{2m} \cdot \frac{m^2 \alpha^2}{\hbar^4} \\
 &amp;= \finalanswer{-\frac{m\alpha^2}{2\hbar^2}}
 \end{aligned}
 \]</div>
-<p>これにより，引力的なデルタ関数ポテンシャルには，このエネルギーを持つ束縛状態が1つだけ存在することが導かれました。</p>
+<p>これにより，引力的なデルタ関数ポテンシャルには，このエネルギーを持つ束縛状態が1つだけ存在することがわかります。</p>
 
 
 

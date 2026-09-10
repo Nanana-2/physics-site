@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14531,7 +14531,7 @@
 <p>である。</p>
 <p>(1) 電場の波動方程式を導き，媒質中の位相速度 <span class="arithmatex">\(v\)</span> と真空に対する屈折率 <span class="arithmatex">\(n=c/v\)</span> を求めよ。比誘電率 <span class="arithmatex">\(\varepsilon_r=\varepsilon/\varepsilon_0\)</span>，比透磁率 <span class="arithmatex">\(\mu_r=\mu/\mu_0\)</span> を用いて <span class="arithmatex">\(n\)</span> を表せ。</p>
 <p>(2) <span class="arithmatex">\(+z\)</span> 方向へ伝わる平面波 <span class="arithmatex">\(\boldsymbol{E}=E_0\cos(kz-\omega t)\boldsymbol{e}_x\)</span> に対する <span class="arithmatex">\(\boldsymbol{B}\)</span> と <span class="arithmatex">\(\boldsymbol{H}=\boldsymbol{B}/\mu\)</span> を求めよ。媒質の波動インピーダンスを <span class="arithmatex">\(Z=E_0/H_0\)</span> と定義し，<span class="arithmatex">\(Z\)</span> を <span class="arithmatex">\(\varepsilon,\mu\)</span> で表せ。</p>
-<p>(3) ポインティングベクトルを <span class="arithmatex">\(\boldsymbol{S}=\boldsymbol{E}\times\boldsymbol{H}\)</span> とする。時間平均強度 <span class="arithmatex">\(I\)</span> を <span class="arithmatex">\(E_0\)</span> と <span class="arithmatex">\(Z\)</span> で表せ。非磁性媒質 <span class="arithmatex">\(\mu=\mu_0\)</span> では，同じ電場振幅に対する強度が屈折率 <span class="arithmatex">\(n\)</span> とともにどう変化するか示せ。</p>
+<p>(3) ポインティングベクトルを <span class="arithmatex">\(\boldsymbol{S}=\boldsymbol{E}\times\boldsymbol{H}\)</span> とする。時間平均強度 <span class="arithmatex">\(I\)</span> を <span class="arithmatex">\(E_0\)</span> と <span class="arithmatex">\(Z\)</span> で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14542,13 +14542,13 @@
 \nabla\times(\nabla\times\boldsymbol{E})
 &amp;=-\frac{\partial}{\partial t}(\nabla\times\boldsymbol{B}) \\
 &amp;=-\mu\varepsilon
-\frac{\partial^2\boldsymbol{E}}{\partial t^2}.
+\frac{\partial^2\boldsymbol{E}}{\partial t^2}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> より左辺は <span class="arithmatex">\(-\nabla^2\boldsymbol{E}\)</span> なので</p>
 <div class="arithmatex">\[
-\nabla^2\boldsymbol{E}
--\mu\varepsilon\frac{\partial^2\boldsymbol{E}}{\partial t^2}=0
+\finalanswer{\nabla^2\boldsymbol{E}
+-\mu\varepsilon\frac{\partial^2\boldsymbol{E}}{\partial t^2}=0}
 \]</div>
 <p>です。したがって</p>
 <div class="arithmatex">\[
@@ -14573,8 +14573,16 @@ n=\frac{c}{v}
 \boldsymbol{B}(z,t)
 &amp;=\frac{E_0}{v}\cos(kz-\omega t)\boldsymbol{e}_y, \\
 \boldsymbol{H}(z,t)
-&amp;=\frac{E_0}{\mu v}\cos(kz-\omega t)\boldsymbol{e}_y.
+&amp;=\frac{E_0}{\mu v}\cos(kz-\omega t)\boldsymbol{e}_y
 \end{aligned}
+\]</div>
+<p>すなわち</p>
+<div class="arithmatex">\[
+\finalanswer{\boldsymbol{B}(z,t)
+=\frac{E_0}{v}\cos(kz-\omega t)\boldsymbol{e}_y,
+\qquad
+\boldsymbol{H}(z,t)
+=\frac{E_0}{\mu v}\cos(kz-\omega t)\boldsymbol{e}_y}
 \]</div>
 <p><span class="arithmatex">\(H_0=E_0/(\mu v)\)</span> より</p>
 <div class="arithmatex">\[
@@ -14582,7 +14590,7 @@ n=\frac{c}{v}
 Z=\frac{E_0}{H_0}
 &amp;=\mu v \\
 &amp;=\frac{\mu}{\sqrt{\mu\varepsilon}} \\
-&amp;=\finalanswer{\sqrt{\frac{\mu}{\varepsilon}}}.
+&amp;=\finalanswer{\sqrt{\frac{\mu}{\varepsilon}}}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
@@ -14590,12 +14598,26 @@ Z=\frac{E_0}{H_0}
 <p><span class="arithmatex">\(H_0=E_0/Z\)</span> なので</p>
 <div class="arithmatex">\[
 \begin{aligned}
+\left\langle\cos^2(kz-\omega t)\right\rangle
+&amp;=\frac{1}{T_0}\int_0^{T_0}
+\cos^2(kz-\omega t)\,dt \\
+&amp;=\frac{1}{2},
+\qquad T_0=\frac{2\pi}{\omega}
+\end{aligned}
+\]</div>
+<p>を用いると</p>
+<div class="arithmatex">\[
+\begin{aligned}
 \boldsymbol{S}(z,t)
 &amp;=\boldsymbol{E}\times\boldsymbol{H} \\
 &amp;=\frac{E_0^2}{Z}\cos^2(kz-\omega t)\boldsymbol{e}_z, \\
 I=\langle S_z\rangle
-&amp;=\frac{E_0^2}{2Z}.
+&amp;=\frac{E_0^2}{2Z}
 \end{aligned}
+\]</div>
+<p>したがって</p>
+<div class="arithmatex">\[
+\finalanswer{I=\frac{E_0^2}{2Z}}
 \]</div>
 <p>非磁性媒質では <span class="arithmatex">\(Z=\sqrt{\mu_0/\varepsilon}=Z_0/n\)</span> です。したがって</p>
 <div class="arithmatex">\[

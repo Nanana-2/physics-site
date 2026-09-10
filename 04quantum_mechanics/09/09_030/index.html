@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14554,10 +14554,7 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 \]</div>
 <p>ハミルトニアンの中には <span class="arithmatex">\(x\)</span> という変数が明示的に含まれていないため， <span class="arithmatex">\(x\)</span> での偏微分を行う演算子 <span class="arithmatex">\(\hat{p}_x\)</span> は，ハミルトニアンのすべての項と入れ替えることができます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-[\hat{H}, \, \hat{p}_x] &amp;= \hat{H}\hat{p}_x - \hat{p}_x\hat{H} \\
-&amp;= \finalanswer{0}
-\end{aligned}
+[\hat{H}, \, \hat{p}_x] = \hat{H}\hat{p}_x - \hat{p}_x\hat{H} = \finalanswer{0}
 \]</div>
 <p>交換子が 0 になるため， <span class="arithmatex">\(\hat{p}_x\)</span> はハミルトニアンと可換であることが示されました。これは， <span class="arithmatex">\(x\)</span> 方向の運動量が保存量であることを意味します。</p>
 <h3 id="3">(3)</h3>
@@ -14565,7 +14562,7 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 <div class="arithmatex">\[
 \hat{H} \psi(x, y) = \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (p_x + qB_0 y)^2 \right] e^{i p_x x / \hbar} \chi(y)
 \]</div>
-<p>共通する平面波の部分を両辺から取り除くことで， <span class="arithmatex">\(y\)</span> に関する方程式を抽出します。</p>
+<p>共通する平面波因子を両辺から除くと， <span class="arithmatex">\(y\)</span> に関する方程式が得られます。</p>
 <div class="arithmatex">\[
 \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (qB_0 y + p_x)^2 \right] \chi(y) = E \chi(y)
 \]</div>
@@ -14575,15 +14572,15 @@ A_x = -B_0 y, \quad A_y = 0, \quad A_z = 0
 \]</div>
 <p>これを元の式に戻し，古典的なサイクロトロン角振動数 <span class="arithmatex">\(\omega_c = \frac{qB_0}{m}\)</span> を用いて係数を整理します。</p>
 <div class="arithmatex">\[
-\left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2m} (qB_0)^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y) = \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2} m \left(\frac{qB_0}{m}\right)^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y)
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \left[ \frac{\hat{p}_y^2}{2m} + \frac{1}{2} m \omega_c^2 \left( y + \frac{p_x}{qB_0} \right)^2 \right] \chi(y) \\
-&amp;= E \chi(y)
+\left[\frac{\hat p_y^2}{2m}+\frac{(qB_0)^2}{2m}
+\left(y+\frac{p_x}{qB_0}\right)^2\right]\chi(y)
+&amp;=\left[\frac{\hat p_y^2}{2m}+\frac12m\omega_c^2
+\left(y+\frac{p_x}{qB_0}\right)^2\right]\chi(y)\\
+&amp;=E\chi(y)
 \end{aligned}
 \]</div>
-<p>この式は，ばね定数 <span class="arithmatex">\(m\omega_c^2\)</span> を持つ1次元調和振動子の形と一致しています。振動の中心位置となる座標を <span class="arithmatex">\(y_0\)</span> と置くと，数式の形から中心位置は以下のように求まります。</p>
+<p>この式は，ばね定数 <span class="arithmatex">\(m\omega_c^2\)</span> を持つ1次元調和振動子の形と一致しています。振動の中心位置となる座標を <span class="arithmatex">\(y_0\)</span> と置くと，式の形から中心位置は以下のように求まります。</p>
 <div class="arithmatex">\[
 \finalanswer{y_0 = -\frac{p_x}{qB_0}}
 \]</div>

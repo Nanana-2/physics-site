@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14526,7 +14526,7 @@
 <p>以下の問いに答えよ。</p>
 <p>(1) 状態 <span class="arithmatex">\(|\Psi(\theta)\rangle\)</span> に対する合成系の全密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(\theta) = |\Psi(\theta)\rangle\langle\Psi(\theta)|\)</span> を展開せよ。</p>
 <p>さらに，系Bに関する部分トレースを実行し，系Aの縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta) = \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{tot}}(\theta))\)</span> を <span class="arithmatex">\(|0_{\mathrm{A}}\rangle, |1_{\mathrm{A}}\rangle\)</span> を基底とする行列形式で求めよ。</p>
-<p>(2) (1) で得られた縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta)\)</span> を用いて，系Aのエンタングルメントエントロピー <span class="arithmatex">\(E(\theta) = -k_B \mathrm{Tr}(\rho_{\mathrm{A}}(\theta) \ln \rho_{\mathrm{A}}(\theta))\)</span> を <span class="arithmatex">\(\theta\)</span> の関数として式で表せ。</p>
+<p>(2) (1) で得られた縮約密度行列 <span class="arithmatex">\(\rho_{\mathrm{A}}(\theta)\)</span> を用いて，系Aのエンタングルメントエントロピー <span class="arithmatex">\(E(\theta) = -k_{\text{B}} \mathrm{Tr}(\rho_{\mathrm{A}}(\theta) \log \rho_{\mathrm{A}}(\theta))\)</span> を <span class="arithmatex">\(\theta\)</span> の関数として式で表せ。</p>
 <p>(3) 指定された3つの <span class="arithmatex">\(\theta\)</span> について <span class="arithmatex">\(E(\theta)\)</span> を求め，最大値と最小値を与える状態を答えよ。</p>
 <ul>
 <li><span class="arithmatex">\(\theta = 0\)</span></li>
@@ -14542,11 +14542,21 @@
 \]</div>
 <p>全密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(\theta) = |\Psi(\theta)\rangle\langle\Psi(\theta)|\)</span> を分配法則に従って展開します。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{tot}}(\theta) = \cos^2\theta |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 0_{\mathrm{B}}| + \cos\theta\sin\theta |0_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 1_{\mathrm{B}}| + \sin\theta\cos\theta |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 0_{\mathrm{B}}| + \sin^2\theta |1_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 1_{\mathrm{B}}|
+\begin{aligned}
+\rho_{\mathrm{tot}}(\theta)
+&amp;=\cos^2\theta\,|00\rangle\langle00|
++\sin\theta\cos\theta\,|00\rangle\langle11| \\
+&amp;\quad+\sin\theta\cos\theta\,|11\rangle\langle00|
++\sin^2\theta\,|11\rangle\langle11|
+\end{aligned}
 \]</div>
 <p>系Bの正規直交基底 <span class="arithmatex">\(\{|0_{\mathrm{B}}\rangle, |1_{\mathrm{B}}\rangle\}\)</span> を用いて部分トレースを行います。</p>
 <div class="arithmatex">\[
-\rho_{\mathrm{A}}(\theta) = \langle 0_{\mathrm{B}}|\rho_{\mathrm{tot}}(\theta)|0_{\mathrm{B}}\rangle + \langle 1_{\mathrm{B}}|\rho_{\mathrm{tot}}(\theta)|1_{\mathrm{B}}\rangle
+\begin{aligned}
+\rho_{\mathrm A}(\theta)
+&amp;=\langle0_{\mathrm B}|\rho_{\mathrm{tot}}(\theta)|0_{\mathrm B}\rangle \\
+&amp;\quad+\langle1_{\mathrm B}|\rho_{\mathrm{tot}}(\theta)|1_{\mathrm B}\rangle
+\end{aligned}
 \]</div>
 <p>系Bの直交条件により，非対角項はすべて 0 になり，対角項の系Bの成分が内積によって消去されます。</p>
 <div class="arithmatex">\[
@@ -14563,20 +14573,20 @@ p_0 = \cos^2\theta, \quad p_1 = \sin^2\theta
 \]</div>
 <p>フォン・ノイマンエントロピーの定義式にこれらの固有値を代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{E(\theta) = -k_B \left( \cos^2\theta \ln(\cos^2\theta) + \sin^2\theta \ln(\sin^2\theta) \right)}
+\finalanswer{E(\theta) = -k_{\text{B}} \left( \cos^2\theta \log(\cos^2\theta) + \sin^2\theta \log(\sin^2\theta) \right)}
 \]</div>
 <p>これが求めるエンタングルメントエントロピーの式です。</p>
 <h3 id="3">(3)</h3>
-<p>指定されたパラメータ <span class="arithmatex">\(\theta\)</span> の値を順に代入して計算を行います。ただし，必要に応じて極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \ln x = 0\)</span> を使用します。</p>
+<p>指定されたパラメータ <span class="arithmatex">\(\theta\)</span> の値を順に代入して計算を行います。ただし，必要に応じて極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \log x = 0\)</span> を使用します。</p>
 <ul>
 <li><strong><span class="arithmatex">\(\theta = 0\)</span> のとき</strong></li>
 </ul>
 <p><span class="arithmatex">\(\cos^2 0 = 1, \sin^2 0 = 0\)</span> となります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-E(0) &amp;= -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) \\
-&amp;= -k_B (0 + 0) \\
-&amp;= 0
+E(0) &amp;= -k_{\text{B}} \left( 1 \cdot \log 1 + 0 \cdot \log 0 \right) \\
+&amp;= -k_{\text{B}} (0 + 0) \\
+&amp;= \finalanswer{0}
 \end{aligned}
 \]</div>
 <p><strong>状態の説明</strong>：</p>
@@ -14587,21 +14597,21 @@ E(0) &amp;= -k_B \left( 1 \cdot \ln 1 + 0 \cdot \ln 0 \right) \\
 <p><span class="arithmatex">\(\cos^2 \frac{\pi}{4} = \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}, \sin^2 \frac{\pi}{4} = \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}\)</span> となります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-E\left(\frac{\pi}{4}\right) &amp;= -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
-&amp;= -k_B \ln \frac{1}{2} \\
-&amp;= k_B \ln 2
+E\left(\frac{\pi}{4}\right) &amp;= -k_{\text{B}} \left( \frac{1}{2} \log \frac{1}{2} + \frac{1}{2} \log \frac{1}{2} \right) \\
+&amp;= -k_{\text{B}} \log \frac{1}{2} \\
+&amp;= \finalanswer{k_{\text{B}} \log 2}
 \end{aligned}
 \]</div>
 <p><strong>状態の説明</strong>：</p>
-<p>2次元量子系においてエントロピーが最大値の <span class="arithmatex">\(k_B \ln 2\)</span> に達しているため，系Aと系Bの間には最も強い量子もつれが形成されています。元の状態はベル状態 <span class="arithmatex">\(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)</span> に相当します。</p>
+<p>2次元量子系においてエントロピーが最大値の <span class="arithmatex">\(k_{\text{B}} \log 2\)</span> に達しているため，系Aと系Bの間には最も強い量子もつれが形成されています。元の状態はベル状態 <span class="arithmatex">\(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)</span> に相当します。</p>
 <ul>
 <li><strong><span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> のとき</strong></li>
 </ul>
 <p><span class="arithmatex">\(\cos^2 \frac{\pi}{2} = 0, \sin^2 \frac{\pi}{2} = 1\)</span> となります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-E\left(\frac{\pi}{2}\right) &amp;= -k_B \left( 0 \cdot \ln 0 + 1 \cdot \ln 1 \right) \\
-&amp;= -k_B (0 + 0) \\
+E\left(\frac{\pi}{2}\right) &amp;= -k_{\text{B}} \left( 0 \cdot \log 0 + 1 \cdot \log 1 \right) \\
+&amp;= -k_{\text{B}} (0 + 0) \\
 &amp;= \finalanswer{0}
 \end{aligned}
 \]</div>

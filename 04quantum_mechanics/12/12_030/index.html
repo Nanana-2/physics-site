@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14521,7 +14521,7 @@
 <p>経路積分において，始点から終点に至るすべての経路は，古典力学の作用 <span class="arithmatex">\(S\)</span> を用いた複素位相因子によって重み付けされて足し合わされる。プランク定数 <span class="arithmatex">\(\hbar\)</span> がマクロなスケールに比べて無視できるほど小さい極限では，複素位相が激しく変化するため，大半の経路からの寄与は干渉によって消去される。</p>
 <p>1次元を運動する粒子の伝播核は，すべての可能な経路 <span class="arithmatex">\(x(t)\)</span> にわたる積分として次のように表される。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}
+K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] \exp\left(i S[x(t)] / \hbar\right)
 \]</div>
 <p>ここで，ある特定の経路 <span class="arithmatex">\(x_0(t)\)</span> から，微小な変動 <span class="arithmatex">\(\eta(t)\)</span> および実数の微小パラメータ <span class="arithmatex">\(\alpha\)</span> を用いてずらした経路 <span class="arithmatex">\(x(t) = x_0(t) + \alpha \eta(t)\)</span> を考える。両端は固定されているため <span class="arithmatex">\(\eta(t_i) = 0\)</span> および <span class="arithmatex">\(\eta(t_f) = 0\)</span> である。この経路に対する作用 <span class="arithmatex">\(S[x]\)</span> を <span class="arithmatex">\(\alpha\)</span> のべき級数として展開した式は次の通りである。</p>
 <div class="arithmatex">\[
@@ -14530,11 +14530,11 @@ S[x_0 + \alpha \eta] = S[x_0] + \alpha \delta S[x_0, \eta] + \frac{\alpha^2}{2} 
 <p>以下の問いに答えよ。</p>
 <p>(1) 経路 <span class="arithmatex">\(x_0(t)\)</span> の周囲における近傍の経路からの寄与を評価するため，パラメータ <span class="arithmatex">\(\alpha\)</span> に関する次の複素位相の積分を考える。</p>
 <div class="arithmatex">\[
-I = \int_{-\infty}^{\infty} e^{i S[x_0 + \alpha \eta] / \hbar} d\alpha
+I = \int_{-\infty}^{\infty} \exp\left(i S[x_0 + \alpha \eta] / \hbar\right) d\alpha
 \]</div>
 <p><span class="arithmatex">\(\alpha\)</span> の2次以上の高次項を無視する近似のもとで，この積分を実行せよ。さらに，得られた結果に対して <span class="arithmatex">\(\hbar \to 0\)</span> の極限をとるとき，1次変分が <span class="arithmatex">\(\delta S[x_0, \eta] \neq 0\)</span> であるならば積分値 <span class="arithmatex">\(I\)</span> が 0 に収束することを示せ。必要であれば，ディラックのデルタ関数の積分表示式である以下の公式を利用せよ。</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} e^{i k \alpha} d\alpha = 2\pi \delta(k)
+\int_{-\infty}^{\infty} \exp\left(i k \alpha\right) d\alpha = 2\pi \delta(k)
 \]</div>
 <p>(2) 近傍の経路からの寄与が極限 <span class="arithmatex">\(\hbar \to 0\)</span> において 0 にならず，互いに強め合って積分に有限の貢献をなすために，1次変分 <span class="arithmatex">\(\delta S[x_0, \eta]\)</span> が満たすべき条件を示せ。</p>
 <p>(3) ラグランジアンが <span class="arithmatex">\(L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)\)</span> で与えられるとき，条件 <span class="arithmatex">\(\delta S[x_0, \eta] = 0\)</span> から導出される古典的な運動方程式を書き下せ。</p>
@@ -14543,19 +14543,19 @@ I = \int_{-\infty}^{\infty} e^{i S[x_0 + \alpha \eta] / \hbar} d\alpha
 <h3 id="1">(1)</h3>
 <p>提示された積分式に対し， <span class="arithmatex">\(\alpha\)</span> の1次項までを残す近似を適用します。</p>
 <div class="arithmatex">\[
-I \approx \int_{-\infty}^{\infty} e^{i \left( S[x_0] + \alpha \delta S[x_0, \eta] \right) / \hbar} d\alpha
+I \approx \int_{-\infty}^{\infty} \exp\left(i \left( S[x_0] + \alpha \delta S[x_0, \eta] \right) / \hbar\right) d\alpha
 \]</div>
 <p>変数 <span class="arithmatex">\(\alpha\)</span> を含まない因子を積分の外へ括り出します。</p>
 <div class="arithmatex">\[
-I = e^{i S[x_0] / \hbar} \int_{-\infty}^{\infty} e^{i \frac{\delta S[x_0, \eta]}{\hbar} \alpha} d\alpha
+I = \exp\left(i S[x_0] / \hbar\right) \int_{-\infty}^{\infty} \exp\left(i \frac{\delta S[x_0, \eta]}{\hbar} \alpha\right) d\alpha
 \]</div>
 <p>ここで，提示されたデルタ関数の積分表示公式を適用します。公式の変数 <span class="arithmatex">\(k\)</span> に相当する成分は <span class="arithmatex">\(\frac{\delta S[x_0, \eta]}{\hbar}\)</span> です。</p>
 <div class="arithmatex">\[
-I = e^{i S[x_0] / \hbar} \cdot 2\pi \delta\left( \frac{\delta S[x_0, \eta]}{\hbar} \right)
+I = \exp\left(i S[x_0] / \hbar\right) \cdot 2\pi \delta\left( \frac{\delta S[x_0, \eta]}{\hbar} \right)
 \]</div>
 <p>デルタ関数の性質である <span class="arithmatex">\(\delta(a x) = \frac{1}{|a|} \delta(x)\)</span> を用いて，引数の分母にある <span class="arithmatex">\(\hbar\)</span> を外に出します。</p>
 <div class="arithmatex">\[
-I = 2\pi \hbar e^{i S[x_0] / \hbar} \delta\left( \delta S[x_0, \eta] \right)
+I = 2\pi \hbar \exp\left(i S[x_0] / \hbar\right) \delta\left( \delta S[x_0, \eta] \right)
 \]</div>
 <p>この結果に対して <span class="arithmatex">\(\hbar \to 0\)</span> の極限を考えます。1次変分が 0 でない値 <span class="arithmatex">\(\delta S[x_0, \eta] \neq 0\)</span> を持つとき，デルタ関数の値は 0 になります。</p>
 <div class="arithmatex">\[
@@ -14565,7 +14565,7 @@ I = 2\pi \hbar e^{i S[x_0] / \hbar} \delta\left( \delta S[x_0, \eta] \right)
 <div class="arithmatex">\[
 \finalanswer{\lim_{\hbar \to 0} I = 0}
 \]</div>
-<p>1次変分が 0 でない経路の近傍では，複素位相が急速に変化して寄与が打ち消し合います。</p>
+<p>1次変分が 0 でない経路の近傍では複素位相が急速に変化するため，近接する経路からの寄与を積分すると 0 に近づきます。</p>
 <h3 id="2">(2)</h3>
 <p>極限 <span class="arithmatex">\(\hbar \to 0\)</span> において積分値が 0 にならず，建設的な干渉によって有限の寄与を残すためには，(1) で用いたデルタ関数の引数が 0 になる必要があります。デルタ関数 <span class="arithmatex">\(\delta(x)\)</span> は <span class="arithmatex">\(x=0\)</span> のときのみ無限大のピークを持ち，積分に対して有限の値を返します。</p>
 <p>したがって，求める条件は1次変分が0 になることです。</p>

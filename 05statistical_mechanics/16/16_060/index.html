@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,7 +14534,7 @@
 \sum_k \hat{M}_k^\dagger(t) \hat{M}_k(t) = \hat{I}_{\mathrm{S}}
 \]</div>
 <p>ただし， <span class="arithmatex">\(\hat{I}_{\mathrm{S}}\)</span> は対象系Sの単位行列であり，全系のユニタリー条件 <span class="arithmatex">\(\hat{U}^\dagger(t) \hat{U}(t) = \hat{I}_{\mathrm{tot}}\)</span> を途中で利用せよ。</p>
-<p>(3) 対象系Sを1つの量子ビット系とし，時間が進むにつれて環境へのエネルギー放出が起きるモデルを考える。このときの時間発展を表すクラウス演算子が，減衰パラメータ <span class="arithmatex">\(\gamma\)</span> <span class="arithmatex">\(0 \le \gamma \le 1\)</span> を用いて以下のように与えられているとする。</p>
+<p>(3) 対象系Sを1つの量子ビット系とし，環境へのエネルギー放出を表すクラウス演算子が，減衰パラメータ <span class="arithmatex">\(0\le\gamma\le1\)</span> を用いて次のように与えられるとする。</p>
 <div class="arithmatex">\[
 \hat{M}_0 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix}, \quad \hat{M}_1 = \begin{pmatrix} 0 &amp; \sqrt{\gamma} \\ 0 &amp; 0 \end{pmatrix}
 \]</div>
@@ -14558,7 +14558,7 @@
 <div class="arithmatex">\[
 \rho_{\mathrm{S}}(t) = \sum_k \left( \langle e_k| \hat{U}(t) |e_0\rangle \right) \rho_{\mathrm{S}}(0) \left( \langle e_0| \hat{U}^\dagger(t) |e_k\rangle \right)
 \]</div>
-<p>ここで，提示されたクラウス演算子の定義 <span class="arithmatex">\(\hat{M}_k(t) = \langle e_k| \hat{U}(t) |e_0\rangle\)</span> を適用します。そのエルミート共役は <span class="arithmatex">\(\hat{M}_k^\dagger(t) = \langle e_0| \hat{U}^\dagger(t) |e_k\rangle\)</span> となります。これらを代入することで，目的のクラウス展開が導出されます。</p>
+<p>ここで，提示されたクラウス演算子の定義 <span class="arithmatex">\(\hat{M}_k(t) = \langle e_k| \hat{U}(t) |e_0\rangle\)</span> を適用します。そのエルミート共役は <span class="arithmatex">\(\hat{M}_k^\dagger(t) = \langle e_0| \hat{U}^\dagger(t) |e_k\rangle\)</span> となります。これらを代入することで，目的のクラウス展開を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{\rho_{\mathrm{S}}(t) = \sum_k \hat{M}_k(t) \rho_{\mathrm{S}}(0) \hat{M}_k^\dagger(t)}
 \]</div>
@@ -14595,11 +14595,12 @@
 <li><strong><span class="arithmatex">\(\hat{M}_0 \rho_{\mathrm{S}}(0) \hat{M}_0^\dagger\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{M}_0 \rho_{\mathrm{S}}(0) \hat{M}_0^\dagger = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix} \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \rho_{10} &amp; \rho_{11} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix}
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; \sqrt{1-\gamma}\rho_{11} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix} \\
+\hat{M}_0\rho_{\mathrm{S}}(0)\hat{M}_0^\dagger
+&amp;=\begin{pmatrix}1&amp;0\\0&amp;\sqrt{1-\gamma}\end{pmatrix}
+\begin{pmatrix}\rho_{00}&amp;\rho_{01}\\\rho_{10}&amp;\rho_{11}\end{pmatrix}
+\begin{pmatrix}1&amp;0\\0&amp;\sqrt{1-\gamma}\end{pmatrix} \\
+&amp;= \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; \sqrt{1-\gamma}\rho_{11} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; \sqrt{1-\gamma} \end{pmatrix} \\
 &amp;= \begin{pmatrix} \rho_{00} &amp; \sqrt{1-\gamma}\rho_{01} \\ \sqrt{1-\gamma}\rho_{10} &amp; (1-\gamma)\rho_{11} \end{pmatrix}
 \end{aligned}
 \]</div>
@@ -14607,11 +14608,12 @@
 <li><strong><span class="arithmatex">\(\hat{M}_1 \rho_{\mathrm{S}}(0) \hat{M}_1^\dagger\)</span> の計算</strong></li>
 </ul>
 <div class="arithmatex">\[
-  \hat{M}_1 \rho_{\mathrm{S}}(0) \hat{M}_1^\dagger = \begin{pmatrix} 0 &amp; \sqrt{\gamma} \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} \rho_{00} &amp; \rho_{01} \\ \rho_{10} &amp; \rho_{11} \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ \sqrt{\gamma} &amp; 0 \end{pmatrix}
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \begin{pmatrix} \sqrt{\gamma}\rho_{10} &amp; \sqrt{\gamma}\rho_{11} \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ \sqrt{\gamma} &amp; 0 \end{pmatrix} \\
+\hat{M}_1\rho_{\mathrm{S}}(0)\hat{M}_1^\dagger
+&amp;=\begin{pmatrix}0&amp;\sqrt{\gamma}\\0&amp;0\end{pmatrix}
+\begin{pmatrix}\rho_{00}&amp;\rho_{01}\\\rho_{10}&amp;\rho_{11}\end{pmatrix}
+\begin{pmatrix}0&amp;0\\\sqrt{\gamma}&amp;0\end{pmatrix} \\
+&amp;= \begin{pmatrix} \sqrt{\gamma}\rho_{10} &amp; \sqrt{\gamma}\rho_{11} \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ \sqrt{\gamma} &amp; 0 \end{pmatrix} \\
 &amp;= \begin{pmatrix} \gamma\rho_{11} &amp; 0 \\ 0 &amp; 0 \end{pmatrix}
 \end{aligned}
 \]</div>
@@ -14624,14 +14626,14 @@
 \end{pmatrix}}
 \]</div>
 <p><strong>物理的現象の説明</strong></p>
-<p>十分に時間が経過して周囲への散逸が進んだ極限 <span class="arithmatex">\(\gamma = 1\)</span> を考えます。上記の行列式に <span class="arithmatex">\(\gamma = 1\)</span> を代入すると以下のようになります。</p>
+<p>十分に時間が経過して周囲への散逸が進んだ極限 <span class="arithmatex">\(\gamma=1\)</span> を考えます。上の行列に <span class="arithmatex">\(\gamma=1\)</span> を代入すると，</p>
 <div class="arithmatex">\[
 \finalanswer{\rho_{\mathrm{S}}(\infty) =
 \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}}
 \]</div>
 <ul>
 <li><strong>散逸</strong>：上準位の存在確率を表す <span class="arithmatex">\(\rho_{11}\)</span> が 0 に減少する一方で，下準位の確率が <span class="arithmatex">\(\rho_{00} + \rho_{11} = 1\)</span> へと変化しています。これは，系が持っていたエネルギーが環境へとすべて逃げていき，基底状態へと落ち切る散逸プロセスに対応します。</li>
-<li><strong>デコヒーレンス</strong>：量子力学的な複素位相の干渉効果を表す非対角項 <span class="arithmatex">\(\sqrt{1-\gamma}\rho_{01}\)</span> が， <span class="arithmatex">\(\gamma=1\)</span> によって0 へと消滅しています。環境との微視的な相互作用により，系単体のコヒーレンスが消失するデコヒーレンスプロセスが数学的に確認できます。</li>
+<li><strong>デコヒーレンス</strong>：量子力学的な複素位相の干渉効果を表す非対角項 <span class="arithmatex">\(\sqrt{1-\gamma}\rho_{01}\)</span> が， <span class="arithmatex">\(\gamma=1\)</span> によって0 へと消滅しています。環境との微視的な相互作用により，系単体のコヒーレンスが消失するデコヒーレンスプロセスが確認できます。</li>
 </ul>
 
 

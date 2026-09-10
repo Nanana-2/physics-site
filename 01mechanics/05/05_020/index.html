@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14523,11 +14523,11 @@
 おもりが最下点にある状態を <span class="arithmatex">\(\theta = 0\)</span> とし，この位置をポテンシャルエネルギーの基準とする。
 以下の問いに答えよ。</p>
 <p>(1) おもりの速度の大きさ <span class="arithmatex">\(v\)</span> および高さを <span class="arithmatex">\(\theta\)</span> とその時間微分 <span class="arithmatex">\(\dot{\theta}\)</span> を用いて表し，系のラグランジアン <span class="arithmatex">\(L(\theta, \dot{\theta})\)</span> を求めよ。</p>
-<p>(2) ラグランジュの運動方程式
-$$
+<p>(2) ラグランジュの運動方程式</p>
+<div class="arithmatex">\[
 \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} = 0
-$$
-を用いて，<span class="arithmatex">\(\theta\)</span> に関する運動方程式を導け。</p>
+\]</div>
+<p>を用いて，<span class="arithmatex">\(\theta\)</span> に関する運動方程式を導け。</p>
 <p>(3) 振れ角が十分に小さい場合を考える。小角近似 <span class="arithmatex">\(\sin \theta \approx \theta\)</span> を用いて，(2) で得られた運動方程式を単振動の方程式に近似し，角振動数 <span class="arithmatex">\(\omega\)</span> と周期 <span class="arithmatex">\(T\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14568,10 +14568,7 @@ U = mgl(1 - \cos \theta)
 \]</div>
 <p>ラグランジアン <span class="arithmatex">\(L\)</span> は，運動エネルギー <span class="arithmatex">\(K\)</span> とポテンシャルエネルギー <span class="arithmatex">\(U\)</span> の差として定義されるため，求めるラグランジアンは以下の通りです。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-L &amp;= K - U \\
-&amp;= \finalanswer{\frac{1}{2} m l^2 \dot{\theta}^2 - mgl(1 - \cos \theta)}
-\end{aligned}
+L = K - U = \finalanswer{\frac{1}{2} m l^2 \dot{\theta}^2 - mgl(1 - \cos \theta)}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で求めたラグランジアン <span class="arithmatex">\(L\)</span> を，ラグランジュの運動方程式に代入します。
@@ -14612,7 +14609,7 @@ m l^2 \ddot{\theta} + mgl \sin \theta &amp;= 0
 <div class="arithmatex">\[
 \omega = \sqrt{\frac{g}{l}}
 \]</div>
-<p>また，周期 <span class="arithmatex">\(T\)</span> は角振動数 <span class="arithmatex">\(\omega\)</span> との間にある関係式 <span class="arithmatex">\(T = \frac{2\pi}{\omega}\)</span> から，次のように導出されます。</p>
+<p>また，周期 <span class="arithmatex">\(T\)</span> は角振動数 <span class="arithmatex">\(\omega\)</span> との間にある関係式 <span class="arithmatex">\(T = \frac{2\pi}{\omega}\)</span> から，次のように得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{T = 2\pi \sqrt{\frac{l}{g}}}
 \]</div>

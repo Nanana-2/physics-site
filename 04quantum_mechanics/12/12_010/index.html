@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14521,7 +14521,7 @@
 <p>量子力学における状態の時間発展は，通常は時間依存シュレーディンガー方程式，あるいは時間発展演算子を用いて説明される。これとは別に，ある初期時刻の位置から別の時刻の位置へと粒子が移動する確率振幅を定義し，空間全体の積分によって波動関数の時間発展を追う形式が存在する。この確率振幅は伝播核またはプロパゲーターと呼ばれ，経路積分を構成する上での基礎となる。</p>
 <p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が時間に依存しない系を考える。時刻 <span class="arithmatex">\(t_i\)</span> において位置固有状態 <span class="arithmatex">\(|x_i\rangle\)</span> にあった粒子が，その後の時刻 <span class="arithmatex">\(t_f\)</span> において位置固有状態 <span class="arithmatex">\(|x_f\rangle\)</span> で観測される確率振幅を，伝播核 <span class="arithmatex">\(K(x_f, t_f; x_i, t_i)\)</span> として以下のように定義する。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} | x_i\rangle
+K(x_f, t_f; x_i, t_i) = \langle x_f | \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) | x_i\rangle
 \]</div>
 <p>系の状態を表す波動関数を <span class="arithmatex">\(\psi(x, t) = \langle x | \psi(t)\rangle\)</span> と表記するとき，以下の問いに答えよ。</p>
 <p>(1) 時刻 <span class="arithmatex">\(t_i\)</span> における系の状態ベクトルを <span class="arithmatex">\(|\psi(t_i)\rangle\)</span> とする。時間発展演算子を用いることで，時刻 <span class="arithmatex">\(t_f\)</span> における状態ベクトル <span class="arithmatex">\(|\psi(t_f)\rangle\)</span> を表せ。</p>
@@ -14537,9 +14537,9 @@ K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} | x_i\rang
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>ハミルトニアンが時間に依存しない系において，状態ベクトルの時間発展を司る時間発展演算子は <span class="arithmatex">\(e^{-i \hat{H}(t_f - t_i)/\hbar}\)</span> と表されます。初期時刻 <span class="arithmatex">\(t_i\)</span> における状態ベクトル <span class="arithmatex">\(|\psi(t_i)\rangle\)</span> に対し，この時間発展演算子を左から掛け算することにより，時刻 <span class="arithmatex">\(t_f\)</span> における状態ベクトルが以下のように得られます。</p>
+<p>ハミルトニアンが時間に依存しない系において，状態ベクトルの時間発展を司る時間発展演算子は <span class="arithmatex">\(\exp\left(-i \hat{H}(t_f - t_i)/\hbar\right)\)</span> と表されます。初期時刻 <span class="arithmatex">\(t_i\)</span> における状態ベクトル <span class="arithmatex">\(|\psi(t_i)\rangle\)</span> に対し，この時間発展演算子を左から掛け算することにより，時刻 <span class="arithmatex">\(t_f\)</span> における状態ベクトルが以下のように得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{|\psi(t_f)\rangle = e^{-i \hat{H}(t_f - t_i)/\hbar} |\psi(t_i)\rangle}
+\finalanswer{|\psi(t_f)\rangle = \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) |\psi(t_i)\rangle}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>時刻 <span class="arithmatex">\(t_f\)</span> における波動関数 <span class="arithmatex">\(\psi(x_f, t_f)\)</span> の定義式から計算を始めます。</p>
@@ -14548,44 +14548,44 @@ K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} | x_i\rang
 \]</div>
 <p>この式に対し， (1) で求めた状態ベクトルの時間発展の関係式を代入します。</p>
 <div class="arithmatex">\[
-\psi(x_f, t_f) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} |\psi(t_i)\rangle
+\psi(x_f, t_f) = \langle x_f | \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) |\psi(t_i)\rangle
 \]</div>
 <p>右端にある状態ベクトル <span class="arithmatex">\(|\psi(t_i)\rangle\)</span> のすぐ左側の位置に，位置固有状態に関する完全性関係 <span class="arithmatex">\(\int_{-\infty}^{\infty} |x_i\rangle \langle x_i| dx_i = 1\)</span> を挿入します。</p>
 <div class="arithmatex">\[
-\psi(x_f, t_f) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} \left( \int_{-\infty}^{\infty} |x_i\rangle \langle x_i| dx_i \right) |\psi(t_i)\rangle
+\psi(x_f, t_f) = \langle x_f | \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) \left( \int_{-\infty}^{\infty} |x_i\rangle \langle x_i| dx_i \right) |\psi(t_i)\rangle
 \]</div>
 <p>積分の記号と変数 <span class="arithmatex">\(dx_i\)</span> を式の先頭へ括り出します。</p>
 <div class="arithmatex">\[
-\psi(x_f, t_f) = \int_{-\infty}^{\infty} \left\langle x_f \left| e^{-i \hat{H}(t_f - t_i)/\hbar} \right| x_i \right\rangle \langle x_i | \psi(t_i)\rangle dx_i
+\psi(x_f, t_f) = \int_{-\infty}^{\infty} \left\langle x_f \left| \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) \right| x_i \right\rangle \langle x_i | \psi(t_i)\rangle dx_i
 \]</div>
-<p>括弧で囲まれた内側の成分に着目すると，前半のブラとケットに挟まれた領域は問題文で定義された伝播核 <span class="arithmatex">\(K(x_f, t_f; x_i, t_i)\)</span> そのものであり，後半の成分は初期時刻における波動関数 <span class="arithmatex">\(\psi(x_i, t_i)\)</span> に一致します。これらを置き換えることで，求める積分方程式が導かれます。</p>
+<p>ブラとケットに挟まれた部分は，問題文で定義された伝播核 <span class="arithmatex">\(K(x_f, t_f; x_i, t_i)\)</span> です。残りの部分は初期時刻の波動関数 <span class="arithmatex">\(\psi(x_i, t_i)\)</span> なので，次の積分方程式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\psi(x_f, t_f) = \int_{-\infty}^{\infty} K(x_f, t_f; x_i, t_i) \psi(x_i, t_i) dx_i}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>問題文で与えられた伝播核の定義式を書き下します。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} | x_i\rangle
+K(x_f, t_f; x_i, t_i) = \langle x_f | \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) | x_i\rangle
 \]</div>
 <p>時間発展演算子と右側の状態 <span class="arithmatex">\(|x_i\rangle\)</span> の間に，エネルギー固有状態の完全性関係 <span class="arithmatex">\(\sum_{n} |n\rangle \langle n| = 1\)</span> を挿入します。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} \left( \sum_{n} |n\rangle \langle n| \right) | x_i\rangle
+K(x_f, t_f; x_i, t_i) = \langle x_f | \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) \left( \sum_{n} |n\rangle \langle n| \right) | x_i\rangle
 \]</div>
 <p>和の記号を式の先頭へ出します。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \sum_{n} \langle x_f | e^{-i \hat{H}(t_f - t_i)/\hbar} |n\rangle \langle n | x_i\rangle
+K(x_f, t_f; x_i, t_i) = \sum_{n} \langle x_f | \exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) |n\rangle \langle n | x_i\rangle
 \]</div>
 <p>エネルギー固有状態 <span class="arithmatex">\(|n\rangle\)</span> に対するハミルトニアンの作用は <span class="arithmatex">\(\hat{H}|n\rangle = E_n|n\rangle\)</span> であるため，指数関数で構成された演算子の部分は単なる複素数の因数へと置き換わります。</p>
 <div class="arithmatex">\[
-e^{-i \hat{H}(t_f - t_i)/\hbar} |n\rangle = e^{-i E_n(t_f - t_i)/\hbar} |n\rangle
+\exp\left(-i \hat{H}(t_f - t_i)/\hbar\right) |n\rangle = \exp\left(-i E_n(t_f - t_i)/\hbar\right) |n\rangle
 \]</div>
 <p>これを式に戻して整理します。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \sum_{n} \langle x_f | n\rangle e^{-i E_n(t_f - t_i)/\hbar} \langle n | x_i\rangle
+K(x_f, t_f; x_i, t_i) = \sum_{n} \langle x_f | n\rangle \exp\left(-i E_n(t_f - t_i)/\hbar\right) \langle n | x_i\rangle
 \]</div>
 <p>ここで，固有関数の定義 <span class="arithmatex">\(\phi_n(x_f) = \langle x_f | n\rangle\)</span> ，およびその複素共役の関係 <span class="arithmatex">\(\phi_n^*(x_i) = \langle n | x_i\rangle\)</span> をそれぞれ代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{K(x_f, t_f; x_i, t_i) = \sum_{n} \phi_n(x_f) \phi_n^*(x_i) e^{-i E_n(t_f - t_i)/\hbar}}
+\finalanswer{K(x_f, t_f; x_i, t_i) = \sum_{n} \phi_n(x_f) \phi_n^*(x_i) \exp\left(-i E_n(t_f - t_i)/\hbar\right)}
 \]</div>
 <p>これにより，系のエネルギー固有値と固有関数が既知であれば，それらの和を計算することによって伝播核を構成できることが示されました。</p>
 

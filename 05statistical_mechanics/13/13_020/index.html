@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,7 +14522,7 @@
 <div class="arithmatex">\[
 W(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi^*\left(x + \frac{y}{2}\right) \psi\left(x - \frac{y}{2}\right) \exp\left( -\frac{ipy}{\hbar} \right) dy
 \]</div>
-<p>対象として，原点から位置 <span class="arithmatex">\(+x_0\)</span> および <span class="arithmatex">\(-x_0\)</span> <span class="arithmatex">\(x_0 &gt; 0\)</span> だけ離れた2つのガウス型波束が，同位相で量子力学的に重ね合わされた以下の状態を考える。</p>
+<p>原点から <span class="arithmatex">\(\pm x_0\)</span> だけ離れた2つのガウス型波束を，同位相で重ね合わせた次の状態を考える。ただし，<span class="arithmatex">\(x_0&gt;0\)</span> とする。</p>
 <div class="arithmatex">\[
 \psi(x) = N \left[ \exp\left( -\frac{(x - x_0)^2}{4\sigma^2} \right) + \exp\left( -\frac{(x + x_0)^2}{4\sigma^2} \right) \right]
 \]</div>
@@ -14535,7 +14535,13 @@ W(x, p) = W_{\mathrm{left}}(x, p) + W_{\mathrm{right}}(x, p) + W_{\mathrm{int}}(
 <p>ここで <span class="arithmatex">\(W_{\mathrm{left}}\)</span> と <span class="arithmatex">\(W_{\mathrm{right}}\)</span> は，それぞれの波束が単独で存在したときの古典的なガウス分布の項である。
 2つの波束の交差から生じる干渉項 <span class="arithmatex">\(W_{\mathrm{int}}(x, p)\)</span> は，以下の積分形式で与えられる。</p>
 <div class="arithmatex">\[
-W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \int_{-\infty}^{\infty} \left[ \exp\left( -\frac{(x + y/2 - x_0)^2 + (x - y/2 + x_0)^2}{4\sigma^2} \right) + \exp\left( -\frac{(x + y/2 + x_0)^2 + (x - y/2 - x_0)^2}{4\sigma^2} \right) \right] \exp\left( -\frac{ipy}{\hbar} \right) dy
+\begin{aligned}
+W_{\mathrm{int}}(x,p)
+&amp;=\frac{N^2}{\pi\hbar}\int_{-\infty}^{\infty}
+\Biggl[\exp\left(-\frac{(x+y/2-x_0)^2+(x-y/2+x_0)^2}{4\sigma^2}\right) \\
+&amp;\qquad+\exp\left(-\frac{(x+y/2+x_0)^2+(x-y/2-x_0)^2}{4\sigma^2}\right)\Biggr]
+e^{-ipy/\hbar}\,dy
+\end{aligned}
 \]</div>
 <p>この干渉項 <span class="arithmatex">\(W_{\mathrm{int}}(x, p)\)</span> の積分を実行し，位置 <span class="arithmatex">\(x\)</span> のガウス関数と運動量 <span class="arithmatex">\(p\)</span> の余弦関数 <span class="arithmatex">\(\cos\)</span> の積を含む関数形を導出せよ。</p>
 <p>(3) <span class="arithmatex">\(W(0,0)\)</span> を求め，<span class="arithmatex">\(x_0\gg\sigma\)</span> で負になることを示せ。</p>
@@ -14550,7 +14556,7 @@ W(x, p) * = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi\left(x + \frac{y}{2}
 <div class="arithmatex">\[
 W(x, p) * = \frac{1}{\pi\hbar} \int_{\infty}^{-\infty} \psi\left(x - \frac{u}{2}\right) \psi^*\left(x + \frac{u}{2}\right) \exp\left( -\frac{ipu}{\hbar} \right) (-du)
 \]</div>
-<p>積分の上下端を元に戻すためにマイナス記号を相殺させ，被積分関数の項の並びを整理します。</p>
+<p>積分区間の上下端を入れ替えると負号が1つ生じるため，変数変換で生じた負号との積は正になります。被積分関数の項を並べ替えると</p>
 <div class="arithmatex">\[
 \finalanswer{W(x, p) * = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \psi^*\left(x + \frac{u}{2}\right) \psi\left(x - \frac{u}{2}\right) \exp\left( -\frac{ipu}{\hbar} \right) du}
 \]</div>
@@ -14569,7 +14575,13 @@ W(x, p) * = \frac{1}{\pi\hbar} \int_{\infty}^{-\infty} \psi\left(x - \frac{u}{2}
 \]</div>
 <p>これらを <span class="arithmatex">\(4\sigma^2\)</span> で割った形で指数関数に戻し， <span class="arithmatex">\(y\)</span> に依存しない共通の塊を積分の外へ括り出します。</p>
 <div class="arithmatex">\[
-W_{\mathrm{int}}(x, p) = \frac{N^2}{\pi\hbar} \exp\left( -\frac{2x^2 + 2x_0^2}{4\sigma^2} \right) \left[ \exp\left( \frac{4xx_0}{4\sigma^2} \right) + \exp\left( -\frac{4xx_0}{4\sigma^2} \right) \right] \int_{-\infty}^{\infty} \exp\left( -\frac{y^2}{8\sigma^2} \right) \exp\left( -\frac{ipy}{\hbar} \right) dy
+\begin{aligned}
+W_{\mathrm{int}}(x,p)
+&amp;=\frac{N^2}{\pi\hbar}e^{-(x^2+x_0^2)/(2\sigma^2)}
+\left(e^{xx_0/\sigma^2}+e^{-xx_0/\sigma^2}\right) \\
+&amp;\quad\times\int_{-\infty}^{\infty}
+e^{-y^2/(8\sigma^2)}e^{-ipy/\hbar}\,dy
+\end{aligned}
 \]</div>
 <p>括弧の内部は双曲線関数を用いて <span class="arithmatex">\(2 \cosh\left( \frac{xx_0}{\sigma^2} \right)\)</span> とまとめられます。</p>
 <p>残った <span class="arithmatex">\(y\)</span> に関する積分は，基本問題で行ったものと全く同じガウス積分 <span class="arithmatex">\(a = \frac{1}{8\sigma^2}\)</span> の平方完成の形をしています。積分の実行結果は <span class="arithmatex">\(2\sqrt{2\pi\sigma^2} \exp\left( -\frac{2\sigma^2 p^2}{\hbar^2} \right)\)</span> となります。</p>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14557,7 +14557,7 @@
 \]</div>
 <p>被積分関数は，偶関数と奇関数 <span class="arithmatex">\(x\)</span> の積であるため，全体として奇関数になります。対称な区間 <span class="arithmatex">\([-\infty, \infty]\)</span> での奇関数の積分は 0 になります。</p>
 <div class="arithmatex">\[
-  \langle x \rangle = 0
+  \finalanswer{\langle x \rangle = 0}
 \]</div>
 <ul>
 <li><strong>運動量の期待値</strong>
@@ -14579,7 +14579,7 @@
 \]</div>
 <p>位置と運動量の平均値はともに 0 であり，これは粒子の分布の中心が原点にあることを示しています。</p>
 <h3 id="2">(2)</h3>
-<p>与えられた公式を用いて2乗平均の積分を行います。定数部分を <span class="arithmatex">\(a = \frac{m\omega}{\hbar}\)</span> と置くことで，見通しを良くして計算します。</p>
+<p>与えられた公式を用いて2乗平均を計算します。ここで， <span class="arithmatex">\(a = \frac{m\omega}{\hbar}\)</span> と置きます。</p>
 <ul>
 <li><strong>位置の2乗平均値</strong></li>
 </ul>
@@ -14595,7 +14595,7 @@
 \]</div>
 <p><span class="arithmatex">\(a\)</span> をもとの物理量に戻します。</p>
 <div class="arithmatex">\[
-  \langle x^2 \rangle = \frac{\hbar}{2m\omega}
+  \finalanswer{\langle x^2 \rangle = \frac{\hbar}{2m\omega}}
 \]</div>
 <ul>
 <li><strong>運動量の2乗平均値</strong>
@@ -14634,12 +14634,12 @@
 <h3 id="3">(3)</h3>
 <p>(1) より，位置と運動量の期待値がともに 0 であるため，それぞれの標準偏差は2乗平均値の平方根となります。</p>
 <div class="arithmatex">\[
-\Delta x = \sqrt{\langle x^2 \rangle} = \sqrt{\frac{\hbar}{2m\omega}}
+\finalanswer{\Delta x = \sqrt{\langle x^2 \rangle} = \sqrt{\frac{\hbar}{2m\omega}}}
 \]</div>
 <div class="arithmatex">\[
-\Delta p = \sqrt{\langle p^2 \rangle} = \sqrt{\frac{m\hbar\omega}{2}}
+\finalanswer{\Delta p = \sqrt{\langle p^2 \rangle} = \sqrt{\frac{m\hbar\omega}{2}}}
 \]</div>
-<p>これら2つの値を掛け算して，不確定性の積を求めます。根号の内部の質量 <span class="arithmatex">\(m\)</span> と角振動数 <span class="arithmatex">\(\omega\)</span> が分母分子で相殺されます。</p>
+<p>これら2つの値を掛けると，根号内の質量 <span class="arithmatex">\(m\)</span> と角振動数 <span class="arithmatex">\(\omega\)</span> の因子が約分されます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \Delta x \Delta p &amp;= \sqrt{\frac{\hbar}{2m\omega} \cdot \frac{m\hbar\omega}{2}} \\

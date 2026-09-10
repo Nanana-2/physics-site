@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14521,59 +14521,74 @@
 <p>時間発展演算子を細かく分割し，各時間ステップの間に位置の完全系を挿入していく手続きにより，量子力学の状態遷移確率をすべての可能な経路の足し合わせとして表す経路積分表示が導かれる。</p>
 <p>質量 <span class="arithmatex">\(m\)</span> ，ポテンシャル <span class="arithmatex">\(V(x)\)</span> の中を運動する粒子のハミルトニアンを <span class="arithmatex">\(\hat{H} = \hat{K} + \hat{V}\)</span> とする。ここで運動エネルギー項は <span class="arithmatex">\(\hat{K} = \hat{p}^2 / 2m\)</span> である。時刻 <span class="arithmatex">\(t_i\)</span> から <span class="arithmatex">\(t_f\)</span> までの時間を <span class="arithmatex">\(N\)</span> 等分し，微小な時間間隔を <span class="arithmatex">\(\epsilon = (t_f - t_i)/N\)</span> と置く。このとき，伝播核は次のように積の形式に分割できる。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| \left( e^{-i \hat{H} \epsilon / \hbar} \right)^N \right| x_i \right\rangle
+K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| \left( \exp\left(-i \hat{H} \epsilon / \hbar\right) \right)^N \right| x_i \right\rangle
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) <span class="arithmatex">\(j = 1, 2, \dots, N-1\)</span> に対する中間時刻を <span class="arithmatex">\(t_j = t_i + j\epsilon\)</span> とする。位置固有状態の完全性関係 <span class="arithmatex">\(\int |x_j\rangle \langle x_j| dx_j = 1\)</span> を分割された演算子の間に挿入し，伝播核を <span class="arithmatex">\(N\)</span> 個の短時間伝播核の積分として表せ。ただし，<span class="arithmatex">\(x_0 = x_i\)</span>，<span class="arithmatex">\(x_N = x_f\)</span> とする。</p>
-<p>(2) <span class="arithmatex">\(\epsilon\)</span> が十分に小さいとき，トロッター公式の簡易形である <span class="arithmatex">\(e^{-i(\hat{K}+\hat{V})\epsilon/\hbar} \approx e^{-i\hat{K}\epsilon/\hbar} e^{-i\hat{V}\epsilon/\hbar}\)</span> が成り立つ。これを用いて，1つの短時間伝播核を次のように変形せよ。</p>
+<p>(1) <span class="arithmatex">\(j = 1, 2, \dots, N-1\)</span> に対する中間時刻を <span class="arithmatex">\(t_j = t_i + j\epsilon\)</span> とする。位置固有状態の完全性関係</p>
 <div class="arithmatex">\[
-\langle x_{j} | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle \approx \langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle e^{-i V(x_{j-1}) \epsilon / \hbar}
+\int_{-\infty}^{\infty}|x_j\rangle\langle x_j|\,dx_j=1
 \]</div>
-<p>さらに，運動量固有状態の完全性関係 <span class="arithmatex">\(\int |p_j\rangle \langle p_j| dp_j = 1\)</span> および自由粒子の波動関数 <span class="arithmatex">\(\langle x | p \rangle = \frac{1}{\sqrt{2\pi\hbar}} e^{i p x / \hbar}\)</span> を挿入して <span class="arithmatex">\(p_j\)</span> のガウス積分を実行し，短時間伝播核の形を導け。必要であれば，以下の積分公式を利用せよ。</p>
+<p>を分割された演算子の間に挿入し，伝播核を <span class="arithmatex">\(N\)</span> 個の短時間伝播核の積分として表せ。ただし，<span class="arithmatex">\(x_0 = x_i\)</span>，<span class="arithmatex">\(x_N = x_f\)</span> とする。</p>
+<p>(2) <span class="arithmatex">\(\epsilon\)</span> が十分に小さいとき，トロッター公式の簡易形である <span class="arithmatex">\(\exp\left(-i(\hat{K}+\hat{V})\epsilon/\hbar\right) \approx \exp\left(-i\hat{K}\epsilon/\hbar\right) \exp\left(-i\hat{V}\epsilon/\hbar\right)\)</span> が成り立つ。これを用いて，1つの短時間伝播核を次のように変形せよ。</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} e^{-A p^2 + B p} dp = \sqrt{\frac{\pi}{A}} e^{B^2 / 4A}
+\langle x_{j} | \exp\left(-i \hat{H} \epsilon / \hbar\right) | x_{j-1} \rangle \approx \langle x_{j} | \exp\left(-i \hat{K} \epsilon / \hbar\right) | x_{j-1} \rangle \exp\left(-i V(x_{j-1}) \epsilon / \hbar\right)
 \]</div>
-<p>(3) (2) の結果を (1) の全空間積分へ代入し，指数部分を <span class="arithmatex">\(\epsilon \sum_{j=1}^{N}\)</span> の形式にまとめよ。 <span class="arithmatex">\(\epsilon \to 0\)</span> の極限において，この和が位置 <span class="arithmatex">\(x(t)\)</span> と速度 <span class="arithmatex">\(\dot{x}(t)\)</span> を用いた時間積分，すなわち古典力学の作用 <span class="arithmatex">\(S = \int L dt\)</span> を用いた次の経路積分の形式にまとめられることを示せ。</p>
+<p>さらに，運動量固有状態の完全性関係</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}
+\int_{-\infty}^{\infty}|p_j\rangle\langle p_j|\,dp_j=1
+\]</div>
+<p>および自由粒子の波動関数 <span class="arithmatex">\(\langle x | p \rangle = \frac{1}{\sqrt{2\pi\hbar}} \exp\left(i p x / \hbar\right)\)</span> を挿入して <span class="arithmatex">\(p_j\)</span> のガウス積分を実行し，短時間伝播核の形を導け。必要であれば，以下の積分公式を利用せよ。</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \exp\left(-A p^2 + B p\right) dp = \sqrt{\frac{\pi}{A}} \exp\left(B^2 / 4A\right)
+\]</div>
+<p>(3) (2) の結果を (1) の全空間積分へ代入し，指数部分を <span class="arithmatex">\(\epsilon \sum_{j=1}^{N}\)</span> の形式にまとめよ。 <span class="arithmatex">\(\epsilon \to 0\)</span> の極限において，この和が位置 <span class="arithmatex">\(x(t)\)</span> と速度 <span class="arithmatex">\(\dot{x}(t)\)</span> を用いた時間積分となることを示せ。古典力学の作用を</p>
+<div class="arithmatex">\[
+S[x(t)]=\int_{t_i}^{t_f}L(x,\dot{x})\,dt
+\]</div>
+<p>と定義し，伝播核を次の経路積分の形に表せ。</p>
+<div class="arithmatex">\[
+K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] \exp\left(i S[x(t)] / \hbar\right)
 \]</div>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>時間発展演算子を <span class="arithmatex">\(N\)</span> 個の因数に並べた式に対し，それぞれの積の間に合計 <span class="arithmatex">\(N-1\)</span> 個の完全系を挿入します。</p>
+<p>短時間伝播核を</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \left\langle x_f \left| e^{-i \hat{H} \epsilon / \hbar} e^{-i \hat{H} \epsilon / \hbar} \cdots e^{-i \hat{H} \epsilon / \hbar} \right| x_i \right\rangle
+K_\epsilon(x_j,x_{j-1})
+=\langle x_j|\exp(-i\hat H\epsilon/\hbar)|x_{j-1}\rangle
 \]</div>
+<p>と置きます。<span class="arithmatex">\(N-1\)</span> 個の完全系を挿入し，<span class="arithmatex">\(x_0=x_i\)</span>，<span class="arithmatex">\(x_N=x_f\)</span> とすれば，伝播核は</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \int \cdots \int \langle x_f | e^{-i \hat{H} \epsilon / \hbar} | x_{N-1} \rangle \langle x_{N-1} | e^{-i \hat{H} \epsilon / \hbar} | x_{N-2} \rangle \cdots \langle x_1 | e^{-i \hat{H} \epsilon / \hbar} | x_i \rangle dx_1 \cdots dx_{N-1}
+\finalanswer{K(x_f,t_f;x_i,t_i)
+=\int_{\mathbb{R}^{N-1}}
+\prod_{j=1}^{N}K_\epsilon(x_j,x_{j-1})\,d^{N-1}x}
 \]</div>
-<p>境界の条件を <span class="arithmatex">\(x_0 = x_i\)</span> ， <span class="arithmatex">\(x_N = x_f\)</span> と書き換えて，総乗の記号 <span class="arithmatex">\(\prod\)</span> でまとめます。</p>
-<div class="arithmatex">\[
-\finalanswer{K(x_f, t_f; x_i, t_i) = \int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} \left[ \prod_{j=1}^{N} \langle x_j | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle \right] dx_1 \cdots dx_{N-1}}
-\]</div>
-<p>これにより，全体の伝播核が短時間伝播核の多重積分に分解されました。</p>
+<p>と表されます。ここで <span class="arithmatex">\(d^{N-1}x=dx_1\cdots dx_{N-1}\)</span> です。</p>
 <h3 id="2">(2)</h3>
 <p>提示された近似式を用いて，ポテンシャルエネルギー演算子 <span class="arithmatex">\(\hat{V}\)</span> を右側の状態 <span class="arithmatex">\(\langle x_{j-1} |\)</span> に作用させて固有値 <span class="arithmatex">\(V(x_{j-1})\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
-\langle x_{j} | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle \approx \langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle e^{-i V(x_{j-1}) \epsilon / \hbar}
+\langle x_{j} | \exp\left(-i \hat{H} \epsilon / \hbar\right) | x_{j-1} \rangle \approx \langle x_{j} | \exp\left(-i \hat{K} \epsilon / \hbar\right) | x_{j-1} \rangle \exp\left(-i V(x_{j-1}) \epsilon / \hbar\right)
 \]</div>
 <p>残った運動エネルギーの部分の間に，運動量の完全系を挿入します。</p>
 <div class="arithmatex">\[
-\langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle = \int_{-\infty}^{\infty} \langle x_j | p_j \rangle \langle p_j | e^{-i \hat{p}^2 \epsilon / 2m\hbar} | x_{j-1} \rangle dp_j
+\langle x_{j} | \exp\left(-i \hat{K} \epsilon / \hbar\right) | x_{j-1} \rangle = \int_{-\infty}^{\infty} \langle x_j | p_j \rangle \langle p_j | \exp\left(-i \hat{p}^2 \epsilon / 2m\hbar\right) | x_{j-1} \rangle dp_j
 \]</div>
 <p>演算子 <span class="arithmatex">\(\hat{p}\)</span> を固有値 <span class="arithmatex">\(p_j\)</span> に変え，平面波の関数を代入します。</p>
 <div class="arithmatex">\[
-\langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle = \int_{-\infty}^{\infty} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{i p_j x_j / \hbar} \right) e^{-i p_j^2 \epsilon / 2m\hbar} \left( \frac{1}{\sqrt{2\pi\hbar}} e^{-i p_j x_{j-1} / \hbar} \right) dp_j
-\]</div>
-<div class="arithmatex">\[
-\langle x_{j} | e^{-i \hat{K} \epsilon / \hbar} | x_{j-1} \rangle = \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} e^{- \frac{i\epsilon}{2m\hbar} p_j^2 + \frac{i(x_j - x_{j-1})}{\hbar} p_j } dp_j
+\begin{aligned}
+\langle x_j|\exp\left(-i\hat K\epsilon/\hbar\right)|x_{j-1}\rangle
+&amp;=\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}
+\exp\Biggl[-\frac{i\epsilon}{2m\hbar}p_j^2
++\frac{i(x_j-x_{j-1})}{\hbar}p_j\Biggr]dp_j
+\end{aligned}
 \]</div>
 <p>提示された公式を適用するため，係数を <span class="arithmatex">\(A = \frac{i\epsilon}{2m\hbar}\)</span> ， <span class="arithmatex">\(B = \frac{i(x_j - x_{j-1})}{\hbar}\)</span> と置きます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\sqrt{\frac{\pi}{A}} &amp;= \sqrt{\frac{2\pi m\hbar}{i\epsilon}} \\
-&amp;= \sqrt{\frac{2\pi m\hbar \cdot i}{-\epsilon}} \implies \frac{1}{2\pi\hbar} \sqrt{\frac{2\pi m\hbar}{i\epsilon}} \\
-&amp;= \sqrt{\frac{m}{2\pi i \hbar \epsilon}}
+\sqrt{\frac{\pi}{A}}
+&amp;=\sqrt{\frac{2\pi m\hbar}{i\epsilon}},\\
+\frac{1}{2\pi\hbar}\sqrt{\frac{\pi}{A}}
+&amp;=\sqrt{\frac{m}{2\pi i\hbar\epsilon}}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
@@ -14585,24 +14600,46 @@ K(x_f, t_f; x_i, t_i) = \int \cdots \int \langle x_f | e^{-i \hat{H} \epsilon / 
 \]</div>
 <p>これらをまとめてポテンシャルの因子と掛け合わせると，短時間伝播核が得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle x_{j} | e^{-i \hat{H} \epsilon / \hbar} | x_{j-1} \rangle = \sqrt{\frac{m}{2\pi i \hbar \epsilon}} e^{\frac{i}{\hbar} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 - V(x_{j-1}) \right] \epsilon}}
+\begin{aligned}
+\langle x_j|\exp\left(-i\hat H\epsilon/\hbar\right)|x_{j-1}\rangle
+&amp;=\sqrt{\frac{m}{2\pi i\hbar\epsilon}}
+\exp\left\{\frac{i\epsilon}{\hbar}\left[
+\frac{m}{2}\left(\frac{x_j-x_{j-1}}{\epsilon}\right)^2
+-V(x_{j-1})\right]\right\}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の結果を (1) の多重積分に代入します。</p>
 <div class="arithmatex">\[
-K(x_f, t_f; x_i, t_i) = \int \cdots \int \left( \frac{m}{2\pi i \hbar \epsilon} \right)^{N/2} e^{\frac{i}{\hbar} \sum_{j=1}^{N} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 - V(x_{j-1}) \right] \epsilon} dx_1 \cdots dx_{N-1}
+\begin{aligned}
+K(x_f,t_f;x_i,t_i)
+&amp;=\int\cdots\int
+\left(\frac{m}{2\pi i\hbar\epsilon}\right)^{N/2}\\
+&amp;\quad\times\exp\left\{\frac{i\epsilon}{\hbar}
+\sum_{j=1}^{N}\left[
+\frac{m}{2}\left(\frac{x_j-x_{j-1}}{\epsilon}\right)^2
+-V(x_{j-1})\right]\right\}
+\prod_{j=1}^{N-1}dx_j
+\end{aligned}
 \]</div>
 <p>ここで <span class="arithmatex">\(\epsilon \to 0\)</span> の極限をとると，差分表現は微分へと移行します。</p>
 <div class="arithmatex">\[
 \frac{x_j - x_{j-1}}{\epsilon} \to \dot{x}(t), \quad V(x_{j-1}) \to V(x(t))
 \]</div>
-<p>括弧の内部はラグランジアン <span class="arithmatex">\(L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)\)</span> となり，時間に関する和の記号は積分へと変化します。</p>
+<p>括弧の内部をラグランジアン <span class="arithmatex">\(L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)\)</span> とみなすと，和は連続極限で</p>
 <div class="arithmatex">\[
-\sum_{j=1}^{N} \left[ \frac{m}{2} \left( \frac{x_j - x_{j-1}}{\epsilon} \right)^2 - V(x_{j-1}) \right] \epsilon \to \int_{t_i}^{t_f} L(x(t), \dot{x}(t)) dt = S[x(t)]
+\epsilon\sum_{j=1}^{N}\left[
+\frac{m}{2}\left(\frac{x_j-x_{j-1}}{\epsilon}\right)^2
+-V(x_{j-1})\right]
+\longrightarrow\int_{t_i}^{t_f}L(x,\dot x)\,dt
 \]</div>
-<p>積分測度を <span class="arithmatex">\(\mathcal{D}[x(t)] = \lim_{N \to \infty} \left( \frac{m}{2\pi i \hbar \epsilon} \right)^{N/2} dx_1 \cdots dx_{N-1}\)</span> と定義することで，求める形式が導かれます。</p>
+<p>となります。作用の定義より，</p>
 <div class="arithmatex">\[
-\finalanswer{K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] e^{i S[x(t)] / \hbar}}
+S[x(t)]=\int_{t_i}^{t_f}L(x,\dot x)\,dt
+\]</div>
+<p>積分測度を <span class="arithmatex">\(\mathcal{D}[x(t)] = \lim_{N \to \infty} \left( \frac{m}{2\pi i \hbar \epsilon} \right)^{N/2} dx_1 \cdots dx_{N-1}\)</span> と定義することで，求める形式が得られます。</p>
+<div class="arithmatex">\[
+\finalanswer{K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] \exp\left(i S[x(t)] / \hbar\right)}
 \]</div>
 
 

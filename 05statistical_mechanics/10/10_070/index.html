@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,7 +14522,7 @@
 <div class="arithmatex">\[
 F(T, m) = F_0(T) + \frac{a(T)}{2} m^2 + \frac{b}{4} m^4
 \]</div>
-<p>ここで <span class="arithmatex">\(F_0(T)\)</span> は秩序度に関係のない背景の自由エネルギーであり， <span class="arithmatex">\(b\)</span> は温度に依存しない正の定数 <span class="arithmatex">\(b &gt; 0\)</span> とする。二次相転移を再現するため， <span class="arithmatex">\(m^2\)</span> の係数 <span class="arithmatex">\(a(T)\)</span> は転移温度 <span class="arithmatex">\(T_c\)</span> の前後で符号が変化する性質を持ち， <span class="arithmatex">\(a(T) = a_0 (T - T_c)\)</span> <span class="arithmatex">\(a_0 &gt; 0\)</span> と表されるものとする。以下の問いに答えよ。</p>
+<p>ここで <span class="arithmatex">\(F_0(T)\)</span> は秩序度に依存しない背景の自由エネルギーであり，<span class="arithmatex">\(b&gt;0\)</span> は温度に依存しない定数とする。また，<span class="arithmatex">\(a(T)=a_0(T-T_c)\)</span>，<span class="arithmatex">\(a_0&gt;0\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 高温相 <span class="arithmatex">\(T &gt; T_c\)</span> と低温相 <span class="arithmatex">\(T &lt; T_c\)</span> のそれぞれの場合について， <span class="arithmatex">\(F(T, m)\)</span> が最小値をとるような秩序変数 <span class="arithmatex">\(m\)</span> の値を求めよ。</p>
 <p>(2) (1) の結果から，温度が <span class="arithmatex">\(T_c\)</span> を下回ったときに自発磁化 <span class="arithmatex">\(m\)</span> が現れる挙動が，臨界指数 <span class="arithmatex">\(\beta\)</span> を用いたべき乗規則 <span class="arithmatex">\(m \propto (T_c - T)^\beta\)</span> に従うことを示し，ランダウ理論における臨界指数 <span class="arithmatex">\(\beta\)</span> の値を決定せよ。</p>
 <p>(3) 各相の平衡自由エネルギー <span class="arithmatex">\(F_{\mathrm{eq}}(T)\)</span> を求め，熱容量の跳び <span class="arithmatex">\(\Delta C_V = C_V(T \to T_c^-) - C_V(T \to T_c^+)\)</span> を <span class="arithmatex">\(T_c,a_0,b\)</span> で表せ。</p>
@@ -14560,12 +14560,12 @@ m_{\mathrm{eq}} &amp;= \pm \sqrt{\frac{a_0(T_c - T)}{b}} \\
 &amp;= \pm \left(\frac{a_0}{b}\right)^{1/2} (T_c - T)^{1/2}
 \end{aligned}
 \]</div>
-<p>この式は，温度が <span class="arithmatex">\(T_c\)</span> を下回ると同時に，それまで対称性の中心であった <span class="arithmatex">\(m=0\)</span> から秩序変数が滑らかに左右へ現れる挙動を数学的に示しています。
+<p>温度が <span class="arithmatex">\(T_c\)</span> を下回ると，<span class="arithmatex">\(m=0\)</span> 以外の二つの平衡値が現れます。
 これをべき乗規則 <span class="arithmatex">\(m \propto (T_c - T)^\beta\)</span> と比較すると，ランダウ理論における自発磁化の臨界指数は以下の値をとることがわかります。</p>
 <div class="arithmatex">\[
 \beta = \frac{1}{2} = \finalanswer{0.5}
 \]</div>
-<p>この値はイジング模型の平均場近似から得られた指数と一致しており，ランダウ理論が平均場的なマクロ表現の同じ近似に基づくことを意味します。</p>
+<p>この値は，イジング模型の平均場近似で得られる臨界指数と一致します。</p>
 <h3 id="3">(3)</h3>
 <p>それぞれの温度領域において，平衡状態での自由エネルギー <span class="arithmatex">\(F_{\mathrm{eq}}(T)\)</span> を求めます。</p>
 <ul>
@@ -14609,12 +14609,9 @@ C_V(T \to T_c^+) = C_0
 \]</div>
 <p>したがって，低温相側から転移点に近づけたときの熱容量は以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-C_V(T \to T_c^-) &amp;= C_0 - T_c \left( -\frac{a_0^2}{2b} \right) \\
-&amp;= C_0 + \frac{a_0^2 T_c}{2b}
-\end{aligned}
+C_V(T \to T_c^-) = C_0 - T_c \left( -\frac{a_0^2}{2b} \right) = C_0 + \frac{a_0^2 T_c}{2b}
 \]</div>
-<p>両側の極限値の差をとることで，二次相転移点における熱容量の不連続な跳びの大きさが導出されます。</p>
+<p>両側の極限値の差をとることで，二次相転移点における熱容量の不連続な跳びの大きさを得ます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \Delta C_V &amp;= \left( C_0 + \frac{a_0^2 T_c}{2b} \right) - C_0 \\

@@ -3672,34 +3672,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14610,10 +14610,10 @@ U(t) = \frac{1}{2} k x^2 \approx \frac{1}{2} k A^2 e^{-2\gamma t} \cos^2(\omega_
 \]</div>
 <p>となります。</p>
 <p>1周期 <span class="arithmatex">\(T = \frac{2\pi}{\omega_0}\)</span> の間，減衰因子 <span class="arithmatex">\(e^{-2\gamma t}\)</span> はほぼ一定とみなせるため，時間平均をとる積分計算の際，この因子を積分の外にくくり出すことができます。</p>
-<p>三角関数の1周期にわたる時間平均について，以下の公式が成り立ちます。
-$$
+<p>三角関数の1周期にわたる時間平均について，以下の公式が成り立ちます。</p>
+<div class="arithmatex">\[
 \frac{1}{T} \int_{t}^{t+T} \sin^2(\omega_0 t' + \phi) dt' = \frac{1}{2}
-$$</p>
+\]</div>
 <div class="arithmatex">\[
 \frac{1}{T} \int_{t}^{t+T} \cos^2(\omega_0 t' + \phi) dt' = \frac{1}{2}
 \]</div>
@@ -14621,7 +14621,7 @@ $$</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle K(t) \rangle &amp;\approx \frac{1}{2} k A^2 e^{-2\gamma t} \cdot \frac{1}{T} \int_{t}^{t+T} \sin^2(\omega_0 t' + \phi) dt' \\\\
-&amp;= \frac{1}{4} k A^2 e^{-2\gamma t}
+&amp;= \finalanswer{\frac{1}{4} k A^2 e^{-2\gamma t}}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
@@ -14637,7 +14637,7 @@ $$</p>
 \begin{aligned}
 \langle E(t) \rangle &amp;= \langle K(t) \rangle + \langle U(t) \rangle \\
 &amp;= \frac{1}{4} k A^2 e^{-2\gamma t} + \frac{1}{4} k A^2 e^{-2\gamma t} \\
-&amp;= \frac{1}{2} k A^2 e^{-2\gamma t}
+&amp;= \finalanswer{\frac{1}{2} k A^2 e^{-2\gamma t}}
 \end{aligned}
 \]</div>
 <p>この両辺を時間 <span class="arithmatex">\(t\)</span> で微分します。</p>
@@ -14650,7 +14650,7 @@ $$</p>
 \]</div>
 <p>したがって，時間平均された全エネルギーは以下の微分方程式を満たします。</p>
 <div class="arithmatex">\[
-\frac{d\langle E \rangle}{dt} = -2\gamma \langle E \rangle
+\finalanswer{\frac{d\langle E \rangle}{dt} = -2\gamma \langle E \rangle}
 \]</div>
 <p>この微分方程式の解は，初期時刻 <span class="arithmatex">\(t=0\)</span> における平均エネルギーを <span class="arithmatex">\(\langle E(0) \rangle = \frac{1}{2} k A^2\)</span> とすると，次のように与えられます。</p>
 <div class="arithmatex">\[

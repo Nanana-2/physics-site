@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p>孤立した容器の中に，互いに相互作用をしない区別可能な <span class="arithmatex">\(N\)</span> 個の粒子からなる気体が存在している。容器の内部は中央の仮想的な境界によって左側と右側の2つの等しい領域に分かれており，粒子はどちらの領域にも等しい確率で入ることができるものとする。左側の領域に存在する粒子数を <span class="arithmatex">\(n\)</span>，右側の領域に存在する粒子数を <span class="arithmatex">\(N-n\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) 左側の領域にちょうど <span class="arithmatex">\(n\)</span> 個の粒子が存在するときの微視的状態数 <span class="arithmatex">\(\Omega(n)\)</span> を求めよ。</p>
-<p>(2) ボルツマンのエントロピー公式 <span class="arithmatex">\(S(n) = k_B \log \Omega(n)\)</span> にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用し，エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(n\)</span> を用いて表せ。</p>
+<p>(2) ボルツマンのエントロピー公式 <span class="arithmatex">\(S(n) = k_{\text{B}} \log \Omega(n)\)</span> にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用し，エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(n\)</span> を用いて表せ。</p>
 <p>(3) エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(n\)</span> について微分し，最大値をとる <span class="arithmatex">\(n\)</span> を求めよ。さらに，<span class="arithmatex">\(n=N/2+\delta n\)</span> と置いて <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(\delta n\)</span> の2次まで展開し，状態数の比が</p>
 <div class="arithmatex">\[
 \frac{\Omega(N/2+\delta n)}{\Omega(N/2)} \simeq \exp\left[-\frac{2(\delta n)^2}{N}\right]
@@ -14537,54 +14537,60 @@
 <p>ボルツマンのエントロピー公式に (1) の結果を代入し，対数の性質を用いて展開します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S(n) &amp;= k_B \log \left[ \frac{N!}{n!(N-n)!} \right] \\
-&amp;= k_B \left[ \log N! - \log n! - \log (N-n)! \right]
+S(n) &amp;= k_{\text{B}} \log \left[ \frac{N!}{n!(N-n)!} \right] \\
+&amp;= k_{\text{B}} \left[ \log N! - \log n! - \log (N-n)! \right]
 \end{aligned}
 \]</div>
 <p>ここで，各項にスターリングの公式を適用します。</p>
 <div class="arithmatex">\[
-S(n) \simeq k_B \left[ (N \log N - N) - (n \log n - n) - \{ (N-n) \log (N-n) - (N-n) \} \right]
+S(n) \simeq k_{\text{B}} \left[ (N \log N - N) - (n \log n - n) - \{ (N-n) \log (N-n) - (N-n) \} \right]
 \]</div>
-<p>括弧内の定数項 <span class="arithmatex">\(-N + n + (N-n) = 0\)</span> となって相殺されるため，エントロピーは以下のようになります。</p>
+<p>括弧内の定数項は <span class="arithmatex">\(-N+n+(N-n)=0\)</span> なので，エントロピーは</p>
 <div class="arithmatex">\[
-\finalanswer{S(n) \simeq k_B \left[ N \log N - n \log n - (N-n) \log (N-n) \right]}
+\finalanswer{S(n) \simeq k_{\text{B}} \left[ N \log N - n \log n - (N-n) \log (N-n) \right]}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>エントロピー <span class="arithmatex">\(S(n)\)</span> が最大となる条件を調べるため，<span class="arithmatex">\(n\)</span> に関する1階微分を計算して 0 とおきます。</p>
-<div class="arithmatex">\[
-\frac{dS(n)}{dn} = k_B \left[ - \left( \log n + n \cdot \frac{1}{n} \right) - \left( - \log (N-n) + (N-n) \cdot \frac{1}{N-n} \cdot (-1) \right) \right]
-\]</div>
+<p>エントロピー <span class="arithmatex">\(S(n)\)</span> を <span class="arithmatex">\(n\)</span> で微分すると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{dS(n)}{dn} &amp;= k_B \left[ - \log n - 1 + \log (N-n) + 1 \right] \\
-&amp;= k_B \log \left( \frac{N-n}{n} \right)
+\frac{dS(n)}{dn}
+&amp;= k_{\text{B}} \left[-(\log n+1)+\log(N-n)+1\right] \\
+&amp;= k_{\text{B}} \log \left( \frac{N-n}{n} \right)
 \end{aligned}
 \]</div>
-<p>極値をとる条件 <span class="arithmatex">\(\frac{dS(n)}{dn} = 0\)</span> より，以下の関係式が得られます。</p>
+<p>となります。極値条件 <span class="arithmatex">\(dS/dn=0\)</span> より，</p>
 <div class="arithmatex">\[
-\frac{N-n}{n} = 1
+\frac{N-n}{n}=1,\qquad \finalanswer{n=\frac{N}{2}}
 \]</div>
+<p>を得ます。さらに，</p>
 <div class="arithmatex">\[
-\finalanswer{n = \frac{N}{2}}
+\frac{d^2S}{dn^2}
+=-k_{\text{B}}\left(\frac{1}{n}+\frac{1}{N-n}\right)&lt;0
 \]</div>
-<p>2階微分を計算すると <span class="arithmatex">\(\frac{d^2S}{dn^2} = -k_B \left( \frac{1}{n} + \frac{1}{N-n} \right) &lt; 0\)</span> となるため，<span class="arithmatex">\(n = N/2\)</span> のときにエントロピーは確かに最大値をとります。</p>
+<p>であるため，<span class="arithmatex">\(S(n)\)</span> は <span class="arithmatex">\(n=N/2\)</span> で最大となります。</p>
 <p><span class="arithmatex">\(n=N/2\)</span> におけるエントロピーと2階微分は</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S\left(\frac{N}{2}\right) &amp;= Nk_B\log 2,\qquad \left.\frac{d^2S}{dn^2}\right|_{n=N/2} \\
-&amp;= -\frac{4k_B}{N}
+S\left(\frac{N}{2}\right)&amp;=Nk_{\text{B}}\log 2, \\
+\left.\frac{d^2S}{dn^2}\right|_{n=N/2}&amp;=-\frac{4k_{\text{B}}}{N}
 \end{aligned}
 \]</div>
-<p>です。したがって，<span class="arithmatex">\(n=N/2+\delta n\)</span> として2次まで展開すると，</p>
+<p>です。<span class="arithmatex">\(n=N/2+\delta n\)</span> と置いて2次まで展開すると，1階微分は <span class="arithmatex">\(n=N/2\)</span> で0であるため，</p>
 <div class="arithmatex">\[
+\begin{aligned}
 S\left(\frac{N}{2}+\delta n\right)
-\simeq Nk_B\log 2-\frac{2k_B}{N}(\delta n)^2
+&amp;\simeq S\left(\frac{N}{2}\right)
++\frac{1}{2}\left.\frac{d^2S}{dn^2}\right|_{n=N/2}(\delta n)^2 \\
+&amp;=Nk_{\text{B}}\log 2-\frac{2k_{\text{B}}}{N}(\delta n)^2
+\end{aligned}
 \]</div>
-<p>となります。<span class="arithmatex">\(S=k_B\log\Omega\)</span> を用いれば，状態数の比は</p>
+<p>となります。<span class="arithmatex">\(S=k_{\text{B}}\log\Omega\)</span> を用いれば，状態数の比は</p>
 <div class="arithmatex">\[
+\begin{aligned}
 \frac{\Omega(N/2+\delta n)}{\Omega(N/2)}
-=\exp\left[\frac{S(N/2+\delta n)-S(N/2)}{k_B}\right]
-\simeq \exp\left[-\frac{2(\delta n)^2}{N}\right]
+&amp;=\exp\left[\frac{S(N/2+\delta n)-S(N/2)}{k_{\text{B}}}\right] \\
+&amp;\simeq \finalanswer{\exp\left[-\frac{2(\delta n)^2}{N}\right]}
+\end{aligned}
 \]</div>
 <p>です。したがって，粒子数のずれの典型的な大きさは <span class="arithmatex">\(\sqrt{N}\)</span> のオーダーであり，相対的なずれは <span class="arithmatex">\(1/\sqrt{N}\)</span> のオーダーで0に近づきます。</p>
 

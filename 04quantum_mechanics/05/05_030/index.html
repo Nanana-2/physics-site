@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14554,17 +14554,18 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <div class="arithmatex">\[
 \left( \frac{d^2H}{d\xi^2} - 2\xi \frac{dH}{d\xi} + (\xi^2 - 1)H \right) + (\lambda - \xi^2)H = 0
 \]</div>
-<p><span class="arithmatex">\(\xi^2 H\)</span> の項が互いに相殺されるため，式を整理すると目的の微分方程式が得られます。</p>
+<p><span class="arithmatex">\(\xi^2 H\)</span> を含む項は符号が逆なので，その和は 0 です。残りの項を整理すると，目的の微分方程式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{d^2 H}{d\xi^2} - 2\xi \frac{dH}{d\xi} + (\lambda - 1)H = 0}
 \]</div>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(H(\xi) = \sum_{m=0}^{\infty} c_m \xi^m\)</span> の各階微分を計算して方程式に代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dH}{d\xi} &amp;= \sum_{m=1}^{\infty} m c_m \xi^{m-1} \implies 2\xi \frac{dH}{d\xi} \\
-&amp;= \sum_{m=0}^{\infty} 2m c_m \xi^m
-\end{aligned}
+\begin{gathered}
+\frac{dH}{d\xi}=\sum_{m=1}^{\infty}mc_m\xi^{m-1} \\
+\Longrightarrow\quad
+2\xi\frac{dH}{d\xi}=\sum_{m=0}^{\infty}2mc_m\xi^m
+\end{gathered}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14580,7 +14581,7 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <div class="arithmatex">\[
 (m+2)(m+1) c_{m+2} - (2m + 1 - \lambda)c_m = 0
 \]</div>
-<p>これを <span class="arithmatex">\(c_{m+2}\)</span> について解くことで，係数の漸化式が導かれます。</p>
+<p>これを <span class="arithmatex">\(c_{m+2}\)</span> について解くことで，係数の漸化式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m}
 \]</div>
@@ -14608,7 +14609,7 @@ c_{m+2} = \frac{2m + 1 - \lambda}{(m+1)(m+2)} c_m
 <div class="arithmatex">\[
 \finalanswer{\frac{2E_n}{\hbar\omega} = 2n + 1 \implies E_n = \left(n + \frac{1}{2}\right)\hbar\omega}
 \]</div>
-<p>これにより，一般の量子数 <span class="arithmatex">\(n\)</span> に対するエネルギー固有値の等間隔な準位構造が厳密に導かれました。</p>
+<p>したがって，一般の量子数 <span class="arithmatex">\(n\)</span> に対してエネルギー準位は等間隔になります。</p>
 
 
 

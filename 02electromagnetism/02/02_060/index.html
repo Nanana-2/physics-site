@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14519,9 +14519,9 @@
 <h1 id="_1">鏡像法による点電荷と接地導体平面</h1>
 <h2 id="_2">問題</h2>
 <p>真空中の領域 <span class="arithmatex">\(z&gt;0\)</span> を考える。<span class="arithmatex">\(z=0\)</span> には電位が常にゼロに保たれた無限接地導体平面があり，点電荷 <span class="arithmatex">\(q&gt;0\)</span> を <span class="arithmatex">\((0,0,a)\)</span> に固定する。<span class="arithmatex">\(a&gt;0\)</span> とし，円筒座標を <span class="arithmatex">\((\rho,\varphi,z)\)</span> とする。領域 <span class="arithmatex">\(z&gt;0\)</span> の電位を <span class="arithmatex">\(\phi(\rho,z)\)</span>，導体表面の誘導電荷密度を <span class="arithmatex">\(\sigma_s(\rho)\)</span>，誘導電荷の総量を <span class="arithmatex">\(Q_{\mathrm{ind}}\)</span> とする。</p>
-<p>(1) 導体を取り除いた仮想的な全空間で <span class="arithmatex">\((0,0,-a)\)</span> に鏡像電荷 <span class="arithmatex">\(-q\)</span> を置く。二点電荷の重ね合わせから <span class="arithmatex">\(\phi(\rho,z)\)</span> を求め，<span class="arithmatex">\(\phi(\rho,0)=0\)</span> と無限遠での条件を満たすことを示せ。</p>
+<p>(1) 導体を取り除いた仮想的な全空間で <span class="arithmatex">\((0,0,-a)\)</span> に鏡像電荷 <span class="arithmatex">\(-q\)</span> を置く。二点電荷の重ね合わせから <span class="arithmatex">\(\phi(\rho,z)\)</span> を求めよ。</p>
 <p>(2) 表面直外の法線電場を <span class="arithmatex">\(E_z(\rho,0^+)=-\partial\phi/\partial z\)</span> から求め，境界条件 <span class="arithmatex">\(\sigma_s=\varepsilon_0E_z(0^+)\)</span> を用いて <span class="arithmatex">\(\sigma_s(\rho)\)</span> を導出せよ。面積要素 <span class="arithmatex">\(dS=2\pi\rho\,d\rho\)</span> を用いて平面全体で積分し，<span class="arithmatex">\(Q_{\mathrm{ind}}\)</span> を求めよ。</p>
-<p>(3) 実電荷に働く力を <span class="arithmatex">\(\boldsymbol{F}=F_z\boldsymbol{e}_z\)</span> と定義し，鏡像電荷による電場から <span class="arithmatex">\(F_z\)</span> を求めよ。点電荷を無限遠から高さ <span class="arithmatex">\(a\)</span> まで準静的に運ぶ外力の仕事を <span class="arithmatex">\(W_{\mathrm{ext}}\)</span> として力を積分し，<span class="arithmatex">\(W_{\mathrm{ext}}\)</span> を求めよ。最後に <span class="arithmatex">\(W_{\mathrm{ext}}=\frac12q\phi_{\mathrm{image}}\)</span> となる理由を説明せよ。</p>
+<p>(3) 鏡像電荷による電場から実電荷に働く力 <span class="arithmatex">\(\boldsymbol{F}=F_z\boldsymbol{e}_z\)</span> を求めよ。点電荷を無限遠から高さ <span class="arithmatex">\(a\)</span> まで準静的に運ぶ外力の仕事 <span class="arithmatex">\(W_{\mathrm{ext}}\)</span> も求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14546,7 +14546,6 @@ E_z(\rho,0)
 =-\frac{qa}{2\pi(\rho^2+a^2)^{3/2}}
 \]</div>
 <p>です。</p>
-<p><strong>誘導電荷の総量</strong></p>
 <p>面積要素は <span class="arithmatex">\(dS=2\pi\rho\,d\rho\)</span> です。</p>
 <p><span class="arithmatex">\(u=\rho^2+a^2\)</span> と置くと <span class="arithmatex">\(du=2\rho\,d\rho\)</span> であり，積分範囲は <span class="arithmatex">\(u=a^2\)</span> から <span class="arithmatex">\(\infty\)</span> へ変わります。したがって</p>
 <div class="arithmatex">\[
@@ -14559,7 +14558,7 @@ Q_{\mathrm{ind}}
 &amp;=-\frac{qa}{2}
 \left[-2u^{-1/2}\right]_{a^2}^{\infty} \\
 &amp;=-qa\left(0+\frac{1}{a}\right) \\
-&amp;=\finalanswer{-q}.
+&amp;=\finalanswer{-q}
 \end{aligned}
 \]</div>
 <p>となります。</p>
@@ -14571,7 +14570,6 @@ Q_{\mathrm{ind}}
 =-\frac{q^2}{16\pi\varepsilon_0a^2}\boldsymbol{e}_z
 \]</div>
 <p>力は導体平面へ向かう引力です。</p>
-<p><strong>力から求める仕事</strong></p>
 <p>高さ <span class="arithmatex">\(z\)</span> での力を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14579,7 +14577,7 @@ W_{\mathrm{ext}}
 &amp;=\int_\infty^a\frac{q^2}{16\pi\varepsilon_0z^2}\,dz \\
 &amp;=\frac{q^2}{16\pi\varepsilon_0}
 \left[-\frac{1}{z}\right]_{\infty}^{a} \\
-&amp;=-\frac{q^2}{16\pi\varepsilon_0a}.
+&amp;=-\frac{q^2}{16\pi\varepsilon_0a}
 \end{aligned}
 \]</div>
 <p>です。鏡像電荷が実電荷位置に作る電位は <span class="arithmatex">\(-q/(8\pi\varepsilon_0a)\)</span> なので</p>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14523,7 +14523,7 @@
 <div class="arithmatex">\[
 H = -J \sum_{i=1}^N s_i s_{i+1} - B \sum_{i=1}^N s_i
 \]</div>
-<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。以下の問いに答えよ。</p>
+<p>逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 系の分配関数 <span class="arithmatex">\(Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} \exp(-\beta H)\)</span> は，隣り合う2つのスピン状態の組み合わせに関する指数の積として，以下の形に書き下すことができる。</p>
 <div class="arithmatex">\[
 Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} P(s_1, s_2) P(s_2, s_3) \dots P(s_N, s_1)
@@ -14539,19 +14539,13 @@ Z = \sum_{s_1} \sum_{s_2} \dots \sum_{s_N} P(s_1, s_2) P(s_2, s_3) \dots P(s_N, 
 <li><span class="arithmatex">\(s_i = 1, s_{i+1} = 1\)</span> のとき</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
-P(1, 1) &amp;= \exp[ \beta J (1)(1) + \frac{\beta B}{2} (1 + 1) ] \\
-&amp;= \exp( \beta J + \beta B )
-\end{aligned}
+P(1, 1) = \exp[ \beta J (1)(1) + \frac{\beta B}{2} (1 + 1) ] = \exp( \beta J + \beta B )
 \]</div>
 <ul>
 <li><span class="arithmatex">\(s_i = -1, s_{i+1} = -1\)</span> のとき</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
-P(-1, -1) &amp;= \exp[ \beta J (-1)(-1) + \frac{\beta B}{2} (-1 - 1) ] \\
-&amp;= \exp( \beta J - \beta B )
-\end{aligned}
+P(-1, -1) = \exp[ \beta J (-1)(-1) + \frac{\beta B}{2} (-1 - 1) ] = \exp( \beta J - \beta B )
 \]</div>
 <ul>
 <li><span class="arithmatex">\(s_i = 1, s_{i+1} = -1\)</span> および <span class="arithmatex">\(s_i = -1, s_{i+1} = 1\)</span> のとき</li>
@@ -14613,7 +14607,7 @@ Z = \lambda_+^N \left[ 1 + \left( \frac{\lambda_-}{\lambda_+} \right)^N \right] 
 \]</div>
 <p>このときの1スピンあたりの自由エネルギー <span class="arithmatex">\(f\)</span> が求まります。</p>
 <div class="arithmatex">\[
-f = -k_B T \log \left[ 2 \cosh(\beta J) \right]
+\finalanswer{f = -k_{\text{B}} T \log \left[ 2 \cosh(\beta J) \right]}
 \]</div>
 <p><strong>有限温度で相転移が起こらない理由</strong></p>
 <p>有限温度 <span class="arithmatex">\(T &gt; 0\)</span> において，最大固有値 <span class="arithmatex">\(\lambda_+\)</span> は磁場 <span class="arithmatex">\(B\)</span> の関数として常に解析的であり，微分不連続な点は存在しません。</p>
@@ -14621,7 +14615,7 @@ f = -k_B T \log \left[ 2 \cosh(\beta J) \right]
 <div class="arithmatex">\[
 \begin{aligned}
 M &amp;= -\frac{\partial f}{\partial B} \\
-&amp;= k_B T \frac{1}{\lambda_+} \frac{\partial \lambda_+}{\partial B}
+&amp;= k_{\text{B}} T \frac{1}{\lambda_+} \frac{\partial \lambda_+}{\partial B}
 \end{aligned}
 \]</div>
 <p>ここで， <span class="arithmatex">\(\lambda_+\)</span> を <span class="arithmatex">\(B\)</span> で偏微分すると， <span class="arithmatex">\(\sinh(\beta B)\)</span> の項が外に出るため， <span class="arithmatex">\(B = 0\)</span> を代入した瞬間に微分値は厳密にゼロになります。</p>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">熱力学第二法則と情報</h1>
 <h2 id="_2">問題</h2>
-<p>対象とする量子系と，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> の熱浴が結合した全系を考える。初期時刻 <span class="arithmatex">\(t=0\)</span> において，系と熱浴は相関を持たず，熱浴は熱平衡状態にあるとする。すなわち，全系の初期密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(0)\)</span> は以下の直積状態で与えられる。</p>
+<p>対象とする量子系と，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> の熱浴が結合した全系を考える。初期時刻 <span class="arithmatex">\(t=0\)</span> において，系と熱浴は相関を持たず，熱浴は熱平衡状態にあるとする。すなわち，全系の初期密度行列 <span class="arithmatex">\(\rho_{\mathrm{tot}}(0)\)</span> は以下の直積状態で与えられる。</p>
 <div class="arithmatex">\[
 \rho_{\mathrm{tot}}(0) = \rho(0) \otimes \rho_{\mathrm{eq, B}}
 \]</div>
@@ -14528,7 +14528,7 @@
 <p>(1) フォン・ノイマンエントロピーの加法性により，初期状態における全系のエントロピーは <span class="arithmatex">\(S\big(\rho_{\mathrm{tot}}(0)\big) = S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big)\)</span> と表される。ユニタリー時間発展において全系のエントロピーは変化しない性質 <span class="arithmatex">\(S\big(\rho_{\mathrm{tot}}(t)\big) = S\big(\rho_{\mathrm{tot}}(0)\big)\)</span> を用いて，時刻 <span class="arithmatex">\(t\)</span> における全系のエントロピーの式を示せ。</p>
 <p>(2) <span class="arithmatex">\(\rho_{\mathrm{tot}}'(t)=\rho(t)\otimes\rho_{\mathrm{eq,B}}\)</span> とする。<span class="arithmatex">\(D\big(\rho_{\mathrm{tot}}(t)\|\rho_{\mathrm{tot}}'(t)\big)\)</span> を各部分系のエントロピーで表せ。</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{S\big(\rho(t)\big)-S\big(\rho(0)\big)}{k_B} + \beta \left[ \mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}\big(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}\big) \right]
+D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{S\big(\rho(t)\big)-S\big(\rho(0)\big)}{k_{\text{B}}} + \beta \left[ \mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}\big(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}\big) \right]
 \]</div>
 <p>(3) <span class="arithmatex">\(\Delta E_{\mathrm{B}}=\mathrm{Tr}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big)-\mathrm{Tr}\big(\rho_{\mathrm{eq,B}}\hat{H}_{\mathrm{B}}\big)\)</span>，<span class="arithmatex">\(Q=-\Delta E_{\mathrm{B}}\)</span>，<span class="arithmatex">\(\Delta S=S\big(\rho(t)\big)-S\big(\rho(0)\big)\)</span> とする。<span class="arithmatex">\(D\ge0\)</span> から <span class="arithmatex">\(\Delta S\)</span> と <span class="arithmatex">\(Q/T\)</span> の不等式を導け。</p>
 <hr />
@@ -14541,14 +14541,14 @@ D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) =
 <p>フォン・ノイマンエントロピーの定義式に代入します。トレースの巡回対称性 <span class="arithmatex">\(\mathrm{Tr}(\hat{A}\hat{B}\hat{C}) = \mathrm{Tr}(\hat{C}\hat{A}\hat{B})\)</span> および，ユニタリー条件 <span class="arithmatex">\(\hat{U}^\dagger(t)\hat{U}(t) = \hat{I}\)</span> を利用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_B \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger \ln\big(\hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger\big) \right) \\
-&amp;= -k_B \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \right)
+S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_{\text{B}} \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger \log\big(\hat{U}\rho_{\mathrm{tot}}(0)\hat{U}^\dagger\big) \right) \\
+&amp;= -k_{\text{B}} \mathrm{Tr}\left( \hat{U}\rho_{\mathrm{tot}}(0) \log\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \right)
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
-S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_B \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \hat{U} \right) \\
-&amp;= -k_B \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \ln\rho_{\mathrm{tot}}(0) \right) \\
+S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_{\text{B}} \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \log\rho_{\mathrm{tot}}(0) \hat{U}^\dagger \hat{U} \right) \\
+&amp;= -k_{\text{B}} \mathrm{Tr}\left( \rho_{\mathrm{tot}}(0) \log\rho_{\mathrm{tot}}(0) \right) \\
 &amp;= S\big(\rho_{\mathrm{tot}}(0)\big)
 \end{aligned}
 \]</div>
@@ -14560,66 +14560,72 @@ S\big(\rho_{\mathrm{tot}}(t)\big) &amp;= -k_B \mathrm{Tr}\left( \rho_{\mathrm{to
 <h3 id="2">(2)</h3>
 <p>提示された2つの密度行列に対する量子相対エントロピーの定義式を書きます。</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \ln \rho_{\mathrm{tot}}(t) \right) - \mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \ln\big(\rho(t) \otimes \rho_{\mathrm{eq, B}}\big) \right)
+D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \log \rho_{\mathrm{tot}}(t) \right) - \mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \log\big(\rho(t) \otimes \rho_{\mathrm{eq, B}}\big) \right)
 \]</div>
 <p>右辺の第1項に，(1) で求めた関係式</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \ln \rho_{\mathrm{tot}}(t) \right) &amp;= -\frac{1}{k_B} S\big(\rho_{\mathrm{tot}}(t)\big) \\
-&amp;= -\frac{1}{k_B} \left( S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big) \right)
+\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) \log \rho_{\mathrm{tot}}(t) \right) &amp;= -\frac{1}{k_{\text{B}}} S\big(\rho_{\mathrm{tot}}(t)\big) \\
+&amp;= -\frac{1}{k_{\text{B}}} \left( S\big(\rho(0)\big) + S\big(\rho_{\mathrm{eq, B}}\big) \right)
 \end{aligned}
 \]</div>
 <p>を代入します。</p>
 <p>右辺の第2項の対数部分を展開します。直積状態の対数は和の形式に分離されます。</p>
 <div class="arithmatex">\[
-\ln\big(\rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \ln\rho(t) \otimes \hat{I}_{\mathrm{B}} + \hat{I}_{\mathrm{sys}} \otimes \ln\rho_{\mathrm{eq, B}}
+\log\big(\rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \log\rho(t) \otimes \hat{I}_{\mathrm{B}} + \hat{I}_{\mathrm{sys}} \otimes \log\rho_{\mathrm{eq, B}}
 \]</div>
 <p>これを第2項のトレースに代入し，各部分系への部分トレースの操作 <span class="arithmatex">\(\mathrm{Tr} = \mathrm{Tr}_{\mathrm{sys}}\mathrm{Tr}_{\mathrm{B}}\)</span> を実行します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
--\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \ln\rho(t) \otimes \hat{I}_{\mathrm{B}} ] \right) &amp;= -\mathrm{Tr}_{\mathrm{sys}}\left( \mathrm{Tr}_{\mathrm{B}}[\rho_{\mathrm{tot}}(t)] \ln\rho(t) \right) \\
-&amp;= -\mathrm{Tr}_{\mathrm{sys}}\left( \rho(t) \ln\rho(t) \right) \\
-&amp;= \frac{1}{k_B} S\big(\rho(t)\big)
+-\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \log\rho(t) \otimes \hat{I}_{\mathrm{B}} ] \right) &amp;= -\mathrm{Tr}_{\mathrm{sys}}\left( \mathrm{Tr}_{\mathrm{B}}[\rho_{\mathrm{tot}}(t)] \log\rho(t) \right) \\
+&amp;= -\mathrm{Tr}_{\mathrm{sys}}\left( \rho(t) \log\rho(t) \right) \\
+&amp;= \frac{1}{k_{\text{B}}} S\big(\rho(t)\big)
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
--\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \hat{I}_{\mathrm{sys}} \otimes \ln\rho_{\mathrm{eq, B}} ] \right) &amp;= -\mathrm{Tr}_{\mathrm{B}}\left( \mathrm{Tr}_{\mathrm{sys}}[\rho_{\mathrm{tot}}(t)] \ln\rho_{\mathrm{eq, B}} \right) \\
-&amp;= -\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \ln\rho_{\mathrm{eq, B}} \right)
+-\mathrm{Tr}\left( \rho_{\mathrm{tot}}(t) [ \hat{I}_{\mathrm{sys}} \otimes \log\rho_{\mathrm{eq, B}} ] \right) &amp;= -\mathrm{Tr}_{\mathrm{B}}\left( \mathrm{Tr}_{\mathrm{sys}}[\rho_{\mathrm{tot}}(t)] \log\rho_{\mathrm{eq, B}} \right) \\
+&amp;= -\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \log\rho_{\mathrm{eq, B}} \right)
 \end{aligned}
 \]</div>
-<p>熱浴の平衡状態の対数式 <span class="arithmatex">\(\ln\rho_{\mathrm{eq, B}} = -\beta \hat{H}_{\mathrm{B}} - \ln Z_{\mathrm{B}} \cdot \hat{I}_{\mathrm{B}}\)</span> を代入します。</p>
+<p>熱浴の平衡状態について成り立つ <span class="arithmatex">\(\log\rho_{\mathrm{eq,B}}=-\beta\hat H_{\mathrm B}-\log Z_{\mathrm B}\,\hat I_{\mathrm B}\)</span> を代入します。</p>
 <div class="arithmatex">\[
--\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) [ -\beta \hat{H}_{\mathrm{B}} - \ln Z_{\mathrm{B}} \cdot \hat{I}_{\mathrm{B}} ] \right) = \beta \mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \hat{H}_{\mathrm{B}} \right) + \ln Z_{\mathrm{B}}
+-\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) [ -\beta \hat{H}_{\mathrm{B}} - \log Z_{\mathrm{B}} \cdot \hat{I}_{\mathrm{B}} ] \right) = \beta \mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \hat{H}_{\mathrm{B}} \right) + \log Z_{\mathrm{B}}
 \]</div>
-<p>ここで，熱浴自身の初期エントロピーの式 <span class="arithmatex">\(S\big(\rho_{\mathrm{eq, B}}\big) = k_B \beta \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}) + k_B \ln Z_{\mathrm{B}}\)</span> より， <span class="arithmatex">\(\ln Z_{\mathrm{B}} = \frac{1}{k_B} S\big(\rho_{\mathrm{eq, B}}\big) - \beta \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}})\)</span> を代入して整理します。</p>
+<p>ここで，熱浴自身の初期エントロピーの式 <span class="arithmatex">\(S\big(\rho_{\mathrm{eq, B}}\big) = k_{\text{B}} \beta \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}) + k_{\text{B}} \log Z_{\mathrm{B}}\)</span> より， <span class="arithmatex">\(\log Z_{\mathrm{B}} = \frac{1}{k_{\text{B}}} S\big(\rho_{\mathrm{eq, B}}\big) - \beta \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}})\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
--\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \ln\rho_{\mathrm{eq, B}} \right) = \beta \mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \hat{H}_{\mathrm{B}} \right) + \frac{1}{k_B} S\big(\rho_{\mathrm{eq, B}}\big) - \beta \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}})
+-\mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \log\rho_{\mathrm{eq, B}} \right) = \beta \mathrm{Tr}_{\mathrm{B}}\left( \rho_{\mathrm{B}}(t) \hat{H}_{\mathrm{B}} \right) + \frac{1}{k_{\text{B}}} S\big(\rho_{\mathrm{eq, B}}\big) - \beta \mathrm{Tr}_{\mathrm{B}}(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}})
 \]</div>
-<p>これら得られたすべての項を足し合わせると， <span class="arithmatex">\(S\big(\rho_{\mathrm{eq, B}}\big)\)</span> の項が相殺し，目的の形式が導出されます。</p>
+<p>得られた項を足すと，<span class="arithmatex">\(S\big(\rho_{\mathrm{eq, B}}\big)\)</span> を含む2項は符号が逆なので，その和は 0 です。したがって</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \finalanswer{\frac{1}{k_B} S\big(\rho(t)\big) - \frac{1}{k_B} S\big(\rho(0)\big)} + \beta \left( \mathrm{Tr}_{\mathrm{B}}\big(\rho_{\mathrm{B}}(t)\hat{H}_{\mathrm{B}}\big) - \mathrm{Tr}_{\mathrm{B}}\big(\rho_{\mathrm{eq, B}}\hat{H}_{\mathrm{B}}\big) \right)
+\begin{aligned}
+D\big(\rho_{\mathrm{tot}}(t)\,\|\,\rho(t)\otimes\rho_{\mathrm{eq,B}}\big)
+&amp;=\finalanswer{\frac{S(\rho(t))-S(\rho(0))}{k_{\text{B}}}} \\
+&amp;\quad\finalanswer{+\beta\Bigl[
+\mathrm{Tr}_{\mathrm B}(\rho_{\mathrm B}(t)\hat H_{\mathrm B})
+-\mathrm{Tr}_{\mathrm B}(\rho_{\mathrm{eq,B}}\hat H_{\mathrm B})\Bigr]}
+\end{aligned}
 \]</div>
-<p>式全体から共通因数の <span class="arithmatex">\(1/k_B\)</span> を除いて整理したものが，提示された数式に等しくなります。</p>
+<p>両辺の共通因数 <span class="arithmatex">\(1/k_{\text{B}}\)</span> を除けば，与えられた式を得ます。</p>
 <h3 id="3">(3)</h3>
 <p>(2) の大括弧の内部に対し，定義された物理量の記号 <span class="arithmatex">\(\Delta E_{\mathrm{B}}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{\Delta S}{k_B} + \beta \Delta E_{\mathrm{B}}
+D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{\Delta S}{k_{\text{B}}} + \beta \Delta E_{\mathrm{B}}
 \]</div>
-<p>系が吸収した熱量の定義 <span class="arithmatex">\(Q = -\Delta E_{\mathrm{B}} \implies \Delta E_{\mathrm{B}} = -Q\)</span> を代入し，さらに逆温度の関係式 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて式を書き換えます。</p>
+<p>系が吸収した熱量の定義 <span class="arithmatex">\(Q = -\Delta E_{\mathrm{B}} \implies \Delta E_{\mathrm{B}} = -Q\)</span> を代入し，さらに逆温度の関係式 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を用いて式を書き換えます。</p>
 <div class="arithmatex">\[
-D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{\Delta S}{k_B} - \frac{Q}{k_B T}
+D\big(\rho_{\mathrm{tot}}(t) \,||\, \rho(t) \otimes \rho_{\mathrm{eq, B}}\big) = \frac{\Delta S}{k_{\text{B}}} - \frac{Q}{k_{\text{B}} T}
 \]</div>
-<p>量子相対エントロピーは数学的に常に 0 以上 <span class="arithmatex">\(D \ge 0\)</span> の値をとるため，以下の不等式が成り立ちます。</p>
+<p>量子相対エントロピーは常に 0 以上 <span class="arithmatex">\(D \ge 0\)</span> の値をとるため，以下の不等式が成り立ちます。</p>
 <div class="arithmatex">\[
-\frac{\Delta S}{k_B} - \frac{Q}{k_B T} \ge 0
+\frac{\Delta S}{k_{\text{B}}} - \frac{Q}{k_{\text{B}} T} \ge 0
 \]</div>
-<p>両辺に正の定数である <span class="arithmatex">\(k_B\)</span> を掛け算して移項します。</p>
+<p>両辺に正の定数である <span class="arithmatex">\(k_{\text{B}}\)</span> を掛け算して移項します。</p>
 <div class="arithmatex">\[
 \finalanswer{\Delta S \ge \frac{Q}{T}}
 \]</div>
-<p>この数式は，マクロ熱力学において熱平衡から外れた変化が起きる際のエントロピー変化を規定するクラウジウスの不等式そのものです。</p>
-<p>全系のユニタリー性を保ったまま，部分系を切り離したことによる情報の相関を計算することで，熱力学第二法則の不等式が導かれることが示されました。</p>
+<p>これはクラウジウスの不等式です。</p>
+<p>全系のユニタリー時間発展と量子相対エントロピーの非負性から，熱力学第二法則に対応する不等式が得られます。</p>
 
 
 

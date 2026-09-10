@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14543,17 +14543,15 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>定義に従って交換関係を展開します。演算子の順序を変更しないように注意して掛け算を行います。</p>
+<p>係数を</p>
 <div class="arithmatex">\[
-[\hat{a}, \hat{a}^\dagger] = \left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} + \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)\left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} - \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right) - \left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} - \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)\left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} + \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)
+\alpha=\sqrt{\frac{m\omega}{2\hbar}},
+\qquad
+\beta=\frac{1}{\sqrt{2m\hbar\omega}}
 \]</div>
-<p>各括弧を展開すると， <span class="arithmatex">\(\hat{x}^2\)</span> と <span class="arithmatex">\(\hat{p}^2\)</span> の項は引き算によって相殺されます。残るのは交差項の組み合わせです。</p>
+<p>と置くと，<span class="arithmatex">\(\hat a=\alpha\hat x+i\beta\hat p\)</span>，<span class="arithmatex">\(\hat a^\dagger=\alpha\hat x-i\beta\hat p\)</span> です。差 <span class="arithmatex">\(\hat a\hat a^\dagger-\hat a^\dagger\hat a\)</span> をとると，<span class="arithmatex">\(\hat{x}^2\)</span> と <span class="arithmatex">\(\hat{p}^2\)</span> の項の和はそれぞれ 0 となるので</p>
 <div class="arithmatex">\[
-\begin{aligned}
-[\hat{a}, \hat{a}^\dagger] &amp;= \frac{i}{2\hbar} (-\hat{x}\hat{p} + \hat{p}\hat{x}) - \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) \\
-&amp;= -\frac{i}{2\hbar} [\hat{x}, \hat{p}] - \frac{i}{2\hbar} [\hat{x}, \hat{p}] \\
-&amp;= -\frac{i}{\hbar} [\hat{x}, \hat{p}]
-\end{aligned}
+[\hat a,\hat a^\dagger] = -2i\alpha\beta[\hat x,\hat p] = -\frac{i}{\hbar}[\hat x,\hat p]
 \]</div>
 <p>ここに基本交換関係 <span class="arithmatex">\([\hat{x}, \hat{p}] = i\hbar\)</span> を代入します。</p>
 <div class="arithmatex">\[
@@ -14567,11 +14565,9 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 <h3 id="2">(2)</h3>
 <p>積 <span class="arithmatex">\(\hat{a}^\dagger \hat{a}\)</span> を直接展開します。</p>
 <div class="arithmatex">\[
-\hat{a}^\dagger \hat{a} = \left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} - \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)\left( \sqrt{\frac{m\omega}{2\hbar}} \hat{x} + \frac{i}{\sqrt{2m\hbar\omega}} \hat{p} \right)
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) + \frac{1}{2m\hbar\omega} \hat{p}^2 \\
+\hat{a}^\dagger\hat{a}
+&amp;= \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} (\hat{x}\hat{p} - \hat{p}\hat{x}) + \frac{1}{2m\hbar\omega} \hat{p}^2 \\
 &amp;= \frac{m\omega}{2\hbar} \hat{x}^2 + \frac{i}{2\hbar} [\hat{x}, \hat{p}] + \frac{1}{2m\hbar\omega} \hat{p}^2
 \end{aligned}
 \]</div>
@@ -14583,14 +14579,16 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right)
 <div class="arithmatex">\[
 \hbar\omega \hat{a}^\dagger \hat{a} = \frac{1}{2}m\omega^2 \hat{x}^2 + \frac{\hat{p}^2}{2m} - \frac{1}{2}\hbar\omega
 \]</div>
-<p>右辺の前半2項の和はハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> そのものです。</p>
+<p>右辺の前半2項の和はハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> です。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\hbar\omega \hat{a}^\dagger \hat{a} &amp;= \hat{H} - \frac{1}{2}\hbar\omega \implies \hat{H} \\
+\hbar\omega \hat{a}^\dagger \hat{a}
+&amp;= \hat{H} - \frac{1}{2}\hbar\omega,\\
+\hat{H}
 &amp;= \hbar\omega \hat{a}^\dagger \hat{a} + \frac{1}{2}\hbar\omega
 \end{aligned}
 \]</div>
-<p>共通因数でくくることで，数演算子 <span class="arithmatex">\(\hat{N} = \hat{a}^\dagger \hat{a}\)</span> を用いたハミルトニアンの形が導かれました。</p>
+<p>共通因数でくくることで，数演算子 <span class="arithmatex">\(\hat{N} = \hat{a}^\dagger \hat{a}\)</span> を用いたハミルトニアンの形が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{H} &amp;= \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) \\

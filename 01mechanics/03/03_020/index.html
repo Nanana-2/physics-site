@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,10 +14534,7 @@
 <p>後半の経路は， <span class="arithmatex">\(x = X\)</span> に固定されたままで <span class="arithmatex">\(y\)</span> が 0 から <span class="arithmatex">\(Y\)</span> まで変化する移動です。このとき <span class="arithmatex">\(dx = 0\)</span> であり，力の <span class="arithmatex">\(y\)</span> 成分は <span class="arithmatex">\(F_y = -ky\)</span> となります。</p>
 <p>それぞれの区間における仕事の和を計算します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-W_1 &amp;= \int_0^X F_x dx + \int_0^Y F_y dy \\
-&amp;= \int_0^X (-kx) dx + \int_0^Y (-ky) dy
-\end{aligned}
+W_1 = \int_0^X F_x dx + \int_0^Y F_y dy = \int_0^X (-kx) dx + \int_0^Y (-ky) dy
 \]</div>
 <p>定積分を実行します。</p>
 <div class="arithmatex">\[
@@ -14576,7 +14573,7 @@ W_2 &amp;= -k \left( 1 + \frac{Y^2}{X^2} \right) \left[ \frac{1}{2} x^2 \right]_
 <h3 id="3">(3)</h3>
 <p>ポテンシャルエネルギーは，基準点からその点まで移動する間に保存力がする仕事の負の値として定義されます。任意の点における座標を <span class="arithmatex">\(x, y\)</span> とすると，ポテンシャルエネルギーの関数は次のようになります。</p>
 <div class="arithmatex">\[
-U(x,y) = -W = \frac{1}{2} k x^2 + \frac{1}{2} k y^2
+\finalanswer{U(x,y) = \frac{1}{2} k x^2 + \frac{1}{2} k y^2}
 \]</div>
 <p>この関数について，各座標方向の偏微分（グラディエント）を計算します。
 <span class="arithmatex">\(x\)</span> について偏微分をおこなうと次のようになります。</p>
@@ -14594,7 +14591,7 @@ U(x,y) = -W = \frac{1}{2} k x^2 + \frac{1}{2} k y^2
 &amp;= \finalanswer{\begin{pmatrix} -kx \\ -ky \end{pmatrix}}
 \end{aligned}
 \]</div>
-<p>この結果は，問題文で提示された力の成分表示と完全に一致します。これにより，保存力とそのポテンシャルエネルギーの間に偏微分を介した負の勾配関係が成り立っていることが示されます。</p>
+<p>この結果は，問題文で提示された力の成分表示と一致します。これにより，保存力とそのポテンシャルエネルギーの間に偏微分を介した負の勾配関係が成り立っていることが示されます。</p>
 
 
 

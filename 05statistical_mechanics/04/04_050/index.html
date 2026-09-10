@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,18 +14518,18 @@
 
 <h1 id="_1">グランドポテンシャルと状態方程式</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の大正準集団を考える。この系のマクロな熱力学状態を規定するグランドポテンシャル <span class="arithmatex">\(\Omega\)</span> は，大分配関数 <span class="arithmatex">\(\Xi\)</span> を用いて以下のように定義される。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，体積 <span class="arithmatex">\(V\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の大正準集団を考える。この系のマクロな熱力学状態を規定するグランドポテンシャル <span class="arithmatex">\(\Omega\)</span> は，大分配関数 <span class="arithmatex">\(\Xi\)</span> を用いて以下のように定義される。</p>
 <div class="arithmatex">\[
-\Omega(T, V, \mu) = -k_B T \log \Xi
+\Omega(T, V, \mu) = -k_{\text{B}} T \log \Xi
 \]</div>
 <p>熱力学において， <span class="arithmatex">\(\Omega\)</span> の全微分関係式は <span class="arithmatex">\(d\Omega = -S dT - P dV - N d\mu\)</span> で与えられる。この統計力学的な定義と熱力学の基礎式を基にして，以下の問いに答えよ。</p>
 <p>(1) エントロピー <span class="arithmatex">\(S\)</span>，圧力 <span class="arithmatex">\(P\)</span>，および粒子数 <span class="arithmatex">\(N\)</span> を，グランドポテンシャル <span class="arithmatex">\(\Omega\)</span> の偏微分としてそれぞれ表せ。</p>
 <p>(2) グランドポテンシャルは <span class="arithmatex">\(\Omega(T,\lambda V,\mu)=\lambda\Omega(T,V,\mu)\)</span> を満たす。この式を <span class="arithmatex">\(\lambda\)</span> で微分し，<span class="arithmatex">\(\lambda=1\)</span> と置くことで <span class="arithmatex">\(\Omega=-PV\)</span> を示せ。</p>
-<p>(3) 相互作用しない二つの部分系について <span class="arithmatex">\(\Xi_{12}=\Xi_1\Xi_2\)</span> が成り立つことから，<span class="arithmatex">\(\log\Xi\)</span> が体積に比例することを示せ。<span class="arithmatex">\(\log\Xi=c(T,\mu)V\)</span> と置き，<span class="arithmatex">\(P = \frac{k_B T}{V} \log \Xi\)</span> が体積に依存しないことを示せ。</p>
+<p>(3) 相互作用しない二つの部分系について <span class="arithmatex">\(\Xi_{12}=\Xi_1\Xi_2\)</span> が成り立つことから，<span class="arithmatex">\(\log\Xi\)</span> が体積に比例することを示せ。<span class="arithmatex">\(\log\Xi=c(T,\mu)V\)</span> と置き，<span class="arithmatex">\(P = \frac{k_{\text{B}} T}{V} \log \Xi\)</span> が体積に依存しないことを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>グランドポテンシャル <span class="arithmatex">\(\Omega(T, V, \mu)\)</span> の全微分関係式 <span class="arithmatex">\(d\Omega = -S dT - P dV - N d\mu\)</span> の各係数を比較することにより，各熱力学量は以下のように <span class="arithmatex">\(\Omega\)</span> の偏微分として導出されます。</p>
+<p>グランドポテンシャル <span class="arithmatex">\(\Omega(T, V, \mu)\)</span> の全微分関係式 <span class="arithmatex">\(d\Omega = -S dT - P dV - N d\mu\)</span> の各係数を比較することにより，各熱力学量は以下のように <span class="arithmatex">\(\Omega\)</span> の偏微分として得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{S = -\left( \frac{\partial \Omega}{\partial T} \right)_{V, \mu}, \quad P = -\left( \frac{\partial \Omega}{\partial V} \right)_{T, \mu}, \quad N = -\left( \frac{\partial \Omega}{\partial \mu} \right)_{T, V}}
 \]</div>
@@ -14555,9 +14555,9 @@
 \]</div>
 <p>したがって，<span class="arithmatex">\(\Omega=-PV\)</span> が成り立ちます。</p>
 <h3 id="3">(3)</h3>
-<p>(2) の結果である <span class="arithmatex">\(\Omega = -PV\)</span> に，統計力学の定義式 <span class="arithmatex">\(\Omega = -k_B T \log \Xi\)</span> を代入します。</p>
+<p>(2) の結果である <span class="arithmatex">\(\Omega = -PV\)</span> に，統計力学の定義式 <span class="arithmatex">\(\Omega = -k_{\text{B}} T \log \Xi\)</span> を代入します。</p>
 <div class="arithmatex">\[
--PV = -k_B T \log \Xi \quad \implies \quad P = \frac{k_B T}{V} \log \Xi
+-PV = -k_{\text{B}} T \log \Xi \quad \implies \quad P = \frac{k_{\text{B}} T}{V} \log \Xi
 \]</div>
 <p>相互作用しない二つの部分系を合わせると，大分配関数は <span class="arithmatex">\(\Xi_{12}=\Xi_1\Xi_2\)</span> を満たします。対数をとると，</p>
 <div class="arithmatex">\[
@@ -14565,7 +14565,7 @@
 \]</div>
 <p>となります。したがって，均一な巨視的系では <span class="arithmatex">\(\log\Xi=c(T,\mu)V\)</span> と書けます。これを圧力の式へ代入すると，</p>
 <div class="arithmatex">\[
-\finalanswer{P=k_BT\,c(T,\mu)}
+\finalanswer{P=k_{\text{B}}T\,c(T,\mu)}
 \]</div>
 <p>となり，圧力は体積に依存しません。</p>
 

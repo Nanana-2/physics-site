@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14524,12 +14524,12 @@ H = -J \sum_{\langle i, j \rangle} s_i s_j - B \sum_{i} s_i
 \]</div>
 <p>ここで， <span class="arithmatex">\(\sum_{\langle i, j \rangle}\)</span> は隣り合うスピンのペアについての和を意味する。平均場近似では，ある特定の中心スピン <span class="arithmatex">\(s_i\)</span> に注目したとき，周囲の隣接スピン <span class="arithmatex">\(s_j\)</span> がすべてその平均値 <span class="arithmatex">\(\langle s_j \rangle = m\)</span> に置き換わったと仮定する。以下の問いに答えよ。</p>
 <p>(1) 周囲のスピンを平均値 <span class="arithmatex">\(m\)</span> に置き換え，有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> を <span class="arithmatex">\(J,z,m,B\)</span> で表せ。</p>
-<p>(2) 逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> のなかに置かれた単一のスピン <span class="arithmatex">\(s_i = \pm 1\)</span> に関する分配関数 <span class="arithmatex">\(z_{\mathrm{single}}\)</span> を求め，このスピンの平均値 <span class="arithmatex">\(\langle s_i \rangle\)</span> の式を双曲線関数 <span class="arithmatex">\(\tanh\)</span> を用いて表せ。</p>
+<p>(2) 逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> のなかに置かれた単一のスピン <span class="arithmatex">\(s_i = \pm 1\)</span> に関する分配関数 <span class="arithmatex">\(z_{\mathrm{single}}\)</span> を求め，このスピンの平均値 <span class="arithmatex">\(\langle s_i \rangle\)</span> の式を双曲線関数 <span class="arithmatex">\(\tanh\)</span> を用いて表せ。</p>
 <p>(3) 系の自己整合性から，自発磁化 <span class="arithmatex">\(m\)</span> が満たすべき以下の<strong>平均場方程式</strong>を導出せよ。</p>
 <div class="arithmatex">\[
-m = \tanh\left[ \beta (z J m + B) \right]
+\finalanswer{m = \tanh\left[ \beta (z J m + B) \right]}
 \]</div>
-<p>また，<span class="arithmatex">\(B=0\)</span> で <span class="arithmatex">\(m\ne0\)</span> の解が存在する条件を求め，転移温度 <span class="arithmatex">\(T_c\)</span> を <span class="arithmatex">\(J,z,k_B\)</span> で表せ。</p>
+<p>また，<span class="arithmatex">\(B=0\)</span> で <span class="arithmatex">\(m\ne0\)</span> の解が存在する条件を求め，転移温度 <span class="arithmatex">\(T_c\)</span> を <span class="arithmatex">\(J,z,k_{\text{B}}\)</span> で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14548,7 +14548,7 @@ H_i &amp;= -J \sum_{j (\text{nn of } i)} s_i s_j - B s_i \\
 <div class="arithmatex">\[
 H_i \simeq - (z J m + B) s_i
 \]</div>
-<p>この式を <span class="arithmatex">\(- B_{\mathrm{eff}} s_i\)</span> と比較することで，周囲のスピンが作る分子場 <span class="arithmatex">\(zJm\)</span> と外部磁場 <span class="arithmatex">\(B\)</span> が合わさった有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> の式が導出されます。</p>
+<p>この式を <span class="arithmatex">\(- B_{\mathrm{eff}} s_i\)</span> と比較することで，周囲のスピンが作る分子場 <span class="arithmatex">\(zJm\)</span> と外部磁場 <span class="arithmatex">\(B\)</span> が合わさった有効磁場 <span class="arithmatex">\(B_{\mathrm{eff}}\)</span> の式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{B_{\mathrm{eff}} = z J m + B}
 \]</div>
@@ -14585,13 +14585,13 @@ m = \tanh\left[ \beta (z J m + B) \right]
 \]</div>
 <p>したがって，ゼロでない自発磁化を持つための条件は以下の通りです。</p>
 <div class="arithmatex">\[
-\beta z J &gt; 1 \implies \frac{z J}{k_B T} &gt; 1 \implies T &lt; \frac{z J}{k_B}
+\beta z J &gt; 1 \implies \frac{z J}{k_{\text{B}} T} &gt; 1 \implies T &lt; \frac{z J}{k_{\text{B}}}
 \]</div>
 <p>この不等式の境界を与える温度が，相転移が起こるキュリー温度 <span class="arithmatex">\(T_c\)</span> となります。</p>
 <div class="arithmatex">\[
-\finalanswer{T_c = \frac{z J}{k_B}}
+\finalanswer{T_c = \frac{z J}{k_{\text{B}}}}
 \]</div>
-<p>この結果により，平均場理論の枠組みでは，温度が <span class="arithmatex">\(T_c = \frac{z J}{k_B}\)</span> を下回るとスピンが自発的に一方向へ揃う相転移現象が再現されます。配位数 <span class="arithmatex">\(z\)</span> が大きいほど周囲からのサポートが強くなるため，より高い温度まで秩序を維持できる性質がこの数式に表れています。</p>
+<p>平均場理論では，温度が <span class="arithmatex">\(T_c=\frac{zJ}{k_{\text{B}}}\)</span> を下回ると自発磁化が生じます。また，配位数 <span class="arithmatex">\(z\)</span> が大きいほど転移温度は高くなります。</p>
 
 
 

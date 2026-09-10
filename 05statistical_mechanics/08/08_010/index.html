@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,7 +14522,7 @@
 <div class="arithmatex">\[
 D(\epsilon) = \frac{2\pi V}{h^3} (2m)^{3/2} \sqrt{\epsilon}
 \]</div>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> のもとで，系全体の全粒子数 <span class="arithmatex">\(N\)</span> は，各準位のボース・アインシュタイン分布関数の総和として定義される。基底状態のエネルギーを <span class="arithmatex">\(\epsilon_0 = 0\)</span> とし，全粒子数を基底状態にある粒子数 <span class="arithmatex">\(N_0\)</span> と，それ以外のエネルギーを持つすべての励起状態にある粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> の和として分離して考える。以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> のもとで，系全体の全粒子数 <span class="arithmatex">\(N\)</span> は，各準位のボース・アインシュタイン分布関数の総和として定義される。基底状態のエネルギーを <span class="arithmatex">\(\epsilon_0 = 0\)</span> とし，全粒子数を基底状態にある粒子数 <span class="arithmatex">\(N_0\)</span> と，それ以外のエネルギーを持つすべての励起状態にある粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> の和として分離して考える。以下の問いに答えよ。</p>
 <p>(1) 励起状態の粒子数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> は，状態密度を用いた積分形式により以下のように連続近似で表される。</p>
 <div class="arithmatex">\[
 N_{\mathrm{ex}} = \int_0^\infty \frac{D(\epsilon)}{\exp\left[ \beta(\epsilon - \mu) \right] - 1} d\epsilon
@@ -14551,24 +14551,24 @@ N_{\mathrm{ex}} &amp;= \frac{2\pi V}{h^3} (2m)^{3/2} \int_0^\infty \frac{\sqrt{\
 &amp;= \frac{2\pi V}{h^3} \left( \frac{2m}{\beta} \right)^{3/2} \int_0^\infty \frac{\sqrt{\x}}{\exp(x - \beta \mu) - 1} dx
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入して係数を整理すると，励起状態の粒子数が温度と化学ポテンシャルを含む形で表されます。</p>
+<p><span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を代入して係数を整理すると，励起状態の粒子数が温度と化学ポテンシャルを含む形で表されます。</p>
 <div class="arithmatex">\[
-\finalanswer{N_{\mathrm{ex}}(T, \mu) = \frac{2\pi V}{h^3} (2m k_B T)^{3/2} \int_0^\infty \frac{\sqrt{x}}{\exp(x - \beta \mu) - 1} dx}
+\finalanswer{N_{\mathrm{ex}}(T, \mu) = \frac{2\pi V}{h^3} (2m k_{\text{B}} T)^{3/2} \int_0^\infty \frac{\sqrt{x}}{\exp(x - \beta \mu) - 1} dx}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>ボース・アインシュタイン分布が破綻しないための制約から，化学ポテンシャルは基底状態エネルギーより低くなければならず， <span class="arithmatex">\(\mu &lt; 0\)</span> です。被積分関数の分母に注目すると， <span class="arithmatex">\(\mu\)</span> が負の値から 0 に近づくにつれて， <span class="arithmatex">\(\exp(x - \beta \mu)\)</span> は減少し，分母全体が小さくなります。分母が小さくなるということは，占有数は大きくなります。</p>
 <p>したがって，積分がとり得る最大のケースは， <span class="arithmatex">\(\mu \to 0\)</span> の極限です。このときの最大値 <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T)\)</span> を計算するため，与えられた定積分公式を適用します。</p>
 <div class="arithmatex">\[
-N_{\mathrm{ex}}^{\max}(T) = \frac{2\pi V}{h^3} (2m k_B T)^{3/2} \int_0^\infty \frac{\sqrt{x}}{\exp(x) - 1} dx
+N_{\mathrm{ex}}^{\max}(T) = \frac{2\pi V}{h^3} (2m k_{\text{B}} T)^{3/2} \int_0^\infty \frac{\sqrt{x}}{\exp(x) - 1} dx
 \]</div>
 <div class="arithmatex">\[
-N_{\mathrm{ex}}^{\max}(T) = \frac{2\pi V}{h^3} (2m k_B T)^{3/2} \cdot \frac{\sqrt{\pi}}{2} \zeta\left(\frac{3}{2}\right)
+N_{\mathrm{ex}}^{\max}(T) = \frac{2\pi V}{h^3} (2m k_{\text{B}} T)^{3/2} \cdot \frac{\sqrt{\pi}}{2} \zeta\left(\frac{3}{2}\right)
 \]</div>
 <p>係数の <span class="arithmatex">\(\pi\)</span> の指数をまとめます。 <span class="arithmatex">\(2\pi \cdot \frac{\sqrt{\pi}}{2} = \pi^{3/2}\)</span> です。これらを括弧の中に集約してすっきりと整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}}
+\finalanswer{N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2}}
 \]</div>
-<p>ここで，熱的ド・ブロイ波長 <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> を用いると，この最大値は <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) = \zeta(3/2) \frac{V}{\lambda^3}\)</span> と表現することもできます。</p>
+<p>ここで，熱的ド・ブロイ波長 <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_{\text{B}} T}}\)</span> を用いると，この最大値は <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) = \zeta(3/2) \frac{V}{\lambda^3}\)</span> と表現することもできます。</p>
 <h3 id="3">(3)</h3>
 <p>(2) の結果は，温度 <span class="arithmatex">\(T\)</span> において励起状態に入ることのできる最大粒子数を表します。この値は <span class="arithmatex">\(T^{3/2}\)</span> に比例して減少します。</p>
 <p>温度を臨界温度以下まで下げると，<span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) &lt; N\)</span> となります。</p>

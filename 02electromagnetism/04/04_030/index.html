@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14541,9 +14541,9 @@ d\boldsymbol{B}
 \frac{d\boldsymbol{l}'\times(\boldsymbol{r}-\boldsymbol{r}')}
 {|\boldsymbol{r}-\boldsymbol{r}'|^3}
 \]</div>
-<p>を導出せよ。外積から微小磁場の向きを説明し，(2) の直線電流と (3) の円形電流で対称性により残る磁場成分を示せ。</p>
+<p>を導出せよ。</p>
 <p>(2) <span class="arithmatex">\(z\)</span> 軸に沿って <span class="arithmatex">\(+z\)</span> 方向へ無限直線電流 <span class="arithmatex">\(I\)</span> が流れる。軸から距離 <span class="arithmatex">\(\rho\)</span> の磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{line}}(\rho)=B_\varphi(\rho)\boldsymbol{e}_\varphi\)</span> とする。電流要素を <span class="arithmatex">\((0,0,z')\)</span> にとり，<span class="arithmatex">\(z'\)</span> を <span class="arithmatex">\(-\infty\)</span> から <span class="arithmatex">\(\infty\)</span> まで積分して <span class="arithmatex">\(B_\varphi(\rho)\)</span> を求めよ。</p>
-<p>(3) 半径 <span class="arithmatex">\(R\)</span> の円形導線が <span class="arithmatex">\(xy\)</span> 平面上にあり，<span class="arithmatex">\(+z\)</span> 方向から見て反時計回りに電流 <span class="arithmatex">\(I\)</span> が流れる。中心軸上の磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{loop}}(z)=B_z(z)\boldsymbol{e}_z\)</span> とし，<span class="arithmatex">\(B_z(z)\)</span> を求めよ。中心磁場 <span class="arithmatex">\(B_z(0)\)</span> を示し，さらに <span class="arithmatex">\(z\gg R\)</span> での主要項を磁気双極子モーメント <span class="arithmatex">\(m=I\pi R^2\)</span> で表せ。</p>
+<p>(3) 半径 <span class="arithmatex">\(R\)</span> の円形導線が <span class="arithmatex">\(xy\)</span> 平面上にあり，<span class="arithmatex">\(+z\)</span> 方向から見て反時計回りに電流 <span class="arithmatex">\(I\)</span> が流れる。中心軸上の磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{loop}}(z)=B_z(z)\boldsymbol{e}_z\)</span> とし，<span class="arithmatex">\(B_z(z)\)</span> を求めよ。<span class="arithmatex">\(z\gg R\)</span> で最初に残る項を磁気双極子モーメント <span class="arithmatex">\(m=I\pi R^2\)</span> で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14570,13 +14570,13 @@ d\boldsymbol{B}
 \]</div>
 <p>外積の順序を交換すると負号が付くため</p>
 <div class="arithmatex">\[
-\boldsymbol{B}(\boldsymbol{r})
+\finalanswer{\boldsymbol{B}(\boldsymbol{r})
 =\frac{\mu_0}{4\pi}
 \int
 \frac{
 \boldsymbol{j}(\boldsymbol{r}')
 \times(\boldsymbol{r}-\boldsymbol{r}')
-}{|\boldsymbol{r}-\boldsymbol{r}'|^3}\,dV'
+}{|\boldsymbol{r}-\boldsymbol{r}'|^3}\,dV'}
 \]</div>
 <p>です。細い導線では <span class="arithmatex">\(\boldsymbol{j}\,dV'=I\,d\boldsymbol{l}'\)</span> なので</p>
 <div class="arithmatex">\[
@@ -14587,7 +14587,7 @@ d\boldsymbol{B}
 \]</div>
 <p>を得ます。これがビオ・サバールの法則です。外積は <span class="arithmatex">\(d\boldsymbol{l}'\)</span> と <span class="arithmatex">\(\boldsymbol{r}-\boldsymbol{r}'\)</span> の両方に垂直なので，微小磁場の向きは右ねじの法則で一意に決まります。</p>
 <p>無限直線電流では，軸の周りのどの方位角も等価です。また軸方向へ観測点を移しても状況は変わりません。この円筒対称性から，合成磁場は直線電流を中心とする円の接線方向だけを向きます。</p>
-<p>円形電流の中心軸上では，円周上の互いに反対側にある二つの電流要素を組にできます。二つの微小磁場の軸に垂直な成分は逆向きで打ち消し合い，軸方向成分は同じ向きに加わります。したがって合成磁場は <span class="arithmatex">\(z\)</span> 成分だけをもちます。この対称性の確認によって，後の積分で不要な成分を最初から除けます。</p>
+<p>円形電流の中心軸上では，円周上の互いに反対側にある二つの電流要素を組にできます。二つの微小磁場について，軸に垂直な成分の和は 0 となり，軸方向成分は同じ向きに加わります。したがって合成磁場は <span class="arithmatex">\(z\)</span> 成分だけをもちます。この対称性により，後の積分では軸方向成分だけを考えれば十分です。</p>
 <h3 id="2">(2)</h3>
 <p>観測点を <span class="arithmatex">\((\rho,0,0)\)</span>，電流要素を <span class="arithmatex">\((0,0,z')\)</span> にとります。この点では <span class="arithmatex">\(\boldsymbol{e}_\varphi=\boldsymbol{e}_y\)</span> です。線素と電流要素から観測点へ向かうベクトルは</p>
 <div class="arithmatex">\[
@@ -14603,11 +14603,17 @@ d\boldsymbol{l}'\times
 (\boldsymbol{r}-\boldsymbol{r}')
 &amp;=dz'\boldsymbol{e}_z\times
 (\rho\boldsymbol{e}_x-z'\boldsymbol{e}_z) \\
-&amp;=\rho\,dz'\boldsymbol{e}_y
-=\rho\,dz'\boldsymbol{e}_\varphi.
+&amp;=\rho\,dz'\boldsymbol{e}_y \\
+&amp;=\rho\,dz'\boldsymbol{e}_\varphi
 \end{aligned}
 \]</div>
 <p>したがって，方位角成分は</p>
+<div class="arithmatex">\[
+B_\varphi(\rho)
+=\frac{\mu_0I}{4\pi}
+\int_{-\infty}^{\infty}
+\frac{\rho\,dz'}{(\rho^2+z'^2)^{3/2}}
+\]</div>
 <p>ここで <span class="arithmatex">\(z'=\rho\tan\theta\)</span> と置くと，<span class="arithmatex">\(dz'=\rho\sec^2\theta\,d\theta\)</span> であり，<span class="arithmatex">\(z'=\pm\infty\)</span> は <span class="arithmatex">\(\theta=\pm\pi/2\)</span> に対応します。よって</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14623,7 +14629,7 @@ B_\varphi
 \int_{-\pi/2}^{\pi/2}\cos\theta\,d\theta \\
 &amp;=\frac{\mu_0I}{4\pi\rho}
 [\sin\theta]_{-\pi/2}^{\pi/2} \\
-&amp;=\frac{\mu_0I}{2\pi\rho}.
+&amp;=\frac{\mu_0I}{2\pi\rho}
 \end{aligned}
 \]</div>
 <p>したがって</p>
@@ -14650,7 +14656,7 @@ d\boldsymbol{l}'\times
 (\boldsymbol{r}-\boldsymbol{r}')
 ={}&amp;Rz(\cos\varphi\boldsymbol{e}_x
 +\sin\varphi\boldsymbol{e}_y)d\varphi \\
-&amp;+R^2\boldsymbol{e}_z\,d\varphi.
+&amp;+R^2\boldsymbol{e}_z\,d\varphi
 \end{aligned}
 \]</div>
 <p>第一項は <span class="arithmatex">\(\varphi=0\)</span> から <span class="arithmatex">\(2\pi\)</span> まで積分するとゼロになり，軸方向成分だけが残ります。また <span class="arithmatex">\(|\boldsymbol{r}-\boldsymbol{r}'|=\sqrt{R^2+z^2}\)</span> は円周上で一定です。したがって</p>
@@ -14664,15 +14670,14 @@ d\boldsymbol{l}'\times
 &amp;=\frac{\mu_0IR^2}{4\pi(R^2+z^2)^{3/2}}
 [\varphi]_0^{2\pi}\boldsymbol{e}_z \\
 &amp;=\frac{\mu_0IR^2}{2(R^2+z^2)^{3/2}}
-\boldsymbol{e}_z.
+\boldsymbol{e}_z
 \end{aligned}
 \]</div>
 <p>です。中心では</p>
 <div class="arithmatex">\[
-\boldsymbol{B}(0)=\frac{\mu_0I}{2R}\boldsymbol{e}_z
+\finalanswer{\boldsymbol{B}(0)=\frac{\mu_0I}{2R}\boldsymbol{e}_z}
 \]</div>
 <p>となります。</p>
-<p><strong>遠方での双極子近似</strong></p>
 <p><span class="arithmatex">\(z\gg R\)</span> では <span class="arithmatex">\((R^2+z^2)^{3/2}\simeq z^3\)</span> なので</p>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{B}(z)

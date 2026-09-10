@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14524,7 +14524,7 @@ m \frac{dv(t)}{dt} = -\gamma v(t) + R(t)
 \]</div>
 <p>ランダム力 <span class="arithmatex">\(R(t)\)</span> は，時間平均するとゼロであり <span class="arithmatex">\(\langle R(t) \rangle = 0\)</span>，異なる時刻間の相関は非常に短い時間でのみ存在するという仮定から，ホワイトノイズとして以下の性質を満たすものとする。</p>
 <div class="arithmatex">\[
-\langle R(t) R(t') \rangle = 2 \gamma k_B T \delta(t - t')
+\langle R(t) R(t') \rangle = 2 \gamma k_{\text{B}} T \delta(t - t')
 \]</div>
 <p>ここで <span class="arithmatex">\(\delta(t)\)</span> はデルタ関数， <span class="arithmatex">\(T\)</span> は流体の絶対温度である。以下の問いに答えよ。</p>
 <p>(1) 初期速度を <span class="arithmatex">\(v(0)\)</span> としてランジュバン方程式を解き，<span class="arithmatex">\(v(t)\)</span> を求めよ。</p>
@@ -14554,13 +14554,13 @@ v(t) \exp\left(\frac{\gamma}{m}t\right) - v(0) = \frac{1}{m} \int_0^t R(s) \exp\
 <div class="arithmatex">\[
 \langle v(t)^2 \rangle = \left\langle \left[ v(0) e^{-\frac{\gamma}{m}t} + \frac{1}{m} \int_0^t R(s) e^{-\frac{\gamma}{m}(t - s)} ds \right]^2 \right\rangle
 \]</div>
-<p>展開すると， <span class="arithmatex">\(v(0)^2\)</span> の項，交差項，および <span class="arithmatex">\(R(s)\)</span> の二重積分の項の3つに分かれます。初期速度とランダム力に相関がない性質 <span class="arithmatex">\(\langle v(0)R(s) \rangle = 0\)</span> より，中央の交差項の平均値はゼロとなって消去されます。</p>
+<p>展開すると，<span class="arithmatex">\(v(0)^2\)</span> の項，交差項，および <span class="arithmatex">\(R(s)\)</span> の二重積分の項の3つに分かれます。初期速度とランダム力に相関がないので，<span class="arithmatex">\(\langle v(0)R(s) \rangle=0\)</span> であり，交差項の平均値は 0 です。</p>
 <div class="arithmatex">\[
 \langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{1}{m^2} \int_0^t ds \int_0^t ds' \, \langle R(s) R(s') \rangle e^{-\frac{\gamma}{m}(t - s)} e^{-\frac{\gamma}{m}(t - s')}
 \]</div>
-<p>ここで，ランダム力のホワイトノイズ特性 <span class="arithmatex">\(\langle R(s) R(s') \rangle = 2 \gamma k_B T \delta(s - s')\)</span> を代入します。デルタ関数の性質により， <span class="arithmatex">\(s'\)</span> に関する積分を実行すると <span class="arithmatex">\(s' = s\)</span> の項だけが残ります。</p>
+<p>ここで，ランダム力のホワイトノイズ特性 <span class="arithmatex">\(\langle R(s) R(s') \rangle = 2 \gamma k_{\text{B}} T \delta(s - s')\)</span> を代入します。デルタ関数の性質により， <span class="arithmatex">\(s'\)</span> に関する積分を実行すると <span class="arithmatex">\(s' = s\)</span> の項だけが残ります。</p>
 <div class="arithmatex">\[
-\langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{2\gamma k_B T}{m^2} \int_0^t ds \, e^{-\frac{2\gamma}{m}(t - s)}
+\langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{2\gamma k_{\text{B}} T}{m^2} \int_0^t ds \, e^{-\frac{2\gamma}{m}(t - s)}
 \]</div>
 <p>残った指数関数の積分を実行します。</p>
 <div class="arithmatex">\[
@@ -14570,15 +14570,15 @@ v(t) \exp\left(\frac{\gamma}{m}t\right) - v(0) = \frac{1}{m} \int_0^t R(s) \exp\
 &amp;= \frac{m}{2\gamma} \left( 1 - e^{-\frac{2\gamma}{m}t} \right)
 \end{aligned}
 \]</div>
-<p>これを元の式に戻して整理すると，速度の2乗平均の式が導出されます。</p>
+<p>これを元の式に戻して整理すると，速度の2乗平均の式を得ます。</p>
 <div class="arithmatex">\[
-\langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{k_B T}{m} \left( 1 - e^{-\frac{2\gamma}{m}t} \right)
+\langle v(t)^2 \rangle = v(0)^2 e^{-\frac{2\gamma}{m}t} + \frac{k_{\text{B}} T}{m} \left( 1 - e^{-\frac{2\gamma}{m}t} \right)
 \]</div>
 <p>ここで十分時間が経過した長時間極限 <span class="arithmatex">\(t \to \infty\)</span> をとると，負の指数関数項はすべてゼロに向かって減衰します。</p>
 <div class="arithmatex">\[
-\finalanswer{\lim_{t \to \infty} \langle v(t)^2 \rangle = \frac{k_B T}{m}}
+\finalanswer{\lim_{t \to \infty} \langle v(t)^2 \rangle = \frac{k_{\text{B}} T}{m}}
 \]</div>
-<p>この式の両辺に <span class="arithmatex">\(\frac{1}{2}m\)</span> を掛けると <span class="arithmatex">\(\frac{1}{2}m \langle v^2 \rangle = \frac{1}{2}k_B T\)</span> となり，流体分子との衝突のバランスによって，マクロな温度が保証する等配分則のエネルギー状態へ正しく緩和していくことが確認できます。</p>
+<p>この式の両辺に <span class="arithmatex">\(\frac{1}{2}m\)</span> を掛けると <span class="arithmatex">\(\frac{1}{2}m \langle v^2 \rangle = \frac{1}{2}k_{\text{B}} T\)</span> となり，流体分子との衝突のバランスによって，マクロな温度が保証する等配分則のエネルギー状態へ正しく緩和していくことが確認できます。</p>
 <h3 id="3">(3)</h3>
 <p>元のランジュバン方程式 <span class="arithmatex">\(m \frac{dv}{dt} = - \gamma v + R(t)\)</span> の両辺に位置 <span class="arithmatex">\(x\)</span> を掛けます。</p>
 <div class="arithmatex">\[
@@ -14588,25 +14588,25 @@ m x \frac{dv}{dt} = -\gamma x v + x R(t)
 <div class="arithmatex">\[
 m \frac{d}{dt}(xv) - m v^2 = -\frac{\gamma}{2} \frac{d}{dt}(x^2) + x R(t)
 \]</div>
-<p>この方程式全体の熱平均をとります。ランダム力の平均値の性質から，位置とランダム力の相関項は <span class="arithmatex">\(\langle x R(t) \rangle = 0\)</span> となります。また，速度の2乗平均は (2) の結果から十分に時間が経っていれば定数 <span class="arithmatex">\(\langle v^2 \rangle = \frac{k_B T}{m}\)</span> とみなせます。</p>
+<p>この方程式全体の熱平均をとります。ランダム力の平均値の性質から，位置とランダム力の相関項は <span class="arithmatex">\(\langle x R(t) \rangle = 0\)</span> となります。また，速度の2乗平均は (2) の結果から十分に時間が経っていれば定数 <span class="arithmatex">\(\langle v^2 \rangle = \frac{k_{\text{B}} T}{m}\)</span> とみなせます。</p>
 <div class="arithmatex">\[
-m \frac{d}{dt}\langle xv \rangle - k_B T = -\frac{\gamma}{2} \frac{d}{dt}\langle x^2 \rangle
+m \frac{d}{dt}\langle xv \rangle - k_{\text{B}} T = -\frac{\gamma}{2} \frac{d}{dt}\langle x^2 \rangle
 \]</div>
 <p>ここで，粒子が受ける流体抵抗が支配的になる長時間極限 <span class="arithmatex">\(t \gg m/\gamma\)</span> を考えます。このスケールでは，粒子の速度変化の慣性項の寄与が無視できるようになります。</p>
 <div class="arithmatex">\[
-- k_B T \simeq -\frac{\gamma}{2} \frac{d}{dt}\langle x^2 \rangle \implies \frac{d}{dt}\langle x^2 \rangle \simeq \frac{2 k_B T}{\gamma}
+- k_{\text{B}} T \simeq -\frac{\gamma}{2} \frac{d}{dt}\langle x^2 \rangle \implies \frac{d}{dt}\langle x^2 \rangle \simeq \frac{2 k_{\text{B}} T}{\gamma}
 \]</div>
 <p>初期位置 <span class="arithmatex">\(x(0)=0\)</span> のもとで，この両辺を時間 <span class="arithmatex">\(t\)</span> で積分します。</p>
 <div class="arithmatex">\[
-\langle x(t)^2 \rangle \simeq \left( \frac{2 k_B T}{\gamma} \right) t
+\langle x(t)^2 \rangle \simeq \left( \frac{2 k_{\text{B}} T}{\gamma} \right) t
 \]</div>
 <p>このミクロな運動方程式から導かれた長時間の平均二乗変位と，マクロな拡散の関係式 <span class="arithmatex">\(\langle x^2 \rangle = 2Dt\)</span> を比較します。</p>
 <div class="arithmatex">\[
-2 D t = \left( \frac{2 k_B T}{\gamma} \right) t
+2 D t = \left( \frac{2 k_{\text{B}} T}{\gamma} \right) t
 \]</div>
-<p>これにより，物質の拡散のしやすさと，運動するときの引きずられにくさが，熱運動の媒介によって結びついていることを示すアインシュタインの関係式が導出されます。</p>
+<p>これにより，物質の拡散のしやすさと，運動するときの引きずられにくさが，熱運動の媒介によって結びついていることを示すアインシュタインの関係式を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{D = \frac{k_B T}{\gamma}}
+\finalanswer{D = \frac{k_{\text{B}} T}{\gamma}}
 \]</div>
 
 

@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14532,7 +14532,7 @@
 <p>とする。</p>
 <p>(1) <span class="arithmatex">\(\phi(x,y)=X(x)Y(y)\)</span> と置き，変数分離定数を <span class="arithmatex">\(-k^2\)</span> として <span class="arithmatex">\(X,Y\)</span> の微分方程式を導け。<span class="arithmatex">\(x=0,a\)</span> の条件から許される波数 <span class="arithmatex">\(k_n\)</span> と固有関数 <span class="arithmatex">\(X_n(x)\)</span> を求めよ。</p>
 <p>(2) <span class="arithmatex">\(y=0\)</span> と <span class="arithmatex">\(y=b\)</span> の条件を用いて電位 <span class="arithmatex">\(\phi(x,y)\)</span> を一意に求めよ。一般のフーリエ級数を残さず，この境界条件で必要なモードだけを示せ。</p>
-<p>(3) 電場成分 <span class="arithmatex">\(E_x=-\partial\phi/\partial x\)</span>，<span class="arithmatex">\(E_y=-\partial\phi/\partial y\)</span> を求めよ。上辺の導体から領域内へ向く単位法線を <span class="arithmatex">\(-\boldsymbol{e}_y\)</span> とし，上辺内側の表面電荷密度を <span class="arithmatex">\(\sigma_s(x)=\varepsilon_0\boldsymbol{E}(x,b^-)cdot(-\boldsymbol{e}_y)\)</span> と定義して求めよ。</p>
+<p>(3) 電場成分 <span class="arithmatex">\(E_x=-\partial\phi/\partial x\)</span>，<span class="arithmatex">\(E_y=-\partial\phi/\partial y\)</span> を求めよ。上辺の導体から領域内へ向く単位法線を <span class="arithmatex">\(-\boldsymbol{e}_y\)</span> とし，上辺内側の表面電荷密度を <span class="arithmatex">\(\sigma_s(x)=\varepsilon_0\boldsymbol{E}(x,b^-)\cdot(-\boldsymbol{e}_y)\)</span> と定義して求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14570,7 +14570,7 @@ X_n(x)=\sin\frac{n\pi x}{a},
 <p>となります。上辺の境界値は <span class="arithmatex">\(n=1\)</span> の固有関数だけを含むため</p>
 <div class="arithmatex">\[
 A_1\sinh\frac{\pi b}{a}=V_0,
-\qquad A_n=0quad n\ge2
+\qquad A_n=0\quad (n\ge2)
 \]</div>
 <p>です。よって</p>
 <div class="arithmatex">\[
@@ -14586,13 +14586,13 @@ A_1\sinh\frac{\pi b}{a}=V_0,
 <div class="arithmatex">\[
 \begin{aligned}
 E_x(x,y)
-&amp;=-\frac{\pi V_0}{a}
+&amp;=\finalanswer{-\frac{\pi V_0}{a}
 \frac{\sinh(\pi y/a)}{\sinh(\pi b/a)}
-\cos\frac{\pi x}{a}, \\
+\cos\frac{\pi x}{a}}, \\
 E_y(x,y)
-&amp;=-\frac{\pi V_0}{a}
+&amp;=\finalanswer{-\frac{\pi V_0}{a}
 \frac{\cosh(\pi y/a)}{\sinh(\pi b/a)}
-\sin\frac{\pi x}{a}.
+\sin\frac{\pi x}{a}}
 \end{aligned}
 \]</div>
 <p>上辺で領域内へ向く法線は <span class="arithmatex">\(-\boldsymbol{e}_y\)</span> なので</p>
@@ -14602,9 +14602,9 @@ E_y(x,y)
 &amp;=\varepsilon_0\boldsymbol{E}(x,b^-)
 \cdot(-\boldsymbol{e}_y) \\
 &amp;=-\varepsilon_0E_y(x,b^-) \\
-&amp;=\finalanswer{\frac{\pi\varepsilon_0V_0}{a}}
+&amp;=\finalanswer{\frac{\pi\varepsilon_0V_0}{a}
 \coth\frac{\pi b}{a}
-\sin\frac{\pi x}{a}.
+\sin\frac{\pi x}{a}}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(0&lt;x&lt;a\)</span> では正であり，正電位の上辺に正電荷が分布します。</p>

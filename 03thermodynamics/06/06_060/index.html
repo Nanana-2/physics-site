@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14501,14 +14501,14 @@
 P = \frac{RT}{v - b} - \frac{a}{v^2}
 \]</div>
 <p>臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> における等温線は，臨界点において体積による1階偏微分と2階偏微分が同時に 0 となる変曲点を持つ。以下の問いに答えよ。</p>
-<p>(1) 臨界点における条件である次の2つの微分方程式から，臨界体積 <span class="arithmatex">\(v_{\text{c}}\)</span> ，臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> ，および臨界圧力 <span class="arithmatex">\(P_{\text{c}}\)</span> を，それぞれ定数 <span class="arithmatex">\(a, b, R\)</span> を用いて表せ。</p>
+<p>(1) 臨界点における次の2条件から，臨界体積 <span class="arithmatex">\(v_{\text{c}}\)</span>，臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span>，および臨界圧力 <span class="arithmatex">\(P_{\text{c}}\)</span> を，それぞれ定数 <span class="arithmatex">\(a,b,R\)</span> を用いて表せ。</p>
 <div class="arithmatex">\[
 \left( \frac{\partial P}{\partial v} \right)_T = 0
 \]</div>
 <div class="arithmatex">\[
 \left( \frac{\partial^2 P}{\partial v^2} \right)_T = 0
 \]</div>
-<p>(2) 臨界点近傍における物理量の振る舞いを示す指標として臨界指数が用いられる。臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> において，圧力と臨界圧力の差 <span class="arithmatex">\(P - P_{\text{c}}\)</span> が，体積と臨界体積の差 <span class="arithmatex">\(v - v_{\text{c}}\)</span> のべき乗に比例する関係に着目する。 <span class="arithmatex">\(v\)</span> の関数としての圧力 <span class="arithmatex">\(P\)</span> を臨界点 <span class="arithmatex">\(v = v_{\text{c}}\)</span> のまわりでテイラー展開し，主要項を求めることで， <span class="arithmatex">\(P - P_{\text{c}} \propto -(v - v_{\text{c}})^\delta\)</span> における臨界指数 <span class="arithmatex">\(\delta\)</span> の値を決定せよ。</p>
+<p>(2) 臨界温度 <span class="arithmatex">\(T_{\text{c}}\)</span> において，圧力 <span class="arithmatex">\(P\)</span> を臨界体積 <span class="arithmatex">\(v=v_{\text{c}}\)</span> のまわりでテイラー展開し，最初に残る非零の項を求めよ。これを <span class="arithmatex">\(P-P_{\text{c}}\propto-(v-v_{\text{c}})^\delta\)</span> と比較し，臨界指数 <span class="arithmatex">\(\delta\)</span> を決定せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14538,7 +14538,7 @@ P = \frac{RT}{v - b} - \frac{a}{v^2}
 \]</div>
 <p>これにより，臨界体積が次のように求まります。</p>
 <div class="arithmatex">\[
-v_{\text{c}} = 3b
+\finalanswer{v_{\text{c}} = 3b}
 \]</div>
 <p>この結果を1階偏微分の等式に代入して，臨界温度について整理します。</p>
 <div class="arithmatex">\[
@@ -14548,11 +14548,16 @@ v_{\text{c}} = 3b
 \frac{RT_{\text{c}}}{4b^2} = \frac{2a}{27b^3}
 \]</div>
 <div class="arithmatex">\[
-T_{\text{c}} = \frac{8a}{27bR}
+\finalanswer{T_{\text{c}} = \frac{8a}{27bR}}
 \]</div>
 <p>最後に，得られた臨界体積と臨界温度の値を元の状態方程式に代入して，臨界圧力を計算します。</p>
 <div class="arithmatex">\[
-P_{\text{c}} = \frac{R \left(\frac{8a}{27bR}\right)}{3b - b} - \frac{a}{(3b)^2} = \frac{8a}{27b(2b)} - \frac{a}{9b^2} = \frac{4a}{27b^2} - \frac{3a}{27b^2} = \finalanswer{\frac{a}{27b^2}}
+\begin{aligned}
+P_{\text{c}}
+&amp;=\frac{R\left(\frac{8a}{27bR}\right)}{3b-b}-\frac{a}{(3b)^2} \\
+&amp;=\frac{4a}{27b^2}-\frac{a}{9b^2} \\
+&amp;=\finalanswer{\frac{a}{27b^2}}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>温度を臨界温度に固定した状態で，圧力 <span class="arithmatex">\(P\)</span> を臨界体積のまわりでテイラー展開します。</p>
@@ -14564,7 +14569,7 @@ P(v)={}&amp;P(v_{\text{c}})
 &amp;+\frac{1}{6}\left(\frac{\partial^3P}{\partial v^3}\right)_{T_{\text{c}},v_{\text{c}}}(v-v_{\text{c}})^3+\cdots
 \end{aligned}
 \]</div>
-<p>臨界点の定義式より， $P(v_{\text{c}}) = P_{\text{c}} $ であり，1階偏微分および2階偏微分の値は 0 となります。したがって，右辺の第2項と第3項は消去されます。</p>
+<p>臨界点では <span class="arithmatex">\(P(v_{\text{c}})=P_{\text{c}}\)</span> であり，1階および2階微分は0です。したがって，最初の非零項は3次の項です。</p>
 <div class="arithmatex">\[
 P(v) - P_{\text{c}} \approx \frac{1}{6} \left( \frac{\partial^3 P}{\partial v^3} \right)_{T_{\text{c}}, v_{\text{c}}} (v - v_{\text{c}})^3
 \]</div>
@@ -14574,11 +14579,17 @@ P(v) - P_{\text{c}} \approx \frac{1}{6} \left( \frac{\partial^3 P}{\partial v^3}
 \]</div>
 <p>この式に臨界点の値を代入します。</p>
 <div class="arithmatex">\[
-\left( \frac{\partial^3 P}{\partial v^3} \right)_{T_{\text{c}}, v_{\text{c}}} = - \frac{6R \left(\frac{8a}{27bR}\right)}{(2b)^4} + \frac{24a}{(3b)^5} = - \frac{a}{9b^5} + \frac{8a}{81b^5} = - \frac{a}{81b^5}
+\begin{aligned}
+\left(\frac{\partial^3P}{\partial v^3}\right)_{T_{\text{c}},v_{\text{c}}}
+&amp;=-\frac{6R\left(\frac{8a}{27bR}\right)}{(2b)^4}
++\frac{24a}{(3b)^5} \\
+&amp;=-\frac{a}{9b^5}+\frac{8a}{81b^5} \\
+&amp;=-\frac{a}{81b^5}
+\end{aligned}
 \]</div>
 <p>この結果をテイラー展開の式に戻します。</p>
 <div class="arithmatex">\[
-P - P_{\text{c}} \approx - \frac{a}{486b^5} (v - v_{\text{c}})^3
+\finalanswer{P - P_{\text{c}} \approx - \frac{a}{486b^5} (v - v_{\text{c}})^3}
 \]</div>
 <p>問題文に提示された比例関係 <span class="arithmatex">\(P - P_{\text{c}} \propto -(v - v_{\text{c}})^\delta\)</span> と比較すると，べき乗の指数は 3 であることがわかります。したがって，臨界指数は次のように決定されます。</p>
 <div class="arithmatex">\[

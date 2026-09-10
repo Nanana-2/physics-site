@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14565,7 +14565,7 @@
 \hat{S}_+ &amp;= \frac{\hbar}{2}(\sigma_x + i\sigma_y) \\
 &amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + i \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \right] \\
 &amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} + \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} \right] \\
-&amp;= \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}
+&amp;= \finalanswer{\hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
@@ -14573,7 +14573,7 @@
 \hat{S}_- &amp;= \frac{\hbar}{2}(\sigma_x - i\sigma_y) \\
 &amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} - i \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \right] \\
 &amp;= \frac{\hbar}{2} \left[ \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} - \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} \right] \\
-&amp;= \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}
+&amp;= \finalanswer{\hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}}
 \end{aligned}
 \]</div>
 <p>求めた行列を各ベクトルに作用させて規則を調べます。</p>
@@ -14581,33 +14581,33 @@
 \begin{aligned}
 \hat{S}_+ |+\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
 &amp;= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
-&amp;= 0
+&amp;= \finalanswer{0}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{S}_+ |-\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
 &amp;= \hbar \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
-&amp;= \hbar |+\rangle
+&amp;= \finalanswer{\hbar |+\rangle}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{S}_- |+\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
 &amp;= \hbar \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
-&amp;= \hbar |-\rangle
+&amp;= \finalanswer{\hbar |-\rangle}
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{S}_- |-\rangle &amp;= \hbar \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
 &amp;= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
-&amp;= 0
+&amp;= \finalanswer{0}
 \end{aligned}
 \]</div>
 <p>この結果より， <span class="arithmatex">\(\hat{S}_+\)</span> は下向き状態を上向き状態へ引き上げ，すでに上向きの状態に作用すると 0 にする性質を持ちます。 <span class="arithmatex">\(\hat{S}_-\)</span> はその逆の作用をします。</p>
 <h3 id="3">(3)</h3>
-<p>行列の積の定義に従って，複素数の演算を慎重に行います。 <span class="arithmatex">\(i^2 = -1\)</span> に注意します。</p>
+<p>行列積を計算し，<span class="arithmatex">\(i^2=-1\)</span> を用いると</p>
 <ul>
 <li><strong><span class="arithmatex">\(\sigma_x \sigma_y\)</span> の計算</strong></li>
 </ul>
@@ -14636,7 +14636,11 @@
 &amp;= 2i \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
 \end{aligned}
 \]</div>
-<p>右辺の行列は <span class="arithmatex">\(\sigma_z\)</span> そのものであるため， <span class="arithmatex">\([\sigma_x, \sigma_y] = 2i\sigma_z\)</span> が成り立ちます。</p>
+<p>右辺の行列は <span class="arithmatex">\(\sigma_z\)</span> なので，</p>
+<div class="arithmatex">\[
+\finalanswer{[\sigma_x,\sigma_y]=2i\sigma_z}
+\]</div>
+<p>が成り立ちます。</p>
 <p>この結果を用いて，スピン演算子の交換関係を組み立てます。定義より係数が出ます。</p>
 <div class="arithmatex">\[
 \begin{aligned}

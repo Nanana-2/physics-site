@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,16 +14520,16 @@
 <h2 id="_2">問題</h2>
 <p>真空中で，面積 <span class="arithmatex">\(S\)</span> の二枚の導体板を距離 <span class="arithmatex">\(d\)</span> だけ離して平行に置く。端効果を無視し，左の板に <span class="arithmatex">\(+Q\)</span>，右の板に <span class="arithmatex">\(-Q\)</span> を与える。左から右へ向く単位ベクトルを <span class="arithmatex">\(\boldsymbol{n}\)</span> とする。二板の電位を <span class="arithmatex">\(V_+\)</span>，<span class="arithmatex">\(V_-\)</span> とし，正の電位差を <span class="arithmatex">\(V=V_+-V_-\)</span>，静電容量を <span class="arithmatex">\(C=Q/V\)</span> と定義する。</p>
 <p>(1) 各板の向かい合う面の表面電荷密度 <span class="arithmatex">\(\sigma_s\)</span> を求めよ。一枚の無限平面電荷が両側に作る電場の大きさが <span class="arithmatex">\(\sigma_s/(2\varepsilon_0)\)</span> であることを用い，板間電場 <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{in}}\)</span> と板外電場 <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{out}}\)</span> を求めよ。</p>
-<p>(2) <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{in}}\)</span> を正極板から負極板まで積分して電位差 <span class="arithmatex">\(V\)</span> を求め，静電容量 <span class="arithmatex">\(C\)</span> を <span class="arithmatex">\(S,d,\varepsilon_0\)</span> で表せ。<span class="arithmatex">\(S\)</span> を増やす場合と <span class="arithmatex">\(d\)</span> を増やす場合に <span class="arithmatex">\(C\)</span> がどう変化するか，式に基づいて説明せよ。</p>
+<p>(2) <span class="arithmatex">\(\boldsymbol{E}_{\mathrm{in}}\)</span> を正極板から負極板まで積分して電位差 <span class="arithmatex">\(V\)</span> を求め，静電容量 <span class="arithmatex">\(C\)</span> を <span class="arithmatex">\(S,d,\varepsilon_0\)</span> で表せ。</p>
 <p>(3) 板間を厚さ <span class="arithmatex">\(d_1,d_2\)</span>，誘電率 <span class="arithmatex">\(\varepsilon_1,\varepsilon_2\)</span> の二層で満たし，<span class="arithmatex">\(d_1+d_2=d\)</span> とする。自由電荷を <span class="arithmatex">\(\pm Q\)</span> に保つ。各層の電場 <span class="arithmatex">\(E_1,E_2\)</span>，全電位差 <span class="arithmatex">\(V\)</span>，合成静電容量 <span class="arithmatex">\(C_{\mathrm{series}}=Q/V\)</span> を求め，<span class="arithmatex">\(C_i=\varepsilon_iS/d_i\)</span> とした直列接続の関係を示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>端効果を無視すると電荷は向かい合う面に一様に分布します。</p>
 <div class="arithmatex">\[
-\sigma_s=\frac{Q}{S}
+\finalanswer{\sigma_s=\frac{Q}{S}}
 \]</div>
-<p>一枚の平面が作る電場の大きさは <span class="arithmatex">\(\sigma_s/(2\varepsilon_0)\)</span> です。板間では二枚の寄与が同じ向きに加わり，板外では打ち消し合います。正極板から負極板へ向く単位ベクトルを <span class="arithmatex">\(\boldsymbol{n}\)</span> とすると</p>
+<p>一枚の平面が作る電場の大きさは <span class="arithmatex">\(\sigma_s/(2\varepsilon_0)\)</span> です。板間では二枚の電場が同じ向きに加わり，板外では和が 0 になります。正極板から負極板へ向く単位ベクトルを <span class="arithmatex">\(\boldsymbol{n}\)</span> とすると</p>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{E}_{\mathrm{in}}=\frac{Q}{\varepsilon_0S}\boldsymbol{n},
 \qquad
@@ -14543,15 +14543,14 @@
 V_+-V_-
 &amp;=\int_0^d E\,dl \\
 &amp;=E[l]_0^d \\
-&amp;=Ed.
+&amp;=Ed
 \end{aligned}
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-V=\frac{Qd}{\varepsilon_0S}
+\finalanswer{V=\frac{Qd}{\varepsilon_0S}}
 \]</div>
 <p>です。</p>
-<p><strong>静電容量</strong></p>
 <p><span class="arithmatex">\(C=Q/V\)</span> に (2) の結果を代入します。</p>
 <div class="arithmatex">\[
 \finalanswer{C=\frac{\varepsilon_0S}{d}}
@@ -14560,15 +14559,15 @@ V=\frac{Qd}{\varepsilon_0S}
 <h3 id="3">(3)</h3>
 <p>界面に自由電荷がないので <span class="arithmatex">\(D=Q/S\)</span> は二層で共通です。したがって</p>
 <div class="arithmatex">\[
-E_1=\frac{Q}{\varepsilon_1S},
+\finalanswer{E_1=\frac{Q}{\varepsilon_1S}},
 \qquad
-E_2=\frac{Q}{\varepsilon_2S}
+\finalanswer{E_2=\frac{Q}{\varepsilon_2S}}
 \]</div>
 <p>です。全電位差は</p>
 <div class="arithmatex">\[
-V=E_1d_1+E_2d_2
+\finalanswer{V=E_1d_1+E_2d_2
 =\frac{Q}{S}\left(\frac{d_1}{\varepsilon_1}
-+\frac{d_2}{\varepsilon_2}\right)
++\frac{d_2}{\varepsilon_2}\right)}
 \]</div>
 <p>なので</p>
 <div class="arithmatex">\[

@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14531,7 +14531,7 @@
 \]</div>
 <p>である。</p>
 <p>(1) 半径 <span class="arithmatex">\(r&lt;R\)</span> の円形経路を用い，<span class="arithmatex">\(E_\varphi(r,t)\)</span> を求めよ。</p>
-<p>(2) 半径 <span class="arithmatex">\(r&gt;R\)</span> の円形経路を用い，<span class="arithmatex">\(E_\varphi(r,t)\)</span> を求めよ。<span class="arithmatex">\(r=R\)</span> で内外の結果が連続することを示せ。</p>
+<p>(2) 半径 <span class="arithmatex">\(r&gt;R\)</span> の円形経路を用い，<span class="arithmatex">\(E_\varphi(r,t)\)</span> を求めよ。</p>
 <p>(3) <span class="arithmatex">\(B(t)=B_0+\beta t\)</span>，<span class="arithmatex">\(\beta&gt;0\)</span> とする。<span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> に置いた正電荷 <span class="arithmatex">\(q\)</span> が受ける力 <span class="arithmatex">\(\boldsymbol{F}=q\boldsymbol{E}\)</span> の向きを示せ。また，半径 <span class="arithmatex">\(r\)</span> の円周に沿って正電荷を一周させるとき電場がする仕事 <span class="arithmatex">\(W=q\oint\boldsymbol{E}\cdot d\boldsymbol{l}\)</span> を両領域で求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14542,7 +14542,7 @@
 \Phi_B(r,t)
 &amp;=\int_0^rB(t)2\pi s\,ds \\
 &amp;=2\pi B(t)\left[\frac{s^2}{2}\right]_0^r \\
-&amp;=B(t)\pi r^2.
+&amp;=B(t)\pi r^2
 \end{aligned}
 \]</div>
 <p>円周上では <span class="arithmatex">\(\boldsymbol{E}=E_\varphi\boldsymbol{e}_\varphi\)</span>，<span class="arithmatex">\(d\boldsymbol{l}=r\,d\varphi\boldsymbol{e}_\varphi\)</span> なので，ファラデーの法則の左辺も</p>
@@ -14550,7 +14550,7 @@
 \begin{aligned}
 \oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
 &amp;=\int_0^{2\pi}E_\varphi r\,d\varphi \\
-&amp;=2\pi rE_\varphi.
+&amp;=2\pi rE_\varphi
 \end{aligned}
 \]</div>
 <p>したがって</p>
@@ -14568,12 +14568,7 @@
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(r&gt;R\)</span> では磁場が存在する面積は <span class="arithmatex">\(\pi R^2\)</span> だけです。<span class="arithmatex">\(R&lt;s&lt;r\)</span> の部分では <span class="arithmatex">\(B=0\)</span> なので</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\Phi_B(r,t)
-&amp;=\int_0^RB(t)2\pi s\,ds
-+\int_R^r0\cdot2\pi s\,ds \\
-&amp;=B(t)\pi R^2.
-\end{aligned}
+\Phi_B(r,t) = \int_0^RB(t)2\pi s\,ds +\int_R^r0\cdot2\pi s\,ds = B(t)\pi R^2
 \]</div>
 <p>よって</p>
 <div class="arithmatex">\[
@@ -14582,9 +14577,9 @@
 \]</div>
 <p>よって</p>
 <div class="arithmatex">\[
-E_\varphi(r,t)
+\finalanswer{E_\varphi(r,t)
 =-\frac{R^2}{2r}\frac{dB}{dt},
-\qquad r&gt;R
+\qquad r&gt;R}
 \]</div>
 <p>となります。<span class="arithmatex">\(r=R\)</span> ではどちらも</p>
 <div class="arithmatex">\[
@@ -14596,8 +14591,8 @@ E_\varphi(r,t)
 <p><span class="arithmatex">\(dB/dt=\beta&gt;0\)</span> なので <span class="arithmatex">\(E_\varphi&lt;0\)</span> です。誘導電場と正電荷への力は，<span class="arithmatex">\(+z\)</span> から見て時計回りを向きます。</p>
 <p><span class="arithmatex">\(r&lt;R\)</span> では</p>
 <div class="arithmatex">\[
-W=qE_\varphi2\pi r
-=-q\pi r^2\beta
+\finalanswer{W=qE_\varphi2\pi r
+=-q\pi r^2\beta}
 \]</div>
 <p>です。<span class="arithmatex">\(r&gt;R\)</span> では</p>
 <div class="arithmatex">\[

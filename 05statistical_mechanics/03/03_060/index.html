@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11056,7 +11056,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">エネルギー揺らぎと熱容量</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> の熱浴と熱平衡状態にある系を考える。この系の分配関数は <span class="arithmatex">\(Z = \sum_i \exp(-\beta E_i)\)</span> であり，ある物理量 <span class="arithmatex">\(A\)</span> のアンサンブル平均は</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> の熱浴と熱平衡状態にある系を考える。この系の分配関数は <span class="arithmatex">\(Z = \sum_i \exp(-\beta E_i)\)</span> であり，ある物理量 <span class="arithmatex">\(A\)</span> のアンサンブル平均は</p>
 <div class="arithmatex">\[
 \langle A \rangle = \frac{1}{Z} \sum_i A_i \exp(-\beta E_i)
 \]</div>
@@ -14528,7 +14528,7 @@
 <div class="arithmatex">\[
 \langle (E - \langle E \rangle)^2 \rangle = \frac{\partial^2 \log Z}{\partial \beta^2}
 \]</div>
-<p>(3) 系の定積熱容量 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U = \langle E \rangle\)</span> の温度微分 <span class="arithmatex">\(\frac{\partial \langle E \rangle}{\partial T}\)</span> として定義される。微分演算子の関係式 <span class="arithmatex">\(\frac{\partial}{\partial T} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta}\)</span> を用いて，定積熱容量 <span class="arithmatex">\(C_V\)</span> とエネルギーの分散 <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle\)</span> の間に成り立つ関係式を導け。</p>
+<p>(3) 系の定積熱容量 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U = \langle E \rangle\)</span> の温度微分 <span class="arithmatex">\(\frac{\partial \langle E \rangle}{\partial T}\)</span> として定義される。微分演算子の関係式 <span class="arithmatex">\(\frac{\partial}{\partial T} = -\frac{1}{k_{\text{B}} T^2} \frac{\partial}{\partial \beta}\)</span> を用いて，定積熱容量 <span class="arithmatex">\(C_V\)</span> とエネルギーの分散 <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle\)</span> の間に成り立つ関係式を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14538,7 +14538,7 @@
 \]</div>
 <p>分配関数 <span class="arithmatex">\(Z = \sum_i \exp(-\beta E_i)\)</span> を <span class="arithmatex">\(\beta\)</span> で1階微分すると <span class="arithmatex">\(\frac{\partial Z}{\partial \beta} = - \sum_i E_i \exp(-\beta E_i)\)</span> となるため，平均エネルギーは次のように表せます。</p>
 <div class="arithmatex">\[
-\langle E \rangle = -\frac{1}{Z} \frac{\partial Z}{\partial \beta}
+\finalanswer{\langle E \rangle = -\frac{1}{Z} \frac{\partial Z}{\partial \beta}}
 \]</div>
 <p>同様に，分配関数 <span class="arithmatex">\(Z\)</span> を <span class="arithmatex">\(\beta\)</span> で2階微分します。各項の指数部分から再び <span class="arithmatex">\(-E_i\)</span> が前に降りてくるため，以下のようになります。</p>
 <div class="arithmatex">\[
@@ -14570,7 +14570,7 @@
 &amp;= \frac{\frac{\partial^2 Z}{\partial \beta^2} \cdot Z - \frac{\partial Z}{\partial \beta} \cdot \frac{\partial Z}{\partial \beta}}{Z^2}
 \end{aligned}
 \]</div>
-<p>右辺の分数式を2つの項に分割して整理します。</p>
+<p>右辺を2項に分けて整理します。</p>
 <div class="arithmatex">\[
 \frac{\partial^2 \log Z}{\partial \beta^2} = \frac{1}{Z} \frac{\partial^2 Z}{\partial \beta^2} - \left( \frac{1}{Z} \frac{\partial Z}{\partial \beta} \right)^2
 \]</div>
@@ -14581,25 +14581,25 @@
 &amp;= \langle E^2 \rangle - \langle E \rangle^2
 \end{aligned}
 \]</div>
-<p>左辺と右辺を入れ替えることで，エネルギーの分散と対数2階微分の関係式が導出されます。</p>
+<p>左辺と右辺を入れ替えることで，エネルギーの分散と対数2階微分の関係式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle (E - \langle E \rangle)^2 \rangle = \frac{\partial^2 \log Z}{\partial \beta^2}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>定積熱容量 <span class="arithmatex">\(C_V = \frac{\partial \langle E \rangle}{\partial T}\)</span> に対し，温度微分を逆温度微分に変換します。</p>
 <div class="arithmatex">\[
-C_V = -\frac{1}{k_B T^2} \frac{\partial \langle E \rangle}{\partial \beta}
+C_V = -\frac{1}{k_{\text{B}} T^2} \frac{\partial \langle E \rangle}{\partial \beta}
 \]</div>
 <p>(2) の途中で導いた <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-C_V &amp;= -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta} \left( -\frac{\partial \log Z}{\partial \beta} \right) \\
-&amp;= \frac{1}{k_B T^2} \frac{\partial^2 \log Z}{\partial \beta^2}
+C_V &amp;= -\frac{1}{k_{\text{B}} T^2} \frac{\partial}{\partial \beta} \left( -\frac{\partial \log Z}{\partial \beta} \right) \\
+&amp;= \frac{1}{k_{\text{B}} T^2} \frac{\partial^2 \log Z}{\partial \beta^2}
 \end{aligned}
 \]</div>
 <p>この式の右辺に，(2) で得られた分散の表現を代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{C_V = \frac{1}{k_B T^2} \langle (E - \langle E \rangle)^2 \rangle}
+\finalanswer{C_V = \frac{1}{k_{\text{B}} T^2} \langle (E - \langle E \rangle)^2 \rangle}
 \]</div>
 <p>この式より，定積熱容量はエネルギーの分散に比例します。</p>
 

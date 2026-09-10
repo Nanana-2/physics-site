@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p>体積 <span class="arithmatex">\(V\)</span> の容器に閉じ込められた全粒子数 <span class="arithmatex">\(N\)</span> の三次元理想ボース気体を考える。ボース気体では励起状態に存在できる粒子の総数 <span class="arithmatex">\(N_{\mathrm{ex}}\)</span> には温度 <span class="arithmatex">\(T\)</span> によって決まる最大収容量が存在し，化学ポテンシャルが上限<span class="arithmatex">\(\mu = 0\)</span>に達したときに最大値をとる。</p>
 <div class="arithmatex">\[
-N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}
+N_{\mathrm{ex}}^{\max}(T) = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2}
 \]</div>
 <p>全粒子数がこの励起状態の最大収容量を上回るとき，残りの粒子がエネルギー <span class="arithmatex">\(\epsilon_0 = 0\)</span> の基底状態を占有し，ボース・アインシュタイン凝縮が生じる。以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T) = N\)</span> が成立する温度を凝縮の<strong>臨界温度</strong> <span class="arithmatex">\(T_c\)</span> と呼ぶ。臨界温度 <span class="arithmatex">\(T_c\)</span> の式を，粒子密度 <span class="arithmatex">\(\rho = N/V\)</span> および定数を用いて表せ。</p>
@@ -14534,23 +14534,23 @@ N_{\mathrm{ex}}^{\max}(T) = N \left( \frac{T}{T_c} \right)^{3/2}
 <h3 id="1">(1)</h3>
 <p>臨界温度 <span class="arithmatex">\(T_c\)</span> の定義より， <span class="arithmatex">\(T = T_c\)</span> において励起状態の最大収容量が全粒子数 <span class="arithmatex">\(N\)</span> と一致します。</p>
 <div class="arithmatex">\[
-N = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_B T_c}{h^2} \right)^{3/2}
+N = \zeta\left(\frac{3}{2}\right) V \left( \frac{2\pi m k_{\text{B}} T_c}{h^2} \right)^{3/2}
 \]</div>
 <p>両辺を体積 <span class="arithmatex">\(V\)</span> で割り，粒子密度 <span class="arithmatex">\(\rho = N/V\)</span> の形を作ります。</p>
 <div class="arithmatex">\[
-\rho = \zeta\left(\frac{3}{2}\right) \left( \frac{2\pi m k_B T_c}{h^2} \right)^{3/2}
+\rho = \zeta\left(\frac{3}{2}\right) \left( \frac{2\pi m k_{\text{B}} T_c}{h^2} \right)^{3/2}
 \]</div>
 <p>この式を <span class="arithmatex">\(T_c\)</span> について解くため，まず両辺を <span class="arithmatex">\(\zeta(3/2)\)</span> で割り，全体を <span class="arithmatex">\(2/3\)</span> 乗します。</p>
 <div class="arithmatex">\[
-\left( \frac{\rho}{\zeta\left(\frac{3}{2}\right)} \right)^{2/3} = \frac{2\pi m k_B T_c}{h^2}
+\left( \frac{\rho}{\zeta\left(\frac{3}{2}\right)} \right)^{2/3} = \frac{2\pi m k_{\text{B}} T_c}{h^2}
 \]</div>
-<p>最後に，係数を右辺に集約することで臨界温度 <span class="arithmatex">\(T_c\)</span> の公式が導出されます。</p>
+<p>最後に，係数を右辺に集約することで臨界温度 <span class="arithmatex">\(T_c\)</span> の公式を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{T_c = \frac{h^2}{2\pi m k_B} \left( \frac{\rho}{\zeta\left(\frac{3}{2}\right)} \right)^{2/3}}
+\finalanswer{T_c = \frac{h^2}{2\pi m k_{\text{B}}} \left( \frac{\rho}{\zeta\left(\frac{3}{2}\right)} \right)^{2/3}}
 \]</div>
 <p>この結果から，粒子密度 <span class="arithmatex">\(\rho\)</span> が高いほど，あるいは粒子の質量 <span class="arithmatex">\(m\)</span> が軽いほど，量子力学的な波の重なりが比較的高い温度で発生するため，臨界温度 <span class="arithmatex">\(T_c\)</span> が高くなることがわかります。</p>
 <h3 id="2">(2)</h3>
-<p>任意の温度 <span class="arithmatex">\(T\)</span> における励起状態の最大収容量 <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T)\)</span> の式を眺めると，温度以外のすべてのパラメータ <span class="arithmatex">\(V, m, h, k_B\)</span>は共通しています。</p>
+<p>任意の温度 <span class="arithmatex">\(T\)</span> における励起状態の最大収容量 <span class="arithmatex">\(N_{\mathrm{ex}}^{\max}(T)\)</span> の式を眺めると，温度以外のすべてのパラメータ <span class="arithmatex">\(V, m, h, k_{\text{B}}\)</span>は共通しています。</p>
 <div class="arithmatex">\[
 N_{\mathrm{ex}}^{\max}(T) \propto T^{3/2}
 \]</div>
@@ -14572,7 +14572,7 @@ N_{\mathrm{ex}}^{\max}(T) \propto T^{3/2}
 <div class="arithmatex">\[
 N_0 = N - N_{\mathrm{ex}} = N - N \left( \frac{T}{T_c} \right)^{3/2}
 \]</div>
-<p>共通因数の <span class="arithmatex">\(N\)</span> で括ることで，凝縮粒子数の温度依存性を表す基本公式が導出されます。</p>
+<p>共通因数の <span class="arithmatex">\(N\)</span> で括ることで，凝縮粒子数の温度依存性を表す基本公式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{N_0(T) = N \left[ 1 - \left( \frac{T}{T_c} \right)^{3/2} \right]}
 \]</div>

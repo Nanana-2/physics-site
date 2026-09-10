@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14521,37 +14521,35 @@
 <p>A元素の原子とB元素の原子がそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつ含まれる，全原子数 <span class="arithmatex">\(N\)</span> の等原子比二元合金を対象とする。この結晶格子は，互いに入り込んだ同数の格子点を持つ2つの副格子に等分できるものとする。</p>
 <p>規則化した状態では，A原子はすべて <span class="arithmatex">\(\alpha\)</span> 副格子に配置され，B原子はすべて <span class="arithmatex">\(\beta\)</span> 副格子に配置される。熱運動が存在する有限温度においては，原子の配置に乱れが生じる。そこで，配置の規則正しさを表す秩序変数として，規則度 <span class="arithmatex">\(X\)</span> を以下のように定義する。</p>
 <div class="arithmatex">\[
-X = \frac{2 N_{A\alpha}}{N} - 1
+X = \frac{4 N_{A\alpha}}{N} - 1
 \]</div>
 <p>ここで <span class="arithmatex">\(N_{A\alpha}\)</span> は <span class="arithmatex">\(\alpha\)</span> 副格子上に存在するA原子の個数である。規則化した状態では <span class="arithmatex">\(X = 1\)</span> となり，ランダムに混ざり合った不規則状態では <span class="arithmatex">\(X = 0\)</span> となる。1つの原子のまわりにある最近接の格子点数を <span class="arithmatex">\(z\)</span> とし，最近接の原子対の結合エネルギーをそれぞれ <span class="arithmatex">\(v_{AA}, v_{BB}, v_{AB}\)</span> とする。以下の問いに答えよ。</p>
-<p>(1) 規則度 <span class="arithmatex">\(X\)</span> を用いて， <span class="arithmatex">\(\alpha\)</span> 副格子上のA原子の数 <span class="arithmatex">\(N_{A\alpha}\)</span>，B原子の数 <span class="arithmatex">\(N_{B\alpha}\)</span>，および <span class="arithmatex">\(\beta\)</span> 副格子上のA原子の数 <span class="arithmatex">\(N_{A\beta}\)</span>，B原子の数 <span class="arithmatex">\(N_{B\beta}\)</span> をそれぞれ <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(X\)</span> の式で表せ。また，これらの原子を各副格子に配置するときの状態数 <span class="arithmatex">\(W\)</span> から，ボルツマンの公式 <span class="arithmatex">\(S = k_B \log W\)</span> とスターリングの近似公式 <span class="arithmatex">\(\log n! \simeq n \log n - n\)</span> を用いて，配置のエントロピー <span class="arithmatex">\(S\)</span> を <span class="arithmatex">\(N, k_B, X\)</span> を用いた式として導出せよ。</p>
-<p>(2) 各副格子上の原子がそれぞれ一様に分布していると仮定する。このとき，全空間に存在する最近接原子対の総数は <span class="arithmatex">\(zN/2\)</span> であり，A-A対，B-B対，A-B対の数が規則度 <span class="arithmatex">\(X\)</span> の関数としてそれぞれ求まる。これらを利用して，合金全体の内部エネルギー <span class="arithmatex">\(U\)</span> が以下のように表されることを示せ。ただし， <span class="arithmatex">\(U_0\)</span> は <span class="arithmatex">\(X\)</span> に依存しない定数項であり， <span class="arithmatex">\(v = v_{AB} - \frac{1}{2}(v_{AA} + v_{BB}) &gt; 0\)</span> である。</p>
+<p>(1) 規則度 <span class="arithmatex">\(X\)</span> を用いて， <span class="arithmatex">\(\alpha\)</span> 副格子上のA原子の数 <span class="arithmatex">\(N_{A\alpha}\)</span>，B原子の数 <span class="arithmatex">\(N_{B\alpha}\)</span>，および <span class="arithmatex">\(\beta\)</span> 副格子上のA原子の数 <span class="arithmatex">\(N_{A\beta}\)</span>，B原子の数 <span class="arithmatex">\(N_{B\beta}\)</span> をそれぞれ <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(X\)</span> の式で表せ。また，これらの原子を各副格子に配置するときの状態数 <span class="arithmatex">\(W\)</span> から，ボルツマンの公式 <span class="arithmatex">\(S = k_{\text{B}} \log W\)</span> とスターリングの近似公式 <span class="arithmatex">\(\log n! \simeq n \log n - n\)</span> を用いて，配置のエントロピー <span class="arithmatex">\(S\)</span> を <span class="arithmatex">\(N, k_{\text{B}}, X\)</span> を用いた式として導出せよ。</p>
+<p>(2) 各副格子上の原子がそれぞれ一様に分布していると仮定する。このとき，全空間に存在する最近接原子対の総数は <span class="arithmatex">\(zN/2\)</span> であり，A-A対，B-B対，A-B対の数が規則度 <span class="arithmatex">\(X\)</span> の関数としてそれぞれ求まる。これらを利用して，合金全体の内部エネルギー <span class="arithmatex">\(U\)</span> が以下のように表されることを示せ。ただし，<span class="arithmatex">\(U_0\)</span> は <span class="arithmatex">\(X\)</span> に依存しない定数項であり，<span class="arithmatex">\(v = \frac{1}{2}(v_{AA} + v_{BB})-v_{AB}&gt;0\)</span> である。</p>
 <div class="arithmatex">\[
-U = U_0 - \frac{z N v}{2} X^2
+U = U_0 - \frac{z N v}{4} X^2
 \]</div>
 <p>(3) ヘルムホルツの自由エネルギー <span class="arithmatex">\(F = U - TS\)</span> を構成せよ。系の熱平衡状態を決める条件 <span class="arithmatex">\(\frac{\partial F}{\partial X} = 0\)</span> から，規則度 <span class="arithmatex">\(X\)</span> が満たすべき以下の自己整合方程式を導出せよ。</p>
 <div class="arithmatex">\[
-X = \tanh\left( \frac{z v X}{2 k_B T} \right)
+X = \tanh\left( \frac{z v X}{2 k_{\text{B}} T} \right)
 \]</div>
-<p>また，この方程式に基づき，温度が十分高い不規則相 <span class="arithmatex">\(X = 0\)</span> から規則相 <span class="arithmatex">\(X &gt; 0\)</span> へと相転移が起こる臨界温度 <span class="arithmatex">\(T_c\)</span> の式を <span class="arithmatex">\(z, v, k_B\)</span> を用いて表せ。</p>
+<p>また，この方程式に基づき，温度が十分高い不規則相 <span class="arithmatex">\(X = 0\)</span> から規則相 <span class="arithmatex">\(X &gt; 0\)</span> へと相転移が起こる臨界温度 <span class="arithmatex">\(T_c\)</span> の式を <span class="arithmatex">\(z, v, k_{\text{B}}\)</span> を用いて表せ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
-<p>各副格子の全格子点はそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつ存在します。定義式 <span class="arithmatex">\(X = \frac{2 N_{A\alpha}}{N} - 1\)</span> を変形すると， <span class="arithmatex">\(\alpha\)</span> 副格子上のA原子の数が得られます。</p>
+<p>各副格子の全格子点はそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつ存在します。定義式 <span class="arithmatex">\(X = \frac{4 N_{A\alpha}}{N} - 1\)</span> を変形すると，<span class="arithmatex">\(\alpha\)</span> 副格子上のA原子の数が得られます。</p>
 <div class="arithmatex">\[
-N_{A\alpha} = \frac{N}{4} (1 + X)
+\finalanswer{N_{A\alpha} = \frac{N}{4} (1 + X)}
 \]</div>
 <p><span class="arithmatex">\(\alpha\)</span> 副格子の残りの格子点はB原子が占めるため，以下のようになります。</p>
 <div class="arithmatex">\[
-N_{B\alpha} = \frac{N}{2} - N_{A\alpha} = \frac{N}{4} (1 - X)
+\finalanswer{N_{B\alpha} = \frac{N}{4} (1 - X)}
 \]</div>
 <p>合金全体でA原子とB原子はそれぞれ <span class="arithmatex">\(N/2\)</span> 個ずつであるため， <span class="arithmatex">\(\beta\)</span> 副格子上の各原子数も決まります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-N_{A\beta} &amp;= \frac{N}{2} - N_{A\alpha} \\
-&amp;= \frac{N}{4} (1 - X), \quad N_{B\beta} \\
-&amp;= \frac{N}{2} - N_{B\alpha} \\
-&amp;= \frac{N}{4} (1 + X)
+N_{A\beta} &amp;= \finalanswer{\frac{N}{4} (1 - X)}, \\
+N_{B\beta} &amp;= \finalanswer{\frac{N}{4} (1 + X)}
 \end{aligned}
 \]</div>
 <p>系全体の状態数 <span class="arithmatex">\(W\)</span> は， <span class="arithmatex">\(\alpha\)</span> 副格子への原子配置の組み合わせと， <span class="arithmatex">\(\beta\)</span> 副格子への原子配置の組み合わせの積になります。</p>
@@ -14565,9 +14563,9 @@ W = \frac{\left(\frac{N}{2}\right)!}{N_{A\alpha}! N_{B\alpha}!} \times \frac{\le
 <div class="arithmatex">\[
 \log W \simeq 2 \left( \frac{N}{2} \log \frac{N}{2} - \frac{N}{2} \right) - 2 \left( N_{A\alpha} \log N_{A\alpha} - N_{A\alpha} \right) - 2 \left( N_{B\alpha} \log N_{B\alpha} - N_{B\alpha} \right)
 \]</div>
-<p>原子数の式を代入して整理を進めると，配置のエントロピー <span class="arithmatex">\(S = k_B \log W\)</span> は以下の形に収束します。</p>
+<p>原子数の式を代入して整理すると，配置のエントロピー <span class="arithmatex">\(S = k_{\text{B}} \log W\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-\finalanswer{S = - \frac{N k_B}{2} \left[ (1 + X) \log(1 + X) + (1 - X) \log(1 - X) - 2 \log 2 \right]}
+\finalanswer{S = - \frac{N k_{\text{B}}}{2} \left[ (1 + X) \log(1 + X) + (1 - X) \log(1 - X) - 2 \log 2 \right]}
 \]</div>
 <h3 id="2_1">(2)</h3>
 <p>内部エネルギー <span class="arithmatex">\(U\)</span> を計算するため，最近接原子対の数を評価します。ブラッグ・ウィリアムズ近似では， <span class="arithmatex">\(\alpha\)</span> 副格子上の原子の周囲にある最近接格子点はすべて <span class="arithmatex">\(\beta\)</span> 副格子に属します。したがって，ある原子対が形成される確率は，それぞれの副格子における原子の存在確率の積に比例します。</p>
@@ -14600,51 +14598,53 @@ U = \frac{zN}{8} (1 - X^2) v_{AA} + \frac{zN}{8} (1 - X^2) v_{BB} + \frac{zN}{4}
 \]</div>
 <p><span class="arithmatex">\(X\)</span> に依存しない定数項を <span class="arithmatex">\(U_0 = \frac{zN}{8}(v_{AA} + v_{BB} + 2v_{AB})\)</span> とまとめ， <span class="arithmatex">\(X^2\)</span> の係数を整理します。</p>
 <div class="arithmatex">\[
-U = U_0 + \frac{zN X^2}{4} \left[ v_{AB} - \frac{1}{2}(v_{AA} + v_{BB}) \right] - \frac{zN X^2}{8} (v_{AA} + v_{BB})
+U = U_0 + \frac{zNX^2}{8} \left[2v_{AB}-(v_{AA}+v_{BB})\right] = U_0-\frac{zNv}{4}X^2
 \]</div>
-<p>ここで与えられたパラメータ <span class="arithmatex">\(v = v_{AB} - \frac{1}{2}(v_{AA} + v_{BB})\)</span> を用いて整理すると，指定された内部エネルギーの式が導かれます。</p>
+<p>ここで，異種原子対が同種原子対より安定である場合を考え，</p>
 <div class="arithmatex">\[
-\finalanswer{U = U_0 - \frac{z N v}{2} X^2}
+v=\frac{1}{2}(v_{AA}+v_{BB})-v_{AB}&gt;0
 \]</div>
+<p>と定義しました。したがって，内部エネルギーは</p>
+<div class="arithmatex">\[
+\finalanswer{U = U_0 - \frac{z N v}{4} X^2}
+\]</div>
+<p>となります。</p>
 <h3 id="3">(3)</h3>
 <p>(1) と (2) の結果を組み合わせることで，系全体のヘルムホルツの自由エネルギー <span class="arithmatex">\(F = U - TS\)</span> が構成されます。</p>
 <div class="arithmatex">\[
-F = U_0 - \frac{z N v}{2} X^2 + \frac{N k_B T}{2} \left[ (1 + X) \log(1 + X) + (1 - X) \log(1 - X) - 2 \log 2 \right]
+F = U_0 - \frac{z N v}{4} X^2 + \frac{N k_{\text{B}} T}{2} \left[ (1 + X) \log(1 + X) + (1 - X) \log(1 - X) - 2 \log 2 \right]
 \]</div>
 <p>この自由エネルギーを規則度 <span class="arithmatex">\(X\)</span> で偏微分し，極小条件を求めます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{\partial F}{\partial X} &amp;= -z N v X + \frac{N k_B T}{2} \left[ \log(1 + X) + 1 - \log(1 - X) - 1 \right] \\
+\frac{\partial F}{\partial X} &amp;= -\frac{z N v}{2}X + \frac{N k_{\text{B}} T}{2} \left[ \log(1 + X) + 1 - \log(1 - X) - 1 \right] \\
 &amp;= 0
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
--z N v X + \frac{N k_B T}{2} \log\left( \frac{1 + X}{1 - X} \right) = 0
+-z v X + k_{\text{B}} T \log\left( \frac{1 + X}{1 - X} \right) = 0
 \]</div>
 <p>対数項の形を整理します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\log\left( \frac{1 + X}{1 - X} \right) &amp;= \frac{2 z v X}{k_B T} \quad \implies \quad \frac{1 + X}{1 - X} \\
-&amp;= \exp\left( \frac{2 z v X}{k_B T} \right)
-\end{aligned}
+\log\left( \frac{1 + X}{1 - X} \right) = \frac{z v X}{k_{\text{B}} T}
 \]</div>
-<p>この式を <span class="arithmatex">\(X\)</span> について解くために，右辺を <span class="arithmatex">\(e^{2Y}\)</span> と置いて変形します。</p>
+<p>両辺を2で割り，<span class="arithmatex">\(\operatorname{artanh}X=\frac{1}{2}\log\frac{1+X}{1-X}\)</span> を用いると，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-X &amp;= \frac{\exp\left( \frac{2 z v X}{k_B T} \right) - 1}{\exp\left( \frac{2 z v X}{k_B T} \right) + 1} \\
-&amp;= \frac{\exp\left( \frac{z v X}{k_B T} \right) - \exp\left( -\frac{z v X}{k_B T} \right)}{\exp\left( \frac{z v X}{k_B T} \right) + \exp\left( -\frac{z v X}{k_B T} \right)} \\
-&amp;= \tanh\left( \frac{z v X}{2 k_B T} \right)
-\end{aligned}
+\operatorname{artanh}X=\frac{zvX}{2k_{\text{B}}T}
 \]</div>
-<p>これにより，目的の自己整合方程式が導出されました。</p>
+<p>となります。両辺に双曲線正接を作用させると，目的の自己整合方程式</p>
+<div class="arithmatex">\[
+\finalanswer{X=\tanh\left(\frac{zvX}{2k_{\text{B}}T}\right)}
+\]</div>
+<p>が得られます。</p>
 <p><strong>臨界温度 <span class="arithmatex">\(T_c\)</span> の決定</strong></p>
-<p>この方程式は，イジング模型の平均場方程式 <span class="arithmatex">\(m = \tanh(\beta z J m)\)</span> と数学的に全く同じ構造を持っています。原点 <span class="arithmatex">\(X = 0\)</span> 以外に有限の規則度 <span class="arithmatex">\(X &gt; 0\)</span> を持つ解が分岐して現れる条件は，右辺の関数の原点における傾きが 1 よりも大きくなることです。</p>
+<p>自己整合方程式の右辺を <span class="arithmatex">\(X=0\)</span> のまわりで考えます。<span class="arithmatex">\(X=0\)</span> 以外の解が現れる条件は，右辺の <span class="arithmatex">\(X=0\)</span> における傾きが1より大きくなることです。</p>
 <div class="arithmatex">\[
-\left. \frac{d}{dX} \tanh\left( \frac{z v X}{2 k_B T} \right) \right|_{X=0} = \frac{z v}{2 k_B T} &gt; 1
+\left. \frac{d}{dX} \tanh\left( \frac{z v X}{2 k_{\text{B}} T} \right) \right|_{X=0} = \frac{z v}{2 k_{\text{B}} T} &gt; 1
 \]</div>
 <p>この条件を満たすとき，合金はランダムに混ざり合った不規則相よりも，特定の副格子に特定の原子が集まった規則相の方が自由エネルギーが低く安定になります。したがって，相転移が起こる境界の臨界温度 <span class="arithmatex">\(T_c\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
-\finalanswer{T_c = \frac{z v}{2 k_B}}
+\finalanswer{T_c = \frac{z v}{2 k_{\text{B}}}}
 \]</div>
 
 

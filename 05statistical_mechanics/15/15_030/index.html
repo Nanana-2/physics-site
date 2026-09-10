@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,16 +14520,16 @@
 <h2 id="_2">問題</h2>
 <p>2つの密度行列を <span class="arithmatex">\(\rho\)</span> と <span class="arithmatex">\(\sigma\)</span> とするとき， <span class="arithmatex">\(\sigma\)</span> に対する <span class="arithmatex">\(\rho\)</span> の量子相対エントロピー <span class="arithmatex">\(D(\rho || \sigma)\)</span> は以下で定義される。</p>
 <div class="arithmatex">\[
-D(\rho || \sigma) = \mathrm{Tr}(\rho \ln \rho) - \mathrm{Tr}(\rho \ln \sigma)
+D(\rho || \sigma) = \mathrm{Tr}(\rho \log \rho) - \mathrm{Tr}(\rho \log \sigma)
 \]</div>
-<p>あるハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> を持つ系が，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> の熱浴と接している熱平衡状態にあるときの密度行列を <span class="arithmatex">\(\sigma = \rho_{\mathrm{eq}} = \frac{\exp(-\beta \hat{H})}{Z}\)</span> とする。ここで <span class="arithmatex">\(Z = \mathrm{Tr}[\exp(-\beta \hat{H})]\)</span> は分配関数である。</p>
+<p>あるハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> を持つ系が，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> の熱浴と接している熱平衡状態にあるときの密度行列を <span class="arithmatex">\(\sigma = \rho_{\mathrm{eq}} = \frac{\exp(-\beta \hat{H})}{Z}\)</span> とする。ここで <span class="arithmatex">\(Z = \mathrm{Tr}[\exp(-\beta \hat{H})]\)</span> は分配関数である。</p>
 <p>系が熱平衡状態から外れた任意の密度行列 <span class="arithmatex">\(\rho\)</span> にあるときを想定し，以下の問いに答えよ。</p>
-<p>(1) 熱平衡状態の対数関数 <span class="arithmatex">\(\ln \sigma = \ln \rho_{\mathrm{eq}}\)</span> が，演算子 <span class="arithmatex">\(\hat{H}\)</span> と定数 <span class="arithmatex">\(\ln Z\)</span> を用いて <span class="arithmatex">\(\ln \rho_{\mathrm{eq}} = -\beta \hat{H} - \ln Z \cdot \hat{I}\)</span> と表されることを示せ。ただし <span class="arithmatex">\(\hat{I}\)</span> は単位行列である。</p>
+<p>(1) 熱平衡状態の対数関数 <span class="arithmatex">\(\log \sigma = \log \rho_{\mathrm{eq}}\)</span> が，演算子 <span class="arithmatex">\(\hat{H}\)</span> と定数 <span class="arithmatex">\(\log Z\)</span> を用いて <span class="arithmatex">\(\log \rho_{\mathrm{eq}} = -\beta \hat{H} - \log Z \cdot \hat{I}\)</span> と表されることを示せ。ただし <span class="arithmatex">\(\hat{I}\)</span> は単位行列である。</p>
 <p>(2) <span class="arithmatex">\(D(\rho\|\rho_{\mathrm{eq}})\)</span> を <span class="arithmatex">\(\langle E\rangle_\rho\)</span> と <span class="arithmatex">\(S(\rho)\)</span> で表せ。</p>
 <div class="arithmatex">\[
-D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_B} + \ln Z
+D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_{\text{B}}} + \log Z
 \]</div>
-<p>(3) <span class="arithmatex">\(F(\rho)=\langle E\rangle_\rho-TS(\rho)\)</span>，<span class="arithmatex">\(F_{\mathrm{eq}}=-k_BT\ln Z\)</span> とする。<span class="arithmatex">\(D(\rho\|\rho_{\mathrm{eq}})\)</span> と <span class="arithmatex">\(F(\rho)-F_{\mathrm{eq}}\)</span> の関係を求め，<span class="arithmatex">\(D\ge0\)</span> から自由エネルギーの不等式を導け。</p>
+<p>(3) <span class="arithmatex">\(F(\rho)=\langle E\rangle_\rho-TS(\rho)\)</span>，<span class="arithmatex">\(F_{\mathrm{eq}}=-k_{\text{B}}T\log Z\)</span> とする。<span class="arithmatex">\(D(\rho\|\rho_{\mathrm{eq}})\)</span> と <span class="arithmatex">\(F(\rho)-F_{\mathrm{eq}}\)</span> の関係を求め，<span class="arithmatex">\(D\ge0\)</span> から自由エネルギーの不等式を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14540,57 +14540,54 @@ D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_
 <p>この行列の対数関数を計算します。行列の積の性質および対数関数の性質から，分子の指数関数部分と分母のスカラー量を分離することができます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\ln \rho_{\mathrm{eq}} &amp;= \ln \left( \exp(-\beta \hat{H}) \cdot \frac{1}{Z} \right) \\
-&amp;= \ln \left( \exp(-\beta \hat{H}) \right) + \ln \left( \frac{1}{Z} \cdot \hat{I} \right)
+\log \rho_{\mathrm{eq}} &amp;= \log \left( \exp(-\beta \hat{H}) \cdot \frac{1}{Z} \right) \\
+&amp;= \log \left( \exp(-\beta \hat{H}) \right) + \log \left( \frac{1}{Z} \cdot \hat{I} \right)
 \end{aligned}
 \]</div>
-<p>第1項は指数関数の逆写像であるため <span class="arithmatex">\(-\beta \hat{H}\)</span> となり，第2項のスカラーの逆数は <span class="arithmatex">\(-\ln Z \cdot \hat{I}\)</span> となります。これらを合わせることで，目的の表現が得られます。</p>
+<p>第1項は指数関数の逆写像であるため <span class="arithmatex">\(-\beta \hat{H}\)</span> となり，第2項のスカラーの逆数は <span class="arithmatex">\(-\log Z \cdot \hat{I}\)</span> となります。これらを合わせることで，目的の表現が得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{\ln \rho_{\mathrm{eq}} = -\beta \hat{H} - \ln Z \cdot \hat{I}}
+\finalanswer{\log \rho_{\mathrm{eq}} = -\beta \hat{H} - \log Z \cdot \hat{I}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>量子相対エントロピーの定義式における <span class="arithmatex">\(\sigma\)</span> に，熱平衡状態 <span class="arithmatex">\(\rho_{\mathrm{eq}}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-D(\rho || \rho_{\mathrm{eq}}) = \mathrm{Tr}(\rho \ln \rho) - \mathrm{Tr}(\rho \ln \rho_{\mathrm{eq}})
+D(\rho || \rho_{\mathrm{eq}}) = \mathrm{Tr}(\rho \log \rho) - \mathrm{Tr}(\rho \log \rho_{\mathrm{eq}})
 \]</div>
-<p>右辺の第1項は，符号を反転させることでそのままフォン・ノイマンエントロピーの定義式 <span class="arithmatex">\(S(\rho) = -k_B \mathrm{Tr}(\rho \ln \rho)\)</span> の形に変形できます。</p>
+<p>右辺の第1項は，符号を反転させることでそのままフォン・ノイマンエントロピーの定義式 <span class="arithmatex">\(S(\rho) = -k_{\text{B}} \mathrm{Tr}(\rho \log \rho)\)</span> の形に変形できます。</p>
 <div class="arithmatex">\[
-\mathrm{Tr}(\rho \ln \rho) = -\frac{S(\rho)}{k_B}
+\mathrm{Tr}(\rho \log \rho) = -\frac{S(\rho)}{k_{\text{B}}}
 \]</div>
-<p>右辺の第2項の括弧の内部に，(1) で導出した <span class="arithmatex">\(\ln \rho_{\mathrm{eq}}\)</span> の展開式を代入してトレースの線形性を適用します。</p>
+<p>右辺の第2項の括弧の内部に，(1) で導出した <span class="arithmatex">\(\log \rho_{\mathrm{eq}}\)</span> の展開式を代入してトレースの線形性を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
--\mathrm{Tr}(\rho \ln \rho_{\mathrm{eq}}) &amp;= -\mathrm{Tr}\big( \rho [ -\beta \hat{H} - \ln Z \cdot \hat{I} ] \big) \\
-&amp;= \beta \mathrm{Tr}(\rho \hat{H}) + \ln Z \mathrm{Tr}(\rho \hat{I})
+-\mathrm{Tr}(\rho \log \rho_{\mathrm{eq}}) &amp;= -\mathrm{Tr}\big( \rho [ -\beta \hat{H} - \log Z \cdot \hat{I} ] \big) \\
+&amp;= \beta \mathrm{Tr}(\rho \hat{H}) + \log Z \mathrm{Tr}(\rho \hat{I})
 \end{aligned}
 \]</div>
 <p>ここで，状態 <span class="arithmatex">\(\rho\)</span> におけるエネルギー期待値の定義 <span class="arithmatex">\(\mathrm{Tr}(\rho \hat{H}) = \langle E \rangle_\rho\)</span> と，密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> をそれぞれ代入します。</p>
 <div class="arithmatex">\[
--\mathrm{Tr}(\rho \ln \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho + \ln Z
+-\mathrm{Tr}(\rho \log \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho + \log Z
 \]</div>
-<p>これら2つの項を足し合わせることで，求める展開式が導出されます。</p>
+<p>これら2つの項を足し合わせることで，求める展開式を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_B} + \ln Z}
+\finalanswer{D(\rho || \rho_{\mathrm{eq}}) = \beta \langle E \rangle_\rho - \frac{S(\rho)}{k_{\text{B}}} + \log Z}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた方程式の右辺を，提示された自由エネルギーの定義を用いて整理します。まず，式の全体に <span class="arithmatex">\(k_B T = \frac{1}{\beta}\)</span> を掛け算します。</p>
+<p>(2) で得られた方程式の右辺を，提示された自由エネルギーの定義を用いて整理します。まず，式の全体に <span class="arithmatex">\(k_{\text{B}} T = \frac{1}{\beta}\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-k_B T D(\rho || \rho_{\mathrm{eq}}) = \langle E \rangle_\rho - T S(\rho) + k_B T \ln Z
+k_{\text{B}} T D(\rho || \rho_{\mathrm{eq}}) = \langle E \rangle_\rho - T S(\rho) + k_{\text{B}} T \log Z
 \]</div>
-<p>右辺の前半2項は，非平衡状態における有効自由エネルギー <span class="arithmatex">\(F(\rho) = \langle E \rangle_\rho - T S(\rho)\)</span> そのものです。また，第3項は真の熱平衡状態の自由エネルギー <span class="arithmatex">\(F_{\mathrm{eq}} = -k_B T \ln Z\)</span> の符号を反転させたもの <span class="arithmatex">\(-F_{\mathrm{eq}}\)</span> に等しくなります。これらを代入します。</p>
+<p>右辺の前半2項は，非平衡状態における有効自由エネルギー <span class="arithmatex">\(F(\rho) = \langle E \rangle_\rho - T S(\rho)\)</span> そのものです。また，第3項は真の熱平衡状態の自由エネルギー <span class="arithmatex">\(F_{\mathrm{eq}} = -k_{\text{B}} T \log Z\)</span> の符号を反転させたもの <span class="arithmatex">\(-F_{\mathrm{eq}}\)</span> に等しくなります。これらを代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-k_B T D(\rho || \rho_{\mathrm{eq}}) &amp;= F(\rho) - F_{\mathrm{eq}} \\
-&amp;= \Delta F
-\end{aligned}
+k_{\text{B}} T D(\rho || \rho_{\mathrm{eq}}) = F(\rho) - F_{\mathrm{eq}} = \Delta F
 \]</div>
 <p>したがって，量子相対エントロピーと自由エネルギー差の間に成り立つ比例関係式は以下のようになります。</p>
 <div class="arithmatex">\[
-\Delta F = k_B T D(\rho || \rho_{\mathrm{eq}})
+\Delta F = k_{\text{B}} T D(\rho || \rho_{\mathrm{eq}})
 \]</div>
 <p><strong>熱力学的な結論</strong></p>
 <p>量子相対エントロピーは，任意の2つの密度行列に対して常に 0 以上になる <span class="arithmatex">\(D(\rho || \sigma) \ge 0\)</span> という数学的性質を持っています。また，2つの状態が一致するときに限り，値は 0 になります。</p>
-<p>絶対温度 <span class="arithmatex">\(T\)</span> およびボルツマン定数 <span class="arithmatex">\(k_B\)</span> は常に正の定数であるため，この性質を上記の比例関係式に適用すると，以下の不等式が導かれます。</p>
+<p>絶対温度 <span class="arithmatex">\(T\)</span> およびボルツマン定数 <span class="arithmatex">\(k_{\text{B}}\)</span> は常に正の定数であるため，この性質を上記の比例関係式に適用すると，以下の不等式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\Delta F \ge 0 \implies F(\rho) \ge F_{\mathrm{eq}}}
 \]</div>

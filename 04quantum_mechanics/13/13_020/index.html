@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14562,7 +14562,7 @@
 <h3 id="2">(2)</h3>
 <p>電場 <span class="arithmatex">\(\boldsymbol{E}\)</span> は，ベクトルポテンシャルを時間 <span class="arithmatex">\(t\)</span> で偏微分して負の符号を付与することで得られます。時間微分は時間関数である <span class="arithmatex">\(a_{\boldsymbol{k}, \lambda}(t)\)</span> とその複素共役にのみ作用します。粒子速度の1階時間微分をドット記号で表記します。</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(\boldsymbol{r}, t) = -\sum_{\boldsymbol{k}} \sum_{\lambda=1}^{2} C_{\boldsymbol{k}} \left( \dot{a}_{\boldsymbol{k}, \lambda}(t) \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} + \dot{a}_{\boldsymbol{k}, \lambda}^*(t) \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right)
+\finalanswer{\boldsymbol{E}(\boldsymbol{r}, t) = -\sum_{\boldsymbol{k}} \sum_{\lambda=1}^{2} C_{\boldsymbol{k}} \left( \dot{a}_{\boldsymbol{k}, \lambda}(t) \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} + \dot{a}_{\boldsymbol{k}, \lambda}^*(t) \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right)}
 \]</div>
 <p>磁場 <span class="arithmatex">\(\boldsymbol{B}\)</span> は，ベクトルポテンシャルのローテーション演算を実行します。ナブラ演算子と偏極ベクトルの外積を計算します。</p>
 <div class="arithmatex">\[
@@ -14587,13 +14587,13 @@
 \]</div>
 <p>横波の偏極条件 <span class="arithmatex">\(\boldsymbol{k} \cdot \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} = 0\)</span> により，この値は 0 になります。</p>
 <div class="arithmatex">\[
-\boldsymbol{k} \cdot \boldsymbol{E}_{\boldsymbol{k}, \lambda} = 0
+\finalanswer{\boldsymbol{k} \cdot \boldsymbol{E}_{\boldsymbol{k}, \lambda} = 0}
 \]</div>
 <p>次に，磁場成分 <span class="arithmatex">\(\boldsymbol{B}_{\boldsymbol{k}, \lambda}\)</span> との逆方向の内積を計算します。 (2) の結果より，磁場のベクトル方向は <span class="arithmatex">\(\boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> で与えられます。</p>
 <div class="arithmatex">\[
 \boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda} \propto \boldsymbol{k} \cdot \left( \boldsymbol{k} \times \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \right)
 \]</div>
-<p>提示されたベクトル解析の公式において， <span class="arithmatex">\(\boldsymbol{a} = \boldsymbol{k}\)</span> ， <span class="arithmatex">\(\boldsymbol{b} = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> と置くと，同一ベクトルの外積との内積になるため，この値は厳密に 0 になります。</p>
+<p>提示されたベクトル解析の公式で <span class="arithmatex">\(\boldsymbol{a} = \boldsymbol{k}\)</span>，<span class="arithmatex">\(\boldsymbol{b} = \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda}\)</span> と置くと，同じベクトルを含む外積との内積になるため，この値は 0 です。</p>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{k} \cdot \boldsymbol{B}_{\boldsymbol{k}, \lambda} = 0}
 \]</div>

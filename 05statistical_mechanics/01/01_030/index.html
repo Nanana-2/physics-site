@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14523,7 +14523,7 @@
 <div class="arithmatex">\[
 \int_1^N \log x \, dx \le \log N! \le \int_1^N \log x \, dx + \log N
 \]</div>
-<p>さらに，<span class="arithmatex">\(N\)</span> が十分に大きいとき，右辺に現れる補正項 <span class="arithmatex">\(\log N\)</span> が主要項に比べて無視できることを示せ。</p>
+<p>さらに，<span class="arithmatex">\(N\)</span> が十分に大きいとき，右辺に現れる補正項 <span class="arithmatex">\(\log N\)</span> が <span class="arithmatex">\(N\log N\)</span> に比べて無視できることを示せ。</p>
 <p>(2) 部分積分法を用いることで定積分 <span class="arithmatex">\(\int_1^N \log x \, dx\)</span> を計算し，スターリングの公式 <span class="arithmatex">\(\log N! \simeq N \log N - N\)</span> を導出せよ。</p>
 <p>(3) 導出した公式を用いて，独立な <span class="arithmatex">\(N\)</span> 個の二状態系においてちょうど半数の <span class="arithmatex">\(N/2\)</span> 個の粒子が励起状態にあるときの微視的状態数</p>
 <div class="arithmatex">\[
@@ -14535,10 +14535,7 @@
 <h3 id="1">(1)</h3>
 <p>階乗の対数は，対数の性質 <span class="arithmatex">\(\log(ab) = \log a + \log b\)</span> を用いることで，以下のように和の形で書き下すことができます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\log N! &amp;= \log (1 \times 2 \times \cdots \times N) \\
-&amp;= \sum_{x=1}^N \log x
-\end{aligned}
+\log N! = \log (1 \times 2 \times \cdots \times N) = \sum_{x=1}^N \log x
 \]</div>
 <p><span class="arithmatex">\(\log x\)</span> は単調増加関数です。区間 <span class="arithmatex">\([k-1,k]\)</span> では <span class="arithmatex">\(\log x \le \log k\)</span> であるため，</p>
 <div class="arithmatex">\[
@@ -14556,7 +14553,12 @@
 <div class="arithmatex">\[
 \finalanswer{\int_1^N \log x \, dx \le \log N! \le \int_1^N \log x \, dx + \log N}
 \]</div>
-<p>が成り立ちます。積分の主要項は <span class="arithmatex">\(N\log N\)</span> のオーダーであるのに対し，補正項は <span class="arithmatex">\(\log N\)</span> のオーダーです。その比は <span class="arithmatex">\(1/N\)</span> で0に近づくため，<span class="arithmatex">\(N\)</span> が十分に大きければ和を積分で近似できます。</p>
+<p>また</p>
+<div class="arithmatex">\[
+\finalanswer{\frac{\log N}{N\log N}=\frac{1}{N}\longrightarrow0
+\qquad (N\to\infty)}
+\]</div>
+<p>が成り立ちます。積分は <span class="arithmatex">\(N\log N\)</span> のオーダーであるのに対し，補正項は <span class="arithmatex">\(\log N\)</span> のオーダーです。その比は <span class="arithmatex">\(1/N\)</span> で0に近づくため，<span class="arithmatex">\(N\)</span> が十分に大きければ和を積分で近似できます。</p>
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(y = \log x\)</span> の積分を部分積分法を用いて計算します。<span class="arithmatex">\(\log x\)</span> の前に隠れている <span class="arithmatex">\(1 = (x)^\prime\)</span> を意識して計算を進めます。</p>
 <div class="arithmatex">\[
@@ -14566,7 +14568,7 @@
 <div class="arithmatex">\[
 \int_1^N \log x \, dx = N \log N - (N - 1) = N \log N - N + 1
 \]</div>
-<p>ここで <span class="arithmatex">\(N\)</span> が非常に大きい極限を考えているため，定数項の <span class="arithmatex">\(1\)</span> は <span class="arithmatex">\(N\)</span> や <span class="arithmatex">\(N \log N\)</span> に比べて無視することができます。これにより，スターリングの公式が導かれます。</p>
+<p>ここで <span class="arithmatex">\(N\)</span> が非常に大きい極限を考えているため，定数項の <span class="arithmatex">\(1\)</span> は <span class="arithmatex">\(N\)</span> や <span class="arithmatex">\(N \log N\)</span> に比べて無視することができます。これにより，スターリングの公式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\log N! \simeq N \log N - N}
 \]</div>
@@ -14586,7 +14588,7 @@
 <div class="arithmatex">\[
 \log \Omega \simeq N \log N - N - N \log N + N \log 2 + N
 \]</div>
-<p>共通する項を相殺することで，以下の簡潔な結果が得られます。</p>
+<p>両式の差をとり，共通する項を除くと</p>
 <div class="arithmatex">\[
 \finalanswer{\log \Omega \simeq N \log 2}
 \]</div>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14509,7 +14509,7 @@
 <p>一方，外部の熱源に着目します。高温熱源は熱量 <span class="arithmatex">\(Q_{\text{H}}\)</span> を放出したため，そのエントロピー変化は <span class="arithmatex">\(- \frac{Q_{\text{H}}}{T_{\text{H}}}\)</span> となります。低温熱源は熱量 <span class="arithmatex">\(Q_{\text{C}}\)</span> を吸収したため，そのエントロピー変化は <span class="arithmatex">\(+ \frac{Q_{\text{C}}}{T_{\text{C}}}\)</span> となります。</p>
 <p>全系のエントロピー変化 <span class="arithmatex">\(\Delta S_{\text{total}}\)</span> は，作業物質と両熱源のエントロピー変化の総和として求められます。</p>
 <div class="arithmatex">\[
-\Delta S_{\text{total}} = \Delta S_{\text{system}} - \frac{Q_{\text{H}}}{T_{\text{H}}} + \frac{Q_{\text{C}}}{T_{\text{C}}} = \frac{Q_{\text{C}}}{T_{\text{C}}} - \frac{Q_{\text{H}}}{T_{\text{H}}}
+\finalanswer{\Delta S_{\text{total}} = \frac{Q_{\text{C}}}{T_{\text{C}}} - \frac{Q_{\text{H}}}{T_{\text{H}}}}
 \]</div>
 <p>熱力学第二法則（エントロピー増大の原理）によると，孤立系である全系の内部で不可逆変化が起きるとき，エントロピーは必ず正の値を生成します。したがって，満たすべき不等式は次のようになります。</p>
 <div class="arithmatex">\[
@@ -14521,7 +14521,9 @@
 <h3 id="2">(2)</h3>
 <p>熱効率の定義式にエネルギー保存則 <span class="arithmatex">\(W = Q_{\text{H}} - Q_{\text{C}}\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-\eta_{\text{irrev}} = \frac{Q_{\text{H}} - Q_{\text{C}}}{Q_{\text{H}}} = 1 - \frac{Q_{\text{C}}}{Q_{\text{H}}} \quad \cdots \text{式1}
+\eta_{\text{irrev}}
+=\frac{Q_{\text{H}}-Q_{\text{C}}}{Q_{\text{H}}}
+=1-\frac{Q_{\text{C}}}{Q_{\text{H}}}
 \]</div>
 <p>次に，(1) で得られた熱力学第二法則の不等式を変形します。 <span class="arithmatex">\(-\frac{Q_{\text{H}}}{T_{\text{H}}}\)</span> を右辺に移行します。</p>
 <div class="arithmatex">\[
@@ -14537,13 +14539,13 @@
 \]</div>
 <p>両辺に 1 を加算します。</p>
 <div class="arithmatex">\[
-1 - \frac{Q_{\text{C}}}{Q_{\text{H}}} &lt; 1 - \frac{T_{\text{C}}}{T_{\text{H}}} \quad \cdots \text{式2}
+1 - \frac{Q_{\text{C}}}{Q_{\text{H}}} &lt; 1 - \frac{T_{\text{C}}}{T_{\text{H}}}
 \]</div>
-<p>式2の左辺は式1で示された不可逆熱機関の熱効率 <span class="arithmatex">\(\eta_{\text{irrev}}\)</span> そのものであり，右辺は可逆熱機関のカルノー効率 <span class="arithmatex">\(\eta_{\text{Carnot}}\)</span> です。したがって，次の関係が導かれます。</p>
+<p>左辺は不可逆熱機関の熱効率 <span class="arithmatex">\(\eta_{\text{irrev}}\)</span> であり，右辺は可逆熱機関のカルノー効率 <span class="arithmatex">\(\eta_{\text{Carnot}}\)</span> です。したがって，次の関係が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\eta_{\text{irrev}} &lt; \eta_{\text{Carnot}}}
 \]</div>
-<p>内部でエントロピーが生成される不可逆な過程を含む場合，同じ熱量を受け取っても低温熱源へより多くの熱量を排出しなければサイクルを維持できなくなるため，有効に取り出せる仕事が減少し，熱効率がカルノー効率を下回ることが数理的に証明されました。</p>
+<p>不可逆過程ではエントロピーが生成されるため，同じ熱量を受け取っても低温熱源へより多くの熱を放出する必要があります。その分だけ取り出せる仕事が減り，熱効率はカルノー効率を下回ります。</p>
 
 
 

@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14527,7 +14527,7 @@
 <p>を用いてよい。</p>
 <p>(1) 点電荷を囲む半径 <span class="arithmatex">\(r\)</span> の球面を用い，電束密度 <span class="arithmatex">\(\boldsymbol{D}(r)=D(r)\boldsymbol{e}_r\)</span> を求めよ。続いて電場 <span class="arithmatex">\(\boldsymbol{E}(r)\)</span> と電位 <span class="arithmatex">\(\phi(r)\)</span> を求め，それぞれ真空中の値との比を比誘電率 <span class="arithmatex">\(\varepsilon_r=\varepsilon/\varepsilon_0\)</span> で表せ。</p>
 <p>(2) 原点から距離 <span class="arithmatex">\(r\)</span> の位置に点電荷 <span class="arithmatex">\(q'\)</span> を置く。<span class="arithmatex">\(q'\)</span> が受ける力を <span class="arithmatex">\(\boldsymbol{F}(r)=F_r(r)\boldsymbol{e}_r\)</span> として求め，<span class="arithmatex">\(qq'\)</span> の符号による力の向きを示せ。</p>
-<p>(3) 二電荷間距離を <span class="arithmatex">\(r_1\)</span> から <span class="arithmatex">\(r_2\)</span> へ準静的に変える外力の仕事を <span class="arithmatex">\(W_{\mathrm{ext}}(r_1\to r_2)\)</span> として求めよ。無限遠を基準とする相互作用エネルギー <span class="arithmatex">\(U(r)\)</span> も求め，<span class="arithmatex">\(U(r_2)-U(r_1)=W_{\mathrm{ext}}\)</span> を確認せよ。</p>
+<p>(3) 二電荷間距離を <span class="arithmatex">\(r_1\)</span> から <span class="arithmatex">\(r_2\)</span> へ準静的に変える外力の仕事を <span class="arithmatex">\(W_{\mathrm{ext}}(r_1\to r_2)\)</span> として求めよ。無限遠を基準とする相互作用エネルギー <span class="arithmatex">\(U(r)\)</span> も求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14537,13 +14537,12 @@
 \]</div>
 <p>です。球対称性を用いると</p>
 <div class="arithmatex">\[
-\boldsymbol{D}(r)=\frac{q}{4\pi r^2}\boldsymbol{e}_r
+\finalanswer{\boldsymbol{D}(r)=\frac{q}{4\pi r^2}\boldsymbol{e}_r}
 \]</div>
 <p>となります。</p>
-<p><strong>電場と電位</strong></p>
 <p>一様な線形誘電体では <span class="arithmatex">\(\boldsymbol{D}=\varepsilon\boldsymbol{E}\)</span> です。したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(r)=\frac{q}{4\pi\varepsilon r^2}\boldsymbol{e}_r
+\finalanswer{\boldsymbol{E}(r)=\frac{q}{4\pi\varepsilon r^2}\boldsymbol{e}_r}
 \]</div>
 <p>です。<span class="arithmatex">\(E_r=-d\phi/dr\)</span> を無限遠から積分すると</p>
 <div class="arithmatex">\[
@@ -14553,7 +14552,7 @@
 \frac{q}{4\pi\varepsilon r'^2}\,dr' \\
 &amp;=-\frac{q}{4\pi\varepsilon}
 \left[-\frac{1}{r'}\right]_\infty^r \\
-&amp;=\finalanswer{\frac{q}{4\pi\varepsilon r}}.
+&amp;=\finalanswer{\frac{q}{4\pi\varepsilon r}}
 \end{aligned}
 \]</div>
 <p>となります。比誘電率を <span class="arithmatex">\(\varepsilon_r=\varepsilon/\varepsilon_0\)</span> とすると，電場と電位は真空中の <span class="arithmatex">\(1/\varepsilon_r\)</span> 倍です。</p>
@@ -14573,11 +14572,15 @@ W_{\mathrm{ext}}
 \frac{qq'}{4\pi\varepsilon r^2}\,dr \\
 &amp;=-\frac{qq'}{4\pi\varepsilon}
 \left[-\frac{1}{r}\right]_{r_1}^{r_2} \\
-&amp;=\finalanswer{\frac{qq'}{4\pi\varepsilon}}
-\left(\frac{1}{r_2}-\frac{1}{r_1}\right).
+&amp;=\finalanswer{\frac{qq'}{4\pi\varepsilon}
+\left(\frac{1}{r_2}-\frac{1}{r_1}\right)}
 \end{aligned}
 \]</div>
-<p>です。基準を無限遠に選べば相互作用エネルギーは <span class="arithmatex">\(U(r)=qq'/(4\pi\varepsilon r)\)</span> となります。</p>
+<p>です。基準を無限遠に選べば相互作用エネルギーは</p>
+<div class="arithmatex">\[
+\finalanswer{U(r)=\frac{qq'}{4\pi\varepsilon r}}
+\]</div>
+<p>となります。</p>
 
 
 

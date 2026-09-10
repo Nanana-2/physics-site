@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14533,7 +14533,7 @@ T_{ij}=\varepsilon_0
 <p>とする。法線 <span class="arithmatex">\(\boldsymbol{n}\)</span> をもつ閉曲面に電磁場が及ぼす表面力密度は <span class="arithmatex">\(\boldsymbol{T}\cdot\boldsymbol{n}\)</span> で与えられる。この符号規約では，面を外向きに通過する電磁場の運動量流束は <span class="arithmatex">\(-\boldsymbol{T}\cdot\boldsymbol{n}\)</span> に対応する。</p>
 <p>(1) 真空平行板コンデンサーの板間に一様電場 <span class="arithmatex">\(\boldsymbol{E}=E_0\boldsymbol{e}_z\)</span> があり，磁場はない。<span class="arithmatex">\(T_{zz}\)</span> を求め，極板に働く単位面積当たりの引力 <span class="arithmatex">\(p\)</span> を示せ。極板面積を <span class="arithmatex">\(A\)</span> として力の大きさ <span class="arithmatex">\(F\)</span> も求めよ。</p>
 <p>(2) <span class="arithmatex">\(+z\)</span> 方向へ進む平面波について <span class="arithmatex">\(\boldsymbol{E}=E_0\cos(kz-\omega t)\boldsymbol{e}_x\)</span>，<span class="arithmatex">\(\boldsymbol{B}=(E_0/c)\cos(kz-\omega t)\boldsymbol{e}_y\)</span> とする。<span class="arithmatex">\(S_z\)</span>，<span class="arithmatex">\(g_z\)</span>，<span class="arithmatex">\(T_{zz}\)</span> を求め，<span class="arithmatex">\(-T_{zz}=S_z/c\)</span> となることを示せ。これは <span class="arithmatex">\(+z\)</span> 法線の面を通る <span class="arithmatex">\(+z\)</span> 運動量流束の大きさである。</p>
-<p>(3) 平均強度 <span class="arithmatex">\(I=\langle S_z\rangle\)</span> の波が面積 <span class="arithmatex">\(A\)</span> の物体へ垂直入射する。完全吸収する場合と完全反射する場合について，単位時間に物体へ渡される運動量から平均放射圧と平均力を求めよ。</p>
+<p>(3) 平均強度 <span class="arithmatex">\(I=\langle S_z\rangle\)</span> の波が面積 <span class="arithmatex">\(A\)</span> の物体へ垂直入射する。完全吸収する場合と完全反射する場合について，単位時間に物体へ渡される運動量から平均放射圧と時間平均した力を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14543,7 +14543,7 @@ T_{ij}=\varepsilon_0
 T_{zz}
 &amp;=\varepsilon_0
 \left(E_zE_z-\frac{1}{2}E^2\right) \\
-&amp;=\frac{1}{2}\varepsilon_0E_0^2.
+&amp;=\finalanswer{\frac{1}{2}\varepsilon_0E_0^2}
 \end{aligned}
 \]</div>
 <p>したがって，極板に働く電気的圧力と力の大きさは</p>
@@ -14558,11 +14558,11 @@ F=pA=\frac{1}{2}\varepsilon_0E_0^2A}
 <div class="arithmatex">\[
 \begin{aligned}
 S_z
-&amp;=\frac{1}{\mu_0}\frac{E_0^2}{c}\cos^2\theta
-=c\varepsilon_0E_0^2\cos^2\theta, \\
+&amp;=\frac{1}{\mu_0}\frac{E_0^2}{c}\cos^2\theta \\
+&amp;=\finalanswer{c\varepsilon_0E_0^2\cos^2\theta}, \\
 g_z
-&amp;=\frac{S_z}{c^2}
-=\frac{\varepsilon_0E_0^2}{c}\cos^2\theta.
+&amp;=\frac{S_z}{c^2} \\
+&amp;=\finalanswer{\frac{\varepsilon_0E_0^2}{c}\cos^2\theta}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(E_z=B_z=0\)</span> なので</p>
@@ -14574,16 +14574,16 @@ T_{zz}
 &amp;=-\frac{1}{2}\varepsilon_0E_0^2\cos^2\theta
 -\frac{E_0^2}{2\mu_0c^2}\cos^2\theta \\
 &amp;=-\varepsilon_0E_0^2\cos^2\theta \\
-&amp;=\finalanswer{-\frac{S_z}{c}}.
+&amp;=\finalanswer{-\frac{S_z}{c}}
 \end{aligned}
 \]</div>
 <p>したがって，この符号規約で <span class="arithmatex">\(+z\)</span> 法線の面を外向きに通過する <span class="arithmatex">\(+z\)</span> 運動量流束は <span class="arithmatex">\(-T_{zz}=S_z/c\)</span> です。</p>
 <h3 id="3">(3)</h3>
 <p>時間 <span class="arithmatex">\(dt\)</span> に入射するエネルギーは <span class="arithmatex">\(dW=IA\,dt\)</span> であり，対応する入射運動量は <span class="arithmatex">\(dW/c\)</span> です。完全吸収ではこの運動量がすべて物体へ渡るので</p>
 <div class="arithmatex">\[
-p_{\mathrm{abs}}=\frac{I}{c},
+\finalanswer{p_{\mathrm{abs}}=\frac{I}{c},
 \qquad
-F_{\mathrm{abs}}=\frac{IA}{c}
+F_{\mathrm{abs}}=\frac{IA}{c}}
 \]</div>
 <p>となります。完全反射では光の運動量が <span class="arithmatex">\(+z\)</span> から <span class="arithmatex">\(-z\)</span> へ反転し，変化量が2倍になるため</p>
 <div class="arithmatex">\[

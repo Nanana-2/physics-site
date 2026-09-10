@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4549,17 +4521,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4951,7 +4912,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14471,17 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14520,8 +14498,7 @@
 <h2 id="_2">問題</h2>
 <p>電荷密度 <span class="arithmatex">\(\rho\)</span> と電流密度 <span class="arithmatex">\(\boldsymbol{j}\)</span> がともにゼロである真空領域を考える。電場を <span class="arithmatex">\(\boldsymbol{E}(\boldsymbol{r},t)\)</span>，磁束密度を <span class="arithmatex">\(\boldsymbol{B}(\boldsymbol{r},t)\)</span> とする。領域は単連結で，場は必要な回数だけ微分可能とする。</p>
 <p>(1) 真空中の四つのマクスウェル方程式を微分形で書け。また，それぞれに対応する積分形を，閉曲面 <span class="arithmatex">\(S\)</span>，閉曲線 <span class="arithmatex">\(C\)</span>，および <span class="arithmatex">\(C\)</span> を縁にもつ面 <span class="arithmatex">\(S_C\)</span> を用いて書け。</p>
-<p>(2) 各方程式について，電気力線と磁力線の湧き出し，時間変化する磁場が作る電場，時間変化する電場が作る磁場という観点から物理的意味を説明せよ。符号の意味も明示せよ。</p>
-<p>(3) ファラデーの法則の発散とアンペール・マクスウェルの法則の発散をとり，<span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> と <span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> が時間発展と両立することを示せ。恒等式 <span class="arithmatex">\(\nabla\cdot(\nabla\times\boldsymbol{A})=0\)</span> を用いてよい。</p>
+<p>(2) ファラデーの法則の発散とアンペール・マクスウェルの法則の発散をとり，<span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> と <span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> が時間発展と両立することを示せ。恒等式 <span class="arithmatex">\(\nabla\cdot(\nabla\times\boldsymbol{A})=0\)</span> を用いてよい。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14529,11 +14506,11 @@
 <p>真空中の微分形は</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\nabla\cdot\boldsymbol{E}&amp;=0, \\
-\nabla\cdot\boldsymbol{B}&amp;=0, \\
-\nabla\times\boldsymbol{E}&amp;=-\frac{\partial\boldsymbol{B}}{\partial t}, \\
-\nabla\times\boldsymbol{B}&amp;=\mu_0\varepsilon_0
-\frac{\partial\boldsymbol{E}}{\partial t}
+&amp;\finalanswer{\nabla\cdot\boldsymbol{E}=0}, \\
+&amp;\finalanswer{\nabla\cdot\boldsymbol{B}=0}, \\
+&amp;\finalanswer{\nabla\times\boldsymbol{E}=-\frac{\partial\boldsymbol{B}}{\partial t}}, \\
+&amp;\finalanswer{\nabla\times\boldsymbol{B}=\mu_0\varepsilon_0
+\frac{\partial\boldsymbol{E}}{\partial t}}
 \end{aligned}
 \]</div>
 <p>です。ここから各式を積分形へ変換します。閉曲面 <span class="arithmatex">\(S\)</span> が囲む体積を <span class="arithmatex">\(V\)</span> とします。</p>
@@ -14543,8 +14520,7 @@
 \begin{aligned}
 \int_V\nabla\cdot\boldsymbol{E}\,dV
 &amp;=\int_V0\,dV \\
-\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}
-&amp;=0.
+&amp;\finalanswer{\oint_S\boldsymbol{E}\cdot d\boldsymbol{S}=0}
 \end{aligned}
 \]</div>
 <p>第一行の体積積分を，第二行では閉曲面を貫く電束へ変換しました。</p>
@@ -14554,8 +14530,7 @@
 \begin{aligned}
 \int_V\nabla\cdot\boldsymbol{B}\,dV
 &amp;=\int_V0\,dV \\
-\oint_S\boldsymbol{B}\cdot d\boldsymbol{S}
-&amp;=0
+&amp;\finalanswer{\oint_S\boldsymbol{B}\cdot d\boldsymbol{S}=0}
 \end{aligned}
 \]</div>
 <p>となります。任意の閉曲面へ入る磁束と出る磁束の総和はゼロです。</p>
@@ -14568,9 +14543,9 @@
 &amp;=-\int_{S_C}
 \frac{\partial\boldsymbol{B}}{\partial t}
 \cdot d\boldsymbol{S} \\
-\oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
-&amp;=-\frac{d}{dt}
-\int_{S_C}\boldsymbol{B}\cdot d\boldsymbol{S}.
+&amp;\finalanswer{\oint_C\boldsymbol{E}\cdot d\boldsymbol{l}
+=-\frac{d}{dt}
+\int_{S_C}\boldsymbol{B}\cdot d\boldsymbol{S}}
 \end{aligned}
 \]</div>
 <p>面 <span class="arithmatex">\(S_C\)</span> が時間変化しないため，右辺では時間微分を面積分の外へ出せます。面の法線と周回方向は右ねじの関係にとります。</p>
@@ -14584,25 +14559,21 @@
 \int_{S_C}
 \frac{\partial\boldsymbol{E}}{\partial t}
 \cdot d\boldsymbol{S} \\
-\oint_C\boldsymbol{B}\cdot d\boldsymbol{l}
-&amp;=\finalanswer{\mu_0\varepsilon_0\frac{d}{dt}}
-\int_{S_C}\boldsymbol{E}\cdot d\boldsymbol{S}.
+&amp;\finalanswer{\oint_C\boldsymbol{B}\cdot d\boldsymbol{l}
+=\mu_0\varepsilon_0\frac{d}{dt}
+\int_{S_C}\boldsymbol{E}\cdot d\boldsymbol{S}}
 \end{aligned}
 \]</div>
 <p>したがって，微分形は各点での局所的な関係，積分形は有限な面や経路を通じた場の関係を表しています。</p>
 <h3 id="2">(2)</h3>
-<p><span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> は，考えている領域に電荷がなく，電気力線の始点や終点がないことを表します。<span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> は磁気単極子がなく，磁力線が途中で始まったり終わったりせず閉じることを表します。</p>
-<p>ファラデーの法則は，時間変化する磁束が周回する電場を作ることを表します。負号は，誘導電場が磁束変化を妨げる向きに作用するレンツの法則に対応します。</p>
-<p>アンペール・マクスウェルの法則は，時間変化する電場が周回する磁場を作ることを表します。この項によって，電荷や伝導電流のない真空中でも電場と磁場が互いを作りながら伝播できます。</p>
-<h3 id="3">(3)</h3>
 <p>ファラデーの法則の両辺の発散をとると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \nabla\cdot(\nabla\times\boldsymbol{E})
 &amp;=-\frac{\partial}{\partial t}
 (\nabla\cdot\boldsymbol{B}), \\
-0&amp;=-\frac{\partial}{\partial t}
-(\nabla\cdot\boldsymbol{B}).
+&amp;\finalanswer{0=-\frac{\partial}{\partial t}
+(\nabla\cdot\boldsymbol{B})}
 \end{aligned}
 \]</div>
 <p>したがって，初期時刻に <span class="arithmatex">\(\nabla\cdot\boldsymbol{B}=0\)</span> なら，その後もゼロです。同様に</p>
@@ -14611,8 +14582,8 @@
 \nabla\cdot(\nabla\times\boldsymbol{B})
 &amp;=\mu_0\varepsilon_0\frac{\partial}{\partial t}
 (\nabla\cdot\boldsymbol{E}), \\
-0&amp;=\finalanswer{\mu_0\varepsilon_0\frac{\partial}{\partial t}}
-(\nabla\cdot\boldsymbol{E}).
+&amp;\finalanswer{0=\mu_0\varepsilon_0\frac{\partial}{\partial t}
+(\nabla\cdot\boldsymbol{E})}
 \end{aligned}
 \]</div>
 <p>よって，初期時刻に <span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=0\)</span> なら，真空中の時間発展はこの条件を保ちます。</p>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14564,11 +14564,10 @@
 \]</div>
 <p>演算子 <span class="arithmatex">\(\hat{S}_x = \frac{\hbar}{2}\sigma_x\)</span> を挟んで行列計算を行います。全体の係数は <span class="arithmatex">\(\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} \cdot \frac{\hbar}{2} = \frac{\hbar}{4}\)</span> となります。</p>
 <div class="arithmatex">\[
-\langle \hat{S}_x \rangle_t = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{i\omega_0 t/2} \\ e^{-i\omega_0 t/2} \end{pmatrix} \\
+\langle \hat{S}_x \rangle_t
+&amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix} \\
+&amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{i\omega_0 t/2} \\ e^{-i\omega_0 t/2} \end{pmatrix} \\
 &amp;= \frac{\hbar}{4} \left( e^{i\omega_0 t} + e^{-i\omega_0 t} \right)
 \end{aligned}
 \]</div>
@@ -14578,34 +14577,28 @@
 \]</div>
 <h3 id="3">(3)</h3>
 <p>同様の手順で <span class="arithmatex">\(y\)</span> 成分と <span class="arithmatex">\(z\)</span> 成分の期待値を計算します。</p>
-<ul>
-<li><strong><span class="arithmatex">\(y\)</span> 成分の計算</strong>
-  演算子は <span class="arithmatex">\(\hat{S}_y = \frac{\hbar}{2}\sigma_y\)</span> です。</li>
-</ul>
-<div class="arithmatex">\[
-  \langle \hat{S}_y \rangle_t = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
-\]</div>
+<p><strong><span class="arithmatex">\(y\)</span> 成分</strong></p>
+<p>演算子は <span class="arithmatex">\(\hat{S}_y = \frac{\hbar}{2}\sigma_y\)</span> です。</p>
 <div class="arithmatex">\[
 \begin{aligned}
- &amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} -i e^{i\omega_0 t/2} \\ i e^{-i\omega_0 t/2} \end{pmatrix} \\
+\langle \hat{S}_y \rangle_t
+&amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix} \\
+&amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} -i e^{i\omega_0 t/2} \\ i e^{-i\omega_0 t/2} \end{pmatrix} \\
 &amp;= \frac{\hbar}{4} \left( -i e^{i\omega_0 t} + i e^{-i\omega_0 t} \right) \\
 &amp;= \frac{\hbar}{2} \frac{e^{i\omega_0 t} - e^{-i\omega_0 t} }{2i}
 \end{aligned}
 \]</div>
 <p>関係式 <span class="arithmatex">\(\sin\theta = \frac{e^{i\theta} - e^{-i\theta}}{2i}\)</span> を適用します。</p>
 <div class="arithmatex">\[
-  \finalanswer{\langle \hat{S}_y \rangle_t = \frac{\hbar}{2} \sin\omega_0 t}
+\finalanswer{\langle \hat{S}_y \rangle_t = \frac{\hbar}{2} \sin\omega_0 t}
 \]</div>
-<ul>
-<li><strong><span class="arithmatex">\(z\)</span> 成分の 計算</strong>
-  演算子は <span class="arithmatex">\(\hat{S}_z = \frac{\hbar}{2}\sigma_z\)</span> です。</li>
-</ul>
-<div class="arithmatex">\[
-  \langle \hat{S}_z \rangle_t = \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix}
-\]</div>
+<p><strong><span class="arithmatex">\(z\)</span> 成分</strong></p>
+<p>演算子は <span class="arithmatex">\(\hat{S}_z = \frac{\hbar}{2}\sigma_z\)</span> です。</p>
 <div class="arithmatex">\[
 \begin{aligned}
- &amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ -e^{i\omega_0 t/2} \end{pmatrix} \\
+\langle \hat{S}_z \rangle_t
+&amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ e^{i\omega_0 t/2} \end{pmatrix} \\
+&amp;= \frac{\hbar}{4} \begin{pmatrix} e^{i\omega_0 t/2}, &amp; e^{-i\omega_0 t/2} \end{pmatrix} \begin{pmatrix} e^{-i\omega_0 t/2} \\ -e^{i\omega_0 t/2} \end{pmatrix} \\
 &amp;= \frac{\hbar}{4} \left( 1 - 1 \right) \\
 &amp;= \finalanswer{0}
 \end{aligned}

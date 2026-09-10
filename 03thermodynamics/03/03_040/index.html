@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14526,7 +14526,7 @@
 <li>状態 4 から 1：定積冷却。排気により体積を <span class="arithmatex">\(V_1\)</span> に保ったまま，圧力が <span class="arithmatex">\(P_4\)</span> から <span class="arithmatex">\(P_1\)</span> へ下降する。</li>
 </ul>
 <p>各状態における温度を <span class="arithmatex">\(T_1, T_2, T_3, T_4\)</span> とし，圧縮比を <span class="arithmatex">\(r = \frac{V_1}{V_2}\)</span> ，締切比を <span class="arithmatex">\(\alpha = \frac{V_3}{V_2}\)</span> とするとき，以下の問いに答えよ。</p>
-<p>(1) 定圧加熱過程において気体が外部から吸収する熱量 <span class="arithmatex">\(Q_{\text{in}}\)</span> ，および定積冷却過程において気体が外部へ放出する熱量 <span class="arithmatex">\(Q_{\text{out}}\)</span> を，各状態の温度を用いて表せ。ただし， <span class="arithmatex">\(Q_{\text{in}}\)</span> 和 <span class="arithmatex">\(Q_{\text{out}}\)</span> はともに正の値として定義する。</p>
+<p>(1) 定圧加熱過程において気体が外部から吸収する熱量 <span class="arithmatex">\(Q_{\text{in}}\)</span>，および定積冷却過程において気体が外部へ放出する熱量 <span class="arithmatex">\(Q_{\text{out}}\)</span> を，各状態の温度を用いて表せ。ただし，<span class="arithmatex">\(Q_{\text{in}}\)</span> と <span class="arithmatex">\(Q_{\text{out}}\)</span> はともに正の値として定義する。</p>
 <p>(2) 状態 2 と状態 3 の間の等圧関係，および各断熱過程の関係式を用いて，各状態の温度 <span class="arithmatex">\(T_2, T_3, T_4\)</span> を， <span class="arithmatex">\(T_1, r, \alpha, \gamma\)</span> を用いて表せ。</p>
 <p>(3) サイクルの熱効率 <span class="arithmatex">\(\eta = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}}\)</span> に対し，これまでの結果を代入することにより，ディーゼルサイクルの熱効率が次のようになることを導け。</p>
 <div class="arithmatex">\[
@@ -14537,7 +14537,7 @@
 <h3 id="1">(1)</h3>
 <p>状態 2 から 3 は定圧過程であるため，気体が外部から吸収する熱量 <span class="arithmatex">\(Q_{\text{in}}\)</span> は定圧モル比熱 <span class="arithmatex">\(C_P\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
-Q_{\text{in}} = n C_P (T_3 - T_2)
+\finalanswer{Q_{\text{in}} = n C_P (T_3 - T_2)}
 \]</div>
 <p>状態 4 から 1 は定積過程であるため，気体が外部へ放出する熱量 <span class="arithmatex">\(Q_{\text{out}}\)</span> は定積モル比熱 <span class="arithmatex">\(C_V\)</span> を用いて次のように表されます。</p>
 <div class="arithmatex">\[
@@ -14547,11 +14547,11 @@ Q_{\text{in}} = n C_P (T_3 - T_2)
 <p>各熱力学過程の関係式を用いて，状態 1 の温度 <span class="arithmatex">\(T_1\)</span> を基準として他の温度を表します。</p>
 <p>状態 1 から 2 は断熱圧縮過程であるため，<span class="arithmatex">\(T V^{\gamma-1} = \text{const.}\)</span> より次のようになります。</p>
 <div class="arithmatex">\[
-T_2 = T_1 \left( \frac{V_1}{V_2} \right)^{\gamma-1} = T_1 r^{\gamma-1}
+\finalanswer{T_2 = T_1 r^{\gamma-1}}
 \]</div>
 <p>状態 2 から 3 は定圧過程であるため，シャルルの法則より温度比は体積比に等しくなります。</p>
 <div class="arithmatex">\[
-T_3 = T_2 \left( \frac{V_3}{V_2} \right) = T_2 \alpha = T_1 r^{\gamma-1} \alpha
+\finalanswer{T_3 = T_1 r^{\gamma-1}\alpha}
 \]</div>
 <p>状態 3 から 4 は断熱膨張過程です。体積が <span class="arithmatex">\(V_3\)</span> から <span class="arithmatex">\(V_4 = V_1\)</span> へ変化するため，断熱の関係式を適用します。</p>
 <div class="arithmatex">\[

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14529,7 +14529,7 @@ V(x) = \begin{cases} -V_0 &amp; (-a &lt; x &lt; a) \\ 0 &amp; (x \le -a, \, a \l
 k = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(-E)}{\hbar^2}}
 \]</div>
 <p>(2) 境界 <span class="arithmatex">\(x = a\)</span> において，波動関数とその微分の連続条件 <span class="arithmatex">\(\psi_{\text{in}}(a) = \psi_{\text{out}}(a)\)</span>，<span class="arithmatex">\(\psi_{\text{in}}'(a) = \psi_{\text{out}}'(a)\)</span> を課す。これら2つの式から全体の係数を消去し，<span class="arithmatex">\(k\)</span> と <span class="arithmatex">\(\kappa\)</span> が満たす関係式を導け。</p>
-<p>(3) 新たに無次元の変数 <span class="arithmatex">\(\xi = ka, \, \eta = \kappa a\)</span> を導入する。 <span class="arithmatex">\(\xi^2 + \eta^2\)</span> を計算して <span class="arithmatex">\(E\)</span> を含まない定数の形にまとめよ。また，(2) で得られた関係式を <span class="arithmatex">\(\xi\)</span> と <span class="arithmatex">\(\eta\)</span> を用いた式に書き換え，これら2つの数式から束縛状態のエネルギーを決定する条件式を導け。</p>
+<p>(3) 新たに無次元の変数 <span class="arithmatex">\(\xi = ka, \, \eta = \kappa a\)</span> を導入する。 <span class="arithmatex">\(\xi^2 + \eta^2\)</span> を計算して <span class="arithmatex">\(E\)</span> を含まない定数の形にまとめよ。また，(2) で得られた関係式を <span class="arithmatex">\(\xi\)</span> と <span class="arithmatex">\(\eta\)</span> を用いた式に書き換え，これら2つの式から束縛状態のエネルギーを決定する条件式を導け。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14539,10 +14539,13 @@ k = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(-E)}{\hbar
 </ul>
 <p>ポテンシャルは <span class="arithmatex">\(V(x) = -V_0\)</span> です。</p>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{in}}}{dx^2} - V_0 \psi_{\text{in}} &amp;= E \psi_{\text{in}} \implies \frac{d^2 \psi_{\text{in}}}{dx^2} \\
-&amp;= -\frac{2m(E + V_0)}{\hbar^2} \psi_{\text{in}}
-\end{aligned}
+\begin{gathered}
+-\frac{\hbar^2}{2m}\frac{d^2\psi_{\text{in}}}{dx^2}-V_0\psi_{\text{in}}
+=E\psi_{\text{in}} \\
+\Longrightarrow\quad
+\frac{d^2\psi_{\text{in}}}{dx^2}
+=-\frac{2m(E+V_0)}{\hbar^2}\psi_{\text{in}}
+\end{gathered}
 \]</div>
 <p>与えられた <span class="arithmatex">\(k\)</span> の定義を用いると <span class="arithmatex">\(\frac{d^2 \psi_{\text{in}}}{dx^2} = -k^2 \psi_{\text{in}}\)</span> となります。偶関数 <span class="arithmatex">\(\psi(-x) = \psi(x)\)</span> の条件を満たす三角関数の解は，コサインのみとなります。</p>
 <div class="arithmatex">\[
@@ -14553,12 +14556,15 @@ k = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(-E)}{\hbar
   ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{out}}}{dx^2} &amp;= E \psi_{\text{out}} \implies \frac{d^2 \psi_{\text{out}}}{dx^2} \\
-&amp;= \frac{2m(-E)}{\hbar^2} \psi_{\text{out}}
-\end{aligned}
+\begin{gathered}
+-\frac{\hbar^2}{2m}\frac{d^2\psi_{\text{out}}}{dx^2}
+=E\psi_{\text{out}} \\
+\Longrightarrow\quad
+\frac{d^2\psi_{\text{out}}}{dx^2}
+=\frac{2m(-E)}{\hbar^2}\psi_{\text{out}}
+\end{gathered}
 \]</div>
-<p>与えられた <span class="arithmatex">\(\kappa\)</span> の定義を用いると <span class="arithmatex">\(\frac{d^2 \psi_{\text{out}}}{dx^2} = \kappa^2 \psi_{\text{out}}\)</span> となります。この一般解は <span class="arithmatex">\(C e^{-\kappa x} + D e^{\kappa x}\)</span> ですが， <span class="arithmatex">\(x \to \infty\)</span> で波動関数が発散しないという物理的要請から，指数減少の項のみが残ります。</p>
+<p>与えられた <span class="arithmatex">\(\kappa\)</span> の定義を用いると <span class="arithmatex">\(\frac{d^2 \psi_{\text{out}}}{dx^2} = \kappa^2 \psi_{\text{out}}\)</span> となります。一般解 <span class="arithmatex">\(C e^{-\kappa x} + D e^{\kappa x}\)</span> のうち，<span class="arithmatex">\(x \to \infty\)</span> で有限となるのは指数減少する項です。</p>
 <div class="arithmatex">\[
   \finalanswer{\psi_{\text{out}}(x) = C e^{-\kappa x}}
 \]</div>
@@ -14576,11 +14582,11 @@ k = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(-E)}{\hbar
 <div class="arithmatex">\[
 -Ak \sin(ka) = -C\kappa e^{-\kappa a} \implies Ak \sin(ka) = C\kappa e^{-\kappa a} \quad \cdots \text{②}
 \]</div>
-<p>未知の係数 <span class="arithmatex">\(A, C\)</span> を消去するため，②式の両辺を①式の両辺でそれぞれ割り算します。</p>
+<p>未知の係数 <span class="arithmatex">\(A,C\)</span> を消去するため，②を①で辺々割ります。</p>
 <div class="arithmatex">\[
 \frac{Ak \sin(ka)}{A \cos(ka)} = \frac{C\kappa e^{-\kappa a}}{C e^{-\kappa a}}
 \]</div>
-<p>左辺の係数 <span class="arithmatex">\(A\)</span> と右辺の係数 <span class="arithmatex">\(C\)</span> および指数項が共通因子として相殺され，サインとコサインの比からタンジェントが現れます。</p>
+<p>共通因子を整理すると，</p>
 <div class="arithmatex">\[
 \finalanswer{k \tan(ka) = \kappa}
 \]</div>
@@ -14592,24 +14598,27 @@ k = \sqrt{\frac{2m(E + V_0)}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(-E)}{\hbar
 &amp;= \frac{2m(E + V_0)}{\hbar^2} a^2 + \frac{2m(-E)}{\hbar^2} a^2
 \end{aligned}
 \]</div>
-<p>展開して共通因子でまとめると，エネルギー <span class="arithmatex">\(E\)</span> の項が互いに打ち消し合います。</p>
+<p>整理すると <span class="arithmatex">\(E\)</span> に依存する項が消え，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\xi^2 + \eta^2 &amp;= \frac{2ma^2}{\hbar^2} (E + V_0 - E) \\
-&amp;= \frac{2ma^2 V_0}{\hbar^2}
-\end{aligned}
+\xi^2+\eta^2
+=\frac{2ma^2}{\hbar^2}(E+V_0-E)
+=\frac{2ma^2V_0}{\hbar^2}
 \]</div>
 <p>この右辺の値は，井戸の幅 <span class="arithmatex">\(a\)</span> と深さ <span class="arithmatex">\(V_0\)</span>，粒子の質量 <span class="arithmatex">\(m\)</span> だけで決まる定数です。これを <span class="arithmatex">\(R^2 = \frac{2ma^2 V_0}{\hbar^2}\)</span> と置くと， <span class="arithmatex">\(\xi, \eta\)</span> は半径 <span class="arithmatex">\(R\)</span> の円の方程式を満たします。</p>
 <div class="arithmatex">\[
-\xi^2 + \eta^2 = R^2 \quad (\xi &gt; 0, \, \eta &gt; 0)
+\finalanswer{\xi^2 + \eta^2 = R^2},
+\qquad
+R^2=\frac{2ma^2V_0}{\hbar^2}
 \]</div>
 <p>一方，(2) で導いた関係式 <span class="arithmatex">\(k \tan(ka) = \kappa\)</span> の両辺に <span class="arithmatex">\(a\)</span> を掛けます。</p>
 <div class="arithmatex">\[
-\finalanswer{(ka) \tan(ka) = (\kappa a) \implies \xi \tan \xi = \eta}
+(ka)\tan(ka)=\kappa a
+\quad\Longrightarrow\quad
+\finalanswer{\xi\tan\xi=\eta}
 \]</div>
 <p>したがって，求める条件式は以下の連立方程式の形式になります。</p>
 <div class="arithmatex">\[
-\begin{cases} \eta = \xi \tan \xi \\ \xi^2 + \eta^2 = R^2 \end{cases}
+\finalanswer{\begin{cases} \eta = \xi \tan \xi \\ \xi^2 + \eta^2 = R^2 \end{cases}}
 \]</div>
 <p>この方程式は代数的に直接解くことができないため， <span class="arithmatex">\(\xi\)</span>-<span class="arithmatex">\(\eta\)</span> 平面における2つの曲線の交点を図形的に求めることで，対応する固有エネルギー <span class="arithmatex">\(E\)</span> の値が決定されます。</p>
 

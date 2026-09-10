@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4298,17 +4270,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4951,7 +4912,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14471,17 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14521,15 +14499,7 @@
 <p>水平な二本の平行導体レールを <span class="arithmatex">\(x\)</span> 軸方向に置く。下側レールを <span class="arithmatex">\(y=0\)</span>，上側レールを <span class="arithmatex">\(y=\ell\)</span> とし，両レールの左端を抵抗 <span class="arithmatex">\(R\)</span> で接続する。レール上に長さ <span class="arithmatex">\(\ell\)</span> の導体棒を <span class="arithmatex">\(y=0\)</span> から <span class="arithmatex">\(y=\ell\)</span> まで渡し，棒を右向きに一定速度 <span class="arithmatex">\(\boldsymbol{v}=v\boldsymbol{e}_x\)</span> で動かす。鉛直上向きを <span class="arithmatex">\(+z\)</span> とし，一様磁場を <span class="arithmatex">\(\boldsymbol{B}=B\boldsymbol{e}_z\)</span> とする。<span class="arithmatex">\(B,v&gt;0\)</span> であり，レールと棒の抵抗および自己インダクタンスを無視する。</p>
 <p>回路の正の周回方向を <span class="arithmatex">\(+z\)</span> から見て反時計回りとする。棒の位置を <span class="arithmatex">\(x(t)\)</span>，回路面積を <span class="arithmatex">\(A(t)=\ell x(t)\)</span> とする。</p>
 <p>(1) 磁束 <span class="arithmatex">\(\Phi_B(t)=BA(t)\)</span> とファラデーの法則から起電力 <span class="arithmatex">\(\mathcal{E}\)</span> を求め，電流 <span class="arithmatex">\(I=\mathcal{E}/R\)</span> の符号と向きを示せ。</p>
-<p>(2) 棒中の正電荷が受けるローレンツ力 <span class="arithmatex">\(q\boldsymbol{v}\times\boldsymbol{B}\)</span> から，棒のどちらの端が高電位になるか示せ。棒に沿う運動起電力</p>
-<div class="arithmatex">\[
-\mathcal{E}_{\mathrm{mot}}
-=\int_{\mathrm{rod}}
-\left(\boldsymbol{v}\times\boldsymbol{B}\right)
-\cdot d\boldsymbol{l}
-\]</div>
-<p>を求め，(1) の結果と符号を含めて一致させよ。</p>
-<p>(3) 電流が流れる棒には磁力 <span class="arithmatex">\(\boldsymbol{F}=I\boldsymbol{\ell}\times\boldsymbol{B}\)</span> が働く。棒を一定速度に保つための外力の大きさ <span class="arithmatex">\(F_{\mathrm{ext}}\)</span> と機械的仕事率 <span class="arithmatex">\(P_{\mathrm{mech}}=F_{\mathrm{ext}}v\)</span> を求め，抵抗のジュール熱 <span class="arithmatex">\(P_R=I^2R\)</span> と一致することを示せ。</p>
+<p>(2) 電流が流れる棒には磁力 <span class="arithmatex">\(\boldsymbol{F}=I\boldsymbol{\ell}\times\boldsymbol{B}\)</span> が働く。棒を一定速度に保つための外力の大きさ <span class="arithmatex">\(F_{\mathrm{ext}}\)</span> と機械的仕事率 <span class="arithmatex">\(P_{\mathrm{mech}}=F_{\mathrm{ext}}v\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14539,9 +14509,9 @@
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-\mathcal{E}
+\finalanswer{\mathcal{E}
 =-\frac{d\Phi_B}{dt}
-=-B\ell v
+=-B\ell v}
 \]</div>
 <p>です。負号より電流は負の周回方向，すなわち <span class="arithmatex">\(+z\)</span> から見て時計回りです。</p>
 <div class="arithmatex">\[
@@ -14549,26 +14519,6 @@
 \]</div>
 <p>となります。</p>
 <h3 id="2">(2)</h3>
-<p>外積は</p>
-<div class="arithmatex">\[
-\boldsymbol{v}\times\boldsymbol{B}
-=v\boldsymbol{e}_x\times B\boldsymbol{e}_z
-=-vB\boldsymbol{e}_y
-\]</div>
-<p>です。正電荷は棒の <span class="arithmatex">\(-y\)</span> 方向へ移動するため，下端 <span class="arithmatex">\(y=0\)</span> が高電位になります。棒に沿う積分を <span class="arithmatex">\(y=0\)</span> から <span class="arithmatex">\(y=\ell\)</span> まで <span class="arithmatex">\(+y\)</span> 方向にとると</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\mathcal{E}_{\mathrm{mot}}
-&amp;=\int_0^\ell
-\left(-vB\boldsymbol{e}_y\right)
-\cdot\boldsymbol{e}_y\,dy \\
-&amp;=-vB\int_0^\ell dy \\
-&amp;=-vB[y]_0^\ell \\
-&amp;=\finalanswer{-vB\ell}.
-\end{aligned}
-\]</div>
-<p>となり，(1) と一致します。</p>
-<h3 id="3">(3)</h3>
 <p>棒を流れる電流の大きさは <span class="arithmatex">\(|I|=B\ell v/R\)</span> です。磁力は運動を妨げる左向きで，大きさは</p>
 <div class="arithmatex">\[
 F_{\mathrm{mag}}
@@ -14577,21 +14527,16 @@ F_{\mathrm{mag}}
 \]</div>
 <p>です。一定速度を保つ外力は右向きで同じ大きさです。</p>
 <div class="arithmatex">\[
-F_{\mathrm{ext}}
-=\frac{B^2\ell^2v}{R}
+\finalanswer{F_{\mathrm{ext}}
+=\frac{B^2\ell^2v}{R}}
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-P_{\mathrm{mech}}
+\finalanswer{P_{\mathrm{mech}}
 =F_{\mathrm{ext}}v
-=\frac{B^2\ell^2v^2}{R}
-\]</div>
-<p>です。一方</p>
-<div class="arithmatex">\[
-\finalanswer{P_R=I^2R
 =\frac{B^2\ell^2v^2}{R}}
 \]</div>
-<p>となり一致します。外力の機械的仕事がジュール熱へ変換されています。</p>
+<p>です。</p>
 
 
 

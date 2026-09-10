@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,7 +14534,7 @@
 <p>ボース粒子は，波動関数が座標の入れ替えに対して対称であるという性質を持ち，複数の粒子が同じ量子状態を共有することに対して何の制限もありません。</p>
 <p>したがって，1つの準位 <span class="arithmatex">\(k\)</span> を占有できる粒子の数 <span class="arithmatex">\(n_k\)</span> は，全く粒子が入っていない状態からすべての粒子が凝縮する状態まで，以下の任意の非負整数をとることができます。</p>
 <div class="arithmatex">\[
-n_k = 0, 1, 2, 3, \dots
+\finalanswer{n_k = 0, 1, 2, 3, \dots}
 \]</div>
 <p>また，系全体の全粒子数が <span class="arithmatex">\(N\)</span> 個に固定されているカノニカル集団においては，すべての準位の占有数を足し合わせた合計が必ず <span class="arithmatex">\(N\)</span> に一致しなければならないため，以下の拘束条件が課されます。</p>
 <div class="arithmatex">\[
@@ -14547,9 +14547,9 @@ n_k = 0, 1, 2, 3, \dots
 \finalanswer{n_k = 0, 1}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>3つの準位に対して 2 個の粒子を配置するすべての組み合わせを，書き漏らしのないように探索します。常に <span class="arithmatex">\(n_1 + n_2 + n_3 = 2\)</span> の条件が満たされている必要があります。</p>
+<p>3つの準位に2個の粒子を配置し，<span class="arithmatex">\(n_1+n_2+n_3=2\)</span> を満たす組を列挙します。</p>
 <p><strong>ボース粒子のケース</strong>
-ボース粒子では同一の準位に 2 個の粒子が同時に入る<span class="arithmatex">\(n_k = 2\)</span>ことが許されます。条件を満たす状態を列挙すると，以下の <strong>6通り</strong> となります。</p>
+ボース粒子では，同一の準位に2個の粒子が入る <span class="arithmatex">\(n_k=2\)</span> も許されます。条件を満たす状態は次の6通りです。</p>
 <ul>
 <li>1つの準位に2粒子が固まって入る状態：
   <span class="arithmatex">\((2, 0, 0), \ (0, 2, 0), \ (0, 0, 2)\)</span></li>
@@ -14557,12 +14557,12 @@ n_k = 0, 1, 2, 3, \dots
   <span class="arithmatex">\((1, 1, 0), \ (1, 0, 1), \ (0, 1, 1)\)</span></li>
 </ul>
 <p><strong>フェルミ粒子のケース</strong></p>
-<p>フェルミ粒子では <span class="arithmatex">\(n_k\)</span> として <span class="arithmatex">\(0\)</span> または <span class="arithmatex">\(1\)</span> しか許されないため，同一準位に 2 個の粒子が入る状態はすべて排除されます。必ず異なる2つの準位を選んで1文字ずつ配置することになるため，とり得る状態は以下の <strong>3通り</strong> に限定されます。</p>
+<p>フェルミ粒子では <span class="arithmatex">\(n_k\)</span> は <span class="arithmatex">\(0\)</span> または <span class="arithmatex">\(1\)</span> なので，2個の粒子は異なる準位に1個ずつ入ります。とり得る状態は次の3通りです。</p>
 <ul>
 <li><span class="arithmatex">\((1, 1, 0), \ (1, 0, 1), \ (0, 1, 1)\)</span></li>
 </ul>
 <p><strong>全状態数の比較</strong></p>
-<p>したがって，状態数はボース粒子で6，フェルミ粒子で3です。</p>
+<p>したがって，状態数は <strong>ボース粒子で6，フェルミ粒子で3</strong> です。</p>
 
 
 

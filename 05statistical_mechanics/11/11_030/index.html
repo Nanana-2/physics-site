@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14552,12 +14552,9 @@
 <div class="arithmatex">\[
 \langle X_n^2 \rangle = \sum_{i=1}^n \langle (\Delta x_i)^2 \rangle + \sum_{i \neq j} \langle \Delta x_i \Delta x_j \rangle
 \]</div>
-<p>各ステップの2乗平均は <span class="arithmatex">\(\langle (\Delta x_i)^2 \rangle = a^2\)</span> です。また，異なるステップ間には相関がないため， <span class="arithmatex">\(i \neq j\)</span> のとき <span class="arithmatex">\(\langle \Delta x_i \Delta x_j \rangle = 0\)</span> となり，第2項の和はすべて消去されます。</p>
+<p>各ステップの2乗平均は <span class="arithmatex">\(\langle (\Delta x_i)^2 \rangle = a^2\)</span> です。また，異なるステップ間には相関がないため，<span class="arithmatex">\(i \neq j\)</span> のとき <span class="arithmatex">\(\langle \Delta x_i \Delta x_j \rangle = 0\)</span> であり，第2項の和は 0 です。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle X_n^2 \rangle &amp;= \sum_{i=1}^n a^2 + 0 \\
-&amp;= \finalanswer{n a^2}
-\end{aligned}
+\langle X_n^2 \rangle = \sum_{i=1}^n a^2 + 0 = \finalanswer{n a^2}
 \]</div>
 <p>これにより，平均二乗変位がステップ数 <span class="arithmatex">\(n\)</span> に比例することが示されました。</p>
 <h3 id="2">(2)</h3>
@@ -14572,7 +14569,7 @@
 <div class="arithmatex">\[
 2 D t = \left( \frac{a^2}{\Delta t} \right) t
 \]</div>
-<p>両辺を <span class="arithmatex">\(2t\)</span> で割ることで，微視的なステップのサイズと時間間隔によって決まる拡散係数 <span class="arithmatex">\(D\)</span> の表現が導出されます。</p>
+<p>両辺を <span class="arithmatex">\(2t\)</span> で割ることで，微視的なステップのサイズと時間間隔によって決まる拡散係数 <span class="arithmatex">\(D\)</span> の表現を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{D = \frac{a^2}{2 \Delta t}}
 \]</div>
@@ -14589,7 +14586,7 @@
 <li><strong>分布の幅</strong>
   ガウス分布の広がりを表す標準偏差は，(2) で求めた平均二乗変位の平方根 <span class="arithmatex">\(\sqrt{\langle x^2 \rangle} = \sqrt{2Dt}\)</span> に対応します。したがって，分布の横幅は時間の平方根に比例して増大 <span class="arithmatex">\(\propto \sqrt{t}\)</span> します。</li>
 </ul>
-<p>時間の経過とともに，出発点であった原点付近の粒子密度は急速に低下し，全体の粒子集団がガウス分布の滑らかな裾野を左右へ広げながら，空間全体へ一様に薄く拡がっていく様子がこの数式によって表現されます。通常の波の伝播とは異なり，広がりが時間の平方根という遅いスケールで進むのが拡散現象の特徴です。</p>
+<p>時間の経過とともに原点付近の粒子密度は低下し，ガウス分布の幅が広がります。その幅が時間の平方根に比例することが，拡散の特徴です。</p>
 
 
 

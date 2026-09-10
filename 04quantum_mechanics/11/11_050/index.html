@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14514,7 +14514,7 @@
 <div class="arithmatex">\[
 \oint_{S} \boldsymbol{J}_{\text{sc}} \cdot \hat{\boldsymbol{r}} \, dS = \frac{\hbar k}{m} \sigma
 \]</div>
-<p>(2) 全確率流を 0 とする条件において，入射波のみによる積分は相殺して 0 になる。したがって，確率保存則は散乱波の積分と干渉項の積分の和が 0 になるという関係式にまとめられる。干渉項の積分を遠方極限で評価すると，以下の結果が得られることが知られている。</p>
+<p>(2) 全確率流を 0 とする条件において，入射波のみによる積分は消去して 0 になる。したがって，確率保存則は散乱波の積分と干渉項の積分の和が 0 になるという関係式にまとめられる。干渉項の積分を遠方極限で評価すると，以下の結果が得られることが知られている。</p>
 <div class="arithmatex">\[
 \oint_{S} \boldsymbol{J}_{\text{int}} \cdot \hat{\boldsymbol{r}} \, dS = -\frac{\hbar k}{m} \frac{4\pi}{k} \text{Im}[f(0)]
 \]</div>
@@ -14537,7 +14537,7 @@ J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ \psi_{\text{sc}}^* \frac{\partial \p
 <div class="arithmatex">\[
 J_{\text{sc}, r} = \frac{\hbar}{2mi} \left[ \left( f^*(\theta) \frac{e^{-i k r}}{r} \right) \left( i k f(\theta) \frac{e^{i k r}}{r} \right) - \left( f(\theta) \frac{e^{i k r}}{r} \right) \left( -i k f^*(\theta) \frac{e^{-i k r}}{r} \right) \right]
 \]</div>
-<p>指数関数部分が相殺して消去されます。</p>
+<p>指数関数の積は 1 になります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 J_{\text{sc}, r} &amp;= \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} \right] \\
@@ -14551,7 +14551,8 @@ J_{\text{sc}, r} &amp;= \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} 
 <p>分母の <span class="arithmatex">\(r^2\)</span> と分子の <span class="arithmatex">\(r^2\)</span> が約分されます。また， <span class="arithmatex">\(\phi\)</span> の積分から <span class="arithmatex">\(2\pi\)</span> が外に出ます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
- &amp;= \frac{\hbar k}{m} \int_{0}^{2\pi} d\phi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta \\
+\oint_S\boldsymbol J_{\mathrm{sc}}\cdot\hat{\boldsymbol r}\,dS
+&amp;= \frac{\hbar k}{m} \int_{0}^{2\pi} d\phi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta \\
 &amp;= \frac{\hbar k}{m} \cdot 2\pi \int_{0}^{\pi} |f(\theta)|^2 \sin\theta d\theta
 \end{aligned}
 \]</div>
@@ -14572,7 +14573,7 @@ J_{\text{sc}, r} &amp;= \frac{\hbar}{2mi} \left[ 2i k \frac{|f(\theta)|^2}{r^2} 
 <div class="arithmatex">\[
 \frac{\hbar k}{m} \sigma + \left( -\frac{\hbar k}{m} \frac{4\pi}{k} \text{Im}[f(0)] \right) = 0
 \]</div>
-<p>共通因数である <span class="arithmatex">\(\frac{\hbar k}{m}\)</span> で両辺を割り算して消去します。</p>
+<p>両辺を共通因子 <span class="arithmatex">\(\frac{\hbar k}{m}\)</span> で割ります。</p>
 <div class="arithmatex">\[
 \sigma - \frac{4\pi}{k} \text{Im}[f(0)] = 0
 \]</div>

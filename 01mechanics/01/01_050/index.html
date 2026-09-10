@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,17 +14534,17 @@ a_y = -g
 \]</div>
 <p>初期条件として，時刻 <span class="arithmatex">\(t=0\)</span> での位置は <span class="arithmatex">\(x(0) = 0, y(0) = 0\)</span> であり，速度の初期成分は <span class="arithmatex">\(v_x(0) = v_0 \cos\theta, v_y(0) = v_0 \sin\theta\)</span> です。加速度を時間で積分することにより，任意の時刻における速度成分が得られます。</p>
 <div class="arithmatex">\[
-v_x(t) = v_0 \cos\theta
+\finalanswer{v_x(t) = v_0 \cos\theta}
 \]</div>
 <div class="arithmatex">\[
-v_y(t) = v_0 \sin\theta - gt
+\finalanswer{v_y(t) = v_0 \sin\theta - gt}
 \]</div>
 <p>速度成分をさらに時間で積分し，初期位置が原点であることを考慮すると，位置成分は次のようになります。</p>
 <div class="arithmatex">\[
-x(t) = v_0 t \cos\theta
+\finalanswer{x(t) = v_0 t \cos\theta}
 \]</div>
 <div class="arithmatex">\[
-y(t) = v_0 t \sin\theta - \frac{1}{2} gt^2
+\finalanswer{y(t) = v_0 t \sin\theta - \frac{1}{2} gt^2}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>水平方向の位置の式 <span class="arithmatex">\(x = v_0 t \cos\theta\)</span> を，時間について整理します。</p>
@@ -14557,7 +14557,7 @@ y = v_0 \left( \frac{x}{v_0 \cos\theta} \right) \sin\theta - \frac{1}{2} g \left
 \]</div>
 <p>分母分子の初速度 <span class="arithmatex">\(v_0\)</span> を約分し，三角関数の関係式 <span class="arithmatex">\(\frac{\sin\theta}{\cos\theta} = \tan\theta\)</span> を適用して式を整理します。</p>
 <div class="arithmatex">\[
-y = x \tan\theta - \frac{g}{2 v_0^2 \cos^2\theta} x^2
+\finalanswer{y = x \tan\theta - \frac{g}{2 v_0^2 \cos^2\theta} x^2}
 \]</div>
 <p>これが求める軌道方程式であり， <span class="arithmatex">\(x\)</span> の2次関数として表されるため軌跡が放物線になることがわかります。</p>
 <h3 id="3">(3)</h3>
@@ -14567,19 +14567,19 @@ v_0 \sin\theta - gt_1 = 0
 \]</div>
 <p>この式から，最高点に達する時刻が求まります。</p>
 <div class="arithmatex">\[
-t_1 = \frac{v_0 \sin\theta}{g}
+\finalanswer{t_1 = \frac{v_0 \sin\theta}{g}}
 \]</div>
 <p>この時刻 <span class="arithmatex">\(t_1\)</span> を位置成分 <span class="arithmatex">\(y(t)\)</span> の式に代入することで，最高点の高さが得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 y_{\text{max}} &amp;= v_0 \left( \frac{v_0 \sin\theta}{g} \right) \sin\theta - \frac{1}{2} g \left( \frac{v_0 \sin\theta}{g} \right)^2 \\
 &amp;= \frac{v_0^2 \sin^2\theta}{g} - \frac{v_0^2 \sin^2\theta}{2g} \\
-&amp;= \frac{v_0^2 \sin^2\theta}{2g}
+&amp;= \finalanswer{\frac{v_0^2 \sin^2\theta}{2g}}
 \end{aligned}
 \]</div>
 <p>軌道の対称性より，再び地面に着地するまでの全飛行時間 <span class="arithmatex">\(t_2\)</span> は，最高点に達する時刻のちょうど2倍になります。</p>
 <div class="arithmatex">\[
-t_2 = 2t_1 = \frac{2v_0 \sin\theta}{g}
+\finalanswer{t_2 = 2t_1 = \frac{2v_0 \sin\theta}{g}}
 \]</div>
 <p>水平到達距離 <span class="arithmatex">\(x_{\text{max}}\)</span> は，この全飛行時間 <span class="arithmatex">\(t_2\)</span> のときにおける水平方向の位置 <span class="arithmatex">\(x(t_2)\)</span> として計算できます。</p>
 <div class="arithmatex">\[
@@ -14591,7 +14591,7 @@ x_{\text{max}} &amp;= v_0 (t_2) \cos\theta \\
 \]</div>
 <p>三角関数の2倍角の公式 <span class="arithmatex">\(2 \sin\theta \cos\theta = \sin 2\theta\)</span> を適用して式をまとめます。</p>
 <div class="arithmatex">\[
-x_{\text{max}} = \frac{v_0^2 \sin 2\theta}{g}
+\finalanswer{x_{\text{max}} = \frac{v_0^2 \sin 2\theta}{g}}
 \]</div>
 
 

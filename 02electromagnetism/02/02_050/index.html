@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,7 +14525,7 @@
 =\frac{Q_S}{\varepsilon_0}
 \]</div>
 <p>を用いてよい。</p>
-<p>(1) 導体部分 <span class="arithmatex">\(a&lt;r&lt;b\)</span> にとったガウス面を用い，<span class="arithmatex">\(Q_{\mathrm{in}}\)</span> を求めよ。球殻全体の電荷が <span class="arithmatex">\(Q\)</span> であることから <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> も求めよ。中心配置によって両表面の電荷が一様になる理由を説明せよ。</p>
+<p>(1) 導体部分 <span class="arithmatex">\(a&lt;r&lt;b\)</span> にとったガウス面を用い，<span class="arithmatex">\(Q_{\mathrm{in}}\)</span> と <span class="arithmatex">\(Q_{\mathrm{out}}\)</span> を求めよ。</p>
 <p>(2) ガウスの法則から <span class="arithmatex">\(\boldsymbol{E}(r)\)</span> を <span class="arithmatex">\(0&lt;r&lt;a\)</span>，<span class="arithmatex">\(a&lt;r&lt;b\)</span>，<span class="arithmatex">\(r&gt;b\)</span> の三領域で一意に求めよ。続いて無限遠から電場を積分し，境界 <span class="arithmatex">\(r=a,b\)</span> で連続する電位 <span class="arithmatex">\(\phi(r)\)</span> を三領域で求めよ。</p>
 <p>(3) 中心点電荷を取り除いて空洞内を無電荷にし，球殻の外部へ任意の電荷を置く。空洞壁が一定電位であることとラプラス方程式の解の一意性を用い，空洞内の電場を求めよ。</p>
 <hr />
@@ -14533,7 +14533,7 @@
 <h3 id="1">(1)</h3>
 <p>導体部分にある半径 <span class="arithmatex">\(r\)</span> のガウス面を考えます。導体内部では電場がゼロなので，囲む全電荷もゼロです。</p>
 <div class="arithmatex">\[
-q+Q_{\mathrm{inner}}=0
+\finalanswer{Q_{\mathrm{inner}}=-q}
 \]</div>
 <p>よって内面の電荷は <span class="arithmatex">\(-q\)</span> です。球殻全体の電荷が <span class="arithmatex">\(Q\)</span> なので，外面には</p>
 <div class="arithmatex">\[
@@ -14543,15 +14543,14 @@ q+Q_{\mathrm{inner}}=0
 <h3 id="2">(2)</h3>
 <p>各領域で同心球面にガウスの法則を適用します。</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(r)=
+\finalanswer{\boldsymbol{E}(r)=
 \begin{cases}
 \dfrac{q}{4\pi\varepsilon_0r^2}\boldsymbol{e}_r,&amp;r&lt;a,\\\\
 \boldsymbol{0},&amp;a&lt;r&lt;b,\\\\
 \dfrac{Q+q}{4\pi\varepsilon_0r^2}\boldsymbol{e}_r,&amp;r&gt;b
-\end{cases}
+\end{cases}}
 \]</div>
 <p>空洞内では中心電荷だけを囲み，導体内では囲む正味電荷がゼロ，外部では系の全電荷 <span class="arithmatex">\(Q+q\)</span> を囲みます。</p>
-<p><strong>三領域の電位</strong></p>
 <p>外部と導体内の電位は</p>
 <div class="arithmatex">\[
 \phi(r)=\frac{Q+q}{4\pi\varepsilon_0r},

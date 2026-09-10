@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14530,7 +14530,7 @@
 <p><span class="arithmatex">\(-a&lt;x&lt;a\)</span> に正の一様電荷密度 <span class="arithmatex">\(\rho_0\)</span> があり，<span class="arithmatex">\(y,z\)</span> 方向には無限に広がる厚さ <span class="arithmatex">\(2a\)</span> の帯電層を考える。対称性より <span class="arithmatex">\(\phi=\phi(x)\)</span>，<span class="arithmatex">\(\boldsymbol{E}(x)=E_x(x)\boldsymbol{e}_x\)</span> である。電位基準を <span class="arithmatex">\(\phi(0)=0\)</span> とする。<span class="arithmatex">\(x=\pm a\)</span> には面電荷が存在しない。</p>
 <p>(1) 帯電層内 <span class="arithmatex">\(|x|&lt;a\)</span> と帯電層外 <span class="arithmatex">\(|x|&gt;a\)</span> で，電位が満たす方程式をそれぞれ <span class="arithmatex">\(d^2\phi/dx^2\)</span> の形で書け。さらに <span class="arithmatex">\(x=0\)</span> に関する対称性，電位基準，<span class="arithmatex">\(x=\pm a\)</span> に面電荷がないことから，解を一意に定める条件を <span class="arithmatex">\(\phi\)</span> と <span class="arithmatex">\(d\phi/dx\)</span> について列挙せよ。</p>
 <p>(2) (1) の方程式と条件を用い，電位 <span class="arithmatex">\(\phi(x)\)</span> を <span class="arithmatex">\(|x|&lt;a\)</span> と <span class="arithmatex">\(|x|&gt;a\)</span> に分けて求めよ。続いて <span class="arithmatex">\(E_x(x)=-d\phi/dx\)</span> から電場を求めよ。</p>
-<p>(3) 電荷密度を一般の偶関数 <span class="arithmatex">\(\rho(x)=\rho(-x)\)</span> に置き換える。対称条件 <span class="arithmatex">\(E(0)=0\)</span> を用いて，層内の電場と中心を基準とした電位を積分表示せよ。一様密度 <span class="arithmatex">\(\rho(x)=\rho_0\)</span> を代入すると (2) の結果へ戻ることを示せ。</p>
+<p>(3) 電荷密度を一般の偶関数 <span class="arithmatex">\(\rho(x)=\rho(-x)\)</span> に置き換える。対称条件 <span class="arithmatex">\(E(0)=0\)</span> を用いて，層内の電場と中心を基準とした電位を積分表示せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14571,20 +14571,19 @@
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{d\phi}{dx}
-&amp;=\int-\frac{\rho_0}{\varepsilon_0}\,dx
-=-\frac{\rho_0}{\varepsilon_0}x+C_1, \\
+&amp;=\int-\frac{\rho_0}{\varepsilon_0}\,dx \\
+&amp;=-\frac{\rho_0}{\varepsilon_0}x+C_1, \\
 \phi(x)
 &amp;=\int
 \left(-\frac{\rho_0}{\varepsilon_0}x+C_1\right)dx \\
-&amp;=-\frac{\rho_0x^2}{2\varepsilon_0}+C_1x+C_2.
+&amp;=-\frac{\rho_0x^2}{2\varepsilon_0}+C_1x+C_2
 \end{aligned}
 \]</div>
 <p>となります。対称性より <span class="arithmatex">\(d\phi/dx=0\)</span> が <span class="arithmatex">\(x=0\)</span> で成り立つため <span class="arithmatex">\(C_1=0\)</span> です。また，<span class="arithmatex">\(\phi(0)=0\)</span> より <span class="arithmatex">\(C_2=0\)</span> です。したがって</p>
 <div class="arithmatex">\[
-\phi(x)=-\frac{\rho_0x^2}{2\varepsilon_0},\qquad |x|&lt;a
+\finalanswer{\phi(x)=-\frac{\rho_0x^2}{2\varepsilon_0},\qquad |x|&lt;a}
 \]</div>
 <p>です。</p>
-<p><strong>層外の電位</strong></p>
 <p>帯電層の外では <span class="arithmatex">\(d^2\phi/dx^2=0\)</span> なので，電位は <span class="arithmatex">\(x\)</span> の一次関数です。系は <span class="arithmatex">\(x=0\)</span> に関して対称であるため，<span class="arithmatex">\(|x|\)</span> を用いて表せます。<span class="arithmatex">\(x=a\)</span> における内側の電位とその微分は</p>
 <div class="arithmatex">\[
 \phi(a)=-\frac{\rho_0a^2}{2\varepsilon_0},\qquad
@@ -14592,18 +14591,17 @@
 \]</div>
 <p>です。これらに連続につながる外側の解は</p>
 <div class="arithmatex">\[
-\phi(x)=-\frac{\rho_0a}{\varepsilon_0}|x|
-+\frac{\rho_0a^2}{2\varepsilon_0},\qquad |x|&gt;a
+\finalanswer{\phi(x)=-\frac{\rho_0a}{\varepsilon_0}|x|
++\frac{\rho_0a^2}{2\varepsilon_0},\qquad |x|&gt;a}
 \]</div>
 <p>となります。帯電層は無限に広いため，無限遠で電位をゼロには選べません。ここでは中心を電位の基準にしています。</p>
-<p><strong>電場との整合性</strong></p>
 <p>電場は <span class="arithmatex">\(\boldsymbol{E}=-(d\phi/dx)\boldsymbol{e}_x\)</span> です。よって</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(x)=
+\finalanswer{\boldsymbol{E}(x)=
 \begin{cases}
 \dfrac{\rho_0x}{\varepsilon_0}\boldsymbol{e}_x,&amp;|x|&lt;a,\\\\
 \dfrac{\rho_0a}{\varepsilon_0}\operatorname{sgn}(x)\boldsymbol{e}_x,&amp;|x|&gt;a
-\end{cases}
+\end{cases}}
 \]</div>
 <p>となります。中心面をまたぐ底面積 <span class="arithmatex">\(S\)</span>，両端が <span class="arithmatex">\(x\)</span> と <span class="arithmatex">\(-x\)</span> にある直方体をガウス面に選ぶと，<span class="arithmatex">\(|x|&lt;a\)</span> では</p>
 <div class="arithmatex">\[
@@ -14622,12 +14620,7 @@ E(x)=\frac{1}{\varepsilon_0}
 \]</div>
 <p>となります。偶関数の電荷分布に対して，この電場は奇関数です。さらに <span class="arithmatex">\(E=-d\phi/dx\)</span> と <span class="arithmatex">\(\phi(0)=0\)</span> を用いると</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\phi(x)
-&amp;=-\int_0^xE(s)\,ds \\
-&amp;=-\frac{1}{\varepsilon_0}
-\int_0^x ds\int_0^s\rho(x')\,dx'.
-\end{aligned}
+\phi(x) = -\int_0^xE(s)\,ds = -\frac{1}{\varepsilon_0} \int_0^x ds\int_0^s\rho(x')\,dx'
 \]</div>
 <p><span class="arithmatex">\(x&gt;0\)</span> では積分領域が <span class="arithmatex">\(0\le x'\le s\le x\)</span> です。先に <span class="arithmatex">\(s\)</span> で積分する順序へ交換すると <span class="arithmatex">\(0\le x'\le x\)</span>，<span class="arithmatex">\(x'\le s\le x\)</span> となるので</p>
 <div class="arithmatex">\[
@@ -14636,9 +14629,9 @@ E(x)=\frac{1}{\varepsilon_0}
 &amp;=-\frac{1}{\varepsilon_0}
 \int_0^x\rho(x')
 \left(\int_{x'}^x ds\right)dx' \\
-&amp;=\finalanswer{-\frac{1}{\varepsilon_0}}
-\int_0^x(x-x')\rho(x')\,dx',
-\qquad x&gt;0.
+&amp;=\finalanswer{-\frac{1}{\varepsilon_0}
+\int_0^x(x-x')\rho(x')\,dx'},
+\qquad x&gt;0
 \end{aligned}
 \]</div>
 <p>とも書けます。<span class="arithmatex">\(\rho(x)=\rho_0\)</span> を代入すると，(2) の <span class="arithmatex">\(-\rho_0x^2/(2\varepsilon_0)\)</span> が再現されます。</p>

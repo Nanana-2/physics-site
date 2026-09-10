@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14575,7 +14575,7 @@
 <div class="arithmatex">\[
 \hat{a}^\dagger\hat{a} = \frac{\hat{H}}{\hbar\omega} - \frac{1}{2}
 \]</div>
-<p>この式を <span class="arithmatex">\(\hat{H}\)</span> について解くように移項することで，求めるハミルトニアンの対角化表現が導かれます。</p>
+<p>この式を <span class="arithmatex">\(\hat{H}\)</span> について解くように移項することで，求めるハミルトニアンの対角化表現が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\hat{H} = \hbar\omega \left( \hat{a}^\dagger\hat{a} + \frac{1}{2} \right)}
 \]</div>
@@ -14649,10 +14649,7 @@
 \]</div>
 <p>したがって，規格化された状態としての関係式は以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\hat{a}^\dagger|n\rangle &amp;= \sqrt{n+1} |n+1\rangle \implies |n+1\rangle \\
-&amp;= \frac{1}{\sqrt{n+1}} \hat{a}^\dagger |n\rangle
-\end{aligned}
+|n+1\rangle=\frac{1}{\sqrt{n+1}}\hat a^\dagger|n\rangle
 \]</div>
 <p>このステップを基底状態 <span class="arithmatex">\(|0\rangle\)</span> から順に繰り返し適用します。</p>
 <ul>
@@ -14660,7 +14657,7 @@
 <li><span class="arithmatex">\(|2\rangle = \frac{1}{\sqrt{2}} \hat{a}^\dagger |1\rangle = \frac{1}{\sqrt{2 \cdot 1}} (\hat{a}^\dagger)^2 |0\rangle\)</span></li>
 <li><span class="arithmatex">\(|3\rangle = \frac{1}{\sqrt{3}} \hat{a}^\dagger |2\rangle = \frac{1}{\sqrt{3 \cdot 2 \cdot 1}} (\hat{a}^\dagger)^3 |0\rangle\)</span></li>
 </ul>
-<p>これらを一般化して <span class="arithmatex">\(n\)</span> 番目の状態についてまとめると，分母に階乗の平方根が現れ，目的の数状態表現が導出されます。</p>
+<p>これらを一般化して <span class="arithmatex">\(n\)</span> 番目の状態についてまとめると，分母に階乗の平方根が現れ，目的の数状態表現を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{|n\rangle = \frac{(\hat{a}^\dagger)^n}{\sqrt{n!}} |0\rangle}
 \]</div>

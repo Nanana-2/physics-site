@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://nanana-2.github.io/physics-site/02electromagnetism/03/03_060/">
       
       
-        <link rel="prev" href="../03_050/">
+        <link rel="prev" href="../03_040/">
       
       
         <link rel="next" href="../03_070/">
@@ -3550,34 +3550,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14531,25 +14531,25 @@ E_{\mathrm{out},r}-E_{\mathrm{in},r}
 =\frac{\sigma_b}{\varepsilon_0}
 \]</div>
 <p>を満たす。</p>
-<p>(1) 球内の束縛体積電荷密度と，球表面の束縛表面電荷密度を求めよ。北半球と南半球で表面電荷の符号がどうなるか説明し，表面全体の束縛電荷を積分してゼロになることを示せ。</p>
+<p>(1) 球内の束縛体積電荷密度と，球表面の束縛表面電荷密度を求めよ。表面全体の束縛電荷も求めよ。</p>
 <p>(2) 球内外には体積電荷がないため，電位はラプラス方程式を満たす。軸対称性，原点で電位が有限であること，無限遠で電位がゼロになることから，解を</p>
 <div class="arithmatex">\[
 \phi_{\mathrm{in}}=Ar\cos\theta,
 \qquad
 \phi_{\mathrm{out}}=\frac{B}{r^2}\cos\theta
 \]</div>
-<p>とおける。電位の連続性と法線電場の境界条件を実際に計算し，定数 <span class="arithmatex">\(A,B\)</span> を決定せよ。接線電場も境界で連続することを確かめよ。</p>
-<p>(3) (2) の電位を微分し，球内部の電場と球外の電場の <span class="arithmatex">\(r,\theta\)</span> 成分を求めよ。球外の結果を電気双極子の電位および電場と比較して球全体の双極子モーメントを決定し，球内に生じる電場が分極と反対向きになる物理的理由を表面束縛電荷から説明せよ。</p>
+<p>とおける。電位の連続性と法線電場の境界条件を用い，定数 <span class="arithmatex">\(A,B\)</span> を決定せよ。</p>
+<p>(3) (2) の電位を微分し，球内部の電場と球外の電場の <span class="arithmatex">\(r,\theta\)</span> 成分を求めよ。球外の電位から球全体の双極子モーメントを求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>分極は一定なので</p>
 <div class="arithmatex">\[
-\rho_b=-\nabla\cdot\boldsymbol{P}=0
+\finalanswer{\rho_b=-\nabla\cdot\boldsymbol{P}=0}
 \]</div>
 <p>です。球表面の法線は <span class="arithmatex">\(\boldsymbol{e}_r\)</span> なので</p>
 <div class="arithmatex">\[
-\sigma_b=\boldsymbol{P}\cdot\boldsymbol{e}_r=P\cos\theta
+\finalanswer{\sigma_b=\boldsymbol{P}\cdot\boldsymbol{e}_r=P\cos\theta}
 \]</div>
 <p>となります。</p>
 <p>北半球では <span class="arithmatex">\(\cos\theta&gt;0\)</span> なので正，南半球では <span class="arithmatex">\(\cos\theta&lt;0\)</span> なので負の束縛表面電荷が現れます。表面全体の電荷は</p>
@@ -14562,7 +14562,7 @@ Q_b^{\mathrm{surf}}
 P\cos\theta\,R^2\sin\theta\,d\theta \\
 &amp;=2\pi PR^2
 \left[\frac{1}{2}\sin^2\theta\right]_0^\pi \\
-&amp;=\finalanswer{0}.
+&amp;=\finalanswer{0}
 \end{aligned}
 \]</div>
 <p>となります。正負の電荷が分離しますが，分極によって球全体の正味電荷が生じるわけではありません。</p>
@@ -14590,9 +14590,9 @@ E_{\mathrm{out},r}
 \]</div>
 <p>となります。<span class="arithmatex">\(B=AR^3\)</span> を代入すると <span class="arithmatex">\(3A=P/\varepsilon_0\)</span> です。したがって</p>
 <div class="arithmatex">\[
-\phi_{\mathrm{in}}=\frac{P}{3\varepsilon_0}r\cos\theta,
+\finalanswer{\phi_{\mathrm{in}}=\frac{P}{3\varepsilon_0}r\cos\theta,
 \qquad
-\phi_{\mathrm{out}}=\frac{PR^3}{3\varepsilon_0r^2}\cos\theta
+\phi_{\mathrm{out}}=\frac{PR^3}{3\varepsilon_0r^2}\cos\theta}
 \]</div>
 <p>を得ます。</p>
 <p>接線成分は <span class="arithmatex">\(E_\theta=-(1/r)\partial\phi/\partial\theta\)</span> です。境界の内外で</p>
@@ -14606,18 +14606,18 @@ E_{\mathrm{out},\theta}
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(r\cos\theta=z\)</span> なので，球内の電位は <span class="arithmatex">\(Pz/(3\varepsilon_0)\)</span> です。</p>
 <div class="arithmatex">\[
-\boldsymbol{E}_{\mathrm{in}}
+\finalanswer{\boldsymbol{E}_{\mathrm{in}}
 =-\nabla\phi_{\mathrm{in}}
-=-\frac{P}{3\varepsilon_0}\boldsymbol{e}_z
+=-\frac{P}{3\varepsilon_0}\boldsymbol{e}_z}
 \]</div>
 <p>となります。球外では，電位を成分ごとに微分して</p>
 <div class="arithmatex">\[
-E_{\mathrm{out},r}
-=\frac{2PR^3}{3\varepsilon_0r^3}\cos\theta
+\finalanswer{E_{\mathrm{out},r}
+=\frac{2PR^3}{3\varepsilon_0r^3}\cos\theta}
 \]</div>
 <div class="arithmatex">\[
-E_{\mathrm{out},\theta}
-=\frac{PR^3}{3\varepsilon_0r^3}\sin\theta
+\finalanswer{E_{\mathrm{out},\theta}
+=\frac{PR^3}{3\varepsilon_0r^3}\sin\theta}
 \]</div>
 <p>を得ます。電気双極子 <span class="arithmatex">\(\boldsymbol{p}=p\boldsymbol{e}_z\)</span> の電位は</p>
 <div class="arithmatex">\[
@@ -14709,7 +14709,7 @@ E_{\mathrm{out},\theta}
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../03_050/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 誘電体境界面での境界条件">
+          <a href="../03_040/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 誘電体を挿入したコンデンサー">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -14719,7 +14719,7 @@ E_{\mathrm{out},\theta}
                 Previous
               </span>
               <div class="md-ellipsis">
-                誘電体境界面での境界条件
+                誘電体を挿入したコンデンサー
               </div>
             </div>
           </a>

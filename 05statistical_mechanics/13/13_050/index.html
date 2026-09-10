@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14545,7 +14545,7 @@ Q_{xp}(x, p) = \frac{1}{4\pi\hbar} R^2 \exp\left( -\frac{1}{2}R^2 \right)
 <div class="arithmatex">\[
 \begin{aligned}
 W(0, 0) &amp;= \frac{1}{\pi\hbar} \left( 2 \cdot 0 - 1 \right) \exp\left( 0 \right) \\
-&amp;= -\frac{1}{\pi\hbar}
+&amp;= \finalanswer{-\frac{1}{\pi\hbar}}
 \end{aligned}
 \]</div>
 <p>原点における値は負の実数となることがわかります。</p>
@@ -14565,16 +14565,13 @@ Q_{xp}(x, p) \ge 0
 \]</div>
 <p>次に，原点 <span class="arithmatex">\(x = 0, p = 0\)</span> を代入します。 <span class="arithmatex">\(R^2 = 0\)</span> となるため，式全体に掛け算されて結果は 0 になります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-Q_{xp}(0, 0) &amp;= \frac{1}{4\pi\hbar} \cdot 0 \cdot \exp\left( 0 \right) \\
-&amp;= \finalanswer{0}
-\end{aligned}
+Q_{xp}(0, 0) = \frac{1}{4\pi\hbar} \cdot 0 \cdot \exp\left( 0 \right) = \finalanswer{0}
 \]</div>
 <p>伏見関数は原点において負に沈み込むことなく，ちょうど 0 という最小値をとることがわかります。</p>
 <h3 id="3">(3)</h3>
 <p>調和振動子の第1励起状態は，エネルギーの節が存在する量子力学的な波の性質を強く持っています。ウィグナー分布関数はこの微視的な波の干渉を敏感に捉えるため，(1) で見たように原点近傍の狭い領域にシャープな負の谷を形成し，その周囲に正のドーナツ状の山が取り囲むという，激しい凹凸を持ったプロファイルを描きます。</p>
 <p>これに対して伏見関数を作る積分変換は，位相空間の各点に対してプランク定数程度の広がりを持つ2次元のガウスフィルターを掛け，周囲の値を足し合わせる平滑化の操作に相当します。</p>
-<p>原点付近に注目すると，ウィグナー分布関数が持つ中心の負の谷と，そのすぐ外側にある正のドーナツ状の山の値が，ガウスフィルターによる平均化の過程で互いに相殺し合います。この粗視化による相殺の効果が非常に精密に働くため，中心の負の底が引き上げられ，最終的な伏見関数のプロファイルでは原点における値がぴったり 0 に平ら化されます。これにより，不確定性原理のスケールよりも細かな量子干渉の構造が滑らかに削ぎ落とされ，全域で 0 以上という古典的な確率に近い滑らかなプロファイルへと変形することになります。</p>
+<p>伏見関数は，ウィグナー分布関数をガウス関数で平滑化したものです。数状態 <span class="arithmatex">\(|1\rangle\)</span> では，原点付近の負の領域とその周囲の正の領域が平均され，原点で <span class="arithmatex">\(Q(0)=0\)</span> となります。また，この平滑化によって細かな振動が除かれ，伏見関数は全域で 0 以上になります。</p>
 
 
 

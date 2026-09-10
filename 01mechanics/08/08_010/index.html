@@ -3672,34 +3672,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14554,7 +14554,7 @@
 <p>したがって，張力 <span class="arithmatex">\(S\)</span> の水平成分は左向きに <span class="arithmatex">\(S \sin \theta\)</span>，鉛直成分は上向きに <span class="arithmatex">\(S \cos \theta\)</span> となります。
 これより，慣性系におけるおもりの運動方程式の <span class="arithmatex">\(x\)</span> 成分および <span class="arithmatex">\(y\)</span> 成分は，それぞれ以下のようになります。</p>
 <div class="arithmatex">\[
-m \frac{d^2 x}{dt^2} = -S \sin \theta
+\finalanswer{m \frac{d^2 x}{dt^2} = -S \sin \theta}
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{m \frac{d^2 y}{dt^2} = S \cos \theta - mg}
@@ -14567,10 +14567,10 @@ X(t) = \frac{1}{2}\alpha t^2
 <p>と表されます。鉛直方向の支点の位置は一定であるため，これを <span class="arithmatex">\(H\)</span> とおきます。</p>
 <p>加速系におけるおもりの座標 <span class="arithmatex">\((x', y')\)</span> と慣性系における座標 <span class="arithmatex">\((x, y)\)</span> の間には，以下の関係が成り立ちます。</p>
 <div class="arithmatex">\[
-x = x' + \frac{1}{2}\alpha t^2
+\finalanswer{x = x' + \frac{1}{2}\alpha t^2}
 \]</div>
 <div class="arithmatex">\[
-y = y' + H
+\finalanswer{y = y' + H}
 \]</div>
 <p>これらの式を時間 <span class="arithmatex">\(t\)</span> について2階微分すると，次のようになります。</p>
 <div class="arithmatex">\[
@@ -14581,7 +14581,7 @@ y = y' + H
 \]</div>
 <p>これらを (1) で得られた慣性系の運動方程式に代入して整理すると，加速系における運動方程式が得られます。</p>
 <div class="arithmatex">\[
-m \frac{d^2 x'}{dt^2} = -S \sin \theta - m\alpha
+\finalanswer{m \frac{d^2 x'}{dt^2} = -S \sin \theta - m\alpha}
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{m \frac{d^2 y'}{dt^2} = S \cos \theta - mg}
@@ -14604,15 +14604,12 @@ S \cos \theta_0 - mg = 0
 \]</div>
 <p>これら2つの式から張力 <span class="arithmatex">\(S\)</span> を消去するために，第1式を第2式で割ると，次の関係が得られます。</p>
 <div class="arithmatex">\[
-\tan \theta_0 = -\frac{\alpha}{g}
+\finalanswer{\tan \theta_0 = -\frac{\alpha}{g}}
 \]</div>
 <p>電車の加速度 <span class="arithmatex">\(\alpha\)</span> が正のとき，<span class="arithmatex">\(\tan \theta_0\)</span> は負の値となり，おもりは電車の進行方向とは逆の左側へ傾いてつりあいます。</p>
 <p>このおもりには，鉛直下向きの重力 <span class="arithmatex">\(mg\)</span> と，水平左向きの慣性力 <span class="arithmatex">\(m\alpha\)</span> が同時にはたらいています。これら2つの力の合力の大きさ <span class="arithmatex">\(F_{\text{eff}}\)</span> は，三平方の定理より以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-F_{\text{eff}} &amp;= \sqrt{(mg)^2 + (m\alpha)^2} \\
-&amp;= \finalanswer{m\sqrt{g^2 + \alpha^2}}
-\end{aligned}
+F_{\text{eff}} = \sqrt{(mg)^2 + (m\alpha)^2} = \finalanswer{m\sqrt{g^2 + \alpha^2}}
 \]</div>
 <p>この合力の向きは，鉛直下向きから電車の進行方向とは逆向きに角度 <span class="arithmatex">\(\theta_0\)</span> だけ傾いた方向となります。加速系においては，この合力があたかも新しい重力のように作用するため，これを見かけの重力と呼びます。</p>
 <h3 id="4">(4)</h3>
@@ -14633,10 +14630,7 @@ mL \frac{d^2 \phi}{dt^2} = -m\sqrt{g^2 + \alpha^2} \sin \phi
 \]</div>
 <p>したがって，この加速系における微小振動の周期 <span class="arithmatex">\(T\)</span> は，次の式で与えられます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-T &amp;= \frac{2\pi}{\omega} \\
-&amp;= \finalanswer{2\pi \sqrt{\frac{L}{\sqrt{g^2 + \alpha^2}}}}
-\end{aligned}
+T = \frac{2\pi}{\omega} = \finalanswer{2\pi \sqrt{\frac{L}{\sqrt{g^2 + \alpha^2}}}}
 \]</div>
 <p>この結果は，静止系における単振り子の周期公式の重力加速度 <span class="arithmatex">\(g\)</span> を，見かけの重力加速度 <span class="arithmatex">\(g' = \sqrt{g^2 + \alpha^2}\)</span> に置き換えたものに一致しています。</p>
 

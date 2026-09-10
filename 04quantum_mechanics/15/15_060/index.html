@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14537,7 +14537,7 @@ i\hbar \frac{\partial \Psi}{\partial t} = c \sum_{j=x,y,z} \alpha_j \hat{p}_j \P
 <div class="arithmatex">\[
 i\hbar \frac{\partial}{\partial t} \begin{pmatrix} \psi_{\text{R}} \\ \psi_{\text{L}} \end{pmatrix} = c \begin{pmatrix} \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} &amp; 0 \\ 0 &amp; -\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} \end{pmatrix} \begin{pmatrix} \psi_{\text{R}} \\ \psi_{\text{L}} \end{pmatrix}
 \]</div>
-<p>右辺の行列の掛け算を実行すると，上位ブロックと下位ブロックが分離され，次の2つの独立した等式が得られます。</p>
+<p>右辺の行列積を計算し，上二成分と下二成分を比較すると，次の2式が得られます。</p>
 <p>上位2成分 <span class="arithmatex">\(\psi_{\text{R}}\)</span> に関する方程式は以下の通りです。</p>
 <div class="arithmatex">\[
 i\hbar \frac{\partial \psi_{\text{R}}}{\partial t} = c \left( \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} \right) \psi_{\text{R}}
@@ -14557,7 +14557,7 @@ E \psi_{\text{R}} = c \left( \boldsymbol{\sigma} \cdot \boldsymbol{p} \right) \p
 <div class="arithmatex">\[
 \finalanswer{E \psi_{\text{L}} = -c \left( \boldsymbol{\sigma} \cdot \boldsymbol{p} \right) \psi_{\text{L}}}
 \]</div>
-<p>波動関数の共通因子を省略することで，求めるべき代数方程式が導かれます。</p>
+<p>波動関数の共通因子を省略することで，求めるべき代数方程式が得られます。</p>
 <h3 id="3">(3)</h3>
 <p>正のエネルギー状態の条件 <span class="arithmatex">\(E = c |\boldsymbol{p}|\)</span> を，(2) で導いた各大数方程式の左辺に代入します。</p>
 <p>右巻き成分の式は次の通りです。</p>
@@ -14572,7 +14572,7 @@ c |\boldsymbol{p}| \psi_{\text{R}} = c \left( \boldsymbol{\sigma} \cdot \boldsym
 <div class="arithmatex">\[
 \left( \frac{1}{2} \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}_{\text{unit}} \right) \psi_{\text{R}} = \frac{1}{2} \psi_{\text{R}}
 \]</div>
-<p>左辺の括弧内は運動方向へのスピンの投影演算子そのものであるため，右巻き成分 <span class="arithmatex">\(\psi_{\text{R}}\)</span> に対するヘリシティの固有値は <strong><span class="arithmatex">\(\frac{1}{2}\)</span></strong> と求まります。</p>
+<p>左辺の括弧内は運動方向へのスピンの投影演算子です。したがって，右巻き成分 <span class="arithmatex">\(\psi_{\text{R}}\)</span> に対するヘリシティの固有値は <strong><span class="arithmatex">\(\frac{1}{2}\)</span></strong> です。</p>
 <p>同様の計算を左巻き成分 <span class="arithmatex">\(\psi_{\text{L}}\)</span> の式に対して実行します。</p>
 <div class="arithmatex">\[
 c |\boldsymbol{p}| \psi_{\text{L}} = -c \left( \boldsymbol{\sigma} \cdot \boldsymbol{p} \right) \psi_{\text{L}}

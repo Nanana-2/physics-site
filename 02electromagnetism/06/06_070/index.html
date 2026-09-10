@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14542,7 +14542,7 @@ i(t)=I_0\cos(\omega t-\delta)
 \overline{P}
 =\frac{1}{2}V_0I_0\cos\delta
 \]</div>
-<p>として求め，<span class="arithmatex">\(\overline{P}=I_0^2R/2\)</span> と一致することを示せ。共振時の平均電力も求めよ。</p>
+<p>として求めよ。共振時の平均電力も求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14553,10 +14553,10 @@ Z(\omega)
 \]</div>
 <p><span class="arithmatex">\(1/i=-i\)</span> より</p>
 <div class="arithmatex">\[
-Z(\omega)
+\finalanswer{Z(\omega)
 =R+i\left(
 \omega L-\frac{1}{\omega C}
-\right)
+\right)}
 \]</div>
 <p>です。絶対値は</p>
 <div class="arithmatex">\[
@@ -14569,12 +14569,12 @@ R^2+\left(
 \]</div>
 <p>なので</p>
 <div class="arithmatex">\[
-I_0=\frac{V_0}{|Z|}
+\finalanswer{I_0=\frac{V_0}{|Z|}}
 \]</div>
 <p>です。インピーダンスの偏角を <span class="arithmatex">\(\delta\)</span> とすると</p>
 <div class="arithmatex">\[
-\tan\delta
-=\frac{\omega L-1/(\omega C)}{R}
+\finalanswer{\tan\delta
+=\frac{\omega L-1/(\omega C)}{R}}
 \]</div>
 <p>となります。<span class="arithmatex">\(\tilde{I}=\tilde{V}/Z\)</span> なので，電流の位相は電圧より <span class="arithmatex">\(\delta\)</span> だけ小さく</p>
 <div class="arithmatex">\[
@@ -14588,7 +14588,7 @@ I_0=\frac{V_0}{|Z|}
 \]</div>
 <p>です。したがって</p>
 <div class="arithmatex">\[
-\omega_0=\frac{1}{\sqrt{LC}}
+\finalanswer{\omega_0=\frac{1}{\sqrt{LC}}}
 \]</div>
 <p>となります。共振時は</p>
 <div class="arithmatex">\[
@@ -14606,11 +14606,11 @@ I_0(\omega_0)=\frac{V_0}{R},
 =\frac{1}{2}V_0I_0\cos\delta
 \]</div>
 <div class="arithmatex">\[
-\overline{P}
+\finalanswer{\overline{P}
 =\frac{1}{2}
 \left(I_0|Z|\right)I_0
 \frac{R}{|Z|}
-=\frac{1}{2}I_0^2R
+=\frac{1}{2}I_0^2R}
 \]</div>
 <p>となります。コイルとコンデンサーは一周期平均ではエネルギーを消費せず，抵抗だけが実電力を消費します。共振時は</p>
 <div class="arithmatex">\[

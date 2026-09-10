@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11056,7 +11056,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,9 +14518,9 @@
 
 <h1 id="_1">自由エネルギーと熱力学量</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> の等温系を考え，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。この系の分配関数を <span class="arithmatex">\(Z(\beta, V, N)\)</span> とするとき，ヘルムホルツの自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> を以下の関係式によって定義する。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> の等温系を考え，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。この系の分配関数を <span class="arithmatex">\(Z(\beta, V, N)\)</span> とするとき，ヘルムホルツの自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> を以下の関係式によって定義する。</p>
 <div class="arithmatex">\[
-F(T, V, N) = -k_B T \log Z
+F(T, V, N) = -k_{\text{B}} T \log Z
 \]</div>
 <p>この統計力学的な定義と，熱力学における完全な熱力学関数としての全微分関係式</p>
 <div class="arithmatex">\[
@@ -14538,14 +14538,14 @@ dF = -S dT - P dV + \mu dN
 \finalanswer{S = -\left( \frac{\partial F}{\partial T} \right)_{V, N}}, \qquad
 \finalanswer{P = -\left( \frac{\partial F}{\partial V} \right)_{T, N}}
 \]</div>
-<p>ここに <span class="arithmatex">\(F = -k_B T \log Z\)</span> を代入して，分配関数による表現に書き換えます。</p>
+<p>ここに <span class="arithmatex">\(F = -k_{\text{B}} T \log Z\)</span> を代入して，分配関数による表現に書き換えます。</p>
 <p><strong>エントロピー <span class="arithmatex">\(S\)</span></strong>
 温度 <span class="arithmatex">\(T\)</span> による偏微分には，積の微分公式 <span class="arithmatex">\((f \cdot g)^\prime = f^\prime g + f g^\prime\)</span> を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 S
-&amp;= -\frac{\partial}{\partial T} \left( -k_B T \log Z \right) \\
-&amp;= \finalanswer{k_B \log Z + k_B T \left( \frac{\partial \log Z}{\partial T} \right)_{V, N}}
+&amp;= -\frac{\partial}{\partial T} \left( -k_{\text{B}} T \log Z \right) \\
+&amp;= \finalanswer{k_{\text{B}} \log Z + k_{\text{B}} T \left( \frac{\partial \log Z}{\partial T} \right)_{V, N}}
 \end{aligned}
 \]</div>
 <p><strong>圧力 <span class="arithmatex">\(P\)</span></strong>
@@ -14553,8 +14553,8 @@ S
 <div class="arithmatex">\[
 \begin{aligned}
 P
-&amp;= -\frac{\partial}{\partial V} \left( -k_B T \log Z \right) \\
-&amp;= \finalanswer{k_B T \left( \frac{\partial \log Z}{\partial V} \right)_{T, N}}
+&amp;= -\frac{\partial}{\partial V} \left( -k_{\text{B}} T \log Z \right) \\
+&amp;= \finalanswer{k_{\text{B}} T \left( \frac{\partial \log Z}{\partial V} \right)_{T, N}}
 \end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
@@ -14562,36 +14562,36 @@ P
 <div class="arithmatex">\[
 \finalanswer{U = F - T \left( \frac{\partial F}{\partial T} \right)_{V, N}}
 \]</div>
-<p>この右辺を分配関数で表します。連鎖律より，温度微分と逆温度微分の間には <span class="arithmatex">\(\frac{\partial}{\partial T} = \frac{\partial \beta}{\partial T} \frac{\partial}{\partial \beta} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta}\)</span> の関係があります。これを用いて <span class="arithmatex">\(F = -k_B T \log Z\)</span> を <span class="arithmatex">\(T\)</span> で偏微分します。</p>
+<p>この右辺を分配関数で表します。連鎖律より，温度微分と逆温度微分の間には <span class="arithmatex">\(\frac{\partial}{\partial T} = \frac{\partial \beta}{\partial T} \frac{\partial}{\partial \beta} = -\frac{1}{k_{\text{B}} T^2} \frac{\partial}{\partial \beta}\)</span> の関係があります。これを用いて <span class="arithmatex">\(F = -k_{\text{B}} T \log Z\)</span> を <span class="arithmatex">\(T\)</span> で偏微分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\left( \frac{\partial F}{\partial T} \right)_{V, N} &amp;= -k_B \log Z - k_B T \left( \frac{\partial \log Z}{\partial T} \right)_{V, N} \\
-&amp;= -k_B \log Z - k_B T \left( -\frac{1}{k_B T^2} \frac{\partial \log Z}{\partial \beta} \right) \\
-&amp;= -k_B \log Z + \frac{1}{T} \frac{\partial \log Z}{\partial \beta}
+\left( \frac{\partial F}{\partial T} \right)_{V, N} &amp;= -k_{\text{B}} \log Z - k_{\text{B}} T \left( \frac{\partial \log Z}{\partial T} \right)_{V, N} \\
+&amp;= -k_{\text{B}} \log Z - k_{\text{B}} T \left( -\frac{1}{k_{\text{B}} T^2} \frac{\partial \log Z}{\partial \beta} \right) \\
+&amp;= -k_{\text{B}} \log Z + \frac{1}{T} \frac{\partial \log Z}{\partial \beta}
 \end{aligned}
 \]</div>
 <p>この結果を最初の <span class="arithmatex">\(U\)</span> の式に代入します。</p>
 <div class="arithmatex">\[
-U = (-k_B T \log Z) - T \left( -k_B \log Z + \frac{1}{T} \frac{\partial \log Z}{\partial \beta} \right)
+U = (-k_{\text{B}} T \log Z) - T \left( -k_{\text{B}} \log Z + \frac{1}{T} \frac{\partial \log Z}{\partial \beta} \right)
 \]</div>
 <div class="arithmatex">\[
 \begin{aligned}
 U
-&amp;= -k_B T \log Z + k_B T \log Z - \frac{\partial \log Z}{\partial \beta} \\
+&amp;= -k_{\text{B}} T \log Z + k_{\text{B}} T \log Z - \frac{\partial \log Z}{\partial \beta} \\
 &amp;= \finalanswer{-\frac{\partial \log Z}{\partial \beta}}
 \end{aligned}
 \]</div>
 <p>平均エネルギーの式 <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}\)</span> と比較すると，<span class="arithmatex">\(U = \langle E \rangle\)</span> が成り立ちます。</p>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた <span class="arithmatex">\(U = -\frac{\partial \log Z}{\partial \beta}\)</span> を定積熱容量の定義に代入します。連鎖律 <span class="arithmatex">\(\frac{\partial}{\partial T} = -\frac{1}{k_B T^2} \frac{\partial}{\partial \beta} = -k_B \beta^2 \frac{\partial}{\partial \beta}\)</span> を用いて，温度微分を <span class="arithmatex">\(\beta\)</span> 微分に変換します。</p>
+<p>(2) で得られた <span class="arithmatex">\(U = -\frac{\partial \log Z}{\partial \beta}\)</span> を定積熱容量の定義に代入します。連鎖律 <span class="arithmatex">\(\frac{\partial}{\partial T} = -\frac{1}{k_{\text{B}} T^2} \frac{\partial}{\partial \beta} = -k_{\text{B}} \beta^2 \frac{\partial}{\partial \beta}\)</span> を用いて，温度微分を <span class="arithmatex">\(\beta\)</span> 微分に変換します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 C_V &amp;= \frac{\partial U}{\partial T} \\
-&amp;= \left( -k_B \beta^2 \frac{\partial}{\partial \beta} \right) \left( -\frac{\partial \log Z}{\partial \beta} \right) \\
-&amp;= \finalanswer{k_B \beta^2 \frac{\partial^2 \log Z}{\partial \beta^2}}
+&amp;= \left( -k_{\text{B}} \beta^2 \frac{\partial}{\partial \beta} \right) \left( -\frac{\partial \log Z}{\partial \beta} \right) \\
+&amp;= \finalanswer{k_{\text{B}} \beta^2 \frac{\partial^2 \log Z}{\partial \beta^2}}
 \end{aligned}
 \]</div>
-<p>この <span class="arithmatex">\(\log Z\)</span> の2階微分を具体的に実行してみます。1階微分は <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta} = -\langle E \rangle\)</span> でした。これをもう一度 <span class="arithmatex">\(\beta\)</span> で微分します。</p>
+<p>次に，<span class="arithmatex">\(\log Z\)</span> の2階微分を求めます。1階微分は <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta} = -\langle E \rangle\)</span> です。これをもう一度 <span class="arithmatex">\(\beta\)</span> で微分すると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{\partial^2 \log Z}{\partial \beta^2} &amp;= \frac{\partial}{\partial \beta} \left( \frac{1}{Z} \frac{\partial Z}{\partial \beta} \right) \\
@@ -14608,9 +14608,9 @@ C_V &amp;= \frac{\partial U}{\partial T} \\
 \]</div>
 <p>この差はエネルギーの分散 <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle\)</span> です。したがって，定積熱容量は</p>
 <div class="arithmatex">\[
-\finalanswer{C_V = k_B \beta^2 \langle (E - \langle E \rangle)^2 \rangle}
+\finalanswer{C_V = k_{\text{B}} \beta^2 \langle (E - \langle E \rangle)^2 \rangle}
 \]</div>
-<p>エネルギーの分散は <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle \ge 0\)</span> を満たします。また，ボルツマン定数 <span class="arithmatex">\(k_B\)</span> と <span class="arithmatex">\(\beta^2\)</span> も正です。
+<p>エネルギーの分散は <span class="arithmatex">\(\langle (E - \langle E \rangle)^2 \rangle \ge 0\)</span> を満たします。また，ボルツマン定数 <span class="arithmatex">\(k_{\text{B}}\)</span> と <span class="arithmatex">\(\beta^2\)</span> も正です。
 エネルギーの分散が負にならないため，定積熱容量は <span class="arithmatex">\(C_V \ge 0\)</span> を満たします。</p>
 
 

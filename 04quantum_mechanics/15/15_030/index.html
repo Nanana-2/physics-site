@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14528,7 +14528,13 @@ i\hbar \frac{\partial \Psi}{\partial t} = \left( c \sum_{i} \alpha_i \hat{p}_i +
 \]</div>
 <p>これをもとの展開式に戻すことで，時間に関する2階微分の等式が得られます。</p>
 <div class="arithmatex">\[
--\hbar^2 \frac{\partial^2 \Psi}{\partial t^2} = \left[ c^2 \sum_{i} \alpha_i^2 \hat{p}_i^2 + c^2 \sum_{i &lt; j} \left( \alpha_i \alpha_j + \alpha_j \alpha_i \right) \hat{p}_i \hat{p}_j + m c^3 \sum_{i} \left( \alpha_i \beta + \beta \alpha_i \right) \hat{p}_i + \beta^2 m^2 c^4 \right] \Psi
+\begin{aligned}
+-\hbar^2 \frac{\partial^2 \Psi}{\partial t^2}
+&amp;= \Biggl[c^2\sum_i\alpha_i^2\hat p_i^2
++c^2\sum_{i&lt;j}(\alpha_i\alpha_j+\alpha_j\alpha_i)\hat p_i\hat p_j \\
+&amp;\qquad +mc^3\sum_i(\alpha_i\beta+\beta\alpha_i)\hat p_i
++\beta^2m^2c^4\Biggr]\Psi
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>(1) で導いた展開式を，問題文に提示されたクライン・ゴルドン方程式と比較します。</p>
@@ -14536,21 +14542,21 @@ i\hbar \frac{\partial \Psi}{\partial t} = \left( c \sum_{i} \alpha_i \hat{p}_i +
 <div class="arithmatex">\[
 \left( c^2 \sum_{i} \hat{p}_i^2 + m^2 c^4 \right) \Psi
 \]</div>
-<p>この式と (1) の結果が完全に一致するためには，各運動量演算子の前にある係数が等しくならなければなりません。</p>
+<p>この式が (1) の結果と一致するには，各運動量演算子の係数が等しくなければなりません。</p>
 <p>まず，運動量の自乗 <span class="arithmatex">\(\hat{p}_i^2\)</span> の係数を比較すると，次の関係が得られます。</p>
 <div class="arithmatex">\[
-\alpha_x^2 = \alpha_y^2 = \alpha_z^2 = 1
+\finalanswer{\alpha_x^2 = \alpha_y^2 = \alpha_z^2 = 1}
 \]</div>
 <p>次に，運動量を含まない定数項 <span class="arithmatex">\(m^2 c^4\)</span> の係数を比較すると，次の関係が得られます。</p>
 <div class="arithmatex">\[
-\beta^2 = 1
+\finalanswer{\beta^2 = 1}
 \]</div>
 <p>クライン・ゴルドン方程式の右辺には，異なる成分の積 <span class="arithmatex">\(\hat{p}_i \hat{p}_j\)</span> や，運動量の1次の項 <span class="arithmatex">\(\hat{p}_i\)</span> は含まれていません。そのため，これらの項の係数はすべて 0 になる必要があります。</p>
-<p>交差する項の係数を 0 と置くことで，次の等式が導かれます。</p>
+<p>運動量の異なる成分を掛け合わせた項の係数を 0 と置くと，次の等式が得られます。</p>
 <div class="arithmatex">\[
-\alpha_i \alpha_j + \alpha_j \alpha_i = 0 \quad (i \neq j)
+\finalanswer{\alpha_i \alpha_j + \alpha_j \alpha_i = 0 \quad (i \neq j)}
 \]</div>
-<p>同様に，運動量の1次項の係数を 0 と置くことで，次の等式が導かれます。</p>
+<p>同様に，運動量の1次項の係数を 0 と置くことで，次の等式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\alpha_i \beta + \beta \alpha_i = 0}
 \]</div>

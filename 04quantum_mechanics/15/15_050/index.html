@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14528,8 +14528,8 @@ i\hbar \frac{\partial \Psi}{\partial t} = \left[ c \sum_{j=x,y,z} \alpha_j \left
 \]</div>
 <p>粒子の速度が光速に比べて十分に遅い非相対論的極限において，この方程式が通常のスピン量子力学のパウリ方程式に帰着することを計算によって確認する。以下の問いに答えよ。</p>
 <p>(1) 与えられた波動関数の形式と行列の表現をディラック方程式に代入し，時間微分を実行せよ。上位2成分の <span class="arithmatex">\(\psi\)</span> と下位2成分の <span class="arithmatex">\(\chi\)</span> が満たす連立微分方程式を導出せよ。</p>
-<p>(2) 非相対論的極限では，静止エネルギーに比べて運動エネルギーや電磁ポテンシャルによるエネルギーが十分に小さい。このため，下位成分の時間微分を無視して <span class="arithmatex">\(\left| i\hbar \frac{\partial \chi}{\partial t} \right| \ll m c^2\)</span> および <span class="arithmatex">\(\left| q \phi \chi \right| \ll m c^2\)</span> と仮定できる。この近似を用いて，下位成分 <span class="arithmatex">\(\chi\)</span> を上位成分 <span class="arithmatex">\(\psi\)</span> を用いて表す式を導出せよ。</p>
-<p>(3) (2) の結果を上位成分 <span class="arithmatex">\(\psi\)</span> の方程式に代入せよ。パウリ行列の演算規則</p>
+<p>(2) 非相対論的極限では，静止エネルギーに比べて運動エネルギーや電磁ポテンシャルによるエネルギーが十分に小さい。このため，<span class="arithmatex">\(\chi\)</span> の時間微分を無視して <span class="arithmatex">\(\left| i\hbar \frac{\partial \chi}{\partial t} \right| \ll m c^2\)</span> および <span class="arithmatex">\(\left| q \phi \chi \right| \ll m c^2\)</span> と仮定できる。この近似を用いて，<span class="arithmatex">\(\chi\)</span> を <span class="arithmatex">\(\psi\)</span> で表せ。</p>
+<p>(3) (2) の結果を <span class="arithmatex">\(\psi\)</span> の方程式に代入せよ。パウリ行列の演算規則</p>
 <div class="arithmatex">\[
 \sum_{j} \sigma_j a_j \sum_{k} \sigma_k a_k = \boldsymbol{a}^2 I + i \boldsymbol{\sigma} \cdot \left( \boldsymbol{a} \times \boldsymbol{a} \right)
 \]</div>
@@ -14553,12 +14553,12 @@ i\hbar \frac{\partial \Psi}{\partial t} = \left[ i\hbar \frac{\partial}{\partial
 <div class="arithmatex">\[
 \left[ c \begin{pmatrix} 0 &amp; \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \\ \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} &amp; 0 \end{pmatrix} + m c^2 \begin{pmatrix} I &amp; 0 \\ 0 &amp; -I \end{pmatrix} + q \phi \begin{pmatrix} I &amp; 0 \\ 0 &amp; I \end{pmatrix} \right] \begin{pmatrix} \psi \\ \chi \end{pmatrix} e^{-imc^2 t/\hbar}
 \]</div>
-<p>両辺の共通の指数関数を消去し，上位成分と下位成分の各ブロックごとに式を分離します。</p>
+<p>両辺の共通の指数関数を除き，上二成分と下二成分を比較します。</p>
 <p>上位2成分に関する式は次の通りです。</p>
 <div class="arithmatex">\[
 i\hbar \frac{\partial \psi}{\partial t} + m c^2 \psi = c \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \chi + m c^2 \psi + q \phi \psi
 \]</div>
-<p>両辺の <span class="arithmatex">\(m c^2 \psi\)</span> を相殺して整理します。</p>
+<p>両辺から共通する <span class="arithmatex">\(m c^2 \psi\)</span> を引いて整理します。</p>
 <div class="arithmatex">\[
 i\hbar \frac{\partial \psi}{\partial t} = c \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \chi + q \phi \psi
 \]</div>
@@ -14572,32 +14572,32 @@ i\hbar \frac{\partial \chi}{\partial t} + m c^2 \chi = c \left( \boldsymbol{\sig
 \]</div>
 <p>これが求めるべき連立微分方程式です。</p>
 <h3 id="2">(2)</h3>
-<p>(1) で得られた下位成分の方程式を次のように変形します。</p>
+<p>(1) で得られた <span class="arithmatex">\(\chi\)</span> の方程式を変形すると</p>
 <div class="arithmatex">\[
 \left( i\hbar \frac{\partial}{\partial t} - q \phi + 2 m c^2 \right) \chi = c \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \psi
 \]</div>
-<p>非相対論的極限における仮定に基づき，左辺の括弧内において静止エネルギーの項が他の項に比べて圧倒的に大きいため， <span class="arithmatex">\(i\hbar \frac{\partial}{\partial t}\)</span> と <span class="arithmatex">\(q \phi\)</span> の作用を無視することができます。</p>
+<p>非相対論的極限では，静止エネルギーの項が他の項より十分大きいため，左辺の <span class="arithmatex">\(i\hbar \frac{\partial}{\partial t}\)</span> と <span class="arithmatex">\(q\phi\)</span> を無視できます。</p>
 <div class="arithmatex">\[
 2 m c^2 \chi \approx c \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \psi
 \]</div>
-<p>両辺を <span class="arithmatex">\(2 m c^2\)</span> で割り算することにより，下位成分 <span class="arithmatex">\(\chi\)</span> を上位成分 <span class="arithmatex">\(\psi\)</span> を用いて表す次の近似式が得られます。</p>
+<p>両辺を <span class="arithmatex">\(2mc^2\)</span> で割ると</p>
 <div class="arithmatex">\[
 \finalanswer{\chi = \frac{1}{2mc} \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \psi}
 \]</div>
-<p>下位成分の振幅は上位成分に比べて <span class="arithmatex">\(c\)</span> の1次のオーダーだけ小さくなっていることが分かります。</p>
+<p><span class="arithmatex">\(\chi\)</span> の振幅は <span class="arithmatex">\(\psi\)</span> より <span class="arithmatex">\(1/c\)</span> のオーダーだけ小さくなります。</p>
 <h3 id="3">(3)</h3>
-<p>(2) の結果を，(1) で得られた上位成分の方程式に代入します。</p>
+<p>(2) の結果を，(1) で得られた <span class="arithmatex">\(\psi\)</span> の方程式に代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 i\hbar \frac{\partial \psi}{\partial t} &amp;= c \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \left[ \frac{1}{2mc} \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right) \psi \right] + q \phi \psi \\
 &amp;= \frac{1}{2m} \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right)^2 \psi + q \phi \psi
 \end{aligned}
 \]</div>
-<p>ここで，問題文に提示されたパウリ行列の積の演算規則を適用します。 <span class="arithmatex">\(\boldsymbol{\sigma} \cdot \boldsymbol{\Pi}\)</span> の自乗を展開します。</p>
+<p>問題文で与えられたパウリ行列の積を用いると，</p>
 <div class="arithmatex">\[
 \left( \boldsymbol{\sigma} \cdot \boldsymbol{\Pi} \right)^2 = \boldsymbol{\Pi}^2 I + i \boldsymbol{\sigma} \cdot \left( \boldsymbol{\Pi} \times \boldsymbol{\Pi} \right)
 \]</div>
-<p>交叉項のベクトル外積の演算子 <span class="arithmatex">\(\boldsymbol{\Pi} \times \boldsymbol{\Pi}\)</span> を具体的に計算します。</p>
+<p><span class="arithmatex">\(\boldsymbol{\Pi} \times \boldsymbol{\Pi}\)</span> を計算します。</p>
 <div class="arithmatex">\[
 \boldsymbol{\Pi} \times \boldsymbol{\Pi} = \left( \hat{\boldsymbol{p}} - q \boldsymbol{A} \right) \times \left( \hat{\boldsymbol{p}} - q \boldsymbol{A} \right)
 \]</div>
@@ -14605,10 +14605,11 @@ i\hbar \frac{\partial \psi}{\partial t} &amp;= c \left( \boldsymbol{\sigma} \cdo
 <div class="arithmatex">\[
 \boldsymbol{\Pi} \times \boldsymbol{\Pi} = -q \left( \hat{\boldsymbol{p}} \times \boldsymbol{A} + \boldsymbol{A} \times \hat{\boldsymbol{p}} \right)
 \]</div>
-<p>問題文に提示された交換関係の等式を代入します。</p>
+<p>交換関係を用いると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
- &amp;= -q \left( -i\hbar \boldsymbol{\nabla} \times \boldsymbol{A} \right) \\
+\boldsymbol{\Pi} \times \boldsymbol{\Pi}
+&amp;= -q \left( -i\hbar \boldsymbol{\nabla} \times \boldsymbol{A} \right) \\
 &amp;= i q \hbar \boldsymbol{B}
 \end{aligned}
 \]</div>
@@ -14619,11 +14620,11 @@ i\hbar \frac{\partial \psi}{\partial t} &amp;= c \left( \boldsymbol{\sigma} \cdo
 &amp;= \left( \hat{\boldsymbol{p}} - q \boldsymbol{A} \right)^2 I - q \hbar \boldsymbol{\sigma} \cdot \boldsymbol{B}
 \end{aligned}
 \]</div>
-<p>この展開式を上位成分の方程式に結合します。単位行列 <span class="arithmatex">\(I\)</span> の記述を省略すると，次の通りになります。</p>
+<p>この展開式を <span class="arithmatex">\(\psi\)</span> の方程式に代入します。単位行列 <span class="arithmatex">\(I\)</span> を省略すると</p>
 <div class="arithmatex">\[
 \finalanswer{i\hbar \frac{\partial \psi}{\partial t} = \left[ \frac{1}{2m} \left( \hat{\boldsymbol{p}} - q \boldsymbol{A} \right)^2 - \frac{q\hbar}{2m} \boldsymbol{\sigma} \cdot \boldsymbol{B} + q \phi \right] \psi}
 \]</div>
-<p>これにより，ディラック方程式の非相対論的極限からパウリ方程式が導出されました。第2項には，電子のスピンと磁場の相互作用を表すスピン磁気モーメントの項が現れています。</p>
+<p>これにより，ディラック方程式の非相対論的極限からパウリ方程式が得られます。第2項には，電子のスピンと磁場の相互作用を表すスピン磁気モーメントの項が現れています。</p>
 
 
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,38 +14534,23 @@
 <h3 id="1">(1)</h3>
 <p>定常状態における確率分布を求めるため，時間微分をゼロとおきます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
--k_1 P_1^{\mathrm{st}} + k_2 P_2^{\mathrm{st}} &amp;= 0 \implies k_1 P_1^{\mathrm{st}} \\
-&amp;= k_2 P_2^{\mathrm{st}}
-\end{aligned}
+k_1P_1^{\mathrm{st}}=k_2P_2^{\mathrm{st}}
 \]</div>
 <p>この関係式は詳細釣り合い条件そのものです。ここに確率の保存則 <span class="arithmatex">\(P_2^{\mathrm{st}} = 1 - P_1^{\mathrm{st}}\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-k_1 P_1^{\mathrm{st}} &amp;= k_2 (1 - P_1^{\mathrm{st}}) \\
-&amp;= k_2 - k_2 P_1^{\mathrm{st}}
-\end{aligned}
+k_1 P_1^{\mathrm{st}} = k_2 (1 - P_1^{\mathrm{st}}) = k_2 - k_2 P_1^{\mathrm{st}}
 \]</div>
 <div class="arithmatex">\[
-\begin{aligned}
-(k_1 + k_2) P_1^{\mathrm{st}} &amp;= k_2 \implies P_1^{\mathrm{st}} \\
-&amp;= \frac{k_2}{k_1 + k_2}
-\end{aligned}
+P_1^{\mathrm{st}}=\frac{k_2}{k_1+k_2}
 \]</div>
 <p>もう一方の状態 2 の定常確率も同様に求まります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-P_2^{\mathrm{st}} &amp;= 1 - P_1^{\mathrm{st}} \\
-&amp;= \finalanswer{\frac{k_1}{k_1 + k_2}}
-\end{aligned}
+P_2^{\mathrm{st}} = 1 - P_1^{\mathrm{st}} = \finalanswer{\frac{k_1}{k_1 + k_2}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>状態 1 に関するマスター方程式に， <span class="arithmatex">\(P_2(t) = 1 - P_1(t)\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dP_1(t)}{dt} &amp;= -k_1 P_1(t) + k_2 (1 - P_1(t)) \\
-&amp;= -(k_1 + k_2) P_1(t) + k_2
-\end{aligned}
+\frac{dP_1(t)}{dt} = -k_1 P_1(t) + k_2 (1 - P_1(t)) = -(k_1 + k_2) P_1(t) + k_2
 \]</div>
 <p>これが <span class="arithmatex">\(P_1(t)\)</span> に関する線形微分方程式です。この方程式を解くため，変数を変形します。右辺の共通因数を括り出します。</p>
 <div class="arithmatex">\[
@@ -14574,8 +14559,9 @@ P_2^{\mathrm{st}} &amp;= 1 - P_1^{\mathrm{st}} \\
 <p>(1) の結果から <span class="arithmatex">\(\frac{k_2}{k_1 + k_2} = P_1^{\mathrm{st}}\)</span> であるため，定常値からのずれを <span class="arithmatex">\(y(t) = P_1(t) - P_1^{\mathrm{st}}\)</span> と置くと，微分方程式は <span class="arithmatex">\(\frac{dy(t)}{dt} = -(k_1 + k_2) y(t)\)</span> と簡単な形になります。この一般解は以下の通りです。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-y(t) &amp;= y(0) \exp\left[ -(k_1 + k_2) t \right] \implies P_1(t) - P_1^{\mathrm{st}} \\
-&amp;= (P_1(0) - P_1^{\mathrm{st}}) \exp\left[ -(k_1 + k_2) t \right]
+y(t)&amp;=y(0)\exp[-(k_1+k_2)t], \\
+P_1(t)-P_1^{\mathrm{st}}
+&amp;=(P_1(0)-P_1^{\mathrm{st}})\exp[-(k_1+k_2)t]
 \end{aligned}
 \]</div>
 <p>初期条件 <span class="arithmatex">\(P_1(0) = 1\)</span> を代入します。</p>
@@ -14592,9 +14578,9 @@ P_1(t) = P_1^{\mathrm{st}} + (1 - P_1^{\mathrm{st}}) \exp\left[ -(k_1 + k_2) t \
 \finalanswer{\tau = \frac{1}{k_1 + k_2}}
 \]</div>
 <p><strong>物理的な説明</strong>
-この数式から，緩和時間 <span class="arithmatex">\(\tau\)</span> は遷移速度の和の逆数に比例することがわかります。</p>
+したがって，緩和時間 <span class="arithmatex">\(\tau\)</span> は遷移速度の和の逆数に比例します。</p>
 <p>遷移速度 <span class="arithmatex">\(k_1\)</span> や <span class="arithmatex">\(k_2\)</span> が大きくなるということは，微視的な状態の行き来の頻度がより頻繁になることを意味します。分母の <span class="arithmatex">\(k_1 + k_2\)</span> が増大すると，全体の数値としての緩和時間 <span class="arithmatex">\(\tau\)</span> は減少します。</p>
-<p>すなわち，系が初期の偏った不平衡状態の記憶を失い，最終的な定常状態へと落ち着くまでの所要時間が短くなり，より素早く系が緩和する性質がこの数式に表れています。</p>
+<p>すなわち，遷移速度が大きいほど，系は短時間で定常状態へ近づきます。</p>
 
 
 

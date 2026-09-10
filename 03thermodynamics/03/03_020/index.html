@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14532,10 +14532,10 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>等温過程において内部エネルギー変化は 0 となるため，熱力学第一法則により，吸収または放出される熱量は気体が外部にする，あるいは外部からされる仕事に完全に一致します。</p>
+<p>等温過程において内部エネルギー変化は 0 となるため，熱力学第一法則により，吸収または放出される熱量は気体が外部にする，あるいは外部からされる仕事に一致します。</p>
 <p>過程 1 から 2 は温度 <span class="arithmatex">\(T_{\text{H}}\)</span> の等温膨張であるため，気体が高温熱源から吸収する熱量 <span class="arithmatex">\(Q_{\text{H}}\)</span> は次のようになります。</p>
 <div class="arithmatex">\[
-Q_{\text{H}} = n R T_{\text{H}} \ln \frac{V_2}{V_1}
+\finalanswer{Q_{\text{H}} = n R T_{\text{H}} \ln \frac{V_2}{V_1}}
 \]</div>
 <p>過程 3 から 4 は温度 <span class="arithmatex">\(T_{\text{C}}\)</span> の等温圧縮です。気体が外部からされる仕事，すなわち系が外部に放出する熱量 <span class="arithmatex">\(Q_{\text{C}}\)</span> は，圧縮により <span class="arithmatex">\(V_3 &gt; V_4\)</span> となるため，正の値となるように符号を調整して次のように表されます。</p>
 <div class="arithmatex">\[
@@ -14548,7 +14548,7 @@ T_{\text{H}} V_2^{\gamma-1} = T_{\text{C}} V_3^{\gamma-1}
 \]</div>
 <p>この式を温度の比について整理します。</p>
 <div class="arithmatex">\[
-\frac{T_{\text{H}}}{T_{\text{C}}} = \left( \frac{V_3}{V_2} \right)^{\gamma-1} \quad \cdots \text{式A}
+\frac{T_{\text{H}}}{T_{\text{C}}} = \left( \frac{V_3}{V_2} \right)^{\gamma-1}
 \]</div>
 <p>同様に，過程 4 から 1 は断熱圧縮であり，次の関係が成り立ちます。</p>
 <div class="arithmatex">\[
@@ -14556,9 +14556,9 @@ T_{\text{C}} V_4^{\gamma-1} = T_{\text{H}} V_1^{\gamma-1}
 \]</div>
 <p>この式も同様に温度の比について整理します。</p>
 <div class="arithmatex">\[
-\frac{T_{\text{H}}}{T_{\text{C}}} = \left( \frac{V_4}{V_1} \right)^{\gamma-1} \quad \cdots \text{式B}
+\frac{T_{\text{H}}}{T_{\text{C}}} = \left( \frac{V_4}{V_1} \right)^{\gamma-1}
 \]</div>
-<p>式Aと式Bの左辺は共通して <span class="arithmatex">\(\frac{T_{\text{H}}}{T_{\text{C}}}\)</span> であるため，右辺同士を等号で結ぶことができます。</p>
+<p>得られた二つの関係式の左辺は，いずれも <span class="arithmatex">\(\frac{T_{\text{H}}}{T_{\text{C}}}\)</span> です。したがって，右辺同士を等号で結べます。</p>
 <div class="arithmatex">\[
 \left( \frac{V_3}{V_2} \right)^{\gamma-1} = \left( \frac{V_4}{V_1} \right)^{\gamma-1}
 \]</div>
@@ -14579,7 +14579,7 @@ T_{\text{C}} V_4^{\gamma-1} = T_{\text{H}} V_1^{\gamma-1}
 <div class="arithmatex">\[
 \eta = 1 - \frac{T_{\text{C}} \ln \frac{V_3}{V_4}}{T_{\text{H}} \ln \frac{V_2}{V_1}}
 \]</div>
-<p>ここで，(2) で導出した体積比の等価関係 <span class="arithmatex">\(\frac{V_2}{V_1} = \frac{V_3}{V_4}\)</span> を適用すると，対数部分の項が完全に一致するため，これらを分子分母で約分して消去することができます。</p>
+<p>ここで，(2) で導出した体積比の等価関係 <span class="arithmatex">\(\frac{V_2}{V_1} = \frac{V_3}{V_4}\)</span> を適用すると，対数部分の項が一致するため，これらを分子分母で約分して消去することができます。</p>
 <div class="arithmatex">\[
 \ln \frac{V_2}{V_1} = \ln \frac{V_3}{V_4}
 \]</div>

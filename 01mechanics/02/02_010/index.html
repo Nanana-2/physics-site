@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14549,7 +14549,7 @@ m g \sin \theta &gt; \mu m g \cos \theta
 \]</div>
 <p>両辺を <span class="arithmatex">\(m g \cos \theta &gt; 0\)</span> で割ることで，求める条件が得られます。</p>
 <div class="arithmatex">\[
-\tan \theta &gt; \mu
+\finalanswer{\tan \theta &gt; \mu}
 \]</div>
 <p>物理的には，斜面の傾き <span class="arithmatex">\(\theta\)</span> が摩擦角 <span class="arithmatex">\(\arctan \mu\)</span> よりも大きくなったときに，物体は滑り始めることを意味しています。</p>
 <h3 id="2">(2)</h3>
@@ -14560,7 +14560,7 @@ f' = \mu' N = \mu' m g \cos \theta
 <p>動摩擦力は物体の運動を妨げる向きに働くため，<span class="arithmatex">\(x\)</span> 軸の負の向きに作用します。
 したがって，滑り出した後の <span class="arithmatex">\(x\)</span> 方向の運動方程式は次のようになります。</p>
 <div class="arithmatex">\[
-m \frac{dv}{dt} = m g \sin \theta - \mu' m g \cos \theta
+\finalanswer{m \frac{dv}{dt} = m g \sin \theta - \mu' m g \cos \theta}
 \]</div>
 <p>両辺を質量 <span class="arithmatex">\(m\)</span> で割ることで，速度 <span class="arithmatex">\(v(t)\)</span> に関する1階微分方程式が得られます。</p>
 <div class="arithmatex">\[
@@ -14568,7 +14568,7 @@ m \frac{dv}{dt} = m g \sin \theta - \mu' m g \cos \theta
 \]</div>
 <p>この式の右辺は時間 <span class="arithmatex">\(t\)</span> に依存しない定数であるため，物体の加速度 <span class="arithmatex">\(a\)</span> は一定となります。したがって，求める加速度 <span class="arithmatex">\(a\)</span> は以下の通りです。</p>
 <div class="arithmatex">\[
-a = g (\sin \theta - \mu' \cos \theta)
+\finalanswer{a = g (\sin \theta - \mu' \cos \theta)}
 \]</div>
 <p>(1) の条件 <span class="arithmatex">\(\tan \theta &gt; \mu\)</span> かつ <span class="arithmatex">\(\mu &gt; \mu'\)</span> より，<span class="arithmatex">\(\sin \theta - \mu' \cos \theta &gt; 0\)</span> が成り立つため，加速度は正の値となり，物体は斜面を下向きに加速していきます。</p>
 <h3 id="3">(3)</h3>
@@ -14583,19 +14583,16 @@ v(t) = a t + C_1
 <p>初期条件 <span class="arithmatex">\(v(0) = 0\)</span> を代入すると， <span class="arithmatex">\(C_1 = 0\)</span> と定まります。
 したがって，時刻 <span class="arithmatex">\(t\)</span> における物体の速度 <span class="arithmatex">\(v(t)\)</span> は以下のように求まります。</p>
 <div class="arithmatex">\[
-v(t) = g (\sin \theta - \mu' \cos \theta) t
+\finalanswer{v(t) = g (\sin \theta - \mu' \cos \theta) t}
 \]</div>
 <p>次に，位置 <span class="arithmatex">\(x(t)\)</span> は速度の定義 <span class="arithmatex">\(v(t) = \frac{dx}{dt}\)</span> より，速度を時間 <span class="arithmatex">\(t\)</span> でさらに積分することで得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-x(t) &amp;= \int v(t) dt \\
-&amp;= \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2 + C_2
-\end{aligned}
+x(t) = \int v(t) dt = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2 + C_2
 \]</div>
 <p>ここで <span class="arithmatex">\(C_2\)</span> は積分定数です。初期条件 <span class="arithmatex">\(x(0) = 0\)</span> を代入すると， <span class="arithmatex">\(C_2 = 0\)</span> と定まります。
 したがって，時刻 <span class="arithmatex">\(t\)</span> における物体の位置 <span class="arithmatex">\(x(t)\)</span> は以下のようになります。</p>
 <div class="arithmatex">\[
-x(t) = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2
+\finalanswer{x(t) = \frac{1}{2} g (\sin \theta - \mu' \cos \theta) t^2}
 \]</div>
 <p>したがって，物体は加速度 <span class="arithmatex">\(g (\sin \theta - \mu' \cos \theta)\)</span> の等加速度運動を行います。</p>
 

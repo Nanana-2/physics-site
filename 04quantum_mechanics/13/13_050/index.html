@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14545,14 +14545,13 @@
 &amp;= -i\hbar \left( \boldsymbol{\nabla} \cdot \hat{\boldsymbol{A}} \right) \psi - i\hbar \hat{\boldsymbol{A}} \cdot \left( \boldsymbol{\nabla} \psi \right)
 \end{aligned}
 \]</div>
-<p>クーロンゲージの条件 <span class="arithmatex">\(\boldsymbol{\nabla} \cdot \hat{\boldsymbol{A}} = 0\)</span> により，第1項は 0 となります。第2項は演算子の順序を入れ替えたものに等しくなります。</p>
+<p>クーロンゲージの条件 <span class="arithmatex">\(\boldsymbol{\nabla}\cdot\hat{\boldsymbol A}=0\)</span> を用いると，第1項は 0 になるので</p>
 <div class="arithmatex">\[
-\begin{aligned}
- &amp;= 0 + \hat{\boldsymbol{A}} \cdot \left( -i\hbar \boldsymbol{\nabla} \psi \right) \\
-&amp;= \hat{\boldsymbol{A}} \cdot \left( \hat{\boldsymbol{p}} \psi \right)
-\end{aligned}
+\hat{\boldsymbol p}\cdot(\hat{\boldsymbol A}\psi)
+=\hat{\boldsymbol A}\cdot(-i\hbar\boldsymbol\nabla\psi)
+=\hat{\boldsymbol A}\cdot(\hat{\boldsymbol p}\psi)
 \]</div>
-<p>したがって，演算子として <span class="arithmatex">\(\hat{\boldsymbol{p}} \cdot \hat{\boldsymbol{A}} = \hat{\boldsymbol{A}} \cdot \hat{\boldsymbol{p}}\)</span> が厳密に成り立ちます。これをもとの展開式に代入して整理します。</p>
+<p>したがって，<span class="arithmatex">\(\hat{\boldsymbol{p}}\cdot\hat{\boldsymbol{A}}=\hat{\boldsymbol{A}}\cdot\hat{\boldsymbol{p}}\)</span> が成り立ちます。これをもとの展開式に代入します。</p>
 <div class="arithmatex">\[
 \left( \hat{\boldsymbol{p}} - q \hat{\boldsymbol{A}} \right)^2 = \hat{\boldsymbol{p}}^2 - 2q \hat{\boldsymbol{A}} \cdot \hat{\boldsymbol{p}} + q^2 \hat{\boldsymbol{A}}^2
 \]</div>
@@ -14569,7 +14568,12 @@
 <div class="arithmatex">\[
 \hat{H}_{\text{int}} = - \frac{q}{m} \sum_{\boldsymbol{k}', \lambda'} C_{\boldsymbol{k}'} \left( \hat{a}_{\boldsymbol{k}', \lambda'} \boldsymbol{\epsilon}_{\boldsymbol{k}', \lambda'} \cdot \hat{\boldsymbol{p}} e^{i \boldsymbol{k}' \cdot \boldsymbol{r}} + \hat{a}_{\boldsymbol{k}', \lambda'}^\dagger \boldsymbol{\epsilon}_{\boldsymbol{k}', \lambda'} \cdot \hat{\boldsymbol{p}} e^{-i \boldsymbol{k}' \cdot \boldsymbol{r}} \right)
 \]</div>
-<p>この演算子を初期状態 <span class="arithmatex">\(|i, n\rangle\)</span> に作用させ，最終状態 <span class="arithmatex">\(\langle f, n-1|\)</span> との内積をとります。電磁場の状態に対する生成消滅演算子の作用を個別に計算します。光子を1個減少させる遷移であるため，消滅演算子 <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}', \lambda'}\)</span> を含む項のみが，電磁場の内積 <span class="arithmatex">\(\langle n-1 | \hat{a}_{\boldsymbol{k}', \lambda'} | n \rangle = \sqrt{\times} = \sqrt{n} \delta_{\boldsymbol{k}, \boldsymbol{k}'} \delta_{\lambda, \lambda'}\)</span> として生き残ります。生成演算子の項は，状態が <span class="arithmatex">\(|n+1\rangle\)</span> になるため，最終状態 <span class="arithmatex">\(|n-1\rangle\)</span> と直交して 0 となります。</p>
+<p>この演算子を初期状態 <span class="arithmatex">\(|i, n\rangle\)</span> に作用させ，最終状態 <span class="arithmatex">\(\langle f, n-1|\)</span> との内積をとります。光子数を1個減らす遷移なので，消滅演算子を含む項について</p>
+<div class="arithmatex">\[
+\langle n-1 | \hat{a}_{\boldsymbol{k}', \lambda'} | n \rangle
+= \sqrt{n}\, \delta_{\boldsymbol{k}, \boldsymbol{k}'} \delta_{\lambda, \lambda'}
+\]</div>
+<p>となります。生成演算子を含む項では状態が <span class="arithmatex">\(|n+1\rangle\)</span> となり，最終状態 <span class="arithmatex">\(|n-1\rangle\)</span> と直交するため，内積は 0 です。</p>
 <p>デルタ関数の条件から，和の記号の変数が特定のモード <span class="arithmatex">\(\boldsymbol{k}, \lambda\)</span> へと固定されます。電磁場部分の計算を完了して整理すると，行列要素は以下のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} C_{\boldsymbol{k}} \sqrt{n} \langle f | e^{i \boldsymbol{k} \cdot \boldsymbol{r}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \hat{\boldsymbol{p}} | i \rangle}
@@ -14584,7 +14588,7 @@
 <div class="arithmatex">\[
 \finalanswer{\langle f, n-1 | \hat{H}_{\text{int}} | i, n \rangle = - \frac{q}{m} \sqrt{\frac{\hbar n}{2\epsilon_0 \omega_{\boldsymbol{k}} L^3}} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} \cdot \langle f | \hat{\boldsymbol{p}} | i \rangle}
 \]</div>
-<p>これにより，1光子の吸収遷移確率の大きさを決定する，長波長近似のもとでの相互作用の行列要素の数式が求まりました。</p>
+<p>これにより，1光子の吸収遷移確率の大きさを決定する，長波長近似のもとでの相互作用の行列要素の式が求まりました。</p>
 
 
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,14 +14522,14 @@
 <div class="arithmatex">\[
 \rho = \frac{1}{Z} \exp(-\beta \hat{H})
 \]</div>
-<p>とする。ここで <span class="arithmatex">\(\beta=1/(k_BT)\)</span> である。以下の問いに答えよ。</p>
+<p>とする。ここで <span class="arithmatex">\(\beta=1/(k_{\text{B}}T)\)</span> である。以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(\mathrm{Tr}(\rho)=1\)</span> から分配関数 <span class="arithmatex">\(Z\)</span> をトレースで表せ。また，エネルギー固有値を <span class="arithmatex">\(E_n\)</span> として和の形に書き直せ。</p>
 <p>(2) <span class="arithmatex">\(U=\mathrm{Tr}(\rho\hat{H})\)</span> から</p>
 <div class="arithmatex">\[
-U = - \frac{\partial \ln Z}{\partial \beta}
+U = - \frac{\partial \log Z}{\partial \beta}
 \]</div>
 <p>を導出せよ。</p>
-<p>(3) <span class="arithmatex">\(S=-k_B\mathrm{Tr}(\rho\ln\rho)\)</span> と <span class="arithmatex">\(F=-k_BT\ln Z\)</span> から</p>
+<p>(3) <span class="arithmatex">\(S=-k_{\text{B}}\mathrm{Tr}(\rho\log\rho)\)</span> と <span class="arithmatex">\(F=-k_{\text{B}}T\log Z\)</span> から</p>
 <div class="arithmatex">\[
 F = U - TS
 \]</div>
@@ -14537,11 +14537,12 @@ F = U - TS
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> に，カノニカル密度行列の定義式を代入します。規格化定数である <span class="arithmatex">\(Z\)</span> は演算子ではないため，トレースの外へ括り出すことができます。</p>
+<p>密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> に，カノニカル密度行列の定義式を代入します。規格化定数 <span class="arithmatex">\(Z\)</span> は演算子ではないため，トレースの外へ出せます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\mathrm{Tr}\left( \frac{1}{Z} \exp(-\beta \hat{H}) \right) &amp;= 1 \implies \frac{1}{Z} \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big) \\
-&amp;= 1
+1=\mathrm{Tr}(\rho)
+&amp;=\mathrm{Tr}\left(\frac{1}{Z}\exp(-\beta\hat H)\right) \\
+&amp;=\frac{1}{Z}\mathrm{Tr}\left(\exp(-\beta\hat H)\right)
 \end{aligned}
 \]</div>
 <p>両辺に <span class="arithmatex">\(Z\)</span> を掛けることで，トレースを用いた分配関数の定義式が得られます。</p>
@@ -14552,13 +14553,11 @@ Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big)
 <div class="arithmatex">\[
 \begin{aligned}
 Z &amp;= \sum_n \langle n| \exp(-\beta \hat{H}) |n\rangle \\
-&amp;= \sum_n \langle n| \exp(-\beta E_n) |n\rangle
+&amp;= \sum_n \exp(-\beta E_n)\langle n|n\rangle \\
+&amp;= \finalanswer{\sum_n \exp(-\beta E_n)}
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(\exp(-\beta E_n)\)</span> はスカラー量であるためブラケットの外へ出ます。基底の規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> を適用することで，求める和の形式が導かれます。</p>
-<div class="arithmatex">\[
-\finalanswer{Z = \sum_n \exp(-\beta E_n)}
-\]</div>
+<p><span class="arithmatex">\(\exp(-\beta E_n)\)</span> はスカラー量であり，基底の規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> を用いました。</p>
 <h3 id="2">(2)</h3>
 <p>分配関数 <span class="arithmatex">\(Z = \mathrm{Tr}\big( \exp(-\beta \hat{H}) \big)\)</span> を逆温度 <span class="arithmatex">\(\beta\)</span> で偏微分します。トレースの内部で微分を実行します。</p>
 <div class="arithmatex">\[
@@ -14585,48 +14584,45 @@ U &amp;= \frac{1}{Z} \left( - \frac{\partial Z}{\partial \beta} \right) \\
 &amp;= - \frac{1}{Z} \frac{\partial Z}{\partial \beta}
 \end{aligned}
 \]</div>
-<p>対数関数の微分公式 <span class="arithmatex">\(\frac{\partial \ln Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta}\)</span> を右辺に適用することで，目的の関係式が導出されます。</p>
+<p>対数関数の微分公式 <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta}\)</span> を右辺に適用することで，目的の関係式を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{U = - \frac{\partial \ln Z}{\partial \beta}}
+\finalanswer{U = - \frac{\partial \log Z}{\partial \beta}}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>フォン・ノイマンエントロピーの式の中にある <span class="arithmatex">\(\ln \rho\)</span> の部分を，カノニカル密度行列の定義式を用いてあらかじめ展開しておきます。対数の性質 <span class="arithmatex">\(\ln(\hat{X}/\alpha) = \ln \hat{X} - \ln \alpha\)</span> を適用します。</p>
+<p>フォン・ノイマンエントロピーの式の中にある <span class="arithmatex">\(\log \rho\)</span> の部分を，カノニカル密度行列の定義式を用いてあらかじめ展開しておきます。対数の性質 <span class="arithmatex">\(\log(\hat{X}/\alpha) = \log \hat{X} - \log \alpha\)</span> を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\ln \rho &amp;= \ln \left( \frac{\exp(-\beta \hat{H})}{Z} \right) \\
-&amp;= \ln \big( \exp(-\beta \hat{H}) \big) - \ln Z \cdot \hat{I} \\
-&amp;= -\beta \hat{H} - \ln Z \cdot \hat{I}
+\log \rho &amp;= \log \left( \frac{\exp(-\beta \hat{H})}{Z} \right) \\
+&amp;= \log \big( \exp(-\beta \hat{H}) \big) - \log Z \cdot \hat{I} \\
+&amp;= -\beta \hat{H} - \log Z \cdot \hat{I}
 \end{aligned}
 \]</div>
 <p>ただし， <span class="arithmatex">\(\hat{I}\)</span> は単位行列です。この展開結果をエントロピーの定義式に代入します。</p>
 <div class="arithmatex">\[
-S = -k_B \mathrm{Tr}\big( \rho [ -\beta \hat{H} - \ln Z \cdot \hat{I} ] \big)
+S = -k_{\text{B}} \mathrm{Tr}\big( \rho [ -\beta \hat{H} - \log Z \cdot \hat{I} ] \big)
 \]</div>
-<p>分配法則に従ってトレースを2つの項に分解し，定数である <span class="arithmatex">\(\beta\)</span> や <span class="arithmatex">\(\ln Z\)</span> を積分の外へ括り出します。</p>
+<p>分配法則に従ってトレースを2つの項に分解し，定数である <span class="arithmatex">\(\beta\)</span> や <span class="arithmatex">\(\log Z\)</span> をトレースの外へ出します。</p>
 <div class="arithmatex">\[
-S = k_B \beta \mathrm{Tr}(\rho \hat{H}) + k_B \ln Z \mathrm{Tr}(\rho)
+S = k_{\text{B}} \beta \mathrm{Tr}(\rho \hat{H}) + k_{\text{B}} \log Z \mathrm{Tr}(\rho)
 \]</div>
 <p>ここで，それぞれのトレース項に既知の物理的性質を適用します。</p>
 <ul>
 <li>第1項のトレース：内部エネルギーの定義より <span class="arithmatex">\(\mathrm{Tr}(\rho \hat{H}) = U\)</span></li>
 <li>第2項のトレース：規格化条件より <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span></li>
 </ul>
-<p>これらを代入して整理します。逆温度の定義 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を元に戻します。</p>
+<p>これらを代入して整理します。逆温度の定義 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を元に戻します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-S &amp;= k_B \left( \frac{1}{k_B T} \right) U + k_B \ln Z \\
-&amp;= \frac{U}{T} + k_B \ln Z
-\end{aligned}
+S = k_{\text{B}} \left( \frac{1}{k_{\text{B}} T} \right) U + k_{\text{B}} \log Z = \frac{U}{T} + k_{\text{B}} \log Z
 \]</div>
 <p>この方程式の全体に絶対温度 <span class="arithmatex">\(T\)</span> を掛け算します。</p>
 <div class="arithmatex">\[
-TS = U + k_B T \ln Z
+TS = U + k_{\text{B}} T \log Z
 \]</div>
-<p>ここで，ヘルムホルツの自由エネルギーの定義 <span class="arithmatex">\(F = -k_B T \ln Z\)</span> を用いると，右辺第2項は <span class="arithmatex">\(-F\)</span> に置き換わります。</p>
+<p>ここで，ヘルムホルツの自由エネルギーの定義 <span class="arithmatex">\(F = -k_{\text{B}} T \log Z\)</span> を用いると，右辺第2項は <span class="arithmatex">\(-F\)</span> に置き換わります。</p>
 <div class="arithmatex">\[
 TS = U - F
 \]</div>
-<p>この式を <span class="arithmatex">\(F\)</span> について解くように移項して整理することで，熱力学における重要な関係式が量子統計の枠組みから自然に導出されます。</p>
+<p>この式を <span class="arithmatex">\(F\)</span> について解くと，</p>
 <div class="arithmatex">\[
 \finalanswer{F = U - TS}
 \]</div>

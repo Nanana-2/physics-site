@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14553,7 +14553,18 @@
 <h3 id="1">(1)</h3>
 <p>電場演算子の内積の空間積分を書き下します。和の記号の変数を区別するため，片方をダッシュ付きの記号で表記します。</p>
 <div class="arithmatex">\[
-\int \hat{\boldsymbol{E}}^2 dV = - \sum_{\boldsymbol{k}, \lambda} \sum_{\boldsymbol{k}', \lambda'} C_{\boldsymbol{k}} C_{\boldsymbol{k}'} \int \left( \hat{a}_{\boldsymbol{k}, \lambda} \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{i \boldsymbol{k} \cdot \boldsymbol{r}} - \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \boldsymbol{\epsilon}_{\boldsymbol{k}, \lambda} e^{-i \boldsymbol{k} \cdot \boldsymbol{r}} \right) \cdot \left( \hat{a}_{\boldsymbol{k}', \lambda'} \boldsymbol{\epsilon}_{\boldsymbol{k}', \lambda'} e^{i \boldsymbol{k}' \cdot \boldsymbol{r}} - \hat{a}_{\boldsymbol{k}', \lambda'}^\dagger \boldsymbol{\epsilon}_{\boldsymbol{k}', \lambda'} e^{-i \boldsymbol{k}' \cdot \boldsymbol{r}} \right) dV
+\begin{aligned}
+\int \hat{\boldsymbol{E}}^2 dV
+&amp;= -\sum_{\boldsymbol{k},\lambda}\sum_{\boldsymbol{k}',\lambda'}
+C_{\boldsymbol{k}}C_{\boldsymbol{k}'}\int
+\left(\hat a_{\boldsymbol{k},\lambda}e^{i\boldsymbol{k}\cdot\boldsymbol r}
+-\hat a_{\boldsymbol{k},\lambda}^\dagger e^{-i\boldsymbol{k}\cdot\boldsymbol r}\right) \\
+&amp;\quad \times
+\left(\hat a_{\boldsymbol{k}',\lambda'}e^{i\boldsymbol{k}'\cdot\boldsymbol r}
+-\hat a_{\boldsymbol{k}',\lambda'}^\dagger e^{-i\boldsymbol{k}'\cdot\boldsymbol r}\right)
+(\boldsymbol\epsilon_{\boldsymbol{k},\lambda}\cdot
+\boldsymbol\epsilon_{\boldsymbol{k}',\lambda'})\,dV
+\end{aligned}
 \]</div>
 <p>括弧を展開して，平面波の空間積分を実行します。積分の結果からデルタ関数が現れます。</p>
 <div class="arithmatex">\[
@@ -14565,7 +14576,17 @@
 \]</div>
 <p>ここで， <span class="arithmatex">\(\boldsymbol{k}\)</span> についての和は，空間の全方向を網羅するため， <span class="arithmatex">\(\hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{-\boldsymbol{k}, \lambda}\)</span> の項において <span class="arithmatex">\(\boldsymbol{k}\)</span> を <span class="arithmatex">\(-\boldsymbol{k}\)</span> に置き換えても全体の和の値は変わりません。この性質を利用して項をまとめます。</p>
 <div class="arithmatex">\[
-\finalanswer{\int \hat{\boldsymbol{E}}^2 dV = L^3 \sum_{\boldsymbol{k}, \lambda} C_{\boldsymbol{k}}^2 \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} - \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{-\boldsymbol{k}, \lambda} - \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{-\boldsymbol{k}, \lambda}^\dagger \right)}
+\begin{aligned}
+\int \hat{\boldsymbol{E}}^2 dV
+&amp;= L^3\sum_{\boldsymbol{k},\lambda}C_{\boldsymbol{k}}^2
+\finalanswer{\Bigl(
+\hat a_{\boldsymbol{k},\lambda}\hat a_{\boldsymbol{k},\lambda}^\dagger
++\hat a_{\boldsymbol{k},\lambda}^\dagger\hat a_{\boldsymbol{k},\lambda}} \\
+&amp;\qquad\qquad\finalanswer{
+-\hat a_{\boldsymbol{k},\lambda}\hat a_{-\boldsymbol{k},\lambda}
+-\hat a_{\boldsymbol{k},\lambda}^\dagger\hat a_{-\boldsymbol{k},\lambda}^\dagger
+\Bigr)}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>磁場演算子についても同様に展開して空間積分を行います。被積分関数に現れるベクトルの外積同士の内積を，提示された公式を用いて変形します。進行方向の単位ベクトルを <span class="arithmatex">\(\boldsymbol{n}_{\boldsymbol{k}}\)</span> とします。</p>
@@ -14584,22 +14605,45 @@
 \]</div>
 <p>この符号の変化に注意して展開し，デルタ関数による和の消去を行うと，磁場の積分は以下の結果になります。</p>
 <div class="arithmatex">\[
-\finalanswer{\int \hat{\boldsymbol{B}}^2 dV = \frac{L^3}{c^2} \sum_{\boldsymbol{k}, \lambda} C_{\boldsymbol{k}}^2 \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} + \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{-\boldsymbol{k}, \lambda} + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{-\boldsymbol{k}, \lambda}^\dagger \right)}
+\begin{aligned}
+\int \hat{\boldsymbol{B}}^2 dV
+&amp;= \frac{L^3}{c^2}\sum_{\boldsymbol{k},\lambda}C_{\boldsymbol{k}}^2
+\finalanswer{\Bigl(
+\hat a_{\boldsymbol{k},\lambda}\hat a_{\boldsymbol{k},\lambda}^\dagger
++\hat a_{\boldsymbol{k},\lambda}^\dagger\hat a_{\boldsymbol{k},\lambda}} \\
+&amp;\qquad\qquad\finalanswer{
++\hat a_{\boldsymbol{k},\lambda}\hat a_{-\boldsymbol{k},\lambda}
++\hat a_{\boldsymbol{k},\lambda}^\dagger\hat a_{-\boldsymbol{k},\lambda}^\dagger
+\Bigr)}
+\end{aligned}
 \]</div>
 <p>電場の結果と比較すると，後半の交差項の符号がプラスに変わっています。</p>
 <h3 id="3">(3)</h3>
 <p>(1) と (2) の積分結果をハミルトニアンの式に代入します。磁場の係数にある <span class="arithmatex">\(\mu_0 c^2\)</span> は，関係式 <span class="arithmatex">\(\frac{1}{\mu_0 c^2} = \epsilon_0\)</span> により電場の係数と共通化できます。</p>
 <div class="arithmatex">\[
-\hat{H} = \frac{1}{2} \epsilon_0 L^3 \sum_{\boldsymbol{k}, \lambda} C_{\boldsymbol{k}}^2 \left[ \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} - \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{-\boldsymbol{k}, \lambda} - \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{-\boldsymbol{k}, \lambda}^\dagger \right) + \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} + \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{-\boldsymbol{k}, \lambda} + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{-\boldsymbol{k}, \lambda}^\dagger \right) \right]
+\begin{aligned}
+\hat H
+&amp;= \frac{\epsilon_0L^3}{2}\sum_{\boldsymbol{k},\lambda}C_{\boldsymbol{k}}^2
+\Bigl[
+\hat a\hat a^\dagger+\hat a^\dagger\hat a
+-\hat a_{\boldsymbol{k},\lambda}\hat a_{-\boldsymbol{k},\lambda}
+-\hat a_{\boldsymbol{k},\lambda}^\dagger\hat a_{-\boldsymbol{k},\lambda}^\dagger \\
+&amp;\qquad\qquad
++\hat a\hat a^\dagger+\hat a^\dagger\hat a
++\hat a_{\boldsymbol{k},\lambda}\hat a_{-\boldsymbol{k},\lambda}
++\hat a_{\boldsymbol{k},\lambda}^\dagger\hat a_{-\boldsymbol{k},\lambda}^\dagger
+\Bigr],
+\end{aligned}
 \]</div>
-<p>括弧の中を整理すると，符号の異なる交差項が相殺されて消去されます。</p>
+<p>ここで，添字を省略した <span class="arithmatex">\(\hat a\)</span> と <span class="arithmatex">\(\hat a^\dagger\)</span> は，それぞれ <span class="arithmatex">\(\hat a_{\boldsymbol{k},\lambda}\)</span> と <span class="arithmatex">\(\hat a_{\boldsymbol{k},\lambda}^\dagger\)</span> を表します。</p>
+<p>括弧の中を整理すると，交差項は符号が逆なので，その和は 0 です。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{H} &amp;= \frac{1}{2} \epsilon_0 L^3 \sum_{\boldsymbol{k}, \lambda} C_{\boldsymbol{k}}^2 \cdot 2 \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} \right) \\
 &amp;= \epsilon_0 L^3 \sum_{\boldsymbol{k}, \lambda} C_{\boldsymbol{k}}^2 \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} \right)
 \end{aligned}
 \]</div>
-<p>定数 <span class="arithmatex">\(C_{\boldsymbol{k}}^2 = \frac{\hbar \omega_{\boldsymbol{k}}}{2 \epsilon_0 L^3}\)</span> を代入します。前方の係数が相殺されます。</p>
+<p>定数 <span class="arithmatex">\(C_{\boldsymbol{k}}^2 = \frac{\hbar \omega_{\boldsymbol{k}}}{2 \epsilon_0 L^3}\)</span> を代入し，係数を整理します。</p>
 <div class="arithmatex">\[
 \hat{H} = \sum_{\boldsymbol{k}, \lambda} \frac{\hbar \omega_{\boldsymbol{k}}}{2} \left( \hat{a}_{\boldsymbol{k}, \lambda} \hat{a}_{\boldsymbol{k}, \lambda}^\dagger + \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} \right)
 \]</div>
@@ -14614,7 +14658,7 @@
 &amp;= \finalanswer{\sum_{\boldsymbol{k}, \lambda} \hbar \omega_{\boldsymbol{k}} \left( \hat{a}_{\boldsymbol{k}, \lambda}^\dagger \hat{a}_{\boldsymbol{k}, \lambda} + \frac{1}{2} \right)}
 \end{aligned}
 \]</div>
-<p>これにより，全体のハミルトニアンが各モードの量子調和振動子のハミルトニアンの和として厳密に導出されました。</p>
+<p>したがって，全体のハミルトニアンは，各モードに対応する量子調和振動子のハミルトニアンの和で表されます。</p>
 
 
 

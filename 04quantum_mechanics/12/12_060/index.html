@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,30 +14520,35 @@
 <h2 id="_2">問題</h2>
 <p>時間を純虚数へ変換するウィック回転により，時間発展演算子は統計力学のボルツマン因子と同じ形になる。この対応を用いると，分配関数を閉じた経路にわたる積分で表せる。</p>
 <p>ハミルトニアン <span class="arithmatex">\(\hat{H}\)</span> が時間に依存しない量子系を考える。実時間 <span class="arithmatex">\(t\)</span> に対して，純虚数の時間 <span class="arithmatex">\(\tau = it\)</span> を定義する。この <span class="arithmatex">\(\tau\)</span> は虚時間と呼ばれる。温度 <span class="arithmatex">\(T\)</span> における系の逆温度を <span class="arithmatex">\(\beta = 1 / (k_{\text{B}} T)\)</span> とするとき，以下の問いに答えよ。ただし <span class="arithmatex">\(k_{\text{B}}\)</span> はボルツマン定数である。</p>
-<p>(1) 量子力学の実時間 <span class="arithmatex">\(t\)</span> の時間発展演算子は <span class="arithmatex">\(e^{-i \hat{H} t / \hbar}\)</span> である。この式に虚時間 <span class="arithmatex">\(\tau = it\)</span> を代入せよ。さらに，虚時間の範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\tau_f\)</span> までとしたときの発展演算子が，統計力学のボルツマン因子 <span class="arithmatex">\(e^{-\beta \hat{H}}\)</span> と一致するために，最終虚時間 <span class="arithmatex">\(\tau_f\)</span> が満たすべき条件を <span class="arithmatex">\(\beta\)</span> と <span class="arithmatex">\(\hbar\)</span> を用いて示せ。</p>
+<p>(1) 量子力学の実時間 <span class="arithmatex">\(t\)</span> の時間発展演算子は <span class="arithmatex">\(\exp\left(-i \hat{H} t / \hbar\right)\)</span> である。この式に虚時間 <span class="arithmatex">\(\tau = it\)</span> を代入せよ。さらに，虚時間の範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\tau_f\)</span> までとしたときの発展演算子が，統計力学のボルツマン因子 <span class="arithmatex">\(\exp\left(-\beta \hat{H}\right)\)</span> と一致するために，最終虚時間 <span class="arithmatex">\(\tau_f\)</span> が満たすべき条件を <span class="arithmatex">\(\beta\)</span> と <span class="arithmatex">\(\hbar\)</span> を用いて示せ。</p>
 <p>(2) 統計力学における正準集団の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> は，エネルギー固有状態の和，あるいは位置固有状態を用いたトレースとして以下のように定義される。</p>
 <div class="arithmatex">\[
-Z(\beta) = \text{Tr}\left[ e^{-\beta \hat{H}} \right] = \int_{-\infty}^{\infty} \langle x | e^{-\beta \hat{H}} | x \rangle dx
+Z(\beta) = \text{Tr}\left[ \exp\left(-\beta \hat{H}\right) \right] = \int_{-\infty}^{\infty} \langle x | \exp\left(-\beta \hat{H}\right) | x \rangle dx
 \]</div>
-<p>前問で得られた対応関係を用いて，行列要素 <span class="arithmatex">\(\langle x | e^{-\beta \hat{H}} | x \rangle\)</span> を虚時間伝播核 <span class="arithmatex">\(K_{\text{E}}(x_f, \tau_f; x_i, 0)\)</span> によって表せ。また，始点と終点の位置および虚時間の長さが満たす条件を述べよ。</p>
-<p>(3) 質量 <span class="arithmatex">\(m\)</span> ，ポテンシャル <span class="arithmatex">\(V(x)\)</span> の中を運動する粒子の実時間作用は <span class="arithmatex">\(S = \int \left[ \frac{1}{2}m (\frac{dx}{dt})^2 - V(x) \right] dt\)</span> である。時間の変数を <span class="arithmatex">\(t = -i\tau\)</span> に変換することで，実時間の積分因子 <span class="arithmatex">\(i S / \hbar\)</span> が，虚時間 <span class="arithmatex">\(\tau\)</span> を用いた次の形式に変化することを示せ。</p>
+<p>前問で得られた対応関係を用いて，行列要素 <span class="arithmatex">\(\langle x | \exp\left(-\beta \hat{H}\right) | x \rangle\)</span> を虚時間伝播核 <span class="arithmatex">\(K_{\text{E}}(x_f, \tau_f; x_i, 0)\)</span> によって表せ。また，始点と終点の位置および虚時間の長さが満たす条件を述べよ。</p>
+<p>(3) 質量 <span class="arithmatex">\(m\)</span> ，ポテンシャル <span class="arithmatex">\(V(x)\)</span> の中を運動する粒子の実時間作用を</p>
+<div class="arithmatex">\[
+S=\int\left[\frac{1}{2}m\left(\frac{dx}{dt}\right)^2-V(x)\right]dt
+\]</div>
+<p>とする。時間の変数を <span class="arithmatex">\(t = -i\tau\)</span> に変換することで，実時間の積分因子 <span class="arithmatex">\(i S / \hbar\)</span> が，虚時間 <span class="arithmatex">\(\tau\)</span> を用いた次の形式に変化することを示せ。</p>
 <div class="arithmatex">\[
 \frac{i}{\hbar} S = -\frac{1}{\hbar} S_{\text{E}}
 \]</div>
-<p>ここで現れる <span class="arithmatex">\(S_{\text{E}} = \int_{0}^{\tau_f} \left[ \frac{1}{2}m (\frac{dx}{d\tau})^2 + V(x) \right] d\tau\)</span> はユークリッド作用と呼ばれる。以上の結果をまとめ，分配関数 <span class="arithmatex">\(Z(\beta)\)</span> の満たすべき経路積分表示の形式を完成させよ。</p>
+<p>ここで，ユークリッド作用を</p>
+<div class="arithmatex">\[
+S_{\text{E}}=\int_{0}^{\tau_f}\left[\frac{1}{2}m\left(\frac{dx}{d\tau}\right)^2+V(x)\right]d\tau
+\]</div>
+<p>と定義する。以上の結果をまとめ，分配関数 <span class="arithmatex">\(Z(\beta)\)</span> の満たすべき経路積分表示の形式を完成させよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>実時間の時間発展演算子の指数部分に対して， <span class="arithmatex">\(t = -i\tau\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-e^{-i \hat{H} t / \hbar} &amp;= e^{-i \hat{H} (-i\tau) / \hbar} \\
-&amp;= e^{-\hat{H} \tau / \hbar}
-\end{aligned}
+\exp\left(-i \hat{H} t / \hbar\right) = \exp\left(-i \hat{H} (-i\tau) / \hbar\right) = \exp\left(-\hat{H} \tau / \hbar\right)
 \]</div>
-<p>この演算子が，最終虚時間 <span class="arithmatex">\(\tau = \tau_f\)</span> において統計力学のボルツマン因子 <span class="arithmatex">\(e^{-\beta \hat{H}}\)</span> と一致するための等式を組み立てます。</p>
+<p>この演算子が，最終虚時間 <span class="arithmatex">\(\tau = \tau_f\)</span> において統計力学のボルツマン因子 <span class="arithmatex">\(\exp\left(-\beta \hat{H}\right)\)</span> と一致するための等式を組み立てます。</p>
 <div class="arithmatex">\[
-e^{-\hat{H} \tau_f / \hbar} = e^{-\beta \hat{H}}
+\exp\left(-\hat{H} \tau_f / \hbar\right) = \exp\left(-\beta \hat{H}\right)
 \]</div>
 <p>指数部分の係数を比較します。</p>
 <div class="arithmatex">\[
@@ -14553,7 +14558,7 @@ e^{-\hat{H} \tau_f / \hbar} = e^{-\beta \hat{H}}
 <h3 id="2">(2)</h3>
 <p>(1) の結果より，ボルツマン因子は始点 <span class="arithmatex">\(\tau=0\)</span> から終点 <span class="arithmatex">\(\tau=\tau_f = \hbar\beta\)</span> までの虚時間発展演算子に置き換わります。これを位置固有状態で挟んだ行列要素は，虚時間の伝播核として以下のように表現できます。</p>
 <div class="arithmatex">\[
-\langle x | e^{-\beta \hat{H}} | x \rangle = K_{\text{E}}(x, \hbar\beta; x, 0)
+\langle x | \exp\left(-\beta \hat{H}\right) | x \rangle = K_{\text{E}}(x, \hbar\beta; x, 0)
 \]</div>
 <p>分配関数の定義式は，この行列要素をすべての空間位置 <span class="arithmatex">\(x\)</span> について足し合わせる積分です。</p>
 <div class="arithmatex">\[
@@ -14580,10 +14585,10 @@ e^{-\hat{H} \tau_f / \hbar} = e^{-\beta \hat{H}}
 <div class="arithmatex">\[
 \frac{i}{\hbar} S = -\frac{1}{\hbar} S_{\text{E}}
 \]</div>
-<p>通常の経路積分における重み因子 <span class="arithmatex">\(e^{iS/\hbar}\)</span> は，虚時間においてはボルツマン因子の類似形である <span class="arithmatex">\(e^{-S_{\text{E}}/\hbar}\)</span> へと変化します。</p>
+<p>通常の経路積分における重み因子 <span class="arithmatex">\(\exp\left(iS/\hbar\right)\)</span> は，虚時間においてはボルツマン因子の類似形である <span class="arithmatex">\(\exp\left(-S_{\text{E}}/\hbar\right)\)</span> へと変化します。</p>
 <p>これに (2) の周期的境界条件 <span class="arithmatex">\(x(0) = x(\hbar\beta)\)</span> を組み合わせることで，正準分配関数の経路積分表示が以下のように完成します。</p>
 <div class="arithmatex">\[
-\finalanswer{Z(\beta) = \int_{x(0)=x(\hbar\beta)} \mathcal{D}[x(\tau)] e^{- S_{\text{E}}[x(\tau)] / \hbar}}
+\finalanswer{Z(\beta) = \int_{x(0)=x(\hbar\beta)} \mathcal{D}[x(\tau)] \exp\left(- S_{\text{E}}[x(\tau)] / \hbar\right)}
 \]</div>
 
 

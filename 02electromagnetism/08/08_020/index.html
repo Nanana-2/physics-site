@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14526,9 +14526,9 @@ b=\frac{R^2}{a},
 q'=-\frac{R}{a}q
 \]</div>
 <p>を用いてよい。球座標の極角 <span class="arithmatex">\(\theta\)</span> は <span class="arithmatex">\(+z\)</span> 軸から測る。</p>
-<p>(1) 実電荷と鏡像電荷による球外電位 <span class="arithmatex">\(\phi(r,\theta)\)</span> を書け。<span class="arithmatex">\(r=R\)</span> では二つの電荷までの距離が比例することを示し，電位がすべての <span class="arithmatex">\(\theta\)</span> でゼロになることを確認せよ。</p>
+<p>(1) 実電荷と鏡像電荷による球外電位 <span class="arithmatex">\(\phi(r,\theta)\)</span> を求めよ。</p>
 <p>(2) 球面直外の法線電場から表面電荷密度 <span class="arithmatex">\(\sigma_s(\theta)=\varepsilon_0E_r(R^+,\theta)\)</span> を求めよ。さらに球面上で積分し，誘導電荷の総量 <span class="arithmatex">\(Q_{\mathrm{ind}}\)</span> を求めよ。</p>
-<p>(3) 実電荷が受ける力を <span class="arithmatex">\(\boldsymbol{F}=F_z\boldsymbol{e}_z\)</span> として求めよ。力の向きと，<span class="arithmatex">\(a\to R^+\)</span> および <span class="arithmatex">\(a\gg R\)</span> での大きさの振る舞いを説明せよ。</p>
+<p>(3) 実電荷が受ける力を <span class="arithmatex">\(\boldsymbol{F}=F_z\boldsymbol{e}_z\)</span> として求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14550,7 +14550,7 @@ d_b^2
 &amp;=R^2+\frac{R^4}{a^2}-\frac{2R^3}{a}\cos\theta \\
 &amp;=\frac{R^2}{a^2}
 (R^2+a^2-2aR\cos\theta) \\
-&amp;=\frac{R^2}{a^2}d_a^2.
+&amp;=\frac{R^2}{a^2}d_a^2
 \end{aligned}
 \]</div>
 <p>したがって <span class="arithmatex">\(d_b=(R/a)d_a\)</span> です。よって</p>
@@ -14563,9 +14563,9 @@ d_b^2
 <h3 id="2">(2)</h3>
 <p><span class="arithmatex">\(E_r=-\partial\phi/\partial r\)</span> を計算し，<span class="arithmatex">\(r=R\)</span> を代入して整理すると</p>
 <div class="arithmatex">\[
-\sigma_s(\theta)
+\finalanswer{\sigma_s(\theta)
 =-\frac{q(a^2-R^2)}{4\pi R}
-\frac{1}{(a^2+R^2-2aR\cos\theta)^{3/2}}
+\frac{1}{(a^2+R^2-2aR\cos\theta)^{3/2}}}
 \]</div>
 <p>となります。<span class="arithmatex">\(q&gt;0\)</span> なので球面全体で負です。総誘導電荷では <span class="arithmatex">\(dS=R^2\sin\theta\,d\theta\,d\varphi\)</span> を用います。</p>
 <div class="arithmatex">\[
@@ -14576,7 +14576,7 @@ Q_{\mathrm{ind}}
 &amp;=-\frac{qR(a^2-R^2)}{2}
 \int_0^\pi
 \frac{\sin\theta\,d\theta}
-{(a^2+R^2-2aR\cos\theta)^{3/2}}.
+{(a^2+R^2-2aR\cos\theta)^{3/2}}
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(u=a^2+R^2-2aR\cos\theta\)</span> と置くと <span class="arithmatex">\(du=2aR\sin\theta\,d\theta\)</span> で，端点は <span class="arithmatex">\((a-R)^2\)</span> と <span class="arithmatex">\((a+R)^2\)</span> です。したがって</p>
@@ -14587,7 +14587,7 @@ Q_{\mathrm{ind}}
 \int_{(a-R)^2}^{(a+R)^2}u^{-3/2}\,du \\
 &amp;=-\frac{q(a^2-R^2)}{4a}
 [-2u^{-1/2}]_{(a-R)^2}^{(a+R)^2} \\
-&amp;=\finalanswer{-\frac{qR}{a}=q'}.
+&amp;=\finalanswer{-\frac{qR}{a}=q'}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
@@ -14601,8 +14601,8 @@ a-b=a-\frac{R^2}{a}=\frac{a^2-R^2}{a}
 F_z
 &amp;=\frac{1}{4\pi\varepsilon_0}
 \frac{qq'}{(a-b)^2} \\
-&amp;=\finalanswer{-\frac{1}{4\pi\varepsilon_0}}
-\frac{q^2Ra}{(a^2-R^2)^2}.
+&amp;=\finalanswer{-\frac{q^2Ra}
+{4\pi\varepsilon_0(a^2-R^2)^2}}
 \end{aligned}
 \]</div>
 <p>負号は導体球へ向かう引力を表します。<span class="arithmatex">\(a\to R^+\)</span> では分母がゼロへ近づくため理想化された力は発散します。<span class="arithmatex">\(a\gg R\)</span> では <span class="arithmatex">\(|F_z|\simeq q^2R/(4\pi\varepsilon_0a^3)\)</span> と減衰します。</p>

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14541,11 +14541,11 @@ Q_{xp}(x,p)=\frac{Q(\alpha)}{2\hbar}, \qquad \int Q_{xp}(x,p)\,dx\,dp=1
 <div class="arithmatex">\[
 Q_{xp}(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( -\frac{(x - x')^2}{x_0^2} - \frac{(p - p')^2}{p_0^2} \right) W(x', p') dx' dp'
 \]</div>
-<p>この構造を踏まえ，ウィグナー分布関数が負の値をとり得る一方で，伏見関数が常に 0 以上になる理由を，不確定性原理が許す位相空間上の分解能と測定にともなうゆらぎの観点から説明せよ。</p>
+<p>伏見関数が常に 0 以上になる理由を密度行列の性質から説明せよ。また，上の平滑化と不確定性原理が許す位相空間上の分解能との関係を説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>密度行列 <span class="arithmatex">\(\rho\)</span> は，純粋状態の確率混合 <span class="arithmatex">\(\rho = \sum_k p_k |\psi_k\rangle\langle\psi_k|\)</span> <span class="arithmatex">\(0 \le p_k \le 1\)</span> として表現されます。これを用いて，コヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> で挟んだ期待値を計算します。</p>
+<p>密度行列を <span class="arithmatex">\(\rho=\sum_k p_k|\psi_k\rangle\langle\psi_k|\)</span> と表します。ただし，<span class="arithmatex">\(0\le p_k\le1\)</span> です。これをコヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> で挟むと，</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle\alpha|\rho|\alpha\rangle &amp;= \sum_k p_k \langle\alpha|\psi_k\rangle\langle\psi_k|\alpha\rangle \\
@@ -14561,30 +14561,23 @@ Q_{xp}(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty
 \finalanswer{Q(\alpha) \ge 0}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>伏見関数 <span class="arithmatex">\(Q(\alpha)\)</span> を複素平面全体で積分します。定義式を代入します。</p>
-<div class="arithmatex">\[
-\int Q(\alpha) d^2\alpha = \int \frac{1}{\pi} \langle\alpha|\rho|\alpha\rangle d^2\alpha
-\]</div>
-<p>トレースの巡回対称性，またはブラケット演算子の順序交換の性質を利用して，状態ベクトル <span class="arithmatex">\(|\alpha\rangle\)</span> を内側にまとめます。</p>
-<div class="arithmatex">\[
-\int \frac{1}{\pi} \langle\alpha|\rho|\alpha\rangle d^2\alpha = \mathrm{Tr}\left( \rho \left[ \frac{1}{\pi} \int |\alpha\rangle\langle\alpha| d^2\alpha \right] \right)
-\]</div>
-<p>大括弧の内部にコヒーレント状態の完全性の式を適用すると，この部分は単位行列 <span class="arithmatex">\(\hat{I}\)</span> に置き換わります。</p>
+<p>完全性関係とトレースの巡回性を用いると</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\int Q(\alpha) d^2\alpha &amp;= \mathrm{Tr}(\rho \hat{I}) \\
-&amp;= \mathrm{Tr}(\rho)
+\int Q(\alpha)\,d^2\alpha
+&amp;=\int\frac{1}{\pi}\langle\alpha|\rho|\alpha\rangle\,d^2\alpha \\
+&amp;=\operatorname{Tr}\left[
+\rho\left(\frac{1}{\pi}\int|\alpha\rangle\langle\alpha|\,d^2\alpha\right)
+\right] \\
+&amp;=\operatorname{Tr}(\rho\hat I) \\
+&amp;=\finalanswer{1}
 \end{aligned}
 \]</div>
-<p>密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> より，積分値はちょうど 1 になります。</p>
-<div class="arithmatex">\[
-\finalanswer{\int Q(\alpha) d^2\alpha = 1}
-\]</div>
-<p>これにより，伏見関数は 0 以上かつ全積分が 1 という，古典的な確率分布関数としての数学的要件を満たすことが確かめられました。</p>
+<p>これにより，伏見関数が 0 以上で，全積分が 1 になることが分かります。</p>
 <h3 id="3">(3)</h3>
-<p>(3) の関係式が示す通り，伏見関数はウィグナー分布関数に対して，位置方向に <span class="arithmatex">\(x_0\)</span>，運動量方向に <span class="arithmatex">\(p_0\)</span> の尺度を持つ2次元のガウスフィルターを掛けたものに相当します。</p>
+<p>(3) の関係式から，伏見関数はウィグナー分布を位置方向に <span class="arithmatex">\(x_0\)</span>，運動量方向に <span class="arithmatex">\(p_0\)</span> の尺度で平滑化したものと解釈できます。</p>
 <p>このコヒーレント状態における位置と運動量の標準偏差はそれぞれ <span class="arithmatex">\(\Delta x=x_0/\sqrt{2}\)</span>，<span class="arithmatex">\(\Delta p=p_0/\sqrt{2}\)</span> であり，<span class="arithmatex">\(\Delta x\Delta p=\hbar/2\)</span> を満たします。したがって，この平滑化は不確定性原理が許す最小限の位相空間分解能に対応します。</p>
-<p>ウィグナー分布関数が持つ局所的な負の領域は，プランク定数より小さな面積スケールで発生する微視的な量子干渉パターンです。伏見関数へと変換する過程で，最小波束の大きさで二次元的な平均化が行われるため，不確定性の隙間に隠れていたシャープな負の谷はノイズによって除かれます。この測定にともなう粗視化の効果により，プロファイルが滑らかになり，常に 0 以上の値に落ち着くことになります。</p>
+<p>ただし，伏見関数の非負性を直接に保証するのは平滑化の説明ではなく，密度行列の非負定値性です。すなわち，任意の <span class="arithmatex">\(|\alpha\rangle\)</span> に対して <span class="arithmatex">\(\langle\alpha|\rho|\alpha\rangle\ge0\)</span> であるため，定義から <span class="arithmatex">\(Q(\alpha)\ge0\)</span> となります。一方，ガウス平滑化は，ウィグナー分布に含まれる細かな干渉構造が，<span class="arithmatex">\(\Delta x\Delta p=\hbar/2\)</span> を満たすコヒーレント状態の分解能で平均化されることを表しています。</p>
 
 
 

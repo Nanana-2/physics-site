@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,25 +14520,25 @@
 <h2 id="_2">問題</h2>
 <p>温度 <span class="arithmatex">\(T\)</span>，体積 <span class="arithmatex">\(V\)</span>，粒子数 <span class="arithmatex">\(N\)</span> の古典的な単原子分子理想気体 <span class="arithmatex">\(N\)</span> 粒子系を考える。系のカノニカル分配関数 <span class="arithmatex">\(Z_N\)</span> は以下の通りである。</p>
 <div class="arithmatex">\[
-Z_N = \frac{1}{N!} \left[ V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \right]^N
+Z_N = \frac{1}{N!} \left[ V \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2} \right]^N
 \]</div>
 <p>この分配関数を出発点として，以下の問いに答えよ。</p>
-<p>(1) 系の内部エネルギー <span class="arithmatex">\(U\)</span> は，カノニカル分布における平均エネルギー <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z_N}{\partial \beta}\)</span> として定義される。逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて分配関数を書き換えることで，内部エネルギー <span class="arithmatex">\(U\)</span> が <span class="arithmatex">\(U = \frac{3}{2} N k_B T\)</span> となることを導出せよ。</p>
+<p>(1) 系の内部エネルギー <span class="arithmatex">\(U\)</span> は，カノニカル分布における平均エネルギー <span class="arithmatex">\(\langle E \rangle = -\frac{\partial \log Z_N}{\partial \beta}\)</span> として定義される。逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を用いて分配関数を書き換えることで，内部エネルギー <span class="arithmatex">\(U\)</span> が <span class="arithmatex">\(U = \frac{3}{2} N k_{\text{B}} T\)</span> となることを導出せよ。</p>
 <p>(2) 系の定積熱容量 <span class="arithmatex">\(C_V\)</span> を内部エネルギー <span class="arithmatex">\(U\)</span> の温度微分として定義し，(1) の結果から <span class="arithmatex">\(C_V\)</span> を求めよ。</p>
 <p>(3) 1粒子のハミルトニアンに含まれる運動量の二次形式の項を数え，エネルギー等分配則から <span class="arithmatex">\(N\)</span> 粒子系の内部エネルギーと定積熱容量を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>分配関数 <span class="arithmatex">\(Z_N\)</span> を，温度 <span class="arithmatex">\(T\)</span> の代わりに逆温度 <span class="arithmatex">\(\beta\)</span> を用いて表します。 <span class="arithmatex">\(T = \frac{1}{k_B \beta}\)</span> を代入すると，以下のようになります。</p>
+<p>分配関数 <span class="arithmatex">\(Z_N\)</span> を，温度 <span class="arithmatex">\(T\)</span> の代わりに逆温度 <span class="arithmatex">\(\beta\)</span> を用いて表します。 <span class="arithmatex">\(T = \frac{1}{k_{\text{B}} \beta}\)</span> を代入すると，以下のようになります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-Z_N &amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B \beta} \right)^{3/2} \right]^N \\
-&amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B} \right)^{3/2} \right]^N \beta^{-3N/2}
+Z_N &amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_{\text{B}} \beta} \right)^{3/2} \right]^N \\
+&amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_{\text{B}}} \right)^{3/2} \right]^N \beta^{-3N/2}
 \end{aligned}
 \]</div>
 <p>この式の自然対数をとります。</p>
 <div class="arithmatex">\[
-\log Z_N = \log \left( \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B} \right)^{3/2} \right]^N \right) - \frac{3N}{2} \log \beta
+\log Z_N = \log \left( \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_{\text{B}}} \right)^{3/2} \right]^N \right) - \frac{3N}{2} \log \beta
 \]</div>
 <p>内部エネルギー <span class="arithmatex">\(U\)</span> を求めるため，この式を <span class="arithmatex">\(\beta\)</span> で偏微分します。第1項は <span class="arithmatex">\(\beta\)</span> を含まない定数項であるため，微分すると消滅します。</p>
 <div class="arithmatex">\[
@@ -14547,42 +14547,39 @@ Z_N &amp;= \frac{1}{N!} \left[ V \left( \frac{2\pi m}{h^2 k_B \beta} \right)^{3/
 &amp;= -\frac{3N}{2\beta}
 \end{aligned}
 \]</div>
-<p>この結果を内部エネルギーの定義式 <span class="arithmatex">\(U = -\frac{\partial \log Z_N}{\partial \beta}\)</span> に代入し，さらに <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を用いて温度の表現に戻します。</p>
+<p>この結果を内部エネルギーの定義式 <span class="arithmatex">\(U = -\frac{\partial \log Z_N}{\partial \beta}\)</span> に代入し，さらに <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を用いて温度の表現に戻します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 U &amp;= - \left( -\frac{3N}{2\beta} \right) \\
-&amp;= \frac{3N}{2} k_B T \\
-&amp;= \finalanswer{\frac{3}{2} N k_B T}
+&amp;= \frac{3N}{2} k_{\text{B}} T \\
+&amp;= \finalanswer{\frac{3}{2} N k_{\text{B}} T}
 \end{aligned}
 \]</div>
-<p>これにより，熱力学で知られる単原子分子理想気体の内部エネルギーの式が統計力学から導かれました。</p>
+<p>これにより，熱力学で知られる単原子分子理想気体の内部エネルギーの式が統計力学から得られます。</p>
 <h3 id="2">(2)</h3>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> を以下のように定義します。</p>
 <div class="arithmatex">\[
 C_V = \left( \frac{\partial U}{\partial T} \right)_{V, N}
 \]</div>
-<p>(1) で得られた <span class="arithmatex">\(U = \frac{3}{2} N k_B T\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分します。</p>
+<p>(1) で得られた <span class="arithmatex">\(U = \frac{3}{2} N k_{\text{B}} T\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-C_V &amp;= \frac{\partial}{\partial T} \left( \frac{3}{2} N k_B T \right) \\
-&amp;= \finalanswer{\frac{3}{2} N k_B}
+C_V &amp;= \frac{\partial}{\partial T} \left( \frac{3}{2} N k_{\text{B}} T \right) \\
+&amp;= \finalanswer{\frac{3}{2} N k_{\text{B}}}
 \end{aligned}
 \]</div>
-<p>したがって，定積熱容量は <span class="arithmatex">\(\frac{3}{2}N k_B\)</span> です。</p>
+<p>したがって，定積熱容量は <span class="arithmatex">\(\frac{3}{2}N k_{\text{B}}\)</span> です。</p>
 <h3 id="3">(3)</h3>
-<p>エネルギー等分配則より，ハミルトニアンに含まれる二次形式の項一つあたり，平均エネルギー <span class="arithmatex">\(k_BT/2\)</span> が割り当てられます。</p>
+<p>エネルギー等分配則より，ハミルトニアンに含まれる二次形式の項一つあたり，平均エネルギー <span class="arithmatex">\(k_{\text{B}}T/2\)</span> が割り当てられます。</p>
 <p>単原子理想気体の1粒子ハミルトニアンは，以下の3個の二次形式の項を含みます。</p>
 <div class="arithmatex">\[
 h = \frac{p_x^2}{2m} + \frac{p_y^2}{2m} + \frac{p_z^2}{2m}
 \]</div>
 <p><span class="arithmatex">\(N\)</span> 粒子系には二次形式の項が合計 <span class="arithmatex">\(3N\)</span> 個あります。したがって，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-U &amp;= 3N \times \left( \frac{1}{2} k_B T \right) \\
-&amp;= \finalanswer{\frac{3}{2} N k_B T}
-\end{aligned}
+U = 3N \times \left( \frac{1}{2} k_{\text{B}} T \right) = \finalanswer{\frac{3}{2} N k_{\text{B}} T}
 \]</div>
-<p>これを温度で微分すると，<span class="arithmatex">\(C_V=3Nk_B/2\)</span> を得ます。</p>
+<p>これを温度で微分すると，<span class="arithmatex">\(C_V=3Nk_{\text{B}}/2\)</span> を得ます。</p>
 
 
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11056,7 +11056,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14544,7 +14544,7 @@
 <div class="arithmatex">\[
 E_n = \hbar\omega \left( n + \frac{1}{2} \right) \quad (n = 0, 1, 2, \dots)
 \]</div>
-<p>この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。以下の問いに答えよ。</p>
+<p>この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 1次元量子調和振動子の分配関数 <span class="arithmatex">\(Z(\beta)\)</span> を求めよ。ただし，<span class="arithmatex">\(|x| &lt; 1\)</span> に対する等比級数の和の公式 <span class="arithmatex">\(\sum_{n=0}^{\infty} x^n = \frac{1}{1-x}\)</span> を用いよ。</p>
 <p>(2) この系の平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を <span class="arithmatex">\(\beta\)</span> および <span class="arithmatex">\(T\)</span> の関数としてそれぞれ求めよ。また，低温極限 <span class="arithmatex">\(T \to 0\)</span> における <span class="arithmatex">\(\langle E \rangle\)</span> の値を求め，その物理的意味を述べよ。</p>
 <p>(3) 高温極限 <span class="arithmatex">\(T \to \infty\)</span> において，<span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> を用いて平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を <span class="arithmatex">\(T\)</span> の1次項まで近似し，古典的なエネルギー等配分則が再現されることを示せ。</p>
@@ -14590,41 +14590,49 @@ Z(\beta) = \exp\left( -\frac{1}{2}\beta\hbar\omega \right) \sum_{n=0}^{\infty} \
 <div class="arithmatex">\[
 \finalanswer{\langle E \rangle = \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\exp(\beta\hbar\omega) - 1}}
 \]</div>
-<p>ここに <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入することで，温度 <span class="arithmatex">\(T\)</span> の関数としても表せます。</p>
+<p>ここに <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を代入することで，温度 <span class="arithmatex">\(T\)</span> の関数としても表せます。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle E \rangle = \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\exp\left(\frac{\hbar\omega}{k_B T}\right) - 1}}
+\finalanswer{\langle E \rangle = \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right) - 1}}
 \]</div>
 <p><strong>低温極限の考察</strong>
-<span class="arithmatex">\(T \to 0\)</span> のとき， <span class="arithmatex">\(\frac{\hbar\omega}{k_B T} \to \infty\)</span> となるため，分母の <span class="arithmatex">\(\exp\left(\frac{\hbar\omega}{k_B T}\right) \to \infty\)</span> となり，第2項は <span class="arithmatex">\(0\)</span> に収束します。したがって，以下のようになります。</p>
+<span class="arithmatex">\(T \to 0\)</span> のとき， <span class="arithmatex">\(\frac{\hbar\omega}{k_{\text{B}} T} \to \infty\)</span> となるため，分母の <span class="arithmatex">\(\exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right) \to \infty\)</span> となり，第2項は <span class="arithmatex">\(0\)</span> に収束します。したがって，以下のようになります。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle E \rangle \to \frac{1}{2}\hbar\omega}
 \]</div>
 <p>これは，<span class="arithmatex">\(T\to0\)</span> でも基底状態のエネルギーである零点エネルギーが残ることを表します。</p>
 <h3 id="3">(3)</h3>
-<p>高温極限 <span class="arithmatex">\(T \to \infty\)</span> では <span class="arithmatex">\(k_B T \gg \hbar\omega\)</span> であり，<span class="arithmatex">\(\frac{\hbar\omega}{k_B T} \ll 1\)</span> となります。近似式 <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> を第2項の分母に適用します。</p>
+<p>高温極限 <span class="arithmatex">\(T \to \infty\)</span> では <span class="arithmatex">\(k_{\text{B}} T \gg \hbar\omega\)</span> であり，<span class="arithmatex">\(\frac{\hbar\omega}{k_{\text{B}} T} \ll 1\)</span> となります。近似式 <span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span> を第2項の分母に適用します。</p>
 <div class="arithmatex">\[
-\exp\left(\frac{\hbar\omega}{k_B T}\right) - 1 \simeq \left( 1 + \frac{\hbar\omega}{k_B T} \right) - 1 = \frac{\hbar\omega}{k_B T}
+\begin{aligned}
+\exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right) - 1
+&amp;\simeq \left( 1 + \frac{\hbar\omega}{k_{\text{B}} T} \right) - 1 \\
+&amp;= \frac{\hbar\omega}{k_{\text{B}} T}
+\end{aligned}
 \]</div>
 <p>これを (2) の式に代入します。</p>
 <div class="arithmatex">\[
-\langle E \rangle \simeq \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\frac{\hbar\omega}{k_B T}} = \frac{1}{2}\hbar\omega + k_B T
+\begin{aligned}
+\langle E \rangle
+&amp;\simeq \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\frac{\hbar\omega}{k_{\text{B}} T}} \\
+&amp;= \frac{1}{2}\hbar\omega + k_{\text{B}} T
+\end{aligned}
 \]</div>
-<p>さらに高温の極限を考えると，定数項である <span class="arithmatex">\(\frac{1}{2}\hbar\omega\)</span> は <span class="arithmatex">\(k_B T\)</span> に比べて無視できるようになるため，最終的に以下の結果が得られます。</p>
+<p>さらに高温の極限を考えると，定数項である <span class="arithmatex">\(\frac{1}{2}\hbar\omega\)</span> は <span class="arithmatex">\(k_{\text{B}} T\)</span> に比べて無視できるようになるため，最終的に以下の結果が得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle E \rangle \simeq k_B T}
+\finalanswer{\langle E \rangle \simeq k_{\text{B}} T}
 \]</div>
-<p>1次元調和振動子のハミルトニアンには，運動エネルギー <span class="arithmatex">\(p^2/2m\)</span> と位置エネルギー <span class="arithmatex">\(m\omega^2x^2/2\)</span> という二つの二次形式の項があります。等分配則によれば，各項の平均エネルギーは <span class="arithmatex">\(k_BT/2\)</span> なので，合計は <span class="arithmatex">\(k_BT\)</span> です。これは上で求めた高温極限と一致します。</p>
+<p>1次元調和振動子のハミルトニアンには，運動エネルギー <span class="arithmatex">\(p^2/2m\)</span> と位置エネルギー <span class="arithmatex">\(m\omega^2x^2/2\)</span> という二つの二次形式の項があります。等分配則によれば，各項の平均エネルギーは <span class="arithmatex">\(k_{\text{B}}T/2\)</span> なので，合計は <span class="arithmatex">\(k_{\text{B}}T\)</span> です。これは上で求めた高温極限と一致します。</p>
 <h3 id="4">(4)</h3>
 <p>熱容量 <span class="arithmatex">\(C\)</span> を求めるため，(2) で得られた平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> を温度 <span class="arithmatex">\(T\)</span> で微分します。零点エネルギーの項は定数なので消え，第2項に商の微分公式と合成関数の微分を適用します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 C &amp;= \frac{\partial \langle E \rangle}{\partial T} \\
-&amp;= \hbar\omega \cdot \left[ - \frac{1}{\left(\exp\left(\frac{\hbar\omega}{k_B T}\right) - 1\right)^2} \right] \cdot \exp\left(\frac{\hbar\omega}{k_B T}\right) \cdot \left( -\frac{\hbar\omega}{k_B T^2} \right)
+&amp;= \hbar\omega \cdot \left[ - \frac{1}{\left(\exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right) - 1\right)^2} \right] \cdot \exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right) \cdot \left( -\frac{\hbar\omega}{k_{\text{B}} T^2} \right)
 \end{aligned}
 \]</div>
-<p>マイナス同士を相殺させ，分母を <span class="arithmatex">\(k_B\)</span> に合わせるために整理します。</p>
+<p>二つの負号により正となることに注意して整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{C = k_B \left( \frac{\hbar\omega}{k_B T} \right)^2 \frac{\exp\left(\frac{\hbar\omega}{k_B T}\right)}{\left(\exp\left(\frac{\hbar\omega}{k_B T}\right) - 1\right)^2}}
+\finalanswer{C = k_{\text{B}} \left( \frac{\hbar\omega}{k_{\text{B}} T} \right)^2 \frac{\exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right)}{\left(\exp\left(\frac{\hbar\omega}{k_{\text{B}} T}\right) - 1\right)^2}}
 \]</div>
 
 

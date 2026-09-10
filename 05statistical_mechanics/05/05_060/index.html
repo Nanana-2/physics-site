@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14523,13 +14523,13 @@
 <div class="arithmatex">\[
 h(\boldsymbol{r}, \boldsymbol{p}) = \frac{\boldsymbol{p}^2}{2m} + m g z
 \]</div>
-<p>この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。以下の問いに答えよ。</p>
+<p>この系が温度 <span class="arithmatex">\(T\)</span> の熱浴と熱平衡状態にあるとし，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。以下の問いに答えよ。</p>
 <p>(1) 粒子の不可区別性を考慮したカノニカル分配関数 <span class="arithmatex">\(Z_N\)</span> を求めよ。また，位置エネルギーを0とした場合の分配関数に対する重力の補正因子を求めよ。</p>
 <p>(2) 高さ <span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z+dz\)</span> の層にある平均粒子数が，その高さのボルツマン因子に比例することを用いて，粒子密度 <span class="arithmatex">\(\rho(z)\)</span> が地表の密度 <span class="arithmatex">\(\rho(0)\)</span> により以下のように表されることを示せ。</p>
 <div class="arithmatex">\[
-\rho(z) = \rho(0) \exp\left( -\frac{m g z}{k_B T} \right)
+\rho(z) = \rho(0) \exp\left( -\frac{m g z}{k_{\text{B}} T} \right)
 \]</div>
-<p>(3) 局所的な領域において理想気体の状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_B T\)</span> が成り立っていると仮定する。(2) の結果を用いて，高さ <span class="arithmatex">\(z\)</span> における気圧 <span class="arithmatex">\(P(z)\)</span> の高度依存性を導出せよ。また，この統計力学的な結果が，流体力学における静水圧平衡の式 <span class="arithmatex">\(\frac{dP(z)}{dz} = -\rho(z) m g\)</span> を満たしていることを微分によって確かめよ。</p>
+<p>(3) 局所的な領域において理想気体の状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_{\text{B}} T\)</span> が成り立っていると仮定する。(2) の結果を用いて，高さ <span class="arithmatex">\(z\)</span> における気圧 <span class="arithmatex">\(P(z)\)</span> の高度依存性を導出せよ。また，この統計力学的な結果が，流体力学における静水圧平衡の式 <span class="arithmatex">\(\frac{dP(z)}{dz} = -\rho(z) m g\)</span> を満たしていることを微分によって確かめよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14539,7 +14539,7 @@ z_1 = \frac{1}{h^3} \int_{-\infty}^{\infty} d^3\boldsymbol{p} \exp\left( -\frac{
 \]</div>
 <p>運動量積分と <span class="arithmatex">\(x,y\)</span> に関する積分は外力がない場合と同じです。<span class="arithmatex">\(x,y\)</span> の積分は面積 <span class="arithmatex">\(S\)</span> を与えます。</p>
 <div class="arithmatex">\[
-z_1 = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \cdot S \cdot \int_0^H \exp(-\beta m g z) dz
+z_1 = \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2} \cdot S \cdot \int_0^H \exp(-\beta m g z) dz
 \]</div>
 <p><span class="arithmatex">\(z\)</span> に関する積分を実行します。</p>
 <div class="arithmatex">\[
@@ -14550,11 +14550,11 @@ z_1 = \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \cdot S \cdot \int_0^H \exp(
 \]</div>
 <p>したがって，1粒子分配関数は以下のようになります。</p>
 <div class="arithmatex">\[
-z_1 = S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_B T} \right) \right)
+z_1 = S \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2} \frac{k_{\text{B}} T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_{\text{B}} T} \right) \right)
 \]</div>
-<p>外力がない<span class="arithmatex">\(g \to 0\)</span>の極限の1粒子分配関数 <span class="arithmatex">\(z_1^{(0)} = V \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2}\)</span> を基準として，マクローリン展開<span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span>を考えると，この式はきれいに外力なしの形に帰着します。系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> は，この <span class="arithmatex">\(z_1\)</span> を用いて以下のように構成されます。</p>
+<p>外力がない<span class="arithmatex">\(g \to 0\)</span>の極限の1粒子分配関数 <span class="arithmatex">\(z_1^{(0)} = V \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2}\)</span> を基準として，マクローリン展開<span class="arithmatex">\(\exp(-x) \simeq 1 - x\)</span>を考えると，この式はきれいに外力なしの形に帰着します。系全体の分配関数 <span class="arithmatex">\(Z_N\)</span> は，この <span class="arithmatex">\(z_1\)</span> を用いて以下のように構成されます。</p>
 <div class="arithmatex">\[
-\finalanswer{Z_N = \frac{1}{N!} \left[ S \left( \frac{2\pi m k_B T}{h^2} \right)^{3/2} \frac{k_B T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_B T} \right) \right) \right]^N}
+\finalanswer{Z_N = \frac{1}{N!} \left[ S \left( \frac{2\pi m k_{\text{B}} T}{h^2} \right)^{3/2} \frac{k_{\text{B}} T}{m g} \left( 1 - \exp\left( -\frac{m g H}{k_{\text{B}} T} \right) \right) \right]^N}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>1粒子が高さ <span class="arithmatex">\(z\)</span> から <span class="arithmatex">\(z+dz\)</span> にある確率 <span class="arithmatex">\(P(z)dz\)</span> はボルツマン因子に比例します。<span class="arithmatex">\(x,y\)</span> 方向は一様なので，<span class="arithmatex">\(z\)</span> 依存性だけを取り出します。</p>
@@ -14583,30 +14583,30 @@ d\langle N(z) \rangle &amp;= N P(z) dz \\
 <div class="arithmatex">\[
 \begin{aligned}
 \rho(z) &amp;= \rho(0) \exp(-\beta m g z) \\
-&amp;= \finalanswer{\rho(0) \exp\left( -\frac{m g z}{k_B T} \right)}
+&amp;= \finalanswer{\rho(0) \exp\left( -\frac{m g z}{k_{\text{B}} T} \right)}
 \end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>与えられた局所的な理想気体の状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_B T\)</span> に，(2) で求めた密度分布の式を直接代入します。</p>
+<p>与えられた局所的な理想気体の状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_{\text{B}} T\)</span> に，(2) で求めた密度分布の式を直接代入します。</p>
 <div class="arithmatex">\[
-P(z) = \rho(0) k_B T \exp\left( -\frac{m g z}{k_B T} \right)
+P(z) = \rho(0) k_{\text{B}} T \exp\left( -\frac{m g z}{k_{\text{B}} T} \right)
 \]</div>
-<p>地表 <span class="arithmatex">\(z = 0\)</span> における気圧を <span class="arithmatex">\(P(0) = \rho(0) k_B T\)</span> とおくと，気圧の高度依存性を表す有名な高度公式が得られます。</p>
+<p>地表 <span class="arithmatex">\(z = 0\)</span> における気圧を <span class="arithmatex">\(P(0) = \rho(0) k_{\text{B}} T\)</span> とおくと，気圧の高度依存性を表す有名な高度公式が得られます。</p>
 <div class="arithmatex">\[
-P(z) = P(0) \exp\left( -\frac{m g z}{k_B T} \right)
+P(z) = P(0) \exp\left( -\frac{m g z}{k_{\text{B}} T} \right)
 \]</div>
-<p>次に，この統計力学的な結果が流体力学の力学的平衡を満たしているかを確認するため， <span class="arithmatex">\(P(z)\)</span> を高さ <span class="arithmatex">\(z\)</span> で微分します。合成関数の微分により，指数の肩から <span class="arithmatex">\(-\frac{m g}{k_B T}\)</span> が前に降ります。</p>
+<p>次に，この統計力学的な結果が流体力学の力学的平衡を満たしているかを確認するため， <span class="arithmatex">\(P(z)\)</span> を高さ <span class="arithmatex">\(z\)</span> で微分します。合成関数の微分により，指数の肩から <span class="arithmatex">\(-\frac{m g}{k_{\text{B}} T}\)</span> が前に降ります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{dP(z)}{dz} &amp;= P(0) \cdot \left( -\frac{m g}{k_B T} \right) \exp\left( -\frac{m g z}{k_B T} \right) \\
-&amp;= -\frac{m g}{k_B T} \left[ P(0) \exp\left( -\frac{m g z}{k_B T} \right) \right]
+\frac{dP(z)}{dz} &amp;= P(0) \cdot \left( -\frac{m g}{k_{\text{B}} T} \right) \exp\left( -\frac{m g z}{k_{\text{B}} T} \right) \\
+&amp;= -\frac{m g}{k_{\text{B}} T} \left[ P(0) \exp\left( -\frac{m g z}{k_{\text{B}} T} \right) \right]
 \end{aligned}
 \]</div>
-<p>括弧の中身は <span class="arithmatex">\(P(z)\)</span> そのものです。さらに状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_B T\)</span> を用いてこれを密度に戻します。</p>
+<p>括弧の中身は <span class="arithmatex">\(P(z)\)</span> そのものです。さらに状態方程式 <span class="arithmatex">\(P(z) = \rho(z) k_{\text{B}} T\)</span> を用いてこれを密度に戻します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\frac{dP(z)}{dz} &amp;= -\frac{m g}{k_B T} P(z) \\
-&amp;= -\frac{m g}{k_B T} \left( \rho(z) k_B T \right) \\
+\frac{dP(z)}{dz} &amp;= -\frac{m g}{k_{\text{B}} T} P(z) \\
+&amp;= -\frac{m g}{k_{\text{B}} T} \left( \rho(z) k_{\text{B}} T \right) \\
 &amp;= \finalanswer{-\rho(z) m g}
 \end{aligned}
 \]</div>

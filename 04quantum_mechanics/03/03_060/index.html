@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14499,7 +14499,7 @@
 <p>半無限井戸型ポテンシャルでは，一方の境界で波動関数が 0 となり，有限の壁を持つ境界では波動関数が外部へ染み出す。</p>
 <p>一次元ポテンシャル <span class="arithmatex">\(V(x)\)</span> を以下のように設定する。ただし， <span class="arithmatex">\(V_0\)</span> は正の定数である。</p>
 <div class="arithmatex">\[
-V(x) = \begin{cases} \infty &amp; (x \le 0) \\ 0 &amp; (0 &lt; x &lt; a) \\ V_0 &amp; (x \le a) \end{cases}
+V(x) = \begin{cases} \infty &amp; (x \le 0) \\ 0 &amp; (0 &lt; x &lt; a) \\ V_0 &amp; (a \le x) \end{cases}
 \]</div>
 <p>このポテンシャルに束縛された質量 <span class="arithmatex">\(m\)</span> の粒子について，エネルギー固有値が <span class="arithmatex">\(0 &lt; E &lt; V_0\)</span> を満たす束縛状態の波動関数を考える。以下の問いに答えよ。</p>
 <p>(1) 井戸の内部 <span class="arithmatex">\(0 &lt; x &lt; a\)</span> における波動関数を <span class="arithmatex">\(\psi_{\text{in}}(x)\)</span>，井戸の外部 <span class="arithmatex">\(x \ge a\)</span> における波動関数を <span class="arithmatex">\(\psi_{\text{out}}(x)\)</span> とする。境界条件 <span class="arithmatex">\(\psi_{\text{in}}(0) = 0\)</span> を満たす内部の解と，<span class="arithmatex">\(x \to \infty\)</span> で有限にとどまる外部の解をそれぞれ表せ。ただし，正の実数の定数 <span class="arithmatex">\(k, \kappa\)</span> を以下のように定義する。</p>
@@ -14549,7 +14549,7 @@ k = \sqrt{\frac{2mE}{\hbar^2}}, \quad \kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}
 <div class="arithmatex">\[
 \frac{A \sin(ka)}{Ak \cos(ka)} = \frac{C e^{-\kappa a}}{-C\kappa e^{-\kappa a}}
 \]</div>
-<p>左辺の係数 <span class="arithmatex">\(A\)</span> と右辺の係数 <span class="arithmatex">\(C\)</span> および指数部分がそれぞれ相殺されます。左辺はサインとコサインの比からタンジェントとなり，右辺は係数のみが残ります。</p>
+<p>左辺の係数 <span class="arithmatex">\(A\)</span> と右辺の係数 <span class="arithmatex">\(C\)</span> および指数部分がそれぞれ消去されます。左辺はサインとコサインの比からタンジェントとなり，右辺は係数のみが残ります。</p>
 <div class="arithmatex">\[
 \frac{1}{k} \tan(ka) = -\frac{1}{\kappa}
 \]</div>

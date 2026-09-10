@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">共鳴透過</h1>
 <h2 id="_2">問題</h2>
-<p>ポテンシャルが局所的に低くなっている井戸型構造や，2つの障壁に挟まれた領域に粒子が入射するとき，特定のエネルギーを持つ粒子が反射されずに100%透過する現象を共鳴透過と呼ぶ。これは，境界で反射された複数の波が特定の条件下で互いに打ち消し合う，または井戸の内部で定在波を形成するという波動としての干渉効果によって生じる。</p>
+<p>ポテンシャルが局所的に低くなっている井戸型構造や，2つの障壁に挟まれた領域に粒子が入射するとき，特定のエネルギーを持つ粒子が反射されずに100%透過する現象を共鳴透過と呼ぶ。これは，境界で生じる反射波の振幅の和が 0 となる条件，または井戸の内部に定在波が形成される条件で生じる。</p>
 <p>幅 <span class="arithmatex">\(a\)</span>，深さ <span class="arithmatex">\(V_0 &gt; 0\)</span> の一次元ポテンシャル井戸を以下のように設定する。</p>
 <div class="arithmatex">\[
 V(x) = \begin{cases} 0 &amp; (x &lt; 0) \\ -V_0 &amp; (0 \le x \le a) \\ 0 &amp; (x &gt; a) \end{cases}
@@ -14549,20 +14549,18 @@ V(x) = \begin{cases} 0 &amp; (x &lt; 0) \\ -V_0 &amp; (0 \le x \le a) \\ 0 &amp;
   ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} &amp;= E \psi \implies k \\
-&amp;= \sqrt{\frac{2mE}{\hbar^2}}
-\end{aligned}
+-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} = E \psi \implies k = \sqrt{\frac{2mE}{\hbar^2}}
 \]</div>
 <ul>
 <li><strong>領域 II：<span class="arithmatex">\(0 \le x \le a\)</span></strong>
   ポテンシャルは <span class="arithmatex">\(V(x) = -V_0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} - V_0 \psi_{\text{II}} &amp;= E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} \\
-&amp;= -\frac{2m(E + V_0)}{\hbar^2} \psi_{\text{II}}
-\end{aligned}
+\begin{gathered}
+-\frac{\hbar^2}{2m}\frac{d^2\psi_{\text{II}}}{dx^2}-V_0\psi_{\text{II}}=E\psi_{\text{II}} \\
+\Longrightarrow\quad
+\frac{d^2\psi_{\text{II}}}{dx^2}=-\frac{2m(E+V_0)}{\hbar^2}\psi_{\text{II}}
+\end{gathered}
 \]</div>
 <p>これより，井戸の内部における波数 <span class="arithmatex">\(q\)</span> の表式が得られます。</p>
 <div class="arithmatex">\[
@@ -14594,33 +14592,27 @@ V(x) = \begin{cases} 0 &amp; (x &lt; 0) \\ -V_0 &amp; (0 \le x \le a) \\ 0 &amp;
 \]</div>
 <p>透過確率 <span class="arithmatex">\(T\)</span> はこの値の逆数となるため，以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-T &amp;= \frac{|F|^2}{|A|^2} \\
-&amp;= \finalanswer{\frac{1}{1 + \frac{(k^2 - q^2)^2}{4k^2 q^2} \sin^2(qa)}}
-\end{aligned}
+T = \frac{|F|^2}{|A|^2} = \finalanswer{\frac{1}{1 + \frac{(k^2 - q^2)^2}{4k^2 q^2} \sin^2(qa)}}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>透過確率 <span class="arithmatex">\(T\)</span> の式において，分母が 1 になるとき <span class="arithmatex">\(T = 1\)</span> となります。分母の第2項は常に 0 以上であるため，これが 0 になることが条件です。</p>
 <p>井戸が存在する限り <span class="arithmatex">\(k \neq q\)</span> であるため，係数の部分は 0 になりません。したがって，サインの部分が 0 になる必要があります。</p>
 <div class="arithmatex">\[
-\sin(qa) = 0
+\finalanswer{\sin(qa) = 0}
 \]</div>
 <p>これが満たされるとき，引数は <span class="arithmatex">\(\pi\)</span> の整数倍に制限されます。</p>
 <div class="arithmatex">\[
-qa = n\pi \quad (n = 1, 2, 3, \dots)
+\finalanswer{qa = n\pi \quad (n = 1, 2, 3, \dots)}
 \]</div>
 <p>この関係式に (1) で求めた <span class="arithmatex">\(q\)</span> の定義式を代入し，エネルギー <span class="arithmatex">\(E\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\sqrt{\frac{2m(E + V_0)}{\hbar^2}} a &amp;= n\pi \implies \frac{2m(E + V_0)}{\hbar^2} a^2 \\
-&amp;= n^2 \pi^2
-\end{aligned}
+\sqrt{\frac{2m(E + V_0)}{\hbar^2}} a = n\pi \implies \frac{2m(E + V_0)}{\hbar^2} a^2 = n^2 \pi^2
 \]</div>
 <div class="arithmatex">\[
 \finalanswer{E + V_0 = \frac{n^2 \pi^2 \hbar^2}{2ma^2} \implies E = \frac{n^2 \pi^2 \hbar^2}{2ma^2} - V_0}
 \]</div>
-<p>このエネルギーを持つ粒子が入射すると，井戸の左端と右端で反射した波が逆位相となって打ち消し合うため，粒子は100%透過します。</p>
-<p>これは，井戸の内部の幅 <span class="arithmatex">\(a\)</span> が，内部における波長 <span class="arithmatex">\(\lambda = \frac{2\pi}{q}\)</span> の半分 <span class="arithmatex">\(\frac{\lambda}{2}\)</span> の整数倍にぴったり一致して定在波を作っている状態に対応しています。</p>
+<p>このエネルギーを持つ粒子が入射すると，井戸の左端と右端で生じる反射波は逆位相となり，反射波の振幅の和が 0 になります。そのため，粒子は100%透過します。</p>
+<p>これは，井戸の幅 <span class="arithmatex">\(a\)</span> が，内部における波長 <span class="arithmatex">\(\lambda = \frac{2\pi}{q}\)</span> の半分 <span class="arithmatex">\(\frac{\lambda}{2}\)</span> の整数倍となり，定在波が形成される状態に対応しています。</p>
 
 
 

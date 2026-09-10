@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,7 +14520,7 @@
 <h2 id="_2">問題</h2>
 <p>フェルミ温度よりも十分に低い低温 <span class="arithmatex">\(T \ll T_F\)</span> の極限において，状態密度 <span class="arithmatex">\(D(\epsilon)\)</span> などの滑らかな関数 <span class="arithmatex">\(H(\epsilon)\)</span> とフェルミ・ディラック分布関数 <span class="arithmatex">\(f(\epsilon)\)</span> の積の積分は，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の近傍でのテイラー展開を用いることで以下のように近似して計算できる。この近似手法を<strong>ゾンマーフェルト展開</strong>と呼ぶ。</p>
 <div class="arithmatex">\[
-\int_0^\infty H(\epsilon) f(\epsilon) d\epsilon \simeq \int_0^\mu H(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 H'(\mu)
+\int_0^\infty H(\epsilon) f(\epsilon) d\epsilon \simeq \int_0^\mu H(\epsilon) d\epsilon + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 H'(\mu)
 \]</div>
 <p>ここで <span class="arithmatex">\(H'(\mu)\)</span> は関数 <span class="arithmatex">\(H(\epsilon)\)</span> を <span class="arithmatex">\(\epsilon\)</span> で微分して <span class="arithmatex">\(\epsilon = \mu\)</span> を代入した値である。この公式と絶対零度における全粒子数 <span class="arithmatex">\(N = \int_0^{\epsilon_F} D(\epsilon) d\epsilon\)</span> の関係式を用いて，以下の問いに答えよ。</p>
 <p>(1) 全粒子数 <span class="arithmatex">\(N = \int_0^\infty D(\epsilon) f(\epsilon) d\epsilon\)</span> にゾンマーフェルト展開を適用し，低温における化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が絶対零度のフェルミエネルギー <span class="arithmatex">\(\epsilon_F\)</span> からどのようにずれるかを表す近似式を導出せよ。微小な差 <span class="arithmatex">\(\mu - \epsilon_F\)</span> を計算する際，積分</p>
@@ -14539,28 +14539,28 @@ U = \int_0^\infty \epsilon D(\epsilon) f(\epsilon) d\epsilon
 <h3 id="1">(1)</h3>
 <p>全粒子数 <span class="arithmatex">\(N\)</span> の積分式に対して，<span class="arithmatex">\(H(\epsilon) = D(\epsilon)\)</span> としてゾンマーフェルト展開の公式を適用します。</p>
 <div class="arithmatex">\[
-N \simeq \int_0^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 D'(\mu)
+N \simeq \int_0^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 D'(\mu)
 \]</div>
 <p>一方で，絶対零度における全粒子数は <span class="arithmatex">\(N = \int_0^{\epsilon_F} D(\epsilon) d\epsilon\)</span> と表されます。粒子数は温度によらず一定であるため，これら二つの式を等置します。</p>
 <div class="arithmatex">\[
-\int_0^{\epsilon_F} D(\epsilon) d\epsilon = \int_0^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 D'(\mu)
+\int_0^{\epsilon_F} D(\epsilon) d\epsilon = \int_0^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 D'(\mu)
 \]</div>
 <p>右辺の積分を左辺に移項し，積分の区間を <span class="arithmatex">\(\epsilon_F\)</span> から <span class="arithmatex">\(\mu\)</span> の範囲にまとめます。</p>
 <div class="arithmatex">\[
-0 = \int_{\epsilon_F}^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 D'(\mu)
+0 = \int_{\epsilon_F}^\mu D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 D'(\mu)
 \]</div>
 <p>ここで与えられた近似 <span class="arithmatex">\(\int_{\epsilon_F}^\mu D(\epsilon) d\epsilon \simeq (\mu - \epsilon_F)D(\epsilon_F)\)</span> と <span class="arithmatex">\(D'(\mu) \simeq D'(\epsilon_F)\)</span> を代入します。</p>
 <div class="arithmatex">\[
-0 \simeq (\mu - \epsilon_F)D(\epsilon_F) + \frac{\pi^2}{6} k_B^2 T^2 D'(\epsilon_F)
+0 \simeq (\mu - \epsilon_F)D(\epsilon_F) + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 D'(\epsilon_F)
 \]</div>
-<p>この式を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解くことで，温度上昇に伴うフェルミエネルギーからのずれが導出されます。</p>
+<p>この式を化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解くことで，温度上昇に伴うフェルミエネルギーからのずれを得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{\mu \simeq \epsilon_F - \frac{\pi^2}{6} k_B^2 T^2 \frac{D'(\epsilon_F)}{D(\epsilon_F)}}
+\finalanswer{\mu \simeq \epsilon_F - \frac{\pi^2}{6} k_{\text{B}}^2 T^2 \frac{D'(\epsilon_F)}{D(\epsilon_F)}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>内部エネルギー <span class="arithmatex">\(U\)</span> の積分式に対して，<span class="arithmatex">\(H(\epsilon) = \epsilon D(\epsilon)\)</span> としてゾンマーフェルト展開を適用します。</p>
 <div class="arithmatex">\[
-U \simeq \int_0^\mu \epsilon D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 \frac{d}{d\epsilon} \left[ \epsilon D(\epsilon) \right]_{\epsilon=\mu}
+U \simeq \int_0^\mu \epsilon D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 \frac{d}{d\epsilon} \left[ \epsilon D(\epsilon) \right]_{\epsilon=\mu}
 \]</div>
 <p>第1項の積分を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\epsilon_F\)</span> の区間と <span class="arithmatex">\(\epsilon_F\)</span> から <span class="arithmatex">\(\mu\)</span> の区間に分割します。</p>
 <div class="arithmatex">\[
@@ -14572,26 +14572,31 @@ U \simeq \int_0^\mu \epsilon D(\epsilon) d\epsilon + \frac{\pi^2}{6} k_B^2 T^2 \
 \]</div>
 <p>ここに (1) で求めた <span class="arithmatex">\(\mu - \epsilon_F\)</span> の表現を代入します。</p>
 <div class="arithmatex">\[
-\int_0^\mu \epsilon D(\epsilon) d\epsilon \simeq U(0) - \epsilon_F D(\epsilon_F) \left( \frac{\pi^2}{6} k_B^2 T^2 \frac{D'(\epsilon_F)}{D(\epsilon_F)} \right) = U(0) - \frac{\pi^2}{6} k_B^2 T^2 \epsilon_F D'(\epsilon_F)
+\begin{aligned}
+\int_0^\mu \epsilon D(\epsilon) d\epsilon
+&amp;\simeq U(0)-\epsilon_F D(\epsilon_F)
+\left(\frac{\pi^2}{6}k_{\text{B}}^2T^2\frac{D'(\epsilon_F)}{D(\epsilon_F)}\right) \\
+&amp;= U(0)-\frac{\pi^2}{6}k_{\text{B}}^2T^2\epsilon_FD'(\epsilon_F)
+\end{aligned}
 \]</div>
 <p>次に，展開式の第2項である微分の部分を積の微分法則で計算し，<span class="arithmatex">\(\mu \simeq \epsilon_F\)</span> と近似します。</p>
 <div class="arithmatex">\[
 \frac{d}{d\epsilon} \left[ \epsilon D(\epsilon) \right]_{\epsilon=\mu} \simeq D(\epsilon_F) + \epsilon_F D'(\epsilon_F)
 \]</div>
-<p>これら二つの結果を元の <span class="arithmatex">\(U\)</span> の式に足し合わせます。すると，符号が逆になっている <span class="arithmatex">\(\epsilon_F D'(\epsilon_F)\)</span> の項が相殺されます。</p>
+<p>これら二つの結果を <span class="arithmatex">\(U\)</span> の式へ代入します。<span class="arithmatex">\(\epsilon_F D'(\epsilon_F)\)</span> を含む2項は符号が逆なので，その和は 0 です。</p>
 <div class="arithmatex">\[
-U \simeq U(0) - \frac{\pi^2}{6} k_B^2 T^2 \epsilon_F D'(\epsilon_F) + \frac{\pi^2}{6} k_B^2 T^2 \left( D(\epsilon_F) + \epsilon_F D'(\epsilon_F) \right)
+U \simeq U(0) - \frac{\pi^2}{6} k_{\text{B}}^2 T^2 \epsilon_F D'(\epsilon_F) + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 \left( D(\epsilon_F) + \epsilon_F D'(\epsilon_F) \right)
 \]</div>
 <div class="arithmatex">\[
-\finalanswer{U(T) \simeq U(0) + \frac{\pi^2}{6} k_B^2 T^2 D(\epsilon_F)}
+\finalanswer{U(T) \simeq U(0) + \frac{\pi^2}{6} k_{\text{B}}^2 T^2 D(\epsilon_F)}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>定積熱容量 <span class="arithmatex">\(C_V\)</span> は，内部エネルギー <span class="arithmatex">\(U(T)\)</span> を温度 <span class="arithmatex">\(T\)</span> で偏微分することで得られます。絶対零度のエネルギー <span class="arithmatex">\(U(0)\)</span> は定数であるため微分すると消去され，<span class="arithmatex">\(T^2\)</span> の微分から <span class="arithmatex">\(2T\)</span> が現れます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 C_V &amp;= \frac{\partial U}{\partial T} \\
-&amp;= \frac{\pi^2}{6} k_B^2 D(\epsilon_F) \cdot 2T \\
-&amp;= \finalanswer{\frac{\pi^2}{3} k_B^2 D(\epsilon_F) T}
+&amp;= \frac{\pi^2}{6} k_{\text{B}}^2 D(\epsilon_F) \cdot 2T \\
+&amp;= \finalanswer{\frac{\pi^2}{3} k_{\text{B}}^2 D(\epsilon_F) T}
 \end{aligned}
 \]</div>
 <p>状態密度 <span class="arithmatex">\(D(\epsilon_F)\)</span> は温度に依存しない定数項であるため，低温におけるフェルミ気体の電子熱容量は<strong>絶対温度 <span class="arithmatex">\(T\)</span> に比例</strong>して直線的に減少していくことがわかります。</p>

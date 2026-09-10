@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4828,17 +4800,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4951,7 +4912,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14471,17 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14537,7 +14515,6 @@ Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij})\,dV'
 \]</div>
 <p>と定義する。遠方電位を <span class="arithmatex">\(r^{-3}\)</span> の項までこれらで表せ。</p>
 <p>(2) <span class="arithmatex">\(z=+a\)</span> と <span class="arithmatex">\(z=-a\)</span> にそれぞれ電荷 <span class="arithmatex">\(+q\)</span>，原点に電荷 <span class="arithmatex">\(-2q\)</span> を置く。この分布の <span class="arithmatex">\(Q\)</span> と <span class="arithmatex">\(\boldsymbol{p}\)</span> を求め，最初に残る多重極が何か示せ。極角を <span class="arithmatex">\(\theta\)</span> として遠方電位を求めよ。</p>
-<p>(3) (2) の結果を <span class="arithmatex">\(z\)</span> 軸上 <span class="arithmatex">\(\theta=0\)</span> と赤道面 <span class="arithmatex">\(\theta=\pi/2\)</span> で評価し，符号を比較せよ。また遠方電場の大きさが距離の何乗で減衰するか説明せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14549,29 +14526,29 @@ Q_{ij}=\int\rho(3x_i'x_j'-r'^2\delta_{ij})\,dV'
 &amp;=\frac{1}{4\pi\varepsilon_0}
 \int\frac{\rho(\boldsymbol{r}')}
 {|\boldsymbol{r}-\boldsymbol{r}'|}\,dV' \\
-&amp;=\finalanswer{\frac{1}{4\pi\varepsilon_0}}
+&amp;=\finalanswer{\frac{1}{4\pi\varepsilon_0}
 \left[
 \frac{Q}{r}
 +\frac{\boldsymbol{p}\cdot\boldsymbol{n}}{r^2}
 +\frac{1}{2r^3}\sum_{i,j}Q_{ij}n_in_j
 +O(r^{-4})
-\right].
+\right]}
 \end{aligned}
 \]</div>
-<p>順に単極子，双極子，四重極の寄与です。低い次数のモーメントがゼロでなければ，遠方ではその項が支配的になります。</p>
+<p>順に単極子項，双極子項，四重極項です。低い次数のモーメントがゼロでなければ，遠方ではその項が最も大きくなります。</p>
 <p>四重極項では，<span class="arithmatex">\(3(\boldsymbol{n}\cdot\boldsymbol{r}')^2-r'^2\)</span> を成分表示すると <span class="arithmatex">\((3x_i'x_j'-r'^2\delta_{ij})n_in_j\)</span> となります。このため二つの添字について和をとる形が現れます。</p>
 <h3 id="2">(2)</h3>
-<p>まず低次のモーメントを調べます。原点の電荷は全電荷には寄与しますが，位置ベクトルがゼロなので双極子以上のモーメントには寄与しません。<span class="arithmatex">\(z=\pm a\)</span> の二電荷は対称なので，双極子項が打ち消し合います。</p>
+<p>まず低次のモーメントを調べます。原点の電荷は全電荷に含まれますが，位置ベクトルがゼロなので双極子以上のモーメントには現れません。<span class="arithmatex">\(z=\pm a\)</span> の二電荷による双極子項は大きさが等しく符号が逆なので，和は 0 です。</p>
 <p>全電荷と双極子モーメントは</p>
 <div class="arithmatex">\[
 \begin{aligned}
-Q&amp;=q+q-2q=0, \\
+Q&amp;=q+q-2q=\finalanswer{0}, \\
 \boldsymbol{p}
 &amp;=q(a\boldsymbol{e}_z)+q(-a\boldsymbol{e}_z)
--2q\boldsymbol{0}=\boldsymbol{0}.
+-2q\boldsymbol{0}=\finalanswer{\boldsymbol{0}}
 \end{aligned}
 \]</div>
-<p>したがって最初に残るのは四重極です。点電荷の電位を展開式へ直接代入すると，二つの外側電荷の奇数次の項は打ち消し合います。</p>
+<p>したがって最初に残るのは四重極です。点電荷の電位を展開式へ直接代入すると，二つの外側電荷による奇数次の項の和は 0 になります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \phi(r,\theta)
@@ -14585,21 +14562,10 @@ Q&amp;=q+q-2q=0, \\
 +\frac{a^2(3\cos^2\theta-1)}{2r^3}\right)
 -\frac{2}{r}
 \right] \\
-&amp;=\finalanswer{\frac{qa^2}{4\pi\varepsilon_0r^3}}
-(3\cos^2\theta-1).
+&amp;=\finalanswer{\frac{qa^2}{4\pi\varepsilon_0r^3}
+(3\cos^2\theta-1)}
 \end{aligned}
 \]</div>
-<h3 id="3">(3)</h3>
-<p>軸上と赤道面では</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\phi(r,0)
-&amp;=\frac{2qa^2}{4\pi\varepsilon_0r^3}, \\
-\phi(r,\pi/2)
-&amp;=\finalanswer{-\frac{qa^2}{4\pi\varepsilon_0r^3}}.
-\end{aligned}
-\]</div>
-<p>軸上では正，赤道面では負です。四重極電位は <span class="arithmatex">\(r^{-3}\)</span> で減衰し，電場は空間微分を一回とるため <span class="arithmatex">\(r^{-4}\)</span> で減衰します。単極子場の <span class="arithmatex">\(r^{-2}\)</span>，双極子場の <span class="arithmatex">\(r^{-3}\)</span> より速い減衰です。</p>
 
 
 

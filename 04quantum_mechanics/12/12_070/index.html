@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14519,17 +14519,21 @@
 <h1 id="_1">経路積分とトンネル効果</h1>
 <h2 id="_2">問題</h2>
 <p>トンネル効果は，時間を虚数へ変換した虚時間経路積分によって扱える。虚時間ではポテンシャルの符号が反転し，障壁を通過する古典解が存在する。この解をインスタントンと呼ぶ。</p>
-<p>質量 <span class="arithmatex">\(m\)</span> の粒子が，位置 <span class="arithmatex">\(x_a\)</span> から <span class="arithmatex">\(x_b\)</span> の間に存在する一定のエネルギー <span class="arithmatex">\(V_0\)</span> のポテンシャル障壁に衝突する運動を考える。粒子のエネルギーを <span class="arithmatex">\(E\)</span> とし， <span class="arithmatex">\(E &lt; V_0\)</span> とする。虚時間 <span class="arithmatex">\(\tau = it\)</span> を導入すると，ユークリッド作用は以下のように定義される。</p>
+<p>質量 <span class="arithmatex">\(m\)</span> の粒子が，位置 <span class="arithmatex">\(x_a\)</span> から <span class="arithmatex">\(x_b\)</span> の間に存在する一定のエネルギー <span class="arithmatex">\(V_0\)</span> のポテンシャル障壁に衝突する運動を考える。粒子のエネルギーを <span class="arithmatex">\(E\)</span> とし， <span class="arithmatex">\(E &lt; V_0\)</span> とする。虚時間 <span class="arithmatex">\(\tau = it\)</span> を導入すると，ユークリッド作用は次のように定義される。</p>
 <div class="arithmatex">\[
-S_{\text{E}} = \int_{\tau_i}^{\tau_f} \left[ \frac{1}{2}m \left(\frac{dx}{d\tau}\right)^2 + V(x) \right] d\tau
+I_{\text{E}} = \int_{\tau_i}^{\tau_f} \left[ \frac{1}{2}m \left(\frac{dx}{d\tau}\right)^2 + V(x) \right] d\tau
 \]</div>
 <p>以下の問いに答えよ。</p>
-<p>(1) 虚時間における古典的な運動方程式は，ユークリッド作用に対する停留条件 <span class="arithmatex">\(\delta S_{\text{E}} = 0\)</span> から導かれる。このときの運動方程式が以下のように表されることを示せ。</p>
+<p>(1) 虚時間における古典的な運動方程式は，ユークリッド作用に対する停留条件 <span class="arithmatex">\(\delta I_{\text{E}} = 0\)</span> から導かれる。このときの運動方程式が次のように表されることを示せ。</p>
 <div class="arithmatex">\[
 m \frac{d^2x}{d\tau^2} = +\frac{dV(x)}{dx}
 \]</div>
 <p>また，この方程式が，通常の力学においてポテンシャルの符号を反転させた全エネルギーの保存則 <span class="arithmatex">\(E_{\text{E}} = \frac{1}{2}m (\frac{dx}{d\tau})^2 - V(x)\)</span> に対応することを利用し，虚時間の速度 <span class="arithmatex">\(\frac{dx}{d\tau}\)</span> を <span class="arithmatex">\(m, V(x), E_{\text{E}}\)</span> を用いて表せ。</p>
-<p>(2) 粒子が障壁の手前 <span class="arithmatex">\(x_a\)</span> から出発し，反転したポテンシャルの谷を越えて障壁の向こう側 <span class="arithmatex">\(x_b\)</span> へと到達するインスタントン解を考える。この経路に沿った運動では，全エネルギーの定数が <span class="arithmatex">\(E_{\text{E}} = -E\)</span> に設定される。この条件のもとで，(1) の速度の式を用いてユークリッド作用の積分式から <span class="arithmatex">\(d\tau\)</span> を消去し，位置 <span class="arithmatex">\(x\)</span> に関する次の積分形式へと書き換えよ。</p>
+<p>(2) 粒子が障壁の手前 <span class="arithmatex">\(x_a\)</span> から障壁の向こう側 <span class="arithmatex">\(x_b\)</span> へ到達する虚時間の経路を考える。この経路では <span class="arithmatex">\(E_{\text{E}}=-E\)</span> とする。エネルギー <span class="arithmatex">\(E\)</span> を固定したトンネル指数に現れる作用を</p>
+<div class="arithmatex">\[
+S_{\text{E}}=I_{\text{E}}-E(\tau_f-\tau_i)
+\]</div>
+<p>と定義する。(1) の速度の式を用いて <span class="arithmatex">\(d\tau\)</span> を消去し，次の積分形式へ書き換えよ。</p>
 <div class="arithmatex">\[
 S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx
 \]</div>
@@ -14545,58 +14549,51 @@ S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx
 <div class="arithmatex">\[
 \frac{\partial L_{\text{E}}}{\partial (\frac{dx}{d\tau})} = m \frac{dx}{d\tau}, \quad \frac{\partial L_{\text{E}}}{\partial x} = \frac{dV(x)}{dx}
 \]</div>
-<p>これらを方程式に代入することにより，求める運動方程式が導かれます。</p>
+<p>これらを方程式に代入することにより，求める運動方程式が得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-m \frac{d^2x}{d\tau^2} - \frac{dV(x)}{dx} &amp;= 0 \implies m \frac{d^2x}{d\tau^2} \\
-&amp;= +\frac{dV(x)}{dx}
-\end{aligned}
+m\frac{d^2x}{d\tau^2}-\frac{dV(x)}{dx}=0
+\quad\Longrightarrow\quad
+\finalanswer{m\frac{d^2x}{d\tau^2}=\frac{dV(x)}{dx}}
 \]</div>
-<p>右辺の符号が正になっていることは，虚時間空間において粒子が受ける有効的な力が，通常のポテンシャルの坂を上る方向へと反転していることを意味します。</p>
+<p>通常の実時間における運動方程式とは，ポテンシャル微分の符号が逆になります。</p>
 <p>この系におけるエネルギー保存則の式を速度について整理します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{1}{2}m \left(\frac{dx}{d\tau}\right)^2 &amp;= E_{\text{E}} + V(x) \implies \left(\frac{dx}{d\tau}\right)^2 \\
-&amp;= \frac{2}{m}(E_{\text{E}} + V(x))
-\end{aligned}
+\frac{1}{2}m\left(\frac{dx}{d\tau}\right)^2=E_{\text{E}}+V(x)
+\quad\Longrightarrow\quad
+\left(\frac{dx}{d\tau}\right)^2=\frac{2}{m}[E_{\text{E}}+V(x)]
 \]</div>
 <p>両辺の平方根をとることで，虚時間における速度の式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{dx}{d\tau} = \sqrt{\frac{2}{m}(E_{\text{E}} + V(x))}}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>ユークリッド作用の定義式にエネルギー保存則の関係式 <span class="arithmatex">\(\frac{1}{2}m (\frac{dx}{d\tau})^2 = E_{\text{E}} + V(x)\)</span> を代入して，速度の項を消去します。</p>
+<p>定義より，エネルギーを固定した作用は</p>
+<div class="arithmatex">\[
+S_{\text{E}}
+= \int_{\tau_i}^{\tau_f}
+\left[
+\frac{1}{2}m\left(\frac{dx}{d\tau}\right)^2+V(x)-E
+\right]d\tau
+\]</div>
+<p>です。<span class="arithmatex">\(E_{\text{E}}=-E\)</span> のとき，エネルギー保存則から</p>
+<div class="arithmatex">\[
+\frac{1}{2}m\left(\frac{dx}{d\tau}\right)^2=V(x)-E
+\]</div>
+<p>となります。したがって，作用の被積分関数は <span class="arithmatex">\(2[V(x)-E]\)</span> です。また，(1) の速度の式から</p>
+<div class="arithmatex">\[
+d\tau = \frac{1}{\sqrt{\frac{2}{m}(V(x) - E)}} dx = \sqrt{\frac{m}{2(V(x) - E)}} dx
+\]</div>
+<p>となります。これらを作用へ代入し，積分変数を <span class="arithmatex">\(\tau\)</span> から <span class="arithmatex">\(x\)</span> へ変更すると，</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S_{\text{E}} &amp;= \int_{\tau_i}^{\tau_f} \left[ \left( E_{\text{E}} + V(x) \right) + V(x) \right] d\tau \\
-&amp;= \int_{\tau_i}^{\tau_f} \left[ E_{\text{E}} + 2V(x) \right] d\tau
+S_{\text{E}}
+&amp;=\int_{x_a}^{x_b}2[V(x)-E]
+\sqrt{\frac{m}{2[V(x)-E]}}\,dx \\
+&amp;=\finalanswer{\int_{x_a}^{x_b}\sqrt{2m[V(x)-E]}\,dx}
 \end{aligned}
-\]</div>
-<p>ここで，問題文に提示された境界条件のエネルギー設定 <span class="arithmatex">\(E_{\text{E}} = -E\)</span> を代入します。</p>
-<div class="arithmatex">\[
-S_{\text{E}} = \int_{\tau_i}^{\tau_f} \left[ 2V(x) - E \right] d\tau
-\]</div>
-<p>積分変数を虚時間 <span class="arithmatex">\(\tau\)</span> から位置 <span class="arithmatex">\(x\)</span> へと変換するため， <span class="arithmatex">\(d\tau = \frac{d\tau}{dx} dx = \left(\frac{dx}{d\tau}\right)^{-1} dx\)</span> の関係を用います。 (1) の速度の式に <span class="arithmatex">\(E_{\text{E}} = -E\)</span> を代入したものを適用します。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-d\tau &amp;= \frac{1}{\sqrt{\frac{2}{m}(V(x) - E)}} dx \\
-&amp;= \sqrt{\frac{m}{2(V(x) - E)}} dx
-\end{aligned}
-\]</div>
-<p>これを作用の積分式に代入し，積分範囲を対応する位置 <span class="arithmatex">\(x_a\)</span> から <span class="arithmatex">\(x_b\)</span> までへと変更します。</p>
-<div class="arithmatex">\[
-S_{\text{E}} = \int_{x_a}^{x_b} [2V(x) - E] \cdot \sqrt{\frac{m}{2(V(x) - E)}} dx
-\]</div>
-<p>ルートの内部を整理します。分子にある <span class="arithmatex">\(2V(x) - E\)</span> は，分母のルートの2乗として扱えるため，約分が成立します。</p>
-<div class="arithmatex">\[
-S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{\frac{m [2V(x) - E]^2}{2(V(x) - E)}} dx
-\]</div>
-<p>通常のトンネル効果の解の軌道においては，粒子の反転点での運動を停留作用で結ぶため，ポテンシャルとエネルギーの差の寄与が支配的になります。経路積分の厳密なエネルギー殻への射影手続きを考慮すると，余剰な相殺項が整理され，次のシンプルな形式が導かれます。</p>
-<div class="arithmatex">\[
-\finalanswer{S_{\text{E}} = \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で求めたユークリッド作用の積分表現を，問題文で与えられた確率の指数因子の式へとそのまま代入します。</p>
+<p>(2) で求めたユークリッド作用を，問題文で与えられた指数因子へ代入します。</p>
 <div class="arithmatex">\[
 \finalanswer{T \propto \exp\left( -\frac{2}{\hbar} S_{\text{E}} \right) = \exp\left( -\frac{2}{\hbar} \int_{x_a}^{x_b} \sqrt{2m(V(x) - E)} dx \right)}
 \]</div>

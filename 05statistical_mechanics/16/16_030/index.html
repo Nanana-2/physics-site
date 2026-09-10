@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14541,9 +14541,23 @@
 \rho_{\mathrm{tot}} = \frac{1}{2} \big( |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle - |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle \big) \big( \langle 0_{\mathrm{A}} 1_{\mathrm{B}}| - \langle 1_{\mathrm{A}} 0_{\mathrm{B}}| \big)
 \]</div>
 <div class="arithmatex">\[
-\rho_{\mathrm{tot}} = \finalanswer{\frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}|} - \frac{1}{2} |0_{\mathrm{A}} 1_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}| - \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 0_{\mathrm{A}} 1_{\mathrm{B}}| + \frac{1}{2} |1_{\mathrm{A}} 0_{\mathrm{B}}\rangle\langle 1_{\mathrm{A}} 0_{\mathrm{B}}|
+\begin{aligned}
+\rho_{\mathrm{tot}}=\frac12\Big(&amp;|01\rangle\langle01|-|01\rangle\langle10| \\
+&amp;-|10\rangle\langle01|+|10\rangle\langle10|\Big)
+\end{aligned}
 \]</div>
-<p>これが求める全密度行列の展開式です。対角項に加えて，符号が負の非対角項が存在していることがわかります。</p>
+<p>したがって，指定された基底での行列表示は</p>
+<div class="arithmatex">\[
+\finalanswer{\rho_{\mathrm{tot}}=
+\frac12
+\begin{pmatrix}
+0&amp;0&amp;0&amp;0\\
+0&amp;1&amp;-1&amp;0\\
+0&amp;-1&amp;1&amp;0\\
+0&amp;0&amp;0&amp;0
+\end{pmatrix}}
+\]</div>
+<p>です。</p>
 <h3 id="2">(2)</h3>
 <p>系Aの縮約密度行列を求めるため，系Bの正規直交基底 <span class="arithmatex">\(\{|0_{\mathrm{B}}\rangle, |1_{\mathrm{B}}\rangle\}\)</span> を用いて部分トレースを行います。</p>
 <div class="arithmatex">\[
@@ -14571,7 +14585,7 @@
 <h3 id="3">(3)</h3>
 <p>全系はもともと単一のベクトルで表される純粋状態であるため，その2乗のトレースは 1 になります。</p>
 <div class="arithmatex">\[
-\mathrm{Tr}(\rho_{\mathrm{tot}}^2) = 1
+\finalanswer{\mathrm{Tr}(\rho_{\mathrm{tot}}^2) = 1}
 \]</div>
 <p>一方，(2) で求めた系Aの縮約密度行列の2乗を計算します。行列が対角化されているため，各対角成分を2乗します。</p>
 <div class="arithmatex">\[
@@ -14579,10 +14593,7 @@
 \]</div>
 <p>このトレースをとることで，系Aの純粋度が得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\mathrm{Tr}(\rho_{\mathrm{A}}^2) &amp;= \frac{1}{4} + \frac{1}{4} \\
-&amp;= \finalanswer{\frac{1}{2}}
-\end{aligned}
+\mathrm{Tr}(\rho_{\mathrm{A}}^2) = \frac{1}{4} + \frac{1}{4} = \finalanswer{\frac{1}{2}}
 \]</div>
 <p><strong>物理的な意味</strong></p>
 <p>全系の純粋度が 1 であるのに対し，部分系の純粋度は <span class="arithmatex">\(\frac{1}{2}\)</span> へと減少しています。</p>

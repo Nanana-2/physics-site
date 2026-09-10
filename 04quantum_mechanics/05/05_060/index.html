@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14535,14 +14535,11 @@
 \]</div>
 <p>線形性により，括弧の中身を分配して <span class="arithmatex">\(|n\rangle\)</span> に作用させます。固有値関係 <span class="arithmatex">\(\hat{N}|n\rangle = n|n\rangle\)</span> を用います。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\hat{a}(\hat{N}|n\rangle - |n\rangle) &amp;= \hat{a}(n|n\rangle - |n\rangle) \\
-&amp;= \hat{a}(n-1)|n\rangle
-\end{aligned}
+\hat{a}(\hat{N}|n\rangle - |n\rangle) = \hat{a}(n|n\rangle - |n\rangle) = \hat{a}(n-1)|n\rangle
 \]</div>
 <p><span class="arithmatex">\(n-1\)</span> は固有値であるため，演算子の前に出すことができます。</p>
 <div class="arithmatex">\[
-\hat{N} \left( \hat{a}|n\rangle \right) = (n-1) \left( \hat{a}|n\rangle \right)
+\finalanswer{\hat{N} \left( \hat{a}|n\rangle \right) = (n-1) \left( \hat{a}|n\rangle \right)}
 \]</div>
 <p>これにより，状態 <span class="arithmatex">\(\hat{a}|n\rangle\)</span> は数演算子の固有状態であり，その固有値は元の状態より 1 だけ小さい <span class="arithmatex">\(n-1\)</span> になることが示されました。</p>
 <p>同様に，状態 <span class="arithmatex">\(\hat{a}^\dagger|n\rangle\)</span> に <span class="arithmatex">\(\hat{N}\)</span> を作用させます。</p>
@@ -14561,7 +14558,7 @@
 <div class="arithmatex">\[
 \left( \hat{a}|n\rangle \right)^\dagger \left( \hat{a}|n\rangle \right) = \langle n| \hat{a}^\dagger \hat{a} |n\rangle
 \]</div>
-<p>ここで，演算子の組み合わせは数演算子の定義そのもの <span class="arithmatex">\(\hat{a}^\dagger \hat{a} = \hat{N}\)</span> です。</p>
+<p>ここで，数演算子の定義 <span class="arithmatex">\(\hat{a}^\dagger \hat{a} = \hat{N}\)</span> を用います。</p>
 <div class="arithmatex">\[
 \langle n| \hat{a}^\dagger \hat{a} |n\rangle = \langle n| \hat{N} |n\rangle
 \]</div>

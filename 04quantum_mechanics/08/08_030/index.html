@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14547,7 +14547,7 @@
   与えられた方程式の一般解は <span class="arithmatex">\(u(\rho) = A e^{\rho/2} + B e^{-\rho/2}\)</span> です。無限遠で波動関数が 0 に収束するという境界条件を満たすためには，正の指数を持つ項の係数が <span class="arithmatex">\(A = 0\)</span> でなければなりません。したがって，妥当な解の形は以下のようになります。</li>
 </ul>
 <div class="arithmatex">\[
-  u(\rho) \propto e^{-\rho/2}
+  \finalanswer{u(\rho) \propto e^{-\rho/2}}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\(\rho \to 0\)</span> のとき</strong>
@@ -14560,7 +14560,11 @@
 <div class="arithmatex">\[
   \finalanswer{(s - l - 1)(s + l) = 0 \implies s = l+1, \, -l}
 \]</div>
-<p>原点 <span class="arithmatex">\(r = 0\)</span> において波動関数が発散せず，存在確率が定義できるためには，正の指数を選択する必要があります。したがって，求める指数は <span class="arithmatex">\(s = l+1\)</span> となります。</p>
+<p>原点 <span class="arithmatex">\(r = 0\)</span> において波動関数が発散しないためには，正の指数を選ぶ必要があります。したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{s=l+1}
+\]</div>
+<p>となります。</p>
 <h3 id="2">(2)</h3>
 <p>仮定された式 <span class="arithmatex">\(u(\rho) = \rho^{l+1} e^{-\rho/2} v(\rho)\)</span> を <span class="arithmatex">\(\rho\)</span> で2回微分します。計算のために <span class="arithmatex">\(f(\rho) = \rho^{l+1} e^{-\rho/2}\)</span> と置くと，1回微分および2回微分は以下の通りです。</p>
 <div class="arithmatex">\[
@@ -14573,7 +14577,7 @@
 <div class="arithmatex">\[
 \finalanswer{\rho \frac{d^2 v}{d\rho^2} + [2(l+1) - \rho] \frac{dv}{d\rho} + (\lambda - l - 1) v = 0}
 \]</div>
-<p>これにより，合流型超幾何微分方程式が導かれました。</p>
+<p>これにより，合流型超幾何微分方程式が得られます。</p>
 <h3 id="3">(3)</h3>
 <p>べき級数表示を (2) の方程式に代入し，各次数の係数を比較することで，係数間の漸化式が得られます。</p>
 <div class="arithmatex">\[
@@ -14585,7 +14589,7 @@ N + l + 1 - \lambda = 0 \implies \lambda = N + l + 1
 \]</div>
 <p>ここで <span class="arithmatex">\(N\)</span> は 0 以上の整数であり， <span class="arithmatex">\(l\)</span> も 0 以上の整数であるため， <span class="arithmatex">\(\lambda\)</span> は正の整数となります。これを主量子数 <span class="arithmatex">\(n = N + l + 1\)</span> と定義します。</p>
 <div class="arithmatex">\[
-\lambda = n
+\finalanswer{\lambda = n=N+l+1}
 \]</div>
 <p>問題文で定義された <span class="arithmatex">\(\lambda\)</span> の式にこれを代入し，エネルギーについて解きます。</p>
 <div class="arithmatex">\[

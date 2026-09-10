@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14531,8 +14531,8 @@
 <p>が成り立つ。</p>
 <p>単位長さ当たりの巻数が <span class="arithmatex">\(n\)</span> の十分に長いソレノイドに自由電流 <span class="arithmatex">\(I\)</span> を流し，内部を一様に磁化された磁性体で満たす。ソレノイド軸を <span class="arithmatex">\(z\)</span> 軸とし，磁化を <span class="arithmatex">\(\boldsymbol{M}=M_0\boldsymbol{e}_z\)</span> とする。端効果を無視する。</p>
 <p>(1) 軸に平行な二辺をもつ長方形のアンペール経路を用い，ソレノイド内部と外部の <span class="arithmatex">\(\boldsymbol{H}\)</span> を求めよ。内部磁場を <span class="arithmatex">\(\boldsymbol{H}_{\mathrm{in}}=H_{\mathrm{in}}\boldsymbol{e}_z\)</span> とする。</p>
-<p>(2) 構成関係から内部の <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{in}}\)</span> を求めよ。結果を自由電流が作る寄与と磁化が作る寄与に分けよ。また，<span class="arithmatex">\(M_0=0\)</span> の真空ソレノイドと比較せよ。</p>
-<p>(3) 磁性体を取り除かずに自由電流だけをゼロにする。残留磁化 <span class="arithmatex">\(M_0\)</span> が保たれると仮定し，<span class="arithmatex">\(\boldsymbol{H}_{\mathrm{in}}\)</span> と <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{in}}\)</span> を求めよ。この結果を，一様磁化円柱の側面に流れる束縛表面電流 <span class="arithmatex">\(\boldsymbol{K}_b=M_0\boldsymbol{e}_\varphi\)</span> から説明せよ。</p>
+<p>(2) 構成関係から内部の <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{in}}\)</span> を求め，自由電流による項と磁化による項に分けて表せ。</p>
+<p>(3) 磁性体を取り除かずに自由電流だけをゼロにする。残留磁化 <span class="arithmatex">\(M_0\)</span> が保たれるとして，<span class="arithmatex">\(\boldsymbol{H}_{\mathrm{in}}\)</span> と <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{in}}\)</span> を求めよ。</p>
 <hr />
 <h2 id="_2">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14551,10 +14551,10 @@ H_{\mathrm{in}}L=nLI
 <h3 id="2">(2)</h3>
 <p>構成関係へ代入すると</p>
 <div class="arithmatex">\[
-\boldsymbol{B}_{\mathrm{in}}
-=\mu_0\left(nI+M_0\right)\boldsymbol{e}_z
+\finalanswer{\boldsymbol{B}_{\mathrm{in}}
+=\mu_0\left(nI+M_0\right)\boldsymbol{e}_z}
 \]</div>
-<p>です。右辺第一項 <span class="arithmatex">\(\mu_0nI\boldsymbol{e}_z\)</span> が自由電流，第二項 <span class="arithmatex">\(\mu_0M_0\boldsymbol{e}_z\)</span> が磁化による寄与です。真空では <span class="arithmatex">\(M_0=0\)</span> なので</p>
+<p>です。右辺第一項 <span class="arithmatex">\(\mu_0nI\boldsymbol{e}_z\)</span> は自由電流から生じ，第二項 <span class="arithmatex">\(\mu_0M_0\boldsymbol{e}_z\)</span> は磁化から生じます。真空では <span class="arithmatex">\(M_0=0\)</span> なので</p>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{B}_{\mathrm{vac}}
 =\mu_0nI\boldsymbol{e}_z}
@@ -14563,7 +14563,7 @@ H_{\mathrm{in}}L=nLI
 <h3 id="3">(3)</h3>
 <p>自由電流をゼロにすると，アンペールの法則の右辺もゼロです。無限長近似では</p>
 <div class="arithmatex">\[
-\boldsymbol{H}_{\mathrm{in}}=\boldsymbol{0}
+\finalanswer{\boldsymbol{H}_{\mathrm{in}}=\boldsymbol{0}}
 \]</div>
 <p>となります。一方，残留磁化は保たれるので</p>
 <div class="arithmatex">\[

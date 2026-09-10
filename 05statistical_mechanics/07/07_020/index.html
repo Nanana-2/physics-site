@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,8 +14522,8 @@
 <div class="arithmatex">\[
 \epsilon_F = \frac{\hbar^2}{2m} \left( 3\pi^2 \rho \right)^{2/3}
 \]</div>
-<p>この量子力学的なエネルギー尺度を，ボルツマン定数 <span class="arithmatex">\(k_B\)</span> を用いて通常の熱エネルギーの温度次元へと換算した指標をフェルミ温度 <span class="arithmatex">\(T_F\)</span> と呼び， <span class="arithmatex">\(k_B T_F = \epsilon_F\)</span> によって定義する。以下の問いに答えよ。</p>
-<p>(1) フェルミ温度 <span class="arithmatex">\(T_F\)</span> の定義式を明示し， <span class="arithmatex">\(T_F\)</span> を <span class="arithmatex">\(\rho, m, \hbar, k_B\)</span> を用いて表せ。</p>
+<p>この量子力学的なエネルギー尺度を，ボルツマン定数 <span class="arithmatex">\(k_{\text{B}}\)</span> を用いて通常の熱エネルギーの温度次元へと換算した指標をフェルミ温度 <span class="arithmatex">\(T_F\)</span> と呼び， <span class="arithmatex">\(k_{\text{B}} T_F = \epsilon_F\)</span> によって定義する。以下の問いに答えよ。</p>
+<p>(1) フェルミ温度 <span class="arithmatex">\(T_F\)</span> の定義式を明示し， <span class="arithmatex">\(T_F\)</span> を <span class="arithmatex">\(\rho, m, \hbar, k_{\text{B}}\)</span> を用いて表せ。</p>
 <p>(2) 一般に，系の温度が <span class="arithmatex">\(T \ll T_F\)</span> を満たすとき，フェルミ分布の熱的な広がりはフェルミエネルギーに比べて小さく，系はフェルミ縮退した状態にある。</p>
 <p>典型的な金属の自由電子ガスでは <span class="arithmatex">\(T_F = 5.0 \times 10^4\,\mathrm{K}\)</span> 程度である。室温を <span class="arithmatex">\(T=300\,\mathrm{K}\)</span> として比 <span class="arithmatex">\(T/T_F\)</span> を求め，電子気体がフェルミ縮退しているか判定せよ。</p>
 <p>(3) フェルミ分布</p>
@@ -14534,26 +14534,22 @@ f(\epsilon)=\frac{1}{\exp[\beta(\epsilon-\mu)]+1}
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>フェルミ温度 <span class="arithmatex">\(T_F\)</span> の定義式 <span class="arithmatex">\(k_B T_F = \epsilon_F\)</span> の両辺をボルツマン定数 <span class="arithmatex">\(k_B\)</span> で割ります。ここにフェルミエネルギーの具体的な表現を代入することで，求める式が得られます。</p>
+<p>フェルミ温度 <span class="arithmatex">\(T_F\)</span> の定義式 <span class="arithmatex">\(k_{\text{B}} T_F = \epsilon_F\)</span> の両辺をボルツマン定数 <span class="arithmatex">\(k_{\text{B}}\)</span> で割ります。ここにフェルミエネルギーの具体的な表現を代入することで，求める式が得られます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-T_F &amp;= \frac{\epsilon_F}{k_B} \\
-&amp;= \finalanswer{\frac{\hbar^2}{2m k_B} \left( 3\pi^2 \rho \right)^{2/3}}
+T_F &amp;= \frac{\epsilon_F}{k_{\text{B}}} \\
+&amp;= \finalanswer{\frac{\hbar^2}{2m k_{\text{B}}} \left( 3\pi^2 \rho \right)^{2/3}}
 \end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <div class="arithmatex">\[
 \finalanswer{\frac{T}{T_F}=\frac{300}{5.0\times10^4}=6.0\times10^{-3}\ll1}
 \]</div>
-<p>したがって室温でも <span class="arithmatex">\(T \ll T_F\)</span> が成り立ち，電子気体はフェルミ縮退しています。熱励起に関与するのは，主としてフェルミ面から <span class="arithmatex">\(k_BT\)</span> 程度の範囲にある電子です。</p>
+<p>したがって室温でも <span class="arithmatex">\(T \ll T_F\)</span> が成り立ち，電子気体はフェルミ縮退しています。熱励起に関与するのは，主としてフェルミ面から <span class="arithmatex">\(k_{\text{B}}T\)</span> 程度の範囲にある電子です。</p>
 <h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(\exp[\beta(\epsilon-\mu)] \gg 1\)</span> ならば，分母の <span class="arithmatex">\(1\)</span> を無視できるため</p>
 <div class="arithmatex">\[
-\begin{aligned}
-f(\epsilon)
-&amp;\simeq \exp[-\beta(\epsilon-\mu)] \\
-&amp;= \finalanswer{e^{\beta\mu}e^{-\beta\epsilon}}
-\end{aligned}
+f(\epsilon) \simeq \exp[-\beta(\epsilon-\mu)] = \finalanswer{e^{\beta\mu}e^{-\beta\epsilon}}
 \]</div>
 <p>となります。これはエネルギーに対するマクスウェル・ボルツマン分布です。各状態の占有確率が十分に小さい極限では，パウリの排他原理による補正が無視でき，フェルミ気体は古典理想気体に近づきます。</p>
 

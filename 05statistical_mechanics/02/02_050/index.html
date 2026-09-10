@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,9 +14525,9 @@
 \]</div>
 <p>これを用いて，量子論的な補正を取り入れた全状態数 <span class="arithmatex">\(\Omega\)</span> の対数 <span class="arithmatex">\(\log \Omega\)</span> を書き下せ。</p>
 <p>(2) <span class="arithmatex">\(N\)</span> が非常に大きい熱力学極限において，<span class="arithmatex">\(\log N!\)</span> および <span class="arithmatex">\(\left(\frac{3N}{2}\right)!\)</span> の項にスターリングの公式 <span class="arithmatex">\(\log X! \simeq X \log X - X\)</span> を適用し，<span class="arithmatex">\(\log \Omega\)</span> を <span class="arithmatex">\(N\)</span> に比例する形へ整理せよ。</p>
-<p>(3) ボルツマンエントロピー <span class="arithmatex">\(S = k_B \log \Omega\)</span> を求め，次の形へ整理せよ。</p>
+<p>(3) ボルツマンエントロピー <span class="arithmatex">\(S = k_{\text{B}} \log \Omega\)</span> を求め，次の形へ整理せよ。</p>
 <div class="arithmatex">\[
-S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
+S(E,V,N)=Nk_{\text{B}}\left[\log\left(\frac{V}{N}\right)
 +\frac{3}{2}\log\left(\frac{4\pi mE}{3Nh^2}\right)+\frac{5}{2}\right]
 \]</div>
 <p>さらに，<span class="arithmatex">\(E,V,N\)</span> を同時に <span class="arithmatex">\(\lambda\)</span> 倍したとき，<span class="arithmatex">\(S\)</span> も <span class="arithmatex">\(\lambda\)</span> 倍となることを示せ。</p>
@@ -14540,7 +14540,11 @@ S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
 \]</div>
 <p>この式の自然対数をとり，各因子の積を和と差の形に展開します。</p>
 <div class="arithmatex">\[
-\log \Omega = \finalanswer{N \log V + \frac{3N}{2} \log \pi + \frac{3N}{2} \log (2mE)} - N \log h^3 - \log N! - \log \left(\frac{3N}{2}\right)!
+\begin{aligned}
+\log\Omega
+&amp;= \finalanswer{N\log V+\frac{3N}{2}\log\pi+\frac{3N}{2}\log(2mE)} \\
+&amp;\quad \finalanswer{{}-3N\log h-\log N!-\log\left(\frac{3N}{2}\right)!}
+\end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>展開した式の後ろ2項にある階乗の対数に対し，スターリングの公式をそれぞれ適用します。</p>
@@ -14552,13 +14556,23 @@ S(E,V,N)=Nk_B\left[\log\left(\frac{V}{N}\right)
 \]</div>
 <p>これらを (1) の式に代入し，マイナスの符号に注意して整理します。</p>
 <div class="arithmatex">\[
-\log \Omega \simeq N \log V + \frac{3N}{2} \log \pi + \frac{3N}{2} \log (2mE) - 3N \log h - (N \log N - N) - \left[ \frac{3N}{2} \log \left(\frac{3N}{2}\right) - \frac{3N}{2} \right]
+\begin{aligned}
+\log\Omega
+&amp;\simeq N\log V+\frac{3N}{2}\log\pi+\frac{3N}{2}\log(2mE)-3N\log h \\
+&amp;\quad -(N\log N-N)
+-\left[\frac{3N}{2}\log\left(\frac{3N}{2}\right)-\frac{3N}{2}\right]
+\end{aligned}
 \]</div>
 <p>定数項を集めつつ，対数の引数を整理していきます。</p>
 <div class="arithmatex">\[
-\log \Omega \simeq N \log V - N \log N + \frac{3N}{2} \log (2mE) - \frac{3N}{2} \log \left(\frac{3N}{2}\right) + \frac{3N}{2} \log \pi - 3N \log h + N + \frac{3N}{2}
+\begin{aligned}
+\log\Omega
+&amp;\simeq N\log V-N\log N
++\frac{3N}{2}\log(2mE)-\frac{3N}{2}\log\left(\frac{3N}{2}\right) \\
+&amp;\quad +\frac{3N}{2}\log\pi-3N\log h+N+\frac{3N}{2}
+\end{aligned}
 \]</div>
-<p>ここで，第1項と第2項，および第3項と第4項をそれぞれ対数の性質を用いて結合させます。</p>
+<p>ここで，第1項と第2項，および第3項と第4項をそれぞれ対数の性質を用いてまとめます。</p>
 <div class="arithmatex">\[
 N \log V - N \log N = N \log \left( \frac{V}{N} \right)
 \]</div>
@@ -14570,12 +14584,17 @@ N \log V - N \log N = N \log \left( \frac{V}{N} \right)
 \]</div>
 <p>これらを元の式に戻し，残りの対数項 <span class="arithmatex">\(\log \pi\)</span> や <span class="arithmatex">\(\log h\)</span> も括弧の中にまとめます。</p>
 <div class="arithmatex">\[
-\finalanswer{\log \Omega \simeq N \log \left( \frac{V}{N} \right) + \frac{3N}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2}N}
+\begin{aligned}
+\log\Omega
+&amp;\simeq \finalanswer{N\log\left(\frac{V}{N}\right)
++\frac{3N}{2}\log\left(\frac{4\pi mE}{3Nh^2}\right)} \\
+&amp;\quad \finalanswer{{}+\frac{5}{2}N}
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた <span class="arithmatex">\(\log \Omega\)</span> にボルツマン定数 <span class="arithmatex">\(k_B\)</span> を掛け，共通因子 <span class="arithmatex">\(N\)</span> を括り出します。</p>
+<p>(2) で得られた <span class="arithmatex">\(\log \Omega\)</span> にボルツマン定数 <span class="arithmatex">\(k_{\text{B}}\)</span> を掛け，共通因子 <span class="arithmatex">\(N\)</span> を括り出します。</p>
 <div class="arithmatex">\[
-S(E, V, N) = N k_B \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2} \right]
+S(E, V, N) = N k_{\text{B}} \left[ \log \left( \frac{V}{N} \right) + \frac{3}{2} \log \left( \frac{4\pi m E}{3N h^2} \right) + \frac{5}{2} \right]
 \]</div>
 <p>この式はサッカー・テトロード方程式と呼ばれます。<span class="arithmatex">\(E,V,N\)</span> を同時に <span class="arithmatex">\(\lambda\)</span> 倍すると，対数内の <span class="arithmatex">\(V/N\)</span> と <span class="arithmatex">\(E/N\)</span> は変化せず，括弧の外の <span class="arithmatex">\(N\)</span> だけが <span class="arithmatex">\(\lambda N\)</span> になります。したがって，</p>
 <div class="arithmatex">\[

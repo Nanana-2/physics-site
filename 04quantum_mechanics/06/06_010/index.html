@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14535,13 +14535,11 @@
 <h3 id="1">(1)</h3>
 <p>外積の成分表示の定義に従って，各演算子を書き下します。右手系の行列式の展開に対応します。</p>
 <div class="arithmatex">\[
-\hat{L}_x = \hat{y}\hat{p}_z - \hat{z}\hat{p}_y
-\]</div>
-<div class="arithmatex">\[
-\hat{L}_y = \hat{z}\hat{p}_x - \hat{x}\hat{p}_z
-\]</div>
-<div class="arithmatex">\[
+\begin{aligned}
+\finalanswer{\hat{L}_x = \hat{y}\hat{p}_z - \hat{z}\hat{p}_y}, \\
+\finalanswer{\hat{L}_y = \hat{z}\hat{p}_x - \hat{x}\hat{p}_z}, \\
 \finalanswer{\hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x}
+\end{aligned}
 \]</div>
 <p>たとえば <span class="arithmatex">\(y\)</span> と <span class="arithmatex">\(p_z\)</span> のように，位置と運動量の異なる成分は互いに可換です。したがって，これらの積の順序は入れ替えられます。</p>
 <h3 id="2">(2)</h3>
@@ -14562,7 +14560,7 @@
 \]</div>
 <p>位置成分同士は可換なので <span class="arithmatex">\([\hat{z}, \hat{y}] = 0\)</span> です。基本交換関係 <span class="arithmatex">\([\hat{y}, \hat{p}_y] = i\hbar\)</span> より <span class="arithmatex">\([\hat{p}_y, \hat{y}] = -i\hbar\)</span> となります。</p>
 <div class="arithmatex">\[
-  [\hat{L}_x, \hat{y}] = -\hat{z}(-i\hbar) = i\hbar \hat{z}
+  \finalanswer{[\hat{L}_x, \hat{y}] = i\hbar \hat{z}}
 \]</div>
 <ul>
 <li><strong><span class="arithmatex">\([\hat{L}_x, \hat{p}_y]\)</span> の計算</strong>
@@ -14582,6 +14580,9 @@
 &amp;= \finalanswer{i\hbar \hat{p}_z}
 \end{aligned}
 \]</div>
+<div class="arithmatex">\[
+\finalanswer{[\hat{L}_x, \hat{p}_y] = i\hbar \hat{p}_z}
+\]</div>
 <h3 id="3">(3)</h3>
 <p>(1) で求めた <span class="arithmatex">\(\hat{L}_y\)</span> の式を代入して交換関係を展開します。</p>
 <div class="arithmatex">\[
@@ -14591,31 +14592,21 @@
 \end{aligned}
 \]</div>
 <p>それぞれの項に積の交換関係の公式を適用します。</p>
-<ul>
-<li>第1項：</li>
-</ul>
+<p><strong>第1項</strong></p>
 <div class="arithmatex">\[
   [\hat{L}_x, \hat{z}\hat{p}_x] = [\hat{L}_x, \hat{z}]\hat{p}_x + \hat{z}[\hat{L}_x, \hat{p}_x]
 \]</div>
 <p>(2) と同様の計算から <span class="arithmatex">\([\hat{L}_x, \hat{z}] = -i\hbar \hat{y}\)</span> が得られます。また， <span class="arithmatex">\(\hat{L}_x\)</span> は <span class="arithmatex">\(x\)</span> 成分の演算子を含まないため <span class="arithmatex">\([\hat{L}_x, \hat{p}_x] = 0\)</span> です。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-[\hat{L}_x, \hat{z}\hat{p}_x] &amp;= (-i\hbar \hat{y})\hat{p}_x \\
-&amp;= -i\hbar \hat{y}\hat{p}_x
-\end{aligned}
+[\hat{L}_x, \hat{z}\hat{p}_x] = (-i\hbar \hat{y})\hat{p}_x = -i\hbar \hat{y}\hat{p}_x
 \]</div>
-<ul>
-<li>第2項：</li>
-</ul>
+<p><strong>第2項</strong></p>
 <div class="arithmatex">\[
   [\hat{L}_x, \hat{x}\hat{p}_z] = [\hat{L}_x, \hat{x}]\hat{p}_z + \hat{x}[\hat{L}_x, \hat{p}_z]
 \]</div>
 <p><span class="arithmatex">\(\hat{L}_x\)</span> と <span class="arithmatex">\(\hat{x}\)</span> は可換なので <span class="arithmatex">\([\hat{L}_x, \hat{x}] = 0\)</span> です。(2) と同様の計算から <span class="arithmatex">\([\hat{L}_x, \hat{p}_z] = -i\hbar \hat{p}_y\)</span> が得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-[\hat{L}_x, \hat{x}\hat{p}_z] &amp;= \hat{x}(-i\hbar \hat{p}_y) \\
-&amp;= -i\hbar \hat{x}\hat{p}_y
-\end{aligned}
+[\hat{L}_x, \hat{x}\hat{p}_z] = \hat{x}(-i\hbar \hat{p}_y) = -i\hbar \hat{x}\hat{p}_y
 \]</div>
 <p>これらを元の式に引き算として戻します。</p>
 <div class="arithmatex">\[
@@ -14624,11 +14615,11 @@
 &amp;= i\hbar (\hat{x}\hat{p}_y - \hat{y}\hat{p}_x)
 \end{aligned}
 \]</div>
-<p>括弧の中身は (1) で書き下した <span class="arithmatex">\(\hat{L}_z\)</span> そのものです。</p>
+<p>括弧内は (1) で求めた <span class="arithmatex">\(\hat{L}_z\)</span> に等しいので，</p>
 <div class="arithmatex">\[
 \finalanswer{[\hat{L}_x, \hat{L}_y] = i\hbar \hat{L}_z}
 \]</div>
-<p>成分を巡回 <span class="arithmatex">\(x \to y \to z \to x\)</span> させた場合も同様の関係が成り立ち，角運動量に特有の交換関係が導かれました。</p>
+<p>成分を巡回 <span class="arithmatex">\(x \to y \to z \to x\)</span> させた場合も同様の関係が成り立ち，角運動量に特有の交換関係が得られます。</p>
 
 
 

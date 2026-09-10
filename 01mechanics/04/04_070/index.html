@@ -3672,34 +3672,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14570,11 +14570,7 @@ P(t+dt) = (m + dm)(v + dv) + (-dm)(v - u)
 \]</div>
 <p>となります。この式を展開すると，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-P(t+dt) &amp;= mv + m dv + v dm + dm dv - v dm + u dm
-\\
-&amp;= mv + m dv + u dm + dm dv  
-\end{aligned}
+P(t+dt) = mv + m dv + v dm + dm dv - v dm + u dm = mv + m dv + u dm + dm dv
 \]</div>
 <p>が得られます。</p>
 <p>外力が働かないため，系全体の運動量について <span class="arithmatex">\(P(t) = P(t+dt)\)</span> が成り立ちます。</p>
@@ -14588,7 +14584,7 @@ m dv + u dm + dm dv = 0
 <div class="arithmatex">\[
 m dv + u dm = 0
 \]</div>
-<p>となります。両辺を微小時間 <span class="arithmatex">\(dt\)</span> で割ることで，求める微分方程式が導かれます。</p>
+<p>となります。両辺を微小時間 <span class="arithmatex">\(dt\)</span> で割ることで，求める微分方程式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{dv}{dt} = -u \frac{dm}{dt}}
 \]</div>
@@ -14627,7 +14623,7 @@ P(t+dt) - P(t) = F dt = -mg dt
 <div class="arithmatex">\[
 m dv + u dm = -mg dt
 \]</div>
-<p>が得られます。両辺を <span class="arithmatex">\(dt\)</span> で割ることで，重力がある場合のロケットの運動方程式が導かれます。</p>
+<p>が得られます。両辺を <span class="arithmatex">\(dt\)</span> で割ることで，重力がある場合のロケットの運動方程式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{m \frac{dv}{dt} = -u \frac{dm}{dt} - mg}
 \]</div>
@@ -14643,11 +14639,7 @@ m \frac{dv}{dt} = ur - mg
 \]</div>
 <p>両辺を <span class="arithmatex">\(m\)</span> で割ると，</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dv}{dt}
-&amp;= \frac{ur}{m} - g \\
-&amp;= \frac{ur}{m_0 - rt} - g
-\end{aligned}
+\frac{dv}{dt} = \frac{ur}{m} - g = \frac{ur}{m_0 - rt} - g
 \]</div>
 <p>となります。この微分方程式を，初期条件 <span class="arithmatex">\(t=0\)</span> で <span class="arithmatex">\(v(0)=v_0\)</span> のもとで時間 <span class="arithmatex">\(t\)</span> について積分します。</p>
 <div class="arithmatex">\[

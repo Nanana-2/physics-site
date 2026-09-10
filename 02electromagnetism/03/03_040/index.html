@@ -14,7 +14,7 @@
         <link rel="prev" href="../03_030/">
       
       
-        <link rel="next" href="../03_050/">
+        <link rel="next" href="../03_060/">
       
       
         
@@ -3672,34 +3672,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14542,7 +14542,7 @@
 <h2 id="_2">問題</h2>
 <p>面積 <span class="arithmatex">\(S\)</span>，板間距離 <span class="arithmatex">\(d\)</span> の平行板コンデンサーを考える。端効果を無視する。はじめは板間が真空であり，初期静電容量，電場，電位差，電荷，静電エネルギーをそれぞれ <span class="arithmatex">\(C_0,E_0,V_0,Q_0,U_0\)</span> とする。その後，比誘電率 <span class="arithmatex">\(\kappa&gt;1\)</span> の線形誘電体を板間全体へ隙間なく挿入し，挿入後の量を <span class="arithmatex">\(C,E,V,Q,U\)</span> とする。</p>
 <p>(1) 真空中の容量 <span class="arithmatex">\(C_0\)</span> と誘電体挿入後の容量 <span class="arithmatex">\(C\)</span> を求め，<span class="arithmatex">\(C/C_0\)</span> を示せ。</p>
-<p>(2) コンデンサーを電池から切り離し，自由電荷を <span class="arithmatex">\(Q=Q_0\)</span> に保って誘電体を挿入する。<span class="arithmatex">\(E/E_0\)</span>，<span class="arithmatex">\(V/V_0\)</span>，<span class="arithmatex">\(U/U_0\)</span> を求めよ。減少した静電エネルギー <span class="arithmatex">\(\Delta U=U-U_0\)</span> の符号を示し，誘電体へ機械的な仕事がなされることを説明せよ。</p>
+<p>(2) コンデンサーを電池から切り離し，自由電荷を <span class="arithmatex">\(Q=Q_0\)</span> に保って誘電体を挿入する。<span class="arithmatex">\(E/E_0\)</span>，<span class="arithmatex">\(V/V_0\)</span>，<span class="arithmatex">\(U/U_0\)</span> および静電エネルギーの変化 <span class="arithmatex">\(\Delta U=U-U_0\)</span> を求めよ。</p>
 <p>(3) 今度は電位差 <span class="arithmatex">\(V_0\)</span> の理想電池へ接続したまま誘電体を挿入する。この場合は <span class="arithmatex">\(V=V_0\)</span> である。<span class="arithmatex">\(E/E_0\)</span>，<span class="arithmatex">\(Q/Q_0\)</span>，<span class="arithmatex">\(U/U_0\)</span> を求め，電池からコンデンサーへ移動する電荷 <span class="arithmatex">\(\Delta Q=Q-Q_0\)</span> を求めよ。</p>
 <p>(4) 誘電体が板間の面積 <span class="arithmatex">\(S/2\)</span> だけを満たし，残りの面積 <span class="arithmatex">\(S/2\)</span> が真空である配置を考える。両領域はともに板間距離 <span class="arithmatex">\(d\)</span> をもち，同じ電位差がかかる。合成静電容量を <span class="arithmatex">\(C_{\mathrm{half}}\)</span> として求め，<span class="arithmatex">\(C_{\mathrm{half}}/C_0\)</span> を示せ。</p>
 <hr />
@@ -14550,7 +14550,7 @@
 <h3 id="1">(1)</h3>
 <p>挿入前の静電容量を <span class="arithmatex">\(C_0\)</span> とすると</p>
 <div class="arithmatex">\[
-C_0=\frac{\varepsilon_0S}{d}
+\finalanswer{C_0=\frac{\varepsilon_0S}{d}}
 \]</div>
 <p>です。誘電体を満たすと誘電率は <span class="arithmatex">\(\kappa\varepsilon_0\)</span> になるので</p>
 <div class="arithmatex">\[
@@ -14560,7 +14560,7 @@ C_0=\frac{\varepsilon_0S}{d}
 <h3 id="2">(2)</h3>
 <p>自由電荷 <span class="arithmatex">\(Q\)</span> が一定なので，電束密度は <span class="arithmatex">\(D=Q/S\)</span> のままです。したがって</p>
 <div class="arithmatex">\[
-E=\frac{D}{\kappa\varepsilon_0}=\frac{E_0}{\kappa}
+\finalanswer{\frac{E}{E_0}=\frac{V}{V_0}=\frac{1}{\kappa}}
 \]</div>
 <p>です。<span class="arithmatex">\(V=Ed\)</span> より電位差も <span class="arithmatex">\(1/\kappa\)</span> 倍です。エネルギーは</p>
 <div class="arithmatex">\[
@@ -14570,7 +14570,7 @@ E=\frac{D}{\kappa\varepsilon_0}=\frac{E_0}{\kappa}
 <h3 id="3">(3)</h3>
 <p>電位差が一定なので <span class="arithmatex">\(E=V/d\)</span> は変わりません。電荷は</p>
 <div class="arithmatex">\[
-Q=CV=\kappa C_0V=\kappa Q_0
+\finalanswer{\frac{E}{E_0}=1,\qquad \frac{Q}{Q_0}=\kappa}
 \]</div>
 <p>となります。コンデンサー内のエネルギーは</p>
 <div class="arithmatex">\[
@@ -14682,13 +14682,13 @@ Q=CV=\kappa C_0V=\kappa Q_0
         
         
           
-          <a href="../03_050/" class="md-footer__link md-footer__link--next" aria-label="Next: 誘電体境界面での境界条件">
+          <a href="../03_060/" class="md-footer__link md-footer__link--next" aria-label="Next: 一様分極した球が作る電場">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                誘電体境界面での境界条件
+                一様分極した球が作る電場
               </div>
             </div>
             <div class="md-footer__button md-icon">

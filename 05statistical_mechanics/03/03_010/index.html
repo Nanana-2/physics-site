@@ -25,7 +25,7 @@
     
     
       
-        <title>ボルツマン因子と分配関数 - 大学物理の問題集</title>
+        <title>ボルツマン因子と状態の縮退 - 大学物理の問題集</title>
       
     
     
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ボルツマン因子と分配関数
+              ボルツマン因子と状態の縮退
             
           </span>
         </div>
@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11065,7 +11065,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -11083,7 +11083,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14516,68 +14516,56 @@
 
 
 
-<h1 id="_1">ボルツマン因子と分配関数</h1>
+<h1 id="_1">ボルツマン因子と状態の縮退</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の十分に大きな熱浴と熱的に接触し，平衡状態にある微視的な系を考える。この系がとりうる微視的状態を <span class="arithmatex">\(r\)</span> とし，状態 <span class="arithmatex">\(r\)</span> における系のエネルギーを <span class="arithmatex">\(E_r\)</span> とする。孤立系を表すミクロカノニカル分布からカノニカル分布を導出する。以下の問いに答えよ。</p>
-<p>(1) 系がエネルギー <span class="arithmatex">\(E_r\)</span> をもつ状態 <span class="arithmatex">\(r\)</span> にある確率は，熱源の微視的状態数 <span class="arithmatex">\(\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> に比例する。熱源のエントロピー <span class="arithmatex">\(S_{\mathrm{B}} = k_B \log \Omega_{\mathrm{B}}\)</span> を用いて，この確率が</p>
-<div class="arithmatex">\[
-\exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]
-\]</div>
-<p>に比例することを示せ。</p>
-<p>(2) 系のエネルギー <span class="arithmatex">\(E_r\)</span> が熱浴の全エネルギー <span class="arithmatex">\(E_{\mathrm{tot}}\)</span> に比べて十分に小さく，<span class="arithmatex">\(E_r \ll E_{\mathrm{tot}}\)</span> を満たすとする。<span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> を <span class="arithmatex">\(E_r = 0\)</span> のまわりで1次までテイラー展開せよ。これより，状態 <span class="arithmatex">\(r\)</span> が実現する確率 <span class="arithmatex">\(P_r\)</span> がボルツマン因子 <span class="arithmatex">\(\exp(-\beta E_r)\)</span> に比例することを導け。ただし <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。</p>
-<p>(3) 確率の規格化条件 <span class="arithmatex">\(\sum_r P_r = 1\)</span> を用いて，状態 <span class="arithmatex">\(r\)</span> の実現確率 <span class="arithmatex">\(P_r\)</span> を求めよ。また，その分母に現れる状態和を分配関数 <span class="arithmatex">\(Z\)</span> として定義せよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と接する1粒子系を考える。エネルギー準位は <span class="arithmatex">\(0\)</span>，<span class="arithmatex">\(\varepsilon\)</span>，<span class="arithmatex">\(2\varepsilon\)</span> であり，各準位の縮退度はそれぞれ <span class="arithmatex">\(1\)</span>，<span class="arithmatex">\(2\)</span>，<span class="arithmatex">\(1\)</span> である。逆温度を <span class="arithmatex">\(\beta=1/(k_{\text{B}}T)\)</span> とする。以下の問いに答えよ。</p>
+<p>(1) 分配関数 <span class="arithmatex">\(Z\)</span> と，各エネルギー準位が実現する確率 <span class="arithmatex">\(P_0\)</span>，<span class="arithmatex">\(P_{\varepsilon}\)</span>，<span class="arithmatex">\(P_{2\varepsilon}\)</span> を求めよ。</p>
+<p>(2) 比 <span class="arithmatex">\(P_{\varepsilon}/P_0\)</span> を求めよ。また，<span class="arithmatex">\(P_{\varepsilon}=P_0\)</span> となる温度を求めよ。</p>
+<p>(3) <span class="arithmatex">\(T\to0\)</span> および <span class="arithmatex">\(T\to\infty\)</span> における各確率の極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>系と熱浴を合わせた全体は孤立系です。系がエネルギー <span class="arithmatex">\(E_r\)</span> の状態 <span class="arithmatex">\(r\)</span> にあるとき，熱浴がとりうる微視的状態数は <span class="arithmatex">\(\Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> となります。したがって，系が状態 <span class="arithmatex">\(r\)</span> をとる確率 <span class="arithmatex">\(P_r\)</span> はこの状態数に比例します。</p>
-<div class="arithmatex">\[
-P_r \propto \Omega_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)
-\]</div>
-<p>熱源のボルツマンエントロピーの定義 <span class="arithmatex">\(S_{\mathrm{B}} = k_B \log \Omega_{\mathrm{B}}\)</span> の両辺の指数をとると，<span class="arithmatex">\(\Omega_{\mathrm{B}} = \exp\left( \frac{S_{\mathrm{B}}}{k_B} \right)\)</span> となります。これを上の比例式に代入することで，確率が以下のようにエントロピーを用いて表されることが示されます。</p>
-<div class="arithmatex">\[
-\finalanswer{P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)}{k_B} \right]}
-\]</div>
-<h3 id="2">(2)</h3>
-<p>熱浴のエントロピー <span class="arithmatex">\(S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r)\)</span> を <span class="arithmatex">\(E_r=0\)</span> のまわりで1次までテイラー展開します。</p>
-<div class="arithmatex">\[
-S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r) \simeq S_{\mathrm{B}}(E_{\mathrm{tot}}) - \left. \frac{\partial S_{\mathrm{B}}}{\partial E} \right|_{E = E_{\mathrm{tot}}} E_r
-\]</div>
-<p>熱力学的な温度の定義より，熱源のエネルギー微分は熱源の温度 <span class="arithmatex">\(T\)</span> の逆数に等しくなります。</p>
-<div class="arithmatex">\[
-\frac{\partial S_{\mathrm{B}}}{\partial E} = \frac{1}{T}
-\]</div>
-<p>これを展開式に代入します。</p>
-<div class="arithmatex">\[
-S_{\mathrm{B}}(E_{\mathrm{tot}} - E_r) \simeq S_{\mathrm{B}}(E_{\mathrm{tot}}) - \frac{E_r}{T}
-\]</div>
-<p>この結果を (1) の指数の肩に代入します。</p>
-<div class="arithmatex">\[
-P_r \propto \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}}) - \frac{E_r}{T}}{k_B} \right] = \exp\left[ \frac{S_{\mathrm{B}}(E_{\mathrm{tot}})}{k_B} \right] \cdot \exp\left( -\frac{E_r}{k_B T} \right)
-\]</div>
-<p>第1因子の <span class="arithmatex">\(\exp[S_{\mathrm{B}}(E_{\mathrm{tot}})/k_B]\)</span> は状態 <span class="arithmatex">\(r\)</span> に依存しない共通の定数であるため，比例関係から除外することができます。逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を導入すると，確率 <span class="arithmatex">\(P_r\)</span> がボルツマン因子に比例することが導かれます。</p>
-<div class="arithmatex">\[
-\finalanswer{P_r \propto \exp(-\beta E_r)}
-\]</div>
-<h3 id="3">(3)</h3>
-<p>(2) の比例関係から，適当な規格化定数 <span class="arithmatex">\(C\)</span> を用いて <span class="arithmatex">\(P_r = C \exp(-\beta E_r)\)</span> とおきます。全確率の和が <span class="arithmatex">\(1\)</span> になるという規格化条件を適用します。</p>
-<div class="arithmatex">\[
-\sum_r P_r = \sum_r C \exp(-\beta E_r) = C \sum_r \exp(-\beta E_r) = 1
-\]</div>
-<p>これより，規格化定数 <span class="arithmatex">\(C\)</span> が以下のように求まります。</p>
-<div class="arithmatex">\[
-C = \frac{1}{\sum_r \exp(-\beta E_r)}
-\]</div>
-<p>したがって，状態 <span class="arithmatex">\(r\)</span> の実現確率は以下のカノニカル分布で与えられます。</p>
+<p>縮退度 <span class="arithmatex">\(g_i\)</span> をもつエネルギー準位 <span class="arithmatex">\(E_i\)</span> のボルツマン重率は <span class="arithmatex">\(g_i e^{-\beta E_i}\)</span> です。したがって，分配関数は</p>
 <div class="arithmatex">\[
 \begin{aligned}
-P_r &amp;= \frac{\exp(-\beta E_r)}{\sum_r \exp(-\beta E_r)} \\
-&amp;= \frac{1}{Z} \exp(-\beta E_r)
+Z
+&amp;=1+2e^{-\beta\varepsilon}+e^{-2\beta\varepsilon} \\
+&amp;=\finalanswer{\left(1+e^{-\beta\varepsilon}\right)^2}
 \end{aligned}
 \]</div>
-<p>この分母にあるすべての微視的状態にわたるボルツマン因子の和 <span class="arithmatex">\(Z\)</span> は分配関数と定義され，数式としては以下のように表されます。</p>
+<p>となります。各準位の確率は，それぞれのボルツマン重率を <span class="arithmatex">\(Z\)</span> で割って</p>
 <div class="arithmatex">\[
-\finalanswer{Z(\beta) = \sum_r \exp(-\beta E_r)}
+\finalanswer{
+P_0=\frac{1}{Z},\qquad
+P_{\varepsilon}=\frac{2e^{-\beta\varepsilon}}{Z},\qquad
+P_{2\varepsilon}=\frac{e^{-2\beta\varepsilon}}{Z}
+}
 \]</div>
+<p>と求められます。<span class="arithmatex">\(P_{\varepsilon}\)</span> はエネルギー <span class="arithmatex">\(\varepsilon\)</span> をもつ2状態の確率を合わせたものです。</p>
+<h3 id="2">(2)</h3>
+<p>(1) の結果から</p>
+<div class="arithmatex">\[
+\finalanswer{\frac{P_{\varepsilon}}{P_0}=2e^{-\beta\varepsilon}}
+\]</div>
+<p>です。<span class="arithmatex">\(P_{\varepsilon}=P_0\)</span> の条件は</p>
+<div class="arithmatex">\[
+2e^{-\beta\varepsilon}=1
+\]</div>
+<p>であるため，<span class="arithmatex">\(\beta\varepsilon=\log 2\)</span> となります。よって</p>
+<div class="arithmatex">\[
+\finalanswer{T=\frac{\varepsilon}{k_{\text{B}}\log 2}}
+\]</div>
+<p>です。</p>
+<h3 id="3">(3)</h3>
+<p><span class="arithmatex">\(T\to0\)</span> では <span class="arithmatex">\(\beta\to\infty\)</span> となり，励起準位のボルツマン因子は0に近づきます。したがって</p>
+<div class="arithmatex">\[
+\finalanswer{(P_0,P_{\varepsilon},P_{2\varepsilon})\to(1,0,0)}
+\]</div>
+<p>です。一方，<span class="arithmatex">\(T\to\infty\)</span> では <span class="arithmatex">\(\beta\to0\)</span> となり，各微視的状態の確率が等しくなります。全状態数は4であり，エネルギー <span class="arithmatex">\(\varepsilon\)</span> の準位だけが2重に縮退しているため</p>
+<div class="arithmatex">\[
+\finalanswer{(P_0,P_{\varepsilon},P_{2\varepsilon})\to\left(\frac14,\frac12,\frac14\right)}
+\]</div>
+<p>となります。</p>
 
 
 
@@ -14601,7 +14589,7 @@ P_r &amp;= \frac{\exp(-\beta E_r)}{\sum_r \exp(-\beta E_r)} \\
     
       
     
-    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="ボルツマン因子と分配関数｜大学物理の問題集">
+    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="ボルツマン因子と状態の縮退｜大学物理の問題集">
       <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
       <div class="page-share__buttons">
         <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">

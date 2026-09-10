@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14545,11 +14545,11 @@
 \oint_C\boldsymbol{B}\cdot d\boldsymbol{l}
 =\mu_0I_{\mathrm{enc}}
 \]</div>
-<p>が成り立つ。以下では，対称性によって磁場の向きが分かり，選んだ経路上で磁場の大きさが一定になることを確認しながら計算せよ。</p>
+<p>が成り立つ。</p>
 <p>(1) <span class="arithmatex">\(z\)</span> 軸を <span class="arithmatex">\(+z\)</span> 方向へ流れる無限直線電流 <span class="arithmatex">\(I\)</span> を考える。磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{line}}(r)=B_\varphi(r)\boldsymbol{e}_\varphi\)</span> とし，半径 <span class="arithmatex">\(r\)</span> の円形経路から <span class="arithmatex">\(B_\varphi(r)\)</span> を求めよ。</p>
 <p>(2) 半径に比べて十分長いソレノイドがあり，単位長さ当たりの巻数は <span class="arithmatex">\(n\)</span>，各巻線の電流は <span class="arithmatex">\(I\)</span> である。軸を <span class="arithmatex">\(z\)</span> 軸とし，内部磁場 <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{in}}=B_{\mathrm{in}}\boldsymbol{e}_z\)</span> と外部磁場 <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{out}}\)</span> を理想的な無限長近似で求めよ。</p>
 <p>(3) 内半径 <span class="arithmatex">\(a\)</span>，外半径 <span class="arithmatex">\(b\)</span>，総巻数 <span class="arithmatex">\(N\)</span> の密巻きトロイドに電流 <span class="arithmatex">\(I\)</span> が流れる。中心軸から距離 <span class="arithmatex">\(r\)</span> の磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{tor}}(r)\)</span> とし，<span class="arithmatex">\(r&lt;a\)</span>，<span class="arithmatex">\(a&lt;r&lt;b\)</span>，<span class="arithmatex">\(r&gt;b\)</span> で求めよ。</p>
-<p>(4) 半径 <span class="arithmatex">\(R\)</span> の無限円柱内を <span class="arithmatex">\(+z\)</span> 方向へ一様な電流密度 <span class="arithmatex">\(\boldsymbol{j}=j\boldsymbol{e}_z\)</span> が流れる。磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{wire}}(r)=B_\varphi(r)\boldsymbol{e}_\varphi\)</span> とし，<span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> で <span class="arithmatex">\(B_\varphi(r)\)</span> を求め，<span class="arithmatex">\(r=R\)</span> で連続であることを示せ。</p>
+<p>(4) 半径 <span class="arithmatex">\(R\)</span> の無限円柱内を <span class="arithmatex">\(+z\)</span> 方向へ一様な電流密度 <span class="arithmatex">\(\boldsymbol{j}=j\boldsymbol{e}_z\)</span> が流れる。磁場を <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{wire}}(r)=B_\varphi(r)\boldsymbol{e}_\varphi\)</span> とし，<span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> で <span class="arithmatex">\(B_\varphi(r)\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14578,30 +14578,30 @@ B_{\mathrm{in}}\ell=\mu_0n\ell I
 <h3 id="3">(3)</h3>
 <p>トロイドと同心の半径 <span class="arithmatex">\(r\)</span> の円を選びます。<span class="arithmatex">\(a&lt;r&lt;b\)</span> では経路が全巻線電流 <span class="arithmatex">\(NI\)</span> を囲むため</p>
 <div class="arithmatex">\[
-\finalanswer{B(r)2\pi r=\mu_0NI}
+B(r)2\pi r=\mu_0NI
 \]</div>
 <p>です。したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{B}(r)=
+\finalanswer{\boldsymbol{B}(r)=
 \begin{cases}
 \boldsymbol{0},&amp;r&lt;a,\\\\
 \dfrac{\mu_0NI}{2\pi r}\boldsymbol{e}_\varphi,&amp;a&lt;r&lt;b,\\\\
 \boldsymbol{0},&amp;r&gt;b
-\end{cases}
+\end{cases}}
 \]</div>
 <p>となります。理想的な密巻き近似では磁場は巻線領域に閉じ込められます。</p>
 <h3 id="4">(4)</h3>
 <p><span class="arithmatex">\(r&lt;R\)</span> で囲む電流は <span class="arithmatex">\(j\pi r^2\)</span> なので</p>
 <div class="arithmatex">\[
-\finalanswer{B(r)2\pi r=\mu_0j\pi r^2}
+B(r)2\pi r=\mu_0j\pi r^2
 \]</div>
 <p>より <span class="arithmatex">\(B=\mu_0jr/2\)</span> です。<span class="arithmatex">\(r&gt;R\)</span> では全電流 <span class="arithmatex">\(I=j\pi R^2\)</span> を囲むため</p>
 <div class="arithmatex">\[
-\boldsymbol{B}(r)=
+\finalanswer{\boldsymbol{B}(r)=
 \begin{cases}
 \dfrac{\mu_0jr}{2}\boldsymbol{e}_\varphi,&amp;r&lt;R,\\\\
 \dfrac{\mu_0jR^2}{2r}\boldsymbol{e}_\varphi,&amp;r&gt;R
-\end{cases}
+\end{cases}}
 \]</div>
 <p>となり，両式は <span class="arithmatex">\(r=R\)</span> で一致します。</p>
 

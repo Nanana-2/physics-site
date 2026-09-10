@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14519,14 +14519,14 @@
 <h1 id="_1">揺動散逸関係の初歩</h1>
 <h2 id="_2">問題</h2>
 <p>熱平衡状態にある系の揺らぎと，外力に対する応答の間に成り立つ関係を揺動散逸関係と呼ぶ。外部磁場 <span class="arithmatex">\(B\)</span> のなかに置かれた，<span class="arithmatex">\(N\)</span> 個の互いに独立な自由スピン 1/2 の系を考える。</p>
-<p>各スピンは磁場の方向を向く状態 <span class="arithmatex">\(s_i = +1\)</span> と，逆方向を向く状態 <span class="arithmatex">\(s_i = -1\)</span> のいずれかをとる。1つのスピンが持つ磁気モーメントを <span class="arithmatex">\(\mu_0\)</span> とすると，系全体の総磁化は <span class="arithmatex">\(M = \mu_0 \sum_{i=1}^N s_i\)</span> と表される。系の温度を <span class="arithmatex">\(T\)</span>，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とするとき，以下の問いに答えよ。</p>
+<p>各スピンは磁場の方向を向く状態 <span class="arithmatex">\(s_i = +1\)</span> と，逆方向を向く状態 <span class="arithmatex">\(s_i = -1\)</span> のいずれかをとる。1つのスピンが持つ磁気モーメントを <span class="arithmatex">\(\mu_0\)</span> とすると，系全体の総磁化は <span class="arithmatex">\(M = \mu_0 \sum_{i=1}^N s_i\)</span> と表される。系の温度を <span class="arithmatex">\(T\)</span>，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とするとき，以下の問いに答えよ。</p>
 <p>(1) 外部磁場がない状態 <span class="arithmatex">\(B = 0\)</span> を考える。このとき，各スピンは等しい確率で上向きと下向きをとるため，各スピンの平均値は <span class="arithmatex">\(\langle s_i \rangle = 0\)</span> となる。</p>
 <p>スピン同士に相互作用がないため，<span class="arithmatex">\(i \neq j\)</span> のとき <span class="arithmatex">\(\langle s_i s_j \rangle = \langle s_i \rangle \langle s_j \rangle = 0\)</span> となる。この関係を用いて，磁場がない熱平衡状態における総磁化の揺らぎ <span class="arithmatex">\(\langle M^2 \rangle_{B=0}\)</span> を求めよ。</p>
 <p>(2) 次に，系に非常に微小な外部磁場 <span class="arithmatex">\(\Delta B\)</span> を印加したときの応答を考える。各スピンが状態 <span class="arithmatex">\(\pm 1\)</span> をとる確率は，ボルツマン因子 <span class="arithmatex">\(\exp(\pm \beta \mu_0 \Delta B)\)</span> に比例する。</p>
 <p>磁場が十分に弱いとして，指数関数を一次の項までテイラー展開<span class="arithmatex">\(\exp(x) \simeq 1 + x\)</span>することにより，磁場印加によって自発的に誘起される1スピンあたりの平均磁化 <span class="arithmatex">\(\langle \mu_0 s_i \rangle_{\Delta B}\)</span> を近似的に計算せよ。さらに，それを <span class="arithmatex">\(N\)</span> 倍することで，系全体の誘起磁化の平均値 <span class="arithmatex">\(\langle M \rangle_{\Delta B}\)</span> を導出せよ。</p>
 <p>(3) 等温磁化率を <span class="arithmatex">\(\chi=\lim_{\Delta B\to0}\langle M\rangle_{\Delta B}/\Delta B\)</span> と定義する。(1)，(2) の結果を用いて，磁場がないときの磁化の揺らぎと磁化率の間に</p>
 <div class="arithmatex">\[
-\langle M^2\rangle_{B=0}=k_BT\chi
+\langle M^2\rangle_{B=0}=k_{\text{B}}T\chi
 \]</div>
 <p>が成り立つことを示せ。</p>
 <hr />
@@ -14543,12 +14543,9 @@
 <div class="arithmatex">\[
 \langle M^2 \rangle_{B=0} = \mu_0^2 \sum_{i=1}^N \langle s_i^2 \rangle + \mu_0^2 \sum_{i \neq j} \langle s_i s_j \rangle
 \]</div>
-<p>各スピンは <span class="arithmatex">\(\pm 1\)</span> の値しかとらないため，その2乗は常に <span class="arithmatex">\(s_i^2 = 1\)</span> であり，平均値も <span class="arithmatex">\(\langle s_i^2 \rangle = 1\)</span> です。また，異なるスピン間には相関がないため， <span class="arithmatex">\(i \neq j\)</span> のとき <span class="arithmatex">\(\langle s_i s_j \rangle = 0\)</span> となります。したがって，第2項の和はすべて消去されます。</p>
+<p>各スピンは <span class="arithmatex">\(\pm 1\)</span> の値しかとらないため，その2乗は常に <span class="arithmatex">\(s_i^2 = 1\)</span> であり，平均値も <span class="arithmatex">\(\langle s_i^2 \rangle = 1\)</span> です。また，異なるスピン間には相関がないため，<span class="arithmatex">\(i \neq j\)</span> のとき <span class="arithmatex">\(\langle s_i s_j \rangle = 0\)</span> です。したがって，第2項の和は 0 です。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle M^2 \rangle_{B=0} &amp;= \mu_0^2 \sum_{i=1}^N 1 + 0 \\
-&amp;= \finalanswer{N \mu_0^2}
-\end{aligned}
+\langle M^2 \rangle_{B=0} = \mu_0^2 \sum_{i=1}^N 1 + 0 = \finalanswer{N \mu_0^2}
 \]</div>
 <p>この結果は，外部から磁場を全くかけていない状態であっても，各スピンが熱運動によってランダムに向きを変えることで，マクロな総磁化が統計的に常にこの大きさで揺らいでいることを意味します。</p>
 <h3 id="2">(2)</h3>
@@ -14559,11 +14556,18 @@
 <p>磁場が十分に弱いという条件のもとで，指数関数を <span class="arithmatex">\(1 \pm \beta \mu_0 \Delta B\)</span> とテイラー展開します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\langle s_i \rangle_{\Delta B} \simeq \frac{(1 + \beta \mu_0 \Delta B) - (1 - \beta \mu_0 \Delta B)}{(1 + \beta \mu_0 \Delta B) + (1 - \beta \mu_0 \Delta B)} &amp;= \frac{2 \beta \mu_0 \Delta B}{2} \\
+\langle s_i \rangle_{\Delta B}
+&amp;\simeq \frac{(1 + \beta \mu_0 \Delta B) - (1 - \beta \mu_0 \Delta B)}{(1 + \beta \mu_0 \Delta B) + (1 - \beta \mu_0 \Delta B)} \\
+&amp;= \frac{2 \beta \mu_0 \Delta B}{2} \\
 &amp;= \beta \mu_0 \Delta B
 \end{aligned}
 \]</div>
-<p>したがって，1スピンあたりの平均磁気モーメントは <span class="arithmatex">\(\langle \mu_0 s_i \rangle_{\Delta B} = \beta \mu_0^2 \Delta B\)</span> となります。系全体ではこれが <span class="arithmatex">\(N\)</span> 倍されるため，マクロに観測される誘起磁化の平均値が求まります。</p>
+<p>したがって，1スピンあたりの平均磁気モーメントは</p>
+<div class="arithmatex">\[
+\finalanswer{\langle \mu_0s_i\rangle_{\Delta B}
+=\beta\mu_0^2\Delta B}
+\]</div>
+<p>です。系全体ではこれが <span class="arithmatex">\(N\)</span> 倍されます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle M \rangle_{\Delta B} = N \beta \mu_0^2 \Delta B}
 \]</div>
@@ -14573,12 +14577,12 @@
 \begin{aligned}
 \langle M \rangle_{\Delta B} &amp;= \chi \Delta B, \quad \chi \\
 &amp;= N \beta \mu_0^2 \\
-&amp;= \frac{N \mu_0^2}{k_B T}
+&amp;= \frac{N \mu_0^2}{k_{\text{B}} T}
 \end{aligned}
 \]</div>
 <p>このマクロな応答係数 <span class="arithmatex">\(\chi\)</span> の分子に注目すると，(1) で求めた磁場ゼロでの熱平衡揺らぎの式 <span class="arithmatex">\(N \mu_0^2 = \langle M^2 \rangle_{B=0}\)</span> がそのまま含まれていることがわかります。この関係を代入して整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{\chi = \frac{\langle M^2 \rangle_{B=0}}{k_B T} \quad \implies \quad \langle M^2 \rangle_{B=0} = k_B T \chi}
+\finalanswer{\chi = \frac{\langle M^2 \rangle_{B=0}}{k_{\text{B}} T} \quad \implies \quad \langle M^2 \rangle_{B=0} = k_{\text{B}} T \chi}
 \]</div>
 <p>これにより，磁場が全くない熱平衡状態でのミクロな磁化の揺らぎの大きさが，微小な磁場をかけたときの系の応答のしやすさを決定していることが示されました。</p>
 <p>この式は，平衡状態における磁化の揺らぎが大きい系ほど，微小な外部磁場に対する応答も大きいことを表します。</p>

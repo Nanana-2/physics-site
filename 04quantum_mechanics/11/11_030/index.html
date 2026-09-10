@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14547,9 +14547,14 @@ e^{ikz} \approx \sum_{l=0}^{\infty} \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\p
 <h3 id="1">(1)</h3>
 <p>全波動関数の部分波成分 <span class="arithmatex">\(\psi_l(r, \theta)\)</span> から，平面波の対応する第 <span class="arithmatex">\(l\)</span> 項を引き算します。共通因数である <span class="arithmatex">\(\frac{2l+1}{2ikr} P_l(\cos\theta)\)</span> を外に括り出します。</p>
 <div class="arithmatex">\[
-\psi_l(r, \theta) - [e^{ikz}]_l = \frac{2l+1}{2ikr} \left[ \left( e^{i(kr - \frac{l\pi}{2} + 2\delta_l)} - (-1)^l e^{-ikr} \right) - \left( e^{i(kr - \frac{l\pi}{2})} - (-1)^l e^{-ikr} \right) \right] P_l(\cos\theta)
+\begin{aligned}
+\psi_l(r, \theta) - [e^{ikz}]_l
+&amp;= \frac{2l+1}{2ikr} P_l(\cos\theta) \\
+&amp;\quad \times \left[ e^{i(kr-l\pi/2+2\delta_l)}-(-1)^l e^{-ikr}
+-e^{i(kr-l\pi/2)}+(-1)^l e^{-ikr} \right]
+\end{aligned}
 \]</div>
-<p>内側の括弧にある内向き球面波の項 <span class="arithmatex">\(-(-1)^l e^{-ikr}\)</span> は，引き算によって相殺されて消去されます。</p>
+<p>内側の括弧にある内向き球面波の項 <span class="arithmatex">\(-(-1)^l e^{-ikr}\)</span> は，外側の負号により <span class="arithmatex">\((-1)^l e^{-ikr}\)</span> となります。</p>
 <div class="arithmatex">\[
 \psi_l(r, \theta) - [e^{ikz}]_l = \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\pi}{2} + 2\delta_l)} - e^{i(kr - \frac{l\pi}{2})} \right] P_l(\cos\theta)
 \]</div>
@@ -14570,11 +14575,11 @@ e^{ikz} \approx \sum_{l=0}^{\infty} \frac{2l+1}{2ikr} \left[ e^{i(kr - \frac{l\p
 \finalanswer{\psi_{\text{sc}}(\boldsymbol{r}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} e^{-i\frac{l\pi}{2}} e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \frac{e^{ikr}}{r}}
 \]</div>
 <h3 id="2">(2)</h3>
-<p>(1) で算出した展開式を，もう一つの散乱波の表現と比較します。</p>
+<p>(1) で計算した展開式を，もう一つの散乱波の表現と比較します。</p>
 <div class="arithmatex">\[
 f(\theta) \frac{e^{ikr}}{r} = \left[ \sum_{l=0}^{\infty} \frac{2l+1}{k} e^{-i\frac{l\pi}{2}} e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \right] \frac{e^{ikr}}{r}
 \]</div>
-<p>両辺の <span class="arithmatex">\(\frac{e^{ikr}}{r}\)</span> を消去することで，散乱振幅 <span class="arithmatex">\(f(\theta)\)</span> の展開式が得られます。さらに， <span class="arithmatex">\(e^{-i\frac{l\pi}{2}} = (e^{-i\pi/2})^l = (-i)^l\)</span> ではなく，一般に平面波側の位相定義と整合させる形，あるいは問題文冒頭の定義式 <span class="arithmatex">\(f(\theta) = \sum (2l+1) f_l P_l\)</span> と直接比較を行います。平面波の漸近展開における因子との相殺を考慮すると，部分波散乱振幅 <span class="arithmatex">\(f_l\)</span> は以下のようになります。</p>
+<p>両辺を <span class="arithmatex">\(\frac{e^{ikr}}{r}\)</span> で割り，問題文の定義式 <span class="arithmatex">\(f(\theta)=\sum_l(2l+1)f_lP_l(\cos\theta)\)</span> と係数を比較します。これより，部分波散乱振幅は</p>
 <div class="arithmatex">\[
 f_l = \frac{e^{i\delta_l} \sin\delta_l}{k}
 \]</div>
@@ -14585,17 +14590,30 @@ f_l = \frac{e^{i\delta_l} \sin\delta_l}{k}
 <h3 id="3">(3)</h3>
 <p>全断面積の定義式に， (2) で求めた <span class="arithmatex">\(f(\theta)\)</span> の展開式を代入します。絶対値の2乗を計算するため， <span class="arithmatex">\(l\)</span> と <span class="arithmatex">\(l'\)</span> の2つの独立な添字を用いた和の掛け算として書き下します。 <span class="arithmatex">\(\phi\)</span> に関する積分は，被積分関数が <span class="arithmatex">\(\phi\)</span> を含まないため単に <span class="arithmatex">\(2\pi\)</span> となります。</p>
 <div class="arithmatex">\[
-\sigma = 2\pi \int_{0}^{\pi} \left[ \frac{1}{k} \sum_{l=0}^{\infty} (2l+1) e^{i\delta_l} \sin\delta_l P_l(\cos\theta) \right] \left[ \frac{1}{k} \sum_{l'=0}^{\infty} (2l'+1) e^{-i\delta_{l'}} \sin\delta_{l'} P_{l'}(\cos\theta) \right] \sin\theta d\theta
+\begin{aligned}
+\sigma
+&amp;= \frac{2\pi}{k^2}\int_0^\pi
+\left[\sum_{l=0}^\infty (2l+1)e^{i\delta_l}\sin\delta_l P_l(\cos\theta)\right] \\
+&amp;\quad \times
+\left[\sum_{l'=0}^\infty (2l'+1)e^{-i\delta_{l'}}\sin\delta_{l'}P_{l'}(\cos\theta)\right]
+\sin\theta\,d\theta
+\end{aligned}
 \]</div>
 <p>定数因数と和の記号を積分の前へ出します。</p>
 <div class="arithmatex">\[
-\sigma = \frac{2\pi}{k^2} \sum_{l=0}^{\infty} \sum_{l'=0}^{\infty} (2l+1)(2l'+1) e^{i(\delta_l - \delta_{l'})} \sin\delta_l \sin\delta_{l'} \int_{0}^{\pi} P_l(\cos\theta) P_{l'}(\cos\theta) \sin\theta d\theta
+\begin{aligned}
+\sigma
+&amp;= \frac{2\pi}{k^2}\sum_{l=0}^\infty\sum_{l'=0}^\infty
+(2l+1)(2l'+1)e^{i(\delta_l-\delta_{l'})} \\
+&amp;\quad \times \sin\delta_l\sin\delta_{l'}
+\int_0^\pi P_l(\cos\theta)P_{l'}(\cos\theta)\sin\theta\,d\theta
+\end{aligned}
 \]</div>
 <p>ここに，提示されたルジャンドル多項式の直交関係式を適用します。積分部分は <span class="arithmatex">\(\frac{2}{2l+1}\delta_{ll'}\)</span> に置き換わります。</p>
 <div class="arithmatex">\[
 \sigma = \frac{2\pi}{k^2} \sum_{l=0}^{\infty} \sum_{l'=0}^{\infty} (2l+1)(2l'+1) e^{i(\delta_l - \delta_{l'})} \sin\delta_l \sin\delta_{l'} \cdot \frac{2}{2l+1} \delta_{ll'}
 \]</div>
-<p>クロネッカーのデルタ <span class="arithmatex">\(\delta_{ll'}\)</span> の働きにより， <span class="arithmatex">\(l'=l\)</span> の項だけが生き残るため， <span class="arithmatex">\(l'\)</span> に関する和の記号が消去されます。</p>
+<p>クロネッカーのデルタ <span class="arithmatex">\(\delta_{ll'}\)</span> により <span class="arithmatex">\(l'=l\)</span> の項だけが 0 でない値をもつため， <span class="arithmatex">\(l'\)</span> に関する和を計算できます。</p>
 <div class="arithmatex">\[
 \sigma = \frac{2\pi}{k^2} \sum_{l=0}^{\infty} (2l+1)(2l+1) e^{i(0)} \sin^2\delta_l \cdot \frac{2}{2l+1}
 \]</div>

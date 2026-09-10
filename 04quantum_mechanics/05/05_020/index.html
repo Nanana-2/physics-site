@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14539,7 +14539,7 @@
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{d\psi}{d\xi} &amp;= A \cdot (-2\alpha \xi) e^{-\alpha \xi^2} \\
-&amp;= -2\alpha \xi \psi(\xi)
+&amp;= \finalanswer{-2\alpha \xi \psi(\xi)}
 \end{aligned}
 \]</div>
 <p>2階微分は，積の微分公式を適用して計算します。</p>
@@ -14570,25 +14570,30 @@
 (4\alpha^2 - 1)\xi^2 + (\lambda - 2\alpha) = 0
 \]</div>
 <p>この式が特定の <span class="arithmatex">\(\xi\)</span> だけでなく，すべての位置 <span class="arithmatex">\(\xi\)</span> で常に成り立つためには， <span class="arithmatex">\(\xi^2\)</span> の係数と定数項がそれぞれ独立に 0 にならなければなりません。</p>
-<ul>
-<li><span class="arithmatex">\(\xi^2\)</span> の係数より：</li>
-</ul>
+<p><span class="arithmatex">\(\xi^2\)</span> の係数を 0 とすると，</p>
 <div class="arithmatex">\[
-  4\alpha^2 - 1 = 0 \implies \alpha^2 = \frac{1}{4}
+4\alpha^2 - 1 = 0 \implies \alpha^2 = \frac{1}{4}
 \]</div>
-<p><span class="arithmatex">\(\alpha &gt; 0\)</span> であるため， <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> と定まります。
-* 定数項より：</p>
+<p><span class="arithmatex">\(\alpha &gt; 0\)</span> であるため，</p>
 <div class="arithmatex">\[
-  \finalanswer{\lambda - 2\alpha = 0 \implies \lambda = 2\alpha}
+\finalanswer{\alpha = \frac{1}{2}}
 \]</div>
-<p>求めた <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> を代入すると， <span class="arithmatex">\(\lambda = 1\)</span> と定まります。</p>
+<p>と定まります。次に，定数項を 0 とすると，</p>
+<div class="arithmatex">\[
+\lambda - 2\alpha = 0 \implies \lambda = 2\alpha
+\]</div>
+<p>求めた <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> を代入すると，</p>
+<div class="arithmatex">\[
+\finalanswer{\lambda = 1}
+\]</div>
+<p>と定まります。</p>
 <h3 id="3">(3)</h3>
 <p>無次元化された各値を，元の物理量へと逆変換します。</p>
 <p>エネルギー固有値は， <span class="arithmatex">\(\lambda = 1\)</span> を関係式に代入します。</p>
 <div class="arithmatex">\[
-E = \frac{\hbar\omega}{2} \cdot 1 = \frac{1}{2}\hbar\omega
+\finalanswer{E = \frac{1}{2}\hbar\omega}
 \]</div>
-<p>このエネルギーは，量子力学的な調和振動子が最低でも持っていなければならないエネルギーであり，零点エネルギーと呼ばれます。</p>
+<p>これは量子調和振動子の最低エネルギーであり，零点エネルギーと呼ばれます。</p>
 <p>次に波動関数について， <span class="arithmatex">\(\alpha = \frac{1}{2}\)</span> と <span class="arithmatex">\(\xi^2 = \frac{m\omega}{\hbar}x^2\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14596,7 +14601,7 @@ E = \frac{\hbar\omega}{2} \cdot 1 = \frac{1}{2}\hbar\omega
 &amp;= \finalanswer{A e^{-\frac{m\omega}{2\hbar}x^2}}
 \end{aligned}
 \]</div>
-<p>これにより，ポテンシャルの中心付近に粒子が存在する確率が最も高く，中心から離れるにつれて確率が急速に減少するガウス型の基底状態波動関数が得られました。</p>
+<p>この波動関数はガウス型であり，<span class="arithmatex">\(x=0\)</span> で最大となって，<span class="arithmatex">\(|x|\)</span> が大きくなるにつれて 0 に近づきます。</p>
 
 
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11056,7 +11056,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,13 +14518,13 @@
 
 <h1 id="_1">分配関数の基本</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱的に接触し，熱平衡状態にある巨視的な系を考える。逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とする。この系がとりうる微視的状態を <span class="arithmatex">\(i\)</span> とし，状態 <span class="arithmatex">\(i\)</span> における系のエネルギーを <span class="arithmatex">\(E_i\)</span> とするとき，状態 <span class="arithmatex">\(i\)</span> が実現する確率はボルツマン因子 <span class="arithmatex">\(\exp(-\beta E_i)\)</span> に比例する。以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span> の熱浴と熱的に接触し，熱平衡状態にある巨視的な系を考える。逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とする。この系がとりうる微視的状態を <span class="arithmatex">\(i\)</span> とし，状態 <span class="arithmatex">\(i\)</span> における系のエネルギーを <span class="arithmatex">\(E_i\)</span> とするとき，状態 <span class="arithmatex">\(i\)</span> が実現する確率はボルツマン因子 <span class="arithmatex">\(\exp(-\beta E_i)\)</span> に比例する。以下の問いに答えよ。</p>
 <p>(1) 状態和である分配関数を <span class="arithmatex">\(Z = \sum_i \exp(-\beta E_i)\)</span> と定義する。状態 <span class="arithmatex">\(i\)</span> が実現する確率 <span class="arithmatex">\(P_i\)</span> を <span class="arithmatex">\(Z\)</span> を用いて表し，すべての状態について確率の総和をとると <span class="arithmatex">\(1\)</span> に規格化されることを示せ。</p>
 <p>(2) 系の平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> の定義式を示せ。また，分配関数 <span class="arithmatex">\(Z\)</span> の <span class="arithmatex">\(\beta\)</span> による偏微分が <span class="arithmatex">\(\frac{\partial Z}{\partial \beta} = -\sum_i E_i \exp(-\beta E_i)\)</span> となることを利用して，<span class="arithmatex">\(\langle E \rangle\)</span> が分配関数の対数微分を用いて以下のように表されることを導出せよ。</p>
 <div class="arithmatex">\[
 \langle E \rangle = -\frac{\partial \log Z}{\partial \beta}
 \]</div>
-<p>(3) ヘルムホルツの自由エネルギー <span class="arithmatex">\(F\)</span> と分配関数 <span class="arithmatex">\(Z\)</span> の関係 <span class="arithmatex">\(F = -k_B T \log Z\)</span>，およびギブズ・ヘルムホルツの式 <span class="arithmatex">\(U = \left( \frac{\partial (F/T)}{\partial (1/T)} \right)_{V, N}\)</span> を用いて，統計力学的な平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> が熱力学的な内部エネルギー <span class="arithmatex">\(U\)</span> と一致することを示せ。</p>
+<p>(3) ヘルムホルツの自由エネルギー <span class="arithmatex">\(F\)</span> と分配関数 <span class="arithmatex">\(Z\)</span> の関係 <span class="arithmatex">\(F = -k_{\text{B}} T \log Z\)</span>，およびギブズ・ヘルムホルツの式 <span class="arithmatex">\(U = \left( \frac{\partial (F/T)}{\partial (1/T)} \right)_{V, N}\)</span> を用いて，統計力学的な平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> が熱力学的な内部エネルギー <span class="arithmatex">\(U\)</span> と一致することを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14552,10 +14552,7 @@ P_i = \frac{\exp(-\beta E_i)}{Z}
 <h3 id="2">(2)</h3>
 <p>平均エネルギー <span class="arithmatex">\(\langle E \rangle\)</span> は，各状態のエネルギー <span class="arithmatex">\(E_i\)</span> にその出現確率 <span class="arithmatex">\(P_i\)</span> を掛けて，すべての状態について足し合わせたものであるため，定義式は以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\langle E \rangle &amp;= \sum_i P_i E_i \\
-&amp;= \frac{1}{Z} \sum_i E_i \exp(-\beta E_i)
-\end{aligned}
+\langle E \rangle = \sum_i P_i E_i = \frac{1}{Z} \sum_i E_i \exp(-\beta E_i)
 \]</div>
 <p>ここで，合成関数の微分公式 <span class="arithmatex">\(\frac{\partial \log Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta}\)</span> を用いて，分配関数の対数微分を計算します。問題文で与えられた <span class="arithmatex">\(\frac{\partial Z}{\partial \beta}\)</span> の式を代入します。</p>
 <div class="arithmatex">\[
@@ -14570,15 +14567,15 @@ P_i = \frac{\exp(-\beta E_i)}{Z}
 \finalanswer{\langle E \rangle = -\frac{\partial \log Z}{\partial \beta}}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>統計力学的な自由エネルギーの定義 <span class="arithmatex">\(F = -k_B T \log Z\)</span> を変形すると， <span class="arithmatex">\(\log Z = -\frac{F}{k_B T}\)</span> となります。また，逆温度の定義から <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> であるため， <span class="arithmatex">\(\frac{\partial}{\partial \beta} = \frac{\partial}{\partial (1/k_B T)} = k_B \frac{\partial}{\partial (1/T)}\)</span> が成り立ちます。</p>
+<p>統計力学的な自由エネルギーの定義 <span class="arithmatex">\(F = -k_{\text{B}} T \log Z\)</span> を変形すると， <span class="arithmatex">\(\log Z = -\frac{F}{k_{\text{B}} T}\)</span> となります。また，逆温度の定義から <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> であるため， <span class="arithmatex">\(\frac{\partial}{\partial \beta} = \frac{\partial}{\partial (1/k_{\text{B}} T)} = k_{\text{B}} \frac{\partial}{\partial (1/T)}\)</span> が成り立ちます。</p>
 <p>これらを (2) で得られた平均エネルギーの式に代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle E \rangle &amp;= -\frac{\partial \log Z}{\partial \beta} \\
-&amp;= - \left( k_B \frac{\partial}{\partial (1/T)} \right) \left( -\frac{F}{k_B T} \right)
+&amp;= - \left( k_{\text{B}} \frac{\partial}{\partial (1/T)} \right) \left( -\frac{F}{k_{\text{B}} T} \right)
 \end{aligned}
 \]</div>
-<p>分母と分子の定数 <span class="arithmatex">\(k_B\)</span> が相殺され，マイナス同士でプラスになります。</p>
+<p>分母と分子の <span class="arithmatex">\(k_{\text{B}}\)</span> を約分すると，2つの負号により全体の符号は正になります。</p>
 <div class="arithmatex">\[
 \langle E \rangle = \frac{\partial (F/T)}{\partial (1/T)}
 \]</div>
@@ -14667,7 +14664,7 @@ P_i = \frac{\exp(-\beta E_i)}{Z}
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../03_010/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ボルツマン因子と分配関数">
+          <a href="../03_010/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ボルツマン因子と状態の縮退">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -14677,7 +14674,7 @@ P_i = \frac{\exp(-\beta E_i)}{Z}
                 Previous
               </span>
               <div class="md-ellipsis">
-                ボルツマン因子と分配関数
+                ボルツマン因子と状態の縮退
               </div>
             </div>
           </a>

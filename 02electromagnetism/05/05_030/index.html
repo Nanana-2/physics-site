@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14527,7 +14527,7 @@
 \]</div>
 <p>が成り立つ。<span class="arithmatex">\(\chi_m\)</span> は磁化率，<span class="arithmatex">\(\mu=\mu_0(1+\chi_m)\)</span> は透磁率である。</p>
 <p>単位長さ当たりの巻数 <span class="arithmatex">\(n\)</span>，長さ <span class="arithmatex">\(\ell\)</span>，断面積 <span class="arithmatex">\(S\)</span> の十分に長いソレノイドを透磁率 <span class="arithmatex">\(\mu\)</span> の磁性体で満たし，電流 <span class="arithmatex">\(I\)</span> を流す。また，内半径 <span class="arithmatex">\(a\)</span>，外半径 <span class="arithmatex">\(b\)</span>，総巻数 <span class="arithmatex">\(N\)</span> のトロイドも同じ磁性体で満たす。</p>
-<p>(1) ソレノイド内部の <span class="arithmatex">\(\boldsymbol{H}\)</span>，<span class="arithmatex">\(\boldsymbol{M}\)</span>，<span class="arithmatex">\(\boldsymbol{B}\)</span> を求めよ。真空中の磁束密度との比 <span class="arithmatex">\(B/B_{\mathrm{vac}}\)</span> を求めよ。</p>
+<p>(1) ソレノイド内部の <span class="arithmatex">\(\boldsymbol{H}\)</span>，<span class="arithmatex">\(\boldsymbol{M}\)</span>，<span class="arithmatex">\(\boldsymbol{B}\)</span> を求めよ。</p>
 <p>(2) ソレノイドを貫く磁束を <span class="arithmatex">\(\Phi=BS\)</span>，総鎖交磁束を <span class="arithmatex">\(N_s\Phi\)</span> とする。ただし <span class="arithmatex">\(N_s=n\ell\)</span> である。自己インダクタンスを <span class="arithmatex">\(L_s=N_s\Phi/I\)</span> と定義し，<span class="arithmatex">\(L_s\)</span> を求めよ。</p>
 <p>(3) トロイド中心軸から距離 <span class="arithmatex">\(r\)</span> が <span class="arithmatex">\(a&lt;r&lt;b\)</span> を満たす領域で，<span class="arithmatex">\(\boldsymbol{H}(r)\)</span> と <span class="arithmatex">\(\boldsymbol{B}(r)\)</span> を求めよ。断面の高さを <span class="arithmatex">\(h\)</span> とし，磁束 <span class="arithmatex">\(\Phi_{\mathrm{tor}}=\int_a^bB(r)h\,dr\)</span> および自己インダクタンス <span class="arithmatex">\(L_{\mathrm{tor}}=N\Phi_{\mathrm{tor}}/I\)</span> を求めよ。</p>
 <hr />
@@ -14535,16 +14535,16 @@
 <h3 id="1">(1)</h3>
 <p>自由電流に対するアンペールの法則より，ソレノイド内部では</p>
 <div class="arithmatex">\[
-\boldsymbol{H}=nI\boldsymbol{e}_z
+\finalanswer{\boldsymbol{H}=nI\boldsymbol{e}_z}
 \]</div>
 <p>です。線形構成関係から</p>
 <div class="arithmatex">\[
-\boldsymbol{M}
-=\chi_mnI\boldsymbol{e}_z
+\finalanswer{\boldsymbol{M}
+=\chi_mnI\boldsymbol{e}_z}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{B}
-=\mu nI\boldsymbol{e}_z
+\finalanswer{\boldsymbol{B}
+=\mu nI\boldsymbol{e}_z}
 \]</div>
 <p>となります。真空では <span class="arithmatex">\(B_{\mathrm{vac}}=\mu_0nI\)</span> なので</p>
 <div class="arithmatex">\[
@@ -14576,12 +14576,12 @@ H(r)2\pi r=NI
 \]</div>
 <p>よって</p>
 <div class="arithmatex">\[
-\boldsymbol{H}(r)
-=\frac{NI}{2\pi r}\boldsymbol{e}_\varphi
+\finalanswer{\boldsymbol{H}(r)
+=\frac{NI}{2\pi r}\boldsymbol{e}_\varphi}
 \]</div>
 <div class="arithmatex">\[
-\boldsymbol{B}(r)
-=\frac{\mu NI}{2\pi r}\boldsymbol{e}_\varphi
+\finalanswer{\boldsymbol{B}(r)
+=\frac{\mu NI}{2\pi r}\boldsymbol{e}_\varphi}
 \]</div>
 <p>です。磁束は</p>
 <div class="arithmatex">\[
@@ -14591,7 +14591,7 @@ H(r)2\pi r=NI
 &amp;=\frac{\mu NIh}{2\pi}
 \int_a^b\frac{dr}{r} \\
 &amp;=\frac{\mu NIh}{2\pi}[\log r]_a^b \\
-&amp;=\frac{\mu NIh}{2\pi}\log\frac{b}{a}.
+&amp;=\finalanswer{\frac{\mu NIh}{2\pi}\log\frac{b}{a}}
 \end{aligned}
 \]</div>
 <p>となります。したがって</p>

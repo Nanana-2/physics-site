@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14524,7 +14524,7 @@ P_X(x_i) = \sum_{j=1}^{m} P(x_i, y_j), \quad P_Y(y_j) = \sum_{i=1}^{n} P(x_i, y_
 \]</div>
 <p>このとき， <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> の間の相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> は以下で定義される。</p>
 <div class="arithmatex">\[
-I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln\left( \frac{P(x_i, y_j)}{P_X(x_i) P_Y(y_j)} \right)
+I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \log\left( \frac{P(x_i, y_j)}{P_X(x_i) P_Y(y_j)} \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(X\)</span> と <span class="arithmatex">\(Y\)</span> が独立なとき <span class="arithmatex">\(I(X;Y)=0\)</span> を示せ。</p>
@@ -14565,52 +14565,54 @@ P(x_i, y_j) = P_X(x_i) P_Y(y_j)
 \]</div>
 <p>この関係式を相互情報量 <span class="arithmatex">\(I(X; Y)\)</span> の定義式にある対数の分子へ代入します。</p>
 <div class="arithmatex">\[
-I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln\left( \frac{P_X(x_i) P_Y(y_j)}{P_X(x_i) P_Y(y_j)} \right)
+I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \log\left( \frac{P_X(x_i) P_Y(y_j)}{P_X(x_i) P_Y(y_j)} \right)
 \]</div>
-<p>対数の内部の分数が 1 になります。自然対数 <span class="arithmatex">\(\ln 1\)</span> の値は 0 であるため，すべての項の掛け算がゼロとなります。</p>
+<p>対数の内部の分数が 1 になります。自然対数 <span class="arithmatex">\(\log 1\)</span> の値は 0 であるため，すべての項の掛け算がゼロとなります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-I(X; Y) &amp;= \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \cdot 0 \\
-&amp;= \finalanswer{0}
-\end{aligned}
+I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \cdot 0 = \finalanswer{0}
 \]</div>
 <p>2つの変数間にいかなる統計的依存関係も存在しない場合，相互情報量は厳密に 0 になることが示されました。</p>
 <h3 id="2">(2)</h3>
-<p>定義式の対数関数部分を，性質 <span class="arithmatex">\(\ln\left(\frac{A}{BC}\right) = \ln A - \ln B - \ln C\)</span> を用いて3つの項に展開します。</p>
+<p>定義式の対数関数部分を，性質 <span class="arithmatex">\(\log\left(\frac{A}{BC}\right) = \log A - \log B - \log C\)</span> を用いて3つの項に展開します。</p>
 <div class="arithmatex">\[
-I(X; Y) = \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln P(x_i, y_j) - \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln P_X(x_i) - \sum_{i=1}^{n} \sum_{j=1}^{m} P(x_i, y_j) \ln P_Y(y_j)
+\begin{aligned}
+I(X;Y)
+&amp;=\sum_{i,j}P(x_i,y_j)\log P(x_i,y_j) \\
+&amp;\quad-\sum_{i,j}P(x_i,y_j)\log P_X(x_i)
+-\sum_{i,j}P(x_i,y_j)\log P_Y(y_j)
+\end{aligned}
 \]</div>
 <p>右辺の各項について，総和の順序を整理します。</p>
 <ul>
 <li><strong>第1項</strong>
-  結合エントロピーの定義式 <span class="arithmatex">\(H(X, Y) = -\sum_{i,j} P(x_i, y_j) \ln P(x_i, y_j)\)</span> の符号を反転させた形そのものです。</li>
+  結合エントロピーの定義式 <span class="arithmatex">\(H(X, Y) = -\sum_{i,j} P(x_i, y_j) \log P(x_i, y_j)\)</span> の符号を反転させた形そのものです。</li>
 </ul>
 <div class="arithmatex">\[
 \text{第1項} = -H(X, Y)
 \]</div>
 <ul>
 <li><strong>第2項</strong>
-  <span class="arithmatex">\(\ln P_X(x_i)\)</span> は添字 <span class="arithmatex">\(j\)</span> を持たないため， <span class="arithmatex">\(j\)</span> に関する内側の総和の外へ括り出すことができます。</li>
+  <span class="arithmatex">\(\log P_X(x_i)\)</span> は添字 <span class="arithmatex">\(j\)</span> を持たないため， <span class="arithmatex">\(j\)</span> に関する内側の総和の外へ括り出すことができます。</li>
 </ul>
 <div class="arithmatex">\[
-\text{第2項} = -\sum_{i=1}^{n} \ln P_X(x_i) \left( \sum_{j=1}^{m} P(x_i, y_j) \right)
+\text{第2項} = -\sum_{i=1}^{n} \log P_X(x_i) \left( \sum_{j=1}^{m} P(x_i, y_j) \right)
 \]</div>
 <p>括弧の内部は周辺確率の定義式 <span class="arithmatex">\(\sum_{j=1}^{m} P(x_i, y_j) = P_X(x_i)\)</span> に置き換わります。</p>
 <div class="arithmatex">\[
-\text{第2項} = -\sum_{i=1}^{n} P_X(x_i) \ln P_X(x_i) = H(X)
+\text{第2項} = -\sum_{i=1}^{n} P_X(x_i) \log P_X(x_i) = H(X)
 \]</div>
 <ul>
 <li><strong>第3項</strong>
-  同様に， <span class="arithmatex">\(\ln P_Y(y_j)\)</span> を添字 <span class="arithmatex">\(i\)</span> に関する総和の外へ括り出します。</li>
+  同様に， <span class="arithmatex">\(\log P_Y(y_j)\)</span> を添字 <span class="arithmatex">\(i\)</span> に関する総和の外へ括り出します。</li>
 </ul>
 <div class="arithmatex">\[
-\text{第3項} = -\sum_{j=1}^{m} \ln P_Y(y_j) \left( \sum_{i=1}^{n} P(x_i, y_j) \right)
+\text{第3項} = -\sum_{j=1}^{m} \log P_Y(y_j) \left( \sum_{i=1}^{n} P(x_i, y_j) \right)
 \]</div>
 <p>括弧の内部を周辺確率の定義式 <span class="arithmatex">\(\sum_{i=1}^{n} P(x_i, y_j) = P_Y(y_j)\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
-\text{第3項} = -\sum_{j=1}^{m} P_Y(y_j) \ln P_Y(y_j) = H(Y)
+\text{第3項} = -\sum_{j=1}^{m} P_Y(y_j) \log P_Y(y_j) = H(Y)
 \]</div>
-<p>これら3つの結果を足し合わせることで，目的の関係式が導出されます。</p>
+<p>これら3つの結果を足し合わせることで，目的の関係式を得ます。</p>
 <div class="arithmatex">\[
 \finalanswer{I(X; Y) = H(X) + H(Y) - H(X, Y)}
 \]</div>
@@ -14636,30 +14638,24 @@ P_Y(1) = P(0,1) + P(1,1) = 0 + \frac{1}{2} = \finalanswer{\frac{1}{2}}
 \]</div>
 <p>各周辺エントロピーを計算します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-H(X) &amp;= -\left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
-&amp;= \ln 2
-\end{aligned}
+H(X) = -\left( \frac{1}{2} \log \frac{1}{2} + \frac{1}{2} \log \frac{1}{2} \right) = \log 2
 \]</div>
 <div class="arithmatex">\[
-\begin{aligned}
-H(Y) &amp;= -\left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
-&amp;= \ln 2
-\end{aligned}
+H(Y) = -\left( \frac{1}{2} \log \frac{1}{2} + \frac{1}{2} \log \frac{1}{2} \right) = \log 2
 \]</div>
 <p>結合エントロピーを計算します。確率が 0 の項はゼロとなるため，確率が <span class="arithmatex">\(\frac{1}{2}\)</span> の2つの項だけが残ります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-H(X, Y) &amp;= -\left( \frac{1}{2} \ln \frac{1}{2} + 0 + 0 + \frac{1}{2} \ln \frac{1}{2} \right) \\
-&amp;= \ln 2
+H(X, Y) &amp;= -\left( \frac{1}{2} \log \frac{1}{2} + 0 + 0 + \frac{1}{2} \log \frac{1}{2} \right) \\
+&amp;= \log 2
 \end{aligned}
 \]</div>
 <p>(2) で得られた関係式にこれらの値を代入して相互情報量を求めます。</p>
 <div class="arithmatex">\[
-I(X; Y) = \ln 2 + \ln 2 - \ln 2 = \finalanswer{\ln 2}
+I(X; Y) = \log 2 + \log 2 - \log 2 = \finalanswer{\log 2}
 \]</div>
 <p><strong>状態の説明</strong></p>
-<p>独立な場合 <span class="arithmatex">\(I=0\)</span> とは対照的に，今回の相互情報量は周辺エントロピーの最大値に等しい <span class="arithmatex">\(\ln 2\)</span> となりました。これは， <span class="arithmatex">\(X=0\)</span> のときには必ず <span class="arithmatex">\(Y=0\)</span> となり， <span class="arithmatex">\(X=1\)</span> のときには必ず <span class="arithmatex">\(Y=1\)</span> となるような，2つの変数の間に完全な相関が存在する状態に対応しています。</p>
+<p>独立な場合 <span class="arithmatex">\(I=0\)</span> とは対照的に，今回の相互情報量は周辺エントロピーの最大値に等しい <span class="arithmatex">\(\log 2\)</span> となりました。これは， <span class="arithmatex">\(X=0\)</span> のときには必ず <span class="arithmatex">\(Y=0\)</span> となり， <span class="arithmatex">\(X=1\)</span> のときには必ず <span class="arithmatex">\(Y=1\)</span> となるような，2つの変数の間に完全な相関が存在する状態に対応しています。</p>
 
 
 

@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14529,7 +14529,7 @@
 <p>とする。<span class="arithmatex">\(k&gt;0\)</span>，<span class="arithmatex">\(\omega&gt;0\)</span> であり，<span class="arithmatex">\(\boldsymbol{E}_0\)</span> と <span class="arithmatex">\(\boldsymbol{B}_0\)</span> は一定ベクトルである。真空中では <span class="arithmatex">\(\nabla\cdot\boldsymbol{E}=\nabla\cdot\boldsymbol{B}=0\)</span>，<span class="arithmatex">\(\nabla\times\boldsymbol{E}=-\partial\boldsymbol{B}/\partial t\)</span> が成り立つ。</p>
 <p>(1) 発散の式を成分で計算し，<span class="arithmatex">\(\boldsymbol{E}_0\)</span> と <span class="arithmatex">\(\boldsymbol{B}_0\)</span> が伝播方向 <span class="arithmatex">\(\boldsymbol{e}_z\)</span> に垂直であることを示せ。</p>
 <p>(2) ファラデーの法則へ平面波を代入し，<span class="arithmatex">\(\boldsymbol{B}_0=(k/\omega)\boldsymbol{e}_z\times\boldsymbol{E}_0\)</span> を導け。真空中の分散関係 <span class="arithmatex">\(\omega=ck\)</span> を用い，振幅比 <span class="arithmatex">\(B_0/E_0\)</span> と三つのベクトルの向きを示せ。</p>
-<p>(3) <span class="arithmatex">\(\boldsymbol{E}_0=E_0\boldsymbol{e}_x\)</span> とする。対応する <span class="arithmatex">\(\boldsymbol{B}\)</span> を具体的に書き，電場と磁場が同位相であることを確認せよ。また，<span class="arithmatex">\(-z\)</span> 方向へ伝わる場合に磁場の向きがどう変わるか示せ。</p>
+<p>(3) <span class="arithmatex">\(\boldsymbol{E}_0=E_0\boldsymbol{e}_x\)</span> とする。対応する <span class="arithmatex">\(\boldsymbol{B}\)</span> を求めよ。また，<span class="arithmatex">\(-z\)</span> 方向へ伝わる場合の磁場の向きを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14540,7 +14540,7 @@
 &amp;=\frac{\partial E_x}{\partial x}
 +\frac{\partial E_y}{\partial y}
 +\frac{\partial E_z}{\partial z} \\
-&amp;=-kE_{0z}\sin(kz-\omega t).
+&amp;=-kE_{0z}\sin(kz-\omega t)
 \end{aligned}
 \]</div>
 <p>これがすべての <span class="arithmatex">\(z,t\)</span> でゼロになるには <span class="arithmatex">\(E_{0z}=0\)</span> が必要です。同様に</p>
@@ -14557,7 +14557,7 @@
 &amp;=-k\sin\theta
 (\boldsymbol{e}_z\times\boldsymbol{E}_0), \\
 -\frac{\partial\boldsymbol{B}}{\partial t}
-&amp;=-\omega\sin\theta\boldsymbol{B}_0.
+&amp;=-\omega\sin\theta\boldsymbol{B}_0
 \end{aligned}
 \]</div>
 <p>両者を等置し，共通因子 <span class="arithmatex">\(-\sin\theta\)</span> を除くと</p>
@@ -14579,10 +14579,15 @@ k\boldsymbol{e}_z\times\boldsymbol{E}_0
 \boldsymbol{E}(z,t)
 &amp;=E_0\cos(kz-\omega t)\boldsymbol{e}_x, \\
 \boldsymbol{B}(z,t)
-&amp;=\frac{E_0}{c}\cos(kz-\omega t)\boldsymbol{e}_y.
+&amp;=\frac{E_0}{c}\cos(kz-\omega t)\boldsymbol{e}_y
 \end{aligned}
 \]</div>
-<p>両者は同じ余弦因子をもつため同位相です。<span class="arithmatex">\(-z\)</span> 方向へ伝わる波では伝播方向が <span class="arithmatex">\(-\boldsymbol{e}_z\)</span> になるので</p>
+<p>したがって，求める磁場は</p>
+<div class="arithmatex">\[
+\finalanswer{\boldsymbol{B}(z,t)
+=\frac{E_0}{c}\cos(kz-\omega t)\boldsymbol{e}_y}
+\]</div>
+<p>電場と磁場はどちらも <span class="arithmatex">\(\cos(kz-\omega t)\)</span> に比例するため，同位相です。<span class="arithmatex">\(-z\)</span> 方向へ伝わる波では伝播方向が <span class="arithmatex">\(-\boldsymbol{e}_z\)</span> になるので</p>
 <div class="arithmatex">\[
 \finalanswer{\boldsymbol{B}_0
 =\frac{1}{c}(-\boldsymbol{e}_z)\times E_0\boldsymbol{e}_x

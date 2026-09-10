@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14527,10 +14527,7 @@
 <h3 id="1">(1)</h3>
 <p>全体のボルツマンエントロピー <span class="arithmatex">\(S_{\mathrm{tot}}\)</span> が最大値をとるとき，<span class="arithmatex">\(E_1\)</span> に関する1階微分は 0 にならなければなりません。したがって，求める必要条件は以下のようになります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dS_{\mathrm{tot}}}{dE_1} &amp;= \frac{d}{dE_1} \left[ S_1(E_1) + S_2(E_2) \right] \\
-&amp;= 0
-\end{aligned}
+\frac{dS_{\mathrm{tot}}}{dE_1} = \frac{d}{dE_1} \left[ S_1(E_1) + S_2(E_2) \right] = 0
 \]</div>
 <p>連鎖律を適用すると，次の式を得ます。</p>
 <div class="arithmatex">\[
@@ -14543,12 +14540,9 @@
 \]</div>
 <p>これを (1) で得られた式に代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dS_1(E_1)}{dE_1} - \frac{dS_2(E_2)}{dE_2} &amp;= 0 \quad \implies \quad \frac{dS_1(E_1)}{dE_1} \\
-&amp;= \frac{dS_2(E_2)}{dE_2}
-\end{aligned}
+\frac{dS_1(E_1)}{dE_1}=\frac{dS_2(E_2)}{dE_2}
 \]</div>
-<p>ボルツマンエントロピーの定義 <span class="arithmatex">\(S_i = k_B \log \Omega_i\)</span> を用いて両辺を <span class="arithmatex">\(k_B\)</span> で割ると，逆温度 <span class="arithmatex">\(\beta_i = \frac{\partial \log \Omega_i}{\partial E_i}\)</span> の定義そのものになります。したがって，求める関係式は以下の通りです。</p>
+<p>ボルツマンエントロピーの定義 <span class="arithmatex">\(S_i = k_{\text{B}} \log \Omega_i\)</span> を用いて両辺を <span class="arithmatex">\(k_{\text{B}}\)</span> で割ると，逆温度 <span class="arithmatex">\(\beta_i = \frac{\partial \log \Omega_i}{\partial E_i}\)</span> の定義そのものになります。したがって，求める関係式は以下の通りです。</p>
 <div class="arithmatex">\[
 \finalanswer{\beta_1 = \beta_2}
 \]</div>
@@ -14557,12 +14551,12 @@
 <div class="arithmatex">\[
 \begin{aligned}
 dS_{\mathrm{tot}} &amp;= \frac{dS_1}{dE_1} dE_1 + \frac{dS_2}{dE_2} dE_2 \\
-&amp;= k_B (\beta_1 dE_1 + \beta_2 dE_2)
+&amp;= k_{\text{B}} (\beta_1 dE_1 + \beta_2 dE_2)
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(dE_2 = -dE_1\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{dS_{\mathrm{tot}} = k_B (\beta_1 - \beta_2) dE_1}
+\finalanswer{dS_{\mathrm{tot}} = k_{\text{B}} (\beta_1 - \beta_2) dE_1}
 \]</div>
 <p>孤立系では <span class="arithmatex">\(dS_{\mathrm{tot}} &gt; 0\)</span> となる変化が生じます。<span class="arithmatex">\(\beta_1 - \beta_2 &gt; 0\)</span> なので，この条件を満たすには <span class="arithmatex">\(dE_1 &gt; 0\)</span> でなければなりません。したがって，温度が高い系2から温度が低い系1へエネルギーが移動します。移動は <span class="arithmatex">\(\beta_1 = \beta_2\)</span>，すなわち <span class="arithmatex">\(T_1=T_2\)</span> となるまで続きます。</p>
 

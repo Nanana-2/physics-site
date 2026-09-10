@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14521,30 +14521,40 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>消滅演算子と生成演算子の積の交換関係 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger]\)</span> を書き下します。2つの空間積分を結合して1つの重積分形式にします。</p>
+<p>交換関係 <span class="arithmatex">\([\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger]\)</span> を書き下し，2つの空間積分を二重積分として表します。</p>
 <div class="arithmatex">\[
-[\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left[ \sqrt{\frac{\omega_{\boldsymbol{k}}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}) + \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}}}} \hat{\pi}(\boldsymbol{r}) , \sqrt{\frac{\omega_{\boldsymbol{k}'}}{2V\hbar}} \hat{\phi}(\boldsymbol{r}') - \frac{i}{\sqrt{2V\hbar\omega_{\boldsymbol{k}'}}} \hat{\pi}(\boldsymbol{r}') \right]
+\begin{aligned}
+[\hat a_{\boldsymbol{k}},\hat a_{\boldsymbol{k}'}^\dagger]
+&amp;=\int d\boldsymbol r\,d\boldsymbol r'\,
+e^{-i\boldsymbol{k}\cdot\boldsymbol r+i\boldsymbol{k}'\cdot\boldsymbol r'} \\
+&amp;\quad\times\left[
+\sqrt{\frac{\omega_{\boldsymbol{k}}}{2V\hbar}}\hat\phi(\boldsymbol r)
++\frac{i\hat\pi(\boldsymbol r)}{\sqrt{2V\hbar\omega_{\boldsymbol{k}}}},
+\sqrt{\frac{\omega_{\boldsymbol{k}'}}{2V\hbar}}\hat\phi(\boldsymbol r')
+-\frac{i\hat\pi(\boldsymbol r')}{\sqrt{2V\hbar\omega_{\boldsymbol{k}'}}}
+\right]
+\end{aligned}
 \]</div>
-<p>交換関係の性質を用いて括弧内部を展開します。同じ場同士の交換関係は 0 になるため，異なる場が交差する項だけが残ります。</p>
+<p>交換関係の性質を用いて括弧内を展開します。同じ場同士の交換関係は 0 なので，異なる場の演算子を含む交換関係だけが残ります。</p>
 <div class="arithmatex">\[
 [\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( -\frac{i\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V\hbar} [\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] + \frac{i\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V\hbar} [\hat{\pi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] \right)
 \]</div>
 <p>問題文に与えられた正準交換関係 <span class="arithmatex">\([\hat{\phi}(\boldsymbol{r}), \hat{\pi}(\boldsymbol{r}')] = i\hbar \delta(\boldsymbol{r} - \boldsymbol{r}')\)</span> および <span class="arithmatex">\([\hat{\pi}(\boldsymbol{r}), \hat{\phi}(\boldsymbol{r}')] = -i\hbar \delta(\boldsymbol{r} - \boldsymbol{r}')\)</span> を代入します。</p>
 <div class="arithmatex">\[
-[\hat{a}_{\boldsymbol{k}}, \hat{a}_{\boldsymbol{k}'}^\dagger] = \int d\boldsymbol{r} d\boldsymbol{r}' \, e^{-i\boldsymbol{k}\cdot\boldsymbol{r} + i\boldsymbol{k}'\cdot\boldsymbol{r}'} \left( \frac{\sqrt{\omega_{\boldsymbol{k}}/\omega_{\boldsymbol{k}'}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') + \frac{\sqrt{\omega_{\boldsymbol{k}'}/\omega_{\boldsymbol{k}}}}{2V} \delta(\boldsymbol{r} - \boldsymbol{r}') \right)
-\]</div>
-<p>デルタ関数の作用により， <span class="arithmatex">\(\boldsymbol{r}'\)</span> の空間積分を実行して <span class="arithmatex">\(\boldsymbol{r}' = \boldsymbol{r}\)</span> と置きます。このとき，デルタ関数の性質から <span class="arithmatex">\(\boldsymbol{k}' = \boldsymbol{k}\)</span> の項のみが抽出されるため，固有振動数は <span class="arithmatex">\(\omega_{\boldsymbol{k}'} = \omega_{\boldsymbol{k}}\)</span> となり，等式は次のように整理されます。</p>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} \left( \frac{1}{2V} + \frac{1}{2V} \right) \\
-&amp;= \frac{1}{V} \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}}
+[\hat a_{\boldsymbol k},\hat a_{\boldsymbol k'}^\dagger]
+&amp;=\int d\boldsymbol r\,d\boldsymbol r'\,
+e^{-i\boldsymbol k\cdot\boldsymbol r+i\boldsymbol k'\cdot\boldsymbol r'}
+\left(
+\frac{\sqrt{\omega_{\boldsymbol k}/\omega_{\boldsymbol k'}}}{2V}
++\frac{\sqrt{\omega_{\boldsymbol k'}/\omega_{\boldsymbol k}}}{2V}
+\right)\delta(\boldsymbol r-\boldsymbol r') \\
+&amp;= \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} \left( \frac{1}{2V} + \frac{1}{2V} \right) \\
+&amp;= \frac{1}{V} \int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} \\
+&amp;=\finalanswer{\delta_{\boldsymbol k\boldsymbol k'}}
 \end{aligned}
 \]</div>
-<p>問題文に提示された空間積分の公式 <span class="arithmatex">\(\int d\boldsymbol{r} \, e^{-i(\boldsymbol{k} - \boldsymbol{k}')\cdot\boldsymbol{r}} = V \delta_{\boldsymbol{k}\boldsymbol{k}'}\)</span> を適用します。</p>
-<div class="arithmatex">\[
-\finalanswer{= \frac{1}{V} \left( V \delta_{\boldsymbol{k}\boldsymbol{k}'} \right) = \delta_{\boldsymbol{k}\boldsymbol{k}'}}
-\]</div>
-<p>これにより，演算子の交換関係が導出されました。</p>
+<p>これにより，演算子の交換関係が得られます。</p>
 <h3 id="2">(2)</h3>
 <p>(1) で得られた交換関係において <span class="arithmatex">\(\boldsymbol{k} = \boldsymbol{k}'\)</span> と置いた式を変形します。</p>
 <div class="arithmatex">\[

@@ -3547,34 +3547,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4837,7 +4809,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11052,7 +11052,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14516,14 +14516,14 @@
 
 <h1 id="_1">リンドブラッド方程式</h1>
 <h2 id="_2">問題</h2>
-<p>対象系の密度行列を <span class="arithmatex">\(\rho\)</span> とし，系のハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。環境との相互作用による効果が，いくつかのジャンプ演算子 <span class="arithmatex">\(\hat{L}_\mu\)</span> <span class="arithmatex">\(\mu = 1, 2, \dots\)</span> によって表されるとき，リンドブラッド方程式は以下で与えられる。</p>
+<p>対象系の密度行列を <span class="arithmatex">\(\rho\)</span>，ハミルトニアンを <span class="arithmatex">\(\hat{H}\)</span> とする。環境との相互作用がジャンプ演算子 <span class="arithmatex">\(\hat{L}_\mu\)</span>（<span class="arithmatex">\(\mu=1,2,\dots\)</span>）によって表されるとき，リンドブラッド方程式は次式で与えられる。</p>
 <div class="arithmatex">\[
 \frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho] + \sum_\mu \left( \hat{L}_\mu \rho \hat{L}_\mu^\dagger - \frac{1}{2} \hat{L}_\mu^\dagger \hat{L}_\mu \rho - \frac{1}{2} \rho \hat{L}_\mu^\dagger \hat{L}_\mu \right)
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(\hat{L}_\mu=0\)</span> のとき，リンドブラッド方程式がフォン・ノイマン方程式に一致することを示せ。</p>
 <p>(2) リンドブラッド方程式に従って時間発展する密度行列が，任意の時刻においてトレースの保存則 <span class="arithmatex">\(\frac{d}{dt} \mathrm{Tr}(\rho) = 0\)</span> を満たすことを，トレースの巡回対称性 <span class="arithmatex">\(\mathrm{Tr}(\hat{A}\hat{B}) = \mathrm{Tr}(\hat{B}\hat{A})\)</span> を用いて証明せよ。</p>
-<p>(3) 2準位系において，励起状態 <span class="arithmatex">\(|1\rangle\)</span> から基底状態 <span class="arithmatex">\(|0\rangle\)</span> へのエネルギー緩和のみが起きる状況を考える。この緩和レートを <span class="arithmatex">\(\Gamma\)</span> <span class="arithmatex">\(\Gamma &gt; 0\)</span> とすると，対応するジャンプ演算子は <span class="arithmatex">\(\hat{L} = \sqrt{\Gamma} |0\rangle\langle 1|\)</span> の1つだけで表される。
+<p>(3) 2準位系において，励起状態 <span class="arithmatex">\(|1\rangle\)</span> から基底状態 <span class="arithmatex">\(|0\rangle\)</span> へのエネルギー緩和のみが起きる状況を考える。緩和レートを <span class="arithmatex">\(\Gamma&gt;0\)</span> とすると，対応するジャンプ演算子は <span class="arithmatex">\(\hat{L}=\sqrt{\Gamma}|0\rangle\langle1|\)</span> である。
 <span class="arithmatex">\(\hat{H}=0\)</span> とし，<span class="arithmatex">\(\rho_{00},\rho_{11},\rho_{01},\rho_{10}\)</span> が満たす微分方程式を導出せよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14533,7 +14533,7 @@
 <div class="arithmatex">\[
 \finalanswer{\frac{d\rho}{dt} = -\frac{i}{\hbar} [\hat{H}, \rho]}
 \]</div>
-<p>この数式は，外部環境とすべてのエネルギーや情報のやり取りを行わない孤立量子系の時間発展を表すフォン・ノイマン方程式に一致します。</p>
+<p>これは，孤立量子系の時間発展を表すフォン・ノイマン方程式です。</p>
 <h3 id="2">(2)</h3>
 <p>リンドブラッド方程式の両辺のトレースをとります。トレースの線形性により，各項のトレースの和に分解できます。</p>
 <div class="arithmatex">\[
@@ -14569,7 +14569,7 @@
 &amp;= 0
 \end{aligned}
 \]</div>
-<p>すべての項が相殺して 0 になるため，以下の保存則が成り立ちます。</p>
+<p>各項を足すと 0 になるため，次の保存則が成り立ちます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{d}{dt} \mathrm{Tr}(\rho) = 0}
 \]</div>
@@ -14625,7 +14625,7 @@
 <div class="arithmatex">\[
 \frac{d\rho}{dt} = \Gamma \rho_{11} |0\rangle\langle 0| - \frac{\Gamma}{2} \rho_{01} |0\rangle\langle 1| - \frac{\Gamma}{2} \rho_{10} |1\rangle\langle 0| - \Gamma \rho_{11} |1\rangle\langle 1|
 \]</div>
-<p>各大括弧の基底 <span class="arithmatex">\(|i\rangle\langle j|\)</span> に対応する行列要素を比較することで，求める4つの微分方程式が導出されます。</p>
+<p>各大括弧の基底 <span class="arithmatex">\(|i\rangle\langle j|\)</span> に対応する行列要素を比較することで，求める4つの微分方程式を得ます。</p>
 <div class="arithmatex">\[
 \frac{d\rho_{00}}{dt} = \Gamma \rho_{11}
 \]</div>

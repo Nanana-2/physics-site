@@ -14,7 +14,7 @@
         <link rel="prev" href="../08_060/">
       
       
-        <link rel="next" href="../../../03thermodynamics/">
+        <link rel="next" href="../08_080/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>電気双極子放射 - 大学物理の問題集</title>
+        <title>電気双極子の放射場 - 大学物理の問題集</title>
       
     
     
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              電気双極子放射
+              電気双極子の放射場
             
           </span>
         </div>
@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4852,7 +4824,7 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
   
 
     
@@ -4870,7 +4842,7 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
   
 
     
@@ -4940,28 +4912,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (4)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4971,6 +4921,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -11175,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14482,28 +14460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (3)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (4)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -14538,7 +14494,7 @@
 
 
 
-<h1 id="_1">電気双極子放射</h1>
+<h1 id="_1">電気双極子の放射場</h1>
 <h2 id="_2">問題</h2>
 <p>原点近傍に局在した電気双極子が時間変化している。双極子モーメントを <span class="arithmatex">\(\boldsymbol{p}(t)\)</span> とし，観測点を <span class="arithmatex">\(\boldsymbol{r}=r\boldsymbol{n}\)</span>，遅延時刻を <span class="arithmatex">\(t_r=t-r/c\)</span> とする。源の大きさを <span class="arithmatex">\(a\)</span>，時間変化の代表的な角周波数を <span class="arithmatex">\(\omega\)</span> とし</p>
 <div class="arithmatex">\[
@@ -14572,47 +14528,22 @@ r\gg\frac{c}{\omega}
 \boldsymbol{\nabla}f(t_r)
 =-\frac{\boldsymbol{n}}{c}\dot f(t_r)
 \]</div>
-<p>が放射場の計算に使えることを示せ。これを用いて <span class="arithmatex">\(-\boldsymbol{\nabla}\phi\)</span> と <span class="arithmatex">\(-\partial\boldsymbol{A}/\partial t\)</span> の <span class="arithmatex">\(r^{-1}\)</span> 項を別々に計算し，放射電場を</p>
+<p>を用い，放射電場を</p>
 <div class="arithmatex">\[
 \boldsymbol{E}_{\mathrm{rad}}(\boldsymbol{r},t)
 =\frac{1}{4\pi\varepsilon_0c^2r}
 \boldsymbol{n}\times
 \left[\boldsymbol{n}\times\ddot{\boldsymbol{p}}(t_r)\right]
 \]</div>
-<p>の形に導け。さらに <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{rad}}\)</span> を求め，<span class="arithmatex">\(\boldsymbol{B}_{\mathrm{rad}}=(1/c)\boldsymbol{n}\times\boldsymbol{E}_{\mathrm{rad}}\)</span> を示せ。</p>
+<p>の形に導け。放射磁場 <span class="arithmatex">\(\boldsymbol{B}_{\mathrm{rad}}\)</span> も求めよ。</p>
 <p>(2) 双極子モーメントが</p>
 <div class="arithmatex">\[
 \boldsymbol{p}(t)=p_0\cos\omega t\boldsymbol{e}_z
 \]</div>
-<p>で振動する。球座標の極角 <span class="arithmatex">\(\theta\)</span> を <span class="arithmatex">\(+z\)</span> 軸から測る。放射電場の球座標成分 <span class="arithmatex">\(E_r,E_\theta,E_\varphi\)</span> と放射磁場の成分 <span class="arithmatex">\(B_r,B_\theta,B_\varphi\)</span> を求めよ。放射場が横波であることと，<span class="arithmatex">\(\theta=0,\pi\)</span> 方向には放射がないことを示せ。</p>
-<p>(3) 放射領域のポインティングベクトルを</p>
-<div class="arithmatex">\[
-\boldsymbol{S}_{\mathrm{rad}}
-=\frac{1}{\mu_0}
-\boldsymbol{E}_{\mathrm{rad}}
-\times\boldsymbol{B}_{\mathrm{rad}}
-\]</div>
-<p>から求めよ。単位立体角当たりの瞬間放射電力を <span class="arithmatex">\(dP/d\Omega=r^2\boldsymbol{S}_{\mathrm{rad}}\cdot\boldsymbol{n}\)</span> と定義し，その時間平均 <span class="arithmatex">\(d\langle P\rangle/d\Omega\)</span> を求めよ。<span class="arithmatex">\(\langle\cos^2\omega t\rangle=1/2\)</span> を用いてよい。</p>
-<p>(4) 角度積分</p>
-<div class="arithmatex">\[
-\int_0^{2\pi}d\varphi
-\int_0^\pi\sin^3\theta\,d\theta
-\]</div>
-<p>を <span class="arithmatex">\(u=\cos\theta\)</span> の置換によって計算せよ。その結果を用いて平均全放射電力 <span class="arithmatex">\(\langle P\rangle\)</span> を求めよ。さらに一般の双極子運動に対する瞬間全放射電力</p>
-<div class="arithmatex">\[
-P(t)=\frac{|\ddot{\boldsymbol{p}}(t_r)|^2}
-{6\pi\varepsilon_0c^3}
-\]</div>
-<p>を導け。非相対論的な速度で運動する点電荷 <span class="arithmatex">\(q\)</span> が，加速度の大きさ <span class="arithmatex">\(a\)</span> によって放射する瞬間電力を</p>
-<div class="arithmatex">\[
-P_{\mathrm{Larmor}}
-=\frac{q^2a^2}{6\pi\varepsilon_0c^3}
-\]</div>
-<p>と表したものをラーモア公式という。一個の電荷について <span class="arithmatex">\(\boldsymbol{p}=q\boldsymbol{x}\)</span> と書ける場合に，双極子放射の式がこの公式と一致することを示せ。また，等速運動ではなく加速度が放射を決める理由を，<span class="arithmatex">\(\ddot{\boldsymbol{p}}\)</span> との関係から説明せよ。</p>
+<p>で振動する。球座標の極角 <span class="arithmatex">\(\theta\)</span> を <span class="arithmatex">\(+z\)</span> 軸から測る。放射電場の球座標成分 <span class="arithmatex">\(E_r,E_\theta,E_\varphi\)</span> と放射磁場の成分 <span class="arithmatex">\(B_r,B_\theta,B_\varphi\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p><strong>遅延時刻の空間微分</strong></p>
 <p>観測点の位置を変えると，遅延時刻 <span class="arithmatex">\(t_r=t-r/c\)</span> も変化します。<span class="arithmatex">\(r=|\boldsymbol{r}|\)</span> なので</p>
 <div class="arithmatex">\[
 \boldsymbol{\nabla}r=\boldsymbol{n}
@@ -14627,11 +14558,10 @@ P_{\mathrm{Larmor}}
 &amp;=-\frac{\boldsymbol{n}}{c}, \\
 \boldsymbol{\nabla}f(t_r)
 &amp;=\frac{df}{dt_r}\boldsymbol{\nabla}t_r \\
-&amp;=-\frac{\boldsymbol{n}}{c}\dot f(t_r).
+&amp;=-\frac{\boldsymbol{n}}{c}\dot f(t_r)
 \end{aligned}
 \]</div>
 <p>ここで上のドットは遅延時刻による微分を表します。</p>
-<p><strong>スカラーポテンシャルからの寄与</strong></p>
 <p><span class="arithmatex">\(\phi\)</span> の第一項は <span class="arithmatex">\(r^{-2}\)</span> なので，微分しても <span class="arithmatex">\(r^{-1}\)</span> の放射場を作りません。第二項では，<span class="arithmatex">\(1/r\)</span> や <span class="arithmatex">\(\boldsymbol{n}\)</span> を微分すると <span class="arithmatex">\(r^{-2}\)</span> の項が生じます。したがって放射場では，<span class="arithmatex">\(\dot{\boldsymbol{p}}(t_r)\)</span> の遅延時刻だけを微分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14646,11 +14576,10 @@ P_{\mathrm{Larmor}}
 &amp;=\frac{\boldsymbol{n}}
 {4\pi\varepsilon_0c^2r}
 \left[\boldsymbol{n}\cdot
-\ddot{\boldsymbol{p}}(t_r)\right].
+\ddot{\boldsymbol{p}}(t_r)\right]
 \end{aligned}
 \]</div>
 <p>第二行では，放射場の精度で <span class="arithmatex">\(\boldsymbol{n}\)</span> の空間微分を無視し，内積全体を遅延時刻の関数として連鎖律を適用しました。</p>
-<p><strong>ベクトルポテンシャルからの寄与</strong></p>
 <p>観測位置を固定した時間微分では <span class="arithmatex">\(\partial t_r/\partial t=1\)</span> です。よって</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14658,10 +14587,10 @@ P_{\mathrm{Larmor}}
 &amp;=-\frac{\mu_0}{4\pi r}
 \ddot{\boldsymbol{p}}(t_r) \\
 &amp;=-\frac{1}{4\pi\varepsilon_0c^2r}
-\ddot{\boldsymbol{p}}(t_r).
+\ddot{\boldsymbol{p}}(t_r)
 \end{aligned}
 \]</div>
-<p>二つの寄与を加えると</p>
+<p>二つの式を加えると</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \boldsymbol{E}_{\mathrm{rad}}
@@ -14673,7 +14602,7 @@ P_{\mathrm{Larmor}}
 \right\} \\
 &amp;=\frac{1}{4\pi\varepsilon_0c^2r}
 \boldsymbol{n}\times
-[\boldsymbol{n}\times\ddot{\boldsymbol{p}}(t_r)].
+[\boldsymbol{n}\times\ddot{\boldsymbol{p}}(t_r)]
 \end{aligned}
 \]</div>
 <p>最後の行では三重積の公式
@@ -14690,8 +14619,8 @@ P_{\mathrm{Larmor}}
 \times\ddot{\boldsymbol{p}}(t_r)\right] \\
 &amp;=-\frac{\mu_0}{4\pi cr}
 \boldsymbol{n}\times\ddot{\boldsymbol{p}}(t_r) \\
-&amp;=\finalanswer{\frac{1}{c}\boldsymbol{n}}
-\times\boldsymbol{E}_{\mathrm{rad}}.
+&amp;=\finalanswer{\frac{1}{c}\boldsymbol{n}
+\times\boldsymbol{E}_{\mathrm{rad}}}
 \end{aligned}
 \]</div>
 <h3 id="2">(2)</h3>
@@ -14720,16 +14649,16 @@ P_{\mathrm{Larmor}}
 (\cos\theta\boldsymbol{e}_r
 -\sin\theta\boldsymbol{e}_\theta) \\
 ={}&amp;-\omega^2p_0\sin\theta
-\cos(\omega t_r)\boldsymbol{e}_\theta.
+\cos(\omega t_r)\boldsymbol{e}_\theta
 \end{aligned}
 \]</div>
 <p>よって電場成分は</p>
 <div class="arithmatex">\[
-E_r=E_\varphi=0,
+\finalanswer{E_r=E_\varphi=0,
 \qquad
 E_\theta
 =-\frac{p_0\omega^2}{4\pi\varepsilon_0c^2r}
-\sin\theta\cos(\omega t_r)
+\sin\theta\cos(\omega t_r)}
 \]</div>
 <p>です。<span class="arithmatex">\(\boldsymbol{e}_r\times\boldsymbol{e}_\theta
 =\boldsymbol{e}_\varphi\)</span> を用いると</p>
@@ -14739,104 +14668,6 @@ E_\theta
 B_\varphi=\frac{E_\theta}{c}}
 \]</div>
 <p>となります。電場と磁場はどちらも動径方向成分をもたず，伝播方向に垂直です。また <span class="arithmatex">\(\sin\theta=0\)</span> となる双極子軸上では放射場がゼロです。</p>
-<h3 id="3">(3)</h3>
-<p><span class="arithmatex">\(\boldsymbol{B}_{\mathrm{rad}}=(1/c)\boldsymbol{n}\times\boldsymbol{E}_{\mathrm{rad}}\)</span> と <span class="arithmatex">\(\boldsymbol{n}\cdot\boldsymbol{E}_{\mathrm{rad}}=0\)</span> を用います。ベクトル三重積より</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\boldsymbol{E}_{\mathrm{rad}}
-\times\boldsymbol{B}_{\mathrm{rad}}
-&amp;=\frac{1}{c}\boldsymbol{E}_{\mathrm{rad}}
-\times(\boldsymbol{n}\times\boldsymbol{E}_{\mathrm{rad}}) \\
-&amp;=\frac{1}{c}
-\left[
-\boldsymbol{n}E_{\mathrm{rad}}^2
--\boldsymbol{E}_{\mathrm{rad}}
-(\boldsymbol{E}_{\mathrm{rad}}\cdot\boldsymbol{n})
-\right] \\
-&amp;=\frac{E_{\mathrm{rad}}^2}{c}\boldsymbol{n}.
-\end{aligned}
-\]</div>
-<p><span class="arithmatex">\(1/(\mu_0c)=\varepsilon_0c\)</span> なので</p>
-<div class="arithmatex">\[
-\boldsymbol{S}_{\mathrm{rad}}
-=\varepsilon_0cE_{\mathrm{rad}}^2\boldsymbol{n}
-\]</div>
-<p>です。(2) の電場を代入すると</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\frac{dP}{d\Omega}
-&amp;=r^2\boldsymbol{S}_{\mathrm{rad}}\cdot\boldsymbol{n} \\
-&amp;=r^2\varepsilon_0cE_\theta^2 \\
-&amp;=\frac{p_0^2\omega^4}{16\pi^2\varepsilon_0c^3}
-\sin^2\theta\cos^2(\omega t_r).
-\end{aligned}
-\]</div>
-<p>一周期で平均すると</p>
-<div class="arithmatex">\[
-\finalanswer{\frac{d\langle P\rangle}{d\Omega}
-=\frac{p_0^2\omega^4}{32\pi^2\varepsilon_0c^3}
-\sin^2\theta}
-\]</div>
-<p>となります。<span class="arithmatex">\(r^2\)</span> が消えるため，任意の半径の球面を通過する全放射電力は同じです。角度分布は双極子軸に関して回転対称で，赤道面 <span class="arithmatex">\(\theta=\pi/2\)</span> で最大になります。</p>
-<h3 id="4">(4)</h3>
-<p>立体角要素は <span class="arithmatex">\(d\Omega=\sin\theta\,d\theta\,d\varphi\)</span> です。したがって必要な角度積分は</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int\sin^2\theta\,d\Omega
-&amp;=\int_0^{2\pi}d\varphi
-\int_0^\pi\sin^3\theta\,d\theta \\
-&amp;=2\pi\int_0^\pi
-(1-\cos^2\theta)\sin\theta\,d\theta.
-\end{aligned}
-\]</div>
-<p><span class="arithmatex">\(u=\cos\theta\)</span> と置くと <span class="arithmatex">\(du=-\sin\theta\,d\theta\)</span> であり，端点は <span class="arithmatex">\(u=1\)</span> から <span class="arithmatex">\(u=-1\)</span> へ変わります。</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\int\sin^2\theta\,d\Omega
-&amp;=2\pi\int_1^{-1}(1-u^2)(-du) \\
-&amp;=2\pi\int_{-1}^{1}(1-u^2)\,du \\
-&amp;=2\pi\left[u-\frac{u^3}{3}\right]_{-1}^{1} \\
-&amp;=\frac{8\pi}{3}.
-\end{aligned}
-\]</div>
-<p>したがって平均全放射電力は</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\langle P\rangle
-&amp;=\int\frac{d\langle P\rangle}{d\Omega}\,d\Omega \\
-&amp;=\frac{p_0^2\omega^4}{32\pi^2\varepsilon_0c^3}
-\frac{8\pi}{3} \\
-&amp;=\frac{p_0^2\omega^4}{12\pi\varepsilon_0c^3}.
-\end{aligned}
-\]</div>
-<p>一般の時刻では，(1) の放射電場の大きさに含まれる横成分が</p>
-<div class="arithmatex">\[
-|\boldsymbol{n}\times
-(\boldsymbol{n}\times\ddot{\boldsymbol{p}})|^2
-=|\ddot{\boldsymbol{p}}|^2
--(\boldsymbol{n}\cdot\ddot{\boldsymbol{p}})^2
-\]</div>
-<p>です。座標軸を瞬間的な <span class="arithmatex">\(\ddot{\boldsymbol{p}}\)</span> の向きに選べば，角度依存性は再び <span class="arithmatex">\(\sin^2\theta\)</span> になります。よって同じ角度積分から</p>
-<div class="arithmatex">\[
-P(t)=\frac{|\ddot{\boldsymbol{p}}(t_r)|^2}
-{6\pi\varepsilon_0c^3}
-\]</div>
-<p>を得ます。振動双極子では <span class="arithmatex">\(\langle|\ddot{\boldsymbol{p}}|^2\rangle=p_0^2\omega^4/2\)</span> なので，直前の平均電力とも一致します。</p>
-<p><strong>ラーモア公式との対応</strong></p>
-<p>ラーモア公式は，速度が光速より十分小さい点電荷が加速するとき，電磁波として遠方へ運び去られる単位時間当たりのエネルギーを与える式です。ここでの <span class="arithmatex">\(a(t_r)\)</span> は観測時刻 <span class="arithmatex">\(t\)</span> より <span class="arithmatex">\(r/c\)</span> だけ前の遅延時刻における加速度の大きさです。</p>
-<p>一個の電荷 <span class="arithmatex">\(q\)</span> の位置を <span class="arithmatex">\(\boldsymbol{x}(t)\)</span>，加速度を <span class="arithmatex">\(\boldsymbol{a}(t)\)</span> とすると</p>
-<div class="arithmatex">\[
-\boldsymbol{p}=q\boldsymbol{x},
-\qquad
-\ddot{\boldsymbol{p}}=q\boldsymbol{a}
-\]</div>
-<p>です。したがって</p>
-<div class="arithmatex">\[
-\finalanswer{P(t)=\frac{q^2a(t_r)^2}
-{6\pi\varepsilon_0c^3}}
-\]</div>
-<p>となり，非相対論的な加速電荷に対するラーモア公式が得られます。</p>
-<p>この式には速度 <span class="arithmatex">\(\dot{\boldsymbol{x}}\)</span> ではなく，加速度 <span class="arithmatex">\(\ddot{\boldsymbol{x}}\)</span> が現れます。等速運動なら <span class="arithmatex">\(\ddot{\boldsymbol{p}}=q\ddot{\boldsymbol{x}}=\boldsymbol{0}\)</span> なので，この近似では放射電力もゼロです。電荷の速度が変化すると電磁場の変化が外向きに伝播し，その <span class="arithmatex">\(1/r\)</span> 成分がエネルギーを無限遠まで運ぶ放射場になります。</p>
 
 
 
@@ -14860,7 +14691,7 @@ P(t)=\frac{|\ddot{\boldsymbol{p}}(t_r)|^2}
     
       
     
-    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="電気双極子放射｜大学物理の問題集">
+    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="電気双極子の放射場｜大学物理の問題集">
       <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
       <div class="page-share__buttons">
         <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
@@ -14934,13 +14765,13 @@ P(t)=\frac{|\ddot{\boldsymbol{p}}(t_r)|^2}
         
         
           
-          <a href="../../../03thermodynamics/" class="md-footer__link md-footer__link--next" aria-label="Next: 熱力学の問題一覧">
+          <a href="../08_080/" class="md-footer__link md-footer__link--next" aria-label="Next: 電気双極子の放射電力">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                熱力学の問題一覧
+                電気双極子の放射電力
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -3672,34 +3672,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4962,7 +4934,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11175,7 +11175,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14542,11 +14542,11 @@
 <h2 id="_2">問題</h2>
 <p>質量 <span class="arithmatex">\(M\)</span> の恒星を原点に固定し，その周囲を質量 <span class="arithmatex">\(m\)</span> の惑星が運動している。万有引力定数を <span class="arithmatex">\(G\)</span> とし，惑星の運動面に極座標 <span class="arithmatex">\(r\)</span>，<span class="arithmatex">\(\theta\)</span> を導入する。</p>
 <p>(1) 惑星の速度ベクトルおよび加速度ベクトルの極座標表示を用いて，惑星の運動方程式の動径方向と角度方向の成分を書き下せ。さらに，角度方向の運動方程式から，角運動量の大きさ <span class="arithmatex">\(L = mr^2 \dot{\theta}\)</span> が時間変化しない一定の値をとることを示せ。</p>
-<p>(2) 惑星の軌道の形状を調べるため，動径の逆数 <span class="arithmatex">\(u = 1/r\)</span> を導入し，時間微分を偏角 <span class="arithmatex">\(\theta\)</span> による微分に変換する。動径方向の運動方程式と角運動量保存則を用いて，軌道方程式が満たす微分方程式
-$$
+<p>(2) 惑星の軌道の形状を調べるため，動径の逆数 <span class="arithmatex">\(u = 1/r\)</span> を導入し，時間微分を偏角 <span class="arithmatex">\(\theta\)</span> による微分に変換する。動径方向の運動方程式と角運動量保存則を用いて，軌道方程式が満たす微分方程式</p>
+<div class="arithmatex">\[
 \frac{d^2u}{d\theta^2} + u = \frac{GMm^2}{L^2}
-$$
-になることを示せ。</p>
+\]</div>
+<p>になることを示せ。</p>
 <p>(3) 前問の微分方程式の一般解を <span class="arithmatex">\(u=C\cos(\theta-\theta_0)+GMm^2/L^2\)</span> とし，<span class="arithmatex">\(\theta_0=0\)</span> を選ぶ。離心率を <span class="arithmatex">\(e=CL^2/(GMm^2)\)</span> として，軌道が楕円となる条件を示せ。また，軌道長半径 <span class="arithmatex">\(a\)</span> を <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(M\)</span>，<span class="arithmatex">\(m\)</span>，<span class="arithmatex">\(L\)</span>，<span class="arithmatex">\(e\)</span> を用いて表せ。</p>
 <p>(4) 惑星が恒星の周りを1周する公転周期を <span class="arithmatex">\(T\)</span> とする。楕円の短半径 <span class="arithmatex">\(b\)</span> は，軌道長半径 <span class="arithmatex">\(a\)</span> と離心率 <span class="arithmatex">\(e\)</span> を用いて <span class="arithmatex">\(b = a \sqrt{1 - e^2}\)</span> と表される。楕円の面積および面積速度の保存則を用いて，公転周期の2乗 <span class="arithmatex">\(T^2\)</span> が軌道長半径の3乗 <span class="arithmatex">\(a^3\)</span> に比例するというケプラーの第3法則を導け。比例定数は <span class="arithmatex">\(G\)</span> と <span class="arithmatex">\(M\)</span> のみによって決まることを示せ。</p>
 <hr />
@@ -14642,9 +14642,13 @@ r &amp;= \frac{1}{\frac{GMm^2}{L^2} + C \cos \theta} \\
 \]</div>
 <p>ここで，半通径 <span class="arithmatex">\(p = L^2 / GMm^2\)</span> および離心率 <span class="arithmatex">\(e = CL^2 / GMm^2\)</span> を定義すると，軌道方程式は次のようになります。</p>
 <div class="arithmatex">\[
-r = \frac{p}{1 + e \cos \theta}
+\finalanswer{r = \frac{p}{1 + e \cos \theta}}
 \]</div>
-<p>この方程式が楕円を表す条件は，離心率 <span class="arithmatex">\(e\)</span> が <span class="arithmatex">\(0\)</span> 以上 <span class="arithmatex">\(1\)</span> 未満であることです。したがって，楕円軌道をとる条件は <span class="arithmatex">\(e &lt; 1\)</span> です。
+<p>この方程式が楕円を表す条件は</p>
+<div class="arithmatex">\[
+\finalanswer{0\le e&lt;1}
+\]</div>
+<p>です。
 近地点における距離 <span class="arithmatex">\(r_{\min}\)</span> は <span class="arithmatex">\(\theta = 0\)</span> のときであり，遠地点における距離 <span class="arithmatex">\(r_{\max}\)</span> は <span class="arithmatex">\(\theta = \pi\)</span> のときです。</p>
 <div class="arithmatex">\[
 r_{\min} = \frac{p}{1 + e}
@@ -14703,7 +14707,7 @@ A = \pi a^2 \sqrt{1 - e^2}
 <div class="arithmatex">\[
 \finalanswer{T^2 = \frac{4\pi^2}{GM} a^3}
 \]</div>
-<p>これにより，公転周期の2乗 <span class="arithmatex">\(T^2\)</span> が軌道長半径の3乗 <span class="arithmatex">\(a^3\)</span> に比例するというケプラーの第3法則が導かれました。比例定数である <span class="arithmatex">\(4\pi^2 / GM\)</span> は，万有引力定数 <span class="arithmatex">\(G\)</span> と恒星の質量 <span class="arithmatex">\(M\)</span> のみによって定まり，惑星の質量 <span class="arithmatex">\(m\)</span> や軌道要素には依存しないことが示されました。</p>
+<p>これにより，公転周期の2乗 <span class="arithmatex">\(T^2\)</span> が軌道長半径の3乗 <span class="arithmatex">\(a^3\)</span> に比例するというケプラーの第3法則が得られます。比例定数である <span class="arithmatex">\(4\pi^2 / GM\)</span> は，万有引力定数 <span class="arithmatex">\(G\)</span> と恒星の質量 <span class="arithmatex">\(M\)</span> のみによって定まり，惑星の質量 <span class="arithmatex">\(m\)</span> や軌道要素には依存しないことが示されました。</p>
 
 
 

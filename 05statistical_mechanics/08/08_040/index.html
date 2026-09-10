@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14521,12 +14521,12 @@
 <p>温度 <span class="arithmatex">\(T\)</span> の熱平衡状態にある空洞内の光子気体を考える。光子はスピン 1 のボース粒子であり，ボース・アインシュタイン統計に従う。以下の問いに答えよ。</p>
 <p>(1) 通常の理想気体では，全粒子数 <span class="arithmatex">\(N\)</span> が一定であるという拘束条件が存在するため，大カノニカル分布における大分配関数を構成する際に化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が重要な役割を果たす。しかし，光子気体では空洞の壁との間で光子の吸収や放出が絶えず行われており，全粒子数 <span class="arithmatex">\(N\)</span> を一定に保つ拘束条件が存在しない。</p>
 <p>一定の温度 <span class="arithmatex">\(T\)</span> と体積 <span class="arithmatex">\(V\)</span> のもとで，系のヘルムホルツの自由エネルギー <span class="arithmatex">\(F(T, V, N)\)</span> が最小化されるという熱力学的な平衡条件から，光子気体の化学ポテンシャル <span class="arithmatex">\(\mu\)</span> が厳密にゼロ<span class="arithmatex">\(\mu = 0\)</span>でなければならないことを示せ。</p>
-<p>(2) 光子の角振動数を <span class="arithmatex">\(\omega\)</span> とする。(1) の結果に基づき，エネルギー <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> を持つ光子状態の平均占有数を，<span class="arithmatex">\(\hbar, \omega, k_B, T\)</span> を用いて表せ。</p>
+<p>(2) 光子の角振動数を <span class="arithmatex">\(\omega\)</span> とする。(1) の結果に基づき，エネルギー <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> を持つ光子状態の平均占有数を，<span class="arithmatex">\(\hbar, \omega, k_{\text{B}}, T\)</span> を用いて表せ。</p>
 <p>(3) 単位体積・単位角振動数あたりの光子の状態密度を</p>
 <div class="arithmatex">\[
 g(\omega)=\frac{\omega^2}{\pi^2c^3}
 \]</div>
-<p>とする。全光子数 <span class="arithmatex">\(N_\gamma\)</span> を積分で表し，変数変換 <span class="arithmatex">\(x=\hbar\omega/(k_BT)\)</span> によって <span class="arithmatex">\(N_\gamma\propto VT^3\)</span> を示せ。この結果から <span class="arithmatex">\(T\to0\)</span> における光子数の極限を求めよ。</p>
+<p>とする。全光子数 <span class="arithmatex">\(N_\gamma\)</span> を積分で表し，変数変換 <span class="arithmatex">\(x=\hbar\omega/(k_{\text{B}}T)\)</span> によって <span class="arithmatex">\(N_\gamma\propto VT^3\)</span> を示せ。この結果から <span class="arithmatex">\(T\to0\)</span> における光子数の極限を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14548,9 +14548,9 @@ g(\omega)=\frac{\omega^2}{\pi^2c^3}
 <div class="arithmatex">\[
 \langle n \rangle = \frac{1}{\exp\left[ \beta(\epsilon - \mu) \right] - 1}
 \]</div>
-<p>(1) の結果より，光子気体では <span class="arithmatex">\(\mu = 0\)</span> です。また，光子1個のエネルギーは <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> ，逆温度は <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> であるため，これらを代入します。</p>
+<p>(1) の結果より，光子気体では <span class="arithmatex">\(\mu = 0\)</span> です。また，光子1個のエネルギーは <span class="arithmatex">\(\epsilon = \hbar \omega\)</span> ，逆温度は <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> であるため，これらを代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle n \rangle = \frac{1}{\exp\left[ \frac{\hbar \omega}{k_B T} \right] - 1}}
+\finalanswer{\langle n \rangle = \frac{1}{\exp\left[ \frac{\hbar \omega}{k_{\text{B}} T} \right] - 1}}
 \]</div>
 <p>この式はプランク分布，あるいはプランクの放射公式と呼ばれ，量子力学の幕開けを飾った黒体放射のエネルギー分布を説明する式となります。</p>
 <h3 id="3">(3)</h3>
@@ -14558,13 +14558,13 @@ g(\omega)=\frac{\omega^2}{\pi^2c^3}
 <div class="arithmatex">\[
 N_\gamma=V\int_0^\infty
 \frac{\omega^2}{\pi^2c^3}
-\frac{d\omega}{\exp(\hbar\omega/k_BT)-1}
+\frac{d\omega}{\exp(\hbar\omega/k_{\text{B}}T)-1}
 \]</div>
-<p>と表されます。<span class="arithmatex">\(x=\hbar\omega/(k_BT)\)</span> とおくと</p>
+<p>と表されます。<span class="arithmatex">\(x=\hbar\omega/(k_{\text{B}}T)\)</span> とおくと</p>
 <div class="arithmatex">\[
-N_\gamma=\frac{V}{\pi^2c^3}
-\left(\frac{k_BT}{\hbar}\right)^3
-\int_0^\infty\frac{x^2}{e^x-1}\,dx
+\finalanswer{N_\gamma=\frac{V}{\pi^2c^3}
+\left(\frac{k_{\text{B}}T}{\hbar}\right)^3
+\int_0^\infty\frac{x^2}{e^x-1}\,dx}
 \]</div>
 <p>となるため，<span class="arithmatex">\(N_\gamma\propto VT^3\)</span> です。したがって</p>
 <div class="arithmatex">\[

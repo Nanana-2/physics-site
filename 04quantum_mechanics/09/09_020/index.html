@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14560,7 +14560,7 @@
 <div class="arithmatex">\[
 q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi - i\hbar e^{i\Lambda}\boldsymbol{\nabla}\psi - q\boldsymbol{A}e^{i\Lambda}\psi - q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi
 \]</div>
-<p>第1項と第4項の <span class="arithmatex">\(q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi\)</span> が互いに相殺します。残った項から共通因数である <span class="arithmatex">\(e^{i\Lambda}\)</span> を前方に括り出します。</p>
+<p>第1項と第4項の <span class="arithmatex">\(q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi\)</span> は符号が逆なので，その和は 0 です。残った項から共通因子 <span class="arithmatex">\(e^{i\Lambda}\)</span> を括り出します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 - i\hbar e^{i\Lambda}\boldsymbol{\nabla}\psi - q\boldsymbol{A}e^{i\Lambda}\psi &amp;= e^{i\Lambda} \left( -i\hbar \boldsymbol{\nabla} - q\boldsymbol{A} \right) \psi \\
@@ -14583,7 +14583,7 @@ q(\boldsymbol{\nabla}\chi)e^{i\Lambda}\psi - i\hbar e^{i\Lambda}\boldsymbol{\nab
 &amp;= e^{i\Lambda} \left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \psi
 \end{aligned}
 \]</div>
-<p>両辺を <span class="arithmatex">\(2m\)</span> で割り算することにより，求める関係式が導かれます。</p>
+<p>両辺を <span class="arithmatex">\(2m\)</span> で割り算することにより，求める関係式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A}' \right)^2 \psi' = e^{i\Lambda} \left[ \frac{1}{2m}\left( \hat{\boldsymbol{p}} - q\boldsymbol{A} \right)^2 \right] \psi}
 \]</div>
@@ -14621,14 +14621,18 @@ i\hbar \frac{\partial \psi'}{\partial t} &amp;= i\hbar \frac{\partial}{\partial 
 &amp;= e^{i\Lambda} \left( \hat{H}\psi - q\frac{\partial \chi}{\partial t}\psi \right)
 \end{aligned}
 \]</div>
-<p>方程式の左辺と右辺を結び付け，両辺に共通して存在する <span class="arithmatex">\(e^{i\Lambda}\)</span> を消去します。</p>
+<p>時間依存シュレーディンガー方程式の両辺を比較し，共通因子 <span class="arithmatex">\(\exp(i\Lambda)\)</span> を除きます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-e^{i\Lambda} \left( i\hbar \frac{\partial \psi}{\partial t} - q\frac{\partial \chi}{\partial t} \right) &amp;= e^{i\Lambda} \left( \hat{H}\psi - q\frac{\partial \chi}{\partial t}\psi \right) \implies i\hbar \frac{\partial \psi}{\partial t} - q\frac{\partial \chi}{\partial t} \\
-&amp;= \hat{H}\psi - q\frac{\partial \chi}{\partial t}
-\end{aligned}
+\begin{gathered}
+\exp(i\Lambda)\left(i\hbar\frac{\partial\psi}{\partial t}
+-q\frac{\partial\chi}{\partial t}\psi\right)
+=\exp(i\Lambda)\left(\hat H\psi-q\frac{\partial\chi}{\partial t}\psi\right) \\
+\Longrightarrow\quad
+i\hbar\frac{\partial\psi}{\partial t}-q\frac{\partial\chi}{\partial t}\psi
+=\hat H\psi-q\frac{\partial\chi}{\partial t}\psi
+\end{gathered}
 \]</div>
-<p>両辺の末尾にある <span class="arithmatex">\(-q\frac{\partial \chi}{\partial t}\)</span> が相殺します。</p>
+<p>両辺から共通する <span class="arithmatex">\(-q\frac{\partial \chi}{\partial t}\)</span> を引きます。</p>
 <div class="arithmatex">\[
 \finalanswer{i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi}
 \]</div>

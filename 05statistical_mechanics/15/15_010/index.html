@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14520,12 +14520,12 @@
 <h2 id="_2">問題</h2>
 <p>密度行列を <span class="arithmatex">\(\rho\)</span> とするとき，フォン・ノイマンエントロピー <span class="arithmatex">\(S\)</span> は以下で定義される。</p>
 <div class="arithmatex">\[
-S = -k_B \mathrm{Tr}(\rho \ln \rho)
+S = -k_{\text{B}} \mathrm{Tr}(\rho \log \rho)
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(\rho|n\rangle=p_n|n\rangle\)</span> とする。フォン・ノイマンエントロピーが</p>
 <div class="arithmatex">\[
-S = -k_B \sum_n p_n \ln p_n
+S = -k_{\text{B}} \sum_n p_n \log p_n
 \]</div>
 <p>と表されることを示せ。</p>
 <p>(2) 純粋状態 <span class="arithmatex">\(\rho=|\psi\rangle\langle\psi|\)</span> の固有値を求め，<span class="arithmatex">\(S=0\)</span> を示せ。</p>
@@ -14539,18 +14539,15 @@ S = -k_B \sum_n p_n \ln p_n
 <h3 id="1">(1)</h3>
 <p>密度行列 <span class="arithmatex">\(\rho\)</span> の固有基底 <span class="arithmatex">\(\{|n\rangle\}\)</span> を用いて定義式のトレースを展開します。</p>
 <div class="arithmatex">\[
-S = -k_B \sum_n \langle n| \rho \ln \rho |n\rangle
+S = -k_{\text{B}} \sum_n \langle n| \rho \log \rho |n\rangle
 \]</div>
-<p>固有値方程式 <span class="arithmatex">\(\rho|n\rangle = p_n|n\rangle\)</span> より，演算子の対数関数を作用させた場合の値は <span class="arithmatex">\(\ln \rho|n\rangle = \ln p_n|n\rangle\)</span> となります。これらをブラケットの内部に適用します。</p>
+<p>固有値方程式 <span class="arithmatex">\(\rho|n\rangle = p_n|n\rangle\)</span> より，演算子の対数関数を作用させた場合の値は <span class="arithmatex">\(\log \rho|n\rangle = \log p_n|n\rangle\)</span> となります。これらをブラケットの内部に適用します。</p>
 <div class="arithmatex">\[
-S = -k_B \sum_n \langle n| p_n \ln p_n |n\rangle
+S = -k_{\text{B}} \sum_n \langle n| p_n \log p_n |n\rangle
 \]</div>
-<p><span class="arithmatex">\(p_n \ln p_n\)</span> はスカラー量であるため積分の外へ括り出すことができます。基底の規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> を適用します。</p>
+<p><span class="arithmatex">\(p_n \log p_n\)</span> はスカラー量であるため積分の外へ括り出すことができます。基底の規格化条件 <span class="arithmatex">\(\langle n|n\rangle = 1\)</span> を適用します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-S &amp;= -k_B \sum_n p_n \ln p_n \langle n|n\rangle \\
-&amp;= \finalanswer{-k_B \sum_n p_n \ln p_n}
-\end{aligned}
+S = -k_{\text{B}} \sum_n p_n \log p_n \langle n|n\rangle = \finalanswer{-k_{\text{B}} \sum_n p_n \log p_n}
 \]</div>
 <p>これにより，行列のトレースで定義された式が，対角化を行うことで各状態の出現確率 <span class="arithmatex">\(p_n\)</span> に関する和の形式に書き換わることが示されました。</p>
 <h3 id="2">(2)</h3>
@@ -14572,11 +14569,11 @@ p_1 = 1, \quad p_2 = p_3 = \dots = 0
 \]</div>
 <p>この固有値を (1) の展開式に代入してエントロピーを計算します。</p>
 <div class="arithmatex">\[
-S = -k_B \Big( 1 \cdot \ln 1 + 0 \cdot \ln 0 + 0 \cdot \ln 0 + \dots \Big)
+S = -k_{\text{B}} \Big( 1 \cdot \log 1 + 0 \cdot \log 0 + 0 \cdot \log 0 + \dots \Big)
 \]</div>
-<p><span class="arithmatex">\(\ln 1 = 0\)</span> であり，また <span class="arithmatex">\(0\)</span> に対応する項は極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \ln x = 0\)</span> によりすべて <span class="arithmatex">\(0\)</span> となります。</p>
+<p><span class="arithmatex">\(\log 1 = 0\)</span> であり，また <span class="arithmatex">\(0\)</span> に対応する項は極限公式 <span class="arithmatex">\(\lim_{x \to 0} x \log x = 0\)</span> によりすべて <span class="arithmatex">\(0\)</span> となります。</p>
 <div class="arithmatex">\[
-S = -k_B \Big( 0 + 0 + \dots \Big) = \finalanswer{0}
+S = -k_{\text{B}} \Big( 0 + 0 + \dots \Big) = \finalanswer{0}
 \]</div>
 <p>量子状態が判明しており，情報の欠落や統計的なゆらぎが存在しない純粋状態では，フォン・ノイマンエントロピーが厳密に 0 になることが示されました。</p>
 <h3 id="3">(3)</h3>
@@ -14587,10 +14584,10 @@ p_1 = \frac{1}{2}, \quad p_2 = \frac{1}{2}
 <p>(1) の式に代入して計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S &amp;= -k_B \left( \frac{1}{2} \ln \frac{1}{2} + \frac{1}{2} \ln \frac{1}{2} \right) \\
-&amp;= -k_B \cdot \ln \frac{1}{2} \\
-&amp;= -k_B \big( -\ln 2 \big) \\
-&amp;= k_B \ln 2
+S &amp;= -k_{\text{B}} \left( \frac{1}{2} \log \frac{1}{2} + \frac{1}{2} \log \frac{1}{2} \right) \\
+&amp;= -k_{\text{B}} \cdot \log \frac{1}{2} \\
+&amp;= -k_{\text{B}} \big( -\log 2 \big) \\
+&amp;= \finalanswer{k_{\text{B}} \log 2}
 \end{aligned}
 \]</div>
 <p>次に，これを一般の <span class="arithmatex">\(d\)</span> 次元量子系の最大混合状態へと拡張します。このときの密度行列は各対角成分に <span class="arithmatex">\(\frac{1}{d}\)</span> が <span class="arithmatex">\(d\)</span> 個並ぶため，固有値分布はすべて等確率となります。</p>
@@ -14600,13 +14597,13 @@ p_n = \frac{1}{d} \quad (\text{ただし } n = 1, 2, \dots, d)
 <p>展開式に代入し，同じ値を持つ <span class="arithmatex">\(d\)</span> 個の項を足し合わせます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-S &amp;= -k_B \sum_{n=1}^{d} \frac{1}{d} \ln \frac{1}{d} \\
-&amp;= -k_B \cdot d \left( \frac{1}{d} \ln \frac{1}{d} \right) \\
-&amp;= -k_B \ln \frac{1}{d} \\
-&amp;= \finalanswer{k_B \ln d}
+S &amp;= -k_{\text{B}} \sum_{n=1}^{d} \frac{1}{d} \log \frac{1}{d} \\
+&amp;= -k_{\text{B}} \cdot d \left( \frac{1}{d} \log \frac{1}{d} \right) \\
+&amp;= -k_{\text{B}} \log \frac{1}{d} \\
+&amp;= \finalanswer{k_{\text{B}} \log d}
 \end{aligned}
 \]</div>
-<p>一般の最大混合状態におけるフォン・ノイマンエントロピーは <span class="arithmatex">\(S = k_B \ln d\)</span> となります。この数式から，取り得る量子状態の次元数 <span class="arithmatex">\(d\)</span> が大きくなればなるほど，系の状態に関する不確定性が対数関数的に増大し，エントロピーの値が大きくなる関係性が得られます。</p>
+<p>一般の最大混合状態におけるフォン・ノイマンエントロピーは <span class="arithmatex">\(S = k_{\text{B}} \log d\)</span> です。次元数 <span class="arithmatex">\(d\)</span> が大きいほど，エントロピーは対数的に増加します。</p>
 
 
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14522,12 +14522,12 @@
 <div class="arithmatex">\[
 N = \sum_{k} n_k, \quad E = \sum_{k} \epsilon_k n_k
 \]</div>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の熱・粒子浴と平衡状態にある系全体の大分配関数 <span class="arithmatex">\(\Xi\)</span> は，すべての微視的状態に関するギブズ因子の和として定義される。以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> の熱・粒子浴と平衡状態にある系全体の大分配関数 <span class="arithmatex">\(\Xi\)</span> は，すべての微視的状態に関するギブズ因子の和として定義される。以下の問いに答えよ。</p>
 <p>(1) 大分配関数 <span class="arithmatex">\(\Xi\)</span> の定義式において，全粒子数 <span class="arithmatex">\(N\)</span> と全エネルギー <span class="arithmatex">\(E\)</span> の式を代入し，各準位 <span class="arithmatex">\(k\)</span> の占有数 <span class="arithmatex">\(n_k\)</span> に関する独立な和の積へと分解できることを示せ。これによって，系全体の大分配関数が，各準位ごとの大分配関数 <span class="arithmatex">\(\Xi_k\)</span> の積 <span class="arithmatex">\(\Xi = \prod_{k} \Xi_k\)</span> として表されることを導け。</p>
 <p>(2) フェルミ粒子およびボース粒子のそれぞれについて，各準位の占有数 <span class="arithmatex">\(n_k\)</span> がとり得る値の範囲を考慮して <span class="arithmatex">\(\Xi_k\)</span> の和を計算せよ。ただし，ボース粒子の計算においては収束条件 <span class="arithmatex">\(\mu &lt; \epsilon_k\)</span> が満たされているものとする。</p>
-<p>(3) (2) の結果を用いることで，系全体のグランドポテンシャル <span class="arithmatex">\(\Omega = -k_B T \log \Xi\)</span> が，フェルミ粒子とボース粒子で符号が異なる以下の一体型の形式で表現できることを示せ。</p>
+<p>(3) (2) の結果を用いることで，系全体のグランドポテンシャル <span class="arithmatex">\(\Omega = -k_{\text{B}} T \log \Xi\)</span> が，フェルミ粒子とボース粒子で符号が異なる以下の一体型の形式で表現できることを示せ。</p>
 <div class="arithmatex">\[
-\Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
+\Omega = \pm k_{\text{B}} T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
 \]</div>
 <p>複号の上の符号がフェルミ粒子，下の符号がボース粒子に対応する。</p>
 <hr />
@@ -14539,10 +14539,7 @@ N = \sum_{k} n_k, \quad E = \sum_{k} \epsilon_k n_k
 \]</div>
 <p>この式の指数部分に，与えられた <span class="arithmatex">\(N\)</span> と <span class="arithmatex">\(E\)</span> の表現を代入します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-E - \mu N &amp;= \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k \\
-&amp;= \sum_{k} (\epsilon_k - \mu) n_k
-\end{aligned}
+E - \mu N = \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k = \sum_{k} (\epsilon_k - \mu) n_k
 \]</div>
 <p>これを指数関数の中に書き戻すと，和の指数関数は，各項の指数関数の積へと書き換えることができます。</p>
 <div class="arithmatex">\[
@@ -14585,27 +14582,27 @@ E - \mu N &amp;= \sum_{k} \epsilon_k n_k - \mu \sum_{k} n_k \\
 <p>系全体のグランドポテンシャル <span class="arithmatex">\(\Omega\)</span> の定義式に，(1) で得られた大分配関数の積の表現を代入します。対数の性質により，積の対数は対数の和へと変換されます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\Omega &amp;= -k_B T \log \Xi \\
-&amp;= -k_B T \log \left( \prod_{k} \Xi_k \right) \\
-&amp;= -k_B T \sum_{k} \log \Xi_k
+\Omega &amp;= -k_{\text{B}} T \log \Xi \\
+&amp;= -k_{\text{B}} T \log \left( \prod_{k} \Xi_k \right) \\
+&amp;= -k_{\text{B}} T \sum_{k} \log \Xi_k
 \end{aligned}
 \]</div>
 <p>この式に，(2) で求めたフェルミ粒子とボース粒子のそれぞれの <span class="arithmatex">\(\Xi_k\)</span> を代入して整理します。</p>
 <p><strong>フェルミ粒子の場合</strong></p>
 <div class="arithmatex">\[
-\Omega_{\mathrm{Fermi}} = -k_B T \sum_{k} \log \left( 1 + \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
+\Omega_{\mathrm{Fermi}} = -k_{\text{B}} T \sum_{k} \log \left( 1 + \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
 \]</div>
 <p><strong>ボース粒子の場合</strong></p>
-<p>分母にある構造を対数の外に出すため，マイナス符号が相殺されてプラスになります。</p>
+<p>分母の式を対数の外へ出すと負号が生じるため，前方の負号との積は正になります。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\Omega_{\mathrm{Bose}} &amp;= -k_B T \sum_{k} \log \left( \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \right) \\
-&amp;= +k_B T \sum_{k} \log \left( 1 - \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
+\Omega_{\mathrm{Bose}} &amp;= -k_{\text{B}} T \sum_{k} \log \left( \frac{1}{1 - \exp\left[ -\beta(\epsilon_k - \mu) \right]} \right) \\
+&amp;= +k_{\text{B}} T \sum_{k} \log \left( 1 - \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)
 \end{aligned}
 \]</div>
 <p>この二つの式を複号を用いて一つの形にまとめます。</p>
 <div class="arithmatex">\[
-\finalanswer{\Omega = \pm k_B T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)}
+\finalanswer{\Omega = \pm k_{\text{B}} T \sum_{k} \log \left( 1 \pm \exp\left[ -\beta(\epsilon_k - \mu) \right] \right)}
 \]</div>
 <p>以上より，フェルミ粒子とボース粒子のグランドポテンシャルが得られます。</p>
 

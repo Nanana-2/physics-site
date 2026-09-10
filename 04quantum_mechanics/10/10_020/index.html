@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,7 +14534,7 @@
 \]</div>
 <p>以下の問いに答えよ。</p>
 <p>(1) 摂動項の演算子部分である <span class="arithmatex">\(\hat{x}^4\)</span> を <span class="arithmatex">\(\hat{a}\)</span> と <span class="arithmatex">\(\hat{a}^\dagger\)</span> を用いて展開せよ。</p>
-<p>(2) 1次摂動エネルギー <span class="arithmatex">\(E_n^{(1)} = \langle n| \hat{V} |n\rangle\)</span> を計算するにあたり，展開した <span class="arithmatex">\(\hat{x}^4\)</span> の各項のうち，状態 <span class="arithmatex">\(|n\rangle\)</span> で挟んだ期待値 <span class="arithmatex">\(\langle n| \dots |n\rangle\)</span> が 0 にならず生き残る項はどのような条件を満たす項か説明せよ。また，その条件を満たす演算子の組み合わせをすべて列挙せよ。</p>
+<p>(2) 1次摂動エネルギー <span class="arithmatex">\(E_n^{(1)} = \langle n| \hat{V} |n\rangle\)</span> を計算するにあたり，展開した <span class="arithmatex">\(\hat{x}^4\)</span> の各項のうち，状態 <span class="arithmatex">\(|n\rangle\)</span> で挟んだ期待値 <span class="arithmatex">\(\langle n| \dots |n\rangle\)</span> が 0 にならない項の条件を説明せよ。また，その条件を満たす演算子の組み合わせをすべて列挙せよ。</p>
 <p>(3) 1次摂動論を適用して，各エネルギー準位に対するエネルギーの1次補正 <span class="arithmatex">\(E_n^{(1)}\)</span> を <span class="arithmatex">\(n, \lambda, \hbar, m, \omega\)</span> を用いて求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
@@ -14563,74 +14563,16 @@
 \finalanswer{\hat{a}^2(\hat{a}^\dagger)^2, \quad \hat{a}\hat{a}^\dagger\hat{a}\hat{a}^\dagger, \quad \hat{a}(\hat{a}^\dagger)^2\hat{a}, \quad \hat{a}^\dagger\hat{a}^2\hat{a}^\dagger, \quad \hat{a}^\dagger\hat{a}\hat{a}^\dagger\hat{a}, \quad (\hat{a}^\dagger)^2\hat{a}^2}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で選別した 6つの演算子の項について，状態 <span class="arithmatex">\(|n\rangle\)</span> に対する期待値を個別に計算します。演算子を右側から順番に状態へ作用させていきます。</p>
-<ul>
-<li>項1の計算</li>
-</ul>
-<div class="arithmatex">\[
-\langle n| \hat{a}^2(\hat{a}^\dagger)^2 |n\rangle = \langle n| \hat{a}^2 \cdot \sqrt{n+1}\sqrt{n+2} |n+2\rangle
-\]</div>
+<p>(2) で求めた6項について，生成消滅演算子を右から順に作用させると</p>
 <div class="arithmatex">\[
 \begin{aligned}
- &amp;= \sqrt{n+1}\sqrt{n+2}\sqrt{n+2}\sqrt{n+1} \langle n|n\rangle \\
-&amp;= (n+1)(n+2)
+\langle n|\hat a^2(\hat a^\dagger)^2|n\rangle&amp;=(n+1)(n+2),\\
+\langle n|\hat a\hat a^\dagger\hat a\hat a^\dagger|n\rangle&amp;=(n+1)^2,\\
+\langle n|\hat a(\hat a^\dagger)^2\hat a|n\rangle&amp;=n(n+1),\\
+\langle n|\hat a^\dagger\hat a^2\hat a^\dagger|n\rangle&amp;=n(n+1),\\
+\langle n|\hat a^\dagger\hat a\hat a^\dagger\hat a|n\rangle&amp;=n^2,\\
+\langle n|(\hat a^\dagger)^2\hat a^2|n\rangle&amp;=n(n-1)
 \end{aligned}
-\]</div>
-<ul>
-<li>項2の計算</li>
-</ul>
-<div class="arithmatex">\[
-\langle n| \hat{a}\hat{a}^\dagger\hat{a}\hat{a}^\dagger |n\rangle = \langle n| \hat{a}\hat{a}^\dagger\hat{a} \sqrt{n+1} |n+1\rangle
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
- &amp;= \langle n| \hat{a}\hat{a}^\dagger (n+1) |n\rangle \\
-&amp;= \langle n| \hat{a} (n+1)\sqrt{n+1} |n+1\rangle \\
-&amp;= (n+1)^2
-\end{aligned}
-\]</div>
-<ul>
-<li>項3の計算</li>
-</ul>
-<div class="arithmatex">\[
-\langle n| \hat{a}(\hat{a}^\dagger)^2\hat{a} |n\rangle = \langle n| \hat{a}(\hat{a}^\dagger)^2 \sqrt{n} |n-1\rangle
-\]</div>
-<div class="arithmatex">\[
-\langle n| \hat{a}(\hat{a}^\dagger)^2\hat{a} |n\rangle = \langle n| \hat{a}\hat{a}^\dagger \sqrt{n}\sqrt{n} |n\rangle = n(n+1)
-\]</div>
-<ul>
-<li>項4の計算</li>
-</ul>
-<div class="arithmatex">\[
-\langle n| \hat{a}^\dagger\hat{a}^2\hat{a}^\dagger |n\rangle = \langle n| \hat{a}^\dagger\hat{a}^2 \sqrt{n+1} |n+1\rangle
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
- &amp;= \langle n| \hat{a}^\dagger \sqrt{n+1}\sqrt{n+1}\sqrt{n} |n-1\rangle \\
-&amp;= n(n+1)
-\end{aligned}
-\]</div>
-<ul>
-<li>項5の計算</li>
-</ul>
-<div class="arithmatex">\[
-\langle n| \hat{a}^\dagger\hat{a}\hat{a}^\dagger\hat{a} |n\rangle = \langle n| \hat{a}^\dagger\hat{a}\hat{a}^\dagger \sqrt{n} |n-1\rangle
-\]</div>
-<div class="arithmatex">\[
-\begin{aligned}
- &amp;= \langle n| \hat{a}^\dagger\hat{a} \sqrt{n}\sqrt{n} |n\rangle \\
-&amp;= \langle n| \hat{a}^\dagger n\sqrt{n} |n-1\rangle \\
-&amp;= n^2
-\end{aligned}
-\]</div>
-<ul>
-<li>項6の計算</li>
-</ul>
-<div class="arithmatex">\[
-\langle n| (\hat{a}^\dagger)^2\hat{a}^2 |n\rangle = \langle n| (\hat{a}^\dagger)^2 \sqrt{n}\sqrt{n-1} |n-2\rangle
-\]</div>
-<div class="arithmatex">\[
-\langle n| (\hat{a}^\dagger)^2\hat{a}^2 |n\rangle = \sqrt{n}\sqrt{n-1}\sqrt{n-1}\sqrt{n} \langle n|n\rangle = n(n-1)
 \]</div>
 <p>これら 6つの期待値の割り出し結果をすべて足し合わせます。</p>
 <div class="arithmatex">\[
@@ -14663,7 +14605,7 @@
 <div class="arithmatex">\[
 E_n^{(1)} = \lambda \left( \frac{\hbar}{2m\omega} \right)^2 \cdot 3(2n^2 + 2n + 1)
 \]</div>
-<p>数式を整理することで，求めるエネルギーの1次補正の式が得られます。</p>
+<p>式を整理することで，求めるエネルギーの1次補正の式が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{E_n^{(1)} = \frac{3\lambda\hbar^2}{4m^2\omega^2} (2n^2 + 2n + 1)}
 \]</div>

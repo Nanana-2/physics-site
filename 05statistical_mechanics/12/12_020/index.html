@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14576,10 +14576,7 @@
 \]</div>
 <p>対角成分の和をとります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\mathrm{Tr}(\rho_A^2) &amp;= \frac{1}{4} + \frac{1}{4} \\
-&amp;= \finalanswer{\frac{1}{2} &lt; 1}
-\end{aligned}
+\mathrm{Tr}(\rho_A^2) = \frac{1}{4} + \frac{1}{4} = \finalanswer{\frac{1}{2} &lt; 1}
 \]</div>
 <p>値が 1 よりも小さいため，<strong>状態Aは混合状態</strong>であると判定されます。</p>
 <ul>
@@ -14595,10 +14592,7 @@
 \]</div>
 <p>対角成分の和をとります。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\mathrm{Tr}(\rho_B^2) &amp;= \frac{1}{2} + \frac{1}{2} \\
-&amp;= \finalanswer{1}
-\end{aligned}
+\mathrm{Tr}(\rho_B^2) = \frac{1}{2} + \frac{1}{2} = \finalanswer{1}
 \]</div>
 <p>値がちょうど 1 になるため，<strong>状態Bは純粋状態</strong>であると判定されます。</p>
 <p>状態Aと状態Bは，どちらも上向きと下向きが <span class="arithmatex">\(1/2\)</span> ずつの割合で観測される点では一見似ていますが，状態Bには位相情報が非対角成分として保存されているため，純粋状態としての性質を維持しています。</p>
@@ -14618,7 +14612,7 @@
 <div class="arithmatex">\[
   (P_x + i P_y)(P_x - i P_y) + (1-P_z)^2 = P_x^2 + P_y^2 + 1 - 2P_z + P_z^2
 \]</div>
-<p>これら2つの成分を足し合わせ，前方の係数 <span class="arithmatex">\(1/4\)</span> を掛けます。 <span class="arithmatex">\(2P_z\)</span> と <span class="arithmatex">\(-2P_z\)</span> は相殺されます。</p>
+<p>これら2つの成分を足し合わせ，係数 <span class="arithmatex">\(1/4\)</span> を掛けます。<span class="arithmatex">\(2P_z+(-2P_z)=0\)</span> なので</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \mathrm{Tr}(\rho^2) &amp;= \frac{1}{4} \Big( 2 + 2P_x^2 + 2P_y^2 + 2P_z^2 \Big) \\
@@ -14633,12 +14627,11 @@
 </ul>
 <div class="arithmatex">\[
 \begin{aligned}
-\finalanswer{\frac{1}{2} (1 + |\boldsymbol{P}|^2)} &amp;= 1 \implies 1 + |\boldsymbol{P}|^2 \\
-&amp;= 2 \implies |\boldsymbol{P}|^2 \\
-&amp;= 1 \implies |\boldsymbol{P}| \\
-&amp;= 1
+\frac{1}{2}(1+|\boldsymbol P|^2)&amp;=1, \\
+|\boldsymbol P|^2&amp;=1
 \end{aligned}
 \]</div>
+<p><span class="arithmatex">\(|\boldsymbol P|\ge0\)</span> なので，<span class="arithmatex">\(\finalanswer{|\boldsymbol P|=1}\)</span> です。</p>
 <p>ブロッホ球上では，純粋状態はブロッホ球の<strong>最表面</strong>に対応します。</p>
 <ul>
 <li><strong>混合状態のとき</strong>

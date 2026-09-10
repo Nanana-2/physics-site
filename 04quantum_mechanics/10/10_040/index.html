@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14544,7 +14544,7 @@
 <div class="arithmatex">\[
 \int_{0}^{\infty} x e^{-\alpha x^2} dx = \frac{1}{2\alpha}
 \]</div>
-<p>(3) 全エネルギーの期待値 <span class="arithmatex">\(\langle H \rangle = \langle K \rangle + \langle V \rangle\)</span> を表す式を組み立てよ。この期待値を最小にする最適な変分パラメータ <span class="arithmatex">\(\alpha_0\)</span> を求め，変分原理に基づく基底状態エネルギーの近似的な上限値 <span class="arithmatex">\(E_{\text{var}}\)</span> を算出せよ。</p>
+<p>(3) 全エネルギーの期待値 <span class="arithmatex">\(\langle H \rangle = \langle K \rangle + \langle V \rangle\)</span> を表す式を組み立てよ。この期待値を最小にする変分パラメータ <span class="arithmatex">\(\alpha_0\)</span> を求め，変分原理による基底状態エネルギーの上限 <span class="arithmatex">\(E_{\text{var}}\)</span> を求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14567,22 +14567,21 @@
 \]</div>
 <p>提示されたガウス積分の公式をそれぞれの積分に適用します。</p>
 <div class="arithmatex">\[
-\langle K \rangle = -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ \alpha^2 \cdot \frac{1}{2\alpha}\sqrt{\frac{\pi}{\alpha}} - \alpha \cdot \sqrt{\frac{\pi}{\alpha}} \right]
-\]</div>
-<div class="arithmatex">\[
 \begin{aligned}
- &amp;= -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ \frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}} - \alpha \sqrt{\frac{\pi}{\alpha}} \right] \\
+\langle K\rangle
+&amp;=-\frac{\hbar^2}{2m}\left(\frac{\alpha}{\pi}\right)^{1/2}
+\left[\frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}}-\alpha\sqrt{\frac{\pi}{\alpha}}\right] \\
 &amp;= -\frac{\hbar^2}{2m} \left( \frac{\alpha}{\pi} \right)^{1/2} \left[ -\frac{\alpha}{2}\sqrt{\frac{\pi}{\alpha}} \right]
 \end{aligned}
 \]</div>
-<p>共通するルートの因数を掛け算して相殺させます。</p>
+<p>根号を含む係数の積を計算します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \langle K \rangle &amp;= -\frac{\hbar^2}{2m} \cdot \left( -\frac{\alpha}{2} \right) \\
 &amp;= \finalanswer{\frac{\hbar^2 \alpha}{4m}}
 \end{aligned}
 \]</div>
-<p>これが運動エネルギーの期待値の数式表現です。</p>
+<p>これが運動エネルギーの期待値です。</p>
 <h3 id="2">(2)</h3>
 <p>ポテンシャルエネルギーの期待値を計算します。被積分関数に含まれる <span class="arithmatex">\(|x|\)</span> は偶関数であるため，積分範囲を <span class="arithmatex">\(0\)</span> から <span class="arithmatex">\(\infty\)</span> までの2倍の形に変形できます。</p>
 <div class="arithmatex">\[
@@ -14616,10 +14615,9 @@ E(\alpha) &amp;= \langle K \rangle + \langle V \rangle \\
 \end{aligned}
 \]</div>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{\hbar^2}{4m} &amp;= \frac{F}{2\sqrt{\pi}} \alpha^{-3/2} \implies \alpha^{3/2} \\
-&amp;= \frac{2mF}{\sqrt{\pi}\hbar^2}
-\end{aligned}
+\frac{\hbar^2}{4m}=\frac{F}{2\sqrt{\pi}}\alpha^{-3/2}
+\quad\Longrightarrow\quad
+\alpha^{3/2}=\frac{2mF}{\sqrt{\pi}\hbar^2}
 \]</div>
 <p>両辺を <span class="arithmatex">\(2/3\)</span> 乗することにより，最適なパラメータ <span class="arithmatex">\(\alpha_0\)</span> が決定されます。</p>
 <div class="arithmatex">\[
@@ -14636,7 +14634,7 @@ E_{\text{var}} &amp;= \frac{\hbar^2 \alpha_0}{4m} + \frac{\hbar^2 \alpha_0}{2m} 
 &amp;= \frac{3\hbar^2 \alpha_0}{4m}
 \end{aligned}
 \]</div>
-<p>ここに算出した <span class="arithmatex">\(\alpha_0\)</span> を代入します。</p>
+<p>ここに計算した <span class="arithmatex">\(\alpha_0\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 E_{\text{var}} &amp;= \frac{3\hbar^2}{4m} \left( \frac{2mF}{\sqrt{\pi}\hbar^2} \right)^{2/3} \\

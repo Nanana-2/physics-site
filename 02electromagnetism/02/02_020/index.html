@@ -3661,34 +3661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14527,33 +14527,32 @@
 <p>を用いてよい。</p>
 <p>(1) 球対称性から表面電荷密度が一様になることを説明し，その値 <span class="arithmatex">\(\sigma_s\)</span> を求めよ。ガウスの法則を用いて，球内外の電場 <span class="arithmatex">\(\boldsymbol{E}(r)\)</span> を領域 <span class="arithmatex">\(r&lt;R\)</span> と <span class="arithmatex">\(r&gt;R\)</span> に分けて求めよ。</p>
 <p>(2) (1) の電場を無限遠から積分して球外の電位 <span class="arithmatex">\(\phi_{\mathrm{out}}(r)\)</span> を求めよ。表面での連続性と導体内部の電場がゼロであることから，球内の電位 <span class="arithmatex">\(\phi_{\mathrm{in}}(r)\)</span> と表面電位 <span class="arithmatex">\(V\)</span> を求め，導体全体が等電位であることを示せ。</p>
-<p>(3) <span class="arithmatex">\(C=Q/V\)</span> から静電容量 <span class="arithmatex">\(C\)</span> を求めよ。続いて球を電荷ゼロから <span class="arithmatex">\(Q\)</span> まで充電する外力の仕事を <span class="arithmatex">\(U\)</span> として求め，球外の電場エネルギー密度 <span class="arithmatex">\(u=\varepsilon_0E^2/2\)</span> の体積積分と一致することを示せ。</p>
+<p>(3) <span class="arithmatex">\(C=Q/V\)</span> から静電容量 <span class="arithmatex">\(C\)</span> を求めよ。球を電荷ゼロから <span class="arithmatex">\(Q\)</span> まで充電する外力の仕事を <span class="arithmatex">\(U\)</span> として求めよ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
 <p>球対称性より電荷は表面に一様に分布します。球の表面積は <span class="arithmatex">\(4\pi R^2\)</span> なので</p>
 <div class="arithmatex">\[
-\sigma_s=\frac{Q}{4\pi R^2}
+\finalanswer{\sigma_s=\frac{Q}{4\pi R^2}}
 \]</div>
 <p>です。</p>
-<p><strong>球内外の電場</strong></p>
 <p>導体内部では静電平衡により電場はゼロです。球外では半径 <span class="arithmatex">\(r\)</span> の球面にガウスの法則を適用します。</p>
 <div class="arithmatex">\[
 \finalanswer{E(r)4\pi r^2=\frac{Q}{\varepsilon_0}}
 \]</div>
 <p>したがって</p>
 <div class="arithmatex">\[
-\boldsymbol{E}(r)=
+\finalanswer{\boldsymbol{E}(r)=
 \begin{cases}
 \boldsymbol{0},&amp;r&lt;R,\\\\
 \dfrac{Q}{4\pi\varepsilon_0r^2}\boldsymbol{e}_r,&amp;r&gt;R
-\end{cases}
+\end{cases}}
 \]</div>
 <p>となります。</p>
 <h3 id="2">(2)</h3>
 <p>球外の電位は点電荷の場合と同じです。</p>
 <div class="arithmatex">\[
-\phi(r)=\frac{Q}{4\pi\varepsilon_0r},\qquad r\ge R
+\finalanswer{\phi(r)=\frac{Q}{4\pi\varepsilon_0r},\qquad r\ge R}
 \]</div>
 <p>導体内部では電場がゼロなので電位は一定です。表面で電位が連続であることから</p>
 <div class="arithmatex">\[
@@ -14563,10 +14562,9 @@
 <h3 id="3">(3)</h3>
 <p>孤立導体の静電容量を <span class="arithmatex">\(C=Q/V\)</span> と定義します。<span class="arithmatex">\(V=\phi(R)\)</span> を代入すると</p>
 <div class="arithmatex">\[
-C=4\pi\varepsilon_0R
+\finalanswer{C=4\pi\varepsilon_0R}
 \]</div>
 <p>です。球が大きいほど，同じ電位で多くの電荷を蓄えられます。</p>
-<p><strong>充電仕事と電場エネルギー</strong></p>
 <p>途中の電荷を <span class="arithmatex">\(q\)</span> とすると球の電位は <span class="arithmatex">\(q/(4\pi\varepsilon_0R)\)</span> です。したがって</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -14574,7 +14572,7 @@ U
 &amp;=\int_0^Q\frac{q}{4\pi\varepsilon_0R}\,dq \\
 &amp;=\frac{1}{4\pi\varepsilon_0R}
 \left[\frac{q^2}{2}\right]_0^Q \\
-&amp;=\frac{Q^2}{8\pi\varepsilon_0R}.
+&amp;=\frac{Q^2}{8\pi\varepsilon_0R}
 \end{aligned}
 \]</div>
 <p>となります。電場から計算しても</p>
@@ -14588,7 +14586,7 @@ U
 \int_R^\infty\frac{dr}{r^2} \\
 &amp;=\frac{Q^2}{8\pi\varepsilon_0}
 \left[-\frac{1}{r}\right]_R^\infty \\
-&amp;=\finalanswer{\frac{Q^2}{8\pi\varepsilon_0R}}.
+&amp;=\finalanswer{\frac{Q^2}{8\pi\varepsilon_0R}}
 \end{aligned}
 \]</div>
 <p>となり，充電仕事が球外の電場に蓄えられていることが分かります。</p>

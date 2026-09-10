@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14518,7 +14518,7 @@
 
 <h1 id="_1">平均粒子数と粒子数揺らぎ</h1>
 <h2 id="_2">問題</h2>
-<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span>，体積 <span class="arithmatex">\(V\)</span> の大正準集団を考える。大分配関数は <span class="arithmatex">\(\Xi = \sum_N \sum_i \exp\left[ -\beta(E_{i,N} - \mu N) \right]\)</span> で与えられ，粒子数 <span class="arithmatex">\(N\)</span> の平均値は <span class="arithmatex">\(\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}\)</span> と表される。以下の問いに答えよ。</p>
+<p>温度 <span class="arithmatex">\(T\)</span>，逆温度 <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span>，化学ポテンシャル <span class="arithmatex">\(\mu\)</span>，体積 <span class="arithmatex">\(V\)</span> の大正準集団を考える。大分配関数は <span class="arithmatex">\(\Xi = \sum_N \sum_i \exp\left[ -\beta(E_{i,N} - \mu N) \right]\)</span> で与えられ，粒子数 <span class="arithmatex">\(N\)</span> の平均値は <span class="arithmatex">\(\langle N \rangle = \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu}\)</span> と表される。以下の問いに答えよ。</p>
 <p>(1) 粒子数 <span class="arithmatex">\(N\)</span> の2乗平均 <span class="arithmatex">\(\langle N^2 \rangle\)</span> が，大分配関数 <span class="arithmatex">\(\Xi\)</span> の <span class="arithmatex">\(\mu\)</span> による2階偏微分を用いて</p>
 <div class="arithmatex">\[
 \langle N^2 \rangle = \frac{1}{\beta^2 \Xi} \frac{\partial^2 \Xi}{\partial \mu^2}
@@ -14577,33 +14577,31 @@
 \]</div>
 <p>分散の定義 <span class="arithmatex">\(\langle (N - \langle N \rangle)^2 \rangle = \langle N^2 \rangle - \langle N \rangle^2\)</span> を用いて式を整理します。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{\partial^2 \log \Xi}{\partial \mu^2} &amp;= \beta^2 \langle (N - \langle N \rangle)^2 \rangle \quad \implies \quad \langle (N - \langle N \rangle)^2 \rangle \\
-&amp;= \frac{1}{\beta^2} \frac{\partial^2 \log \Xi}{\partial \mu^2}
-\end{aligned}
+\finalanswer{\langle(N-\langle N\rangle)^2\rangle
+=\frac{1}{\beta^2}\frac{\partial^2\log\Xi}{\partial\mu^2}}
 \]</div>
-<p>ここで，右辺の微分を <span class="arithmatex">\(\frac{1}{\beta} \frac{\partial}{\partial \mu} \left( \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu} \right)\)</span> と変形します。括弧の中身は平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> の表現そのものであるため，以下の関係が導かれます。</p>
+<p>ここで，右辺の微分を <span class="arithmatex">\(\frac{1}{\beta} \frac{\partial}{\partial \mu} \left( \frac{1}{\beta} \frac{\partial \log \Xi}{\partial \mu} \right)\)</span> と変形します。括弧の中身は平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> の表現そのものであるため，以下の関係が得られます。</p>
 <div class="arithmatex">\[
 \finalanswer{\langle (N - \langle N \rangle)^2 \rangle = \frac{1}{\beta} \frac{\partial \langle N \rangle}{\partial \mu}}
 \]</div>
 <h3 id="3">(3)</h3>
-<p>(2) で得られた粒子数の分散の式に，問題文で与えられた熱力学的関係式 <span class="arithmatex">\(\frac{\partial \langle N \rangle}{\partial \mu} = \frac{\langle N \rangle^2}{V} \kappa_T\)</span> と <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入します。</p>
+<p>(2) で得られた粒子数の分散の式に，問題文で与えられた熱力学的関係式 <span class="arithmatex">\(\frac{\partial \langle N \rangle}{\partial \mu} = \frac{\langle N \rangle^2}{V} \kappa_T\)</span> と <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\langle (N - \langle N \rangle)^2 \rangle &amp;= k_B T \frac{\partial \langle N \rangle}{\partial \mu} \\
-&amp;= k_B T \frac{\langle N \rangle^2}{V} \kappa_T
+\langle (N - \langle N \rangle)^2 \rangle &amp;= k_{\text{B}} T \frac{\partial \langle N \rangle}{\partial \mu} \\
+&amp;= k_{\text{B}} T \frac{\langle N \rangle^2}{V} \kappa_T
 \end{aligned}
 \]</div>
 <p>粒子数の標準偏差 <span class="arithmatex">\(\Delta N\)</span> は，この分散の平方根として求められます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\Delta N &amp;= \sqrt{k_B T \frac{\langle N \rangle^2}{V} \kappa_T} \\
-&amp;= \langle N \rangle \sqrt{\frac{k_B T \kappa_T}{V}}
+\Delta N &amp;= \sqrt{k_{\text{B}} T \frac{\langle N \rangle^2}{V} \kappa_T} \\
+&amp;= \langle N \rangle \sqrt{\frac{k_{\text{B}} T \kappa_T}{V}}
 \end{aligned}
 \]</div>
 <p>両辺を平均粒子数 <span class="arithmatex">\(\langle N \rangle\)</span> で割ることで，相対揺らぎの式が得られます。</p>
 <div class="arithmatex">\[
-\frac{\Delta N}{\langle N \rangle} = \sqrt{\frac{k_B T \kappa_T}{V}}
+\finalanswer{\frac{\Delta N}{\langle N \rangle} = \sqrt{\frac{k_{\text{B}} T \kappa_T}{V}}}
 \]</div>
 <p><span class="arithmatex">\(V \to \infty\)</span> を考えます。等温圧縮率 <span class="arithmatex">\(\kappa_T\)</span> は系の大きさに依存しないため，相対揺らぎは <span class="arithmatex">\(1/\sqrt{V}\)</span> に比例して0へ収束します。</p>
 <div class="arithmatex">\[

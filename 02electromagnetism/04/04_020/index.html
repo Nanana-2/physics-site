@@ -3551,34 +3551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../03/03_060/" class="md-nav__link">
         
   
@@ -4951,7 +4923,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14534,9 +14534,9 @@ m_e\frac{d\boldsymbol{v}_d}{dt}
 p=\boldsymbol{j}\cdot\boldsymbol{E}
 \]</div>
 <p>で与えられる。この仕事は導体内でジュール熱へ変換される。</p>
-<p>(1) 定常状態では <span class="arithmatex">\(d\boldsymbol{v}_d/dt=\boldsymbol{0}\)</span> である。定常ドリフト速度 <span class="arithmatex">\(\boldsymbol{v}_d\)</span> を求め，<span class="arithmatex">\(\boldsymbol{j}=-ne\boldsymbol{v}_d\)</span> へ代入して局所的なオームの法則 <span class="arithmatex">\(\boldsymbol{j}=\sigma\boldsymbol{E}\)</span> を導出せよ。電気伝導率 <span class="arithmatex">\(\sigma\)</span> を <span class="arithmatex">\(n,e,m_e,\tau\)</span> で表せ。続いて導体内の電場を <span class="arithmatex">\(V,L\)</span> で表し，全電流 <span class="arithmatex">\(I\)</span> と抵抗 <span class="arithmatex">\(R=V/I\)</span> を求めよ。</p>
-<p>(2) 単位体積当たりの発熱率 <span class="arithmatex">\(p\)</span> を，<span class="arithmatex">\(\sigma\)</span> と <span class="arithmatex">\(E\)</span> を用いる形，および <span class="arithmatex">\(j\)</span> と <span class="arithmatex">\(\sigma\)</span> を用いる形で表せ。さらに導体全体で積分し，全発熱率が <span class="arithmatex">\(VI\)</span>，<span class="arithmatex">\(I^2R\)</span>，<span class="arithmatex">\(V^2/R\)</span> の三通りに書けることを途中式を示して導出せよ。</p>
-<p>(3) 同じ材質，同じ体積の導体を，長さ <span class="arithmatex">\(2L\)</span>，断面積 <span class="arithmatex">\(S/2\)</span> の細長い形へ変形する。変形前後で抵抗を比較せよ。続いて，両端電圧を同じ <span class="arithmatex">\(V\)</span> に保つ場合と，全電流を同じ <span class="arithmatex">\(I\)</span> に保つ場合のそれぞれについて，全発熱率が何倍になるか求め，結果が異なる理由を説明せよ。</p>
+<p>(1) 定常ドリフト速度 <span class="arithmatex">\(\boldsymbol{v}_d\)</span> を求め，局所的なオームの法則 <span class="arithmatex">\(\boldsymbol{j}=\sigma\boldsymbol{E}\)</span> を導出せよ。電気伝導率 <span class="arithmatex">\(\sigma\)</span> を <span class="arithmatex">\(n,e,m_e,\tau\)</span> で表せ。</p>
+<p>(2) 導体内の電場を <span class="arithmatex">\(V,L\)</span> で表し，全電流 <span class="arithmatex">\(I\)</span> と抵抗 <span class="arithmatex">\(R=V/I\)</span> を求めよ。</p>
+<p>(3) 単位体積当たりの発熱率 <span class="arithmatex">\(p\)</span> を <span class="arithmatex">\(E,j,\sigma\)</span> で表せ。導体全体の発熱率を求め，<span class="arithmatex">\(VI\)</span>，<span class="arithmatex">\(I^2R\)</span>，<span class="arithmatex">\(V^2/R\)</span> の形で表せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14548,8 +14548,8 @@ p=\boldsymbol{j}\cdot\boldsymbol{E}
 \]</div>
 <p>これを <span class="arithmatex">\(\boldsymbol{v}_d\)</span> について解くと</p>
 <div class="arithmatex">\[
-\boldsymbol{v}_d
-=-\frac{e\tau}{m_e}\boldsymbol{E}
+\finalanswer{\boldsymbol{v}_d
+=-\frac{e\tau}{m_e}\boldsymbol{E}}
 \]</div>
 <p>となります。電子は負電荷をもつため，平均ドリフト速度は電場と反対向きです。慣用的な電流密度へ代入すると</p>
 <div class="arithmatex">\[
@@ -14559,15 +14559,16 @@ p=\boldsymbol{j}\cdot\boldsymbol{E}
 \]</div>
 <p>です。したがって局所的なオームの法則と電気伝導率は</p>
 <div class="arithmatex">\[
-\boldsymbol{j}=\sigma\boldsymbol{E},
+\finalanswer{\boldsymbol{j}=\sigma\boldsymbol{E},
 \qquad
-\sigma=\frac{ne^2\tau}{m_e}
+\sigma=\frac{ne^2\tau}{m_e}}
 \]</div>
 <p>となります。電子のドリフトとは逆向きに定義される慣用電流は，電場と同じ向きを向きます。</p>
-<p>次に有限の円柱導体へ適用します。</p>
+<h3 id="2">(2)</h3>
+<p>有限の円柱導体へ適用します。</p>
 <p>電位は <span class="arithmatex">\(+x\)</span> 方向へ <span class="arithmatex">\(V\)</span> だけ低下するため，電場は <span class="arithmatex">\(+x\)</span> 方向を向きます。端効果を無視すれば大きさは一定で</p>
 <div class="arithmatex">\[
-\boldsymbol{E}=\frac{V}{L}\boldsymbol{e}_x
+\finalanswer{\boldsymbol{E}=\frac{V}{L}\boldsymbol{e}_x}
 \]</div>
 <p>です。局所的なオームの法則へ代入すると</p>
 <div class="arithmatex">\[
@@ -14586,7 +14587,7 @@ I
 \frac{\sigma V}{L}
 \boldsymbol{e}_x\cdot\boldsymbol{e}_x\,dS \\
 &amp;=\frac{\sigma V}{L}\int_SdS \\
-&amp;=\frac{\sigma S}{L}V.
+&amp;=\frac{\sigma S}{L}V
 \end{aligned}
 \]</div>
 <p>です。これを <span class="arithmatex">\(V=RI\)</span> の形へ整理すると</p>
@@ -14598,14 +14599,14 @@ V=\frac{L}{\sigma S}I
 \finalanswer{R=\frac{L}{\sigma S}}
 \]</div>
 <p>を得ます。長い導体では電荷が電場に逆らう散乱を受けながら進む距離が長くなるため抵抗が増えます。断面積が大きい導体では電流が通る経路が並列に増えるため抵抗が減ります。</p>
-<h3 id="2">(2)</h3>
+<h3 id="3">(3)</h3>
 <p><span class="arithmatex">\(\boldsymbol{j}\)</span> と <span class="arithmatex">\(\boldsymbol{E}\)</span> は同じ向きなので</p>
 <div class="arithmatex">\[
 p=\boldsymbol{j}\cdot\boldsymbol{E}=jE
 \]</div>
 <p>です。<span class="arithmatex">\(j=\sigma E\)</span> を用いると</p>
 <div class="arithmatex">\[
-p=\sigma E^2
+\finalanswer{p=\sigma E^2=\frac{j^2}{\sigma}}
 \]</div>
 <p>となります。反対に <span class="arithmatex">\(E=j/\sigma\)</span> を用いれば</p>
 <div class="arithmatex">\[
@@ -14626,28 +14627,6 @@ P=VI
 \finalanswer{P=VI=I^2R=\frac{V^2}{R}}
 \]</div>
 <p>となります。同じ発熱率を，制御しやすい電圧または電流に応じて異なる形で表しています。</p>
-<h3 id="3">(3)</h3>
-<p>変形後の長さと断面積を <span class="arithmatex">\(L'=2L\)</span>，<span class="arithmatex">\(S'=S/2\)</span> とします。体積は <span class="arithmatex">\(L'S'=LS\)</span> で変化しません。抵抗は</p>
-<div class="arithmatex">\[
-R'=\frac{L'}{\sigma S'}
-=\frac{2L}{\sigma(S/2)}
-=4R
-\]</div>
-<p>です。</p>
-<p>電圧を同じ <span class="arithmatex">\(V\)</span> に保つ場合は <span class="arithmatex">\(P=V^2/R\)</span> を用います。</p>
-<div class="arithmatex">\[
-\finalanswer{\frac{P'}{P}
-=\frac{V^2/R'}{V^2/R}
-=\frac{R}{R'}
-=\frac{1}{4}}
-\]</div>
-<p>したがって発熱率は <span class="arithmatex">\(1/4\)</span> 倍です。一方，電流を同じ <span class="arithmatex">\(I\)</span> に保つ場合は <span class="arithmatex">\(P=I^2R\)</span> より</p>
-<div class="arithmatex">\[
-\finalanswer{\frac{P'}{P}
-=\frac{I^2R'}{I^2R}
-=4}
-\]</div>
-<p>となります。電圧一定では抵抗増加によって電流が減りますが，電流一定では同じ電流を流すためにより大きな電圧が必要です。この外部条件の違いにより，発熱率の変化が逆になります。</p>
 
 
 

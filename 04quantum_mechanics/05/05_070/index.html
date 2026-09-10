@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14541,7 +14541,7 @@
 \]</div>
 <p>右側の状態 <span class="arithmatex">\(|n\rangle\)</span> にそれぞれの演算子を作用させます。</p>
 <div class="arithmatex">\[
-\langle m|\hat{x}|n\rangle = \sqrt{\frac{\hbar}{2m\omega}} \left( \sqrt{n}\langle m|n-1\rangle + \sqrt{n+1}\langle m|n+1\rangle \right)
+\finalanswer{\langle m|\hat{x}|n\rangle = \sqrt{\frac{\hbar}{2m\omega}} \left( \sqrt{n}\langle m|n-1\rangle + \sqrt{n+1}\langle m|n+1\rangle \right)}
 \]</div>
 <p>状態の直交関係より，内積 <span class="arithmatex">\(\langle m|n-1\rangle\)</span> は <span class="arithmatex">\(m = n-1\)</span> のときだけ 1 になり，それ以外では 0 になります。同様に， <span class="arithmatex">\(\langle m|n+1\rangle\)</span> は <span class="arithmatex">\(m = n+1\)</span> のときだけ 1 になります。</p>
 <p>したがって，行列要素全体が 0 にならないための条件は，量子数の差がちょうど 1 になるとき，すなわち以下の関係を満たすときです。</p>
@@ -14558,16 +14558,16 @@
 \]</div>
 <p>演算子を作用させます。</p>
 <div class="arithmatex">\[
-\langle m|\hat{p}|n\rangle = -i\sqrt{\frac{m\hbar\omega}{2}} \left( \sqrt{n}\langle m|n-1\rangle - \sqrt{n+1}\langle m|n+1\rangle \right)
+\finalanswer{\langle m|\hat{p}|n\rangle = -i\sqrt{\frac{m\hbar\omega}{2}} \left( \sqrt{n}\langle m|n-1\rangle - \sqrt{n+1}\langle m|n+1\rangle \right)}
 \]</div>
-<p>(1) と同様に，内積が 0 にならない位置を直交性から判断します。括弧の中の符号は引き算に変わっていますが，内積が生き残る位置自体は位置演算子と同じです。</p>
+<p>(1) と同様に，直交性を用いて 0 にならない内積を調べます。括弧内の符号は負ですが，0 にならない内積の組み合わせは位置演算子の場合と同じです。</p>
 <p>したがって，運動量の行列要素が 0 にならない条件も以下のように定まります。</p>
 <div class="arithmatex">\[
 \finalanswer{m = n - 1 \quad \text{または} \quad m = n + 1}
 \]</div>
 <p>このように，調和振動子では位置や運動量による状態の変化は，量子数が 1 つだけずれる組み合わせに限られます。</p>
 <h3 id="3">(3)</h3>
-<p>(1) と (2) の一般式に，指定された量子数の組み合わせを直接代入して値を抽出します。</p>
+<p>(1) と (2) の一般式に，指定された量子数を代入します。</p>
 <ul>
 <li><strong>位置の行列要素 <span class="arithmatex">\(\langle n+1|\hat{x}|n\rangle\)</span></strong>
   (1) の式において <span class="arithmatex">\(m = n+1\)</span> とします。</li>
@@ -14579,7 +14579,7 @@
 <div class="arithmatex">\[
 \begin{aligned}
 \langle n+1|\hat{x}|n\rangle &amp;= \sqrt{\frac{\hbar}{2m\omega}} \sqrt{n+1} \\
-&amp;= \sqrt{\frac{\hbar(n+1)}{2m\omega}}
+&amp;= \finalanswer{\sqrt{\frac{\hbar(n+1)}{2m\omega}}}
 \end{aligned}
 \]</div>
 <ul>

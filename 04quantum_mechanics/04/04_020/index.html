@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14548,24 +14548,25 @@ T \approx \frac{16 k^2 \kappa^2}{(k^2 + \kappa^2)^2} e^{-2\kappa a}
   ポテンシャルは <span class="arithmatex">\(V(x) = 0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} &amp;= E \psi \implies \frac{d^2 \psi}{dx^2} \\
-&amp;= -\frac{2mE}{\hbar^2} \psi
-\end{aligned}
+\begin{gathered}
+-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi \\
+\Longrightarrow\quad \frac{d^2\psi}{dx^2}=-\frac{2mE}{\hbar^2}\psi
+\end{gathered}
 \]</div>
 <p>これより，定数 <span class="arithmatex">\(k\)</span> の表式が得られます。</p>
 <div class="arithmatex">\[
-  k = \sqrt{\frac{2mE}{\hbar^2}}
+  \finalanswer{k = \sqrt{\frac{2mE}{\hbar^2}}}
 \]</div>
 <ul>
 <li><strong>領域 II：<span class="arithmatex">\(0 \le x \le a\)</span></strong>
   ポテンシャルは <span class="arithmatex">\(V(x) = V_0\)</span> です。</li>
 </ul>
 <div class="arithmatex">\[
-\begin{aligned}
--\frac{\hbar^2}{2m} \frac{d^2 \psi_{\text{II}}}{dx^2} + V_0 \psi_{\text{II}} &amp;= E \psi_{\text{II}} \implies \frac{d^2 \psi_{\text{II}}}{dx^2} \\
-&amp;= \frac{2m(V_0 - E)}{\hbar^2} \psi_{\text{II}}
-\end{aligned}
+\begin{gathered}
+-\frac{\hbar^2}{2m}\frac{d^2\psi_{\text{II}}}{dx^2}+V_0\psi_{\text{II}}=E\psi_{\text{II}} \\
+\Longrightarrow\quad
+\frac{d^2\psi_{\text{II}}}{dx^2}=\frac{2m(V_0-E)}{\hbar^2}\psi_{\text{II}}
+\end{gathered}
 \]</div>
 <p><span class="arithmatex">\(E &lt; V_0\)</span> であるため，根号の中身は正となります。これにより定数 <span class="arithmatex">\(\kappa\)</span> の表式が得られます。</p>
 <div class="arithmatex">\[
@@ -14606,10 +14607,9 @@ ik(A - B) = -\kappa C
 \]</div>
 <p>次に，境界 <span class="arithmatex">\(x = a\)</span> の③式，④式を考えます。<span class="arithmatex">\(D\)</span> の項を残し，<span class="arithmatex">\(e^{-\kappa a}\)</span> の項を右辺の <span class="arithmatex">\(F\)</span> と結びつけます。③式と④式を連立させて <span class="arithmatex">\(D\)</span> について解くと，以下の関係が得られます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-2D e^{\kappa a} &amp;= F e^{ika} \left( 1 + \frac{ik}{\kappa} \right) \implies D \\
-&amp;= \frac{\kappa + ik}{2\kappa} e^{ika - \kappa a} F
-\end{aligned}
+2D e^{\kappa a}=F e^{ika}\left(1+\frac{ik}{\kappa}\right)
+\quad\Longrightarrow\quad
+D=\frac{\kappa+ik}{2\kappa}e^{ika-\kappa a}F
 \]</div>
 <p>さらに，途中の領域 II 全体を繋ぐために，本来の接続条件から得られる <span class="arithmatex">\(C\)</span> と <span class="arithmatex">\(D\)</span> の関係 <span class="arithmatex">\(D \approx C e^{-2\kappa a} \cdot \frac{\kappa - ik}{\kappa + ik}\)</span> を考慮して， <span class="arithmatex">\(A\)</span> から <span class="arithmatex">\(F\)</span> への減衰を評価します。厳密な展開を近似すると，係数 <span class="arithmatex">\(F\)</span> は <span class="arithmatex">\(C\)</span> に対して <span class="arithmatex">\(e^{-\kappa a}\)</span> の割合で減少する形に結びつきます。</p>
 <div class="arithmatex">\[

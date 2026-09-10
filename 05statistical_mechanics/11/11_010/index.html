@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14529,7 +14529,7 @@
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
-<p>詳細釣り合い条件とは，任意の2状態 <span class="arithmatex">\(i\)</span> と <span class="arithmatex">\(j\)</span> の間において， <span class="arithmatex">\(i\)</span> から <span class="arithmatex">\(j\)</span> への遷移によって失われる確率の流量と， <span class="arithmatex">\(j\)</span> から <span class="arithmatex">\(i\)</span> への遷移によって流れ込む確率の流量が，個別に厳密に釣り合っているという規則です。したがって，求める数式は以下の通りになります。</p>
+<p>詳細釣り合い条件とは，任意の2状態 <span class="arithmatex">\(i\)</span> と <span class="arithmatex">\(j\)</span> の間で，<span class="arithmatex">\(i\)</span> から <span class="arithmatex">\(j\)</span> へ流れる確率と <span class="arithmatex">\(j\)</span> から <span class="arithmatex">\(i\)</span> へ流れる確率が等しいという条件です。したがって</p>
 <div class="arithmatex">\[
 \finalanswer{W(i \to j) P_i^{\mathrm{eq}} = W(j \to i) P_j^{\mathrm{eq}}}
 \]</div>
@@ -14544,10 +14544,7 @@ W(j \to i) P_j^{\mathrm{eq}} - W(i \to j) P_i^{\mathrm{eq}} = 0
 \]</div>
 <p>これをすべての <span class="arithmatex">\(j\)</span> について足し合わせても全体の和はゼロのままです。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\frac{dP_i^{\mathrm{eq}}}{dt} &amp;= \sum_{j \neq i} 0 \\
-&amp;= \finalanswer{0}
-\end{aligned}
+\frac{dP_i^{\mathrm{eq}}}{dt} = \sum_{j \neq i} 0 = \finalanswer{0}
 \]</div>
 <p>これにより，詳細釣り合い条件が満たされているならば，その確率分布はマスター方程式に従って時間変化しない定常な分布として維持されることが示されました。詳細釣り合いは，系全体の確率が保存されるための十分条件となっています。</p>
 <h3 id="3">(3)</h3>
@@ -14555,7 +14552,7 @@ W(j \to i) P_j^{\mathrm{eq}} - W(i \to j) P_i^{\mathrm{eq}} = 0
 <div class="arithmatex">\[
 \frac{W(i \to j)}{W(j \to i)} = \frac{P_j^{\mathrm{eq}}}{P_i^{\mathrm{eq}}}
 \]</div>
-<p>ここにカノニカル分布の確率 <span class="arithmatex">\(P_i^{\mathrm{eq}} = \frac{1}{Z} \exp(-\beta E_i)\)</span> を代入します。規格化定数である分配関数 <span class="arithmatex">\(Z\)</span> は分子分母で相殺されます。</p>
+<p>ここにカノニカル分布の確率 <span class="arithmatex">\(P_i^{\mathrm{eq}} = \frac{1}{Z} \exp(-\beta E_i)\)</span> を代入し，分子と分母の <span class="arithmatex">\(Z\)</span> を約分します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{W(i \to j)}{W(j \to i)} &amp;= \frac{\exp(-\beta E_j)}{\exp(-\beta E_i)} \\
@@ -14572,7 +14569,16 @@ W(j \to i) P_j^{\mathrm{eq}} - W(i \to j) P_i^{\mathrm{eq}} = 0
 <li><strong>エネルギーが上がる場合 <span class="arithmatex">\(\Delta E &gt; 0\)</span></strong>
   遷移速度比の要求値は 1 よりも小さくなります。このとき，試みられた遷移はボルツマン因子に等しい確率 <span class="arithmatex">\(W(i \to j) = \exp(-\beta \Delta E)\)</span> で確率的に受け入れられ，残りの確率で元の状態 <span class="arithmatex">\(i\)</span> に留まります。</li>
 </ul>
-<p>このように遷移規則を定めて状態の更新を多数回繰り返すと，遷移の比が常に <span class="arithmatex">\(\exp(-\beta \Delta E)\)</span> を満たすため，詳細釣り合い条件によって，最終的に得られる状態のサンプリング分布が目的のカノニカル分布へと自動的に収束していくことになります。</p>
+<p>以上をまとめると，メトロポリス法の受理確率は</p>
+<div class="arithmatex">\[
+\finalanswer{A(i\to j)=\min\{1,e^{-\beta\Delta E}\}}
+\]</div>
+<p>です。この遷移規則は詳細釣り合い条件を満たすため，反復後のサンプリング分布はカノニカル分布へ収束します。</p>
+<p>以上をまとめると，メトロポリス法の受理確率は</p>
+<div class="arithmatex">\[
+\finalanswer{A(i\to j)=\min\{1,e^{-\beta\Delta E}\}}
+\]</div>
+<p>です。</p>
 
 
 

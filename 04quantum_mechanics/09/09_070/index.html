@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,11 +14525,17 @@ i\hbar \frac{\partial \psi}{\partial t} = \left[ \frac{1}{2m} (\hat{\boldsymbol{
 \]</div>
 <p>運動量演算子 <span class="arithmatex">\(\hat{\boldsymbol{p}} = -i\hbar \boldsymbol{\nabla}\)</span> を代入して右辺を展開すると，方程式は次のように書き下される。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \boldsymbol{\nabla}^2 \psi + \frac{i\hbar q}{2m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi + \frac{i\hbar q}{m} \boldsymbol{A} \cdot (\boldsymbol{\nabla}\psi) + \frac{q^2}{2m} \boldsymbol{A}^2 \psi + q\phi \psi
+\begin{aligned}
+i\hbar\frac{\partial\psi}{\partial t}
+={}&amp;-\frac{\hbar^2}{2m}\nabla^2\psi
++\frac{i\hbar q}{2m}(\nabla\cdot\boldsymbol A)\psi\\
+&amp;+\frac{i\hbar q}{m}\boldsymbol A\cdot\nabla\psi
++\frac{q^2}{2m}\boldsymbol A^2\psi+q\phi\psi
+\end{aligned}
 \]</div>
 <p>確率密度を <span class="arithmatex">\(\rho = |\psi|^2 = \psi^* \psi\)</span> と定義する。以下の問いに答えよ。</p>
 <p>(1) 与えられたシュレーディンガー方程式の全体について複素共役をとることにより， <span class="arithmatex">\(\psi^*\)</span> の時間微分 <span class="arithmatex">\(-i\hbar \frac{\partial \psi^*}{\partial t}\)</span> に関する方程式を求めよ。</p>
-<p>(2) 確率密度の時間変化 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} = \frac{\partial \psi^*}{\partial t} \psi + \psi^* \frac{\partial \psi}{\partial t}\)</span> に対し， (1) の結果および元のシュレーディンガー方程式を代入して整理せよ。ポテンシャル <span class="arithmatex">\(\phi\)</span> を含む項が相殺されることを確認せよ。</p>
+<p>(2) 確率密度の時間変化 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} = \frac{\partial \psi^*}{\partial t} \psi + \psi^* \frac{\partial \psi}{\partial t}\)</span> に対し， (1) の結果および元のシュレーディンガー方程式を代入して整理せよ。ポテンシャル <span class="arithmatex">\(\phi\)</span> を含む項が消去されることを確認せよ。</p>
 <p>(3) (2) で得られた式を，確率の連続の式である以下の形式へと変形せよ。</p>
 <div class="arithmatex">\[
 \frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \boldsymbol{J} = 0
@@ -14540,7 +14546,13 @@ i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \boldsymbol{\nabla
 <h3 id="1">(1)</h3>
 <p>提示されたシュレーディンガー方程式の全体の複素共役をとります。虚数単位 <span class="arithmatex">\(i\)</span> を <span class="arithmatex">\(-i\)</span> に置き換え，波動関数を複素共役の記号に掛け替えます。ポテンシャル <span class="arithmatex">\(\phi\)</span> や <span class="arithmatex">\(\boldsymbol{A}\)</span> は実数の物理量であるため，形は変化しません。</p>
 <div class="arithmatex">\[
--i\hbar \frac{\partial \psi^*}{\partial t} = \finalanswer{-\frac{\hbar^2}{2m} \boldsymbol{\nabla}^2 \psi^* - \frac{i\hbar q}{2m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^* - \frac{i\hbar q}{m} \boldsymbol{A} \cdot (\boldsymbol{\nabla}\psi^*)} + \frac{q^2}{2m} \boldsymbol{A}^2 \psi^* + q\phi \psi^*
+\begin{aligned}
+-i\hbar\frac{\partial\psi^*}{\partial t}
+={}&amp;\finalanswer{-\frac{\hbar^2}{2m}\nabla^2\psi^*
+-\frac{i\hbar q}{2m}(\nabla\cdot\boldsymbol A)\psi^*}\\
+&amp;\quad\finalanswer{-\frac{i\hbar q}{m}\boldsymbol A\cdot\nabla\psi^*
++\frac{q^2}{2m}\boldsymbol A^2\psi^*+q\phi\psi^*}
+\end{aligned}
 \]</div>
 <p>これが複素共役をとった方程式です。</p>
 <h3 id="2">(2)</h3>
@@ -14553,53 +14565,69 @@ i\hbar \frac{\partial \rho}{\partial t} &amp;= \left( i\hbar \frac{\partial \psi
 \]</div>
 <p>ここに， (1) の結果と元のシュレーディンガー方程式をそれぞれ代入します。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \rho}{\partial t} = - \left[ -\frac{\hbar^2}{2m} \boldsymbol{\nabla}^2 \psi^* - \frac{i\hbar q}{2m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^* - \frac{i\hbar q}{m} \boldsymbol{A} \cdot (\boldsymbol{\nabla}\psi^*) + \frac{q^2}{2m} \boldsymbol{A}^2 \psi^* + q\phi \psi^* \right] \psi
-\]</div>
-<div class="arithmatex">\[
-+ \psi^* \left[ -\frac{\hbar^2}{2m} \boldsymbol{\nabla}^2 \psi + \frac{i\hbar q}{2m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi + \frac{i\hbar q}{m} \boldsymbol{A} \cdot (\boldsymbol{\nabla}\psi) + \frac{q^2}{2m} \boldsymbol{A}^2 \psi + q\phi \psi \right]
+\begin{aligned}
+i\hbar\frac{\partial\rho}{\partial t}
+={}&amp;-\left(-i\hbar\frac{\partial\psi^*}{\partial t}\right)\psi
++\psi^*\left(i\hbar\frac{\partial\psi}{\partial t}\right)
+\end{aligned}
 \]</div>
 <p>各項を展開してまとめます。</p>
-<ul>
-<li><span class="arithmatex">\(\boldsymbol{A}^2\)</span> を含む項：</li>
-</ul>
-<p>前半の <span class="arithmatex">\(- \frac{q^2}{2m}\boldsymbol{A}^2\psi^*\psi\)</span> と後半の <span class="arithmatex">\(+ \frac{q^2}{2m}\boldsymbol{A}^2\psi^*\psi\)</span> が相殺して 0 になります。</p>
-<ul>
-<li>スカラーポテンシャル <span class="arithmatex">\(\phi\)</span> を含む項：</li>
-</ul>
-<p>前半の <span class="arithmatex">\(-q\phi\psi^*\psi\)</span> と後半の <span class="arithmatex">\(+q\phi\psi^*\psi\)</span> が相殺して 0 になります。</p>
+<p>この式へ二つのシュレーディンガー方程式を代入すると，<span class="arithmatex">\(\boldsymbol A^2\)</span> を含む項と <span class="arithmatex">\(\phi\)</span> を含む項はそれぞれ符号が逆なので，その和は 0 です。</p>
 <p>残った項を微分演算子の種類ごとに整理します。</p>
 <div class="arithmatex">\[
-i\hbar \frac{\partial \rho}{\partial t} = \frac{\hbar^2}{2m} \left( \psi \boldsymbol{\nabla}^2 \psi^* - \psi^* \boldsymbol{\nabla}^2 \psi \right) + \frac{i\hbar q}{2m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^*\psi + \frac{i\hbar q}{2m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^*\psi + \frac{i\hbar q}{m} \psi \boldsymbol{A} \cdot (\boldsymbol{\nabla}\psi^*) + \frac{i\hbar q}{m} \psi^* \boldsymbol{A} \cdot (\boldsymbol{\nabla}\psi)
+\begin{aligned}
+i\hbar\frac{\partial\rho}{\partial t}
+={}&amp;\frac{\hbar^2}{2m}(\psi\nabla^2\psi^*-\psi^*\nabla^2\psi)\\
+&amp;+\frac{i\hbar q}{m}(\nabla\cdot\boldsymbol A)|\psi|^2\\
+&amp;+\frac{i\hbar q}{m}\boldsymbol A\cdot
+(\psi\nabla\psi^*+\psi^*\nabla\psi)
+\end{aligned}
 \]</div>
 <p>同じ形を足し合わせ，両辺を <span class="arithmatex">\(i\hbar\)</span> で割り算します。</p>
 <div class="arithmatex">\[
-\finalanswer{\frac{\partial \rho}{\partial t} = \frac{\hbar}{2mi} \left( \psi \boldsymbol{\nabla}^2 \psi^* - \psi^* \boldsymbol{\nabla}^2 \psi \right) + \frac{q}{m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^*\psi + \frac{q}{m} \boldsymbol{A} \cdot \left( \psi \boldsymbol{\nabla}\psi^* + \psi^* \boldsymbol{\nabla}\psi \right)}
+\begin{aligned}
+\frac{\partial\rho}{\partial t}
+={}&amp;\frac{\hbar}{2mi}(\psi\nabla^2\psi^*-\psi^*\nabla^2\psi)\\
+&amp;+\frac{q}{m}(\nabla\cdot\boldsymbol A)|\psi|^2
++\frac{q}{m}\boldsymbol A\cdot
+(\psi\nabla\psi^*+\psi^*\nabla\psi)
+\end{aligned}
 \]</div>
 <h3 id="3">(3)</h3>
 <p>(2) の右辺にある各項を，ナブラ演算子 <span class="arithmatex">\(\boldsymbol{\nabla}\)</span> が先頭にくる発散の形へ変形します。</p>
-<ul>
-<li>第1項の括弧部分に，ベクトルの恒等式 <span class="arithmatex">\(\boldsymbol{\nabla} \cdot (\psi \boldsymbol{\nabla}\psi^* - \psi^* \boldsymbol{\nabla}\psi) = \psi \boldsymbol{\nabla}^2 \psi^* - \psi^* \boldsymbol{\nabla}^2 \psi\)</span> を適用します。</li>
-</ul>
+<p>第一項には恒等式</p>
 <div class="arithmatex">\[
-  \frac{\hbar}{2mi} \left( \psi \boldsymbol{\nabla}^2 \psi^* - \psi^* \boldsymbol{\nabla}^2 \psi \right) = \boldsymbol{\nabla} \cdot \left[ \frac{\hbar}{2mi} \left( \psi \boldsymbol{\nabla}\psi^* - \psi^* \boldsymbol{\nabla}\psi \right) \right]
+\psi\nabla^2\psi^*-\psi^*\nabla^2\psi
+=\nabla\cdot(\psi\nabla\psi^*-\psi^*\nabla\psi)
 \]</div>
-<ul>
-<li>第2項と第3項の部分に対し，積の微分公式 <span class="arithmatex">\(\boldsymbol{\nabla} \cdot (\boldsymbol{A} \psi^* \psi) = (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^*\psi + \boldsymbol{A} \cdot \boldsymbol{\nabla}(\psi^*\psi)\)</span> を適用します。ここで <span class="arithmatex">\(\boldsymbol{\nabla}(\psi^*\psi) = \psi\boldsymbol{\nabla}\psi^* + \psi^*\boldsymbol{\nabla}\psi\)</span> であるため，残りの 2つの項は以下のように1つにまとまります。</li>
-</ul>
+<p>を用います。ベクトルポテンシャルを含む二項には</p>
 <div class="arithmatex">\[
-  \frac{q}{m} (\boldsymbol{\nabla} \cdot \boldsymbol{A})\psi^*\psi + \frac{q}{m} \boldsymbol{A} \cdot \left( \psi \boldsymbol{\nabla}\psi^* + \psi^* \boldsymbol{\nabla}\psi \right) = \boldsymbol{\nabla} \cdot \left( \frac{q}{m} \boldsymbol{A} \psi^* \psi \right)
+\nabla\cdot(\boldsymbol A|\psi|^2)
+=(\nabla\cdot\boldsymbol A)|\psi|^2
++\boldsymbol A\cdot\nabla|\psi|^2
 \]</div>
+<p>を用います。</p>
 <p>これらを合わせた全体の式を組み立てます。</p>
 <div class="arithmatex">\[
-\frac{\partial \rho}{\partial t} = \boldsymbol{\nabla} \cdot \left[ \frac{\hbar}{2mi} \left( \psi \boldsymbol{\nabla}\psi^* - \psi^* \boldsymbol{\nabla}\psi \right) + \frac{q}{m} \boldsymbol{A} \psi^* \psi \right]
+\frac{\partial\rho}{\partial t}
+=\nabla\cdot\left[
+\frac{\hbar}{2mi}(\psi\nabla\psi^*-\psi^*\nabla\psi)
++\frac{q}{m}\boldsymbol A|\psi|^2\right]
 \]</div>
 <p>右辺の項をすべて左辺に移項し，連続の式 <span class="arithmatex">\(\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \boldsymbol{J} = 0\)</span> の形式に合わせます。符号を反転させるため，第1項の括弧の中身を入れ替えます。</p>
 <div class="arithmatex">\[
-\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla} \cdot \left[ \frac{\hbar}{2mi} \left( \psi^* \boldsymbol{\nabla}\psi - \psi \boldsymbol{\nabla}\psi^* \right) - \frac{q}{m} \boldsymbol{A} |\psi|^2 \right] = 0
+\begin{aligned}
+\frac{\partial\rho}{\partial t}
++\nabla\cdot\left[
+\frac{\hbar}{2mi}(\psi^*\nabla\psi-\psi\nabla\psi^*)
+-\frac{q}{m}\boldsymbol A|\psi|^2\right]=0
+\end{aligned}
 \]</div>
-<p>括弧で囲まれたベクトルを抽出することで，電磁場中における確率流密度 <span class="arithmatex">\(\boldsymbol{J}\)</span> が以下のように求まります。</p>
+<p>括弧内を確率流密度 <span class="arithmatex">\(\boldsymbol{J}\)</span> とみなすと，次の式が得られます。</p>
 <div class="arithmatex">\[
-\finalanswer{\boldsymbol{J} = \frac{\hbar}{2mi} \left( \psi^* \boldsymbol{\nabla}\psi - \psi \boldsymbol{\nabla}\psi^* \right) - \frac{q}{m} \boldsymbol{A} |\psi|^2}
+\finalanswer{\boldsymbol J
+=\frac{\hbar}{2mi}(\psi^*\nabla\psi-\psi\nabla\psi^*)
+-\frac{q}{m}\boldsymbol A|\psi|^2}
 \]</div>
 <p>自由空間での確率流密度に，ベクトルポテンシャル <span class="arithmatex">\(\boldsymbol{A}\)</span> に比例する項が加わっています。これは最小結合による運動量の置き換えに対応します。</p>
 

@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11164,7 +11164,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14525,7 +14525,7 @@
 <div class="arithmatex">\[
 V_D(R) = \frac{\pi^{D/2}}{\Gamma(D/2 + 1)} R^D
 \]</div>
-<p>で与えられることを用いて，エネルギーが <span class="arithmatex">\(E\)</span> 以下の状態数に比例する量 <span class="arithmatex">\(\Gamma(E)\)</span> を <span class="arithmatex">\(V, m, E, N\)</span> を用いて表せ。また，エントロピー <span class="arithmatex">\(S \simeq k_B \log \Gamma(E)\)</span> から温度 <span class="arithmatex">\(T\)</span> を導出し，理想気体の内部エネルギーの式 <span class="arithmatex">\(E = \frac{3}{2}Nk_BT\)</span> が得られることを示せ。</p>
+<p>で与えられることを用いて，エネルギーが <span class="arithmatex">\(E\)</span> 以下の状態数に比例する量 <span class="arithmatex">\(\Gamma(E)\)</span> を <span class="arithmatex">\(V, m, E, N\)</span> を用いて表せ。また，エントロピー <span class="arithmatex">\(S \simeq k_{\text{B}} \log \Gamma(E)\)</span> から温度 <span class="arithmatex">\(T\)</span> を導出し，理想気体の内部エネルギーの式 <span class="arithmatex">\(E = \frac{3}{2}Nk_{\text{B}}T\)</span> が得られることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14541,7 +14541,7 @@ H &amp;= \sum_{i=1}^N \frac{\boldsymbol{p}_i^2}{2m} \\
 <div class="arithmatex">\[
 \Gamma(E) = \int \cdots \int_{H \le E} \prod_{i=1}^N d\boldsymbol{r}_i d\boldsymbol{p}_i
 \]</div>
-<p>この積分は，位置座標 <span class="arithmatex">\(\boldsymbol{r}_i\)</span> に関する積分と，運動量 <span class="arithmatex">\(\boldsymbol{p}_i\)</span> に関する積分へ分離できます。各粒子は体積 <span class="arithmatex">\(V\)</span> の容器内のどこにでも存在できるため，位置に関する積分は粒子ごとに <span class="arithmatex">\(V\)</span> を与え，全体で <span class="arithmatex">\(V^N\)</span> となります。</p>
+<p>この積分は，位置座標 <span class="arithmatex">\(\boldsymbol{r}_i\)</span> に関する積分と，運動量 <span class="arithmatex">\(\boldsymbol{p}_i\)</span> に関する積分へ分離できます。各粒子は体積 <span class="arithmatex">\(V\)</span> の容器内のどこにでも存在できるため，位置積分は粒子ごとに <span class="arithmatex">\(V\)</span> となり，全体では <span class="arithmatex">\(V^N\)</span> です。</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \Gamma(E) &amp;= \left( \int_V \prod_{i=1}^N d\boldsymbol{r}_i \right) \left( \int_{\sum \frac{\boldsymbol{p}_i^2}{2m} \le E} \prod_{i=1}^N d\boldsymbol{p}_i \right) \\
@@ -14552,19 +14552,19 @@ H &amp;= \sum_{i=1}^N \frac{\boldsymbol{p}_i^2}{2m} \\
 <h3 id="3">(3)</h3>
 <p>与えられた公式において，次元数 <span class="arithmatex">\(D = 3N\)</span>，半径 <span class="arithmatex">\(R = \sqrt{2mE}\)</span> を代入すると，<span class="arithmatex">\(\Gamma(E)\)</span> は以下のように求まります。</p>
 <div class="arithmatex">\[
-\Gamma(E) = V^N \frac{\pi^{3N/2}}{\Gamma\left(\frac{3N}{2} + 1\right)} (2mE)^{3N/2}
+\finalanswer{\Gamma(E) = V^N \frac{\pi^{3N/2}}{\Gamma\left(\frac{3N}{2} + 1\right)} (2mE)^{3N/2}}
 \]</div>
-<p>この対数をとってエントロピー <span class="arithmatex">\(S \simeq k_B \log \Gamma(E)\)</span> を計算します。<span class="arithmatex">\(N\)</span> が非常に大きいとき，ガンマ関数の部分はスターリングの公式により <span class="arithmatex">\(\log \Gamma(\frac{3N}{2}+1) \simeq \log (\frac{3N}{2})! \simeq \frac{3N}{2}\log\left(\frac{3N}{2}\right) - \frac{3N}{2}\)</span> と近似できます。エネルギー <span class="arithmatex">\(E\)</span> に依存する項のみを抽出して整理すると，エントロピーは以下のように表せます。</p>
+<p>この対数をとってエントロピー <span class="arithmatex">\(S \simeq k_{\text{B}} \log \Gamma(E)\)</span> を計算します。<span class="arithmatex">\(N\)</span> が非常に大きいとき，ガンマ関数の部分はスターリングの公式により <span class="arithmatex">\(\log \Gamma(\frac{3N}{2}+1) \simeq \log (\frac{3N}{2})! \simeq \frac{3N}{2}\log\left(\frac{3N}{2}\right) - \frac{3N}{2}\)</span> と近似できます。エネルギー <span class="arithmatex">\(E\)</span> に依存する項をまとめると，エントロピーは次のように表せます。</p>
 <div class="arithmatex">\[
-S = k_B \frac{3N}{2} \log E + (\text{$E$ に依存しない項})
+S = k_{\text{B}} \frac{3N}{2} \log E + (\text{$E$ に依存しない項})
 \]</div>
 <p>熱力学的な温度の定義 <span class="arithmatex">\(\frac{1}{T} = \left(\frac{\partial S}{\partial E}\right)_{V, N}\)</span> を用いて，このエントロピーを <span class="arithmatex">\(E\)</span> で偏微分します。</p>
 <div class="arithmatex">\[
-\frac{1}{T} = k_B \frac{3N}{2} \cdot \frac{1}{E}
+\frac{1}{T} = k_{\text{B}} \frac{3N}{2} \cdot \frac{1}{E}
 \]</div>
-<p>この式の両辺の逆数をとり，エネルギー <span class="arithmatex">\(E\)</span> について整理をすることで，単原子分子理想気体の内部エネルギーの公式が導出されます。</p>
+<p>この式の両辺の逆数をとり，エネルギー <span class="arithmatex">\(E\)</span> について整理をすることで，単原子分子理想気体の内部エネルギーの公式を得ます。</p>
 <div class="arithmatex">\[
-\finalanswer{E = \frac{3}{2} N k_B T}
+\finalanswer{E = \frac{3}{2} N k_{\text{B}} T}
 \]</div>
 
 

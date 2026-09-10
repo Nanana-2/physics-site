@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11054,7 +11054,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14497,14 +14497,14 @@
 <h1 id="_1">古典極限とマクスウェル・ボルツマン分布</h1>
 <h2 id="_2">問題</h2>
 <p>量子力学的な効果が顕著に現れるフェルミ粒子やボース粒子であっても，系の温度が十分に高い，あるいは粒子の密度が十分に低い状況下では，粒子の量子力学的な区別不可能性や排他原理の影響が無視できるようになり，古典統計力学のマクスウェル・ボルツマン分布へと帰着する。この極限を古典極限，またはボルツマン極限と呼ぶ。</p>
-<p>ある単一粒子量子状態 <span class="arithmatex">\(k\)</span> のエネルギーを <span class="arithmatex">\(\epsilon_k\)</span>，系の化学ポテンシャルを <span class="arithmatex">\(\mu\)</span>，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> とするとき，フェルミ・ディラック分布およびボース・アインシュタイン分布は，複号を用いて以下のように一括して表現できる。上側の符号がフェルミ粒子，下側の符号がボース粒子に対応する。</p>
+<p>ある単一粒子量子状態 <span class="arithmatex">\(k\)</span> のエネルギーを <span class="arithmatex">\(\epsilon_k\)</span>，系の化学ポテンシャルを <span class="arithmatex">\(\mu\)</span>，逆温度を <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> とするとき，フェルミ・ディラック分布およびボース・アインシュタイン分布は，複号を用いて以下のように一括して表現できる。上側の符号がフェルミ粒子，下側の符号がボース粒子に対応する。</p>
 <div class="arithmatex">\[
 \langle n_k \rangle = \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] \pm 1}
 \]</div>
 <p>この分布関数を基にして，以下の問いに答えよ。</p>
 <p>(1) <span class="arithmatex">\(\exp[\beta(\epsilon_k-\mu)]\gg1\)</span> が成り立つとき，フェルミ分布とボース分布がともに以下のマクスウェル・ボルツマン分布へ近づくことを示せ。</p>
 <div class="arithmatex">\[
-\langle n_k \rangle \simeq \exp\left[ \mu / k_B T \right] \exp\left[ -\epsilon_k / k_B T \right]
+\langle n_k \rangle \simeq \exp\left[ \mu / k_{\text{B}} T \right] \exp\left[ -\epsilon_k / k_{\text{B}} T \right]
 \]</div>
 <p>(2) 全粒子数が <span class="arithmatex">\(N=\sum_k\langle n_k\rangle\)</span> で与えられることを用いて，<span class="arithmatex">\(\exp(\beta\mu)\)</span> を <span class="arithmatex">\(N\)</span> と1粒子分配関数 <span class="arithmatex">\(z_1=\sum_k\exp(-\beta\epsilon_k)\)</span> で表せ。さらに，<span class="arithmatex">\(z_1=V/\lambda^3\)</span> と数密度 <span class="arithmatex">\(\rho=N/V\)</span> を用いて化学ポテンシャルを求め，古典極限の条件が <span class="arithmatex">\(\rho\lambda^3\ll1\)</span> となることを示せ。</p>
 <hr />
@@ -14517,13 +14517,18 @@
 <p>このとき，分母の <span class="arithmatex">\(\pm1\)</span> を指数関数に対して無視できます。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\langle n_k \rangle &amp;= \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] \pm 1} \simeq \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right]} \\
+\langle n_k \rangle &amp;= \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right] \pm 1} \\
+&amp;\simeq \frac{1}{\exp\left[ \beta(\epsilon_k - \mu) \right]} \\
 &amp;= \exp\left[ -\beta(\epsilon_k - \mu) \right]
 \end{aligned}
 \]</div>
-<p>指数法則を用いてこの式を展開し， <span class="arithmatex">\(\beta = \frac{1}{k_B T}\)</span> を代入して整理します。</p>
+<p>指数法則を用いてこの式を展開し， <span class="arithmatex">\(\beta = \frac{1}{k_{\text{B}} T}\)</span> を代入して整理します。</p>
 <div class="arithmatex">\[
-\finalanswer{\langle n_k \rangle \simeq \exp(\beta \mu) \exp(-\beta \epsilon_k) = \exp\left[ \frac{\mu}{k_B T} \right] \exp\left[ -\frac{\epsilon_k}{k_B T} \right]}
+\begin{aligned}
+\langle n_k \rangle
+&amp;\simeq \exp(\beta \mu) \exp(-\beta \epsilon_k) \\
+&amp;= \finalanswer{\exp\left[ \frac{\mu}{k_{\text{B}} T} \right] \exp\left[ -\frac{\epsilon_k}{k_{\text{B}} T} \right]}
+\end{aligned}
 \]</div>
 <p>したがって，どちらの分布も同じマクスウェル・ボルツマン分布へ近づきます。</p>
 <h3 id="2">(2)</h3>
@@ -14537,23 +14542,17 @@ N = \exp(\beta \mu) \sum_k \exp(-\beta \epsilon_k)
 \]</div>
 <p>右辺の総和は1粒子分配関数 <span class="arithmatex">\(z_1\)</span> です。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-N &amp;= \exp(\beta \mu) z_1 \quad \implies \quad \exp(\beta \mu) \\
-&amp;= \frac{N}{z_1}
-\end{aligned}
+\finalanswer{\exp(\beta\mu)=\frac{N}{z_1}}
 \]</div>
 <p>両辺の自然対数をとり，化学ポテンシャル <span class="arithmatex">\(\mu\)</span> について解きます。</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\beta \mu &amp;= \log \left( \frac{N}{z_1} \right) \quad \implies \quad \mu \\
-&amp;= k_B T \log \left( \frac{N}{z_1} \right)
-\end{aligned}
+\mu=k_{\text{B}}T\log\left(\frac{N}{z_1}\right)
 \]</div>
-<p>ここで，体積 <span class="arithmatex">\(V\)</span> の空間における 1 粒子分配関数は，熱的ド・ブロイ波長 <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_B T}}\)</span> を用いて <span class="arithmatex">\(z_1 = \frac{V}{\lambda^3}\)</span> と表されます。これを代入します。</p>
+<p>ここで，体積 <span class="arithmatex">\(V\)</span> の空間における 1 粒子分配関数は，熱的ド・ブロイ波長 <span class="arithmatex">\(\lambda = \frac{h}{\sqrt{2\pi m k_{\text{B}} T}}\)</span> を用いて <span class="arithmatex">\(z_1 = \frac{V}{\lambda^3}\)</span> と表されます。これを代入します。</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\mu &amp;= k_B T \log \left( \frac{N \lambda^3}{V} \right) \\
-&amp;= k_B T \log \left( \rho \lambda^3 \right)
+\mu &amp;= k_{\text{B}} T \log \left( \frac{N \lambda^3}{V} \right) \\
+&amp;= \finalanswer{k_{\text{B}} T \log \left( \rho \lambda^3 \right)}
 \end{aligned}
 \]</div>
 <p>ここで <span class="arithmatex">\(\rho = N/V\)</span> は数密度です。古典極限の条件 <span class="arithmatex">\(\exp(\beta \mu) \ll 1\)</span> は，</p>

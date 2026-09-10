@@ -3549,34 +3549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../02electromagnetism/03/03_050/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    誘電体境界面での境界条件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../02electromagnetism/03/03_060/" class="md-nav__link">
         
   
@@ -4839,7 +4811,35 @@
   <span class="md-ellipsis">
     
   
-    電気双極子放射
+    電気双極子の放射場
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02electromagnetism/08/08_080/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気双極子の放射電力
   
 
     
@@ -11153,7 +11153,7 @@
   <span class="md-ellipsis">
     
   
-    ボルツマン因子と分配関数
+    ボルツマン因子と状態の縮退
   
 
     
@@ -14497,8 +14497,8 @@
 <h1 id="_1">エントロピーの多角的定義と整合性</h1>
 <h2 id="_2">問題</h2>
 <p>物質量 <span class="arithmatex">\(n\)</span> ，分子数 <span class="arithmatex">\(N\)</span> の理想気体を考える。この気体は絶対温度 <span class="arithmatex">\(T\)</span> の大きな熱浴に接触しており，体積が <span class="arithmatex">\(V_1\)</span> から <span class="arithmatex">\(V_2\)</span> への可逆等温膨張を行う。気体定数を <span class="arithmatex">\(R\)</span> ，ボルツマン定数を <span class="arithmatex">\(k_{\text{B}}\)</span> とするとき，以下の問いに答えよ。</p>
-<p>(1) マクロな熱力学におけるクラウジウスの定義に基づき，この等温変化の間に気体が熱浴から吸収する熱量を求め，理想気体のエントロピー変化 <span class="arithmatex">\(\Delta S_{\text{Clausius}}\)</span> を <span class="arithmatex">\(n, R, V_1, V_2\)</span> を用いて表せ。</p>
-<p>(2) ミクロな統計力学におけるボルツマンの定義を考える。理想気体を構成する各分子が体積 <span class="arithmatex">\(V\)</span> の容器内のどこに存在するかという空間的な微視的状態の数は，体積 <span class="arithmatex">\(V\)</span> に比例する。全 <span class="arithmatex">\(N\)</span> 分子がいずれも独立に動くとき，体積 <span class="arithmatex">\(V\)</span> における総状態数 <span class="arithmatex">\(W\)</span> は <span class="arithmatex">\(V^N\)</span> に比例する。ボルツマンの関係式 <span class="arithmatex">\(S = k_{\text{B}} \ln W\)</span> に基づき，体積が <span class="arithmatex">\(V_1\)</span> から <span class="arithmatex">\(V_2\)</span> へ変化したときのエントロピー変化 <span class="arithmatex">\(\Delta S_{\text{Boltzmann}}\)</span> を <span class="arithmatex">\(N, k_{\text{B}}, V_1, V_2\)</span> を用いて表せ。さらに，アボガドロ定数を <span class="arithmatex">\(N_{\text{A}}\)</span> としたときの関係式 <span class="arithmatex">\(R = N_{\text{A}} k_{\text{B}}\)</span> および <span class="arithmatex">\(N = n N_{\text{A}}\)</span> を用いて，ミクロな定義から導かれた式がマクロなクラウジウスの式と完全に一致することを示せ。</p>
+<p>(1) マクロな熱力学におけるクラウジウスの定義に基づき，この等温変化の間に気体が熱浴から吸収する熱量を求め，理想気体のエントロピー変化 <span class="arithmatex">\(\Delta S_{\mathrm{th}}\)</span> を <span class="arithmatex">\(n, R, V_1, V_2\)</span> を用いて表せ。</p>
+<p>(2) ミクロな統計力学におけるボルツマンの定義を考える。理想気体を構成する各分子が体積 <span class="arithmatex">\(V\)</span> の容器内のどこに存在するかという空間的な微視的状態の数は，体積 <span class="arithmatex">\(V\)</span> に比例する。全 <span class="arithmatex">\(N\)</span> 分子がいずれも独立に動くとき，体積 <span class="arithmatex">\(V\)</span> における総状態数 <span class="arithmatex">\(W\)</span> は <span class="arithmatex">\(V^N\)</span> に比例する。ボルツマンの関係式 <span class="arithmatex">\(S = k_{\text{B}} \ln W\)</span> に基づき，体積が <span class="arithmatex">\(V_1\)</span> から <span class="arithmatex">\(V_2\)</span> へ変化したときのエントロピー変化 <span class="arithmatex">\(\Delta S_{\mathrm{stat}}\)</span> を <span class="arithmatex">\(N, k_{\text{B}}, V_1, V_2\)</span> を用いて表せ。さらに，アボガドロ定数を <span class="arithmatex">\(N_{\text{A}}\)</span> としたときの関係式 <span class="arithmatex">\(R = N_{\text{A}} k_{\text{B}}\)</span> および <span class="arithmatex">\(N = n N_{\text{A}}\)</span> を用いて，<span class="arithmatex">\(\Delta S_{\mathrm{stat}}=\Delta S_{\mathrm{th}}\)</span> となることを示せ。</p>
 <hr />
 <h2 id="_3">解説</h2>
 <h3 id="1">(1)</h3>
@@ -14512,7 +14512,7 @@ Q = \int_{V_1}^{V_2} \frac{nRT}{V} dV = nRT \ln \frac{V_2}{V_1}
 \]</div>
 <p>クラウジウスのエントロピー定義式 <span class="arithmatex">\(\Delta S = \frac{Q}{T}\)</span> に，得られた熱量の表現を代入します。</p>
 <div class="arithmatex">\[
-\Delta S_{\text{Clausius}} = \frac{nRT \ln \frac{V_2}{V_1}}{T} = \finalanswer{nR \ln \frac{V_2}{V_1}}
+\Delta S_{\mathrm{th}} = \frac{nRT \ln \frac{V_2}{V_1}}{T} = \finalanswer{nR \ln \frac{V_2}{V_1}}
 \]</div>
 <h3 id="2">(2)</h3>
 <p>ボルツマンの定義に従い，変化前の状態数 <span class="arithmatex">\(W_1\)</span> と変化後の状態数 <span class="arithmatex">\(W_2\)</span> を記述します。比例定数を <span class="arithmatex">\(C\)</span> とすると，それぞれの状態数は次のようになります。</p>
@@ -14522,27 +14522,27 @@ W_1 = C V_1^N
 <div class="arithmatex">\[
 W_2 = C V_2^N
 \]</div>
-<p>ボルツマンのエントロピー公式を適用し，変化後のエントロピーと変化前のエントロピーの差 <span class="arithmatex">\(\Delta S_{\text{Boltzmann}}\)</span> を計算します。</p>
+<p>ボルツマンのエントロピー公式を適用し，変化後と変化前のエントロピーの差 <span class="arithmatex">\(\Delta S_{\mathrm{stat}}\)</span> を計算します。</p>
 <div class="arithmatex">\[
-\Delta S_{\text{Boltzmann}} = k_{\text{B}} \ln W_2 - k_{\text{B}} \ln W_1 = k_{\text{B}} \ln \frac{W_2}{W_1}
+\Delta S_{\mathrm{stat}} = k_{\text{B}} \ln W_2 - k_{\text{B}} \ln W_1 = k_{\text{B}} \ln \frac{W_2}{W_1}
 \]</div>
-<p>状態数の比を代入します。比例定数 <span class="arithmatex">\(C\)</span> は分母分子で相殺されます。</p>
+<p>状態数の比を代入すると，比例定数 <span class="arithmatex">\(C\)</span> は分子と分母に共通するので約分できます。</p>
 <div class="arithmatex">\[
-\Delta S_{\text{Boltzmann}} = k_{\text{B}} \ln \left( \frac{V_2}{V_1} \right)^N
+\Delta S_{\mathrm{stat}} = k_{\text{B}} \ln \left( \frac{V_2}{V_1} \right)^N
 \]</div>
 <p>対数の性質を用いて，指数 <span class="arithmatex">\(N\)</span> を対数の外側へ括り出します。</p>
 <div class="arithmatex">\[
-\Delta S_{\text{Boltzmann}} = N k_{\text{B}} \ln \frac{V_2}{V_1}
+\Delta S_{\mathrm{stat}} = N k_{\text{B}} \ln \frac{V_2}{V_1}
 \]</div>
 <p>ここで，総分子数 <span class="arithmatex">\(N\)</span> を物質量 <span class="arithmatex">\(n\)</span> とアボガドロ定数 <span class="arithmatex">\(N_{\text{A}}\)</span> の積 <span class="arithmatex">\(N = n N_{\text{A}}\)</span> に置き換えます。</p>
 <div class="arithmatex">\[
-\Delta S_{\text{Boltzmann}} = n N_{\text{A}} k_{\text{B}} \ln \frac{V_2}{V_1}
+\Delta S_{\mathrm{stat}} = n N_{\text{A}} k_{\text{B}} \ln \frac{V_2}{V_1}
 \]</div>
 <p>さらに，微視的なボルツマン定数とマクロな気体定数の間の関係式 <span class="arithmatex">\(N_{\text{A}} k_{\text{B}} = R\)</span> を代入します。</p>
 <div class="arithmatex">\[
-\finalanswer{\Delta S_{\text{Boltzmann}} = nR \ln \frac{V_2}{V_1}}
+\finalanswer{\Delta S_{\mathrm{stat}} = nR \ln \frac{V_2}{V_1}}
 \]</div>
-<p>この変形により，式は(1)で求めた <span class="arithmatex">\(\Delta S_{\text{Clausius}}\)</span> と同一の形式となり，マクロな熱量測定に基づく定義とミクロな確率的状態数に基づく定義が同一のエントロピー変化を与えることが示されます。</p>
+<p>この結果は (1) で求めた <span class="arithmatex">\(\Delta S_{\mathrm{th}}\)</span> と等しく，<span class="arithmatex">\(\Delta S_{\mathrm{stat}}=\Delta S_{\mathrm{th}}\)</span> となります。</p>
 
 
 
