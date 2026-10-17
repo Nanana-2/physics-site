@@ -849,3 +849,13 @@ body, input {
     width: 100%;
   }
 }
+
+/* 問題図・解答図（ライト・ダークで画像を切り替える。#only-light / #only-dark は Material の機能） */
+.md-typeset figure.problem-figure {
+  margin: 1.4em auto;
+}
+
+.md-typeset figure.problem-figure img {
+  max-width: 100%;
+  height: auto;
+}

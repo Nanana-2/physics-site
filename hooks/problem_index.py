@@ -56,6 +56,7 @@ def _question_text(markdown: str) -> str:
     )
     text = match.group(1) if match else ""
     text = re.sub(r"<!--.*?-->", " ", text, flags=re.DOTALL)
+    text = re.sub(r"<figure\b.*?</figure>", " ", text, flags=re.DOTALL)
     text = re.sub(r"!\[[^]]*]\([^)]*\)", " ", text)
     text = re.sub(r"\[([^]]+)]\([^)]*\)", r"\1", text)
     text = re.sub(r"[`*_>#|]", " ", text)
