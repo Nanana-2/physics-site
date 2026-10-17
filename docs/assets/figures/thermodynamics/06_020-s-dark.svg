@@ -37,10 +37,15 @@
 </g>
 </g>
 <clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 15.375 14 L 179 14 L 179 91 L 15.375 91 Z M 15.375 14 "/>
+</clipPath>
+<clipPath id="clip-1">
 <path clip-rule="nonzero" d="M 172 88 L 192 88 L 192 103.003906 L 172 103.003906 Z M 172 88 "/>
 </clipPath>
 </defs>
+<g clip-path="url(#clip-0)">
 <path fill="none" stroke-width="0.79701" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M -0.00194203 17.826626 L 36.556633 42.782543 L 109.673783 42.782543 L 152.324145 71.302471 " transform="matrix(0.995192, 0, 0, -0.995192, 15.376933, 96.963577)"/>
+</g>
 <path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-dasharray="2.98883 2.98883" stroke-miterlimit="10" d="M -0.00194203 42.782543 L 36.556633 42.782543 " transform="matrix(0.995192, 0, 0, -0.995192, 15.376933, 96.963577)"/>
 <g fill="#d9dce4" fill-opacity="1">
 <use xlink:href="#glyph-0-0" x="2.392659" y="56.940923"/>
@@ -70,7 +75,7 @@
 </g>
 <path fill="none" stroke-width="0.49814" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M -0.00194203 -0.00127295 L 164.613698 -0.00127295 " transform="matrix(0.995192, 0, 0, -0.995192, 15.376933, 96.963577)"/>
 <path fill-rule="nonzero" fill="#d9dce4" fill-opacity="1" d="M 184.105469 96.964844 C 183.503906 96.820312 180.855469 96.011719 179.199219 95.132812 L 179.199219 98.796875 C 180.855469 97.914062 183.503906 97.105469 184.105469 96.964844 Z M 184.105469 96.964844 "/>
-<g clip-path="url(#clip-0)">
+<g clip-path="url(#clip-1)">
 <path fill="none" stroke-width="0.49814" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M 4.92819 -0.00127295 C 4.323721 0.143957 1.662489 0.956457 -0.00176193 1.839609 L -0.00176193 -1.842155 C 1.662489 -0.955077 4.323721 -0.142577 4.92819 -0.00127295 Z M 4.92819 -0.00127295 " transform="matrix(0.995192, 0, 0, -0.995192, 179.200972, 96.963577)"/>
 </g>
 <path fill="none" stroke-width="0.49814" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M -0.00194203 -0.00127295 L -0.00194203 79.576626 " transform="matrix(0.995192, 0, 0, -0.995192, 15.376933, 96.963577)"/>
