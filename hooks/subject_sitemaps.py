@@ -88,3 +88,11 @@ def on_post_build(config, **kwargs):
         encoding="utf-8",
         xml_declaration=True,
     )
+
+    # テキスト形式のサイトマップ（1行に1URL）。XML版が Search Console で処理されないときの予備。
+    urls = [
+        loc.text.strip()
+        for entry in entries
+        if (loc := entry.find(f"{{{SITEMAP_NS}}}loc")) is not None and loc.text
+    ]
+    (site_dir / "sitemap.txt").write_text("\n".join(urls) + "\n", encoding="utf-8")
