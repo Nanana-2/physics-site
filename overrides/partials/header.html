@@ -45,16 +45,17 @@
     {% if config.extra.alternate %}
       {% include "partials/alternate.html" %}
     {% endif %}
-    {% if "material/search" in config.plugins %}
-      {% set search = config.plugins["material/search"] | attr("config") %}
-      {% if search.enabled %}
-        <label class="md-header__button md-icon" for="__search">
-          {% set icon = config.theme.icon.search or "material/magnify" %}
-          {% include ".icons/" ~ icon ~ ".svg" %}
-        </label>
-        {% include "partials/search.html" %}
-      {% endif %}
-    {% endif %}
+    {#- 検索：Material の検索の代わりに，問題の索引（problem-index.json）から候補を出す自前の検索。
+        Enter で「問題を探す」に ?keyword= 付きで移る（JavaScript なしでもフォームとして動く）。
+        スマホでは虫眼鏡から「問題を探す」へ直接移る。 -#}
+    <a class="md-header__button md-icon site-search__mobile" href="{{ 'tags/' | url }}" aria-label="問題を探す">
+      {% include ".icons/material/magnify.svg" %}
+    </a>
+    <form class="site-search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
+      <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
+      <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索" autocomplete="off" aria-label="問題を検索" aria-autocomplete="list" aria-controls="site-search-results">
+      <div class="site-search__results" id="site-search-results" role="listbox" hidden></div>
+    </form>
     {% if config.repo_url %}
       <div class="md-header__source">
         {% include "partials/source.html" %}

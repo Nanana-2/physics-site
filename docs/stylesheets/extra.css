@@ -928,3 +928,63 @@ body, input {
 
 /* 左右のサイドバーを出さないページ（問題を探す など）は，本文を中央に置く */
 .md-sidebar--primary[hidden] ~ .md-content > .md-content__inner { margin-left: auto; margin-right: auto; }
+
+/* ==========================================
+   ヘッダーの検索（javascripts/site-search.js）。スマホは虫眼鏡から「問題を探す」へ
+   ========================================== */
+.site-search { position: relative; display: flex; align-items: center; margin-left: .8rem; }
+.site-search__icon { position: absolute; left: .55rem; display: inline-flex; width: 1rem; height: 1rem; color: rgba(255, 255, 255, .7); pointer-events: none; }
+.site-search__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.site-search__input {
+  width: 11.7rem;
+  height: 1.8rem;
+  padding: 0 .6rem 0 2rem;
+  border: none;
+  border-radius: .1rem;
+  background: rgba(0, 0, 0, .26);
+  color: #fff;
+  font: inherit;
+  font-size: .72rem;
+  outline: none;
+  transition: width .25s cubic-bezier(.2, .8, .2, 1), background .25s;
+}
+.site-search__input::placeholder { color: rgba(255, 255, 255, .7); }
+.site-search__input:focus { width: 16rem; background: rgba(0, 0, 0, .4); }
+.site-search__results {
+  position: absolute;
+  top: calc(100% + .35rem);
+  right: 0;
+  z-index: 10;
+  width: 24rem;
+  max-width: calc(100vw - 2rem);
+  padding: .3rem 0;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 .3rem 1.2rem rgba(0, 0, 0, .18);
+}
+.site-search__item {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .9rem;
+  color: var(--md-typeset-color);
+  font-size: .72rem;
+}
+.site-search__item:hover, .site-search__item.is-active { background: #fafafb; }
+[data-md-color-scheme="slate"] .site-search__item:hover,
+[data-md-color-scheme="slate"] .site-search__item.is-active { background: rgba(255, 255, 255, .05); }
+.site-search__num { font-size: .66rem; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .site-search__num { color: #c5d0ff; }
+.site-search__text { display: flex; flex-direction: column; line-height: 1.4; }
+.site-search__where { font-size: .6rem; color: var(--md-default-fg-color--light); }
+.site-search__stars { font-size: .6rem; letter-spacing: .06em; }
+.site-search__stars .on { color: #e0b400; }
+.site-search__stars .off { color: var(--md-default-fg-color--lighter); }
+.site-search__all { display: block; margin-top: .2rem; border-top: 1px solid var(--md-default-fg-color--lightest); color: var(--site-navy); font-weight: 500; }
+[data-md-color-scheme="slate"] .site-search__all { color: #c5d0ff; }
+.site-search__empty { margin: 0; padding: .5rem .9rem; color: var(--md-default-fg-color--light); font-size: .7rem; }
+.md-header__button.site-search__mobile { display: none; }
+@media screen and (max-width: 59.984375em) {
+  .site-search { display: none; }
+  .md-header__button.site-search__mobile { display: inline-block; }
+}

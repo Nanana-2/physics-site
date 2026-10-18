@@ -3,6 +3,7 @@ site_url: https://nanana-2.github.io/physics-site/
 theme:
   name: material
   custom_dir: overrides
+  language: ja   # 目次などの見出しを日本語に
   font:
     text: Noto Sans JP  # 👈 サイト全体の文字を Noto Sans JP に！
     code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
@@ -49,10 +50,11 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261018i
-  - javascripts/problem-filter.js?v=20261018i
-  - javascripts/share.js?v=20261018i
-  - javascripts/tabs.js?v=20261018i
+  - javascripts/mathjax.js?v=20261018j
+  - javascripts/problem-filter.js?v=20261018j
+  - javascripts/share.js?v=20261018j
+  - javascripts/tabs.js?v=20261018j
+  - javascripts/site-search.js?v=20261018j
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -65,7 +67,6 @@ not_in_nav: |
   tag-index.md
 
 plugins:
-  - search
   - awesome-pages
   - tags:
       tags_file: tag-index.md
@@ -73,4 +74,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261018i
+  - stylesheets/extra.css?v=20261018j
