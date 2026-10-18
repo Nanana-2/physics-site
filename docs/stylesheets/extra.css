@@ -1159,3 +1159,24 @@ body, input {
 .drawer__link.is-current { border-left-color: var(--site-star); font-weight: 500; }
 .drawer__link .side-heading__icon { color: var(--site-navy); }
 [data-md-color-scheme="slate"] .drawer__link .side-heading__icon { color: #c5d0ff; }
+
+/* iPhone（Safari・iPhone 版 Chrome は WebKit）は検索窓とボタンに独自の見た目（角丸の枠・余白・最小幅）を付けるので打ち消す */
+.md-typeset .finder__search input,
+.site-search__input {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.md-typeset .finder__search input { width: 100%; padding: 0; }
+.md-typeset .finder__search input::-webkit-search-decoration,
+.md-typeset .finder__search input::-webkit-search-cancel-button { -webkit-appearance: none; }
+.md-typeset .finder__subject,
+.md-typeset .finder__level {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.md-typeset .finder__search { min-width: 0; }
