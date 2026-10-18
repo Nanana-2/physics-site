@@ -1,6 +1,8 @@
 ---
 title: 熱力学の問題一覧
 hero_image: assets/images/thermodynamics.jpg
+hide:
+  - toc   # 本文が章の目次なので右のサイドバーは出さない（本文を中央に）
 ---
 
 # 熱力学の問題一覧
