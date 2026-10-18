@@ -15,6 +15,7 @@ Markdown 側は今まで通り「## 問題」…「---」…「## 解答・解�
 import re
 from pathlib import Path
 
+import material
 import yaml
 
 SUBJECT_DIRS = (
@@ -68,6 +69,8 @@ def _indent_continuations(body: str) -> str:
 
 
 def on_page_content(html, page, config, files):
+    if page.file.src_uri == "books.md":
+        return _books(html)
     if not page.file.src_uri.startswith(SUBJECT_DIRS):
         return html
     if page.file.src_uri.endswith("/index.md"):
@@ -154,3 +157,35 @@ def _subject_index(html, page, config):
     if not sections:
         return html
     return html[: grid.start()] + '<div class="toc">' + "".join(sections) + "</div>" + html[grid.end() :]
+
+
+# ---- 参考文献一覧：分野の見出しにアイコン，冒頭の「このページは何？」を薄いグレーの面で囲む ----
+
+ICON_DIR = Path(material.__file__).parent / "templates/.icons/fontawesome/solid"
+BOOK_ICONS = {
+    "力学": "apple-whole",
+    "電磁気学": "magnet",
+    "熱力学": "temperature-half",
+    "量子力学": "atom",
+    "統計力学": "dice",
+    "その他": "book",
+}
+
+
+def _icon(name: str) -> str:
+    return re.sub(r"<!--.*?-->", "", (ICON_DIR / f"{name}.svg").read_text(encoding="utf-8"))
+
+
+def _books(html: str) -> str:
+    def head(m):
+        title = m.group(2).strip()
+        if title not in BOOK_ICONS:
+            return m.group(0)
+        return (f'<h2 id="{m.group(1)}" class="books-head"><span class="books-head__icon">'
+                f"{_icon(BOOK_ICONS[title])}</span>{title}</h2>")
+
+    html = re.sub(r'<h2 id="([^"]+)">(.*?)</h2>', head, html)
+    intro = re.search(r'<h2 id="[^"]+">このページは何？</h2>.*?(?=<h2 )', html, re.DOTALL)
+    if intro:
+        html = html[: intro.start()] + f'<section class="books-intro">{intro.group(0)}</section>' + html[intro.end() :]
+    return html

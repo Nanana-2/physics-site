@@ -422,169 +422,69 @@ body, input {
 }
 
 /* ==========================================
-   13. 教科書一覧・書籍カード
+   13. 参考文献一覧：分野の見出し（紺の丸にアイコン＋薄紺の帯）と，線で区切った本の一覧
+   見出しと冒頭の囲みは hooks/problem_layout.py が付ける
    ========================================== */
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
+.md-typeset .books-intro { margin: 1.4em 0 2.4em; padding: .3em 1.1rem .6em; background: #fafafb; }
+[data-md-color-scheme="slate"] .md-typeset .books-intro { background: rgba(255, 255, 255, .035); }
+.md-typeset .books-intro h2 { margin: .8em 0 .6em; padding: 0; border: none; font-size: .9rem; }
 
-.book-card {
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 1.2rem;
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.book-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--md-default-fg-color--lighter);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.book-cover {
-  float: left;
-  width: 28%;
-  text-align: center;
-}
-
-.book-cover img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.book-info {
-  float: right;
-  width: 68%;
-  box-sizing: border-box;
-  text-align: left;
-}
-
-.book-card::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-.book-grid--text-only .book-card {
+.md-typeset h2.books-head {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin: 2.6em 0 .4em 1.05rem;
+  padding: .4em .9rem .35em 1.55rem;
+  border: none;
+  border-radius: 0 1em 1em 0;
+  background: #eef0f6;
+  color: var(--site-navy);
+  font-size: .9rem;
+  letter-spacing: .04em;
 }
-
-.book-grid--text-only .book-cover {
-  display: none;
-}
-
-.book-grid--text-only .book-info {
+.md-typeset .books-head__icon {
+  position: absolute;
+  left: -1.05rem; top: 50%;
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  float: none;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem; height: 2.1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+  color: #fff;
 }
+.md-typeset .books-head__icon svg { width: .8rem; height: .8rem; fill: currentColor; }
+[data-md-color-scheme="slate"] .md-typeset h2.books-head { background: rgba(159, 179, 255, .12); color: #e3e7f7; }
+[data-md-color-scheme="slate"] .md-typeset .books-head__icon { background: #3a4785; }
 
-.book-grid--text-only .book-btn {
-  align-self: flex-start;
-  margin-top: auto;
+.md-typeset .book-grid { display: block; margin: .6em 0 0; }
+.md-typeset .book-card { padding: 1.1rem .2rem 1.2rem; border-bottom: 1px solid #e9ebf0; }
+[data-md-color-scheme="slate"] .md-typeset .book-card { border-color: rgba(255, 255, 255, .08); }
+.md-typeset .book-cover { display: none; }
+.md-typeset .book-info h3 { margin: 0 0 .15rem; font-size: .9rem; font-weight: 500; }
+.md-typeset .book-info .book-meta { margin: 0 0 .6rem; font-size: .66rem; color: var(--md-default-fg-color--light); }
+.md-typeset .book-info p { margin: 0 0 .5rem; font-size: .76rem; }
+/* Amazon へのリンク：紺のボタン。マウスを乗せると横から少し明るくなる */
+.md-typeset a.book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  margin-top: .3rem;
+  padding: .35rem .9rem;
+  border: none;
+  background-color: var(--site-navy);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 500;
+  background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
 }
-
-.book-actions {
-  display: grid;
-  gap: 0.6rem;
-  margin-top: auto;
-}
-
-.book-actions .book-btn {
-  margin-top: 0;
-}
-
-.book-info h3 {
-  margin: 0.4rem 0 0.6rem !important;
-  color: var(--md-typeset-color) !important;
-  font-size: 1.05rem !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-}
-
-.book-info p {
-  margin-bottom: 1rem !important;
-  color: var(--md-default-fg-color--light) !important;
-  font-size: 0.85rem !important;
-  line-height: 1.6 !important;
-}
-
-.book-info .book-meta {
-  margin: -0.2rem 0 1rem !important;
-  color: var(--md-default-fg-color--light) !important;
-  font-size: 0.76rem !important;
-  line-height: 1.5 !important;
-}
-
-.book-tag {
-  display: inline-block;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.tag-recommend {
-  color: #ef4444;
-  background-color: #fee2e2;
-}
-
-.tag-hard {
-  color: #475569;
-  background-color: #f1f5f9;
-}
-
-.book-btn {
-  display: inline-block;
-  padding: 0.4rem 1.2rem;
-  color: #ffffff !important;
-  background-color: var(--md-primary-fg-color);
-  border-radius: 4px;
-  font-size: 0.8rem !important;
-  font-weight: 600;
-  text-decoration: none !important;
-  transition: background-color 0.2s;
-}
-
-.book-btn:hover {
-  background-color: var(--md-primary-fg-color--dark);
-}
-
-@media screen and (max-width: 45em) {
-  .book-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 30em) {
-  .book-cover {
-    float: none;
-    width: 100%;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .book-cover img {
-    max-height: 140px;
-  }
-
-  .book-info {
-    float: none;
-    width: 100%;
-    text-align: left;
-  }
-}
+.md-typeset a.book-btn::after { content: "→"; }
+.md-typeset a.book-btn:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset a.book-btn { background-color: #3a4785; }
 
 /* ==========================================
    14. 問題を探す：検索窓・分野の切り替え（黄色の下線）・難易度の★ボタン
