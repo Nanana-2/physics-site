@@ -71,4 +71,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra.css?v=20261018
