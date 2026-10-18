@@ -1340,6 +1340,7 @@ body, input {
    Markdown でコピー（javascripts/copy-markdown.js）：パンくずの下，右寄せ
    ========================================== */
 .md-typeset .page-tools { display: flex; justify-content: flex-end; margin: -2.6rem 0 1.4rem; min-height: 1.2rem; }
+@media screen and (max-width: 45em) { .md-typeset .page-tools { margin: -.6rem 0 1.2rem; } }
 .md-typeset .page-tools__copy {
   display: inline-flex; align-items: center; gap: .4em;
   padding: .2rem .7rem; border: 1px solid var(--md-default-fg-color--lightest); background: none; cursor: pointer;
@@ -1354,11 +1355,29 @@ body, input {
 }
 
 /* ==========================================
-   ページの先頭へ（navigation.top）
+   トップへ（navigation.top）：右下の小さな丸いボタン（↑ とその下に「トップへ」）
    ========================================== */
-.md-top { background: var(--site-navy); color: #fff; box-shadow: 0 .2rem .8rem rgba(0, 0, 0, .2); font-size: .66rem; }
-.md-top:hover, .md-top:focus { background: var(--site-navy); color: var(--site-star); }
+.md-top {
+  position: fixed;
+  inset: auto 1rem 1.2rem auto !important;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .05rem;
+  width: 2.9rem; height: 2.9rem; margin: 0; padding: 0;
+  border-radius: 50%;
+  background: var(--site-navy); color: #fff;
+  box-shadow: 0 .2rem .7rem rgba(0, 0, 0, .22);
+  font-size: 0;
+  transform: none;
+  transition: opacity .3s, transform .3s, background .3s;
+}
+.md-top svg { width: .9rem; height: .9rem; margin: 0; }
+.md-top::after { content: "トップへ"; font-size: .45rem; line-height: 1; letter-spacing: .04em; }
+.md-top:hover, .md-top:focus { background: #2b3566; color: var(--site-star); }
+.md-top--hidden { opacity: 0; transform: translateY(.8rem); pointer-events: none; }
 [data-md-color-scheme="slate"] .md-top { background: #3a4785; }
+
+/* 同じページ内の移動（目次・トップへ）はなめらかにスクロール */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* ==========================================
    404 ページ
