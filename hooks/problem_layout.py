@@ -152,7 +152,8 @@ def on_post_page(output, page, config):
         return output
     title_end = output.find("</h1>", article)
     at = title_end + len("</h1>") if title_end >= 0 else article + len(ARTICLE_START)
-    return output[: nav.start()] + output[nav.end() : at] + nav.group(0) + output[at:]
+    crumb = nav.group(0).replace('class="md-path__link"', 'class="md-path__link" aria-label="トップページ"', 1)
+    return output[: nav.start()] + output[nav.end() : at] + crumb + output[at:]
 
 
 # ---- 分野別の問題一覧：章ごとのカードを目次（番号・タイトル・★）に組み替える ----
