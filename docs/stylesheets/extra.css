@@ -1125,6 +1125,19 @@ body, input {
 /* ==========================================
    スマホ・タブレットの左メニュー（overrides/partials/nav.html）
    ========================================== */
+/* Material のスマホメニューは高さが画面に固定された箱なので，中身（.drawer）を縦にスクロールさせる */
+@media screen and (max-width: 76.234375em) {
+  .md-nav--primary { display: flex; flex-direction: column; }
+  .md-nav--primary > .drawer {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* サイト名は切らずに折り返す */
+  .md-nav--primary > .md-nav__title { white-space: normal !important; overflow: visible !important; font-size: .75rem; flex: none; }
+}
 .drawer { padding: .6rem .8rem 2rem; font-size: .72rem; }
 .drawer .side-chapters { margin-top: .4rem; font-size: .7rem; }
 .drawer__heading { margin: 1.4rem 0 .4rem .6rem; font-size: .62rem; font-weight: 500; color: var(--md-default-fg-color--light); letter-spacing: .04em; }
