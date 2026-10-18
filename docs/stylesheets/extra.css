@@ -868,3 +868,18 @@ body, input {
   max-width: 100%;
   height: auto;
 }
+
+/* 答えの強調（\finalanswer）：黄色の下地。答えだけの式は式ごと，導出の途中にある答えはその部分だけ */
+:root { --site-answer-bg: rgba(255, 214, 10, .23); }
+[data-md-color-scheme="slate"] { --site-answer-bg: rgba(159, 179, 255, .10); }
+.md-typeset mjx-container[display="true"].fa-whole {
+  display: block;
+  width: fit-content;
+  margin: 1.1em auto !important;
+  padding: .45em 1em !important;
+  background: var(--site-answer-bg);
+}
+.md-typeset mjx-container:not(.fa-whole) .fa {
+  background: var(--site-answer-bg);
+  box-shadow: 0 0 0 .25em var(--site-answer-bg);
+}
