@@ -50,11 +50,11 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261018m
-  - javascripts/problem-filter.js?v=20261018m
-  - javascripts/share.js?v=20261018m
-  - javascripts/tabs.js?v=20261018m
-  - javascripts/site-search.js?v=20261018m
+  - javascripts/mathjax.js?v=20261018n
+  - javascripts/problem-filter.js?v=20261018n
+  - javascripts/share.js?v=20261018n
+  - javascripts/tabs.js?v=20261018n
+  - javascripts/site-search.js?v=20261018n
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -74,4 +74,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261018m
+  - stylesheets/extra.css?v=20261018n

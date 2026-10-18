@@ -1121,3 +1121,28 @@ body, input {
 .toc-icon { display: inline-flex; width: .8em; height: .8em; margin-right: .4em; vertical-align: -.05em; color: var(--site-navy); }
 .toc-icon svg { width: 100%; height: 100%; fill: currentColor; }
 [data-md-color-scheme="slate"] .toc-icon { color: #c5d0ff; }
+
+/* ==========================================
+   スマホ・タブレットの左メニュー（overrides/partials/nav.html）
+   ========================================== */
+.drawer { padding: .6rem .8rem 2rem; font-size: .72rem; }
+.drawer .side-chapters { margin-top: .4rem; font-size: .7rem; }
+.drawer__heading { margin: 1.4rem 0 .4rem .6rem; font-size: .62rem; font-weight: 500; color: var(--md-default-fg-color--light); letter-spacing: .04em; }
+.drawer__links { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--md-default-fg-color--lightest); }
+.drawer__link {
+  display: flex;
+  align-items: center;
+  gap: .55em;
+  margin-left: -1px;
+  padding: .45rem .7rem;
+  border-left: 2px solid transparent;
+  color: var(--md-typeset-color);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.drawer__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text); }
+.drawer__link.is-current { border-left-color: var(--site-star); font-weight: 500; }
+.drawer__link .side-heading__icon { color: var(--site-navy); }
+[data-md-color-scheme="slate"] .drawer__link .side-heading__icon { color: #c5d0ff; }

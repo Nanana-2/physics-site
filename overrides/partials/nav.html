@@ -1,0 +1,38 @@
+{#-
+  スマホ・タブレットの左メニュー（PC では左のナビは出さない）。
+  Material 標準の入れ子の一覧の代わりに，今いる分野の章のリストと，分野・道具へのリンクを置く。
+-#}
+{% set menu_icons = {
+  '力学': 'fontawesome/solid/apple-whole',
+  '電磁気学': 'fontawesome/solid/magnet',
+  '熱力学': 'fontawesome/solid/temperature-half',
+  '量子力学': 'fontawesome/solid/atom',
+  '統計力学': 'fontawesome/solid/dice',
+  '参考文献一覧': 'fontawesome/solid/book-open',
+  '問題を探す': 'fontawesome/solid/list-ul'
+} %}
+<nav class="md-nav md-nav--primary" aria-label="メニュー" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.site_name }}
+  </label>
+  <div class="drawer">
+    {% include "partials/side-chapters.html" %}
+    <p class="drawer__heading">分野・ページ</p>
+    <ul class="drawer__links">
+      {% for item in nav %}
+        {% if not item.is_homepage %}
+          {% set target = item.children | first if item.children else item %}
+          <li>
+            <a class="drawer__link{% if item.active %} is-current{% endif %}" href="{{ target.url | url }}">
+              {% if item.title in menu_icons %}<span class="side-heading__icon">{% include ".icons/" ~ menu_icons[item.title] ~ ".svg" %}</span>{% endif %}
+              {{ item.title }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

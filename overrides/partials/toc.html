@@ -25,40 +25,7 @@
   {% endif %}
 </nav>
 
-{% set subject_icons = {
-  '力学': 'fontawesome/solid/apple-whole',
-  '電磁気学': 'fontawesome/solid/magnet',
-  '熱力学': 'fontawesome/solid/temperature-half',
-  '量子力学': 'fontawesome/solid/atom',
-  '統計力学': 'fontawesome/solid/dice'
-} %}
-{% set subject = page.ancestors | last if page.ancestors else none %}
 {#- 分野別一覧のページでは本文が章の目次なので，右には出さない -#}
-{% if subject and subject.children and not page.is_index %}
-  <nav class="side-chapters" aria-label="{{ subject.title }}の章">
-    {% for chapter in subject.children %}
-      {% if chapter.children %}
-        {% set number = chapter.title.split('.')[0] %}
-        <details class="side-chapter"{% if chapter.active %} open{% endif %}>
-          <summary class="side-chapter__head">{{ chapter.title }}</summary>
-          <ol class="side-chapter__list">
-            {% for item in chapter.children %}
-              <li>
-                <a class="side-chapter__link{% if item.active %} is-current{% endif %}" href="{{ item.url | url }}"{% if item.active %} aria-current="page"{% endif %}>
-                  <span class="side-chapter__num">{{ number }}-{{ loop.index }}</span>{{ item.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ol>
-        </details>
-      {% else %}
-        {#- 分野の問題一覧へのボタン（紺の帯） -#}
-        <a class="side-chapters__index" href="{{ chapter.url | url }}">
-          {% if subject.title in subject_icons %}<span class="side-heading__icon">{% include ".icons/" ~ subject_icons[subject.title] ~ ".svg" %}</span>{% endif %}
-          <span class="side-chapters__label">{{ chapter.title }}</span>
-          <span aria-hidden="true">→</span>
-        </a>
-      {% endif %}
-    {% endfor %}
-  </nav>
+{% if not page.is_index %}
+  {% include "partials/side-chapters.html" %}
 {% endif %}
