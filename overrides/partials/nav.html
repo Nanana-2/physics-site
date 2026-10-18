@@ -20,7 +20,7 @@
   </label>
   <div class="drawer">
     {% include "partials/side-chapters.html" %}
-    <p class="drawer__heading">分野・ページ</p>
+    <p class="drawer__heading side-heading"><span class="side-heading__icon">{% include ".icons/fontawesome/solid/compass.svg" %}</span>分野・ページ</p>
     <ul class="drawer__links">
       {% for item in nav %}
         {% if not item.is_homepage %}
