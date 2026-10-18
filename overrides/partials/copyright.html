@@ -1,18 +1,47 @@
-<div class="md-copyright">
-  <div class="site-footer-links">
-    <a href="{{ 'privacy/' | url }}">プライバシーポリシー</a>
-    <span aria-hidden="true">/</span>
-    <a href="{{ 'terms/' | url }}">このサイトの利用について</a>
-  </div>
-  {% if config.copyright %}
-    <div class="md-copyright__highlight">
-      {{ config.copyright }}
+{#-
+  サイトのフッター：ロゴとサイト名・運営者，分野／探す／このサイトのリンク，最下段に著作権表示。
+-#}
+{% set footer_subjects = [
+  ('力学', '01mechanics/', 'apple-whole'),
+  ('電磁気学', '02electromagnetism/', 'magnet'),
+  ('熱力学', '03thermodynamics/', 'temperature-half'),
+  ('量子力学', '04quantum_mechanics/', 'atom'),
+  ('統計力学', '05statistical_mechanics/', 'dice')
+] %}
+<div class="site-footer">
+  <div class="site-footer__brand">
+    <img src="{{ 'assets/logo.svg' | url }}" alt="" class="site-footer__logo" width="52" height="52">
+    <div>
+      <p class="site-footer__name">{{ config.site_name }}</p>
+      <p class="site-footer__by">運営：ななな２</p>
     </div>
-  {% endif %}
-  {% if not config.extra.generator == false %}
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  {% endif %}
+  </div>
+  <nav class="site-footer__col" aria-label="分野">
+    <p class="site-footer__head">分野</p>
+    <ul>
+      {% for name, href, icon in footer_subjects %}
+        <li><a href="{{ href | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/" ~ icon ~ ".svg" %}</span>{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav class="site-footer__col" aria-label="探す">
+    <p class="site-footer__head">探す</p>
+    <ul>
+      <li><a href="{{ 'tags/' | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/list-ul.svg" %}</span>問題を探す</a></li>
+      <li><a href="{{ 'books/' | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/book-open.svg" %}</span>参考文献一覧</a></li>
+    </ul>
+  </nav>
+  <nav class="site-footer__col" aria-label="このサイト">
+    <p class="site-footer__head">このサイト</p>
+    <ul>
+      <li><a href="{{ 'privacy/' | url }}">プライバシーポリシー</a></li>
+      <li><a href="{{ 'terms/' | url }}">このサイトの利用について</a></li>
+    </ul>
+  </nav>
+  <p class="site-footer__bottom">
+    © 2026 ななな２
+    {% if not config.extra.generator == false %}
+      <span aria-hidden="true">・</span>Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>
+    {% endif %}
+  </p>
 </div>

@@ -4,6 +4,8 @@ theme:
   name: material
   custom_dir: overrides
   language: ja   # 目次などの見出しを日本語に
+  logo: assets/logo.svg       # ベクトル n に★（ななな２の n，★に向かって進む）
+  favicon: assets/favicon.svg
   font:
     text: Noto Sans JP  # 👈 サイト全体の文字を Noto Sans JP に！
     code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
@@ -50,11 +52,11 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261018q
-  - javascripts/problem-filter.js?v=20261018q
-  - javascripts/share.js?v=20261018q
-  - javascripts/tabs.js?v=20261018q
-  - javascripts/site-search.js?v=20261018q
+  - javascripts/mathjax.js?v=20261018r
+  - javascripts/problem-filter.js?v=20261018r
+  - javascripts/share.js?v=20261018r
+  - javascripts/tabs.js?v=20261018r
+  - javascripts/site-search.js?v=20261018r
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -74,4 +76,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261018q
+  - stylesheets/extra.css?v=20261018r
