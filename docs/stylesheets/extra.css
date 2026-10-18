@@ -1226,3 +1226,7 @@ body, input {
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg { width: 1.9rem; height: 1.9rem; }
 .md-header__button.md-logo { margin: .1rem; padding: .2rem; }
+
+/* ヘッダーもフッターと対称に：一番上（サイト名の段）は最下段と同じ暗い紺，タブの段は紺 */
+.md-header { background-color: #0d1126; }
+[data-md-color-scheme="slate"] .md-header { background-color: #0a0d1f; }
