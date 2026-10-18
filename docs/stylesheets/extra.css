@@ -285,6 +285,27 @@ span.arithmatex mjx-mfrac {
   padding-bottom: 0.5rem !important;
 }
 
+/* サイドバー上部に残る見出し（分野名）に Material が付ける白いぼかし影を消し，背景をサイドバーと同じ色に */
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item > [for] {
+  box-shadow: none !important;
+  background-color: var(--md-code-bg-color) !important;
+}
+
+/* ==========================================
+   9b. ヘッダーの分野タブ（アイコン付き，今いる分野に黄色の下線，道具系は右端）
+   ========================================== */
+.md-tabs { background: var(--md-primary-fg-color); }
+.md-tabs__list { display: flex; contain: none; }
+.md-tabs__item { height: 2.3rem; padding-left: .5rem; padding-right: .5rem; }
+.md-tabs__link { display: inline-flex; align-items: center; gap: .4em; margin-top: .65rem; font-size: .72rem; opacity: .75; }
+.md-tabs__item--active .md-tabs__link { opacity: 1; font-weight: 500; }
+.md-tabs__item--active { box-shadow: inset 0 -2px 0 var(--site-star); }
+.md-tabs__item--tool { order: 1; }
+.md-tabs__item--tool:not(.md-tabs__item--tool ~ .md-tabs__item--tool) { margin-left: auto; }
+.md-tabs__icon { display: inline-flex; width: .85em; height: .85em; }
+.md-tabs__link .md-tabs__icon svg { flex: none; width: 100%; height: 100%; margin: 0 !important; fill: currentColor; }
+
 /* ==========================================
    10. 記事エリアの可読性向上
    ========================================== */

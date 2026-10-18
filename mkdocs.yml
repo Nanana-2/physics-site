@@ -9,6 +9,8 @@ theme:
   features:
     - content.code.copy 
     - navigation.path   # 問題ページの上にパンくず（分野 › 章）を出す
+    - navigation.tabs        # ヘッダーの2段目に分野のタブを出す（サイドバーは今いる分野だけになる）
+    - navigation.tabs.sticky # スクロールしてもタブを残す
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -47,7 +49,7 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261018f
+  - javascripts/mathjax.js?v=20261018g
   - javascripts/problem-filter.js
   - javascripts/share.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -70,4 +72,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261018f
+  - stylesheets/extra.css?v=20261018g

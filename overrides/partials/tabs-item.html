@@ -1,0 +1,52 @@
+{#-
+  Material for MkDocs の tabs-item.html をもとに，
+  ・ホームのタブは出さない（左上のサイト名がホームへのリンク）
+  ・各タブの前に分野のアイコンを付ける
+  ・「参考文献一覧」「問題を探す」は右端に寄せる（tools）
+-#}
+{% set tab_icons = {
+  '力学': 'fontawesome/solid/apple-whole',
+  '電磁気学': 'fontawesome/solid/magnet',
+  '熱力学': 'fontawesome/solid/temperature-half',
+  '量子力学': 'fontawesome/solid/atom',
+  '統計力学': 'fontawesome/solid/dice',
+  '参考文献一覧': 'fontawesome/solid/book-open',
+  '問題を探す': 'fontawesome/solid/list-ul'
+} %}
+{% set tool_tabs = ['参考文献一覧', '問題を探す'] %}
+{% macro render_content(nav_item, ref) %}
+  {% set ref = ref or nav_item %}
+  {% if ref.title in tab_icons %}
+    <span class="md-tabs__icon">{% include ".icons/" ~ tab_icons[ref.title] ~ ".svg" %}</span>
+  {% endif %}
+  {{ ref.title }}
+{% endmacro %}
+{% macro render(nav_item, ref) %}
+  {% set ref = ref or nav_item %}
+  {% set class = "md-tabs__item" %}
+  {% if ref.active %}
+    {% set class = class ~ " md-tabs__item--active" %}
+  {% endif %}
+  {% if ref.title in tool_tabs %}
+    {% set class = class ~ " md-tabs__item--tool" %}
+  {% endif %}
+  {% if nav_item.is_homepage %}
+  {% elif nav_item.children %}
+    {% set first = nav_item.children | first %}
+    {% if first.children %}
+      {{ render(first, ref) }}
+    {% else %}
+      <li class="{{ class }}">
+        <a href="{{ first.url | url }}" class="md-tabs__link">
+          {{ render_content(first, ref) }}
+        </a>
+      </li>
+    {% endif %}
+  {% else %}
+    <li class="{{ class }}">
+      <a href="{{ nav_item.url | url }}" class="md-tabs__link">
+        {{ render_content(nav_item) }}
+      </a>
+    </li>
+  {% endif %}
+{% endmacro %}

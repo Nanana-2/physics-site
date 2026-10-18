@@ -15,7 +15,7 @@
   {% endif %}
 {% endblock %}
 
-{% block header %}
+{% block tabs %}
   {{ super() }}
   {% if page and (page.is_homepage or page.meta.hero_image) %}
     {% set hero_image = page.meta.hero_image or 'assets/images/index.jpg' %}
