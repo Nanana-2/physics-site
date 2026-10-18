@@ -50,7 +50,7 @@ def _heading(markdown: str, fallback: str) -> str:
 
 def _question_text(markdown: str) -> str:
     match = re.search(
-        r"^##\s+問題\s*$\n(.*?)(?=^##\s+解説\s*$|\Z)",
+        r"^##\s+問題\s*$\n(.*?)(?=^##\s+(?:解答・)?解説\s*$|\Z)",
         markdown,
         re.MULTILINE | re.DOTALL,
     )

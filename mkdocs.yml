@@ -8,6 +8,7 @@ theme:
     code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
   features:
     - content.code.copy 
+    - navigation.path   # 問題ページの上にパンくず（分野 › 章）を出す
     - navigation.footer # コードをコピーするボタンを付ける（おまけ）
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
   palette:
@@ -53,6 +54,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
+  - hooks/problem_layout.py
   - hooks/problem_index.py
   - hooks/seo_metadata.py
   - hooks/subject_sitemaps.py

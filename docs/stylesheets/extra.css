@@ -68,60 +68,78 @@ span.arithmatex mjx-mfrac {
 }
 
 /* ==========================================
-   3. 見出し（H2）のカスタムデザイン
-   ========================================= */
-.md-typeset h2 {
-  position: relative;
-  padding-bottom: 7px !important;
-}
+   3. 見出し（本の紙面に合わせた組み方）
+   ========================================== */
+[data-md-color-scheme="default"] { --site-navy: #171d3b; --site-star: #ffd60a; }
+[data-md-color-scheme="slate"] { --site-navy: #2b3566; --site-star: #ffd60a; }
 
-/* ☀️ ライトモード時のH2の下線（薄い青） */
-[data-md-color-scheme="default"] .md-typeset h2 {
-  border-bottom: solid 3px var(--site-heading-soft);
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 500;
+  color: var(--md-typeset-color);
 }
-/* 🌙 ダークモード時のH2の下線（少し沈んだ青） */
-[data-md-color-scheme="slate"] .md-typeset h2 {
-  border-bottom: solid 3px var(--site-heading-soft);
-}
+.md-typeset h1 { letter-spacing: .04em; }
+.md-typeset h2 { padding-bottom: .25em; border-bottom: 1px solid var(--md-default-fg-color--lightest); }
 
-.md-typeset h2:after {
-  font-weight: 550;
-  position: absolute;
-  content: " ";
-  display: block;
-  bottom: -3px;
-  width: 20%;
-}
-/* ☀️ ライトモード時のリボン（鮮やかな青） */
-[data-md-color-scheme="default"] .md-typeset h2:after {
-  border-bottom: solid 3px var(--site-heading-accent);
-}
-/* 🌙 ダークモード時のリボン（ネオン系の映える青） */
-[data-md-color-scheme="slate"] .md-typeset h2:after {
-  border-bottom: solid 3px var(--site-heading-accent);
-}
+/* パンくず（分野 › 章）。灰色にせず本文と同じ色で */
+.md-path { font-size: .72rem; }
+.md-path__link { color: var(--md-typeset-color); }
+.md-path__link:hover { color: var(--md-accent-fg-color); }
+
+/* 難易度は「問題」の帯の★で示すので，タグの表示はしない */
+.md-content .md-tags, .md-typeset .md-tags { display: none !important; }
 
 /* ==========================================
-   4. ページタイトル（H1, H3）のデザイン
+   4. 問題ページ：問題の枠・解答・解説の帯・小見出し
    ========================================== */
-.md-typeset h1,
-.md-typeset h3 {
-  font-weight: 500; 
-  padding: 0.25em 0.5em;
-  background: transparent;
+/* 問題の枠：上辺が紺の帯，帯の「問題」と★を枠内の本文の行頭・行末にそろえる */
+.md-typeset .problem-box {
+  border: 1.5px solid var(--site-navy);
+  margin: 1.2em 0 2.2em;
 }
+.md-typeset .problem-box > h2,
+.md-typeset h2.solution-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: .35em .9rem .3em 1.2rem;
+  border: none;
+  background: var(--site-navy);
+  color: #fff;
+  font-size: .9rem;
+  letter-spacing: .05em;
+}
+.md-typeset h2.solution-heading { margin: 2em 0 1.1em; }
+.md-typeset .problem-box__body { padding: .3em .9rem .5em; }
 
-/* ☀️ ライトモード時の左線と文字色 */
-[data-md-color-scheme="default"] .md-typeset h1,
-[data-md-color-scheme="default"] .md-typeset h3 {
-  color: #333333 !important;
-  border-left: solid 5px var(--site-heading-accent);
+/* 難易度の★：塗りは黄，空きは薄い白 */
+.problem-stars { font-size: .8rem; letter-spacing: .12em; font-weight: 400; }
+.problem-stars__on { color: var(--site-star); }
+.problem-stars__off { color: rgba(255, 255, 255, .3); }
+
+/* 小問：番号の幅でぶら下げインデント */
+.md-typeset .problem-box__body p.subq {
+  display: grid;
+  grid-template-columns: 2.1em 1fr;
+  margin: .9em 0;
 }
-/* 🌙 ダークモード時の左線と文字色 */
-[data-md-color-scheme="slate"] .md-typeset h1,
-[data-md-color-scheme="slate"] .md-typeset h3 {
-  color: #f8fafcf1 !important; /* 暗闇で見やすい白 */
-  border-left: solid 5px var(--site-heading-accent);
+.md-typeset p.subq .subq__number { white-space: nowrap; }
+
+/* 解説の小見出し (1)：右に細い線を伸ばす */
+.md-typeset h3.solution-part {
+  display: flex;
+  align-items: center;
+  gap: .7em;
+  margin: 2em 0 .6em;
+  font-size: .95rem;
+  font-weight: 600;
+}
+.md-typeset h3.solution-part::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
 /* ==========================================
@@ -210,15 +228,6 @@ body, input {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.md-typeset h2 {
-  font-weight: 500;
-  /* ☀️ 通常時の文字色 */
-  color: #333333;
-}
-/* 🌙 ダークモード時のH2文字色 */
-[data-md-color-scheme="slate"] .md-typeset h2 {
-  color: #f8fafc;
-}
 
 /* ==========================================
    12. スマホ版サイドバー（ドロワー）の崩れ修正 ＆ デザイン統一
