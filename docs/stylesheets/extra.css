@@ -603,215 +603,117 @@ body, input {
 }
 
 /* ==========================================
-   14. 全問題一覧・絞り込み
+   14. 問題を探す：検索窓・分野の切り替え（黄色の下線）・難易度の★ボタン
+   結果の章見出しと行は 14b の目次と同じ部品を使う
    ========================================== */
-.problem-finder {
-  margin-top: 1.8rem;
-}
-
-.problem-finder__controls {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
-  gap: 0.9rem;
-  padding: 1.35rem;
-  background: var(--md-code-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 10px;
-}
-
-.problem-finder__controls label {
-  display: grid;
-  gap: 0.35rem;
-  margin: 0;
-  color: var(--md-default-fg-color);
-  font-size: 0.74rem;
-  font-weight: 600;
-}
-
-.problem-finder__keyword {
-  grid-column: 1 / -1;
-}
-
-.problem-finder__controls input,
-.problem-finder__controls select {
-  width: 100%;
-  min-width: 0;
-  height: 2.6rem;
-  box-sizing: border-box;
-  padding: 0 0.8rem;
-  color: var(--md-typeset-color);
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 5px;
-  font: inherit;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-.problem-finder__controls input:focus,
-.problem-finder__controls select:focus {
-  border-color: var(--md-accent-fg-color);
-  outline: 2px solid color-mix(in srgb, var(--md-accent-fg-color) 22%, transparent);
-  outline-offset: 1px;
-}
-
-.problem-finder__reset,
-.problem-finder__more {
-  min-height: 2.6rem;
-  padding: 0.45rem 1rem;
-  color: var(--md-primary-fg-color);
-  background: transparent;
-  border: 1px solid var(--md-primary-fg-color--light);
-  border-radius: 4px;
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.76rem;
-  font-weight: 600;
-}
-
-.problem-finder__reset {
-  align-self: end;
-  white-space: nowrap;
-}
-
-.problem-finder__reset:hover,
-.problem-finder__more:hover {
-  color: #ffffff;
-  background: var(--md-primary-fg-color);
-}
-
-[data-md-color-scheme="slate"] .problem-finder__reset,
-[data-md-color-scheme="slate"] .problem-finder__more {
-  color: #b9c3ec;
-  border-color: #6673aa;
-}
-
-.problem-finder__status {
-  margin: 1.5rem 0 0.8rem !important;
-  color: var(--md-default-fg-color);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.problem-finder__results {
-  display: grid;
-  gap: 0.65rem;
-}
-
-.problem-result {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+.md-typeset .finder { margin-top: 1.2em; }
+.md-typeset .finder__search {
+  display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.95rem 1rem;
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-left: 3px solid var(--site-heading-soft);
-  border-radius: 6px;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  gap: .6rem;
+  padding: .55rem .9rem;
+  background: #fafafb;
+  border-bottom: 2px solid var(--site-navy);
 }
-
-.problem-result:hover {
-  background: var(--md-code-bg-color);
-  border-color: var(--md-default-fg-color--lighter);
-  border-left-color: var(--site-heading-accent);
-}
-
-.problem-result__body {
-  min-width: 0;
-}
-
-.md-typeset .problem-result__title {
+.md-typeset .finder__search input {
+  flex: 1;
+  border: none;
+  background: transparent;
   color: var(--md-typeset-color);
-  border-bottom: 0;
-  font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1.55;
+  font: inherit;
+  font-size: .85rem;
+  outline: none;
 }
+[data-md-color-scheme="slate"] .md-typeset .finder__search { background: rgba(255, 255, 255, .035); border-color: #9fb3ff; }
 
-.md-typeset .problem-result__title:hover {
-  color: var(--md-typeset-a-color);
-}
-
-.problem-result__meta {
+/* 分野：ヘッダーのタブと同じく，選ぶと黄色の下線が中央から伸びる */
+.md-typeset .finder__subjects {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0.25rem;
-  margin: 0.3rem 0 0 !important;
-  color: var(--md-default-fg-color--light);
-  font-size: 0.72rem;
-  line-height: 1.5;
+  gap: 0 .2rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
-
-.problem-result__number {
-  margin-left: 0.45rem;
-  color: var(--md-default-fg-color--lighter);
-  font-family: var(--md-code-font-family);
-  font-size: 0.65rem;
-}
-
-.problem-result__difficulty {
+.md-typeset .finder__subject {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-width: 3.1rem;
-  padding: 0.18rem 0.55rem;
+  gap: .4em;
+  padding: .55rem .6rem;
+  border: none;
+  background: none;
   color: var(--md-default-fg-color--light);
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 999px;
-  font-size: 0.68rem;
-  line-height: 1.4;
+  font: inherit;
+  font-size: .74rem;
+  cursor: pointer;
 }
-
-.problem-result__difficulty[data-difficulty="発展"] {
-  color: var(--site-heading-accent);
-  border-color: var(--site-heading-accent);
+.md-typeset .finder__subject::after {
+  content: "";
+  position: absolute;
+  left: .6rem; right: .6rem; bottom: -1px;
+  height: 2px;
+  background: var(--site-star);
+  transform: scaleX(0);
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1);
 }
+.md-typeset .finder__subject:hover::after,
+.md-typeset .finder__subject.is-on::after { transform: scaleX(1); }
+.md-typeset .finder__subject.is-on { color: var(--md-typeset-color); font-weight: 500; }
 
-[data-md-color-scheme="slate"] .problem-result__difficulty[data-difficulty="発展"] {
-  color: #a5b0df;
+/* 検索窓の虫眼鏡と分野のアイコン（SVG をマスクにして文字色で塗る） */
+.md-typeset .finder__glass,
+.md-typeset .finder__subject:not([data-subject=""])::before {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
 }
+.md-typeset .finder__glass { --site-icon: url("../assets/icons/magnifying-glass.svg"); width: .95rem; height: .95rem; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .finder__glass { color: #c5d0ff; }
+.md-typeset .finder__subject:not([data-subject=""])::before { width: .85em; height: .85em; }
+.md-typeset .finder__subject--01mechanics::before { --site-icon: url("../assets/icons/apple-whole.svg"); }
+.md-typeset .finder__subject--02electromagnetism::before { --site-icon: url("../assets/icons/magnet.svg"); }
+.md-typeset .finder__subject--03thermodynamics::before { --site-icon: url("../assets/icons/temperature-half.svg"); }
+.md-typeset .finder__subject--04quantum_mechanics::before { --site-icon: url("../assets/icons/atom.svg"); }
+.md-typeset .finder__subject--05statistical_mechanics::before { --site-icon: url("../assets/icons/dice.svg"); }
 
-.problem-finder__more {
-  display: block;
-  min-width: 12rem;
-  margin: 1.4rem auto 0;
-}
-
-.problem-finder__more[hidden] {
-  display: none;
-}
-
-.problem-finder__empty {
-  padding: 1.4rem 0;
+/* 難易度：★のボタン。選ぶと紺の面に黄色の★，もう一度押すと解除 */
+.md-typeset .finder__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .9rem 0 1.4rem;
+  font-size: .7rem;
   color: var(--md-default-fg-color--light);
 }
-
-@media screen and (max-width: 45em) {
-  .problem-finder__controls {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .problem-finder__keyword {
-    grid-column: auto;
-  }
-
-  .problem-finder__reset {
-    width: 100%;
-  }
-
-  .problem-result {
-    align-items: start;
-    gap: 0.65rem;
-    padding: 0.85rem;
-  }
-
-  .problem-result__meta {
-    align-items: flex-start;
-  }
+.md-typeset .finder__levels { display: inline-flex; align-items: center; gap: .35rem; }
+.md-typeset .finder__label { margin-right: .3rem; }
+.md-typeset .finder__level {
+  min-width: 2.6rem;
+  padding: .3rem .6rem;
+  border: none;
+  background: #f1f2f6;
+  color: #c9a200;
+  font: inherit;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: background .15s;
 }
+.md-typeset .finder__level:hover { background: #e4e7ef; }
+.md-typeset .finder__level.is-on { background: var(--site-navy); color: var(--site-star); }
+[data-md-color-scheme="slate"] .md-typeset .finder__level { background: rgba(255, 255, 255, .06); color: #e0b400; }
+[data-md-color-scheme="slate"] .md-typeset .finder__level:hover { background: rgba(255, 255, 255, .12); }
+[data-md-color-scheme="slate"] .md-typeset .finder__level.is-on { background: #3a4785; color: var(--site-star); }
+
+/* 結果の行：タイトルの下に，キーワードが当たった問題文の一部（当たった語に黄色の下地） */
+.md-typeset a.finder__row { align-items: center; }
+.md-typeset .finder__text { display: flex; flex-direction: column; gap: .1em; }
+.md-typeset .finder__snippet { font-size: .64rem; color: var(--md-default-fg-color--light); }
+.md-typeset .finder__snippet mark { padding: 0 .1em; background: var(--site-answer-bg); color: inherit; }
+.md-typeset .finder__subject-label { margin-right: .6em; font-size: .7em; opacity: .7; }
+.md-typeset .finder__empty { color: var(--md-default-fg-color--light); font-size: .75rem; }
 
 /* ==========================================
    14b. 分野別の問題一覧：章の見出し（紺の丸に章番号＋薄紺の帯）と問題の行
@@ -1023,3 +925,6 @@ body, input {
 }
 /* 複数行の式（aligned など）の行間をわずかに開ける */
 .md-typeset mjx-container[display="true"] mjx-mtable mjx-mtd { padding-top: .12em !important; padding-bottom: .12em !important; }
+
+/* 左右のサイドバーを出さないページ（問題を探す など）は，本文を中央に置く */
+.md-sidebar--primary[hidden] ~ .md-content > .md-content__inner { margin-left: auto; margin-right: auto; }
