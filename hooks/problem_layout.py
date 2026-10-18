@@ -40,6 +40,17 @@ def _stars(meta) -> str:
     )
 
 
+def _indent_continuations(body: str) -> str:
+    """小問の途中に別行立ての数式や箇条書きがあるとき，その後ろ（次の小問まで）も小問の本文と同じだけ下げる。"""
+    parts = body.split('<p class="subq">')
+    for i in range(1, len(parts)):
+        end = parts[i].index("</p>") + len("</p>")
+        rest = parts[i][end:]
+        if rest.strip():
+            parts[i] = parts[i][:end] + f'<div class="subq__cont">{rest}</div>'
+    return '<p class="subq">'.join(parts)
+
+
 def on_page_content(html, page, config, files):
     if not page.file.src_uri.startswith(SUBJECT_DIRS):
         return html
@@ -57,6 +68,7 @@ def on_page_content(html, page, config, files):
         f"<span>{m.group(2)}</span></p>",
         body,
     )
+    body = _indent_continuations(body)
     box = (
         '<div class="problem-box">'
         f'<h2 id="{heading.group(1)}"><span>問題</span>{_stars(page.meta)}</h2>'

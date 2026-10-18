@@ -48,7 +48,7 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261018c
+  - javascripts/mathjax.js?v=20261018d
   - javascripts/problem-filter.js
   - javascripts/share.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -71,4 +71,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261018c
+  - stylesheets/extra.css?v=20261018d

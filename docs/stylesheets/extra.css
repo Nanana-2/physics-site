@@ -213,6 +213,8 @@ span.arithmatex mjx-mfrac {
   margin: .9em 0;
 }
 .md-typeset p.subq .subq__number { white-space: nowrap; }
+/* 小問の途中の別行数式・続きの文・箇条書きも，小問の本文と同じ位置にそろえる */
+.md-typeset .problem-box__body .subq__cont { margin-left: 2.1em; }
 
 /* 解説の小見出し (1)：右に細い線を伸ばす */
 .md-typeset h3.solution-part {
@@ -968,5 +970,8 @@ body, input {
 }
 .md-typeset mjx-container:not(.fa-whole) .fa {
   background: var(--site-answer-bg);
-  box-shadow: 0 0 0 .25em var(--site-answer-bg);
+  /* 左右にだけ広げる（上下に広げると複数行の式で上下の行と重なる） */
+  box-shadow: .25em 0 0 var(--site-answer-bg), -.25em 0 0 var(--site-answer-bg);
 }
+/* 複数行の式（aligned など）の行間をわずかに開ける */
+.md-typeset mjx-container[display="true"] mjx-mtable mjx-mtd { padding-top: .12em !important; padding-bottom: .12em !important; }
