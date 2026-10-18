@@ -997,7 +997,7 @@ body, input {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 0 .6rem 1.1rem;
+  margin: .35rem 0 .7rem 1.1rem;
   padding: .3rem .6rem .28rem 1.2rem;
   border-radius: 0 1em 1em 0;
   background: #eef0f6;
@@ -1051,10 +1051,10 @@ body, input {
 [data-md-color-scheme="slate"] .side-chapter__num { color: #c5d0ff; }
 
 /* ==========================================
-   押せるもの共通：マウスを乗せる／押すと，紺が左から塗られて文字が白く反転する
+   押せるもの共通：マウスを乗せる／押すと，解答・解説の帯と同じ薄い紺が左から塗られる
    ========================================== */
-[data-md-color-scheme] { --site-sweep: var(--site-navy); }
-[data-md-color-scheme="slate"] { --site-sweep: #3a4785; }
+[data-md-color-scheme] { --site-sweep: #e6e9f3; --site-sweep-text: var(--site-navy); }
+[data-md-color-scheme="slate"] { --site-sweep: rgba(159, 179, 255, .16); --site-sweep-text: #eef1ff; }
 .md-sidebar--secondary .md-nav--secondary .md-nav__link,
 .side-chapter__head,
 .side-chapter__link,
@@ -1075,13 +1075,13 @@ body, input {
   background-size: 100% 100%;
   background-color: transparent;
   border-radius: 0;
-  color: #fff !important;
+  color: var(--site-sweep-text) !important;
 }
 .side-chapter__link:hover .side-chapter__num,
 .md-typeset .page-nav__side:hover :is(.page-nav__dir, .page-nav__title),
 .md-typeset a.page-links__button:hover :is(.page-links__arrow),
 .md-typeset a.page-links__button:hover::before,
-.md-typeset a.toc-row:hover :is(.toc-row__num, .toc-row__title, .finder__snippet) { color: #fff !important; }
+.md-typeset a.toc-row:hover :is(.toc-row__num, .toc-row__title, .finder__snippet) { color: var(--site-sweep-text) !important; }
 /* 紺の一覧ボタンは逆に，白っぽく明るくなる */
 .side-chapters__index { background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%; transition: background-size .45s cubic-bezier(.25, .8, .25, 1); }
 .side-chapters__index:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
@@ -1097,7 +1097,7 @@ body, input {
   background-size: 100% 0;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
 }
-.md-typeset .page-nav__list:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff !important; }
+.md-typeset .page-nav__list:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text) !important; }
 
 /* 章を開くと問題のリストがにゅっと伸びる（対応ブラウザのみ。非対応ならそのまま開く） */
 .side-chapter { interpolate-size: allow-keywords; }
@@ -1116,3 +1116,8 @@ body, input {
 @media (prefers-reduced-motion: reduce) {
   .md-typeset .page-nav__list, .side-chapter::details-content { transition: none; }
 }
+
+/* 目次の「問題」「解答・解説」のアイコン */
+.toc-icon { display: inline-flex; width: .8em; height: .8em; margin-right: .4em; vertical-align: -.05em; color: var(--site-navy); }
+.toc-icon svg { width: 100%; height: 100%; fill: currentColor; }
+[data-md-color-scheme="slate"] .toc-icon { color: #c5d0ff; }
