@@ -1135,12 +1135,11 @@ body, input {
    トップページ（ヒーローは overrides/main.html，本文は hooks/problem_layout.py の _home）
    ========================================== */
 .home-hero { position: relative; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #0d1126; background-position: center; background-size: cover; color: #fff; }
-.home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(13, 17, 38, .55), rgba(13, 17, 38, .7)); }
+.home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(13, 17, 38, .68), rgba(13, 17, 38, .8)); }
 .home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
 .home-hero__logo { width: 4.2rem; height: 4.2rem; }
-.home-hero__title { margin: .4rem 0 .3rem; font-size: 1.6rem; font-weight: 500; letter-spacing: .08em; color: #fff; }
-.home-hero__lead { margin: 0 0 .25rem; font-size: .82rem; letter-spacing: .06em; color: rgba(255, 255, 255, .9); }
-.home-hero__facts { margin: 0 0 1.4rem; font-size: .66rem; letter-spacing: .06em; color: rgba(255, 255, 255, .6); }
+.home-hero__title { margin: .5rem 0 .4rem; font-size: 1.45rem; font-weight: 500; letter-spacing: .08em; color: #fff; }
+.home-hero__facts { margin: 0 0 1.4rem; font-size: .74rem; letter-spacing: .06em; color: rgba(255, 255, 255, .78); }
 .home-search { margin: 0; }
 .home-search .site-search__input { width: 100% !important; height: 2.6rem; padding-left: 2.6rem; font-size: .85rem; background: rgba(255, 255, 255, .12); }
 .home-search .site-search__input:focus { background: rgba(255, 255, 255, .18); }
@@ -1213,8 +1212,8 @@ body, input {
 /* ==========================================
    斜めのストライプ：グレー・薄紺の面にごく薄く（問題文の面は読みやすさのため除く）
    ========================================== */
-[data-md-color-scheme] { --site-stripe: repeating-linear-gradient(-45deg, rgba(23, 29, 59, .028) 0 2px, transparent 2px 7px); }
-[data-md-color-scheme="slate"] { --site-stripe: repeating-linear-gradient(-45deg, rgba(255, 255, 255, .025) 0 2px, transparent 2px 7px); }
+[data-md-color-scheme] { --site-stripe: repeating-linear-gradient(-45deg, rgba(23, 29, 59, .035) 0 1px, transparent 1px 3.5px); }
+[data-md-color-scheme="slate"] { --site-stripe: repeating-linear-gradient(-45deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 3.5px); }
 .md-typeset :is(h2.solution-heading, h2.toc-chapter__head, h2.books-head, .books-intro, .home-promise, .finder__search),
 .md-sidebar--secondary .md-nav__title.side-heading, .side-heading {
   background-image: var(--site-stripe);
@@ -1228,38 +1227,51 @@ body, input {
 .md-typeset :is(a.page-links__button, a.home-tile, a.home-level):is(:hover, :focus-visible, :active) { background-size: 100% 100%, auto; }
 
 /* ==========================================
-   運営者のひとこと（吹き出し）：全ページの末尾
+   運営者情報：見出しは吹き出し（紺，しっぽが下のカードを指す），中身は薄いグレーのカード。全ページの末尾
    ========================================== */
 .md-typeset .owner { margin: 2.4rem 0 1rem; }
-.md-typeset .owner__bubble {
+.md-typeset .owner__heading {
   position: relative;
-  padding: .9rem 1.1rem;
-  border-radius: .3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  margin: 0 0 .9rem;
+  padding: .4rem 1rem;
+  border-radius: .2rem;
   background: var(--site-navy);
   color: #fff;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .04em;
 }
-.md-typeset .owner__bubble::after {
+.md-typeset .owner__heading::after {
   content: "";
   position: absolute;
-  left: 1.3rem; bottom: -.55rem;
-  border: .6rem solid transparent;
+  left: 1.1rem; bottom: -.5rem;
+  border: .5rem solid transparent;
   border-bottom: 0;
   border-top-color: var(--site-navy);
 }
-[data-md-color-scheme="slate"] .md-typeset .owner__bubble { background: #3a4785; }
-[data-md-color-scheme="slate"] .md-typeset .owner__bubble::after { border-top-color: #3a4785; }
-.md-typeset .owner__text { margin: 0 0 .6rem; font-size: .74rem; line-height: 1.7; }
-.md-typeset .owner__links { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
+[data-md-color-scheme="slate"] .md-typeset .owner__heading { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset .owner__heading::after { border-top-color: #3a4785; }
+.md-typeset .owner__heading-icon { display: inline-flex; width: .8em; height: .8em; }
+.md-typeset .owner__heading-icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; background-color: #fafafb; background-image: var(--site-stripe); }
+[data-md-color-scheme="slate"] .md-typeset .owner__card { background-color: rgba(255, 255, 255, .035); }
+.md-typeset .owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; object-fit: cover; }
+.md-typeset .owner__body p { margin: 0; }
+.md-typeset .owner__name { font-size: .92rem; font-weight: 500; }
+.md-typeset .owner__name span { margin-left: .6em; font-size: .62rem; font-weight: 400; color: var(--md-default-fg-color--light); }
+.md-typeset .owner__text { margin: .3rem 0 .7rem !important; font-size: .74rem; }
+.md-typeset .owner__links { display: flex; flex-wrap: wrap; gap: .5rem; }
 .md-typeset a.owner__link {
   display: inline-flex; align-items: center; gap: .45em;
-  padding: .28rem .8rem; border: 1px solid rgba(255, 255, 255, .5); color: #fff; font-size: .66rem;
-  background-image: linear-gradient(rgba(255, 255, 255, .16), rgba(255, 255, 255, .16));
-  background-repeat: no-repeat; background-size: 0 100%;
+  padding: .32rem .9rem; border: none; background-color: var(--site-navy); color: #fff; font-size: .68rem; font-weight: 500;
+  background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
 }
 .md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset a.owner__link { background-color: #3a4785; }
 .md-typeset .owner__icon { display: inline-flex; width: .85em; height: .85em; }
 .md-typeset .owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
-.md-typeset .owner__who { display: flex; align-items: center; gap: .6rem; margin: .8rem 0 0 .55rem; }
-.md-typeset .owner__avatar { width: 2.4rem; height: 2.4rem; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--md-default-bg-color), 0 0 0 3px var(--site-navy); }
-.md-typeset .owner__name { font-size: .72rem; font-weight: 500; }
+.home-hero__title span { display: inline-block; }
