@@ -9,9 +9,13 @@ Markdown 側は今まで通り「## 問題」…「---」…「## 解答・解�
     </div>
 
 タイトルの h1 には class="problem-title" を付け，パンくずはタイトルの下へ移す。
+分野別の問題一覧（<分野>/index.md）は，章ごとのカードを番号・タイトル・★の目次に組み替える。
 """
 
 import re
+from pathlib import Path
+
+import yaml
 
 SUBJECT_DIRS = (
     "01mechanics",
@@ -26,11 +30,23 @@ PROBLEM_HEADING = re.compile(r'<h2 id="([^"]+)">問題</h2>')
 SUBQUESTION = re.compile(r"<p>\((\d+)\)\s*(.*?)</p>", re.DOTALL)
 
 
-def _stars(meta) -> str:
-    tags = meta.get("tags") or []
+def _level_from_tags(tags) -> int:
     if isinstance(tags, str):
         tags = [tags]
-    level = next((LEVELS[tag] for tag in tags if tag in LEVELS), 0)
+    return next((LEVELS[tag] for tag in tags or [] if tag in LEVELS), 0)
+
+
+def _stars_html(level: int, cls: str) -> str:
+    if not level:
+        return ""
+    return (
+        f'<span class="{cls}" aria-label="難易度 {level}/3">'
+        f'<span class="on">{"★" * level}</span><span class="off">{"☆" * (3 - level)}</span></span>'
+    )
+
+
+def _stars(meta) -> str:
+    level = _level_from_tags(meta.get("tags"))
     if not level:
         return ""
     return (
@@ -54,6 +70,8 @@ def _indent_continuations(body: str) -> str:
 def on_page_content(html, page, config, files):
     if not page.file.src_uri.startswith(SUBJECT_DIRS):
         return html
+    if page.file.src_uri.endswith("/index.md"):
+        return _subject_index(html, page, config)
     heading = PROBLEM_HEADING.search(html)
     if not heading:
         return html
@@ -84,15 +102,55 @@ def on_page_content(html, page, config, files):
 
 
 BREADCRUMB = re.compile(r'<nav class="md-path".*?</nav>\s*', re.DOTALL)
+ARTICLE_START = '<article class="md-content__inner md-typeset">'
 
 
 def on_post_page(output, page, config):
-    # 問題ページのパンくずは，タイトル（とその下線）の下へ移す
-    if 'class="problem-title"' not in output:
-        return output
+    # パンくずは本文の中へ移して左端をそろえる。タイトルがあればその（下線の）下，なければ本文の先頭
     nav = BREADCRUMB.search(output)
-    title_end = output.find("</h1>", nav.end()) if nav else -1
-    if title_end < 0:
+    article = output.find(ARTICLE_START, nav.end()) if nav else -1
+    if article < 0:
         return output
-    title_end += len("</h1>")
-    return output[: nav.start()] + output[nav.end() : title_end] + nav.group(0) + output[title_end:]
+    title_end = output.find("</h1>", article)
+    at = title_end + len("</h1>") if title_end >= 0 else article + len(ARTICLE_START)
+    return output[: nav.start()] + output[nav.end() : at] + nav.group(0) + output[at:]
+
+
+# ---- 分野別の問題一覧：章ごとのカードを目次（番号・タイトル・★）に組み替える ----
+
+CHAPTER_CARD = re.compile(
+    r"<li>\s*<p><strong>(\d+)\.\s*(.*?)</strong></p>\s*<hr\s*/?>\s*<ul>(.*?)</ul>\s*</li>", re.DOTALL
+)
+CARD_GRID = re.compile(r'<div class="grid cards">.*?</div>', re.DOTALL)
+
+
+def _level(md_path: Path) -> int:
+    try:
+        text = md_path.read_text(encoding="utf-8")
+        meta = yaml.safe_load(re.match(r"---\s*\n(.*?)\n---", text, re.DOTALL).group(1)) or {}
+    except (OSError, AttributeError, yaml.YAMLError):
+        return 0
+    return _level_from_tags(meta.get("tags"))
+
+
+def _subject_index(html, page, config):
+    base = Path(config["docs_dir"]) / Path(page.file.src_uri).parent
+    grid = CARD_GRID.search(html)
+    if not grid:
+        return html
+    sections = []
+    for number, title, items in CHAPTER_CARD.findall(grid.group(0)):
+        links = re.findall(r'<a href="([^"]+)">(.*?)</a>', items)
+        rows = "".join(
+            f'<a class="toc-row" href="{href}"><span class="toc-row__num">{number}-{i}</span>'
+            f'<span class="toc-row__title">{name}</span>{_stars_html(_level(base / (href.strip("/") + ".md")), "toc-row__stars")}</a>'
+            for i, (href, name) in enumerate(links, 1)
+        )
+        sections.append(
+            f'<section class="toc-chapter"><h2 class="toc-chapter__head"><span class="toc-chapter__no">{number}</span>'
+            f'<span class="toc-chapter__title">{title}</span></h2>'
+            f"{rows}</section>"
+        )
+    if not sections:
+        return html
+    return html[: grid.start()] + '<div class="toc">' + "".join(sections) + "</div>" + html[grid.end() :]

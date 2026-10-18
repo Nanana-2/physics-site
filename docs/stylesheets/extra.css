@@ -762,6 +762,58 @@ body, input {
 }
 
 /* ==========================================
+   14b. 分野別の問題一覧：章の見出し（紺の丸に章番号＋薄紺の帯）と問題の行
+   ========================================== */
+.md-typeset .toc { margin-top: 1.5em; }
+.md-typeset .toc-chapter { margin: 0 0 2.2em; }
+.md-typeset h2.toc-chapter__head {
+  position: relative;
+  margin: 0 0 .3em 1.05rem;
+  padding: .4em .9rem .35em 1.55rem;
+  border: none;
+  border-radius: 0 1em 1em 0;
+  background: #eef0f6;
+  color: var(--site-navy);
+  font-size: .9rem;
+  letter-spacing: .04em;
+}
+.md-typeset .toc-chapter__no {
+  position: absolute;
+  left: -1.05rem; top: 50%;
+  width: 2.1rem; height: 2.1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+  color: #fff;
+  font-size: .85rem;
+  line-height: 2.1rem;
+  text-align: center;
+}
+[data-md-color-scheme="slate"] .md-typeset h2.toc-chapter__head { background: rgba(159, 179, 255, .12); color: #e3e7f7; }
+[data-md-color-scheme="slate"] .md-typeset .toc-chapter__no { background: #3a4785; }
+
+.md-typeset a.toc-row {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr auto;
+  align-items: baseline;
+  gap: .6rem;
+  padding: .5rem .2rem;
+  border: none;
+  border-bottom: 1px solid #eef0f4;
+  color: var(--md-typeset-color);
+  font-size: .8rem;
+}
+.md-typeset a.toc-row:hover { background: #fafafb; }
+.md-typeset a.toc-row:hover .toc-row__title { color: var(--md-accent-fg-color); }
+.md-typeset .toc-row__num { font-size: .7rem; color: var(--site-navy); }
+.md-typeset .toc-row__stars { font-size: .65rem; letter-spacing: .08em; }
+.md-typeset .toc-row__stars .on { color: #e0b400; }
+.md-typeset .toc-row__stars .off { color: var(--md-default-fg-color--lighter); }
+[data-md-color-scheme="slate"] .md-typeset a.toc-row { border-color: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset a.toc-row:hover { background: rgba(255, 255, 255, .035); }
+[data-md-color-scheme="slate"] .md-typeset .toc-row__num { color: #c5d0ff; }
+
+/* ==========================================
    15. 問題末尾：前後の問題・一覧へ（中央）・関連ページのボタン
    ========================================== */
 .md-typeset .page-nav {
