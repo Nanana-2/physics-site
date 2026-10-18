@@ -1275,3 +1275,8 @@ body, input {
 .md-typeset .owner__icon { display: inline-flex; width: .85em; height: .85em; }
 .md-typeset .owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
 .home-hero__title span { display: inline-block; }
+
+/* タブレット幅でも本文を中央に（PC 幅の指定は上の 35rem） */
+@media screen and (min-width: 45em) and (max-width: 76.234375em) {
+  .md-main .md-content__inner { margin-left: auto !important; margin-right: auto !important; }
+}
