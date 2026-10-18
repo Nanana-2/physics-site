@@ -1130,3 +1130,81 @@ body, input {
 /* ヘッダーもフッターと対称に：一番上（サイト名の段）は最下段と同じ暗い紺，タブの段は紺 */
 .md-header { background-color: #0d1126; }
 [data-md-color-scheme="slate"] .md-header { background-color: #0a0d1f; }
+
+/* ==========================================
+   トップページ（ヒーローは overrides/main.html，本文は hooks/problem_layout.py の _home）
+   ========================================== */
+.home-hero { position: relative; isolation: isolate; padding: 3.2rem 1rem 3rem; background: #0d1126 var(--home-hero-image) center / cover; color: #fff; }
+.home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(13, 17, 38, .78), rgba(13, 17, 38, .9)); }
+.home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
+.home-hero__logo { width: 4.2rem; height: 4.2rem; }
+.home-hero__title { margin: .4rem 0 .3rem; font-size: 1.6rem; font-weight: 500; letter-spacing: .08em; color: #fff; }
+.home-hero__facts { margin: 0 0 1.4rem; font-size: .7rem; letter-spacing: .04em; color: rgba(255, 255, 255, .7); }
+.home-search { margin: 0; }
+.home-search .site-search__input { width: 100% !important; height: 2.6rem; padding-left: 2.6rem; font-size: .85rem; background: rgba(255, 255, 255, .12); }
+.home-search .site-search__input:focus { background: rgba(255, 255, 255, .18); }
+.home-search .site-search__icon { left: .9rem; width: 1.1rem; height: 1.1rem; }
+.home-search .site-search__results { left: 0; right: 0; width: auto; text-align: left; }
+@media screen and (max-width: 59.984375em) { .home-search.site-search { display: flex; } }
+
+.md-typeset .home-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin: 1rem 0 .6rem; }
+.md-typeset a.home-tile,
+.md-typeset a.home-level {
+  border: none;
+  background-color: #fafafb;
+  color: var(--md-typeset-color);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset a.home-tile:is(:hover, :focus-visible), .md-typeset a.home-level:is(:hover, :focus-visible) { background-size: 100% 100%; }
+[data-md-color-scheme="slate"] .md-typeset :is(a.home-tile, a.home-level) { background-color: rgba(255, 255, 255, .035); }
+.md-typeset a.home-tile { display: flex; gap: .8rem; padding: .9rem 1rem; }
+.md-typeset .home-tile__icon { display: flex; flex: none; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--site-navy); color: #fff; }
+.md-typeset .home-tile__icon svg { width: .85rem; height: .85rem; fill: currentColor; }
+[data-md-color-scheme="slate"] .md-typeset .home-tile__icon { background: #3a4785; }
+.md-typeset .home-tile__body { display: flex; flex: 1; flex-direction: column; gap: .25rem; min-width: 0; }
+.md-typeset .home-tile__name { display: flex; justify-content: space-between; align-items: baseline; font-size: .88rem; font-weight: 500; }
+.md-typeset .home-tile__count { font-size: .66rem; font-weight: 400; color: var(--md-default-fg-color--light); }
+.md-typeset .home-tile__desc { font-size: .64rem; line-height: 1.5; color: var(--md-default-fg-color--light); }
+.md-typeset .home-bar { display: flex; gap: 2px; height: 4px; margin-top: .35rem; }
+.md-typeset .home-bar__seg { display: inline-block; height: 4px; border-radius: 2px; }
+.md-typeset .home-bar__seg--1 { background: #ffe68f; }
+.md-typeset .home-bar__seg--2 { background: #ffd60a; }
+.md-typeset .home-bar__seg--3 { background: #d9a400; }
+.md-typeset .home-legend { display: flex; align-items: center; justify-content: flex-end; gap: .4rem; font-size: .6rem; color: var(--md-default-fg-color--light); }
+.md-typeset .home-legend .home-bar__seg { width: 1rem; margin-left: .6rem; }
+.md-typeset .home-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin: 1rem 0; }
+.md-typeset a.home-level { display: flex; flex-direction: column; gap: .2rem; padding: .9rem 1rem; }
+.md-typeset .home-level__stars { font-size: .9rem; letter-spacing: .06em; color: #e0b400; }
+.md-typeset .home-level__stars .off { color: var(--md-default-fg-color--lighter); }
+.md-typeset .home-level__name { font-size: .85rem; font-weight: 500; }
+.md-typeset .home-level__desc { font-size: .62rem; color: var(--md-default-fg-color--light); }
+.md-typeset .home-level__count { font-size: .66rem; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .home-level__count { color: #c5d0ff; }
+.md-typeset .home-promise { padding: .3em 1.1rem .6em; background: #fafafb; border-left: 3px solid var(--site-star); }
+[data-md-color-scheme="slate"] .md-typeset .home-promise { background: rgba(255, 255, 255, .035); }
+
+/* 運営者のカード：ロゴ（ファビコン）を顔にして，名前・紹介・SNS のボタン */
+.md-typeset .home-owner { display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0 2rem; padding: 1.1rem 1.2rem; background: #fafafb; }
+[data-md-color-scheme="slate"] .md-typeset .home-owner { background: rgba(255, 255, 255, .035); }
+.md-typeset .home-owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; }
+.md-typeset .home-owner__body p { margin: 0; }
+.md-typeset .home-owner__name { font-size: .95rem; font-weight: 500; }
+.md-typeset .home-owner__name span { margin-left: .6em; font-size: .62rem; font-weight: 400; color: var(--md-default-fg-color--light); }
+.md-typeset .home-owner__bio { margin: .3rem 0 .7rem !important; font-size: .74rem; }
+.md-typeset .home-owner__links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.md-typeset a.home-owner__link {
+  display: inline-flex; align-items: center; gap: .45em;
+  padding: .32rem .9rem; border: none; background-color: var(--site-navy); color: #fff; font-size: .68rem; font-weight: 500;
+  background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset a.home-owner__link:is(:hover, :focus-visible) { background-size: 100% 100%; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset a.home-owner__link { background-color: #3a4785; }
+.md-typeset .home-owner__icon { display: inline-flex; width: .85em; height: .85em; }
+.md-typeset .home-owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
+@media screen and (max-width: 45em) {
+  .md-typeset .home-tiles, .md-typeset .home-levels { grid-template-columns: 1fr; }
+}

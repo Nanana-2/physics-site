@@ -71,6 +71,8 @@ def _indent_continuations(body: str) -> str:
 def on_page_content(html, page, config, files):
     if page.file.src_uri == "books.md":
         return _books(html)
+    if page.is_homepage:
+        return _home(html, page, config)
     if not page.file.src_uri.startswith(SUBJECT_DIRS):
         return html
     if page.file.src_uri.endswith("/index.md"):
@@ -189,3 +191,94 @@ def _books(html: str) -> str:
     if intro:
         html = html[: intro.start()] + f'<section class="books-intro">{intro.group(0)}</section>' + html[intro.end() :]
     return html
+
+
+# ---- トップページ：分野のタイル（問題数と難易度の割合のバー），難易度の入口，運営者のカード ----
+
+HOME_SUBJECTS = (
+    ("01mechanics", "力学", "apple-whole", "運動方程式・剛体から解析力学まで"),
+    ("02electromagnetism", "電磁気学", "magnet", "静電場・静磁場からマクスウェル方程式，放射まで"),
+    ("03thermodynamics", "熱力学", "temperature-half", "熱力学の諸法則から熱力学関数，相転移まで"),
+    ("04quantum_mechanics", "量子力学", "atom", "束縛・散乱問題から電磁場の量子化まで"),
+    ("05statistical_mechanics", "統計力学", "dice", "古典・量子統計から非平衡，開放量子系まで"),
+)
+HOME_LEVELS = (("基本", "定期試験に出てくる程度"), ("標準", "院試のベーシックな問題"), ("発展", "やや発展的なトピック"))
+BRAND_DIR = ICON_DIR.parent / "brands"
+
+
+def _level_counts(docs: Path, subject: str) -> dict:
+    counts = {name: 0 for name in LEVELS}
+    for md in sorted((docs / subject).glob("*/*.md")):
+        level = _level(md)
+        for name, value in LEVELS.items():
+            if value == level:
+                counts[name] += 1
+    return counts
+
+
+def _home_heading(title: str, icon: str, id_: str = "") -> str:
+    id_attr = f' id="{id_}"' if id_ else ""
+    return f'<h2{id_attr} class="books-head"><span class="books-head__icon">{_icon(icon)}</span>{title}</h2>'
+
+
+def _home(html: str, page, config) -> str:
+    docs = Path(config["docs_dir"])
+    counts = {slug: _level_counts(docs, slug) for slug, *_ in HOME_SUBJECTS}
+    page.meta["problem_total"] = sum(sum(c.values()) for c in counts.values())
+
+    sections = {}
+    for m in re.finditer(r'<h2 id="[^"]+">(.*?)</h2>(.*?)(?=<h2 |\Z)', html, re.DOTALL):
+        sections[re.sub(r"<[^>]+>", "", m.group(1)).strip()] = m.group(2)
+
+    tiles = ""
+    for slug, name, icon, desc in HOME_SUBJECTS:
+        c = counts[slug]
+        bar = "".join(
+            f'<span class="home-bar__seg home-bar__seg--{i}" style="flex:{c[k]}" title="{k} {c[k]}問"></span>'
+            for i, k in enumerate(LEVELS, 1)
+        )
+        tiles += (
+            f'<a class="home-tile" href="{slug}/"><span class="home-tile__icon">{_icon(icon)}</span>'
+            f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
+            f'<span class="home-tile__desc">{desc}</span><span class="home-bar">{bar}</span></span></a>'
+        )
+    legend = '<p class="home-legend">' + "".join(
+        f'<span class="home-bar__seg home-bar__seg--{i}"></span>{"★" * i} {k}' for i, k in enumerate(LEVELS, 1)
+    ) + "</p>"
+
+    levels = ""
+    for i, (name, desc) in enumerate(HOME_LEVELS, 1):
+        total = sum(c[name] for c in counts.values())
+        levels += (
+            f'<a class="home-level" href="tags/?difficulty={name}"><span class="home-level__stars">{"★" * i}'
+            f'<span class="off">{"☆" * (3 - i)}</span></span><span class="home-level__name">{name}</span>'
+            f'<span class="home-level__desc">{desc}</span><span class="home-level__count">{total}問</span></a>'
+        )
+
+    owner = sections.get("運営者情報・SNS", "")
+    bio = re.search(r"<p>(.*?)</p>", owner, re.DOTALL)
+    links = re.findall(r'<strong>(.*?)：?</strong>\s*<a href="([^"]+)">', owner)
+    buttons = ""
+    for label, href in links:
+        icon = (BRAND_DIR / "x-twitter.svg") if "twitter" in href or "x.com" in href else (ICON_DIR / "pen-nib.svg")
+        svg = re.sub(r"<!--.*?-->", "", icon.read_text(encoding="utf-8"))
+        name = "X" if "twitter" in href or "x.com" in href else re.sub(r"[:：\s]", "", label)
+        buttons += f'<a class="home-owner__link" href="{href}" target="_blank" rel="noopener"><span class="home-owner__icon">{svg}</span>{name}</a>'
+    owner_card = (
+        '<div class="home-owner"><img class="home-owner__avatar" src="assets/favicon.svg" alt="" width="64" height="64">'
+        f'<div class="home-owner__body"><p class="home-owner__name">ななな２<span>なななつ</span></p>'
+        f'<p class="home-owner__bio">{bio.group(1) if bio else ""}</p><p class="home-owner__links">{buttons}</p></div></div>'
+    )
+
+    return (
+        _home_heading("分野から選ぶ", "layer-group", "fields")
+        + f'<div class="home-tiles">{tiles}</div>{legend}'
+        + _home_heading("難易度から選ぶ", "star")
+        + f'<div class="home-levels">{levels}</div>'
+        + _home_heading("このサイトは何者？", "circle-question")
+        + sections.get("このサイトは何者？", "")
+        + _home_heading("重要な約束と推奨される使い方", "triangle-exclamation")
+        + f'<div class="home-promise">{sections.get("重要な約束と推奨される使い方", "")}</div>'
+        + _home_heading("運営者情報・SNS", "user")
+        + owner_card
+    )

@@ -1,6 +1,7 @@
 ---
 title: ホーム
-hero_image: assets/images/index.jpg
+hide:
+  - toc   # トップページは本文を中央に（見出しと入口は hooks/problem_layout.py が組む）
 ---
 
 ## このサイトは何者？

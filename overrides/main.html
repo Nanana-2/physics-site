@@ -19,7 +19,22 @@
 
 {% block tabs %}
   {{ super() }}
-  {% if page and (page.is_homepage or page.meta.hero_image) %}
+  {% if page and page.is_homepage %}
+    {#- トップページ：ロゴ・サイト名・収録数と，大きな検索窓（問題数は hooks/problem_layout.py が数える） -#}
+    <section class="home-hero" style="--home-hero-image: url('{{ 'assets/images/index.jpg' | url }}');">
+      <div class="home-hero__inner">
+        <img class="home-hero__logo" src="{{ 'assets/logo.svg' | url }}" alt="" width="84" height="84">
+        <h1 class="home-hero__title">{{ config.site_name }}</h1>
+        <p class="home-hero__facts">力学・電磁気学・熱力学・量子力学・統計力学　{{ page.meta.problem_total }}問</p>
+        <form class="site-search home-search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
+          <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
+          <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索（例：角運動量，分配関数）" autocomplete="off" aria-label="問題を検索">
+          <div class="site-search__results" role="listbox" hidden></div>
+        </form>
+      </div>
+    </section>
+    <style>.md-content__inner > h1:first-child { display: none; }</style>
+  {% elif page and page.meta.hero_image %}
     {% set hero_image = page.meta.hero_image or 'assets/images/index.jpg' %}
     <section class="page-hero{% if page.is_homepage %} page-hero--home{% endif %}" style="--page-hero-image: url('{{ hero_image | url }}');" aria-labelledby="page-hero-title">
       <div class="page-hero__inner">
