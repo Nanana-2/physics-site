@@ -6,9 +6,7 @@ theme:
   language: ja   # 目次などの見出しを日本語に
   logo: assets/logo.svg       # ベクトル n に★（ななな２の n，★に向かって進む）
   favicon: assets/favicon.svg
-  font:
-    text: Noto Sans JP  # 👈 サイト全体の文字を Noto Sans JP に！
-    code: Roboto Mono   # 👈 数式やコード用のフォント（そのままでOK）
+  font: false   # フォントは overrides/main.html で必要な太さ（400・700）だけ読み込む
   features:
     - content.code.copy 
     - navigation.path   # 問題ページの上にパンくず（分野 › 章）を出す
@@ -53,13 +51,13 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261019c
-  - javascripts/problem-filter.js?v=20261019c
-  - javascripts/share.js?v=20261019c
-  - javascripts/tabs.js?v=20261019c
-  - javascripts/site-search.js?v=20261019c
-  - javascripts/answers.js?v=20261019c
-  - javascripts/copy-markdown.js?v=20261019c
+  - javascripts/mathjax.js?v=20261019d
+  - javascripts/problem-filter.js?v=20261019d
+  - javascripts/share.js?v=20261019d
+  - javascripts/tabs.js?v=20261019d
+  - javascripts/site-search.js?v=20261019d
+  - javascripts/answers.js?v=20261019d
+  - javascripts/copy-markdown.js?v=20261019d
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -79,4 +77,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261019c
+  - stylesheets/extra.css?v=20261019d

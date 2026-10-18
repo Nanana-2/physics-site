@@ -1,3 +1,6 @@
+/* 本文・コードのフォント（mkdocs.yml の font は false にして overrides/main.html で読み込む） */
+:root { --md-text-font: "Noto Sans JP"; --md-code-font: "Roboto Mono"; }
+
 /* ==========================================
    0. サイト全体の基準色
    ========================================== */
