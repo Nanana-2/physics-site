@@ -780,7 +780,7 @@ body, input {
   color: rgba(255, 255, 255, .45);
 }
 .site-footer__bottom span { margin: 0 .5em; }
-.site-footer__bottom a { color: rgba(255, 255, 255, .6); border: none; }
+.site-footer__bottom a { color: rgba(255, 255, 255, .6); border: none; text-decoration: underline; text-underline-offset: .15em; }
 [data-md-color-scheme="slate"] .site-footer__bottom { background: #0a0d1f; box-shadow: 0 0 0 100vmax #0a0d1f; }
 @media screen and (max-width: 45em) {
   .site-footer { grid-template-columns: 1fr 1fr; }

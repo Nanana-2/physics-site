@@ -3,6 +3,7 @@
 {% block extrahead %}
   {{ super() }}
   <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon-32.png' | url }}">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" href="{{ 'assets/apple-touch-icon.png' | url }}">
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
   {#- SNS のカード画像（tools/make_og_images.py で作る）。問題ページは問題ごと，ほかは共通の1枚 -#}
