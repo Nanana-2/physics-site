@@ -7,6 +7,8 @@ Markdown 側は今まで通り「## 問題」…「---」…「## 解答・解�
       <h2 id="..."><span>問題</span><span class="problem-stars">★☆☆</span></h2>
       <div class="problem-box__body"> 問題文（小問は p.subq） </div>
     </div>
+
+タイトルの h1 には class="problem-title" を付け，パンくずはタイトルの下へ移す。
 """
 
 import re
@@ -65,4 +67,20 @@ def on_page_content(html, page, config, files):
     # 解答・解説の帯と，小問ごとの小見出し（(1) の右に細い線）
     rest = re.sub(r'<h2 id="([^"]+)">解答・解説</h2>', r'<h2 id="\1" class="solution-heading">解答・解説</h2>', rest, count=1)
     rest = re.sub(r'<h3 id="([^"]+)">', r'<h3 id="\1" class="solution-part">', rest)
-    return html[: heading.start()] + box + rest
+    head = re.sub(r"<h1 ", '<h1 class="problem-title" ', html[: heading.start()], count=1)
+    return head + box + rest
+
+
+BREADCRUMB = re.compile(r'<nav class="md-path".*?</nav>\s*', re.DOTALL)
+
+
+def on_post_page(output, page, config):
+    # 問題ページのパンくずは，タイトル（とその下線）の下へ移す
+    if 'class="problem-title"' not in output:
+        return output
+    nav = BREADCRUMB.search(output)
+    title_end = output.find("</h1>", nav.end()) if nav else -1
+    if title_end < 0:
+        return output
+    title_end += len("</h1>")
+    return output[: nav.start()] + output[nav.end() : title_end] + nav.group(0) + output[title_end:]

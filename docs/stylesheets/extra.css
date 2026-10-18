@@ -95,7 +95,6 @@ span.arithmatex mjx-mfrac {
    ========================================== */
 /* 問題の枠：上辺が紺の帯，帯の「問題」と★を枠内の本文の行頭・行末にそろえる */
 .md-typeset .problem-box {
-  border: 1.5px solid var(--site-navy);
   margin: 1.2em 0 2.2em;
 }
 .md-typeset .problem-box > h2,
@@ -111,8 +110,96 @@ span.arithmatex mjx-mfrac {
   font-size: .9rem;
   letter-spacing: .05em;
 }
-.md-typeset h2.solution-heading { margin: 2em 0 1.1em; }
-.md-typeset .problem-box__body { padding: .3em .9rem .5em; }
+/* 問題文は枠線を引かず，ごく薄いグレーの面で囲む */
+.md-typeset .problem-box__body { padding: .5em 1.1rem .7em; background: #fafafb; }
+[data-md-color-scheme="slate"] .md-typeset .problem-box__body { background: rgba(255, 255, 255, .035); }
+
+/* 帯・見出しのアイコン（Font Awesome の SVG をマスクにして文字色で塗る） */
+.md-typeset .problem-box > h2 > span:first-child::before,
+.md-typeset h1.problem-title::after,
+.md-typeset h2.solution-heading::after,
+.md-typeset .md-path__item:first-child .md-path__link::before {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
+}
+.md-typeset .problem-box > h2 > span:first-child::before {
+  --site-icon: url("../assets/icons/file-pen.svg");
+  width: 1em; height: .85em;
+  margin-right: .5em;
+  vertical-align: -.05em;
+}
+
+/* 解答・解説：薄紺の帯（右端は丸く），左端に重なる紺の丸にチェック */
+.md-typeset h2.solution-heading {
+  position: relative;
+  display: block;
+  margin: 2em 0 1.1em 1.05rem;
+  padding: .38em .9rem .34em 1.55rem;
+  border-radius: 0 1em 1em 0;
+  background: #eef0f6;
+  color: var(--site-navy);
+}
+.md-typeset h2.solution-heading::before {
+  content: "";
+  position: absolute;
+  left: -1.05rem; top: 50%;
+  width: 2.1rem; height: 2.1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+}
+.md-typeset h2.solution-heading::after {
+  --site-icon: url("../assets/icons/check.svg");
+  position: absolute;
+  left: -.4rem; top: 50%;
+  width: .8rem; height: .8rem;
+  transform: translateY(-50%);
+  color: #fff;
+}
+[data-md-color-scheme="slate"] .md-typeset h2.solution-heading { background: rgba(159, 179, 255, .12); color: #e3e7f7; }
+[data-md-color-scheme="slate"] .md-typeset h2.solution-heading::before { background: #3a4785; }
+
+/* 問題のタイトル：左に薄いグレーの丸に鉛筆，下に同じグレーの細い線 */
+.md-typeset h1.problem-title {
+  position: relative;
+  margin-bottom: .3em;
+  padding: 0 0 .35em 1.75em;
+  border-bottom: 1px solid #eceef2;
+}
+.md-typeset h1.problem-title::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .06em;
+  width: 1.36em; height: 1.36em;
+  border-radius: 50%;
+  background: #eceef2;
+}
+.md-typeset h1.problem-title::after {
+  --site-icon: url("../assets/icons/pencil.svg");
+  position: absolute;
+  left: .43em; top: .49em;
+  width: .5em; height: .5em;
+  color: var(--site-navy);
+}
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title { border-color: rgba(255, 255, 255, .08); }
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title::before { background: rgba(255, 255, 255, .08); }
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title::after { color: #c5d0ff; }
+
+/* 問題ページのパンくずはタイトルの下線の下に置く（hooks/problem_layout.py で移動）。「ホーム」は家のアイコンに */
+.md-typeset .md-path { margin: 0 0 1.5em; font-size: .68rem; }
+.md-typeset .md-path ol.md-path__list { display: flex; flex-wrap: wrap; align-items: center; margin: 0; padding: 0; }
+.md-typeset .md-path li.md-path__item { display: inline-flex; align-items: center; margin: 0; }
+.md-typeset a.md-path__link { border-bottom: none; color: var(--md-typeset-color); }
+.md-typeset a.md-path__link:hover { color: var(--md-accent-fg-color); }
+.md-typeset .md-path__item:first-child .md-ellipsis { display: none; }
+.md-typeset .md-path__item:first-child .md-path__link::before {
+  --site-icon: url("../assets/icons/house.svg");
+  width: 1.1em; height: 1em;
+  vertical-align: -.1em;
+}
 
 /* 難易度の★：塗りは黄，空きは薄い白 */
 .problem-stars { font-size: .8rem; letter-spacing: .12em; font-weight: 400; }
@@ -215,10 +302,10 @@ span.arithmatex mjx-mfrac {
   margin-bottom: 0.5rem;
 }
 
-.mjx-container[display="true"] {
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-}
+/* 別行立ての数式と前後の文章の間は詰める（段落の余白 1.2rem のままだと開きすぎる） */
+.md-typeset mjx-container[display="true"] { margin: .6em 0; }
+.md-typeset p:has(+ div.arithmatex) { margin-bottom: .5rem; }
+.md-typeset div.arithmatex + p { margin-top: .5rem; }
 
 /* ==========================================
    11. Noto Sans JP 用の微調整
@@ -875,7 +962,7 @@ body, input {
 .md-typeset mjx-container[display="true"].fa-whole {
   display: block;
   width: fit-content;
-  margin: 1.1em auto !important;
+  margin: .8em auto !important;
   padding: .45em 1em !important;
   background: var(--site-answer-bg);
 }
