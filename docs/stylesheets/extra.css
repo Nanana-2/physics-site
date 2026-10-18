@@ -762,190 +762,134 @@ body, input {
 }
 
 /* ==========================================
-   15. 問題末尾から分野一覧へ戻る導線
+   15. 問題末尾：前後の問題・一覧へ（中央）・関連ページのボタン
    ========================================== */
-.problem-subject-return {
+.md-typeset .page-nav {
   display: grid;
-  gap: 0.65rem;
-  margin-top: 3rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
+  grid-template-columns: 1fr 5rem 1fr;
+  margin: 3em 0 0;
+  border-top: 1px solid #e3e6ee;
+  border-bottom: 1px solid #e3e6ee;
 }
+.md-typeset .page-nav a { border-bottom: none; color: var(--md-typeset-color); }
+.md-typeset .page-nav__side { display: flex; flex-direction: column; gap: .25em; padding: 1rem .2rem; }
+.md-typeset .page-nav__side--next { align-items: flex-end; text-align: right; }
+.md-typeset .page-nav__dir { font-size: .66rem; font-weight: 500; color: var(--site-navy); }
+.md-typeset .page-nav__title { font-size: .85rem; font-weight: 500; }
+.md-typeset .page-nav__side:hover .page-nav__title { color: var(--md-accent-fg-color); }
+.md-typeset .page-nav__stars { font-size: .65rem; letter-spacing: .08em; }
+.md-typeset .page-nav__stars .on { color: #e0b400; }
+.md-typeset .page-nav__stars .off { color: var(--md-default-fg-color--lighter); }
+.md-typeset .page-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .35em;
+  margin: .9rem 0;
+  border-left: 1px solid #e3e6ee;
+  border-right: 1px solid #e3e6ee;
+  font-size: .66rem;
+  font-weight: 500;
+}
+.md-typeset .page-nav__list:hover { color: var(--md-accent-fg-color); }
+[data-md-color-scheme="slate"] .md-typeset .page-nav,
+[data-md-color-scheme="slate"] .md-typeset .page-nav__list { border-color: rgba(255, 255, 255, .1); }
+[data-md-color-scheme="slate"] .md-typeset .page-nav__dir { color: #c5d0ff; }
 
-.md-typeset .problem-subject-return a {
+/* 参考文献一覧など：横長のボタン（問題文と同じ薄いグレーの面）。今後のボタンもここに縦に足す */
+.md-typeset .page-links { display: flex; flex-direction: column; gap: .45rem; margin: 1.2em 0 0; }
+.md-typeset a.page-links__button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.85rem 1rem;
-  color: var(--md-primary-fg-color);
-  background: var(--md-code-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-left: 3px solid var(--site-heading-accent);
-  border-radius: 6px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  gap: .7rem;
+  padding: .55rem 1rem;
+  border: none;
+  background: #fafafb;
+  color: var(--md-typeset-color);
+  font-size: .75rem;
 }
+.md-typeset a.page-links__button:hover { background: #eef0f6; }
+.md-typeset .page-links__label { flex: 1; }
+.md-typeset .page-links__arrow { color: var(--md-default-fg-color--light); }
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button { background: rgba(255, 255, 255, .035); }
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button:hover { background: rgba(159, 179, 255, .12); }
 
-.md-typeset .problem-subject-return a:hover {
-  color: var(--md-primary-fg-color--dark);
-  background: var(--md-default-bg-color);
-  border-color: var(--site-heading-accent);
+/* 一覧（ドット）・本のアイコン */
+.md-typeset .page-nav__list::before,
+.md-typeset .page-links__button::before {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
 }
+.md-typeset .page-nav__list::before { --site-icon: url("../assets/icons/dots-grid.svg"); width: 1.1rem; height: 1.1rem; }
+.md-typeset .page-links__button::before { width: .9rem; height: .9rem; color: var(--site-navy); }
+.md-typeset .page-links__button--books::before { --site-icon: url("../assets/icons/book-open.svg"); }
+[data-md-color-scheme="slate"] .md-typeset .page-links__button::before { color: #c5d0ff; }
 
-.md-typeset .problem-subject-return__reference {
-  border-left-color: var(--site-heading-soft);
-}
-
-.md-typeset .problem-subject-return__reference:hover {
-  border-left-color: var(--site-heading-accent);
-}
-
-[data-md-color-scheme="slate"] .md-typeset .problem-subject-return a {
-  color: #c3cbef;
-}
-
-[data-md-color-scheme="slate"] .md-typeset .problem-subject-return a:hover {
-  color: #eef1ff;
-}
-
-@media screen and (max-width: 45em) {
-  .problem-subject-return {
-    margin-top: 2.4rem;
+/* スマホ：前後の問題を左右に，一覧へはその下の1行に */
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav { grid-template-columns: 1fr 1fr; }
+  .md-typeset .page-nav__list {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-direction: row;
+    margin: 0;
+    padding: .6rem 0;
+    border: none;
+    border-top: 1px solid #e3e6ee;
   }
-
-  .md-typeset .problem-subject-return a {
-    padding: 0.9rem;
-  }
+  .md-typeset .page-nav__side--next { padding-left: .6rem; border-left: 1px solid #e3e6ee; }
+  .md-typeset .page-nav__title { font-size: .78rem; }
 }
+
+/* ページ最下部の帯もサイトの紺に */
+.md-footer-meta { background: #11162e; }
+[data-md-color-scheme="slate"] .md-footer-meta { background: #1c2247; }
 
 /* ==========================================
-   16. ページ共有ボタン
+   16. ページ共有ボタン（色を付けない丸いアイコン）
    ========================================== */
-.page-share {
-  margin-top: 3rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
-}
+.page-share { margin-top: 1.8em; }
 
 .md-typeset .page-share__label {
   margin: 0 0 0.7rem;
   color: var(--md-default-fg-color--light);
   font-size: 0.76rem;
-  font-weight: 600;
   text-align: center;
 }
 
-.page-share__buttons {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
-}
+.page-share__buttons { display: flex; justify-content: center; gap: .6rem; }
 
 .md-typeset .page-share__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  min-height: 2.15rem;
-  padding: 0.45rem 0.75rem;
-  color: var(--md-default-fg-color--light);
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0;
+  color: var(--md-typeset-color);
   background: transparent;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 5px;
+  border-radius: 50%;
   font: inherit;
-  font-size: 0.72rem;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-  text-decoration: none;
   cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.15s ease;
 }
+.md-typeset .page-share__button:hover { border-color: var(--md-typeset-color); }
+.md-typeset .page-share__button > span:not(.page-share__icon) { display: none; }
 
-.md-typeset .page-share__button:hover {
-  color: var(--md-primary-fg-color);
-  background: var(--md-code-bg-color);
-  border-color: var(--site-heading-accent);
-}
-
-.md-typeset .page-share__button[data-share-x] {
-  color: #ffffff;
-  background: #000000;
-  border-color: #000000;
-}
-
-.md-typeset .page-share__button[data-share-x]:hover {
-  color: #ffffff;
-  background: #242424;
-  border-color: #242424;
-}
-
-.md-typeset .page-share__button[data-share-facebook] {
-  color: #ffffff;
-  background: #4267b2;
-  border-color: #4267b2;
-}
-
-.md-typeset .page-share__button[data-share-facebook]:hover {
-  color: #ffffff;
-  background: #365899;
-  border-color: #365899;
-}
-
-.md-typeset .page-share__button[data-share-line] {
-  color: #ffffff;
-  background: #06c755;
-  border-color: #06c755;
-}
-
-.md-typeset .page-share__button[data-share-line]:hover {
-  color: #ffffff;
-  background: #05ad4a;
-  border-color: #05ad4a;
-}
-
-.md-typeset .page-share__button[data-share-copy] {
-  background: var(--md-code-bg-color);
-}
-
-.page-share__icon {
-  display: inline-flex;
-  width: 0.82rem;
-  height: 0.82rem;
-}
-
-.page-share__icon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentcolor;
-}
+.page-share__icon { display: inline-flex; width: 0.82rem; height: 0.82rem; }
+.page-share__icon svg { width: 100%; height: 100%; fill: currentcolor; }
 
 .md-typeset .page-share__status {
   min-height: 1em;
   margin: 0.45rem 0 0;
   color: var(--md-primary-fg-color);
   font-size: 0.68rem;
-}
-
-.page-share + .problem-subject-return {
-  margin-top: 1.5rem;
-}
-
-[data-md-color-scheme="slate"] .md-typeset .page-share__button[data-share-copy]:hover {
-  color: #eef1ff;
-}
-
-@media screen and (max-width: 45em) {
-  .page-share__buttons {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md-typeset .page-share__button {
-    width: 100%;
-  }
+  text-align: center;
 }
 
 /* 問題図・解答図（ライト・ダークで画像を切り替える。#only-light / #only-dark は Material の機能） */

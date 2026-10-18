@@ -177,36 +177,7 @@
 {% block content %}
   {{ super() }}
 
-  {% if page and page.file and not page.meta.hide_share %}
-    {% if page.is_homepage %}
-      {% set share_title = config.site_name %}
-    {% else %}
-      {% set share_title = (page.meta.title or page.title) ~ '｜' ~ config.site_name %}
-    {% endif %}
-    <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="{{ share_title | e }}">
-      <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
-      <div class="page-share__buttons">
-        <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
-          <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/x-twitter.svg" %}</span>
-          <span>X</span>
-        </a>
-        <a class="page-share__button" data-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebookでシェア">
-          <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/facebook-f.svg" %}</span>
-          <span>Facebook</span>
-        </a>
-        <a class="page-share__button" data-share-line href="#" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
-          <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/line.svg" %}</span>
-          <span>LINE</span>
-        </a>
-        <button class="page-share__button" type="button" data-share-copy>
-          <span class="page-share__icon" aria-hidden="true">{% include ".icons/material/link-variant.svg" %}</span>
-          <span data-share-copy-label>リンクコピー</span>
-        </button>
-      </div>
-      <p class="page-share__status" data-share-status role="status" aria-live="polite"></p>
-    </section>
-
-    {% set path_parts = page.file.src_uri.split('/') %}
+  {% if page and page.file %}
     {% set subject_links = {
       '01mechanics': ('力学', '01mechanics/'),
       '02electromagnetism': ('電磁気学', '02electromagnetism/'),
@@ -214,19 +185,69 @@
       '04quantum_mechanics': ('量子力学', '04quantum_mechanics/'),
       '05statistical_mechanics': ('統計力学', '05statistical_mechanics/')
     } %}
+    {% set levels = {'基本': 1, '標準': 2, '発展': 3} %}
+    {% set path_parts = page.file.src_uri.split('/') %}
 
     {% if path_parts | length == 3 and path_parts[0] in subject_links %}
       {% set subject = subject_links[path_parts[0]] %}
-      <nav class="problem-subject-return" aria-label="問題に関連するページ">
-        <a href="{{ subject[1] | url }}">
-          <span>{{ subject[0] }}の問題一覧を見る</span>
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="{{ 'books/' | url }}" class="problem-subject-return__reference">
-          <span>参考文献一覧を見る</span>
-          <span aria-hidden="true">→</span>
+      {# 前後の問題（同じ分野の問題ページのときだけ出す）と，その難易度の★ #}
+      {% macro side(target, label, cls) %}
+        {% set parts = target.file.src_uri.split('/') if target and target.file else [] %}
+        {% if parts | length == 3 and parts[0] == path_parts[0] %}
+          {% set level = namespace(n=0) %}
+          {% for tag in target.meta.tags or [] %}{% if tag in levels %}{% set level.n = levels[tag] %}{% endif %}{% endfor %}
+          <a class="page-nav__side {{ cls }}" href="{{ target.url | url }}">
+            <span class="page-nav__dir">{{ label }}</span>
+            <span class="page-nav__title">{{ target.title }}</span>
+            {% if level.n %}
+              <span class="page-nav__stars" aria-label="難易度 {{ level.n }}/3"><span class="on">{{ '★' * level.n }}</span><span class="off">{{ '☆' * (3 - level.n) }}</span></span>
+            {% endif %}
+          </a>
+        {% else %}
+          <span class="page-nav__side {{ cls }}"></span>
+        {% endif %}
+      {% endmacro %}
+      <nav class="page-nav" aria-label="前後の問題">
+        {{ side(page.previous_page, '← 前の問題', '') }}
+        <a class="page-nav__list" href="{{ subject[1] | url }}">一覧へ</a>
+        {{ side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
+      </nav>
+      <nav class="page-links" aria-label="関連ページ">
+        <a class="page-links__button page-links__button--books" href="{{ 'books/' | url }}">
+          <span class="page-links__label">参考文献一覧</span>
+          <span class="page-links__arrow" aria-hidden="true">→</span>
         </a>
       </nav>
+    {% endif %}
+
+    {% if not page.meta.hide_share %}
+      {% if page.is_homepage %}
+        {% set share_title = config.site_name %}
+      {% else %}
+        {% set share_title = (page.meta.title or page.title) ~ '｜' ~ config.site_name %}
+      {% endif %}
+      <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="{{ share_title | e }}">
+        <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
+        <div class="page-share__buttons">
+          <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+            <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/x-twitter.svg" %}</span>
+            <span>X</span>
+          </a>
+          <a class="page-share__button" data-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebookでシェア">
+            <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/facebook-f.svg" %}</span>
+            <span>Facebook</span>
+          </a>
+          <a class="page-share__button" data-share-line href="#" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+            <span class="page-share__icon" aria-hidden="true">{% include ".icons/fontawesome/brands/line.svg" %}</span>
+            <span>LINE</span>
+          </a>
+          <button class="page-share__button" type="button" data-share-copy aria-label="リンクをコピー">
+            <span class="page-share__icon" aria-hidden="true">{% include ".icons/material/link-variant.svg" %}</span>
+            <span data-share-copy-label>リンクコピー</span>
+          </button>
+        </div>
+        <p class="page-share__status" data-share-status role="status" aria-live="polite"></p>
+      </section>
     {% endif %}
   {% endif %}
 {% endblock %}

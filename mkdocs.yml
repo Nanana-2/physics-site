@@ -9,7 +9,6 @@ theme:
   features:
     - content.code.copy 
     - navigation.path   # 問題ページの上にパンくず（分野 › 章）を出す
-    - navigation.footer # コードをコピーするボタンを付ける（おまけ）
     # - navigation.expand # ★これを追加！初期状態でサイドバーの各章を折りたたみます
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -48,7 +47,7 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261018d
+  - javascripts/mathjax.js?v=20261018e
   - javascripts/problem-filter.js
   - javascripts/share.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -71,4 +70,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261018d
+  - stylesheets/extra.css?v=20261018e
