@@ -279,6 +279,4 @@ def _home(html: str, page, config) -> str:
         + sections.get("このサイトは何者？", "")
         + _home_heading("重要な約束と推奨される使い方", "triangle-exclamation")
         + f'<div class="home-promise">{sections.get("重要な約束と推奨される使い方", "")}</div>'
-        + _home_heading("運営者情報・SNS", "user")
-        + owner_card
     )

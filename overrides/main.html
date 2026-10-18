@@ -21,11 +21,12 @@
   {{ super() }}
   {% if page and page.is_homepage %}
     {#- トップページ：ロゴ・サイト名・収録数と，大きな検索窓（問題数は hooks/problem_layout.py が数える） -#}
-    <section class="home-hero" style="--home-hero-image: url('{{ 'assets/images/index.jpg' | url }}');">
+    <section class="home-hero" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');">
       <div class="home-hero__inner">
         <img class="home-hero__logo" src="{{ 'assets/logo.svg' | url }}" alt="" width="84" height="84">
         <h1 class="home-hero__title">{{ config.site_name }}</h1>
-        <p class="home-hero__facts">力学・電磁気学・熱力学・量子力学・統計力学　{{ page.meta.problem_total }}問</p>
+        <p class="home-hero__lead">院試までに出会っておきたい物理を，問題で一望する。</p>
+        <p class="home-hero__facts">5分野・{{ page.meta.problem_total }}問</p>
         <form class="site-search home-search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
           <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
           <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索（例：角運動量，分配関数）" autocomplete="off" aria-label="問題を検索">
@@ -266,5 +267,20 @@
         <p class="page-share__status" data-share-status role="status" aria-live="polite"></p>
       </section>
     {% endif %}
+
+    {#- 運営者のひとこと（吹き出し）。全ページの末尾に出す -#}
+    <aside class="owner" aria-label="運営者">
+      <div class="owner__bubble">
+        <p class="owner__text">ななな２（なななつとか呼ばれます）です。物性物理が好きな院生（M1）です。最近は2次元物質や学習理論，情報統計力学に興味があります。間違いや気になる点があれば X の DM に（優しく）どうぞ。</p>
+        <p class="owner__links">
+          <a class="owner__link" href="https://twitter.com/nanana_UTM1" target="_blank" rel="noopener"><span class="owner__icon">{% include ".icons/fontawesome/brands/x-twitter.svg" %}</span>X</a>
+          <a class="owner__link" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="owner__icon">{% include ".icons/simple/note.svg" %}</span>note</a>
+        </p>
+      </div>
+      <div class="owner__who">
+        <img class="owner__avatar" src="{{ 'assets/owner.png' | url }}" alt="" width="56" height="56" loading="lazy">
+        <span class="owner__name">ななな２</span>
+      </div>
+    </aside>
   {% endif %}
 {% endblock %}
