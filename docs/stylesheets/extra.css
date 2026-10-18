@@ -1280,3 +1280,104 @@ body, input {
 @media screen and (min-width: 45em) and (max-width: 76.234375em) {
   .md-main .md-content__inner { margin-left: auto !important; margin-right: auto !important; }
 }
+
+/* ==========================================
+   解答の折りたたみ（javascripts/answers.js）
+   ========================================== */
+.md-typeset .answer { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .45s cubic-bezier(.25, .8, .25, 1); }
+.md-typeset .answer.is-closed { grid-template-rows: 0fr; }
+.md-typeset .answer__inner { min-height: 0; overflow: hidden; }
+.md-typeset .answer-toggle {
+  display: inline-flex; align-items: center; gap: .4em;
+  margin: 0 0 .6rem; padding: .35rem 1rem; border: none; cursor: pointer;
+  background-color: #eef0f6; background-image: linear-gradient(var(--site-sweep), var(--site-sweep)), var(--site-stripe);
+  background-size: 0 100%, auto; background-repeat: no-repeat, repeat;
+  color: var(--site-navy); font: inherit; font-size: .72rem; font-weight: 500;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset .answer-toggle::before { content: "▶"; font-size: .6em; transition: transform .3s; }
+.md-typeset .answer-toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
+.md-typeset .answer-toggle:is(:hover, :focus-visible) { background-size: 100% 100%, auto; }
+[data-md-color-scheme="slate"] .md-typeset .answer-toggle { background-color: rgba(159, 179, 255, .12); color: #e3e7f7; }
+.md-typeset h2.solution-heading .answer-all {
+  position: absolute; right: .7rem; top: 50%; transform: translateY(-50%);
+  padding: .15rem .7rem; border: 1px solid currentColor; border-radius: 1em; background: none; cursor: pointer;
+  color: inherit; font: inherit; font-size: .62rem; opacity: .8;
+}
+.md-typeset h2.solution-heading .answer-all:hover { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .md-typeset .answer { transition: none; } }
+
+/* ==========================================
+   解いた印（javascripts/solved.js）
+   ========================================== */
+.md-typeset .solved { display: flex; justify-content: center; margin: 3em 0 0; }
+.md-typeset .solved + .page-nav { margin-top: 1.4em; }
+.md-typeset .solved__button {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .55rem 1.6rem; border: 1.5px solid var(--site-navy); border-radius: 2em; background: none; cursor: pointer;
+  color: var(--site-navy); font: inherit; font-size: .8rem; font-weight: 500;
+  transition: background .3s, color .3s, transform .2s;
+}
+.md-typeset .solved__button:hover { background: #eef0f6; }
+.md-typeset .solved__button:active { transform: scale(.96); }
+.md-typeset .solved__check { display: inline-flex; align-items: center; justify-content: center; width: 1.2em; height: 1.2em; border-radius: 50%; border: 1.5px solid currentColor; font-size: .8em; }
+.md-typeset .solved__button.is-on { background: var(--site-navy); color: #fff; }
+.md-typeset .solved__button.is-on .solved__check { background: var(--site-star); border-color: var(--site-star); color: var(--site-navy); animation: site-pop .35s cubic-bezier(.2, .8, .2, 1.4); }
+@keyframes site-pop { from { transform: scale(.4); } to { transform: scale(1); } }
+[data-md-color-scheme="slate"] .md-typeset .solved__button { border-color: #9fb3ff; color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .solved__button.is-on { background: #3a4785; color: #fff; }
+/* 一覧などの ✓：番号の左に小さな黄色の丸 */
+:is(.side-chapter__link, a.toc-row, a.page-nav__side, .site-search__item).is-solved { position: relative; }
+:is(.side-chapter__link, a.toc-row, .site-search__item).is-solved::after {
+  content: "✓"; position: absolute; left: -.35rem; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; justify-content: center; width: .9rem; height: .9rem;
+  border-radius: 50%; background: var(--site-star); color: var(--site-navy); font-size: .55rem; font-weight: 700;
+}
+.md-typeset a.page-nav__side.is-solved .page-nav__title::after { content: " ✓"; color: #c9a200; }
+.md-typeset .home-tile__count.has-solved { color: #b38600; font-weight: 500; }
+
+/* ==========================================
+   Markdown でコピー（javascripts/copy-markdown.js）：パンくずの下，右寄せ
+   ========================================== */
+.md-typeset .page-tools { display: flex; justify-content: flex-end; margin: -2.6rem 0 1.4rem; min-height: 1.2rem; }
+.md-typeset .page-tools__copy {
+  display: inline-flex; align-items: center; gap: .4em;
+  padding: .2rem .7rem; border: 1px solid var(--md-default-fg-color--lightest); background: none; cursor: pointer;
+  color: var(--md-default-fg-color--light); font: inherit; font-size: .62rem;
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset .page-tools__copy:is(:hover, :focus-visible) { background-size: 100% 100%; color: var(--site-sweep-text); }
+.md-typeset .page-tools__icon {
+  display: inline-block; width: .9em; height: .9em; background-color: currentColor;
+  -webkit-mask: url("../assets/icons/copy.svg") center / contain no-repeat; mask: url("../assets/icons/copy.svg") center / contain no-repeat;
+}
+
+/* ==========================================
+   ページの先頭へ（navigation.top）
+   ========================================== */
+.md-top { background: var(--site-navy); color: #fff; box-shadow: 0 .2rem .8rem rgba(0, 0, 0, .2); font-size: .66rem; }
+.md-top:hover, .md-top:focus { background: var(--site-navy); color: var(--site-star); }
+[data-md-color-scheme="slate"] .md-top { background: #3a4785; }
+
+/* ==========================================
+   404 ページ
+   ========================================== */
+.md-typeset .not-found { max-width: 30rem; margin: 2rem auto 3rem; text-align: center; }
+.md-typeset .not-found__logo { width: 3.6rem; height: 3.6rem; border-radius: .3rem; }
+.md-typeset .not-found__code { margin: .8rem 0 0; font-size: 2.4rem; font-weight: 300; letter-spacing: .2em; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .not-found__code { color: #c5d0ff; }
+.md-typeset h1.not-found__title { margin: .2rem 0 .6rem; padding: 0; border: none; font-size: 1.2rem; }
+.md-typeset .not-found__text { font-size: .75rem; color: var(--md-default-fg-color--light); }
+.md-typeset .not-found__search { display: flex !important; margin: 1.2rem 0; }
+.md-typeset .not-found__search .site-search__input { width: 100% !important; height: 2.4rem; padding-left: 2.4rem; background: #f1f2f6; color: var(--md-typeset-color); }
+.md-typeset .not-found__search .site-search__input::placeholder { color: var(--md-default-fg-color--light); }
+.md-typeset .not-found__search .site-search__icon { color: var(--site-navy); left: .8rem; }
+.md-typeset .not-found__search .site-search__results { left: 0; right: 0; width: auto; text-align: left; }
+[data-md-color-scheme="slate"] .md-typeset .not-found__search .site-search__input { background: rgba(255, 255, 255, .06); }
+.md-typeset .not-found__links { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem .8rem; }
+.md-typeset a.not-found__link { display: inline-flex; align-items: center; gap: .4em; border: none; color: var(--md-typeset-color); font-size: .74rem; }
+.md-typeset .not-found__icon { display: inline-flex; width: .85em; height: .85em; color: var(--site-navy); }
+.md-typeset .not-found__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-typeset a.not-found__home { border: none; font-size: .74rem; color: var(--site-navy); font-weight: 500; }
+.md-main__inner:has(.not-found) .md-sidebar--secondary { display: none; }

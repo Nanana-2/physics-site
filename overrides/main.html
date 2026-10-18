@@ -5,13 +5,26 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon-32.png' | url }}">
   <link rel="apple-touch-icon" href="{{ 'assets/apple-touch-icon.png' | url }}">
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+  {#- SNS のカード画像（tools/make_og_images.py で作る）。問題ページは問題ごと，ほかは共通の1枚 -#}
+  {% if page and page.file %}
+    {% set og_path = page.file.src_uri | replace('.md', '.png') %}
+    {% if og_path.split('/') | length == 3 and og_path.startswith('0') %}
+      {% set og_image = 'assets/og/' ~ og_path %}
+    {% else %}
+      {% set og_image = 'assets/og/default.png' %}
+    {% endif %}
+    <meta property="og:image" content="{{ config.site_url }}{{ og_image }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="{{ config.site_url }}{{ og_image }}" />
+  {% endif %}
   {% if page and page.meta.description %}
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="{{ config.site_name | e }}" />
     <meta property="og:title" content="{{ page.title | e }}" />
     <meta property="og:description" content="{{ page.meta.description | e }}" />
     <meta property="og:url" content="{{ page.canonical_url }}" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title | e }}" />
     <meta name="twitter:description" content="{{ page.meta.description | e }}" />
   {% endif %}
@@ -224,6 +237,12 @@
           <span class="page-nav__side {{ cls }}"></span>
         {% endif %}
       {% endmacro %}
+      {#- 解いた印（ブラウザに保存。javascripts/solved.js） -#}
+      <div class="solved">
+        <button type="button" class="solved__button" data-solved-toggle hidden>
+          <span class="solved__check" aria-hidden="true">✓</span><span data-solved-label>解いた！</span>
+        </button>
+      </div>
       <nav class="page-nav" aria-label="前後の問題">
         {{ side(page.previous_page, '← 前の問題', '') }}
         <a class="page-nav__list" href="{{ subject[1] | url }}">一覧へ</a>

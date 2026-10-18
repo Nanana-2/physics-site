@@ -1,0 +1,21 @@
+{#- 見つからないページ：ロゴ・検索窓・分野への入口 -#}
+{% extends "main.html" %}
+{% block content %}
+  <div class="not-found">
+    <img class="not-found__logo" src="{{ 'assets/favicon.svg' | url }}" alt="" width="72" height="72">
+    <p class="not-found__code">404</p>
+    <h1 class="not-found__title">ページが見つかりませんでした</h1>
+    <p class="not-found__text">URL が変わったか，ページが移動した可能性があります。問題名や言葉から探してみてください。</p>
+    <form class="site-search not-found__search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
+      <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
+      <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索（例：角運動量，分配関数）" autocomplete="off" aria-label="問題を検索">
+      <div class="site-search__results" role="listbox" hidden></div>
+    </form>
+    <p class="not-found__links">
+      {% for name, href, icon in [('力学','01mechanics/','apple-whole'),('電磁気学','02electromagnetism/','magnet'),('熱力学','03thermodynamics/','temperature-half'),('量子力学','04quantum_mechanics/','atom'),('統計力学','05statistical_mechanics/','dice')] %}
+        <a class="not-found__link" href="{{ href | url }}"><span class="not-found__icon">{% include ".icons/fontawesome/solid/" ~ icon ~ ".svg" %}</span>{{ name }}</a>
+      {% endfor %}
+    </p>
+    <p><a class="not-found__home" href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}">トップページへ →</a></p>
+  </div>
+{% endblock %}

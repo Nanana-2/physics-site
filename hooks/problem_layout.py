@@ -102,8 +102,42 @@ def on_page_content(html, page, config, files):
     # 解答・解説の帯と，小問ごとの小見出し（(1) の右に細い線）
     rest = re.sub(r'<h2 id="([^"]+)">解答・解説</h2>', r'<h2 id="\1" class="solution-heading">解答・解説</h2>', rest, count=1)
     rest = re.sub(r'<h3 id="([^"]+)">', r'<h3 id="\1" class="solution-part">', rest)
+    rest = _fold_answers(rest)
     head = re.sub(r"<h1 ", '<h1 class="problem-title" ', html[: heading.start()], count=1)
-    return head + box + rest
+    return head + _copy_source(page) + box + rest
+
+
+ANSWER_TOGGLE = '<button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button>'
+
+
+def _fold_answers(rest: str) -> str:
+    """小問ごとの解答（(1) の見出しの下から次の見出しまで）を折りたためるように包む。
+    JavaScript が動かないときは全部見えたまま（javascripts/answers.js がボタンを出して閉じる）。"""
+    heading = re.search(r'<h2 id="[^"]+" class="solution-heading">.*?</h2>', rest)
+    if not heading:
+        return rest
+    before, after = rest[: heading.end()], rest[heading.end() :]
+    parts = re.split(r'(<h3 id="[^"]+" class="solution-part">.*?</h3>)', after)
+    if len(parts) == 1:
+        return before + ANSWER_TOGGLE + f'<div class="answer"><div class="answer__inner">{after}</div></div>'
+    out = parts[0]
+    for i in range(1, len(parts), 2):
+        out += parts[i] + ANSWER_TOGGLE + f'<div class="answer"><div class="answer__inner">{parts[i + 1]}</div></div>'
+    return before + out
+
+
+def _copy_source(page) -> str:
+    """「Markdown でコピー」用に，問題と解答の Markdown をページに埋め込む（図は「（図）」に置き換える）。"""
+    title = page.title or ""
+    text = re.sub(r"<figure.*?</figure>", "（図は省略）", page.markdown or "", flags=re.DOTALL)
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    text = f"# {title}\n\n{text}" if not text.startswith("# ") else text
+    text = text.replace("</", "<\\/")
+    return (
+        '<div class="page-tools"><button type="button" class="page-tools__copy" data-copy-markdown hidden>'
+        '<span class="page-tools__icon" aria-hidden="true"></span><span data-copy-label>Markdownでコピー</span></button></div>'
+        f'<script type="text/markdown" id="page-markdown">{text}</script>'
+    )
 
 
 BREADCRUMB = re.compile(r'<nav class="md-path".*?</nav>\s*', re.DOTALL)
