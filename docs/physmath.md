@@ -27,4 +27,12 @@ hide:
 
     [微分方程式の問題一覧へ](08differential_equations/index.md)
 
+-   :fontawesome-solid-location-arrow: __ベクトル解析__（36問）
+
+    ---
+
+    勾配・発散・回転から積分定理，曲線座標まで
+
+    [ベクトル解析の問題一覧へ](09vector_analysis/index.md)
+
 </div>

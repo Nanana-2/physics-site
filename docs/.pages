@@ -10,5 +10,6 @@ nav:
     - physmath.md
     - 07linear_algebra
     - 08differential_equations
+    - 09vector_analysis
   - books.md
   - tags.md

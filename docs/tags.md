@@ -23,6 +23,7 @@ hide:
     <button type="button" class="finder__subject finder__subject--06solid_state" data-subject="06solid_state">固体物性</button>
     <button type="button" class="finder__subject finder__subject--07linear_algebra" data-subject="07linear_algebra">線形代数</button>
     <button type="button" class="finder__subject finder__subject--08differential_equations" data-subject="08differential_equations">微分方程式</button>
+    <button type="button" class="finder__subject finder__subject--09vector_analysis" data-subject="09vector_analysis">ベクトル解析</button>
   </div>
 
   <div class="finder__bar">
