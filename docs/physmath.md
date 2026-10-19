@@ -59,4 +59,12 @@ hide:
 
     [特殊関数・変分法の問題一覧へ](12special_functions/index.md)
 
+-   :fontawesome-solid-chart-column: __確率・統計__（36問）
+
+    ---
+
+    確率分布・極限定理・統計的推定と確率過程の入口
+
+    [確率・統計の問題一覧へ](13probability_statistics/index.md)
+
 </div>

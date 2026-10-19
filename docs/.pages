@@ -14,5 +14,6 @@ nav:
     - 10integral_transforms
     - 11complex_analysis
     - 12special_functions
+    - 13probability_statistics
   - books.md
   - tags.md
