@@ -8,9 +8,20 @@
   '熱力学': 'fontawesome/solid/temperature-half',
   '量子力学': 'fontawesome/solid/atom',
   '統計力学': 'fontawesome/solid/dice',
-  '固体物性': 'fontawesome/solid/cube'
+  '固体物性': 'fontawesome/solid/cube',
+  '線形代数': 'fontawesome/solid/table-cells',
+  '微分方程式': 'fontawesome/solid/chart-line',
+  'ベクトル解析': 'fontawesome/solid/location-arrow',
+  '積分変換': 'fontawesome/solid/wave-square',
+  '複素関数': 'fontawesome/solid/infinity',
+  '特殊関数・変分法': 'fontawesome/solid/bezier-curve',
+  '確率・統計': 'fontawesome/solid/chart-column'
 } %}
 {% set subject = page.ancestors | last if page.ancestors else none %}
+{#- 物理数学のタブは「物理数学 → 分野 → 章」の3段なので，分野の段を使う -#}
+{% if subject and subject.title == '物理数学' %}
+  {% set subject = page.ancestors[-2] if page.ancestors | length > 1 else none %}
+{% endif %}
 {% if subject and subject.children %}
   <nav class="side-chapters" aria-label="{{ subject.title }}の章">
     {% for chapter in subject.children %}

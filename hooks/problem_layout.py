@@ -25,6 +25,13 @@ SUBJECT_DIRS = (
     "04quantum_mechanics",
     "05statistical_mechanics",
     "06solid_state",
+    "07linear_algebra",
+    "08differential_equations",
+    "09vector_analysis",
+    "10integral_transforms",
+    "11complex_analysis",
+    "12special_functions",
+    "13probability_statistics",
 )
 LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 
@@ -207,6 +214,13 @@ BOOK_ICONS = {
     "量子力学": "atom",
     "統計力学": "dice",
     "固体物性": "cube",
+    "線形代数": "table-cells",
+    "微分方程式": "chart-line",
+    "ベクトル解析": "location-arrow",
+    "積分変換": "wave-square",
+    "複素関数": "infinity",
+    "特殊関数・変分法": "bezier-curve",
+    "確率・統計": "chart-column",
     "その他": "book",
 }
 
@@ -240,6 +254,15 @@ HOME_SUBJECTS = (
     ("05statistical_mechanics", "統計力学", "dice", "古典・量子統計から非平衡，開放量子系まで"),
     ("06solid_state", "固体物性", "cube", "結晶構造・格子振動からバンド，磁性・超伝導まで"),
 )
+MATH_SUBJECTS = (
+    ("07linear_algebra", "線形代数", "table-cells", "行列の計算から固有値問題・内積空間・物理への応用まで"),
+    ("08differential_equations", "微分方程式", "chart-line", "1階・2階の常微分方程式から偏微分方程式，安定性まで"),
+    ("09vector_analysis", "ベクトル解析", "location-arrow", "勾配・発散・回転から積分定理，曲線座標まで"),
+    ("10integral_transforms", "積分変換", "wave-square", "フーリエ級数・フーリエ変換・デルタ関数・ラプラス変換"),
+    ("11complex_analysis", "複素関数", "infinity", "正則関数・複素積分・留数定理と物理への応用"),
+    ("12special_functions", "特殊関数・変分法", "bezier-curve", "ガンマ関数・直交多項式・ベッセル関数と変分法"),
+    ("13probability_statistics", "確率・統計", "chart-column", "確率分布・極限定理・統計的推定と確率過程の入口"),
+)
 HOME_LEVELS = (("基本", "定期試験に出てくる程度"), ("標準", "院試のベーシックな問題"), ("発展", "やや発展的なトピック"))
 BRAND_DIR = ICON_DIR.parent / "brands"
 
@@ -261,25 +284,31 @@ def _home_heading(title: str, icon: str, id_: str = "") -> str:
 
 def _home(html: str, page, config) -> str:
     docs = Path(config["docs_dir"])
-    counts = {slug: _level_counts(docs, slug) for slug, *_ in HOME_SUBJECTS}
+    math_subjects = [m for m in MATH_SUBJECTS if (docs / m[0]).is_dir()]
+    counts = {slug: _level_counts(docs, slug) for slug, *_ in (*HOME_SUBJECTS, *math_subjects)}
     page.meta["problem_total"] = sum(sum(c.values()) for c in counts.values())
 
     sections = {}
     for m in re.finditer(r'<h2 id="[^"]+">(.*?)</h2>(.*?)(?=<h2 |\Z)', html, re.DOTALL):
         sections[re.sub(r"<[^>]+>", "", m.group(1)).strip()] = m.group(2)
 
-    tiles = ""
-    for slug, name, icon, desc in HOME_SUBJECTS:
-        c = counts[slug]
-        bar = "".join(
-            f'<span class="home-bar__seg home-bar__seg--{i}" style="flex:{c[k]}" title="{k} {c[k]}問"></span>'
-            for i, k in enumerate(LEVELS, 1)
-        )
-        tiles += (
-            f'<a class="home-tile" href="{slug}/"><span class="home-tile__icon">{_icon(icon)}</span>'
-            f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
-            f'<span class="home-tile__desc">{desc}</span><span class="home-bar">{bar}</span></span></a>'
-        )
+    def _tiles(subjects):
+        out = ""
+        for slug, name, icon, desc in subjects:
+            c = counts[slug]
+            bar = "".join(
+                f'<span class="home-bar__seg home-bar__seg--{i}" style="flex:{c[k]}" title="{k} {c[k]}問"></span>'
+                for i, k in enumerate(LEVELS, 1)
+            )
+            out += (
+                f'<a class="home-tile" href="{slug}/"><span class="home-tile__icon">{_icon(icon)}</span>'
+                f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
+                f'<span class="home-tile__desc">{desc}</span><span class="home-bar">{bar}</span></span></a>'
+            )
+        return out
+
+    tiles = _tiles(HOME_SUBJECTS)
+    math_tiles = _tiles(math_subjects)
     legend = '<p class="home-legend">' + "".join(
         f'<span class="home-bar__seg home-bar__seg--{i}"></span>{"★" * i} {k}' for i, k in enumerate(LEVELS, 1)
     ) + "</p>"
@@ -311,6 +340,7 @@ def _home(html: str, page, config) -> str:
     return (
         _home_heading("分野から選ぶ", "layer-group", "fields")
         + f'<div class="home-tiles">{tiles}</div>{legend}'
+        + (_home_heading("物理数学", "square-root-variable", "math") + f'<div class="home-tiles">{math_tiles}</div>' if math_tiles else "")
         + _home_heading("難易度から選ぶ", "star")
         + f'<div class="home-levels">{levels}</div>'
         + _home_heading("このサイトは何者？", "circle-question")

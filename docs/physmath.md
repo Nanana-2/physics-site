@@ -1,0 +1,22 @@
+---
+title: 物理数学の問題一覧
+hero_image: assets/images/index.jpg
+hide:
+  - toc
+---
+
+# 物理数学の問題一覧
+
+物理を学ぶときに使う数学の演習問題です。分野を選んでください。
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-table-cells: __線形代数__（39問）
+
+    ---
+
+    行列の計算から固有値問題・内積空間・物理への応用まで
+
+    [線形代数の問題一覧へ](07linear_algebra/index.md)
+
+</div>

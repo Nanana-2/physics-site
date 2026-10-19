@@ -6,5 +6,8 @@ nav:
   - 04quantum_mechanics
   - 05statistical_mechanics
   - 06solid_state
+  - 物理数学:
+    - physmath.md
+    - 07linear_algebra
   - books.md
   - tags.md

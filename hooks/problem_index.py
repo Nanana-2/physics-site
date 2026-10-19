@@ -15,6 +15,13 @@ SUBJECT_DIRS = (
     "04quantum_mechanics",
     "05statistical_mechanics",
     "06solid_state",
+    "07linear_algebra",
+    "08differential_equations",
+    "09vector_analysis",
+    "10integral_transforms",
+    "11complex_analysis",
+    "12special_functions",
+    "13probability_statistics",
 )
 
 

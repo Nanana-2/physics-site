@@ -17,6 +17,13 @@ SUBJECT_SITEMAPS = {
     "04quantum_mechanics": "sitemap-quantum-mechanics.xml",
     "05statistical_mechanics": "sitemap-statistical-mechanics.xml",
     "06solid_state": "sitemap-solid-state.xml",
+    "07linear_algebra": "sitemap-linear-algebra.xml",
+    "08differential_equations": "sitemap-differential-equations.xml",
+    "09vector_analysis": "sitemap-vector-analysis.xml",
+    "10integral_transforms": "sitemap-integral-transforms.xml",
+    "11complex_analysis": "sitemap-complex-analysis.xml",
+    "12special_functions": "sitemap-special-functions.xml",
+    "13probability_statistics": "sitemap-probability-statistics.xml",
 }
 
 

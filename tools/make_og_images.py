@@ -25,6 +25,13 @@ SUBJECTS = {
     "04quantum_mechanics": "量子力学",
     "05statistical_mechanics": "統計力学",
     "06solid_state": "固体物性",
+    "07linear_algebra": "線形代数",
+    "08differential_equations": "微分方程式",
+    "09vector_analysis": "ベクトル解析",
+    "10integral_transforms": "積分変換",
+    "11complex_analysis": "複素関数",
+    "12special_functions": "特殊関数・変分法",
+    "13probability_statistics": "確率・統計",
 }
 LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 W, H = 1200, 630
