@@ -13,5 +13,6 @@ nav:
     - 09vector_analysis
     - 10integral_transforms
     - 11complex_analysis
+    - 12special_functions
   - books.md
   - tags.md

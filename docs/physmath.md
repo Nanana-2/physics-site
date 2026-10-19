@@ -51,4 +51,12 @@ hide:
 
     [複素関数の問題一覧へ](11complex_analysis/index.md)
 
+-   :fontawesome-solid-bezier-curve: __特殊関数・変分法__（35問）
+
+    ---
+
+    ガンマ関数・直交多項式・ベッセル関数と変分法
+
+    [特殊関数・変分法の問題一覧へ](12special_functions/index.md)
+
 </div>

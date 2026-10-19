@@ -26,6 +26,7 @@ hide:
     <button type="button" class="finder__subject finder__subject--09vector_analysis" data-subject="09vector_analysis">ベクトル解析</button>
     <button type="button" class="finder__subject finder__subject--10integral_transforms" data-subject="10integral_transforms">積分変換</button>
     <button type="button" class="finder__subject finder__subject--11complex_analysis" data-subject="11complex_analysis">複素関数</button>
+    <button type="button" class="finder__subject finder__subject--12special_functions" data-subject="12special_functions">特殊関数・変分法</button>
   </div>
 
   <div class="finder__bar">
