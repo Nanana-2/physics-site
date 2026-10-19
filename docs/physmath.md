@@ -35,4 +35,12 @@ hide:
 
     [ベクトル解析の問題一覧へ](09vector_analysis/index.md)
 
+-   :fontawesome-solid-wave-square: __積分変換__（36問）
+
+    ---
+
+    フーリエ級数・フーリエ変換・デルタ関数・ラプラス変換
+
+    [積分変換の問題一覧へ](10integral_transforms/index.md)
+
 </div>

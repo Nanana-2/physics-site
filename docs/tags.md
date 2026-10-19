@@ -24,6 +24,7 @@ hide:
     <button type="button" class="finder__subject finder__subject--07linear_algebra" data-subject="07linear_algebra">線形代数</button>
     <button type="button" class="finder__subject finder__subject--08differential_equations" data-subject="08differential_equations">微分方程式</button>
     <button type="button" class="finder__subject finder__subject--09vector_analysis" data-subject="09vector_analysis">ベクトル解析</button>
+    <button type="button" class="finder__subject finder__subject--10integral_transforms" data-subject="10integral_transforms">積分変換</button>
   </div>
 
   <div class="finder__bar">

@@ -11,5 +11,6 @@ nav:
     - 07linear_algebra
     - 08differential_equations
     - 09vector_analysis
+    - 10integral_transforms
   - books.md
   - tags.md

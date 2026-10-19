@@ -32,6 +32,7 @@ def norm(t):
     t=re.sub(r'\\frac\{d ?([a-zA-Z\\][a-zA-Z{}_^0-9\\]*?)\}\{d([a-zA-Z])\}',r'\\frac{\\mathrm{d}\1}{\\mathrm{d}\2}',t)
     t=re.sub(r'(\\,|\;|\s)d([xyztsuvrkθωφ]|\\theta|\\phi|\\varphi|\\omega|\\tau|\\xi|\\lambda|\\boldsymbol\{[A-Za-z]\}|[VSl])(?![a-zA-Z])',r'\1\\mathrm{d}\2',t)
     t=re.sub(r'(?<![a-zA-Z\\])d([A-Za-z](?:_\{?[A-Za-z0-9\\]+\}?)?)?/d([a-z])(?![a-zA-Z])',lambda m:'\\mathrm{d}'+(m.group(1) or '')+'/\\mathrm{d}'+m.group(2),t)
+    t=re.sub(r'\\frac\{d([a-z])\}\{(?!d)',r'\\frac{\\mathrm{d}\1}{',t)
     t=re.sub(r'\\mathrm\{d\}\s+\\mathrm\{d\}',r'\\mathrm{d}',t)
     return t
 for f in sys.argv[1:]:

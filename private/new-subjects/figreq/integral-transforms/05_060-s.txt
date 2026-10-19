@@ -1,0 +1,1 @@
+<!-- FIGURE solution (1): tau-t 平面において，直線 tau = 0，t = tau，および t -> \infty で囲まれる領域（0 <= tau <= t < \infty）を示す図。縦軸 t，横軸 tau，原点 O。 -->
