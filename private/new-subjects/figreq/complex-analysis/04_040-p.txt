@@ -1,0 +1,1 @@
+<!-- FIGURE problem: 複素平面上の積分経路。実軸上の [-R, -\epsilon] と [\epsilon, R]，原点を避ける上半平面の半径 \epsilon の小さな時計回り半円弧 C_\epsilon，および上半平面を閉じる半径 R の反時計回り大半円弧 C_R からなる閉経路。 -->

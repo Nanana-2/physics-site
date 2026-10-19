@@ -12,5 +12,6 @@ nav:
     - 08differential_equations
     - 09vector_analysis
     - 10integral_transforms
+    - 11complex_analysis
   - books.md
   - tags.md

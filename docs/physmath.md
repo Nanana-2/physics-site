@@ -43,4 +43,12 @@ hide:
 
     [積分変換の問題一覧へ](10integral_transforms/index.md)
 
+-   :fontawesome-solid-infinity: __複素関数__（35問）
+
+    ---
+
+    正則関数・複素積分・留数定理と物理への応用
+
+    [複素関数の問題一覧へ](11complex_analysis/index.md)
+
 </div>

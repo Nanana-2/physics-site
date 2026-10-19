@@ -1,0 +1,1 @@
+<!-- FIGURE problem: 上半平面における積分経路。実軸上の点 omega_0 を中心とする半径 epsilon の上側小半円 C_epsilon と，区間 [-R, omega_0 - epsilon]，[omega_0 + epsilon, R]，および半径 R の大半円 C_R からなる反時計回りの閉経路。 -->
