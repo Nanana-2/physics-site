@@ -91,6 +91,8 @@ def main() -> None:
     _card(OUT / "default.png", "物理の問題をたくさん見よう！", "力学から統計力学まで", 0)
     count = 0
     for subject, name in SUBJECTS.items():
+        if not (DOCS / subject).is_dir():
+            continue
         for chapter_dir in sorted(p for p in (DOCS / subject).iterdir() if p.is_dir()):
             files = sorted(chapter_dir.glob("*.md"))
             chapter = _chapter_title(subject, chapter_dir.name)

@@ -9,5 +9,6 @@ nav:
   - 物理数学:
     - physmath.md
     - 07linear_algebra
+    - 08differential_equations
   - books.md
   - tags.md

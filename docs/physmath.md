@@ -19,4 +19,12 @@ hide:
 
     [線形代数の問題一覧へ](07linear_algebra/index.md)
 
+-   :fontawesome-solid-chart-line: __微分方程式__（39問）
+
+    ---
+
+    1階・2階の常微分方程式から偏微分方程式，安定性まで
+
+    [微分方程式の問題一覧へ](08differential_equations/index.md)
+
 </div>
