@@ -43,7 +43,7 @@
       <div class="home-hero__inner">
         <img class="home-hero__logo" src="{{ 'assets/logo.svg' | url }}" alt="" width="84" height="84">
         <h1 class="home-hero__title"><span>物理の問題をたくさん見よう！</span><span>たくさん解こう！</span></h1>
-        <p class="home-hero__facts">5分野・{{ page.meta.problem_total }}問で学べる大学物理の問題集サイト</p>
+        <p class="home-hero__facts">6分野・{{ page.meta.problem_total }}問で学べる大学物理の問題集サイト</p>
         <form class="site-search home-search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
           <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
           <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索（例：角運動量，分配関数）" autocomplete="off" aria-label="問題を検索">
@@ -218,7 +218,8 @@
       '02electromagnetism': ('電磁気学', '02electromagnetism/'),
       '03thermodynamics': ('熱力学', '03thermodynamics/'),
       '04quantum_mechanics': ('量子力学', '04quantum_mechanics/'),
-      '05statistical_mechanics': ('統計力学', '05statistical_mechanics/')
+      '05statistical_mechanics': ('統計力学', '05statistical_mechanics/'),
+      '06solid_state': ('固体物性', '06solid_state/')
     } %}
     {% set levels = {'基本': 1, '標準': 2, '発展': 3} %}
     {% set path_parts = page.file.src_uri.split('/') %}

@@ -12,7 +12,7 @@
       <div class="site-search__results" role="listbox" hidden></div>
     </form>
     <p class="not-found__links">
-      {% for name, href, icon in [('力学','01mechanics/','apple-whole'),('電磁気学','02electromagnetism/','magnet'),('熱力学','03thermodynamics/','temperature-half'),('量子力学','04quantum_mechanics/','atom'),('統計力学','05statistical_mechanics/','dice')] %}
+      {% for name, href, icon in [('力学','01mechanics/','apple-whole'),('電磁気学','02electromagnetism/','magnet'),('熱力学','03thermodynamics/','temperature-half'),('量子力学','04quantum_mechanics/','atom'),('統計力学','05statistical_mechanics/','dice'),('固体物性','06solid_state/','cube')] %}
         <a class="not-found__link" href="{{ href | url }}"><span class="not-found__icon">{% include ".icons/fontawesome/solid/" ~ icon ~ ".svg" %}</span>{{ name }}</a>
       {% endfor %}
     </p>

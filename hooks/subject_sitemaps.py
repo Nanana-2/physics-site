@@ -16,6 +16,7 @@ SUBJECT_SITEMAPS = {
     "03thermodynamics": "sitemap-thermodynamics.xml",
     "04quantum_mechanics": "sitemap-quantum-mechanics.xml",
     "05statistical_mechanics": "sitemap-statistical-mechanics.xml",
+    "06solid_state": "sitemap-solid-state.xml",
 }
 
 

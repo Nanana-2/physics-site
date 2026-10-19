@@ -14,6 +14,7 @@ SUBJECT_DIRS = (
     "03thermodynamics",
     "04quantum_mechanics",
     "05statistical_mechanics",
+    "06solid_state",
 )
 
 

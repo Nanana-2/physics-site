@@ -51,13 +51,13 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261019e
-  - javascripts/problem-filter.js?v=20261019e
-  - javascripts/share.js?v=20261019e
-  - javascripts/tabs.js?v=20261019e
-  - javascripts/site-search.js?v=20261019e
-  - javascripts/answers.js?v=20261019e
-  - javascripts/copy-markdown.js?v=20261019e
+  - javascripts/mathjax.js?v=20261019f
+  - javascripts/problem-filter.js?v=20261019f
+  - javascripts/share.js?v=20261019f
+  - javascripts/tabs.js?v=20261019f
+  - javascripts/site-search.js?v=20261019f
+  - javascripts/answers.js?v=20261019f
+  - javascripts/copy-markdown.js?v=20261019f
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -77,4 +77,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261019e
+  - stylesheets/extra.css?v=20261019f

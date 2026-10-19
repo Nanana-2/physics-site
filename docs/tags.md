@@ -20,6 +20,7 @@ hide:
     <button type="button" class="finder__subject finder__subject--03thermodynamics" data-subject="03thermodynamics">熱力学</button>
     <button type="button" class="finder__subject finder__subject--04quantum_mechanics" data-subject="04quantum_mechanics">量子力学</button>
     <button type="button" class="finder__subject finder__subject--05statistical_mechanics" data-subject="05statistical_mechanics">統計力学</button>
+    <button type="button" class="finder__subject finder__subject--06solid_state" data-subject="06solid_state">固体物性</button>
   </div>
 
   <div class="finder__bar">

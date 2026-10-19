@@ -93,6 +93,15 @@ hide:
 
     [統計力学の問題一覧へ](05statistical_mechanics/index.md)
 
+
+-   __固体物性__
+
+    ---
+
+    結晶構造・格子振動から電子のバンド，半導体，磁性，超伝導の入口まで
+
+    [固体物性の問題一覧へ](06solid_state/index.md)
+
 </div>
 
 

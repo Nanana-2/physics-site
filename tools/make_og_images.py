@@ -24,6 +24,7 @@ SUBJECTS = {
     "03thermodynamics": "熱力学",
     "04quantum_mechanics": "量子力学",
     "05statistical_mechanics": "統計力学",
+    "06solid_state": "固体物性",
 }
 LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 W, H = 1200, 630

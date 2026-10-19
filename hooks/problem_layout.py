@@ -24,6 +24,7 @@ SUBJECT_DIRS = (
     "03thermodynamics",
     "04quantum_mechanics",
     "05statistical_mechanics",
+    "06solid_state",
 )
 LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 
@@ -205,6 +206,7 @@ BOOK_ICONS = {
     "熱力学": "temperature-half",
     "量子力学": "atom",
     "統計力学": "dice",
+    "固体物性": "cube",
     "その他": "book",
 }
 
@@ -236,6 +238,7 @@ HOME_SUBJECTS = (
     ("03thermodynamics", "熱力学", "temperature-half", "熱力学の諸法則から熱力学関数，相転移まで"),
     ("04quantum_mechanics", "量子力学", "atom", "束縛・散乱問題から電磁場の量子化まで"),
     ("05statistical_mechanics", "統計力学", "dice", "古典・量子統計から非平衡，開放量子系まで"),
+    ("06solid_state", "固体物性", "cube", "結晶構造・格子振動からバンド，磁性・超伝導まで"),
 )
 HOME_LEVELS = (("基本", "定期試験に出てくる程度"), ("標準", "院試のベーシックな問題"), ("発展", "やや発展的なトピック"))
 BRAND_DIR = ICON_DIR.parent / "brands"

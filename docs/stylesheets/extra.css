@@ -564,6 +564,7 @@ body, input {
 .md-typeset .finder__subject--03thermodynamics::before { --site-icon: url("../assets/icons/temperature-half.svg"); }
 .md-typeset .finder__subject--04quantum_mechanics::before { --site-icon: url("../assets/icons/atom.svg"); }
 .md-typeset .finder__subject--05statistical_mechanics::before { --site-icon: url("../assets/icons/dice.svg"); }
+.md-typeset .finder__subject--06solid_state::before { --site-icon: url("../assets/icons/cube.svg"); }
 
 /* 難易度：★のボタン。選ぶと紺の面に黄色の★，もう一度押すと解除 */
 .md-typeset .finder__bar {
