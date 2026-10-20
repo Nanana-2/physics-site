@@ -1524,3 +1524,5 @@ html { scroll-behavior: smooth; }
 .md-typeset .rigor-note__body > p { margin: 0; }
 [data-md-color-scheme="slate"] .md-typeset details.rigor-note { border-top-color: rgba(255, 255, 255, .1); }
 @media (prefers-reduced-motion: reduce) { .md-typeset details.rigor-note > summary::before { transition: none; } }
+.md-typeset .rigor-note__icon { display: inline-flex; flex: none; width: .85em; height: .85em; margin-left: -.1rem; }
+.md-typeset .rigor-note__icon svg { width: 100%; height: 100%; fill: currentColor; }

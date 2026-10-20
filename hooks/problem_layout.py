@@ -131,7 +131,8 @@ def _fold_answers(rest: str) -> str:
     m = re.search(r'<aside class="rigor-note">(.*?)</aside>\s*$', after, re.DOTALL)
     if m:
         after = after[: m.start()]
-        note = ('<details class="rigor-note"><summary>補足</summary>'
+        note = ('<details class="rigor-note"><summary>'
+                f'<span class="rigor-note__icon" aria-hidden="true">{_icon("circle-info")}</span>補足</summary>'
                 f'<div class="rigor-note__body">{m.group(1).strip()}</div></details>')
     parts = re.split(r'(<h3 id="[^"]+" class="solution-part">.*?</h3>)', after)
     if len(parts) == 1:
@@ -222,7 +223,7 @@ def _related_html(page, config) -> str:
     for other in others:
         subject, number, title, url = _problem_info(docs, other)
         href = posixpath.relpath(url, here.rstrip("/") or ".") + "/"
-        items += f'<li><a class="related__link" href="{href}">{names.get(subject, subject)} {number}　{title}</a></li>'
+        items += f'<li><a class="related__link" href="{href}">{title}【{names.get(subject, subject)}】</a></li>'
     return (
         '<section class="related" aria-label="関連">'
         '<span class="related__label">関連</span>'
