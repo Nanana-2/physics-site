@@ -38,7 +38,7 @@
 05statistical_mechanics/11_050 13probability_statistics/05_040 13probability_statistics/06_100   # ブラウン運動とランジュバン方程式
 05statistical_mechanics/05_030 05statistical_mechanics/05_040 13probability_statistics/02_060   # マクスウェル速度分布
 05statistical_mechanics/01_020 13probability_statistics/02_010 13probability_statistics/06_070 13probability_statistics/03_020   # 二項分布とガウス近似
-05statistical_mechanics/01_030 12special_functions/01_040 11complex_analysis/05_030   # スターリングの公式
+05statistical_mechanics/01_030 12special_functions/01_040   # スターリングの公式
 05statistical_mechanics/15_050 13probability_statistics/05_050 05statistical_mechanics/15_020   # 情報エントロピー
 05statistical_mechanics/01_010 13probability_statistics/01_030 05statistical_mechanics/03_060   # 平均・分散と揺らぎ
 12special_functions/01_010 12special_functions/01_020 11complex_analysis/06_090 12special_functions/01_030   # ガンマ関数
@@ -91,3 +91,4 @@
 04quantum_mechanics/05_090 05statistical_mechanics/14_020   # コヒーレント状態
 04quantum_mechanics/05_100 05statistical_mechanics/14_040   # スクイーズド状態
 04quantum_mechanics/12_040 10integral_transforms/03_010 08differential_equations/06_030   # 自由粒子の伝播核と熱核
+11complex_analysis/05_030 11complex_analysis/06_050 11complex_analysis/04_040 10integral_transforms/04_040   # フレネル積分と経路の回転

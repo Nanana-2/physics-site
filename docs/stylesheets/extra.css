@@ -1382,8 +1382,9 @@ body, input {
 }
 .md-top svg { width: .9rem; height: .9rem; margin: 0; }
 .md-top::after { content: "トップへ"; font-size: .45rem; line-height: 1; letter-spacing: .04em; }
-.md-top:hover, .md-top:focus { background: #2b3566; color: var(--site-star); }
-.md-top--hidden { opacity: 0; transform: translateY(.8rem); pointer-events: none; }
+.md-top:is(:hover, :focus-visible) { background: #2b3566; color: #fff; transform: translateY(-.15rem); box-shadow: 0 .35rem .9rem rgba(0, 0, 0, .26); }
+/* 消えるときも下へ沈みながらフェードする（Material は隠すときのアニメーションを 0 にしているので上書き） */
+.md-top[hidden], .md-top--hidden { display: flex; opacity: 0; transform: translateY(.8rem); pointer-events: none; transition-duration: .3s; }
 [data-md-color-scheme="slate"] .md-top { background: #3a4785; }
 
 /* 同じページ内の移動（目次・トップへ）はなめらかにスクロール */
@@ -1419,10 +1420,8 @@ html { scroll-behavior: smooth; }
 .md-typeset .home-news {
   margin: 1rem 0 0;
   padding: 1.1rem 1.3rem .4rem;
-  border: 1px solid #e6e8ef;
-  border-top: 3px solid var(--site-navy);
-  border-radius: .2rem;
-  background: #fafafb;
+  background-color: #fafafb;
+  background-image: var(--site-stripe);
   font-size: .74rem;
 }
 .md-typeset .home-news > ul { margin: 0; padding: 0; list-style: none; }
@@ -1442,7 +1441,7 @@ html { scroll-behavior: smooth; }
 .md-typeset .home-news ul ul { margin: .45em 0 0; padding: 0; list-style: none; color: var(--md-default-fg-color--light); }
 .md-typeset .home-news ul ul li { position: relative; margin: .2em 0; padding-left: .9em; }
 .md-typeset .home-news ul ul li::before { content: ""; position: absolute; left: 0; top: .8em; width: .35em; height: 1px; background: currentColor; opacity: .6; }
-[data-md-color-scheme="slate"] .md-typeset .home-news { border-color: rgba(255, 255, 255, .08); border-top-color: #6f7fd0; background: rgba(255, 255, 255, .035); }
+[data-md-color-scheme="slate"] .md-typeset .home-news { background-color: rgba(255, 255, 255, .035); }
 [data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::before { background: #8d9be0; box-shadow: 0 0 0 3px #26292f; }
 [data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::after { background: rgba(255, 255, 255, .12); }
 [data-md-color-scheme="slate"] .md-typeset .home-news > ul > li strong { color: #c9d1f3; }
@@ -1463,14 +1462,14 @@ html { scroll-behavior: smooth; }
   z-index: 3;
   padding: .3rem 0 .4rem;
   border-radius: 0 0 .3rem .3rem;
-  background: rgba(23, 29, 59, .82);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  backdrop-filter: blur(10px) saturate(140%);
+  background: rgba(23, 29, 59, .62);
+  -webkit-backdrop-filter: blur(3px) saturate(130%);
+  backdrop-filter: blur(3px) saturate(130%);
   box-shadow: 0 .6rem 1.4rem rgba(0, 0, 0, .22);
   transform: translateY(-.35rem); opacity: 0;
   transition: transform .18s ease, opacity .18s ease;
 }
-[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(16, 20, 42, .8); }
+[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(16, 20, 42, .6); }
 .md-tabs__menu.is-open { transform: none; opacity: 1; }
 .md-tabs__menu-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
 .md-tabs__menu-link {
@@ -1484,25 +1483,23 @@ html { scroll-behavior: smooth; }
 .md-tabs__menu-link .md-tabs__icon svg { width: 100%; height: 100%; fill: currentColor; }
 @media (prefers-reduced-motion: reduce) { .md-tabs__menu, .md-tabs__caret { transition: none; } }
 
-/* 関連する問題（解説の下，前後の問題の上） */
-.md-typeset .related { margin: 2.6em 0 0; padding: .9rem 1.1rem 1rem; border: 1px solid #e6e8ef; border-radius: .2rem; background: #fafafb; }
-.md-typeset .related__head { margin: 0 0 .5rem; font-size: .7rem; font-weight: 500; letter-spacing: .08em; color: var(--md-default-fg-color--light); }
-.md-typeset .related__list { margin: 0; padding: 0; list-style: none; }
-.md-typeset .related__list li { margin: 0; }
-.md-typeset a.related__link { display: flex; align-items: baseline; gap: .55em; padding: .32rem .3rem; border-radius: .15rem; color: var(--md-typeset-color); font-size: .76rem; }
-.md-typeset a.related__link:hover { background: rgba(23, 29, 59, .05); color: var(--md-accent-fg-color); }
-.md-typeset .related__icon { display: inline-flex; flex: none; width: .8em; height: .8em; align-self: center; color: var(--site-navy); }
-.md-typeset .related__icon svg { width: 100%; height: 100%; fill: currentColor; }
-.md-typeset .related__meta { flex: none; font-size: .66rem; color: var(--md-default-fg-color--light); font-variant-numeric: tabular-nums; }
-[data-md-color-scheme="slate"] .md-typeset .related { border-color: rgba(255, 255, 255, .08); background: rgba(255, 255, 255, .035); }
-[data-md-color-scheme="slate"] .md-typeset .related__icon { color: #8d9be0; }
-[data-md-color-scheme="slate"] .md-typeset a.related__link:hover { background: rgba(255, 255, 255, .05); }
-.md-typeset ul.related__list { margin: 0; }
+/* 関連（解説の下，前後の問題の上）：運営者情報と同じく，紺の吹き出しの見出しと，グレーにストライプの面 */
+.md-typeset .related { margin: 2.6em 0 0; }
+.md-typeset .related__heading {
+  position: relative; display: inline-flex; align-items: center; gap: .5em;
+  margin: 0 0 .9rem; padding: .4rem 1rem; border-radius: .2rem;
+  background: var(--site-navy); color: #fff; font-size: .78rem; font-weight: 500; letter-spacing: .04em;
+}
+.md-typeset .related__heading::after {
+  content: ""; position: absolute; left: 1.1rem; bottom: -.5rem;
+  border: .5rem solid transparent; border-bottom: 0; border-top-color: var(--site-navy);
+}
+[data-md-color-scheme="slate"] .md-typeset .related__heading { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset .related__heading::after { border-top-color: #3a4785; }
+.md-typeset .related__heading-icon { display: inline-flex; width: .8em; height: .8em; }
+.md-typeset .related__heading-icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-typeset ul.related__list { margin: 0; padding: .7rem 1.2rem; list-style: none; background-color: #fafafb; background-image: var(--site-stripe); }
+[data-md-color-scheme="slate"] .md-typeset ul.related__list { background-color: rgba(255, 255, 255, .035); }
 .md-typeset ul.related__list > li { margin: 0; list-style: none; }
-.md-typeset a.related__link, .md-typeset a.related__link:hover { border-bottom: none; text-decoration: none; }
-
-/* 解説の末尾：数学的な補足（物理の標準的な扱いに対する厳密な条件など） */
-.md-typeset aside.rigor-note { margin: 2em 0 0; padding: .7rem 1rem .75rem; border-left: 2px solid #c9cee0; background: #fafafb; font-size: .72rem; color: var(--md-default-fg-color--light); }
-.md-typeset aside.rigor-note::before { content: "数学的な補足"; display: block; margin-bottom: .3em; font-size: .66rem; font-weight: 500; letter-spacing: .08em; color: var(--md-default-fg-color--light); }
-.md-typeset aside.rigor-note > p { margin: 0; }
-[data-md-color-scheme="slate"] .md-typeset aside.rigor-note { border-left-color: rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .035); }
+.md-typeset a.related__link { display: block; padding: .3rem 0; border-bottom: none; color: var(--md-typeset-color); font-size: .76rem; }
+.md-typeset a.related__link:is(:hover, :focus-visible) { color: var(--md-accent-fg-color); border-bottom: none; }

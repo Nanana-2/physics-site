@@ -214,18 +214,18 @@ def _related_html(page, config) -> str:
         return ""
     # 他の分野の問題を先に，最大5つ
     others = sorted(others, key=lambda k: k.split("/")[0] == m.group(1))[:5]
-    names = {slug: (name, icon) for slug, name, icon, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
+    names = {slug: name for slug, name, _, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
     here = page.url
     items = ""
     for other in others:
         subject, number, title, url = _problem_info(docs, other)
-        name, icon = names.get(subject, (subject, "file-pen"))
         href = posixpath.relpath(url, here.rstrip("/") or ".") + "/"
-        items += (
-            f'<li><a class="related__link" href="{href}"><span class="related__icon" aria-hidden="true">{_icon(icon)}</span>'
-            f'<span class="related__meta">{name} {number}</span><span class="related__title">{title}</span></a></li>'
-        )
-    return f'<section class="related" aria-label="関連する問題"><p class="related__head">関連する問題</p><ul class="related__list">{items}</ul></section>'
+        items += f'<li><a class="related__link" href="{href}">{names.get(subject, subject)} {number}　{title}</a></li>'
+    return (
+        '<section class="related" aria-label="関連">'
+        f'<p class="related__heading"><span class="related__heading-icon">{_icon("magnifying-glass")}</span>関連</p>'
+        f'<ul class="related__list">{items}</ul></section>'
+    )
 
 
 def on_post_page(output, page, config):

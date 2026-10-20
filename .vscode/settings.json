@@ -1,0 +1,33 @@
+{
+  // ビルド出力や作業用フォルダは，VS Code の監視・検索・エクスプローラーから外す（重くなるのを防ぐ）
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/site/**": true,
+    "**/tmp/**": true,
+    "**/output/**": true,
+    "**/archive/**": true,
+    "**/private/pdf-books/**": true,
+    "**/private/new-subjects/generated/**": true,
+    "**/private/new-subjects/outputs/**": true,
+    "**/docs/assets/og/**": true,
+    "**/docs/assets/figures/**": true
+  },
+  "search.exclude": {
+    "**/site": true,
+    "**/tmp": true,
+    "**/output": true,
+    "**/archive": true,
+    "**/private/pdf-books/source/*-a4": true,
+    "**/private/pdf-books/source/*-sample*": true,
+    "**/docs/assets/og": true,
+    "**/docs/assets/figures": true
+  },
+  "files.exclude": {
+    "**/site": true,
+    "**/tmp": true
+  },
+  // 長い Markdown でのリンク検証・目次計算を止める
+  "markdown.validate.enabled": false,
+  "markdown.suggest.paths.enabled": false,
+  "markdown.occurrencesHighlight.enabled": false
+}
