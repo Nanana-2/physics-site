@@ -152,6 +152,19 @@ BREADCRUMB = re.compile(r'<nav class="md-path".*?</nav>\s*', re.DOTALL)
 ARTICLE_START = '<article class="md-content__inner md-typeset">'
 
 
+# パンくずの分野（と物理数学）の前にアイコンを付ける
+PATH_NAME = re.compile(r'(<a [^>]*class="md-path__link"[^>]*>\s*)(<span class="md-ellipsis">\s*([^<]*?)\s*</span>)')
+
+
+def _crumb_icon(m):
+    icons = {name: icon for _, name, icon, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
+    icons["物理数学"] = "square-root-variable"
+    icon = icons.get(m.group(3))
+    if not icon:
+        return m.group(0)
+    return f'{m.group(1)}<span class="md-path__icon" aria-hidden="true">{_icon(icon)}</span>{m.group(2)}'
+
+
 def on_post_page(output, page, config):
     # パンくずは本文の中へ移して左端をそろえる。タイトルがあればその（下線の）下，なければ本文の先頭
     nav = BREADCRUMB.search(output)
@@ -161,6 +174,7 @@ def on_post_page(output, page, config):
     title_end = output.find("</h1>", article)
     at = title_end + len("</h1>") if title_end >= 0 else article + len(ARTICLE_START)
     crumb = nav.group(0).replace('class="md-path__link"', 'class="md-path__link" aria-label="トップページ"', 1)
+    crumb = PATH_NAME.sub(_crumb_icon, crumb)
     return output[: nav.start()] + output[nav.end() : at] + crumb + output[at:]
 
 
@@ -337,12 +351,15 @@ def _home(html: str, page, config) -> str:
         f'<p class="home-owner__bio">{bio.group(1) if bio else ""}</p><p class="home-owner__links">{buttons}</p></div></div>'
     )
 
+    news = sections.get("更新履歴", "")
     return (
         _home_heading("分野から選ぶ", "layer-group", "fields")
-        + f'<div class="home-tiles">{tiles}</div>{legend}'
-        + (_home_heading("物理数学", "square-root-variable", "math") + f'<div class="home-tiles">{math_tiles}</div>' if math_tiles else "")
+        + f'<h3 class="home-subhead">物理</h3><div class="home-tiles">{tiles}</div>'
+        + (f'<h3 class="home-subhead">物理数学</h3><div class="home-tiles">{math_tiles}</div>' if math_tiles else "")
+        + legend
         + _home_heading("難易度から選ぶ", "star")
         + f'<div class="home-levels">{levels}</div>'
+        + (_home_heading("更新履歴", "clock-rotate-left") + f'<div class="home-news">{news}</div>' if news else "")
         + _home_heading("このサイトは何者？", "circle-question")
         + sections.get("このサイトは何者？", "")
         + _home_heading("重要な約束と推奨される使い方", "triangle-exclamation")

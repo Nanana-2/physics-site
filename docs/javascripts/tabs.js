@@ -26,3 +26,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 600);
   try { localStorage.setItem("tabs-peek", "1"); } catch (e) {}
 });
+
+// 「物理数学」のタブ：ページへ移らず，タブのバーの下に分野の一覧を開く
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".md-tabs__menu-toggle");
+  const tabs = document.querySelector(".md-tabs");
+  if (!toggle || !tabs) return;
+  const menu = document.getElementById(toggle.getAttribute("aria-controls"));
+  if (!menu) return;
+  // タブのリストは横スクロールで切れるので，一覧はバーの直後へ移す
+  tabs.after(menu);
+
+  const setOpen = (open) => {
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.closest(".md-tabs__item").classList.toggle("md-tabs__item--open", open);
+    if (open) {
+      menu.hidden = false;
+      requestAnimationFrame(() => menu.classList.add("is-open"));
+    } else {
+      menu.classList.remove("is-open");
+      const done = () => { if (!menu.classList.contains("is-open")) menu.hidden = true; };
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) done();
+      else menu.addEventListener("transitionend", done, { once: true });
+      setTimeout(done, 300);
+    }
+  };
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+  document.addEventListener("click", (e) => {
+    if (toggle.getAttribute("aria-expanded") === "true" && !menu.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { setOpen(false); toggle.focus(); }
+  });
+});

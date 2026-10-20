@@ -1411,3 +1411,51 @@ html { scroll-behavior: smooth; }
 .md-typeset .not-found__icon svg { width: 100%; height: 100%; fill: currentColor; }
 .md-typeset a.not-found__home { border: none; font-size: .74rem; color: var(--site-navy); font-weight: 500; }
 .md-main__inner:has(.not-found) .md-sidebar--secondary { display: none; }
+
+/* トップページ：分野の中の小見出し（物理・物理数学）と更新履歴 */
+.md-typeset h3.home-subhead { margin: 1.3em 0 0; padding-left: .1rem; font-size: .78rem; font-weight: 500; letter-spacing: .06em; color: var(--md-default-fg-color--light); }
+.md-typeset .home-news { margin: 1rem 0 0; font-size: .74rem; }
+.md-typeset .home-news > ul { margin: 0; padding: 0; list-style: none; }
+.md-typeset .home-news > ul > li { margin: 0 0 .9em; padding: 0 0 .9em; border-bottom: 1px solid #e9ebf0; }
+.md-typeset .home-news > ul > li:last-child { border-bottom: none; }
+.md-typeset .home-news > ul > li > strong { font-weight: 500; color: var(--site-navy); font-variant-numeric: tabular-nums; }
+.md-typeset .home-news ul ul { margin: .4em 0 0 1.2em; color: var(--md-default-fg-color--light); }
+.md-typeset .home-news ul ul li { margin: .15em 0; }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li { border-color: rgba(255, 255, 255, .08); }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li > strong { color: #c9d1f3; }
+
+/* パンくず：分野のアイコン */
+.md-typeset .md-path__icon { display: inline-flex; width: .9em; height: .9em; margin-right: .35em; vertical-align: -.1em; }
+.md-typeset .md-path__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-typeset .md-path__link { display: inline-flex; align-items: center; }
+
+/* ヘッダー：「物理数学」タブで開く分野の一覧（タブのバーの下に降りてくる） */
+.md-tabs__menu-toggle { padding: 0; border: none; background: none; color: inherit; font-family: inherit; line-height: inherit; cursor: pointer; }
+.md-tabs__caret { display: inline-flex; width: .6em; height: .6em; margin-left: .1em; transition: transform .2s ease; }
+.md-tabs__link .md-tabs__caret svg { flex: none; width: 100%; height: 100%; margin: 0 !important; fill: currentColor; }
+.md-tabs__item--open .md-tabs__caret { transform: rotate(180deg); }
+.md-tabs__item--open .md-tabs__link { opacity: 1; }
+.md-tabs__menu {
+  position: absolute; left: 0; right: 0; top: 100%;
+  z-index: 3;
+  background: var(--md-primary-fg-color);
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .18);
+  clip-path: inset(0 0 -1rem 0);
+  transform: translateY(-.5rem); opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.md-tabs__menu.is-open { transform: none; opacity: 1; }
+.md-tabs__menu-list {
+  display: flex; flex-wrap: wrap; gap: .1rem .4rem;
+  max-width: 61rem; margin: 0 auto; padding: .35rem .8rem .55rem;
+  list-style: none;
+}
+.md-tabs__menu-link {
+  display: inline-flex; align-items: center; gap: .45em;
+  padding: .35rem .55rem; border-radius: .2rem;
+  color: var(--md-primary-bg-color); font-size: .7rem; opacity: .8;
+}
+.md-tabs__menu-link:hover, .md-tabs__menu-link:focus-visible { opacity: 1; background: rgba(255, 255, 255, .08); }
+.md-tabs__menu-item--active .md-tabs__menu-link { opacity: 1; font-weight: 500; }
+.md-tabs__menu-link .md-tabs__icon svg { width: 100%; height: 100%; fill: currentColor; }
+@media (prefers-reduced-motion: reduce) { .md-tabs__menu, .md-tabs__caret { transition: none; } }

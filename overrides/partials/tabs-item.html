@@ -3,6 +3,7 @@
   ・ホームのタブは出さない（左上のサイト名がホームへのリンク）
   ・各タブの前に分野のアイコンを付ける
   ・「参考文献一覧」「問題を探す」は右端に寄せる（tools）
+  ・「物理数学」はページへ移らず，タブの下に分野の一覧を開くボタンにする（tabs.js がバーの下へ移す）
 -#}
 {% set tab_icons = {
   '力学': 'fontawesome/solid/apple-whole',
@@ -12,6 +13,13 @@
   '統計力学': 'fontawesome/solid/dice',
   '固体物性': 'fontawesome/solid/cube',
   '物理数学': 'fontawesome/solid/square-root-variable',
+  '線形代数': 'fontawesome/solid/table-cells',
+  '微分方程式': 'fontawesome/solid/chart-line',
+  'ベクトル解析': 'fontawesome/solid/location-arrow',
+  '積分変換': 'fontawesome/solid/wave-square',
+  '複素関数': 'fontawesome/solid/infinity',
+  '特殊関数・変分法': 'fontawesome/solid/bezier-curve',
+  '確率・統計': 'fontawesome/solid/chart-column',
   '参考文献一覧': 'fontawesome/solid/book-open',
   '問題を探す': 'fontawesome/solid/list-ul'
 } %}
@@ -33,6 +41,26 @@
     {% set class = class ~ " md-tabs__item--tool" %}
   {% endif %}
   {% if nav_item.is_homepage %}
+  {% elif ref.title == '物理数学' and nav_item.children %}
+    <li class="{{ class }} md-tabs__item--menu">
+      <button type="button" class="md-tabs__link md-tabs__menu-toggle" aria-expanded="false" aria-controls="tabs-menu-physmath">
+        {{ render_content(nav_item, ref) }}
+        <span class="md-tabs__caret" aria-hidden="true">{% include ".icons/fontawesome/solid/chevron-down.svg" %}</span>
+      </button>
+      <div class="md-tabs__menu" id="tabs-menu-physmath" hidden>
+        <ul class="md-tabs__menu-list">
+          {% for child in nav_item.children if child.children %}
+            {% set first = child.children | first %}
+            <li class="md-tabs__menu-item{% if child.active %} md-tabs__menu-item--active{% endif %}">
+              <a href="{{ first.url | url }}" class="md-tabs__menu-link">
+                {% if child.title in tab_icons %}<span class="md-tabs__icon">{% include ".icons/" ~ tab_icons[child.title] ~ ".svg" %}</span>{% endif %}
+                {{ child.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
   {% elif nav_item.children %}
     {% set first = nav_item.children | first %}
     {% if first.children %}

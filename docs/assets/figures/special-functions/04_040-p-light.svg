@@ -49,7 +49,7 @@
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
 <use xlink:href="#glyph-2-0" x="124.599912" y="111.599963"/>
 </g>
-<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 68.773438 30.722656 L 75.632812 30.722656 L 75.632812 23.210938 L 68.773438 23.210938 Z M 68.773438 30.722656 "/>
+<path fill-rule="nonzero" fill="#fafafb" fill-opacity="1" d="M 68.773438 30.722656 L 75.632812 30.722656 L 75.632812 23.210938 L 68.773438 23.210938 Z M 68.773438 30.722656 "/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
 <use xlink:href="#glyph-2-1" x="69.768338" y="29.729789"/>
 </g>
