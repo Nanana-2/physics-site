@@ -1548,3 +1548,31 @@ html { scroll-behavior: smooth; }
 }
 .md-typeset .approach > p { margin: 0 0 .4em; }
 [data-md-color-scheme="slate"] .md-typeset .approach::before { color: #c5d0ff; background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)); }
+
+/* ==========================================
+   紺のボタン：押すと黄色に塗られ，文字が濃い紺になる（はっきり押した感じを出す）
+   ========================================== */
+.side-chapters__index,
+.md-typeset a.book-btn,
+.md-typeset a.home-owner__link,
+.md-typeset a.owner__link,
+.md-typeset a.page-nav__side--next {
+  background-image: linear-gradient(var(--site-star), var(--site-star)) !important;
+  background-repeat: no-repeat !important;
+  background-size: 0 100% !important;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link, .md-typeset a.page-nav__side--next):is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link, .md-typeset a.page-nav__side--next):is(:hover, :focus-visible, :active),
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link, .md-typeset a.page-nav__side--next):is(:hover, :focus-visible, :active) * {
+  color: #171d3b !important;
+}
+.side-chapters__index:is(:hover, :focus-visible, :active) .side-heading__icon svg { fill: #171d3b; }
+
+/* 次の問題だけ紺の面にして，前の問題と差をつける */
+.md-typeset a.page-nav__side--next { background-color: var(--site-navy); color: #fff; }
+.md-typeset a.page-nav__side--next :is(.page-nav__dir, .page-nav__title) { color: #fff; }
+.md-typeset a.page-nav__side--next .page-nav__stars .on { color: var(--site-star); }
+.md-typeset a.page-nav__side--next .page-nav__stars .off { color: rgba(255, 255, 255, .35); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .off { color: rgba(23, 29, 59, .3) !important; }
+[data-md-color-scheme="slate"] .md-typeset a.page-nav__side--next { background-color: #3a4785; }
