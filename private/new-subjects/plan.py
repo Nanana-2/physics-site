@@ -584,6 +584,8 @@ def write_all():
         if name == "batch_03.md":
             write_supplement()
             index.append(f"- `batch_03_1.md`：固体物性 既存の問題を分割・補う追加分（{len(SUPPLEMENT)}問）")
+    write_topology()
+    index.append(f"- `batch_20.md`：固体物性 第12章 トポロジカルな物性（{len(TOPOLOGY)}問，応用編）")
     (pdir / "README.md").write_text("\n".join(index) + "\n", encoding="utf-8")
     print(f"{total} problems, {len(batches())} batches")
 
@@ -616,6 +618,34 @@ def write_supplement():
         spec.append(f"- `{ch}/{fname}`（{pos}）「{title}」 難易度：{LEVEL[int(level)]} ／ ねらい：{note} ／ 既存との関係：{rel}")
     body = COMMON.replace("{{SPEC}}", "\n".join(spec)).replace("{{COUNT}}", str(len(SUPPLEMENT)))
     (HERE / "prompts" / "batch_03_1.md").write_text(body, encoding="utf-8")
+
+
+# 固体物性の応用編：トポロジカルな物性（batch_20）。既存の11章のあとに第12章として足す。
+# 各要素："ファイル名|題名|難易度|ねらい"
+TOPOLOGY = [
+    "12_010.md|ベリー位相|3|スピン1/2が磁場の向きに沿って断熱的に1周するとき，固有状態が得るベリー位相が磁場の向きの描く立体角 Ω を用いて -Ω/2 になること",
+    "12_020.md|ベリー接続とベリー曲率|3|2準位のハミルトニアン H=d(k)·σ について，ベリー接続とベリー曲率を求め，d 空間で原点にある単極子の場と同じ形になること",
+    "12_030.md|SSH 模型のバンドと巻き付き数|3|飛び移りが v, w と交互に並ぶ1次元の鎖（SSH 模型）のブロッホハミルトニアンとエネルギー分散，d(k) が原点のまわりを回る巻き付き数が v<w で1，v>w で0になること",
+    "12_040.md|SSH 模型の端状態|3|開いた SSH 鎖で，端に局在するエネルギー0の状態が v<w のときに現れること，振幅が減衰する長さを v/w で表す",
+    "12_050.md|2次元の2バンド模型とチャーン数|3|正方格子の2バンド模型 d(k)=(sin k_x, sin k_y, m+cos k_x+cos k_y) のチャーン数を，d(k)/|d| が単位球面を覆う回数から求め，m の範囲によって 0, ±1 と変わること",
+    "12_060.md|量子ホール効果とチャーン数|3|ホール伝導度が σ_xy=(e^2/h)C と書けることを既知として，満ちたランダウ準位の数と C の関係，端を流れる状態の数とバルクの C が一致すること",
+    "12_070.md|トポロジカル絶縁体の表面状態|3|3次元トポロジカル絶縁体の表面の有効ハミルトニアン H=v(σ_x p_y - σ_y p_x) の固有値と固有状態，スピンの向きが運動量に垂直に固定されること，後方散乱が起こらない理由をスピンの直交性から示す",
+]
+
+
+def write_topology():
+    spec = ["- 分野：固体物性（フォルダ名 `06solid_state`）",
+            "- 分野の方針：統計力学・量子力学の道具を固体に使う。物性物理の入口として，学部4年の院試までの範囲。",
+            "- 今回は，既存の第1〜11章に続く応用編として，第12章「トポロジカルな物性」を作る。院試の範囲を少し超える内容なので，難易度はすべて発展とする。",
+            "- 前提にしてよいのは，量子力学の2準位系とパウリ行列，固体物性のブロッホの定理と強束縛近似（第7章）まで。それ以外の概念（ベリー位相，巻き付き数，チャーン数など）は，問題文で式を使って定義してから問う。",
+            "- 計算で答えが決まる問いにする。トポロジーの一般論を説明させる問いや，名前だけを答えさせる問いは作らない。",
+            "",
+            "#### 第12章 トポロジカルな物性（フォルダ `12`）"]
+    for line in TOPOLOGY:
+        fname, title, level, note = line.split("|", 3)
+        spec.append(f"- `12/{fname}` 「{title}」 難易度：{LEVEL[int(level)]} ／ ねらい：{note}")
+    body = COMMON.replace("{{SPEC}}", "\n".join(spec)).replace("{{COUNT}}", str(len(TOPOLOGY)))
+    (HERE / "prompts" / "batch_20.md").write_text(body, encoding="utf-8")
 
 
 if __name__ == "__main__":

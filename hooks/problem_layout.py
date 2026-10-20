@@ -226,7 +226,7 @@ def _related_html(page, config) -> str:
         items += f'<li><a class="related__link" href="{href}">{title}【{names.get(subject, subject)}】</a></li>'
     return (
         '<section class="related" aria-label="関連">'
-        '<span class="related__label">関連</span>'
+        f'<span class="related__label"><span class="related__icon" aria-hidden="true">{_icon("link")}</span>関連</span>'
         f'<ul class="related__list">{items}</ul></section>'
     )
 
