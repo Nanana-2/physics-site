@@ -148,6 +148,7 @@ def _copy_source(page) -> str:
     title = page.title or ""
     text = re.sub(r"<figure.*?</figure>", "（図は省略）", page.markdown or "", flags=re.DOTALL)
     text = re.sub(r'<aside class="rigor-note" markdown>\s*(.*?)\s*</aside>', r"補足：\1", text, flags=re.DOTALL)
+    text = re.sub(r'<div class="approach" markdown>\s*(.*?)\s*</div>', r"考え方：\1", text, flags=re.DOTALL)
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
     text = f"# {title}\n\n{text}" if not text.startswith("# ") else text
     text = text.replace("</", "<\\/")
