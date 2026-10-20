@@ -1,0 +1,93 @@
+# 関連する問題のグループ（hooks/problem_layout.py が読む）
+# 1行が1グループ。同じ行の問題どうしを，各ページの解説の下に「関連する問題」として並べる。
+# 書式：<分野フォルダ>/<問題ファイル名> を空白で区切る。# 以降はメモ。
+# 分野：01mechanics 02electromagnetism 03thermodynamics 04quantum_mechanics 05statistical_mechanics
+#       06solid_state 07linear_algebra 08differential_equations 09vector_analysis 10integral_transforms
+#       11complex_analysis 12special_functions 13probability_statistics
+
+02electromagnetism/01_060 02electromagnetism/08_010 08differential_equations/05_050 08differential_equations/06_010 08differential_equations/06_020   # ラプラス方程式
+02electromagnetism/08_030 09vector_analysis/06_030 12special_functions/02_020 12special_functions/02_030   # 多重極展開とルジャンドル多項式
+09vector_analysis/06_010 09vector_analysis/06_020 09vector_analysis/07_090 02electromagnetism/01_030 10integral_transforms/04_030   # 点源・ガウスの法則・1/r
+09vector_analysis/04_040 09vector_analysis/07_090 02electromagnetism/01_030   # 立体角
+02electromagnetism/02_060 02electromagnetism/08_020 11complex_analysis/05_010 11complex_analysis/06_100   # 鏡像法と等角写像
+02electromagnetism/07_020 09vector_analysis/07_050 09vector_analysis/05_010 09vector_analysis/05_020   # マクスウェル方程式と積分定理
+02electromagnetism/04_040 09vector_analysis/05_020   # アンペールの法則とストークスの定理
+02electromagnetism/07_050 09vector_analysis/07_060   # ポインティングの定理
+02electromagnetism/08_050 09vector_analysis/07_070   # マクスウェル応力
+02electromagnetism/04_070 09vector_analysis/05_060 04quantum_mechanics/09_020   # ベクトルポテンシャルとゲージ
+02electromagnetism/04_010 04quantum_mechanics/01_050 09vector_analysis/05_050 13probability_statistics/06_110   # 連続の式
+04quantum_mechanics/05_030 04quantum_mechanics/05_010 12special_functions/02_040 12special_functions/05_020 12special_functions/05_030   # 調和振動子とエルミート多項式
+04quantum_mechanics/08_040 12special_functions/02_050 12special_functions/05_090   # 水素原子とラゲール多項式
+04quantum_mechanics/10_040 04quantum_mechanics/10_050 12special_functions/05_090 07linear_algebra/06_040 12special_functions/04_070 12special_functions/05_120   # 変分法
+04quantum_mechanics/06_030 12special_functions/03_050 12special_functions/05_050 12special_functions/03_060 12special_functions/05_040   # 球面調和関数
+08differential_equations/06_050 12special_functions/03_030 12special_functions/03_010 12special_functions/03_020   # ベッセル関数と円形膜
+12special_functions/03_040 04quantum_mechanics/08_020 04quantum_mechanics/08_010   # 球対称な問題と動径方程式
+01mechanics/10_020 12special_functions/04_010 12special_functions/05_070 12special_functions/04_020   # オイラー・ラグランジュ方程式
+01mechanics/10_040 12special_functions/04_050 12special_functions/04_040 13probability_statistics/05_050 05statistical_mechanics/01_060   # ラグランジュの未定乗数
+01mechanics/06_010 01mechanics/06_020 01mechanics/06_030 07linear_algebra/06_010 01mechanics/10_060   # 連成振動と固有値問題
+01mechanics/09_010 07linear_algebra/06_020   # 慣性テンソル
+04quantum_mechanics/07_010 07linear_algebra/05_050 07linear_algebra/06_030 04quantum_mechanics/07_050 05statistical_mechanics/12_020   # 二準位系とパウリ行列
+07linear_algebra/03_060 04quantum_mechanics/07_030 08differential_equations/03_010   # 行列の指数関数と時間発展
+04quantum_mechanics/01_060 07linear_algebra/05_010 07linear_algebra/05_020   # エルミート行列
+04quantum_mechanics/01_070 07linear_algebra/05_040 10integral_transforms/03_050   # 可換性と不確定性
+04quantum_mechanics/02_020 07linear_algebra/05_030   # 完全性とスペクトル分解
+04quantum_mechanics/02_040 07linear_algebra/01_050   # 表現行列と基底変換
+07linear_algebra/06_050 13probability_statistics/05_010 13probability_statistics/05_020 05statistical_mechanics/11_020 05statistical_mechanics/11_010   # マルコフ過程とマスター方程式
+05statistical_mechanics/11_030 13probability_statistics/03_030 13probability_statistics/03_040 05statistical_mechanics/11_040 13probability_statistics/06_110   # ランダムウォークと拡散
+05statistical_mechanics/11_040 08differential_equations/06_030 10integral_transforms/04_020 12special_functions/05_010   # 拡散方程式と熱核
+05statistical_mechanics/11_050 13probability_statistics/05_040 13probability_statistics/06_100   # ブラウン運動とランジュバン方程式
+05statistical_mechanics/05_030 05statistical_mechanics/05_040 13probability_statistics/02_060   # マクスウェル速度分布
+05statistical_mechanics/01_020 13probability_statistics/02_010 13probability_statistics/06_070 13probability_statistics/03_020   # 二項分布とガウス近似
+05statistical_mechanics/01_030 12special_functions/01_040 11complex_analysis/05_030   # スターリングの公式
+05statistical_mechanics/15_050 13probability_statistics/05_050 05statistical_mechanics/15_020   # 情報エントロピー
+05statistical_mechanics/01_010 13probability_statistics/01_030 05statistical_mechanics/03_060   # 平均・分散と揺らぎ
+12special_functions/01_010 12special_functions/01_020 11complex_analysis/06_090 12special_functions/01_030   # ガンマ関数
+11complex_analysis/06_050 10integral_transforms/03_010 12special_functions/01_020 05statistical_mechanics/05_010   # ガウス積分
+12special_functions/01_050 05statistical_mechanics/02_040 05statistical_mechanics/06_070 06solid_state/06_020   # 状態数と状態密度
+01mechanics/05_060 10integral_transforms/04_010 08differential_equations/02_060 10integral_transforms/06_020 01mechanics/05_070   # 強制振動と共鳴
+01mechanics/05_040 08differential_equations/02_010 10integral_transforms/05_050 02electromagnetism/06_070   # 減衰振動と2階線形微分方程式
+02electromagnetism/06_040 10integral_transforms/05_040 10integral_transforms/05_050   # 回路の過渡応答とラプラス変換
+11complex_analysis/05_040 06solid_state/09_010 10integral_transforms/04_010   # 応答関数とクラマース・クローニッヒ
+10integral_transforms/04_040 10integral_transforms/06_030 06solid_state/03_020   # 回折とフーリエ変換
+10integral_transforms/03_050 04quantum_mechanics/02_030 04quantum_mechanics/01_070   # フーリエ変換と不確定性
+10integral_transforms/02_010 10integral_transforms/02_050 04quantum_mechanics/03_040 09vector_analysis/06_010   # デルタ関数
+08differential_equations/04_060 10integral_transforms/04_030 02electromagnetism/08_060   # グリーン関数
+08differential_equations/05_020 02electromagnetism/07_030 08differential_equations/05_030 01mechanics/06_050 12special_functions/04_060   # 波動方程式
+01mechanics/06_060 06solid_state/04_010 06solid_state/04_060   # 分散関係と群速度
+08differential_equations/04_040 08differential_equations/06_060 04quantum_mechanics/03_010 06solid_state/06_010   # 固有値問題と箱の中の粒子
+08differential_equations/05_040 10integral_transforms/06_010 08differential_equations/06_040   # 有限長の熱伝導
+04quantum_mechanics/04_070 06solid_state/07_030 06solid_state/07_010   # 周期ポテンシャル
+01mechanics/01_030 09vector_analysis/01_040 09vector_analysis/03_010   # 極座標と円筒座標
+09vector_analysis/03_020 09vector_analysis/03_030 04quantum_mechanics/08_010   # 曲線座標のラプラシアン
+01mechanics/08_050 09vector_analysis/01_020 09vector_analysis/02_030   # 回転座標系と回転
+01mechanics/03_020 09vector_analysis/02_060 09vector_analysis/04_020   # 保存力とポテンシャル
+09vector_analysis/07_040 11complex_analysis/06_080   # 渦と2次元の流れ
+03thermodynamics/05_050 08differential_equations/01_050 03thermodynamics/01_010   # 完全微分と状態量
+05statistical_mechanics/08_050 10integral_transforms/01_050 11complex_analysis/05_050 05statistical_mechanics/08_060   # 級数の和とゼータ関数
+05statistical_mechanics/07_040 06solid_state/06_030   # ゾンマーフェルト展開
+01mechanics/03_070 08differential_equations/03_020 08differential_equations/03_040 01mechanics/10_090   # 平衡点と相図
+07linear_algebra/04_040 04quantum_mechanics/14_010 06solid_state/01_060   # 回転と対称操作
+01mechanics/02_030 08differential_equations/01_030   # 速度比例抵抗と1階線形方程式
+01mechanics/02_040 08differential_equations/01_010 01mechanics/04_070   # 変数分離形の運動方程式
+02electromagnetism/04_060 06solid_state/06_050 04quantum_mechanics/09_030   # 磁場中の荷電粒子
+04quantum_mechanics/09_040 06solid_state/10_070 06solid_state/10_075   # ランダウ準位
+06solid_state/11_020 02electromagnetism/07_070   # 侵入長と表皮効果
+06solid_state/06_060 06solid_state/09_030 06solid_state/09_050   # プラズマ振動数
+05statistical_mechanics/08_070 06solid_state/05_020   # アインシュタイン模型
+05statistical_mechanics/08_080 06solid_state/05_030 06solid_state/04_030   # デバイ模型
+05statistical_mechanics/07_060 06solid_state/10_030   # パウリ常磁性
+05statistical_mechanics/10_040 05statistical_mechanics/10_050 06solid_state/10_040   # 平均場近似
+05statistical_mechanics/07_010 06solid_state/06_010   # フェルミ気体
+05statistical_mechanics/07_050 06solid_state/06_015   # フェルミ気体の圧力
+07linear_algebra/04_030 13probability_statistics/04_040   # 最小二乗法
+07linear_algebra/04_060 13probability_statistics/06_050   # 二次形式と2変数ガウス分布
+13probability_statistics/06_040 10integral_transforms/03_020   # ローレンツ関数とコーシー分布
+10integral_transforms/06_060 05statistical_mechanics/09_050   # 相関関数
+06solid_state/03_060 13probability_statistics/02_030   # ガウス分布のモーメント
+12special_functions/04_060 01mechanics/06_050 04quantum_mechanics/16_060   # 場のラグランジアン
+07linear_algebra/06_060 05statistical_mechanics/16_020   # 特異値分解とシュミット分解
+07linear_algebra/07_030 05statistical_mechanics/12_010   # 射影と密度行列
+07linear_algebra/04_020 08differential_equations/04_050   # 直交化と直交関数系
+04quantum_mechanics/05_090 05statistical_mechanics/14_020   # コヒーレント状態
+04quantum_mechanics/05_100 05statistical_mechanics/14_040   # スクイーズド状態
+04quantum_mechanics/12_040 10integral_transforms/03_010 08differential_equations/06_030   # 自由粒子の伝播核と熱核

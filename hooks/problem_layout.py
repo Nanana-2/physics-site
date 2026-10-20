@@ -12,6 +12,7 @@ Markdown 側は今まで通り「## 問題」…「---」…「## 解答・解�
 分野別の問題一覧（<分野>/index.md）は，章ごとのカードを番号・タイトル・★の目次に組み替える。
 """
 
+import posixpath
 import re
 from pathlib import Path
 
@@ -125,19 +126,25 @@ def _fold_answers(rest: str) -> str:
     if not heading:
         return rest
     before, after = rest[: heading.end()], rest[heading.end() :]
+    # 末尾の「数学的な補足」は折りたたまずに，最後の解答の外へ出す
+    note = ""
+    m = re.search(r'<aside class="rigor-note">.*?</aside>\s*$', after, re.DOTALL)
+    if m:
+        after, note = after[: m.start()], m.group(0)
     parts = re.split(r'(<h3 id="[^"]+" class="solution-part">.*?</h3>)', after)
     if len(parts) == 1:
-        return before + ANSWER_TOGGLE + f'<div class="answer"><div class="answer__inner">{after}</div></div>'
+        return before + ANSWER_TOGGLE + f'<div class="answer"><div class="answer__inner">{after}</div></div>' + note
     out = parts[0]
     for i in range(1, len(parts), 2):
         out += parts[i] + ANSWER_TOGGLE + f'<div class="answer"><div class="answer__inner">{parts[i + 1]}</div></div>'
-    return before + out
+    return before + out + note
 
 
 def _copy_source(page) -> str:
     """「Markdown でコピー」用に，問題と解答の Markdown をページに埋め込む（図は「（図）」に置き換える）。"""
     title = page.title or ""
     text = re.sub(r"<figure.*?</figure>", "（図は省略）", page.markdown or "", flags=re.DOTALL)
+    text = re.sub(r'<aside class="rigor-note" markdown>\s*(.*?)\s*</aside>', r"数学的な補足：\1", text, flags=re.DOTALL)
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
     text = f"# {title}\n\n{text}" if not text.startswith("# ") else text
     text = text.replace("</", "<\\/")
@@ -165,7 +172,70 @@ def _crumb_icon(m):
     return f'{m.group(1)}<span class="md-path__icon" aria-hidden="true">{_icon(icon)}</span>{m.group(2)}'
 
 
+# ---- 関連する問題：hooks/related_problems.txt のグループから，解説の下（前後の問題の上）に並べる ----
+RELATED_FILE = Path(__file__).with_name("related_problems.txt")
+_related_cache = {}
+
+
+def _related_index(docs: Path) -> dict:
+    if "index" in _related_cache:
+        return _related_cache["index"]
+    index = {}
+    for raw in RELATED_FILE.read_text(encoding="utf-8").splitlines():
+        group = raw.split("#")[0].split()
+        for key in group:
+            index.setdefault(key, [])
+            for other in group:
+                if other != key and other not in index[key]:
+                    index[key].append(other)
+    _related_cache["index"] = index
+    return index
+
+
+def _problem_info(docs: Path, key: str):
+    subject, stem = key.split("/")
+    chapter = stem[:2]
+    files = sorted((docs / subject / chapter).glob("*.md"))
+    path = docs / subject / chapter / f"{stem}.md"
+    title = re.search(r"^# (.*)$", path.read_text(encoding="utf-8"), re.M).group(1)
+    number = f"{int(chapter)}-{files.index(path) + 1}"
+    return subject, number, title, f"{subject}/{chapter}/{stem}/"
+
+
+def _related_html(page, config) -> str:
+    src = page.file.src_uri
+    m = re.match(r"(\d\d[a-z_]+)/\d\d/(\d\d_\d\d\d)\.md$", src)
+    if not m:
+        return ""
+    docs = Path(config["docs_dir"])
+    key = f"{m.group(1)}/{m.group(2)}"
+    others = _related_index(docs).get(key, [])
+    if not others:
+        return ""
+    # 他の分野の問題を先に，最大5つ
+    others = sorted(others, key=lambda k: k.split("/")[0] == m.group(1))[:5]
+    names = {slug: (name, icon) for slug, name, icon, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
+    here = page.url
+    items = ""
+    for other in others:
+        subject, number, title, url = _problem_info(docs, other)
+        name, icon = names.get(subject, (subject, "file-pen"))
+        href = posixpath.relpath(url, here.rstrip("/") or ".") + "/"
+        items += (
+            f'<li><a class="related__link" href="{href}"><span class="related__icon" aria-hidden="true">{_icon(icon)}</span>'
+            f'<span class="related__meta">{name} {number}</span><span class="related__title">{title}</span></a></li>'
+        )
+    return f'<section class="related" aria-label="関連する問題"><p class="related__head">関連する問題</p><ul class="related__list">{items}</ul></section>'
+
+
 def on_post_page(output, page, config):
+    related = _related_html(page, config)
+    if related:
+        at = output.find('<nav class="page-nav"')
+        if at < 0:
+            at = output.rfind("</article>")
+        if at >= 0:
+            output = output[:at] + related + output[at:]
     # パンくずは本文の中へ移して左端をそろえる。タイトルがあればその（下線の）下，なければ本文の先頭
     nav = BREADCRUMB.search(output)
     article = output.find(ARTICLE_START, nav.end()) if nav else -1
