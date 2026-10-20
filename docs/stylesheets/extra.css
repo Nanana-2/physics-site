@@ -1555,24 +1555,23 @@ html { scroll-behavior: smooth; }
 .side-chapters__index,
 .md-typeset a.book-btn,
 .md-typeset a.home-owner__link,
-.md-typeset a.owner__link,
-.md-typeset a.page-nav__side--next {
+.md-typeset a.owner__link {
   background-image: linear-gradient(var(--site-star), var(--site-star)) !important;
   background-repeat: no-repeat !important;
   background-size: 0 100% !important;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
 }
-:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link, .md-typeset a.page-nav__side--next):is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
-:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link, .md-typeset a.page-nav__side--next):is(:hover, :focus-visible, :active),
-:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link, .md-typeset a.page-nav__side--next):is(:hover, :focus-visible, :active) * {
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active),
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active) * {
   color: #171d3b !important;
 }
-.side-chapters__index:is(:hover, :focus-visible, :active) .side-heading__icon svg { fill: #171d3b; }
 
-/* 次の問題だけ紺の面にして，前の問題と差をつける */
-.md-typeset a.page-nav__side--next { background-color: var(--site-navy); color: #fff; }
-.md-typeset a.page-nav__side--next :is(.page-nav__dir, .page-nav__title) { color: #fff; }
-.md-typeset a.page-nav__side--next .page-nav__stars .on { color: var(--site-star); }
-.md-typeset a.page-nav__side--next .page-nav__stars .off { color: rgba(255, 255, 255, .35); }
-.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .off { color: rgba(23, 29, 59, .3) !important; }
-[data-md-color-scheme="slate"] .md-typeset a.page-nav__side--next { background-color: #3a4785; }
+/* 前後の問題：矢印の向きに塗る（前は右から，次は左から）。次の問題だけ塗りを紺にして差をつける */
+.md-typeset .page-nav__side:not(.page-nav__side--next) { background-position: right center; }
+.md-typeset .page-nav__side--next { background-image: linear-gradient(var(--site-navy), var(--site-navy)) !important; }
+[data-md-color-scheme="slate"] .md-typeset .page-nav__side--next { background-image: linear-gradient(#3a4785, #3a4785) !important; }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active),
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) :is(.page-nav__dir, .page-nav__title) { color: #fff !important; }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .on { color: var(--site-star); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .off { color: rgba(255, 255, 255, .35); }
