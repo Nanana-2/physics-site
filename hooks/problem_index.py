@@ -15,6 +15,7 @@ SUBJECT_DIRS = (
     "04quantum_mechanics",
     "05statistical_mechanics",
     "06solid_state",
+    "14calculus",
     "07linear_algebra",
     "08differential_equations",
     "09vector_analysis",

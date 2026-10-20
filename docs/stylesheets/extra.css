@@ -565,6 +565,7 @@ body, input {
 .md-typeset .finder__subject--04quantum_mechanics::before { --site-icon: url("../assets/icons/atom.svg"); }
 .md-typeset .finder__subject--05statistical_mechanics::before { --site-icon: url("../assets/icons/dice.svg"); }
 .md-typeset .finder__subject--06solid_state::before { --site-icon: url("../assets/icons/cube.svg"); }
+.md-typeset .finder__subject--14calculus::before { --site-icon: url("../assets/icons/chart-area.svg"); }
 .md-typeset .finder__subject--07linear_algebra::before { --site-icon: url("../assets/icons/table-cells.svg"); }
 .md-typeset .finder__subject--08differential_equations::before { --site-icon: url("../assets/icons/chart-line.svg"); }
 .md-typeset .finder__subject--09vector_analysis::before { --site-icon: url("../assets/icons/location-arrow.svg"); }

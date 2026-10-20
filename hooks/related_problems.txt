@@ -23,7 +23,7 @@
 08differential_equations/06_050 12special_functions/03_030 12special_functions/03_010 12special_functions/03_020   # ベッセル関数と円形膜
 12special_functions/03_040 04quantum_mechanics/08_020 04quantum_mechanics/08_010   # 球対称な問題と動径方程式
 01mechanics/10_020 12special_functions/04_010 12special_functions/05_070 12special_functions/04_020   # オイラー・ラグランジュ方程式
-01mechanics/10_040 12special_functions/04_050 12special_functions/04_040 13probability_statistics/05_050 05statistical_mechanics/01_060   # ラグランジュの未定乗数
+01mechanics/10_040 12special_functions/04_050 12special_functions/04_040 13probability_statistics/05_050 05statistical_mechanics/01_060 14calculus/05_050   # ラグランジュの未定乗数
 01mechanics/06_010 01mechanics/06_020 01mechanics/06_030 07linear_algebra/06_010 01mechanics/10_060   # 連成振動と固有値問題
 01mechanics/09_010 07linear_algebra/06_020   # 慣性テンソル
 04quantum_mechanics/07_010 07linear_algebra/05_050 07linear_algebra/06_030 04quantum_mechanics/07_050 05statistical_mechanics/12_020   # 二準位系とパウリ行列
@@ -42,7 +42,7 @@
 05statistical_mechanics/15_050 13probability_statistics/05_050 05statistical_mechanics/15_020   # 情報エントロピー
 05statistical_mechanics/01_010 13probability_statistics/01_030 05statistical_mechanics/03_060   # 平均・分散と揺らぎ
 12special_functions/01_010 12special_functions/01_020 11complex_analysis/06_090 12special_functions/01_030   # ガンマ関数
-11complex_analysis/06_050 10integral_transforms/03_010 12special_functions/01_020 05statistical_mechanics/05_010   # ガウス積分
+11complex_analysis/06_050 10integral_transforms/03_010 12special_functions/01_020 05statistical_mechanics/05_010 14calculus/06_020   # ガウス積分
 12special_functions/01_050 05statistical_mechanics/02_040 05statistical_mechanics/06_070 06solid_state/06_020   # 状態数と状態密度
 01mechanics/05_060 10integral_transforms/04_010 08differential_equations/02_060 10integral_transforms/06_020 01mechanics/05_070   # 強制振動と共鳴
 01mechanics/05_040 08differential_equations/02_010 10integral_transforms/05_050 02electromagnetism/06_070   # 減衰振動と2階線形微分方程式
@@ -58,7 +58,7 @@
 08differential_equations/05_040 10integral_transforms/06_010 08differential_equations/06_040   # 有限長の熱伝導
 04quantum_mechanics/04_070 06solid_state/07_030 06solid_state/07_010   # 周期ポテンシャル
 01mechanics/01_030 09vector_analysis/01_040 09vector_analysis/03_010   # 極座標と円筒座標
-09vector_analysis/03_020 09vector_analysis/03_030 04quantum_mechanics/08_010   # 曲線座標のラプラシアン
+09vector_analysis/03_020 09vector_analysis/03_030 04quantum_mechanics/08_010 14calculus/05_020   # 曲線座標のラプラシアン
 01mechanics/08_050 09vector_analysis/01_020 09vector_analysis/02_030   # 回転座標系と回転
 01mechanics/03_020 09vector_analysis/02_060 09vector_analysis/04_020   # 保存力とポテンシャル
 09vector_analysis/07_040 11complex_analysis/06_080   # 渦と2次元の流れ
@@ -70,7 +70,7 @@
 01mechanics/02_030 08differential_equations/01_030   # 速度比例抵抗と1階線形方程式
 01mechanics/02_040 08differential_equations/01_010 01mechanics/04_070   # 変数分離形の運動方程式
 02electromagnetism/04_060 06solid_state/06_050 04quantum_mechanics/09_030   # 磁場中の荷電粒子
-04quantum_mechanics/09_040 06solid_state/10_070 06solid_state/10_075   # ランダウ準位
+04quantum_mechanics/09_040 06solid_state/10_070 06solid_state/10_075 06solid_state/12_060   # ランダウ準位
 06solid_state/11_020 02electromagnetism/07_070   # 侵入長と表皮効果
 06solid_state/06_060 06solid_state/09_030 06solid_state/09_050   # プラズマ振動数
 05statistical_mechanics/08_070 06solid_state/05_020   # アインシュタイン模型
@@ -92,3 +92,12 @@
 04quantum_mechanics/05_100 05statistical_mechanics/14_040   # スクイーズド状態
 04quantum_mechanics/12_040 10integral_transforms/03_010 08differential_equations/06_030   # 自由粒子の伝播核と熱核
 11complex_analysis/05_030 11complex_analysis/06_050 11complex_analysis/04_040 10integral_transforms/04_040   # フレネル積分と経路の回転
+01mechanics/09_010 14calculus/06_040 14calculus/06_050   # 慣性モーメントの積分
+06solid_state/12_010 06solid_state/12_020 04quantum_mechanics/09_050 04quantum_mechanics/07_020   # ベリー位相
+06solid_state/12_030 06solid_state/12_040 06solid_state/07_040   # SSH模型
+06solid_state/12_050 06solid_state/12_060 06solid_state/12_020   # チャーン数
+06solid_state/12_070 04quantum_mechanics/15_060 04quantum_mechanics/07_020   # ディラック型の表面状態
+14calculus/03_050 14calculus/03_060 14calculus/01_060 11complex_analysis/03_010   # テイラー展開
+14calculus/06_060 02electromagnetism/01_040   # 球殻がつくる場
+14calculus/05_030 03thermodynamics/05_060 03thermodynamics/02_070   # 偏微分の循環関係
+14calculus/01_050 14calculus/01_060 14calculus/01_040   # 級数の収束

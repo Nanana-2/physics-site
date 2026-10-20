@@ -8,6 +8,7 @@ nav:
   - 06solid_state
   - 物理数学:
     - physmath.md
+    - 14calculus
     - 07linear_algebra
     - 08differential_equations
     - 09vector_analysis

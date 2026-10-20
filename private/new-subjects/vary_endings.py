@@ -22,8 +22,13 @@ def vary(text, is_tex):
         count += 1
     return '\n'.join(lines), n
 
+import sys
+# 2回当てると次の「となります」がまた変わるので，必ず対象のファイルを指定して1回だけ当てる
+args = sys.argv[1:]
+if not args:
+    sys.exit('usage: python3 vary_endings.py file...  (同じファイルに2回当てないこと)')
 tot = 0
-for f in glob.glob('docs/*/*/*.md') + glob.glob('private/pdf-books/source/*-full*/problems/*.tex'):
+for f in args:
     t = open(f).read(); u, n = vary(t, f.endswith('.tex'))
     if n: open(f, 'w').write(u); tot += n
 print('changed', tot)

@@ -21,6 +21,7 @@ hide:
     <button type="button" class="finder__subject finder__subject--04quantum_mechanics" data-subject="04quantum_mechanics">量子力学</button>
     <button type="button" class="finder__subject finder__subject--05statistical_mechanics" data-subject="05statistical_mechanics">統計力学</button>
     <button type="button" class="finder__subject finder__subject--06solid_state" data-subject="06solid_state">物性物理学</button>
+    <button type="button" class="finder__subject finder__subject--14calculus" data-subject="14calculus">数列・極限・微積分</button>
     <button type="button" class="finder__subject finder__subject--07linear_algebra" data-subject="07linear_algebra">線形代数</button>
     <button type="button" class="finder__subject finder__subject--08differential_equations" data-subject="08differential_equations">微分方程式</button>
     <button type="button" class="finder__subject finder__subject--09vector_analysis" data-subject="09vector_analysis">ベクトル解析</button>

@@ -21,8 +21,8 @@ lines+=['</div>','']
 (DOCS/'physmath.md').write_text('\n'.join(lines),encoding='utf-8')
 # finder buttons
 tags=(DOCS/'tags.md').read_text(encoding='utf-8')
-tags=re.sub(r'    <button type="button" class="finder__subject finder__subject--1[0-3][a-z_]+".*\n|    <button type="button" class="finder__subject finder__subject--0[7-9][a-z_]+".*\n','',tags)
-anchor='data-subject="06solid_state">固体物性</button>\n'
+tags=re.sub(r'    <button type="button" class="finder__subject finder__subject--1[0-9][a-z_]+".*\n|    <button type="button" class="finder__subject finder__subject--0[7-9][a-z_]+".*\n','',tags)
+anchor=re.search(r'data-subject="06solid_state">[^<]*</button>\n',tags).group(0)
 tags=tags.replace(anchor,anchor+''.join(f'    <button type="button" class="finder__subject finder__subject--{m[0]}" data-subject="{m[0]}">{m[1]}</button>\n' for m in live))
 (DOCS/'tags.md').write_text(tags,encoding='utf-8')
 print('live:',[m[1] for m in live])

@@ -11,6 +11,14 @@ hide:
 
 <div class="grid cards" markdown>
 
+-   :fontawesome-solid-chart-area: __数列・極限・微積分__（34問）
+
+    ---
+
+    数列の極限・級数から1変数・多変数の微積分まで
+
+    [数列・極限・微積分の問題一覧へ](14calculus/index.md)
+
 -   :fontawesome-solid-table-cells: __線形代数__（39問）
 
     ---
