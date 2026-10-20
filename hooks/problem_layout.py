@@ -300,7 +300,7 @@ BOOK_ICONS = {
     "熱力学": "temperature-half",
     "量子力学": "atom",
     "統計力学": "dice",
-    "固体物性": "cube",
+    "物性物理学": "cube",
     "線形代数": "table-cells",
     "微分方程式": "chart-line",
     "ベクトル解析": "location-arrow",
@@ -339,7 +339,7 @@ HOME_SUBJECTS = (
     ("03thermodynamics", "熱力学", "temperature-half", "熱力学の諸法則から熱力学関数，相転移まで"),
     ("04quantum_mechanics", "量子力学", "atom", "束縛・散乱問題から電磁場の量子化まで"),
     ("05statistical_mechanics", "統計力学", "dice", "古典・量子統計から非平衡，開放量子系まで"),
-    ("06solid_state", "固体物性", "cube", "結晶構造・格子振動からバンド，磁性・超伝導まで"),
+    ("06solid_state", "物性物理学", "cube", "結晶構造・格子振動からバンド，磁性・超伝導まで"),
 )
 MATH_SUBJECTS = (
     ("07linear_algebra", "線形代数", "table-cells", "行列の計算から固有値問題・内積空間・物理への応用まで"),

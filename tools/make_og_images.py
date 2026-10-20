@@ -24,7 +24,7 @@ SUBJECTS = {
     "03thermodynamics": "熱力学",
     "04quantum_mechanics": "量子力学",
     "05statistical_mechanics": "統計力学",
-    "06solid_state": "固体物性",
+    "06solid_state": "物性物理学",
     "07linear_algebra": "線形代数",
     "08differential_equations": "微分方程式",
     "09vector_analysis": "ベクトル解析",

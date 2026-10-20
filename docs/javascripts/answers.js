@@ -47,3 +47,36 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup);
   else setup();
 })();
+
+// 補足（details.rigor-note）：開け閉めを，解答と同じくなめらかに伸び縮みさせる
+(() => {
+  const EASE = "cubic-bezier(.25, .8, .25, 1)";
+  const setup = () => {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll("details.rigor-note").forEach((note) => {
+      const summary = note.querySelector("summary");
+      const body = note.querySelector(".rigor-note__body");
+      if (!summary || !body || reduce) return;
+      let anim = null;
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (anim) anim.cancel();
+        const opening = !note.open;
+        if (opening) note.open = true;
+        const full = body.scrollHeight;
+        const from = opening ? 0 : full, to = opening ? full : 0;
+        body.style.overflow = "hidden";
+        anim = body.animate(
+          [{ height: from + "px", opacity: opening ? 0 : 1 }, { height: to + "px", opacity: opening ? 1 : 0 }],
+          { duration: 450, easing: EASE }
+        );
+        anim.onfinish = () => {
+          if (!opening) note.open = false;
+          body.style.overflow = ""; anim = null;
+        };
+      });
+    });
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup);
+  else setup();
+})();
