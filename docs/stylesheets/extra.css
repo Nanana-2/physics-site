@@ -1462,14 +1462,14 @@ html { scroll-behavior: smooth; }
   z-index: 3;
   padding: .3rem 0 .4rem;
   border-radius: 0 0 .3rem .3rem;
-  background: rgba(23, 29, 59, .62);
-  -webkit-backdrop-filter: blur(3px) saturate(130%);
-  backdrop-filter: blur(3px) saturate(130%);
+  background: rgba(15, 19, 42, .74);
+  -webkit-backdrop-filter: blur(4px) saturate(120%);
+  backdrop-filter: blur(4px) saturate(120%);
   box-shadow: 0 .6rem 1.4rem rgba(0, 0, 0, .22);
   transform: translateY(-.35rem); opacity: 0;
   transition: transform .18s ease, opacity .18s ease;
 }
-[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(16, 20, 42, .6); }
+[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(12, 15, 34, .72); }
 .md-tabs__menu.is-open { transform: none; opacity: 1; }
 .md-tabs__menu-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
 .md-tabs__menu-link {
@@ -1477,29 +1477,50 @@ html { scroll-behavior: smooth; }
   padding: .42rem 1.1rem .42rem .75rem;
   color: var(--md-primary-bg-color); font-size: .7rem; white-space: nowrap; opacity: .82;
 }
-.md-tabs__menu-link:hover, .md-tabs__menu-link:focus-visible { opacity: 1; background: rgba(255, 255, 255, .07); }
+/* 触れると，サイドバーと同じように左から薄い色が塗られる */
+.md-tabs__menu-link {
+  background-image: linear-gradient(rgba(255, 255, 255, .12), rgba(255, 255, 255, .12));
+  background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), opacity .3s;
+}
+.md-tabs__menu-link:is(:hover, :focus-visible, :active) { opacity: 1; background-size: 100% 100%; }
 .md-tabs__menu-item--active .md-tabs__menu-link { opacity: 1; font-weight: 500; box-shadow: inset 2px 0 0 var(--md-accent-fg-color); }
 .md-tabs__menu-link .md-tabs__icon { width: .85em; height: .85em; }
 .md-tabs__menu-link .md-tabs__icon svg { width: 100%; height: 100%; fill: currentColor; }
 @media (prefers-reduced-motion: reduce) { .md-tabs__menu, .md-tabs__caret { transition: none; } }
 
-/* 関連（解説の下，前後の問題の上）：運営者情報と同じく，紺の吹き出しの見出しと，グレーにストライプの面 */
-.md-typeset .related { margin: 2.6em 0 0; }
-.md-typeset .related__heading {
-  position: relative; display: inline-flex; align-items: center; gap: .5em;
-  margin: 0 0 .9rem; padding: .4rem 1rem; border-radius: .2rem;
-  background: var(--site-navy); color: #fff; font-size: .78rem; font-weight: 500; letter-spacing: .04em;
-}
-.md-typeset .related__heading::after {
-  content: ""; position: absolute; left: 1.1rem; bottom: -.5rem;
-  border: .5rem solid transparent; border-bottom: 0; border-top-color: var(--site-navy);
-}
-[data-md-color-scheme="slate"] .md-typeset .related__heading { background: #3a4785; }
-[data-md-color-scheme="slate"] .md-typeset .related__heading::after { border-top-color: #3a4785; }
-.md-typeset .related__heading-icon { display: inline-flex; width: .8em; height: .8em; }
-.md-typeset .related__heading-icon svg { width: 100%; height: 100%; fill: currentColor; }
-.md-typeset ul.related__list { margin: 0; padding: .7rem 1.2rem; list-style: none; background-color: #fafafb; background-image: var(--site-stripe); }
-[data-md-color-scheme="slate"] .md-typeset ul.related__list { background-color: rgba(255, 255, 255, .035); }
+/* 関連：前後の問題の真上に，同じ線と同じ形で1段足す（左に「関連」，右に問題の一覧） */
+.md-typeset .related { display: grid; grid-template-columns: 5rem 1fr; margin: 3em 0 0; border-top: 1px solid #e3e6ee; }
+.md-typeset .related__label { display: flex; align-items: center; justify-content: center; margin: .7rem 0; border-right: 1px solid #e3e6ee; color: var(--site-navy); font-size: .7rem; font-weight: 500; letter-spacing: .1em; }
+.md-typeset ul.related__list { margin: 0; padding: .45rem 0; list-style: none; }
 .md-typeset ul.related__list > li { margin: 0; list-style: none; }
-.md-typeset a.related__link { display: block; padding: .3rem 0; border-bottom: none; color: var(--md-typeset-color); font-size: .76rem; }
-.md-typeset a.related__link:is(:hover, :focus-visible) { color: var(--md-accent-fg-color); border-bottom: none; }
+.md-typeset a.related__link {
+  display: block; padding: .32rem .9rem; border-bottom: none; color: var(--md-typeset-color); font-size: .78rem;
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset a.related__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text); border-bottom: none; }
+.md-typeset .related + .page-nav { margin-top: 0; }
+[data-md-color-scheme="slate"] .md-typeset .related, [data-md-color-scheme="slate"] .md-typeset .related__label { border-color: rgba(255, 255, 255, .1); }
+[data-md-color-scheme="slate"] .md-typeset .related__label { color: #c5d0ff; }
+@media screen and (max-width: 44.9375em) { .md-typeset .related { grid-template-columns: 3.6rem 1fr; } }
+
+/* 解説の末尾：補足（物理の標準的な扱いに対する厳密な条件など）。普段は1行で，押すと開く */
+.md-typeset details.rigor-note { margin: 2em 0 0; padding: 0; border: none; border-top: 1px solid #e3e6ee; border-radius: 0; background: none; box-shadow: none; font-size: inherit; overflow: visible; }
+.md-typeset details.rigor-note > summary {
+  display: flex; align-items: center; gap: .55rem; margin: 0; padding: .6rem 0; border: none; border-radius: 0; background: none;
+  color: var(--md-default-fg-color--light); font-size: .72rem; font-weight: 400; cursor: pointer; list-style: none;
+}
+.md-typeset details.rigor-note > summary::-webkit-details-marker { display: none; }
+.md-typeset details.rigor-note > summary::before {
+  content: ""; position: static; flex: none; width: .4rem; height: .4rem; margin: 0; background: none;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; -webkit-mask: none; mask: none;
+  transform: rotate(-45deg); transition: transform .2s;
+}
+.md-typeset details.rigor-note > summary::after { display: none; }
+.md-typeset details.rigor-note[open] > summary::before { transform: rotate(45deg); }
+.md-typeset details.rigor-note > summary:hover { color: var(--md-typeset-color); }
+.md-typeset .rigor-note__body { padding: 0 0 .5rem 1rem; color: var(--md-default-fg-color--light); font-size: .74rem; }
+.md-typeset .rigor-note__body > p { margin: 0; }
+[data-md-color-scheme="slate"] .md-typeset details.rigor-note { border-top-color: rgba(255, 255, 255, .1); }
+@media (prefers-reduced-motion: reduce) { .md-typeset details.rigor-note > summary::before { transition: none; } }

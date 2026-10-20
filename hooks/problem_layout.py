@@ -126,11 +126,13 @@ def _fold_answers(rest: str) -> str:
     if not heading:
         return rest
     before, after = rest[: heading.end()], rest[heading.end() :]
-    # 末尾の「数学的な補足」は折りたたまずに，最後の解答の外へ出す
+    # 末尾の補足は，最後の解答の外へ出して，押すと開く1行（details）にする
     note = ""
-    m = re.search(r'<aside class="rigor-note">.*?</aside>\s*$', after, re.DOTALL)
+    m = re.search(r'<aside class="rigor-note">(.*?)</aside>\s*$', after, re.DOTALL)
     if m:
-        after, note = after[: m.start()], m.group(0)
+        after = after[: m.start()]
+        note = ('<details class="rigor-note"><summary>補足</summary>'
+                f'<div class="rigor-note__body">{m.group(1).strip()}</div></details>')
     parts = re.split(r'(<h3 id="[^"]+" class="solution-part">.*?</h3>)', after)
     if len(parts) == 1:
         return before + ANSWER_TOGGLE + f'<div class="answer"><div class="answer__inner">{after}</div></div>' + note
@@ -144,7 +146,7 @@ def _copy_source(page) -> str:
     """「Markdown でコピー」用に，問題と解答の Markdown をページに埋め込む（図は「（図）」に置き換える）。"""
     title = page.title or ""
     text = re.sub(r"<figure.*?</figure>", "（図は省略）", page.markdown or "", flags=re.DOTALL)
-    text = re.sub(r'<aside class="rigor-note" markdown>\s*(.*?)\s*</aside>', r"数学的な補足：\1", text, flags=re.DOTALL)
+    text = re.sub(r'<aside class="rigor-note" markdown>\s*(.*?)\s*</aside>', r"補足：\1", text, flags=re.DOTALL)
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
     text = f"# {title}\n\n{text}" if not text.startswith("# ") else text
     text = text.replace("</", "<\\/")
@@ -223,7 +225,7 @@ def _related_html(page, config) -> str:
         items += f'<li><a class="related__link" href="{href}">{names.get(subject, subject)} {number}　{title}</a></li>'
     return (
         '<section class="related" aria-label="関連">'
-        f'<p class="related__heading"><span class="related__heading-icon">{_icon("magnifying-glass")}</span>関連</p>'
+        '<span class="related__label">関連</span>'
         f'<ul class="related__list">{items}</ul></section>'
     )
 
