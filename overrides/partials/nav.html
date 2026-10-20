@@ -11,7 +11,15 @@
   '物性物理学': 'fontawesome/solid/cube',
   '物理数学': 'fontawesome/solid/square-root-variable',
   '参考文献一覧': 'fontawesome/solid/book-open',
-  '問題を探す': 'fontawesome/solid/list-ul'
+  '問題を探す': 'fontawesome/solid/list-ul',
+  '数列・極限・微積分': 'fontawesome/solid/chart-area',
+  '線形代数': 'fontawesome/solid/table-cells',
+  '微分方程式': 'fontawesome/solid/chart-line',
+  'ベクトル解析': 'fontawesome/solid/location-arrow',
+  '積分変換': 'fontawesome/solid/wave-square',
+  '複素関数': 'fontawesome/solid/infinity',
+  '特殊関数・変分法': 'fontawesome/solid/bezier-curve',
+  '確率・統計': 'fontawesome/solid/chart-column'
 } %}
 <nav class="md-nav md-nav--primary" aria-label="メニュー" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
@@ -25,7 +33,29 @@
     <p class="drawer__heading side-heading"><span class="side-heading__icon">{% include ".icons/fontawesome/solid/compass.svg" %}</span>分野・ページ</p>
     <ul class="drawer__links">
       {% for item in nav %}
-        {% if not item.is_homepage %}
+        {% if item.title == '物理数学' and item.children %}
+          {#- 物理数学はその場で開いて分野を選ぶ（一覧ページへは飛ばさない） -#}
+          <li>
+            <details class="drawer__group"{% if item.active %} open{% endif %}>
+              <summary class="drawer__link drawer__toggle{% if item.active %} is-current{% endif %}">
+                <span class="side-heading__icon">{% include ".icons/" ~ menu_icons[item.title] ~ ".svg" %}</span>
+                {{ item.title }}
+                <span class="drawer__caret" aria-hidden="true">{% include ".icons/fontawesome/solid/chevron-down.svg" %}</span>
+              </summary>
+              <ul class="drawer__sublinks">
+                {% for sub in item.children if sub.children %}
+                  {% set subtarget = sub.children | first %}
+                  <li>
+                    <a class="drawer__link drawer__sublink{% if sub.active %} is-current{% endif %}" href="{{ subtarget.url | url }}">
+                      {% if sub.title in menu_icons %}<span class="side-heading__icon">{% include ".icons/" ~ menu_icons[sub.title] ~ ".svg" %}</span>{% endif %}
+                      {{ sub.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </details>
+          </li>
+        {% elif not item.is_homepage %}
           {% set target = item.children | first if item.children else item %}
           <li>
             <a class="drawer__link{% if item.active %} is-current{% endif %}" href="{{ target.url | url }}">
