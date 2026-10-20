@@ -710,7 +710,7 @@ body, input {
 }
 .md-typeset .page-links__label { flex: 1; }
 .md-typeset .page-links__arrow { color: var(--md-default-fg-color--light); }
-[data-md-color-scheme="slate"] .md-typeset a.page-links__button { background: rgba(255, 255, 255, .035); }
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button { background-color: rgba(255, 255, 255, .035); }
 
 /* 一覧（ドット）・本のアイコン */
 .md-typeset .page-nav__list::before,
@@ -1154,7 +1154,7 @@ body, input {
 /* ==========================================
    トップページ（ヒーローは overrides/main.html，本文は hooks/problem_layout.py の _home）
    ========================================== */
-.home-hero { position: relative; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #0d1126; background-position: center; background-size: cover; color: #fff; }
+.home-hero { position: relative; z-index: 4; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #0d1126; background-position: center; background-size: cover; color: #fff; }
 .home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(13, 17, 38, .68), rgba(13, 17, 38, .8)); }
 .home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
 .home-hero__logo { width: 4.2rem; height: 4.2rem; }
