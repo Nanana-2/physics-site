@@ -303,7 +303,7 @@ BOOK_ICONS = {
     "量子力学": "atom",
     "統計力学": "dice",
     "物性物理学": "cube",
-    "数列・極限・微積分": "chart-area",
+    "微積分": "chart-area",
     "線形代数": "table-cells",
     "微分方程式": "chart-line",
     "ベクトル解析": "location-arrow",
@@ -345,7 +345,7 @@ HOME_SUBJECTS = (
     ("06solid_state", "物性物理学", "cube", "結晶構造・格子振動からバンド，磁性・超伝導・トポロジーまで"),
 )
 MATH_SUBJECTS = (
-    ("14calculus", "数列・極限・微積分", "chart-area", "数列の極限・級数から1変数・多変数の微積分まで"),
+    ("14calculus", "微積分", "chart-area", "数列の極限・級数から1変数・多変数の微積分まで"),
     ("07linear_algebra", "線形代数", "table-cells", "行列の計算から固有値問題・内積空間・物理への応用まで"),
     ("08differential_equations", "微分方程式", "chart-line", "1階・2階の常微分方程式から偏微分方程式，安定性まで"),
     ("09vector_analysis", "ベクトル解析", "location-arrow", "勾配・発散・回転から積分定理，曲線座標まで"),
@@ -424,7 +424,7 @@ def _home(html: str, page, config) -> str:
         buttons += f'<a class="home-owner__link" href="{href}" target="_blank" rel="noopener"><span class="home-owner__icon">{svg}</span>{name}</a>'
     owner_card = (
         '<div class="home-owner"><img class="home-owner__avatar" src="assets/favicon.svg" alt="" width="64" height="64">'
-        f'<div class="home-owner__body"><p class="home-owner__name">ななな２<span>なななつ</span></p>'
+        f'<div class="home-owner__body"><p class="home-owner__name">ななな２</p>'
         f'<p class="home-owner__bio">{bio.group(1) if bio else ""}</p><p class="home-owner__links">{buttons}</p></div></div>'
     )
 
@@ -436,9 +436,9 @@ def _home(html: str, page, config) -> str:
         + legend
         + _home_heading("難易度から選ぶ", "star")
         + f'<div class="home-levels">{levels}</div>'
-        + (_home_heading("更新履歴", "clock-rotate-left") + f'<div class="home-news">{news}</div>' if news else "")
         + _home_heading("このサイトは何者？", "circle-question")
         + sections.get("このサイトは何者？", "")
         + _home_heading("重要な約束と推奨される使い方", "triangle-exclamation")
         + f'<div class="home-promise">{sections.get("重要な約束と推奨される使い方", "")}</div>'
+        + (_home_heading("更新履歴", "clock-rotate-left") + f'<div class="home-news">{news}</div>' if news else "")
     )

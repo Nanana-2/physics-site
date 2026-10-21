@@ -49,6 +49,12 @@
 <path clip-rule="nonzero" d="M 1.183594 51 L 14 51 L 14 68 L 1.183594 68 Z M 1.183594 51 "/>
 </clipPath>
 </defs>
+<path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M -31.180763 22.678105 L 31.182683 22.678105 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
+<path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M -31.180763 22.678105 L -7.03029 22.678105 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
+<path fill-rule="nonzero" fill="#d9dce4" fill-opacity="1" stroke-width="1.24722" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M 2.965924 0.000585042 C 2.59959 0.0951229 1.000325 0.622959 -0.000199916 1.198064 L -0.000199916 -1.196894 C 1.000325 -0.621789 2.59959 -0.0939528 2.965924 0.000585042 Z M 2.965924 0.000585042 " transform="matrix(0.991667, 0, 0, -0.991667, 54.820511, 45.914643)"/>
+<g fill="#d9dce4" fill-opacity="1">
+<use xlink:href="#glyph-0-0" x="45.391833" y="42.325325"/>
+</g>
 <path fill-rule="nonzero" fill="#2a2f45" fill-opacity="1" d="M 61.792969 68.402344 L 230.457031 68.402344 L 230.457031 43.105469 L 61.792969 43.105469 Z M 61.792969 68.402344 "/>
 <path fill-rule="nonzero" fill="#1c1c1c" fill-opacity="1" d="M 61.792969 43.105469 L 230.457031 43.105469 L 258.566406 23.425781 L 89.902344 23.425781 Z M 61.792969 43.105469 "/>
 <path fill-rule="nonzero" fill="#2c2c2c" fill-opacity="1" d="M 230.457031 68.402344 L 258.566406 48.726562 L 258.566406 23.425781 L 230.457031 43.105469 Z M 230.457031 68.402344 "/>
@@ -57,11 +63,6 @@
 <path fill="none" stroke-width="0.59776" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M 170.082368 0.000846639 L 198.427956 19.841971 L 198.427956 45.355363 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
 <path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-dasharray="1.59404 1.29515" stroke-miterlimit="10" d="M 0.000960084 0.000846639 L 28.346548 19.841971 L 198.427956 19.841971 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
 <path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-dasharray="1.59404 1.29515" stroke-miterlimit="10" d="M 28.346548 19.841971 L 28.346548 45.355363 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
-<path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M -25.512433 22.678105 L 5.724437 22.678105 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
-<path fill-rule="nonzero" fill="#d9dce4" fill-opacity="1" stroke-width="1.24722" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M 2.964681 0.000585042 C 2.602286 0.0951229 0.999082 0.622959 -0.00144303 1.198064 L -0.00144303 -1.196894 C 0.999082 -0.621789 2.602286 -0.0939528 2.964681 0.000585042 Z M 2.964681 0.000585042 " transform="matrix(0.991667, 0, 0, -0.991667, 67.470181, 45.914643)"/>
-<g fill="#d9dce4" fill-opacity="1">
-<use xlink:href="#glyph-0-0" x="45.111192" y="41.831475"/>
-</g>
 <path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="#d9dce4" stroke-opacity="1" stroke-miterlimit="10" d="M 187.087357 22.678105 L 215.492032 22.678105 " transform="matrix(0.991667, 0, 0, -0.991667, 61.792017, 68.403183)"/>
 <path fill-rule="nonzero" fill="#d9dce4" fill-opacity="1" d="M 278.429688 45.914062 C 278.070312 45.820312 276.480469 45.296875 275.488281 44.726562 L 275.488281 47.101562 C 276.480469 46.53125 278.070312 46.007812 278.429688 45.914062 Z M 278.429688 45.914062 "/>
 <g clip-path="url(#clip-0)">

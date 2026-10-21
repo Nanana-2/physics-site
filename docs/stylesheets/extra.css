@@ -1575,3 +1575,60 @@ html { scroll-behavior: smooth; }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) :is(.page-nav__dir, .page-nav__title) { color: #fff !important; }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .on { color: var(--site-star); }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .off { color: rgba(255, 255, 255, .35); }
+
+/* 前後の問題がない側（分野の最初と最後）は押せないので，塗りも反応もしない */
+.md-typeset .page-nav__side--empty { background-image: none !important; cursor: default; }
+
+/* 次の問題：右から紺の円が広がって反転し，→ が右へ抜けて「次の問題」の左から入り直す */
+.md-typeset a.page-nav__side--next { position: relative; isolation: isolate; overflow: hidden; background-image: none !important; }
+.md-typeset a.page-nav__side--next::before {
+  content: ""; position: absolute; right: 1.2rem; top: 50%; z-index: -1;
+  width: 1rem; height: 1rem; margin: -.5rem -.5rem 0 0; border-radius: 50%;
+  background: var(--site-navy); opacity: 0;
+  transition: transform .8s cubic-bezier(.23, 1, .32, 1), opacity .25s;
+}
+[data-md-color-scheme="slate"] .md-typeset a.page-nav__side--next::before { background: #3a4785; }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active)::before { transform: scale(48); opacity: 1; }
+.md-typeset .page-nav__side--next .page-nav__dir { position: relative; display: inline-flex; align-items: center; gap: .3em; }
+.md-typeset .page-nav__arrow { display: inline-block; transition: transform .6s cubic-bezier(.23, 1, .32, 1), opacity .3s; }
+.md-typeset .page-nav__arrow--in { position: absolute; right: calc(100% + .3em); opacity: 0; transform: translateX(-1.6rem); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__arrow--out { opacity: 0; transform: translateX(1.6rem); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__arrow--in { opacity: 1; transform: none; transition-delay: .08s; }
+.md-typeset a.page-nav__side--next .page-nav__title { transition: transform .6s cubic-bezier(.23, 1, .32, 1); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__title { transform: translateX(-.25rem); }
+
+/* Markdown でコピー：ふだんはアイコンだけ。乗せると，ゆっくり動き出して加速しながら名前まで開く */
+.md-typeset .page-tools__copy { gap: 0; padding: .2rem .45rem; }
+.md-typeset .page-tools__copy [data-copy-label] {
+  display: inline-block; max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0;
+  transition: max-width .42s cubic-bezier(.6, 0, .9, .45), opacity .25s .1s, margin .42s cubic-bezier(.6, 0, .9, .45);
+}
+.md-typeset .page-tools__copy:is(:hover, :focus-visible) [data-copy-label],
+.md-typeset .page-tools__copy.is-copied [data-copy-label] { max-width: 9rem; margin-left: .4em; opacity: 1; }
+@media (hover: none) { .md-typeset .page-tools__copy [data-copy-label] { max-width: 9rem; margin-left: .4em; opacity: 1; } }
+
+/* メニューボタン：右上の角から黄色に塗られ，開くと三本線が×に変わる */
+.site-burger { position: relative; width: 2.2rem; height: 2.2rem; overflow: hidden; isolation: isolate; }
+.site-burger::before {
+  content: ""; position: absolute; top: 0; right: 0; z-index: -1;
+  border-style: solid; border-color: transparent var(--site-star) transparent transparent;
+  border-width: 0 .55rem .55rem 0; transition: border-width .25s ease-in-out;
+}
+.site-burger:hover::before, .site-burger:focus-visible::before { border-width: 0 4.6rem 4.6rem 0; }
+.site-burger__line {
+  position: absolute; left: 50%; top: 50%; width: 1.05rem; height: 2px; margin-left: -.525rem; border-radius: 1px;
+  background: currentColor; transition: transform .3s ease-in-out, opacity .2s, background-color .2s;
+}
+.site-burger__line:nth-child(1) { transform: translateY(-6px); }
+.site-burger__line:nth-child(3) { transform: translateY(6px); }
+.site-burger:hover .site-burger__line, .site-burger:focus-visible .site-burger__line { background: #171d3b; }
+.site-burger:hover .site-burger__line:nth-child(2) { transform: scaleX(.6); }
+#__drawer:checked ~ .md-header .site-burger__line:nth-child(1) { transform: rotate(45deg); }
+#__drawer:checked ~ .md-header .site-burger__line:nth-child(2) { opacity: 0; }
+#__drawer:checked ~ .md-header .site-burger__line:nth-child(3) { transform: rotate(-45deg); }
+
+/* 本文のリンク：サイトの紺に寄せる。開いたことのあるリンクは少しくすませる */
+[data-md-color-scheme="default"] { --md-typeset-a-color: #2b3566; }
+[data-md-color-scheme="slate"] { --md-typeset-a-color: #c5d0ff; }
+.md-typeset a:not([class]):visited { color: #6a6f93; border-bottom-color: #6a6f93; }
+[data-md-color-scheme="slate"] .md-typeset a:not([class]):visited { color: #98a1c8; border-bottom-color: #98a1c8; }

@@ -12,9 +12,8 @@
     <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
       {% include "partials/logo.html" %}
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      {% set icon = config.theme.icon.menu or "material/menu" %}
-      {% include ".icons/" ~ icon ~ ".svg" %}
+    <label class="md-header__button md-icon site-burger" for="__drawer" aria-label="メニュー">
+      <span class="site-burger__line"></span><span class="site-burger__line"></span><span class="site-burger__line"></span>
     </label>
     <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" class="md-header__title header-home-link" title="{{ config.site_name }}（トップページへ）" data-md-component="header-title">
       <div class="md-header__ellipsis">

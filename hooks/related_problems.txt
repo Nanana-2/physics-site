@@ -98,6 +98,7 @@
 06solid_state/12_050 06solid_state/12_060 06solid_state/12_020   # チャーン数
 06solid_state/12_070 04quantum_mechanics/15_060 04quantum_mechanics/07_020   # ディラック型の表面状態
 14calculus/03_050 14calculus/03_060 14calculus/01_060 11complex_analysis/03_010   # テイラー展開
-14calculus/06_060 02electromagnetism/01_040   # 球殻がつくる場
+14calculus/06_060 02electromagnetism/01_040 01mechanics/07_030   # 球殻がつくる場
 14calculus/05_030 03thermodynamics/05_060 03thermodynamics/02_070   # 偏微分の循環関係
 14calculus/01_050 14calculus/01_060 14calculus/01_040   # 級数の収束
+06solid_state/05_010 05statistical_mechanics/03_040 05statistical_mechanics/08_070   # 調和振動子の平均エネルギーと固体の比熱

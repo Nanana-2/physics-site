@@ -220,7 +220,7 @@
       '04quantum_mechanics': ('量子力学', '04quantum_mechanics/'),
       '05statistical_mechanics': ('統計力学', '05statistical_mechanics/'),
       '06solid_state': ('物性物理学', '06solid_state/'),
-      '14calculus': ('数列・極限・微積分', '14calculus/'),
+      '14calculus': ('微積分', '14calculus/'),
       '07linear_algebra': ('線形代数', '07linear_algebra/'),
       '08differential_equations': ('微分方程式', '08differential_equations/'),
       '09vector_analysis': ('ベクトル解析', '09vector_analysis/'),
@@ -241,14 +241,18 @@
           {% set level = namespace(n=0) %}
           {% for tag in target.meta.tags or [] %}{% if tag in levels %}{% set level.n = levels[tag] %}{% endif %}{% endfor %}
           <a class="page-nav__side {{ cls }}" href="{{ target.url | url }}">
-            <span class="page-nav__dir">{{ label }}</span>
+            {% if 'next' in cls %}
+              <span class="page-nav__dir"><span class="page-nav__arrow page-nav__arrow--in" aria-hidden="true">→</span>次の問題<span class="page-nav__arrow page-nav__arrow--out" aria-hidden="true">→</span></span>
+            {% else %}
+              <span class="page-nav__dir">{{ label }}</span>
+            {% endif %}
             <span class="page-nav__title">{{ target.title }}</span>
             {% if level.n %}
               <span class="page-nav__stars" aria-label="難易度 {{ level.n }}/3"><span class="on">{{ '★' * level.n }}</span><span class="off">{{ '☆' * (3 - level.n) }}</span></span>
             {% endif %}
           </a>
         {% else %}
-          <span class="page-nav__side {{ cls }}"></span>
+          <span class="page-nav__side page-nav__side--empty {{ cls }}"></span>
         {% endif %}
       {% endmacro %}
       <nav class="page-nav" aria-label="前後の問題">
@@ -300,8 +304,8 @@
       <div class="owner__card">
         <img class="owner__avatar" src="{{ 'assets/owner.png' | url }}" alt="" width="64" height="64" loading="lazy">
         <div class="owner__body">
-          <p class="owner__name">ななな２<span>なななつ</span></p>
-          <p class="owner__text">ななな２（なななつとか呼ばれます）です。物性物理が好きな院生（M1）です。最近は2次元物質や学習理論，情報統計力学に興味があります。</p>
+          <p class="owner__name">ななな２</p>
+          <p class="owner__text">なななつとか呼ばれます。物性物理が好きな院生です。超伝導や情報統計力学に興味があります。</p>
           <p class="owner__links">
             <a class="owner__link" href="https://twitter.com/nanana_UTM1" target="_blank" rel="noopener"><span class="owner__icon">{% include ".icons/fontawesome/brands/x-twitter.svg" %}</span>X</a>
             <a class="owner__link" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="owner__icon">{% include ".icons/simple/note.svg" %}</span>note</a>

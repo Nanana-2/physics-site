@@ -1,6 +1,6 @@
 """文中の ∫・Σ・lim の扱いをそろえる。
 - 長い ∫/Σ を含む文中の数式は別行の数式に出す。
-- 残った文中の Σ・Π・lim には \\displaystyle を付ける。∫ はそのまま。
+- 残った文中の Σ・Π・lim・∫ には \\displaystyle を付ける（文中の分数は \\dfrac なので，∫ だけ小さいと不釣り合いになる）。
 - PDF原稿がある分野（力学・電磁気・熱・量子・統計）は，対応する原稿の $X$ も同じように直す（別行は \\[X\\]）。
 使い方: python3 display_bigops.py [-n] file...   (-n は変更の表示のみ)"""
 import re, sys
@@ -11,7 +11,7 @@ SUBJ = {"01mechanics": "mechanics", "02electromagnetism": "electromagnetism", "0
         "04quantum_mechanics": "quantum-mechanics", "05statistical_mechanics": "statistical-mechanics"}
 INL = re.compile(r'(?<![$\\])\$([^$\n]+)\$(?!\$)')
 BIG = re.compile(r'\\(int|oint|sum)(?![a-zA-Z])')
-DSOP = re.compile(r'\\(sum|prod|lim)(?![a-zA-Z])')
+DSOP = re.compile(r'\\(sum|prod|lim|int|iint|iiint|oint)(?![a-zA-Z])')
 
 
 def visible_len(b):
