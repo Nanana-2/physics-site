@@ -21,7 +21,7 @@ PDF 原稿（`private/pdf-books/`），図の TikZ ソース（`output/pdf/figur
 ## 作業のしかた
 
 - 作業はブランチで行い，PR にします。`main` に直接プッシュしたり，デプロイ（`mkdocs gh-deploy`）したりしないでください。
-- `main` にマージすると，GitHub Actions（`.github/workflows/deploy.yml`）が自動でビルドして公開します。PR の段階で `python3 -m mkdocs build` が通ることを必ず確かめてください。
+- `main` にマージすると，GitHub Actions（`.github/workflows/deploy.yml`）が自動でビルドして公開します。PR の段階で `python3 -m mkdocs build` が通ることを必ず確かめてください。PR を作ると，GitHub Actions（`.github/workflows/check.yml`）もビルドを確かめます。この確認が失敗している PR はマージしないでください。
 - 1つの PR は1つのまとまり（例：物性の5章の考え方）にします。
 - 確認：`pip install mkdocs==1.6.1 mkdocs-material==9.7.6 mkdocs-awesome-pages-plugin==2.10.1 pymdown-extensions==10.21.3` のあと `python3 -m mkdocs build` が警告なく通ること。
 - 数式の表示確認は `tools/checks/render_check.py`（Chrome とローカルサーバーが必要）。使えない環境では，`$` の対応と波括弧の対応を目で確かめます。

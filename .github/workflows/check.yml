@@ -1,0 +1,31 @@
+# PR ごとにサイトをビルドして，エラーと警告がないことを確かめる。
+# 公開はしない。公開は main に入ったあとで deploy.yml が行う。
+name: Check build
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install MkDocs
+        run: pip install mkdocs==1.6.1 mkdocs-material==9.7.6 mkdocs-awesome-pages-plugin==2.10.1 pymdown-extensions==10.21.3
+      - name: Build
+        # tags_file の非推奨の警告は既知のものなので除く。
+        run: |
+          set -o pipefail
+          python -m mkdocs build 2>&1 | tee build.log
+          if grep -E "WARNING|ERROR" build.log | grep -v "tags_file"; then
+            echo "ビルドで警告またはエラーが出ました。"
+            exit 1
+          fi
