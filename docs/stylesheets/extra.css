@@ -1647,3 +1647,10 @@ html { scroll-behavior: smooth; }
 
 /* 前の問題の塗りも，次の問題に合わせてゆっくりにする */
 .md-typeset a.page-nav__side:not(.page-nav__side--next) { transition: background-size .8s cubic-bezier(.25, .8, .25, 1), color .4s; }
+
+/* 作成中の章の注意書き：枠なしで，答えと同じ色の下地 */
+.md-typeset .wip-note {
+  padding: .7em 1em;
+  border-radius: .2rem;
+  background: var(--site-answer-bg);
+}
