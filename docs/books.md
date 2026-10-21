@@ -279,7 +279,9 @@ hero_image: assets/images/tag.jpg
 <div class="grid cards book-grid book-grid--text-only" markdown>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/41SrN-NvK-L._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>大学演習 熱学・統計力学〔修訂版〕</h3>
     <p class="book-meta">久保亮五 編</p>
@@ -294,7 +296,9 @@ hero_image: assets/images/tag.jpg
 </div>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/41ep3rzIyQL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>統計力学（新装版）</h3>
     <p class="book-meta">長岡洋介 著｜岩波基礎物理シリーズ</p>
@@ -307,7 +311,9 @@ hero_image: assets/images/tag.jpg
 </div>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/319yYPpdBhL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>現代統計力学</h3>
     <p class="book-meta">永長直人 著</p>
@@ -320,7 +326,9 @@ hero_image: assets/images/tag.jpg
 </div>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/41ujI4iQLfL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>量子測定と量子制御［増訂第3版］</h3>
     <p class="book-meta">沙川貴大・上田正仁 著｜SGC Books</p>
@@ -335,7 +343,9 @@ hero_image: assets/images/tag.jpg
 </div>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/41IU7w8W4lL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>統計力学 第2版</h3>
     <p class="book-meta">阿部龍蔵 著</p>
@@ -349,7 +359,9 @@ hero_image: assets/images/tag.jpg
 </div>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/41QnLDjRvPL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>相転移・臨界現象とくりこみ群</h3>
     <p class="book-meta">高橋和孝・西森秀稔 著</p>
@@ -369,7 +381,9 @@ hero_image: assets/images/tag.jpg
 <div class="grid cards book-grid book-grid--text-only" markdown>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/51+Sa-IxjaL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>理論物理への道標〈上〉／新・物理入門〈増補改訂版〉</h3>
     <p class="book-meta">杉山忠男 著／山本義隆 著</p>
@@ -390,7 +404,9 @@ hero_image: assets/images/tag.jpg
 </div>
 
 <div class="book-card">
-  <div class="book-cover"></div>
+  <div class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/51TsY9HcoPL._SL500_.jpg" alt="教科書カバー">
+  </div>
   <div class="book-info">
     <h3>詳解と演習 大学院入試問題〈物理学〉</h3>
     <p class="book-meta">小林奈央樹・森山修 著／香取眞理 監修</p>

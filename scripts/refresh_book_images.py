@@ -35,6 +35,8 @@ def main() -> int:
         m = re.search(r"amazon\.co\.jp/dp/([0-9A-Z]{10})", cards[k])
         if m and urls.get(m.group(1)):
             new = re.sub(r'<img src="https://m\.media-amazon\.com/images/I/[^"]+"', f'<img src="{urls[m.group(1)]}"', cards[k], count=1)
+            # 画像の入れ物が空のカードには，画像を入れる
+            new = new.replace('<div class="book-cover"></div>', f'<div class="book-cover">\n    <img src="{urls[m.group(1)]}" alt="教科書カバー">\n  </div>', 1)
             changed += new != cards[k]
             cards[k] = new
     BOOKS.write_text('<div class="book-card">'.join(cards), encoding="utf-8")
