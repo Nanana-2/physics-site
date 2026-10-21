@@ -13,7 +13,7 @@
         await navigator.clipboard.writeText(text);
         label.textContent = "コピーしました";
       } catch (e) {
-        label.textContent = "コピーできませんでした";
+        label.textContent = "失敗しました";
       }
       // 結果を読めるように，2秒間は開いたままにする
       button.classList.add("is-copied");

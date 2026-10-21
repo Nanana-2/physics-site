@@ -1605,12 +1605,16 @@ html { scroll-behavior: smooth; }
 /* Markdown でコピー：ふだんはアイコンだけ。乗せると，ゆっくり動き出して加速しながら名前まで開く。
    スマホやタブレットもアイコンだけにし，押すと「コピーしました」が2秒間開く */
 .md-typeset .page-tools__copy { gap: 0; padding: .2rem .45rem; }
+/* 開いたときの幅は「Markdownでコピー」に合わせて固定し，「コピーしました」に変わっても幅が動かないようにする */
 .md-typeset .page-tools__copy [data-copy-label] {
-  display: inline-block; max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0;
-  transition: max-width .42s cubic-bezier(.6, 0, .9, .45), opacity .25s .1s, margin .42s cubic-bezier(.6, 0, .9, .45);
+  display: inline-block; width: 0; overflow: hidden; white-space: nowrap; text-align: center; opacity: 0;
+  transition: width .42s cubic-bezier(.6, 0, .9, .45), opacity .25s .1s, margin .42s cubic-bezier(.6, 0, .9, .45);
 }
-.md-typeset .page-tools__copy:is(:hover, :focus-visible) [data-copy-label],
-.md-typeset .page-tools__copy.is-copied [data-copy-label] { max-width: 9rem; margin-left: .4em; opacity: 1; }
+.md-typeset .page-tools__copy.is-copied [data-copy-label] { width: 7.4em; margin-left: .4em; opacity: 1; }
+/* 乗せて開くのはマウスのときだけ。タッチでは押したあとに開いたままにならないようにする */
+@media (hover: hover) {
+  .md-typeset .page-tools__copy:is(:hover, :focus-visible) [data-copy-label] { width: 7.4em; margin-left: .4em; opacity: 1; }
+}
 
 /* メニューボタン：右上の角から黄色に塗られ，開くと三本線が×に変わる */
 .site-burger { position: relative; width: 2.2rem; height: 2.2rem; overflow: hidden; isolation: isolate; }
