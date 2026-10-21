@@ -11,7 +11,7 @@ hide:
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-chart-area: __微積分__（34問）
+-   :site-integral: __微積分__（34問）
 
     ---
 

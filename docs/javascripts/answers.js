@@ -48,14 +48,14 @@
   else setup();
 })();
 
-// 補足（details.rigor-note）：開け閉めを，解答と同じくなめらかに伸び縮みさせる
+// 補足（details.rigor-note）とスマホメニューの物理数学（details.drawer__group）：開け閉めを，解答と同じくなめらかに伸び縮みさせる
 (() => {
   const EASE = "cubic-bezier(.25, .8, .25, 1)";
   const setup = () => {
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    document.querySelectorAll("details.rigor-note").forEach((note) => {
+    document.querySelectorAll("details.rigor-note, details.drawer__group").forEach((note) => {
       const summary = note.querySelector("summary");
-      const body = note.querySelector(".rigor-note__body");
+      const body = note.querySelector(".rigor-note__body, .drawer__sublinks");
       if (!summary || !body || reduce) return;
       let anim = null;
       summary.addEventListener("click", (e) => {

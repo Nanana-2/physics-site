@@ -16,7 +16,8 @@ lines=['---','title: 物理数学の問題一覧','hero_image: assets/images/ind
        '物理を学ぶときに使う数学の演習問題です。分野を選んでください。','','<div class="grid cards" markdown>','']
 for slug,name,icon,_,desc in live:
     n=len(list((DOCS/slug).glob('*/*.md')))
-    lines+=[f'-   :fontawesome-solid-{icon}: __{name}__（{n}問）','','    ---','',f'    {desc}','',f'    [{name}の問題一覧へ]({slug}/index.md)','']
+    code=icon.replace('/','-') if icon.startswith('site/') else f'fontawesome-solid-{icon}'
+    lines+=[f'-   :{code}: __{name}__（{n}問）','','    ---','',f'    {desc}','',f'    [{name}の問題一覧へ]({slug}/index.md)','']
 lines+=['</div>','']
 (DOCS/'physmath.md').write_text('\n'.join(lines),encoding='utf-8')
 # finder buttons
