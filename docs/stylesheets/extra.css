@@ -1654,3 +1654,4 @@ html { scroll-behavior: smooth; }
   border-radius: .2rem;
   background: var(--site-answer-bg);
 }
+.md-typeset .toc-chapter .wip-note { margin: .6em 0 .4em; font-size: .7rem; }

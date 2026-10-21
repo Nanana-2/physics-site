@@ -114,9 +114,13 @@ def on_page_content(html, page, config, files):
     rest = re.sub(r'<h3 id="([^"]+)">', r'<h3 id="\1" class="solution-part">', rest)
     rest = _fold_answers(rest)
     head = re.sub(r"<h1 ", '<h1 class="problem-title" ', html[: heading.start()], count=1)
-    return head + _copy_source(page) + box + rest
+    # 作成中の注意書きは「Markdownでコピー」のボタンの下に置く
+    notes = "".join(WIP_NOTE.findall(head))
+    head = WIP_NOTE.sub("", head)
+    return head + _copy_source(page) + notes + box + rest
 
 
+WIP_NOTE = re.compile(r'<p class="wip-note">.*?</p>', re.DOTALL)
 ANSWER_TOGGLE = '<button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button>'
 
 
@@ -256,7 +260,7 @@ def on_post_page(output, page, config):
 # ---- 分野別の問題一覧：章ごとのカードを目次（番号・タイトル・★）に組み替える ----
 
 CHAPTER_CARD = re.compile(
-    r"<li>\s*<p><strong>(\d+)\.\s*(.*?)</strong></p>\s*<hr\s*/?>\s*<ul>(.*?)</ul>\s*</li>", re.DOTALL
+    r"<li>\s*<p><strong>(\d+)\.\s*(.*?)</strong></p>\s*<hr\s*/?>\s*(?:<p>(.*?)</p>\s*)?<ul>(.*?)</ul>\s*</li>", re.DOTALL
 )
 CARD_GRID = re.compile(r'<div class="grid cards">.*?</div>', re.DOTALL)
 
@@ -276,7 +280,7 @@ def _subject_index(html, page, config):
     if not grid:
         return html
     sections = []
-    for number, title, items in CHAPTER_CARD.findall(grid.group(0)):
+    for number, title, note, items in CHAPTER_CARD.findall(grid.group(0)):
         links = re.findall(r'<a href="([^"]+)">(.*?)</a>', items)
         rows = "".join(
             f'<a class="toc-row" href="{href}"><span class="toc-row__num">{number}-{i}</span>'
@@ -286,7 +290,8 @@ def _subject_index(html, page, config):
         sections.append(
             f'<section class="toc-chapter"><h2 class="toc-chapter__head"><span class="toc-chapter__no">{number}</span>'
             f'<span class="toc-chapter__title">{title}</span></h2>'
-            f"{rows}</section>"
+            + (f'<p class="wip-note">{note}</p>' if note else "")
+            + f"{rows}</section>"
         )
     if not sections:
         return html
