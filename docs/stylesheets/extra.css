@@ -472,7 +472,7 @@ body, input {
 @media screen and (max-width: 30em) { .md-typeset .book-card { grid-template-columns: 4rem 1fr; gap: .8rem; } }
 .md-typeset .book-info h3 { margin: 0 0 .15rem; font-size: .9rem; font-weight: 500; }
 .md-typeset .book-info .book-meta { margin: 0 0 .6rem; font-size: .66rem; color: var(--md-default-fg-color--light); }
-.md-typeset .book-info p { margin: 0 0 .5rem; font-size: .76rem; }
+.md-typeset .book-info p { margin: 0 0 .5rem; font-size: .76rem; text-align: justify; text-justify: inter-character; }
 /* Amazon へのリンク：紺のボタン。マウスを乗せると横から少し明るくなる */
 .md-typeset a.book-btn {
   display: inline-flex;
