@@ -1637,3 +1637,10 @@ html { scroll-behavior: smooth; }
 [data-md-color-scheme="slate"] { --md-typeset-a-color: #c5d0ff; }
 .md-typeset a:not([class]):visited { color: #6a6f93; border-bottom-color: #6a6f93; }
 [data-md-color-scheme="slate"] .md-typeset a:not([class]):visited { color: #98a1c8; border-bottom-color: #98a1c8; }
+
+/* Amazonでみる：文頭に買い物かごのアイコン（Amazon のロゴは商標なので使わない） */
+.md-typeset a.book-btn::before {
+  content: ""; flex: none; width: .95em; height: .95em; background-color: currentColor;
+  -webkit-mask: url("../assets/icons/cart-shopping.svg") center / contain no-repeat;
+  mask: url("../assets/icons/cart-shopping.svg") center / contain no-repeat;
+}
