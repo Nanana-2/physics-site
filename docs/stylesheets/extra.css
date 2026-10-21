@@ -464,7 +464,12 @@ body, input {
 .md-typeset .book-grid { display: block; margin: .6em 0 0; }
 .md-typeset .book-card { padding: 1.1rem .2rem 1.2rem; border-bottom: 1px solid #e9ebf0; }
 [data-md-color-scheme="slate"] .md-typeset .book-card { border-color: rgba(255, 255, 255, .08); }
-.md-typeset .book-cover { display: none; }
+.md-typeset .book-card { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1.1rem; align-items: start; }
+.md-typeset .book-info { min-width: 0; }
+/* 表紙：Creators API が返す公式の画像（scripts/refresh_book_images.py） */
+.md-typeset .book-cover { margin-top: .2rem; }
+.md-typeset .book-cover img { display: block; width: 100%; height: auto; box-shadow: 0 .15rem .5rem rgba(0, 0, 0, .18); }
+@media screen and (max-width: 30em) { .md-typeset .book-card { grid-template-columns: 4rem 1fr; gap: .8rem; } }
 .md-typeset .book-info h3 { margin: 0 0 .15rem; font-size: .9rem; font-weight: 500; }
 .md-typeset .book-info .book-meta { margin: 0 0 .6rem; font-size: .66rem; color: var(--md-default-fg-color--light); }
 .md-typeset .book-info p { margin: 0 0 .5rem; font-size: .76rem; }

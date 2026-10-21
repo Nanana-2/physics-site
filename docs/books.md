@@ -18,7 +18,6 @@ hero_image: assets/images/tag.jpg
 
 
 
-（現状画像取得ができていないので無骨な感じになっています。すみません……）
 
 
 ## 力学 
@@ -31,7 +30,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/41rPcgGht1L._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>力学</h3>
@@ -47,7 +46,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51X1-X17-DL._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/417ocNqYnTL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>演習しよう 力学</h3>
@@ -71,7 +70,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51X1-X17-DL._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/416baCG1RhL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>理論電磁気学 第3版</h3>
@@ -86,7 +85,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/41VT+AU0FpL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>電磁気学演習</h3>
@@ -100,7 +99,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/51T+Goev-9L._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>演習しよう電磁気学</h3>
@@ -115,7 +114,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/31l8YLulW4L._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>光物理学</h3>
@@ -146,7 +145,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51X1-X17-DL._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/518GVWEivwL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>熱力学キャンパス・ゼミ 改訂7</h3>
@@ -160,7 +159,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/41SrN-NvK-L._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>大学演習 熱学・統計力学〔修訂版〕</h3>
@@ -182,7 +181,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51X1-X17-DL._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/414QQMGsFML._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>現代の量子力学（上）第3版</h3>
@@ -200,7 +199,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/51oV4YjoMNL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>演習しよう量子力学</h3>
@@ -215,7 +214,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/31fp6NYOfBL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>量子力学I</h3>
@@ -230,7 +229,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/415Op3-cqML._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>微分幾何学とトポロジー</h3>
@@ -245,7 +244,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/41XxL7JT1KL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>量子力学1</h3>
@@ -260,7 +259,7 @@ hero_image: assets/images/tag.jpg
 
 <div class="book-card">
   <div class="book-cover">
-    <img src="https://m.media-amazon.com/images/I/51A8J1R8H2L._SL500_.jpg" alt="教科書カバー">
+    <img src="https://m.media-amazon.com/images/I/51SI9Ta4OBL._SL500_.jpg" alt="教科書カバー">
   </div>
   <div class="book-info">
     <h3>量子力学1</h3>
