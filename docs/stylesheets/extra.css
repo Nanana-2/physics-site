@@ -1602,7 +1602,8 @@ html { scroll-behavior: smooth; }
 .md-typeset a.page-nav__side--next .page-nav__title { transition: transform 1s cubic-bezier(.23, 1, .32, 1); }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__title { transform: translateX(-.25rem); }
 
-/* Markdown でコピー：ふだんはアイコンだけ。乗せると，ゆっくり動き出して加速しながら名前まで開く */
+/* Markdown でコピー：ふだんはアイコンだけ。乗せると，ゆっくり動き出して加速しながら名前まで開く。
+   スマホやタブレットもアイコンだけにし，押すと「コピーしました」が2秒間開く */
 .md-typeset .page-tools__copy { gap: 0; padding: .2rem .45rem; }
 .md-typeset .page-tools__copy [data-copy-label] {
   display: inline-block; max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0;
@@ -1610,7 +1611,6 @@ html { scroll-behavior: smooth; }
 }
 .md-typeset .page-tools__copy:is(:hover, :focus-visible) [data-copy-label],
 .md-typeset .page-tools__copy.is-copied [data-copy-label] { max-width: 9rem; margin-left: .4em; opacity: 1; }
-@media (hover: none) { .md-typeset .page-tools__copy [data-copy-label] { max-width: 9rem; margin-left: .4em; opacity: 1; } }
 
 /* メニューボタン：右上の角から黄色に塗られ，開くと三本線が×に変わる */
 .site-burger { position: relative; width: 2.2rem; height: 2.2rem; overflow: hidden; isolation: isolate; }
