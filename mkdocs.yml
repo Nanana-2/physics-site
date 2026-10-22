@@ -54,7 +54,6 @@ markdown_extensions:
 
 
 extra_javascript:
-<<<<<<< HEAD
   - javascripts/mathjax.js?v=20261022b
   - javascripts/problem-filter.js?v=20261022b
   - javascripts/share.js?v=20261022b
@@ -62,15 +61,6 @@ extra_javascript:
   - javascripts/site-search.js?v=20261022b
   - javascripts/answers.js?v=20261022b
   - javascripts/copy-markdown.js?v=20261022b
-=======
-  - javascripts/mathjax.js?v=20261022b
-  - javascripts/problem-filter.js?v=20261022b
-  - javascripts/share.js?v=20261022b
-  - javascripts/tabs.js?v=20261022b
-  - javascripts/site-search.js?v=20261022b
-  - javascripts/answers.js?v=20261022b
-  - javascripts/copy-markdown.js?v=20261022b
->>>>>>> 22af981ee (Home: links to the reference list and note, as navy buttons that fill yellow on press)
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -90,8 +80,4 @@ plugins:
 
 
 extra_css:
-<<<<<<< HEAD
   - stylesheets/extra.css?v=20261022b
-=======
-  - stylesheets/extra.css?v=20261022b
->>>>>>> 22af981ee (Home: links to the reference list and note, as navy buttons that fill yellow on press)
