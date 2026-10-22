@@ -1659,3 +1659,21 @@ html { scroll-behavior: smooth; }
   background: var(--site-answer-bg);
 }
 .md-typeset .toc-chapter .wip-note { margin: .6em 0 .4em; font-size: .7rem; }
+/* トップの「参考文献一覧」「note」：問題ページ下のボタンと同じ形で，紺の面に白い文字。押すと黄色に塗られ，文字が濃い紺になる */
+.md-typeset .page-links__button--note::before { --site-icon: url("../assets/icons/note.svg"); }
+.md-typeset .home-links { margin: .8em 0 1.2em; }
+.md-typeset a.page-links__button.home-link {
+  background-color: var(--site-navy) !important;
+  color: #fff !important;
+  background-image: linear-gradient(var(--site-star), var(--site-star)) !important;
+  background-repeat: no-repeat !important;
+  background-size: 0 100% !important;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button.home-link { background-color: #3a4785 !important; }
+.md-typeset a.page-links__button.home-link::before,
+.md-typeset a.page-links__button.home-link .page-links__arrow { color: #fff !important; }
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active),
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active)::before,
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) * { color: #171d3b !important; }

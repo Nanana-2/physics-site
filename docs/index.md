@@ -25,6 +25,24 @@ hide:
 
 **ただし原則として自分自身が学部の時に知っていたこと以上の話題は入れない**ようにしています。ですので一学生が学部の間に学ぶことのサンプルケースとして見ていただければ幸いです。
 
+また，より直接的に役立つ情報として実際に自分が読んで参考になった教科書を紹介してますのでこちらも是非ごらんください！
+
+<div class="page-links home-links">
+  <a class="page-links__button page-links__button--books home-link" href="books/">
+    <span class="page-links__label">参考文献一覧</span>
+    <span class="page-links__arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+
+またWebサイトとは別にnoteもやっています。こちらではWeb作成の裏側の話や日々のぼやきを投稿しています。是非見てみてください（宣伝）
+
+<div class="page-links home-links">
+  <a class="page-links__button page-links__button--note home-link" href="https://note.com/john_doenote" target="_blank" rel="noopener">
+    <span class="page-links__label">note</span>
+    <span class="page-links__arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+
 
 ## 重要な約束と推奨される使い方
 
