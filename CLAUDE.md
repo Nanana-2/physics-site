@@ -16,7 +16,8 @@ MkDocs Material で作っている問題集サイト（https://nanana-2.github.i
 PDF 原稿（`private/pdf-books/`），図の TikZ ソース（`output/pdf/figures-work/`），Amazon のキー（`.env`）は Git の管理外です。非公開リポジトリ `Nanana-2/physics-site-private` に控えがありますが，クラウドの作業では扱いません。
 
 - 物理5分野（力学・電磁気・熱・量子・統計）の本文を直すと，PDF 原稿と食い違います。直した箇所を PR の説明に一覧で書いてください。原稿への反映は運営者の Mac で行います。
-- 図の追加や修正はしないでください。図が必要なら PR の説明に書いてください。
+- 図の追加や修正はしないでください。図が必要なら，`figure-requests.md` に依頼を書き，PR の説明にもそのことを書いてください。
+- Mac で作業するときは，まず `figure-requests.md` を確かめてください。図の作り方と，作る図の一覧があります。
 
 ## 作業のしかた
 
