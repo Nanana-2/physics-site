@@ -3,6 +3,7 @@
 from copy import deepcopy
 from datetime import date
 from pathlib import Path
+import subprocess
 from typing import Optional
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
@@ -26,6 +27,39 @@ SUBJECT_SITEMAPS = {
     "12special_functions": "sitemap-special-functions.xml",
     "13probability_statistics": "sitemap-probability-statistics.xml",
 }
+
+
+# Markdown ファイルごとの最終コミット日（docs_dir からの相対パス → YYYY-MM-DD）。
+# MkDocs は lastmod に全ページともビルド日を入れるので，git の日付で置き換える。
+_GIT_DATES: dict[str, str] = {}
+
+
+def on_config(config, **kwargs):
+    _GIT_DATES.clear()
+    try:
+        output = subprocess.run(
+            ["git", "log", "--format=%x00%cs", "--name-only", "--relative", "--", "."],
+            cwd=config["docs_dir"],
+            capture_output=True,
+            text=True,
+            check=True,
+        ).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return config
+    # 新しいコミットから順に出るので，最初に見えた日付がそのファイルの最終更新日になる。
+    for block in output.split("\0")[1:]:
+        day, *paths = block.strip().splitlines() or [""]
+        for path in paths:
+            if path:
+                _GIT_DATES.setdefault(path, day)
+    return config
+
+
+def on_page_markdown(markdown, page, **kwargs):
+    day = _GIT_DATES.get(page.file.src_uri)
+    if day:
+        page.update_date = day
+    return markdown
 
 
 def _subject_slug(url: str, site_path: str) -> Optional[str]:
