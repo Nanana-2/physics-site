@@ -17,3 +17,6 @@
 /latex/
 /output/pdf/
 /tmp/pdfs/
+
+# Python のキャッシュ
+__pycache__/
