@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nanana-2.github.io/physics-site/sitemap.xml
+Sitemap: https://nanana-2.github.io/physics-site/sitemap-index.xml

@@ -1,0 +1,3004 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="統計力学の「伏見関数の定義」に関する演習問題です。位相空間表示の問題文と解答・解説を掲載しています。">
+      
+      
+      
+        <link rel="canonical" href="https://nanana-2.github.io/physics-site/05statistical_mechanics/13/13_040/">
+      
+      
+        <link rel="prev" href="../13_030/">
+      
+      
+        <link rel="next" href="../13_050/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>伏見関数の定義 - 大学物理の問題集</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css?v=20261031c">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-FDK0HJQRC9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-FDK0HJQRC9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-FDK0HJQRC9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono&display=swap">
+  <link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+  <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+    
+    
+      
+    
+    <meta property="og:image" content="https://nanana-2.github.io/physics-site/assets/og/05statistical_mechanics/13/13_040.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="https://nanana-2.github.io/physics-site/assets/og/05statistical_mechanics/13/13_040.png" />
+  
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="伏見関数の定義" />
+    <meta property="og:description" content="統計力学の「伏見関数の定義」に関する演習問題です。位相空間表示の問題文と解答・解説を掲載しています。" />
+    <meta property="og:url" content="https://nanana-2.github.io/physics-site/05statistical_mechanics/13/13_040/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="伏見関数の定義" />
+    <meta name="twitter:description" content="統計力学の「伏見関数の定義」に関する演習問題です。位相空間表示の問題文と解答・解説を掲載しています。" />
+  
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="大学物理の問題集" class="md-header__button md-logo" aria-label="大学物理の問題集" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon site-burger" for="__drawer" aria-label="メニュー">
+      <span class="site-burger__line"></span><span class="site-burger__line"></span><span class="site-burger__line"></span>
+    </label>
+    <a href="../../.." class="md-header__title header-home-link" title="大学物理の問題集（トップページへ）" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            大学物理の問題集
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              伏見関数の定義
+            
+          </span>
+        </div>
+      </div>
+    </a>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ダークモードに切り替え"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替え" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ライトモードに切り替え"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替え" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    <a class="md-header__button md-icon site-search__mobile" href="../../../tags/" aria-label="問題を探す">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </a>
+    <form class="site-search" action="../../../tags/" method="get" role="search" data-site-search data-index-url="../../../problem-index.json">
+      <span class="site-search__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg></span>
+      <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索" autocomplete="off" aria-label="問題を検索" aria-autocomplete="list" aria-controls="site-search-results">
+      <div class="site-search__results" id="site-search-results" role="listbox" hidden></div>
+    </form>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../01mechanics/" class="md-tabs__link">
+          
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 112c-8.8 0-16-7.2-16-16V80c0-44.2 35.8-80 80-80h16c8.8 0 16 7.2 16 16v16c0 44.2-35.8 80-80 80zM0 288c0-76.3 35.7-160 112-160 27.3 0 59.7 10.3 82.7 19.3 18.8 7.3 39.9 7.3 58.7 0 22.9-8.9 55.4-19.3 82.7-19.3 76.3 0 112 83.7 112 160 0 128-80 224-160 224-16.5 0-38.1-6.6-51.5-11.3-8.1-2.8-16.9-2.8-25 0-13.4 4.7-35 11.3-51.5 11.3-80 0-160-96-160-224z"/></svg></span>
+  
+  力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../02electromagnetism/" class="md-tabs__link">
+          
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 176v112c0 123.7 100.3 224 224 224s224-100.3 224-224V176H320v112c0 53-43 96-96 96s-96-43-96-96V176zm0-48h128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64zm320 0h128V64c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32z"/></svg></span>
+  
+  電磁気学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../03thermodynamics/" class="md-tabs__link">
+          
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160 0c-53 0-96 43-96 96v164.7C34.5 287 16 325.4 16 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-42.6-18.5-81-48-107.3V96c0-53-43-96-96-96m64 368c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-26.9 16.5-49.9 40-59.3V216c0-13.3 10.7-24 24-24s24 10.7 24 24v92.7c23.5 9.5 40 32.5 40 59.3"/></svg></span>
+  
+  熱力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../04quantum_mechanics/" class="md-tabs__link">
+          
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 398.8c-11.8 5.1-23.4 9.7-34.9 13.5 16.7 33.8 31 35.7 34.9 35.7s18.1-1.9 34.9-35.7c-11.4-3.9-23.1-8.4-34.9-13.5M414 256c33 45.2 44.3 90.9 23.6 128-20.2 36.3-62.5 49.3-115.2 43.2-22 52.1-55.7 84.8-98.4 84.8s-76.4-32.7-98.4-84.8c-52.7 6.1-95-6.9-115.2-43.2C-10.3 346.9 1 301.2 34 256c-33-45.2-44.3-90.9-23.6-128 20.2-36.3 62.5-49.3 115.2-43.2C147.6 32.7 181.2 0 224 0s76.4 32.7 98.4 84.8c52.7-6.1 95 6.8 115.2 43.2 20.7 37.1 9.4 82.8-23.6 128m-65.8 67.4c-1.7 14.2-3.9 28-6.7 41.2 31.8 1.4 38.6-8.7 40.2-11.7 2.3-4.2 7-17.9-11.9-48.1q-10.2 9.45-21.6 18.6m-6.7-175.9c2.8 13.1 5 26.9 6.7 41.2q11.4 9.15 21.6 18.6c18.9-30.2 14.2-44 11.9-48.1-1.6-2.9-8.4-13-40.2-11.7m-82.6-47.8C242.1 65.9 227.9 64 224 64s-18.1 1.9-34.9 35.7c11.4 3.9 23.1 8.4 34.9 13.5 11.8-5.1 23.4-9.7 34.9-13.5m-159 88.9c1.7-14.3 3.9-28 6.7-41.2-31.8-1.4-38.6 8.7-40.2 11.7-2.3 4.2-7 17.9 11.9 48.1q10.2-9.45 21.6-18.6M78.2 304.8c-18.9 30.2-14.2 44-11.9 48.1 1.6 2.9 8.4 13 40.2 11.7-2.8-13.1-5-26.9-6.7-41.2q-11.4-9.15-21.6-18.6M304 256a80 80 0 1 0-160 0 80 80 0 1 0 160 0m-80-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg></span>
+  
+  量子力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7c-10.3 38.4 12.5 77.9 50.9 88.2l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1-55.4 32m-85.2 12.3a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m185 96.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4m9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m-121 14.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4M418 192l-40.6 151.2c-17.2 64-83 102-147 84.9l-38.3-10.3V448c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z"/></svg></span>
+  
+  統計力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../06solid_state/" class="md-tabs__link">
+          
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3-2.5c19.8-11.4 44.2-11.4 64 0L464.2 99c19.8 11.4 32 32.6 32 55.4v203c0 22.9-12.2 44-32 55.4L288.3 514.5a64.16 64.16 0 0 1-64 0L48.5 413c-19.8-11.4-32-32.6-32-55.4v-203c0-22.9 12.2-44 32-55.4zm207.8 360V191.4l-143.8 83v166.1z"/></svg></span>
+  
+  物性物理学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    <li class="md-tabs__item md-tabs__item--menu">
+      <button type="button" class="md-tabs__link md-tabs__menu-toggle" aria-expanded="false" aria-controls="tabs-menu-physmath">
+        
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M282.6 78.1c8-27.3 33-46.1 61.4-46.1h200c17.7 0 32 14.3 32 32s-14.3 32-32 32H344L238.7 457c-3.6 12.3-14.1 21.2-26.8 22.8s-25.1-4.6-31.5-15.6L77.6 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h45.6c22.8 0 43.8 12.1 55.3 31.8l65.2 111.8 84.4-289.5zm110.8 155.3c12.5-12.5 32.8-12.5 45.3 0l41.4 41.4 41.4-41.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-41.4 41.4 41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-41.4-41.4-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l41.4-41.4-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3"/></svg></span>
+  
+  物理数学
+
+        <span class="md-tabs__caret" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
+      </button>
+      <div class="md-tabs__menu" id="tabs-menu-physmath" hidden>
+        <ul class="md-tabs__menu-list">
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../14calculus/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- サイト独自のアイコン：積分記号（微積分） --><path d="M352 74c-54-30-118-4-126 70l-30 242c-6 50-44 62-74 40l-26 44c54 36 146 22 158-80l30-242c4-36 32-48 56-30z"/></svg></span>
+                微積分
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../07linear_algebra/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 96v64h-64V96zm0 128v64h-64v-64zm0 128v64h-64v-64zm-128-64h-64v-64h64zm-64 64h64v64h-64zm-64-64H64v-64h64zm-64 64h64v64H64zm0-192V96h64v64zm128 0V96h64v64zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64z"/></svg></span>
+                線形代数
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../08differential_equations/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v336c0 44.2 35.8 80 80 80h400c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.3c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l73.4-73.4 57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg></span>
+                微分方程式
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../09vector_analysis/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M477.9 75.5c4.5-11.8 1.7-25.2-7.2-34.1s-22.3-11.8-34.1-7.2l-416 160C7.9 199-.3 211.2 0 224.7s9.1 25.4 21.9 29.6l176.8 58.9L257.6 490c4.3 12.8 16.1 21.6 29.6 21.9s25.7-7.9 30.6-20.5l160-416z"/></svg></span>
+                ベクトル解析
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../10integral_transforms/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 96c0-17.7 14.3-32 32-32h160c17.7 0 32 14.3 32 32v288h96V256c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32v128c0 17.7-14.3 32-32 32H256c-17.7 0-32-14.3-32-32V128h-96v128c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h32z"/></svg></span>
+                積分変換
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../11complex_analysis/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 256C0 167.6 71.6 96 160 96c50.4 0 97.8 23.7 128 64l32 42.7 32-42.7c30.2-40.3 77.6-64 128-64 88.4 0 160 71.6 160 160s-71.6 160-160 160c-50.4 0-97.8-23.7-128-64l-32-42.7-32 42.7c-30.2 40.3-77.6 64-128 64C71.6 416 0 344.4 0 256m280 0-43.2-57.6C218.7 174.2 190.2 160 160 160c-53 0-96 43-96 96s43 96 96 96c30.2 0 58.7-14.2 76.8-38.4zm80 0 43.2 57.6c18.1 24.2 46.6 38.4 76.8 38.4 53 0 96-43 96-96s-43-96-96-96c-30.2 0-58.7 14.2-76.8 38.4z"/></svg></span>
+                複素関数
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../12special_functions/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M296 136V88h48v48zm-8-104c-26.5 0-48 21.5-48 48v4H121.6C111.2 62.7 89.3 48 64 48 28.7 48 0 76.7 0 112s28.7 64 64 64c25.3 0 47.2-14.7 57.6-36h66.9c-58.9 39.6-98.9 105-104 180H80c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48h-3.3c5.9-67 48.5-123.4 107.5-149.1 8.6 12.7 23.2 21.1 39.8 21.1h64c16.6 0 31.1-8.4 39.8-21.1 59 25.7 101.6 82.1 107.5 149.1H496c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48h-4.5c-5-75-45.1-140.4-104-180h66.9c10.4 21.3 32.3 36 57.6 36 35.3 0 64-28.7 64-64s-28.7-64-64-64c-25.3 0-47.2 14.7-57.6 36H400v-4c0-26.5-21.5-48-48-48zM88 376h48v48H88zm416 48v-48h48v48z"/></svg></span>
+                特殊関数・変分法
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../13probability_statistics/" class="md-tabs__menu-link">
+                <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M32 32c17.7 0 32 14.3 32 32v336c0 8.8 7.2 16 16 16h400c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64c0-17.7 14.3-32 32-32m112 192c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m144-64v160c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32m80 32c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32v-96c0-17.7 14.3-32 32-32m144-96v224c0 17.7-14.3 32-32 32s-32-14.3-32-32V96c0-17.7 14.3-32 32-32s32 14.3 32 32"/></svg></span>
+                確率・統計
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--tool">
+      <a href="../../../books/" class="md-tabs__link">
+        
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 141.3v309.3l.5-.2A449 449 0 0 1 428.8 416H448V96h-19.2c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7m-25.1-79.8L256 72l25.1-10.5C327.9 42 378.1 32 428.8 32H464c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-35.2c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h35.2c50.7 0 100.9 10 147.7 29.5"/></svg></span>
+  
+  参考文献一覧
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--tool">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96m144-80c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zM48 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96m48-208a48 48 0 1 0-96 0 48 48 0 1 0 96 0"/></svg></span>
+  
+  問題を探す
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--tool">
+      <a href="../../../exam/" class="md-tabs__link">
+        
+  
+  
+    <span class="md-tabs__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 64c0-35.3 28.7-64 64-64h213.5c17 0 33.3 6.7 45.3 18.7l42.5 42.5c12 12 18.7 28.3 18.7 45.3V144H64zM0 256c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v96c0 17.7-14.3 32-32 32h-32v64c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64v-64H32c-17.7 0-32-14.3-32-32zm128 160v32h256v-96H128zm328-144a24 24 0 1 0-48 0 24 24 0 1 0 48 0"/></svg></span>
+  
+  問題を印刷する
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+  
+        
+      
+  
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--primary" aria-label="メニュー" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="大学物理の問題集" class="md-nav__button md-logo" aria-label="大学物理の問題集">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    大学物理の問題集
+  </label>
+  <div class="drawer">
+    
+
+
+  <nav class="side-chapters" aria-label="統計力学の章">
+    
+      <a class="side-chapters__index" href="../../">
+          <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7c-10.3 38.4 12.5 77.9 50.9 88.2l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1-55.4 32m-85.2 12.3a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m185 96.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4m9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m-121 14.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4M418 192l-40.6 151.2c-17.2 64-83 102-147 84.9l-38.3-10.3V448c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z"/></svg></span>
+          <span class="side-chapters__label">統計力学の問題一覧</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">1. 確率・状態数・エントロピー</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_010/">
+                  <span class="side-chapter__num">1-1</span>離散確率分布の平均と分散
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_020/">
+                  <span class="side-chapter__num">1-2</span>二項分布と大数の法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_030/">
+                  <span class="side-chapter__num">1-3</span>スターリングの公式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_040/">
+                  <span class="side-chapter__num">1-4</span>ボルツマンエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_050/">
+                  <span class="side-chapter__num">1-5</span>二準位系の状態数とエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_060/">
+                  <span class="side-chapter__num">1-6</span>エントロピー最大原理
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_070/">
+                  <span class="side-chapter__num">1-7</span>負温度をもつ二準位系
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">2. ミクロカノニカル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_010/">
+                  <span class="side-chapter__num">2-1</span>等重率の原理
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_020/">
+                  <span class="side-chapter__num">2-2</span>ミクロカノニカル分布のエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_030/">
+                  <span class="side-chapter__num">2-3</span>二つの系の熱平衡条件
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_040/">
+                  <span class="side-chapter__num">2-4</span>理想気体の状態数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_050/">
+                  <span class="side-chapter__num">2-5</span>サッカー・テトロード方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_060/">
+                  <span class="side-chapter__num">2-6</span>古典的理想気体のエントロピーと示量性
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_070/">
+                  <span class="side-chapter__num">2-7</span>ゴム紐の統計力学とフックの法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_080/">
+                  <span class="side-chapter__num">2-8</span>ミクロカノニカル分布からカノニカル分布への導出
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">3. カノニカル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_010/">
+                  <span class="side-chapter__num">3-1</span>ボルツマン因子と状態の縮退
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_020/">
+                  <span class="side-chapter__num">3-2</span>分配関数の基本
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_030/">
+                  <span class="side-chapter__num">3-3</span>二準位系のカノニカル分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_040/">
+                  <span class="side-chapter__num">3-4</span>量子調和振動子の分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_050/">
+                  <span class="side-chapter__num">3-5</span>自由エネルギーと熱力学量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_060/">
+                  <span class="side-chapter__num">3-6</span>エネルギー揺らぎと熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_070/">
+                  <span class="side-chapter__num">3-7</span>古典極限と等分配則
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">4. グランドカノニカル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_010/">
+                  <span class="side-chapter__num">4-1</span>粒子数が変化する系
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_020/">
+                  <span class="side-chapter__num">4-2</span>大分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_030/">
+                  <span class="side-chapter__num">4-3</span>平均粒子数と粒子数揺らぎ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_040/">
+                  <span class="side-chapter__num">4-4</span>理想気体の大分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_050/">
+                  <span class="side-chapter__num">4-5</span>グランドポテンシャルと状態方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_060/">
+                  <span class="side-chapter__num">4-6</span>吸着模型とラングミュア等温式 (1)
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_070/">
+                  <span class="side-chapter__num">4-7</span>吸着模型とラングミュア等温式 (2)
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">5. 古典理想気体とマクスウェル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_010/">
+                  <span class="side-chapter__num">5-1</span>古典理想気体の分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_020/">
+                  <span class="side-chapter__num">5-2</span>理想気体の状態方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_030/">
+                  <span class="side-chapter__num">5-3</span>マクスウェル速度分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_040/">
+                  <span class="side-chapter__num">5-4</span>平均速度・最確速度・二乗平均平方根速度
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_050/">
+                  <span class="side-chapter__num">5-5</span>理想気体の内部エネルギーと熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_060/">
+                  <span class="side-chapter__num">5-6</span>外力場中の理想気体
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_070/">
+                  <span class="side-chapter__num">5-7</span>ビリアル展開
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">6. 量子統計の基礎</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_010/">
+                  <span class="side-chapter__num">6-1</span>同種粒子と波動関数の対称性
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_020/">
+                  <span class="side-chapter__num">6-2</span>占有数表示
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_030/">
+                  <span class="side-chapter__num">6-3</span>フェルミ・ディラック分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_040/">
+                  <span class="side-chapter__num">6-4</span>ボース・アインシュタイン分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_050/">
+                  <span class="side-chapter__num">6-5</span>古典極限とマクスウェル・ボルツマン分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_060/">
+                  <span class="side-chapter__num">6-6</span>量子理想気体の大分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_070/">
+                  <span class="side-chapter__num">6-7</span>状態密度
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">7. フェルミ気体</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_010/">
+                  <span class="side-chapter__num">7-1</span>絶対零度のフェルミ気体
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_020/">
+                  <span class="side-chapter__num">7-2</span>フェルミ温度
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_030/">
+                  <span class="side-chapter__num">7-3</span>絶対零度での内部エネルギー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_040/">
+                  <span class="side-chapter__num">7-4</span>ゾンマーフェルト展開と電子熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_050/">
+                  <span class="side-chapter__num">7-5</span>フェルミ気体の圧力
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_060/">
+                  <span class="side-chapter__num">7-6</span>パウリ常磁性
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">8. ボース気体・光子・フォノン</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_010/">
+                  <span class="side-chapter__num">8-1</span>理想ボース気体の粒子数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_020/">
+                  <span class="side-chapter__num">8-2</span>ボース・アインシュタイン凝縮
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_030/">
+                  <span class="side-chapter__num">8-3</span>二次元ボース気体
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_040/">
+                  <span class="side-chapter__num">8-4</span>光子気体と化学ポテンシャル
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_050/">
+                  <span class="side-chapter__num">8-5</span>プランクの黒体放射法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_060/">
+                  <span class="side-chapter__num">8-6</span>ステファン・ボルツマンの法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_070/">
+                  <span class="side-chapter__num">8-7</span>アインシュタイン模型による固体の熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_080/">
+                  <span class="side-chapter__num">8-8</span>デバイ模型による固体の熱容量
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">9. 揺らぎと応答</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_010/">
+                  <span class="side-chapter__num">9-1</span>エネルギー揺らぎ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_020/">
+                  <span class="side-chapter__num">9-2</span>粒子数揺らぎ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_030/">
+                  <span class="side-chapter__num">9-3</span>磁化揺らぎと磁化率
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_040/">
+                  <span class="side-chapter__num">9-4</span>揺動散逸関係の初歩
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_050/">
+                  <span class="side-chapter__num">9-5</span>相関関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">10. 相転移とイジング模型</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_010/">
+                  <span class="side-chapter__num">10-1</span>相転移と秩序変数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_020/">
+                  <span class="side-chapter__num">10-2</span>一次相転移と二次相転移
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_030/">
+                  <span class="side-chapter__num">10-3</span>一次元イジング模型
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_040/">
+                  <span class="side-chapter__num">10-4</span>平均場近似
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_050/">
+                  <span class="side-chapter__num">10-5</span>キュリー温度と自発磁化
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_060/">
+                  <span class="side-chapter__num">10-6</span>2元合金の相転移
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_070/">
+                  <span class="side-chapter__num">10-7</span>ランダウ自由エネルギー
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">11. 非平衡統計力学の基本</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_010/">
+                  <span class="side-chapter__num">11-1</span>詳細釣り合い
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_020/">
+                  <span class="side-chapter__num">11-2</span>マスター方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_030/">
+                  <span class="side-chapter__num">11-3</span>ランダムウォークと拡散
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_040/">
+                  <span class="side-chapter__num">11-4</span>拡散方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_050/">
+                  <span class="side-chapter__num">11-5</span>ブラウン運動とランジュバン方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_060/">
+                  <span class="side-chapter__num">11-6</span>ボルツマン方程式とマクロ保存則
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">12. 密度行列</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_010/">
+                  <span class="side-chapter__num">12-1</span>密度行列の性質
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_020/">
+                  <span class="side-chapter__num">12-2</span>密度行列の基本：スピン1/2系
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_030/">
+                  <span class="side-chapter__num">12-3</span>部分系の密度行列
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_040/">
+                  <span class="side-chapter__num">12-4</span>密度行列のユニタリー時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_050/">
+                  <span class="side-chapter__num">12-5</span>熱平衡状態の密度行列
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_060/">
+                  <span class="side-chapter__num">12-6</span>二準位系の密度行列
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter" open>
+          <summary class="side-chapter__head">13. 位相空間表示</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../13_010/">
+                  <span class="side-chapter__num">13-1</span>位相空間表示とウィグナー関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../13_020/">
+                  <span class="side-chapter__num">13-2</span>ウィグナー分布の非古典性
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../13_030/">
+                  <span class="side-chapter__num">13-3</span>ウィグナー分布の時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link is-current" href="./" aria-current="page">
+                  <span class="side-chapter__num">13-4</span>伏見関数の定義
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../13_050/">
+                  <span class="side-chapter__num">13-5</span>ウィグナー分布と伏見関数の比較
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">14. 調和振動子の演算子法と量子状態</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_010/">
+                  <span class="side-chapter__num">14-1</span>生成消滅演算子と数状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_020/">
+                  <span class="side-chapter__num">14-2</span>コヒーレント状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_030/">
+                  <span class="side-chapter__num">14-3</span>コヒーレント状態の時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_040/">
+                  <span class="side-chapter__num">14-4</span>スクイーズド状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_050/">
+                  <span class="side-chapter__num">14-5</span>スクイーズド状態のウィグナー分布
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">15. 情報と熱力学</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_010/">
+                  <span class="side-chapter__num">15-1</span>密度行列のエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_020/">
+                  <span class="side-chapter__num">15-2</span>熱平衡状態とエントロピー最大化
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_030/">
+                  <span class="side-chapter__num">15-3</span>量子相対エントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_040/">
+                  <span class="side-chapter__num">15-4</span>熱力学第二法則と情報
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_050/">
+                  <span class="side-chapter__num">15-5</span>シャノンエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_060/">
+                  <span class="side-chapter__num">15-6</span>相互情報量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_070/">
+                  <span class="side-chapter__num">15-7</span>マクスウェルの悪魔
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">16. 量子もつれと開放量子系</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_010/">
+                  <span class="side-chapter__num">16-1</span>合成系と分離可能状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_020/">
+                  <span class="side-chapter__num">16-2</span>シュミット分解
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_030/">
+                  <span class="side-chapter__num">16-3</span>ベル状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_040/">
+                  <span class="side-chapter__num">16-4</span>ベルの不等式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_050/">
+                  <span class="side-chapter__num">16-5</span>エンタングルメントエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_060/">
+                  <span class="side-chapter__num">16-6</span>開放量子系の非ユニタリー時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_070/">
+                  <span class="side-chapter__num">16-7</span>リンドブラッド方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">17. 総合問題</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_910/">
+                  <span class="side-chapter__num">17-1</span>横磁場イジング模型の平均場近似
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_920/">
+                  <span class="side-chapter__num">17-2</span>調和トラップ中のボース凝縮
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_930/">
+                  <span class="side-chapter__num">17-3</span>熱による山越えの速さ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_940/">
+                  <span class="side-chapter__num">17-4</span>ランダムエネルギー模型
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+  </nav>
+
+    <p class="drawer__heading side-heading"><span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m50.7-186.9-144.3 55.5c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31l-55.5 144.3c-3.2 8.5-9.9 15.1-18.4 18.4M288 256a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg></span>分野・ページ</p>
+    <ul class="drawer__links">
+      
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../01mechanics/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 112c-8.8 0-16-7.2-16-16V80c0-44.2 35.8-80 80-80h16c8.8 0 16 7.2 16 16v16c0 44.2-35.8 80-80 80zM0 288c0-76.3 35.7-160 112-160 27.3 0 59.7 10.3 82.7 19.3 18.8 7.3 39.9 7.3 58.7 0 22.9-8.9 55.4-19.3 82.7-19.3 76.3 0 112 83.7 112 160 0 128-80 224-160 224-16.5 0-38.1-6.6-51.5-11.3-8.1-2.8-16.9-2.8-25 0-13.4 4.7-35 11.3-51.5 11.3-80 0-160-96-160-224z"/></svg></span>
+              力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../02electromagnetism/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 176v112c0 123.7 100.3 224 224 224s224-100.3 224-224V176H320v112c0 53-43 96-96 96s-96-43-96-96V176zm0-48h128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64zm320 0h128V64c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32z"/></svg></span>
+              電磁気学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../03thermodynamics/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160 0c-53 0-96 43-96 96v164.7C34.5 287 16 325.4 16 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-42.6-18.5-81-48-107.3V96c0-53-43-96-96-96m64 368c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-26.9 16.5-49.9 40-59.3V216c0-13.3 10.7-24 24-24s24 10.7 24 24v92.7c23.5 9.5 40 32.5 40 59.3"/></svg></span>
+              熱力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../04quantum_mechanics/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 398.8c-11.8 5.1-23.4 9.7-34.9 13.5 16.7 33.8 31 35.7 34.9 35.7s18.1-1.9 34.9-35.7c-11.4-3.9-23.1-8.4-34.9-13.5M414 256c33 45.2 44.3 90.9 23.6 128-20.2 36.3-62.5 49.3-115.2 43.2-22 52.1-55.7 84.8-98.4 84.8s-76.4-32.7-98.4-84.8c-52.7 6.1-95-6.9-115.2-43.2C-10.3 346.9 1 301.2 34 256c-33-45.2-44.3-90.9-23.6-128 20.2-36.3 62.5-49.3 115.2-43.2C147.6 32.7 181.2 0 224 0s76.4 32.7 98.4 84.8c52.7-6.1 95 6.8 115.2 43.2 20.7 37.1 9.4 82.8-23.6 128m-65.8 67.4c-1.7 14.2-3.9 28-6.7 41.2 31.8 1.4 38.6-8.7 40.2-11.7 2.3-4.2 7-17.9-11.9-48.1q-10.2 9.45-21.6 18.6m-6.7-175.9c2.8 13.1 5 26.9 6.7 41.2q11.4 9.15 21.6 18.6c18.9-30.2 14.2-44 11.9-48.1-1.6-2.9-8.4-13-40.2-11.7m-82.6-47.8C242.1 65.9 227.9 64 224 64s-18.1 1.9-34.9 35.7c11.4 3.9 23.1 8.4 34.9 13.5 11.8-5.1 23.4-9.7 34.9-13.5m-159 88.9c1.7-14.3 3.9-28 6.7-41.2-31.8-1.4-38.6 8.7-40.2 11.7-2.3 4.2-7 17.9 11.9 48.1q10.2-9.45 21.6-18.6M78.2 304.8c-18.9 30.2-14.2 44-11.9 48.1 1.6 2.9 8.4 13 40.2 11.7-2.8-13.1-5-26.9-6.7-41.2q-11.4-9.15-21.6-18.6M304 256a80 80 0 1 0-160 0 80 80 0 1 0 160 0m-80-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg></span>
+              量子力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link is-current" href="../../">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7c-10.3 38.4 12.5 77.9 50.9 88.2l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1-55.4 32m-85.2 12.3a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m185 96.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4m9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m-121 14.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4M418 192l-40.6 151.2c-17.2 64-83 102-147 84.9l-38.3-10.3V448c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z"/></svg></span>
+              統計力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../06solid_state/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3-2.5c19.8-11.4 44.2-11.4 64 0L464.2 99c19.8 11.4 32 32.6 32 55.4v203c0 22.9-12.2 44-32 55.4L288.3 514.5a64.16 64.16 0 0 1-64 0L48.5 413c-19.8-11.4-32-32.6-32-55.4v-203c0-22.9 12.2-44 32-55.4zm207.8 360V191.4l-143.8 83v166.1z"/></svg></span>
+              物性物理学
+            </a>
+          </li>
+        
+      
+        <li>
+            <details class="drawer__group">
+              <summary class="drawer__link drawer__toggle">
+                <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M282.6 78.1c8-27.3 33-46.1 61.4-46.1h200c17.7 0 32 14.3 32 32s-14.3 32-32 32H344L238.7 457c-3.6 12.3-14.1 21.2-26.8 22.8s-25.1-4.6-31.5-15.6L77.6 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h45.6c22.8 0 43.8 12.1 55.3 31.8l65.2 111.8 84.4-289.5zm110.8 155.3c12.5-12.5 32.8-12.5 45.3 0l41.4 41.4 41.4-41.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-41.4 41.4 41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-41.4-41.4-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l41.4-41.4-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3"/></svg></span>
+                物理数学
+                <span class="drawer__caret" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
+              </summary>
+              <ul class="drawer__sublinks">
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../14calculus/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- サイト独自のアイコン：積分記号（微積分） --><path d="M352 74c-54-30-118-4-126 70l-30 242c-6 50-44 62-74 40l-26 44c54 36 146 22 158-80l30-242c4-36 32-48 56-30z"/></svg></span>
+                      微積分
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../07linear_algebra/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 96v64h-64V96zm0 128v64h-64v-64zm0 128v64h-64v-64zm-128-64h-64v-64h64zm-64 64h64v64h-64zm-64-64H64v-64h64zm-64 64h64v64H64zm0-192V96h64v64zm128 0V96h64v64zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64z"/></svg></span>
+                      線形代数
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../08differential_equations/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v336c0 44.2 35.8 80 80 80h400c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.3c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l73.4-73.4 57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg></span>
+                      微分方程式
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../09vector_analysis/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M477.9 75.5c4.5-11.8 1.7-25.2-7.2-34.1s-22.3-11.8-34.1-7.2l-416 160C7.9 199-.3 211.2 0 224.7s9.1 25.4 21.9 29.6l176.8 58.9L257.6 490c4.3 12.8 16.1 21.6 29.6 21.9s25.7-7.9 30.6-20.5l160-416z"/></svg></span>
+                      ベクトル解析
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../10integral_transforms/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 96c0-17.7 14.3-32 32-32h160c17.7 0 32 14.3 32 32v288h96V256c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32v128c0 17.7-14.3 32-32 32H256c-17.7 0-32-14.3-32-32V128h-96v128c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h32z"/></svg></span>
+                      積分変換
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../11complex_analysis/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 256C0 167.6 71.6 96 160 96c50.4 0 97.8 23.7 128 64l32 42.7 32-42.7c30.2-40.3 77.6-64 128-64 88.4 0 160 71.6 160 160s-71.6 160-160 160c-50.4 0-97.8-23.7-128-64l-32-42.7-32 42.7c-30.2 40.3-77.6 64-128 64C71.6 416 0 344.4 0 256m280 0-43.2-57.6C218.7 174.2 190.2 160 160 160c-53 0-96 43-96 96s43 96 96 96c30.2 0 58.7-14.2 76.8-38.4zm80 0 43.2 57.6c18.1 24.2 46.6 38.4 76.8 38.4 53 0 96-43 96-96s-43-96-96-96c-30.2 0-58.7 14.2-76.8 38.4z"/></svg></span>
+                      複素関数
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../12special_functions/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M296 136V88h48v48zm-8-104c-26.5 0-48 21.5-48 48v4H121.6C111.2 62.7 89.3 48 64 48 28.7 48 0 76.7 0 112s28.7 64 64 64c25.3 0 47.2-14.7 57.6-36h66.9c-58.9 39.6-98.9 105-104 180H80c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48h-3.3c5.9-67 48.5-123.4 107.5-149.1 8.6 12.7 23.2 21.1 39.8 21.1h64c16.6 0 31.1-8.4 39.8-21.1 59 25.7 101.6 82.1 107.5 149.1H496c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48v-64c0-26.5-21.5-48-48-48h-4.5c-5-75-45.1-140.4-104-180h66.9c10.4 21.3 32.3 36 57.6 36 35.3 0 64-28.7 64-64s-28.7-64-64-64c-25.3 0-47.2 14.7-57.6 36H400v-4c0-26.5-21.5-48-48-48zM88 376h48v48H88zm416 48v-48h48v48z"/></svg></span>
+                      特殊関数・変分法
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../13probability_statistics/">
+                      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M32 32c17.7 0 32 14.3 32 32v336c0 8.8 7.2 16 16 16h400c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64c0-17.7 14.3-32 32-32m112 192c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m144-64v160c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32m80 32c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32v-96c0-17.7 14.3-32 32-32m144-96v224c0 17.7-14.3 32-32 32s-32-14.3-32-32V96c0-17.7 14.3-32 32-32s32 14.3 32 32"/></svg></span>
+                      確率・統計
+                    </a>
+                  </li>
+                
+              </ul>
+            </details>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../books/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 141.3v309.3l.5-.2A449 449 0 0 1 428.8 416H448V96h-19.2c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7m-25.1-79.8L256 72l25.1-10.5C327.9 42 378.1 32 428.8 32H464c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-35.2c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h35.2c50.7 0 100.9 10 147.7 29.5"/></svg></span>
+              参考文献一覧
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../tags/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96m144-80c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zM48 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96m48-208a48 48 0 1 0-96 0 48 48 0 1 0 96 0"/></svg></span>
+              問題を探す
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../exam/">
+              <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 64c0-35.3 28.7-64 64-64h213.5c17 0 33.3 6.7 45.3 18.7l42.5 42.5c12 12 18.7 28.3 18.7 45.3V144H64zM0 256c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v96c0 17.7-14.3 32-32 32h-32v64c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64v-64H32c-17.7 0-32-14.3-32-32zm128 160v32h256v-96H128zm328-144a24 24 0 1 0-48 0 24 24 0 1 0 48 0"/></svg></span>
+              問題を印刷する
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title side-heading" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v416c0 11.5 6.2 22.2 16.2 27.8s22.3 5.5 32.2-.4L192 421.3l143.5 86.1c9.9 5.9 22.2 6.1 32.2.4S384 491.5 384 480V64c0-35.3-28.7-64-64-64z"/></svg></span>このページ
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        
+<li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="toc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M128.1 0c-35.3 0-64 28.7-64 64v384c0 35.3 28.7 64 64 64h146.2l10.9-54.5c4.3-21.7 15-41.6 30.6-57.2L448 268.1v-97.5c0-17-6.7-33.3-18.7-45.3L322.8 18.7C310.8 6.7 294.5 0 277.6 0zm261.5 176h-93.5c-13.3 0-24-10.7-24-24V58.5zm-57.3 290.9-11.9 59.6c-.2.9-.3 1.9-.3 2.9 0 8 6.5 14.6 14.6 14.6 1 0 1.9-.1 2.9-.3l59.6-11.9c12.4-2.5 23.8-8.6 32.7-17.5l118.9-118.9-80-80-118.9 118.9c-8.9 8.9-15 20.3-17.5 32.7zm267.8-123c22.1-22.1 22.1-57.9 0-80s-57.9-22.1-80 0l-28.8 28.8 80 80z"/></svg></span>
+      
+        問題
+      
+    </span>
+  </a>
+  
+</li>
+      
+        
+<li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="toc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m118-366.3c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8l135.9-187c7.8-10.7 5.4-25.7-5.3-33.5"/></svg></span>
+      
+        解答・解説
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解答・解説">
+      <ul class="md-nav__list">
+        
+          
+<li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+  
+
+
+  <nav class="side-chapters" aria-label="統計力学の章">
+    
+      <a class="side-chapters__index" href="../../">
+          <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7c-10.3 38.4 12.5 77.9 50.9 88.2l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1-55.4 32m-85.2 12.3a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m185 96.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4m9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m-121 14.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4M418 192l-40.6 151.2c-17.2 64-83 102-147 84.9l-38.3-10.3V448c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z"/></svg></span>
+          <span class="side-chapters__label">統計力学の問題一覧</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">1. 確率・状態数・エントロピー</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_010/">
+                  <span class="side-chapter__num">1-1</span>離散確率分布の平均と分散
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_020/">
+                  <span class="side-chapter__num">1-2</span>二項分布と大数の法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_030/">
+                  <span class="side-chapter__num">1-3</span>スターリングの公式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_040/">
+                  <span class="side-chapter__num">1-4</span>ボルツマンエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_050/">
+                  <span class="side-chapter__num">1-5</span>二準位系の状態数とエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_060/">
+                  <span class="side-chapter__num">1-6</span>エントロピー最大原理
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../01/01_070/">
+                  <span class="side-chapter__num">1-7</span>負温度をもつ二準位系
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">2. ミクロカノニカル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_010/">
+                  <span class="side-chapter__num">2-1</span>等重率の原理
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_020/">
+                  <span class="side-chapter__num">2-2</span>ミクロカノニカル分布のエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_030/">
+                  <span class="side-chapter__num">2-3</span>二つの系の熱平衡条件
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_040/">
+                  <span class="side-chapter__num">2-4</span>理想気体の状態数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_050/">
+                  <span class="side-chapter__num">2-5</span>サッカー・テトロード方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_060/">
+                  <span class="side-chapter__num">2-6</span>古典的理想気体のエントロピーと示量性
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_070/">
+                  <span class="side-chapter__num">2-7</span>ゴム紐の統計力学とフックの法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../02/02_080/">
+                  <span class="side-chapter__num">2-8</span>ミクロカノニカル分布からカノニカル分布への導出
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">3. カノニカル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_010/">
+                  <span class="side-chapter__num">3-1</span>ボルツマン因子と状態の縮退
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_020/">
+                  <span class="side-chapter__num">3-2</span>分配関数の基本
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_030/">
+                  <span class="side-chapter__num">3-3</span>二準位系のカノニカル分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_040/">
+                  <span class="side-chapter__num">3-4</span>量子調和振動子の分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_050/">
+                  <span class="side-chapter__num">3-5</span>自由エネルギーと熱力学量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_060/">
+                  <span class="side-chapter__num">3-6</span>エネルギー揺らぎと熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../03/03_070/">
+                  <span class="side-chapter__num">3-7</span>古典極限と等分配則
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">4. グランドカノニカル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_010/">
+                  <span class="side-chapter__num">4-1</span>粒子数が変化する系
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_020/">
+                  <span class="side-chapter__num">4-2</span>大分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_030/">
+                  <span class="side-chapter__num">4-3</span>平均粒子数と粒子数揺らぎ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_040/">
+                  <span class="side-chapter__num">4-4</span>理想気体の大分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_050/">
+                  <span class="side-chapter__num">4-5</span>グランドポテンシャルと状態方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_060/">
+                  <span class="side-chapter__num">4-6</span>吸着模型とラングミュア等温式 (1)
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../04/04_070/">
+                  <span class="side-chapter__num">4-7</span>吸着模型とラングミュア等温式 (2)
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">5. 古典理想気体とマクスウェル分布</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_010/">
+                  <span class="side-chapter__num">5-1</span>古典理想気体の分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_020/">
+                  <span class="side-chapter__num">5-2</span>理想気体の状態方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_030/">
+                  <span class="side-chapter__num">5-3</span>マクスウェル速度分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_040/">
+                  <span class="side-chapter__num">5-4</span>平均速度・最確速度・二乗平均平方根速度
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_050/">
+                  <span class="side-chapter__num">5-5</span>理想気体の内部エネルギーと熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_060/">
+                  <span class="side-chapter__num">5-6</span>外力場中の理想気体
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../05/05_070/">
+                  <span class="side-chapter__num">5-7</span>ビリアル展開
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">6. 量子統計の基礎</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_010/">
+                  <span class="side-chapter__num">6-1</span>同種粒子と波動関数の対称性
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_020/">
+                  <span class="side-chapter__num">6-2</span>占有数表示
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_030/">
+                  <span class="side-chapter__num">6-3</span>フェルミ・ディラック分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_040/">
+                  <span class="side-chapter__num">6-4</span>ボース・アインシュタイン分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_050/">
+                  <span class="side-chapter__num">6-5</span>古典極限とマクスウェル・ボルツマン分布
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_060/">
+                  <span class="side-chapter__num">6-6</span>量子理想気体の大分配関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../06/06_070/">
+                  <span class="side-chapter__num">6-7</span>状態密度
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">7. フェルミ気体</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_010/">
+                  <span class="side-chapter__num">7-1</span>絶対零度のフェルミ気体
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_020/">
+                  <span class="side-chapter__num">7-2</span>フェルミ温度
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_030/">
+                  <span class="side-chapter__num">7-3</span>絶対零度での内部エネルギー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_040/">
+                  <span class="side-chapter__num">7-4</span>ゾンマーフェルト展開と電子熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_050/">
+                  <span class="side-chapter__num">7-5</span>フェルミ気体の圧力
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../07/07_060/">
+                  <span class="side-chapter__num">7-6</span>パウリ常磁性
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">8. ボース気体・光子・フォノン</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_010/">
+                  <span class="side-chapter__num">8-1</span>理想ボース気体の粒子数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_020/">
+                  <span class="side-chapter__num">8-2</span>ボース・アインシュタイン凝縮
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_030/">
+                  <span class="side-chapter__num">8-3</span>二次元ボース気体
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_040/">
+                  <span class="side-chapter__num">8-4</span>光子気体と化学ポテンシャル
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_050/">
+                  <span class="side-chapter__num">8-5</span>プランクの黒体放射法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_060/">
+                  <span class="side-chapter__num">8-6</span>ステファン・ボルツマンの法則
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_070/">
+                  <span class="side-chapter__num">8-7</span>アインシュタイン模型による固体の熱容量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../08/08_080/">
+                  <span class="side-chapter__num">8-8</span>デバイ模型による固体の熱容量
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">9. 揺らぎと応答</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_010/">
+                  <span class="side-chapter__num">9-1</span>エネルギー揺らぎ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_020/">
+                  <span class="side-chapter__num">9-2</span>粒子数揺らぎ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_030/">
+                  <span class="side-chapter__num">9-3</span>磁化揺らぎと磁化率
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_040/">
+                  <span class="side-chapter__num">9-4</span>揺動散逸関係の初歩
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../09/09_050/">
+                  <span class="side-chapter__num">9-5</span>相関関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">10. 相転移とイジング模型</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_010/">
+                  <span class="side-chapter__num">10-1</span>相転移と秩序変数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_020/">
+                  <span class="side-chapter__num">10-2</span>一次相転移と二次相転移
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_030/">
+                  <span class="side-chapter__num">10-3</span>一次元イジング模型
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_040/">
+                  <span class="side-chapter__num">10-4</span>平均場近似
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_050/">
+                  <span class="side-chapter__num">10-5</span>キュリー温度と自発磁化
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_060/">
+                  <span class="side-chapter__num">10-6</span>2元合金の相転移
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../10/10_070/">
+                  <span class="side-chapter__num">10-7</span>ランダウ自由エネルギー
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">11. 非平衡統計力学の基本</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_010/">
+                  <span class="side-chapter__num">11-1</span>詳細釣り合い
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_020/">
+                  <span class="side-chapter__num">11-2</span>マスター方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_030/">
+                  <span class="side-chapter__num">11-3</span>ランダムウォークと拡散
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_040/">
+                  <span class="side-chapter__num">11-4</span>拡散方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_050/">
+                  <span class="side-chapter__num">11-5</span>ブラウン運動とランジュバン方程式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../11/11_060/">
+                  <span class="side-chapter__num">11-6</span>ボルツマン方程式とマクロ保存則
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">12. 密度行列</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_010/">
+                  <span class="side-chapter__num">12-1</span>密度行列の性質
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_020/">
+                  <span class="side-chapter__num">12-2</span>密度行列の基本：スピン1/2系
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_030/">
+                  <span class="side-chapter__num">12-3</span>部分系の密度行列
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_040/">
+                  <span class="side-chapter__num">12-4</span>密度行列のユニタリー時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_050/">
+                  <span class="side-chapter__num">12-5</span>熱平衡状態の密度行列
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../12/12_060/">
+                  <span class="side-chapter__num">12-6</span>二準位系の密度行列
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter" open>
+          <summary class="side-chapter__head">13. 位相空間表示</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../13_010/">
+                  <span class="side-chapter__num">13-1</span>位相空間表示とウィグナー関数
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../13_020/">
+                  <span class="side-chapter__num">13-2</span>ウィグナー分布の非古典性
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../13_030/">
+                  <span class="side-chapter__num">13-3</span>ウィグナー分布の時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link is-current" href="./" aria-current="page">
+                  <span class="side-chapter__num">13-4</span>伏見関数の定義
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../13_050/">
+                  <span class="side-chapter__num">13-5</span>ウィグナー分布と伏見関数の比較
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">14. 調和振動子の演算子法と量子状態</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_010/">
+                  <span class="side-chapter__num">14-1</span>生成消滅演算子と数状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_020/">
+                  <span class="side-chapter__num">14-2</span>コヒーレント状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_030/">
+                  <span class="side-chapter__num">14-3</span>コヒーレント状態の時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_040/">
+                  <span class="side-chapter__num">14-4</span>スクイーズド状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../14/14_050/">
+                  <span class="side-chapter__num">14-5</span>スクイーズド状態のウィグナー分布
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">15. 情報と熱力学</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_010/">
+                  <span class="side-chapter__num">15-1</span>密度行列のエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_020/">
+                  <span class="side-chapter__num">15-2</span>熱平衡状態とエントロピー最大化
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_030/">
+                  <span class="side-chapter__num">15-3</span>量子相対エントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_040/">
+                  <span class="side-chapter__num">15-4</span>熱力学第二法則と情報
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_050/">
+                  <span class="side-chapter__num">15-5</span>シャノンエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_060/">
+                  <span class="side-chapter__num">15-6</span>相互情報量
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../15/15_070/">
+                  <span class="side-chapter__num">15-7</span>マクスウェルの悪魔
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">16. 量子もつれと開放量子系</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_010/">
+                  <span class="side-chapter__num">16-1</span>合成系と分離可能状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_020/">
+                  <span class="side-chapter__num">16-2</span>シュミット分解
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_030/">
+                  <span class="side-chapter__num">16-3</span>ベル状態
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_040/">
+                  <span class="side-chapter__num">16-4</span>ベルの不等式
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_050/">
+                  <span class="side-chapter__num">16-5</span>エンタングルメントエントロピー
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_060/">
+                  <span class="side-chapter__num">16-6</span>開放量子系の非ユニタリー時間発展
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../16/16_070/">
+                  <span class="side-chapter__num">16-7</span>リンドブラッド方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">17. 総合問題</summary>
+          <ol class="side-chapter__list">
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_910/">
+                  <span class="side-chapter__num">17-1</span>横磁場イジング模型の平均場近似
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_920/">
+                  <span class="side-chapter__num">17-2</span>調和トラップ中のボース凝縮
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_930/">
+                  <span class="side-chapter__num">17-3</span>熱による山越えの速さ
+                </a>
+              </li>
+            
+              <li>
+                <a class="side-chapter__link" href="../../17/17_940/">
+                  <span class="side-chapter__num">17-4</span>ランダムエネルギー模型
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+  </nav>
+
+
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../tag-index/#tag:標準" class="md-tag">標準</a>
+      
+    
+  </nav>
+
+
+
+<h1 class="problem-title" id="_1">伏見関数の定義</h1><nav class="md-path" aria-label="ナビゲーション" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link" aria-label="トップページ">
+        
+  <span class="md-ellipsis">
+    ホーム
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-path__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7c-10.3 38.4 12.5 77.9 50.9 88.2l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1-55.4 32m-85.2 12.3a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m185 96.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4m9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m-121 14.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4M418 192l-40.6 151.2c-17.2 64-83 102-147 84.9l-38.3-10.3V448c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z"/></svg></span><span class="md-ellipsis">
+    統計力学
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../13_010/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    13. 位相空間表示
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              
+<div class="page-tools"><button type="button" class="page-tools__exam" data-exam-toggle hidden></button><button type="button" class="page-tools__copy" data-copy-markdown hidden><span class="page-tools__icon" aria-hidden="true"></span><span data-copy-label>Markdownでコピー</span></button></div><script type="text/markdown" id="page-markdown"># 伏見関数の定義
+
+## 問題
+消滅演算子を $\hat{a}$ とする。位相空間の座標を表す尺度 $x_0$，$p_0$ を $x_0p_0=\hbar$ と定め，複素数 $\alpha = \frac{x}{\sqrt{2}x_0} + i\frac{p}{\sqrt{2}p_0}$ を固有値に持つコヒーレント状態を $|\alpha\rangle$ とする。 $|\alpha\rangle$ は規格化条件 $\langle\alpha|\alpha\rangle = 1$ を満たし，以下の固有値関係式に従う。
+
+$$
+\hat{a}|\alpha\rangle = \alpha|\alpha\rangle
+$$
+
+系の密度行列を $\rho$ とするとき，伏見関数 $Q(\alpha)$ は以下の形式で定義される。
+
+$$
+Q(\alpha) = \frac{1}{\pi} \langle\alpha|\rho|\alpha\rangle
+$$
+
+以下の問いに答えよ。
+
+(1) 密度行列の非負定値性から $Q(\alpha)\ge0$ を示せ。
+
+(2) コヒーレント状態は，複素平面上で次の完全性関係を満たす。
+
+$$
+\frac{1}{\pi} \int |\alpha\rangle\langle\alpha| d^2\alpha = \hat{I}
+$$
+
+ただし， $d^2\alpha = d(\mathrm{Re}\alpha)d(\mathrm{Im}\alpha)$ であり， $\hat{I}$ は単位行列である。密度行列の規格化条件 $\mathrm{Tr}(\rho) = 1$ を用いて，伏見関数を複素平面全体で積分した値 $\displaystyle \int Q(\alpha) d^2\alpha$ が 1 になることを計算して導出せよ。
+
+(3) $dx\,dp$ に関して規格化された伏見関数を $Q_{xp}(x,p)$ とする。この関数と $Q(\alpha)$ の間には
+
+$$
+Q_{xp}(x,p)=\frac{Q(\alpha)}{2\hbar}, \qquad \int Q_{xp}(x,p)\,dx\,dp=1
+$$
+
+の関係がある。また，$Q_{xp}(x,p)$ はウィグナー分布関数 $W(x,p)$ を位相空間上で平滑化したものに等しく，次の関係が成り立つ。
+
+$$
+Q_{xp}(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( -\frac{(x - x')^2}{x_0^2} - \frac{(p - p')^2}{p_0^2} \right) W(x', p') dx' dp'
+$$
+
+上の式の指数関数を $x'$，$p'$ についてのガウス分布とみなす。この分布の標準偏差 $\sigma_x$，$\sigma_p$ と，その積 $\sigma_x\sigma_p$ を求めよ。
+
+---
+
+## 解答・解説
+
+考え方：伏見関数は，密度行列をコヒーレント状態ではさんだものです。密度行列は非負なので，この値は0以上です。規格化は，コヒーレント状態の完全性関係を使って確かめます。
+
+### (1)
+
+密度行列を
+
+$$
+\rho=\sum_k p_k|\psi_k\rangle\langle\psi_k|
+$$
+
+と表します。ただし，$0\le p_k\le1$ です。これをコヒーレント状態 $|\alpha\rangle$ ではさむと，
+
+$$
+\begin{aligned}
+\langle\alpha|\rho|\alpha\rangle &= \sum_k p_k \langle\alpha|\psi_k\rangle\langle\psi_k|\alpha\rangle \\
+&= \sum_k p_k |\langle\alpha|\psi_k\rangle|^2
+\end{aligned}
+$$
+
+重なりの絶対値の2乗 $|\langle\alpha|\psi_k\rangle|^2$ は，常に 0 以上です。確率 $p_k$ も 0 以上です。したがって，それらの積の和も 0 以上になります。
+
+$$
+\langle\alpha|\rho|\alpha\rangle \ge 0
+$$
+
+定義式の係数は $\dfrac{1}{\pi} > 0$ なので，伏見関数は複素平面の全域で負の値をとりません。
+
+$$
+\finalanswer{Q(\alpha) \ge 0}
+$$
+
+### (2)
+
+完全性関係とトレースの巡回性を用いると
+
+$$
+\begin{aligned}
+\int Q(\alpha)\,d^2\alpha
+&=\int\frac{1}{\pi}\langle\alpha|\rho|\alpha\rangle\,d^2\alpha \\
+&=\operatorname{Tr}\left[
+\rho\left(\frac{1}{\pi}\int|\alpha\rangle\langle\alpha|\,d^2\alpha\right)
+\right] \\
+&=\operatorname{Tr}(\rho\hat I) \\
+&=1
+\end{aligned}
+$$
+
+したがって，
+
+$$
+\finalanswer{\int Q(\alpha)\,d^2\alpha=1}
+$$
+
+以上より，伏見関数は 0 以上で全積分が 1 になります。
+
+### (3)
+
+標準偏差 $\sigma$ のガウス分布は $\exp\left(-\dfrac{u^2}{2\sigma^2}\right)$ に比例します。問題文の指数関数と比べると，$2\sigma_x^2=x_0^2$，$2\sigma_p^2=p_0^2$ となります。
+
+$$
+\finalanswer{\sigma_x=\frac{x_0}{\sqrt{2}},\qquad \sigma_p=\frac{p_0}{\sqrt{2}}}
+$$
+
+$x_0p_0=\hbar$ より，積は次のようになります。
+
+$$
+\finalanswer{\sigma_x\sigma_p=\frac{\hbar}{2}}
+$$
+
+この値は不確定性関係の下限に等しくなっています。したがってこの平滑化は，不確定性原理が許す最小の位相空間の分解能に対応します。
+
+ただし伏見関数が負にならないことは，密度行列が非負定値であることから直接わかります。任意の $|\alpha\rangle$ に対して $\langle\alpha|\rho|\alpha\rangle\ge0$ なので，定義から $Q(\alpha)\ge0$ となります。
+
+一方，ガウス関数による平滑化は，ウィグナー分布の細かな干渉の構造がコヒーレント状態の分解能で平均されることを表します。</script><div class="problem-box"><h2 id="_2"><span>問題</span><span class="problem-stars" aria-label="難易度 2/3"><span class="problem-stars__on">★★</span><span class="problem-stars__off">☆</span></span></h2><div class="problem-box__body">
+<p>消滅演算子を <span class="arithmatex">\(\hat{a}\)</span> とする。位相空間の座標を表す尺度 <span class="arithmatex">\(x_0\)</span>，<span class="arithmatex">\(p_0\)</span> を <span class="arithmatex">\(x_0p_0=\hbar\)</span> と定め，複素数 <span class="arithmatex">\(\alpha = \frac{x}{\sqrt{2}x_0} + i\frac{p}{\sqrt{2}p_0}\)</span> を固有値に持つコヒーレント状態を <span class="arithmatex">\(|\alpha\rangle\)</span> とする。 <span class="arithmatex">\(|\alpha\rangle\)</span> は規格化条件 <span class="arithmatex">\(\langle\alpha|\alpha\rangle = 1\)</span> を満たし，以下の固有値関係式に従う。</p>
+<div class="arithmatex">\[
+\hat{a}|\alpha\rangle = \alpha|\alpha\rangle
+\]</div>
+<p>系の密度行列を <span class="arithmatex">\(\rho\)</span> とするとき，伏見関数 <span class="arithmatex">\(Q(\alpha)\)</span> は以下の形式で定義される。</p>
+<div class="arithmatex">\[
+Q(\alpha) = \frac{1}{\pi} \langle\alpha|\rho|\alpha\rangle
+\]</div>
+<p>以下の問いに答えよ。</p>
+<p class="subq"><span class="subq__number">(1)</span><span>密度行列の非負定値性から <span class="arithmatex">\(Q(\alpha)\ge0\)</span> を示せ。</span></p>
+<p class="subq"><span class="subq__number">(2)</span><span>コヒーレント状態は，複素平面上で次の完全性関係を満たす。</span></p><div class="subq__cont">
+<div class="arithmatex">\[
+\frac{1}{\pi} \int |\alpha\rangle\langle\alpha| d^2\alpha = \hat{I}
+\]</div>
+<p>ただし， <span class="arithmatex">\(d^2\alpha = d(\mathrm{Re}\alpha)d(\mathrm{Im}\alpha)\)</span> であり， <span class="arithmatex">\(\hat{I}\)</span> は単位行列である。密度行列の規格化条件 <span class="arithmatex">\(\mathrm{Tr}(\rho) = 1\)</span> を用いて，伏見関数を複素平面全体で積分した値 <span class="arithmatex">\(\displaystyle \int Q(\alpha) d^2\alpha\)</span> が 1 になることを計算して導出せよ。</p>
+</div><p class="subq"><span class="subq__number">(3)</span><span><span class="arithmatex">\(dx\,dp\)</span> に関して規格化された伏見関数を <span class="arithmatex">\(Q_{xp}(x,p)\)</span> とする。この関数と <span class="arithmatex">\(Q(\alpha)\)</span> の間には</span></p><div class="subq__cont">
+<div class="arithmatex">\[
+Q_{xp}(x,p)=\frac{Q(\alpha)}{2\hbar}, \qquad \int Q_{xp}(x,p)\,dx\,dp=1
+\]</div>
+<p>の関係がある。また，<span class="arithmatex">\(Q_{xp}(x,p)\)</span> はウィグナー分布関数 <span class="arithmatex">\(W(x,p)\)</span> を位相空間上で平滑化したものに等しく，次の関係が成り立つ。</p>
+<div class="arithmatex">\[
+Q_{xp}(x, p) = \frac{1}{\pi\hbar} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left( -\frac{(x - x')^2}{x_0^2} - \frac{(p - p')^2}{p_0^2} \right) W(x', p') dx' dp'
+\]</div>
+<p>上の式の指数関数を <span class="arithmatex">\(x'\)</span>，<span class="arithmatex">\(p'\)</span> についてのガウス分布とみなす。この分布の標準偏差 <span class="arithmatex">\(\sigma_x\)</span>，<span class="arithmatex">\(\sigma_p\)</span> と，その積 <span class="arithmatex">\(\sigma_x\sigma_p\)</span> を求めよ。</p>
+</div></div></div>
+<h2 id="_3" class="solution-heading">解答・解説</h2>
+<div class="approach">
+<p>伏見関数は，密度行列をコヒーレント状態ではさんだものです。密度行列は非負なので，この値は0以上です。規格化は，コヒーレント状態の完全性関係を使って確かめます。</p>
+</div>
+<h3 id="1" class="solution-part">(1)</h3><button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button><div class="answer"><div class="answer__inner">
+<p>密度行列を</p>
+<div class="arithmatex">\[
+\rho=\sum_k p_k|\psi_k\rangle\langle\psi_k|
+\]</div>
+<p>と表します。ただし，<span class="arithmatex">\(0\le p_k\le1\)</span> です。これをコヒーレント状態 <span class="arithmatex">\(|\alpha\rangle\)</span> ではさむと，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\langle\alpha|\rho|\alpha\rangle &amp;= \sum_k p_k \langle\alpha|\psi_k\rangle\langle\psi_k|\alpha\rangle \\
+&amp;= \sum_k p_k |\langle\alpha|\psi_k\rangle|^2
+\end{aligned}
+\]</div>
+<p>重なりの絶対値の2乗 <span class="arithmatex">\(|\langle\alpha|\psi_k\rangle|^2\)</span> は，常に 0 以上です。確率 <span class="arithmatex">\(p_k\)</span> も 0 以上です。したがって，それらの積の和も 0 以上になります。</p>
+<div class="arithmatex">\[
+\langle\alpha|\rho|\alpha\rangle \ge 0
+\]</div>
+<p>定義式の係数は <span class="arithmatex">\(\dfrac{1}{\pi} &gt; 0\)</span> なので，伏見関数は複素平面の全域で負の値をとりません。</p>
+<div class="arithmatex">\[
+\finalanswer{Q(\alpha) \ge 0}
+\]</div>
+</div></div><h3 id="2" class="solution-part">(2)</h3><button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button><div class="answer"><div class="answer__inner">
+<p>完全性関係とトレースの巡回性を用いると</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\int Q(\alpha)\,d^2\alpha
+&amp;=\int\frac{1}{\pi}\langle\alpha|\rho|\alpha\rangle\,d^2\alpha \\
+&amp;=\operatorname{Tr}\left[
+\rho\left(\frac{1}{\pi}\int|\alpha\rangle\langle\alpha|\,d^2\alpha\right)
+\right] \\
+&amp;=\operatorname{Tr}(\rho\hat I) \\
+&amp;=1
+\end{aligned}
+\]</div>
+<p>したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{\int Q(\alpha)\,d^2\alpha=1}
+\]</div>
+<p>以上より，伏見関数は 0 以上で全積分が 1 になります。</p>
+</div></div><h3 id="3" class="solution-part">(3)</h3><button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button><div class="answer"><div class="answer__inner">
+<p>標準偏差 <span class="arithmatex">\(\sigma\)</span> のガウス分布は <span class="arithmatex">\(\exp\left(-\dfrac{u^2}{2\sigma^2}\right)\)</span> に比例します。問題文の指数関数と比べると，<span class="arithmatex">\(2\sigma_x^2=x_0^2\)</span>，<span class="arithmatex">\(2\sigma_p^2=p_0^2\)</span> となります。</p>
+<div class="arithmatex">\[
+\finalanswer{\sigma_x=\frac{x_0}{\sqrt{2}},\qquad \sigma_p=\frac{p_0}{\sqrt{2}}}
+\]</div>
+<p><span class="arithmatex">\(x_0p_0=\hbar\)</span> より，積は次のようになります。</p>
+<div class="arithmatex">\[
+\finalanswer{\sigma_x\sigma_p=\frac{\hbar}{2}}
+\]</div>
+<p>この値は不確定性関係の下限に等しくなっています。したがってこの平滑化は，不確定性原理が許す最小の位相空間の分解能に対応します。</p>
+<p>ただし伏見関数が負にならないことは，密度行列が非負定値であることから直接わかります。任意の <span class="arithmatex">\(|\alpha\rangle\)</span> に対して <span class="arithmatex">\(\langle\alpha|\rho|\alpha\rangle\ge0\)</span> なので，定義から <span class="arithmatex">\(Q(\alpha)\ge0\)</span> となります。</p>
+<p>一方，ガウス関数による平滑化は，ウィグナー分布の細かな干渉の構造がコヒーレント状態の分解能で平均されることを表します。</p></div></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+
+  
+    
+    
+    
+
+    
+      
+      
+      
+      <nav class="page-nav" aria-label="前後の問題">
+        
+        
+        
+          
+          
+          <a class="page-nav__side " href="../13_030/">
+            
+              <span class="page-nav__dir">← 前の問題</span>
+            
+            <span class="page-nav__title">ウィグナー分布の時間発展</span>
+            
+              <span class="page-nav__stars" aria-label="難易度 3/3"><span class="on">★★★</span><span class="off"></span></span>
+            
+          </a>
+        
+      
+        <a class="page-nav__list" href="../../">一覧へ</a>
+        
+        
+        
+          
+          
+          <a class="page-nav__side page-nav__side--next" href="../13_050/">
+            
+              <span class="page-nav__dir"><span class="page-nav__arrow page-nav__arrow--in" aria-hidden="true">→</span>次の問題<span class="page-nav__arrow page-nav__arrow--out" aria-hidden="true">→</span></span>
+            
+            <span class="page-nav__title">ウィグナー分布と伏見関数の比較</span>
+            
+              <span class="page-nav__stars" aria-label="難易度 3/3"><span class="on">★★★</span><span class="off"></span></span>
+            
+          </a>
+        
+      
+      </nav>
+      <nav class="page-links" aria-label="関連ページ">
+        <a class="page-links__button page-links__button--books" href="../../../books/">
+          <span class="page-links__label">参考文献一覧</span>
+          <span class="page-links__arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    
+
+    
+      
+        
+      
+      <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="伏見関数の定義｜大学物理の問題集">
+        <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
+        <div class="page-share__buttons">
+          <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg></span>
+            <span>X</span>
+          </a>
+          <a class="page-share__button" data-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebookでシェア">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"/></svg></span>
+            <span>Facebook</span>
+          </a>
+          <a class="page-share__button" data-share-line href="#" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5L254 230v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7v-81.3c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4.6 3 1.6l37.3 50.3v-48.2c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7v-81.3c0-1.9-1.6-3.7-3.7-3.7m-31.4 68.1h-35.6v-64.4c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5.7.6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1h-52.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344v-13.6h35.5c2.1 0 3.7-1.6 3.7-3.7v-13.1c0-2.1-1.6-3.7-3.7-3.7H344v-13.7h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4v326c-.1 51.2-42.1 92.7-93.4 92.6h-326C41.4 511.9-.1 469.8 0 418.6v-326C.1 41.4 42.2-.1 93.4 0h326c51.2.1 92.7 42.1 92.6 93.4m-70.4 140.1c0-83.4-83.7-151.3-186.4-151.3S68.8 150.1 68.8 233.5c0 74.7 66.3 137.4 155.9 149.3 21.8 4.7 19.3 12.7 14.4 42.1-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"/></svg></span>
+            <span>LINE</span>
+          </a>
+          <button class="page-share__button" type="button" data-share-copy aria-label="リンクをコピー">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span>
+            <span data-share-copy-label>リンクコピー</span>
+          </button>
+        </div>
+        <p class="page-share__status" data-share-status role="status" aria-live="polite"></p>
+      </section>
+    <aside class="owner" aria-label="運営者情報">
+      <p class="owner__heading"><span class="owner__heading-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h356.6c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3z"/></svg></span>運営者情報</p>
+      <div class="owner__card">
+        <img class="owner__avatar" src="../../../assets/owner.png" alt="" width="64" height="64" loading="lazy">
+        <div class="owner__body">
+          <p class="owner__name">ななな２</p>
+          <p class="owner__text">なななつとか呼ばれます。物性物理が好きな院生です。超伝導や情報統計力学に興味があります。</p>
+          <p class="owner__links">
+            <a class="owner__link" href="https://twitter.com/nanana_UTM1" target="_blank" rel="noopener"><span class="owner__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg></span>X</a>
+            <a class="owner__link" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="owner__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/></svg></span>note</a>
+          </p>
+        </div>
+      </div>
+    </aside>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+<div class="site-footer">
+  <div class="site-footer__brand">
+    <img src="../../../assets/logo.svg" alt="" class="site-footer__logo" width="52" height="52">
+    <div>
+      <p class="site-footer__name">大学物理の問題集</p>
+      <p class="site-footer__by">運営：ななな２</p>
+    </div>
+  </div>
+  <nav class="site-footer__col" aria-label="分野">
+    <p class="site-footer__head">分野</p>
+    <ul>
+      
+        <li><a href="../../../01mechanics/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 112c-8.8 0-16-7.2-16-16V80c0-44.2 35.8-80 80-80h16c8.8 0 16 7.2 16 16v16c0 44.2-35.8 80-80 80zM0 288c0-76.3 35.7-160 112-160 27.3 0 59.7 10.3 82.7 19.3 18.8 7.3 39.9 7.3 58.7 0 22.9-8.9 55.4-19.3 82.7-19.3 76.3 0 112 83.7 112 160 0 128-80 224-160 224-16.5 0-38.1-6.6-51.5-11.3-8.1-2.8-16.9-2.8-25 0-13.4 4.7-35 11.3-51.5 11.3-80 0-160-96-160-224z"/></svg></span>力学</a></li>
+      
+        <li><a href="../../../02electromagnetism/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 176v112c0 123.7 100.3 224 224 224s224-100.3 224-224V176H320v112c0 53-43 96-96 96s-96-43-96-96V176zm0-48h128V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64zm320 0h128V64c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32z"/></svg></span>電磁気学</a></li>
+      
+        <li><a href="../../../03thermodynamics/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160 0c-53 0-96 43-96 96v164.7C34.5 287 16 325.4 16 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-42.6-18.5-81-48-107.3V96c0-53-43-96-96-96m64 368c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-26.9 16.5-49.9 40-59.3V216c0-13.3 10.7-24 24-24s24 10.7 24 24v92.7c23.5 9.5 40 32.5 40 59.3"/></svg></span>熱力学</a></li>
+      
+        <li><a href="../../../04quantum_mechanics/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 398.8c-11.8 5.1-23.4 9.7-34.9 13.5 16.7 33.8 31 35.7 34.9 35.7s18.1-1.9 34.9-35.7c-11.4-3.9-23.1-8.4-34.9-13.5M414 256c33 45.2 44.3 90.9 23.6 128-20.2 36.3-62.5 49.3-115.2 43.2-22 52.1-55.7 84.8-98.4 84.8s-76.4-32.7-98.4-84.8c-52.7 6.1-95-6.9-115.2-43.2C-10.3 346.9 1 301.2 34 256c-33-45.2-44.3-90.9-23.6-128 20.2-36.3 62.5-49.3 115.2-43.2C147.6 32.7 181.2 0 224 0s76.4 32.7 98.4 84.8c52.7-6.1 95 6.8 115.2 43.2 20.7 37.1 9.4 82.8-23.6 128m-65.8 67.4c-1.7 14.2-3.9 28-6.7 41.2 31.8 1.4 38.6-8.7 40.2-11.7 2.3-4.2 7-17.9-11.9-48.1q-10.2 9.45-21.6 18.6m-6.7-175.9c2.8 13.1 5 26.9 6.7 41.2q11.4 9.15 21.6 18.6c18.9-30.2 14.2-44 11.9-48.1-1.6-2.9-8.4-13-40.2-11.7m-82.6-47.8C242.1 65.9 227.9 64 224 64s-18.1 1.9-34.9 35.7c11.4 3.9 23.1 8.4 34.9 13.5 11.8-5.1 23.4-9.7 34.9-13.5m-159 88.9c1.7-14.3 3.9-28 6.7-41.2-31.8-1.4-38.6 8.7-40.2 11.7-2.3 4.2-7 17.9 11.9 48.1q10.2-9.45 21.6-18.6M78.2 304.8c-18.9 30.2-14.2 44-11.9 48.1 1.6 2.9 8.4 13 40.2 11.7-2.8-13.1-5-26.9-6.7-41.2q-11.4-9.15-21.6-18.6M304 256a80 80 0 1 0-160 0 80 80 0 1 0 160 0m-80-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg></span>量子力学</a></li>
+      
+        <li><a href="../../"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7c-10.3 38.4 12.5 77.9 50.9 88.2l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1-55.4 32m-85.2 12.3a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m185 96.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4m9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1-32-55.4m-121 14.4a32 32 0 1 1-32-55.4 32 32 0 1 1 32 55.4M418 192l-40.6 151.2c-17.2 64-83 102-147 84.9l-38.3-10.3V448c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64z"/></svg></span>統計力学</a></li>
+      
+        <li><a href="../../../06solid_state/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3-2.5c19.8-11.4 44.2-11.4 64 0L464.2 99c19.8 11.4 32 32.6 32 55.4v203c0 22.9-12.2 44-32 55.4L288.3 514.5a64.16 64.16 0 0 1-64 0L48.5 413c-19.8-11.4-32-32.6-32-55.4v-203c0-22.9 12.2-44 32-55.4zm207.8 360V191.4l-143.8 83v166.1z"/></svg></span>物性物理学</a></li>
+      
+        <li><a href="../../../physmath/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M282.6 78.1c8-27.3 33-46.1 61.4-46.1h200c17.7 0 32 14.3 32 32s-14.3 32-32 32H344L238.7 457c-3.6 12.3-14.1 21.2-26.8 22.8s-25.1-4.6-31.5-15.6L77.6 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h45.6c22.8 0 43.8 12.1 55.3 31.8l65.2 111.8 84.4-289.5zm110.8 155.3c12.5-12.5 32.8-12.5 45.3 0l41.4 41.4 41.4-41.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-41.4 41.4 41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-41.4-41.4-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l41.4-41.4-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3"/></svg></span>物理数学</a></li>
+      
+    </ul>
+  </nav>
+  <nav class="site-footer__col" aria-label="探す">
+    <p class="site-footer__head">探す</p>
+    <ul>
+      <li><a href="../../../tags/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96m144-80c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zM48 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96m48-208a48 48 0 1 0-96 0 48 48 0 1 0 96 0"/></svg></span>問題を探す</a></li>
+      <li><a href="../../../books/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 141.3v309.3l.5-.2A449 449 0 0 1 428.8 416H448V96h-19.2c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7m-25.1-79.8L256 72l25.1-10.5C327.9 42 378.1 32 428.8 32H464c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-35.2c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h35.2c50.7 0 100.9 10 147.7 29.5"/></svg></span>参考文献一覧</a></li>
+      <li><a href="../../../exam/"><span class="site-footer__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 64c0-35.3 28.7-64 64-64h213.5c17 0 33.3 6.7 45.3 18.7l42.5 42.5c12 12 18.7 28.3 18.7 45.3V144H64zM0 256c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v96c0 17.7-14.3 32-32 32h-32v64c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64v-64H32c-17.7 0-32-14.3-32-32zm128 160v32h256v-96H128zm328-144a24 24 0 1 0-48 0 24 24 0 1 0 48 0"/></svg></span>問題を印刷する</a></li>
+    </ul>
+  </nav>
+  <nav class="site-footer__col" aria-label="このサイト">
+    <p class="site-footer__head">このサイト</p>
+    <ul>
+      <li><a href="../../../privacy/">プライバシーポリシー</a></li>
+      <li><a href="../../../terms/">このサイトの利用について</a></li>
+    </ul>
+  </nav>
+  <p class="site-footer__bottom">
+    © 2026 ななな２
+    
+      <span aria-hidden="true">・</span>Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>
+    
+  </p>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/problem-filter.js?v=20261031c"></script>
+      
+        <script src="../../../javascripts/share.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/tabs.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/site-search.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/answers.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/copy-markdown.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/exam.js?v=20261031g"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
