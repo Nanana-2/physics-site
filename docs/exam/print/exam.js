@@ -21,6 +21,9 @@
     tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]], macros: { finalanswer: ["\\boxed{#1}", 1] } },
     svg: { fontCache: "global", matchFontHeight: false, mtextInheritFont: true }, // 数式は本文と同じ 10pt（和文の x の高さに合わせて拡大しない）
     startup: { typeset: false },
+    // 数式のフォントは LaTeX の標準に近い Latin Modern（MathJax 4 の既定の New Computer Modern より線が細い）
+    loader: { paths: { "mathjax-modern": "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-modern-font@4.0.0" } },
+    output: { font: "mathjax-modern" },
   };
 
   const el = (html) => { const t = document.createElement("template"); t.innerHTML = html.trim(); return [...t.content.children]; };
@@ -41,6 +44,8 @@
       if (!prev || before === "" || PUNCT_L.test(before)) m.classList.add("no-l");
       if (!next || after === "" || PUNCT_R.test(after)) m.classList.add("no-r");
     });
+    // 別行の数式に続く段落は，LaTeX と同じく行頭を下げない
+    doc.querySelectorAll("div.arithmatex + p").forEach((p) => p.classList.add("cont"));
     const parts = [...doc.querySelectorAll("h3.solution-part")].map((h) => {
       let a = h.nextElementSibling;
       while (a && !a.classList.contains("answer")) a = a.nextElementSibling;
@@ -60,8 +65,9 @@
   const blocks = (items) => {
     const prob = [], ans = [];
     items.forEach((it, i) => {
-      prob.push({ node: el(`<h2 class="q-head">${label(i + 1)}</h2>`)[0], keep: true, page: i > 0 && opt.breakEach });
-      it.problem.forEach((n) => prob.push({ node: n }));
+      // 大問は 1 つのまとまり（group）として扱い，1 ページに収まるなら途中で分けない
+      prob.push({ node: el(`<h2 class="q-head">${label(i + 1)}</h2>`)[0], keep: true, page: i > 0 && opt.breakEach, group: i });
+      it.problem.forEach((n) => prob.push({ node: n, group: i }));
       ans.push({ node: el(`<h2 class="q-head">${label(i + 1)}<span>${it.title}</span></h2>`)[0], keep: true });
       if (it.approach.length) {
         ans.push({ node: el('<p class="a-label">考え方</p>')[0], keep: true });
@@ -89,18 +95,35 @@
     const pages = [];
     let page = first || newPage(site);
     pages.push(page);
-    list.forEach((b, i) => {
-      let body = page.querySelector(".page__body");
-      if (b.page && body.children.length) { page = newPage(site); pages.push(page); body = page.querySelector(".page__body"); }
-      body.append(b.node);
-      if (fits(body) || body.children.length === 1) return;
+    const body = () => page.querySelector(".page__body");
+    const turn = () => { page = newPage(site); pages.push(page); };
+    for (let i = 0; i < list.length; i++) {
+      const b = list[i];
+      if (b.page && body().children.length) turn();
+      // 大問のまとまりは，今のページに入らず新しいページなら収まるとき，まとめて次のページへ送る
+      if (b.group !== undefined && (i === 0 || list[i - 1].group !== b.group)) {
+        let k = i;
+        while (k + 1 < list.length && list[k + 1].group === b.group) k++;
+        const nodes = list.slice(i, k + 1).map((x) => x.node);
+        const hadContent = body().children.length > 0;
+        body().append(...nodes);
+        if (fits(body())) { i = k; continue; }
+        const height = nodes[nodes.length - 1].getBoundingClientRect().bottom - nodes[0].getBoundingClientRect().top;
+        if (hadContent && height <= body().clientHeight) { turn(); body().append(...nodes); i = k; continue; }
+        // 1 ページに収まらない長い大問でも，残りが 4 分の 1 ページ未満なら次のページから始める
+        const rest = body().getBoundingClientRect().bottom - nodes[0].getBoundingClientRect().top;
+        nodes.forEach((n) => n.remove());
+        if (hadContent && rest < body().clientHeight / 4) turn();
+      }
+      body().append(b.node);
+      if (fits(body()) || body().children.length === 1) continue;
       // 見出しが下端に取り残されないよう，直前の keep の要素も一緒に送る
       const move = [b.node];
       let prev = b.node.previousElementSibling, j = i - 1;
-      while (prev && list[j] && list[j].keep && body.children.length > move.length + 1) { move.unshift(prev); prev = prev.previousElementSibling; j--; }
-      page = newPage(site); pages.push(page);
-      page.querySelector(".page__body").append(...move);
-    });
+      while (prev && list[j] && list[j].keep && body().children.length > move.length + 1) { move.unshift(prev); prev = prev.previousElementSibling; j--; }
+      turn();
+      body().append(...move);
+    }
     return pages;
   };
 
@@ -148,6 +171,8 @@
     await MathJax.typesetPromise([flow]);
     await document.fonts.ready;
     await Promise.all([...flow.querySelectorAll("img")].map((img) => img.complete ? 0 : new Promise((r) => { img.onload = img.onerror = r; })));
+    // 図はサイトでは 1.4 倍に拡大して表示している。印刷では TikZ で描いたときの大きさに戻す
+    flow.querySelectorAll("img").forEach((img) => { if (img.naturalWidth) img.style.width = `${(img.naturalWidth * 0.75 / 1.4).toFixed(1)}pt`; });
 
     if (opt.book) {
       // 冊子：問題と解答・解説に表紙をつけ，それぞれ 4 の倍数のページにそろえる

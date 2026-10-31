@@ -74,7 +74,8 @@
       const chapters = [...new Map(index.filter((p) => p.subjectSlug === subject).map((p) => [p.chapterSlug, p.chapter])).entries()];
       chapterSel.innerHTML = '<option value="">すべての章</option>' + chapters.map(([slug, name]) => `<option value="${slug}">${esc(name)}</option>`).join("");
     };
-    const inRange = () => index.filter((p) => p.subjectSlug === subject && (!chapterSel.value || p.chapterSlug === chapterSel.value));
+    const levelSel = $("[data-exam-level]");
+    const inRange = () => index.filter((p) => p.subjectSlug === subject && (!chapterSel.value || p.chapterSlug === chapterSel.value) && (!levelSel.value || p.difficulty === levelSel.value));
     const renderList = () => {
       const list = chosen();
       const full = list.length >= MAX;
@@ -102,8 +103,9 @@
       renderList();
     });
     chapterSel.addEventListener("change", renderList);
+    levelSel.addEventListener("change", renderList);
 
-    // 範囲からランダムに選ぶ（すでに選んだ問題は除き，上限を超えない）
+    // 範囲からランダムに選ぶ（すでに選んだ問題は除き，上限を超えない）。選んだ問題は問題番号の順に加える
     const countSel = $("[data-exam-random-count]");
     countSel.innerHTML = Array.from({ length: MAX }, (_, i) => i + 1).map((n) => `<option value="${n}"${n === 3 ? " selected" : ""}>${n}</option>`).join("");
     $("[data-exam-random]").addEventListener("click", () => {
@@ -112,7 +114,8 @@
       if (room <= 0) { status(`すでに${MAX}問選んでいます`); return; }
       const pool = inRange().map(idOf).filter((id) => !list.includes(id));
       for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
-      const add = pool.slice(0, Math.min(Number(countSel.value), room));
+      const order = new Map(index.map((p, i) => [idOf(p), i]));
+      const add = pool.slice(0, Math.min(Number(countSel.value), room)).sort((a, b) => order.get(a) - order.get(b));
       write(KEY, [...list, ...add]);
       renderChosen();
       status(add.length ? `${add.length}問を加えました` : "この範囲に加えられる問題がありません");
@@ -123,6 +126,7 @@
       const list = chosen();
       $("[data-exam-count]").textContent = `${list.length} / ${MAX}`;
       $("[data-exam-empty]").hidden = list.length > 0;
+      $("[data-exam-clear]").hidden = !list.length;
       $("[data-exam-chosen]").innerHTML = list.map((id, i) => {
         const p = byId.get(id);
         return `<div class="toc-row exam-builder__row"><span class="toc-row__num">${i + 1}</span>`
@@ -144,6 +148,12 @@
       if (b.dataset.remove !== undefined) list.splice(i, 1);
       else { const j = b.dataset.up !== undefined ? i - 1 : i + 1; [list[i], list[j]] = [list[j], list[i]]; }
       write(KEY, list);
+      renderChosen();
+    });
+
+    $("[data-exam-clear]").addEventListener("click", () => {
+      if (!confirm("選んだ問題をすべて外しますか。")) return;
+      write(KEY, []);
       renderChosen();
     });
 

@@ -57,12 +57,14 @@ b, strong, h1, h2, h3, h4 { font-family: var(--gothic); font-weight: 400; }
 
 /* 本文 */
 .pages p { margin: 0 0 .5em; text-align: justify; text-indent: 1em; }
-.pages .subq, .pages figure p, .pages .a-label, .pages .a-source, .cover p { text-indent: 0; }
-.pages .subq { display: flex; gap: .6em; padding-left: .2em; }
-.pages .subq__number { flex: none; }
+.pages .subq, .pages p.cont, .pages .subq__cont p, .pages figure p, .pages .a-label, .pages .a-source, .cover p { text-indent: 0; }
+/* 小問は番号の幅をそろえ，続きの行（別行の式とそのあとの文）を小問の文の頭にそろえる */
+.pages .subq { display: flex; align-items: baseline; }
+.pages .subq__number { flex: none; width: 1.8em; }
+.pages .subq__cont { padding-left: 1.8em; }
 .pages figure { margin: 3mm 0; }
 .pages figure p { text-align: center; }
-.pages figure img { display: block; margin: 0 auto; max-width: 75%; height: auto; }
+.pages figure img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
 .pages mjx-container[display="true"] { margin: .5em 0 !important; }
 /* 和文と数式の間は TeX と同じく四分ほど空ける（原稿の半角スペースは使わない）。
    段落の頭や約物（，。（）など）の隣では空けない。exam.js が no-l，no-r を付ける */

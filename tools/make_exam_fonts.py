@@ -44,7 +44,7 @@ def _used() -> set:
 
 def main(src: Path) -> None:
     text = _jis_level1() | _used() | {chr(c) for c in range(0x20, 0x7F)}
-    text = "".join(sorted(c for c in text if c.isprintable()))
+    text = "".join(sorted(c for c in text if c.isprintable() or c == "\u3000"))  # 全角スペースは isprintable() が偽になる
     OUT.mkdir(parents=True, exist_ok=True)
     for name, out in FONTS.items():
         options = subset.Options()

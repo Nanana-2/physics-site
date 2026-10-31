@@ -7,14 +7,17 @@ hide:
 
 # 試験を作る
 
-好きな問題を8問まで選ぶと，定期試験の形の問題用紙と解答・解説の別冊を印刷できます。問題は，各問題のページの「試験に追加」からも選ぶことができます。
+好きな問題を選ぶと，定期試験の形の問題用紙と解答・解説の別冊を印刷できます。
 
 <div class="exam-builder" data-exam-builder data-index-url="../problem-index.json" markdown="0">
   <section class="toc-chapter">
     <h2 class="toc-chapter__head"><span class="toc-chapter__no">1</span><span class="toc-chapter__title">問題を選ぶ</span></h2>
     <div class="finder__subjects" data-exam-subjects role="group" aria-label="分野"></div>
     <div class="exam-builder__bar">
+      <span class="exam-builder__filters">
       <label class="exam-builder__select">章 <select data-exam-chapter></select></label>
+      <label class="exam-builder__select">難易度 <select data-exam-level><option value="">すべて</option><option value="基本">★ 基本</option><option value="標準">★★ 標準</option><option value="発展">★★★ 発展</option></select></label>
+      </span>
       <span class="exam-builder__random">
         <span>この範囲からランダムに</span>
         <select data-exam-random-count aria-label="問題数"></select>
@@ -27,6 +30,7 @@ hide:
   <section class="toc-chapter">
     <h2 class="toc-chapter__head"><span class="toc-chapter__no">2</span><span class="toc-chapter__title">選んだ問題<span class="exam-builder__count" data-exam-count></span></span></h2>
     <div data-exam-chosen></div>
+    <div class="exam-builder__clear"><button type="button" class="exam-builder__chip" data-exam-clear hidden>すべて外す</button></div>
     <p class="exam-builder__empty" data-exam-empty>まだ問題が選ばれていません。上の一覧の「追加」か，各問題のページの「試験に追加」から選んでください。</p>
   </section>
 
