@@ -1700,12 +1700,23 @@ html { scroll-behavior: smooth; }
 .md-typeset .exam-builder__filters { display: grid; grid-template-columns: 4em 1fr; align-items: start; gap: .6rem 1rem; margin: .9rem 0 0; font-size: .7rem; }
 .md-typeset .exam-builder__filters dt { margin: 0; padding-top: .3rem; color: var(--md-default-fg-color--light); font-weight: 400; }
 .md-typeset .exam-builder__filters dd { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
-.md-typeset .exam-builder__chapters .exam-builder__chip { font-size: .68rem; }
-.md-typeset .exam-builder__chip.exam-builder__check.is-on { background: var(--site-navy); color: #fff; }
-[data-md-color-scheme="slate"] .md-typeset .exam-builder__chip.exam-builder__check.is-on { background: #3a4785; }
-.md-typeset .exam-builder__check::before { content: "✓"; display: inline-block; width: 1em; margin-right: .2em; opacity: 0; }
-.md-typeset .exam-builder__check.is-on::before { opacity: 1; }
-.md-typeset .finder__level.exam-builder__check::before { color: #fff; }
+/* 選んだものは薄い下地と ✓，選んでいないものは灰色の文字だけにして，並んだときに重く見えないようにする */
+.md-typeset .exam-builder__filters .exam-builder__check,
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check {
+  padding: .2rem .55rem; border: 1px solid transparent; background: transparent; color: var(--md-default-fg-color--light); font-size: .68rem;
+}
+.md-typeset .exam-builder__filters .exam-builder__check:hover,
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check:hover { background: #f1f2f6; }
+.md-typeset .exam-builder__filters .exam-builder__check.is-on,
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { background: rgba(23, 29, 59, .07); color: var(--md-typeset-color); }
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check { color: #c9a200; opacity: .45; }
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { color: #c9a200; opacity: 1; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check { background: transparent; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check:hover { background: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check.is-on { background: rgba(255, 255, 255, .1); }
+.md-typeset .exam-builder__filters .exam-builder__check::before { content: "✓"; display: inline-block; width: 0; margin-right: 0; overflow: hidden; color: var(--site-navy); vertical-align: top; }
+.md-typeset .exam-builder__filters .exam-builder__check.is-on::before { width: 1em; margin-right: .15em; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__check::before { color: #8c9eff; }
 .md-typeset .exam-builder__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin: .9rem 0 .6rem; font-size: .7rem; color: var(--md-default-fg-color--light); }
 .md-typeset .exam-builder__select { display: inline-flex; align-items: center; gap: .5rem; }
 .md-typeset .exam-builder__random { display: inline-flex; align-items: center; gap: .4rem; }
