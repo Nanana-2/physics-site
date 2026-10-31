@@ -55,7 +55,7 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/mathjax.js?v=20261022b
-  - javascripts/problem-filter.js?v=20261031b
+  - javascripts/problem-filter.js?v=20261031c
   - javascripts/share.js?v=20261022b
   - javascripts/tabs.js?v=20261022b
   - javascripts/site-search.js?v=20261022b
