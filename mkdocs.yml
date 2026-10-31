@@ -61,7 +61,7 @@ extra_javascript:
   - javascripts/site-search.js?v=20261022b
   - javascripts/answers.js?v=20261022b
   - javascripts/copy-markdown.js?v=20261022b
-  - javascripts/exam.js?v=20261031e
+  - javascripts/exam.js?v=20261031f
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:

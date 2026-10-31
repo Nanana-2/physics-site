@@ -9,7 +9,7 @@
   --gothic: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "HaranoAji Gothic", sans-serif;
 }
 html { background: #e9e9e9; color: #000; }
-/* 文字の大きさと行送りは jsarticle（10pt）に合わせる。和文は 10pt の 0.925 倍（9.25pt），行送りは 16pt */
+/* 文字の大きさと行送りは jsarticle（10pt）に合わせる。和文は 10pt の 0.925 倍（9.25pt），行送りは 16pt。数式も本文と同じ大きさ */
 body { margin: 0; font-family: var(--mincho); font-size: 9.25pt; line-height: 16pt; -webkit-text-size-adjust: 100%; }
 b, strong, h1, h2, h3, h4 { font-family: var(--gothic); font-weight: 400; }
 
@@ -66,8 +66,6 @@ b, strong, h1, h2, h3, h4 { font-family: var(--gothic); font-weight: 400; }
 .pages figure { margin: 3mm 0; }
 .pages figure p { text-align: center; }
 .pages figure img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
-/* 数式は欧文と同じ 10pt（和文の 9.25pt の 1.081 倍） */
-.pages mjx-container { font-size: 108.1%; }
 .pages mjx-container[display="true"] { margin: .5em 0 !important; }
 /* 和文と数式の間は TeX と同じく四分ほど空ける（原稿の半角スペースは使わない）。
    段落の頭や約物（，。（）など）の隣では空けない。exam.js が no-l，no-r を付ける */
