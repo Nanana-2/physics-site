@@ -1,4 +1,4 @@
-"""試験の印刷ページ（docs/exam/print/）で使う原ノ味フォントを，使う文字だけに絞って woff2 にする。
+"""問題の印刷ページ（docs/exam/print/）で使う原ノ味フォントを，使う文字だけに絞って woff2 にする。
 
 原ノ味フォントは https://github.com/trueroad/HaranoAjiFonts から
 HaranoAjiMincho-Regular.otf と HaranoAjiGothic-Regular.otf を取ってきて，そのフォルダを渡す。

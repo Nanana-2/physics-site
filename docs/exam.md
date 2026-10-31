@@ -1,13 +1,13 @@
 ---
-title: 試験を作る
+title: 問題を印刷する
 hide:
   - navigation
   - toc
 ---
 
-# 試験を作る
+# 問題を印刷する
 
-好きな問題を選ぶと，定期試験の形の問題用紙と解答・解説の別冊を印刷できます。
+好きな問題を選ぶと，問題用紙と解答・解説の別冊を印刷できます。
 
 <div class="exam-builder" data-exam-builder data-index-url="../problem-index.json" markdown="0">
   <section class="toc-chapter">
@@ -37,14 +37,14 @@ hide:
     <h2 class="toc-chapter__head"><span class="toc-chapter__no">2</span><span class="toc-chapter__title">選んだ問題<span class="exam-builder__count" data-exam-count></span></span></h2>
     <div data-exam-chosen></div>
     <div class="exam-builder__clear"><button type="button" class="exam-builder__chip" data-exam-clear hidden>すべて外す</button></div>
-    <p class="exam-builder__empty" data-exam-empty>まだ問題が選ばれていません。上の一覧の「追加」か，各問題のページの「試験に追加」から選んでください。</p>
+    <p class="exam-builder__empty" data-exam-empty>まだ問題が選ばれていません。上の一覧の「追加」か，各問題のページの「印刷に追加」から選んでください。</p>
   </section>
 
   <section class="toc-chapter">
-    <h2 class="toc-chapter__head"><span class="toc-chapter__no">3</span><span class="toc-chapter__title">試験の設定</span></h2>
+    <h2 class="toc-chapter__head"><span class="toc-chapter__no">3</span><span class="toc-chapter__title">印刷の設定</span></h2>
     <label class="finder__search exam-builder__title">
       <span class="exam-builder__title-label">題名</span>
-      <input type="text" data-exam-title maxlength="40" placeholder="物理学 試験問題" aria-label="題名">
+      <input type="text" data-exam-title maxlength="40" placeholder="物理学 問題" aria-label="題名">
     </label>
     <dl class="exam-builder__settings">
       <dt>大問番号</dt>
@@ -60,7 +60,7 @@ hide:
 
   <div class="exam-builder__actions">
     <a class="exam-builder__open" data-exam-open href="print/">印刷用のページを開く</a>
-    <button type="button" class="exam-builder__chip" data-exam-share>この試験のリンクをコピー</button>
+    <button type="button" class="exam-builder__chip" data-exam-share>このセットのリンクをコピー</button>
     <span class="exam-builder__status" data-exam-status role="status" aria-live="polite"></span>
   </div>
   <p class="exam-builder__note">冊子形式は，ページ数を4の倍数にそろえて印刷します。冊子の形に並べるには，プリンターや PDF ビューアーの小冊子印刷の設定を使ってください。</p>

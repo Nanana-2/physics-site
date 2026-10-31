@@ -1200,6 +1200,7 @@ body, input {
 .md-typeset .home-bar__seg--3 { background: #d9a400; }
 .md-typeset .home-legend { display: flex; align-items: center; justify-content: flex-end; gap: .4rem; font-size: .6rem; color: var(--md-default-fg-color--light); }
 .md-typeset .home-legend .home-bar__seg { width: 1rem; margin-left: .6rem; }
+.md-typeset .home-tiles--single { grid-template-columns: 1fr; }
 .md-typeset .home-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin: 1rem 0; }
 .md-typeset a.home-level { display: flex; flex-direction: column; gap: .2rem; padding: .9rem 1rem; }
 .md-typeset .home-level__stars { font-size: .9rem; letter-spacing: .06em; color: #e0b400; }
@@ -1679,7 +1680,7 @@ html { scroll-behavior: smooth; }
 .md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) * { color: #171d3b !important; }
 
 /* ==========================================
-   試験を作る（javascripts/exam.js）：問題ページの「試験に追加」と，試験を作るページ
+   問題を印刷する（javascripts/exam.js）：問題ページの「印刷に追加」と，問題を印刷するページ
    ========================================== */
 .md-typeset .page-tools { gap: .4rem; }
 .md-typeset .page-tools__exam {
@@ -1693,7 +1694,7 @@ html { scroll-behavior: smooth; }
 .md-typeset .page-tools__exam.is-on { border-color: var(--site-navy); color: var(--md-typeset-color); }
 .md-typeset .page-tools__exam:is(:hover, :focus-visible) { background-size: 100% 100%; color: var(--site-sweep-text); }
 
-/* 試験を作るページ：章の見出しの帯・分野のタブ・問題の行は，ほかの一覧ページと同じ部品を使う */
+/* 問題を印刷するページ：章の見出しの帯・分野のタブ・問題の行は，ほかの一覧ページと同じ部品を使う */
 .md-typeset .exam-builder { margin-top: 1.5em; }
 .md-typeset .exam-builder__count { margin-left: .8em; font-size: .72rem; opacity: .75; }
 /* 章と難易度の絞り込み：押すたびに入れる・外すを切り替える（複数選べる） */
@@ -1766,7 +1767,7 @@ html { scroll-behavior: smooth; }
 .md-typeset .exam-builder__empty { margin: .6rem .2rem; font-size: .72rem; color: var(--md-default-fg-color--light); }
 .md-typeset .exam-builder__clear { display: flex; justify-content: flex-end; margin-top: .6rem; }
 
-/* 試験の設定：題名は検索窓と同じ形，選択肢は難易度のボタンと同じ形 */
+/* 印刷の設定：題名は検索窓と同じ形，選択肢は難易度のボタンと同じ形 */
 .md-typeset .finder__search.exam-builder__title { margin: .9rem 0 1rem; }
 .md-typeset .exam-builder__title-label { flex: none; font-size: .72rem; color: var(--md-default-fg-color--light); }
 .md-typeset .exam-builder__settings { display: grid; grid-template-columns: 5em 1fr; align-items: center; gap: .6rem 1rem; margin: 0; font-size: .72rem; }
