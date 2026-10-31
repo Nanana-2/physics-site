@@ -37,7 +37,6 @@ SUBJECT_DIRS = (
 )
 LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 
-CHAPTER_END_MARK = '<span class="toc-row__mark">章末</span>'
 PROBLEM_HEADING = re.compile(r'<h2 id="([^"]+)">問題</h2>')
 SUBQUESTION = re.compile(r"<p>\((\d+)\)\s*(.*?)</p>", re.DOTALL)
 
@@ -290,7 +289,7 @@ def _subject_index(html, page, config):
         links = re.findall(r'<a href="([^"]+)">(.*?)</a>', items)
         rows = "".join(
             f'<a class="toc-row" href="{href}"><span class="toc-row__num">{number}-{i}</span>'
-            f'<span class="toc-row__title">{name}{CHAPTER_END_MARK if _is_chapter_end(href.strip("/")) else ""}</span>{_stars_html(_level(base / (href.strip("/") + ".md")), "toc-row__stars")}</a>'
+            f'<span class="toc-row__title">{"章末：" if _is_chapter_end(href.strip("/")) else ""}{name}</span>{_stars_html(_level(base / (href.strip("/") + ".md")), "toc-row__stars")}</a>'
             for i, (href, name) in enumerate(links, 1)
         )
         sections.append(

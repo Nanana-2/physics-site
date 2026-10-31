@@ -66,7 +66,7 @@
           html += `<section class="toc-chapter"><h2 class="toc-chapter__head"><span class="toc-chapter__no">${p.chapterNumber}</span><span class="toc-chapter__title">${subjectLabel}${escapeHtml(p.chapterName)}</span></h2>`;
         }
         const href = new URL(`../${p.url}`, window.location.href).href;
-        html += `<a class="toc-row finder__row" href="${escapeHtml(href)}"><span class="toc-row__num">${p.label}</span><span class="finder__text"><span class="toc-row__title">${escapeHtml(p.title)}${p.number.endsWith("_900") ? '<span class="toc-row__mark">章末</span>' : ""}</span>${snippet(p, words)}</span>${stars(LEVELS[p.difficulty] || 0)}</a>`;
+        html += `<a class="toc-row finder__row" href="${escapeHtml(href)}"><span class="toc-row__num">${p.label}</span><span class="finder__text"><span class="toc-row__title">${p.number.endsWith("_900") ? "章末：" : ""}${escapeHtml(p.title)}</span>${snippet(p, words)}</span>${stars(LEVELS[p.difficulty] || 0)}</a>`;
       });
       results.innerHTML = `${html}</section>`;
     };
