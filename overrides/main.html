@@ -42,7 +42,7 @@
     <section class="home-hero" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');">
       <div class="home-hero__inner">
         <img class="home-hero__logo" src="{{ 'assets/logo.svg' | url }}" alt="" width="84" height="84">
-        <h1 class="home-hero__title"><span>物理の問題をたくさん見よう！</span><span>たくさん解こう！</span></h1>
+        <h1 class="home-hero__title"><span><span>物理の問題を</span><span>たくさん見よう！</span></span><span>たくさん解こう！</span></h1>
         <p class="home-hero__facts">物理6分野と物理数学・{{ page.meta.problem_total }}問で学べる大学物理の問題集サイト</p>
         <form class="site-search home-search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
           <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
