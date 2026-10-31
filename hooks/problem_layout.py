@@ -104,7 +104,7 @@ def on_page_content(html, page, config, files):
     body = _indent_continuations(body)
     box = (
         '<div class="problem-box">'
-        f'<h2 id="{heading.group(1)}"><span>問題</span>{_stars(page.meta)}</h2>'
+        f'<h2 id="{heading.group(1)}"><span>{"章末問題" if _is_chapter_end(page.file.src_uri) else "問題"}</span>{_stars(page.meta)}</h2>'
         f'<div class="problem-box__body">{body}</div>'
         "</div>"
     )
@@ -265,6 +265,11 @@ CHAPTER_CARD = re.compile(
 CARD_GRID = re.compile(r'<div class="grid cards">.*?</div>', re.DOTALL)
 
 
+def _is_chapter_end(path: str) -> bool:
+    # 章末問題はファイル名の番号を 900 にする（<章>_900.md）
+    return Path(path).stem.endswith("_900")
+
+
 def _level(md_path: Path) -> int:
     try:
         text = md_path.read_text(encoding="utf-8")
@@ -284,7 +289,7 @@ def _subject_index(html, page, config):
         links = re.findall(r'<a href="([^"]+)">(.*?)</a>', items)
         rows = "".join(
             f'<a class="toc-row" href="{href}"><span class="toc-row__num">{number}-{i}</span>'
-            f'<span class="toc-row__title">{name}</span>{_stars_html(_level(base / (href.strip("/") + ".md")), "toc-row__stars")}</a>'
+            f'<span class="toc-row__title">{"章末：" if _is_chapter_end(href.strip("/")) else ""}{name}</span>{_stars_html(_level(base / (href.strip("/") + ".md")), "toc-row__stars")}</a>'
             for i, (href, name) in enumerate(links, 1)
         )
         sections.append(
