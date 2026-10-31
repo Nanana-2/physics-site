@@ -3,7 +3,7 @@
 // 設定は試験を作るページ（docs/exam.md と docs/javascripts/exam.js）が作る。
 (() => {
   const SITE = "https://nanana-2.github.io/physics-site/";
-  const MAX = 5;
+  const MAX = 8;
   const PAPER = { A4: [210, 297], B5: [182, 257] }; // B5 は日本の B5（JIS）
   const q = new URLSearchParams(location.search);
   const ids = (q.get("p") || "").split(",").filter((id) => /^[0-9a-z_]+\/[0-9a-z_]+\/[0-9a-z_]+$/.test(id)).slice(0, MAX);
@@ -14,12 +14,12 @@
     breakEach: q.get("break") === "1",
     book: q.get("book") === "1",
   };
-  const label = (i) => opt.num === "box" ? `<span class="q-head__box">${i}</span>` : opt.num === "dai" ? `第 ${i} 問` : `問題 ${i}`;
+  const label = (i) => opt.num === "box" ? `<span class="q-head__box">${i}</span>` : opt.num === "dai" ? `<span>第<span class="q-head__num">${i}</span>問</span>` : `<span>問題<span class="q-head__num">${i}</span></span>`;
 
   // 答えは黄色の下地ではなく枠で囲む。数式の中の日本語は本文と同じフォントにする
   window.MathJax = {
     tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]], macros: { finalanswer: ["\\boxed{#1}", 1] } },
-    svg: { fontCache: "global", mtextInheritFont: true },
+    svg: { fontCache: "global", matchFontHeight: false, mtextInheritFont: true }, // 数式は本文と同じ 10pt（和文の x の高さに合わせて拡大しない）
     startup: { typeset: false },
   };
 
@@ -30,11 +30,16 @@
   const extract = (doc, url) => {
     doc.querySelectorAll('img[src*="#only-dark"]').forEach((img) => img.remove());
     doc.querySelectorAll("img").forEach((img) => { img.src = new URL(img.getAttribute("src"), url).href; });
-    // 数式の前後の半角スペースは消し，間隔は CSS でそろえる
+    // 数式の前後の半角スペースは消し，間隔は CSS でそろえる。段落の頭と約物の隣には間隔を入れない
+    const PUNCT_L = /[\s（「『【〔［｛，、。・：；]$/, PUNCT_R = /^[\s）」』】〕］｝，、。・：；！？]/;
     doc.querySelectorAll("span.arithmatex").forEach((m) => {
       [m.previousSibling, m.nextSibling].forEach((t, k) => {
         if (t && t.nodeType === 3) t.textContent = k ? t.textContent.replace(/^ +/, "") : t.textContent.replace(/ +$/, "");
       });
+      const prev = m.previousSibling, next = m.nextSibling;
+      const before = prev ? prev.textContent : "", after = next ? next.textContent : "";
+      if (!prev || before === "" || PUNCT_L.test(before)) m.classList.add("no-l");
+      if (!next || after === "" || PUNCT_R.test(after)) m.classList.add("no-r");
     });
     const parts = [...doc.querySelectorAll("h3.solution-part")].map((h) => {
       let a = h.nextElementSibling;

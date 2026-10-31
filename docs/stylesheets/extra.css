@@ -1693,41 +1693,87 @@ html { scroll-behavior: smooth; }
 .md-typeset .page-tools__exam.is-on { border-color: var(--site-navy); color: var(--md-typeset-color); }
 .md-typeset .page-tools__exam:is(:hover, :focus-visible) { background-size: 100% 100%; color: var(--site-sweep-text); }
 
-.md-typeset .exam-builder__section { margin: 0 0 1.6rem; }
-.md-typeset .exam-builder h2 { margin: 0 0 .7rem; font-size: .85rem; }
-.md-typeset .exam-builder__count { margin-left: .4em; font-size: .75rem; color: var(--md-default-fg-color--light); }
-.md-typeset .exam-builder__chosen { margin: 0; padding-left: 1.4rem; }
-.md-typeset .exam-builder__chosen li { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .1rem .6rem; margin: 0 0 .5rem; }
-.md-typeset .exam-builder__chosen .exam-builder__meta { grid-column: 1; grid-row: 2; }
-.md-typeset .exam-builder__meta { font-size: .65rem; color: var(--md-default-fg-color--light); }
-.md-typeset .exam-builder__ops { display: inline-flex; gap: .25rem; grid-column: 2; grid-row: 1 / span 2; }
-.md-typeset .exam-builder__ops button,
-.md-typeset .exam-builder__button {
-  padding: .15rem .6rem; border: 1px solid var(--md-default-fg-color--lightest); background: none; cursor: pointer;
-  color: var(--md-typeset-color); font: inherit; font-size: .68rem;
+/* 試験を作るページ：章の見出しの帯・分野のタブ・問題の行は，ほかの一覧ページと同じ部品を使う */
+.md-typeset .exam-builder { margin-top: 1.5em; }
+.md-typeset .exam-builder__count { margin-left: .8em; font-size: .72rem; opacity: .75; }
+.md-typeset .exam-builder__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin: .9rem 0 .6rem; font-size: .7rem; color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__select { display: inline-flex; align-items: center; gap: .5rem; }
+.md-typeset .exam-builder__random { display: inline-flex; align-items: center; gap: .4rem; }
+.md-typeset .exam-builder select {
+  padding: .3rem 1.6rem .3rem .6rem; border: none; border-radius: 0; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; font-size: .72rem;
+  appearance: none; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - .75rem) 55%, calc(100% - .5rem) 55%; background-size: .25rem .25rem; background-repeat: no-repeat;
 }
-.md-typeset .exam-builder__ops button:disabled { opacity: .35; cursor: default; }
-.md-typeset .exam-builder__empty { margin: 0; font-size: .72rem; color: var(--md-default-fg-color--light); }
-.md-typeset .exam-builder__row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.1rem; margin: 0 0 .7rem; font-size: .75rem; }
-.md-typeset .exam-builder__row select,
-.md-typeset .exam-builder__row input[type="text"] {
-  padding: .2rem .4rem; border: 1px solid var(--md-default-fg-color--lighter); border-radius: .1rem;
-  background: var(--md-default-bg-color); color: var(--md-typeset-color); font: inherit;
+.md-typeset .exam-builder__select select { max-width: 16rem; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder select { background-color: rgba(255, 255, 255, .06); }
+.md-typeset .exam-builder__chip {
+  padding: .3rem .8rem; border: none; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; font-size: .72rem; cursor: pointer; transition: background .15s;
 }
-.md-typeset .exam-builder__title { display: flex; flex: 1; align-items: center; gap: .5rem; }
-.md-typeset .exam-builder__title input { flex: 1; min-width: 0; }
-.md-typeset .exam-builder__label { min-width: 4.5em; color: var(--md-default-fg-color--light); }
-.md-typeset .exam-builder__box { display: inline-flex; align-items: center; justify-content: center; width: 1.4em; height: 1.4em; border: 1.5px solid currentColor; line-height: 1; }
-.md-typeset .exam-builder__list { max-height: 18rem; overflow-y: auto; margin: 0; padding: .3rem .6rem; border: 1px solid var(--md-default-fg-color--lightest); list-style: none; }
-.md-typeset .exam-builder__list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .6rem; margin: 0; padding: .25rem 0; font-size: .75rem; border-bottom: 1px solid var(--md-default-fg-color--lightest); }
-.md-typeset .exam-builder__list li:last-child { border-bottom: none; }
+.md-typeset .exam-builder__chip:hover { background: #e4e7ef; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__chip { background: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__chip:hover { background: rgba(255, 255, 255, .12); }
+
+/* 問題の行（a.toc-row と同じ形。行の右端に「追加」） */
+.md-typeset .exam-builder__list { max-height: 24rem; overflow-y: auto; border-top: 1px solid #eef0f4; }
+.md-typeset .toc-row.exam-builder__row {
+  display: grid; grid-template-columns: 2.6rem 1fr auto auto; align-items: center; gap: .6rem;
+  padding: .45rem .2rem; border-bottom: 1px solid #eef0f4; color: var(--md-typeset-color); font-size: .8rem;
+}
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__list,
+[data-md-color-scheme="slate"] .md-typeset .toc-row.exam-builder__row { border-color: rgba(255, 255, 255, .07); }
+.md-typeset .exam-builder__row a.toc-row__title { color: inherit; border: none; }
+.md-typeset .exam-builder__row a.toc-row__title:hover { color: var(--md-accent-fg-color); }
+.md-typeset .exam-builder__row.is-on { background: var(--site-answer-bg); }
+.md-typeset .exam-builder__add {
+  min-width: 5.6em; padding: .2rem .6rem; border: 1px solid var(--md-default-fg-color--lightest); background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light); font: inherit; font-size: .65rem; cursor: pointer;
+}
+.md-typeset .exam-builder__row.is-on .exam-builder__add { border-color: var(--site-navy); color: var(--md-typeset-color); }
+.md-typeset .exam-builder__add:disabled { opacity: .35; cursor: default; }
+
+/* 選んだ問題の行：番号・題名と分野・並べ替えと外す */
+.md-typeset [data-exam-chosen] .exam-builder__row { grid-template-columns: 2.6rem 1fr auto; }
+.md-typeset .exam-builder__text { display: flex; flex-direction: column; gap: .1em; }
+.md-typeset .exam-builder__meta { font-size: .64rem; color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__ops { display: inline-flex; gap: .25rem; }
+.md-typeset .exam-builder__ops button {
+  width: 1.7rem; height: 1.7rem; border: none; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; font-size: .72rem; cursor: pointer;
+}
+.md-typeset .exam-builder__ops button:hover { background: #e4e7ef; }
+.md-typeset .exam-builder__ops button:disabled { opacity: .3; cursor: default; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__ops button { background: rgba(255, 255, 255, .06); }
+.md-typeset .exam-builder__empty { margin: .6rem .2rem; font-size: .72rem; color: var(--md-default-fg-color--light); }
+
+/* 試験の設定：題名は検索窓と同じ形，選択肢は難易度のボタンと同じ形 */
+.md-typeset .finder__search.exam-builder__title { margin: .9rem 0 1rem; }
+.md-typeset .exam-builder__title-label { flex: none; font-size: .72rem; color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__settings { display: grid; grid-template-columns: 5em 1fr; align-items: center; gap: .6rem 1rem; margin: 0; font-size: .72rem; }
+.md-typeset .exam-builder__settings dt { margin: 0; color: var(--md-default-fg-color--light); font-weight: 400; }
+.md-typeset .exam-builder__settings dd { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+.md-typeset .exam-builder__settings button {
+  min-width: 3.2rem; padding: .3rem .8rem; border: none; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; cursor: pointer; transition: background .15s;
+}
+.md-typeset .exam-builder__settings button:hover { background: #e4e7ef; }
+.md-typeset .exam-builder__settings button.is-on { background: var(--site-navy); color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button { background: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button.is-on { background: #3a4785; }
+.md-typeset .exam-builder__box { display: inline-flex; align-items: center; justify-content: center; width: 1.35em; height: 1.35em; border: 1.5px solid currentColor; line-height: 1; }
+
 .md-typeset .exam-builder__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: 0 0 .8rem; }
 .md-typeset a.exam-builder__open {
-  display: inline-block; padding: .45rem 1.2rem; background-color: var(--site-navy); color: #fff; font-size: .78rem;
+  display: inline-block; padding: .55rem 1.4rem; background-color: var(--site-navy); color: #fff; font-size: .8rem;
   background-image: linear-gradient(var(--site-star), var(--site-star)); background-repeat: no-repeat; background-size: 0 100%;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
 }
 .md-typeset a.exam-builder__open:is(:hover, :focus-visible) { background-size: 100% 100%; color: #171d3b; }
+[data-md-color-scheme="slate"] .md-typeset a.exam-builder__open { background-color: #3a4785; }
 .md-typeset a.exam-builder__open.is-disabled { opacity: .45; }
 .md-typeset .exam-builder__status { font-size: .7rem; color: var(--md-default-fg-color--light); }
-.md-typeset .exam-builder__note { font-size: .68rem; color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__note { font-size: .66rem; color: var(--md-default-fg-color--light); }
+@media screen and (max-width: 30em) {
+  .md-typeset .toc-row.exam-builder__row { grid-template-columns: 2.2rem 1fr auto; gap: .4rem; }
+  .md-typeset .exam-builder__list .toc-row__stars { display: none; }
+  .md-typeset [data-exam-chosen] .exam-builder__row { grid-template-columns: 1.2rem 1fr auto; }
+  .md-typeset .exam-builder__ops { gap: .15rem; }
+  .md-typeset .exam-builder__ops button { width: 1.5rem; height: 1.5rem; }
+}
