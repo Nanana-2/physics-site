@@ -1,6 +1,6 @@
-// 試験問題の印刷ページ：URL の設定に従って問題ページから問題と解答を取り出し，試験問題の体裁でページに割り付ける。
+// 問題の印刷ページ：URL の設定に従って問題ページから問題と解答を取り出し，試験問題のような体裁でページに割り付ける。
 // 例：?p=01mechanics/03/03_050,02electromagnetism/01/01_010&title=物理学 期末試験&num=mon&paper=A4&break=0&book=0
-// 設定は試験を作るページ（docs/exam.md と docs/javascripts/exam.js）が作る。
+// 設定は問題を印刷するページ（docs/exam.md と docs/javascripts/exam.js）が作る。
 (() => {
   const SITE = "https://nanana-2.github.io/physics-site/";
   const MAX = 8;
@@ -10,7 +10,7 @@
   const q = new URLSearchParams(location.search);
   const ids = (q.get("p") || "").split(",").filter((id) => /^[0-9a-z_]+\/[0-9a-z_]+\/[0-9a-z_]+$/.test(id)).slice(0, MAX);
   const opt = {
-    title: (q.get("title") || "物理学 試験問題").replace(/[<>&"]/g, ""),
+    title: (q.get("title") || "物理学 問題").replace(/[<>&"]/g, ""),
     num: ["box", "dai", "mon"].includes(q.get("num")) ? q.get("num") : "mon",
     paper: q.get("paper") === "B5" ? "B5" : "A4",
     breakEach: q.get("break") === "1",
@@ -149,7 +149,7 @@
 
   const build = async () => {
     document.querySelector("[data-back]").href = `../${location.search}`;
-    if (!ids.length) { status(""); document.getElementById("pages").innerHTML = '<p class="message">問題が選ばれていません。試験を作るページで問題を選んでください。</p>'; return; }
+    if (!ids.length) { status(""); document.getElementById("pages").innerHTML = '<p class="message">問題が選ばれていません。問題を印刷するページで問題を選んでください。</p>'; return; }
     const [w, h, my, mx, foot] = PAPER[opt.paper];
     const css = { "--paper-w": w, "--paper-h": h, "--margin-y": my, "--margin-x": mx, "--foot": foot };
     Object.entries(css).forEach(([k, v]) => document.documentElement.style.setProperty(k, `${v}mm`));

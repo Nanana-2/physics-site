@@ -450,6 +450,10 @@ def _home(html: str, page, config) -> str:
         + legend
         + _home_heading("難易度から選ぶ", "star")
         + f'<div class="home-levels">{levels}</div>'
+        + _home_heading("選んで印刷する", "print")
+        + f'<div class="home-tiles home-tiles--single"><a class="home-tile" href="exam/"><span class="home-tile__icon">{_icon("print")}</span>'
+        '<span class="home-tile__body"><span class="home-tile__name">問題を印刷する</span>'
+        '<span class="home-tile__desc">好きな問題を選んで，問題用紙と解答・解説を印刷できます</span></span></a></div>'
         + _home_heading("このサイトは何者？", "circle-question")
         + sections.get("このサイトは何者？", "")
         + _home_heading("重要な約束と推奨される使い方", "triangle-exclamation")

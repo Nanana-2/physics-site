@@ -1,5 +1,5 @@
-// 試験を作る：選んだ問題（8問まで）をブラウザに保存する（登録不要・この端末だけ）。
-// 問題ページでは「試験に追加」ボタンを，試験を作るページ（exam.md）では問題の選択と設定を受け持つ。
+// 問題を印刷する：選んだ問題（8問まで）をブラウザに保存する（登録不要・この端末だけ）。
+// 問題ページでは「印刷に追加」ボタンを，問題を印刷するページ（exam.md）では問題の選択と設定を受け持つ。
 // 印刷用のページ（exam/print/）には，選んだ問題と設定を URL で渡す。
 (() => {
   const KEY = "exam-problems";
@@ -10,7 +10,7 @@
   const write = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} };
   const chosen = () => read(KEY, []).filter((id) => ID.test(id)).slice(0, MAX);
 
-  // 問題ページ：「試験に追加」ボタン
+  // 問題ページ：「印刷に追加」ボタン
   const setupButton = () => {
     const button = document.querySelector("[data-exam-toggle]");
     const m = location.pathname.match(/([0-9a-z_]+\/[0-9a-z_]+\/[0-9a-z_]+)\/(index\.html)?$/);
@@ -21,20 +21,20 @@
       const on = list.includes(id);
       button.classList.toggle("is-on", on);
       button.setAttribute("aria-pressed", String(on));
-      button.textContent = note || (on ? `試験に追加済み（${list.length}/${MAX}）` : "試験に追加");
+      button.textContent = note || (on ? `印刷に追加済み（${list.length}/${MAX}）` : "印刷に追加");
     };
     button.hidden = false;
     render();
     button.addEventListener("click", () => {
       const list = chosen();
       if (list.includes(id)) write(KEY, list.filter((x) => x !== id));
-      else if (list.length >= MAX) { render(`試験に入れられるのは${MAX}問までです`); setTimeout(() => render(), 2500); return; }
+      else if (list.length >= MAX) { render(`選ぶことができるのは${MAX}問までです`); setTimeout(() => render(), 2500); return; }
       else write(KEY, [...list, id]);
       render();
     });
   };
 
-  // 試験を作るページ
+  // 問題を印刷するページ
   const setupBuilder = async () => {
     const root = document.querySelector("[data-exam-builder]");
     if (!root) return;
@@ -57,7 +57,7 @@
     write(SETTINGS, settings);
 
     const query = () => {
-      const q = new URLSearchParams({ p: chosen().join(","), title: settings.title || "物理学 試験問題", num: settings.num, paper: settings.paper, book: settings.book, break: settings.break });
+      const q = new URLSearchParams({ p: chosen().join(","), title: settings.title || "物理学 問題", num: settings.num, paper: settings.paper, book: settings.book, break: settings.break });
       return `?${q.toString()}`;
     };
     let timer;
@@ -189,7 +189,7 @@
       renderChosen();
     });
 
-    // 試験の設定
+    // 印刷の設定
     const title = $("[data-exam-title]");
     title.value = settings.title;
     title.addEventListener("input", () => { settings.title = title.value.trim(); write(SETTINGS, settings); renderChosen(); });
