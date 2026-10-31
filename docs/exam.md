@@ -13,13 +13,19 @@ hide:
   <section class="toc-chapter">
     <h2 class="toc-chapter__head"><span class="toc-chapter__no">1</span><span class="toc-chapter__title">問題を選ぶ</span></h2>
     <div class="finder__subjects" data-exam-subjects role="group" aria-label="分野"></div>
+    <dl class="exam-builder__filters">
+      <dt>章</dt>
+      <dd class="exam-builder__chapters" data-exam-chapters role="group" aria-label="章"></dd>
+      <dt>難易度</dt>
+      <dd class="finder__levels" data-exam-levels role="group" aria-label="難易度">
+        <button type="button" class="finder__level exam-builder__check is-on" data-level="基本" aria-label="基本" aria-pressed="true">★</button>
+        <button type="button" class="finder__level exam-builder__check is-on" data-level="標準" aria-label="標準" aria-pressed="true">★★</button>
+        <button type="button" class="finder__level exam-builder__check is-on" data-level="発展" aria-label="発展" aria-pressed="true">★★★</button>
+      </dd>
+    </dl>
     <div class="exam-builder__bar">
-      <span class="exam-builder__filters">
-      <label class="exam-builder__select">章 <select data-exam-chapter></select></label>
-      <label class="exam-builder__select">難易度 <select data-exam-level><option value="">すべて</option><option value="基本">★ 基本</option><option value="標準">★★ 標準</option><option value="発展">★★★ 発展</option></select></label>
-      </span>
       <span class="exam-builder__random">
-        <span>この範囲からランダムに</span>
+        <span>選んだ章と難易度からランダムに</span>
         <select data-exam-random-count aria-label="問題数"></select>
         <button type="button" class="exam-builder__chip" data-exam-random>問加える</button>
       </span>

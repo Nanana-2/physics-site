@@ -1696,8 +1696,17 @@ html { scroll-behavior: smooth; }
 /* 試験を作るページ：章の見出しの帯・分野のタブ・問題の行は，ほかの一覧ページと同じ部品を使う */
 .md-typeset .exam-builder { margin-top: 1.5em; }
 .md-typeset .exam-builder__count { margin-left: .8em; font-size: .72rem; opacity: .75; }
+/* 章と難易度の絞り込み：押すたびに入れる・外すを切り替える（複数選べる） */
+.md-typeset .exam-builder__filters { display: grid; grid-template-columns: 4em 1fr; align-items: start; gap: .6rem 1rem; margin: .9rem 0 0; font-size: .7rem; }
+.md-typeset .exam-builder__filters dt { margin: 0; padding-top: .3rem; color: var(--md-default-fg-color--light); font-weight: 400; }
+.md-typeset .exam-builder__filters dd { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+.md-typeset .exam-builder__chapters .exam-builder__chip { font-size: .68rem; }
+.md-typeset .exam-builder__chip.exam-builder__check.is-on { background: var(--site-navy); color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__chip.exam-builder__check.is-on { background: #3a4785; }
+.md-typeset .exam-builder__check::before { content: "✓"; display: inline-block; width: 1em; margin-right: .2em; opacity: 0; }
+.md-typeset .exam-builder__check.is-on::before { opacity: 1; }
+.md-typeset .finder__level.exam-builder__check::before { color: #fff; }
 .md-typeset .exam-builder__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin: .9rem 0 .6rem; font-size: .7rem; color: var(--md-default-fg-color--light); }
-.md-typeset .exam-builder__filters { display: inline-flex; flex-wrap: wrap; gap: .6rem 1.2rem; }
 .md-typeset .exam-builder__select { display: inline-flex; align-items: center; gap: .5rem; }
 .md-typeset .exam-builder__random { display: inline-flex; align-items: center; gap: .4rem; }
 .md-typeset .exam-builder select {

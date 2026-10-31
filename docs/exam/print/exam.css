@@ -3,7 +3,7 @@
 @font-face { font-family: "HaranoAji Gothic"; src: url("fonts/HaranoAjiGothic-Regular.woff2") format("woff2"); }
 :root {
   --paper-w: 210mm; --paper-h: 297mm;
-  --margin-y: 25mm; --margin-x: 20mm;
+  --margin-y: 35mm; --margin-x: 25mm; --foot: 20mm;
   /* Mac・iPhone はヒラギノ，Windows は游書体，それ以外は原ノ味（TeX Live の標準） */
   --mincho: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "HaranoAji Mincho", serif;
   --gothic: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "HaranoAji Gothic", sans-serif;
@@ -33,7 +33,7 @@ b, strong, h1, h2, h3, h4 { font-family: var(--gothic); font-weight: 400; }
   margin: 0 auto 8mm; background: #fff; overflow: hidden;
 }
 .page__body { height: 100%; overflow: hidden; }
-.page__foot { position: absolute; left: var(--margin-x); right: var(--margin-x); bottom: 12mm; text-align: center; font-size: 9pt; }
+.page__foot { position: absolute; left: var(--margin-x); right: var(--margin-x); bottom: var(--foot); text-align: center; font-size: 9pt; }
 .page__site { position: absolute; right: 0; bottom: 0; font-size: 7pt; }
 @media screen { .pages { padding: 8mm 0; } .page { box-shadow: 0 1px 6px rgba(0, 0, 0, .25); } }
 @media print {

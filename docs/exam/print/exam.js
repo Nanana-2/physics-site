@@ -4,7 +4,9 @@
 (() => {
   const SITE = "https://nanana-2.github.io/physics-site/";
   const MAX = 8;
-  const PAPER = { A4: [210, 297], B5: [182, 257] }; // B5 は日本の B5（JIS）
+  // 用紙の大きさと余白（上下，左右，ページ番号の下端からの位置）。B5 は日本の B5（JIS）。
+  // 余白は LaTeX（jsarticle）の A4 の標準に合わせ，B5 は用紙の大きさに比例させる
+  const PAPER = { A4: [210, 297, 35, 25, 20], B5: [182, 257, 30, 22, 17] };
   const q = new URLSearchParams(location.search);
   const ids = (q.get("p") || "").split(",").filter((id) => /^[0-9a-z_]+\/[0-9a-z_]+\/[0-9a-z_]+$/.test(id)).slice(0, MAX);
   const opt = {
@@ -148,9 +150,9 @@
   const build = async () => {
     document.querySelector("[data-back]").href = `../${location.search}`;
     if (!ids.length) { status(""); document.getElementById("pages").innerHTML = '<p class="message">問題が選ばれていません。試験を作るページで問題を選んでください。</p>'; return; }
-    const [w, h] = PAPER[opt.paper];
-    document.documentElement.style.setProperty("--paper-w", `${w}mm`);
-    document.documentElement.style.setProperty("--paper-h", `${h}mm`);
+    const [w, h, my, mx, foot] = PAPER[opt.paper];
+    const css = { "--paper-w": w, "--paper-h": h, "--margin-y": my, "--margin-x": mx, "--foot": foot };
+    Object.entries(css).forEach(([k, v]) => document.documentElement.style.setProperty(k, `${v}mm`));
     document.getElementById("paper").textContent = `@page { size: ${w}mm ${h}mm; margin: 0; }`;
     document.title = `${opt.title}｜大学物理の問題集`;
 

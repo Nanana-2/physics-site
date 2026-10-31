@@ -66,26 +66,41 @@
     // 分野のタブと章の選択。その範囲の問題を一覧にし，行の「追加」で選ぶ
     const subjects = [...new Map(index.map((p) => [p.subjectSlug, p.subject])).entries()];
     let subject = subjects[0][0];
-    const chapterSel = $("[data-exam-chapter]");
+    // 章と難易度はチェックで複数選ぶ。分野を替えると章はすべて選んだ状態に戻す
+    const chapterBox = $("[data-exam-chapters]");
+    const levelBox = $("[data-exam-levels]");
     const tabs = $("[data-exam-subjects]");
+    let chapters = new Set();
+    const levels = new Set(Object.keys(LEVELS));
     tabs.innerHTML = subjects.map(([slug, name]) => `<button type="button" class="finder__subject finder__subject--${slug}" data-subject="${slug}">${esc(name)}</button>`).join("");
+    const markChapters = () => {
+      const all = chapterBox.querySelectorAll("[data-chapter]");
+      all.forEach((b) => { const on = chapters.has(b.dataset.chapter); b.classList.toggle("is-on", on); b.setAttribute("aria-pressed", String(on)); });
+      const every = chapters.size === all.length;
+      const allButton = chapterBox.querySelector("[data-chapter-all]");
+      allButton.classList.toggle("is-on", every);
+      allButton.setAttribute("aria-pressed", String(every));
+    };
     const fillChapters = () => {
       tabs.querySelectorAll("button").forEach((b) => b.classList.toggle("is-on", b.dataset.subject === subject));
-      const chapters = [...new Map(index.filter((p) => p.subjectSlug === subject).map((p) => [p.chapterSlug, p.chapter])).entries()];
-      chapterSel.innerHTML = '<option value="">すべての章</option>' + chapters.map(([slug, name]) => `<option value="${slug}">${esc(name)}</option>`).join("");
+      const list = [...new Map(index.filter((p) => p.subjectSlug === subject).map((p) => [p.chapterSlug, p.chapter])).entries()];
+      chapters = new Set(list.map(([slug]) => slug));
+      chapterBox.innerHTML = '<button type="button" class="exam-builder__chip exam-builder__check" data-chapter-all>すべて</button>'
+        + list.map(([slug, name]) => `<button type="button" class="exam-builder__chip exam-builder__check" data-chapter="${slug}">${esc(name)}</button>`).join("");
+      markChapters();
     };
-    const levelSel = $("[data-exam-level]");
-    const inRange = () => index.filter((p) => p.subjectSlug === subject && (!chapterSel.value || p.chapterSlug === chapterSel.value) && (!levelSel.value || p.difficulty === levelSel.value));
+    const inRange = () => index.filter((p) => p.subjectSlug === subject && chapters.has(p.chapterSlug) && levels.has(p.difficulty));
     const renderList = () => {
       const list = chosen();
       const full = list.length >= MAX;
-      $("[data-exam-list]").innerHTML = inRange().map((p) => {
+      const rows = inRange();
+      $("[data-exam-list]").innerHTML = rows.length ? rows.map((p) => {
         const id = idOf(p);
         const on = list.includes(id);
         return `<div class="toc-row exam-builder__row${on ? " is-on" : ""}"><span class="toc-row__num">${label(p)}</span>`
           + `<a class="toc-row__title" href="${new URL(p.url, site)}">${esc(p.title)}</a>${stars(p)}`
           + `<button type="button" class="exam-builder__add" data-toggle="${id}"${!on && full ? " disabled" : ""}>${on ? "✓ 追加済み" : "＋ 追加"}</button></div>`;
-      }).join("");
+      }).join("") : '<p class="exam-builder__empty">章と難易度を選ぶと，ここに問題が並びます。</p>';
     };
     $("[data-exam-list]").addEventListener("click", (e) => {
       const b = e.target.closest("[data-toggle]");
@@ -102,8 +117,26 @@
       fillChapters();
       renderList();
     });
-    chapterSel.addEventListener("change", renderList);
-    levelSel.addEventListener("change", renderList);
+    chapterBox.addEventListener("click", (e) => {
+      const b = e.target.closest("button");
+      if (!b) return;
+      if (b.dataset.chapterAll !== undefined) {
+        const all = [...chapterBox.querySelectorAll("[data-chapter]")].map((x) => x.dataset.chapter);
+        chapters = new Set(chapters.size === all.length ? [] : all);
+      } else if (chapters.has(b.dataset.chapter)) chapters.delete(b.dataset.chapter);
+      else chapters.add(b.dataset.chapter);
+      markChapters();
+      renderList();
+    });
+    levelBox.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-level]");
+      if (!b) return;
+      if (levels.has(b.dataset.level)) levels.delete(b.dataset.level);
+      else levels.add(b.dataset.level);
+      b.classList.toggle("is-on", levels.has(b.dataset.level));
+      b.setAttribute("aria-pressed", String(levels.has(b.dataset.level)));
+      renderList();
+    });
 
     // 範囲からランダムに選ぶ（すでに選んだ問題は除き，上限を超えない）。選んだ問題は問題番号の順に加える
     const countSel = $("[data-exam-random-count]");
@@ -118,7 +151,7 @@
       const add = pool.slice(0, Math.min(Number(countSel.value), room)).sort((a, b) => order.get(a) - order.get(b));
       write(KEY, [...list, ...add]);
       renderChosen();
-      status(add.length ? `${add.length}問を加えました` : "この範囲に加えられる問題がありません");
+      status(add.length ? `${add.length}問を加えました` : "選んだ章と難易度に加えられる問題がありません");
     });
 
     // 選んだ問題の一覧（並べ替え・外す）
@@ -152,7 +185,6 @@
     });
 
     $("[data-exam-clear]").addEventListener("click", () => {
-      if (!confirm("選んだ問題をすべて外しますか。")) return;
       write(KEY, []);
       renderChosen();
     });
