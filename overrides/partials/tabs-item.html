@@ -2,7 +2,7 @@
   Material for MkDocs の tabs-item.html をもとに，
   ・ホームのタブは出さない（左上のサイト名がホームへのリンク）
   ・各タブの前に分野のアイコンを付ける
-  ・「参考文献一覧」「問題を探す」は右端に寄せる（tools）
+  ・「参考文献一覧」「問題を探す」「試験を作る」は右端に寄せる（tools）
   ・「物理数学」はページへ移らず，タブの下に分野の一覧を開くボタンにする（tabs.js がバーの下へ移す）
 -#}
 {% set tab_icons = {
@@ -22,9 +22,10 @@
   '特殊関数・変分法': 'fontawesome/solid/bezier-curve',
   '確率・統計': 'fontawesome/solid/chart-column',
   '参考文献一覧': 'fontawesome/solid/book-open',
-  '問題を探す': 'fontawesome/solid/list-ul'
+  '問題を探す': 'fontawesome/solid/list-ul',
+  '試験を作る': 'fontawesome/solid/print'
 } %}
-{% set tool_tabs = ['参考文献一覧', '問題を探す'] %}
+{% set tool_tabs = ['参考文献一覧', '問題を探す', '試験を作る'] %}
 {% macro render_content(nav_item, ref) %}
   {% set ref = ref or nav_item %}
   {% if ref.title in tab_icons %}

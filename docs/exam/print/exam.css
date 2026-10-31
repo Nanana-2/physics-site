@@ -1,0 +1,75 @@
+/* 試験問題の体裁：本文は明朝，見出しはゴシック（太字にしない），白黒。docs/exam/print/exam.js が組む */
+@font-face { font-family: "HaranoAji Mincho"; src: url("fonts/HaranoAjiMincho-Regular.woff2") format("woff2"); }
+@font-face { font-family: "HaranoAji Gothic"; src: url("fonts/HaranoAjiGothic-Regular.woff2") format("woff2"); }
+:root {
+  --paper-w: 210mm; --paper-h: 297mm;
+  --margin-y: 25mm; --margin-x: 20mm;
+  /* Mac・iPhone はヒラギノ，Windows は游書体，それ以外は原ノ味（TeX Live の標準） */
+  --mincho: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "HaranoAji Mincho", serif;
+  --gothic: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "HaranoAji Gothic", sans-serif;
+}
+html { background: #e9e9e9; color: #000; }
+body { margin: 0; font-family: var(--mincho); font-size: 10.5pt; line-height: 1.8; -webkit-text-size-adjust: 100%; }
+b, strong, h1, h2, h3, h4 { font-family: var(--gothic); font-weight: 400; }
+
+/* 画面の上の操作欄（印刷しない） */
+.toolbar {
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px; background: #171d3b; color: #fff; font-family: var(--gothic); font-size: 14px;
+}
+.toolbar__back { color: #fff; text-decoration: none; }
+.toolbar__status { flex: 1; text-align: right; opacity: .8; }
+.toolbar__print { padding: 6px 18px; border: none; border-radius: 3px; background: #ffd60a; color: #171d3b; font: inherit; cursor: pointer; }
+.toolbar__print:disabled { opacity: .5; cursor: default; }
+
+/* 組版前の流し込み先：用紙の本文幅で見えないところに置いて大きさを測る */
+.flow { position: absolute; left: -9999px; top: 0; width: calc(var(--paper-w) - 2 * var(--margin-x)); visibility: hidden; }
+
+/* 1ページ */
+.page {
+  position: relative; box-sizing: border-box;
+  width: var(--paper-w); height: var(--paper-h);
+  padding: var(--margin-y) var(--margin-x);
+  margin: 0 auto 8mm; background: #fff; overflow: hidden;
+}
+.page__body { height: 100%; overflow: hidden; }
+.page__foot { position: absolute; left: var(--margin-x); right: var(--margin-x); bottom: 12mm; text-align: center; font-size: 9pt; }
+.page__site { position: absolute; right: 0; bottom: 0; font-size: 7pt; }
+@media screen { .pages { padding: 8mm 0; } .page { box-shadow: 0 1px 6px rgba(0, 0, 0, .25); } }
+@media print {
+  html { background: #fff; }
+  .toolbar { display: none; }
+  .pages { padding: 0; zoom: 1 !important; }
+  .page { margin: 0; break-after: page; }
+}
+
+/* 表題（プリント形式の1ページ目）と表紙（冊子形式） */
+.exam-title { margin: 0 0 10mm; font-size: 13pt; letter-spacing: .05em; text-align: center; }
+.cover { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6mm; padding-bottom: 40mm; box-sizing: border-box; }
+.cover .exam-title { margin: 0; font-size: 14.4pt; }
+.cover__sub { margin: 0; font-size: 12pt; letter-spacing: .3em; }
+
+/* 大問の見出し */
+.q-head { margin: 7mm 0 3mm; font-size: 13pt; display: flex; align-items: center; gap: 4mm; }
+.page__body > .q-head:first-child { margin-top: 0; }
+.q-head__box { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; width: 1.7em; height: 1.7em; border: 1.8pt solid #000; line-height: 1; }
+
+/* 本文 */
+.pages p { margin: 0 0 .5em; text-align: justify; text-indent: 1em; }
+.pages .subq, .pages figure p, .pages .a-label, .pages .a-source, .cover p { text-indent: 0; }
+.pages .subq { display: flex; gap: .6em; padding-left: .2em; }
+.pages .subq__number { flex: none; }
+.pages figure { margin: 3mm 0; }
+.pages figure p { text-align: center; }
+.pages figure img { display: block; margin: 0 auto; max-width: 75%; height: auto; }
+.pages mjx-container[display="true"] { margin: .5em 0 !important; }
+/* 和文と数式の間は TeX と同じく四分ほど空ける（原稿の半角スペースは使わない） */
+.pages mjx-container:not([display="true"]) { margin: 0 .25em; }
+
+/* 解答・解説 */
+.a-part { margin: 3mm 0 1mm; font-size: inherit; }
+.a-label { margin: 2mm 0 1mm; font-family: var(--gothic); }
+.a-source { margin: 1mm 0 0; font-size: 8pt; text-align: right; }
+.pages aside { margin: 2mm 0; font-size: 9.5pt; }
+
+.message { max-width: 560px; margin: 40px auto; padding: 0 16px; font-family: var(--gothic); }
