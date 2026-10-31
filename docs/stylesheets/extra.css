@@ -661,6 +661,7 @@ body, input {
 .md-typeset a.toc-row:hover .toc-row__title { color: var(--md-accent-fg-color); }
 .md-typeset .toc-row__num { font-size: .7rem; color: var(--site-navy); }
 .md-typeset .toc-row__stars { font-size: .65rem; letter-spacing: .08em; }
+.md-typeset .toc-row__mark { margin-left: .5em; font-size: .6rem; color: var(--md-default-fg-color--light); white-space: nowrap; }
 .md-typeset .toc-row__stars .on { color: #e0b400; }
 .md-typeset .toc-row__stars .off { color: var(--md-default-fg-color--lighter); }
 [data-md-color-scheme="slate"] .md-typeset a.toc-row { border-color: rgba(255, 255, 255, .06); }
