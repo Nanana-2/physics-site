@@ -174,19 +174,6 @@ BREADCRUMB = re.compile(r'<nav class="md-path".*?</nav>\s*', re.DOTALL)
 ARTICLE_START = '<article class="md-content__inner md-typeset">'
 
 
-# パンくずの分野（と物理数学）の前にアイコンを付ける
-PATH_NAME = re.compile(r'(<a [^>]*class="md-path__link"[^>]*>\s*)(<span class="md-ellipsis">\s*([^<]*?)\s*</span>)')
-
-
-def _crumb_icon(m):
-    icons = {name: icon for _, name, icon, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
-    icons["物理数学"] = "square-root-variable"
-    icon = icons.get(m.group(3))
-    if not icon:
-        return m.group(0)
-    return f'{m.group(1)}<span class="md-path__icon" aria-hidden="true">{_icon(icon)}</span>{m.group(2)}'
-
-
 # ---- 関連する問題：hooks/related_problems.txt のグループから，解説の下（前後の問題の上）に並べる ----
 RELATED_FILE = Path(__file__).with_name("related_problems.txt")
 _related_cache = {}
@@ -259,7 +246,6 @@ def on_post_page(output, page, config):
     title_end = output.find("</h1>", article)
     at = title_end + len("</h1>") if title_end >= 0 else article + len(ARTICLE_START)
     crumb = nav.group(0).replace('class="md-path__link"', 'class="md-path__link" aria-label="トップページ"', 1)
-    crumb = PATH_NAME.sub(_crumb_icon, crumb)
     return output[: nav.start()] + output[nav.end() : at] + crumb + output[at:]
 
 
@@ -399,14 +385,14 @@ def _home(html: str, page, config) -> str:
 
     def _tiles(subjects):
         out = ""
-        for slug, name, icon, desc in subjects:
+        for slug, name, _icon_name, desc in subjects:
             c = counts[slug]
             bar = "".join(
                 f'<span class="home-bar__seg home-bar__seg--{i}" style="flex:{c[k]}" title="{k} {c[k]}問"></span>'
                 for i, k in enumerate(LEVELS, 1)
             )
             out += (
-                f'<a class="home-tile" href="{slug}/"><span class="home-tile__icon">{_icon(icon)}</span>'
+                f'<a class="home-tile" href="{slug}/">'
                 f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
                 f'<span class="home-tile__desc">{desc}</span><span class="home-bar">{bar}</span></span></a>'
             )
@@ -451,7 +437,7 @@ def _home(html: str, page, config) -> str:
         + _home_heading("難易度から選ぶ", "star")
         + f'<div class="home-levels">{levels}</div>'
         + _home_heading("選んで印刷する", "print")
-        + f'<div class="home-tiles home-tiles--single"><a class="home-tile" href="exam/"><span class="home-tile__icon">{_icon("print")}</span>'
+        + f'<div class="home-tiles home-tiles--single"><a class="home-tile" href="exam/">'
         '<span class="home-tile__body"><span class="home-tile__name">問題を印刷する</span>'
         '<span class="home-tile__desc">好きな問題を選んで，問題用紙と解答・解説を印刷できます</span></span></a></div>'
         + _home_heading("このサイトは何者？", "circle-question")

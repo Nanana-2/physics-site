@@ -37,23 +37,43 @@
    0. サイト全体の基準色
    ========================================== */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #171d3b;
-  --md-primary-fg-color--light: #2b345f;
-  --md-primary-fg-color--dark: #0e1329;
+  --md-primary-fg-color: #1f1f1f;
+  --md-primary-fg-color--light: #373737;
+  --md-primary-fg-color--dark: #141414;
   --md-accent-fg-color: #5472cd;
   --md-typeset-a-color: #334d86;
-  --site-heading-accent: #303a78;
-  --site-heading-soft: #d9dcef;
+  --site-heading-accent: #3f3f3f;
+  --site-heading-soft: #dddddd;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #11162f;
-  --md-primary-fg-color--light: #283156;
-  --md-primary-fg-color--dark: #090d20;
+  /* Material の暗い色は紺みの灰色（色相 232°，彩度 15%）なので，彩度 0 の灰色に置き換える */
+  --md-default-fg-color: hsla(0, 0%, 90%, .82);
+  --md-default-fg-color--light: hsla(0, 0%, 90%, .56);
+  --md-default-fg-color--lighter: hsla(0, 0%, 90%, .32);
+  --md-default-fg-color--lightest: hsla(0, 0%, 90%, .12);
+  --md-default-bg-color: hsla(0, 0%, 14%, 1);
+  --md-default-bg-color--light: hsla(0, 0%, 14%, .54);
+  --md-default-bg-color--lighter: hsla(0, 0%, 14%, .26);
+  --md-default-bg-color--lightest: hsla(0, 0%, 14%, .07);
+  --md-code-fg-color: hsla(0, 0%, 86%, .82);
+  --md-code-bg-color: hsla(0, 0%, 18%, 1);
+  --md-code-bg-color--light: hsla(0, 0%, 18%, .9);
+  --md-code-bg-color--lighter: hsla(0, 0%, 18%, .54);
+  --md-typeset-kbd-color: hsla(0, 0%, 90%, .12);
+  --md-typeset-kbd-accent-color: hsla(0, 0%, 90%, .2);
+  --md-typeset-kbd-border-color: hsla(0, 0%, 14%, 1);
+  --md-typeset-table-color: hsla(0, 0%, 95%, .12);
+  --md-typeset-table-color--light: hsla(0, 0%, 95%, .035);
+  --md-footer-bg-color: hsla(0, 0%, 10%, .87);
+  --md-footer-bg-color--dark: hsla(0, 0%, 8%, 1);
+  --md-primary-fg-color: #181818;
+  --md-primary-fg-color--light: #333333;
+  --md-primary-fg-color--dark: #0e0e0e;
   --md-accent-fg-color: #6f93e8;
   --md-typeset-a-color: #82a7df;
-  --site-heading-accent: #7d8bd1;
-  --site-heading-soft: #2b3152;
+  --site-heading-accent: #8f8f8f;
+  --site-heading-soft: #333333;
 }
 
 .header-home-link {
@@ -98,8 +118,8 @@ span.arithmatex mjx-mfrac {
 /* ==========================================
    3. 見出し（本の紙面に合わせた組み方）
    ========================================== */
-[data-md-color-scheme="default"] { --site-navy: #171d3b; --site-star: #ffd60a; }
-[data-md-color-scheme="slate"] { --site-navy: #2b3566; --site-star: #ffd60a; }
+[data-md-color-scheme="default"] { --site-navy: #1f1f1f; --site-star: #ffd60a; }
+[data-md-color-scheme="slate"] { --site-navy: #383838; --site-star: #ffd60a; }
 
 .md-typeset h1,
 .md-typeset h2,
@@ -167,7 +187,7 @@ span.arithmatex mjx-mfrac {
   margin: 2em 0 1.1em 1.05rem;
   padding: .38em .9rem .34em 1.55rem;
   border-radius: 0 1em 1em 0;
-  background: #eef0f6;
+  background: #f0f0f0;
   color: var(--site-navy);
 }
 .md-typeset h2.solution-heading::before {
@@ -187,15 +207,15 @@ span.arithmatex mjx-mfrac {
   transform: translateY(-50%);
   color: #fff;
 }
-[data-md-color-scheme="slate"] .md-typeset h2.solution-heading { background: rgba(159, 179, 255, .12); color: #e3e7f7; }
-[data-md-color-scheme="slate"] .md-typeset h2.solution-heading::before { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset h2.solution-heading { background: rgba(255, 255, 255, .12); color: #e7e7e7; }
+[data-md-color-scheme="slate"] .md-typeset h2.solution-heading::before { background: #4b4b4b; }
 
 /* 問題のタイトル：左に薄いグレーの丸に鉛筆，下に同じグレーの細い線 */
 .md-typeset h1.problem-title {
   position: relative;
   margin-bottom: .3em;
   padding: 0 0 .35em 1.75em;
-  border-bottom: 1px solid #eceef2;
+  border-bottom: 1px solid #eeeeee;
 }
 .md-typeset h1.problem-title::before {
   content: "";
@@ -203,7 +223,7 @@ span.arithmatex mjx-mfrac {
   left: 0; top: .06em;
   width: 1.36em; height: 1.36em;
   border-radius: 50%;
-  background: #eceef2;
+  background: #eeeeee;
 }
 .md-typeset h1.problem-title::after {
   --site-icon: url("../assets/icons/pencil.svg");
@@ -214,7 +234,7 @@ span.arithmatex mjx-mfrac {
 }
 [data-md-color-scheme="slate"] .md-typeset h1.problem-title { border-color: rgba(255, 255, 255, .08); }
 [data-md-color-scheme="slate"] .md-typeset h1.problem-title::before { background: rgba(255, 255, 255, .08); }
-[data-md-color-scheme="slate"] .md-typeset h1.problem-title::after { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title::after { color: #d2d2d2; }
 
 /* 問題ページのパンくずはタイトルの下線の下に置く（hooks/problem_layout.py で移動）。「ホーム」は家のアイコンに */
 .md-typeset .md-path { margin: 0 0 1.5em; font-size: var(--fs-68); }
@@ -362,8 +382,6 @@ span.arithmatex mjx-mfrac {
 }
 .md-tabs__item--tool { order: 1; }
 .md-tabs__item--tool:not(.md-tabs__item--tool ~ .md-tabs__item--tool) { margin-left: auto; }
-.md-tabs__icon { display: inline-flex; width: .85em; height: .85em; }
-.md-tabs__link .md-tabs__icon svg { flex: none; width: 100%; height: 100%; margin: 0 !important; fill: currentColor; }
 
 /* ==========================================
    10. 記事エリアの可読性向上
@@ -465,7 +483,7 @@ body, input {
   padding: .4em .9rem .35em 1.55rem;
   border: none;
   border-radius: 0 1em 1em 0;
-  background: #eef0f6;
+  background: #f0f0f0;
   color: var(--site-navy);
   font-size: var(--fs-90);
   letter-spacing: .04em;
@@ -483,11 +501,11 @@ body, input {
   color: #fff;
 }
 .md-typeset .books-head__icon svg { width: .8rem; height: .8rem; fill: currentColor; }
-[data-md-color-scheme="slate"] .md-typeset h2.books-head { background: rgba(159, 179, 255, .12); color: #e3e7f7; }
-[data-md-color-scheme="slate"] .md-typeset .books-head__icon { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset h2.books-head { background: rgba(255, 255, 255, .12); color: #e7e7e7; }
+[data-md-color-scheme="slate"] .md-typeset .books-head__icon { background: #4b4b4b; }
 
 .md-typeset .book-grid { display: block; margin: .6em 0 0; }
-.md-typeset .book-card { padding: 1.1rem .2rem 1.2rem; border-bottom: 1px solid #e9ebf0; }
+.md-typeset .book-card { padding: 1.1rem .2rem 1.2rem; border-bottom: 1px solid #ebebeb; }
 [data-md-color-scheme="slate"] .md-typeset .book-card { border-color: rgba(255, 255, 255, .08); }
 .md-typeset .book-card { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1.1rem; align-items: start; }
 .md-typeset .book-info { min-width: 0; }
@@ -517,7 +535,7 @@ body, input {
 }
 .md-typeset a.book-btn::after { content: "→"; }
 .md-typeset a.book-btn:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
-[data-md-color-scheme="slate"] .md-typeset a.book-btn { background-color: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset a.book-btn { background-color: #4b4b4b; }
 
 /* ==========================================
    14. 問題を探す：検索窓・分野の切り替え（黄色の下線）・難易度の★ボタン
@@ -541,7 +559,7 @@ body, input {
   font-size: var(--fs-85);
   outline: none;
 }
-[data-md-color-scheme="slate"] .md-typeset .finder__search { background: rgba(255, 255, 255, .035); border-color: #9fb3ff; }
+[data-md-color-scheme="slate"] .md-typeset .finder__search { background: rgba(255, 255, 255, .035); border-color: #b6b6b6; }
 
 /* 分野：ヘッダーのタブと同じく，選ぶと黄色の下線が中央から伸びる */
 .md-typeset .finder__subjects {
@@ -587,7 +605,7 @@ body, input {
   mask: var(--site-icon) center / contain no-repeat;
 }
 .md-typeset .finder__glass { --site-icon: url("../assets/icons/magnifying-glass.svg"); width: .95rem; height: .95rem; color: var(--site-navy); }
-[data-md-color-scheme="slate"] .md-typeset .finder__glass { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .finder__glass { color: #d2d2d2; }
 .md-typeset .finder__subject:not([data-subject=""])::before { width: .85em; height: .85em; }
 .md-typeset .finder__subject--01mechanics::before { --site-icon: url("../assets/icons/apple-whole.svg"); }
 .md-typeset .finder__subject--02electromagnetism::before { --site-icon: url("../assets/icons/magnet.svg"); }
@@ -619,7 +637,7 @@ body, input {
   min-width: 2.6rem;
   padding: .3rem .6rem;
   border: none;
-  background: #f1f2f6;
+  background: #f2f2f2;
   color: #c9a200;
   font: inherit;
   font-size: var(--fs-80);
@@ -627,11 +645,11 @@ body, input {
   cursor: pointer;
   transition: background .15s;
 }
-.md-typeset .finder__level:hover { background: #e4e7ef; }
+.md-typeset .finder__level:hover { background: #e7e7e7; }
 .md-typeset .finder__level.is-on { background: var(--site-navy); color: var(--site-star); }
 [data-md-color-scheme="slate"] .md-typeset .finder__level { background: rgba(255, 255, 255, .06); color: #e0b400; }
 [data-md-color-scheme="slate"] .md-typeset .finder__level:hover { background: rgba(255, 255, 255, .12); }
-[data-md-color-scheme="slate"] .md-typeset .finder__level.is-on { background: #3a4785; color: var(--site-star); }
+[data-md-color-scheme="slate"] .md-typeset .finder__level.is-on { background: #4b4b4b; color: var(--site-star); }
 
 /* 結果の行：タイトルの下に，キーワードが当たった問題文の一部（当たった語に黄色の下地） */
 .md-typeset a.finder__row { align-items: center; }
@@ -652,7 +670,7 @@ body, input {
   padding: .4em .9rem .35em 1.55rem;
   border: none;
   border-radius: 0 1em 1em 0;
-  background: #eef0f6;
+  background: #f0f0f0;
   color: var(--site-navy);
   font-size: var(--fs-90);
   letter-spacing: .04em;
@@ -669,8 +687,8 @@ body, input {
   line-height: 2.1rem;
   text-align: center;
 }
-[data-md-color-scheme="slate"] .md-typeset h2.toc-chapter__head { background: rgba(159, 179, 255, .12); color: #e3e7f7; }
-[data-md-color-scheme="slate"] .md-typeset .toc-chapter__no { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset h2.toc-chapter__head { background: rgba(255, 255, 255, .12); color: #e7e7e7; }
+[data-md-color-scheme="slate"] .md-typeset .toc-chapter__no { background: #4b4b4b; }
 
 .md-typeset a.toc-row {
   display: grid;
@@ -679,7 +697,7 @@ body, input {
   gap: .6rem;
   padding: .5rem .2rem;
   border: none;
-  border-bottom: 1px solid #eef0f4;
+  border-bottom: 1px solid #f0f0f0;
   color: var(--md-typeset-color);
   font-size: var(--fs-80);
 }
@@ -689,7 +707,7 @@ body, input {
 .md-typeset .toc-row__stars .on { color: #e0b400; }
 .md-typeset .toc-row__stars .off { color: var(--md-default-fg-color--lighter); }
 [data-md-color-scheme="slate"] .md-typeset a.toc-row { border-color: rgba(255, 255, 255, .06); }
-[data-md-color-scheme="slate"] .md-typeset .toc-row__num { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .toc-row__num { color: #d2d2d2; }
 
 /* ==========================================
    15. 問題末尾：前後の問題・一覧へ（中央）・関連ページのボタン
@@ -698,8 +716,8 @@ body, input {
   display: grid;
   grid-template-columns: 1fr 5rem 1fr;
   margin: 3em 0 0;
-  border-top: 1px solid #e3e6ee;
-  border-bottom: 1px solid #e3e6ee;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 .md-typeset .page-nav a { border-bottom: none; color: var(--md-typeset-color); }
 .md-typeset .page-nav__side { display: flex; flex-direction: column; gap: .25em; padding: 1rem .9rem; }
@@ -716,15 +734,15 @@ body, input {
   justify-content: center;
   gap: .35em;
   margin: .9rem 0;
-  border-left: 1px solid #e3e6ee;
-  border-right: 1px solid #e3e6ee;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
   font-size: var(--fs-66);
   font-weight: 500;
 }
 .md-typeset .page-nav__list:hover { color: var(--md-accent-fg-color); }
 [data-md-color-scheme="slate"] .md-typeset .page-nav,
 [data-md-color-scheme="slate"] .md-typeset .page-nav__list { border-color: rgba(255, 255, 255, .1); }
-[data-md-color-scheme="slate"] .md-typeset .page-nav__dir { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .page-nav__dir { color: #d2d2d2; }
 
 /* 参考文献一覧など：横長のボタン（問題文と同じ薄いグレーの面）。今後のボタンもここに縦に足す */
 .md-typeset .page-links { display: flex; flex-direction: column; gap: .45rem; margin: 1.2em 0 0; }
@@ -754,7 +772,7 @@ body, input {
 .md-typeset .page-nav__list::before { --site-icon: url("../assets/icons/dots-grid.svg"); width: 1.1rem; height: 1.1rem; }
 .md-typeset .page-links__button::before { width: .9rem; height: .9rem; color: var(--site-navy); }
 .md-typeset .page-links__button--books::before { --site-icon: url("../assets/icons/book-open.svg"); }
-[data-md-color-scheme="slate"] .md-typeset .page-links__button::before { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .page-links__button::before { color: #d2d2d2; }
 
 /* スマホ：前後の問題を左右に，一覧へはその下の1行に */
 @media screen and (max-width: 600px) {
@@ -766,9 +784,9 @@ body, input {
     margin: 0;
     padding: .6rem 0;
     border: none;
-    border-top: 1px solid #e3e6ee;
+    border-top: 1px solid #e6e6e6;
   }
-  .md-typeset .page-nav__side--next { border-left: 1px solid #e3e6ee; }
+  .md-typeset .page-nav__side--next { border-left: 1px solid #e6e6e6; }
   .md-typeset .page-nav__title { font-size: var(--fs-78); }
 }
 
@@ -815,15 +833,15 @@ body, input {
   grid-column: 1 / -1;
   margin-top: 1rem !important;
   padding: .9rem 0;
-  background: #0d1126;
-  box-shadow: 0 0 0 100vmax #0d1126;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 100vmax #1a1a1a;
   clip-path: inset(0 -100vmax);
   font-size: var(--fs-58);
   color: rgba(255, 255, 255, .45);
 }
 .site-footer__bottom span { margin: 0 .5em; }
 .site-footer__bottom a { color: rgba(255, 255, 255, .6); border: none; text-decoration: underline; text-underline-offset: .15em; }
-[data-md-color-scheme="slate"] .site-footer__bottom { background: #0a0d1f; box-shadow: 0 0 0 100vmax #0a0d1f; }
+[data-md-color-scheme="slate"] .site-footer__bottom { background: #0e0e0e; box-shadow: 0 0 0 100vmax #0e0e0e; }
 @media screen and (max-width: 45em) {
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer__brand { grid-column: 1 / -1; }
@@ -885,7 +903,7 @@ body, input {
 
 /* 答えの強調（\finalanswer）：黄色の下地。答えだけの式は式ごと，導出の途中にある答えはその部分だけ */
 :root { --site-answer-bg: rgba(255, 214, 10, .23); }
-[data-md-color-scheme="slate"] { --site-answer-bg: rgba(159, 179, 255, .10); }
+[data-md-color-scheme="slate"] { --site-answer-bg: rgba(255, 255, 255, .10); }
 .md-typeset mjx-container[display="true"].fa-whole {
   display: block;
   width: fit-content;
@@ -949,14 +967,14 @@ body, input {
 [data-md-color-scheme="slate"] .site-search__item:hover,
 [data-md-color-scheme="slate"] .site-search__item.is-active { background: rgba(255, 255, 255, .05); }
 .site-search__num { font-size: var(--fs-66); color: var(--site-navy); }
-[data-md-color-scheme="slate"] .site-search__num { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .site-search__num { color: #d2d2d2; }
 .site-search__text { display: flex; flex-direction: column; line-height: 1.4; }
 .site-search__where { font-size: var(--fs-60); color: var(--md-default-fg-color--light); }
 .site-search__stars { font-size: var(--fs-60); letter-spacing: .06em; }
 .site-search__stars .on { color: #e0b400; }
 .site-search__stars .off { color: var(--md-default-fg-color--lighter); }
 .site-search__all { display: block; margin-top: .2rem; border-top: 1px solid var(--md-default-fg-color--lightest); color: var(--site-navy); font-weight: 500; }
-[data-md-color-scheme="slate"] .site-search__all { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .site-search__all { color: #d2d2d2; }
 .site-search__empty { margin: 0; padding: .5rem .9rem; color: var(--md-default-fg-color--light); font-size: var(--fs-70); }
 .md-header__button.site-search__mobile { display: none; }
 @media screen and (max-width: 59.984375em) {
@@ -981,7 +999,7 @@ body, input {
   margin: .35rem 0 .7rem 1.1rem;
   padding: .3rem .6rem .28rem 1.2rem;
   border-radius: 0 1em 1em 0;
-  background: #eef0f6;
+  background: #f0f0f0;
   color: var(--site-navy);
   font-size: var(--fs-68);
   font-weight: 500;
@@ -1001,9 +1019,9 @@ body, input {
   color: #fff;
   box-sizing: border-box;
 }
-[data-md-color-scheme="slate"] .side-heading { background: rgba(159, 179, 255, .12) !important; color: #e3e7f7; }
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__title.side-heading { background: rgba(159, 179, 255, .12) !important; color: #e3e7f7; }
-[data-md-color-scheme="slate"] .side-heading .side-heading__icon { background: #3a4785; }
+[data-md-color-scheme="slate"] .side-heading { background: rgba(255, 255, 255, .12) !important; color: #e7e7e7; }
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__title.side-heading { background: rgba(255, 255, 255, .12) !important; color: #e7e7e7; }
+[data-md-color-scheme="slate"] .side-heading .side-heading__icon { background: #4b4b4b; }
 .side-heading__icon { display: inline-flex; flex: none; width: .85em; height: .85em; }
 .side-heading__icon svg { width: 100%; height: 100%; fill: currentColor; }
 .md-sidebar--secondary .md-nav--secondary .md-nav__list { border-left: 1px solid var(--md-default-fg-color--lightest); }
@@ -1023,7 +1041,7 @@ body, input {
   font-weight: 500;
 }
 .side-chapters__label { flex: 1; }
-[data-md-color-scheme="slate"] .side-chapters__index { background: #3a4785; }
+[data-md-color-scheme="slate"] .side-chapters__index { background: #4b4b4b; }
 .side-chapter__head { list-style: none; padding: .3rem .6rem; cursor: pointer; color: var(--md-typeset-color); }
 .side-chapter__head::-webkit-details-marker { display: none; }
 .side-chapter[open] > .side-chapter__head { font-weight: 500; }
@@ -1031,13 +1049,13 @@ body, input {
 .side-chapter__link { display: flex; gap: .5em; margin-left: -1px; padding: .22rem .6rem; border-left: 2px solid transparent; color: var(--md-default-fg-color--light); line-height: 1.4; }
 .side-chapter__link.is-current { border-left-color: var(--site-star); color: var(--md-typeset-color); font-weight: 500; }
 .side-chapter__num { flex: none; color: var(--site-navy); }
-[data-md-color-scheme="slate"] .side-chapter__num { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .side-chapter__num { color: #d2d2d2; }
 
 /* ==========================================
    押せるもの共通：マウスを乗せる／押すと，解答・解説の帯と同じ薄い紺が左から塗られる
    ========================================== */
-[data-md-color-scheme] { --site-sweep: #e6e9f3; --site-sweep-text: var(--site-navy); }
-[data-md-color-scheme="slate"] { --site-sweep: rgba(159, 179, 255, .16); --site-sweep-text: #eef1ff; }
+[data-md-color-scheme] { --site-sweep: #e9e9e9; --site-sweep-text: var(--site-navy); }
+[data-md-color-scheme="slate"] { --site-sweep: rgba(255, 255, 255, .16); --site-sweep-text: #f1f1f1; }
 .md-sidebar--secondary .md-nav--secondary .md-nav__link,
 .side-chapter__head,
 .side-chapter__link,
@@ -1103,7 +1121,7 @@ body, input {
 /* 目次の「問題」「解答・解説」のアイコン */
 .toc-icon { display: inline-flex; width: .8em; height: .8em; margin-right: .4em; vertical-align: -.05em; color: var(--site-navy); }
 .toc-icon svg { width: 100%; height: 100%; fill: currentColor; }
-[data-md-color-scheme="slate"] .toc-icon { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .toc-icon { color: #d2d2d2; }
 
 /* ==========================================
    スマホ・タブレットの左メニュー（overrides/partials/nav.html）
@@ -1141,7 +1159,7 @@ body, input {
 .drawer__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text); }
 .drawer__link.is-current { border-left-color: var(--site-star); font-weight: 500; }
 .drawer__link .side-heading__icon { color: var(--site-navy); }
-[data-md-color-scheme="slate"] .drawer__link .side-heading__icon { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .drawer__link .side-heading__icon { color: #d2d2d2; }
 /* 物理数学：その場で開く分野の一覧 */
 .drawer__toggle { cursor: pointer; list-style: none; }
 .drawer__toggle::-webkit-details-marker { display: none; }
@@ -1178,14 +1196,14 @@ body, input {
 .md-header__button.md-logo { margin: .1rem; padding: .2rem; }
 
 /* ヘッダーもフッターと対称に：一番上（サイト名の段）は最下段と同じ暗い紺，タブの段は紺 */
-.md-header { background-color: #0d1126; }
-[data-md-color-scheme="slate"] .md-header { background-color: #0a0d1f; }
+.md-header { background-color: #1a1a1a; }
+[data-md-color-scheme="slate"] .md-header { background-color: #0e0e0e; }
 
 /* ==========================================
    トップページ（ヒーローは overrides/main.html，本文は hooks/problem_layout.py の _home）
    ========================================== */
-.home-hero { position: relative; z-index: 1; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #0d1126; background-position: center; background-size: cover; color: #fff; }
-.home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(13, 17, 38, .68), rgba(13, 17, 38, .8)); }
+.home-hero { position: relative; z-index: 1; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #1a1a1a; background-position: center; background-size: cover; color: #fff; }
+.home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(18, 18, 18, .68), rgba(18, 18, 18, .8)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
 .home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
 .home-hero__logo { width: 4.2rem; height: 4.2rem; }
 .home-hero__title { margin: .5rem 0 .4rem; font-size: var(--fs-145); font-weight: 500; letter-spacing: .08em; color: #fff; }
@@ -1211,9 +1229,6 @@ body, input {
 .md-typeset a.home-tile:is(:hover, :focus-visible), .md-typeset a.home-level:is(:hover, :focus-visible) { background-size: 100% 100%; }
 [data-md-color-scheme="slate"] .md-typeset :is(a.home-tile, a.home-level) { background-color: rgba(255, 255, 255, .035); }
 .md-typeset a.home-tile { display: flex; gap: .8rem; padding: .9rem 1rem; }
-.md-typeset .home-tile__icon { display: flex; flex: none; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--site-navy); color: #fff; }
-.md-typeset .home-tile__icon svg { width: .85rem; height: .85rem; fill: currentColor; }
-[data-md-color-scheme="slate"] .md-typeset .home-tile__icon { background: #3a4785; }
 .md-typeset .home-tile__body { display: flex; flex: 1; flex-direction: column; gap: .25rem; min-width: 0; }
 .md-typeset .home-tile__name { display: flex; justify-content: space-between; align-items: baseline; font-size: var(--fs-88); font-weight: 500; }
 .md-typeset .home-tile__count { font-size: var(--fs-66); font-weight: 400; color: var(--md-default-fg-color--light); }
@@ -1233,7 +1248,7 @@ body, input {
 .md-typeset .home-level__name { font-size: var(--fs-85); font-weight: 500; }
 .md-typeset .home-level__desc { font-size: var(--fs-62); color: var(--md-default-fg-color--light); }
 .md-typeset .home-level__count { font-size: var(--fs-66); color: var(--site-navy); }
-[data-md-color-scheme="slate"] .md-typeset .home-level__count { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .home-level__count { color: #d2d2d2; }
 .md-typeset .home-promise { padding: .3em 1.1rem .6em; background: #fafafb; border-left: 3px solid var(--site-star); }
 [data-md-color-scheme="slate"] .md-typeset .home-promise { background: rgba(255, 255, 255, .035); }
 
@@ -1253,7 +1268,7 @@ body, input {
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
 }
 .md-typeset a.home-owner__link:is(:hover, :focus-visible) { background-size: 100% 100%; color: #fff; }
-[data-md-color-scheme="slate"] .md-typeset a.home-owner__link { background-color: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset a.home-owner__link { background-color: #4b4b4b; }
 .md-typeset .home-owner__icon { display: inline-flex; width: .85em; height: .85em; }
 .md-typeset .home-owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
 @media screen and (max-width: 45em) {
@@ -1263,7 +1278,7 @@ body, input {
 /* ==========================================
    斜めのストライプ：グレー・薄紺の面にごく薄く（問題文の面は読みやすさのため除く）
    ========================================== */
-[data-md-color-scheme] { --site-stripe: repeating-linear-gradient(-45deg, rgba(23, 29, 59, .035) 0 1px, transparent 1px 3.5px); }
+[data-md-color-scheme] { --site-stripe: repeating-linear-gradient(-45deg, rgba(0, 0, 0, .035) 0 1px, transparent 1px 3.5px); }
 [data-md-color-scheme="slate"] { --site-stripe: repeating-linear-gradient(-45deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 3.5px); }
 .md-typeset :is(h2.solution-heading, h2.toc-chapter__head, h2.books-head, .books-intro, .home-promise, .finder__search),
 .md-sidebar--secondary .md-nav__title.side-heading, .side-heading {
@@ -1303,8 +1318,8 @@ body, input {
   border-bottom: 0;
   border-top-color: var(--site-navy);
 }
-[data-md-color-scheme="slate"] .md-typeset .owner__heading { background: #3a4785; }
-[data-md-color-scheme="slate"] .md-typeset .owner__heading::after { border-top-color: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset .owner__heading { background: #4b4b4b; }
+[data-md-color-scheme="slate"] .md-typeset .owner__heading::after { border-top-color: #4b4b4b; }
 .md-typeset .owner__heading-icon { display: inline-flex; width: .8em; height: .8em; }
 .md-typeset .owner__heading-icon svg { width: 100%; height: 100%; fill: currentColor; }
 .md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; background-color: #fafafb; background-image: var(--site-stripe); }
@@ -1322,7 +1337,7 @@ body, input {
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
 }
 .md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
-[data-md-color-scheme="slate"] .md-typeset a.owner__link { background-color: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset a.owner__link { background-color: #4b4b4b; }
 .md-typeset .owner__icon { display: inline-flex; width: .85em; height: .85em; }
 .md-typeset .owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
 .home-hero__title span { display: inline-block; }
@@ -1341,7 +1356,7 @@ body, input {
 .md-typeset .answer-toggle {
   display: inline-flex; align-items: center; gap: .4em;
   margin: 0 0 .6rem; padding: .35rem 1rem; border: none; cursor: pointer;
-  background-color: #eef0f6; background-image: linear-gradient(var(--site-sweep), var(--site-sweep)), var(--site-stripe);
+  background-color: #f0f0f0; background-image: linear-gradient(var(--site-sweep), var(--site-sweep)), var(--site-stripe);
   background-size: 0 100%, auto; background-repeat: no-repeat, repeat;
   color: var(--site-navy); font: inherit; font-size: var(--fs-72); font-weight: 500;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
@@ -1349,7 +1364,7 @@ body, input {
 .md-typeset .answer-toggle::before { content: "▶"; font-size: .6em; transition: transform .3s; }
 .md-typeset .answer-toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
 .md-typeset .answer-toggle:is(:hover, :focus-visible) { background-size: 100% 100%, auto; }
-[data-md-color-scheme="slate"] .md-typeset .answer-toggle { background-color: rgba(159, 179, 255, .12); color: #e3e7f7; }
+[data-md-color-scheme="slate"] .md-typeset .answer-toggle { background-color: rgba(255, 255, 255, .12); color: #e7e7e7; }
 .md-typeset h2.solution-heading .answer-all {
   position: absolute; right: .7rem; top: 50%; transform: translateY(-50%);
   padding: .15rem .7rem; border: 1px solid currentColor; border-radius: 1em; background: none; cursor: pointer;
@@ -1369,14 +1384,14 @@ body, input {
   color: var(--site-navy); font: inherit; font-size: var(--fs-80); font-weight: 500;
   transition: background .3s, color .3s, transform .2s;
 }
-.md-typeset .solved__button:hover { background: #eef0f6; }
+.md-typeset .solved__button:hover { background: #f0f0f0; }
 .md-typeset .solved__button:active { transform: scale(.96); }
 .md-typeset .solved__check { display: inline-flex; align-items: center; justify-content: center; width: 1.2em; height: 1.2em; border-radius: 50%; border: 1.5px solid currentColor; font-size: .8em; }
 .md-typeset .solved__button.is-on { background: var(--site-navy); color: #fff; }
 .md-typeset .solved__button.is-on .solved__check { background: var(--site-star); border-color: var(--site-star); color: var(--site-navy); animation: site-pop .35s cubic-bezier(.2, .8, .2, 1.4); }
 @keyframes site-pop { from { transform: scale(.4); } to { transform: scale(1); } }
-[data-md-color-scheme="slate"] .md-typeset .solved__button { border-color: #9fb3ff; color: #c5d0ff; }
-[data-md-color-scheme="slate"] .md-typeset .solved__button.is-on { background: #3a4785; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset .solved__button { border-color: #b6b6b6; color: #d2d2d2; }
+[data-md-color-scheme="slate"] .md-typeset .solved__button.is-on { background: #4b4b4b; color: #fff; }
 /* 一覧などの ✓：番号の左に小さな黄色の丸 */
 :is(.side-chapter__link, a.toc-row, a.page-nav__side, .site-search__item).is-solved { position: relative; }
 :is(.side-chapter__link, a.toc-row, .site-search__item).is-solved::after {
@@ -1422,10 +1437,10 @@ body, input {
 }
 .md-top svg { width: .9rem; height: .9rem; margin: 0; }
 .md-top::after { content: "トップへ"; font-size: var(--fs-45); line-height: 1; letter-spacing: .04em; }
-.md-top:is(:hover, :focus-visible) { background: #2b3566; color: #fff; transform: translateY(-.15rem); box-shadow: 0 .35rem .9rem rgba(0, 0, 0, .26); }
+.md-top:is(:hover, :focus-visible) { background: #383838; color: #fff; transform: translateY(-.15rem); box-shadow: 0 .35rem .9rem rgba(0, 0, 0, .26); }
 /* 消えるときも下へ沈みながらフェードする（Material は隠すときのアニメーションを 0 にしているので上書き） */
 .md-top[hidden], .md-top--hidden { display: flex; opacity: 0; transform: translateY(.8rem); pointer-events: none; transition-duration: .3s; }
-[data-md-color-scheme="slate"] .md-top { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-top { background: #4b4b4b; }
 
 /* 同じページ内の移動（目次・トップへ）はなめらかにスクロール */
 html { scroll-behavior: smooth; }
@@ -1437,11 +1452,11 @@ html { scroll-behavior: smooth; }
 .md-typeset .not-found { max-width: 30rem; margin: 2rem auto 3rem; text-align: center; }
 .md-typeset .not-found__logo { width: 3.6rem; height: 3.6rem; border-radius: .3rem; }
 .md-typeset .not-found__code { margin: .8rem 0 0; font-size: var(--fs-240); font-weight: 300; letter-spacing: .2em; color: var(--site-navy); }
-[data-md-color-scheme="slate"] .md-typeset .not-found__code { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .not-found__code { color: #d2d2d2; }
 .md-typeset h1.not-found__title { margin: .2rem 0 .6rem; padding: 0; border: none; font-size: var(--fs-120); }
 .md-typeset .not-found__text { font-size: var(--fs-75); color: var(--md-default-fg-color--light); }
 .md-typeset .not-found__search { display: flex !important; margin: 1.2rem 0; }
-.md-typeset .not-found__search .site-search__input { width: 100% !important; height: 2.4rem; padding-left: 2.4rem; background: #f1f2f6; color: var(--md-typeset-color); }
+.md-typeset .not-found__search .site-search__input { width: 100% !important; height: 2.4rem; padding-left: 2.4rem; background: #f2f2f2; color: var(--md-typeset-color); }
 .md-typeset .not-found__search .site-search__input::placeholder { color: var(--md-default-fg-color--light); }
 .md-typeset .not-found__search .site-search__icon { color: var(--site-navy); left: .8rem; }
 .md-typeset .not-found__search .site-search__results { left: 0; right: 0; width: auto; text-align: left; }
@@ -1473,7 +1488,7 @@ html { scroll-behavior: smooth; }
 }
 .md-typeset .home-news > ul > li::after {
   content: ""; position: absolute; left: .42rem; top: 1.1em; bottom: -.3em;
-  width: 1px; background: #d9dce6;
+  width: 1px; background: #dcdcdc;
 }
 .md-typeset .home-news > ul > li:last-child::after { display: none; }
 .md-typeset .home-news > ul > li > p { margin: 0; }
@@ -1482,13 +1497,12 @@ html { scroll-behavior: smooth; }
 .md-typeset .home-news ul ul li { position: relative; margin: .2em 0; padding-left: .9em; }
 .md-typeset .home-news ul ul li::before { content: ""; position: absolute; left: 0; top: .8em; width: .35em; height: 1px; background: currentColor; opacity: .6; }
 [data-md-color-scheme="slate"] .md-typeset .home-news { background-color: rgba(255, 255, 255, .035); }
-[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::before { background: #8d9be0; box-shadow: 0 0 0 3px #26292f; }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::before { background: #9f9f9f; box-shadow: 0 0 0 3px #292929; }
 [data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::after { background: rgba(255, 255, 255, .12); }
-[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li strong { color: #c9d1f3; }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li strong { color: #d2d2d2; }
 
-/* パンくず：分野のアイコン */
-.md-typeset .md-path__icon { display: inline-flex; width: .9em; height: .9em; margin-right: .35em; vertical-align: -.1em; }
-.md-typeset .md-path__icon svg { width: 100%; height: 100%; fill: currentColor; }
+
+/* パンくず */
 .md-typeset .md-path__link { display: inline-flex; align-items: center; }
 
 /* ヘッダー：「物理数学」タブで開く分野の一覧（タブの真下に縦に並べる。背景は少し透かす） */
@@ -1502,14 +1516,14 @@ html { scroll-behavior: smooth; }
   z-index: 3;
   padding: .3rem 0 .4rem;
   border-radius: 0 0 .3rem .3rem;
-  background: rgba(15, 19, 42, .74);
+  background: rgba(21, 21, 21, .74);
   -webkit-backdrop-filter: blur(4px) saturate(120%);
   backdrop-filter: blur(4px) saturate(120%);
   box-shadow: 0 .6rem 1.4rem rgba(0, 0, 0, .22);
   transform: translateY(-.35rem); opacity: 0;
   transition: transform .18s ease, opacity .18s ease;
 }
-[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(12, 15, 34, .72); }
+[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(16, 16, 16, .72); }
 .md-tabs__menu.is-open { transform: none; opacity: 1; }
 .md-tabs__menu-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
 .md-tabs__menu-link {
@@ -1525,13 +1539,11 @@ html { scroll-behavior: smooth; }
 }
 .md-tabs__menu-link:is(:hover, :focus-visible, :active) { opacity: 1; background-size: 100% 100%; }
 .md-tabs__menu-item--active .md-tabs__menu-link { opacity: 1; font-weight: 500; box-shadow: inset 2px 0 0 var(--md-accent-fg-color); }
-.md-tabs__menu-link .md-tabs__icon { width: .85em; height: .85em; }
-.md-tabs__menu-link .md-tabs__icon svg { width: 100%; height: 100%; fill: currentColor; }
 @media (prefers-reduced-motion: reduce) { .md-tabs__menu, .md-tabs__caret { transition: none; } }
 
 /* 関連：前後の問題の真上に，同じ線と同じ形で1段足す（左に「関連」，右に問題の一覧） */
-.md-typeset .related { display: grid; grid-template-columns: 5rem 1fr; margin: 3em 0 0; border-top: 1px solid #e3e6ee; }
-.md-typeset .related__label { display: flex; align-items: center; justify-content: center; margin: .7rem 0; border-right: 1px solid #e3e6ee; color: var(--site-navy); font-size: var(--fs-70); font-weight: 500; letter-spacing: .1em; }
+.md-typeset .related { display: grid; grid-template-columns: 5rem 1fr; margin: 3em 0 0; border-top: 1px solid #e6e6e6; }
+.md-typeset .related__label { display: flex; align-items: center; justify-content: center; margin: .7rem 0; border-right: 1px solid #e6e6e6; color: var(--site-navy); font-size: var(--fs-70); font-weight: 500; letter-spacing: .1em; }
 .md-typeset ul.related__list { margin: 0; padding: .45rem 0; list-style: none; }
 .md-typeset ul.related__list > li { margin: 0; list-style: none; }
 .md-typeset a.related__link {
@@ -1542,11 +1554,11 @@ html { scroll-behavior: smooth; }
 .md-typeset a.related__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text); border-bottom: none; }
 .md-typeset .related + .page-nav { margin-top: 0; }
 [data-md-color-scheme="slate"] .md-typeset .related, [data-md-color-scheme="slate"] .md-typeset .related__label { border-color: rgba(255, 255, 255, .1); }
-[data-md-color-scheme="slate"] .md-typeset .related__label { color: #c5d0ff; }
+[data-md-color-scheme="slate"] .md-typeset .related__label { color: #d2d2d2; }
 @media screen and (max-width: 44.9375em) { .md-typeset .related { grid-template-columns: 3.6rem 1fr; } }
 
 /* 解説の末尾：補足（物理の標準的な扱いに対する厳密な条件など）。普段は1行で，押すと開く */
-.md-typeset details.rigor-note { margin: 2em 0 0; padding: 0; border: none; border-top: 1px solid #e3e6ee; border-radius: 0; background: none; box-shadow: none; font-size: inherit; overflow: visible; }
+.md-typeset details.rigor-note { margin: 2em 0 0; padding: 0; border: none; border-top: 1px solid #e6e6e6; border-radius: 0; background: none; box-shadow: none; font-size: inherit; overflow: visible; }
 .md-typeset details.rigor-note > summary {
   display: flex; align-items: center; gap: .55rem; margin: 0; padding: .6rem 0; border: none; border-radius: 0; background: none;
   color: var(--md-default-fg-color--light); font-size: var(--fs-72); font-weight: 400; cursor: pointer; list-style: none;
@@ -1575,10 +1587,10 @@ html { scroll-behavior: smooth; }
 .md-typeset .approach::before {
   content: "考え方"; display: block; margin: 0 0 .3em; padding-right: 0;
   color: var(--site-navy); font-size: var(--fs-72); font-weight: 700; letter-spacing: .1em;
-  background: linear-gradient(#e3e6ee, #e3e6ee) right center / calc(100% - 4.2em) 1px no-repeat;
+  background: linear-gradient(#e6e6e6, #e6e6e6) right center / calc(100% - 4.2em) 1px no-repeat;
 }
 .md-typeset .approach > p { margin: 0 0 .4em; }
-[data-md-color-scheme="slate"] .md-typeset .approach::before { color: #c5d0ff; background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)); }
+[data-md-color-scheme="slate"] .md-typeset .approach::before { color: #d2d2d2; background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)); }
 
 /* ==========================================
    紺のボタン：押すと黄色に塗られ，文字が濃い紺になる（はっきり押した感じを出す）
@@ -1595,13 +1607,13 @@ html { scroll-behavior: smooth; }
 :is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
 :is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active),
 :is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active) * {
-  color: #171d3b !important;
+  color: #1f1f1f !important;
 }
 
 /* 前後の問題：矢印の向きに塗る（前は右から，次は左から）。次の問題だけ塗りを紺にして差をつける */
 .md-typeset .page-nav__side:not(.page-nav__side--next) { background-position: right center; }
 .md-typeset .page-nav__side--next { background-image: linear-gradient(var(--site-navy), var(--site-navy)) !important; }
-[data-md-color-scheme="slate"] .md-typeset .page-nav__side--next { background-image: linear-gradient(#3a4785, #3a4785) !important; }
+[data-md-color-scheme="slate"] .md-typeset .page-nav__side--next { background-image: linear-gradient(#4b4b4b, #4b4b4b) !important; }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active),
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) :is(.page-nav__dir, .page-nav__title) { color: #fff !important; }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .on { color: var(--site-star); }
@@ -1618,7 +1630,7 @@ html { scroll-behavior: smooth; }
   background: var(--site-navy); opacity: 0;
   transition: transform 1.4s cubic-bezier(.23, 1, .32, 1), opacity .4s;
 }
-[data-md-color-scheme="slate"] .md-typeset a.page-nav__side--next::before { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset a.page-nav__side--next::before { background: #4b4b4b; }
 .md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active)::before { transform: scale(48); opacity: 1; }
 .md-typeset .page-nav__side--next .page-nav__dir { position: relative; display: inline-flex; align-items: center; gap: .3em; }
 .md-typeset .page-nav__arrow { display: inline-block; transition: transform 1s cubic-bezier(.23, 1, .32, 1), opacity .5s; }
@@ -1656,15 +1668,15 @@ html { scroll-behavior: smooth; }
 }
 .site-burger__line:nth-child(1) { transform: translateY(-6px); }
 .site-burger__line:nth-child(3) { transform: translateY(6px); }
-.site-burger:hover .site-burger__line, .site-burger:focus-visible .site-burger__line { background: #171d3b; }
+.site-burger:hover .site-burger__line, .site-burger:focus-visible .site-burger__line { background: #1f1f1f; }
 .site-burger:hover .site-burger__line:nth-child(2) { transform: scaleX(.6); }
 #__drawer:checked ~ .md-header .site-burger__line:nth-child(1) { transform: rotate(45deg); }
 #__drawer:checked ~ .md-header .site-burger__line:nth-child(2) { opacity: 0; }
 #__drawer:checked ~ .md-header .site-burger__line:nth-child(3) { transform: rotate(-45deg); }
 
 /* 本文のリンク：サイトの紺に寄せる。開いたことのあるリンクは少しくすませる */
-[data-md-color-scheme="default"] { --md-typeset-a-color: #2b3566; }
-[data-md-color-scheme="slate"] { --md-typeset-a-color: #c5d0ff; }
+[data-md-color-scheme="default"] { --md-typeset-a-color: #383838; }
+[data-md-color-scheme="slate"] { --md-typeset-a-color: #d2d2d2; }
 .md-typeset a:not([class]):visited { color: #6a6f93; border-bottom-color: #6a6f93; }
 [data-md-color-scheme="slate"] .md-typeset a:not([class]):visited { color: #98a1c8; border-bottom-color: #98a1c8; }
 
@@ -1696,13 +1708,13 @@ html { scroll-behavior: smooth; }
   background-size: 0 100% !important;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
 }
-[data-md-color-scheme="slate"] .md-typeset a.page-links__button.home-link { background-color: #3a4785 !important; }
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button.home-link { background-color: #4b4b4b !important; }
 .md-typeset a.page-links__button.home-link::before,
 .md-typeset a.page-links__button.home-link .page-links__arrow { color: #fff !important; }
 .md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
 .md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active),
 .md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active)::before,
-.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) * { color: #171d3b !important; }
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) * { color: #1f1f1f !important; }
 
 /* ==========================================
    問題を印刷する（javascripts/exam.js）：問題ページの「印刷に追加」と，問題を印刷するページ
@@ -1732,9 +1744,9 @@ html { scroll-behavior: smooth; }
   padding: .2rem .55rem; border: 1px solid transparent; background: transparent; color: var(--md-default-fg-color--light); font-size: var(--fs-68);
 }
 .md-typeset .exam-builder__filters .exam-builder__check:hover,
-.md-typeset .exam-builder__filters .finder__level.exam-builder__check:hover { background: #f1f2f6; }
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check:hover { background: #f2f2f2; }
 .md-typeset .exam-builder__filters .exam-builder__check.is-on,
-.md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { background: rgba(23, 29, 59, .07); color: var(--md-typeset-color); }
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { background: rgba(0, 0, 0, .07); color: var(--md-typeset-color); }
 .md-typeset .exam-builder__filters .finder__level.exam-builder__check { color: #c9a200; opacity: .45; }
 .md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { color: #c9a200; opacity: 1; }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check { background: transparent; }
@@ -1742,29 +1754,29 @@ html { scroll-behavior: smooth; }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check.is-on { background: rgba(255, 255, 255, .1); }
 .md-typeset .exam-builder__filters .exam-builder__check::before { content: "✓"; display: inline-block; width: 0; margin-right: 0; overflow: hidden; color: var(--site-navy); vertical-align: top; }
 .md-typeset .exam-builder__filters .exam-builder__check.is-on::before { width: 1em; margin-right: .15em; }
-[data-md-color-scheme="slate"] .md-typeset .exam-builder__check::before { color: #8c9eff; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__check::before { color: #a4a4a4; }
 .md-typeset .exam-builder__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin: .9rem 0 .6rem; font-size: var(--fs-70); color: var(--md-default-fg-color--light); }
 .md-typeset .exam-builder__select { display: inline-flex; align-items: center; gap: .5rem; }
 .md-typeset .exam-builder__random { display: inline-flex; align-items: center; gap: .4rem; }
 .md-typeset .exam-builder select {
-  padding: .3rem 1.6rem .3rem .6rem; border: none; border-radius: 0; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72);
+  padding: .3rem 1.6rem .3rem .6rem; border: none; border-radius: 0; background: #f2f2f2; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72);
   appearance: none; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
   background-position: calc(100% - .75rem) 55%, calc(100% - .5rem) 55%; background-size: .25rem .25rem; background-repeat: no-repeat;
 }
 .md-typeset .exam-builder__select select { max-width: 16rem; }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder select { background-color: rgba(255, 255, 255, .06); }
 .md-typeset .exam-builder__chip {
-  padding: .3rem .8rem; border: none; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72); cursor: pointer; transition: background .15s;
+  padding: .3rem .8rem; border: none; background: #f2f2f2; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72); cursor: pointer; transition: background .15s;
 }
-.md-typeset .exam-builder__chip:hover { background: #e4e7ef; }
+.md-typeset .exam-builder__chip:hover { background: #e7e7e7; }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__chip { background: rgba(255, 255, 255, .06); }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__chip:hover { background: rgba(255, 255, 255, .12); }
 
 /* 問題の行（a.toc-row と同じ形。行の右端に「追加」） */
-.md-typeset .exam-builder__list { max-height: 24rem; overflow-y: auto; border-top: 1px solid #eef0f4; }
+.md-typeset .exam-builder__list { max-height: 24rem; overflow-y: auto; border-top: 1px solid #f0f0f0; }
 .md-typeset .toc-row.exam-builder__row {
   display: grid; grid-template-columns: 2.6rem 1fr auto auto; align-items: center; gap: .6rem;
-  padding: .45rem .2rem; border-bottom: 1px solid #eef0f4; color: var(--md-typeset-color); font-size: var(--fs-80);
+  padding: .45rem .2rem; border-bottom: 1px solid #f0f0f0; color: var(--md-typeset-color); font-size: var(--fs-80);
 }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__list,
 [data-md-color-scheme="slate"] .md-typeset .toc-row.exam-builder__row { border-color: rgba(255, 255, 255, .07); }
@@ -1784,9 +1796,9 @@ html { scroll-behavior: smooth; }
 .md-typeset .exam-builder__meta { font-size: var(--fs-64); color: var(--md-default-fg-color--light); }
 .md-typeset .exam-builder__ops { display: inline-flex; gap: .25rem; }
 .md-typeset .exam-builder__ops button {
-  width: 1.7rem; height: 1.7rem; border: none; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72); cursor: pointer;
+  width: 1.7rem; height: 1.7rem; border: none; background: #f2f2f2; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72); cursor: pointer;
 }
-.md-typeset .exam-builder__ops button:hover { background: #e4e7ef; }
+.md-typeset .exam-builder__ops button:hover { background: #e7e7e7; }
 .md-typeset .exam-builder__ops button:disabled { opacity: .3; cursor: default; }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__ops button { background: rgba(255, 255, 255, .06); }
 .md-typeset .exam-builder__empty { margin: .6rem .2rem; font-size: var(--fs-72); color: var(--md-default-fg-color--light); }
@@ -1799,12 +1811,12 @@ html { scroll-behavior: smooth; }
 .md-typeset .exam-builder__settings dt { margin: 0; color: var(--md-default-fg-color--light); font-weight: 400; }
 .md-typeset .exam-builder__settings dd { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
 .md-typeset .exam-builder__settings button {
-  min-width: 3.2rem; padding: .3rem .8rem; border: none; background: #f1f2f6; color: var(--md-typeset-color); font: inherit; cursor: pointer; transition: background .15s;
+  min-width: 3.2rem; padding: .3rem .8rem; border: none; background: #f2f2f2; color: var(--md-typeset-color); font: inherit; cursor: pointer; transition: background .15s;
 }
-.md-typeset .exam-builder__settings button:hover { background: #e4e7ef; }
+.md-typeset .exam-builder__settings button:hover { background: #e7e7e7; }
 .md-typeset .exam-builder__settings button.is-on { background: var(--site-navy); color: #fff; }
 [data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button { background: rgba(255, 255, 255, .06); }
-[data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button.is-on { background: #3a4785; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button.is-on { background: #4b4b4b; }
 .md-typeset .exam-builder__box { display: inline-flex; align-items: center; justify-content: center; width: 1.35em; height: 1.35em; border: 1.5px solid currentColor; line-height: 1; }
 
 .md-typeset .exam-builder__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: 0 0 .8rem; }
@@ -1813,8 +1825,8 @@ html { scroll-behavior: smooth; }
   background-image: linear-gradient(var(--site-star), var(--site-star)); background-repeat: no-repeat; background-size: 0 100%;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
 }
-.md-typeset a.exam-builder__open:is(:hover, :focus-visible) { background-size: 100% 100%; color: #171d3b; }
-[data-md-color-scheme="slate"] .md-typeset a.exam-builder__open { background-color: #3a4785; }
+.md-typeset a.exam-builder__open:is(:hover, :focus-visible) { background-size: 100% 100%; color: #1f1f1f; }
+[data-md-color-scheme="slate"] .md-typeset a.exam-builder__open { background-color: #4b4b4b; }
 .md-typeset a.exam-builder__open.is-disabled { opacity: .45; }
 .md-typeset .exam-builder__status { font-size: var(--fs-70); color: var(--md-default-fg-color--light); }
 .md-typeset .exam-builder__note { font-size: var(--fs-66); color: var(--md-default-fg-color--light); }
