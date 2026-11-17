@@ -87,11 +87,21 @@
         isolation: isolate;
         background-color: var(--md-primary-fg-color);
         background-image:
-          linear-gradient(rgba(7, 10, 24, 0.58), rgba(7, 10, 24, 0.66)),
+          linear-gradient(rgba(11, 11, 11, 0.58), rgba(11, 11, 11, 0.66)),
           var(--page-hero-image);
         background-position: center;
         background-size: cover;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      /* 背景の写真は色味を抜いて白黒で見せる */
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        -webkit-backdrop-filter: grayscale(1);
+        backdrop-filter: grayscale(1);
       }
 
       .page-hero__inner {
@@ -161,12 +171,12 @@
       }
 
       .page-hero__button--secondary {
-        background-color: rgba(7, 10, 24, 0.22);
+        background-color: rgba(11, 11, 11, 0.22);
         color: #ffffff !important;
       }
 
       .page-hero__button--secondary:hover {
-        background-color: rgba(7, 10, 24, 0.48);
+        background-color: rgba(11, 11, 11, 0.48);
         border-color: #ffffff;
       }
 
