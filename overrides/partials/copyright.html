@@ -2,13 +2,13 @@
   サイトのフッター：ロゴとサイト名・運営者，分野／探す／このサイトのリンク，最下段に著作権表示。
 -#}
 {% set footer_subjects = [
-  ('力学', '01mechanics/', 'apple-whole'),
-  ('電磁気学', '02electromagnetism/', 'magnet'),
-  ('熱力学', '03thermodynamics/', 'temperature-half'),
-  ('量子力学', '04quantum_mechanics/', 'atom'),
-  ('統計力学', '05statistical_mechanics/', 'dice'),
-  ('物性物理学', '06solid_state/', 'cube'),
-  ('物理数学', 'physmath/', 'square-root-variable')
+  ('力学', '01mechanics/'),
+  ('電磁気学', '02electromagnetism/'),
+  ('熱力学', '03thermodynamics/'),
+  ('量子力学', '04quantum_mechanics/'),
+  ('統計力学', '05statistical_mechanics/'),
+  ('物性物理学', '06solid_state/'),
+  ('物理数学', 'physmath/')
 ] %}
 <div class="site-footer">
   <div class="site-footer__brand">
@@ -21,17 +21,17 @@
   <nav class="site-footer__col" aria-label="分野">
     <p class="site-footer__head">分野</p>
     <ul>
-      {% for name, href, icon in footer_subjects %}
-        <li><a href="{{ href | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/" ~ icon ~ ".svg" %}</span>{{ name }}</a></li>
+      {% for name, href in footer_subjects %}
+        <li><a href="{{ href | url }}">{{ name }}</a></li>
       {% endfor %}
     </ul>
   </nav>
   <nav class="site-footer__col" aria-label="探す">
     <p class="site-footer__head">探す</p>
     <ul>
-      <li><a href="{{ 'tags/' | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/list-ul.svg" %}</span>問題を探す</a></li>
-      <li><a href="{{ 'books/' | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/book-open.svg" %}</span>参考文献一覧</a></li>
-      <li><a href="{{ 'exam/' | url }}"><span class="site-footer__icon">{% include ".icons/fontawesome/solid/print.svg" %}</span>問題を印刷する</a></li>
+      <li><a href="{{ 'tags/' | url }}">問題を探す</a></li>
+      <li><a href="{{ 'books/' | url }}">参考文献一覧</a></li>
+      <li><a href="{{ 'exam/' | url }}">問題を印刷する</a></li>
     </ul>
   </nav>
   <nav class="site-footer__col" aria-label="このサイト">

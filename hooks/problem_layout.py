@@ -290,27 +290,27 @@ def _subject_index(html, page, config):
     return html[: grid.start()] + '<div class="toc">' + "".join(sections) + "</div>" + html[grid.end() :]
 
 
-# ---- 参考文献一覧：分野の見出しにアイコン，冒頭の「このページは何？」を薄いグレーの面で囲む ----
+# ---- 参考文献一覧：分野の見出しを帯にする（科目のアイコンは付けない），冒頭の「このページは何？」を薄いグレーの面で囲む ----
 
 ICON_DIR = Path(material.__file__).parent / "templates/.icons/fontawesome/solid"
 SITE_ICON_DIR = Path(__file__).resolve().parents[1] / "overrides/.icons/site"
-BOOK_ICONS = {
-    "力学": "apple-whole",
-    "電磁気学": "magnet",
-    "熱力学": "temperature-half",
-    "量子力学": "atom",
-    "統計力学": "dice",
-    "物性物理学": "cube",
-    "微積分": "site/integral",
-    "線形代数": "table-cells",
-    "微分方程式": "chart-line",
-    "ベクトル解析": "location-arrow",
-    "積分変換": "wave-square",
-    "複素関数": "infinity",
-    "特殊関数・変分法": "bezier-curve",
-    "確率・統計": "chart-column",
-    "その他": "book",
-}
+BOOK_SUBJECTS = (
+    "力学",
+    "電磁気学",
+    "熱力学",
+    "量子力学",
+    "統計力学",
+    "物性物理学",
+    "微積分",
+    "線形代数",
+    "微分方程式",
+    "ベクトル解析",
+    "積分変換",
+    "複素関数",
+    "特殊関数・変分法",
+    "確率・統計",
+    "その他",
+)
 
 
 def _icon(name: str) -> str:
@@ -322,10 +322,9 @@ def _icon(name: str) -> str:
 def _books(html: str) -> str:
     def head(m):
         title = m.group(2).strip()
-        if title not in BOOK_ICONS:
+        if title not in BOOK_SUBJECTS:
             return m.group(0)
-        return (f'<h2 id="{m.group(1)}" class="books-head"><span class="books-head__icon">'
-                f"{_icon(BOOK_ICONS[title])}</span>{title}</h2>")
+        return f'<h2 id="{m.group(1)}" class="books-head books-head--plain">{title}</h2>'
 
     html = re.sub(r'<h2 id="([^"]+)">(.*?)</h2>', head, html)
     intro = re.search(r'<h2 id="[^"]+">このページは何？</h2>.*?(?=<h2 )', html, re.DOTALL)
