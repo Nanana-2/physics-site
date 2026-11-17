@@ -16,11 +16,11 @@ b, strong, h1, h2, h3, h4 { font-family: var(--gothic); font-weight: 400; }
 /* 画面の上の操作欄（印刷しない） */
 .toolbar {
   position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 12px;
-  padding: 10px 16px; background: #171d3b; color: #fff; font-family: var(--gothic); font-size: 14px;
+  padding: 10px 16px; background: #1a1a1a; color: #fff; font-family: var(--gothic); font-size: 14px;
 }
 .toolbar__back { color: #fff; text-decoration: none; }
 .toolbar__status { flex: 1; text-align: right; opacity: .8; }
-.toolbar__print { padding: 6px 18px; border: none; border-radius: 3px; background: #ffd60a; color: #171d3b; font: inherit; cursor: pointer; }
+.toolbar__print { padding: 6px 18px; border: none; border-radius: 3px; background: #f2c200; color: #1a1a1a; font: inherit; cursor: pointer; }
 .toolbar__print:disabled { opacity: .5; cursor: default; }
 
 /* 組版前の流し込み先：用紙の本文幅で見えないところに置いて大きさを測る */
