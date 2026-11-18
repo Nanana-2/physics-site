@@ -1830,7 +1830,7 @@ html { scroll-behavior: smooth; }
 .home-ring { display: none; }
 .home-motion .home-ring {
   display: block; position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
-  background: #121212 var(--home-ring-bg) center / cover; perspective: 1500px;
+  background-color: #121212; background-position: center; background-size: cover; perspective: 1500px;
 }
 .home-motion .home-ring::before { content: ""; position: absolute; inset: 0; background: rgba(12, 12, 12, var(--home-ring-veil, .78)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
 .home-ring__stage { position: absolute; left: 50%; top: 0; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
@@ -1840,16 +1840,16 @@ html { scroll-behavior: smooth; }
 .home-motion :is(.md-container, .md-main, .md-content) { background: transparent; }
 .home-motion .md-main { position: relative; z-index: 1; }
 .home-motion .md-footer { position: relative; z-index: 1; }
-.home-motion .home-hero { position: relative; z-index: 1; background: none !important; min-height: calc(100svh - 4.8rem); }
+.home-motion .home-hero { position: relative; z-index: 1; background: none !important; }
 .home-motion .home-hero::before { display: none; }
 .home-motion .home-hero__inner { text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
-.home-motion .home-search .site-search__input { background: rgba(40, 40, 40, .85); }
-/* 背景が透けるので，カードと文章の面は少し濃くする */
-.home-motion .md-typeset :is(a.home-tile, a.home-level) { background-color: rgba(28, 28, 28, .88); }
+.home-motion .home-search .site-search__input { background: #2a2a2a; }
+/* 円筒の上のカードと見出しは透かさない */
+.home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: #1e1e1e; }
 .home-motion .md-typeset .home-news { background-color: rgba(28, 28, 28, .8); }
 /* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
 .md-typeset .home-dark { color: var(--md-typeset-color); }
-.md-typeset [data-md-color-scheme="slate"] h2.books-head { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
+.md-typeset [data-md-color-scheme="slate"] h2.books-head { background: #303030; color: #e3e3e3; }
 .md-typeset [data-md-color-scheme="slate"] .books-head__icon { background: #4b4b4b; }
 .md-typeset [data-md-color-scheme="slate"] .home-level__count { color: #d2d2d2; }
 /* 「このサイトは何者？」から下は無地の面。左右と下は影を広げて画面の端まで塗る */
@@ -1873,7 +1873,7 @@ html { scroll-behavior: smooth; }
 .home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
 .home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
 /* 見出し：丸が大きくなってから，帯が左から伸びる */
-.md-typeset h2.books-head.hm-head { clip-path: inset(0 calc(100% - 1px) 0 -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
+.md-typeset h2.books-head.hm-head { clip-path: inset(-1rem calc(100% - 1px) -1rem -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
 .md-typeset h2.books-head.hm-head .books-head__icon { transform: translateY(-50%) scale(0); transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); }
-.md-typeset h2.books-head.hm-head.is-shown { clip-path: inset(0 0 0 -2.4rem); }
+.md-typeset h2.books-head.hm-head.is-shown { clip-path: inset(-1rem 0 -1rem -2.4rem); }
 .md-typeset h2.books-head.hm-head.is-shown .books-head__icon { transform: translateY(-50%) scale(1); }
