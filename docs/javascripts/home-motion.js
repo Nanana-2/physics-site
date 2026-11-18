@@ -25,7 +25,7 @@
     var top = kids.filter(function (el, i) { return (cut < 0 || i < cut) && !el.matches("h1"); });
     var rest = cut < 0 ? [] : kids.slice(cut);
     if (top.length) {
-      dark = document.createElement("div"); dark.className = "home-dark"; dark.setAttribute("data-md-color-scheme", "slate");
+      dark = document.createElement("div"); dark.className = "home-dark";
       inner.insertBefore(dark, top[0]); top.forEach(function (el) { dark.appendChild(el); });
     }
     if (rest.length) {
@@ -101,7 +101,7 @@
     var startY = centerStart - scrollY, endY = innerHeight * 0.5;
     var cy = startY + (endY - startY) * d;
     stage.style.transform = "translateY(" + cy + "px) scale(" + (1 + 0.3 * d).toFixed(3) + ")";
-    ringEl.style.setProperty("--home-ring-veil", (0.45 + 0.2 * d).toFixed(3));
+    ringEl.style.setProperty("--home-ring-veil", (0.68 + 0.17 * d).toFixed(3));
 
     var scrollAngle = scrollY * 0.05;
     rings.forEach(function (rg, j) {
@@ -150,6 +150,26 @@
     if (b1) add(b1, "hm-fade");
     if (b2) add(b2, "hm-fade");
   });
+
+  /* カードのまとまり：物理は左から，物理数学は右から，難易度と印刷は下から入る */
+  function group(nodes, dir) {
+    var box = wrap(nodes.filter(Boolean));
+    if (box) { box.classList.add("hm-slide", "hm-slide--" + dir); add(box, "hm-slide"); }
+  }
+  if (dark) {
+    var subs = dark.querySelectorAll(":scope > h3.home-subhead");
+    Array.prototype.forEach.call(subs, function (h3, i) {
+      var nodes = [h3];
+      for (var n = h3.nextElementSibling; n && !n.matches("h2, h3"); n = n.nextElementSibling) nodes.push(n);
+      group(nodes, i === 0 ? "left" : "right");
+    });
+    var lv = dark.querySelector(":scope > .home-levels");
+    if (lv) {
+      var nodes = [lv];
+      for (var n = lv.nextElementSibling; n; n = n.nextElementSibling) nodes.push(n);
+      group(nodes, "up");
+    }
+  }
 
   var blocks = [];
   [dark, sheet].forEach(function (box) { if (box) blocks = blocks.concat(Array.prototype.slice.call(box.children)); });

@@ -1845,10 +1845,12 @@ html { scroll-behavior: smooth; }
 .home-motion .home-hero__inner { text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
 .home-motion .home-search .site-search__input { background: #2a2a2a; }
 /* 円筒の上のカードと見出しは透かさない */
-.home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: #1e1e1e; }
+body[data-md-color-scheme="slate"].home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: #1e1e1e; }
 .home-motion .md-typeset .home-news { background-color: rgba(28, 28, 28, .8); }
 /* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
-.md-typeset .home-dark { color: var(--md-typeset-color); }
+/* 円筒の上にじかに載る小見出しと凡例は，どちらのモードでも明るい文字にする */
+.md-typeset .home-dark :is(h3.home-subhead, .home-legend) { color: rgba(255, 255, 255, .78); }
+.home-dark { overflow-x: clip; overflow-clip-margin: 1.5rem; }
 .md-typeset [data-md-color-scheme="slate"] h2.books-head { background: #303030; color: #e3e3e3; }
 .md-typeset [data-md-color-scheme="slate"] .books-head__icon { background: #4b4b4b; }
 .md-typeset [data-md-color-scheme="slate"] .home-level__count { color: #d2d2d2; }
@@ -1869,6 +1871,12 @@ html { scroll-behavior: smooth; }
 .hm-left { transform: translateX(-3rem); }
 .hm-right { transform: translateX(3rem); }
 .hm.is-shown { opacity: 1; transform: none; }
+/* カードのまとまりは画面の外からすべり込む（動かすのは中身で，外枠は動かさず画面に入ったかの判定に使う） */
+.hm-slide > * { opacity: 0; transition: transform 1s cubic-bezier(.2, .75, .25, 1), opacity .35s ease; }
+.hm-slide--left > * { transform: translateX(-100vw); }
+.hm-slide--right > * { transform: translateX(100vw); }
+.hm-slide--up > * { transform: translateY(60vh); }
+.hm-slide.is-shown > * { opacity: 1; transform: none; }
 /* 無地の面は下からせり上がる */
 .home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
 .home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
