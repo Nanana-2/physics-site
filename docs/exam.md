@@ -1,5 +1,6 @@
 ---
 title: 問題を印刷する
+hero_image: assets/images/print.jpg
 hide:
   - navigation
   - toc
