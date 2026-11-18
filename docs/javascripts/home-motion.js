@@ -88,41 +88,81 @@
   var t0 = null, dimStart = null;
   function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
   function smooth(x) { return x * x * (3 - 2 * x); }
-  if (reduce) dimStart = -1e9;
+
+  /* 同じ訪問の中で2回目からは，回さずに暗い状態から始める */
+  var seen = false;
+  try { seen = sessionStorage.getItem("home-ring-seen") === "1"; sessionStorage.setItem("home-ring-seen", "1"); } catch (e) {}
+  var still = reduce || seen;
+  if (still) dimStart = -1e9;
+
   /* 暗くなり始めたら，すぐに見出しとカードを出し始める（間をあけない） */
   var onDim = null;
   function startDim(now) { dimStart = now; if (onDim) onDim(); }
-  addEventListener("scroll", function () { if (dimStart === null && scrollY > 40) startDim(performance.now()); }, { passive: true });
+
+  /* 画像を読み終えてから円筒を出して回し始める（遅い回線で1枚ずつ出てくるのを避ける。最大2.5秒待つ） */
+  var ready = false;
+  stage.style.opacity = "0";
+  function onReady() {
+    if (ready) return;
+    ready = true; stage.style.opacity = "1";
+    if (dimStart === null && scrollY > 40) startDim(performance.now());
+    kick();
+  }
+  (function preload() {
+    var left = N;
+    function one() { if (--left === 0) onReady(); }
+    for (var i = 0; i < N; i++) {
+      var im = new Image(); im.onload = im.onerror = one;
+      im.src = base + (i < 10 ? "0" : "") + i + ".jpg";
+    }
+    setTimeout(onReady, 2500);
+  })();
+
+  /* 動くものがないときは描き直しを止める。スクロールや画面の大きさが変わったら再開する */
+  var running = false;
+  function kick() { if (!running) { running = true; requestAnimationFrame(frame); } }
+  addEventListener("scroll", function () {
+    if (dimStart === null && ready && scrollY > 40) startDim(performance.now());
+    kick();
+  }, { passive: true });
 
   function frame(now) {
-    if (t0 === null) t0 = now;
-    var el = now - t0;
+    if (ready && t0 === null) t0 = now;
+    var el = t0 === null ? 0 : now - t0;
     if (dimStart === null && el > T_SPIN1) startDim(now);
-    var d = dimStart === null ? 0 : smooth(Math.min(1, (now - dimStart) / T_DIM));
-    var bright = 1 - 0.74 * d;
+    var since = dimStart === null ? 0 : now - dimStart;
+    var d = dimStart === null ? 0 : smooth(Math.min(1, since / T_DIM));
+    /* 明るさは位置より先に落とす（明るい円筒が題名に重ならないように） */
+    var db = dimStart === null ? 0 : smooth(Math.min(1, since / (T_DIM * 0.45)));
+    var bright = 1 - 0.74 * db;
     /* 中心：最初の位置（ページの上からの距離）から，画面の真ん中に止まる位置へ */
     var startY = centerStart - scrollY, endY = innerHeight * 0.5;
     var cy = startY + (endY - startY) * d;
-    stage.style.transform = "translateY(" + cy + "px) scale(" + (1 + (geo.S - 1) * d).toFixed(3) + ")";
-    ringEl.style.setProperty("--home-ring-veil", (0.68 + 0.17 * d).toFixed(3));
+    stage.style.transform = "translateY(" + cy.toFixed(1) + "px) scale(" + (1 + (geo.S - 1) * d).toFixed(3) + ")";
+    ringEl.style.setProperty("--home-ring-veil", (0.68 + 0.17 * db).toFixed(3));
 
-    var scrollAngle = scrollY * 0.05;
+    var scrollAngle = scrollY * 0.05, moving = !ready || d < 1;
     rings.forEach(function (rg, j) {
-      var spin = reduce ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / tSpin(j))));
+      var spin = still ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / tSpin(j))));
       var target = spin + scrollAngle;
-      rg.cur += (target - rg.cur) * (dimStart === null ? 1 : 0.12 - 0.07 * j / Math.max(1, RINGS - 1));
-      rg.el.style.transform = "translateY(" + rg.dy + "px) rotateX(-8deg) rotateY(" + -rg.cur + "deg)";
+      var k = (dimStart === null || !rg.init) ? 1 : 0.12 - 0.07 * j / Math.max(1, RINGS - 1);
+      rg.init = true;
+      rg.cur += (target - rg.cur) * k;
+      if (Math.abs(target - rg.cur) > 0.02) moving = true; else rg.cur = target;
+      rg.el.style.transform = "translateY(" + rg.dy + "px) rotateX(-8deg) rotateY(" + (-rg.cur).toFixed(2) + "deg)";
       rg.tiles.forEach(function (t) {
         var c = Math.cos((t.a0 - rg.cur) * Math.PI / 180);
-        t.el.style.filter = "brightness(" + ((0.35 + 0.65 * (c + 1) / 2) * bright).toFixed(3) + ")";
-        t.el.style.zIndex = Math.round(c * 100);
+        var f = "brightness(" + ((0.35 + 0.65 * (c + 1) / 2) * bright).toFixed(2) + ")";
+        if (f !== t.f) { t.f = f; t.el.style.filter = f; }
+        var z = Math.round(c * 100);
+        if (z !== t.z) { t.z = z; t.el.style.zIndex = z; }
       });
     });
-    requestAnimationFrame(frame);
+    if (moving) requestAnimationFrame(frame); else running = false;
   }
   build();
-  addEventListener("resize", build);
-  requestAnimationFrame(frame);
+  addEventListener("resize", function () { build(); kick(); });
+  kick();
 
   /* ---------- スクロールで現れる ---------- */
   if (!("IntersectionObserver" in window) || reduce) return;
