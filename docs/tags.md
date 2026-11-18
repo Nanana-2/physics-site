@@ -1,5 +1,6 @@
 ---
 title: 問題を探す
+hero_image: assets/images/finder.jpg
 hide:
   - navigation
   - toc
