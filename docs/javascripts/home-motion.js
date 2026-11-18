@@ -3,21 +3,39 @@
       画面に止まった背景として残る。あとはスクロールに合わせてゆっくり回る。
    2. スクロールで現れる：見出し（丸が大きくなってから帯が伸びる），分野・難易度のカード（横から），
       文章（まとまりごとにフェード）。
-   トップは背景が暗いので，サイトのダークモードの配色で表示する。 */
+   円筒の上（見出し・検索窓・分野と難易度のカード）はダークモードの配色で表示する。
+   「このサイトは何者？」から下は無地の面に載せ，円筒の上へせり上がるようにする。
+   この面はライトモードとダークモードの切り替えに従う。 */
 (function () {
   var ringEl = document.querySelector("[data-home-ring]");
   if (!ringEl) return;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var body = document.body;
 
-  /* ---------- ダークモードの配色に固定する（Material の切り替えが上書きしても戻す） ---------- */
-  function forceDark() { if (body.getAttribute("data-md-color-scheme") !== "slate") body.setAttribute("data-md-color-scheme", "slate"); }
-  forceDark();
-  new MutationObserver(forceDark).observe(body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
   body.classList.add("home-motion");
 
+  /* ---------- 円筒の上の部分と，無地の面に分ける ---------- */
+  var hero = document.querySelector(".home-hero");
+  if (hero) hero.setAttribute("data-md-color-scheme", "slate");
+  var inner = document.querySelector(".md-content__inner");
+  var dark = null, sheet = null;
+  if (inner) {
+    var kids = Array.prototype.slice.call(inner.children), cut = -1;
+    kids.forEach(function (el, i) { if (cut < 0 && el.matches("h2.books-head") && el.textContent.indexOf("何者") >= 0) cut = i; });
+    var top = kids.filter(function (el, i) { return (cut < 0 || i < cut) && !el.matches("h1"); });
+    var rest = cut < 0 ? [] : kids.slice(cut);
+    if (top.length) {
+      dark = document.createElement("div"); dark.className = "home-dark"; dark.setAttribute("data-md-color-scheme", "slate");
+      inner.insertBefore(dark, top[0]); top.forEach(function (el) { dark.appendChild(el); });
+    }
+    if (rest.length) {
+      sheet = document.createElement("div"); sheet.className = "home-sheet";
+      inner.insertBefore(sheet, rest[0]); rest.forEach(function (el) { sheet.appendChild(el); });
+    }
+  }
+
   /* ---------- 円筒 ---------- */
-  var N = 44, RINGS = 3, PER = 14, FIGS = 32;
+  var N = 44, PER = 14, FIGS = 32, RINGS = 10;
   var base = ringEl.getAttribute("data-ring-base");
   var order = [];
   for (var i = 0; i < FIGS; i++) order.push(i);
@@ -33,11 +51,10 @@
   function build() {
     stage.innerHTML = ""; rings.length = 0;
     var vw = innerWidth;
-    /* 最初は検索窓の下に収まる大きさにする（高さ 3h + 2gap = 約 2.48w） */
-    var sb = search ? search.getBoundingClientRect().bottom + scrollY : innerHeight * 0.55;
-    var avail = innerHeight - sb - 36;
-    var w = Math.max(64, Math.min(150, vw * 0.11, avail / 2.48)), h = w * 230 / 320, gap = h * 0.22;
-    geo = { w: w, h: h, total: 3 * h + 2 * gap, r: (w * 1.08 * PER) / (2 * Math.PI) };
+    var w = Math.max(64, Math.min(130, vw * 0.1)), h = w * 230 / 320, gap = h * 0.22;
+    /* 暗くなったあと（1.3倍）に，円筒の上下の端が画面の外に出る段数にする（最低10段） */
+    RINGS = Math.max(10, Math.ceil(innerHeight / (1.3 * (h + gap))) + 3);
+    geo = { w: w, h: h, total: RINGS * h + (RINGS - 1) * gap, r: (w * 1.08 * PER) / (2 * Math.PI) };
     for (var j = 0; j < RINGS; j++) {
       var ring = document.createElement("div"); ring.className = "home-ring__ring";
       var tiles = [];
@@ -52,19 +69,19 @@
         ring.appendChild(t); tiles.push({ el: t, a0: a0 });
       }
       stage.appendChild(ring);
-      rings.push({ el: ring, tiles: tiles, dy: (j - 1) * (h + gap), cur: 0 });
+      rings.push({ el: ring, tiles: tiles, dy: (j - (RINGS - 1) / 2) * (h + gap), cur: 0 });
     }
     centerStart = startCenter();
   }
 
-  /* 円筒の中心の高さ：最初は検索窓のすぐ下，暗くなったあとは画面の真ん中 */
-
+  /* 円筒の中心の高さ：最初は上の端が検索窓のすぐ下，暗くなったあとは画面の真ん中 */
   function startCenter() {
     var b = search ? search.getBoundingClientRect().bottom + scrollY : innerHeight * 0.55;
     return b + 24 + geo.total / 2;
   }
 
-  var SPIN = 900, T_SPIN = [4200, 4700, 5200], T_DIM = 1400;
+  var SPIN = 900, T_SPIN0 = 4200, T_SPIN1 = 5200, T_DIM = 1400;
+  function tSpin(j) { return T_SPIN0 + (T_SPIN1 - T_SPIN0) * j / Math.max(1, RINGS - 1); }
   var t0 = null, dimStart = null;
   function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
   function smooth(x) { return x * x * (3 - 2 * x); }
@@ -74,7 +91,7 @@
   function frame(now) {
     if (t0 === null) t0 = now;
     var el = now - t0;
-    if (dimStart === null && el > T_SPIN[2]) dimStart = now;
+    if (dimStart === null && el > T_SPIN1) dimStart = now;
     var d = dimStart === null ? 0 : smooth(Math.min(1, (now - dimStart) / T_DIM));
     var bright = 1 - 0.74 * d;
     /* 中心：最初の位置（ページの上からの距離）から，画面の真ん中に止まる位置へ */
@@ -85,9 +102,9 @@
 
     var scrollAngle = scrollY * 0.05;
     rings.forEach(function (rg, j) {
-      var spin = reduce ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / T_SPIN[j])));
+      var spin = reduce ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / tSpin(j))));
       var target = spin + scrollAngle;
-      rg.cur += (target - rg.cur) * (dimStart === null ? 1 : 0.12 - j * 0.03);
+      rg.cur += (target - rg.cur) * (dimStart === null ? 1 : 0.12 - 0.07 * j / Math.max(1, RINGS - 1));
       rg.el.style.transform = "translateY(" + rg.dy + "px) rotateX(-8deg) rotateY(" + -rg.cur + "deg)";
       rg.tiles.forEach(function (t) {
         var c = Math.cos((t.a0 - rg.cur) * Math.PI / 180);
@@ -103,7 +120,6 @@
 
   /* ---------- スクロールで現れる ---------- */
   if (!("IntersectionObserver" in window) || reduce) return;
-  var inner = document.querySelector(".md-content__inner");
   if (!inner) return;
   var targets = [];
   function add(el, cls, delay) {
@@ -132,7 +148,9 @@
     if (b2) add(b2, "hm-fade");
   });
 
-  Array.prototype.forEach.call(inner.children, function (el) {
+  var blocks = [];
+  [dark, sheet].forEach(function (box) { if (box) blocks = blocks.concat(Array.prototype.slice.call(box.children)); });
+  blocks.forEach(function (el) {
     if (el.matches("h1")) return;
     if (el.matches("h2.books-head")) { add(el, "hm-head"); return; }
     if (el.matches(".home-tiles")) {
@@ -149,6 +167,19 @@
     add(el, "hm-fade");
   });
   document.querySelectorAll(".md-content .page-share, .md-content .owner").forEach(function (el) { add(el, "hm-fade"); });
+
+  /* 見出しは最初ほとんど切り取られていて面積がないので，少しでも入ったら出す */
+  var heads = [];
+  targets = targets.filter(function (el) { if (el.classList.contains("hm-head")) { heads.push(el); return false; } return true; });
+  if (sheet) { sheet.classList.add("hm", "hm-sheet"); heads.push(sheet); }
+  var ioHead = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("is-shown");
+      ioHead.unobserve(e.target);
+    });
+  }, { rootMargin: "0px 0px -12% 0px", threshold: 0 });
+  heads.forEach(function (el) { ioHead.observe(el); });
 
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {

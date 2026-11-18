@@ -1847,9 +1847,20 @@ html { scroll-behavior: smooth; }
 /* 背景が透けるので，カードと文章の面は少し濃くする */
 .home-motion .md-typeset :is(a.home-tile, a.home-level) { background-color: rgba(28, 28, 28, .88); }
 .home-motion .md-typeset .home-news { background-color: rgba(28, 28, 28, .8); }
-.home-motion .md-typeset .home-promise { background: none; }
-/* トップはダークモードの配色に固定するので，切り替えボタンは出さない */
-.home-motion .md-header__option { display: none; }
+/* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
+.md-typeset .home-dark { color: var(--md-typeset-color); }
+.md-typeset [data-md-color-scheme="slate"] h2.books-head { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
+.md-typeset [data-md-color-scheme="slate"] .books-head__icon { background: #4b4b4b; }
+.md-typeset [data-md-color-scheme="slate"] .home-level__count { color: #d2d2d2; }
+/* 「このサイトは何者？」から下は無地の面。左右と下は影を広げて画面の端まで塗る */
+.home-motion .home-sheet {
+  position: relative; z-index: 1; margin-top: 4rem; padding-top: 1.6rem;
+  background: var(--md-default-bg-color); box-shadow: 0 0 0 100vmax var(--md-default-bg-color);
+  clip-path: inset(0 -100vmax -100vmax -100vmax);
+}
+.home-motion .md-content__inner > .page-share,
+.home-motion .md-content__inner > .owner { position: relative; z-index: 1; }
+.home-motion .md-typeset .home-promise { background: none; border-left: 0; padding-left: 0; }
 
 /* スクロールで現れる */
 .hm { transition-delay: var(--hm-delay, 0ms); }
@@ -1858,8 +1869,11 @@ html { scroll-behavior: smooth; }
 .hm-left { transform: translateX(-3rem); }
 .hm-right { transform: translateX(3rem); }
 .hm.is-shown { opacity: 1; transform: none; }
+/* 無地の面は下からせり上がる */
+.home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
+.home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
 /* 見出し：丸が大きくなってから，帯が左から伸びる */
-.md-typeset h2.books-head.hm-head { clip-path: inset(0 100% 0 -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
+.md-typeset h2.books-head.hm-head { clip-path: inset(0 calc(100% - 1px) 0 -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
 .md-typeset h2.books-head.hm-head .books-head__icon { transform: translateY(-50%) scale(0); transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); }
 .md-typeset h2.books-head.hm-head.is-shown { clip-path: inset(0 0 0 -2.4rem); }
 .md-typeset h2.books-head.hm-head.is-shown .books-head__icon { transform: translateY(-50%) scale(1); }
