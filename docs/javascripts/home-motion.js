@@ -52,9 +52,12 @@
     stage.innerHTML = ""; rings.length = 0;
     var vw = innerWidth;
     var w = Math.max(64, Math.min(130, vw * 0.1)), h = w * 230 / 320, gap = h * 0.22;
-    /* 暗くなったあと（1.3倍）に，円筒の上下の端が画面の外に出る段数にする（最低10段） */
-    RINGS = Math.max(10, Math.ceil(innerHeight / (1.3 * (h + gap))) + 3);
-    geo = { w: w, h: h, total: RINGS * h + (RINGS - 1) * gap, r: (w * 1.08 * PER) / (2 * Math.PI) };
+    var r = (w * 1.08 * PER) / (2 * Math.PI);
+    /* 暗くなったあとは，円筒の左右の端が画面の外に出るまで拡大する */
+    var S = Math.max(1.3, 1.15 * vw / (2 * r));
+    /* 拡大したあとも，上下の端が画面の外に出る段数にする（最低10段） */
+    RINGS = Math.max(10, Math.ceil(innerHeight / (S * (h + gap))) + 3);
+    geo = { w: w, h: h, S: S, total: RINGS * h + (RINGS - 1) * gap, r: r };
     for (var j = 0; j < RINGS; j++) {
       var ring = document.createElement("div"); ring.className = "home-ring__ring";
       var tiles = [];
@@ -100,7 +103,7 @@
     /* 中心：最初の位置（ページの上からの距離）から，画面の真ん中に止まる位置へ */
     var startY = centerStart - scrollY, endY = innerHeight * 0.5;
     var cy = startY + (endY - startY) * d;
-    stage.style.transform = "translateY(" + cy + "px) scale(" + (1 + 0.3 * d).toFixed(3) + ")";
+    stage.style.transform = "translateY(" + cy + "px) scale(" + (1 + (geo.S - 1) * d).toFixed(3) + ")";
     ringEl.style.setProperty("--home-ring-veil", (0.68 + 0.17 * d).toFixed(3));
 
     var scrollAngle = scrollY * 0.05;
