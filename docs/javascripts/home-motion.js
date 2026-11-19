@@ -35,7 +35,7 @@
   }
 
   /* ---------- 円筒 ---------- */
-  var N = 44, PER = 14, FIGS = 32, RINGS = 10;
+  var N = 44, PER = 14, FIGS = 32;
   var base = ringEl.getAttribute("data-ring-base");
   var order = [];
   for (var i = 0; i < FIGS; i++) order.push(i);
@@ -44,10 +44,11 @@
   var stage = document.createElement("div");
   stage.className = "home-ring__stage";
   ringEl.appendChild(stage);
-  var rings = [], geo = {};
-  var search = document.querySelector(".home-hero .home-search");
-  var centerStart = 0;
+  var rings = [];
 
+  /* 回し方：何もしていないときの回転は CSS のアニメーション（.home-ring__spin）に任せる。
+     スクリプトはスクロールした分の回転だけを受け持ち，動きが収まったら描き直しを止める。
+     タイルの明るさは一様にし，裏を向いたタイルは描かない（1コマごとの計算をなくすため） */
   function build() {
     stage.innerHTML = ""; rings.length = 0;
     var vw = innerWidth;
@@ -59,11 +60,10 @@
     w *= S; h *= S; gap *= S; r *= S;
     ringEl.style.perspective = (1500 * S).toFixed(0) + "px";
     /* 上下の端も画面の外に出る段数にする */
-    RINGS = Math.max(6, Math.ceil(innerHeight / (h + gap)) + 3);
-    geo = { w: w, h: h, S: 1, total: RINGS * h + (RINGS - 1) * gap, r: r };
+    var RINGS = Math.max(6, Math.ceil(innerHeight / (h + gap)) + 3);
     for (var j = 0; j < RINGS; j++) {
       var ring = document.createElement("div"); ring.className = "home-ring__ring";
-      var tiles = [];
+      var spin = document.createElement("div"); spin.className = "home-ring__spin";
       for (var i = 0; i < PER; i++) {
         var t = document.createElement("div"); t.className = "home-ring__tile";
         t.style.width = w + "px"; t.style.height = h + "px";
@@ -71,47 +71,38 @@
         var n = order[(j * PER + i) % order.length];
         t.style.backgroundImage = "url(" + base + (n < 10 ? "0" : "") + n + ".webp)";
         var a0 = (360 / PER) * i + j * (180 / PER);
-        t.style.transform = "rotateY(" + a0 + "deg) translateZ(" + geo.r + "px)";
-        ring.appendChild(t); tiles.push({ el: t, a0: a0 });
+        t.style.transform = "rotateY(" + a0 + "deg) translateZ(" + r + "px)";
+        spin.appendChild(t);
       }
+      ring.appendChild(spin);
       stage.appendChild(ring);
-      rings.push({ el: ring, tiles: tiles, dy: (j - (RINGS - 1) / 2) * (h + gap), cur: 0 });
+      rings.push({ el: ring, dy: (j - (RINGS - 1) / 2) * (h + gap), k: 0.12 - 0.07 * j / (RINGS - 1), cur: target() });
     }
-    centerStart = startCenter();
+    rings.forEach(draw);
   }
 
-  /* 円筒の中心の高さ：最初は上の端が検索窓のすぐ下，暗くなったあとは画面の真ん中 */
-  function startCenter() {
-    var b = search ? search.getBoundingClientRect().bottom + scrollY : innerHeight * 0.55;
-    return b + 24 + geo.total / 2;
+  /* スクロールした分の回転（下の段ほど遅れてついてくる） */
+  function target() { return scrollY * 0.05; }
+  function draw(rg) { rg.el.style.transform = "translateY(" + rg.dy + "px) rotateX(-8deg) rotateY(" + (-rg.cur).toFixed(2) + "deg)"; }
+  var running = false;
+  function frame() {
+    var goal = target(), moving = false;
+    rings.forEach(function (rg) {
+      rg.cur += (goal - rg.cur) * (reduce ? 1 : rg.k);
+      if (Math.abs(goal - rg.cur) > 0.02) moving = true; else rg.cur = goal;
+      draw(rg);
+    });
+    if (moving) requestAnimationFrame(frame); else running = false;
   }
+  function kick() { if (!running) { running = true; requestAnimationFrame(frame); } }
+  addEventListener("scroll", kick, { passive: true });
+  addEventListener("resize", build);
+  build();
 
-  var SPIN = 900, T_SPIN0 = 4200, T_SPIN1 = 5200, T_DIM = 1400;
-  function tSpin(j) { return T_SPIN0 + (T_SPIN1 - T_SPIN0) * j / Math.max(1, RINGS - 1); }
-  var t0 = null, dimStart = null;
-  function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
-  function smooth(x) { return x * x * (3 - 2 * x); }
-
-  /* 同じ訪問の中で2回目からは，回さずに暗い状態から始める */
-  /* 最初から暗い背景の状態で置き，回し始めの演出はしない */
-  var still = true;
-  dimStart = -1e9;
-  /* 何もしていないときもゆっくり回す（90秒で1周）。スクロールの分はこれに足す */
-  var AUTO = reduce ? 0 : 360 / 90000;
-
-  /* 暗くなり始めたら，すぐに見出しとカードを出し始める（間をあけない） */
-  var onDim = null;
-  function startDim(now) { dimStart = now; if (onDim) onDim(); }
-
-  /* 画像を読み終えてから円筒を出して回し始める（遅い回線で1枚ずつ出てくるのを避ける。最大2.5秒待つ） */
-  /* 透明度で出すと奥のタイルが透けて見えるので，暗い状態から明るさを上げて出す */
-  var ready = false, readyAt = 0, FADE = 600;
-  function onReady() {
-    if (ready) return;
-    ready = true; readyAt = performance.now();
-    if (dimStart === null && scrollY > 40) startDim(performance.now());
-    kick();
-  }
+  /* 画像を読み終えてから円筒を出す（遅い回線で1枚ずつ出てくるのを避ける。最大2.5秒待つ）。
+     透明度で出すと立体の表示が崩れるので，暗い状態から明るさを上げて出す（CSS の .is-ready） */
+  var ready = false;
+  function onReady() { if (ready) return; ready = true; ringEl.classList.add("is-ready"); }
   (function preload() {
     var left = N;
     function one() { if (--left === 0) onReady(); }
@@ -121,55 +112,6 @@
     }
     setTimeout(onReady, 2500);
   })();
-
-  /* 動くものがないときは描き直しを止める。スクロールや画面の大きさが変わったら再開する */
-  var running = false;
-  function kick() { if (!running) { running = true; requestAnimationFrame(frame); } }
-  addEventListener("scroll", function () {
-    if (dimStart === null && ready && scrollY > 40) startDim(performance.now());
-    kick();
-  }, { passive: true });
-
-  function frame(now) {
-    if (ready && t0 === null) t0 = now;
-    var el = t0 === null ? 0 : now - t0;
-    if (dimStart === null && el > T_SPIN1) startDim(now);
-    var since = dimStart === null ? 0 : now - dimStart;
-    var d = dimStart === null ? 0 : smooth(Math.min(1, since / T_DIM));
-    /* 明るさは位置より先に落とす（明るい円筒が題名に重ならないように） */
-    var db = dimStart === null ? 0 : smooth(Math.min(1, since / (T_DIM * 0.45)));
-    var bright = 1 - 0.83 * db;
-    /* 中心：最初の位置（ページの上からの距離）から，画面の真ん中に止まる位置へ */
-    var startY = centerStart - scrollY, endY = innerHeight * 0.5;
-    var cy = startY + (endY - startY) * d;
-    stage.style.transform = "translateY(" + cy.toFixed(1) + "px) scale(" + (1 + (geo.S - 1) * d).toFixed(3) + ")";
-    ringEl.style.setProperty("--home-ring-veil", (0.72 + 0.2 * db).toFixed(3));
-
-    var fade = ready ? Math.min(1, (now - readyAt) / FADE) : 0;
-    var scrollAngle = scrollY * 0.05 + AUTO * el, moving = !ready || d < 1 || fade < 1 || AUTO > 0;
-    rings.forEach(function (rg, j) {
-      var spin = still ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / tSpin(j))));
-      var target = spin + scrollAngle;
-      var k = (dimStart === null || !rg.init) ? 1 : 0.12 - 0.07 * j / Math.max(1, RINGS - 1);
-      rg.init = true;
-      rg.cur += (target - rg.cur) * k;
-      if (Math.abs(target - rg.cur) > 0.02) moving = true; else rg.cur = target;
-      rg.el.style.transform = "translateY(" + rg.dy + "px) rotateX(-8deg) rotateY(" + (-rg.cur).toFixed(2) + "deg)";
-      rg.tiles.forEach(function (t) {
-        var c = Math.cos((t.a0 - rg.cur) * Math.PI / 180);
-        var f = "brightness(" + ((0.35 + 0.65 * (c + 1) / 2) * bright * fade).toFixed(2) + ")";
-        if (f !== t.f) { t.f = f; t.el.style.filter = f; }
-        var z = Math.round(c * 100);
-        if (z !== t.z) { t.z = z; t.el.style.zIndex = z; }
-        var v = ready ? "visible" : "hidden";
-        if (v !== t.v) { t.v = v; t.el.style.visibility = v; }
-      });
-    });
-    if (moving) requestAnimationFrame(frame); else running = false;
-  }
-  build();
-  addEventListener("resize", function () { build(); kick(); });
-  kick();
 
   /* ---------- スクロールで現れる ---------- */
   if (!("IntersectionObserver" in window) || reduce) return;
@@ -265,5 +207,6 @@
     heads.forEach(function (el) { ioHead.observe(el); });
     targets.forEach(function (el) { io.observe(el); });
   }
-  if (dimStart !== null) observeAll(); else onDim = observeAll;
+  /* 円筒は最初から背景として置くので，見出しとカードはすぐに出し始める */
+  observeAll();
 })();
