@@ -39,6 +39,8 @@
   {{ super() }}
   {% if page and page.is_homepage %}
     {#- トップページ：ロゴ・サイト名・収録数と，大きな検索窓（問題数は hooks/problem_layout.py が数える） -#}
+    {#- 円筒（問題の図と問題文が回る）。javascripts/home-motion.js が組み立てる。JS が動かないときは今までどおりの写真のヒーロー -#}
+    <div class="home-ring" aria-hidden="true" data-home-ring data-ring-base="{{ 'assets/images/ring/' | url }}" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');"></div>
     <section class="home-hero" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');">
       <div class="home-hero__inner">
         <img class="home-hero__logo" src="{{ 'assets/logo.svg' | url }}" alt="" width="84" height="84">
