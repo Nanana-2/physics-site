@@ -1848,7 +1848,6 @@ html { scroll-behavior: smooth; }
 body[data-md-color-scheme="slate"].home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: #1e1e1e; }
 /* ライトモードの白いカードは，背景からわずかに透かして浮きすぎないようにする */
 body:not([data-md-color-scheme="slate"]).home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: rgba(246, 246, 246, .9); }
-.home-motion .md-typeset .home-news { background-color: rgba(28, 28, 28, .8); }
 /* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
 /* 円筒の上にじかに載る小見出しと凡例は，どちらのモードでも明るい文字にする */
 .md-typeset .home-dark :is(h3.home-subhead, .home-legend) { color: rgba(255, 255, 255, .78); }
