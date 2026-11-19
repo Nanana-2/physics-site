@@ -13,10 +13,30 @@ MkDocs Material で作っている問題集サイト（https://nanana-2.github.i
 
 ## この環境にないもの
 
-PDF 原稿（`private/pdf-books/`），図の TikZ ソース（`output/pdf/figures-work/`），Amazon のキー（`.env`）は Git の管理外です。非公開リポジトリ `Nanana-2/physics-site-private` に控えがありますが，クラウドの作業では扱いません。
+PDF 原稿（`private/pdf-books/`），これまでの図の TikZ ソース（`output/pdf/figures-work/`），Amazon のキー（`.env`）は Git の管理外です。非公開リポジトリ `Nanana-2/physics-site-private` に控えがありますが，クラウドの作業では扱いません。
 
 - 物理5分野（力学・電磁気・熱・量子・統計）の本文を直すと，PDF 原稿と食い違います。直した箇所を PR の説明に一覧で書いてください。原稿への反映は運営者の Mac で行います。
-- 図の追加や修正はしないでください。図が必要なら PR の説明に書いてください。
+- これまでの図の TikZ ソースは Mac にしかありません。順に `figures/src/` へ移します（Mac で行う）。移すまでは，既存の図の修正は Mac で行います。
+
+## 図
+
+新しく作る図の原稿は，リポジトリの `figures/src/` に置きます。クラウドでも Mac でも作ることができます。
+
+- 原稿は `figures/src/<分野>/<問題番号>-p.tex`（問題の図）または `-s.tex`（解答の図）。`standalone` クラスの TikZ で1枚ずつ書きます。`<分野>` は `docs/assets/figures/` の下のフォルダ名（`complex-analysis` など）にそろえます。
+- `python3 tools/figures/build.py <原稿>`（全部なら `--all`）で，`docs/assets/figures/<分野>/` にライト用とダーク用の SVG ができます。ダーク用は，灰色の明るさを反転して自動で作ります。灰色以外の色は反転しないので，色は使いません。
+- 体裁：軸は `line width=0.4pt`，曲線と矢印は `0.9pt`，矢じりは `Stealth`，塗りは `black!10`〜`black!15`。文字は数式で書き，日本語は入れません。
+- クラウドでは，最初に `apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-latex-base texlive-pictures texlive-latex-extra texlive-fonts-recommended poppler-utils` を実行します（数分かかります）。
+- ページには次の形で入れます。問題の図は小問 (1) の前に，解答の図は使う段落の前に置きます。
+
+```
+<figure class="problem-figure" markdown>
+![問題の図](../../assets/figures/<分野>/<番号>-p-light.svg#only-light)
+![問題の図](../../assets/figures/<分野>/<番号>-p-dark.svg#only-dark)
+</figure>
+```
+
+- 物理5分野に図を足すと PDF 原稿と食い違うので，足した図を PR の説明に一覧で書きます。
+- 図を足す候補の一覧は，`figures/candidates.md` にあります。図を足したら，一覧から消します。
 
 ## 作業のしかた
 

@@ -1,0 +1,30 @@
+\documentclass[tikz,border=3pt]{standalone}
+\begin{document}
+\begin{tikzpicture}[scale=0.75,line width=0.9pt]
+  \foreach \k/\dx/\lab in {1/0/{(1)\ $1<|z|<2$},2/6.6/{(2)\ $|z|>2$},3/13.2/{(3)\ $0<|z-1|<1$}}{
+    \begin{scope}[xshift=\dx cm]
+      \ifnum\k=1
+        \fill[black!15,even odd rule] (0,0) circle (2) (0,0) circle (1);
+      \fi
+      \ifnum\k=2
+        \fill[black!15,even odd rule] (-3,-3) rectangle (3,3) (0,0) circle (2);
+      \fi
+      \ifnum\k=3
+        \fill[black!15] (1,0) circle (1);
+      \fi
+      \draw[line width=0.4pt,->] (-3,0) -- (3,0);
+      \draw[line width=0.4pt,->] (0,-3) -- (0,3);
+      \ifnum\k<3
+        \draw[dashed,line width=0.6pt] (0,0) circle (1);
+        \draw[dashed,line width=0.6pt] (0,0) circle (2);
+      \else
+        \draw[dashed,line width=0.6pt] (1,0) circle (1);
+      \fi
+      \fill (1,0) circle (3pt);
+      \fill (2,0) circle (3pt);
+      \node[below left] at (1,0) {$1$};
+      \node[below right] at (2,0) {$2$};
+      \node[below] at (0,-3.2) {\lab};
+    \end{scope}}
+\end{tikzpicture}
+\end{document}
