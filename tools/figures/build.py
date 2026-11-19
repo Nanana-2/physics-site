@@ -35,6 +35,19 @@ def to_dark(svg):
     return re.sub(r"rgb\(([\d.]+)%,\s*([\d.]+)%,\s*([\d.]+)%\)", rep, svg)
 
 
+SCALE = 1.4  # これまでの図と同じく，表示の寸法を原稿の 1.4 倍にする
+
+
+def enlarge(svg):
+    """width と height を SCALE 倍にする。viewBox は変えないので，線も文字も同じ比率で大きくなる。"""
+    def rep(m):
+        return '{}="{:.2f}pt"'.format(m.group(1), float(m.group(2)) * SCALE)
+    i = svg.index("<svg")
+    j = svg.index(">", i)
+    tag = re.sub(r'(width|height)="([\d.]+)(?:pt)?"', rep, svg[i:j])
+    return svg[:i] + tag + svg[j:]
+
+
 def build(tex):
     tex = pathlib.Path(tex).resolve()
     rel = tex.relative_to(SRC)
@@ -49,7 +62,8 @@ def build(tex):
         pdf = pathlib.Path(d) / (tex.stem + ".pdf")
         light = dest / (tex.stem + "-light.svg")
         subprocess.run(["pdftocairo", "-svg", str(pdf), str(light)], check=True)
-    svg = light.read_text()
+    svg = enlarge(light.read_text())
+    light.write_text(svg)
     (dest / (tex.stem + "-dark.svg")).write_text(to_dark(svg))
     print(rel, "->", light.relative_to(ROOT))
 
