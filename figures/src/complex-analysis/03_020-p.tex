@@ -1,31 +1,27 @@
 \documentclass[tikz,border=3pt]{standalone}
 \begin{document}
-\begin{tikzpicture}[scale=0.7,line width=0.9pt]
-  \foreach \k/\dy/\lab in {1/0/{(1)\ $1<|z|<2$},2/-7/{(2)\ $|z|>2$},3/-14/{(3)\ $0<|z-1|<1$}}{
-    \begin{scope}[yshift=\dy cm]
-      \ifnum\k=1
-        \fill[black!15,even odd rule] (0,0) circle (2) (0,0) circle (1);
-      \fi
-      \ifnum\k=2
-        \fill[black!15,even odd rule] (-2.9,-2.9) rectangle (2.9,2.9) (0,0) circle (2);
-      \fi
-      \ifnum\k=3
-        \fill[black!15] (1,0) circle (1);
-      \fi
-      \draw[line width=0.4pt,->] (-3,0) -- (3.2,0) node[right] {$\mathrm{Re}\,z$};
-      \draw[line width=0.4pt,->] (0,-3) -- (0,3.2) node[above] {$\mathrm{Im}\,z$};
-      \node[below left] at (0,0) {$O$};
-      \ifnum\k<3
-        \draw[dashed,line width=0.6pt] (0,0) circle (1);
-        \draw[dashed,line width=0.6pt] (0,0) circle (2);
-      \else
-        \draw[dashed,line width=0.6pt] (1,0) circle (1);
-      \fi
-      \fill (1,0) circle (2.5pt);
-      \fill (2,0) circle (2.5pt);
-      \node[below right] at (1,0) {$1$};
-      \node[below right] at (2,0) {$2$};
-      \node[right] at (4.6,0) {\lab};
-    \end{scope}}
+\begin{tikzpicture}[scale=0.5,line width=0.9pt]
+  % 上：z=0 のまわりの展開の領域 (1)(2)
+  \fill[black!15,even odd rule] (0,0) circle (2) (0,0) circle (1);
+  \draw[line width=0.4pt,->] (-2.8,0) -- (3,0) node[right] {$\mathrm{Re}\,z$};
+  \draw[line width=0.4pt,->] (0,-2.8) -- (0,3) node[above] {$\mathrm{Im}\,z$};
+  \draw[dashed,line width=0.6pt] (0,0) circle (1);
+  \draw[dashed,line width=0.6pt] (0,0) circle (2);
+  \node[below left,inner sep=1.5pt] at (0,0) {$O$};
+  \fill (1,0) circle (3pt) node[below right,inner sep=1.5pt] {$1$};
+  \fill (2,0) circle (3pt) node[below right,inner sep=1.5pt] {$2$};
+  \node at (125:1.5) {(1)};
+  \node at (-2.3,2.4) {(2)};
+  % 下：z=1 のまわりの展開の領域 (3)
+  \begin{scope}[yshift=-7.3cm]
+    \fill[black!15] (1,0) circle (1);
+    \draw[line width=0.4pt,->] (-2.8,0) -- (3,0) node[right] {$\mathrm{Re}\,z$};
+    \draw[line width=0.4pt,->] (0,-2.8) -- (0,3) node[above] {$\mathrm{Im}\,z$};
+    \draw[dashed,line width=0.6pt] (1,0) circle (1);
+    \node[below left,inner sep=1.5pt] at (0,0) {$O$};
+    \fill (1,0) circle (3pt) node[below right,inner sep=1.5pt] {$1$};
+    \fill (2,0) circle (3pt) node[below right,inner sep=1.5pt] {$2$};
+    \node at (1,1.5) {(3)};
+  \end{scope}
 \end{tikzpicture}
 \end{document}
