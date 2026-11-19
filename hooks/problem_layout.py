@@ -393,7 +393,7 @@ def _home(html: str, page, config) -> str:
             out += (
                 f'<a class="home-tile" href="{slug}/">'
                 f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
-                f'<span class="home-tile__desc">{desc}</span><span class="home-bar">{bar}</span></span></a>'
+                f'<span class="home-bar">{bar}</span><span class="home-tile__desc">{desc}</span></span></a>'
             )
         return out
 

@@ -1221,6 +1221,7 @@ body, input {
 .md-typeset .home-tile__count { font-size: var(--fs-66); font-weight: 400; color: var(--md-default-fg-color--light); }
 .md-typeset .home-tile__desc { font-size: var(--fs-64); line-height: 1.5; color: var(--md-default-fg-color--light); }
 .md-typeset .home-bar { display: flex; gap: 2px; height: 4px; margin-top: .35rem; }
+.md-typeset .home-bar + .home-tile__desc { margin-top: .45rem; }
 .md-typeset .home-bar__seg { display: inline-block; height: 4px; border-radius: 2px; }
 .md-typeset .home-bar__seg--1 { background: #d6d6d6; }
 .md-typeset .home-bar__seg--2 { background: #9a9a9a; }
@@ -1833,9 +1834,9 @@ html { scroll-behavior: smooth; }
   background-color: #121212; background-position: center; background-size: cover; perspective: 1500px;
 }
 .home-motion .home-ring::before { content: ""; position: absolute; inset: 0; background: rgba(12, 12, 12, var(--home-ring-veil, .78)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
-.home-ring__stage { position: absolute; left: 50%; top: 0; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
+.home-ring__stage { position: absolute; left: 50%; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
 .home-ring__ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
-.home-ring__tile { visibility: hidden; position: absolute; left: 0; top: 0; border-radius: 3px; background: #fff center / cover no-repeat; will-change: transform, filter; }
+.home-ring__tile { visibility: hidden; position: absolute; left: 0; top: 0; border-radius: 3px; background: #fff center / cover no-repeat; }
 .home-motion { background: #121212; }
 .home-motion :is(.md-container, .md-main, .md-content) { background: transparent; }
 .home-motion .md-main { position: relative; z-index: 1; }
@@ -1882,7 +1883,7 @@ body:not([data-md-color-scheme="slate"]).home-motion .home-dark :is(a.home-tile,
 .home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
 .home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
 /* 見出し：丸が大きくなってから，帯が左から伸びる */
-.md-typeset h2.books-head.hm-head { clip-path: inset(-1rem calc(100% - 1px) -1rem -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
+.md-typeset h2.books-head.hm-head { clip-path: inset(-1rem calc(100% - 1.1rem) -1rem -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
 .md-typeset h2.books-head.hm-head .books-head__icon { transform: translateY(-50%) scale(0); transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); }
 .md-typeset h2.books-head.hm-head.is-shown { clip-path: inset(-1rem 0 -1rem -2.4rem); }
 .md-typeset h2.books-head.hm-head.is-shown .books-head__icon { transform: translateY(-50%) scale(1); }
