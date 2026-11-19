@@ -25,6 +25,8 @@ PDF 原稿（`private/pdf-books/`），これまでの図の TikZ ソース（`o
 - 原稿は `figures/src/<分野>/<問題番号>-p.tex`（問題の図）または `-s.tex`（解答の図）。`standalone` クラスの TikZ で1枚ずつ書きます。`<分野>` は `docs/assets/figures/` の下のフォルダ名（`complex-analysis` など）にそろえます。
 - `python3 tools/figures/build.py <原稿>`（全部なら `--all`）で，`docs/assets/figures/<分野>/` にライト用とダーク用の SVG ができます。ダーク用は，灰色の明るさを反転して自動で作ります。灰色以外の色は反転しないので，色は使いません。
 - 体裁：軸は `line width=0.4pt`，曲線と矢印は `0.9pt`，矢じりは `Stealth`，塗りは `black!10`〜`black!15`。文字は数式で書き，日本語は入れません。
+- 軸には名前（$x$，$\mathrm{Re}\,z$ など）を付け，原点には $O$ を書きます。
+- 表示の寸法は，これまでの図と同じく原稿の 1.4 倍です（`build.py` が SVG の width と height を 1.4 倍にします）。スマホで文字が小さくならないように，原稿の横幅は 8 cm 程度までにします。横に並べると広くなる図は，縦に並べます。
 - クラウドでは，最初に `apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-latex-base texlive-pictures texlive-latex-extra texlive-fonts-recommended poppler-utils` を実行します（数分かかります）。
 - ページには次の形で入れます。問題の図は小問 (1) の前に，解答の図は使う段落の前に置きます。
 
