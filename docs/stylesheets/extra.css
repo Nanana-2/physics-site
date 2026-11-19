@@ -1833,9 +1833,9 @@ html { scroll-behavior: smooth; }
   background-color: #121212; background-position: center; background-size: cover; perspective: 1500px;
 }
 .home-motion .home-ring::before { content: ""; position: absolute; inset: 0; background: rgba(12, 12, 12, var(--home-ring-veil, .78)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
-.home-ring__stage { position: absolute; left: 50%; top: 0; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; transition: opacity .6s ease; }
+.home-ring__stage { position: absolute; left: 50%; top: 0; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
 .home-ring__ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
-.home-ring__tile { position: absolute; left: 0; top: 0; border-radius: 3px; background: #fff center / cover no-repeat; will-change: transform, filter; }
+.home-ring__tile { visibility: hidden; position: absolute; left: 0; top: 0; border-radius: 3px; background: #fff center / cover no-repeat; will-change: transform, filter; }
 .home-motion { background: #121212; }
 .home-motion :is(.md-container, .md-main, .md-content) { background: transparent; }
 .home-motion .md-main { position: relative; z-index: 1; }

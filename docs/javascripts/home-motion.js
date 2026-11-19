@@ -100,11 +100,11 @@
   function startDim(now) { dimStart = now; if (onDim) onDim(); }
 
   /* 画像を読み終えてから円筒を出して回し始める（遅い回線で1枚ずつ出てくるのを避ける。最大2.5秒待つ） */
-  var ready = false;
-  stage.style.opacity = "0";
+  /* 透明度で出すと奥のタイルが透けて見えるので，暗い状態から明るさを上げて出す */
+  var ready = false, readyAt = 0, FADE = 600;
   function onReady() {
     if (ready) return;
-    ready = true; stage.style.opacity = "1";
+    ready = true; readyAt = performance.now();
     if (dimStart === null && scrollY > 40) startDim(performance.now());
     kick();
   }
@@ -141,7 +141,8 @@
     stage.style.transform = "translateY(" + cy.toFixed(1) + "px) scale(" + (1 + (geo.S - 1) * d).toFixed(3) + ")";
     ringEl.style.setProperty("--home-ring-veil", (0.68 + 0.17 * db).toFixed(3));
 
-    var scrollAngle = scrollY * 0.05, moving = !ready || d < 1;
+    var fade = ready ? Math.min(1, (now - readyAt) / FADE) : 0;
+    var scrollAngle = scrollY * 0.05, moving = !ready || d < 1 || fade < 1;
     rings.forEach(function (rg, j) {
       var spin = still ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / tSpin(j))));
       var target = spin + scrollAngle;
@@ -152,10 +153,12 @@
       rg.el.style.transform = "translateY(" + rg.dy + "px) rotateX(-8deg) rotateY(" + (-rg.cur).toFixed(2) + "deg)";
       rg.tiles.forEach(function (t) {
         var c = Math.cos((t.a0 - rg.cur) * Math.PI / 180);
-        var f = "brightness(" + ((0.35 + 0.65 * (c + 1) / 2) * bright).toFixed(2) + ")";
+        var f = "brightness(" + ((0.35 + 0.65 * (c + 1) / 2) * bright * fade).toFixed(2) + ")";
         if (f !== t.f) { t.f = f; t.el.style.filter = f; }
         var z = Math.round(c * 100);
         if (z !== t.z) { t.z = z; t.el.style.zIndex = z; }
+        var v = ready ? "visible" : "hidden";
+        if (v !== t.v) { t.v = v; t.el.style.visibility = v; }
       });
     });
     if (moving) requestAnimationFrame(frame); else running = false;
