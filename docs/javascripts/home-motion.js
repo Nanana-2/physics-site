@@ -1,6 +1,6 @@
 /* トップページの動き（ほかのページでは何もしない）
-   1. 円筒：問題の図と問題文を3段の円筒に並べる。見出しの下で2周半ほど回ってから暗くなり，
-      画面に止まった背景として残る。あとはスクロールに合わせてゆっくり回る。
+   1. 円筒：問題の図と問題文を円筒に並べ，暗くした背景として画面に止めて置く。
+      何もしていないときもゆっくり回り，スクロールするとその分だけ余計に回る。
    2. スクロールで現れる：見出し（丸が大きくなってから帯が伸びる），分野・難易度のカード（横から），
       文章（まとまりごとにフェード）。
    円筒の上（見出し・検索窓・分野と難易度のカード）はダークモードの配色で表示する。
@@ -53,11 +53,14 @@
     var vw = innerWidth;
     var w = Math.max(64, Math.min(130, vw * 0.1)), h = w * 230 / 320, gap = h * 0.22;
     var r = (w * 1.08 * PER) / (2 * Math.PI);
-    /* 暗くなったあとは，円筒の左右の端が画面の外に出るまで拡大する */
+    /* 円筒の左右の端が画面の外に出る大きさにする。scale() で拡大すると画像が粗く描かれるので，
+       タイルの大きさ・半径・奥行き（perspective）をそろえて S 倍にする（見え方は拡大と同じ） */
     var S = Math.max(1.3, 1.15 * vw / (2 * r));
-    /* 拡大したあとも，上下の端が画面の外に出る段数にする（最低10段） */
-    RINGS = Math.max(10, Math.ceil(innerHeight / (S * (h + gap))) + 3);
-    geo = { w: w, h: h, S: S, total: RINGS * h + (RINGS - 1) * gap, r: r };
+    w *= S; h *= S; gap *= S; r *= S;
+    ringEl.style.perspective = (1500 * S).toFixed(0) + "px";
+    /* 上下の端も画面の外に出る段数にする */
+    RINGS = Math.max(6, Math.ceil(innerHeight / (h + gap)) + 3);
+    geo = { w: w, h: h, S: 1, total: RINGS * h + (RINGS - 1) * gap, r: r };
     for (var j = 0; j < RINGS; j++) {
       var ring = document.createElement("div"); ring.className = "home-ring__ring";
       var tiles = [];
@@ -66,7 +69,7 @@
         t.style.width = w + "px"; t.style.height = h + "px";
         t.style.marginLeft = -w / 2 + "px"; t.style.marginTop = -h / 2 + "px";
         var n = order[(j * PER + i) % order.length];
-        t.style.backgroundImage = "url(" + base + (n < 10 ? "0" : "") + n + ".jpg)";
+        t.style.backgroundImage = "url(" + base + (n < 10 ? "0" : "") + n + ".webp)";
         var a0 = (360 / PER) * i + j * (180 / PER);
         t.style.transform = "rotateY(" + a0 + "deg) translateZ(" + geo.r + "px)";
         ring.appendChild(t); tiles.push({ el: t, a0: a0 });
@@ -90,10 +93,11 @@
   function smooth(x) { return x * x * (3 - 2 * x); }
 
   /* 同じ訪問の中で2回目からは，回さずに暗い状態から始める */
-  var seen = false;
-  try { seen = sessionStorage.getItem("home-ring-seen") === "1"; sessionStorage.setItem("home-ring-seen", "1"); } catch (e) {}
-  var still = reduce || seen;
-  if (still) dimStart = -1e9;
+  /* 最初から暗い背景の状態で置き，回し始めの演出はしない */
+  var still = true;
+  dimStart = -1e9;
+  /* 何もしていないときもゆっくり回す（90秒で1周）。スクロールの分はこれに足す */
+  var AUTO = reduce ? 0 : 360 / 90000;
 
   /* 暗くなり始めたら，すぐに見出しとカードを出し始める（間をあけない） */
   var onDim = null;
@@ -113,7 +117,7 @@
     function one() { if (--left === 0) onReady(); }
     for (var i = 0; i < N; i++) {
       var im = new Image(); im.onload = im.onerror = one;
-      im.src = base + (i < 10 ? "0" : "") + i + ".jpg";
+      im.src = base + (i < 10 ? "0" : "") + i + ".webp";
     }
     setTimeout(onReady, 2500);
   })();
@@ -134,15 +138,15 @@
     var d = dimStart === null ? 0 : smooth(Math.min(1, since / T_DIM));
     /* 明るさは位置より先に落とす（明るい円筒が題名に重ならないように） */
     var db = dimStart === null ? 0 : smooth(Math.min(1, since / (T_DIM * 0.45)));
-    var bright = 1 - 0.74 * db;
+    var bright = 1 - 0.83 * db;
     /* 中心：最初の位置（ページの上からの距離）から，画面の真ん中に止まる位置へ */
     var startY = centerStart - scrollY, endY = innerHeight * 0.5;
     var cy = startY + (endY - startY) * d;
     stage.style.transform = "translateY(" + cy.toFixed(1) + "px) scale(" + (1 + (geo.S - 1) * d).toFixed(3) + ")";
-    ringEl.style.setProperty("--home-ring-veil", (0.68 + 0.17 * db).toFixed(3));
+    ringEl.style.setProperty("--home-ring-veil", (0.72 + 0.2 * db).toFixed(3));
 
     var fade = ready ? Math.min(1, (now - readyAt) / FADE) : 0;
-    var scrollAngle = scrollY * 0.05, moving = !ready || d < 1 || fade < 1;
+    var scrollAngle = scrollY * 0.05 + AUTO * el, moving = !ready || d < 1 || fade < 1 || AUTO > 0;
     rings.forEach(function (rg, j) {
       var spin = still ? 0 : -SPIN * (1 - easeOut(Math.min(1, el / tSpin(j))));
       var target = spin + scrollAngle;
