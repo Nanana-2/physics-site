@@ -1994,28 +1994,3 @@ html { scroll-behavior: smooth; }
 
 /* ヘッダーのサイト名：トップの題名と同じ書体にそろえる */
 .md-header__topic:first-child .md-ellipsis { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; font-weight: 500; letter-spacing: .14em; }
-
-/* ==========================================
-   ヘッダーとタブ：色の帯を敷かず本文と同じ地に置く。PC ではサイト名・分野・サイト全体のリンクを1段に並べ，細い線で区切る
-   ========================================== */
-.md-header__button.md-logo .site-logo { display: block; width: 1.9rem; height: 1.9rem; }
-.md-header__button.md-logo { color: inherit; }
-body:not(.home-motion) :is(.md-header, .md-tabs) { background-color: var(--md-default-bg-color); color: var(--md-default-fg-color); }
-body:not(.home-motion) .md-header { border-bottom: 1px solid var(--md-default-fg-color--lightest); }
-body:not(.home-motion) .md-tabs { border-bottom: 1px solid var(--md-default-fg-color--lightest); }
-body:not(.home-motion) .site-burger__line { background: currentColor; }
-.md-tabs__link { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; font-weight: 500; letter-spacing: .12em; }
-.md-header__topic:first-child .md-ellipsis { letter-spacing: .12em; }
-@media (min-width: 76.25em) {
-  body:not(.home-motion) .md-tabs { border-bottom: 0; }
-  .md-header .md-tabs { position: absolute; top: 0; left: 0; right: 0; height: 2.4rem; background: none !important; border: 0 !important; pointer-events: none; overflow: visible; }
-  .md-header .md-tabs .md-grid { height: 100%; }
-  .md-tabs__list { height: 100%; padding-left: 13.5rem; padding-right: 4.8rem; overflow: visible; pointer-events: auto; }
-  .md-tabs__item { height: 2.4rem; padding-left: .38rem; padding-right: .38rem; }
-  .md-tabs__item::after { left: .38rem; right: .38rem; height: 1px; background: currentColor; }
-  .md-tabs__link { margin-top: .78rem; font-size: .66rem; }
-  .md-header .site-search { display: none; }
-  .md-header__button.site-search__mobile { display: inline-block; }
-  .md-header__title { flex: 0 0 11.5rem; margin-left: .3rem; }
-  .md-header__option { margin-left: auto; }
-}
