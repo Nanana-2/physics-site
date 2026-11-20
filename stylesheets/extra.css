@@ -1,0 +1,1996 @@
+/* 本文・コードのフォント（mkdocs.yml の font は false にして overrides/main.html で読み込む） */
+:root { --md-text-font: "Noto Sans JP"; --md-code-font: "Roboto Mono"; }
+
+/* ==========================================
+   文字の大きさ
+   ========================================== */
+/* このファイルで使う文字の大きさの一覧。名前の数字は rem の100倍。
+   px は PC の標準の幅（1rem = 20px）での大きさ。大きさをまとめるときは，ここの値を書き換える。 */
+:root {
+  --fs-45: .45rem;    /* 9px・1か所 */
+  --fs-55: .55rem;    /* 11px・1か所 */
+  --fs-58: .58rem;    /* 11.6px・1か所 */
+  --fs-60: .6rem;     /* 12px・3か所 */
+  --fs-62: .62rem;    /* 12.4px・7か所 */
+  --fs-64: .64rem;    /* 12.8px・3か所 */
+  --fs-65: .65rem;    /* 13px・3か所 */
+  --fs-66: .66rem;    /* 13.2px・8か所 */
+  --fs-68: .68rem;    /* 13.6px・11か所 */
+  --fs-70: .7rem;     /* 14px・11か所 */
+  --fs-72: .72rem;    /* 14.4px・15か所 */
+  --fs-74: .74rem;    /* 14.8px・8か所 */
+  --fs-75: .75rem;    /* 15px・4か所 */
+  --fs-76: .76rem;    /* 15.2px・2か所 */
+  --fs-78: .78rem;    /* 15.6px・4か所 */
+  --fs-80: .8rem;     /* 16px・6か所 */
+  --fs-85: .85rem;    /* 17px・6か所 */
+  --fs-88: .88rem;    /* 17.6px・1か所 */
+  --fs-90: .9rem;     /* 18px・6か所 */
+  --fs-92: .92rem;    /* 18.4px・1か所 */
+  --fs-95: .95rem;    /* 19px・2か所 */
+  --fs-120: 1.2rem;   /* 24px・1か所 */
+  --fs-145: 1.45rem;  /* 29px・1か所 */
+  --fs-240: 2.4rem;   /* 48px・1か所 */
+}
+
+/* ==========================================
+   0. サイト全体の基準色
+   ========================================== */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1f1f1f;
+  --md-primary-fg-color--light: #373737;
+  --md-primary-fg-color--dark: #141414;
+  --md-accent-fg-color: #5472cd;
+  --md-typeset-a-color: #334d86;
+  --site-heading-accent: #3f3f3f;
+  --site-heading-soft: #dddddd;
+}
+
+[data-md-color-scheme="slate"] {
+  /* Material の暗い色は紺みの灰色（色相 232°，彩度 15%）なので，彩度 0 の灰色に置き換える */
+  --md-default-fg-color: hsla(0, 0%, 90%, .82);
+  --md-default-fg-color--light: hsla(0, 0%, 90%, .56);
+  --md-default-fg-color--lighter: hsla(0, 0%, 90%, .32);
+  --md-default-fg-color--lightest: hsla(0, 0%, 90%, .12);
+  --md-default-bg-color: hsla(0, 0%, 14%, 1);
+  --md-default-bg-color--light: hsla(0, 0%, 14%, .54);
+  --md-default-bg-color--lighter: hsla(0, 0%, 14%, .26);
+  --md-default-bg-color--lightest: hsla(0, 0%, 14%, .07);
+  --md-code-fg-color: hsla(0, 0%, 86%, .82);
+  --md-code-bg-color: hsla(0, 0%, 18%, 1);
+  --md-code-bg-color--light: hsla(0, 0%, 18%, .9);
+  --md-code-bg-color--lighter: hsla(0, 0%, 18%, .54);
+  --md-typeset-kbd-color: hsla(0, 0%, 90%, .12);
+  --md-typeset-kbd-accent-color: hsla(0, 0%, 90%, .2);
+  --md-typeset-kbd-border-color: hsla(0, 0%, 14%, 1);
+  --md-typeset-table-color: hsla(0, 0%, 95%, .12);
+  --md-typeset-table-color--light: hsla(0, 0%, 95%, .035);
+  --md-footer-bg-color: hsla(0, 0%, 10%, .87);
+  --md-footer-bg-color--dark: hsla(0, 0%, 8%, 1);
+  --md-primary-fg-color: #181818;
+  --md-primary-fg-color--light: #333333;
+  --md-primary-fg-color--dark: #0e0e0e;
+  --md-accent-fg-color: #6f93e8;
+  --md-typeset-a-color: #82a7df;
+  --site-heading-accent: #8f8f8f;
+  --site-heading-soft: #333333;
+}
+
+.header-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-home-link:hover {
+  color: inherit;
+}
+
+.header-home-link:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: -2px;
+}
+
+/* ==========================================
+   1. 数式まわり
+   ========================================== */
+/* 別行の数式が画面の幅を超えたときの横スクロールは，テーマ（.md-typeset div.arithmatex）が受け持つ */
+/* インライン数式の分数が本文中で潰れすぎないよう、わずかに拡大する */
+span.arithmatex mjx-mfrac {
+  font-size: 1.08em;
+}
+
+/* ==========================================
+   2. サイト全体の見た目をちょっとオシャレにする
+   ========================================== */
+.md-typeset pre code {
+  border-radius: 8px;
+}
+
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--md-typeset-a-color);
+  transition: all 0.3s;
+}
+.md-typeset a:hover {
+  border-bottom-style: solid;
+}
+
+/* ==========================================
+   3. 見出し（本の紙面に合わせた組み方）
+   ========================================== */
+[data-md-color-scheme="default"] { --site-navy: #1f1f1f; --site-star: #f2c200; }
+[data-md-color-scheme="slate"] { --site-navy: #383838; --site-star: #f2c200; }
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 500;
+  color: var(--md-typeset-color);
+}
+.md-typeset h1 { letter-spacing: .04em; }
+.md-typeset h2 { padding-bottom: .25em; border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+
+/* パンくず（分野 › 章）。灰色にせず本文と同じ色で */
+.md-path { font-size: var(--fs-72); }
+.md-path__link { color: var(--md-typeset-color); }
+.md-path__link:hover { color: var(--md-accent-fg-color); }
+
+/* 難易度は「問題」の帯の★で示すので，タグの表示はしない */
+.md-content .md-tags, .md-typeset .md-tags { display: none !important; }
+
+/* ==========================================
+   4. 問題ページ：問題の枠・解答・解説の帯・小見出し
+   ========================================== */
+/* 問題の枠：上辺が紺の帯，帯の「問題」と★を枠内の本文の行頭・行末にそろえる */
+.md-typeset .problem-box {
+  margin: 1.2em 0 2.2em;
+}
+.md-typeset .problem-box > h2,
+.md-typeset h2.solution-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: .35em .9rem .3em 1.2rem;
+  border: none;
+  background: var(--site-navy);
+  color: #fff;
+  font-size: var(--fs-90);
+  letter-spacing: .05em;
+}
+/* 問題文は枠線を引かず，ごく薄いグレーの面で囲む */
+.md-typeset .problem-box__body { padding: .5em 1.1rem .7em; background: #f6f6f6; }
+[data-md-color-scheme="slate"] .md-typeset .problem-box__body { background: rgba(255, 255, 255, .035); }
+
+/* 帯・見出しのアイコン（Font Awesome の SVG をマスクにして文字色で塗る） */
+.md-typeset .problem-box > h2 > span:first-child::before,
+.md-typeset h1.problem-title::after,
+.md-typeset h2.solution-heading::after,
+.md-typeset .md-path__item:first-child .md-path__link::before {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
+}
+.md-typeset .problem-box > h2 > span:first-child::before {
+  --site-icon: url("../assets/icons/file-pen.svg");
+  width: 1em; height: .85em;
+  margin-right: .5em;
+  vertical-align: -.05em;
+}
+
+/* 解答・解説：薄紺の帯（右端は丸く），左端に重なる紺の丸にチェック */
+.md-typeset h2.solution-heading {
+  position: relative;
+  display: block;
+  margin: 2em 0 1.1em 1.05rem;
+  padding: .38em .9rem .34em 1.55rem;
+  border-radius: 0 1em 1em 0;
+  background: #ececec;
+  color: var(--site-navy);
+}
+.md-typeset h2.solution-heading::before {
+  content: "";
+  position: absolute;
+  left: -1.05rem; top: 50%;
+  width: 2.1rem; height: 2.1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+}
+.md-typeset h2.solution-heading::after {
+  --site-icon: url("../assets/icons/check.svg");
+  position: absolute;
+  left: -.4rem; top: 50%;
+  width: .8rem; height: .8rem;
+  transform: translateY(-50%);
+  color: #fff;
+}
+[data-md-color-scheme="slate"] .md-typeset h2.solution-heading { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
+[data-md-color-scheme="slate"] .md-typeset h2.solution-heading::before { background: #4b4b4b; }
+
+/* 問題のタイトル：左に薄いグレーの丸に鉛筆，下に同じグレーの細い線 */
+.md-typeset h1.problem-title {
+  position: relative;
+  margin-bottom: .3em;
+  padding: 0 0 .35em 1.75em;
+  border-bottom: 1px solid #ececec;
+}
+.md-typeset h1.problem-title::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .06em;
+  width: 1.36em; height: 1.36em;
+  border-radius: 50%;
+  background: #ececec;
+}
+.md-typeset h1.problem-title::after {
+  --site-icon: url("../assets/icons/pencil.svg");
+  position: absolute;
+  left: .43em; top: .49em;
+  width: .5em; height: .5em;
+  color: var(--site-navy);
+}
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title { border-color: rgba(255, 255, 255, .08); }
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title::before { background: rgba(255, 255, 255, .08); }
+[data-md-color-scheme="slate"] .md-typeset h1.problem-title::after { color: #d2d2d2; }
+
+/* 問題ページのパンくずはタイトルの下線の下に置く（hooks/problem_layout.py で移動）。「ホーム」は家のアイコンに */
+.md-typeset .md-path { margin: 0 0 1.5em; font-size: var(--fs-68); }
+.md-typeset .md-path ol.md-path__list { display: flex; flex-wrap: wrap; align-items: center; margin: 0; padding: 0; }
+.md-typeset .md-path li.md-path__item { display: inline-flex; align-items: center; margin: 0; }
+.md-typeset a.md-path__link { border-bottom: none; color: var(--md-typeset-color); }
+.md-typeset a.md-path__link:hover { color: var(--md-accent-fg-color); }
+.md-typeset .md-path__item:first-child .md-ellipsis { display: none; }
+.md-typeset .md-path__item:first-child .md-path__link::before {
+  --site-icon: url("../assets/icons/house.svg");
+  width: 1.1em; height: 1em;
+  vertical-align: -.1em;
+}
+
+/* 難易度の★：塗りは黄，空きは薄い白 */
+.problem-stars { font-size: var(--fs-80); letter-spacing: .12em; font-weight: 400; }
+.problem-stars__on { color: var(--site-star); }
+.problem-stars__off { color: rgba(255, 255, 255, .3); }
+
+/* 小問：番号の幅でぶら下げインデント */
+.md-typeset .problem-box__body p.subq {
+  display: grid;
+  grid-template-columns: 2.1em 1fr;
+  margin: .9em 0;
+}
+.md-typeset p.subq .subq__number { white-space: nowrap; }
+/* 小問の途中の別行数式・続きの文・箇条書きも，小問の本文と同じ位置にそろえる */
+.md-typeset .problem-box__body .subq__cont { margin-left: 2.1em; }
+
+/* 解説の小見出し (1)：右に細い線を伸ばす */
+.md-typeset h3.solution-part {
+  display: flex;
+  align-items: center;
+  gap: .7em;
+  margin: 2em 0 .6em;
+  font-size: var(--fs-95);
+  font-weight: 600;
+}
+.md-typeset h3.solution-part::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ==========================================
+   7. サイドバー（ナビゲーション）のデザインカスタム
+   ========================================== */
+.md-nav__link:hover {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-typeset-a-color) !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.md-nav__link--active {
+  font-weight: bold;
+  color: var(--md-typeset-a-color) !important;
+}
+
+.md-nav__item {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+.md-nav__icon {
+  transition: transform 0.25s ease;
+}
+
+/* ==========================================
+   8. 左サイドバーの背景色と角丸設定（PC版）
+   ========================================== */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    --md-sidebar-bg: var(--md-code-bg-color); 
+  }
+
+  .md-sidebar--primary .md-nav {
+    background-color: var(--md-sidebar-bg) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: none !important; 
+  }
+
+  .md-sidebar--primary .md-nav__title,
+  .md-sidebar--primary .md-nav__list {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==========================================
+   9. サイドバーメインタイトルの余白調整
+   ========================================== */
+.md-sidebar--primary .md-nav--primary > .md-nav__title {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* サイドバー上部に残る見出し（分野名）に Material が付ける白いぼかし影を消し，背景をサイドバーと同じ色に */
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item > [for] {
+  box-shadow: none !important;
+  background-color: var(--md-code-bg-color) !important;
+}
+
+/* ==========================================
+   9b. ヘッダーの分野タブ（アイコン付き，今いる分野に黄色の下線，道具系は右端）
+   ========================================== */
+.md-tabs { background: var(--md-primary-fg-color); }
+.md-tabs__list { display: flex; contain: none; }
+.md-tabs__item { height: 2.3rem; padding-left: .5rem; padding-right: .5rem; }
+.md-tabs__link { display: inline-flex; align-items: center; gap: .4em; margin-top: .65rem; font-size: var(--fs-72); opacity: .75; }
+.md-tabs__item--active .md-tabs__link { opacity: 1; font-weight: 500; }
+/* 黄色の下線：今いる分野は開いたときに中央からピュッと伸び，ほかの分野はマウスを乗せる／押すと伸びる */
+.md-tabs__item { position: relative; }
+.md-tabs__item::after {
+  content: "";
+  position: absolute;
+  left: .5rem; right: .5rem; bottom: 0;
+  height: 2px;
+  background: var(--site-star);
+  transform: scaleX(0);
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1);
+}
+.md-tabs__item:hover::after,
+.md-tabs__item:focus-within::after,
+.md-tabs__item:active::after { transform: scaleX(1); }
+.md-tabs__item--active::after { transform: scaleX(1); animation: site-tab-underline .45s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes site-tab-underline { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .md-tabs__item::after { transition: none; animation: none !important; }
+}
+
+/* スマホでもタブを出す（横スクロール）。続きがある側の端は薄くぼかす（javascripts/tabs.js がクラスを付ける） */
+@media screen and (max-width: 76.234375em) {
+  .md-tabs { display: block; }
+  .md-tabs__list { margin: 0; padding-right: 1.5rem; scroll-behavior: smooth; }
+  .md-tabs__list.has-more-right { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent); }
+  .md-tabs__list.has-more-left { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent); }
+  .md-tabs__list.has-more-left.has-more-right { -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent); mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent); }
+  .md-tabs__item { height: 2.2rem; padding-left: .45rem; padding-right: .45rem; }
+  .md-tabs__item::after { left: .45rem; right: .45rem; }
+  .md-tabs__link { font-size: var(--fs-68); margin-top: .6rem; }
+  .md-tabs__item--tool { margin-left: 0 !important; }
+}
+.md-tabs__item--tool { order: 1; }
+.md-tabs__item--tool:not(.md-tabs__item--tool ~ .md-tabs__item--tool) { margin-left: auto; }
+
+/* ==========================================
+   10. 記事エリアの可読性向上
+   ========================================== */
+.md-content__inner {
+  max-width: 44rem; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  line-height: 1.75;
+}
+
+.md-typeset p {
+  margin-bottom: 1.2rem;
+}
+
+.md-typeset ol li, 
+.md-typeset ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* 別行立ての数式と前後の文章の間は詰める（段落の余白 1.2rem のままだと開きすぎる） */
+.md-typeset mjx-container[display="true"] { margin: .6em 0; }
+.md-typeset p:has(+ div.arithmatex) { margin-bottom: .5rem; }
+.md-typeset div.arithmatex + p { margin-top: .5rem; }
+
+/* ==========================================
+   11. Noto Sans JP 用の微調整
+   ========================================== */
+body, input {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ==========================================
+   12. スマホ版サイドバー（ドロワー）の崩れ修正 ＆ デザイン統一
+   ========================================== */
+@media screen and (max-width: 76.24em) {
+  .md-nav--primary > .md-nav__title {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.75rem !important;
+    height: 4rem !important;
+    padding: 0.8rem 1rem !important;
+    color: #ffffff !important;
+    background-color: var(--md-primary-fg-color) !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+  }
+
+  .md-nav--primary > .md-nav__title .md-logo {
+    position: static !important;
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+  }
+
+  .md-nav--primary > .md-nav__title .md-logo img,
+  .md-nav--primary > .md-nav__title .md-logo svg {
+    width: 1.55rem !important;
+    height: 1.55rem !important;
+  }
+
+  .md-nav--primary {
+    background-color: var(--md-code-bg-color) !important; 
+  }
+
+  .md-nav--primary > .md-nav__title {
+    color: #ffffff !important;
+  }
+
+  .md-nav--primary > .md-nav__title .md-logo,
+  .md-nav--primary > .md-nav__title .md-nav__icon {
+    color: #ffffff !important;
+  }
+}
+
+/* ==========================================
+   13. 参考文献一覧：分野の見出し（紺の丸にアイコン＋薄紺の帯）と，線で区切った本の一覧
+   見出しと冒頭の囲みは hooks/problem_layout.py が付ける
+   ========================================== */
+.md-typeset .books-intro { margin: 1.4em 0 2.4em; padding: .3em 1.1rem .6em; background: #f6f6f6; }
+[data-md-color-scheme="slate"] .md-typeset .books-intro { background: rgba(255, 255, 255, .035); }
+.md-typeset .books-intro h2 { margin: .8em 0 .6em; padding: 0; border: none; font-size: var(--fs-90); }
+
+.md-typeset h2.books-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2.6em 0 .4em 1.05rem;
+  padding: .4em .9rem .35em 1.55rem;
+  border: none;
+  border-radius: 0 1em 1em 0;
+  background: #ececec;
+  color: var(--site-navy);
+  font-size: var(--fs-90);
+  letter-spacing: .04em;
+}
+.md-typeset h2.books-head--plain { margin-left: 0; padding-left: .9rem; }
+.md-typeset .books-head__icon {
+  position: absolute;
+  left: -1.05rem; top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem; height: 2.1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+  color: #fff;
+}
+.md-typeset .books-head__icon svg { width: .8rem; height: .8rem; fill: currentColor; }
+[data-md-color-scheme="slate"] .md-typeset h2.books-head { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
+[data-md-color-scheme="slate"] .md-typeset .books-head__icon { background: #4b4b4b; }
+
+.md-typeset .book-grid { display: block; margin: .6em 0 0; }
+.md-typeset .book-card { padding: 1.1rem .2rem 1.2rem; border-bottom: 1px solid #e3e3e3; }
+[data-md-color-scheme="slate"] .md-typeset .book-card { border-color: rgba(255, 255, 255, .08); }
+.md-typeset .book-card { display: grid; grid-template-columns: 5.2rem 1fr; gap: 1.1rem; align-items: start; }
+.md-typeset .book-info { min-width: 0; }
+/* 表紙：Creators API が返す公式の画像（scripts/refresh_book_images.py） */
+.md-typeset .book-cover { margin-top: .2rem; }
+.md-typeset .book-cover img { display: block; width: 100%; height: auto; box-shadow: 0 .15rem .5rem rgba(0, 0, 0, .18); }
+@media screen and (max-width: 30em) { .md-typeset .book-card { grid-template-columns: 4rem 1fr; gap: .8rem; } }
+.md-typeset .book-info h3 { margin: 0 0 .15rem; font-size: var(--fs-90); font-weight: 500; }
+.md-typeset .book-info .book-meta { margin: 0 0 .6rem; font-size: var(--fs-66); color: var(--md-default-fg-color--light); }
+.md-typeset .book-info p { margin: 0 0 .5rem; font-size: var(--fs-76); text-align: justify; text-justify: inter-character; }
+/* Amazon へのリンク：紺のボタン。マウスを乗せると横から少し明るくなる */
+.md-typeset a.book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  margin-top: .3rem;
+  padding: .35rem .9rem;
+  border: none;
+  background-color: var(--site-navy);
+  color: #fff;
+  font-size: var(--fs-68);
+  font-weight: 500;
+  background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset a.book-btn::after { content: "→"; }
+.md-typeset a.book-btn:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset a.book-btn { background-color: #4b4b4b; }
+
+/* ==========================================
+   14. 問題を探す：検索窓・分野の切り替え（黄色の下線）・難易度の★ボタン
+   結果の章見出しと行は 14b の目次と同じ部品を使う
+   ========================================== */
+.md-typeset .finder { margin-top: 1.2em; }
+.md-typeset .finder__search {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .55rem .9rem;
+  background: #f6f6f6;
+  border-bottom: 2px solid var(--site-navy);
+}
+.md-typeset .finder__search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--md-typeset-color);
+  font: inherit;
+  font-size: var(--fs-85);
+  outline: none;
+}
+[data-md-color-scheme="slate"] .md-typeset .finder__search { background: rgba(255, 255, 255, .035); border-color: #b6b6b6; }
+
+/* 分野：ヘッダーのタブと同じく，選ぶと黄色の下線が中央から伸びる */
+.md-typeset .finder__subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 .2rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset .finder__subject {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  padding: .55rem .6rem;
+  border: none;
+  background: none;
+  color: var(--md-default-fg-color--light);
+  font: inherit;
+  font-size: var(--fs-74);
+  cursor: pointer;
+}
+.md-typeset .finder__subject::after {
+  content: "";
+  position: absolute;
+  left: .6rem; right: .6rem; bottom: -1px;
+  height: 2px;
+  background: var(--site-star);
+  transform: scaleX(0);
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1);
+}
+.md-typeset .finder__subject:hover::after,
+.md-typeset .finder__subject.is-on::after { transform: scaleX(1); }
+.md-typeset .finder__subject.is-on { color: var(--md-typeset-color); font-weight: 500; }
+
+/* 検索窓の虫眼鏡（SVG をマスクにして文字色で塗る） */
+.md-typeset .finder__glass {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
+}
+.md-typeset .finder__glass { --site-icon: url("../assets/icons/magnifying-glass.svg"); width: .95rem; height: .95rem; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .finder__glass { color: #d2d2d2; }
+
+/* 難易度：★のボタン。選ぶと紺の面に黄色の★，もう一度押すと解除 */
+.md-typeset .finder__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .9rem 0 1.4rem;
+  font-size: var(--fs-70);
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .finder__levels { display: inline-flex; align-items: center; gap: .35rem; }
+.md-typeset .finder__label { margin-right: .3rem; }
+.md-typeset .finder__level {
+  min-width: 2.6rem;
+  padding: .3rem .6rem;
+  border: none;
+  background: #f6f6f6;
+  color: #f2c200;
+  font: inherit;
+  font-size: var(--fs-80);
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: background .15s;
+}
+.md-typeset .finder__level:hover { background: #e3e3e3; }
+.md-typeset .finder__level.is-on { background: var(--site-navy); color: var(--site-star); }
+[data-md-color-scheme="slate"] .md-typeset .finder__level { background: rgba(255, 255, 255, .06); color: #f2c200; }
+[data-md-color-scheme="slate"] .md-typeset .finder__level:hover { background: rgba(255, 255, 255, .12); }
+[data-md-color-scheme="slate"] .md-typeset .finder__level.is-on { background: #4b4b4b; color: var(--site-star); }
+
+/* 結果の行：タイトルの下に，キーワードが当たった問題文の一部（当たった語に黄色の下地） */
+.md-typeset a.finder__row { align-items: center; }
+.md-typeset .finder__text { display: flex; flex-direction: column; gap: .1em; }
+.md-typeset .finder__snippet { font-size: var(--fs-64); color: var(--md-default-fg-color--light); }
+.md-typeset .finder__snippet mark { padding: 0 .1em; background: var(--site-answer-bg); color: inherit; }
+.md-typeset .finder__subject-label { margin-right: .6em; font-size: .7em; opacity: .7; }
+.md-typeset .finder__empty { color: var(--md-default-fg-color--light); font-size: var(--fs-75); }
+
+/* ==========================================
+   14b. 分野別の問題一覧：章の見出し（紺の丸に章番号＋薄紺の帯）と問題の行
+   ========================================== */
+.md-typeset .toc { margin-top: 1.5em; }
+.md-typeset .toc-chapter { margin: 0 0 2.2em; }
+.md-typeset h2.toc-chapter__head {
+  position: relative;
+  margin: 0 0 .3em 1.05rem;
+  padding: .4em .9rem .35em 1.55rem;
+  border: none;
+  border-radius: 0 1em 1em 0;
+  background: #ececec;
+  color: var(--site-navy);
+  font-size: var(--fs-90);
+  letter-spacing: .04em;
+}
+.md-typeset .toc-chapter__no {
+  position: absolute;
+  left: -1.05rem; top: 50%;
+  width: 2.1rem; height: 2.1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+  color: #fff;
+  font-size: var(--fs-85);
+  line-height: 2.1rem;
+  text-align: center;
+}
+[data-md-color-scheme="slate"] .md-typeset h2.toc-chapter__head { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
+[data-md-color-scheme="slate"] .md-typeset .toc-chapter__no { background: #4b4b4b; }
+
+.md-typeset a.toc-row {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr auto;
+  align-items: baseline;
+  gap: .6rem;
+  padding: .5rem .2rem;
+  border: none;
+  border-bottom: 1px solid #ececec;
+  color: var(--md-typeset-color);
+  font-size: var(--fs-80);
+}
+.md-typeset a.toc-row:hover .toc-row__title { color: var(--md-accent-fg-color); }
+.md-typeset .toc-row__num { font-size: var(--fs-70); color: var(--site-navy); }
+.md-typeset .toc-row__stars { font-size: var(--fs-65); letter-spacing: .08em; }
+.md-typeset .toc-row__stars .on { color: #f2c200; }
+.md-typeset .toc-row__stars .off { color: var(--md-default-fg-color--lighter); }
+[data-md-color-scheme="slate"] .md-typeset a.toc-row { border-color: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .toc-row__num { color: #d2d2d2; }
+
+/* ==========================================
+   15. 問題末尾：前後の問題・一覧へ（中央）・関連ページのボタン
+   ========================================== */
+.md-typeset .page-nav {
+  display: grid;
+  grid-template-columns: 1fr 5rem 1fr;
+  margin: 3em 0 0;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+.md-typeset .page-nav a { border-bottom: none; color: var(--md-typeset-color); }
+.md-typeset .page-nav__side { display: flex; flex-direction: column; gap: .25em; padding: 1rem .9rem; }
+.md-typeset .page-nav__side--next { align-items: flex-end; text-align: right; }
+.md-typeset .page-nav__dir { font-size: var(--fs-66); font-weight: 500; color: var(--site-navy); }
+.md-typeset .page-nav__title { font-size: var(--fs-85); font-weight: 500; }
+.md-typeset .page-nav__stars { font-size: var(--fs-65); letter-spacing: .08em; }
+.md-typeset .page-nav__stars .on { color: #f2c200; }
+.md-typeset .page-nav__stars .off { color: var(--md-default-fg-color--lighter); }
+.md-typeset .page-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .35em;
+  margin: .9rem 0;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  font-size: var(--fs-66);
+  font-weight: 500;
+}
+.md-typeset .page-nav__list:hover { color: var(--md-accent-fg-color); }
+[data-md-color-scheme="slate"] .md-typeset .page-nav,
+[data-md-color-scheme="slate"] .md-typeset .page-nav__list { border-color: rgba(255, 255, 255, .1); }
+[data-md-color-scheme="slate"] .md-typeset .page-nav__dir { color: #d2d2d2; }
+
+/* 参考文献一覧など：横長のボタン（問題文と同じ薄いグレーの面）。今後のボタンもここに縦に足す */
+.md-typeset .page-links { display: flex; flex-direction: column; gap: .45rem; margin: 1.2em 0 0; }
+.md-typeset a.page-links__button {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .55rem 1rem;
+  border: none;
+  background: #f6f6f6;
+  color: var(--md-typeset-color);
+  font-size: var(--fs-75);
+}
+.md-typeset .page-links__label { flex: 1; }
+.md-typeset .page-links__arrow { color: var(--md-default-fg-color--light); }
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button { background-color: rgba(255, 255, 255, .035); }
+
+/* 一覧（ドット）・本のアイコン */
+.md-typeset .page-nav__list::before,
+.md-typeset .page-links__button::before {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--site-icon) center / contain no-repeat;
+  mask: var(--site-icon) center / contain no-repeat;
+}
+.md-typeset .page-nav__list::before { --site-icon: url("../assets/icons/dots-grid.svg"); width: 1.1rem; height: 1.1rem; }
+.md-typeset .page-links__button::before { width: .9rem; height: .9rem; color: var(--site-navy); }
+.md-typeset .page-links__button--books::before { --site-icon: url("../assets/icons/book-open.svg"); }
+[data-md-color-scheme="slate"] .md-typeset .page-links__button::before { color: #d2d2d2; }
+
+/* スマホ：前後の問題を左右に，一覧へはその下の1行に */
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav { grid-template-columns: 1fr 1fr; }
+  .md-typeset .page-nav__list {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-direction: row;
+    margin: 0;
+    padding: .6rem 0;
+    border: none;
+    border-top: 1px solid #e3e3e3;
+  }
+  .md-typeset .page-nav__side--next { border-left: 1px solid #e3e3e3; }
+  .md-typeset .page-nav__title { font-size: var(--fs-78); }
+}
+
+/* ==========================================
+   15b. サイトのフッター（overrides/partials/copyright.html）
+   ヘッダーと同じ紺で上下を挟み，最下段の著作権表示だけ一段暗い紺に
+   ========================================== */
+.md-footer-meta { background: var(--md-primary-fg-color); }
+.md-footer-meta__inner { display: block; }
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 1.6rem 2rem;
+  padding: 2.4rem .8rem 0;
+  color: rgba(255, 255, 255, .85);
+  font-size: var(--fs-68);
+}
+.site-footer p { margin: 0; }
+.site-footer__brand { display: flex; gap: .8rem; align-items: center; align-self: start; }
+.site-footer__logo { flex: none; width: 2.6rem; height: 2.6rem; }
+.site-footer__name { font-size: var(--fs-85); font-weight: 500; color: #fff; }
+.site-footer__by { margin-top: .25rem !important; font-size: var(--fs-62); color: rgba(255, 255, 255, .55); }
+.site-footer__head { margin-bottom: .5rem !important; font-size: var(--fs-68); font-weight: 700; color: #fff; }
+.md-typeset .site-footer ul { margin: 0; padding: 0; list-style: none; }
+.md-typeset .site-footer li { margin: 0 0 .2rem !important; padding: 0; }
+/* リンク：ほかの場所と同じく，横から塗られる（紺の上なので白を薄く） */
+.site-footer ul a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  margin-left: -.45rem;
+  padding: .2rem .45rem;
+  border: none;
+  color: rgba(255, 255, 255, .85);
+  background-image: linear-gradient(rgba(255, 255, 255, .12), rgba(255, 255, 255, .12));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.site-footer ul a:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
+.site-footer__bottom {
+  grid-column: 1 / -1;
+  margin-top: 1rem !important;
+  padding: .9rem 0;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 100vmax #1a1a1a;
+  clip-path: inset(0 -100vmax);
+  font-size: var(--fs-58);
+  color: rgba(255, 255, 255, .45);
+}
+.site-footer__bottom span { margin: 0 .5em; }
+.site-footer__bottom a { color: rgba(255, 255, 255, .6); border: none; text-decoration: underline; text-underline-offset: .15em; }
+[data-md-color-scheme="slate"] .site-footer__bottom { background: #0e0e0e; box-shadow: 0 0 0 100vmax #0e0e0e; }
+@media screen and (max-width: 45em) {
+  .site-footer { grid-template-columns: 1fr 1fr; }
+  .site-footer__brand { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) { .site-footer ul a { transition: none; } }
+
+/* ==========================================
+   16. ページ共有ボタン（色を付けない丸いアイコン）
+   ========================================== */
+.page-share { margin-top: 1.8em; }
+
+.md-typeset .page-share__label {
+  margin: 0 0 0.7rem;
+  color: var(--md-default-fg-color--light);
+  font-size: var(--fs-76);
+  text-align: center;
+}
+
+.page-share__buttons { display: flex; justify-content: center; gap: .6rem; }
+
+.md-typeset .page-share__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0;
+  color: var(--md-typeset-color);
+  background: transparent;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 50%;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+.md-typeset .page-share__button:hover { border-color: var(--md-typeset-color); }
+.md-typeset .page-share__button > span:not(.page-share__icon) { display: none; }
+
+.page-share__icon { display: inline-flex; width: 0.82rem; height: 0.82rem; }
+.page-share__icon svg { width: 100%; height: 100%; fill: currentcolor; }
+
+.md-typeset .page-share__status {
+  min-height: 1em;
+  margin: 0.45rem 0 0;
+  color: var(--md-primary-fg-color);
+  font-size: var(--fs-68);
+  text-align: center;
+}
+
+/* 問題図・解答図（ライト・ダークで画像を切り替える。#only-light / #only-dark は Material の機能） */
+.md-typeset figure.problem-figure {
+  margin: 1.4em auto;
+}
+
+.md-typeset figure.problem-figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 答えの強調（\finalanswer）：黄色の下地。答えだけの式は式ごと，導出の途中にある答えはその部分だけ */
+:root { --site-answer-bg: rgba(242, 194, 0, .22); }
+[data-md-color-scheme="slate"] { --site-answer-bg: rgba(255, 255, 255, .10); }
+.md-typeset mjx-container[display="true"].fa-whole {
+  display: block;
+  width: fit-content;
+  margin: .8em auto !important;
+  padding: .45em 1em !important;
+  background: var(--site-answer-bg);
+}
+.md-typeset mjx-container:not(.fa-whole) .fa {
+  background: var(--site-answer-bg);
+  /* 左右にだけ広げる（上下に広げると複数行の式で上下の行と重なる） */
+  box-shadow: .25em 0 0 var(--site-answer-bg), -.25em 0 0 var(--site-answer-bg);
+}
+/* 複数行の式（aligned など）の行間をわずかに開ける */
+.md-typeset mjx-container[display="true"] mjx-mtable mjx-mtd { padding-top: .12em !important; padding-bottom: .12em !important; }
+
+/* 左右のサイドバーを出さないページ（問題を探す など）は，本文を中央に置く */
+.md-sidebar--primary[hidden] ~ .md-content > .md-content__inner { margin-left: auto; margin-right: auto; }
+
+/* ==========================================
+   ヘッダーの検索（javascripts/site-search.js）。スマホは虫眼鏡から「問題を探す」へ
+   ========================================== */
+.site-search { position: relative; display: flex; align-items: center; margin-left: .8rem; }
+.site-search__icon { position: absolute; left: .55rem; display: inline-flex; width: 1rem; height: 1rem; color: rgba(255, 255, 255, .7); pointer-events: none; }
+.site-search__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.site-search__input {
+  width: 11.7rem;
+  height: 1.8rem;
+  padding: 0 .6rem 0 2rem;
+  border: none;
+  border-radius: .1rem;
+  background: rgba(0, 0, 0, .26);
+  color: #fff;
+  font: inherit;
+  font-size: var(--fs-72);
+  outline: none;
+  transition: width .25s cubic-bezier(.2, .8, .2, 1), background .25s;
+}
+.site-search__input::placeholder { color: rgba(255, 255, 255, .7); }
+.site-search__input:focus { width: 16rem; background: rgba(0, 0, 0, .4); }
+.site-search__results {
+  position: absolute;
+  top: calc(100% + .35rem);
+  right: 0;
+  z-index: 10;
+  width: 24rem;
+  max-width: calc(100vw - 2rem);
+  padding: .3rem 0;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 .3rem 1.2rem rgba(0, 0, 0, .18);
+}
+.site-search__item {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .9rem;
+  color: var(--md-typeset-color);
+  font-size: var(--fs-72);
+}
+.site-search__item:hover, .site-search__item.is-active { background: #f6f6f6; }
+[data-md-color-scheme="slate"] .site-search__item:hover,
+[data-md-color-scheme="slate"] .site-search__item.is-active { background: rgba(255, 255, 255, .05); }
+.site-search__num { font-size: var(--fs-66); color: var(--site-navy); }
+[data-md-color-scheme="slate"] .site-search__num { color: #d2d2d2; }
+.site-search__text { display: flex; flex-direction: column; line-height: 1.4; }
+.site-search__where { font-size: var(--fs-60); color: var(--md-default-fg-color--light); }
+.site-search__stars { font-size: var(--fs-60); letter-spacing: .06em; }
+.site-search__stars .on { color: #f2c200; }
+.site-search__stars .off { color: var(--md-default-fg-color--lighter); }
+.site-search__all { display: block; margin-top: .2rem; border-top: 1px solid var(--md-default-fg-color--lightest); color: var(--site-navy); font-weight: 500; }
+[data-md-color-scheme="slate"] .site-search__all { color: #d2d2d2; }
+.site-search__empty { margin: 0; padding: .5rem .9rem; color: var(--md-default-fg-color--light); font-size: var(--fs-70); }
+.md-header__button.site-search__mobile { display: none; }
+@media screen and (max-width: 59.984375em) {
+  .site-search { display: none; }
+  .md-header__button.site-search__mobile { display: inline-block; }
+}
+
+/* ==========================================
+   右のサイドバー：このページの目次 ＋ 今いる分野の章（overrides/partials/toc.html）
+   PC では左のナビを出さない（スマホのメニューは今まで通り左から）
+   ========================================== */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary { display: none; }
+  .md-sidebar--secondary { width: 14rem; }
+}
+/* 「このページ」：解答・解説の帯と同じ形（薄紺の帯，左端に紺の丸としおりのアイコン） */
+.side-heading,
+.md-sidebar--secondary .md-nav__title.side-heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: .35rem 0 .7rem 1.1rem;
+  padding: .3rem .6rem .28rem 1.2rem;
+  border-radius: 0 1em 1em 0;
+  background: #ececec;
+  color: var(--site-navy);
+  font-size: var(--fs-68);
+  font-weight: 500;
+  letter-spacing: .04em;
+  overflow: visible;
+  box-shadow: none !important;
+}
+.side-heading .side-heading__icon,
+.md-sidebar--secondary .md-nav__title.side-heading .side-heading__icon {
+  position: absolute;
+  left: -.8rem; top: 50%;
+  width: 1.6rem; height: 1.6rem;
+  padding: .45rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--site-navy);
+  color: #fff;
+  box-sizing: border-box;
+}
+[data-md-color-scheme="slate"] .side-heading { background: rgba(255, 255, 255, .12) !important; color: #e3e3e3; }
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__title.side-heading { background: rgba(255, 255, 255, .12) !important; color: #e3e3e3; }
+[data-md-color-scheme="slate"] .side-heading .side-heading__icon { background: #4b4b4b; }
+.side-heading__icon { display: inline-flex; flex: none; width: .85em; height: .85em; }
+.side-heading__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-sidebar--secondary .md-nav--secondary .md-nav__list { border-left: 1px solid var(--md-default-fg-color--lightest); }
+.md-sidebar--secondary .md-nav--secondary .md-nav__link { margin: 0 0 0 -1px; padding: .3rem .7rem; border-left: 2px solid transparent; }
+.md-sidebar--secondary .md-nav--secondary .md-nav__link--active { border-left-color: var(--site-star); color: var(--md-typeset-color) !important; }
+
+.side-chapters { margin: 1.6rem 0 1rem; font-size: var(--fs-66); }
+.side-chapters__index {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  margin-bottom: .5rem;
+  padding: .45rem .7rem;
+  background: var(--site-navy);
+  color: #fff;
+  font-size: var(--fs-70);
+  font-weight: 500;
+}
+.side-chapters__label { flex: 1; }
+[data-md-color-scheme="slate"] .side-chapters__index { background: #4b4b4b; }
+.side-chapter__head { list-style: none; padding: .3rem .6rem; cursor: pointer; color: var(--md-typeset-color); }
+.side-chapter__head::-webkit-details-marker { display: none; }
+.side-chapter[open] > .side-chapter__head { font-weight: 500; }
+.side-chapter__list { margin: 0 0 .4rem .6rem; padding: 0; list-style: none; border-left: 1px solid var(--md-default-fg-color--lightest); }
+.side-chapter__link { display: flex; gap: .5em; margin-left: -1px; padding: .22rem .6rem; border-left: 2px solid transparent; color: var(--md-default-fg-color--light); line-height: 1.4; }
+.side-chapter__link.is-current { border-left-color: var(--site-star); color: var(--md-typeset-color); font-weight: 500; }
+.side-chapter__num { flex: none; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .side-chapter__num { color: #d2d2d2; }
+
+/* ==========================================
+   押せるもの共通：マウスを乗せる／押すと，解答・解説の帯と同じ薄い紺が左から塗られる
+   ========================================== */
+[data-md-color-scheme] { --site-sweep: #ececec; --site-sweep-text: var(--site-navy); }
+[data-md-color-scheme="slate"] { --site-sweep: rgba(255, 255, 255, .16); --site-sweep-text: #f1f1f1; }
+.md-sidebar--secondary .md-nav--secondary .md-nav__link,
+.side-chapter__head,
+.side-chapter__link,
+.md-typeset .page-nav__side,
+.md-typeset a.page-links__button,
+.md-typeset a.toc-row {
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-sidebar--secondary .md-nav--secondary .md-nav__link:is(:hover, :focus-visible, :active),
+.side-chapter__head:is(:hover, :focus-visible, :active),
+.side-chapter__link:is(:hover, :focus-visible, :active),
+.md-typeset .page-nav__side:is(:hover, :focus-visible, :active),
+.md-typeset a.page-links__button:is(:hover, :focus-visible, :active),
+.md-typeset a.toc-row:is(:hover, :focus-visible, :active) {
+  background-size: 100% 100%;
+  background-color: transparent;
+  border-radius: 0;
+  color: var(--site-sweep-text) !important;
+}
+.side-chapter__link:hover .side-chapter__num,
+.md-typeset .page-nav__side:hover :is(.page-nav__dir, .page-nav__title),
+.md-typeset a.page-links__button:hover :is(.page-links__arrow),
+.md-typeset a.page-links__button:hover::before,
+.md-typeset a.toc-row:hover :is(.toc-row__num, .toc-row__title, .finder__snippet) { color: var(--site-sweep-text) !important; }
+/* 紺の一覧ボタンは逆に，白っぽく明るくなる */
+.side-chapters__index { background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%; transition: background-size .45s cubic-bezier(.25, .8, .25, 1); }
+.side-chapters__index:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
+@media (prefers-reduced-motion: reduce) {
+  .md-sidebar--secondary .md-nav--secondary .md-nav__link, .side-chapter__head, .side-chapter__link,
+  .md-typeset .page-nav__side, .md-typeset a.page-links__button, .md-typeset a.toc-row, .side-chapters__index { transition: none; }
+}
+
+/* 「一覧へ」は上から下へ塗る */
+.md-typeset .page-nav__list {
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep));
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset .page-nav__list:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text) !important; }
+
+/* 章を開くと問題のリストがにゅっと伸びる（対応ブラウザのみ。非対応ならそのまま開く） */
+.side-chapter { interpolate-size: allow-keywords; }
+.side-chapter::details-content {
+  height: 0;
+  overflow: clip;
+  transition: height .35s cubic-bezier(.25, .8, .25, 1), content-visibility .35s allow-discrete;
+}
+.side-chapter[open]::details-content { height: auto; }
+
+/* PC では本文の幅を読みやすい長さに抑え，右のサイドバーとの間で中央に置く */
+@media screen and (min-width: 76.25em) {
+  .md-main .md-content__inner { max-width: 35rem; margin-left: auto !important; margin-right: auto !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .page-nav__list, .side-chapter::details-content { transition: none; }
+}
+
+/* 目次の「問題」「解答・解説」のアイコン */
+.toc-icon { display: inline-flex; width: .8em; height: .8em; margin-right: .4em; vertical-align: -.05em; color: var(--site-navy); }
+.toc-icon svg { width: 100%; height: 100%; fill: currentColor; }
+[data-md-color-scheme="slate"] .toc-icon { color: #d2d2d2; }
+
+/* ==========================================
+   スマホ・タブレットの左メニュー（overrides/partials/nav.html）
+   ========================================== */
+/* Material のスマホメニューは高さが画面に固定された箱なので，中身（.drawer）を縦にスクロールさせる */
+@media screen and (max-width: 76.234375em) {
+  .md-nav--primary { display: flex; flex-direction: column; }
+  .md-nav--primary > .drawer {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* サイト名は切らずに折り返す */
+  .md-nav--primary > .md-nav__title { white-space: normal !important; overflow: visible !important; font-size: var(--fs-75); flex: none; }
+}
+.drawer { padding: .6rem .8rem 2rem; font-size: var(--fs-72); }
+.drawer .side-chapters { margin-top: .4rem; font-size: var(--fs-70); }
+.drawer__heading.side-heading { margin: 1.6rem 0 .6rem 1.1rem; }
+.drawer__links { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--md-default-fg-color--lightest); }
+.drawer__link {
+  display: flex;
+  align-items: center;
+  gap: .55em;
+  margin-left: -1px;
+  padding: .45rem .7rem;
+  border-left: 2px solid transparent;
+  color: var(--md-typeset-color);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.drawer__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text); }
+.drawer__link.is-current { border-left-color: var(--site-star); font-weight: 500; }
+/* 物理数学：その場で開く分野の一覧 */
+.drawer__toggle { cursor: pointer; list-style: none; }
+.drawer__toggle::-webkit-details-marker { display: none; }
+.drawer__caret { display: inline-flex; margin-left: auto; width: .7em; height: .7em; color: var(--md-default-fg-color--light); transition: transform .3s cubic-bezier(.25, .8, .25, 1); }
+.drawer__caret svg { width: 100%; height: 100%; fill: currentColor; }
+.drawer__group[open] .drawer__caret { transform: rotate(180deg); }
+.drawer__sublinks { margin: 0 0 .3rem; padding: 0 0 0 1.1rem; list-style: none; }
+.drawer__sublink { padding-top: .38rem; padding-bottom: .38rem; font-size: var(--fs-68); }
+
+/* iPhone（Safari・iPhone 版 Chrome は WebKit）は検索窓とボタンに独自の見た目（角丸の枠・余白・最小幅）を付けるので打ち消す */
+.md-typeset .finder__search input,
+.site-search__input {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.md-typeset .finder__search input { width: 100%; padding: 0; }
+.md-typeset .finder__search input::-webkit-search-decoration,
+.md-typeset .finder__search input::-webkit-search-cancel-button { -webkit-appearance: none; }
+.md-typeset .finder__subject,
+.md-typeset .finder__level {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.md-typeset .finder__search { min-width: 0; }
+
+/* ヘッダーのロゴ（ベクトル n と★）を少し大きく */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg { width: 1.9rem; height: 1.9rem; }
+.md-header__button.md-logo { margin: .1rem; padding: .2rem; }
+
+/* ヘッダー：サイト名の段とタブの段を同じ黒の1本の帯にする。下の影も付けない */
+.md-header, .md-tabs { background-color: #1a1a1a; }
+[data-md-color-scheme="slate"] :is(.md-header, .md-tabs) { background-color: #0e0e0e; }
+.md-header, .md-header--shadow { box-shadow: none; }
+/* スマホのメニューを開いたときの上の段もヘッダーと同じ黒にする */
+@media screen and (max-width: 76.24em) {
+  .md-nav--primary > .md-nav__title { background-color: #1a1a1a !important; }
+  [data-md-color-scheme="slate"] .md-nav--primary > .md-nav__title { background-color: #0e0e0e !important; }
+}
+
+/* ==========================================
+   トップページ（ヒーローは overrides/main.html，本文は hooks/problem_layout.py の _home）
+   ========================================== */
+.home-hero { position: relative; z-index: 1; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #1a1a1a; background-position: center; background-size: cover; color: #fff; }
+.home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(18, 18, 18, .68), rgba(18, 18, 18, .8)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
+.home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
+.home-hero__title { margin: .5rem 0 .4rem; font-size: var(--fs-145); font-weight: 500; letter-spacing: .08em; color: #fff; }
+.home-hero__facts { margin: 0 0 1.4rem; font-size: var(--fs-74); letter-spacing: .06em; color: rgba(255, 255, 255, .78); }
+.home-search { margin: 0; }
+.home-search .site-search__input { width: 100% !important; height: 2.6rem; padding-left: 2.6rem; font-size: var(--fs-85); background: rgba(255, 255, 255, .12); }
+.home-search .site-search__input:focus { background: rgba(255, 255, 255, .18); }
+.home-search .site-search__icon { left: .9rem; width: 1.1rem; height: 1.1rem; }
+.home-search .site-search__results { left: 0; right: 0; width: auto; text-align: left; }
+@media screen and (max-width: 59.984375em) { .home-search.site-search { display: flex; } }
+
+.md-typeset .home-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin: 1rem 0 .6rem; }
+.md-typeset a.home-tile,
+.md-typeset a.home-level {
+  border: none;
+  background-color: #f6f6f6;
+  color: var(--md-typeset-color);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep));
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset a.home-tile:is(:hover, :focus-visible), .md-typeset a.home-level:is(:hover, :focus-visible) { background-size: 100% 100%; }
+[data-md-color-scheme="slate"] .md-typeset :is(a.home-tile, a.home-level) { background-color: rgba(255, 255, 255, .035); }
+.md-typeset a.home-tile { display: flex; gap: .8rem; padding: .9rem 1rem; }
+.md-typeset .home-tile__body { display: flex; flex: 1; flex-direction: column; gap: .25rem; min-width: 0; }
+.md-typeset .home-tile__name { display: flex; justify-content: space-between; align-items: baseline; font-size: var(--fs-88); font-weight: 500; }
+.md-typeset .home-tile__count { font-size: var(--fs-66); font-weight: 400; color: var(--md-default-fg-color--light); }
+.md-typeset .home-tile__desc { font-size: var(--fs-64); line-height: 1.5; color: var(--md-default-fg-color--light); }
+.md-typeset .home-bar { display: flex; gap: 2px; height: 4px; margin-top: .35rem; }
+.md-typeset .home-bar + .home-tile__desc { margin-top: .45rem; }
+.md-typeset .home-bar__seg { display: inline-block; height: 4px; border-radius: 2px; }
+.md-typeset .home-bar__seg--1 { background: #d6d6d6; }
+.md-typeset .home-bar__seg--2 { background: #9a9a9a; }
+.md-typeset .home-bar__seg--3 { background: #4a4a4a; }
+.md-typeset .home-legend { display: flex; align-items: center; justify-content: flex-end; gap: .4rem; font-size: var(--fs-60); color: var(--md-default-fg-color--light); }
+.md-typeset .home-legend .home-bar__seg { width: 1rem; margin-left: .6rem; }
+.md-typeset .home-tiles--single { grid-template-columns: 1fr; }
+.md-typeset .home-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin: 1rem 0; }
+.md-typeset a.home-level { display: flex; flex-direction: column; gap: .2rem; padding: .9rem 1rem; }
+.md-typeset .home-level__stars { font-size: var(--fs-90); letter-spacing: .06em; color: #f2c200; }
+.md-typeset .home-level__stars .off { color: var(--md-default-fg-color--lighter); }
+.md-typeset .home-level__name { font-size: var(--fs-85); font-weight: 500; }
+.md-typeset .home-level__desc { font-size: var(--fs-62); color: var(--md-default-fg-color--light); }
+.md-typeset .home-level__count { font-size: var(--fs-66); color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .home-level__count { color: #d2d2d2; }
+.md-typeset .home-promise { padding: .3em 1.1rem .6em; background: #f6f6f6; border-left: 3px solid var(--site-star); }
+[data-md-color-scheme="slate"] .md-typeset .home-promise { background: rgba(255, 255, 255, .035); }
+
+/* 運営者のカード：ロゴ（ファビコン）を顔にして，名前・紹介・SNS のボタン */
+.md-typeset .home-owner { display: flex; gap: 1rem; align-items: flex-start; margin: 1rem 0 2rem; padding: 1.1rem 1.2rem; background: #f6f6f6; }
+[data-md-color-scheme="slate"] .md-typeset .home-owner { background: rgba(255, 255, 255, .035); }
+.md-typeset .home-owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; }
+.md-typeset .home-owner__body p { margin: 0; }
+.md-typeset .home-owner__name { font-size: var(--fs-95); font-weight: 500; }
+.md-typeset .home-owner__name span { margin-left: .6em; font-size: var(--fs-62); font-weight: 400; color: var(--md-default-fg-color--light); }
+.md-typeset .home-owner__bio { margin: .3rem 0 .7rem !important; font-size: var(--fs-74); }
+.md-typeset .home-owner__links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.md-typeset a.home-owner__link {
+  display: inline-flex; align-items: center; gap: .45em;
+  padding: .32rem .9rem; border: none; background-color: var(--site-navy); color: #fff; font-size: var(--fs-68); font-weight: 500;
+  background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset a.home-owner__link:is(:hover, :focus-visible) { background-size: 100% 100%; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset a.home-owner__link { background-color: #4b4b4b; }
+.md-typeset .home-owner__icon { display: inline-flex; width: .85em; height: .85em; }
+.md-typeset .home-owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
+@media screen and (max-width: 45em) {
+  .md-typeset .home-tiles, .md-typeset .home-levels { grid-template-columns: 1fr; }
+}
+
+/* ==========================================
+   面の地模様：今は使わない（2026-11-17 に斜線をやめた）。
+   ボタン類の背景は「塗り」と「地模様」の2層で組んでいるので，変数は none のまま残す
+   ========================================== */
+[data-md-color-scheme] { --site-stripe: none; }
+.md-typeset :is(h2.solution-heading, h2.toc-chapter__head, h2.books-head, .books-intro, .home-promise, .finder__search),
+.md-sidebar--secondary .md-nav__title.side-heading, .side-heading {
+  background-image: var(--site-stripe);
+}
+/* 横から塗られるボタン類：塗りの層と地模様の層 */
+.md-typeset :is(a.page-links__button, a.home-tile, a.home-level) {
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)), var(--site-stripe);
+  background-size: 0 100%, auto;
+  background-repeat: no-repeat, repeat;
+}
+.md-typeset :is(a.page-links__button, a.home-tile, a.home-level):is(:hover, :focus-visible, :active) { background-size: 100% 100%, auto; }
+
+/* ==========================================
+   運営者情報：見出しは吹き出し（紺，しっぽが下のカードを指す），中身は薄いグレーのカード。全ページの末尾
+   ========================================== */
+.md-typeset .owner { margin: 2.4rem 0 1rem; }
+.md-typeset .owner__heading {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  margin: 0 0 .9rem;
+  padding: .4rem 1rem;
+  border-radius: .2rem;
+  background: var(--site-navy);
+  color: #fff;
+  font-size: var(--fs-78);
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+.md-typeset .owner__heading::after {
+  content: "";
+  position: absolute;
+  left: 1.1rem; bottom: -.5rem;
+  border: .5rem solid transparent;
+  border-bottom: 0;
+  border-top-color: var(--site-navy);
+}
+[data-md-color-scheme="slate"] .md-typeset .owner__heading { background: #4b4b4b; }
+[data-md-color-scheme="slate"] .md-typeset .owner__heading::after { border-top-color: #4b4b4b; }
+.md-typeset .owner__heading-icon { display: inline-flex; width: .8em; height: .8em; }
+.md-typeset .owner__heading-icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; background-color: #f6f6f6; background-image: var(--site-stripe); }
+[data-md-color-scheme="slate"] .md-typeset .owner__card { background-color: rgba(255, 255, 255, .035); }
+.md-typeset .owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; object-fit: cover; }
+.md-typeset .owner__body p { margin: 0; }
+.md-typeset .owner__name { font-size: var(--fs-92); font-weight: 500; }
+.md-typeset .owner__name span { margin-left: .6em; font-size: var(--fs-62); font-weight: 400; color: var(--md-default-fg-color--light); }
+.md-typeset .owner__text { margin: .3rem 0 .7rem !important; font-size: var(--fs-74); }
+.md-typeset .owner__links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.md-typeset a.owner__link {
+  display: inline-flex; align-items: center; gap: .45em;
+  padding: .32rem .9rem; border: none; background-color: var(--site-navy); color: #fff; font-size: var(--fs-68); font-weight: 500;
+  background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset a.owner__link { background-color: #4b4b4b; }
+.md-typeset .owner__icon { display: inline-flex; width: .85em; height: .85em; }
+.md-typeset .owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.home-hero__title span { display: inline-block; }
+
+/* タブレット幅でも PC と同じ行幅（35rem）にして中央に */
+@media screen and (min-width: 45em) and (max-width: 76.234375em) {
+  .md-main .md-content__inner { max-width: 35rem; margin-left: auto !important; margin-right: auto !important; }
+}
+
+/* ==========================================
+   解答の折りたたみ（javascripts/answers.js）
+   ========================================== */
+.md-typeset .answer { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .45s cubic-bezier(.25, .8, .25, 1); }
+.md-typeset .answer.is-closed { grid-template-rows: 0fr; }
+.md-typeset .answer__inner { min-height: 0; overflow: hidden; }
+.md-typeset .answer-toggle {
+  display: inline-flex; align-items: center; gap: .4em;
+  margin: 0 0 .6rem; padding: .35rem 1rem; border: none; cursor: pointer;
+  background-color: #ececec; background-image: linear-gradient(var(--site-sweep), var(--site-sweep)), var(--site-stripe);
+  background-size: 0 100%, auto; background-repeat: no-repeat, repeat;
+  color: var(--site-navy); font: inherit; font-size: var(--fs-72); font-weight: 500;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
+}
+.md-typeset .answer-toggle::before { content: "▶"; font-size: .6em; transition: transform .3s; }
+.md-typeset .answer-toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
+.md-typeset .answer-toggle:is(:hover, :focus-visible) { background-size: 100% 100%, auto; }
+[data-md-color-scheme="slate"] .md-typeset .answer-toggle { background-color: rgba(255, 255, 255, .12); color: #e3e3e3; }
+.md-typeset h2.solution-heading .answer-all {
+  position: absolute; right: .7rem; top: 50%; transform: translateY(-50%);
+  padding: .15rem .7rem; border: 1px solid currentColor; border-radius: 1em; background: none; cursor: pointer;
+  color: inherit; font: inherit; font-size: var(--fs-62); opacity: .8;
+}
+.md-typeset h2.solution-heading .answer-all:hover { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .md-typeset .answer { transition: none; } }
+
+/* ==========================================
+   解いた印（javascripts/solved.js）
+   ========================================== */
+.md-typeset .solved { display: flex; justify-content: center; margin: 3em 0 0; }
+.md-typeset .solved + .page-nav { margin-top: 1.4em; }
+.md-typeset .solved__button {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .55rem 1.6rem; border: 1.5px solid var(--site-navy); border-radius: 2em; background: none; cursor: pointer;
+  color: var(--site-navy); font: inherit; font-size: var(--fs-80); font-weight: 500;
+  transition: background .3s, color .3s, transform .2s;
+}
+.md-typeset .solved__button:hover { background: #ececec; }
+.md-typeset .solved__button:active { transform: scale(.96); }
+.md-typeset .solved__check { display: inline-flex; align-items: center; justify-content: center; width: 1.2em; height: 1.2em; border-radius: 50%; border: 1.5px solid currentColor; font-size: .8em; }
+.md-typeset .solved__button.is-on { background: var(--site-navy); color: #fff; }
+.md-typeset .solved__button.is-on .solved__check { background: var(--site-star); border-color: var(--site-star); color: var(--site-navy); animation: site-pop .35s cubic-bezier(.2, .8, .2, 1.4); }
+@keyframes site-pop { from { transform: scale(.4); } to { transform: scale(1); } }
+[data-md-color-scheme="slate"] .md-typeset .solved__button { border-color: #b6b6b6; color: #d2d2d2; }
+[data-md-color-scheme="slate"] .md-typeset .solved__button.is-on { background: #4b4b4b; color: #fff; }
+/* 一覧などの ✓：番号の左に小さな黄色の丸 */
+:is(.side-chapter__link, a.toc-row, a.page-nav__side, .site-search__item).is-solved { position: relative; }
+:is(.side-chapter__link, a.toc-row, .site-search__item).is-solved::after {
+  content: "✓"; position: absolute; left: -.35rem; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; justify-content: center; width: .9rem; height: .9rem;
+  border-radius: 50%; background: var(--site-star); color: var(--site-navy); font-size: var(--fs-55); font-weight: 700;
+}
+.md-typeset a.page-nav__side.is-solved .page-nav__title::after { content: " ✓"; color: #f2c200; }
+.md-typeset .home-tile__count.has-solved { color: #f2c200; font-weight: 500; }
+
+/* ==========================================
+   Markdown でコピー（javascripts/copy-markdown.js）：パンくずの下，右寄せ
+   ========================================== */
+.md-typeset .page-tools { display: flex; justify-content: flex-end; margin: -2.6rem 0 1.4rem; min-height: 1.2rem; }
+@media screen and (max-width: 45em) { .md-typeset .page-tools { margin: -.6rem 0 1.2rem; } }
+.md-typeset .page-tools__copy {
+  display: inline-flex; align-items: center; gap: .4em;
+  padding: .2rem .7rem; border: 1px solid var(--md-default-fg-color--lightest); background: none; cursor: pointer;
+  color: var(--md-default-fg-color--light); font: inherit; font-size: var(--fs-62);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset .page-tools__copy:is(:hover, :focus-visible) { background-size: 100% 100%; color: var(--site-sweep-text); }
+.md-typeset .page-tools__icon {
+  display: inline-block; width: .9em; height: .9em; background-color: currentColor;
+  -webkit-mask: url("../assets/icons/copy.svg") center / contain no-repeat; mask: url("../assets/icons/copy.svg") center / contain no-repeat;
+}
+
+/* ==========================================
+   トップへ（navigation.top）：右下の小さな丸いボタン（↑ とその下に「トップへ」）
+   ========================================== */
+.md-top {
+  position: fixed;
+  inset: auto 1rem 1.2rem auto !important;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .05rem;
+  width: 2.9rem; height: 2.9rem; margin: 0; padding: 0;
+  border-radius: 50%;
+  background: var(--site-navy); color: #fff;
+  box-shadow: 0 .2rem .7rem rgba(0, 0, 0, .22);
+  font-size: 0;
+  transform: none;
+  transition: opacity .3s, transform .3s, background .3s;
+}
+.md-top svg { width: .9rem; height: .9rem; margin: 0; }
+.md-top::after { content: "トップへ"; font-size: var(--fs-45); line-height: 1; letter-spacing: .04em; }
+.md-top:is(:hover, :focus-visible) { background: #383838; color: #fff; transform: translateY(-.15rem); box-shadow: 0 .35rem .9rem rgba(0, 0, 0, .26); }
+/* 消えるときも下へ沈みながらフェードする（Material は隠すときのアニメーションを 0 にしているので上書き） */
+.md-top[hidden], .md-top--hidden { display: flex; opacity: 0; transform: translateY(.8rem); pointer-events: none; transition-duration: .3s; }
+[data-md-color-scheme="slate"] .md-top { background: #4b4b4b; }
+
+/* 同じページ内の移動（目次・トップへ）はなめらかにスクロール */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ==========================================
+   404 ページ
+   ========================================== */
+.md-typeset .not-found { max-width: 30rem; margin: 2rem auto 3rem; text-align: center; }
+.md-typeset .not-found__logo { width: 3.6rem; height: 3.6rem; border-radius: .3rem; }
+.md-typeset .not-found__code { margin: .8rem 0 0; font-size: var(--fs-240); font-weight: 300; letter-spacing: .2em; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .not-found__code { color: #d2d2d2; }
+.md-typeset h1.not-found__title { margin: .2rem 0 .6rem; padding: 0; border: none; font-size: var(--fs-120); }
+.md-typeset .not-found__text { font-size: var(--fs-75); color: var(--md-default-fg-color--light); }
+.md-typeset .not-found__search { display: flex !important; margin: 1.2rem 0; }
+.md-typeset .not-found__search .site-search__input { width: 100% !important; height: 2.4rem; padding-left: 2.4rem; background: #f6f6f6; color: var(--md-typeset-color); }
+.md-typeset .not-found__search .site-search__input::placeholder { color: var(--md-default-fg-color--light); }
+.md-typeset .not-found__search .site-search__icon { color: var(--site-navy); left: .8rem; }
+.md-typeset .not-found__search .site-search__results { left: 0; right: 0; width: auto; text-align: left; }
+[data-md-color-scheme="slate"] .md-typeset .not-found__search .site-search__input { background: rgba(255, 255, 255, .06); }
+.md-typeset .not-found__links { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem .8rem; }
+.md-typeset a.not-found__link { display: inline-flex; align-items: center; gap: .4em; border: none; color: var(--md-typeset-color); font-size: var(--fs-74); }
+.md-typeset a.not-found__home { border: none; font-size: var(--fs-74); color: var(--site-navy); font-weight: 500; }
+.md-main__inner:has(.not-found) .md-sidebar--secondary { display: none; }
+
+/* トップページ：分野の中の小見出し（物理・物理数学） */
+.md-typeset h3.home-subhead { margin: 1.3em 0 0; padding-left: .1rem; font-size: var(--fs-78); font-weight: 500; letter-spacing: .06em; color: var(--md-default-fg-color--light); }
+
+/* トップページ：更新履歴（日付の点を縦線でつないだ年表） */
+.md-typeset .home-news {
+  margin: 1rem 0 0;
+  padding: 1.1rem 1.3rem .4rem;
+  background-color: #f6f6f6;
+  background-image: var(--site-stripe);
+  font-size: var(--fs-74);
+}
+.md-typeset .home-news > ul { margin: 0; padding: 0; list-style: none; }
+.md-typeset .home-news > ul > li { position: relative; margin: 0; padding: 0 0 1.1em 1.4rem; }
+.md-typeset .home-news > ul > li::before {
+  content: ""; position: absolute; left: .18rem; top: .42em;
+  width: .5rem; height: .5rem; border-radius: 50%;
+  background: var(--site-navy); box-shadow: 0 0 0 3px #f6f6f6;
+}
+.md-typeset .home-news > ul > li::after {
+  content: ""; position: absolute; left: .42rem; top: 1.1em; bottom: -.3em;
+  width: 1px; background: #dcdcdc;
+}
+.md-typeset .home-news > ul > li:last-child::after { display: none; }
+.md-typeset .home-news > ul > li > p { margin: 0; }
+.md-typeset .home-news > ul > li strong { display: block; margin-bottom: .15em; font-weight: 600; letter-spacing: .04em; color: var(--site-navy); font-variant-numeric: tabular-nums; }
+.md-typeset .home-news ul ul { margin: .45em 0 0; padding: 0; list-style: none; color: var(--md-default-fg-color--light); }
+.md-typeset .home-news ul ul li { position: relative; margin: .2em 0; padding-left: .9em; }
+.md-typeset .home-news ul ul li::before { content: ""; position: absolute; left: 0; top: .8em; width: .35em; height: 1px; background: currentColor; opacity: .6; }
+[data-md-color-scheme="slate"] .md-typeset .home-news { background-color: rgba(255, 255, 255, .035); }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::before { background: #9f9f9f; box-shadow: 0 0 0 3px #292929; }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li::after { background: rgba(255, 255, 255, .12); }
+[data-md-color-scheme="slate"] .md-typeset .home-news > ul > li strong { color: #d2d2d2; }
+
+
+/* パンくず */
+.md-typeset .md-path__link { display: inline-flex; align-items: center; }
+
+/* ヘッダー：「物理数学」タブで開く分野の一覧（タブの真下に縦に並べる。背景は少し透かす） */
+.md-tabs__menu-toggle { padding: 0; border: none; background: none; color: inherit; font-family: inherit; line-height: inherit; cursor: pointer; }
+.md-tabs__caret { display: inline-flex; width: .6em; height: .6em; margin-left: .1em; transition: transform .2s ease; }
+.md-tabs__link .md-tabs__caret svg { flex: none; width: 100%; height: 100%; margin: 0 !important; fill: currentColor; }
+.md-tabs__item--open .md-tabs__caret { transform: rotate(180deg); }
+.md-tabs__item--open .md-tabs__link { opacity: 1; }
+.md-tabs__menu {
+  position: absolute; top: 100%; left: 0;
+  z-index: 3;
+  padding: .3rem 0 .4rem;
+  border-radius: 0 0 .3rem .3rem;
+  background: rgba(21, 21, 21, .74);
+  -webkit-backdrop-filter: blur(4px) saturate(120%);
+  backdrop-filter: blur(4px) saturate(120%);
+  box-shadow: 0 .6rem 1.4rem rgba(0, 0, 0, .22);
+  transform: translateY(-.35rem); opacity: 0;
+  transition: transform .18s ease, opacity .18s ease;
+}
+[data-md-color-scheme="slate"] .md-tabs__menu { background: rgba(16, 16, 16, .72); }
+.md-tabs__menu.is-open { transform: none; opacity: 1; }
+.md-tabs__menu-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.md-tabs__menu-link {
+  display: flex; align-items: center; gap: .55em;
+  padding: .42rem 1.1rem .42rem .75rem;
+  color: var(--md-primary-bg-color); font-size: var(--fs-70); white-space: nowrap; opacity: .82;
+}
+/* 触れると，サイドバーと同じように左から薄い色が塗られる */
+.md-tabs__menu-link {
+  background-image: linear-gradient(rgba(255, 255, 255, .12), rgba(255, 255, 255, .12));
+  background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), opacity .3s;
+}
+.md-tabs__menu-link:is(:hover, :focus-visible, :active) { opacity: 1; background-size: 100% 100%; }
+.md-tabs__menu-item--active .md-tabs__menu-link { opacity: 1; font-weight: 500; box-shadow: inset 2px 0 0 var(--md-accent-fg-color); }
+@media (prefers-reduced-motion: reduce) { .md-tabs__menu, .md-tabs__caret { transition: none; } }
+
+/* 関連：前後の問題の真上に，同じ線と同じ形で1段足す（左に「関連」，右に問題の一覧） */
+.md-typeset .related { display: grid; grid-template-columns: 5rem 1fr; margin: 3em 0 0; border-top: 1px solid #e3e3e3; }
+.md-typeset .related__label { display: flex; align-items: center; justify-content: center; margin: .7rem 0; border-right: 1px solid #e3e3e3; color: var(--site-navy); font-size: var(--fs-70); font-weight: 500; letter-spacing: .1em; }
+.md-typeset ul.related__list { margin: 0; padding: .45rem 0; list-style: none; }
+.md-typeset ul.related__list > li { margin: 0; list-style: none; }
+.md-typeset a.related__link {
+  display: block; padding: .32rem .9rem; border-bottom: none; color: var(--md-typeset-color); font-size: var(--fs-78);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset a.related__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text); border-bottom: none; }
+.md-typeset .related + .page-nav { margin-top: 0; }
+[data-md-color-scheme="slate"] .md-typeset .related, [data-md-color-scheme="slate"] .md-typeset .related__label { border-color: rgba(255, 255, 255, .1); }
+[data-md-color-scheme="slate"] .md-typeset .related__label { color: #d2d2d2; }
+@media screen and (max-width: 44.9375em) { .md-typeset .related { grid-template-columns: 3.6rem 1fr; } }
+
+/* 解説の末尾：補足（物理の標準的な扱いに対する厳密な条件など）。普段は1行で，押すと開く */
+.md-typeset details.rigor-note { margin: 2em 0 0; padding: 0; border: none; border-top: 1px solid #e3e3e3; border-radius: 0; background: none; box-shadow: none; font-size: inherit; overflow: visible; }
+.md-typeset details.rigor-note > summary {
+  display: flex; align-items: center; gap: .55rem; margin: 0; padding: .6rem 0; border: none; border-radius: 0; background: none;
+  color: var(--md-default-fg-color--light); font-size: var(--fs-72); font-weight: 400; cursor: pointer; list-style: none;
+}
+.md-typeset details.rigor-note > summary::-webkit-details-marker { display: none; }
+.md-typeset details.rigor-note > summary::before {
+  content: ""; position: static; flex: none; width: .4rem; height: .4rem; margin: 0; background: none;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; -webkit-mask: none; mask: none;
+  transform: rotate(-45deg); transition: transform .2s;
+}
+.md-typeset details.rigor-note > summary::after { display: none; }
+.md-typeset details.rigor-note[open] > summary::before { transform: rotate(45deg); }
+.md-typeset details.rigor-note > summary:hover { color: var(--md-typeset-color); }
+.md-typeset .rigor-note__body { padding: 0 0 .5rem 1rem; color: var(--md-default-fg-color--light); font-size: var(--fs-74); }
+.md-typeset .rigor-note__body > p { margin: 0; }
+[data-md-color-scheme="slate"] .md-typeset details.rigor-note { border-top-color: rgba(255, 255, 255, .1); }
+@media (prefers-reduced-motion: reduce) { .md-typeset details.rigor-note > summary::before { transition: none; } }
+.md-typeset .rigor-note__icon { display: inline-flex; flex: none; width: .85em; height: .85em; margin-left: -.1rem; }
+.md-typeset .rigor-note__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.md-typeset .related__label { gap: .4em; }
+.md-typeset .related__icon { display: inline-flex; width: .85em; height: .85em; }
+.md-typeset .related__icon svg { width: 100%; height: 100%; fill: currentColor; }
+
+/* 解説の頭：考え方と，そのあとに置く性質の欄。見出しは同じ部品で，文字と線の始まりだけを変える */
+.md-typeset .approach { margin: 0 0 1.8em; }
+.md-typeset .approach-points { margin: -1em 0 1.8em; }
+.md-typeset :is(.approach, .approach-points)::before {
+  content: "考え方"; display: block; margin: 0 0 .3em; padding-right: 0;
+  color: var(--site-navy); font-size: var(--fs-72); font-weight: 700; letter-spacing: .1em;
+  background: linear-gradient(#e3e3e3, #e3e3e3) right center / calc(100% - var(--label-w, 4.2em)) 1px no-repeat;
+}
+.md-typeset .approach-points::before { content: "性質"; --label-w: 3.1em; }
+.md-typeset .approach > p { margin: 0 0 .4em; }
+.md-typeset .approach-points > ul { margin: 0 0 .4em; }
+[data-md-color-scheme="slate"] .md-typeset :is(.approach, .approach-points)::before { color: #d2d2d2; background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)); }
+
+/* ==========================================
+   紺のボタン：押すと黄色に塗られ，文字が濃い紺になる（はっきり押した感じを出す）
+   ========================================== */
+.side-chapters__index,
+.md-typeset a.book-btn,
+.md-typeset a.home-owner__link,
+.md-typeset a.owner__link {
+  background-image: linear-gradient(var(--site-star), var(--site-star)) !important;
+  background-repeat: no-repeat !important;
+  background-size: 0 100% !important;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active),
+:is(.side-chapters__index, .md-typeset a.book-btn, .md-typeset a.home-owner__link, .md-typeset a.owner__link):is(:hover, :focus-visible, :active) * {
+  color: #1f1f1f !important;
+}
+
+/* 前後の問題：矢印の向きに塗る（前は右から，次は左から）。次の問題だけ塗りを紺にして差をつける */
+.md-typeset .page-nav__side:not(.page-nav__side--next) { background-position: right center; }
+.md-typeset .page-nav__side--next { background-image: linear-gradient(var(--site-navy), var(--site-navy)) !important; }
+[data-md-color-scheme="slate"] .md-typeset .page-nav__side--next { background-image: linear-gradient(#4b4b4b, #4b4b4b) !important; }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active),
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) :is(.page-nav__dir, .page-nav__title) { color: #fff !important; }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .on { color: var(--site-star); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__stars .off { color: rgba(255, 255, 255, .35); }
+
+/* 前後の問題がない側（分野の最初と最後）は押せないので，塗りも反応もしない */
+.md-typeset .page-nav__side--empty { background-image: none !important; cursor: default; }
+
+/* 次の問題：右から紺の円が広がって反転し，→ が右へ抜けて「次の問題」の左から入り直す */
+.md-typeset a.page-nav__side--next { position: relative; isolation: isolate; overflow: hidden; background-image: none !important; }
+.md-typeset a.page-nav__side--next::before {
+  content: ""; position: absolute; right: 1.2rem; top: 50%; z-index: -1;
+  width: 1rem; height: 1rem; margin: -.5rem -.5rem 0 0; border-radius: 50%;
+  background: var(--site-navy); opacity: 0;
+  transition: transform 1.4s cubic-bezier(.23, 1, .32, 1), opacity .4s;
+}
+[data-md-color-scheme="slate"] .md-typeset a.page-nav__side--next::before { background: #4b4b4b; }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active)::before { transform: scale(48); opacity: 1; }
+.md-typeset .page-nav__side--next .page-nav__dir { position: relative; display: inline-flex; align-items: center; gap: .3em; }
+.md-typeset .page-nav__arrow { display: inline-block; transition: transform 1s cubic-bezier(.23, 1, .32, 1), opacity .5s; }
+.md-typeset .page-nav__arrow--in { position: absolute; right: calc(100% + .3em); opacity: 0; transform: translateX(-1.6rem); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__arrow--out { opacity: 0; transform: translateX(1.6rem); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__arrow--in { opacity: 1; transform: none; transition-delay: .15s; }
+.md-typeset a.page-nav__side--next .page-nav__title { transition: transform 1s cubic-bezier(.23, 1, .32, 1); }
+.md-typeset a.page-nav__side--next:is(:hover, :focus-visible, :active) .page-nav__title { transform: translateX(-.25rem); }
+
+/* Markdown でコピー：ふだんはアイコンだけ。乗せると，ゆっくり動き出して加速しながら名前まで開く。
+   スマホやタブレットもアイコンだけにし，押すと「コピーしました」が2秒間開く */
+.md-typeset .page-tools__copy { gap: 0; padding: .2rem .45rem; }
+/* 開いたときの幅は「Markdownでコピー」に合わせて固定し，「コピーしました」に変わっても幅が動かないようにする */
+.md-typeset .page-tools__copy [data-copy-label] {
+  display: inline-block; width: 0; overflow: hidden; white-space: nowrap; text-align: center; opacity: 0;
+  transition: width .42s cubic-bezier(.6, 0, .9, .45), opacity .25s .1s, margin .42s cubic-bezier(.6, 0, .9, .45);
+}
+.md-typeset .page-tools__copy.is-copied [data-copy-label] { width: 7.4em; margin-left: .4em; opacity: 1; }
+/* 乗せて開くのはマウスのときだけ。タッチでは押したあとに開いたままにならないようにする */
+@media (hover: hover) {
+  .md-typeset .page-tools__copy:is(:hover, :focus-visible) [data-copy-label] { width: 7.4em; margin-left: .4em; opacity: 1; }
+}
+
+/* メニューボタン：右上の角から黄色に塗られ，開くと三本線が×に変わる */
+.site-burger { position: relative; width: 2.2rem; height: 2.2rem; overflow: hidden; isolation: isolate; }
+.site-burger::before {
+  content: ""; position: absolute; top: 0; right: 0; z-index: -1;
+  border-style: solid; border-color: transparent var(--site-star) transparent transparent;
+  border-width: 0 .55rem .55rem 0; transition: border-width .25s ease-in-out;
+}
+.site-burger:hover::before, .site-burger:focus-visible::before { border-width: 0 4.6rem 4.6rem 0; }
+.site-burger__line {
+  position: absolute; left: 50%; top: 50%; width: 1.05rem; height: 2px; margin-left: -.525rem; border-radius: 1px;
+  background: currentColor; transition: transform .3s ease-in-out, opacity .2s, background-color .2s;
+}
+.site-burger__line:nth-child(1) { transform: translateY(-6px); }
+.site-burger__line:nth-child(3) { transform: translateY(6px); }
+.site-burger:hover .site-burger__line, .site-burger:focus-visible .site-burger__line { background: #1f1f1f; }
+.site-burger:hover .site-burger__line:nth-child(2) { transform: scaleX(.6); }
+#__drawer:checked ~ .md-header .site-burger__line:nth-child(1) { transform: rotate(45deg); }
+#__drawer:checked ~ .md-header .site-burger__line:nth-child(2) { opacity: 0; }
+#__drawer:checked ~ .md-header .site-burger__line:nth-child(3) { transform: rotate(-45deg); }
+
+/* 本文のリンク：サイトの紺に寄せる。開いたことのあるリンクは少しくすませる */
+[data-md-color-scheme="default"] { --md-typeset-a-color: #383838; }
+[data-md-color-scheme="slate"] { --md-typeset-a-color: #d2d2d2; }
+.md-typeset a:not([class]):visited { color: #6a6f93; border-bottom-color: #6a6f93; }
+[data-md-color-scheme="slate"] .md-typeset a:not([class]):visited { color: #98a1c8; border-bottom-color: #98a1c8; }
+
+/* Amazonでみる：文頭に買い物かごのアイコン（Amazon のロゴは商標なので使わない） */
+.md-typeset a.book-btn::before {
+  content: ""; flex: none; width: .95em; height: .95em; background-color: currentColor;
+  -webkit-mask: url("../assets/icons/cart-shopping.svg") center / contain no-repeat;
+  mask: url("../assets/icons/cart-shopping.svg") center / contain no-repeat;
+}
+
+/* 前の問題の塗りも，次の問題に合わせてゆっくりにする */
+.md-typeset a.page-nav__side:not(.page-nav__side--next) { transition: background-size .8s cubic-bezier(.25, .8, .25, 1), color .4s; }
+
+/* 作成中の章の注意書き：枠なしで，答えと同じ色の下地 */
+.md-typeset .wip-note {
+  padding: .7em 1em;
+  border-radius: .2rem;
+  background: var(--site-answer-bg);
+}
+.md-typeset .toc-chapter .wip-note { margin: .6em 0 .4em; font-size: var(--fs-70); }
+/* トップの「参考文献一覧」「note」：問題ページ下のボタンと同じ形で，紺の面に白い文字。押すと黄色に塗られ，文字が濃い紺になる */
+.md-typeset .page-links__button--note::before { --site-icon: url("../assets/icons/note.svg"); }
+.md-typeset .home-links { margin: .8em 0 1.2em; }
+.md-typeset a.page-links__button.home-link {
+  background-color: var(--site-navy) !important;
+  color: #fff !important;
+  background-image: linear-gradient(var(--site-star), var(--site-star)) !important;
+  background-repeat: no-repeat !important;
+  background-size: 0 100% !important;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+[data-md-color-scheme="slate"] .md-typeset a.page-links__button.home-link { background-color: #4b4b4b !important; }
+.md-typeset a.page-links__button.home-link::before,
+.md-typeset a.page-links__button.home-link .page-links__arrow { color: #fff !important; }
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) { background-size: 100% 100% !important; }
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active),
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active)::before,
+.md-typeset a.page-links__button.home-link:is(:hover, :focus-visible, :active) * { color: #1f1f1f !important; }
+
+/* ==========================================
+   問題を印刷する（javascripts/exam.js）：問題ページの「印刷に追加」と，問題を印刷するページ
+   ========================================== */
+.md-typeset .page-tools { gap: .4rem; }
+.md-typeset .page-tools__exam {
+  padding: .2rem .7rem; border: 1px solid var(--md-default-fg-color--lightest); background: none; cursor: pointer;
+  color: var(--md-default-fg-color--light); font: inherit; font-size: var(--fs-62);
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset .page-tools__exam::before { content: "＋"; margin-right: .3em; }
+.md-typeset .page-tools__exam.is-on::before { content: "✓"; }
+.md-typeset .page-tools__exam.is-on { border-color: var(--site-navy); color: var(--md-typeset-color); }
+.md-typeset .page-tools__exam:is(:hover, :focus-visible) { background-size: 100% 100%; color: var(--site-sweep-text); }
+
+/* 問題を印刷するページ：章の見出しの帯・分野のタブ・問題の行は，ほかの一覧ページと同じ部品を使う */
+.md-typeset .exam-builder { margin-top: 1.5em; }
+.md-typeset .exam-builder__count { margin-left: .8em; font-size: var(--fs-72); opacity: .75; }
+/* 章と難易度の絞り込み：押すたびに入れる・外すを切り替える（複数選べる） */
+.md-typeset .exam-builder__filters { display: grid; grid-template-columns: 4em 1fr; align-items: start; gap: .6rem 1rem; margin: .9rem 0 0; font-size: var(--fs-70); }
+.md-typeset .exam-builder__filters dt { margin: 0; padding-top: .3rem; color: var(--md-default-fg-color--light); font-weight: 400; }
+.md-typeset .exam-builder__filters dd { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+/* 選んだものは薄い下地と ✓，選んでいないものは灰色の文字だけにして，並んだときに重く見えないようにする */
+.md-typeset .exam-builder__filters .exam-builder__check,
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check {
+  padding: .2rem .55rem; border: 1px solid transparent; background: transparent; color: var(--md-default-fg-color--light); font-size: var(--fs-68);
+}
+.md-typeset .exam-builder__filters .exam-builder__check:hover,
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check:hover { background: #f6f6f6; }
+.md-typeset .exam-builder__filters .exam-builder__check.is-on,
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { background: rgba(0, 0, 0, .07); color: var(--md-typeset-color); }
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check { color: #f2c200; opacity: .45; }
+.md-typeset .exam-builder__filters .finder__level.exam-builder__check.is-on { color: #f2c200; opacity: 1; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check { background: transparent; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check:hover { background: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__filters .exam-builder__check.is-on { background: rgba(255, 255, 255, .1); }
+.md-typeset .exam-builder__filters .exam-builder__check::before { content: "✓"; display: inline-block; width: 0; margin-right: 0; overflow: hidden; color: var(--site-navy); vertical-align: top; }
+.md-typeset .exam-builder__filters .exam-builder__check.is-on::before { width: 1em; margin-right: .15em; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__check::before { color: #a4a4a4; }
+.md-typeset .exam-builder__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin: .9rem 0 .6rem; font-size: var(--fs-70); color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__select { display: inline-flex; align-items: center; gap: .5rem; }
+.md-typeset .exam-builder__random { display: inline-flex; align-items: center; gap: .4rem; }
+.md-typeset .exam-builder select {
+  padding: .3rem 1.6rem .3rem .6rem; border: none; border-radius: 0; background: #f6f6f6; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72);
+  appearance: none; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - .75rem) 55%, calc(100% - .5rem) 55%; background-size: .25rem .25rem; background-repeat: no-repeat;
+}
+.md-typeset .exam-builder__select select { max-width: 16rem; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder select { background-color: rgba(255, 255, 255, .06); }
+.md-typeset .exam-builder__chip {
+  padding: .3rem .8rem; border: none; background: #f6f6f6; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72); cursor: pointer; transition: background .15s;
+}
+.md-typeset .exam-builder__chip:hover { background: #e3e3e3; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__chip { background: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__chip:hover { background: rgba(255, 255, 255, .12); }
+
+/* 問題の行（a.toc-row と同じ形。行の右端に「追加」） */
+.md-typeset .exam-builder__list { max-height: 24rem; overflow-y: auto; border-top: 1px solid #ececec; }
+.md-typeset .toc-row.exam-builder__row {
+  display: grid; grid-template-columns: 2.6rem 1fr auto auto; align-items: center; gap: .6rem;
+  padding: .45rem .2rem; border-bottom: 1px solid #ececec; color: var(--md-typeset-color); font-size: var(--fs-80);
+}
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__list,
+[data-md-color-scheme="slate"] .md-typeset .toc-row.exam-builder__row { border-color: rgba(255, 255, 255, .07); }
+.md-typeset .exam-builder__row a.toc-row__title { color: inherit; border: none; }
+.md-typeset .exam-builder__row a.toc-row__title:hover { color: var(--md-accent-fg-color); }
+.md-typeset .exam-builder__row.is-on { background: var(--site-answer-bg); }
+.md-typeset .exam-builder__add {
+  min-width: 5.6em; padding: .2rem .6rem; border: 1px solid var(--md-default-fg-color--lightest); background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light); font: inherit; font-size: var(--fs-65); cursor: pointer;
+}
+.md-typeset .exam-builder__row.is-on .exam-builder__add { border-color: var(--site-navy); color: var(--md-typeset-color); }
+.md-typeset .exam-builder__add:disabled { opacity: .35; cursor: default; }
+
+/* 選んだ問題の行：番号・題名と分野・並べ替えと外す */
+.md-typeset [data-exam-chosen] .exam-builder__row { grid-template-columns: 2.6rem 1fr auto; }
+.md-typeset .exam-builder__text { display: flex; flex-direction: column; gap: .1em; }
+.md-typeset .exam-builder__meta { font-size: var(--fs-64); color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__ops { display: inline-flex; gap: .25rem; }
+.md-typeset .exam-builder__ops button {
+  width: 1.7rem; height: 1.7rem; border: none; background: #f6f6f6; color: var(--md-typeset-color); font: inherit; font-size: var(--fs-72); cursor: pointer;
+}
+.md-typeset .exam-builder__ops button:hover { background: #e3e3e3; }
+.md-typeset .exam-builder__ops button:disabled { opacity: .3; cursor: default; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__ops button { background: rgba(255, 255, 255, .06); }
+.md-typeset .exam-builder__empty { margin: .6rem .2rem; font-size: var(--fs-72); color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__clear { display: flex; justify-content: flex-end; margin-top: .6rem; }
+
+/* 印刷の設定：題名は検索窓と同じ形，選択肢は難易度のボタンと同じ形 */
+.md-typeset .finder__search.exam-builder__title { margin: .9rem 0 1rem; }
+.md-typeset .exam-builder__title-label { flex: none; font-size: var(--fs-72); color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__settings { display: grid; grid-template-columns: 5em 1fr; align-items: center; gap: .6rem 1rem; margin: 0; font-size: var(--fs-72); }
+.md-typeset .exam-builder__settings dt { margin: 0; color: var(--md-default-fg-color--light); font-weight: 400; }
+.md-typeset .exam-builder__settings dd { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+.md-typeset .exam-builder__settings button {
+  min-width: 3.2rem; padding: .3rem .8rem; border: none; background: #f6f6f6; color: var(--md-typeset-color); font: inherit; cursor: pointer; transition: background .15s;
+}
+.md-typeset .exam-builder__settings button:hover { background: #e3e3e3; }
+.md-typeset .exam-builder__settings button.is-on { background: var(--site-navy); color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button { background: rgba(255, 255, 255, .06); }
+[data-md-color-scheme="slate"] .md-typeset .exam-builder__settings button.is-on { background: #4b4b4b; }
+.md-typeset .exam-builder__box { display: inline-flex; align-items: center; justify-content: center; width: 1.35em; height: 1.35em; border: 1.5px solid currentColor; line-height: 1; }
+
+.md-typeset .exam-builder__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: 0 0 .8rem; }
+.md-typeset a.exam-builder__open {
+  display: inline-block; padding: .55rem 1.4rem; background-color: var(--site-navy); color: #fff; font-size: var(--fs-80);
+  background-image: linear-gradient(var(--site-star), var(--site-star)); background-repeat: no-repeat; background-size: 0 100%;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset a.exam-builder__open:is(:hover, :focus-visible) { background-size: 100% 100%; color: #1f1f1f; }
+[data-md-color-scheme="slate"] .md-typeset a.exam-builder__open { background-color: #4b4b4b; }
+.md-typeset a.exam-builder__open.is-disabled { opacity: .45; }
+.md-typeset .exam-builder__status { font-size: var(--fs-70); color: var(--md-default-fg-color--light); }
+.md-typeset .exam-builder__note { font-size: var(--fs-66); color: var(--md-default-fg-color--light); }
+@media screen and (max-width: 30em) {
+  .md-typeset .toc-row.exam-builder__row { grid-template-columns: 2.2rem 1fr auto; gap: .4rem; }
+  .md-typeset .exam-builder__list .toc-row__stars { display: none; }
+  .md-typeset [data-exam-chosen] .exam-builder__row { grid-template-columns: 1.2rem 1fr auto; }
+  .md-typeset .exam-builder__ops { gap: .15rem; }
+  .md-typeset .exam-builder__ops button { width: 1.5rem; height: 1.5rem; }
+}
+
+/* ==========================================
+   トップページの動き（javascripts/home-motion.js が body に .home-motion を付けたときだけ）
+   ========================================== */
+/* 円筒と背景の写真は画面に止めた層に置き，ページの中身はその上を流れる */
+.home-ring { display: none; }
+.home-motion .home-ring {
+  display: block; position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+  background-color: #121212; background-position: center; background-size: cover; perspective: 1500px;
+}
+.home-motion .home-ring::before { content: ""; position: absolute; inset: 0; background: rgba(12, 12, 12, .92); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
+.home-ring__stage { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; }
+.home-ring__ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
+.home-ring__spin { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; animation: home-ring-spin 90s linear infinite; }
+@keyframes home-ring-spin { from { transform: rotateY(0deg); } to { transform: rotateY(-360deg); } }
+@media (prefers-reduced-motion: reduce) { .home-ring__spin { animation: none; } }
+/* 明るさは一様（背景なので暗く）。裏を向いたタイルは描かない。読み終えたら暗い状態から明るさを上げる */
+.home-ring__tile {
+  position: absolute; left: 0; top: 0; border-radius: 3px; background: #fff center / cover no-repeat;
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  visibility: hidden; filter: brightness(0); transition: filter .8s ease;
+}
+.home-ring.is-ready .home-ring__tile { visibility: visible; filter: brightness(.16); }
+.home-motion { background: #121212; }
+.home-motion :is(.md-container, .md-main, .md-content) { background: transparent; }
+.home-motion .md-main { position: relative; z-index: 1; }
+.home-motion .md-footer { position: relative; z-index: 1; }
+.home-motion .home-hero { position: relative; z-index: 1; background: none !important; }
+.home-motion .home-hero::before { display: none; }
+.home-motion .home-hero__inner { text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
+/* 検索窓は円筒の上にじかに載るので，背景をぼかして透かすガラスの板にする */
+.home-motion .home-search .site-search__input {
+  background: rgba(255, 255, 255, .09);
+  border: 1px solid rgba(255, 255, 255, .22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .28), 0 10px 30px rgba(0, 0, 0, .35);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6); backdrop-filter: blur(16px) saturate(1.6);
+}
+.home-motion .home-search .site-search__input:focus { background: rgba(255, 255, 255, .15); border-color: rgba(255, 255, 255, .38); }
+.home-motion .home-search .site-search__icon { z-index: 1; }
+/* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
+/* 円筒の上にじかに載る小見出しと凡例は，どちらのモードでも明るい文字にする */
+.md-typeset .home-dark :is(h3.home-subhead, .home-legend) { color: rgba(255, 255, 255, .78); }
+.home-dark { overflow-x: clip; overflow-clip-margin: 1.5rem; }
+.md-typeset [data-md-color-scheme="slate"] h2.books-head { background: #303030; color: #e3e3e3; }
+.md-typeset [data-md-color-scheme="slate"] .books-head__icon { background: #4b4b4b; }
+.md-typeset [data-md-color-scheme="slate"] .home-level__count { color: #d2d2d2; }
+/* 「このサイトについて」から下は無地の面。左右と下は影を広げて画面の端まで塗る */
+.home-motion .home-sheet {
+  position: relative; z-index: 1; margin-top: 4rem; padding-top: 1.6rem;
+  background: var(--md-default-bg-color); box-shadow: 0 0 0 100vmax var(--md-default-bg-color);
+  clip-path: inset(0 -100vmax 0 -100vmax);
+}
+/* 最後の面だけは下にも広げて，ページの終わりまで塗る */
+.home-motion .home-sheet--last { clip-path: inset(0 -100vmax -100vmax -100vmax); }
+.home-motion .md-content__inner > .page-share,
+.home-motion .md-content__inner > .owner { position: relative; z-index: 1; }
+.home-motion .md-typeset .home-promise { background: none; border-left: 0; padding-left: 0; }
+
+/* スクロールで現れる */
+.hm { transition-delay: var(--hm-delay, 0ms); }
+.hm-fade { opacity: 0; transition: opacity 1.1s ease; }
+.hm-left, .hm-right { opacity: 0; transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--hm-delay, 0ms); }
+.hm-left { transform: translateX(-3rem); }
+.hm-right { transform: translateX(3rem); }
+.hm.is-shown { opacity: 1; transform: none; }
+/* カードのまとまりは画面の外からすべり込む（動かすのは中身で，外枠は動かさず画面に入ったかの判定に使う） */
+.hm-slide > * { opacity: 0; transition: transform 1s cubic-bezier(.2, .75, .25, 1), opacity .35s ease; }
+.hm-slide--left > * { transform: translateX(-100vw); }
+.hm-slide--right > * { transform: translateX(100vw); }
+.hm-slide--up > * { transform: translateY(60vh); }
+.hm-slide.is-shown > * { opacity: 1; transform: none; }
+/* 無地の面は下からせり上がる */
+.home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
+.home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
+/* 見出し：文字と下線が左から順に現れる（最初に幅 1px だけ残すのは，画面に入ったかを判定するため） */
+.md-typeset h2.home-head.hm-head { clip-path: inset(-1rem calc(100% - 1px) -1rem 0); transition: clip-path .9s cubic-bezier(.3, .7, .2, 1) .1s; }
+.md-typeset h2.home-head.hm-head.is-shown { clip-path: inset(-1rem -1rem -1rem 0); }
+
+/* ==========================================
+   トップの節：見出しは大きな文字と短い下線だけにし，PC では見出しを左，カードと本文を右に並べる。
+   円筒の上のカードと検索窓は，背景を透かすガラスにする
+   ========================================== */
+.md-typeset h2.home-head {
+  margin: 4.5rem 0 1.4rem; padding: 0; border: 0;
+  font-size: 1.45rem; font-weight: 500; letter-spacing: .08em; line-height: 1.4;
+  color: var(--md-typeset-color);
+}
+.md-typeset h2.home-head::after { content: ""; display: block; width: 1.6rem; height: 2px; margin-top: .7rem; background: currentColor; }
+.md-typeset .home-dark h2.home-head { color: #fff; }
+.md-typeset .home-sec:first-child h2.home-head { margin-top: 2rem; }
+@media (max-width: 600px) { .md-typeset h2.home-head { font-size: 1.3rem; } }
+@media (min-width: 1100px) {
+  .home-motion .md-grid { max-width: min(94vw, 72rem); }
+  .home-motion .md-content__inner { max-width: none; margin-left: 1.6rem; margin-right: 1.6rem; }
+  .md-typeset .home-dark .home-sec { display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 3rem; align-items: start; margin-top: 4.5rem; }
+  .md-typeset .home-sec:first-child { margin-top: 2rem; }
+  .md-typeset .home-dark .home-sec > h2.home-head { position: sticky; top: 8.5rem; margin: 0; }
+  .md-typeset .home-sec__body > :first-child,
+  .md-typeset .home-sec__body > .hm-slide:first-child > :first-child { margin-top: 0; }
+  /* 分野・難易度・印刷のカードは同じ3列にそろえる */
+  .home-motion .md-typeset .home-dark :is(.home-tiles, .home-tiles--single) { grid-template-columns: repeat(3, 1fr); }
+  /* 文章の節は1列にし，読みやすい幅に収める */
+  .md-typeset .home-sheet .home-sec__body { max-width: 40rem; }
+  /* 題名と検索窓は左に寄せ，見出しの列と左端をそろえる */
+  .home-motion .home-hero { padding-left: 0; padding-right: 0; }
+  .home-motion .home-hero__inner { max-width: min(94vw, 72rem); margin: 0 auto; padding: 0 1.5rem; text-align: left; box-sizing: border-box; }
+  .home-motion .home-hero__title { font-size: 2rem; line-height: 1.35; }
+  .home-motion .home-hero__facts { margin-bottom: 2rem; }
+  .home-motion .home-search { max-width: 38rem; }
+}
+/* ガラスのカード：グラデーション・光・影は付けず，平らな板にする。
+   円筒の上はどちらのモードでも暗いので，ライトモードでもダークモードと同じ白を薄く重ねたガラスにする */
+.home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
+  border-radius: 10px; box-shadow: none;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); color: #fff;
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+}
+.home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .16); }
+.home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .72); }
+.home-motion .home-search .site-search__input { border-radius: 10px; background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .32); }
+/* 参考文献と note の帯：無地の面を切って円筒を見せる */
+.md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
+.home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
+.home-motion .home-sheet { padding-bottom: 3rem; }
+/* トップでは共有ボタンを出さず，運営者情報も節の見出しと同じ作りにする */
+.home-motion .page-share { display: none; }
+.home-motion .md-typeset .owner { margin: 4.5rem 0 3rem; }
+.home-motion .md-typeset .owner__heading {
+  display: block; margin: 0 0 1.4rem; padding: 0; background: none; color: var(--md-typeset-color);
+  font-size: 1.45rem; font-weight: 500; letter-spacing: .08em; line-height: 1.4;
+}
+.home-motion .md-typeset .owner__heading::after { content: ""; position: static; display: block; width: 1.6rem; height: 2px; margin-top: .7rem; border: 0; background: currentColor; }
+.home-motion .md-typeset .owner__heading-icon { display: none; }
+.home-motion .md-typeset .owner__card { padding: 0; background: none; max-width: 40rem; }
+@media (max-width: 600px) { .home-motion .md-typeset .owner__heading { font-size: 1.3rem; } }
+/* 更新履歴は灰色の箱に入れない */
+.home-motion .md-typeset .home-news { padding: 0; background: none; border: 0; }
+.home-motion .md-typeset a.owner__link { background: none; border: 1px solid var(--md-default-fg-color--lighter); color: var(--md-typeset-color); }
+.home-motion .md-typeset a.owner__link:is(:hover, :focus-visible) { border-color: var(--md-typeset-color); }
+/* トップの題名：サイト名を Zen Kaku Gothic New で置く（読み込むのは題名の8文字だけ） */
+.home-hero__title { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; letter-spacing: .14em; }
+.home-hero__facts { font-size: .8rem; letter-spacing: .08em; }
+@media (min-width: 1100px) { .home-motion .home-hero { padding-top: 4.5rem; padding-bottom: 3.5rem; } }
+@media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1.55rem; } }
+
+/* トップのヘッダーとタブ：円筒が透けるガラスにする。タブはヘッダーの中にあるので，ガラスはヘッダーにだけ掛け，
+   タブは背景を透明にする（入れ子の要素に backdrop-filter を重ねると，親の背景しか透けず不透明に見える）。
+   「何のサイト？」の面が出てくるまでは隠す（home-motion.js が body に home-headless を付け外しする） */
+.home-motion .md-header {
+  background-color: rgba(18, 18, 18, .66);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), opacity .35s ease;
+}
+[data-md-color-scheme="slate"].home-motion .md-header { background-color: rgba(10, 10, 10, .66); }
+.home-motion .md-tabs { background: none; border-top: 1px solid rgba(255, 255, 255, .08); }
+.home-motion.home-headless .md-header { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .home-motion .md-header { transition: none; } }
+
+
+/* トップのヒーロー：円筒を画面いっぱいに見せ，左下に小さくサイト名と一行の説明を置く。検索窓はヘッダーにあるので置かない */
+.home-motion .home-hero { min-height: 100svh; display: flex; align-items: flex-end; box-sizing: border-box; margin-top: -4.85rem; padding-top: 0; padding-bottom: 2.4rem; }
+.home-motion .home-hero__inner { width: 100%; }
+.home-motion .md-typeset .home-hero__title, .home-motion .home-hero__title { margin: 0; font-size: 1rem; line-height: 1.6; letter-spacing: .3em; }
+.home-motion .home-hero__facts { margin: .4rem 0 0; font-size: .62rem; letter-spacing: .14em; opacity: .75; }
+@media (min-width: 1100px) { .home-motion .home-hero { padding-top: 0; padding-bottom: 3rem; } .home-motion .home-hero__title { font-size: 1rem; } .home-motion .home-hero__facts { margin-bottom: 0; } }
+@media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1rem; } }
+
+/* ヘッダーのサイト名：トップの題名と同じ書体にそろえる */
+.md-header__topic:first-child .md-ellipsis { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; font-weight: 500; letter-spacing: .14em; }
