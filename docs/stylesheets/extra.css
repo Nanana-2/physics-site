@@ -1865,10 +1865,6 @@ html { scroll-behavior: smooth; }
 }
 .home-motion .home-search .site-search__input:focus { background: rgba(255, 255, 255, .15); border-color: rgba(255, 255, 255, .38); }
 .home-motion .home-search .site-search__icon { z-index: 1; }
-/* 円筒の上のカードと見出しは透かさない */
-body[data-md-color-scheme="slate"].home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: #1e1e1e; }
-/* ライトモードの白いカードは，背景からわずかに透かして浮きすぎないようにする */
-body:not([data-md-color-scheme="slate"]).home-motion .home-dark :is(a.home-tile, a.home-level) { background-color: rgba(246, 246, 246, .9); }
 /* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
 /* 円筒の上にじかに載る小見出しと凡例は，どちらのモードでも明るい文字にする */
 .md-typeset .home-dark :is(h3.home-subhead, .home-legend) { color: rgba(255, 255, 255, .78); }
@@ -1876,12 +1872,14 @@ body:not([data-md-color-scheme="slate"]).home-motion .home-dark :is(a.home-tile,
 .md-typeset [data-md-color-scheme="slate"] h2.books-head { background: #303030; color: #e3e3e3; }
 .md-typeset [data-md-color-scheme="slate"] .books-head__icon { background: #4b4b4b; }
 .md-typeset [data-md-color-scheme="slate"] .home-level__count { color: #d2d2d2; }
-/* 「このサイトは何者？」から下は無地の面。左右と下は影を広げて画面の端まで塗る */
+/* 「このサイトについて」から下は無地の面。左右と下は影を広げて画面の端まで塗る */
 .home-motion .home-sheet {
   position: relative; z-index: 1; margin-top: 4rem; padding-top: 1.6rem;
   background: var(--md-default-bg-color); box-shadow: 0 0 0 100vmax var(--md-default-bg-color);
-  clip-path: inset(0 -100vmax -100vmax -100vmax);
+  clip-path: inset(0 -100vmax 0 -100vmax);
 }
+/* 最後の面だけは下にも広げて，ページの終わりまで塗る */
+.home-motion .home-sheet--last { clip-path: inset(0 -100vmax -100vmax -100vmax); }
 .home-motion .md-content__inner > .page-share,
 .home-motion .md-content__inner > .owner { position: relative; z-index: 1; }
 .home-motion .md-typeset .home-promise { background: none; border-left: 0; padding-left: 0; }
@@ -1902,8 +1900,65 @@ body:not([data-md-color-scheme="slate"]).home-motion .home-dark :is(a.home-tile,
 /* 無地の面は下からせり上がる */
 .home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
 .home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
-/* 見出し：丸が大きくなってから，帯が左から伸びる */
-.md-typeset h2.books-head.hm-head { clip-path: inset(-1rem calc(100% - 1.1rem) -1rem -2.4rem); transition: clip-path .75s cubic-bezier(.3, .7, .2, 1) .35s; }
-.md-typeset h2.books-head.hm-head .books-head__icon { transform: translateY(-50%) scale(0); transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); }
-.md-typeset h2.books-head.hm-head.is-shown { clip-path: inset(-1rem 0 -1rem -2.4rem); }
-.md-typeset h2.books-head.hm-head.is-shown .books-head__icon { transform: translateY(-50%) scale(1); }
+/* 見出し：文字と下線が左から順に現れる（最初に幅 1px だけ残すのは，画面に入ったかを判定するため） */
+.md-typeset h2.home-head.hm-head { clip-path: inset(-1rem calc(100% - 1px) -1rem 0); transition: clip-path .9s cubic-bezier(.3, .7, .2, 1) .1s; }
+.md-typeset h2.home-head.hm-head.is-shown { clip-path: inset(-1rem -1rem -1rem 0); }
+
+/* ==========================================
+   トップの節：見出しは大きな文字と短い下線だけにし，PC では見出しを左，カードと本文を右に並べる。
+   円筒の上のカードと検索窓は，背景を透かすガラスにする
+   ========================================== */
+.md-typeset h2.home-head {
+  margin: 4.5rem 0 1.4rem; padding: 0; border: 0;
+  font-size: 1.9rem; font-weight: 400; letter-spacing: .08em; line-height: 1.35;
+  color: var(--md-typeset-color);
+}
+.md-typeset h2.home-head::after { content: ""; display: block; width: 2.2rem; height: 2px; margin-top: .9rem; background: currentColor; }
+.md-typeset .home-dark h2.home-head { color: #fff; }
+.md-typeset .home-sec:first-child h2.home-head { margin-top: 2rem; }
+@media (max-width: 600px) { .md-typeset h2.home-head { font-size: 1.5rem; } }
+@media (min-width: 1100px) {
+  .home-motion .md-grid { max-width: 1240px; }
+  .home-motion .md-content__inner { max-width: none; margin-left: 1.6rem; margin-right: 1.6rem; }
+  .md-typeset .home-sec { display: grid; grid-template-columns: 20rem minmax(0, 1fr); column-gap: 3rem; align-items: start; margin-top: 4.5rem; }
+  .md-typeset .home-sec:first-child { margin-top: 2rem; }
+  .md-typeset .home-sec > h2.home-head { position: sticky; top: 8.5rem; margin: 0; }
+  .md-typeset .home-sec__body > :first-child,
+  .md-typeset .home-sec__body > .hm-slide:first-child > :first-child { margin-top: 0; }
+  /* 分野・難易度・印刷のカードは同じ3列にそろえる */
+  .home-motion .md-typeset .home-dark :is(.home-tiles, .home-tiles--single) { grid-template-columns: repeat(3, 1fr); }
+  .md-typeset .home-sheet .home-sec__body { max-width: 46rem; }
+  /* 帯のカードは右の列に置く */
+  .md-typeset .home-band { padding-left: 23rem; }
+  /* 題名と検索窓は左に寄せ，見出しの列と左端をそろえる */
+  .home-motion .home-hero { padding-left: 0; padding-right: 0; }
+  .home-motion .home-hero__inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; text-align: left; box-sizing: border-box; }
+  .home-motion .home-hero__title { font-size: 2.6rem; line-height: 1.35; }
+  .home-motion .home-hero__facts { margin-bottom: 2rem; }
+  .home-motion .home-search { max-width: 38rem; }
+}
+/* ガラスのカード：ダークモードは白を薄く重ね，ライトモードは白をすりガラスにする */
+.home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px) saturate(1.8); backdrop-filter: blur(20px) saturate(1.8);
+}
+body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
+  background: linear-gradient(160deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .08));
+  border: 1px solid rgba(255, 255, 255, .32); color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 12px 30px rgba(0, 0, 0, .35);
+}
+body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) {
+  background: linear-gradient(160deg, rgba(255, 255, 255, .28), rgba(255, 255, 255, .14));
+}
+body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .78); }
+body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
+  background: linear-gradient(160deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .7));
+  border: 1px solid rgba(255, 255, 255, .9);
+  box-shadow: inset 0 1px 0 #fff, 0 12px 30px rgba(0, 0, 0, .35);
+}
+body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .95); }
+.home-motion .home-search .site-search__input { border-radius: 10px; background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .32); }
+/* 参考文献と note の帯：無地の面を切って円筒を見せる */
+.md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
+.home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
+.home-motion .home-sheet { padding-bottom: 3rem; }
