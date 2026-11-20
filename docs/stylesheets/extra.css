@@ -1937,20 +1937,14 @@ html { scroll-behavior: smooth; }
   .home-motion .home-search { max-width: 38rem; }
 }
 /* ガラスのカード：グラデーション・光・影は付けず，平らな板にする。
-   ダークモードは白を薄く重ね，ライトモードは白い板をわずかに透かす */
+   円筒の上はどちらのモードでも暗いので，ライトモードでもダークモードと同じ白を薄く重ねたガラスにする */
 .home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
   border-radius: 10px; box-shadow: none;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); color: #fff;
   -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
 }
-body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
-  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); color: #fff;
-}
-body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .16); }
-body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .72); }
-body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
-  background: rgba(246, 246, 246, .92); border: 1px solid transparent;
-}
-body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: #fff; }
+.home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .16); }
+.home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .72); }
 .home-motion .home-search .site-search__input { border-radius: 10px; background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .32); }
 /* 参考文献と note の帯：無地の面を切って円筒を見せる */
 .md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
