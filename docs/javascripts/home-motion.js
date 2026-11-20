@@ -1,10 +1,11 @@
 /* トップページの動き（ほかのページでは何もしない）
    1. 円筒：問題の図と問題文を円筒に並べ，暗くした背景として画面に止めて置く。
       何もしていないときもゆっくり回り，スクロールするとその分だけ余計に回る。
-   2. スクロールで現れる：見出し（丸が大きくなってから帯が伸びる），分野・難易度のカード（横から），
+   2. スクロールで現れる：見出し（左から順に現れる），分野・難易度のカード（横から），
       文章（まとまりごとにフェード）。
+   3. 節の組み立て：見出しとその中身を1つの節にまとめる。PC では見出しを左の列，中身を右の列に置く。
    円筒の上（見出し・検索窓・分野と難易度のカード）はダークモードの配色で表示する。
-   「このサイトは何者？」から下は無地の面に載せ，円筒の上へせり上がるようにする。
+   「このサイトについて」から下は無地の面に載せ，円筒の上へせり上がるようにする。
    この面はライトモードとダークモードの切り替えに従う。 */
 (function () {
   var ringEl = document.querySelector("[data-home-ring]");
@@ -21,7 +22,7 @@
   var dark = null, sheet = null;
   if (inner) {
     var kids = Array.prototype.slice.call(inner.children), cut = -1;
-    kids.forEach(function (el, i) { if (cut < 0 && el.matches("h2.books-head") && el.textContent.indexOf("何者") >= 0) cut = i; });
+    kids.forEach(function (el, i) { if (cut < 0 && el.matches("h2#about")) cut = i; });
     var top = kids.filter(function (el, i) { return (cut < 0 || i < cut) && !el.matches("h1"); });
     var rest = cut < 0 ? [] : kids.slice(cut);
     if (top.length) {
@@ -123,7 +124,7 @@
     targets.push(el);
   }
 
-  /* 文章のまとまり：何者？の前半（区切り線の前）と後半，約束，更新履歴 */
+  /* 文章のまとまり：このサイトについての前半（区切り線の前）と後半，約束，更新履歴 */
   function wrap(nodes) {
     if (!nodes.length) return null;
     var box = document.createElement("div");
@@ -131,8 +132,7 @@
     nodes.forEach(function (n) { box.appendChild(n); });
     return box;
   }
-  Array.prototype.forEach.call(inner.querySelectorAll("h2.books-head"), function (h) {
-    if (h.textContent.indexOf("何者") < 0) return;
+  Array.prototype.forEach.call(inner.querySelectorAll("h2#about"), function (h) {
     var first = [], second = [], hr = false;
     for (var n = h.nextElementSibling; n && !n.matches("h2"); n = n.nextElementSibling) {
       if (n.matches("hr")) { hr = true; second.push(n); continue; }
@@ -155,19 +155,16 @@
       for (var n = h3.nextElementSibling; n && !n.matches("h2, h3"); n = n.nextElementSibling) nodes.push(n);
       group(nodes, i === 0 ? "left" : "right");
     });
-    var lv = dark.querySelector(":scope > .home-levels");
-    if (lv) {
-      var nodes = [lv];
-      for (var n = lv.nextElementSibling; n; n = n.nextElementSibling) nodes.push(n);
-      group(nodes, "up");
-    }
+    /* 難易度と印刷は別の節なので，まとまりも分ける */
+    group([dark.querySelector(":scope > .home-levels")], "up");
+    group([dark.querySelector(":scope > .home-tiles--single")], "up");
   }
 
   var blocks = [];
   [dark, sheet].forEach(function (box) { if (box) blocks = blocks.concat(Array.prototype.slice.call(box.children)); });
   blocks.forEach(function (el) {
     if (el.matches("h1")) return;
-    if (el.matches("h2.books-head")) { add(el, "hm-head"); return; }
+    if (el.matches("h2.home-head")) { add(el, "hm-head"); return; }
     if (el.matches(".home-tiles")) {
       Array.prototype.forEach.call(el.children, function (card, i) {
         add(card, (i % 2 === 0 || el.matches(".home-tiles--single")) ? "hm-left" : "hm-right", Math.floor(i / 2) * 70);
@@ -182,6 +179,18 @@
     add(el, "hm-fade");
   });
   document.querySelectorAll(".md-content .page-share, .md-content .owner").forEach(function (el) { add(el, "hm-fade"); });
+
+  /* 節の組み立て：見出しと，次の見出しまでの中身を section.home-sec にまとめる */
+  [dark, sheet].forEach(function (box) {
+    if (!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll(":scope > h2.home-head"), function (h) {
+      var sec = document.createElement("section"), main = document.createElement("div");
+      sec.className = "home-sec"; main.className = "home-sec__body";
+      box.insertBefore(sec, h);
+      for (var n = h.nextElementSibling; n && !n.matches("h2"); ) { var nx = n.nextElementSibling; main.appendChild(n); n = nx; }
+      sec.appendChild(h); sec.appendChild(main);
+    });
+  });
 
   /* 見出しは最初ほとんど切り取られていて面積がないので，少しでも入ったら出す */
   var heads = [];

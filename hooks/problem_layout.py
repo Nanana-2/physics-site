@@ -368,9 +368,10 @@ def _level_counts(docs: Path, subject: str) -> dict:
     return counts
 
 
-def _home_heading(title: str, icon: str, id_: str = "") -> str:
+def _home_heading(title: str, id_: str = "") -> str:
+    # トップの見出しは飾りを付けず，大きな文字と短い下線だけにする（見た目は extra.css の .home-head）
     id_attr = f' id="{id_}"' if id_ else ""
-    return f'<h2{id_attr} class="books-head"><span class="books-head__icon">{_icon(icon)}</span>{title}</h2>'
+    return f'<h2{id_attr} class="home-head">{title}</h2>'
 
 
 def _home(html: str, page, config) -> str:
@@ -430,19 +431,19 @@ def _home(html: str, page, config) -> str:
 
     news = sections.get("更新履歴", "")
     return (
-        _home_heading("分野から選ぶ", "layer-group", "fields")
+        _home_heading("分野から選ぶ", "fields")
         + f'<h3 class="home-subhead">物理</h3><div class="home-tiles">{tiles}</div>'
         + (f'<h3 class="home-subhead">物理数学</h3><div class="home-tiles">{math_tiles}</div>' if math_tiles else "")
         + legend
-        + _home_heading("難易度から選ぶ", "star")
+        + _home_heading("難易度から選ぶ")
         + f'<div class="home-levels">{levels}</div>'
-        + _home_heading("選んで印刷する", "print")
+        + _home_heading("印刷", "print")
         + f'<div class="home-tiles home-tiles--single"><a class="home-tile" href="exam/">'
-        '<span class="home-tile__body"><span class="home-tile__name">問題を印刷する</span>'
-        '<span class="home-tile__desc">好きな問題を選んで，問題用紙と解答・解説を印刷できます</span></span></a></div>'
-        + _home_heading("このサイトは何者？", "circle-question")
-        + sections.get("このサイトは何者？", "")
-        + _home_heading("重要な約束と推奨される使い方", "triangle-exclamation")
+        '<span class="home-tile__body"><span class="home-tile__name">問題用紙をつくる</span>'
+        '<span class="home-tile__desc">解答・解説は別冊になります</span></span></a></div>'
+        + _home_heading("このサイトについて", "about")
+        + sections.get("このサイトについて", "")
+        + _home_heading("重要な約束と推奨される使い方", "promise")
         + f'<div class="home-promise">{sections.get("重要な約束と推奨される使い方", "")}</div>'
-        + (_home_heading("更新履歴", "clock-rotate-left") + f'<div class="home-news">{news}</div>' if news else "")
+        + (_home_heading("更新履歴", "news") + f'<div class="home-news">{news}</div>' if news else "")
     )
