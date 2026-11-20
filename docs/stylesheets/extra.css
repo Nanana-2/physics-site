@@ -1970,15 +1970,16 @@ html { scroll-behavior: smooth; }
 @media (min-width: 1100px) { .home-motion .home-hero { padding-top: 4.5rem; padding-bottom: 3.5rem; } }
 @media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1.55rem; } }
 
-/* トップのヘッダーとタブ：円筒が透けるガラスにし，タブもヘッダーの下に止めておく。
+/* トップのヘッダーとタブ：円筒が透けるガラスにする。タブはヘッダーの中にあるので，ガラスはヘッダーにだけ掛け，
+   タブは背景を透明にする（入れ子の要素に backdrop-filter を重ねると，親の背景しか透けず不透明に見える）。
    「何のサイト？」の面が出てくるまでは隠す（home-motion.js が body に home-headless を付け外しする） */
-.home-motion :is(.md-header, .md-tabs) {
-  background-color: rgba(18, 18, 18, .8);
+.home-motion .md-header {
+  background-color: rgba(18, 18, 18, .66);
   -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6);
   transition: transform .45s cubic-bezier(.2, .7, .2, 1), opacity .35s ease;
 }
-[data-md-color-scheme="slate"].home-motion :is(.md-header, .md-tabs) { background-color: rgba(10, 10, 10, .8); }
-.home-motion .md-tabs { position: sticky; top: 2.4rem; z-index: 3; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+[data-md-color-scheme="slate"].home-motion .md-header { background-color: rgba(10, 10, 10, .66); }
+.home-motion .md-tabs { background: none; border-top: 1px solid rgba(255, 255, 255, .08); }
 .home-motion.home-headless .md-header { transform: translateY(-100%); opacity: 0; pointer-events: none; }
-.home-motion.home-headless .md-tabs { transform: translateY(calc(-100% - 2.4rem)); opacity: 0; pointer-events: none; }
-@media (prefers-reduced-motion: reduce) { .home-motion :is(.md-header, .md-tabs) { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .home-motion .md-header { transition: none; } }
+
