@@ -1578,6 +1578,20 @@ html { scroll-behavior: smooth; }
 .md-typeset .approach > p { margin: 0 0 .4em; }
 [data-md-color-scheme="slate"] .md-typeset .approach::before { color: #d2d2d2; background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)); }
 
+/* 考え方のあとに置く，性質や計算規則の欄。見出しは data-label で変える（例：data-label="性質"） */
+.md-typeset .approach-points { position: relative; margin: -1em 0 1.8em; }
+.md-typeset .approach-points::before {
+  content: attr(data-label); position: relative; z-index: 1; display: inline-block; margin: 0 0 .3em; padding-right: .7em;
+  background: var(--md-default-bg-color);
+  color: var(--site-navy); font-size: var(--fs-72); font-weight: 700; letter-spacing: .1em;
+}
+.md-typeset .approach-points::after {
+  content: ""; position: absolute; top: .55em; left: 0; right: 0; height: 1px; background: #e3e3e3;
+}
+.md-typeset .approach-points > ul { margin: 0 0 .4em; }
+[data-md-color-scheme="slate"] .md-typeset .approach-points::before { color: #d2d2d2; }
+[data-md-color-scheme="slate"] .md-typeset .approach-points::after { background: rgba(255, 255, 255, .1); }
+
 /* ==========================================
    紺のボタン：押すと黄色に塗られ，文字が濃い紺になる（はっきり押した感じを出す）
    ========================================== */
