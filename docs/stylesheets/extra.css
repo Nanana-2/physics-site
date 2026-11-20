@@ -1192,7 +1192,6 @@ body, input {
 .home-hero { position: relative; z-index: 1; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #1a1a1a; background-position: center; background-size: cover; color: #fff; }
 .home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(18, 18, 18, .68), rgba(18, 18, 18, .8)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
 .home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
-.home-hero__logo { width: 4.2rem; height: 4.2rem; }
 .home-hero__title { margin: .5rem 0 .4rem; font-size: var(--fs-145); font-weight: 500; letter-spacing: .08em; color: #fff; }
 .home-hero__facts { margin: 0 0 1.4rem; font-size: var(--fs-74); letter-spacing: .06em; color: rgba(255, 255, 255, .78); }
 .home-search { margin: 0; }
@@ -1932,7 +1931,7 @@ html { scroll-behavior: smooth; }
   /* 題名と検索窓は左に寄せ，見出しの列と左端をそろえる */
   .home-motion .home-hero { padding-left: 0; padding-right: 0; }
   .home-motion .home-hero__inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; text-align: left; box-sizing: border-box; }
-  .home-motion .home-hero__title { font-size: 2.6rem; line-height: 1.35; }
+  .home-motion .home-hero__title { font-size: 2rem; line-height: 1.35; }
   .home-motion .home-hero__facts { margin-bottom: 2rem; }
   .home-motion .home-search { max-width: 38rem; }
 }
@@ -1965,3 +1964,21 @@ html { scroll-behavior: smooth; }
 .home-motion .md-typeset .home-news { padding: 0; background: none; border: 0; }
 .home-motion .md-typeset a.owner__link { background: none; border: 1px solid var(--md-default-fg-color--lighter); color: var(--md-typeset-color); }
 .home-motion .md-typeset a.owner__link:is(:hover, :focus-visible) { border-color: var(--md-typeset-color); }
+/* トップの題名：サイト名を Zen Kaku Gothic New で置く（読み込むのは題名の8文字だけ） */
+.home-hero__title { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; letter-spacing: .14em; }
+.home-hero__facts { font-size: .8rem; letter-spacing: .08em; }
+@media (min-width: 1100px) { .home-motion .home-hero { padding-top: 4.5rem; padding-bottom: 3.5rem; } }
+@media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1.55rem; } }
+
+/* トップのヘッダーとタブ：円筒が透けるガラスにし，タブもヘッダーの下に止めておく。
+   「何のサイト？」の面が出てくるまでは隠す（home-motion.js が body に home-headless を付け外しする） */
+.home-motion :is(.md-header, .md-tabs) {
+  background-color: rgba(18, 18, 18, .8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), opacity .35s ease;
+}
+[data-md-color-scheme="slate"].home-motion :is(.md-header, .md-tabs) { background-color: rgba(10, 10, 10, .8); }
+.home-motion .md-tabs { position: sticky; top: 2.4rem; z-index: 3; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.home-motion.home-headless .md-header { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+.home-motion.home-headless .md-tabs { transform: translateY(calc(-100% - 2.4rem)); opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .home-motion :is(.md-header, .md-tabs) { transition: none; } }
