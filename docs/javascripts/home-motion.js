@@ -39,6 +39,15 @@
     if (sheets.length) sheets[sheets.length - 1].classList.add("home-sheet--last");
   }
 
+  /* ---------- ヘッダー：「何のサイト？」の面が画面の下から4割まで来るまでは隠す ---------- */
+  if (sheets.length) {
+    body.classList.add("home-headless");
+    new IntersectionObserver(function (entries) {
+      var r = entries[0].boundingClientRect;
+      body.classList.toggle("home-headless", !entries[0].isIntersecting && r.top > 0);
+    }, { rootMargin: "0px 0px -40% 0px", threshold: 0 }).observe(sheets[0]);
+  }
+
   /* ---------- 円筒 ---------- */
   var N = 44, PER = 14, FIGS = 32;
   var base = ringEl.getAttribute("data-ring-base");

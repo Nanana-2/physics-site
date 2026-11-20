@@ -1192,7 +1192,6 @@ body, input {
 .home-hero { position: relative; z-index: 1; isolation: isolate; padding: 3.2rem 1rem 3rem; background-color: #1a1a1a; background-position: center; background-size: cover; color: #fff; }
 .home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(rgba(18, 18, 18, .68), rgba(18, 18, 18, .8)); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
 .home-hero__inner { max-width: 34rem; margin: 0 auto; text-align: center; }
-.home-hero__logo { width: 4.2rem; height: 4.2rem; }
 .home-hero__title { margin: .5rem 0 .4rem; font-size: var(--fs-145); font-weight: 500; letter-spacing: .08em; color: #fff; }
 .home-hero__facts { margin: 0 0 1.4rem; font-size: var(--fs-74); letter-spacing: .06em; color: rgba(255, 255, 255, .78); }
 .home-search { margin: 0; }
@@ -1910,55 +1909,76 @@ html { scroll-behavior: smooth; }
    ========================================== */
 .md-typeset h2.home-head {
   margin: 4.5rem 0 1.4rem; padding: 0; border: 0;
-  font-size: 1.9rem; font-weight: 400; letter-spacing: .08em; line-height: 1.35;
+  font-size: 1.45rem; font-weight: 500; letter-spacing: .08em; line-height: 1.4;
   color: var(--md-typeset-color);
 }
-.md-typeset h2.home-head::after { content: ""; display: block; width: 2.2rem; height: 2px; margin-top: .9rem; background: currentColor; }
+.md-typeset h2.home-head::after { content: ""; display: block; width: 1.6rem; height: 2px; margin-top: .7rem; background: currentColor; }
 .md-typeset .home-dark h2.home-head { color: #fff; }
 .md-typeset .home-sec:first-child h2.home-head { margin-top: 2rem; }
-@media (max-width: 600px) { .md-typeset h2.home-head { font-size: 1.5rem; } }
+@media (max-width: 600px) { .md-typeset h2.home-head { font-size: 1.3rem; } }
 @media (min-width: 1100px) {
   .home-motion .md-grid { max-width: 1240px; }
   .home-motion .md-content__inner { max-width: none; margin-left: 1.6rem; margin-right: 1.6rem; }
-  .md-typeset .home-sec { display: grid; grid-template-columns: 20rem minmax(0, 1fr); column-gap: 3rem; align-items: start; margin-top: 4.5rem; }
+  .md-typeset .home-dark .home-sec { display: grid; grid-template-columns: 20rem minmax(0, 1fr); column-gap: 3rem; align-items: start; margin-top: 4.5rem; }
   .md-typeset .home-sec:first-child { margin-top: 2rem; }
-  .md-typeset .home-sec > h2.home-head { position: sticky; top: 8.5rem; margin: 0; }
+  .md-typeset .home-dark .home-sec > h2.home-head { position: sticky; top: 8.5rem; margin: 0; }
   .md-typeset .home-sec__body > :first-child,
   .md-typeset .home-sec__body > .hm-slide:first-child > :first-child { margin-top: 0; }
   /* 分野・難易度・印刷のカードは同じ3列にそろえる */
   .home-motion .md-typeset .home-dark :is(.home-tiles, .home-tiles--single) { grid-template-columns: repeat(3, 1fr); }
-  .md-typeset .home-sheet .home-sec__body { max-width: 46rem; }
-  /* 帯のカードは右の列に置く */
-  .md-typeset .home-band { padding-left: 23rem; }
+  /* 文章の節は1列にし，読みやすい幅に収める */
+  .md-typeset .home-sheet .home-sec__body { max-width: 40rem; }
   /* 題名と検索窓は左に寄せ，見出しの列と左端をそろえる */
   .home-motion .home-hero { padding-left: 0; padding-right: 0; }
   .home-motion .home-hero__inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; text-align: left; box-sizing: border-box; }
-  .home-motion .home-hero__title { font-size: 2.6rem; line-height: 1.35; }
+  .home-motion .home-hero__title { font-size: 2rem; line-height: 1.35; }
   .home-motion .home-hero__facts { margin-bottom: 2rem; }
   .home-motion .home-search { max-width: 38rem; }
 }
-/* ガラスのカード：ダークモードは白を薄く重ね，ライトモードは白をすりガラスにする */
+/* ガラスのカード：グラデーション・光・影は付けず，平らな板にする。
+   円筒の上はどちらのモードでも暗いので，ライトモードでもダークモードと同じ白を薄く重ねたガラスにする */
 .home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
-  border-radius: 10px;
-  -webkit-backdrop-filter: blur(20px) saturate(1.8); backdrop-filter: blur(20px) saturate(1.8);
+  border-radius: 10px; box-shadow: none;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); color: #fff;
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
 }
-body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
-  background: linear-gradient(160deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .08));
-  border: 1px solid rgba(255, 255, 255, .32); color: #fff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 12px 30px rgba(0, 0, 0, .35);
-}
-body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) {
-  background: linear-gradient(160deg, rgba(255, 255, 255, .28), rgba(255, 255, 255, .14));
-}
-body[data-md-color-scheme="slate"].home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .78); }
-body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
-  background: linear-gradient(160deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .7));
-  border: 1px solid rgba(255, 255, 255, .9);
-  box-shadow: inset 0 1px 0 #fff, 0 12px 30px rgba(0, 0, 0, .35);
-}
-body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .95); }
+.home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .16); }
+.home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .72); }
 .home-motion .home-search .site-search__input { border-radius: 10px; background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .32); }
 /* 参考文献と note の帯：無地の面を切って円筒を見せる */
 .md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
 .home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
 .home-motion .home-sheet { padding-bottom: 3rem; }
+/* トップでは共有ボタンを出さず，運営者情報も節の見出しと同じ作りにする */
+.home-motion .page-share { display: none; }
+.home-motion .md-typeset .owner { margin: 4.5rem 0 3rem; }
+.home-motion .md-typeset .owner__heading {
+  display: block; margin: 0 0 1.4rem; padding: 0; background: none; color: var(--md-typeset-color);
+  font-size: 1.45rem; font-weight: 500; letter-spacing: .08em; line-height: 1.4;
+}
+.home-motion .md-typeset .owner__heading::after { content: ""; position: static; display: block; width: 1.6rem; height: 2px; margin-top: .7rem; border: 0; background: currentColor; }
+.home-motion .md-typeset .owner__heading-icon { display: none; }
+.home-motion .md-typeset .owner__card { padding: 0; background: none; max-width: 40rem; }
+@media (max-width: 600px) { .home-motion .md-typeset .owner__heading { font-size: 1.3rem; } }
+/* 更新履歴は灰色の箱に入れない */
+.home-motion .md-typeset .home-news { padding: 0; background: none; border: 0; }
+.home-motion .md-typeset a.owner__link { background: none; border: 1px solid var(--md-default-fg-color--lighter); color: var(--md-typeset-color); }
+.home-motion .md-typeset a.owner__link:is(:hover, :focus-visible) { border-color: var(--md-typeset-color); }
+/* トップの題名：サイト名を Zen Kaku Gothic New で置く（読み込むのは題名の8文字だけ） */
+.home-hero__title { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; letter-spacing: .14em; }
+.home-hero__facts { font-size: .8rem; letter-spacing: .08em; }
+@media (min-width: 1100px) { .home-motion .home-hero { padding-top: 4.5rem; padding-bottom: 3.5rem; } }
+@media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1.55rem; } }
+
+/* トップのヘッダーとタブ：円筒が透けるガラスにし，タブもヘッダーの下に止めておく。
+   「何のサイト？」の面が出てくるまでは隠す（home-motion.js が body に home-headless を付け外しする） */
+.home-motion :is(.md-header, .md-tabs) {
+  background-color: rgba(18, 18, 18, .8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), opacity .35s ease;
+}
+[data-md-color-scheme="slate"].home-motion :is(.md-header, .md-tabs) { background-color: rgba(10, 10, 10, .8); }
+.home-motion .md-tabs { position: sticky; top: 2.4rem; z-index: 3; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.home-motion.home-headless .md-header { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+.home-motion.home-headless .md-tabs { transform: translateY(calc(-100% - 2.4rem)); opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .home-motion :is(.md-header, .md-tabs) { transition: none; } }
