@@ -1876,8 +1876,10 @@ html { scroll-behavior: smooth; }
 .home-motion .home-sheet {
   position: relative; z-index: 1; margin-top: 4rem; padding-top: 1.6rem;
   background: var(--md-default-bg-color); box-shadow: 0 0 0 100vmax var(--md-default-bg-color);
-  clip-path: inset(0 -100vmax -100vmax -100vmax);
+  clip-path: inset(0 -100vmax 0 -100vmax);
 }
+/* 最後の面だけは下にも広げて，ページの終わりまで塗る */
+.home-motion .home-sheet--last { clip-path: inset(0 -100vmax -100vmax -100vmax); }
 .home-motion .md-content__inner > .page-share,
 .home-motion .md-content__inner > .owner { position: relative; z-index: 1; }
 .home-motion .md-typeset .home-promise { background: none; border-left: 0; padding-left: 0; }
@@ -1926,6 +1928,8 @@ html { scroll-behavior: smooth; }
   /* 分野・難易度・印刷のカードは同じ3列にそろえる */
   .home-motion .md-typeset .home-dark :is(.home-tiles, .home-tiles--single) { grid-template-columns: repeat(3, 1fr); }
   .md-typeset .home-sheet .home-sec__body { max-width: 46rem; }
+  /* 帯のカードは右の列に置く */
+  .md-typeset .home-band { padding-left: 23rem; }
   /* 題名と検索窓は左に寄せ，見出しの列と左端をそろえる */
   .home-motion .home-hero { padding-left: 0; padding-right: 0; }
   .home-motion .home-hero__inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; text-align: left; box-sizing: border-box; }
@@ -1954,3 +1958,7 @@ body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(
 }
 body:not([data-md-color-scheme="slate"]).home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .95); }
 .home-motion .home-search .site-search__input { border-radius: 10px; background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .32); }
+/* 参考文献と note の帯：無地の面を切って円筒を見せる */
+.md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
+.home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
+.home-motion .home-sheet { padding-bottom: 3rem; }

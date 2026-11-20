@@ -5,7 +5,7 @@
       文章（まとまりごとにフェード）。
    3. 節の組み立て：見出しとその中身を1つの節にまとめる。PC では見出しを左の列，中身を右の列に置く。
    円筒の上（見出し・検索窓・分野と難易度のカード）はダークモードの配色で表示する。
-   「このサイトについて」から下は無地の面に載せ，円筒の上へせり上がるようにする。
+   「何のサイト？」から下は無地の面に載せ，円筒の上へせり上がるようにする。
    この面はライトモードとダークモードの切り替えに従う。 */
 (function () {
   var ringEl = document.querySelector("[data-home-ring]");
@@ -19,20 +19,24 @@
   var hero = document.querySelector(".home-hero");
   if (hero) hero.setAttribute("data-md-color-scheme", "slate");
   var inner = document.querySelector(".md-content__inner");
-  var dark = null, sheet = null;
+  /* 「何のサイト？」から下は無地の面にする。ただし .home-band（参考文献と note の入口）では面を切り，
+     円筒をもう一度見せる。dark は円筒の上の最初の部分，darks と sheets はそれぞれのまとまりの一覧 */
+  var dark = null, darks = [], sheets = [];
   if (inner) {
-    var kids = Array.prototype.slice.call(inner.children), cut = -1;
-    kids.forEach(function (el, i) { if (cut < 0 && el.matches("h2#about")) cut = i; });
-    var top = kids.filter(function (el, i) { return (cut < 0 || i < cut) && !el.matches("h1"); });
-    var rest = cut < 0 ? [] : kids.slice(cut);
-    if (top.length) {
-      dark = document.createElement("div"); dark.className = "home-dark";
-      inner.insertBefore(dark, top[0]); top.forEach(function (el) { dark.appendChild(el); });
-    }
-    if (rest.length) {
-      sheet = document.createElement("div"); sheet.className = "home-sheet";
-      inner.insertBefore(sheet, rest[0]); rest.forEach(function (el) { sheet.appendChild(el); });
-    }
+    var kids = Array.prototype.slice.call(inner.children), onSheet = false, box = null, kind = "";
+    kids.forEach(function (el) {
+      if (el.matches("h1")) return;
+      if (el.matches("h2#about")) onSheet = true;
+      var k = (onSheet && !el.matches(".home-band")) ? "sheet" : "dark";
+      if (!box || k !== kind) {
+        box = document.createElement("div"); box.className = k === "sheet" ? "home-sheet" : "home-dark"; kind = k;
+        inner.insertBefore(box, el);
+        (k === "sheet" ? sheets : darks).push(box);
+      }
+      box.appendChild(el);
+    });
+    dark = darks[0] || null;
+    if (sheets.length) sheets[sheets.length - 1].classList.add("home-sheet--last");
   }
 
   /* ---------- 円筒 ---------- */
@@ -124,7 +128,7 @@
     targets.push(el);
   }
 
-  /* 文章のまとまり：このサイトについての前半（区切り線の前）と後半，約束，更新履歴 */
+  /* 文章のまとまり：何のサイト？の前半（区切り線の前）と後半，約束，更新履歴 */
   function wrap(nodes) {
     if (!nodes.length) return null;
     var box = document.createElement("div");
@@ -159,11 +163,15 @@
     group([dark.querySelector(":scope > .home-levels")], "up");
     group([dark.querySelector(":scope > .home-tiles--single")], "up");
   }
+  /* 参考文献と note のカードも下から入る */
+  darks.slice(1).forEach(function (box) {
+    Array.prototype.forEach.call(box.querySelectorAll(":scope > .home-band > .home-tiles"), function (t) { group([t], "up"); });
+  });
 
   var blocks = [];
-  [dark, sheet].forEach(function (box) { if (box) blocks = blocks.concat(Array.prototype.slice.call(box.children)); });
+  darks.concat(sheets).forEach(function (box) { blocks = blocks.concat(Array.prototype.slice.call(box.children)); });
   blocks.forEach(function (el) {
-    if (el.matches("h1")) return;
+    if (el.matches("h1, .home-band")) return;
     if (el.matches("h2.home-head")) { add(el, "hm-head"); return; }
     if (el.matches(".home-tiles")) {
       Array.prototype.forEach.call(el.children, function (card, i) {
@@ -181,8 +189,7 @@
   document.querySelectorAll(".md-content .page-share, .md-content .owner").forEach(function (el) { add(el, "hm-fade"); });
 
   /* 節の組み立て：見出しと，次の見出しまでの中身を section.home-sec にまとめる */
-  [dark, sheet].forEach(function (box) {
-    if (!box) return;
+  darks.concat(sheets).forEach(function (box) {
     Array.prototype.forEach.call(box.querySelectorAll(":scope > h2.home-head"), function (h) {
       var sec = document.createElement("section"), main = document.createElement("div");
       sec.className = "home-sec"; main.className = "home-sec__body";
@@ -195,7 +202,7 @@
   /* 見出しは最初ほとんど切り取られていて面積がないので，少しでも入ったら出す */
   var heads = [];
   targets = targets.filter(function (el) { if (el.classList.contains("hm-head")) { heads.push(el); return false; } return true; });
-  if (sheet) { sheet.classList.add("hm", "hm-sheet"); heads.push(sheet); }
+  sheets.forEach(function (sheet) { sheet.classList.add("hm", "hm-sheet"); heads.push(sheet); });
   var ioHead = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (!e.isIntersecting) return;

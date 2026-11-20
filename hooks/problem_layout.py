@@ -439,11 +439,19 @@ def _home(html: str, page, config) -> str:
         + f'<div class="home-levels">{levels}</div>'
         + _home_heading("印刷", "print")
         + f'<div class="home-tiles home-tiles--single"><a class="home-tile" href="exam/">'
-        '<span class="home-tile__body"><span class="home-tile__name">問題用紙をつくる</span>'
-        '<span class="home-tile__desc">解答・解説は別冊になります</span></span></a></div>'
-        + _home_heading("このサイトについて", "about")
-        + sections.get("このサイトについて", "")
-        + _home_heading("重要な約束と推奨される使い方", "promise")
-        + f'<div class="home-promise">{sections.get("重要な約束と推奨される使い方", "")}</div>'
+        '<span class="home-tile__body"><span class="home-tile__name">問題用紙をつくる</span></span></a></div>'
+        + _home_heading("何のサイト？", "about")
+        + sections.get("何のサイト？", "")
+        + _home_heading("AIの利用について", "ai")
+        + sections.get("AIの利用について", "")
+        # 円筒をもう一度見せる帯：参考文献一覧と note への入口
+        + '<div class="home-band"><div class="home-tiles">'
+        '<a class="home-tile" href="books/"><span class="home-tile__body"><span class="home-tile__name">参考文献一覧</span>'
+        '<span class="home-tile__desc">このサイトを作るにあたって参照した教科書を紹介します。</span></span></a>'
+        '<a class="home-tile" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="home-tile__body">'
+        '<span class="home-tile__name">note</span><span class="home-tile__desc">日記やサイト作成の裏話などを書いています。</span></span></a>'
+        '</div></div>'
+        + _home_heading("推奨される使い方", "usage")
+        + f'<div class="home-promise">{sections.get("推奨される使い方", "")}</div>'
         + (_home_heading("更新履歴", "news") + f'<div class="home-news">{news}</div>' if news else "")
     )
