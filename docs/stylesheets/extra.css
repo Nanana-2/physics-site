@@ -1991,3 +1991,6 @@ html { scroll-behavior: smooth; }
 .home-motion .home-hero__facts { margin: .4rem 0 0; font-size: .62rem; letter-spacing: .14em; opacity: .75; }
 @media (min-width: 1100px) { .home-motion .home-hero { padding-top: 0; padding-bottom: 3rem; } .home-motion .home-hero__title { font-size: 1rem; } .home-motion .home-hero__facts { margin-bottom: 0; } }
 @media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1rem; } }
+
+/* ヘッダーのサイト名：トップの題名と同じ書体にそろえる */
+.md-header__topic:first-child .md-ellipsis { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; font-weight: 500; letter-spacing: .14em; }

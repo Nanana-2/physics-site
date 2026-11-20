@@ -8,10 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono&display=swap">
-  {%- if page and page.is_homepage %}
-  {#- トップの題名だけ Zen Kaku Gothic New を使う。使う8文字だけを読み込む -#}
+  {#- サイト名（トップの題名とヘッダー）だけ Zen Kaku Gothic New を使う。使う8文字だけを読み込む -#}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&text=%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%86&display=swap">
-  {%- endif %}
   <link rel="apple-touch-icon" href="{{ 'assets/apple-touch-icon.png' | url }}">
   <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
   {#- SNS のカード画像（tools/make_og_images.py で作る）。問題ページは問題ごと，ほかは共通の1枚 -#}
