@@ -42,18 +42,13 @@
 {% block tabs %}
   {{ super() }}
   {% if page and page.is_homepage %}
-    {#- トップページ：サイト名と一行の説明，大きな検索窓 -#}
+    {#- トップページ：円筒の画面いっぱいに，左下へ小さくサイト名と一行の説明 -#}
     {#- 円筒（問題の図と問題文が回る）。javascripts/home-motion.js が組み立てる。JS が動かないときは今までどおりの写真のヒーロー -#}
     <div class="home-ring" aria-hidden="true" data-home-ring data-ring-base="{{ 'assets/images/ring/' | url }}" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');"></div>
     <section class="home-hero" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');">
       <div class="home-hero__inner">
         <h1 class="home-hero__title">大学物理の問題集</h1>
-        <p class="home-hero__facts">定期試験から大学院入試まで，物理と物理数学の問題を集めました</p>
-        <form class="site-search home-search" action="{{ 'tags/' | url }}" method="get" role="search" data-site-search data-index-url="{{ 'problem-index.json' | url }}">
-          <span class="site-search__icon" aria-hidden="true">{% include ".icons/material/magnify.svg" %}</span>
-          <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索（例：角運動量，分配関数）" autocomplete="off" aria-label="問題を検索">
-          <div class="site-search__results" role="listbox" hidden></div>
-        </form>
+        <p class="home-hero__facts">物理6分野と物理数学・{{ page.meta.problem_total }}問で学べる大学物理の問題集サイト</p>
       </div>
     </section>
     <style>.md-content__inner > h1:first-child { display: none; }</style>
