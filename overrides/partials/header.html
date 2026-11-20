@@ -10,7 +10,8 @@
 <header class="{{ class }}" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
     <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
-      {% include "partials/logo.html" %}
+      {#- ロゴは文字色に合わせて n の色が変わるよう，SVG を直接埋め込む（★の黄色はそのまま） -#}
+      {% include "partials/logo-mark.svg" %}
     </a>
     <label class="md-header__button md-icon site-burger" for="__drawer" aria-label="メニュー">
       <span class="site-burger__line"></span><span class="site-burger__line"></span><span class="site-burger__line"></span>

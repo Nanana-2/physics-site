@@ -62,7 +62,7 @@ extra_javascript:
   - javascripts/answers.js?v=20261022b
   - javascripts/copy-markdown.js?v=20261022b
   - javascripts/exam.js?v=20261031g
-  - javascripts/home-motion.js?v=20261120f
+  - javascripts/home-motion.js?v=20261120h
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 hooks:
@@ -82,4 +82,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261120f
+  - stylesheets/extra.css?v=20261120h
