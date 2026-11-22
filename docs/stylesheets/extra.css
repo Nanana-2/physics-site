@@ -1984,5 +1984,5 @@ html { scroll-behavior: smooth; }
 .md-typeset .page-nav__subject { display: none; }
 @media screen and (max-width: 600px) { .md-typeset .page-nav__subject { display: inline; } }
 /* 章の問題の一覧の見出し：章の番号と題名 */
-.md-typeset p.chapter-list__title { display: flex; gap: .6em; margin: .3rem 0 .4rem; padding: 0 .9rem; color: var(--md-default-fg-color--light); font-size: var(--fs-70); font-weight: 500; }
+.md-typeset p.chapter-list__title { display: flex; gap: .6em; margin: .3rem 0 .2rem; padding: .32rem .9rem 0; color: var(--md-default-fg-color--light); font-size: var(--fs-78); line-height: 1.5; }
 .md-typeset p.chapter-list__title .chapter-list__num { color: inherit; }
