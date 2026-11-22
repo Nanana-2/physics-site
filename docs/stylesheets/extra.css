@@ -1985,8 +1985,9 @@ html { scroll-behavior: smooth; }
   [data-md-color-scheme="slate"] .md-typeset .page-nav__hub { border-top-color: rgba(255, 255, 255, .1); }
 }
 
-/* 分野の一覧ページの最後：問題用紙をつくる・参考文献一覧のボタンを2列に並べる */
-.md-typeset .page-links--pair { display: grid; grid-template-columns: 1fr 1fr; margin-top: 3rem; }
+/* 問題ページと分野の一覧ページの最後：問題用紙をつくる・参考文献一覧のボタンを2列に並べる */
+.md-typeset .page-links--pair { display: grid; grid-template-columns: 1fr 1fr; }
+.md-typeset .toc + .page-links--pair { margin-top: 3rem; }
 .md-typeset .page-links__button--print::before { --site-icon: url("../assets/icons/print.svg"); }
 /* スマホの「〜の一覧へ」：収まらないときは分野の名前のあとで改行する（名前の途中では切らない） */
 @media screen and (max-width: 600px) {
