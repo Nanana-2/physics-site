@@ -251,7 +251,7 @@ def on_post_page(output, page, config):
     return output[: nav.start()] + output[nav.end() : at] + crumb + output[at:]
 
 
-# ---- 分野別の問題一覧：章ごとのカードを目次（番号・タイトル・★）に組み替える ----
+# ---- 分野別の問題一覧：章ごとのカードを目次（番号・タイトル・★）に組み替え，最初に章の目次（押すとその章へ移る）を置く ----
 
 CHAPTER_CARD = re.compile(
     r"<li>\s*<p><strong>(\d+)\.\s*(.*?)</strong></p>\s*<hr\s*/?>\s*(?:<p>(.*?)</p>\s*)?<ul>(.*?)</ul>\s*</li>", re.DOTALL
@@ -273,7 +273,7 @@ def _subject_index(html, page, config):
     grid = CARD_GRID.search(html)
     if not grid:
         return html
-    sections = []
+    sections, index = [], []
     for number, title, note, items in CHAPTER_CARD.findall(grid.group(0)):
         links = re.findall(r'<a href="([^"]+)">(.*?)</a>', items)
         rows = "".join(
@@ -282,14 +282,19 @@ def _subject_index(html, page, config):
             for i, (href, name) in enumerate(links, 1)
         )
         sections.append(
-            f'<section class="toc-chapter"><h2 class="toc-chapter__head"><span class="toc-chapter__no">{number}</span>'
+            f'<section class="toc-chapter" id="ch{number}"><h2 class="toc-chapter__head"><span class="toc-chapter__no">{number}</span>'
             f'<span class="toc-chapter__title">{title}</span></h2>'
             + (f'<p class="wip-note">{note}</p>' if note else "")
             + f"{rows}</section>"
         )
+        index.append(
+            f'<a class="toc-index__link" href="#ch{number}"><span class="toc-index__no">{number}</span>'
+            f'<span class="toc-index__title">{title}</span></a>'
+        )
     if not sections:
         return html
-    return html[: grid.start()] + '<div class="toc">' + "".join(sections) + "</div>" + html[grid.end() :]
+    nav = '<nav class="toc-index" aria-label="章の一覧">' + "".join(index) + "</nav>"
+    return html[: grid.start()] + nav + '<div class="toc">' + "".join(sections) + "</div>" + html[grid.end() :]
 
 
 # ---- 参考文献一覧：分野の見出しを帯にする（科目のアイコンは付けない），冒頭の「このページは何？」を薄いグレーの面で囲む ----

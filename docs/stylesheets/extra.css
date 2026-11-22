@@ -647,37 +647,35 @@ body, input {
 /* ==========================================
    14b. 分野別の問題一覧：章の見出し（紺の丸に章番号＋薄紺の帯）と問題の行
    ========================================== */
-.md-typeset .toc { margin-top: 1.5em; }
-.md-typeset .toc-chapter { margin: 0 0 2.2em; }
+.md-typeset .toc { margin-top: 0; }
+.md-typeset .toc-chapter { margin: 0 0 1.4em; }
+/* 章の見出しは，トップの節の見出しと同じ形（太字にせず，下に短い線）にする。本文の行とは文字の大きさだけで区別する */
 .md-typeset h2.toc-chapter__head {
-  position: relative;
-  margin: 0 0 .3em 1.05rem;
-  padding: .4em .9rem .35em 1.55rem;
+  display: flex;
+  gap: .6em;
+  margin: 2.4rem 0 .6rem;
+  padding: 0 .2rem;
   border: none;
-  border-radius: 0 1em 1em 0;
-  background: #ececec;
-  color: var(--site-navy);
-  font-size: var(--fs-90);
-  letter-spacing: .04em;
+  color: var(--md-typeset-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  line-height: 1.5;
 }
-.md-typeset .toc-chapter__no {
-  position: absolute;
-  left: -1.05rem; top: 50%;
-  width: 2.1rem; height: 2.1rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: var(--site-navy);
-  color: #fff;
-  font-size: var(--fs-85);
-  line-height: 2.1rem;
-  text-align: center;
-}
-[data-md-color-scheme="slate"] .md-typeset h2.toc-chapter__head { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
-[data-md-color-scheme="slate"] .md-typeset .toc-chapter__no { background: #4b4b4b; }
+.md-typeset .toc-chapter__title::after { content: ""; display: block; width: 1.6rem; height: 2px; margin-top: .6rem; background: currentColor; }
+.md-typeset .toc-chapter:first-child h2.toc-chapter__head { margin-top: 1rem; }
+.md-typeset .toc-chapter { scroll-margin-top: 5.6rem; }
+/* 最初に置く章の目次（押すとその章へ移る）。文字は問題の行と同じ大きさで，番号だけ色を変える */
+.md-typeset .toc-index { margin: .6em 0 1.6em; padding: .3rem 0; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #e3e3e3; }
+.md-typeset a.toc-index__link { display: flex; gap: .6rem; padding: .4rem .2rem; border: none; color: var(--md-typeset-color); font-size: var(--fs-80); line-height: 1.5; }
+.md-typeset a.toc-index__link:hover { color: var(--md-accent-fg-color); }
+.md-typeset .toc-index__no { flex: none; width: 2.8em; color: var(--site-navy); }
+[data-md-color-scheme="slate"] .md-typeset .toc-index { border-color: rgba(255, 255, 255, .1); }
+[data-md-color-scheme="slate"] .md-typeset .toc-index__no { color: #d2d2d2; }
 
 .md-typeset a.toc-row {
   display: grid;
-  grid-template-columns: 2.6rem 1fr auto;
+  grid-template-columns: 2.8em 1fr auto;
   align-items: baseline;
   gap: .6rem;
   padding: .5rem .2rem;
@@ -687,7 +685,7 @@ body, input {
   font-size: var(--fs-80);
 }
 .md-typeset a.toc-row:hover .toc-row__title { color: var(--md-accent-fg-color); }
-.md-typeset .toc-row__num { font-size: var(--fs-70); color: var(--site-navy); }
+.md-typeset .toc-row__num { color: var(--site-navy); }
 .md-typeset .toc-row__stars { font-size: var(--fs-65); letter-spacing: .08em; }
 .md-typeset .toc-row__stars .on { color: #f2c200; }
 .md-typeset .toc-row__stars .off { color: var(--md-default-fg-color--lighter); }
@@ -772,6 +770,8 @@ body, input {
     border-top: 1px solid #e3e3e3;
   }
   .md-typeset .page-nav__side--next { border-left: 1px solid #e3e3e3; }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__side--next { border-left-color: rgba(255, 255, 255, .1); }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__list { border-top-color: rgba(255, 255, 255, .1); }
   .md-typeset .page-nav__title { font-size: var(--fs-78); }
 }
 
@@ -1176,9 +1176,15 @@ body, input {
 .md-header__button.md-logo svg { width: 1.9rem; height: 1.9rem; }
 .md-header__button.md-logo { margin: .1rem; padding: .2rem; }
 
-/* ヘッダー：サイト名の段とタブの段を同じ黒の1本の帯にする。下の影も付けない */
-.md-header, .md-tabs { background-color: #1a1a1a; }
-[data-md-color-scheme="slate"] :is(.md-header, .md-tabs) { background-color: #0e0e0e; }
+/* ヘッダー：サイト名の段とタブの段を同じ黒の1本の帯にする。下の影も付けない。
+   トップと同じく後ろが透けるガラスにする。白い本文の上でも黒の帯に見えるよう，暗さは 86% にする（トップは 66%）。
+   タブはヘッダーの中にあるので，ガラスはヘッダーにだけ掛け，タブは背景を透明にする */
+.md-header {
+  background-color: rgba(26, 26, 26, .86);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6);
+}
+.md-tabs { background-color: transparent; border-top: 1px solid rgba(255, 255, 255, .08); }
+[data-md-color-scheme="slate"] .md-header { background-color: rgba(14, 14, 14, .86); }
 .md-header, .md-header--shadow { box-shadow: none; }
 /* スマホのメニューを開いたときの上の段もヘッダーと同じ黒にする */
 @media screen and (max-width: 76.24em) {

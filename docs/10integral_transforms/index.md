@@ -7,8 +7,6 @@ hide:
 
 # 積分変換の問題一覧
 
-この単元に収録されている演習問題の一覧です。
-
 <div class="grid cards" markdown>
 
 -   __1. フーリエ級数__
