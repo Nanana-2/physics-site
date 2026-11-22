@@ -40,8 +40,8 @@
 {% block tabs %}
   {{ super() }}
   {% if page and page.is_homepage %}
-    {#- トップページ：円筒の画面いっぱいに，左下へ小さくサイト名と一行の説明 -#}
-    {#- 円筒（問題の図と問題文が回る）。javascripts/home-motion.js が組み立てる。JS が動かないときは今までどおりの写真のヒーロー -#}
+    {#- トップページ：ヘッダーのすぐ下に，小さくサイト名と一行の説明 -#}
+    {#- 背景の帯（問題の図と問題文が横に流れる）。javascripts/home-motion.js が組み立てる。JS が動かないときは今までどおりの写真のヒーロー -#}
     <div class="home-ring" aria-hidden="true" data-home-ring data-ring-base="{{ 'assets/images/ring/' | url }}" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');"></div>
     <section class="home-hero" style="background-image: url('{{ 'assets/images/index.jpg' | url }}');">
       <div class="home-hero__inner">
@@ -265,9 +265,29 @@
       {% endmacro %}
       <nav class="page-nav" aria-label="前後の問題">
         {{ side(page.previous_page, '← 前の問題', '') }}
-        <a class="page-nav__list" href="{{ subject[1] | url }}">一覧へ</a>
+        {#- スマホでは，一覧へのボタンに章の番号と題名も書き，下の章の問題の一覧の見出しを兼ねる -#}
+        {% set ch = page.parent %}
+        <a class="page-nav__list" href="{{ subject[1] | url }}">{% if ch and ch.title %}{% set ch_parts = ch.title.split('.', 1) %}<span class="page-nav__chapter"><span class="page-nav__chapter-no">{{ ch_parts[0] }}</span>{{ (ch_parts[1] if ch_parts | length > 1 else ch.title) | trim }}</span>{% endif %}<span class="page-nav__list-label">一覧へ</span></a>
         {{ side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
       </nav>
+      {#- この章の問題：PC は右のサイドバーに同じ一覧があるので，サイドバーが出ない幅（スマホ・タブレット）だけで見せる -#}
+      {% set chapter = page.parent %}
+      {% if chapter and chapter.children and chapter.children | length > 1 %}
+        {% set chapter_no = chapter.title.split('.')[0] %}
+        <section class="chapter-list" aria-label="この章の問題">
+          <div class="chapter-list__body">
+            <ol class="chapter-list__items">
+              {% for item in chapter.children %}
+                <li>
+                  <a class="chapter-list__link{% if item.active %} is-current{% endif %}" href="{{ item.url | url }}"{% if item.active %} aria-current="page"{% endif %}>
+                    <span class="chapter-list__num">{{ chapter_no }}-{{ loop.index }}</span>{{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ol>
+          </div>
+        </section>
+      {% endif %}
       <nav class="page-links" aria-label="関連ページ">
         <a class="page-links__button page-links__button--books" href="{{ 'books/' | url }}">
           <span class="page-links__label">参考文献一覧</span>
