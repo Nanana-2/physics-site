@@ -772,6 +772,8 @@ body, input {
     border-top: 1px solid #e3e3e3;
   }
   .md-typeset .page-nav__side--next { border-left: 1px solid #e3e3e3; }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__side--next { border-left-color: rgba(255, 255, 255, .1); }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__list { border-top-color: rgba(255, 255, 255, .1); }
   .md-typeset .page-nav__title { font-size: var(--fs-78); }
 }
 
