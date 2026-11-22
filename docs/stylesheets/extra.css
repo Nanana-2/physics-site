@@ -1812,7 +1812,8 @@ html { scroll-behavior: smooth; }
 .home-ring__tile { flex: none; border-radius: 3px; background: #fff center / cover no-repeat; }
 .home-motion { background: #121212; }
 .home-motion :is(.md-container, .md-main, .md-content) { background: transparent; }
-.home-motion .md-main { position: relative; z-index: 1; }
+/* md-main に z-index を付けると，スマホのメニュー（md-main の中）が暗い幕（md-overlay）の下に潜って押せなくなるので付けない */
+.home-motion .md-main { position: relative; }
 .home-motion .md-footer { position: relative; z-index: 1; }
 .home-motion .home-hero { position: relative; z-index: 1; background: none !important; }
 .home-motion .home-hero::before { display: none; }
