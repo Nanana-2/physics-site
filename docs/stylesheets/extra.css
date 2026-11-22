@@ -141,31 +141,47 @@ span.arithmatex mjx-mfrac {
 /* ==========================================
    4. 問題ページ：問題の枠・解答・解説の帯・小見出し
    ========================================== */
-/* 問題の枠：上辺が紺の帯，帯の「問題」と★を枠内の本文の行頭・行末にそろえる */
-.md-typeset .problem-box {
-  margin: 1.2em 0 2.2em;
-}
+/* 見出しの形：サイトの見出しは，トップの節の見出しと同じ形にそろえる（太字にせず，下に短い線。帯・丸・アイコンは付けない）。
+   使う所：問題の枠の「問題」，解答・解説，分野の一覧の章，参考文献一覧の分野，運営者情報 */
+.md-typeset .problem-box { margin: 1.2em 0 2.2em; }
 .md-typeset .problem-box > h2,
-.md-typeset h2.solution-heading {
+.md-typeset h2.solution-heading,
+.md-typeset h2.books-head,
+.md-typeset .owner__heading {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 0;
-  padding: .35em .9rem .3em 1.2rem;
+  margin: 2.4rem 0 1rem;
+  padding: 0;
   border: none;
-  background: var(--site-navy);
-  color: #fff;
-  font-size: var(--fs-90);
-  letter-spacing: .05em;
+  border-radius: 0;
+  background: none;
+  color: var(--md-typeset-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  line-height: 1.5;
 }
+.md-typeset .problem-box > h2 > span:first-child::after,
+.md-typeset h2.solution-heading::after,
+.md-typeset h2.books-head::after,
+.md-typeset .owner__heading::after,
+.md-typeset h1.problem-title::after {
+  content: "";
+  display: block;
+  width: 1.6rem; height: 2px;
+  margin-top: .6rem;
+  background: currentColor;
+}
+.md-typeset .problem-box > h2 { margin-top: 0; }
+/* 「問題」の行だけは右に★を置くので横に並べる。ほかの見出しは短い線を文字の下に置くため縦に積む */
+.md-typeset :is(h2.solution-heading, h2.books-head) { display: block; }
+.md-typeset h2.solution-heading { position: relative; }
 /* 問題文は枠線を引かず，ごく薄いグレーの面で囲む */
 .md-typeset .problem-box__body { padding: .5em 1.1rem .7em; background: #f6f6f6; }
 [data-md-color-scheme="slate"] .md-typeset .problem-box__body { background: rgba(255, 255, 255, .035); }
 
-/* 帯・見出しのアイコン（Font Awesome の SVG をマスクにして文字色で塗る） */
-.md-typeset .problem-box > h2 > span:first-child::before,
-.md-typeset h1.problem-title::after,
-.md-typeset h2.solution-heading::after,
+/* パンくずの「ホーム」の家のアイコン（Font Awesome の SVG をマスクにして文字色で塗る） */
 .md-typeset .md-path__item:first-child .md-path__link::before {
   content: "";
   display: inline-block;
@@ -173,68 +189,11 @@ span.arithmatex mjx-mfrac {
   -webkit-mask: var(--site-icon) center / contain no-repeat;
   mask: var(--site-icon) center / contain no-repeat;
 }
-.md-typeset .problem-box > h2 > span:first-child::before {
-  --site-icon: url("../assets/icons/file-pen.svg");
-  width: 1em; height: .85em;
-  margin-right: .5em;
-  vertical-align: -.05em;
-}
 
-/* 解答・解説：薄紺の帯（右端は丸く），左端に重なる紺の丸にチェック */
-.md-typeset h2.solution-heading {
-  position: relative;
-  display: block;
-  margin: 2em 0 1.1em 1.05rem;
-  padding: .38em .9rem .34em 1.55rem;
-  border-radius: 0 1em 1em 0;
-  background: #ececec;
-  color: var(--site-navy);
-}
-.md-typeset h2.solution-heading::before {
-  content: "";
-  position: absolute;
-  left: -1.05rem; top: 50%;
-  width: 2.1rem; height: 2.1rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: var(--site-navy);
-}
-.md-typeset h2.solution-heading::after {
-  --site-icon: url("../assets/icons/check.svg");
-  position: absolute;
-  left: -.4rem; top: 50%;
-  width: .8rem; height: .8rem;
-  transform: translateY(-50%);
-  color: #fff;
-}
-[data-md-color-scheme="slate"] .md-typeset h2.solution-heading { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
-[data-md-color-scheme="slate"] .md-typeset h2.solution-heading::before { background: #4b4b4b; }
 
-/* 問題のタイトル：左に薄いグレーの丸に鉛筆，下に同じグレーの細い線 */
-.md-typeset h1.problem-title {
-  position: relative;
-  margin-bottom: .3em;
-  padding: 0 0 .35em 1.75em;
-  border-bottom: 1px solid #ececec;
-}
-.md-typeset h1.problem-title::before {
-  content: "";
-  position: absolute;
-  left: 0; top: .06em;
-  width: 1.36em; height: 1.36em;
-  border-radius: 50%;
-  background: #ececec;
-}
-.md-typeset h1.problem-title::after {
-  --site-icon: url("../assets/icons/pencil.svg");
-  position: absolute;
-  left: .43em; top: .49em;
-  width: .5em; height: .5em;
-  color: var(--site-navy);
-}
-[data-md-color-scheme="slate"] .md-typeset h1.problem-title { border-color: rgba(255, 255, 255, .08); }
-[data-md-color-scheme="slate"] .md-typeset h1.problem-title::before { background: rgba(255, 255, 255, .08); }
-[data-md-color-scheme="slate"] .md-typeset h1.problem-title::after { color: #d2d2d2; }
+
+/* 問題のタイトル：下に短い線（見出しの形は上の「見出しの形」と同じ） */
+.md-typeset h1.problem-title { margin-bottom: 1rem; padding: 0; border: none; }
 
 /* 問題ページのパンくずはタイトルの下線の下に置く（hooks/problem_layout.py で移動）。「ホーム」は家のアイコンに */
 .md-typeset .md-path { margin: 0 0 1.5em; font-size: var(--fs-68); }
@@ -252,7 +211,7 @@ span.arithmatex mjx-mfrac {
 /* 難易度の★：塗りは黄，空きは薄い白 */
 .problem-stars { font-size: var(--fs-80); letter-spacing: .12em; font-weight: 400; }
 .problem-stars__on { color: var(--site-star); }
-.problem-stars__off { color: rgba(255, 255, 255, .3); }
+.problem-stars__off { color: var(--md-default-fg-color--lighter); }
 
 /* 小問：番号の幅でぶら下げインデント */
 .md-typeset .problem-box__body p.subq {
@@ -271,7 +230,7 @@ span.arithmatex mjx-mfrac {
   gap: .7em;
   margin: 2em 0 .6em;
   font-size: var(--fs-95);
-  font-weight: 600;
+  font-weight: 500;
 }
 .md-typeset h3.solution-part::after {
   content: "";
@@ -475,35 +434,8 @@ body, input {
 [data-md-color-scheme="slate"] .md-typeset .books-intro { background: rgba(255, 255, 255, .035); }
 .md-typeset .books-intro h2 { margin: .8em 0 .6em; padding: 0; border: none; font-size: var(--fs-90); }
 
-.md-typeset h2.books-head {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 2.6em 0 .4em 1.05rem;
-  padding: .4em .9rem .35em 1.55rem;
-  border: none;
-  border-radius: 0 1em 1em 0;
-  background: #ececec;
-  color: var(--site-navy);
-  font-size: var(--fs-90);
-  letter-spacing: .04em;
-}
-.md-typeset h2.books-head--plain { margin-left: 0; padding-left: .9rem; }
-.md-typeset .books-head__icon {
-  position: absolute;
-  left: -1.05rem; top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.1rem; height: 2.1rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: var(--site-navy);
-  color: #fff;
-}
-.md-typeset .books-head__icon svg { width: .8rem; height: .8rem; fill: currentColor; }
-[data-md-color-scheme="slate"] .md-typeset h2.books-head { background: rgba(255, 255, 255, .12); color: #e3e3e3; }
-[data-md-color-scheme="slate"] .md-typeset .books-head__icon { background: #4b4b4b; }
+/* 分野の見出しの形は，問題ページの「見出しの形」と同じ */
+.md-typeset .books-head__icon { display: none; }
 
 .md-typeset .book-grid { display: block; margin: .6em 0 0; }
 .md-typeset .book-card { padding: 1.1rem .2rem 1.2rem; border-bottom: 1px solid #e3e3e3; }
@@ -1286,35 +1218,12 @@ body, input {
 .md-typeset :is(a.page-links__button, a.home-tile, a.home-level):is(:hover, :focus-visible, :active) { background-size: 100% 100%, auto; }
 
 /* ==========================================
-   運営者情報：見出しは吹き出し（紺，しっぽが下のカードを指す），中身は薄いグレーのカード。全ページの末尾
+   運営者情報：見出しはほかの見出しと同じ形，中身は薄いグレーのカード。全ページの末尾
    ========================================== */
 .md-typeset .owner { margin: 2.4rem 0 1rem; }
-.md-typeset .owner__heading {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: .5em;
-  margin: 0 0 .9rem;
-  padding: .4rem 1rem;
-  border-radius: .2rem;
-  background: var(--site-navy);
-  color: #fff;
-  font-size: var(--fs-78);
-  font-weight: 500;
-  letter-spacing: .04em;
-}
-.md-typeset .owner__heading::after {
-  content: "";
-  position: absolute;
-  left: 1.1rem; bottom: -.5rem;
-  border: .5rem solid transparent;
-  border-bottom: 0;
-  border-top-color: var(--site-navy);
-}
-[data-md-color-scheme="slate"] .md-typeset .owner__heading { background: #4b4b4b; }
-[data-md-color-scheme="slate"] .md-typeset .owner__heading::after { border-top-color: #4b4b4b; }
-.md-typeset .owner__heading-icon { display: inline-flex; width: .8em; height: .8em; }
-.md-typeset .owner__heading-icon svg { width: 100%; height: 100%; fill: currentColor; }
+/* 見出しの形は，問題ページの「見出しの形」と同じ（アイコンは出さない） */
+.md-typeset .owner__heading { display: block; margin-top: 0; }
+.md-typeset .owner__heading-icon { display: none; }
 .md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; background-color: #f6f6f6; background-image: var(--site-stripe); }
 [data-md-color-scheme="slate"] .md-typeset .owner__card { background-color: rgba(255, 255, 255, .035); }
 .md-typeset .owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; object-fit: cover; }
@@ -1359,9 +1268,9 @@ body, input {
 .md-typeset .answer-toggle:is(:hover, :focus-visible) { background-size: 100% 100%, auto; }
 [data-md-color-scheme="slate"] .md-typeset .answer-toggle { background-color: rgba(255, 255, 255, .12); color: #e3e3e3; }
 .md-typeset h2.solution-heading .answer-all {
-  position: absolute; right: .7rem; top: 50%; transform: translateY(-50%);
+  position: absolute; right: 0; top: .2em;
   padding: .15rem .7rem; border: 1px solid currentColor; border-radius: 1em; background: none; cursor: pointer;
-  color: inherit; font: inherit; font-size: var(--fs-62); opacity: .8;
+  color: inherit; font: inherit; font-size: var(--fs-62); letter-spacing: .04em; opacity: .8;
 }
 .md-typeset h2.solution-heading .answer-all:hover { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .md-typeset .answer { transition: none; } }
