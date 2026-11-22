@@ -294,7 +294,9 @@ def _subject_index(html, page, config):
     if not sections:
         return html
     nav = '<nav class="toc-index" aria-label="章の一覧">' + "".join(index) + "</nav>"
-    return html[: grid.start()] + nav + '<div class="toc">' + "".join(sections) + "</div>" + html[grid.end() :]
+    slug = page.file.src_uri.split("/")[0]
+    exam = f'<p class="toc-exam"><a class="toc-exam__link" href="../exam/?subject={slug}">この分野から問題用紙をつくる<span aria-hidden="true">→</span></a></p>'
+    return html[: grid.start()] + nav + '<div class="toc">' + "".join(sections) + "</div>" + exam + html[grid.end() :]
 
 
 # ---- 参考文献一覧：分野の見出しを帯にする（科目のアイコンは付けない），冒頭の「このページは何？」を薄いグレーの面で囲む ----
@@ -441,17 +443,14 @@ def _home(html: str, page, config) -> str:
         + f'<h3 class="home-subhead">物理</h3><div class="home-tiles">{tiles}</div>'
         + (f'<h3 class="home-subhead">物理数学</h3><div class="home-tiles">{math_tiles}</div>' if math_tiles else "")
         + legend
-        + _home_heading("難易度から選ぶ")
-        + f'<div class="home-levels">{levels}</div>'
-        + _home_heading("印刷", "print")
-        + f'<div class="home-tiles home-tiles--single"><a class="home-tile" href="exam/">'
-        '<span class="home-tile__body"><span class="home-tile__name">問題用紙をつくる</span></span></a></div>'
         + _home_heading("何のサイト？", "about")
         + sections.get("何のサイト？", "")
         + _home_heading("AIの利用について", "ai")
         + sections.get("AIの利用について", "")
-        # 円筒をもう一度見せる帯：参考文献一覧と note への入口
+        # 背景の帯をもう一度見せる欄：問題用紙をつくる・参考文献一覧・note への入口
         + '<div class="home-band"><div class="home-tiles">'
+        '<a class="home-tile" href="exam/"><span class="home-tile__body"><span class="home-tile__name">問題用紙をつくる</span>'
+        '<span class="home-tile__desc">好きな問題を選んで，試験の形式で印刷します。</span></span></a>'
         '<a class="home-tile" href="books/"><span class="home-tile__body"><span class="home-tile__name">参考文献一覧</span>'
         '<span class="home-tile__desc">このサイトを作るにあたって参照した教科書を紹介します。</span></span></a>'
         '<a class="home-tile" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="home-tile__body">'

@@ -273,7 +273,10 @@
       <nav class="page-nav" aria-label="前後の問題">
         {{ side(page.previous_page, '← 前の問題', '') }}
         {#- スマホでは，一覧へのボタンに分野の名前も書く（章の題名は下の章の問題の一覧の見出しに置く） -#}
-        <a class="page-nav__list" href="{{ subject[1] | url }}"><span><span class="page-nav__subject">{{ subject[0] }}の</span>一覧へ</span></a>
+        <div class="page-nav__hub">
+          <a class="page-nav__home" href="{{ '' | url }}"><span>トップ</span></a>
+          <a class="page-nav__list" href="{{ subject[1] | url }}"><span><span class="page-nav__subject">{{ subject[0] }}の</span>一覧へ</span></a>
+        </div>
         {{ side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
       </nav>
       {#- この章の問題：PC は右のサイドバーに同じ一覧があるので，サイドバーが出ない幅（スマホ・タブレット）だけで見せる -#}

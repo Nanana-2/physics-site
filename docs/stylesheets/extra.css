@@ -1949,3 +1949,40 @@ html { scroll-behavior: smooth; }
 /* 章の問題の一覧の見出し：章の番号と題名 */
 .md-typeset p.chapter-list__title { display: flex; gap: .6em; margin: .3rem 0 .2rem; padding: .32rem .9rem 0; color: var(--md-default-fg-color--light); font-size: var(--fs-78); line-height: 1.5; }
 .md-typeset p.chapter-list__title .chapter-list__num { color: inherit; }
+
+/* ==========================================
+   前後の問題の間：「トップ」と「一覧へ」を上下（スマホでは左右）に並べる
+   ========================================== */
+.md-typeset .page-nav__hub {
+  display: flex; flex-direction: column;
+  margin: .9rem 0;
+  border-left: 1px solid #e3e3e3; border-right: 1px solid #e3e3e3;
+}
+.md-typeset .page-nav__hub .page-nav__list { flex: 1; margin: 0; border: none; }
+.md-typeset a.page-nav__home {
+  display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; gap: .35em;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: var(--fs-66); font-weight: 500;
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 100% 0;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset a.page-nav__home:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text) !important; }
+.md-typeset .page-nav__home::before {
+  content: ""; display: inline-block; width: 1.05rem; height: 1rem; background-color: currentColor;
+  -webkit-mask: url("../assets/icons/house.svg") center / contain no-repeat; mask: url("../assets/icons/house.svg") center / contain no-repeat;
+}
+[data-md-color-scheme="slate"] .md-typeset :is(.page-nav__hub, a.page-nav__home) { border-color: rgba(255, 255, 255, .1); }
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav__hub {
+    grid-column: 1 / -1; grid-row: 2; flex-direction: row;
+    margin: 0; border: none; border-top: 1px solid #e3e3e3;
+  }
+  .md-typeset .page-nav__hub .page-nav__list { border-top: none; }
+  .md-typeset a.page-nav__home { flex: 0 0 33.3%; flex-direction: row; padding: .6rem 0; border-bottom: none; border-right: 1px solid #e3e3e3; }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__hub { border-top-color: rgba(255, 255, 255, .1); }
+}
+
+/* 分野の一覧ページの最後：問題用紙をつくるページへの入口 */
+.md-typeset .toc-exam { margin: 3rem 0 0; text-align: right; }
+.md-typeset a.toc-exam__link { display: inline-flex; gap: .5em; border-bottom: 1px solid currentColor; color: var(--md-typeset-color); font-size: var(--fs-80); }
+.md-typeset a.toc-exam__link:hover { color: var(--md-accent-fg-color); }
