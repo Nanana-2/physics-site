@@ -1283,14 +1283,13 @@ body, input {
 .md-typeset :is(a.page-links__button, a.home-tile, a.home-level):is(:hover, :focus-visible, :active) { background-size: 100% 100%, auto; }
 
 /* ==========================================
-   運営者情報：見出しはほかの見出しと同じ形，中身は薄いグレーのカード。全ページの末尾
+   運営者情報：見出しはほかの見出しと同じ形，中身は枠も面も付けない（トップと同じ）。全ページの末尾
    ========================================== */
 .md-typeset .owner { margin: 2.4rem 0 1rem; }
 /* 見出しの形は，上の「見出しの形」と同じ（アイコンは出さない） */
 .md-typeset .owner__heading { display: block; margin-top: 0; }
 .md-typeset .owner__heading-icon { display: none; }
-.md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; background-color: #f6f6f6; background-image: var(--site-stripe); }
-[data-md-color-scheme="slate"] .md-typeset .owner__card { background-color: rgba(255, 255, 255, .035); }
+.md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; max-width: 40rem; }
 .md-typeset .owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; object-fit: cover; }
 .md-typeset .owner__body p { margin: 0; }
 .md-typeset .owner__name { font-size: var(--fs-92); font-weight: 500; }
@@ -1299,12 +1298,11 @@ body, input {
 .md-typeset .owner__links { display: flex; flex-wrap: wrap; gap: .5rem; }
 .md-typeset a.owner__link {
   display: inline-flex; align-items: center; gap: .45em;
-  padding: .32rem .9rem; border: none; background-color: var(--site-navy); color: #fff; font-size: var(--fs-68); font-weight: 500;
+  padding: .32rem .9rem; border: 1px solid var(--md-default-fg-color--lighter); background-color: transparent; color: var(--md-typeset-color); font-size: var(--fs-68); font-weight: 500;
   background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
 }
-.md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
-[data-md-color-scheme="slate"] .md-typeset a.owner__link { background-color: #4b4b4b; }
+.md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; border-color: var(--md-typeset-color); }
 .md-typeset .owner__icon { display: inline-flex; width: .85em; height: .85em; }
 .md-typeset .owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
 .home-hero__title span { display: inline-block; }
@@ -1892,7 +1890,7 @@ html { scroll-behavior: smooth; }
 .md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
 .home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
 .home-motion .home-sheet { padding-bottom: 3rem; }
-/* トップでは共有ボタンを出さず，運営者情報も節の見出しと同じ作りにする */
+/* トップでは共有ボタンを出さず，運営者情報の見出しをトップの節の見出しと同じ大きさにする */
 .home-motion .page-share { display: none; }
 .home-motion .md-typeset .owner { margin: 4.5rem 0 3rem; }
 .home-motion .md-typeset .owner__heading {
@@ -1901,12 +1899,9 @@ html { scroll-behavior: smooth; }
 }
 .home-motion .md-typeset .owner__heading::after { content: ""; position: static; display: block; width: 1.6rem; height: 2px; margin-top: .7rem; border: 0; background: currentColor; }
 .home-motion .md-typeset .owner__heading-icon { display: none; }
-.home-motion .md-typeset .owner__card { padding: 0; background: none; max-width: 40rem; }
 @media (max-width: 600px) { .home-motion .md-typeset .owner__heading { font-size: 1.3rem; } }
 /* 更新履歴は灰色の箱に入れない */
 .home-motion .md-typeset .home-news { padding: 0; background: none; border: 0; }
-.home-motion .md-typeset a.owner__link { background: none; border: 1px solid var(--md-default-fg-color--lighter); color: var(--md-typeset-color); }
-.home-motion .md-typeset a.owner__link:is(:hover, :focus-visible) { border-color: var(--md-typeset-color); }
 /* トップの題名：サイト名を Zen Kaku Gothic New で置く（読み込むのは題名の8文字だけ） */
 .home-hero__title { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; letter-spacing: .14em; }
 .home-hero__facts { font-size: .8rem; letter-spacing: .08em; }
