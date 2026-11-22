@@ -189,8 +189,11 @@
       try { await navigator.clipboard.writeText(new URL(query(), base).href); status("リンクをコピーしました"); } catch (e) { status("コピーできませんでした"); }
     });
 
+    // 分野の一覧ページから来たとき（?subject=）はその分野を開く。そうでなければ，選んだ最初の問題の分野を開く
+    const fromSubject = params.get("subject");
     const first = byId.get(chosen()[0]);
-    if (first) subject = first.subjectSlug;
+    if (fromSubject && subjects.some(([slug]) => slug === fromSubject)) subject = fromSubject;
+    else if (first) subject = first.subjectSlug;
     fillChapters();
     renderChosen();
   };

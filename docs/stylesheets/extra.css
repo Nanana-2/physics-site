@@ -1283,14 +1283,13 @@ body, input {
 .md-typeset :is(a.page-links__button, a.home-tile, a.home-level):is(:hover, :focus-visible, :active) { background-size: 100% 100%, auto; }
 
 /* ==========================================
-   運営者情報：見出しはほかの見出しと同じ形，中身は薄いグレーのカード。全ページの末尾
+   運営者情報：見出しはほかの見出しと同じ形，中身は枠も面も付けない（トップと同じ）。全ページの末尾
    ========================================== */
 .md-typeset .owner { margin: 2.4rem 0 1rem; }
 /* 見出しの形は，上の「見出しの形」と同じ（アイコンは出さない） */
 .md-typeset .owner__heading { display: block; margin-top: 0; }
 .md-typeset .owner__heading-icon { display: none; }
-.md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; padding: 1.1rem 1.2rem; background-color: #f6f6f6; background-image: var(--site-stripe); }
-[data-md-color-scheme="slate"] .md-typeset .owner__card { background-color: rgba(255, 255, 255, .035); }
+.md-typeset .owner__card { display: flex; gap: 1rem; align-items: flex-start; max-width: 40rem; }
 .md-typeset .owner__avatar { flex: none; width: 3.4rem; height: 3.4rem; border-radius: 50%; object-fit: cover; }
 .md-typeset .owner__body p { margin: 0; }
 .md-typeset .owner__name { font-size: var(--fs-92); font-weight: 500; }
@@ -1299,12 +1298,11 @@ body, input {
 .md-typeset .owner__links { display: flex; flex-wrap: wrap; gap: .5rem; }
 .md-typeset a.owner__link {
   display: inline-flex; align-items: center; gap: .45em;
-  padding: .32rem .9rem; border: none; background-color: var(--site-navy); color: #fff; font-size: var(--fs-68); font-weight: 500;
+  padding: .32rem .9rem; border: 1px solid var(--md-default-fg-color--lighter); background-color: transparent; color: var(--md-typeset-color); font-size: var(--fs-68); font-weight: 500;
   background-image: linear-gradient(rgba(255, 255, 255, .14), rgba(255, 255, 255, .14)); background-repeat: no-repeat; background-size: 0 100%;
   transition: background-size .45s cubic-bezier(.25, .8, .25, 1);
 }
-.md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: #fff; }
-[data-md-color-scheme="slate"] .md-typeset a.owner__link { background-color: #4b4b4b; }
+.md-typeset a.owner__link:is(:hover, :focus-visible, :active) { background-size: 100% 100%; border-color: var(--md-typeset-color); }
 .md-typeset .owner__icon { display: inline-flex; width: .85em; height: .85em; }
 .md-typeset .owner__icon svg { width: 100%; height: 100%; fill: currentColor; }
 .home-hero__title span { display: inline-block; }
@@ -1892,7 +1890,7 @@ html { scroll-behavior: smooth; }
 .md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
 .home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
 .home-motion .home-sheet { padding-bottom: 3rem; }
-/* トップでは共有ボタンを出さず，運営者情報も節の見出しと同じ作りにする */
+/* トップでは共有ボタンを出さず，運営者情報の見出しをトップの節の見出しと同じ大きさにする */
 .home-motion .page-share { display: none; }
 .home-motion .md-typeset .owner { margin: 4.5rem 0 3rem; }
 .home-motion .md-typeset .owner__heading {
@@ -1901,12 +1899,9 @@ html { scroll-behavior: smooth; }
 }
 .home-motion .md-typeset .owner__heading::after { content: ""; position: static; display: block; width: 1.6rem; height: 2px; margin-top: .7rem; border: 0; background: currentColor; }
 .home-motion .md-typeset .owner__heading-icon { display: none; }
-.home-motion .md-typeset .owner__card { padding: 0; background: none; max-width: 40rem; }
 @media (max-width: 600px) { .home-motion .md-typeset .owner__heading { font-size: 1.3rem; } }
 /* 更新履歴は灰色の箱に入れない */
 .home-motion .md-typeset .home-news { padding: 0; background: none; border: 0; }
-.home-motion .md-typeset a.owner__link { background: none; border: 1px solid var(--md-default-fg-color--lighter); color: var(--md-typeset-color); }
-.home-motion .md-typeset a.owner__link:is(:hover, :focus-visible) { border-color: var(--md-typeset-color); }
 /* トップの題名：サイト名を Zen Kaku Gothic New で置く（読み込むのは題名の8文字だけ） */
 .home-hero__title { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; letter-spacing: .14em; }
 .home-hero__facts { font-size: .8rem; letter-spacing: .08em; }
@@ -1954,3 +1949,66 @@ html { scroll-behavior: smooth; }
 /* 章の問題の一覧の見出し：章の番号と題名 */
 .md-typeset p.chapter-list__title { display: flex; gap: .6em; margin: .3rem 0 .2rem; padding: .32rem .9rem 0; color: var(--md-default-fg-color--light); font-size: var(--fs-78); line-height: 1.5; }
 .md-typeset p.chapter-list__title .chapter-list__num { color: inherit; }
+
+/* ==========================================
+   前後の問題の間：「トップ」と「一覧へ」を上下（スマホでは左右）に並べる
+   ========================================== */
+.md-typeset .page-nav__hub {
+  display: flex; flex-direction: column;
+  margin: .9rem 0;
+  border-left: 1px solid #e3e3e3; border-right: 1px solid #e3e3e3;
+}
+.md-typeset .page-nav__hub .page-nav__list { flex: 1; margin: 0; border: none; }
+.md-typeset a.page-nav__home {
+  display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; gap: .35em;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: var(--fs-66); font-weight: 500;
+  background-image: linear-gradient(var(--site-sweep), var(--site-sweep)); background-repeat: no-repeat; background-size: 100% 0;
+  transition: background-size .45s cubic-bezier(.25, .8, .25, 1), color .3s;
+}
+.md-typeset a.page-nav__home:is(:hover, :focus-visible, :active) { background-size: 100% 100%; color: var(--site-sweep-text) !important; }
+.md-typeset .page-nav__home::before {
+  content: ""; display: inline-block; width: 1.05rem; height: 1rem; background-color: currentColor;
+  -webkit-mask: url("../assets/icons/house.svg") center / contain no-repeat; mask: url("../assets/icons/house.svg") center / contain no-repeat;
+}
+[data-md-color-scheme="slate"] .md-typeset :is(.page-nav__hub, a.page-nav__home) { border-color: rgba(255, 255, 255, .1); }
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav__hub {
+    grid-column: 1 / -1; grid-row: 2; flex-direction: row;
+    margin: 0; border: none; border-top: 1px solid #e3e3e3;
+  }
+  .md-typeset .page-nav__hub .page-nav__list { border-top: none; }
+  /* 「トップ」と「一覧へ」は半分ずつにし，境の線を上の前後の問題の境の線とそろえる */
+  .md-typeset a.page-nav__home { flex: 0 0 50%; flex-direction: row; padding: .6rem 0; border-bottom: none; border-right: 1px solid #e3e3e3; }
+  .md-typeset .page-nav__hub .page-nav__list { flex: 0 0 50%; min-width: 0; padding: .6rem .3rem; text-align: center; }
+  [data-md-color-scheme="slate"] .md-typeset a.page-nav__home { border-right-color: rgba(255, 255, 255, .1); }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__hub { border-top-color: rgba(255, 255, 255, .1); }
+}
+
+/* 分野の一覧ページの最後：問題用紙をつくる・参考文献一覧のボタンを2列に並べる */
+.md-typeset .page-links--pair { display: grid; grid-template-columns: 1fr 1fr; margin-top: 3rem; }
+.md-typeset .page-links__button--print::before { --site-icon: url("../assets/icons/print.svg"); }
+/* スマホの「〜の一覧へ」：収まらないときは分野の名前のあとで改行する（名前の途中では切らない） */
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav__hub .page-nav__list > span { word-break: keep-all; }
+  .md-typeset .page-nav__hub .page-nav__subject { display: inline-block; }
+}
+/* PC：記号と文字を横に並べる（「🏠 トップへ」「⋮ 一覧へ」を上下に2段） */
+@media screen and (min-width: 600.0625px) {
+  .md-typeset .page-nav { grid-template-columns: 1fr 7.5rem 1fr; }
+  .md-typeset a.page-nav__home, .md-typeset .page-nav__hub .page-nav__list { flex-direction: row; gap: .5em; }
+}
+/* スマホでは2列の幅が狭いので，記号を文字の上に置き，矢印は出さない */
+@media screen and (max-width: 600px) {
+  .md-typeset .page-links--pair a.page-links__button { flex-direction: column; justify-content: center; gap: .45rem; padding: .9rem .3rem; text-align: center; }
+  .md-typeset .page-links--pair .page-links__label { flex: none; }
+  .md-typeset .page-links--pair .page-links__arrow { display: none; }
+}
+@media screen and (max-width: 600px) {
+  .md-typeset .page-links--pair .page-links__label { word-break: keep-all; }
+  .md-typeset .page-nav__hub .page-nav__list::before { flex: none; }
+}
+/* スマホ：記号は文字の上に置き，分野の名前が長くても1〜2行に収める */
+@media screen and (max-width: 600px) {
+  .md-typeset a.page-nav__home, .md-typeset .page-nav__hub .page-nav__list { flex-direction: column; gap: .3em; }
+}
