@@ -1829,25 +1829,21 @@ html { scroll-behavior: smooth; }
 /* ==========================================
    トップページの動き（javascripts/home-motion.js が body に .home-motion を付けたときだけ）
    ========================================== */
-/* 円筒と背景の写真は画面に止めた層に置き，ページの中身はその上を流れる */
+/* 背景の帯と写真は画面に止めた層に置き，ページの中身はその上を流れる。帯は横に流れるだけで，操作には反応しない */
 .home-ring { display: none; }
 .home-motion .home-ring {
   display: block; position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
-  background-color: #121212; background-position: center; background-size: cover; perspective: 1500px;
+  background-color: #121212; background-position: center; background-size: cover;
 }
 .home-motion .home-ring::before { content: ""; position: absolute; inset: 0; background: rgba(12, 12, 12, .92); -webkit-backdrop-filter: grayscale(1); backdrop-filter: grayscale(1); }
-.home-ring__stage { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; }
-.home-ring__ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
-.home-ring__spin { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; animation: home-ring-spin 90s linear infinite; }
-@keyframes home-ring-spin { from { transform: rotateY(0deg); } to { transform: rotateY(-360deg); } }
-@media (prefers-reduced-motion: reduce) { .home-ring__spin { animation: none; } }
-/* 明るさは一様（背景なので暗く）。裏を向いたタイルは描かない。読み終えたら暗い状態から明るさを上げる */
-.home-ring__tile {
-  position: absolute; left: 0; top: 0; border-radius: 3px; background: #fff center / cover no-repeat;
-  -webkit-backface-visibility: hidden; backface-visibility: hidden;
-  visibility: hidden; filter: brightness(0); transition: filter .8s ease;
-}
-.home-ring.is-ready .home-ring__tile { visibility: visible; filter: brightness(.16); }
+/* 帯の明るさは，上に重ねた暗い面で一様に落とす（タイルごとに filter を掛けない） */
+.home-motion .home-ring::after { content: ""; position: absolute; inset: 0; background: rgba(12, 12, 12, .84); }
+.home-ring__stage { position: absolute; inset: 0; opacity: 0; transition: opacity .8s ease; }
+.home-ring.is-ready .home-ring__stage { opacity: 1; }
+.home-ring__row { position: absolute; left: 0; display: flex; width: max-content; animation: home-ring-slide 400s linear infinite; will-change: transform; }
+@keyframes home-ring-slide { from { transform: translateX(0); } to { transform: translateX(var(--hr-shift)); } }
+@media (prefers-reduced-motion: reduce) { .home-ring__row { animation: none; } }
+.home-ring__tile { flex: none; border-radius: 3px; background: #fff center / cover no-repeat; }
 .home-motion { background: #121212; }
 .home-motion :is(.md-container, .md-main, .md-content) { background: transparent; }
 .home-motion .md-main { position: relative; z-index: 1; }
@@ -1855,7 +1851,7 @@ html { scroll-behavior: smooth; }
 .home-motion .home-hero { position: relative; z-index: 1; background: none !important; }
 .home-motion .home-hero::before { display: none; }
 .home-motion .home-hero__inner { text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
-/* 検索窓は円筒の上にじかに載るので，背景をぼかして透かすガラスの板にする */
+/* 検索窓は帯の上にじかに載るので，背景をぼかして透かすガラスの板にする */
 .home-motion .home-search .site-search__input {
   background: rgba(255, 255, 255, .09);
   border: 1px solid rgba(255, 255, 255, .22);
@@ -1864,8 +1860,8 @@ html { scroll-behavior: smooth; }
 }
 .home-motion .home-search .site-search__input:focus { background: rgba(255, 255, 255, .15); border-color: rgba(255, 255, 255, .38); }
 .home-motion .home-search .site-search__icon { z-index: 1; }
-/* 円筒の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
-/* 円筒の上にじかに載る小見出しと凡例は，どちらのモードでも明るい文字にする */
+/* 帯の上の部分はダークモードの配色にする（data-md-color-scheme を .md-typeset の内側に付けているので，ダークモード用の規則をここで補う） */
+/* 帯の上にじかに載る小見出しと凡例は，どちらのモードでも明るい文字にする */
 .md-typeset .home-dark :is(h3.home-subhead, .home-legend) { color: rgba(255, 255, 255, .78); }
 .home-dark { overflow-x: clip; overflow-clip-margin: 1.5rem; }
 .md-typeset [data-md-color-scheme="slate"] h2.books-head { background: #303030; color: #e3e3e3; }
@@ -1883,29 +1879,9 @@ html { scroll-behavior: smooth; }
 .home-motion .md-content__inner > .owner { position: relative; z-index: 1; }
 .home-motion .md-typeset .home-promise { background: none; border-left: 0; padding-left: 0; }
 
-/* スクロールで現れる */
-.hm { transition-delay: var(--hm-delay, 0ms); }
-.hm-fade { opacity: 0; transition: opacity 1.1s ease; }
-.hm-left, .hm-right { opacity: 0; transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--hm-delay, 0ms); }
-.hm-left { transform: translateX(-3rem); }
-.hm-right { transform: translateX(3rem); }
-.hm.is-shown { opacity: 1; transform: none; }
-/* カードのまとまりは画面の外からすべり込む（動かすのは中身で，外枠は動かさず画面に入ったかの判定に使う） */
-.hm-slide > * { opacity: 0; transition: transform 1s cubic-bezier(.2, .75, .25, 1), opacity .35s ease; }
-.hm-slide--left > * { transform: translateX(-100vw); }
-.hm-slide--right > * { transform: translateX(100vw); }
-.hm-slide--up > * { transform: translateY(60vh); }
-.hm-slide.is-shown > * { opacity: 1; transform: none; }
-/* 無地の面は下からせり上がる */
-.home-motion .home-sheet.hm-sheet { transform: translateY(5rem); transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
-.home-motion .home-sheet.hm-sheet.is-shown { transform: none; }
-/* 見出し：文字と下線が左から順に現れる（最初に幅 1px だけ残すのは，画面に入ったかを判定するため） */
-.md-typeset h2.home-head.hm-head { clip-path: inset(-1rem calc(100% - 1px) -1rem 0); transition: clip-path .9s cubic-bezier(.3, .7, .2, 1) .1s; }
-.md-typeset h2.home-head.hm-head.is-shown { clip-path: inset(-1rem -1rem -1rem 0); }
-
 /* ==========================================
    トップの節：見出しは大きな文字と短い下線だけにし，PC では見出しを左，カードと本文を右に並べる。
-   円筒の上のカードと検索窓は，背景を透かすガラスにする
+   帯の上のカードと検索窓は，背景を透かすガラスにする
    ========================================== */
 .md-typeset h2.home-head {
   margin: 4.5rem 0 1.4rem; padding: 0; border: 0;
@@ -1922,8 +1898,7 @@ html { scroll-behavior: smooth; }
   .md-typeset .home-dark .home-sec { display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 3rem; align-items: start; margin-top: 4.5rem; }
   .md-typeset .home-sec:first-child { margin-top: 2rem; }
   .md-typeset .home-dark .home-sec > h2.home-head { position: sticky; top: 8.5rem; margin: 0; }
-  .md-typeset .home-sec__body > :first-child,
-  .md-typeset .home-sec__body > .hm-slide:first-child > :first-child { margin-top: 0; }
+  .md-typeset .home-sec__body > :first-child { margin-top: 0; }
   /* 分野・難易度・印刷のカードは同じ3列にそろえる */
   .home-motion .md-typeset .home-dark :is(.home-tiles, .home-tiles--single) { grid-template-columns: repeat(3, 1fr); }
   /* 文章の節は1列にし，読みやすい幅に収める */
@@ -1936,7 +1911,7 @@ html { scroll-behavior: smooth; }
   .home-motion .home-search { max-width: 38rem; }
 }
 /* ガラスのカード：グラデーション・光・影は付けず，平らな板にする。
-   円筒の上はどちらのモードでも暗いので，ライトモードでもダークモードと同じ白を薄く重ねたガラスにする */
+   帯の上はどちらのモードでも暗いので，ライトモードでもダークモードと同じ白を薄く重ねたガラスにする */
 .home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level) {
   border-radius: 10px; box-shadow: none;
   background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); color: #fff;
@@ -1945,7 +1920,7 @@ html { scroll-behavior: smooth; }
 .home-motion .md-typeset .home-dark :is(a.home-tile, a.home-level):is(:hover, :focus-visible) { background: rgba(255, 255, 255, .16); }
 .home-motion .md-typeset .home-dark :is(.home-tile__desc, .home-tile__count, .home-level__desc, .home-level__count) { color: rgba(255, 255, 255, .72); }
 .home-motion .home-search .site-search__input { border-radius: 10px; background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .32); }
-/* 参考文献と note の帯：無地の面を切って円筒を見せる */
+/* 参考文献と note の帯：無地の面を切って背景の帯を見せる */
 .md-typeset .home-band { padding-top: 5rem; padding-bottom: 4rem; }
 .home-motion .home-sheet + .home-dark + .home-sheet { margin-top: 0; }
 .home-motion .home-sheet { padding-bottom: 3rem; }
@@ -1970,26 +1945,21 @@ html { scroll-behavior: smooth; }
 @media (min-width: 1100px) { .home-motion .home-hero { padding-top: 4.5rem; padding-bottom: 3.5rem; } }
 @media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1.55rem; } }
 
-/* トップのヘッダーとタブ：円筒が透けるガラスにする。タブはヘッダーの中にあるので，ガラスはヘッダーにだけ掛け，
-   タブは背景を透明にする（入れ子の要素に backdrop-filter を重ねると，親の背景しか透けず不透明に見える）。
-   「何のサイト？」の面が出てくるまでは隠す（home-motion.js が body に home-headless を付け外しする） */
+/* トップのヘッダーとタブ：背景の帯が透けるガラスにする。タブはヘッダーの中にあるので，ガラスはヘッダーにだけ掛け，
+   タブは背景を透明にする（入れ子の要素に backdrop-filter を重ねると，親の背景しか透けず不透明に見える） */
 .home-motion .md-header {
   background-color: rgba(18, 18, 18, .66);
   -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6);
-  transition: transform .45s cubic-bezier(.2, .7, .2, 1), opacity .35s ease;
 }
 [data-md-color-scheme="slate"].home-motion .md-header { background-color: rgba(10, 10, 10, .66); }
 .home-motion .md-tabs { background: none; border-top: 1px solid rgba(255, 255, 255, .08); }
-.home-motion.home-headless .md-header { transform: translateY(-100%); opacity: 0; pointer-events: none; }
-@media (prefers-reduced-motion: reduce) { .home-motion .md-header { transition: none; } }
 
 
-/* トップのヒーロー：円筒を画面いっぱいに見せ，左下に小さくサイト名と一行の説明を置く。検索窓はヘッダーにあるので置かない */
-.home-motion .home-hero { min-height: 100svh; display: flex; align-items: flex-end; box-sizing: border-box; margin-top: -4.85rem; padding-top: 0; padding-bottom: 2.4rem; }
-.home-motion .home-hero__inner { width: 100%; }
+/* トップのヒーロー：大きな余白は取らず，ヘッダーのすぐ下に小さくサイト名と一行の説明を置く。検索窓はヘッダーにあるので置かない */
+.home-motion .home-hero { padding-top: 2.4rem; padding-bottom: 0; }
 .home-motion .md-typeset .home-hero__title, .home-motion .home-hero__title { margin: 0; font-size: 1rem; line-height: 1.6; letter-spacing: .3em; }
 .home-motion .home-hero__facts { margin: .4rem 0 0; font-size: .62rem; letter-spacing: .14em; opacity: .75; }
-@media (min-width: 1100px) { .home-motion .home-hero { padding-top: 0; padding-bottom: 3rem; } .home-motion .home-hero__title { font-size: 1rem; } .home-motion .home-hero__facts { margin-bottom: 0; } }
+@media (min-width: 1100px) { .home-motion .home-hero { padding-top: 3rem; padding-bottom: 0; } .home-motion .home-hero__title { font-size: 1rem; } .home-motion .home-hero__facts { margin-bottom: 0; } }
 @media (max-width: 600px) { .home-motion .home-hero__title { font-size: 1rem; } }
 
 /* ヘッダーのサイト名：トップの題名と同じ書体にそろえる */
