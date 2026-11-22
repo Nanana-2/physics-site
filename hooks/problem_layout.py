@@ -295,7 +295,14 @@ def _subject_index(html, page, config):
         return html
     nav = '<nav class="toc-index" aria-label="章の一覧">' + "".join(index) + "</nav>"
     slug = page.file.src_uri.split("/")[0]
-    exam = f'<p class="toc-exam"><a class="toc-exam__link" href="../exam/?subject={slug}">この分野から問題用紙をつくる<span aria-hidden="true">→</span></a></p>'
+    # 一覧の最後：問題用紙をつくるページ（この分野を選んだ状態で開く）と参考文献一覧。問題ページの参考文献一覧と同じボタンを2列に並べる
+    exam = (
+        '<nav class="page-links page-links--pair" aria-label="関連ページ">'
+        f'<a class="page-links__button page-links__button--print" href="../exam/?subject={slug}">'
+        '<span class="page-links__label">問題用紙を<wbr>つくる</span><span class="page-links__arrow" aria-hidden="true">→</span></a>'
+        '<a class="page-links__button page-links__button--books" href="../books/">'
+        '<span class="page-links__label">参考文献一覧</span><span class="page-links__arrow" aria-hidden="true">→</span></a></nav>'
+    )
     return html[: grid.start()] + nav + '<div class="toc">' + "".join(sections) + "</div>" + exam + html[grid.end() :]
 
 

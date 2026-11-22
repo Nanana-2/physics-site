@@ -1978,11 +1978,37 @@ html { scroll-behavior: smooth; }
     margin: 0; border: none; border-top: 1px solid #e3e3e3;
   }
   .md-typeset .page-nav__hub .page-nav__list { border-top: none; }
-  .md-typeset a.page-nav__home { flex: 0 0 33.3%; flex-direction: row; padding: .6rem 0; border-bottom: none; border-right: 1px solid #e3e3e3; }
+  /* 「トップ」と「一覧へ」は半分ずつにし，境の線を上の前後の問題の境の線とそろえる */
+  .md-typeset a.page-nav__home { flex: 0 0 50%; flex-direction: row; padding: .6rem 0; border-bottom: none; border-right: 1px solid #e3e3e3; }
+  .md-typeset .page-nav__hub .page-nav__list { flex: 0 0 50%; min-width: 0; padding: .6rem .3rem; text-align: center; }
+  [data-md-color-scheme="slate"] .md-typeset a.page-nav__home { border-right-color: rgba(255, 255, 255, .1); }
   [data-md-color-scheme="slate"] .md-typeset .page-nav__hub { border-top-color: rgba(255, 255, 255, .1); }
 }
 
-/* 分野の一覧ページの最後：問題用紙をつくるページへの入口 */
-.md-typeset .toc-exam { margin: 3rem 0 0; text-align: right; }
-.md-typeset a.toc-exam__link { display: inline-flex; gap: .5em; border-bottom: 1px solid currentColor; color: var(--md-typeset-color); font-size: var(--fs-80); }
-.md-typeset a.toc-exam__link:hover { color: var(--md-accent-fg-color); }
+/* 分野の一覧ページの最後：問題用紙をつくる・参考文献一覧のボタンを2列に並べる */
+.md-typeset .page-links--pair { display: grid; grid-template-columns: 1fr 1fr; margin-top: 3rem; }
+.md-typeset .page-links__button--print::before { --site-icon: url("../assets/icons/print.svg"); }
+/* スマホの「〜の一覧へ」：収まらないときは分野の名前のあとで改行する（名前の途中では切らない） */
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav__hub .page-nav__list > span { word-break: keep-all; }
+  .md-typeset .page-nav__hub .page-nav__subject { display: inline-block; }
+}
+/* PC：記号と文字を横に並べる（「🏠 トップへ」「⋮ 一覧へ」を上下に2段） */
+@media screen and (min-width: 600.0625px) {
+  .md-typeset .page-nav { grid-template-columns: 1fr 7.5rem 1fr; }
+  .md-typeset a.page-nav__home, .md-typeset .page-nav__hub .page-nav__list { flex-direction: row; gap: .5em; }
+}
+/* スマホでは2列の幅が狭いので，記号を文字の上に置き，矢印は出さない */
+@media screen and (max-width: 600px) {
+  .md-typeset .page-links--pair a.page-links__button { flex-direction: column; justify-content: center; gap: .45rem; padding: .9rem .3rem; text-align: center; }
+  .md-typeset .page-links--pair .page-links__label { flex: none; }
+  .md-typeset .page-links--pair .page-links__arrow { display: none; }
+}
+@media screen and (max-width: 600px) {
+  .md-typeset .page-links--pair .page-links__label { word-break: keep-all; }
+  .md-typeset .page-nav__hub .page-nav__list::before { flex: none; }
+}
+/* スマホ：記号は文字の上に置き，分野の名前が長くても1〜2行に収める */
+@media screen and (max-width: 600px) {
+  .md-typeset a.page-nav__home, .md-typeset .page-nav__hub .page-nav__list { flex-direction: column; gap: .3em; }
+}
