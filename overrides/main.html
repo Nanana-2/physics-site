@@ -265,9 +265,9 @@
       {% endmacro %}
       <nav class="page-nav" aria-label="前後の問題">
         {{ side(page.previous_page, '← 前の問題', '') }}
-        {#- スマホでは，一覧へのボタンに章の番号と題名も書き，下の章の問題の一覧の見出しを兼ねる -#}
+        {#- スマホでは，一覧へのボタンに章の題名も書き，下の章の問題の一覧の見出しを兼ねる -#}
         {% set ch = page.parent %}
-        <a class="page-nav__list" href="{{ subject[1] | url }}">{% if ch and ch.title %}{% set ch_parts = ch.title.split('.', 1) %}<span class="page-nav__chapter"><span class="page-nav__chapter-no">{{ ch_parts[0] }}</span>{{ (ch_parts[1] if ch_parts | length > 1 else ch.title) | trim }}</span>{% endif %}<span class="page-nav__list-label">一覧へ</span></a>
+        <a class="page-nav__list" href="{{ subject[1] | url }}">{% if ch and ch.title %}{% set ch_parts = ch.title.split('.', 1) %}<span class="page-nav__chapter">{{ (ch_parts[1] if ch_parts | length > 1 else ch.title) | trim }}</span>{% endif %}<span class="page-nav__list-label">一覧へ</span></a>
         {{ side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
       </nav>
       {#- この章の問題：PC は右のサイドバーに同じ一覧があるので，サイドバーが出ない幅（スマホ・タブレット）だけで見せる -#}
