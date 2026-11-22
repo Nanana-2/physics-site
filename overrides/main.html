@@ -299,7 +299,11 @@
           </div>
         </section>
       {% endif %}
-      <nav class="page-links" aria-label="関連ページ">
+      <nav class="page-links page-links--pair" aria-label="関連ページ">
+        <a class="page-links__button page-links__button--print" href="{{ 'exam/' | url }}?subject={{ path_parts[0] }}">
+          <span class="page-links__label">問題用紙を<wbr>つくる</span>
+          <span class="page-links__arrow" aria-hidden="true">→</span>
+        </a>
         <a class="page-links__button page-links__button--books" href="{{ 'books/' | url }}">
           <span class="page-links__label">参考文献一覧</span>
           <span class="page-links__arrow" aria-hidden="true">→</span>
