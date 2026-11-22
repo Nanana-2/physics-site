@@ -1968,7 +1968,6 @@ html { scroll-behavior: smooth; }
 /* この章の問題：前後の問題の下に，関連と同じ形（左に見出し，右に一覧）で置く。PC は右のサイドバーに同じ一覧があるので出さない */
 .md-typeset .chapter-list { margin: 0; border-top: 1px solid #e3e3e3; }
 .md-typeset .chapter-list__body { padding: .55rem 0 .5rem; }
-.md-typeset p.chapter-list__title { margin: 0 .9rem .3rem; color: var(--md-default-fg-color--light); font-size: var(--fs-70); }
 .md-typeset ol.chapter-list__items { margin: 0; padding: 0; list-style: none; }
 .md-typeset ol.chapter-list__items > li { margin: 0; list-style: none; }
 .md-typeset a.chapter-list__link { display: flex; gap: .6em; padding: .32rem .9rem; border-bottom: none; color: var(--md-typeset-color); font-size: var(--fs-78); line-height: 1.5; }
@@ -1980,3 +1979,15 @@ html { scroll-behavior: smooth; }
 [data-md-color-scheme="slate"] .md-typeset .chapter-list { border-color: rgba(255, 255, 255, .1); }
 [data-md-color-scheme="slate"] .md-typeset .chapter-list__num { color: #d2d2d2; }
 @media screen and (min-width: 60em) { .md-typeset .chapter-list { display: none; } .md-typeset .chapter-list + .related { margin-top: 0; } }
+
+/* スマホ：一覧へのボタンに章の番号と題名を書く（左に章，右に「一覧へ →」）。PC とタブレットでは章を出さない */
+.md-typeset .page-nav__chapter { display: none; }
+@media screen and (max-width: 600px) {
+  .md-typeset .page-nav__list { justify-content: flex-start; gap: .6em; padding-left: .9rem; padding-right: .9rem; }
+  .md-typeset .page-nav__list::before { display: none; }
+  .md-typeset .page-nav__chapter { display: flex; flex: 1; gap: .6em; min-width: 0; font-size: var(--fs-78); text-align: left; }
+  .md-typeset .page-nav__chapter-no { flex: none; min-width: 2.2em; color: var(--site-navy); }
+  [data-md-color-scheme="slate"] .md-typeset .page-nav__chapter-no { color: #d2d2d2; }
+  .md-typeset .page-nav__list-label { flex: none; color: var(--md-default-fg-color--light); }
+  .md-typeset .page-nav__list-label::after { content: " →"; }
+}
