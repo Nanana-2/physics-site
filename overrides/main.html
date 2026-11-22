@@ -268,6 +268,26 @@
         <a class="page-nav__list" href="{{ subject[1] | url }}">一覧へ</a>
         {{ side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
       </nav>
+      {#- この章の問題：PC は右のサイドバーに同じ一覧があるので，サイドバーが出ない幅（スマホ・タブレット）だけで見せる -#}
+      {% set chapter = page.parent %}
+      {% if chapter and chapter.children and chapter.children | length > 1 %}
+        {% set chapter_no = chapter.title.split('.')[0] %}
+        <section class="chapter-list" aria-label="この章の問題">
+          <span class="chapter-list__label">この章</span>
+          <div class="chapter-list__body">
+            <p class="chapter-list__title">{{ chapter.title }}</p>
+            <ol class="chapter-list__items">
+              {% for item in chapter.children %}
+                <li>
+                  <a class="chapter-list__link{% if item.active %} is-current{% endif %}" href="{{ item.url | url }}"{% if item.active %} aria-current="page"{% endif %}>
+                    <span class="chapter-list__num">{{ chapter_no }}-{{ loop.index }}</span>{{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ol>
+          </div>
+        </section>
+      {% endif %}
       <nav class="page-links" aria-label="関連ページ">
         <a class="page-links__button page-links__button--books" href="{{ 'books/' | url }}">
           <span class="page-links__label">参考文献一覧</span>

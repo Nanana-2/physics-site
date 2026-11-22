@@ -175,7 +175,7 @@ BREADCRUMB = re.compile(r'<nav class="md-path".*?</nav>\s*', re.DOTALL)
 ARTICLE_START = '<article class="md-content__inner md-typeset">'
 
 
-# ---- 関連する問題：hooks/related_problems.txt のグループから，解説の下（前後の問題の上）に並べる ----
+# ---- 関連する問題：hooks/related_problems.txt のグループから，前後の問題とこの章の問題の下に並べる ----
 RELATED_FILE = Path(__file__).with_name("related_problems.txt")
 _related_cache = {}
 
@@ -234,7 +234,8 @@ def _related_html(page, config) -> str:
 def on_post_page(output, page, config):
     related = _related_html(page, config)
     if related:
-        at = output.find('<nav class="page-nav"')
+        # 次の問題とこの章の問題の下（参考文献一覧の上）に置く
+        at = output.find('<nav class="page-links"')
         if at < 0:
             at = output.rfind("</article>")
         if at >= 0:

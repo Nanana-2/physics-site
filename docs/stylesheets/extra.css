@@ -1994,3 +1994,21 @@ html { scroll-behavior: smooth; }
 
 /* ヘッダーのサイト名：トップの題名と同じ書体にそろえる */
 .md-header__topic:first-child .md-ellipsis { font-family: "Zen Kaku Gothic New", var(--md-text-font-family), sans-serif; font-weight: 500; letter-spacing: .14em; }
+
+/* この章の問題：前後の問題の下に，関連と同じ形（左に見出し，右に一覧）で置く。PC は右のサイドバーに同じ一覧があるので出さない */
+.md-typeset .chapter-list { display: grid; grid-template-columns: 5rem 1fr; margin: 0; border-top: 1px solid #e3e3e3; }
+.md-typeset .chapter-list__label { display: flex; align-items: center; justify-content: center; margin: .7rem 0; border-right: 1px solid #e3e3e3; color: var(--site-navy); font-size: var(--fs-70); font-weight: 500; letter-spacing: .1em; }
+.md-typeset .chapter-list__body { padding: .55rem 0 .5rem; }
+.md-typeset p.chapter-list__title { margin: 0 .9rem .3rem; color: var(--md-default-fg-color--light); font-size: var(--fs-70); }
+.md-typeset ol.chapter-list__items { margin: 0; padding: 0; list-style: none; }
+.md-typeset ol.chapter-list__items > li { margin: 0; list-style: none; }
+.md-typeset a.chapter-list__link { display: flex; gap: .6em; padding: .32rem .9rem; border-bottom: none; color: var(--md-typeset-color); font-size: var(--fs-78); line-height: 1.5; }
+.md-typeset a.chapter-list__link.is-current { box-shadow: inset 2px 0 0 var(--site-star); font-weight: 500; }
+.md-typeset .chapter-list__num { flex: none; min-width: 2.2em; color: var(--site-navy); }
+.md-typeset .page-nav + .chapter-list { border-top: 1px solid #e3e3e3; }
+.md-typeset .chapter-list + .related { margin-top: 0; }
+.md-typeset .page-nav + .related { margin-top: 0; }
+[data-md-color-scheme="slate"] .md-typeset .chapter-list, [data-md-color-scheme="slate"] .md-typeset .chapter-list__label { border-color: rgba(255, 255, 255, .1); }
+[data-md-color-scheme="slate"] .md-typeset .chapter-list__label, [data-md-color-scheme="slate"] .md-typeset .chapter-list__num { color: #d2d2d2; }
+@media screen and (max-width: 44.9375em) { .md-typeset .chapter-list { grid-template-columns: 3.6rem 1fr; } }
+@media screen and (min-width: 60em) { .md-typeset .chapter-list { display: none; } .md-typeset .chapter-list + .related { margin-top: 0; } }
