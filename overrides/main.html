@@ -273,7 +273,6 @@
       {% if chapter and chapter.children and chapter.children | length > 1 %}
         {% set chapter_no = chapter.title.split('.')[0] %}
         <section class="chapter-list" aria-label="この章の問題">
-          <span class="chapter-list__label">この章</span>
           <div class="chapter-list__body">
             <p class="chapter-list__title">{{ chapter.title }}</p>
             <ol class="chapter-list__items">
