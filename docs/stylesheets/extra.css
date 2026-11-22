@@ -1980,12 +1980,9 @@ html { scroll-behavior: smooth; }
 [data-md-color-scheme="slate"] .md-typeset .chapter-list__num { color: #d2d2d2; }
 @media screen and (min-width: 60em) { .md-typeset .chapter-list { display: none; } .md-typeset .chapter-list + .related { margin-top: 0; } }
 
-/* スマホ：一覧へのボタンに章の題名を書く（左に章，右に「一覧へ →」）。PC とタブレットでは章を出さない */
-.md-typeset .page-nav__chapter { display: none; }
-@media screen and (max-width: 600px) {
-  .md-typeset .page-nav__list { justify-content: flex-start; gap: .6em; padding-left: .9rem; padding-right: .9rem; }
-  .md-typeset .page-nav__list::before { display: none; }
-  .md-typeset .page-nav__chapter { display: block; flex: 1; min-width: 0; font-size: var(--fs-78); text-align: left; }
-  .md-typeset .page-nav__list-label { flex: none; }
-  .md-typeset .page-nav__list-label::after { content: " →"; }
-}
+/* スマホ：一覧へのボタンに分野の名前も書く。PC とタブレットでは「一覧へ」だけ */
+.md-typeset .page-nav__subject { display: none; }
+@media screen and (max-width: 600px) { .md-typeset .page-nav__subject { display: inline; } }
+/* 章の問題の一覧の見出し：章の番号と題名 */
+.md-typeset p.chapter-list__title { display: flex; gap: .6em; margin: .3rem 0 .4rem; padding: 0 .9rem; color: var(--md-default-fg-color--light); font-size: var(--fs-70); font-weight: 500; }
+.md-typeset p.chapter-list__title .chapter-list__num { color: inherit; }

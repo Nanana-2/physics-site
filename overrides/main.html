@@ -265,9 +265,8 @@
       {% endmacro %}
       <nav class="page-nav" aria-label="前後の問題">
         {{ side(page.previous_page, '← 前の問題', '') }}
-        {#- スマホでは，一覧へのボタンに章の題名も書き，下の章の問題の一覧の見出しを兼ねる -#}
-        {% set ch = page.parent %}
-        <a class="page-nav__list" href="{{ subject[1] | url }}">{% if ch and ch.title %}{% set ch_parts = ch.title.split('.', 1) %}<span class="page-nav__chapter">{{ (ch_parts[1] if ch_parts | length > 1 else ch.title) | trim }}</span>{% endif %}<span class="page-nav__list-label">一覧へ</span></a>
+        {#- スマホでは，一覧へのボタンに分野の名前も書く（章の題名は下の章の問題の一覧の見出しに置く） -#}
+        <a class="page-nav__list" href="{{ subject[1] | url }}"><span><span class="page-nav__subject">{{ subject[0] }}の</span>一覧へ</span></a>
         {{ side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
       </nav>
       {#- この章の問題：PC は右のサイドバーに同じ一覧があるので，サイドバーが出ない幅（スマホ・タブレット）だけで見せる -#}
@@ -276,6 +275,8 @@
         {% set chapter_no = chapter.title.split('.')[0] %}
         <section class="chapter-list" aria-label="この章の問題">
           <div class="chapter-list__body">
+            {% set ch_parts = chapter.title.split('.', 1) %}
+            <p class="chapter-list__title"><span class="chapter-list__num">{{ chapter_no }}章</span>{{ (ch_parts[1] if ch_parts | length > 1 else chapter.title) | trim }}</p>
             <ol class="chapter-list__items">
               {% for item in chapter.children %}
                 <li>
