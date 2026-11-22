@@ -164,7 +164,7 @@ def _copy_source(page) -> str:
     text = f"# {title}\n\n{text}" if not text.startswith("# ") else text
     text = text.replace("</", "<\\/")
     return (
-        '<div class="page-tools"><button type="button" class="page-tools__exam" data-exam-toggle hidden></button>'
+        '<div class="page-tools">'
         '<button type="button" class="page-tools__copy" data-copy-markdown hidden>'
         '<span class="page-tools__icon" aria-hidden="true"></span><span data-copy-label>Markdownでコピー</span></button></div>'
         f'<script type="text/markdown" id="page-markdown">{text}</script>'

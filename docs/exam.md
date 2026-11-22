@@ -38,7 +38,7 @@ hide:
     <h2 class="toc-chapter__head"><span class="toc-chapter__no">2</span><span class="toc-chapter__title">選んだ問題<span class="exam-builder__count" data-exam-count></span></span></h2>
     <div data-exam-chosen></div>
     <div class="exam-builder__clear"><button type="button" class="exam-builder__chip" data-exam-clear hidden>すべて外す</button></div>
-    <p class="exam-builder__empty" data-exam-empty>まだ問題が選ばれていません。上の一覧の「追加」か，各問題のページの「印刷に追加」から選んでください。</p>
+    <p class="exam-builder__empty" data-exam-empty>まだ問題が選ばれていません。上の一覧の「追加」から選んでください。</p>
   </section>
 
   <section class="toc-chapter">
