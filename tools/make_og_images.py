@@ -83,7 +83,7 @@ def _card(path: Path, title: str, where: str, level: int, number: str = "") -> N
     if level:
         page.insert_text((80, y + 10), "★" * level, fontsize=44, fontname="japan", color=STAR)
         page.insert_text((80 + 46 * level, y + 10), "☆" * (3 - level), fontsize=44, fontname="japan", color=(0.45, 0.5, 0.65))
-    page.insert_text((80, H - 25), "nanana-2.github.io/physics-site", fontsize=24, fontname="helv", color=(0.7, 0.74, 0.86))
+    page.insert_text((80, H - 25), "practice-physics.com", fontsize=24, fontname="helv", color=(0.7, 0.74, 0.86))
     path.parent.mkdir(parents=True, exist_ok=True)
     page.get_pixmap(dpi=72).save(str(path))
 
