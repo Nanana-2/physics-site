@@ -15,7 +15,7 @@
   var hero = document.querySelector(".home-hero");
   if (hero) hero.setAttribute("data-md-color-scheme", "slate");
   var inner = document.querySelector(".md-content__inner");
-  /* 「何のサイト？」から下は無地の面にする。ただし .home-band（参考文献と note の入口）では面を切り，
+  /* 「何のサイト？」から下は無地の面にする。ただし .home-band（問題を探す・問題用紙・参考文献一覧の入口）では面を切り，
      帯をもう一度見せる。darks と sheets はそれぞれのまとまりの一覧 */
   var darks = [], sheets = [];
   if (inner) {
