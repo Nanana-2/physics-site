@@ -1,0 +1,41 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath,bm}
+\let\boldsymbol\bm
+\begin{document}
+\begin{tikzpicture}[scale=1.0,>=Stealth,line width=0.9pt]
+  % 導体領域 x <= 0
+  \fill[black!12] (-2.2,-1.5) rectangle (0,1.5);
+
+  % 座標軸
+  \draw[line width=0.4pt,->] (-2.2,0) -- (2.5,0) node[right] {$x$};
+  \draw[line width=0.4pt,->] (0,-1.5) -- (0,1.8) node[above] {$y$};
+
+  % 原点と z 軸記号（紙面手前向き）
+  \draw[line width=0.5pt,fill=white] (0,0) circle (2.8pt);
+  \fill (0,0) circle (0.9pt);
+  \node[above right,inner sep=2pt] at (0,0) {$z$};
+  \node[below right,inner sep=2pt] at (0,0) {$O$};
+
+  % 電気双極子 p at (a, 0), 角度 theta
+  \def\ax{1.15}
+  \def\ang{55}
+  \fill (\ax,0) circle (1.8pt);
+  \node[below,yshift=-2pt] at (\ax,0) {$a$};
+  \draw[->] ({\ax-0.42*cos(\ang)},{-0.42*sin(\ang)}) -- ({\ax+0.68*cos(\ang)},{0.68*sin(\ang)}) node[above right,inner sep=1.5pt] {$\boldsymbol{p}$};
+
+  % 角度 theta の弧
+  \draw[line width=0.5pt] ({\ax+0.42},0) arc[start angle=0,end angle=\ang,radius=0.42];
+  \node at ({\ax+0.62*cos(\ang/2)},{0.62*sin(\ang/2)}) {$\theta$};
+
+  % 領域ラベル
+  \node at (-1.1,1.15) {$x \le 0$};
+  \node at (1.35,1.15) {$x > 0$};
+
+  % 接地記号
+  \draw[line width=0.6pt] (-1.8,-1.5) -- (-1.8,-1.85);
+  \draw[line width=0.6pt] (-2.08,-1.85) -- (-1.52,-1.85);
+  \draw[line width=0.6pt] (-1.98,-1.96) -- (-1.62,-1.96);
+  \draw[line width=0.6pt] (-1.88,-2.07) -- (-1.72,-2.07);
+\end{tikzpicture}
+\end{document}
