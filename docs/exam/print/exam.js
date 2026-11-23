@@ -2,7 +2,7 @@
 // 例：?p=01mechanics/03/03_050,02electromagnetism/01/01_010&title=物理学 期末試験&num=mon&paper=A4&break=0&book=0
 // 設定は問題を印刷するページ（docs/exam.md と docs/javascripts/exam.js）が作る。
 (() => {
-  const SITE = "https://nanana-2.github.io/physics-site/";
+  const SITE = "https://practice-physics.com/";
   const MAX = 8;
   // 用紙の大きさと余白（上下，左右，ページ番号の下端からの位置）。B5 は日本の B5（JIS）。
   // 余白は LaTeX（jsarticle）の A4 の標準に合わせ，B5 は用紙の大きさに比例させる
