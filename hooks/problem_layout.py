@@ -452,17 +452,17 @@ def _home(html: str, page, config) -> str:
         + legend
         + _home_heading("何のサイト？", "about")
         + sections.get("何のサイト？", "")
-        + _home_heading("AIの利用について", "ai")
-        + sections.get("AIの利用について", "")
-        # 背景の帯をもう一度見せる欄：問題用紙をつくる・参考文献一覧・note への入口
+        # 背景の帯をもう一度見せる欄：問題を探す・問題用紙をつくる・参考文献一覧への入口（「何のサイト？」を読んだ人がそのまま次へ進めるよう，すぐ後に置く）
         + '<div class="home-band"><div class="home-tiles">'
+        '<a class="home-tile" href="tags/"><span class="home-tile__body"><span class="home-tile__name">問題を探す</span>'
+        '<span class="home-tile__desc">キーワードと難易度で，すべての分野から問題を絞り込みます。</span></span></a>'
         '<a class="home-tile" href="exam/"><span class="home-tile__body"><span class="home-tile__name">問題用紙をつくる</span>'
         '<span class="home-tile__desc">好きな問題を選んで，試験の形式で印刷します。</span></span></a>'
         '<a class="home-tile" href="books/"><span class="home-tile__body"><span class="home-tile__name">参考文献一覧</span>'
         '<span class="home-tile__desc">このサイトを作るにあたって参照した教科書を紹介します。</span></span></a>'
-        '<a class="home-tile" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="home-tile__body">'
-        '<span class="home-tile__name">note</span><span class="home-tile__desc">日記やサイト作成の裏話などを書いています。</span></span></a>'
         '</div></div>'
+        + _home_heading("AIの利用について", "ai")
+        + sections.get("AIの利用について", "")
         + _home_heading("推奨される使い方", "usage")
         + f'<div class="home-promise">{sections.get("推奨される使い方", "")}</div>'
         + (_home_heading("更新履歴", "news") + f'<div class="home-news">{news}</div>' if news else "")
