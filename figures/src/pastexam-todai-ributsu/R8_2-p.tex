@@ -1,0 +1,77 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta,calc}
+\begin{document}
+\begin{tikzpicture}[scale=0.95,>=Stealth,line width=0.9pt]
+  % 上段：1次元高分子モデルの構造
+  \def\a{1.15}
+  % x 軸
+  \draw[line width=0.4pt,->] (-0.4,0) -- (3.9,0) node[right] {$x$};
+  \node[below] at (0,-0.04) {$x=0$};
+  \node[below] at ({2.6*\a},-0.04) {$x=R$};
+
+  % 棒粒子 1, 2, 3（x軸と数字が重ならないよう少し上げる）
+  \coordinate (p0) at (0,0.34);
+  \coordinate (p1) at ({\a},0.48);
+  \coordinate (p2) at ({2*\a},0.62);
+  \coordinate (p3) at ({\a},0.82);
+  \draw[line width=0.4pt,densely dashed] (0,0) -- (p0);
+  \draw[->] (p0) -- (p1) node[midway,below,yshift=-1pt] {\scriptsize $1$};
+  \draw[->] (p1) -- (p2) node[midway,below,yshift=-1pt] {\scriptsize $2$};
+  \draw[->] (p2) -- (p3) node[midway,above,yshift=1pt] {\scriptsize $3$};
+  \fill (p0) circle (1.2pt);
+  \fill (p1) circle (1.2pt);
+  \fill (p2) circle (1.2pt);
+  \fill (p3) circle (1.2pt);
+
+  % 寸法 a（棒粒子 1 の上ではなく，棒粒子 N-1, N と分離した位置に配置）
+  \draw[line width=0.4pt,densely dashed] (p3) -- ({\a},1.36);
+  \draw[line width=0.4pt,densely dashed] (p2) -- ({2*\a},1.36);
+  \draw[line width=0.4pt,<->] ({\a},1.28) -- ({2*\a},1.28) node[midway,above,yshift=0pt] {$a$};
+
+  % 省略記号（3 と a の間の右寄りに配置して重なりを避ける）
+  \node at ({2.25*\a},1.18) {$\vdots$};
+
+  % 棒粒子 N-1, N
+  \coordinate (pnm2) at ({0.6*\a},1.82);
+  \coordinate (pnm1) at ({1.6*\a},1.96);
+  \coordinate (pn)   at ({2.6*\a},2.10);
+  \draw[->] (pnm2) -- (pnm1) node[midway,above,yshift=1pt] {\scriptsize $N{-}1$};
+  \draw[->] (pnm1) -- (pn)   node[midway,above,yshift=1pt] {\scriptsize $N$};
+  \fill (pnm2) circle (1.2pt);
+  \fill (pnm1) circle (1.2pt);
+  \draw[fill=black!10] (pn) circle (2.8pt);
+  \node[scale=0.65] at (pn) {$+$};
+  \draw[line width=0.4pt,densely dashed] (pn) -- ({2.6*\a},0);
+
+  % 下段：連結部分のエネルギー（左：u_i = u，右：u_i = -u）
+  \begin{scope}[yshift=-1.55cm]
+    \node at (0.85,0.96) {$u_i = u$};
+    % 折れ（i: 右，i+1: 左）
+    \draw[->] (0.25,0.28) -- (1.40,0.40);
+    \draw[->] (1.40,0.40) -- (0.25,0.52);
+    \fill (1.40,0.40) circle (1.2pt);
+    \node[below] at (0.82,0.28) {\scriptsize $i$};
+    \node[above] at (0.82,0.48) {\scriptsize $i{+}1$};
+    % 折れ（i: 左，i+1: 右）
+    \draw[->] (1.40,-0.74) -- (0.25,-0.62);
+    \draw[->] (0.25,-0.62) -- (1.40,-0.50);
+    \fill (0.25,-0.62) circle (1.2pt);
+    \node[below] at (0.82,-0.72) {\scriptsize $i$};
+    \node[above] at (0.82,-0.52) {\scriptsize $i{+}1$};
+
+    \node at (3.25,0.96) {$u_i = -u$};
+    % まっすぐ（左→左）
+    \draw[->] (4.15,0.32) -- (3.25,0.40);
+    \draw[->] (3.25,0.40) -- (2.35,0.48);
+    \fill (3.25,0.40) circle (1.2pt);
+    \node[above] at (3.70,0.38) {\scriptsize $i$};
+    \node[above] at (2.80,0.46) {\scriptsize $i{+}1$};
+    % まっすぐ（右→右）
+    \draw[->] (2.35,-0.70) -- (3.25,-0.62);
+    \draw[->] (3.25,-0.62) -- (4.15,-0.54);
+    \fill (3.25,-0.62) circle (1.2pt);
+    \node[above] at (2.80,-0.64) {\scriptsize $i$};
+    \node[above] at (3.70,-0.56) {\scriptsize $i{+}1$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
