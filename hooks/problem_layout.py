@@ -39,6 +39,7 @@ LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 
 PROBLEM_HEADING = re.compile(r'<h2 id="([^"]+)">問題</h2>')
 SUBQUESTION = re.compile(r"<p>\((\d+)\)\s*(.*?)</p>", re.DOTALL)
+SOURCE_NOTE = re.compile(r"<blockquote>\s*<p>(出典：.*?)</p>\s*</blockquote>", re.DOTALL)
 SUBQUESTION_SUB = re.compile(r"<p>\(([a-z])\)\s*(.*?)</p>", re.DOTALL)
 
 
@@ -69,7 +70,7 @@ def _stars(meta) -> str:
 
 
 # 小問の途中で設定を足す前置きの段落（「以下，〜の場合を考える。」など）は，小問の続きとして下げない
-LEAD_PARAGRAPH = re.compile(r'<p class="problem-lead">|<p>(?=以下，|以下では|次に，|最後に，|続いて，)')
+LEAD_PARAGRAPH = re.compile(r'<p class="problem-source">|<p class="problem-lead">|<p>(?=以下，|以下では|次に，|最後に，|続いて，)')
 SUBQ = '<p class="subq">'
 SUBQ_SUB = '<p class="subq subq--sub">'
 
@@ -131,6 +132,8 @@ def on_page_content(html, page, config, files):
         f"<span>{m.group(2)}</span></p>",
         body,
     )
+    # 過去問の出典の注記：引用の枠をやめ，小問の続きとして下げずに，上に細い線を引いて置く
+    body = SOURCE_NOTE.sub(r'<p class="problem-source">\1</p>', body)
     body = _indent_continuations(body)
     box = (
         '<div class="problem-box">'
