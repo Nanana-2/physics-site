@@ -39,6 +39,7 @@ LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 
 PROBLEM_HEADING = re.compile(r'<h2 id="([^"]+)">問題</h2>')
 SUBQUESTION = re.compile(r"<p>\((\d+)\)\s*(.*?)</p>", re.DOTALL)
+SUBQUESTION_SUB = re.compile(r"<p>\(([a-z])\)\s*(.*?)</p>", re.DOTALL)
 
 
 def _level_from_tags(tags) -> int:
@@ -67,15 +68,39 @@ def _stars(meta) -> str:
     )
 
 
-def _indent_continuations(body: str) -> str:
-    """小問の途中に別行立ての数式や箇条書きがあるとき，その後ろ（次の小問まで）も小問の本文と同じだけ下げる。"""
-    parts = body.split('<p class="subq">')
+# 小問の途中で設定を足す前置きの段落（「以下，〜の場合を考える。」など）は，小問の続きとして下げない
+LEAD_PARAGRAPH = re.compile(r'<p class="problem-lead">|<p>(?=以下，|以下では|次に，|最後に，|続いて，)')
+SUBQ = '<p class="subq">'
+SUBQ_SUB = '<p class="subq subq--sub">'
+
+
+def _wrap_after(segment: str, marker: str, cls: str, inner=None) -> str:
+    """marker の小問ごとに，その後ろ（次の小問か前置きの段落まで）を cls の div で囲む。"""
+    parts = segment.split(marker)
     for i in range(1, len(parts)):
         end = parts[i].index("</p>") + len("</p>")
         rest = parts[i][end:]
-        if rest.strip():
-            parts[i] = parts[i][:end] + f'<div class="subq__cont">{rest}</div>'
-    return '<p class="subq">'.join(parts)
+        lead = LEAD_PARAGRAPH.search(rest)
+        cont, tail = (rest[: lead.start()], rest[lead.start() :]) if lead else (rest, "")
+        if inner:
+            cont = inner(cont)
+        if cont.strip():
+            cont = f'<div class="{cls}">{cont}</div>'
+        parts[i] = parts[i][:end] + cont + tail
+    return marker.join(parts)
+
+
+def _indent_continuations(body: str) -> str:
+    """小問の途中に別行立ての数式や箇条書きがあるとき，その後ろ（次の小問まで）も小問の本文と同じだけ下げる。
+    (1) の中の (a)，(b) のような小問も，同じ形で1段深く下げる。"""
+    return _wrap_after(body, SUBQ, "subq__cont", inner=lambda s: _wrap_after(s, SUBQ_SUB, "subq__cont"))
+
+
+def _band_label(page) -> str:
+    """問題の帯の見出し。過去問は「東大理物 令和8年度 第1問」のように題名の「：」より前を出す。"""
+    if page.meta.get("exam_number"):
+        return str(page.meta.get("title", "")).split("：")[0] or "過去問"
+    return "総合問題" if _is_comprehensive(page.file.src_uri) else "問題"
 
 
 def on_page_content(html, page, config, files):
@@ -83,7 +108,7 @@ def on_page_content(html, page, config, files):
         return _books(html)
     if page.is_homepage:
         return _home(html, page, config)
-    if not page.file.src_uri.startswith(SUBJECT_DIRS):
+    if not page.file.src_uri.startswith(SUBJECT_DIRS) and not page.meta.get("exam_number"):
         return html
     if page.file.src_uri.endswith("/index.md"):
         return _subject_index(html, page, config)
@@ -101,10 +126,15 @@ def on_page_content(html, page, config, files):
         f"<span>{m.group(2)}</span></p>",
         body,
     )
+    body = SUBQUESTION_SUB.sub(
+        lambda m: f'<p class="subq subq--sub"><span class="subq__number">({m.group(1)})</span>'
+        f"<span>{m.group(2)}</span></p>",
+        body,
+    )
     body = _indent_continuations(body)
     box = (
         '<div class="problem-box">'
-        f'<h2 id="{heading.group(1)}"><span>{"総合問題" if _is_comprehensive(page.file.src_uri) else "問題"}</span>{_stars(page.meta)}</h2>'
+        f'<h2 id="{heading.group(1)}"><span>{_band_label(page)}</span>{_stars(page.meta)}</h2>'
         f'<div class="problem-box__body">{body}</div>'
         "</div>"
     )

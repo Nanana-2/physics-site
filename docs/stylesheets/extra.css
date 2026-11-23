@@ -287,6 +287,8 @@ span.arithmatex mjx-mfrac {
 .md-typeset p.subq .subq__number { white-space: nowrap; }
 /* 小問の途中の別行数式・続きの文・箇条書きも，小問の本文と同じ位置にそろえる */
 .md-typeset .problem-box__body .subq__cont { margin-left: 2.1em; }
+/* (1) の中の (a)，(b)：番号を1段下げ，間隔を詰める */
+.md-typeset .problem-box__body p.subq--sub { margin: .6em 0; }
 
 /* 解説の小見出し (1)：右に細い線を伸ばす */
 .md-typeset h3.solution-part {
