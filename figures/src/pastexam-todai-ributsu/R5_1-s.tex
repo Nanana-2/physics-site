@@ -1,0 +1,25 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[scale=0.82,>=Stealth,line width=0.9pt]
+  % 座標軸（横軸 L / hbar, 縦軸 E / (hbar omega)）
+  \draw[line width=0.4pt,->] (-3.8,0) -- (4.0,0) node[right] {$L/\hbar$};
+  \draw[line width=0.4pt,->] (0,-0.4) -- (0,4.8) node[above] {$E/(\hbar\omega)$};
+  \node[below left] at (0,0) {$O$};
+
+  % 目盛り
+  \foreach \x in {-3,-2,-1,1,2,3} {
+    \draw[line width=0.4pt] (\x,0.08) -- (\x,-0.08) node[below] {$\x$};
+  }
+  \foreach \y in {1,2,3,4} {
+    \draw[line width=0.4pt] (0.08,\y) -- (-0.08,\y);
+    \node[left,xshift=-2pt] at (0,\y) {$\y$};
+    \draw[line width=0.3pt,densely dotted] (-3.3,\y) -- (3.3,\y);
+  }
+
+  % 点 (L_{n,l}/hbar, E_n/(hbar omega)) for 0 <= n <= 3
+  \foreach \x/\y in {0/1, -1/2, 1/2, -2/3, 0/3, 2/3, -3/4, -1/4, 1/4, 3/4} {
+    \fill (\x,\y) circle (2.4pt);
+  }
+\end{tikzpicture}
+\end{document}
