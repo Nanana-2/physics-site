@@ -1,0 +1,35 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+  >=Stealth,
+  font=\normalsize,
+  axis/.style={line width=0.4pt},
+  curve/.style={line width=0.8pt},
+  mono/.style={circle,draw=black,fill=white,line width=0.6pt,inner sep=1.4pt}
+]
+  % Axes
+  \draw[axis,->] (-1.6,0) -- (2.2,0) node[right] {$x$};
+  \draw[axis,->] (0,0) -- (0,5.1) node[left] {$y$};
+  \node[below] at (0,-0.08) {$0$};
+
+  % Polymer chain: 10 steps (y = 0 to 10, scale 0.44 per step)
+  % Steps: (0,0) -> (1,1) -> (2,2) -> (1,3) -> (2,4) -> (1,5) -> (0,6) -> (-1,7) -> (0,8) -> (1,9) -> (2,10) -> (1,11)? Let's match 10 steps nicely!
+  % (0,0) -> (1,1) -> (2,2) -> (1,3) -> (2,4) -> (1,5) -> (0,6) -> (-1,7) -> (0,8) -> (1,9) -> (2,10)
+  \def\s{0.44}
+  \draw[curve]
+    (0,0) -- (1*\s,1*\s) -- (2*\s,2*\s) -- (1*\s,3*\s) -- (2*\s,4*\s)
+    -- (1*\s,5*\s) -- (0,6*\s) -- (-1*\s,7*\s) -- (0,8*\s) -- (1*\s,9*\s) -- (2*\s,10*\s);
+
+  % Dashed horizontal line at y = L
+  \draw[axis,dotted] (0,10*\s) -- (2*\s,10*\s);
+  \node[left] at (0,10*\s) {$L$};
+
+  % Monomer circles
+  \foreach \px/\py in {0/0, 1/1, 2/2, 1/3, 2/4, 1/5, 0/6, -1/7, 0/8, 1/9, 2/10} {
+    \node[mono] at (\px*\s,\py*\s) {};
+  }
+\end{tikzpicture}
+\end{document}
