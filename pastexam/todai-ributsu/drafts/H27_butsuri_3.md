@@ -71,18 +71,19 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-等速運動する電荷がつくる電磁場は，電荷が静止している慣性系 $\mathcal{O}'$ に移れば純粋な静電場（$\boldsymbol{B}' = \mathbf{0}$）になるため，ガウスの法則やクーロンの法則だけで簡単に求まります。
-
-それを電磁場のローレンツ変換で実験室系 $\mathcal{O}$ へ戻すことで，定常電流がつくる磁場が静電場の相対論的変換として自然に現れること，および単一運動電荷の電場が進行方向に垂直な面へ圧縮される構造が直接確かめられます。
+電荷とともに動く慣性系では電荷が静止しているため，静電場から電磁場を求めることができます。電場と磁場のローレンツ変換を使うと，運動する電荷の場を同じ静電場から調べることができます。
 </div>
 
 ### (1)
-$|x| \gg a$ の遠方では，$z$ 軸上の荷電粒子列は一様な線電荷密度 $\lambda = \dfrac{q}{a}$ および定常電流 $I = \lambda v_z = \dfrac{q v_z}{a}$（$+z$ 向き）とみなすことができます。
+$|x| \gg a$ の遠方では，$z$ 軸上の荷電粒子列は一様な線電荷密度 $\lambda = \dfrac{q}{a}$ および定常電流 $I = \lambda v_z = \dfrac{q v_z}{a}$とみなすことができます。
 
 軸対称性より，半径 $r = |x|$，長さ $\ell$ の円筒面に対してガウスの法則を用いると，
 
 $$
-2\pi r \ell E_r = \frac{\lambda \ell}{\epsilon_0} \implies E_r = \frac{q}{2\pi\epsilon_0 a r}
+\begin{aligned}
+2\pi r\ell E_r &= \frac{\lambda\ell}{\epsilon_0}\\
+E_r &= \frac{q}{2\pi\epsilon_0 ar}
+\end{aligned}
 $$
 
 であり，点 $(x, 0, 0)$ では $E_x = \dfrac{q}{2\pi\epsilon_0 a x},\ E_y = E_z = 0$ です。
@@ -90,7 +91,11 @@ $$
 同様に半径 $r = |x|$ の円周に沿ってアンペールの法則を用いると，
 
 $$
-2\pi r B_\varphi = \mu_0 I = \frac{\mu_0 q v_z}{a} \implies B_\varphi = \frac{\mu_0 q v_z}{2\pi a r}
+\begin{aligned}
+2\pi rB_\varphi &= \mu_0 I\\
+&= \frac{\mu_0 qv_z}{a}\\
+B_\varphi &= \frac{\mu_0 qv_z}{2\pi ar}
+\end{aligned}
 $$
 
 であり，点 $(x, 0, 0)$ では接線方向 $\boldsymbol{e}_\varphi = \operatorname{sgn}(x)\,\boldsymbol{e}_y$ なので $B_y = \dfrac{\mu_0 q v_z}{2\pi a x},\ B_x = B_z = 0$ です。したがって，
@@ -120,7 +125,7 @@ $$
 $$
 
 ### (4)
-式 (1) より $x' = x,\ y' = y$ です。問3の $\boldsymbol{E}',\ \boldsymbol{B}' = \mathbf{0}$ を式 (2)，(3) に代入します。
+式 (1) より $x' = x,\ y' = y$ です。問3の $\boldsymbol{E}',\ \boldsymbol{B}' = \mathbf{0}$ を式 (2)，(3) に代入します。 設問3の条件 $r'=\sqrt{x'^2+y'^2}\gg a'$ は，$r=\sqrt{x^2+y^2}\gg\gamma a$ となります。以下はこの連続近似が成り立つ範囲で考えます。
 
 $$
 \begin{aligned}
@@ -165,16 +170,21 @@ $$
 
 $$
 \begin{aligned}
-E_x &= \gamma E_x' = \frac{\gamma q x}{4\pi\epsilon_0 \left(x^2 + \gamma^2 v_z^2 t^2\right)^{3/2}} \\
-E_y &= \gamma E_y' = 0 \\
-E_z &= E_z' = -\frac{\gamma q v_z t}{4\pi\epsilon_0 \left(x^2 + \gamma^2 v_z^2 t^2\right)^{3/2}}
+E_x &= \gamma E_x' \\
+&= \frac{\gamma q x}{4\pi\epsilon_0 \left(x^2 + \gamma^2 v_z^2 t^2\right)^{3/2}} \\
+E_y &= \gamma E_y' \\
+&= 0 \\
+E_z &= E_z' \\
+&= -\frac{\gamma q v_z t}{4\pi\epsilon_0 \left(x^2 + \gamma^2 v_z^2 t^2\right)^{3/2}}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 B_x &= 0 \\
-B_y &= \gamma\frac{\beta}{c}E_x' = \frac{v_z}{c^2} E_x = \frac{\mu_0 \gamma q v_z x}{4\pi \left(x^2 + \gamma^2 v_z^2 t^2\right)^{3/2}} \\
+B_y &= \gamma\frac{\beta}{c}E_x' \\
+&= \frac{v_z}{c^2} E_x \\
+&= \frac{\mu_0 \gamma q v_z x}{4\pi \left(x^2 + \gamma^2 v_z^2 t^2\right)^{3/2}} \\
 B_z &= 0
 \end{aligned}
 $$
@@ -186,5 +196,5 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-問6の結果で $t = 0$（粒子が最接近する瞬間）に注目すると，電場の大きさは静止電荷の $\gamma$ 倍に増強される一方，持続時間は $\Delta t \sim |x|/(\gamma v_z)$ と $1/\gamma$ 倍に短縮されます。つまり高エネルギー荷電粒子の電気力線は進行方向に垂直なパンケーキ状の面へ集中します。
+$t=0$ の最接近時刻には，電場の大きさは同じ距離にある静止電荷の $\gamma$ 倍です。$v_z\neq0$ のとき，場が強くなる時間幅は $\Delta t\sim |x|/(\gamma|v_z|)$ であり，同じ速さの非相対論的な見積もりの $1/\gamma$ 倍になります。高エネルギー荷電粒子の電気力線は，進行方向に垂直な面へ集中します。
 </aside>

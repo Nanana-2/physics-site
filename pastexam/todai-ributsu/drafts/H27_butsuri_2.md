@@ -27,7 +27,7 @@ $$
 <figure class="problem-figure" markdown>
 ![高分子鎖のモデル](../../../docs/assets/figures/pastexam-todai-ributsu/H27_butsuri_2-p-light.svg#only-light)
 ![高分子鎖のモデル](../../../docs/assets/figures/pastexam-todai-ributsu/H27_butsuri_2-p-dark.svg#only-dark)
-<figcaption markdown="span">図1：高分子鎖のモデル。</figcaption>
+<figcaption markdown="span">図1：高分子鎖のモデル</figcaption>
 </figure>
 
 (1) $C(x, L)$ が以下で与えられることを示せ。
@@ -64,13 +64,13 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-各ステップで $x$ が $\pm 1$ 変化する高分子鎖の配位数 $C(x, L)$ は1次元ランダムウォークの経路数にほかならず，離散フーリエ変換によって漸化式が単純な乗算へ変換されます。長鎖極限（$L \gg 1$）では特性関数 $(2\cos k)^L$ の2次展開から中心極限定理のガウス分布が導かれます。
+隣接する格子点からの経路数を足す漸化式は，フーリエ変換すると各波数ごとの関係に分けることができます。長い鎖の分布も，波数の小さい領域での振る舞いから調べることができます。
 
-終点に電荷 $q$ を載せて静電場 $E$ を印加すると，分配関数は $k = i\beta q E$ における特性関数そのものになり，さらに分配関数の対数の2階微分を通じて，無外場での位置ゆらぎ $\langle x^2 \rangle_{E=0}$ と線形応答係数 $\left.\partial\langle x\rangle/\partial E\right|_{E=0}$ を結ぶ揺動散逸関係が模型の詳細によらず成り立ちます。
+静電場は終点の位置に比例するエネルギーを与えるため，分配関数を電場で微分すると位置の平均や分散が現れます。配位数を個別に数え直すことなく，位置の揺らぎと電場への応答を結び付けることができます。
 </div>
 
 ### (1)
-$L$ 回のステップのうち右斜上（$x$ が $+1$）へ伸びる回数を $n_+$，左斜上（$x$ が $-1$）へ伸びる回数を $n_-$ とします。これらは
+$x$ が $+1$ 変化する右斜上へのステップ数を $n_+$ とします。$x$ が $-1$ 変化する左斜上へのステップ数を $n_-$ とすると，
 
 $$
 n_+ + n_- = L,\qquad n_+ - n_- = x
@@ -85,7 +85,10 @@ $$
 となります。$n_+,\ n_-$ がともに $0$ 以上 $L$ 以下の整数であるための必要十分条件は，$L + x$ が偶数かつ $|x| \le L$ であることです。それ以外の $(x, L)$ には到達できないため $C(x, L) = 0$ です。条件を満たすとき，$L$ ステップのうち右斜上となる $n_+$ ステップの選び方は二項係数 $\dbinom{L}{n_+}$ に等しいため，
 
 $$
-C(x, L) = \frac{L!}{n_-!\,n_+!} = \frac{L!}{\bigl((L - x)/2\bigr)!\,\bigl((L + x)/2\bigr)!}
+\begin{aligned}
+C(x, L) &= \frac{L!}{n_-!\,n_+!} \\
+&= \frac{L!}{\bigl((L - x)/2\bigr)!\,\bigl((L + x)/2\bigr)!}
+\end{aligned}
 $$
 
 となり，式 (2) が成り立ちます。
@@ -123,7 +126,7 @@ $$
 $$
 
 ### (4)
-問3より $\ln\tilde{C}(k, L) = L\ln(2\cos k)$ です。$k$ が小さい領域で $\cos k = 1 - \dfrac{k^2}{2} + \mathcal{O}(k^4)$ と展開し，$\ln(1 + u) = u + \mathcal{O}(u^2)$ を用います。
+ここでは中心領域 $x=O(\sqrt{L})$ の漸近形を求めます。問3より $\ln\tilde{C}(k, L) = L\ln(2\cos k)$ です。$k$ が小さい領域で $\cos k = 1 - \dfrac{k^2}{2} + \mathcal{O}(k^4)$ と展開し，$\ln(1 + u) = u + \mathcal{O}(u^2)$ を用います。
 
 $$
 \begin{aligned}
@@ -135,23 +138,25 @@ $$
 
 $k^2 L$ を一定に保って $L \to \infty$ とすると $L k^4 = (k^2 L)^2 / L \to 0$ となるため，$\tilde{C}(k, L) \simeq 2^L e^{-Lk^2/2}$ です。
 
-ここで $k \in [-\pi, \pi]$ において $|\cos k|$ が最大値 $1$ をとるのは $k = 0$ に加えて $k = \pm\pi$ の近傍でもあることに注意します。
+$|\cos k|$ は $k=0,\pm\pi$ で最大値 $1$ をとります。そのため，逆フーリエ積分では $k=0$ 付近に加えて，区間の両端付近からの寄与も調べます。
 
 - $k \approx 0$ の寄与：積分範囲を $(-\infty, \infty)$ に広げてガウス積分公式を用いると，
   $$
-  \frac{2^L}{2\pi}\int_{-\infty}^{\infty} e^{ikx - \frac{L}{2}k^2}\,\mathrm{d}k
-  = \frac{2^L}{2\pi}\sqrt{\frac{2\pi}{L}}\exp\left(-\frac{x^2}{2L}\right)
-  = \frac{2^L}{\sqrt{2\pi L}}\exp\left(-\frac{x^2}{2L}\right)
+  \begin{aligned}
+  \frac{2^L}{2\pi}\int_{-\infty}^{\infty}e^{ikx-Lk^2/2}\,\mathrm{d}k
+  &= \frac{2^L}{2\pi}\sqrt{\frac{2\pi}{L}}\exp\left(-\frac{x^2}{2L}\right) \\
+  &= \frac{2^L}{\sqrt{2\pi L}}\exp\left(-\frac{x^2}{2L}\right)
+  \end{aligned}
   $$
 - $k \approx \pm\pi$ の寄与：$k = \pi + q$ とおくと $\cos(\pi + q) = -\cos q$ なので $\tilde{C}(\pi + q, L) \simeq (-1)^L 2^L e^{-Lq^2/2}$，$e^{i(\pi + q)x} = (-1)^x e^{iqx}$ となり，同様に $(-1)^{L + x}\dfrac{2^L}{\sqrt{2\pi L}}\exp\left(-\dfrac{x^2}{2L}\right)$ を与えます。
 
-両者を合わせると，$L + x$ が奇数のときは $0$，$L + x$ が偶数のときは2倍になります（$x$ が2刻みで値をとるため，連続密度としての $\dfrac{2^L}{\sqrt{2\pi L}}e^{-x^2/(2L)}$ に格子間隔 $2$ を掛けた値に一致します）。したがって，$L + x$ が偶数のとき
+両者を合わせると，$L+x$ が奇数のときは $0$，偶数のときは2倍になります。$x$ は2刻みで値をとるため，連続密度に格子間隔 $2$ を掛けた値に一致します。したがって，$L+x$ が偶数のとき
 
 $$
 \finalanswer{C(x, L) \simeq 2^L\sqrt{\frac{2}{\pi L}}\exp\left(-\frac{x^2}{2L}\right)}
 $$
 
-（$L + x$ が奇数のときは $C(x, L) = 0$ です。また $k \approx 0$ のみからの連続近似密度としては $\dfrac{2^L}{\sqrt{2\pi L}}\exp\left(-\dfrac{x^2}{2L}\right)$ となります。）
+$L+x$ が奇数のときは $C(x,L)=0$ です。
 
 ### (5)
 終点 $(x, L)$ に電荷 $q$ があるとき，静電場 $E$ によるポテンシャルエネルギーは $U(x) = -qEx$ です。逆温度を $\beta = \dfrac{1}{k_{\mathrm{B}}T}$ とすると，分配関数 $Z(T, E)$ は
@@ -214,11 +219,11 @@ $$
 となり，比例関係が成り立ちます。したがって，$\left.\dfrac{\partial\langle x \rangle}{\partial E}\right|_{E=0} = \alpha\langle x^2 \rangle_{E=0}$ と書いたときの比例係数 $\alpha$ は
 
 $$
-\finalanswer{\frac{q}{k_{\mathrm{B}}T}}
+\finalanswer{\alpha = \frac{q}{k_{\mathrm{B}}T}}
 $$
 
-です（逆に $\langle x^2 \rangle_{E=0} = \dfrac{k_{\mathrm{B}}T}{q}\left.\dfrac{\partial\langle x \rangle}{\partial E}\right|_{E=0}$ でもあります）。
+です。$q\neq0$ なら，逆に $\langle x^2 \rangle_{E=0} = \dfrac{k_{\mathrm{B}}T}{q}\left.\dfrac{\partial\langle x \rangle}{\partial E}\right|_{E=0}$ と表すこともできます。
 
 <aside class="rigor-note" markdown>
-問7の関係は静的な揺動散逸定理（線形応答理論におけるゆらぎと感受率の関係）の一例です。問6の結果から $\left.\dfrac{\partial\langle x\rangle}{\partial E}\right|_{E=0} = \dfrac{qL}{k_{\mathrm{B}}T}$ なので，$\langle x^2 \rangle_{E=0} = L$ となり，ランダムウォークの2乗平均変位がステップ数 $L$ に比例することとも一致します。
+線形応答理論では，揺らぎと感受率を結ぶ関係を**揺動散逸定理**といいます。問7は静的な場合の一例です。問6の結果から $\left.\dfrac{\partial\langle x\rangle}{\partial E}\right|_{E=0} = \dfrac{qL}{k_{\mathrm{B}}T}$ なので，$\langle x^2 \rangle_{E=0} = L$ となり，ランダムウォークの2乗平均変位がステップ数 $L$ に比例することとも一致します。
 </aside>

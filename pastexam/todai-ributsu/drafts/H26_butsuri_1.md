@@ -65,9 +65,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-前半はクーロンポテンシャル中の s 波シュレーディンガー方程式を無次元化することで，ボーア半径 $r_0$ とリュードベリエネルギー $E_0$ という固有のスケールを直接取り出す構成です。
+球対称な状態では，波動関数の変化を動径だけで調べることができます。長さとエネルギーの単位を選び直すと，運動エネルギーとクーロンエネルギーの大きさを比較しやすくなります。
 
-後半では，対称ゲージの一様磁場中ハミルトニアンに現れる力学運動量 $(p_1, p_2)$ 同士が非可換であることに着目します。これらを 1 組の正準変数 $(X, P)$ とみなすと 2 次元運動が 1 次元調和振動子に還元され，ハミルトニアンに現れないもう 1 組の正準変数 $(X', P')$ がサイクロトロン軌道の中心（案内中心）に対応します。
+一様磁場中では，力学運動量の2成分の交換関係を使うと，調和振動子と同じ形の正準変数を選ぶことができます。エネルギーを変える運動と，軌道の中心を変える自由度を分けて扱うことができます。
 </div>
 
 ### (1)
@@ -90,8 +90,10 @@ $$
 
 $$
 \begin{aligned}
-\frac{q^2}{4\pi\epsilon_0 r_0}\cdot\frac{2m r_0^2}{\hbar^2} &= 2 \implies r_0 = \frac{4\pi\epsilon_0 \hbar^2}{m q^2}, \\
-E_0 &= \frac{\hbar^2}{2m r_0^2} = \frac{m q^4}{32\pi^2 \epsilon_0^2 \hbar^2}
+\frac{q^2}{4\pi\epsilon_0 r_0}\frac{2mr_0^2}{\hbar^2}&=2\\
+r_0&=\frac{4\pi\epsilon_0\hbar^2}{mq^2}\\
+E_0&=\frac{\hbar^2}{2mr_0^2}\\
+&=\frac{mq^4}{32\pi^2\epsilon_0^2\hbar^2}
 \end{aligned}
 $$
 
@@ -110,16 +112,15 @@ $$
 
 となります。よって $\varepsilon = 1$ であり，基底状態のエネルギーは $E = -E_0$ です。
 
-次に，$\langle r^2 \rangle$ を球座標の体積要素 $\mathrm{d}^3 r = 4\pi r^2\,\mathrm{d}r$ を用いて計算します。ガンマ関数の公式 $\int_0^\infty \rho^n e^{-2\rho}\,\mathrm{d}\rho = \dfrac{n!}{2^{n+1}}$ を用いると，
+次に，$\langle r^2 \rangle$ を球座標の体積要素 $\mathrm{d}^3 r = 4\pi r^2\,\mathrm{d}r$ を用いて計算します。ガンマ関数の公式 $\displaystyle\int_0^\infty \rho^n e^{-2\rho}\,\mathrm{d}\rho = \dfrac{n!}{2^{n+1}}$ を用いると，
 
 $$
 \begin{aligned}
-\langle r^2 \rangle
-&= \frac{\int_0^\infty r^2 |\psi(r)|^2 \cdot 4\pi r^2\,\mathrm{d}r}{\int_0^\infty |\psi(r)|^2 \cdot 4\pi r^2\,\mathrm{d}r}
-= r_0^2\,\frac{\int_0^\infty \rho^4 e^{-2\rho}\,\mathrm{d}\rho}{\int_0^\infty \rho^2 e^{-2\rho}\,\mathrm{d}\rho} \\
-&= r_0^2\,\frac{4!/2^5}{2!/2^3}
-= r_0^2\,\frac{24/32}{2/8}
-= 3r_0^2
+\langle r^2 \rangle &= \frac{\int_0^\infty r^2 |\psi(r)|^2 \cdot 4\pi r^2\,\mathrm{d}r}{\int_0^\infty |\psi(r)|^2 \cdot 4\pi r^2\,\mathrm{d}r} \\
+&= r_0^2\,\frac{\int_0^\infty \rho^4 e^{-2\rho}\,\mathrm{d}\rho}{\int_0^\infty \rho^2 e^{-2\rho}\,\mathrm{d}\rho} \\
+ &= r_0^2\,\frac{4!/2^5}{2!/2^3} \\
+&= r_0^2\,\frac{24/32}{2/8} \\
+&= 3r_0^2
 \end{aligned}
 $$
 
@@ -134,11 +135,10 @@ $$
 
 $$
 \begin{aligned}
-[p_1, p_2]
-&= \left[p_x - \frac{qBy}{2},\; p_y + \frac{qBx}{2}\right] \\
+[p_1, p_2] &= \left[p_x - \frac{qBy}{2},\; p_y + \frac{qBx}{2}\right] \\
 &= \frac{qB}{2}[p_x, x] - \frac{qB}{2}[y, p_y] \\
-&= \frac{qB}{2}(-i\hbar) - \frac{qB}{2}(i\hbar)
-= -i\hbar qB
+ &= \frac{qB}{2}(-i\hbar) - \frac{qB}{2}(i\hbar) \\
+&= -i\hbar qB
 \end{aligned}
 $$
 
@@ -152,18 +152,30 @@ $$
 $X = k p_2$，$P = p_1$ が正準交換関係 $[X, P] = i\hbar$ を満たす条件を求めます。(3) の結果 $[p_2, p_1] = i\hbar qB$ より，
 
 $$
-[X, P] = k[p_2, p_1] = i\hbar k qB = i\hbar \implies k = \frac{1}{qB}
+\begin{aligned}
+[X,P]&=k[p_2,p_1]\\
+&=i\hbar kqB
+\end{aligned}
+\qquad
+\begin{aligned}
+kqB&=1\\
+k&=\frac{1}{qB}
+\end{aligned}
 $$
 
-が得られます（ここで $qB \neq 0$ とします）。このとき $p_1 = P$，$p_2 = qB X$ であり，ハミルトニアン (2) の $(x, y)$ 方向に関する部分 $H_{xy}$ は次のように書き換えられます。
+が得られます。ここで $qB\neq0$ とします。このとき $p_1 = P$，$p_2 = qB X$ であり，ハミルトニアン (2) の $(x, y)$ 方向に関する部分 $H_{xy}$ は次のように書き換えられます。
 
 $$
-H_{xy} = \frac{1}{2m}\left(p_1^2 + p_2^2\right) = \frac{P^2}{2m} + \frac{q^2 B^2}{2m}X^2 = \frac{P^2}{2m} + \frac{1}{2}m\omega^2 X^2
+\begin{aligned}
+H_{xy} &= \frac{1}{2m}\left(p_1^2 + p_2^2\right) \\
+&= \frac{P^2}{2m} + \frac{q^2 B^2}{2m}X^2 \\
+&= \frac{P^2}{2m} + \frac{1}{2}m\omega^2 X^2
+\end{aligned}
 $$
 
 ここで $\omega = \dfrac{|qB|}{m}$ とおきました。$(X, P)$ は正準交換関係 $[X, P] = i\hbar$ を満たすエルミート演算子なので，$(x, y)$ 方向の運動は質量 $m$，固有振動数 $\omega = \dfrac{|qB|}{m}$ の 1 次元調和振動子と等価です。
 
-古典的描像では，$\omega$ は一様磁場中でローレンツ力を受けて $xy$ 面内を等速円運動する荷電粒子の角振動数（サイクロトロン角振動数）を表します。
+古典的描像では，$\omega$ は一様磁場中でローレンツ力を受けて $xy$ 面内を等速円運動する荷電粒子の角振動数を表します。この角振動数を**サイクロトロン角振動数**といいます。
 
 $$
 \finalanswer{k = \frac{1}{qB}, \qquad \omega = \frac{|qB|}{m}}
@@ -206,10 +218,13 @@ $$
 $$
 
 ### (6)
-$X$ を対角化する表示では，(4) で示した 1 次元調和振動子 $H_{xy} = \dfrac{P^2}{2m} + \dfrac{1}{2}m\omega^2 X^2$（$\omega = \dfrac{|qB|}{m}$）の基底状態波動関数はガウス関数で与えられます。規格化定数を含めて表すと次のとおりです。
+(4) より，$H_{xy}$ は固有振動数 $\omega=\dfrac{|qB|}{m}$ の1次元調和振動子のハミルトニアンです。$X$ を対角化する表示で，規格化した基底状態の波動関数は次のとおりです。
 
 $$
-\psi_0(X) = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{m\omega}{2\hbar}X^2\right) = \left(\frac{|qB|}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{|qB|}{2\hbar}X^2\right)
+\begin{aligned}
+\psi_0(X) &= \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{m\omega}{2\hbar}X^2\right) \\
+&= \left(\frac{|qB|}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{|qB|}{2\hbar}X^2\right)
+\end{aligned}
 $$
 
 さらに，(4) と (5) の定義より $X = \dfrac{1}{qB}p_y + \dfrac{1}{2}x$，$X' = \dfrac{1}{2}x - \dfrac{1}{qB}p_y$ なので，両者の和は
@@ -226,12 +241,20 @@ $$
 
 と表されます。
 
-ここで $a$ は，調和振動子の波動関数が局在する中心の $x$ 座標を表しています。古典的描像では，$m\dot{y} = p_y + \dfrac{qBx}{2}$ より $X' = x - \dfrac{m\dot{y}}{qB}$ は時間によらない保存量となり，$a$ は一様磁場中をサイクロトロン運動する荷電粒子の円軌道の中心（案内中心）の $x$ 座標に対応します。
+ここで $a$ は，調和振動子の波動関数が局在する中心の $x$ 座標を表しています。古典的描像では，$m\dot{y} = p_y + \dfrac{qBx}{2}$ より $X' = x - \dfrac{m\dot{y}}{qB}$ は時間によらない保存量となり，$a$ は一様磁場中をサイクロトロン運動する荷電粒子の円軌道の中心の $x$ 座標に対応します。円軌道の中心を**案内中心**といいます。
 
 $$
 \finalanswer{\psi_0(X) = \left(\frac{|qB|}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{|qB|}{2\hbar}X^2\right)}
 $$
 
 <aside class="rigor-note" markdown>
-一様磁場 $\boldsymbol{B} = (0, 0, -B)$ に対して，$Y' \equiv -\dfrac{P'}{qB} = -\dfrac{p_x}{qB} - \dfrac{y}{2}$ を定義すると，古典的には $Y' = y + \dfrac{m\dot{x}}{qB}$ がサイクロトロン軌道の中心（案内中心）の $y$ 座標になります。$(X', Y')$ は $[X', Y'] = -\dfrac{i\hbar}{qB}$ を満たし，ハミルトニアンと可換なまま互いに非可換です。このため，各ランダウ準位は案内中心の位置の自由度に対応して巨視的に縮退します。また，磁気長さ $\ell_B = \sqrt{\dfrac{\hbar}{|qB|}}$ を用いると，(6) の波動関数は $\exp\!\left(-\dfrac{(x-a)^2}{2\ell_B^2}\right)$ と簡潔に表されます。
+一様磁場 $\boldsymbol{B}=(0,0,-B)$ では，案内中心の $y$ 座標を
+
+$$
+Y'\equiv\frac{P'}{qB}=\frac{p_x}{qB}+\frac{y}{2}
+$$
+
+と定義します。$m\dot{x}=p_x-qBy/2$ より，古典的には $Y'=y+\dfrac{m\dot{x}}{qB}$ となります。$(X',Y')$ の交換関係は $[X',Y']=\dfrac{i\hbar}{qB}$ です。案内中心の両座標はハミルトニアンと可換ですが，互いには可換ではありません。
+
+各ランダウ準位は案内中心の位置の自由度に対応して巨視的に縮退します。磁気長さ $\ell_B=\sqrt{\dfrac{\hbar}{|qB|}}$ を使うと，(6) の波動関数の $x$ 依存性は $\exp\!\left(-\dfrac{(x-a)^2}{2\ell_B^2}\right)$ と表されます。
 </aside>
