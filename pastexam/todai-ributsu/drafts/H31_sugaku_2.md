@@ -37,8 +37,9 @@ $$
 
 ただし，$f_\alpha^{(n)}(x) = 0$ という自明な解は考えない。
 
-1. $\lambda_\alpha^{(n)}$ と $f_\alpha^{(n)}(x)$ を求めよ。固有関数は規格化しなくてよい。
-2. $m_\alpha < \dfrac{1}{2}$ として，次の量 $D$ を計算することを考える。
+(1) $\lambda_\alpha^{(n)}$ と $f_\alpha^{(n)}(x)$ を求めよ。固有関数は規格化しなくてよい。
+
+(2) $m_\alpha < \dfrac{1}{2}$ として，次の量 $D$ を計算することを考える。
 
 $$
 D = \prod_{n=1}^{\infty} \frac{\lambda_2^{(n)}}{\lambda_1^{(n)}}
@@ -96,13 +97,15 @@ $$
 
 (vi) $\tilde{g}_\alpha(0)$ を具体的に計算し，$D$ を $m_1$ と $m_2$ を用いて表せ。
 
-<figure class="figure" markdown="0">
-  <img class="figure-img only-light" src="../../../docs/assets/figures/pastexam-todai-ributsu/H31_sugaku_2-p-light.svg" alt="積分経路 C と変形経路 C_in, C_out およびブランチカット">
-  <img class="figure-img only-dark"  src="../../../docs/assets/figures/pastexam-todai-ributsu/H31_sugaku_2-p-dark.svg"  alt="積分経路 C と変形経路 C_in, C_out およびブランチカット">
-  <figcaption>図1：積分経路 $C$（実線），$C_{\mathrm{in}}$（破線），および $C_{\mathrm{out}}$（点線）。図中の黒丸は $\lambda_1^{(n)},\ \lambda_2^{(n)}\ (n = 1, 2, 3, \dots)$，太い実線はブランチカット（切断線）を表す。</figcaption>
+<figure class="problem-figure" markdown>
+![積分経路 C と変形経路 C_in, C_out およびブランチカット](../../../docs/assets/figures/pastexam-todai-ributsu/H31_sugaku_2-p-light.svg#only-light)
+![積分経路 C と変形経路 C_in, C_out およびブランチカット](../../../docs/assets/figures/pastexam-todai-ributsu/H31_sugaku_2-p-dark.svg#only-dark)
+<figcaption markdown="span">図1：積分経路 $C$（実線），$C_{\mathrm{in}}$（破線），および $C_{\mathrm{out}}$（点線）。図中の黒丸は $\lambda_1^{(n)},\ \lambda_2^{(n)}\ (n = 1, 2, 3, \dots)$，太い実線はブランチカット（切断線）を表す。</figcaption>
 </figure>
 
 > 出典：東京大学大学院理学系研究科物理学専攻 平成31年度修士課程入学試験 数学 第2問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，図を描き直しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
+
+---
 
 ## 解答・解説
 
@@ -112,7 +115,7 @@ $$
 積分経路をブランチカットの両岸 $C_{\mathrm{in}},\ C_{\mathrm{out}}$ へ変形すると，$\lambda^{-s}$ の多価性から $(e^{2\pi i s} - 1)$ の因子が前に出て，$s = 0$ での微分が端点 $\lambda = 0$ の値だけで決まる全微分積分として直接計算することができます。
 </div>
 
-### 1.
+### (1)
 固有値方程式は次のように書き換えられます。
 
 $$
@@ -131,7 +134,7 @@ $$
 \finalanswer{\lambda_\alpha^{(n)} = \left(n - \frac{1}{2}\right)^2 - m_\alpha^2,\qquad f_\alpha^{(n)}(x) = \cos\left[\left(n - \frac{1}{2}\right)x\right] \qquad (n = 1, 2, 3, \dots)}
 $$
 
-### 2.
+### (2)
 (i) $\lambda^{-s} = e^{-s\ln\lambda}$ を $s$ で微分します。
 
 $$

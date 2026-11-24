@@ -41,15 +41,17 @@ $$
 
 で与えられる。$\mathbf{e}_r,\ \mathbf{e}_\theta,\ \mathbf{e}_z$ はそれぞれ $r, \theta, z$ 方向の単位ベクトルである。以下の設問に答えよ。
 
-<figure class="figure" markdown="0">
-  <img class="figure-img only-light" src="../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_3-p-light.svg" alt="同軸ケーブルと円筒座標系">
-  <img class="figure-img only-dark"  src="../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_3-p-dark.svg"  alt="同軸ケーブルと円筒座標系">
-  <figcaption>図1：半径 $a$ の円柱芯線と内半径 $b$ の円筒状導体からなる同軸ケーブルおよび円筒座標系 $(r, \theta, z)$。</figcaption>
+<figure class="problem-figure" markdown>
+![同軸ケーブルと円筒座標系](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_3-p-light.svg#only-light)
+![同軸ケーブルと円筒座標系](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_3-p-dark.svg#only-dark)
+<figcaption markdown="span">図1：半径 $a$ の円柱芯線と内半径 $b$ の円筒状導体からなる同軸ケーブルおよび円筒座標系 $(r, \theta, z)$。</figcaption>
 </figure>
 
-1. この TEM モードの磁束密度の $r$ 方向成分 $B_r$，電場の $\theta$ 方向成分 $E_\theta$ はともにゼロとなることを示せ。
-2. $E_r(r, z, t)$ に対する波動方程式を求めよ。
-3. $z$ 方向の波数を $k$，角周波数を $\omega$ として，電場および磁束密度を複素表示でそれぞれ
+(1) この TEM モードの磁束密度の $r$ 方向成分 $B_r$，電場の $\theta$ 方向成分 $E_\theta$ はともにゼロとなることを示せ。
+
+(2) $E_r(r, z, t)$ に対する波動方程式を求めよ。
+
+(3) $z$ 方向の波数を $k$，角周波数を $\omega$ として，電場および磁束密度を複素表示でそれぞれ
 
 $$
 E_r(r, z, t) = \mathcal{E}(r) e^{ikz - i\omega t},\qquad B_\theta(r, z, t) = \mathcal{B}(r) e^{ikz - i\omega t}
@@ -57,10 +59,13 @@ $$
 
 と記述する。$\mathcal{E}(r = a) = E_0$ としたとき，$\mathcal{E}(r)$ を求めよ。
 
-4. 同軸ケーブルを伝搬する電磁波の位相速度を求めよ。
-5. 同軸ケーブル断面を通過する単位時間あたりの電磁波のエネルギーを求めよ。
-6. 位置 $z$，時刻 $t$ における円筒状導体に対する芯線の電圧 $V(z, t)$ を求めよ。
-7. 設問6で求めた電圧 $V$ と，芯線を流れる電流 $I$ の比 $V(z, t)/I(z, t)$ は特性インピーダンス $Z_0$ と呼ばれる。$Z_0$ を求めよ。
+(4) 同軸ケーブルを伝搬する電磁波の位相速度を求めよ。
+
+(5) 同軸ケーブル断面を通過する単位時間あたりの電磁波のエネルギーを求めよ。
+
+(6) 位置 $z$，時刻 $t$ における円筒状導体に対する芯線の電圧 $V(z, t)$ を求めよ。
+
+(7) 設問6で求めた電圧 $V$ と，芯線を流れる電流 $I$ の比 $V(z, t)/I(z, t)$ は特性インピーダンス $Z_0$ と呼ばれる。$Z_0$ を求めよ。
 
 次に，同軸ケーブルを伝搬するパルスを考える。その電圧を $V(z, t)$ で表す。以下，$\epsilon$ および $\mu$ は周波数の関数であり，$\omega$ は波数 $k$ の関数とする。$V(z, t)$ の複素表示を波数 $k$ の波の重ね合わせとして
 
@@ -70,7 +75,7 @@ $$
 
 と表す。
 
-8. $v(k)$ がある波数 $k_0$ を中心とする狭い範囲でのみ $0$ でない値をとり，$\omega(k)$ が定数 $A$ を用いて
+(8) $v(k)$ がある波数 $k_0$ を中心とする狭い範囲でのみ $0$ でない値をとり，$\omega(k)$ が定数 $A$ を用いて
 
 $$
 \omega(k) = \omega(k_0) + A(k - k_0)
@@ -79,6 +84,8 @@ $$
 と近似できるとき，複素表示での電圧パルスの振幅 $|V(z, t)|$ は，その波形を変えずに同軸ケーブル中を伝搬することを示せ。
 
 > 出典：東京大学大学院理学系研究科物理学専攻 令和2年度修士課程入学試験 物理学 第3問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，図を描き直しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
+
+---
 
 ## 解答・解説
 
