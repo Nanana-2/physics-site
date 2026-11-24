@@ -24,7 +24,7 @@ $$
 
 を用いてよい。公式中で，$a > 0$，$p$ は実数，$i$ は虚数単位である。
 
-1. 誤差関数
+(1) 誤差関数
 
 $$
 \operatorname{erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x d\xi\, e^{-\xi^2}
@@ -40,7 +40,7 @@ $$
 \operatorname{erf}(x) \sim 1 - \frac{1}{\sqrt{\pi}\,x} e^{-x^2} + \text{（高次の項）}
 $$
 
-2. 偏微分方程式
+(2) 偏微分方程式
 
 $$
 \frac{\partial u(x, t)}{\partial t} = -c\frac{\partial u(x, t)}{\partial x} + \frac{\lambda}{2}\frac{\partial^2 u(x, t)}{\partial x^2}
@@ -72,6 +72,8 @@ $$
 
 > 出典：東京大学大学院理学系研究科物理学専攻 令和2年度修士課程入学試験 数学 第1問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，解答に図を追加しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
 
+---
+
 ## 解答・解説
 
 <div class="approach" markdown>
@@ -80,7 +82,7 @@ $$
 階段状の初期分布を畳み込むとガウス積分が誤差関数として自然に現れ，設問1で調べた誤差関数の振る舞いから波面の移流と拡散による広がりを定量的に把握することができます。
 </div>
 
-### 1.
+### (1)
 (i) 指数関数 $e^{-\xi^2}$ のマクローリン展開は全実数で一様収束するため，項別積分を行うことができます。
 
 $$
@@ -129,7 +131,7 @@ $$
 
 となり，最初の2項が問題文の漸近展開に一致することが確かめられます。
 
-### 2.
+### (2)
 (i) $\lambda = 0$ のとき，偏微分方程式は1階の移流方程式 $\dfrac{\partial u}{\partial t} + c\dfrac{\partial u}{\partial x} = 0$ となります。
 
 特性変数 $\xi = x - ct,\ \tau = t$ へ変数変換すると，$\dfrac{\partial}{\partial t} = \dfrac{\partial}{\partial\tau} - c\dfrac{\partial}{\partial\xi}$，$\dfrac{\partial}{\partial x} = \dfrac{\partial}{\partial\xi}$ より方程式は $\dfrac{\partial u}{\partial\tau} = 0$ となります。よって $u$ は $\xi = x - ct$ のみの関数 $u(x, t) = f(x - ct)$ であり，初期条件 $u(x, 0) = f(x) = U(x)$ より $f = U$ と決まります。したがって，
@@ -205,10 +207,10 @@ $$
 
 **概形の変化**：初期時刻 $t = 0$ で $x = 0$ にあった階段状の不連続な段差（$x < 0$ で $1$，$x \ge 0$ で $0$）は，$t > 0$ では滑らかな単調減少関数へと変化します。値が $\dfrac{1}{2}$ となる中心位置 $x = ct$ は一定の速さ $c$ で $x$ 軸の正の向きへ移動し，同時に段差が $1$ から $0$ へ変化する遷移領域の幅は拡散によって $\sqrt{2\lambda t}$（すなわち $\sqrt{t}$ に比例）のスケールで次第に広がっていきます。
 
-<figure class="figure" markdown="0">
-  <img class="figure-img only-light" src="../../../docs/assets/figures/pastexam-todai-ributsu/R2_sugaku_1-s-light.svg" alt="移流拡散方程式の解 u(x,t) の時間変化">
-  <img class="figure-img only-dark"  src="../../../docs/assets/figures/pastexam-todai-ributsu/R2_sugaku_1-s-dark.svg"  alt="移流拡散方程式の解 u(x,t) の時間変化">
-  <figcaption>階段状の初期分布（$t = 0$，破線）に対する移流拡散方程式の解 $u(x, t)$ の時間発展（$0 < t_1 < t_2$）。中心 $x = ct$ が速さ $c$ で右へ移動しながら，段差の幅が $\sqrt{2\lambda t}$ でなだらかに広がる。</figcaption>
+<figure class="problem-figure" markdown>
+![移流拡散方程式の解 u(x,t) の時間変化](../../../docs/assets/figures/pastexam-todai-ributsu/R2_sugaku_1-s-light.svg#only-light)
+![移流拡散方程式の解 u(x,t) の時間変化](../../../docs/assets/figures/pastexam-todai-ributsu/R2_sugaku_1-s-dark.svg#only-dark)
+<figcaption markdown="span">階段状の初期分布（$t = 0$，破線）に対する移流拡散方程式の解 $u(x, t)$ の時間発展（$0 < t_1 < t_2$）。中心 $x = ct$ が速さ $c$ で右へ移動しながら，段差の幅が $\sqrt{2\lambda t}$ でなだらかに広がる。</figcaption>
 </figure>
 
 <aside class="rigor-note" markdown>

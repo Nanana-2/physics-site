@@ -33,11 +33,14 @@ $$
 
 を用いて表す。
 
-1. 状態 $|\uparrow\rangle$ において観測量 $\sigma_z$ を測定した。測定結果が取りうる値 $s_z$，およびその期待値を求めよ。
-2. 状態 $|\uparrow\rangle$ において観測量 $\sigma_x$ を測定した。測定結果が取りうる値 $s_x$，およびその期待値を求めよ。
-3. 状態 $|\uparrow\rangle$ において観測量 $\sigma(\theta)$ を測定した。測定結果が取りうる値 $s_\theta$，およびその期待値を求めよ。
+(1) 状態 $|\uparrow\rangle$ において観測量 $\sigma_z$ を測定した。測定結果が取りうる値 $s_z$，およびその期待値を求めよ。
+
+(2) 状態 $|\uparrow\rangle$ において観測量 $\sigma_x$ を測定した。測定結果が取りうる値 $s_x$，およびその期待値を求めよ。
+
+(3) 状態 $|\uparrow\rangle$ において観測量 $\sigma(\theta)$ を測定した。測定結果が取りうる値 $s_\theta$，およびその期待値を求めよ。
 
 上記の二状態系 $A, B$ からなる複合系を考える。その状態は四状態
+{: .problem-lead }
 
 $$
 |\uparrow\rangle_A|\uparrow\rangle_B,\quad
@@ -49,10 +52,10 @@ $$
 の線形結合で書ける。そのような複合系を準備したのち，二状態系 $A, B$ をそれぞれ別の場所で測定する。模式図は以下を参照せよ：
 {: .problem-lead }
 
-<figure class="figure" markdown="0">
-  <img class="figure-img only-light" src="../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_1-p-light.svg" alt="複合系を準備し部分系AとBをそれぞれ別の場所で測定する模式図">
-  <img class="figure-img only-dark"  src="../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_1-p-dark.svg"  alt="複合系を準備し部分系AとBをそれぞれ別の場所で測定する模式図">
-  <figcaption>模式図：$S$ で複合系を準備し，離れた場所にある $A$ で部分系 $A$ を測定，$B$ で部分系 $B$ を測定する。</figcaption>
+<figure class="problem-figure" markdown>
+![複合系を準備し部分系AとBをそれぞれ別の場所で測定する模式図](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_1-p-light.svg#only-light)
+![複合系を準備し部分系AとBをそれぞれ別の場所で測定する模式図](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_1-p-dark.svg#only-dark)
+<figcaption markdown="span">模式図：$S$ で複合系を準備し，離れた場所にある $A$ で部分系 $A$ を測定，$B$ で部分系 $B$ を測定する。</figcaption>
 </figure>
 
 この設定の下で，次の実験を考える。
@@ -67,11 +70,15 @@ $$
 の複合系を毎回新たに準備し，部分系 $A$ において観測量 $\sigma_z^A,\ \sigma_x^A,\ \sigma^A(\theta)$ のいずれか，部分系 $B$ において観測量 $\sigma_z^B,\ \sigma_x^B,\ \sigma^B(\varphi)$ のいずれかを測定する。この実験を，何度も繰り返すことを考えよう。
 {: .problem-lead }
 
-4. 毎回，部分系 $A$ で $\sigma_z^A$，部分系 $B$ で $\sigma_z^B$ を測定する。取りうる測定結果の組 $(s_z^A, s_z^B)$ を述べよ。また，積 $s_z^A s_z^B$ の期待値を求めよ。
-5. 毎回，部分系 $A$ で $\sigma_x^A$，部分系 $B$ で $\sigma_x^B$ を測定する。取りうる測定結果の組 $(s_x^A, s_x^B)$ を述べよ。また，積 $s_x^A s_x^B$ の期待値を求めよ。
-6. 毎回，部分系 $A$ で $\sigma^A(\theta)$，部分系 $B$ で $\sigma^B(\theta)$ を測定する。この場合，測定結果の組 $(s_\theta^A, s_\theta^B)$ は $s_\theta^A = -s_\theta^B = \pm 1$ を満たすことを示せ。
-7. 毎回，部分系 $A$ で $\sigma^A(\theta)$，部分系 $B$ で $\sigma^B(\varphi)$ を測定する。取りうる測定結果の組 $(s_\theta^A, s_\varphi^B)$ を述べよ。また，積 $s_\theta^A s_\varphi^B$ の期待値を求めよ。
-8. 各回，部分系 $A$ で測定する観測量 $\sigma^A(\theta)$ を $\sigma^A(0^\circ),\ \sigma^A(120^\circ),\ \sigma^A(240^\circ)$ からそれぞれ $1/3$ の確率で測定者が選択することにし，また，部分系 $B$ でも，測定する観測量 $\sigma^B(\varphi)$ を $\sigma^B(0^\circ),\ \sigma^B(120^\circ),\ \sigma^B(240^\circ)$ からそれぞれ $1/3$ の確率で測定者が選択することにする。測定結果の組 $(s^A, s^B)$ の取りうる値を述べよ。また，積 $s^A s^B$ の期待値を求め，それが $0$ になることを示せ。
+(4) 毎回，部分系 $A$ で $\sigma_z^A$，部分系 $B$ で $\sigma_z^B$ を測定する。取りうる測定結果の組 $(s_z^A, s_z^B)$ を述べよ。また，積 $s_z^A s_z^B$ の期待値を求めよ。
+
+(5) 毎回，部分系 $A$ で $\sigma_x^A$，部分系 $B$ で $\sigma_x^B$ を測定する。取りうる測定結果の組 $(s_x^A, s_x^B)$ を述べよ。また，積 $s_x^A s_x^B$ の期待値を求めよ。
+
+(6) 毎回，部分系 $A$ で $\sigma^A(\theta)$，部分系 $B$ で $\sigma^B(\theta)$ を測定する。この場合，測定結果の組 $(s_\theta^A, s_\theta^B)$ は $s_\theta^A = -s_\theta^B = \pm 1$ を満たすことを示せ。
+
+(7) 毎回，部分系 $A$ で $\sigma^A(\theta)$，部分系 $B$ で $\sigma^B(\varphi)$ を測定する。取りうる測定結果の組 $(s_\theta^A, s_\varphi^B)$ を述べよ。また，積 $s_\theta^A s_\varphi^B$ の期待値を求めよ。
+
+(8) 各回，部分系 $A$ で測定する観測量 $\sigma^A(\theta)$ を $\sigma^A(0^\circ),\ \sigma^A(120^\circ),\ \sigma^A(240^\circ)$ からそれぞれ $1/3$ の確率で測定者が選択することにし，また，部分系 $B$ でも，測定する観測量 $\sigma^B(\varphi)$ を $\sigma^B(0^\circ),\ \sigma^B(120^\circ),\ \sigma^B(240^\circ)$ からそれぞれ $1/3$ の確率で測定者が選択することにする。測定結果の組 $(s^A, s^B)$ の取りうる値を述べよ。また，積 $s^A s^B$ の期待値を求め，それが $0$ になることを示せ。
 
 これまでは量子力学を用いて考察を行ったが，そのようにして得られた設問8の結論は，以下でのべる決定論的仮説と矛盾することを確認しよう。設問8の設定において，量子力学的には，各回の実験では，部分系 $A$ について $\sigma^A(0^\circ),\ \sigma^A(120^\circ),\ \sigma^A(240^\circ)$ のどれか一つ，部分系 $B$ について $\sigma^B(0^\circ),\ \sigma^B(120^\circ),\ \sigma^B(240^\circ)$ のどれか一つしか測定できない。これに対し，決定論的に，次のように考えてみよう。
 {: .problem-lead }
@@ -87,7 +94,7 @@ $$
 を満たすとする。
 {: .problem-lead }
 
-9. 上記の仮説のもと，設問8と同様，部分系 $A$ で $\sigma^A(0^\circ),\ \sigma^A(120^\circ),\ \sigma^A(240^\circ)$ をそれぞれ $1/3$ の確率で測定し，部分系 $B$ で $\sigma^B(0^\circ),\ \sigma^B(120^\circ),\ \sigma^B(240^\circ)$ をそれぞれ $1/3$ の確率で測定する。このとき，$\sigma^A(\theta)$ を測定した際に得られる測定結果を $s^A = s_\theta^A$，$\sigma^B(\varphi)$ を測定した際に得られる測定結果を $s^B = s_\varphi^B$ と書く。
+(9) 上記の仮説のもと，設問8と同様，部分系 $A$ で $\sigma^A(0^\circ),\ \sigma^A(120^\circ),\ \sigma^A(240^\circ)$ をそれぞれ $1/3$ の確率で測定し，部分系 $B$ で $\sigma^B(0^\circ),\ \sigma^B(120^\circ),\ \sigma^B(240^\circ)$ をそれぞれ $1/3$ の確率で測定する。このとき，$\sigma^A(\theta)$ を測定した際に得られる測定結果を $s^A = s_\theta^A$，$\sigma^B(\varphi)$ を測定した際に得られる測定結果を $s^B = s_\varphi^B$ と書く。
 
 (i) $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A) = (+1, +1, +1)$ の場合，$s^A s^B$ の期待値を求めよ。
 
@@ -99,6 +106,8 @@ $$
 {: .problem-lead }
 
 > 出典：東京大学大学院理学系研究科物理学専攻 令和2年度修士課程入学試験 物理学 第1問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，図を描き直しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
+
+---
 
 ## 解答・解説
 

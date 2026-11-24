@@ -24,21 +24,25 @@ $$
 
 で与えられる。ここで，$J > 0$ である。この系が，温度 $T$ の熱平衡状態にあるとする。ここで，ボルツマン定数 $k_{\mathrm{B}}$ を用いて逆温度を $\beta = 1/(k_{\mathrm{B}}T)$ と定義し，系の分配関数を $Z_L(\beta)$ とする。以下の設問に答えよ。
 
-<figure class="figure" markdown="0">
-  <img class="figure-img only-light" src="../../../docs/assets/figures/pastexam-todai-ributsu/H31_butsuri_2-p-light.svg" alt="L=6の場合の1次元スピン配置の例">
-  <img class="figure-img only-dark"  src="../../../docs/assets/figures/pastexam-todai-ributsu/H31_butsuri_2-p-dark.svg"  alt="L=6の場合の1次元スピン配置の例">
-  <figcaption>図1：$L = 6$ の場合のスピン配置の例。</figcaption>
+<figure class="problem-figure" markdown>
+![L=6の場合の1次元スピン配置の例](../../../docs/assets/figures/pastexam-todai-ributsu/H31_butsuri_2-p-light.svg#only-light)
+![L=6の場合の1次元スピン配置の例](../../../docs/assets/figures/pastexam-todai-ributsu/H31_butsuri_2-p-dark.svg#only-dark)
+<figcaption markdown="span">図1：$L = 6$ の場合のスピン配置の例。</figcaption>
 </figure>
 
-1. $L = 2$ の場合に，可能なスピン配置をすべて列挙し，それぞれのエネルギーを求めよ。また，その結果をもとに，分配関数 $Z_2(\beta)$ を求めよ。
-2. $L = 3$ の場合に，可能なスピン配置をすべて列挙し，それぞれのエネルギーを求めよ。また，その結果をもとに，分配関数 $Z_3(\beta)$ を求めよ。
-3. 一般の $L$ について，$Z_L(\beta)$ を求めよ。ただし，$L \ge 3$ のとき，$Z_L(\beta)$ は $Z_{L-1}(\beta)$ を用いて表すことができる。その関係式を用いてよい。
-4. 一般の $L$ について，系の自由エネルギー $F_L(\beta)$ を求めよ。
-5. $L$ が十分大きい極限での，スピン1個あたりの内部エネルギー $u(\beta)$ を求めよ。また，高温極限および低温極限での $u(\beta)$ の値とスピン配置の出現確率との関係について説明せよ。
+(1) $L = 2$ の場合に，可能なスピン配置をすべて列挙し，それぞれのエネルギーを求めよ。また，その結果をもとに，分配関数 $Z_2(\beta)$ を求めよ。
+
+(2) $L = 3$ の場合に，可能なスピン配置をすべて列挙し，それぞれのエネルギーを求めよ。また，その結果をもとに，分配関数 $Z_3(\beta)$ を求めよ。
+
+(3) 一般の $L$ について，$Z_L(\beta)$ を求めよ。ただし，$L \ge 3$ のとき，$Z_L(\beta)$ は $Z_{L-1}(\beta)$ を用いて表すことができる。その関係式を用いてよい。
+
+(4) 一般の $L$ について，系の自由エネルギー $F_L(\beta)$ を求めよ。
+
+(5) $L$ が十分大きい極限での，スピン1個あたりの内部エネルギー $u(\beta)$ を求めよ。また，高温極限および低温極限での $u(\beta)$ の値とスピン配置の出現確率との関係について説明せよ。
 
 次に，原子数 $L$ の系の左端のスピン $\mathbf{S}_1$ と右端のスピン $\mathbf{S}_L$ の内積の期待値 $\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ について考える。
 
-6. 原子数 $L$ の系において，$\mathbf{S}_1 = \hat{a}$ かつ $\mathbf{S}_L = \hat{b}$（$\hat{a}, \hat{b}$ は，$\hat{x}, \hat{y}$ のいずれか）である確率を $P_L(\hat{a}, \hat{b})$ とする。$L \ge 3$ のとき，$P_L(\hat{a}, \hat{b})$ と $P_{L-1}(\hat{a}, \hat{b})$ の間には，以下の関係が成り立つ。
+(6) 原子数 $L$ の系において，$\mathbf{S}_1 = \hat{a}$ かつ $\mathbf{S}_L = \hat{b}$（$\hat{a}, \hat{b}$ は，$\hat{x}, \hat{y}$ のいずれか）である確率を $P_L(\hat{a}, \hat{b})$ とする。$L \ge 3$ のとき，$P_L(\hat{a}, \hat{b})$ と $P_{L-1}(\hat{a}, \hat{b})$ の間には，以下の関係が成り立つ。
 
 $$
 \begin{pmatrix} P_L(\hat{x}, \hat{x}) & P_L(\hat{x}, \hat{y}) \\ P_L(\hat{y}, \hat{x}) & P_L(\hat{y}, \hat{y}) \end{pmatrix}
@@ -48,7 +52,7 @@ $$
 
 このとき，4つの行列要素 $Q(\hat{a}, \hat{b})$ を $\beta, J$ を用いて表せ。
 
-7. $\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ を，$\beta, J, L$ を用いて表せ。また，$\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ は，$L$ に依存しない定数 $A, B, \xi$ を用いて
+(7) $\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ を，$\beta, J, L$ を用いて表せ。また，$\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ は，$L$ に依存しない定数 $A, B, \xi$ を用いて
 
 $$
 \langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle = A + B\exp\left(-\frac{L - 1}{\xi}\right) \tag{3}
@@ -57,6 +61,8 @@ $$
 と書ける。高温極限および低温極限における $\xi$ を，それぞれ $\beta, J$ を用いて表せ。
 
 > 出典：東京大学大学院理学系研究科物理学専攻 平成31年度修士課程入学試験 物理学 第2問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，図を描き直しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
+
+---
 
 ## 解答・解説
 

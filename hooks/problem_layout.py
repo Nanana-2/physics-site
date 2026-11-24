@@ -40,7 +40,7 @@ LEVELS = {"基本": 1, "標準": 2, "発展": 3}
 PROBLEM_HEADING = re.compile(r'<h2 id="([^"]+)">問題</h2>')
 SUBQUESTION = re.compile(r"<p>\((\d+)\)\s*(.*?)</p>", re.DOTALL)
 SOURCE_NOTE = re.compile(r"<blockquote>\s*<p>(出典：.*?)</p>\s*</blockquote>", re.DOTALL)
-SUBQUESTION_SUB = re.compile(r"<p>\(([a-z])\)\s*(.*?)</p>", re.DOTALL)
+SUBQUESTION_SUB = re.compile(r"<p>\(([a-z]|[ivx]{2,4})\)\s*(.*?)</p>", re.DOTALL)
 
 
 def _level_from_tags(tags) -> int:
@@ -70,18 +70,20 @@ def _stars(meta) -> str:
 
 
 # 小問の途中で設定を足す前置きの段落（「以下，〜の場合を考える。」など）は，小問の続きとして下げない
-LEAD_PARAGRAPH = re.compile(r'<p class="problem-source">|<p class="problem-lead">|<p>(?=以下，|以下では|次に，|最後に，|続いて，)')
+LEAD_PARAGRAPH = re.compile(r'<p class="problem-source">|<p class="problem-lead">|<p>(?=以下，|以下では|以下の設問では|以下の小問では|次に，|つぎに，|最後に，|続いて，)')
 SUBQ = '<p class="subq">'
 SUBQ_SUB = '<p class="subq subq--sub">'
 
 
 def _wrap_after(segment: str, marker: str, cls: str, inner=None) -> str:
-    """marker の小問ごとに，その後ろ（次の小問か前置きの段落まで）を cls の div で囲む。"""
+    """marker の小問ごとに，その後ろ（次の小問か前置きの段落まで）を cls の div で囲む。
+    外側の小問では，後ろにまだ (a)，(b) が続く前置きの段落はその小問の中のものとして囲む。"""
     parts = segment.split(marker)
     for i in range(1, len(parts)):
         end = parts[i].index("</p>") + len("</p>")
         rest = parts[i][end:]
-        lead = LEAD_PARAGRAPH.search(rest)
+        lead = next((m for m in LEAD_PARAGRAPH.finditer(rest)
+                     if not inner or SUBQ_SUB not in rest[m.start():]), None)
         cont, tail = (rest[: lead.start()], rest[lead.start() :]) if lead else (rest, "")
         if inner:
             cont = inner(cont)

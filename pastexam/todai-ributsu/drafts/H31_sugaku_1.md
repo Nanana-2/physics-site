@@ -19,7 +19,7 @@ exam_modified: Web掲載にあたり数式をテキスト化しています。
 
 以下の設問に答えよ。ただし正方行列 $X, Y$ に対して $\operatorname{tr} X$ は $X$ のトレース，$\det X$ は $X$ の行列式を表し，$[X, Y] = XY - YX$，$e^X = \displaystyle\sum_{k=0}^{\infty}\dfrac{X^k}{k!}$ とする。また，行列 $X$ に対して，$X^{\mathrm{T}}$ は $X$ の転置，$X^\dagger$ は $X$ のエルミート共役（転置の複素共役）を表す。ベクトル $\mathbf{x}$ に対して $\mathbf{x}^{\mathrm{T}}$ および $\mathbf{x}^\dagger$ も同様である。$I$ は単位行列を表す。虚数単位を $i$ とする。
 
-1. $A, B$ をエルミート（$A^\dagger = A,\ B^\dagger = B$）かつトレースレス（$\operatorname{tr} A = \operatorname{tr} B = 0$）な有限次元の行列とする。以下の (i)〜(iii) を示せ。ただしエルミート行列 $A$ が対角行列 $D$ とユニタリー行列 $V$（$V^\dagger V = I$）を用いて $A = V^\dagger D V$ と対角化できること，および同じ型の正方行列 $X, Y$ に対して $\det(XY) = \det X \det Y$ が成り立つことを用いてもよい。
+(1) $A, B$ をエルミート（$A^\dagger = A,\ B^\dagger = B$）かつトレースレス（$\operatorname{tr} A = \operatorname{tr} B = 0$）な有限次元の行列とする。以下の (i)〜(iii) を示せ。ただしエルミート行列 $A$ が対角行列 $D$ とユニタリー行列 $V$（$V^\dagger V = I$）を用いて $A = V^\dagger D V$ と対角化できること，および同じ型の正方行列 $X, Y$ に対して $\det(XY) = \det X \det Y$ が成り立つことを用いてもよい。
 
 (i) $i[A, B]$ はエルミートかつトレースレスである。
 
@@ -38,15 +38,19 @@ T = \begin{pmatrix}
 \end{pmatrix} = \sum_{a=1}^{8} \alpha_a T_a
 $$
 
-2. 行列 $T_1, T_2$ および $T_7$ の具体形を書け。
-3. 設問1の (i) より，実数 $A_{ab, c}\ (a, b, c = 1, 2, \dots, 8)$ を用いて $[T_a, T_b] = i\displaystyle\sum_{c=1}^{8} A_{ab, c} T_c$ と書ける。$A_{71, 2}$ および $A_{56, 8}$ を求めよ。
-4. 実数 $\theta$ を用いて行列 $U$ を $U = e^{i\theta T} = \exp\left(i\theta\displaystyle\sum_{a=1}^{8} \alpha_a T_a\right)$ と定義し，複素 $3$ 成分のベクトル $\mathbf{x} = (x_1, x_2, x_3)^{\mathrm{T}}$，$\mathbf{y} = (y_1, y_2, y_3)^{\mathrm{T}}$，およびそれらに $U$ をかけたベクトル $\mathbf{x}' = U\mathbf{x}$，$\mathbf{y}' = U\mathbf{y}$ を考える。
+(2) 行列 $T_1, T_2$ および $T_7$ の具体形を書け。
+
+(3) 設問1の (i) より，実数 $A_{ab, c}\ (a, b, c = 1, 2, \dots, 8)$ を用いて $[T_a, T_b] = i\displaystyle\sum_{c=1}^{8} A_{ab, c} T_c$ と書ける。$A_{71, 2}$ および $A_{56, 8}$ を求めよ。
+
+(4) 実数 $\theta$ を用いて行列 $U$ を $U = e^{i\theta T} = \exp\left(i\theta\displaystyle\sum_{a=1}^{8} \alpha_a T_a\right)$ と定義し，複素 $3$ 成分のベクトル $\mathbf{x} = (x_1, x_2, x_3)^{\mathrm{T}}$，$\mathbf{y} = (y_1, y_2, y_3)^{\mathrm{T}}$，およびそれらに $U$ をかけたベクトル $\mathbf{x}' = U\mathbf{x}$，$\mathbf{y}' = U\mathbf{y}$ を考える。
 
 (i) $G_a = \mathbf{x}^\dagger T_a \mathbf{y}$，$G_a' = \mathbf{x}'^\dagger T_a \mathbf{y}'$ とする（$a = 1, 2, \dots, 8$）。$G_a'$ を $\theta$ の1次まで展開すると，$G_a' = G_a + i\theta\displaystyle\sum_{b=1}^{8} H_{ab} G_b + \mathcal{O}(\theta^2)$ の形に書けることを示し，$H_{ab}$ を求めよ。
 
 (ii) $z_i = \displaystyle\sum_{j, k = 1}^{3} \varepsilon_{ijk} x_j y_k$，$z_i' = \displaystyle\sum_{j, k = 1}^{3} \varepsilon_{ijk} x_j' y_k'$ とし，$\mathbf{z} = (z_1, z_2, z_3)^{\mathrm{T}}$，$\mathbf{z}' = (z_1', z_2', z_3')^{\mathrm{T}}$ とする。$\mathbf{z}'$ を $\theta$ の1次まで展開すると $\mathbf{z}' = (I + i\theta M)\mathbf{z} + \mathcal{O}(\theta^2)$ の形に書けることを示し，行列 $M$ を求めよ。ただし $\varepsilon_{ijk}$ は3階の完全反対称テンソルで，$\varepsilon_{123} = 1,\ \varepsilon_{ijk} = -\varepsilon_{jik} = -\varepsilon_{kji}$ である。$\displaystyle\sum_{k=1}^{3} \varepsilon_{ijk}\varepsilon_{k\ell m} = \delta_{i\ell}\delta_{jm} - \delta_{im}\delta_{j\ell}$ を用いてもよい（$\delta_{i\ell}$ 等はクロネッカーの $\delta$ 記号を表す）。
 
 > 出典：東京大学大学院理学系研究科物理学専攻 平成31年度修士課程入学試験 数学 第1問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
+
+---
 
 ## 解答・解説
 
