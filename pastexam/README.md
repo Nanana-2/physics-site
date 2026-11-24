@@ -13,13 +13,18 @@
 
 | ファイル | 内容 |
 |---|---|
-| `H29_butsuri.pdf`，`H29_sugaku.pdf` | 平成29年度 物理学，数学 |
-| `H30_butsuri.pdf`，`H30_sugaku.pdf` | 平成30年度 物理学，数学 |
-| `H31_butsuri.pdf`，`H31_sugaku.pdf` | 平成31年度 物理学，数学 |
+| `H8_butsuri.pdf` 〜 `H12_butsuri.pdf` | 平成8〜12年度 物理学（専門科目） |
+| `H8_ippan.pdf` 〜 `H12_ippan.pdf` | 平成8〜12年度 一般教育科目（数学と物理学が1冊） |
+| `H13_butsuri.pdf` 〜 `H18_butsuri.pdf` | 平成13〜18年度 物理学 |
+| `H13_sugaku.pdf` 〜 `H18_sugaku.pdf` | 平成13〜18年度 数学（もとは「数学・英語」の1冊。英語のページは抜いてある） |
+| `H19_butsuri.pdf` 〜 `H31_butsuri.pdf` | 平成19〜31年度 物理学 |
+| `H19_sugaku.pdf` 〜 `H31_sugaku.pdf` | 平成19〜31年度 数学 |
 | `R2_butsuri.pdf`，`R2_sugaku.pdf` | 令和2年度 物理学，数学 |
 | `R4_senmon.pdf` 〜 `R8_senmon.pdf` | 令和4〜8年度 専門科目 |
 
 令和3年度は，新型コロナウイルス感染症の影響で筆記試験が行われなかったため，ありません。令和4年度から，物理学と数学は専門科目にまとまっています。多くは画像の PDF で，文字は取り出すことができません。
+
+平成13〜18年度の英語の問題文には，論文やカタログなど大学以外に著作権がある文章が引用されているため，このリポジトリには置きません。英語を含むもとの冊子は，非公開リポジトリに `H13_sugaku_eigo.pdf` などの名前で置いてあります。
 
 ## サイトに載せるときの決まり（東大理物）
 
@@ -38,7 +43,7 @@
 ## ドラフト作成の規則
 
 ### 置き場所とファイル名
-- Markdown 原稿は `pastexam/<大学>/drafts/<年度>_<大問番号>.md`（例：`pastexam/todai-ributsu/drafts/R8_1.md`）に置く。`docs/` の外に置き，サイトへの組み込みはデザイン担当が行う。
+- Markdown 原稿は `pastexam/<大学>/drafts/<年度>_<大問番号>.md`（例：`pastexam/todai-ributsu/drafts/R8_1.md`）に置く。令和2年度以前は科目を入れて `R2_butsuri_1.md`，`R2_sugaku_1.md` とする。平成8〜12年度の一般教育科目は `H12_ippan_sugaku_1.md`，`H12_ippan_butsuri_1.md` とし，題名は `東大理物 平成12年度 一般教育科目 物理学 第1問：〜` とする。`docs/` の外に置き，サイトへの組み込みはデザイン担当が行う。
 - TikZ 原稿は `figures/src/pastexam-<大学>/<年度>_<大問番号>-p.tex`（複数あるときは `-p1.tex`，`-p2.tex`）に置く。`python3 tools/figures/build.py` でライト用・ダーク用の SVG を `docs/assets/figures/pastexam-<大学>/` に生成し，PNG 化して文字の重なりがないか目視確認する。
 
 ### フロントマターと見出し
