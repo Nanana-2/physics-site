@@ -1,0 +1,18 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[>=stealth, thick, scale=1.0]
+  % Axes
+  \draw[->] (-3.0, 0) -- (3.0, 0) node[right] {$k_x$};
+  \draw[->] (0, -2.5) -- (0, 2.7) node[above] {$\varepsilon$};
+  \node[below left] at (0, 0) {$O$};
+
+  % Upper band: eps = Delta + a * k_x^2
+  \draw[very thick, domain=-1.35:1.35, samples=80] plot (\x, {0.85 + 0.85*\x*\x});
+  \node[below right] at (0.05, 0.88) {$\Delta$};
+
+  % Lower band: eps = -Delta - b * k_x^2 (broader, M > m)
+  \draw[very thick, domain=-2.2:2.2, samples=80] plot (\x, {-0.85 - 0.30*\x*\x});
+  \node[above right] at (0.05, -0.88) {$-\Delta$};
+\end{tikzpicture}
+\end{document}
