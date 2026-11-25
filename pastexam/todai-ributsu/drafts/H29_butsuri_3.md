@@ -153,10 +153,13 @@ $$
 問5の2次方程式の両辺を $(m_1 + m_2)\omega^4$ で割り，$X = \dfrac{g}{\omega^2}$ についての2次方程式に書き直します。
 
 $$
-\begin{aligned}
-X^2 - (\ell_1 + \ell_2)X + \frac{m_1}{m_1 + m_2}\ell_1\ell_2 &= 0 \\
-X &= \frac{1}{2}\left[\ell_1 + \ell_2 \pm \sqrt{(\ell_1 - \ell_2)^2 + \frac{4m_2}{m_1 + m_2}\ell_1\ell_2}\right]
-\end{aligned}
+X^2 - (\ell_1 + \ell_2)X + \frac{m_1}{m_1 + m_2}\ell_1\ell_2 = 0
+$$
+
+解の公式から，$X$ は次のようになります。
+
+$$
+X = \frac{1}{2}\left[\ell_1 + \ell_2 \pm \sqrt{(\ell_1 - \ell_2)^2 + \frac{4m_2}{m_1 + m_2}\ell_1\ell_2}\right]
 $$
 
 ここで $4\ell_1\ell_2 \le (\ell_1 + \ell_2)^2$ であり，条件 $|\ell_1 - \ell_2| \gg \sqrt{\dfrac{m_2}{m_1}}(\ell_1 + \ell_2)$ より根号内の第2項は第1項に比べて十分小さいため省略することができます。すると $X = \ell_1$ または $X = \ell_2$，すなわち

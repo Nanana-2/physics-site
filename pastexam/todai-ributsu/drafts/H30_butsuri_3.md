@@ -136,11 +136,19 @@ $$
 次に問2の表式を式 (4) に代入し，ベクトル恒等式 $\nabla\times(\nabla\times\boldsymbol{A}) = \nabla(\nabla\cdot\boldsymbol{A}) - \nabla^2\boldsymbol{A}$ とローレンツ条件を用います。
 
 $$
-\begin{aligned}
-\nabla(\nabla\cdot\boldsymbol{A}) - \nabla^2\boldsymbol{A} &= \mu_0\boldsymbol{j} + \frac{1}{c^2}\frac{\partial}{\partial t}\left(-\nabla\phi - \frac{\partial\boldsymbol{A}}{\partial t}\right) \\
--\nabla^2\boldsymbol{A} + \frac{1}{c^2}\frac{\partial^2\boldsymbol{A}}{\partial t^2} + \nabla\left(\nabla\cdot\boldsymbol{A} + \frac{1}{c^2}\frac{\partial\phi}{\partial t}\right) &= \mu_0\boldsymbol{j} \\
-\nabla^2\boldsymbol{A} - \frac{1}{c^2}\frac{\partial^2\boldsymbol{A}}{\partial t^2} &= -\mu_0\boldsymbol{j}
-\end{aligned}
+\nabla(\nabla\cdot\boldsymbol{A}) - \nabla^2\boldsymbol{A} = \mu_0\boldsymbol{j} + \frac{1}{c^2}\frac{\partial}{\partial t}\left(-\nabla\phi - \frac{\partial\boldsymbol{A}}{\partial t}\right)
+$$
+
+右辺の時間微分の項を左辺に移し，$\nabla$ を含む項をまとめます。
+
+$$
+-\nabla^2\boldsymbol{A} + \frac{1}{c^2}\frac{\partial^2\boldsymbol{A}}{\partial t^2} + \nabla\left(\nabla\cdot\boldsymbol{A} + \frac{1}{c^2}\frac{\partial\phi}{\partial t}\right) = \mu_0\boldsymbol{j}
+$$
+
+ローレンツ条件から，左辺の第3項は $0$ です。両辺に $-1$ を掛けると，次の式になります。
+
+$$
+\nabla^2\boldsymbol{A} - \frac{1}{c^2}\frac{\partial^2\boldsymbol{A}}{\partial t^2} = -\mu_0\boldsymbol{j}
 $$
 
 よって式 (5) および式 (6) が導かれます。

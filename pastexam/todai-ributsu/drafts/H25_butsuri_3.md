@@ -103,10 +103,13 @@ $$
 これを設問1の方程式に代入して $m\ddot{x}_i$ について整理します。
 
 $$
-\begin{aligned}
-m\ddot{x}_i + q\frac{\partial A_i}{\partial t} + q\sum_{j=1}^3 \dot{x}_j \frac{\partial A_i}{\partial x_j} &= q\sum_{j=1}^3 \dot{x}_j \frac{\partial A_j}{\partial x_i} - q\frac{\partial \varphi}{\partial x_i} \\
-m\ddot{x}_i &= q\left(-\frac{\partial \varphi}{\partial x_i} - \frac{\partial A_i}{\partial t}\right) + q\sum_{j=1}^3 \dot{x}_j\left(\frac{\partial A_j}{\partial x_i} - \frac{\partial A_i}{\partial x_j}\right)
-\end{aligned}
+m\ddot{x}_i + q\frac{\partial A_i}{\partial t} + q\sum_{j=1}^3 \dot{x}_j \frac{\partial A_i}{\partial x_j} = q\sum_{j=1}^3 \dot{x}_j \frac{\partial A_j}{\partial x_i} - q\frac{\partial \varphi}{\partial x_i}
+$$
+
+$m\ddot{x}_i$ 以外の項を右辺に移し，$q$ でくくります。
+
+$$
+m\ddot{x}_i = q\left(-\frac{\partial \varphi}{\partial x_i} - \frac{\partial A_i}{\partial t}\right) + q\sum_{j=1}^3 \dot{x}_j\left(\frac{\partial A_j}{\partial x_i} - \frac{\partial A_i}{\partial x_j}\right)
 $$
 
 右辺第2項を $i = 1$ の成分について書き出します。
@@ -210,9 +213,14 @@ $$
 $$
 \begin{aligned}
 m\ddot{\zeta} &= q\alpha\zeta + qB(\dot{y} - i\dot{x}) \\
-m\ddot{\zeta} &= q\alpha\zeta - i qB\dot{\zeta} \\
-\ddot{\zeta} + i\frac{qB}{m}\dot{\zeta} - \frac{q\alpha}{m}\zeta &= 0
+m\ddot{\zeta} &= q\alpha\zeta - i qB\dot{\zeta}
 \end{aligned}
+$$
+
+すべての項を左辺に移し，両辺を $m$ で割ります。
+
+$$
+\ddot{\zeta} + i\frac{qB}{m}\dot{\zeta} - \frac{q\alpha}{m}\zeta = 0
 $$
 
 $\omega_{\mathrm{c}} = \dfrac{qB}{m}$ とおき，$\zeta(t) = C e^{-i\Omega t}$ を代入して特性方程式を解きます。

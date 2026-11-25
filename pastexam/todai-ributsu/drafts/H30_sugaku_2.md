@@ -205,11 +205,14 @@ $$
 これらを式 (3) に代入し，式 (4) の $\dfrac{\partial\phi}{\partial t} = D\dfrac{\partial^2\phi}{\partial x^2}$ を用います。
 
 $$
-\begin{aligned}
 D S'(\phi)\frac{\partial^2\phi}{\partial x^2}
-&= \frac{1}{2}\bigl(S'(\phi)\bigr)^2\left(\frac{\partial\phi}{\partial x}\right)^2 + D S''(\phi)\left(\frac{\partial\phi}{\partial x}\right)^2 + D S'(\phi)\frac{\partial^2\phi}{\partial x^2} \\
-\left[D S''(\phi) + \frac{1}{2}\bigl(S'(\phi)\bigr)^2\right]\left(\frac{\partial\phi}{\partial x}\right)^2 &= 0
-\end{aligned}
+= \frac{1}{2}\bigl(S'(\phi)\bigr)^2\left(\frac{\partial\phi}{\partial x}\right)^2 + D S''(\phi)\left(\frac{\partial\phi}{\partial x}\right)^2 + D S'(\phi)\frac{\partial^2\phi}{\partial x^2}
+$$
+
+両辺から $D S'(\phi)\dfrac{\partial^2\phi}{\partial x^2}$ を引き，残りの項を左辺にまとめます。
+
+$$
+\left[D S''(\phi) + \frac{1}{2}\bigl(S'(\phi)\bigr)^2\right]\left(\frac{\partial\phi}{\partial x}\right)^2 = 0
 $$
 
 任意の解 $\phi(t, x)$ に対して成り立つためには，$S(\phi)$ が次の常微分方程式を満たす必要があります。
