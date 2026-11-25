@@ -57,9 +57,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-誘電体と良導体の境界面に垂直入射する平面電磁波を扱い，反射率の 1 からのずれと導体内部のジュール熱損失が一致することを確かめる問題です。良導体中では変位電流を無視することができ，波動方程式が拡散方程式型になって複素波数 $k_{\mathrm{m}}$ が表皮深さ $\delta$ による指数減衰をもたらします。
+媒質ごとの波動方程式から，波の伝わり方と減衰の仕方を調べることができます。境界で電場と磁場の接線成分をつなぐと，入射振幅に対する反射振幅と導体内の振幅が求められます。
 
-境界条件から反射係数と透過係数を比 $k / k_{\mathrm{m}} \propto \sqrt{\omega \epsilon_{\mathrm{d}} / \sigma_{\mathrm{m}}}$ で展開すると，電力反射率 $R$ の低下分 $1 - R$ がちょうど導体内での抵抗損失電力の入射電力に対する比と一致し，エネルギー保存則が検証されます。
+良導体では電場が表面付近で減衰するため，深さに沿ってジュール熱を積分すると失われる電力を調べることができます。複素振幅の時間平均を使うことで，反射電力と抵抗損失を同じ基準で比較することができます。
 </div>
 
 ### (1)
@@ -67,7 +67,8 @@ $$
 
 $$
 \begin{aligned}
-\nabla \times (\nabla \times \boldsymbol{E}) &= -\frac{\partial}{\partial t}(\nabla \times \boldsymbol{B}) = -\mu_0 \epsilon_{\mathrm{d}}\frac{\partial^2 \boldsymbol{E}}{\partial t^2} \\
+\nabla \times (\nabla \times \boldsymbol{E}) &= -\frac{\partial}{\partial t}(\nabla \times \boldsymbol{B}) \\
+&= -\mu_0 \epsilon_{\mathrm{d}}\frac{\partial^2 \boldsymbol{E}}{\partial t^2} \\
 \nabla(\nabla \cdot \boldsymbol{E}) - \nabla^2 \boldsymbol{E} &= -\mu_0 \epsilon_{\mathrm{d}}\frac{\partial^2 \boldsymbol{E}}{\partial t^2} \\
 \nabla^2 \boldsymbol{E} &= \mu_0 \epsilon_{\mathrm{d}}\frac{\partial^2 \boldsymbol{E}}{\partial t^2}
 \end{aligned}
@@ -79,7 +80,7 @@ $$
 \left(-k^2 + \mu_0 \epsilon_{\mathrm{d}} \omega^2\right)\boldsymbol{E}_0 = \boldsymbol{0}
 $$
 
-となります（また $\nabla \cdot \boldsymbol{E} = ik E_{0z} e^{i(kz-\omega t)} = 0$ より横波条件 $E_{0z} = 0$ を満たします）。有限振幅 $\boldsymbol{E}_0 \neq \boldsymbol{0}$ の波が存在するための条件は
+となります。また $\nabla\cdot\boldsymbol{E}=ikE_{0z}e^{i(kz-\omega t)}=0$ から，横波条件 $E_{0z}=0$ を満たします。有限振幅 $\boldsymbol{E}_0 \neq \boldsymbol{0}$ の波が存在するための条件は
 
 $$
 k^2 = \mu_0 \epsilon_{\mathrm{d}} \omega^2
@@ -88,7 +89,10 @@ $$
 であり，$+z$ 方向に伝搬する波（$\omega > 0$，$k > 0$）については $\omega = \dfrac{k}{\sqrt{\mu_0 \epsilon_{\mathrm{d}}}}$ です。したがって，この波の位相速度 $v_{\mathrm{p}}$ は次のようになります。
 
 $$
-v_{\mathrm{p}} = \frac{\omega}{k} = \frac{1}{\sqrt{\mu_0 \epsilon_{\mathrm{d}}}}
+\begin{aligned}
+v_{\mathrm{p}} &= \frac{\omega}{k} \\
+&= \frac{1}{\sqrt{\mu_0 \epsilon_{\mathrm{d}}}}
+\end{aligned}
 $$
 
 $$
@@ -118,18 +122,18 @@ $$
 $$
 
 ### (3)
-境界面 $z = 0$ をまたぎ，境界面に平行な辺の長さ $\ell$，垂直な辺の長さ $h$ を持つ微小な長方形閉路 $C$（囲む面を $S$ とします）を考えます。(3) 式および (4) 式の両辺を面 $S$ 上で面積分し，ストークスの定理を用いると次式が得られます。
+境界面 $z = 0$ をまたぎ，境界面に平行な辺の長さ $\ell$，垂直な辺の長さ $h$ を持つ微小な長方形閉路 $C$ を考えます。閉路が囲む面を $S$ とします。(3) 式および (4) 式の両辺を面 $S$ 上で面積分し，ストークスの定理を用いると次式が得られます。
 
 $$
 \oint_C \boldsymbol{E} \cdot \mathrm{d}\boldsymbol{l} = -\int_S \frac{\partial \boldsymbol{B}}{\partial t}\cdot \mathrm{d}\boldsymbol{S}, \qquad \oint_C \boldsymbol{H} \cdot \mathrm{d}\boldsymbol{l} = \int_S \left(\boldsymbol{j} + \frac{\partial \boldsymbol{D}}{\partial t}\right)\cdot \mathrm{d}\boldsymbol{S}
 $$
 
-ここで $\ell$ を固定して $h \to 0$ の極限をとります。導体は有限の電気伝導度 $\sigma_{\mathrm{m}}$ を持つため $\boldsymbol{j} = \sigma_{\mathrm{m}}\boldsymbol{E}$ は有限であり，境界面に面電流は流れません。また $\dfrac{\partial \boldsymbol{B}}{\partial t}$ および $\dfrac{\partial \boldsymbol{D}}{\partial t}$ も有限なので，いずれの右辺の面積分も $h \to 0$ で $0$ に収束します。したがって，電場および磁場の境界面に平行な成分（接線成分）$\boldsymbol{E}_{\parallel}$，$\boldsymbol{H}_{\parallel}$ は $z = 0$ で連続です。透磁率は両媒質とも $\mu_0$ なので，$\boldsymbol{B}_{\parallel}$ も連続です。
+ここで $\ell$ を固定して $h \to 0$ の極限をとります。導体は有限の電気伝導度 $\sigma_{\mathrm{m}}$ を持つため $\boldsymbol{j} = \sigma_{\mathrm{m}}\boldsymbol{E}$ は有限であり，境界面に面電流は流れません。また $\dfrac{\partial \boldsymbol{B}}{\partial t}$ および $\dfrac{\partial \boldsymbol{D}}{\partial t}$ も有限なので，いずれの右辺の面積分も $h \to 0$ で $0$ に収束します。したがって，境界面に平行な電場・磁場の成分を，接線成分 $\boldsymbol{E}_{\parallel}$，$\boldsymbol{H}_{\parallel}$ と書きます。両成分は $z=0$ で連続です。透磁率は両媒質とも $\mu_0$ なので，$\boldsymbol{B}_{\parallel}$ も連続です。
 
 今，電場は $x$ 方向を向いており，各波の磁場は (3) 式 $\nabla \times \boldsymbol{E} = i\omega \boldsymbol{B}$ より $y$ 方向を向きます。具体的には $E_x$ 成分に対して $B_y = \dfrac{1}{i\omega}\dfrac{\partial E_x}{\partial z}$ なので，入射波・反射波・透過波の磁場振幅はそれぞれ $\dfrac{k}{\omega}E_{\mathrm{i}0}$，$-\dfrac{k}{\omega}E_{\mathrm{r}0}$，$\dfrac{k_{\mathrm{m}}}{\omega}E_{\mathrm{m}0}$ となります。よって $z = 0$ での接続条件は次のとおりです。
 
 $$
-E_{\mathrm{i}0} + E_{\mathrm{r}0} = E_{\mathrm{m}0}, \qquad k(E_{\mathrm{i}0} - E_{\mathrm{r}0}) = k_{\mathrm{m}} E_{\mathrm{m}0}
+\finalanswer{E_{\mathrm{i}0} + E_{\mathrm{r}0} = E_{\mathrm{m}0}, \qquad k(E_{\mathrm{i}0} - E_{\mathrm{r}0}) = k_{\mathrm{m}} E_{\mathrm{m}0}}
 $$
 
 ### (4)
@@ -142,7 +146,11 @@ $$
 となります。ここに $\boldsymbol{E} = \boldsymbol{E}_{\mathrm{m}0} \exp(i k_{\mathrm{m}} z - i\omega t)$ を代入すると，
 
 $$
--k_{\mathrm{m}}^2 = -i\omega \mu_0 \sigma_{\mathrm{m}} \implies k_{\mathrm{m}}^2 = i\omega \mu_0 \sigma_{\mathrm{m}} = \omega \mu_0 \sigma_{\mathrm{m}} e^{i\pi/2}
+\begin{aligned}
+-k_{\mathrm{m}}^2&=-i\omega\mu_0\sigma_{\mathrm{m}}\\
+k_{\mathrm{m}}^2&=i\omega\mu_0\sigma_{\mathrm{m}}\\
+&=\omega\mu_0\sigma_{\mathrm{m}}e^{i\pi/2}
+\end{aligned}
 $$
 
 が得られます。平方根をとると $k_{\mathrm{m}} = \pm(1 + i)\sqrt{\dfrac{\omega \mu_0 \sigma_{\mathrm{m}}}{2}}$ となります。
@@ -153,7 +161,7 @@ $$
 k_{\mathrm{m}} = (1 + i)\sqrt{\frac{\omega \mu_0 \sigma_{\mathrm{m}}}{2}}
 $$
 
-と定まります。表皮深さ $\delta \equiv \sqrt{\dfrac{2}{\omega \mu_0 \sigma_{\mathrm{m}}}}$ を導入すると $k_{\mathrm{m}} = \dfrac{1 + i}{\delta}$ であり，$z > 0$ における電場の解は次のようになります（なお，(3) の接続条件より振幅は $\boldsymbol{E}_{\mathrm{m}0} = \dfrac{2k}{k + k_{\mathrm{m}}}\boldsymbol{E}_{\mathrm{i}0}$ です）。
+と定まります。表皮深さ $\delta \equiv \sqrt{\dfrac{2}{\omega \mu_0 \sigma_{\mathrm{m}}}}$ を導入すると $k_{\mathrm{m}} = \dfrac{1 + i}{\delta}$ であり，$z > 0$ における電場の解は次のようになります。振幅は (3) の接続条件から $\boldsymbol{E}_{\mathrm{m}0}=\dfrac{2k}{k+k_{\mathrm{m}}}\boldsymbol{E}_{\mathrm{i}0}$ です。
 
 $$
 \boldsymbol{E}(z, t) = \boldsymbol{E}_{\mathrm{m}0}\exp\!\left(-\frac{z}{\delta}\right)\exp\!\left[i\!\left(\frac{z}{\delta} - \omega t\right)\right]
@@ -167,28 +175,31 @@ $$
 (3) の接続条件より，振幅反射率 $r = \dfrac{E_{\mathrm{r}0}}{E_{\mathrm{i}0}}$ は次のようになります。
 
 $$
-r = \frac{k - k_{\mathrm{m}}}{k + k_{\mathrm{m}}} = -\frac{1 - k/k_{\mathrm{m}}}{1 + k/k_{\mathrm{m}}}
+\begin{aligned}
+r &= \frac{k - k_{\mathrm{m}}}{k + k_{\mathrm{m}}} \\
+&= -\frac{1 - k/k_{\mathrm{m}}}{1 + k/k_{\mathrm{m}}}
+\end{aligned}
 $$
 
 微小量 $\eta \equiv \sqrt{\dfrac{\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}} \ll 1$ を用いて比 $\dfrac{k}{k_{\mathrm{m}}}$ を計算すると，$k = \omega\sqrt{\mu_0 \epsilon_{\mathrm{d}}}$ より，
 
 $$
-\frac{k}{k_{\mathrm{m}}}
-= \frac{\omega\sqrt{\mu_0 \epsilon_{\mathrm{d}}}}{(1 + i)\sqrt{\omega \mu_0 \sigma_{\mathrm{m}} / 2}}
-= \frac{\sqrt{2}}{1 + i}\sqrt{\frac{\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}
-= \frac{1 - i}{\sqrt{2}}\,\eta
+\begin{aligned}
+\frac{k}{k_{\mathrm{m}}} &= \frac{\omega\sqrt{\mu_0 \epsilon_{\mathrm{d}}}}{(1 + i)\sqrt{\omega \mu_0 \sigma_{\mathrm{m}} / 2}} \\
+&= \frac{\sqrt{2}}{1 + i}\sqrt{\frac{\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}} \\
+&= \frac{1 - i}{\sqrt{2}}\,\eta
+\end{aligned}
 $$
 
 となります。入射波と反射波は同一の誘電体中を伝搬するため，電力反射率 $R$ は $R = |r|^2$ で与えられます。これを $\eta$ の 1 次まで展開します。
 
 $$
 \begin{aligned}
-R &= \left|\frac{1 - \dfrac{1 - i}{\sqrt{2}}\eta}{1 + \dfrac{1 - i}{\sqrt{2}}\eta}\right|^2
-= \frac{\left(1 - \dfrac{\eta}{\sqrt{2}}\right)^2 + \left(\dfrac{\eta}{\sqrt{2}}\right)^2}{\left(1 + \dfrac{\eta}{\sqrt{2}}\right)^2 + \left(\dfrac{\eta}{\sqrt{2}}\right)^2} \\
-&= \frac{1 - \sqrt{2}\,\eta + \eta^2}{1 + \sqrt{2}\,\eta + \eta^2}
-= \left(1 - \sqrt{2}\,\eta + O(\eta^2)\right)\left(1 - \sqrt{2}\,\eta + O(\eta^2)\right) \\
-&\simeq 1 - 2\sqrt{2}\,\eta
-= 1 - 2\sqrt{\frac{2\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}
+R &= \left|\frac{1 - \dfrac{1 - i}{\sqrt{2}}\eta}{1 + \dfrac{1 - i}{\sqrt{2}}\eta}\right|^2 \\
+&= \frac{\left(1 - \dfrac{\eta}{\sqrt{2}}\right)^2 + \left(\dfrac{\eta}{\sqrt{2}}\right)^2}{\left(1 + \dfrac{\eta}{\sqrt{2}}\right)^2 + \left(\dfrac{\eta}{\sqrt{2}}\right)^2} \\
+ &= \frac{1 - \sqrt{2}\,\eta + \eta^2}{1 + \sqrt{2}\,\eta + \eta^2} \\
+&= \left(1 - \sqrt{2}\,\eta + O(\eta^2)\right)\left(1 - \sqrt{2}\,\eta + O(\eta^2)\right) \\
+&\simeq 1 - 2\sqrt{2}\,\eta = 1 - 2\sqrt{\frac{2\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}
 \end{aligned}
 $$
 
@@ -203,9 +214,8 @@ $$
 
 $$
 \begin{aligned}
-P_{\mathrm{loss}}
-&= \left\langle \int_0^\infty \boldsymbol{j} \cdot \boldsymbol{E}\,\mathrm{d}z \right\rangle
-= \frac{1}{2}\sigma_{\mathrm{m}} |E_{\mathrm{m}0}|^2 \int_0^\infty e^{-2z/\delta}\,\mathrm{d}z \\
+P_{\mathrm{loss}} &= \left\langle \int_0^\infty \boldsymbol{j} \cdot \boldsymbol{E}\,\mathrm{d}z \right\rangle \\
+&= \frac{1}{2}\sigma_{\mathrm{m}} |E_{\mathrm{m}0}|^2 \int_0^\infty e^{-2z/\delta}\,\mathrm{d}z \\
 &= \frac{1}{4}\sigma_{\mathrm{m}} \delta |E_{\mathrm{m}0}|^2
 \end{aligned}
 $$
@@ -213,9 +223,10 @@ $$
 ここで $E_{\mathrm{m}0} = \dfrac{2k}{k + k_{\mathrm{m}}}E_{\mathrm{i}0} = \dfrac{2(k/k_{\mathrm{m}})}{1 + k/k_{\mathrm{m}}}E_{\mathrm{i}0}$ と $\left|\dfrac{k}{k_{\mathrm{m}}}\right|^2 = \eta^2 = \dfrac{\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}$ を用いると，
 
 $$
-|E_{\mathrm{m}0}|^2
-= \frac{4\eta^2}{1 + \sqrt{2}\,\eta + \eta^2}|E_{\mathrm{i}0}|^2
-= 4\eta^2\left(1 + O(\eta)\right)|E_{\mathrm{i}0}|^2
+\begin{aligned}
+|E_{\mathrm{m}0}|^2 &= \frac{4\eta^2}{1 + \sqrt{2}\,\eta + \eta^2}|E_{\mathrm{i}0}|^2 \\
+&= 4\eta^2\left(1 + O(\eta)\right)|E_{\mathrm{i}0}|^2
+\end{aligned}
 $$
 
 となります。これを $P_{\mathrm{loss}}$ に代入して $\eta = \sqrt{\dfrac{\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ の 1 次まで求めます。
@@ -231,10 +242,11 @@ $$
 一方，$xy$ 面上単位面積当たりの入射電力 $P_{\mathrm{i}}$ は入射波のポインティングベクトルの $z$ 成分の時間平均であり，次のように与えられます。
 
 $$
-P_{\mathrm{i}}
-= \frac{1}{2}\operatorname{Re}\!\left(\boldsymbol{E}_{\mathrm{i}} \times \boldsymbol{H}_{\mathrm{i}}^*\right)_z
-= \frac{1}{2}\frac{k}{\omega \mu_0}|E_{\mathrm{i}0}|^2
-= \frac{1}{2}\sqrt{\frac{\epsilon_{\mathrm{d}}}{\mu_0}}\,|E_{\mathrm{i}0}|^2
+\begin{aligned}
+P_{\mathrm{i}} &= \frac{1}{2}\operatorname{Re}\!\left(\boldsymbol{E}_{\mathrm{i}} \times \boldsymbol{H}_{\mathrm{i}}^*\right)_z \\
+&= \frac{1}{2}\frac{k}{\omega \mu_0}|E_{\mathrm{i}0}|^2 \\
+&= \frac{1}{2}\sqrt{\frac{\epsilon_{\mathrm{d}}}{\mu_0}}\,|E_{\mathrm{i}0}|^2
+\end{aligned}
 $$
 
 したがって，抵抗損失電力の入射電力に対する割合は次のとおりです。
@@ -250,5 +262,7 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-(5) と (6) の結果を足し合わせると $R + \dfrac{P_{\mathrm{loss}}}{P_{\mathrm{i}}} = 1$ となり，入射エネルギーが反射波と導体内のジュール熱損失に過不足なく分配されていることが確かめられます。(5) で得られた電力反射率の近似式 $R \simeq 1 - 2\sqrt{\dfrac{2\omega \epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ は**ハーゲン・ルーベンスの関係式**（Hagen–Rubens relation）と呼ばれ，赤外線などの低周波領域における金属の反射率をよく記述します。
+微小量 $\eta=\sqrt{\dfrac{\omega\epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ を使うと，(5)，(6) は $R+\dfrac{P_{\mathrm{loss}}}{P_{\mathrm{i}}}=1+O(\eta^2)$ を満たします。求めた近似の範囲で，入射電力と反射電力の差が抵抗損失に一致します。
+
+低周波領域における近似式 $R\simeq1-2\sqrt{\dfrac{2\omega\epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ を**ハーゲン・ルーベンスの関係式**といいます。金属の低周波反射率を表す関係です。
 </aside>

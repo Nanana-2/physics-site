@@ -53,9 +53,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-円周上のデルタ関数ポテンシャルは原点 $x = 0$ でのみ波動関数の1階微分に跳びを生じさせるため，$x \in (0, 2\pi L)$ の自由粒子解に対して周期性と原点での接続条件を課すだけで厳密な固有値方程式が得られます。
+デルタ関数ポテンシャルの影響は，原点での波動関数の接続条件にまとめることができます。原点以外では自由粒子の方程式なので，周期性と接続条件から固有値を調べることができます。
 
-円周上の左右対称性（$x \leftrightarrow 2\pi L - x$）により，正エネルギー状態は原点に節をもつ奇対称解（ポテンシャルの影響を受けない）と偶対称解（$2k\tan(\pi L k) = v$ でエネルギーが押し上げられる）へ明確に分離されます。
+左右反転に対する対称性を使うと，原点で波動関数が消える状態を区別することができます。ポテンシャルの影響の有無を分けて考えることで，縮退がどのように変わるかを見通すことができます。
 </div>
 
 ### (1)
@@ -67,7 +67,9 @@ $$
 \psi_n(x) = \frac{1}{\sqrt{2\pi L}} e^{i\frac{n}{L}x},\qquad E_n = \frac{\hbar^2 n^2}{2m L^2} \qquad (n = 0, \pm 1, \pm 2, \dots)
 $$
 
-$n = 0$（基底状態 $E_0 = 0$）は定数関数 $\psi_0(x) = \dfrac{1}{\sqrt{2\pi L}}$ のみで**縮退はありません**。一方，$n \neq 0$（$E_n > 0$）では $+|n|$ と $-|n|$ が同じエネルギーを与えるため，**2重に縮退しています**（$\cos(nx/L)$ と $\sin(nx/L)$ の2つの独立な解があります）。したがって，
+$n = 0$ の基底状態は $E_0 = 0$ で，波動関数は定数関数 $\psi_0(x) = \dfrac{1}{\sqrt{2\pi L}}$ です。独立な固有関数は1つなので，縮退はありません。
+
+$n \neq 0$ では $+|n|$ と $-|n|$ が同じエネルギーを与えます。$\cos(nx/L)$ と $\sin(nx/L)$ が独立な解となるため，2重に縮退しています。したがって，
 
 $$
 \finalanswer{\psi_n(x) = \frac{1}{\sqrt{2\pi L}} e^{i\frac{n}{L}x},\qquad E_n = \frac{\hbar^2 n^2}{2m L^2} \qquad (n = 0, \pm 1, \pm 2, \dots)}
@@ -96,7 +98,10 @@ $$
 $x \in (0, 2\pi L)$ では $\delta(x) = 0$ なので，$\psi(x) = e^{\kappa x} + A e^{-\kappa x}$ を2回微分すると $\psi''(x) = \kappa^2(e^{\kappa x} + A e^{-\kappa x}) = \kappa^2\psi(x)$ となり，
 
 $$
-H\psi(x) = -\frac{\hbar^2}{2m}\psi''(x) = -\frac{\hbar^2\kappa^2}{2m}\psi(x)
+\begin{aligned}
+H\psi(x) &= -\frac{\hbar^2}{2m}\psi''(x) \\
+&= -\frac{\hbar^2\kappa^2}{2m}\psi(x)
+\end{aligned}
 $$
 
 となってエネルギー固有値 $E = -\dfrac{\hbar^2\kappa^2}{2m}$ の解であることが確かめられます。
@@ -104,7 +109,11 @@ $$
 次に $x = 0$ と $x = 2\pi L$ が同一点であることから，連続条件 $\psi(0+) = \psi(2\pi L-)$ を課します。
 
 $$
-1 + A = e^{2\pi L\kappa} + A e^{-2\pi L\kappa} \implies A\left(1 - e^{-2\pi L\kappa}\right) = e^{2\pi L\kappa} - 1 \implies A = e^{2\pi L\kappa}
+\begin{aligned}
+1+A &= e^{2\pi L\kappa}+Ae^{-2\pi L\kappa} \\
+A\left(1-e^{-2\pi L\kappa}\right) &= e^{2\pi L\kappa}-1 \\
+A &= e^{2\pi L\kappa}
+\end{aligned}
 $$
 
 続いて問2の接続条件 $\psi'(0+) - \psi'(2\pi L-) = v\psi(0)$ を課します。$\psi'(0+) = \kappa(1 - A)$，$\psi'(2\pi L-) = \kappa(e^{2\pi L\kappa} - A e^{-2\pi L\kappa}) = \kappa(A - 1)$，$\psi(0) = 1 + A$ より，
@@ -113,7 +122,8 @@ $$
 \begin{aligned}
 2\kappa(1 - A) &= v(1 + A) \\
 2\kappa\left(1 - e^{2\pi L\kappa}\right) &= v\left(1 + e^{2\pi L\kappa}\right) \\
--v &= 2\kappa\frac{e^{2\pi L\kappa} - 1}{e^{2\pi L\kappa} + 1} = 2\kappa\tanh(\pi L\kappa)
+-v &= 2\kappa\frac{e^{2\pi L\kappa} - 1}{e^{2\pi L\kappa} + 1} \\
+&= 2\kappa\tanh(\pi L\kappa)
 \end{aligned}
 $$
 
@@ -132,47 +142,81 @@ $$
 </figure>
 
 ### (4)
-$x \in (0, 2\pi L)$ での一般解は $\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr) + C_2\sin\bigl(k(x - \pi L)\bigr)$（あるいは $e^{ikx}$ と $e^{-ikx}$ の線形結合）です。
+$x \in (0, 2\pi L)$ での一般解は $\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr) + C_2\sin\bigl(k(x - \pi L)\bigr)$です。
 
-- **奇対称解**（$C_1 = 0$）：$\psi(x) = C_2\sin\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-)$ は $-C_2\sin(\pi L k) = C_2\sin(\pi L k)$ より $\sin(\pi L k) = 0$，すなわち $k = \dfrac{n}{L}\ (n = 1, 2, 3, \dots)$ です。このとき $\psi(0) = 0$ かつ $\psi'(0+) = \psi'(2\pi L-) = (-1)^n k C_2$ となるため接続条件も自動的に満たされ，ポテンシャル $v$ の影響を受けません（$\psi(x) \propto \sin(nx/L)$）。
+- **奇対称解**（$C_1 = 0$）：$\psi(x) = C_2\sin\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-)$ は $-C_2\sin(\pi L k) = C_2\sin(\pi L k)$ より $\sin(\pi L k) = 0$，すなわち $k = \dfrac{n}{L}\ (n = 1, 2, 3, \dots)$ です。このとき $\psi(0) = 0$ かつ $\psi'(0+) = \psi'(2\pi L-) = (-1)^n k C_2$ となるため接続条件も自動的に満たされ，ポテンシャル $v$ の影響を受けません。波動関数は $\psi(x) \propto \sin(nx/L)$ です。
 - **偶対称解**（$C_2 = 0$）：$\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-) = C_1\cos(\pi L k)$ は任意の $k$ で満たされます。接続条件 $\psi'(0+) - \psi'(2\pi L-) = v\psi(0)$ を書き下すと，$\psi'(0+) = k C_1\sin(\pi L k),\ \psi'(2\pi L-) = -k C_1\sin(\pi L k)$ より，
 
 $$
 2k\sin(\pi L k) = v\cos(\pi L k) \implies 2k\tan(\pi L k) = v
 $$
 
-（$\cos(\pi L k) = 0$ のときは左辺 $\neq 0$，右辺 $= 0$ で解になりません。）したがって，奇対称解と偶対称解はそれぞれ次のとおりです。
+$\cos(\pi L k) = 0$ のときは，$2k\sin(\pi Lk)=v\cos(\pi Lk)$ の左辺が $0$ でなく右辺が $0$ になるため，解になりません。したがって，奇対称解と偶対称解はそれぞれ次のとおりです。
 
 $$
 \finalanswer{\psi_{\mathrm{odd}}(x) \propto \sin\left(\frac{n}{L}x\right),\ k = \frac{n}{L} \ (n = 1, 2, \dots);\qquad \psi_{\mathrm{even}}(x) \propto \cos\bigl(k(x - \pi L)\bigr),\ 2k\tan(\pi L k) = v}
 $$
 
 ### (5)
-$v = 0$ のとき $k_n^{(0)} = \dfrac{n}{L}\ (n = 1, 2, \dots)$ であった2重縮退準位に対する補正を調べます（$k \gg v$ より $n \ge 1$）。
+まず，$v = 0$ のとき $k_n^{(0)} = \dfrac{n}{L}\ (n = 1, 2, \dots)$ であった2重縮退準位の補正を調べます。
 
-- **奇対称解**：問4より $k = \dfrac{n}{L}$ のまま変化しないため，エネルギー固有値の補正は $\Delta E_n^{\mathrm{odd}} = 0$ です。
-- **偶対称解**：$k_n = \dfrac{n}{L} + \delta k_n$（$|\pi L\delta k_n| \ll 1$）とおいて $2k_n\tan(\pi L k_n) = v$ を1次まで展開します。$\tan(\pi L k_n) = \tan(\pi L\delta k_n) \simeq \pi L\delta k_n$ より，
+- **奇対称解**：問4より $k = \dfrac{n}{L}$ は変化しないため，エネルギーの補正は $0$ です。
+- **偶対称解**：$k_n = \dfrac{n}{L} + \delta k_n$ とおきます。$|\pi L\delta k_n| \ll 1$ のもとで量子化条件を $v$ の1次まで展開すると，
 
 $$
-2\frac{n}{L}(\pi L\delta k_n) \simeq v \implies \delta k_n \simeq \frac{v}{2\pi n}
+\begin{aligned}
+2k_n\tan(\pi L k_n) &= v \\
+2\frac{n}{L}\pi L\delta k_n &\simeq v \\
+\delta k_n &\simeq \frac{v}{2\pi n}
+\end{aligned}
 $$
 
-エネルギーの補正を $v$ の1次まで求めます。
+となります。したがって，
 
 $$
 \begin{aligned}
 \Delta E_n^{\mathrm{even}}
-&= \frac{\hbar^2}{2m}\left[\left(\frac{n}{L} + \delta k_n\right)^2 - \left(\frac{n}{L}\right)^2\right] \\
-&\simeq \frac{\hbar^2}{m}\frac{n}{L}\delta k_n = \frac{\hbar^2 v}{2\pi m L}
+&= \frac{\hbar^2}{2m}\left[\left(\frac{n}{L} + \delta k_n\right)^2-\left(\frac{n}{L}\right)^2\right] \\
+&\simeq \frac{\hbar^2}{m}\frac{n}{L}\delta k_n \\
+&\simeq \frac{\hbar^2 v}{2\pi mL}
 \end{aligned}
 $$
 
-したがって，$v$ の1次までのエネルギー固有値の補正は奇対称解で $0$，偶対称解で $\dfrac{\hbar^2 v}{2\pi m L}$ です。
+です。$n \ge 1$ の準位の1次補正は，
 
 $$
-\finalanswer{\Delta E_n^{\mathrm{odd}} = 0,\qquad \Delta E_n^{\mathrm{even}} = \frac{\hbar^2 v}{2\pi m L}}
+\finalanswer{\Delta E_n^{\mathrm{odd}} = 0,\qquad \Delta E_n^{\mathrm{even}} = \frac{\hbar^2v}{2\pi mL}\quad(n\ge1)}
 $$
+
+となります。
+
+次に，$v = 0$ の基底状態から続く偶対称解を調べます。$vL \ll 1$ のとき $kL \ll 1$ となるため，量子化条件から
+
+$$
+\begin{aligned}
+2k\tan(\pi Lk) &= v \\
+2\pi Lk^2 &\simeq v \\
+k^2 &\simeq \frac{v}{2\pi L}
+\end{aligned}
+$$
+
+が得られます。この解も $k/v \simeq (2\pi Lv)^{-1/2}\gg1$ を満たすため，設問の条件から除外することはできません。したがって，基底状態の1次補正は
+
+$$
+\finalanswer{\Delta E_0 = \frac{\hbar^2v}{4\pi mL}}
+$$
+
+です。
 
 <aside class="rigor-note" markdown>
-問5の1次補正は縮退摂動論とも完全に一致します。$v = 0$ の固有基底として実の正規直交基底 $\psi_n^{\mathrm{even}}(x) = \dfrac{1}{\sqrt{\pi L}}\cos(nx/L)$ と $\psi_n^{\mathrm{odd}}(x) = \dfrac{1}{\sqrt{\pi L}}\sin(nx/L)$ を選ぶと，$V(x) = \dfrac{\hbar^2 v}{2m}\delta(x)$ はこの基底ですでに対角化されており，対角成分は $\langle V \rangle_{\mathrm{odd}} = 0$，$\langle V \rangle_{\mathrm{even}} = \dfrac{\hbar^2 v}{2m}\cdot\dfrac{1}{\pi L} = \dfrac{\hbar^2 v}{2\pi m L}$ となります。
+問5の $n\ge1$ の準位の1次補正は縮退摂動論と一致します。$v = 0$ の固有基底として実の正規直交基底 $\psi_n^{\mathrm{even}}(x) = \dfrac{1}{\sqrt{\pi L}}\cos(nx/L)$ と $\psi_n^{\mathrm{odd}}(x) = \dfrac{1}{\sqrt{\pi L}}\sin(nx/L)$ を選ぶと，$V(x) = \dfrac{\hbar^2 v}{2m}\delta(x)$ はこの基底ですでに対角化されており，対角成分は $\langle V \rangle_{\mathrm{odd}} = 0$，$\langle V \rangle_{\mathrm{even}} = \dfrac{\hbar^2 v}{2m}\cdot\dfrac{1}{\pi L} = \dfrac{\hbar^2 v}{2\pi m L}$ となります。 基底状態は $\psi_0(x)=\dfrac{1}{\sqrt{2\pi L}}$ なので，
+
+$$
+\begin{aligned}
+\langle V\rangle_0&=\frac{\hbar^2v}{2m}|\psi_0(0)|^2\\
+&=\frac{\hbar^2v}{4\pi mL}
+\end{aligned}
+$$
+
+となります。
 </aside>

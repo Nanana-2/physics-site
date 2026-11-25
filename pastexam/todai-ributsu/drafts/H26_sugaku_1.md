@@ -71,9 +71,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-線形 1 階常微分方程式から出発し，逐次崩壊型の連立系，実対称行列の対角化を伴う連立系，ディリクレ境界条件つきの 1 次元熱伝導方程式，そしてベルヌーイ型の非線形常微分方程式へと段階的に展開する構成です。
+積分因子を使うと，1階線形方程式の左辺を積の微分にまとめることができます。連立系でも，一方の解を他方へ代入する場合や，固有ベクトルごとの変化に分ける場合に，1階の方程式として扱うことができます。
 
-連立系 (3) では係数行列が実対称であることに注目すると直交固有ベクトルで分解することができ，(5) では逆数 $u = 1/y$ へ変数変換することで 1 階線形常微分方程式へと変形され，初期値 $A$ と $1/\beta$ の大小を場合分けせずに統一的に解を求めることができます。
+熱伝導方程式では時間と位置の依存性を分けると，境界条件を満たす空間波形を選ぶことができます。非線形方程式では逆数を使うと線形になり，初期値を含めた解を求めやすくなります。
 </div>
 
 ### (1)
@@ -86,7 +86,7 @@ e^{\alpha x}\frac{\mathrm{d}y}{\mathrm{d}x} + \alpha e^{\alpha x} y &= 0 \\
 \end{aligned}
 $$
 
-よって $e^{\alpha x} y(x) = C$（$C$ は積分定数）となります。初期条件 $y(b) = A$ より $C = A e^{\alpha b}$ なので，求める解は次のとおりです（この導出は $A = 0$ の場合にもそのまま成り立ちます）。
+よって $e^{\alpha x}y(x)=C$ となります。ここで $C$ は積分定数です。初期条件から $C=Ae^{\alpha b}$ なので，求める解は次のとおりです。$A=0$ の場合も同じ導出が成り立ちます。
 
 $$
 \finalanswer{y(x) = A e^{-\alpha(x - b)}}
@@ -98,8 +98,8 @@ $$
 $$
 \begin{aligned}
 \frac{\mathrm{d}}{\mathrm{d}x}\left(e^{\gamma x} y_2\right) &= \beta A e^{(\gamma - \alpha) x} \\
-e^{\gamma x} y_2(x) - y_2(0) &= \beta A \int_0^x e^{(\gamma - \alpha) s}\,\mathrm{d}s
-= \frac{\beta A}{\gamma - \alpha}\left(e^{(\gamma - \alpha)x} - 1\right)
+e^{\gamma x} y_2(x) - y_2(0) &= \beta A \int_0^x e^{(\gamma - \alpha) s}\,\mathrm{d}s \\
+&= \frac{\beta A}{\gamma - \alpha}\left(e^{(\gamma - \alpha)x} - 1\right)
 \end{aligned}
 $$
 
@@ -121,7 +121,7 @@ $$
 \finalanswer{y_1(x) = A e^{-\alpha x}, \qquad y_2(x) = \frac{\beta A}{\gamma - \alpha}\left(e^{-\alpha x} - e^{-\gamma x}\right)}
 $$
 
-（符号：$y_1(x) > 0$（すべての $x$）；$y_2(x) > 0$（$x > 0$），$y_2(0) = 0$，$y_2(x) < 0$（$x < 0$）。）
+
 
 ### (3)
 方程式を行列形式で書きます。
@@ -133,7 +133,11 @@ $$
 $M$ の固有方程式は
 
 $$
-\det(M - \lambda I) = (\lambda + 1)(\lambda + 3) - 3 = \lambda(\lambda + 4) = 0
+\begin{aligned}
+\det(M - \lambda I) &= (\lambda + 1)(\lambda + 3) - 3 \\
+&= \lambda(\lambda + 4) \\
+&= 0
+\end{aligned}
 $$
 
 より，固有値は $\lambda_1 = 0$，$\lambda_2 = -4$ です。それぞれに対応する規格化された固有ベクトルは次のとおりです。
@@ -166,10 +170,13 @@ $$
 $-a < x < a$ の領域で変数分離解 $y(x, t) = X(x) T(t)$ を仮定し，偏微分方程式に代入します。
 
 $$
-\frac{1}{T(t)}\frac{\mathrm{d}T}{\mathrm{d}t} = \frac{1}{X(x)}\frac{\mathrm{d}^2 X}{\mathrm{d}x^2} = -k^2
+\begin{aligned}
+\frac{1}{T(t)}\frac{\mathrm{d}T}{\mathrm{d}t} &= \frac{1}{X(x)}\frac{\mathrm{d}^2 X}{\mathrm{d}x^2} \\
+&= -k^2
+\end{aligned}
 $$
 
-ここで $k$ は実定数とします（分離定数が $0$ または正のときは境界条件 $X(-a) = X(a) = 0$ を満たす零でない解が存在しません）。これより $T(t) = e^{-k^2 t}$，$X(x) = C_1 \cos(kx) + C_2 \sin(kx)$ が得られます。
+ここで $k$ は実定数です。分離定数が $0$ または正のとき，境界条件 $X(-a)=X(a)=0$ を満たす $0$ でない解はありません。$-k^2$ と選んだ場合は $T(t)=e^{-k^2t}$，$X(x)=C_1\cos(kx)+C_2\sin(kx)$ が得られます。
 
 境界条件 $X(-a) = X(a) = 0$ より，零でない解は $k_n = \dfrac{n\pi}{2a}$（$n = 1, 2, 3, \dots$）に対して
 
@@ -177,7 +184,7 @@ $$
 X_n(x) = \sin\!\left(\frac{n\pi(x + a)}{2a}\right)
 $$
 
-と与えられます（奇数 $n$ では $\cos\!\left(\dfrac{n\pi x}{2a}\right)$ に，偶数 $n$ では $\sin\!\left(\dfrac{n\pi x}{2a}\right)$ に比例します）。特に $n = 1$ を選べば，$C \neq 0$ を任意の実定数として
+と与えられます。奇数 $n$ では $\cos\!\left(\dfrac{n\pi x}{2a}\right)$，偶数 $n$ では $\sin\!\left(\dfrac{n\pi x}{2a}\right)$ に比例します。特に $n=1$ を選べば，$C\neq0$ を任意の実定数として
 
 $$
 y(x, t) = \begin{cases} C \exp\!\left(-\dfrac{\pi^2}{4a^2} t\right)\cos\!\left(\dfrac{\pi x}{2a}\right) & (-a < x < a) \\ 0 & (|x| \ge a) \end{cases}
@@ -203,17 +210,21 @@ $$
 
 $$
 \begin{aligned}
-u(x) - \beta &= \left(u(0) - \beta\right) e^{\alpha x} = \left(\frac{1}{A} - \beta\right) e^{\alpha x} \\
-u(x) &= \beta + \left(\frac{1}{A} - \beta\right) e^{\alpha x} = \frac{A\beta + (1 - A\beta) e^{\alpha x}}{A}
+u(x) - \beta &= \left(u(0) - \beta\right) e^{\alpha x} \\
+&= \left(\frac{1}{A} - \beta\right) e^{\alpha x} \\
+u(x) &= \beta + \left(\frac{1}{A} - \beta\right) e^{\alpha x} \\
+&= \frac{A\beta + (1 - A\beta) e^{\alpha x}}{A}
 \end{aligned}
 $$
 
-$y(x) = \dfrac{1}{u(x)}$ より，求める解は次のとおりです（$A\beta = 1$ のときは定数解 $y(x) = \dfrac{1}{\beta}$ に一致します）。
+$y(x)=\dfrac{1}{u(x)}$ より，求める解は次のとおりです。$A\beta=1$ の場合は定数解 $y(x)=\dfrac{1}{\beta}$ に一致します。
 
 $$
 \finalanswer{y(x) = \frac{A}{A\beta + (1 - A\beta) e^{\alpha x}}}
 $$
 
 <aside class="rigor-note" markdown>
-(5) の解の存在区間は初期値 $A$ と平衡点 $1/\beta$ の大小関係に依存します。$0 < A \le 1/\beta$ のときは分母がすべての実数 $x$ で正となるため，解は全実数軸上で大域的に存在し，$x \to +\infty$ で $0$（$A = 1/\beta$ なら $1/\beta$），$x \to -\infty$ で $1/\beta$ に漸近します。一方，$A > 1/\beta$ のときは $x_* = \dfrac{1}{\alpha}\ln\!\left(\dfrac{A\beta}{A\beta - 1}\right) > 0$ で分母が $0$ となって発散するため，初期値 $x = 0$ を含む解の存在区間は $x < x_*$ です。
+(5) の解の存在区間は，初期値 $A$ と平衡点 $1/\beta$ の大小関係に依存します。$0<A<1/\beta$ では分母が全実数 $x$ で正なので，解は全実数軸上で存在します。$x\to+\infty$ で $0$，$x\to-\infty$ で $1/\beta$ に漸近します。$A=1/\beta$ では，常に $y(x)=1/\beta$ です。
+
+$A>1/\beta$ では $x_*=\dfrac{1}{\alpha}\ln\!\left(\dfrac{A\beta}{A\beta-1}\right)>0$ で分母が $0$ になります。初期値 $x=0$ を含む解の存在区間は $x<x_*$ です。
 </aside>

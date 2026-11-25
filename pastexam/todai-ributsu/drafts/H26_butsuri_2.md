@@ -72,28 +72,38 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-2 次元放物線分散では状態密度がエネルギーによらない定数となるため，自由フェルミ気体の粒子数積分を初等関数で厳密に評価することが可能です。大分配関数の積表示からフェルミ分布関数を導き，低温比熱が $T$ に比例する仕組みをフェルミ面近傍の熱励起として捉えるのが前半の柱です。
+2次元の放物線分散では，等しいエネルギー幅に含まれる状態数が一定です。そのため，波数についての和をエネルギー積分に直すと，粒子数を計算しやすくなります。
 
-後半はエネルギーギャップ $2\Delta$ を持つ真性半導体型の 2 バンド模型です。低温 $k_{\mathrm{B}} T \ll \Delta$ では上下バンドの分布にボルツマン近似が成り立ち，負エネルギー帯に生じた空孔（正孔）数と正エネルギー帯へ励起された粒子数の釣り合いから，有効質量の比 $M/m$ による化学ポテンシャルの温度変化が定まります。
+低温でギャップを越えて励起される粒子は少ないため，励起粒子と正孔の分布をボルツマン近似で扱うことができます。全粒子数を保つ条件から両者の数を等しくすることで，化学ポテンシャルを調べることができます。
 </div>
 
 ### (1)
 周期境界条件のもとで，波数 $\boldsymbol{k} = (k_x, k_y)$ は整数 $n_x, n_y$ を用いて $k_x = \dfrac{2\pi}{L}n_x$，$k_y = \dfrac{2\pi}{L}n_y$ と離散化されます。1 粒子の固有エネルギーは次のとおりです。
 
 $$
-\varepsilon_{\boldsymbol{k}} = \frac{\hbar^2 |\boldsymbol{k}|^2}{2m} = \frac{\hbar^2(k_x^2 + k_y^2)}{2m}
+\begin{aligned}
+\varepsilon_{\boldsymbol{k}} &= \frac{\hbar^2 |\boldsymbol{k}|^2}{2m} \\
+&= \frac{\hbar^2(k_x^2 + k_y^2)}{2m}
+\end{aligned}
 $$
 
 スピンの自由度がないため，各波数状態にはフェルミ粒子が最大 1 個まで入ります。$N_0$ が十分大きいとき，占有される波数空間の領域は半径 $k_{\mathrm{F}}$ の円とみなされます。1 状態あたりの波数空間の面積は $\left(\dfrac{2\pi}{L}\right)^2$ なので，
 
 $$
-N_0 = \frac{\pi k_{\mathrm{F}}^2}{(2\pi / L)^2} = \frac{L^2 k_{\mathrm{F}}^2}{4\pi} \implies k_{\mathrm{F}}^2 = \frac{4\pi N_0}{L^2}
+\begin{aligned}
+N_0&=\frac{\pi k_{\mathrm{F}}^2}{(2\pi/L)^2}\\
+&=\frac{L^2k_{\mathrm{F}}^2}{4\pi}\\
+k_{\mathrm{F}}^2&=\frac{4\pi N_0}{L^2}
+\end{aligned}
 $$
 
-となります。したがって，固有エネルギーの最大値（フェルミエネルギー $\varepsilon_{\mathrm{F}}$）は次のとおりです。
+となります。したがって，固有エネルギーの最大値を**フェルミエネルギー** $\varepsilon_{\mathrm{F}}$ といいます。したがって，
 
 $$
-\varepsilon_{\mathrm{F}} = \frac{\hbar^2 k_{\mathrm{F}}^2}{2m} = \frac{2\pi\hbar^2 N_0}{m L^2}
+\begin{aligned}
+\varepsilon_{\mathrm{F}} &= \frac{\hbar^2 k_{\mathrm{F}}^2}{2m} \\
+&= \frac{2\pi\hbar^2 N_0}{m L^2}
+\end{aligned}
 $$
 
 $$
@@ -101,7 +111,7 @@ $$
 $$
 
 ### (2)
-全粒子数 $N$ についての和と $N = \sum_{\boldsymbol{k}} n_{\boldsymbol{k}}$ の制約つき和を合わせると，各波数 $\boldsymbol{k}$ の占有数 $n_{\boldsymbol{k}}$ を独立にすべての可能な値にわたって足し合わせる和に一致します。フェルミ粒子ではパウリの排他原理により $n_{\boldsymbol{k}} = 0, 1$ なので，次のように変形されます。
+全粒子数 $N$ についての和と $N = \displaystyle\sum_{\boldsymbol{k}} n_{\boldsymbol{k}}$ の制約つき和を合わせると，各波数 $\boldsymbol{k}$ の占有数 $n_{\boldsymbol{k}}$ を独立にすべての可能な値にわたって足し合わせる和に一致します。フェルミ粒子ではパウリの排他原理により $n_{\boldsymbol{k}} = 0, 1$ なので，次のように変形されます。
 
 $$
 \begin{aligned}
@@ -117,22 +127,36 @@ $$
 $$
 
 ### (3)
-大分配関数 (1) を $\mu$ で偏微分すると $\dfrac{\partial \Xi}{\partial \mu} = \beta \sum_{N}\sum_{\{n_{\boldsymbol{k}}\}} N e^{-\beta(E_N - \mu N)}$ となるため，全粒子数の期待値 $\overline{N}$ は (2) で得た積表示を用いて次のように計算されます。
+大分配関数 (1) を $\mu$ で偏微分すると $\dfrac{\partial \Xi}{\partial \mu} = \beta \displaystyle\sum_{N}\sum_{\{n_{\boldsymbol{k}}\}} N e^{-\beta(E_N - \mu N)}$ となるため，全粒子数の期待値 $\overline{N}$ は (2) で得た積表示を用いて次のように計算されます。
 
 $$
 \begin{aligned}
-\overline{N}
-&= \frac{1}{\beta}\frac{\partial \ln \Xi}{\partial \mu}
-= \frac{1}{\beta}\sum_{\boldsymbol{k}}\frac{\partial}{\partial \mu}\ln\!\left(1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}\right) \\
-&= \sum_{\boldsymbol{k}}\frac{e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}}{1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}}
-= \sum_{\boldsymbol{k}}\frac{1}{e^{\beta(\varepsilon_{\boldsymbol{k}} - \mu)} + 1}
-= \sum_{\boldsymbol{k}} f(\varepsilon_{\boldsymbol{k}})
+\overline{N} &= \frac{1}{\beta}\frac{\partial \ln \Xi}{\partial \mu} \\
+&= \frac{1}{\beta}\sum_{\boldsymbol{k}}\frac{\partial}{\partial \mu}\ln\!\left(1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}\right) \\
+ &= \sum_{\boldsymbol{k}}\frac{e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}}{1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}} \\
+&= \sum_{\boldsymbol{k}}\frac{1}{e^{\beta(\varepsilon_{\boldsymbol{k}} - \mu)} + 1} \\
+&= \sum_{\boldsymbol{k}} f(\varepsilon_{\boldsymbol{k}})
 \end{aligned}
 $$
 
 ここに $f(\varepsilon) = \dfrac{1}{e^{\beta(\varepsilon - \mu)} + 1}$ はフェルミ分布関数であり，(2) 式が成り立ちます。
 
-次に，$L$ が十分大きいとして $\sum_{\boldsymbol{k}} \to \dfrac{L^2}{(2\pi)^2}\int \mathrm{d}^2 k$ と置き換えます。$\varepsilon = \dfrac{\hbar^2 k^2}{2m}$ より $k\,\mathrm{d}k = \dfrac{m}{\hbar^2}\,\mathrm{d}\varepsilon$ なので，2 次元状態密度はエネルギーによらない定数 $D(\varepsilon) = \dfrac{L^2}{(2\pi)^2}\cdot 2\pi \dfrac{m}{\hbar^2} = \dfrac{m L^2}{2\pi\hbar^2}$（$\varepsilon \ge 0$）となります。よって積分を計算すると次の結果が得られます。
+次に，$L$ が十分大きいとして波数和を積分に置き換えます。
+
+$$
+\sum_{\boldsymbol{k}}\longrightarrow\frac{L^2}{(2\pi)^2}\int\mathrm{d}^2k
+$$
+
+$\varepsilon=\dfrac{\hbar^2k^2}{2m}$ より $k\,\mathrm{d}k=\dfrac{m}{\hbar^2}\,\mathrm{d}\varepsilon$ です。状態密度は，
+
+$$
+\begin{aligned}
+D(\varepsilon)&=\frac{L^2}{(2\pi)^2}\,2\pi\frac{m}{\hbar^2}\\
+&=\frac{mL^2}{2\pi\hbar^2}\qquad(\varepsilon\ge0)
+\end{aligned}
+$$
+
+となり，エネルギーによらない定数です。したがって，粒子数の積分は次のようになります。
 
 $$
 \begin{aligned}
@@ -160,9 +184,13 @@ $$
 となります。これを温度 $T$ で微分して得られる比熱 $C = \dfrac{\partial U}{\partial T}$ は $C \sim D(\varepsilon_{\mathrm{F}}) k_{\mathrm{B}}^2 T$ となり，温度 $T$ に比例します。
 
 ### (5)
-絶対零度では負のエネルギー帯（価電子帯，$\varepsilon_{1\boldsymbol{k}} \le -\Delta$）が完全に満たされ，正のエネルギー帯（伝導帯，$\varepsilon_{2\boldsymbol{k}} \ge \Delta$）が完全に空であるため，化学ポテンシャル $\mu$ はエネルギーギャップ $(-\Delta, \Delta)$ の内部に位置します。
+負のエネルギー帯を**価電子帯**，正のエネルギー帯を**伝導帯**といいます。絶対零度では価電子帯が完全に満たされ，伝導帯は空です。この占有状態に対応する化学ポテンシャル $\mu$ は，ギャップ $(-\Delta,\Delta)$ の内部にあります。
 
-$0 < k_{\mathrm{B}} T \ll \Delta$ の温度領域では，熱エネルギー $k_{\mathrm{B}} T$ がギャップ幅 $2\Delta$ に比べて極めて小さいため，負のエネルギー帯の上端近傍（$\boldsymbol{k} \approx \boldsymbol{0}$，$\varepsilon_{1\boldsymbol{k}} \approx -\Delta$）にあるごく一部の粒子だけが熱励起によってギャップを越え，正のエネルギー帯の下端近傍（$\boldsymbol{k} \approx \boldsymbol{0}$，$\varepsilon_{2\boldsymbol{k}} \approx \Delta$）の準位へ移ります。その結果，正のエネルギー帯の $\boldsymbol{k} \approx \boldsymbol{0}$ 近傍に指数関数的に小さい割合（$\sim e^{-\Delta/(k_{\mathrm{B}} T)}$）の粒子が分布し，負のエネルギー帯の $\boldsymbol{k} \approx \boldsymbol{0}$ 近傍に同数の空席（正孔）が生じます。一方，$|\boldsymbol{k}|$ の大きい負エネルギー状態はほぼ完全に占有されたままであり，高エネルギーの正エネルギー状態はほぼ完全に空のままです。
+$0<k_{\mathrm{B}}T\ll\Delta$ では，負のエネルギー帯の上端 $-\Delta$ 付近にあるごく一部の粒子が，正のエネルギー帯の下端 $\Delta$ 付近へ熱励起されます。両方のバンド端は $\boldsymbol{k}=\boldsymbol{0}$ にあります。
+
+正のエネルギー帯では $\boldsymbol{k}\approx\boldsymbol{0}$ 付近に少数の励起粒子が生じ，負のエネルギー帯には同数の空席が生じます。この空席を**正孔**といいます。励起粒子と正孔の数は，低温で $e^{-\Delta/(k_{\mathrm{B}}T)}$ を含む指数関数に従って小さくなります。
+
+$|\boldsymbol{k}|$ の大きい負のエネルギー状態は，ほぼ完全に占有されたままです。高い正のエネルギー状態は，ほぼ空のままです。
 
 ### (6)
 正のエネルギー帯の粒子数の期待値を $\overline{N}_2(T)$ とすると，全粒子数保存より
@@ -171,15 +199,16 @@ $$
 \overline{N}_1(T) + \overline{N}_2(T) = \overline{N}_1(0) \implies \overline{N}_1(0) - \overline{N}_1(T) = \overline{N}_2(T)
 $$
 
-が成り立ちます。左辺は負のエネルギー帯に生じた空席（正孔）の数であり，次のように表されます。
+が成り立ちます。左辺は負のエネルギー帯に生じた正孔数であり，次のように表されます。
 
 $$
-\overline{N}_1(0) - \overline{N}_1(T)
-= \sum_{|\boldsymbol{k}| < K}\left[1 - f(\varepsilon_{1\boldsymbol{k}})\right]
-= \sum_{|\boldsymbol{k}| < K}\frac{1}{e^{\beta(\mu - \varepsilon_{1\boldsymbol{k}})} + 1}
+\begin{aligned}
+\overline{N}_1(0) - \overline{N}_1(T) &= \sum_{|\boldsymbol{k}| < K}\left[1 - f(\varepsilon_{1\boldsymbol{k}})\right] \\
+&= \sum_{|\boldsymbol{k}| < K}\frac{1}{e^{\beta(\mu - \varepsilon_{1\boldsymbol{k}})} + 1}
+\end{aligned}
 $$
 
-ここで $-\Delta < \mu < \Delta$ かつ $\beta(\mu + \Delta) \gg 1$，$\beta(\Delta - \mu) \gg 1$ を仮定して（結果がこれを満たすことを後で確かめます），分母の $1$ を無視するボルツマン近似を行い，$K$ が十分大きいことから波数積分の上限を $\infty$ に伸ばします。
+ここでは $-\Delta<\mu<\Delta$ かつ $\beta(\mu+\Delta)\gg1$，$\beta(\Delta-\mu)\gg1$ として，分母の $1$ を無視するボルツマン近似を用います。得られた結果が仮定を満たす温度範囲は後で確認します。また，波数和を積分に置き換えるため $L$ を十分大きくとり，$K$ が熱的に励起される波数より十分大きいとして積分の上限を $\infty$ に伸ばします。
 
 まず負のエネルギー帯の空席数は次のように計算されます。
 
@@ -215,12 +244,20 @@ e^{2\beta\mu} &= \frac{M}{m} \\
 \end{aligned}
 $$
 
-が得られます。$k_{\mathrm{B}} T \ll \Delta$ のもとで $|\mu(T)| \ll \Delta$ なので，$\beta(\Delta \pm \mu) \gg 1$ の仮定は自己無撞着に満たされています。
+が得られます。質量比 $M/m$ を有限の値に保って十分低温にすると，$|\mu(T)|\ll\Delta$ となります。具体的には $\beta\Delta\pm\dfrac{1}{2}\ln(M/m)\gg1$ の両方が満たされる範囲で，先に用いたボルツマン近似と整合します。
 
 $$
 \finalanswer{\mu(T) = \frac{1}{2}k_{\mathrm{B}} T \ln\!\left(\frac{M}{m}\right)}
 $$
 
 <aside class="rigor-note" markdown>
-2 次元では状態密度が有効質量に比例するため，化学ポテンシャルの温度勾配の係数は $\dfrac{1}{2}k_{\mathrm{B}}\ln(M/m)$ となります（3 次元真性半導体では状態密度が $m^{3/2}$ に比例するため，$\dfrac{3}{4}k_{\mathrm{B}} T \ln(M/m)$ になります）。$M > m$ のとき負のエネルギー帯の状態密度が正のエネルギー帯より大きく，正孔数と励起粒子数を釣り合わせるために $\mu$ はギャップ中央（$0$）から正のエネルギー帯側へ引き上げられます。また，(3) の結果を用いると，2 次元では $K \to \infty$ の積分は近似なしでも $\ln(1 + e^{-\beta(\mu+\Delta)}) / \ln(1 + e^{-\beta(\Delta-\mu)}) = m/M$ と厳密に書き下すことができます。
+2次元では状態密度が有効質量に比例するため，低温の化学ポテンシャルの温度勾配は $\dfrac{\mathrm{d}\mu}{\mathrm{d}T}\simeq\dfrac{1}{2}k_{\mathrm{B}}\ln(M/m)$ です。3次元では状態密度に現れる質量因子が $m^{3/2}$ となるため，$\mu(T)\simeq\dfrac{3}{4}k_{\mathrm{B}}T\ln(M/m)$ であり，温度勾配は $\dfrac{3}{4}k_{\mathrm{B}}\ln(M/m)$ になります。
+
+$M>m$ では負のエネルギー帯の状態密度が正のエネルギー帯より大きいため，正孔数と励起粒子数が等しくなる化学ポテンシャルは，ギャップの中央 $0$ より正のエネルギー帯側にあります。2次元で $K\to\infty$ とした連続近似では，粒子数の条件をボルツマン近似なしで
+
+$$
+\frac{\ln(1+e^{-\beta(\mu+\Delta)})}{\ln(1+e^{-\beta(\Delta-\mu)})}=\frac{m}{M}
+$$
+
+と表すことができます。
 </aside>

@@ -80,9 +80,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-時間と空間の両方について並進不変な拡散方程式は，時空フーリエ変換によって微分演算子が代数因子 $i\omega + \lambda k^2$ へ変換されるため，グリーン関数のフーリエ表示を1行で書き下すことができます。
+拡散方程式は位置や時刻の原点の取り方によらないため，フーリエ変換で各波数・周波数ごとの式に分けることができます。微分を掛け算に置き換えることで，点状の源に対する応答を調べることができます。
 
-その極 $\omega = i\lambda k^2$ が複素 $\omega$ 平面の上半平面にあることから，留数積分によって $t < t'$ で $0$，$t > t'$ で指数減衰する因果的（遅延）グリーン関数が自動的に選ばれ，さらに $k$ のガウス積分によって熱核が導かれます。
+時間の前後で応答が変わることは，周波数積分の閉経路を選ぶ半平面に反映されます。源より前に応答しない条件と，複素平面上の極の位置を結び付けて考えることができます。
 </div>
 
 ### (1)
@@ -104,7 +104,7 @@ $$
 \frac{\partial\hat{f}(t, k)}{\partial t} = -\lambda k^2\hat{f}(t, k)
 $$
 
-が成り立ちます。これを $t$ について解くと $\hat{f}(t, k) = \tilde{f}(k) e^{-\lambda k^2 t}$（$\tilde{f}(k) = \hat{f}(0, k)$）となり，逆変換の式へ戻すと式 (2) が得られます。
+が成り立ちます。$t$ について解くと $\hat{f}(t,k)=\tilde{f}(k)e^{-\lambda k^2t}$ となります。ここで $\tilde{f}(k)=\hat{f}(0,k)$ です。逆変換の式に代入すると式 (2) が得られます。
 
 ### (2)
 式 (4) の両辺に演算子 $\dfrac{\partial}{\partial t} - \lambda\dfrac{\partial^2}{\partial x^2}$ を作用させ，積分記号下で微分して式 (3) を代入します。
@@ -134,9 +134,10 @@ $$
 $\alpha = 1$ と選ぶと分子と分母が約分されて $1$ となり，さらに $iC = 1$ すなわち $C = -i$ と選ぶと，デルタ関数のフーリエ積分表示より
 
 $$
-\left(\frac{\partial}{\partial t} - \lambda\frac{\partial^2}{\partial x^2}\right)G(t, x, t', x')
-= \left(\int_{-\infty}^{\infty}\frac{\mathrm{d}\omega}{2\pi} e^{i\omega(t - t')}\right)\left(\int_{-\infty}^{\infty}\frac{\mathrm{d}k}{2\pi} e^{-ik(x - x')}\right)
-= \delta(t - t')\delta(x - x')
+\begin{aligned}
+\left(\frac{\partial}{\partial t} - \lambda\frac{\partial^2}{\partial x^2}\right)G(t, x, t', x') &= \left(\int_{-\infty}^{\infty}\frac{\mathrm{d}\omega}{2\pi} e^{i\omega(t - t')}\right)\left(\int_{-\infty}^{\infty}\frac{\mathrm{d}k}{2\pi} e^{-ik(x - x')}\right) \\
+&= \delta(t - t')\delta(x - x')
+\end{aligned}
 $$
 
 となって式 (3) を満たします。したがって，
@@ -152,12 +153,15 @@ $$
 I_\omega(t - t', k) = -i\int_{-\infty}^{\infty}\frac{\mathrm{d}\omega}{2\pi}\frac{e^{i\omega(t - t')}}{\omega - i\lambda k^2}
 $$
 
-です。被積分関数の極は $\omega = i\lambda k^2$ であり，$k \neq 0$ かつ $\lambda > 0$ より複素 $\omega$ 平面の**上半平面**（$\operatorname{Im}\omega > 0$）にあります。
+です。被積分関数の極は $\omega = i\lambda k^2$ であり，$k \neq 0$ かつ $\lambda > 0$ より複素 $\omega$ 平面の**上半平面**（$\operatorname{Im}\omega > 0$）にあります。 $k=0$ は $k\to0$ の極限で扱い，実軸上の極には $\omega-i0^+$ の処方を用います。
 
 - **$t < t'$ のとき**：$t - t' < 0$ より，下半平面の大きな半円弧（$\operatorname{Im}\omega < 0$）上で $\left|e^{i\omega(t - t')}\right| = e^{-\operatorname{Im}\omega(t - t')} \to 0$ となるため，下半平面に閉経路をとります。閉経路内に極は存在しないのでコーシーの積分定理より $I_\omega = 0$ です。
 - **$t > t'$ のとき**：$t - t' > 0$ より，上半平面の大きな半円弧（$\operatorname{Im}\omega > 0$）上で $\left|e^{i\omega(t - t')}\right| \to 0$ となるため，上半平面に反時計回りの閉経路をとります。極 $\omega = i\lambda k^2$ が内部に含まれるので留数定理より，
   $$
-  I_\omega(t - t', k) = (-i)\cdot\frac{2\pi i}{2\pi}\,e^{i(i\lambda k^2)(t - t')} = e^{-\lambda k^2(t - t')}
+\begin{aligned}
+I_\omega(t - t', k) &= (-i)\cdot\frac{2\pi i}{2\pi}\,e^{i(i\lambda k^2)(t - t')} \\
+&= e^{-\lambda k^2(t - t')}
+\end{aligned}
   $$
 
 したがって，$\omega$ についての積分結果は
@@ -168,7 +172,7 @@ $$
 
 ### (5)
 - **$t < t'$ のとき**：問4より $G(t, x, t', x') = 0$ です。
-- **$t > t'$ のとき**：問4の結果を $k$ で積分し，平方完成と式 (6) のガウス積分公式を用います。
+- **$t > t'$ のとき**：問4の結果を $k$ で積分し，平方完成と式 (6) のガウス積分公式を用います。 平方完成後の積分路は複素平面内で実軸と平行な直線になりますが，被積分関数が整関数で，両端の接続部分の積分が $0$ に収束するため，実軸へ移して同じ公式を使うことができます。
 
 $$
 \begin{aligned}
@@ -193,24 +197,36 @@ $t > 0$ のときは $t'$ 積分により $t' = 0$ が選ばれ，$\cos(px') = \
 
 $$
 \begin{aligned}
-f(t, x)
-&= \int_{-\infty}^{\infty} G(t, x, 0, x')\cos(px')\,\mathrm{d}x' \\
+f(t, x) &= \int_{-\infty}^{\infty} G(t, x, 0, x')\cos(px')\,\mathrm{d}x' \\
 &= \operatorname{Re}\left[\frac{1}{\sqrt{4\pi\lambda t}}\int_{-\infty}^{\infty}\exp\left(-\frac{(x' - x)^2}{4\lambda t} + ipx'\right)\mathrm{d}x'\right] \\
 &= \operatorname{Re}\left[\frac{e^{ipx}}{\sqrt{4\pi\lambda t}}\int_{-\infty}^{\infty}\exp\left(-\frac{u^2}{4\lambda t} + ipu\right)\mathrm{d}u\right] \\
-&= \operatorname{Re}\left[e^{ipx}\,e^{-\lambda p^2 t}\right] = e^{-\lambda p^2 t}\cos(px)
+ &= \operatorname{Re}\left[e^{ipx}\,e^{-\lambda p^2 t}\right] \\
+&= e^{-\lambda p^2 t}\cos(px)
 \end{aligned}
 $$
 
-（問4の $k$ 空間表示 $G(t, x, 0, x') = \displaystyle\int_{-\infty}^{\infty}\dfrac{\mathrm{d}k}{2\pi} e^{-\lambda k^2 t - ik(x - x')}$ を用いて $x'$ 積分を先に行うとさらに簡潔に同じ結果が得られます。）
 
-$t > 0$ を固定したとき，$\cos(px) \le 1$ なので $f(t, x)$ の最大値は $e^{-\lambda p^2 t}$ です。最大値を与える $x$ は，$\cos(px) = 1$ を満たす点であり，$p \neq 0$ のとき $x = \dfrac{2n\pi}{p}\ (n \in \mathbb{Z})$，$p = 0$ のときは任意の実数 $x$（最大値 $1$）です。したがって，
+
+$t>0$ を固定すると $\cos(px)\le1$ なので，最大値は $e^{-\lambda p^2t}$ です。$p\neq0$ では $x=2n\pi/p$ で最大値をとり，$p=0$ では任意の実数 $x$ で最大値 $1$ をとります。したがって，
 
 $$
-\finalanswer{f(t, x) = \begin{cases} 0 & (t < 0) \\ e^{-\lambda p^2 t}\cos(px) & (t > 0) \end{cases},\qquad f_{\max}(t) = e^{-\lambda p^2 t},\qquad x = \frac{2n\pi}{p} \ (n \in \mathbb{Z},\ p \neq 0)}
+\finalanswer{f(t,x)=\begin{cases}0&(t<0)\\e^{-\lambda p^2t}\cos(px)&(t>0)\end{cases}}
 $$
 
-（$p = 0$ のときは任意の実数 $x$ で最大値 $1$ をとります。）
+です。また，最大値と最大値を与える位置を $f_{\max}(t),x_{\max}$ と書くと，
+
+$$
+\finalanswer{f_{\max}(t)=e^{-\lambda p^2t}}
+$$
+
+および
+
+$$
+\finalanswer{x_{\max}=\frac{2n\pi}{p}\quad(n\in\mathbb{Z},\ p\neq0),\qquad x_{\max}\in\mathbb{R}\quad(p=0)}
+$$
+
+となります。
 
 <aside class="rigor-note" markdown>
-問6の結果は，初期分布 $\cos(px)$ のように空間波数 $p$ をもつ単一フーリエモードが拡散方程式のもとで空間パターンを保ったまま緩和時間 $\tau_p = (\lambda p^2)^{-1}$ で指数減衰することを示しています。短波長（大きい $|p|$）の成分ほど速く減衰して平滑化されるのが拡散現象の本質です。
+$p\neq0$ のフーリエモード $\cos(px)$ は，空間パターンを保ちながら緩和時間 $\tau_p=(\lambda p^2)^{-1}$ で指数減衰します。$p=0$ の一定成分は減衰しません。波数の絶対値が大きい短波長の成分ほど速く減衰するため，拡散によって分布が滑らかになります。
 </aside>

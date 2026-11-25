@@ -885,6 +885,11 @@ body, input {
   height: auto;
 }
 
+/* 図の説明文：日本語には斜体の字形がないので，Material の斜体をやめる */
+.md-typeset figure.problem-figure figcaption {
+  font-style: normal;
+}
+
 /* 答えの強調（\finalanswer）：黄色の下地。答えだけの式は式ごと，導出の途中にある答えはその部分だけ */
 :root { --site-answer-bg: rgba(242, 194, 0, .22); }
 [data-md-color-scheme="slate"] { --site-answer-bg: rgba(255, 255, 255, .10); }

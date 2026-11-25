@@ -67,9 +67,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-巡回シフト行列 $P$ が $A(\epsilon, t)$ と可換であり，しかも $P$ の固有値がすべて縮退していないことを利用すると，$P$ の固有ベクトル系がそのまま $A(\epsilon, t)$ を対角化する離散フーリエ変換ユニタリ行列 $U$ を与えます。これは周期境界条件を課した 1 次元強束縛模型のブロッホの定理そのものです。
+巡回シフトと可換な行列では，シフトの固有ベクトルを使って行列の成分を整理することができます。周期性に合った基底を選ぶことで，大きな行列の対角化を各波数ごとの計算として扱うことができます。
 
-後半のブロック行列 $B$ では，$U$ が $\epsilon, t$ に依存しないため上下ブロックを同時に対角化することができ，問題が $n$ 個の $2 \times 2$ 行列に分解されます。微弱な結合 $\lambda \ll t$ に対する固有値のシフトは，非縮退準位では 2 次摂動（$\propto \lambda^2$）となる一方，$n$ が 4 の倍数のときに現れる $\cos(2\pi k / n) = 0$ の縮退点では 1 次摂動（$\propto \lambda$）に切り替わります。
+2つの行列を結ぶ部分が単位行列に比例するため，結合を加えても異なる波数は混ざりません。各波数の2成分だけを調べることで，全固有値と弱い結合による変化を求めることができます。
 </div>
 
 ### (1)(i)
@@ -86,7 +86,7 @@ $$
 $$
 
 ### (1)(ii)
-$P$ は直交行列（実ユニタリ行列）であり，その逆行列 $P^{-1} = {}^t P$ は $(P^{-1})_{i+1, i} = 1$（$i = 1, \dots, n - 1$），$(P^{-1})_{1, n} = 1$，その他は $0$ です。よって行列 $A(\epsilon, t)$ は
+$P$ は実の直交行列であり，逆行列 $P^{-1} = {}^t P$ は $(P^{-1})_{i+1, i} = 1$（$i = 1, \dots, n - 1$），$(P^{-1})_{1, n} = 1$，その他は $0$ です。よって行列 $A(\epsilon, t)$ は
 
 $$
 A(\epsilon, t) = \epsilon I + t\left(P + P^{-1}\right)
@@ -95,7 +95,10 @@ $$
 と表されます。$P$ は単位行列 $I$，$P$，および $P^{-1}$ のいずれとも可換なので，
 
 $$
-PA - AP = P\left[\epsilon I + t\left(P + P^{-1}\right)\right] - \left[\epsilon I + t\left(P + P^{-1}\right)\right] P = O
+\begin{aligned}
+PA - AP &= P\left[\epsilon I + t\left(P + P^{-1}\right)\right] - \left[\epsilon I + t\left(P + P^{-1}\right)\right] P \\
+&= O
+\end{aligned}
 $$
 
 となります。
@@ -117,13 +120,13 @@ $$
 \omega_k = \exp\!\left(i\frac{2\pi k}{n}\right) \qquad (k = 1, 2, \dots, n)
 $$
 
-です。これらは互いにすべて異なるため，対応する固有ベクトル（ノルムを $1$ に規格化したもの）
+です。これらは互いにすべて異なるため，ノルムを $1$ に規格化した対応する固有ベクトル
 
 $$
 \boldsymbol{u}_k = \frac{1}{\sqrt{n}}\begin{pmatrix} 1 \\ \omega_k \\ \omega_k^2 \\ \vdots \\ \omega_k^{n-1} \end{pmatrix} \qquad (k = 1, 2, \dots, n)
 $$
 
-は互いに線形独立です（さらに正規直交系をなします）。
+は互いに線形独立であり，正規直交系をなします。
 
 $$
 \finalanswer{\omega_k = e^{i\frac{2\pi k}{n}}, \qquad \boldsymbol{u}_k = \frac{1}{\sqrt{n}}\begin{pmatrix} 1 \\ \omega_k \\ \omega_k^2 \\ \vdots \\ \omega_k^{n-1} \end{pmatrix} \quad (k = 1, 2, \dots, n)}
@@ -151,12 +154,15 @@ $$
 U = \left(\boldsymbol{u}_1,\; \boldsymbol{u}_2,\; \dots,\; \boldsymbol{u}_n\right), \qquad U_{j,k} = \frac{1}{\sqrt{n}}\omega_k^{j-1} = \frac{1}{\sqrt{n}}\exp\!\left(i\frac{2\pi (j - 1) k}{n}\right)
 $$
 
-を定義します。$\boldsymbol{u}_k^{\dagger}\boldsymbol{u}_l = \dfrac{1}{n}\sum_{j=1}^n \left(\omega_k^* \omega_l\right)^{j-1} = \delta_{kl}$ なので，$U^{\dagger} U = I$ すなわち $U$ はユニタリ行列です。
+を定義します。$\boldsymbol{u}_k^{\dagger}\boldsymbol{u}_l = \dfrac{1}{n}\displaystyle\sum_{j=1}^n \left(\omega_k^* \omega_l\right)^{j-1} = \delta_{kl}$ なので，$U^{\dagger} U = I$ すなわち $U$ はユニタリ行列です。
 
 (iv) の結果より，$k \neq l$ のとき $(U^{\dagger} A U)_{k, l} = \boldsymbol{u}_k^{\dagger} A \boldsymbol{u}_l = 0$ です。また，対角成分については $A = \epsilon I + t(P + P^{-1})$ より
 
 $$
-A\boldsymbol{u}_k = \left[\epsilon + t\left(\omega_k + \omega_k^{-1}\right)\right]\boldsymbol{u}_k = \left(\epsilon + 2t\cos\frac{2\pi k}{n}\right)\boldsymbol{u}_k
+\begin{aligned}
+A\boldsymbol{u}_k &= \left[\epsilon + t\left(\omega_k + \omega_k^{-1}\right)\right]\boldsymbol{u}_k \\
+&= \left(\epsilon + 2t\cos\frac{2\pi k}{n}\right)\boldsymbol{u}_k
+\end{aligned}
 $$
 
 なので，$(U^{\dagger} A U)_{k,k} = \boldsymbol{u}_k^{\dagger} A \boldsymbol{u}_k = \epsilon + 2t\cos\dfrac{2\pi k}{n}$ となります。したがって，
@@ -198,11 +204,11 @@ $$
 $$
 
 ### (2)(ii)
-$\lambda = 0$ のとき，各 $k$ に対する 2 つの固有値は $\mu_{k, \pm}(0) = 3t\cos\theta_k \pm t|\cos\theta_k|$，すなわち $2t\cos\theta_k$ と $4t\cos\theta_k$ です。$\lambda > 0$ になると $\sqrt{t^2\cos^2\theta_k + \lambda^2} > t|\cos\theta_k|$ となるため，各 $k$ について大きい方の固有値 $\mu_{k,+}$ は増加し，小さい方の固有値 $\mu_{k,-}$ は同じ大きさだけ減少します（準位反発）。
+$\lambda = 0$ のとき，各 $k$ に対する 2 つの固有値は $\mu_{k, \pm}(0) = 3t\cos\theta_k \pm t|\cos\theta_k|$，すなわち $2t\cos\theta_k$ と $4t\cos\theta_k$ です。$\lambda > 0$ になると $\sqrt{t^2\cos^2\theta_k + \lambda^2} > t|\cos\theta_k|$ となるため，各 $k$ について大きい方の固有値 $\mu_{k,+}$ は増加し，小さい方の固有値 $\mu_{k,-}$ は同じ大きさだけ減少します。この変化を**準位反発**といいます。
 
-$0 < \lambda \ll t$ のときの微小な変化 $\Delta\mu_{k, \pm} \equiv \mu_{k, \pm}(\lambda) - \mu_{k, \pm}(0)$ は，$\cos\theta_k$ が $0$ であるか否か（すなわち $\lambda = 0$ で縮退しているか否か）によって振る舞いが異なります。
+$0<\lambda\ll t$ のときの変化量 $\Delta\mu_{k,\pm}\equiv\mu_{k,\pm}(\lambda)-\mu_{k,\pm}(0)$ を調べます。同じ波数 $k$ の2準位が一致するかどうか，すなわち $\cos\theta_k=0$ かどうかで，変化の最低次数が異なります。
 
-- **$\cos\theta_k \neq 0$ のとき（非縮退）**：$\lambda \ll t|\cos\theta_k|$ のもとで平方根をテイラー展開します。
+- **$\cos\theta_k\neq0$ のとき**：$\lambda \ll t|\cos\theta_k|$ のもとで平方根をテイラー展開します。
   $$
   \begin{aligned}
   \mu_{k, \pm}(\lambda)
@@ -223,5 +229,7 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-(2)(ii) の結果は，量子力学における摂動論の一般構造をそのまま反映しています。摂動項 $V = \begin{pmatrix} O & \lambda I \\ \lambda I & O \end{pmatrix}$ は非対角ブロックのみに現れるため，非縮退固有状態に対する 1 次摂動エネルギーは $0$ となり，最低次のシフトは 2 次摂動の $O(\lambda^2)$ から現れます。一方，$n$ が 4 の倍数のときに生じる $\cos(2\pi k/n) = 0$ の縮退部分空間では，摂動行列の対角化によって 1 次摂動の $O(\lambda)$ で縮退が解消されます。
+摂動項 $V=\begin{pmatrix}O&\lambda I\\\lambda I&O\end{pmatrix}$ は，同じ波数 $k$ の上下のバンドだけを結びます。$\cos\theta_k\neq0$ では同じ $k$ の2準位に差があるため，最低次の変化は $O(\lambda^2)$ です。異なる波数間に縮退があっても，摂動が異なる波数を結ばないので，この結論は変わりません。
+
+$n$ が4の倍数なら $k=n/4,3n/4$ の2つの波数で上下の準位がともに $0$ です。各波数で $\pm\lambda$ へ分裂し，4重の $0$ 固有値が2重の $+\lambda$ と2重の $-\lambda$ に分かれます。縮退は一部残ります。
 </aside>
