@@ -86,9 +86,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-2体重力問題の相対運動は循環座標 $\varphi$ と時間並進対称性により角運動量 $J$ と力学的エネルギー $E$ を保存します。重力波によるエネルギー散逸を準定常な円軌道の断熱変化として取り込むと，エネルギー収支式とケプラーの第三法則から軌道半径 $a(t)$ と公転周期 $P(t)$ に対する変数分離型の微分方程式が得られます。
+ラグランジアンの時間と角度への依存を調べることで，放射を考えない運動の保存量を確認できます。放射を含める場合には，与えられたエネルギー損失率と円軌道のエネルギーを結び付けます。
 
-この方程式から導かれる合体時間 $\tau_{\mathrm{GW}}$ は系の質量（チャープ質量）に強く依存するため，観測された初期周期 $P_0$ と合体までの時間 $\tau_{\mathrm{GW}}$ だけで連星ブラックホールの質量を定量的に見積もることができます。
+ケプラーの法則を使うと，軌道半径の変化を公転周期の変化に置き換えることができます。観測された周期と経過時間を使う際も，問題で指定された近似の範囲で評価します。
 </div>
 
 ### (1)
@@ -103,14 +103,25 @@ $$
 \end{aligned}
 $$
 
-オイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial\mathcal{L}}{\partial\dot{q}}\right) - \dfrac{\partial\mathcal{L}}{\partial q} = 0$ を $r$ と $\varphi$ について書き下します。したがって，
+オイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial\mathcal{L}}{\partial\dot{q}}\right) - \dfrac{\partial\mathcal{L}}{\partial q} = 0$ を $r$ と $\varphi$ について書きます。したがって，
 
 $$
 \finalanswer{\mu\frac{\mathrm{d}^2 r}{\mathrm{d}t^2} - \mu r\left(\frac{\mathrm{d}\varphi}{\mathrm{d}t}\right)^2 + \frac{G\mu M}{r^2} = 0,\qquad \frac{\mathrm{d}}{\mathrm{d}t}\left(\mu r^2\frac{\mathrm{d}\varphi}{\mathrm{d}t}\right) = 0}
 $$
 
 ### (2)
-$\varphi$ に共役な運動量（角運動量）$J$ は $J = \dfrac{\partial\mathcal{L}}{\partial\dot{\varphi}} = \mu r^2\dot{\varphi}$ です。また系のエネルギー $E$ は運動エネルギーとポテンシャルエネルギーの和（ハミルトニアン $\dot{r}\dfrac{\partial\mathcal{L}}{\partial\dot{r}} + \dot{\varphi}\dfrac{\partial\mathcal{L}}{\partial\dot{\varphi}} - \mathcal{L}$）です。したがって，
+$\varphi$ に共役な運動量 $J$ は角運動量です。系のエネルギーはハミルトニアンから求めます。
+
+$$
+\begin{aligned}
+J&=\frac{\partial\mathcal L}{\partial\dot\varphi}\\
+&=\mu r^2\dot\varphi\\
+E&=\dot r\frac{\partial\mathcal L}{\partial\dot r}+\dot\varphi\frac{\partial\mathcal L}{\partial\dot\varphi}-\mathcal L\\
+&=\mu\dot r^2+\mu r^2\dot\varphi^2-\mathcal L
+\end{aligned}
+$$
+
+したがって，
 
 $$
 \finalanswer{E = \frac{1}{2}\mu\left(\frac{\mathrm{d}r}{\mathrm{d}t}\right)^2 + \frac{1}{2}\mu r^2\left(\frac{\mathrm{d}\varphi}{\mathrm{d}t}\right)^2 - \frac{G\mu M}{r},\qquad J = \mu r^2\frac{\mathrm{d}\varphi}{\mathrm{d}t}}
@@ -120,7 +131,10 @@ $$
 まず問1の $\varphi$ に関する運動方程式より，
 
 $$
-\frac{\mathrm{d}J}{\mathrm{d}t} = \frac{\mathrm{d}}{\mathrm{d}t}\left(\mu r^2\dot{\varphi}\right) = 0
+\begin{aligned}
+\frac{\mathrm{d}J}{\mathrm{d}t} &= \frac{\mathrm{d}}{\mathrm{d}t}\left(\mu r^2\dot{\varphi}\right) \\
+&= 0
+\end{aligned}
 $$
 
 となるため，$J$ は運動の定数です。
@@ -129,17 +143,17 @@ $$
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}E}{\mathrm{d}t}
-&= \mu\dot{r}\ddot{r} + \mu r\dot{r}\dot{\varphi}^2 + \mu r^2\dot{\varphi}\ddot{\varphi} + \frac{G\mu M}{r^2}\dot{r} \\
+\frac{\mathrm{d}E}{\mathrm{d}t} &= \mu\dot{r}\ddot{r} + \mu r\dot{r}\dot{\varphi}^2 + \mu r^2\dot{\varphi}\ddot{\varphi} + \frac{G\mu M}{r^2}\dot{r} \\
 &= \dot{r}\left(\mu\ddot{r} - \mu r\dot{\varphi}^2 + \frac{G\mu M}{r^2}\right) + \dot{\varphi}\left(2\mu r\dot{r}\dot{\varphi} + \mu r^2\ddot{\varphi}\right) \\
-&= \dot{r}\left(\mu\ddot{r} - \mu r\dot{\varphi}^2 + \frac{G\mu M}{r^2}\right) + \dot{\varphi}\frac{\mathrm{d}}{\mathrm{d}t}\left(\mu r^2\dot{\varphi}\right) = 0
+&= \dot{r}\left(\mu\ddot{r} - \mu r\dot{\varphi}^2 + \frac{G\mu M}{r^2}\right) + \dot{\varphi}\frac{\mathrm{d}}{\mathrm{d}t}\left(\mu r^2\dot{\varphi}\right) \\
+&= 0
 \end{aligned}
 $$
 
 よって $E$ も運動の定数です。
 
 ### (4)
-式 (3) の $E = -\dfrac{G\mu M}{2a}$ を時間 $t$ で微分します（$\mu, M$ は定数）。
+$\mu,M$ を定数として，式 (3) の $E=-\dfrac{G\mu M}{2a}$ を時間 $t$ で微分します。
 
 $$
 \frac{\mathrm{d}E}{\mathrm{d}t} = \frac{G\mu M}{2a^2}\frac{\mathrm{d}a}{\mathrm{d}t}
@@ -148,7 +162,10 @@ $$
 これを式 (4), (5) の $\dfrac{\mathrm{d}E}{\mathrm{d}t} = -\dfrac{32 G^4 \mu^2 M^3}{5 c^5 a^5}$ に代入して $\dfrac{\mathrm{d}a}{\mathrm{d}t}$ について解きます。
 
 $$
-\frac{\mathrm{d}a}{\mathrm{d}t} = -\frac{2a^2}{G\mu M}\cdot\frac{32 G^4 \mu^2 M^3}{5 c^5 a^5} = -\frac{64 G^3 \mu M^2}{5 c^5 a^3}
+\begin{aligned}
+\frac{\mathrm{d}a}{\mathrm{d}t} &= -\frac{2a^2}{G\mu M}\cdot\frac{32 G^4 \mu^2 M^3}{5 c^5 a^5} \\
+&= -\frac{64 G^3 \mu M^2}{5 c^5 a^3}
+\end{aligned}
 $$
 
 したがって，
@@ -158,7 +175,7 @@ $$
 $$
 
 ### (5)
-式 (6) を変数分離し，時刻 $t = 0$（$P = P_0$）から合体時刻 $t = \tau_{\mathrm{GW}}$（$P = 0$）まで積分します。
+式 (6) を変数分離します。初期条件を $P(0)=P_0$，合体時刻の条件を $P(\tau_{\mathrm{GW}})=0$ として積分します。
 
 $$
 \begin{aligned}
@@ -178,7 +195,10 @@ $$
 ケプラーの方程式 (7) $G M P^2 = 4\pi^2 a^3$ の両辺の対数微分をとると，
 
 $$
-\frac{2}{P}\frac{\mathrm{d}P}{\mathrm{d}t} = \frac{3}{a}\frac{\mathrm{d}a}{\mathrm{d}t} \implies \frac{\mathrm{d}P}{\mathrm{d}t} = \frac{3P}{2a}\frac{\mathrm{d}a}{\mathrm{d}t}
+\begin{aligned}
+\frac{2}{P}\frac{\mathrm{d}P}{\mathrm{d}t} &= \frac{3}{a}\frac{\mathrm{d}a}{\mathrm{d}t} \\
+\frac{\mathrm{d}P}{\mathrm{d}t} &= \frac{3P}{2a}\frac{\mathrm{d}a}{\mathrm{d}t}
+\end{aligned}
 $$
 
 となります。これに問4の $\dfrac{\mathrm{d}a}{\mathrm{d}t}$ と式 (7) から得られる $a = \left(\dfrac{GM}{4\pi^2}\right)^{1/3} P^{2/3}$ を代入します。
@@ -207,26 +227,44 @@ $$
 P_{\mathrm{c}} = P_0\left(\frac{3}{8A}\frac{P_0}{\tau_{\mathrm{GW}}}\right)^{3/5}
 $$
 
-与えられた数値 $P_0 \approx 0.06\ \mathrm{sec},\ \tau_{\mathrm{GW}} \approx 0.15\ \mathrm{sec},\ A \approx 2500$ を代入します。$\dfrac{P_0}{\tau_{\mathrm{GW}}} = \dfrac{0.06}{0.15} = \dfrac{2}{5}$ より，
+与えられた数値 $P_0 \approx 0.06\ \mathrm{sec},\ \tau_{\mathrm{GW}} \approx 0.15\ \mathrm{sec},\ A \approx 2500$ を代入します。
 
 $$
 \begin{aligned}
-\frac{3}{8A}\frac{P_0}{\tau_{\mathrm{GW}}}
-&\approx \frac{3}{8\times 2500}\cdot\frac{2}{5} = \frac{6}{10^5} = 6\times 10^{-5} \\
-P_{\mathrm{c}}
-&\approx \left(6\times 10^{-2}\ \mathrm{sec}\right)\left(6\times 10^{-5}\right)^{3/5} \\
-&= 6\times 6^{3/5}\times 10^{-5}\ \mathrm{sec} \\
-&\approx 6\times 2.9\times 10^{-5}\ \mathrm{sec} = 1.74\times 10^{-4}\ \mathrm{sec}
+\dfrac{P_0}{\tau_{\mathrm{GW}}} &= \dfrac{0.06}{0.15} \\
+&= \dfrac{2}{5}
 \end{aligned}
 $$
 
-一方，等質量 $m_1 = m_2 = m$ のとき $M = 2m,\ \mu = \dfrac{m}{2}$ なので，問6の $P_{\mathrm{c}}$ は次のようになります。
+ より，
 
 $$
 \begin{aligned}
-P_{\mathrm{c}}
-&= \frac{G}{c^3}\left(\frac{m}{2}\right)^{3/5}(2m)^{2/5}
-= 2^{-1/5}\frac{Gm}{c^3} \\
+\frac{3}{8A}\frac{P_0}{\tau_{\mathrm{GW}}} &\approx \frac{3}{8\times 2500}\cdot\frac{2}{5} \\
+&= \frac{6}{10^5} \\
+&= 6\times 10^{-5} \\
+P_{\mathrm{c}} &\approx \left(6\times 10^{-2}\ \mathrm{sec}\right)\left(6\times 10^{-5}\right)^{3/5} \\
+&= 6\times 6^{3/5}\times 10^{-5}\ \mathrm{sec} \\
+&\approx 6\times 2.9\times 10^{-5}\ \mathrm{sec} \\
+&= 1.74\times 10^{-4}\ \mathrm{sec}
+\end{aligned}
+$$
+
+一方，等質量 
+
+$$
+\begin{aligned}
+m_1 &= m_2 \\
+&= m
+\end{aligned}
+$$
+
+ のとき $M = 2m,\ \mu = \dfrac{m}{2}$ なので，問6の $P_{\mathrm{c}}$ は次のようになります。
+
+$$
+\begin{aligned}
+P_{\mathrm{c}} &= \frac{G}{c^3}\left(\frac{m}{2}\right)^{3/5}(2m)^{2/5} \\
+&= 2^{-1/5}\frac{Gm}{c^3} \\
 &= \frac{1}{2\cdot 2^{1/5}}\left(\frac{2GM_\odot}{c^3}\right)\frac{m}{M_\odot}
 \end{aligned}
 $$
@@ -234,10 +272,14 @@ $$
 これに $\dfrac{2GM_\odot}{c^3} \approx 10^{-5}\ \mathrm{sec},\ 2^{1/5} \approx 1.1$ を代入して $\dfrac{m}{M_\odot}$ を求めます。
 
 $$
-\frac{m}{M_\odot} \approx 2\times 1.1 \times \frac{1.74\times 10^{-4}}{10^{-5}} \approx 2.2 \times 17.4 \approx 38
+\begin{aligned}
+\frac{m}{M_\odot} &\approx 2\times 1.1 \times \frac{1.74\times 10^{-4}}{10^{-5}} \\
+&\approx 2.2 \times 17.4 \\
+&\approx 38
+\end{aligned}
 $$
 
-したがって，$m$ は太陽質量 $M_\odot$ のおよそ $38$ 倍（有効数字1桁なら約 $40$ 倍）です。
+したがって，$m$ は太陽質量 $M_\odot$ のおよそ $38$ 倍です。有効数字1桁では約 $40$ 倍です。
 
 $$
 \finalanswer{\frac{m}{M_\odot} \approx 38}
@@ -247,13 +289,29 @@ $$
 公転半径が $a_0$ から $a_{\min}$ まで減少する間に重力波として放射される全エネルギー $\Delta E$ は，式 (3) と $a_0 \gg a_{\min}$ より次のように近似されます。
 
 $$
-\Delta E = E(a_0) - E(a_{\min}) = -\frac{G\mu M}{2a_0} - \left(-\frac{G\mu M}{2a_{\min}}\right) \simeq \frac{G\mu M}{2a_{\min}}
+\begin{aligned}
+\Delta E &= E(a_0) - E(a_{\min}) \\
+&= -\frac{G\mu M}{2a_0} - \left(-\frac{G\mu M}{2a_{\min}}\right) \\
+&\simeq \frac{G\mu M}{2a_{\min}}
+\end{aligned}
 $$
 
-等質量連星なので $\mu M = \dfrac{m}{2}\cdot 2m = m^2$ です。これが質量 $m$ の約1割（$0.1\,m$）に相当する静止エネルギー $\dfrac{1}{10}m c^2$ に等しいとおくと，
+等質量連星なので，
 
 $$
-\frac{G m^2}{2 a_{\min}} = \frac{1}{10}m c^2 \implies a_{\min} = \frac{5 G m}{c^2}
+\begin{aligned}
+\mu M&=\frac m2\cdot2m\\
+&=m^2
+\end{aligned}
+$$
+
+です。放出されたエネルギーを，問題で指定された $mc^2/10$ と等しくおくと，
+
+$$
+\begin{aligned}
+\frac{G m^2}{2 a_{\min}} &= \frac{1}{10}m c^2 \\
+a_{\min} &= \frac{5 G m}{c^2}
+\end{aligned}
 $$
 
 となります。したがって，
@@ -262,6 +320,4 @@ $$
 \finalanswer{a_{\min} = \frac{5 G m}{c^2}}
 $$
 
-<aside class="rigor-note" markdown>
-問6で現れた質量の組合せ $\mathcal{M}_{\mathrm{c}} = \mu^{3/5}M^{2/5} = \dfrac{(m_1 m_2)^{3/5}}{(m_1 + m_2)^{1/5}}$ はチャープ質量と呼ばれ，重力波の周波数変化（チャープ信号）から最も高精度に決まる量です。また問8の $a_{\min} = \dfrac{5Gm}{c^2}$ は，質量 $m$ のブラックホールのシュバルツシルト半径 $r_{\mathrm{S}} = \dfrac{2Gm}{c^2}$ の $2.5$ 倍にあたり，2つのブラックホールの事象の地平面が互いに接する距離（$2r_{\mathrm{S}}$）と同程度であることがわかります。
-</aside>
+

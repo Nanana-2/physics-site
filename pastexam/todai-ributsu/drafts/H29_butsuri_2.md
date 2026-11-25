@@ -36,7 +36,7 @@ $$
 <figure class="problem-figure" markdown>
 ![正方格子上のA・B副格子と最近接交換相互作用J](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_2-p1-light.svg#only-light)
 ![正方格子上のA・B副格子と最近接交換相互作用J](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_2-p1-dark.svg#only-dark)
-<figcaption markdown="span">図1：正方格子の副格子 A（白丸）・B（黒丸）と隣接スピン間の交換相互作用 $J$（実線）。</figcaption>
+<figcaption markdown="span">図1</figcaption>
 </figure>
 
 (3) 正方格子は図1のように1つおきに A, B の2つの格子に分けることができる。平均場近似では，格子 A, B 上のスピンはそれぞれ
@@ -77,7 +77,7 @@ $$
 <figure class="problem-figure" markdown>
 ![正方格子上の最近接相互作用Jと対角線方向相互作用J'](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_2-p2-light.svg#only-light)
 ![正方格子上の最近接相互作用Jと対角線方向相互作用J'](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_2-p2-dark.svg#only-dark)
-<figcaption markdown="span">図2：正方格子の副格子 A（白丸）・B（黒丸）と交換相互作用 $J$（実線），対角線方向の交換相互作用 $J'$（破線）。</figcaption>
+<figcaption markdown="span">図2</figcaption>
 </figure>
 
 (6) 設問3と同様にして2つの格子 A, B を考え，平均場近似を適用して，$H = 0$ のときのセルフ・コンシステント方程式を書き下せ。また，$\langle\sigma_{\mathrm{A}}\rangle = -\langle\sigma_{\mathrm{B}}\rangle \neq 0$ となるような反強磁性秩序の転移温度を求めよ。さらに $J' \to J$ の極限で転移温度が $0$ となることを示せ。
@@ -89,16 +89,19 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-正方格子は2部格子（A, B の2つの副格子）に分けられるため，反強磁性イジング模型に平均場近似を用いると，互いに相手副格子の平均スピンから逆向きの有効磁場を受ける連立セルフ・コンシステント方程式になります。
+隣接スピンの平均を使うと，各格子点の交換相互作用を有効磁場として扱うことができます。正方格子を2つの副格子に分けることで，隣接するスピンが逆向きを向く配置を調べることができます。
 
-対角線方向の反強磁性相互作用 $J'$ を加えると，対角隣接格子点は同一副格子に属するため同じ副格子どうしのスピンを反平行に揃えようとしてネール秩序と競合（フラストレーション）し，有効結合定数が $J - J'$ へ減少して転移温度が下がります。
+平均スピンが小さい範囲では，平均場の方程式を1次まで展開することで応答を求めることができます。同じ副格子を結ぶ相互作用も，有効磁場に含めて比較します。
 </div>
 
 ### (1)
 逆温度を $\beta = \dfrac{1}{k_{\mathrm{B}}T}$ とします。分配関数 $Z_1$ は
 
 $$
-Z_1 = e^{\beta\mu H} + e^{-\beta\mu H} = 2\cosh\left(\frac{\mu H}{k_{\mathrm{B}}T}\right)
+\begin{aligned}
+Z_1 &= e^{\beta\mu H} + e^{-\beta\mu H} \\
+&= 2\cosh\left(\frac{\mu H}{k_{\mathrm{B}}T}\right)
+\end{aligned}
 $$
 
 なので，ボルツマン分布より各状態の確率は次のようになります。したがって，
@@ -112,10 +115,9 @@ $$
 
 $$
 \begin{aligned}
-\langle\sigma\rangle
-&= (+1)p_+ + (-1)p_- \\
-&= \frac{e^{\frac{\mu H}{k_{\mathrm{B}}T}} - e^{-\frac{\mu H}{k_{\mathrm{B}}T}}}{e^{\frac{\mu H}{k_{\mathrm{B}}T}} + e^{-\frac{\mu H}{k_{\mathrm{B}}T}}}
-= \tanh\left(\frac{\mu H}{k_{\mathrm{B}}T}\right)
+\langle\sigma\rangle &= (+1)p_+ + (-1)p_- \\
+&= \frac{e^{\frac{\mu H}{k_{\mathrm{B}}T}} - e^{-\frac{\mu H}{k_{\mathrm{B}}T}}}{e^{\frac{\mu H}{k_{\mathrm{B}}T}} + e^{-\frac{\mu H}{k_{\mathrm{B}}T}}} \\
+&= \tanh\left(\frac{\mu H}{k_{\mathrm{B}}T}\right)
 \end{aligned}
 $$
 
@@ -139,7 +141,10 @@ $$
 $H = 0$ のとき $f(x) = -\tanh\left(\dfrac{4Jx}{k_{\mathrm{B}}T}\right)$ は奇関数です。反強磁性秩序の解 $\langle\sigma_{\mathrm{A}}\rangle = -\langle\sigma_{\mathrm{B}}\rangle \equiv m\ (\neq 0)$ を代入すると，2つの式はともに1つの方程式にまとまります。
 
 $$
-m = f(-m) = \tanh\left(\frac{4Jm}{k_{\mathrm{B}}T}\right)
+\begin{aligned}
+m &= f(-m) \\
+&= \tanh\left(\frac{4Jm}{k_{\mathrm{B}}T}\right)
+\end{aligned}
 $$
 
 右辺の関数 $g(m) = \tanh\left(\dfrac{4Jm}{k_{\mathrm{B}}T}\right)$ は $m > 0$ で上に凸かつ $\displaystyle\lim_{m\to\infty} g(m) = 1$ であり，原点 $m = 0$ での傾きは $g'(0) = \dfrac{4J}{k_{\mathrm{B}}T}$ です。したがって $y = m$ と $y = g(m)$ が $m = 0$ 以外の交点をもつための必要十分条件は原点での傾きが $1$ より大きいことです。
@@ -148,18 +153,19 @@ $$
 \frac{4J}{k_{\mathrm{B}}T} > 1 \iff T < \frac{4J}{k_{\mathrm{B}}}
 $$
 
-よって転移温度（ネール温度）$T_{\mathrm{N}}$ は $\dfrac{4J}{k_{\mathrm{B}}}$ です。したがって，
+よって転移温度 $T_{\mathrm{N}}$ は $\dfrac{4J}{k_{\mathrm{B}}}$ です。したがって，
 
 $$
 \finalanswer{T_{\mathrm{N}} = \frac{4J}{k_{\mathrm{B}}}}
 $$
 
 ### (5)
-$T > T_{\mathrm{N}}$ の常磁性相では自発磁化がなく，微小磁場 $H$ のもとで両副格子の期待値は等しくなります（$\langle\sigma_{\mathrm{A}}\rangle = \langle\sigma_{\mathrm{B}}\rangle \equiv \sigma$）。$H \to 0$ で $\sigma \to 0$ なので，$\tanh u = u + \mathcal{O}(u^3)$ と線形化します。
+$T>T_{\mathrm N}$ では自発磁化がありません。微小磁場のもとで両副格子の期待値は等しいので，$\langle\sigma_{\mathrm A}\rangle=\langle\sigma_{\mathrm B}\rangle\equiv\sigma$ とします。$H\to0$ で $\sigma\to0$ となるため，$\tanh u=u+\mathcal O(u^3)$ を用います。
 
 $$
 \begin{aligned}
-\sigma &= \tanh\left(\frac{-4J\sigma + \mu H}{k_{\mathrm{B}}T}\right) \simeq \frac{-4J\sigma + \mu H}{k_{\mathrm{B}}T} \\
+\sigma &= \tanh\left(\frac{-4J\sigma + \mu H}{k_{\mathrm{B}}T}\right) \\
+&\simeq \frac{-4J\sigma + \mu H}{k_{\mathrm{B}}T} \\
 \left(1 + \frac{4J}{k_{\mathrm{B}}T}\right)\sigma &\simeq \frac{\mu H}{k_{\mathrm{B}}T} \\
 \sigma &\simeq \frac{\mu H}{k_{\mathrm{B}}T + 4J}
 \end{aligned}
@@ -168,7 +174,11 @@ $$
 これを帯磁率 $\chi$ の定義に代入します。
 
 $$
-\chi = \lim_{H \to 0}\frac{\mathrm{d}}{\mathrm{d}H}(\mu\sigma) = \frac{\mu^2}{k_{\mathrm{B}}T + 4J} = \frac{\mu^2}{k_{\mathrm{B}}(T + T_{\mathrm{N}})}
+\begin{aligned}
+\chi &= \lim_{H \to 0}\frac{\mathrm{d}}{\mathrm{d}H}(\mu\sigma) \\
+&= \frac{\mu^2}{k_{\mathrm{B}}T + 4J} \\
+&= \frac{\mu^2}{k_{\mathrm{B}}(T + T_{\mathrm{N}})}
+\end{aligned}
 $$
 
 したがって，
@@ -178,7 +188,7 @@ $$
 $$
 
 ### (6)
-図2より，格子 A の1つのスピンは，最近接に $z = 4$ 個の格子 B のスピン（相互作用 $J$），対角線方向の次近接に $z' = 4$ 個の**同じ格子 A** のスピン（相互作用 $J'$）をもちます。格子 B についても同様です。
+格子 A の1つのスピンは，相互作用 $J$ で格子 B の4個のスピンと結ばれています。対角線方向の相互作用 $J'$ は，同じ格子 A の4個のスピンを結びます。格子 B についても同様です。
 
 よって $H = 0$ での平均場近似の有効磁場はそれぞれ次のようになります。
 
@@ -194,7 +204,16 @@ $$
 \langle\sigma_{\mathrm{B}}\rangle = \tanh\left(-\frac{4J\langle\sigma_{\mathrm{A}}\rangle + 4J'\langle\sigma_{\mathrm{B}}\rangle}{k_{\mathrm{B}}T}\right)
 $$
 
-ここに反強磁性秩序解 $\langle\sigma_{\mathrm{A}}\rangle = -\langle\sigma_{\mathrm{B}}\rangle = m\ (\neq 0)$ を代入します。
+ここに反強磁性秩序解 
+
+$$
+\begin{aligned}
+\langle\sigma_{\mathrm{A}}\rangle &= -\langle\sigma_{\mathrm{B}}\rangle \\
+&= m\ (\neq 0)
+\end{aligned}
+$$
+
+ を代入します。
 
 $$
 m = \tanh\left(\frac{4(J - J')m}{k_{\mathrm{B}}T}\right)
@@ -209,7 +228,10 @@ $$
 この式において $J' \to J$ の極限をとると，
 
 $$
-\lim_{J' \to J} T_{\mathrm{N}}' = \lim_{J' \to J} \frac{4(J - J')}{k_{\mathrm{B}}} = 0
+\begin{aligned}
+\lim_{J' \to J} T_{\mathrm{N}}' &= \lim_{J' \to J} \frac{4(J - J')}{k_{\mathrm{B}}} \\
+&= 0
+\end{aligned}
 $$
 
 となり，転移温度が $0$ に近づくことが確かめられます。したがって，
@@ -219,5 +241,5 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-問5の $\chi = \dfrac{\mu^2}{k_{\mathrm{B}}(T + T_{\mathrm{N}})}$ は反強磁性体のキュリー・ワイスの法則であり，高温側で $1/\chi$ を外挿すると負の温度 $-T_{\mathrm{N}}$ で $0$ になることが強磁性体との大きな違いです。また問6の模型は $J_1$–$J_2$ イジング模型と呼ばれ，$J'$ が増大すると最近接と次近接の反強磁性相互作用が両立できない幾何学的フラストレーションが強まり，$J' > J/2$ の領域では実際にはネール秩序よりもストライプ状の反強磁性秩序（コリニア秩序）の方がエネルギー的に安定になります。
+設問6は，2つの副格子の平均が逆向きとなる配置についての結果です。この配置の1スピン当たりの基底エネルギーは $-2J+2J'$ です。一方，列ごとに向きが交互に変わる配置では $-2J'$ となるため，$J'>J/2$ では後者のエネルギーが低くなります。設問6の転移温度を，この領域で実現する秩序全体の転移温度と解釈しないようにします。
 </aside>

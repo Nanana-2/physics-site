@@ -100,9 +100,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-非対角項 $V > 0$ の存在により，2つの固有エネルギーは $\lambda = 0$ でも交差せず最小間隔 $2V$ の擬交差（準位反発）を作ります。各時刻の瞬間固有基底で状態を展開すると，状態間の遷移は基底の回転速度 $\dot{\theta}$ によってのみ引き起こされます。
+各時刻の固有状態を基底にすると，エネルギーによる位相の変化と，基底自体の変化を分けることができます。固有状態の時間微分も含めて方程式を変換し，異なる状態の係数を結ぶ項を調べます。
 
-回転が集中する擬交差領域 $|\lambda| \lesssim V/\mathcal{E}$ を通過する時間 $\tau_{\mathrm{tr}} \sim TV/\mathcal{E}$ がエネルギーギャップに対応する振動周期 $\hbar/V$ より十分長いとき（$TV^2/\mathcal{E} \gg \hbar$），動的位相因子が激しく振動して遷移振幅が打ち消し合い，系は瞬間固有状態に追従し続けます。
+時間の位相を係数から分けると，遷移振幅を振動する関数の積分として扱うことができます。基底が変わる時間幅と，エネルギー差による位相の変化を比較して，遷移の大きさを評価します。
 </div>
 
 ### (1)
@@ -150,17 +150,20 @@ $$
 問2で求めた係数の比 $r_\pm = \dfrac{\langle 2|\psi_\pm\rangle}{\langle 1|\psi_\pm\rangle}$ はともに実数であり，その積を計算すると
 
 $$
-r_+ r_- = \left(\frac{E_2 - E_1}{2V}\right)^2 - \left[\left(\frac{E_2 - E_1}{2V}\right)^2 + 1\right] = -1
+\begin{aligned}
+r_+ r_- &= \left(\frac{E_2 - E_1}{2V}\right)^2 - \left[\left(\frac{E_2 - E_1}{2V}\right)^2 + 1\right] \\
+&= -1
+\end{aligned}
 $$
 
 となります。よって内積 $\langle\psi_+|\psi_-\rangle$ は
 
 $$
 \begin{aligned}
-\langle\psi_+|\psi_-\rangle
-&= \langle\psi_+|1\rangle\langle 1|\psi_-\rangle + \langle\psi_+|2\rangle\langle 2|\psi_-\rangle \\
+\langle\psi_+|\psi_-\rangle &= \langle\psi_+|1\rangle\langle 1|\psi_-\rangle + \langle\psi_+|2\rangle\langle 2|\psi_-\rangle \\
 &= \langle\psi_+|1\rangle\langle 1|\psi_-\rangle\left(1 + r_+ r_-\right) \\
-&= \langle\psi_+|1\rangle\langle 1|\psi_-\rangle(1 - 1) = 0
+&= \langle\psi_+|1\rangle\langle 1|\psi_-\rangle(1 - 1) \\
+&= 0
 \end{aligned}
 $$
 
@@ -176,10 +179,13 @@ $$
 となります。したがって2つの固有値の差は
 
 $$
-E_+(\lambda) - E_-(\lambda) = \sqrt{(\mathcal{E}\lambda)^2 + 4V^2} \ge \sqrt{4V^2} = 2V
+\begin{aligned}
+E_+(\lambda) - E_-(\lambda) &= \sqrt{(\mathcal{E}\lambda)^2 + 4V^2} \ge \sqrt{4V^2} \\
+&= 2V
+\end{aligned}
 $$
 
-となり，任意の実数 $\lambda$ に対して $E_+(\lambda) - E_-(\lambda) \ge 2V$ が成り立ちます（等号は $\lambda = 0$ のとき）。
+となり，任意の実数 $\lambda$ に対して $E_+(\lambda) - E_-(\lambda) \ge 2V$ が成り立ちます。等号は $\lambda=0$ のときに成立します。
 
 ### (5)
 (i) $|\psi_+^{(\lambda)}\rangle = \cos\theta(\lambda)|1\rangle + \sin\theta(\lambda)|2\rangle$ と直交する規格化された固有状態 $|\psi_-^{(\lambda)}\rangle$ は，位相を選んで
@@ -188,7 +194,16 @@ $$
 |\psi_-^{(\lambda)}\rangle = -\sin\theta(\lambda)|1\rangle + \cos\theta(\lambda)|2\rangle
 $$
 
-ととることができます。時刻 $t$ に対する時間微分を $\dot{\theta}(t) = \dfrac{\mathrm{d}}{\mathrm{d}t}\theta(t/T) = \dfrac{1}{T}\theta'(t/T)$ とおくと，基底ベクトルの時間微分は次のようになります。
+ととることができます。時刻 $t$ に対する時間微分を 
+
+$$
+\begin{aligned}
+\dot{\theta}(t) &= \dfrac{\mathrm{d}}{\mathrm{d}t}\theta(t/T) \\
+&= \dfrac{1}{T}\theta'(t/T)
+\end{aligned}
+$$
+
+ とおくと，基底ベクトルの時間微分は次のようになります。
 
 $$
 \frac{\partial}{\partial t}|\psi_+^{(t/T)}\rangle = \dot{\theta}(t)\,|\psi_-^{(t/T)}\rangle,\qquad
@@ -208,7 +223,7 @@ $$
 \finalanswer{i\hbar\frac{\mathrm{d}}{\mathrm{d}t}\begin{pmatrix} c_+(t) \\ c_-(t) \end{pmatrix} = \begin{pmatrix} E_+(t/T) & i\hbar\,\dot{\theta}(t) \\ -i\hbar\,\dot{\theta}(t) & E_-(t/T) \end{pmatrix}\begin{pmatrix} c_+(t) \\ c_-(t) \end{pmatrix}}
 $$
 
-（ここで $\dot{\theta}(t) = \dfrac{\mathrm{d}}{\mathrm{d}t}\theta(t/T)$ です。）
+
 
 (ii) 式 (7) より $c_\pm(t) = \tilde{c}_\pm(t)\exp\left(-\dfrac{i}{\hbar}\displaystyle\int_{-T}^{t} E_\pm(t'/T)\,\mathrm{d}t'\right)$ なので，時間微分は
 
@@ -223,7 +238,7 @@ $$
 $$
 
 ### (6)
-初期条件は $\tilde{c}_+(-T) = 1,\ \tilde{c}_-(-T) = 0$ です。$|\tilde{c}_-(t)| \ll 1$ と仮定した1次近似（$\tilde{c}_+(t) \simeq 1$）で問5(ii)の第2式を $t = -T$ から $t = +T$ まで積分し，変数 $\lambda = t/T$ に書き換えます。
+初期条件は $\tilde c_+(-T)=1$，$\tilde c_-(-T)=0$ です。$\tilde c_+(t)\simeq1$ とする1次近似で，問5(ii)の第2式を積分します。最後にこの近似と整合することを確認します。
 
 $$
 \begin{aligned}
@@ -235,7 +250,7 @@ $$
 
 ここで実関数 $\chi(\lambda)$ は $\chi(\lambda) = \dfrac{T}{\hbar}\displaystyle\int_{-1}^{\lambda}\Delta E(\lambda')\,\mathrm{d}\lambda'$ です。
 
-図1のとおり，$\theta(\lambda)$ は $|\lambda| \lesssim \mathcal{O}(V/\mathcal{E})$ の狭い領域でのみ $0$ から $+\pi/2$ へ変化し，その外側ではほぼ定数（$\mathrm{d}\theta/\mathrm{d}\lambda \simeq 0$）です。そこで無次元変数 $x = \dfrac{\mathcal{E}}{V}\lambda$ を導入すると，積分に実質的に寄与するのは幅 $\mathcal{O}(1)$ の区間 $I$（$|x| \lesssim \mathcal{O}(1)$）に限られます。
+$\theta(\lambda)$ は主に $|\lambda|\lesssim V/\mathcal E$ の領域で変わり，外側では微分が小さくなります。$x=\mathcal E\lambda/V$ とおくと，この変化は幅が $\mathcal O(1)$ の区間で起こります。
 
 $$
 \tilde{c}_-(T) \simeq -\int_I \frac{\mathrm{d}\theta}{\mathrm{d}x}\,e^{-i\chi(x)}\,\mathrm{d}x
@@ -244,11 +259,21 @@ $$
 区間 $I$ の上で $g(x) = \dfrac{\mathrm{d}\theta}{\mathrm{d}x}$ は緩やかに $\mathcal{O}(1)$ 程度変化する実関数です。一方，位相 $\chi(x)$ の変化率を問4の不等式 $\Delta E(\lambda) \ge 2V$ を用いて評価すると，
 
 $$
-\frac{\mathrm{d}\chi}{\mathrm{d}x} = \frac{V}{\mathcal{E}}\frac{\mathrm{d}\chi}{\mathrm{d}\lambda} = \frac{TV}{\hbar\mathcal{E}}\Delta E(\lambda) \ge \frac{2TV^2}{\hbar\mathcal{E}} \gg 1
+\begin{aligned}
+\frac{\mathrm{d}\chi}{\mathrm{d}x} &= \frac{V}{\mathcal{E}}\frac{\mathrm{d}\chi}{\mathrm{d}\lambda} \\
+&= \frac{TV}{\hbar\mathcal{E}}\Delta E(\lambda) \ge \frac{2TV^2}{\hbar\mathcal{E}} \gg 1
+\end{aligned}
 $$
 
-となります。したがって区間 $I$ 上で $e^{-i\chi(x)}$ は激しく振動するため，問題文の事実より $|\tilde{c}_-(T)| \ll 1$ となります。また時間発展のユニタリ性（$|\tilde{c}_+(t)|^2 + |\tilde{c}_-(t)|^2 = 1$）より，$|\tilde{c}_+(T)| = \sqrt{1 - |\tilde{c}_-(T)|^2} \simeq 1$ が保たれます。
+となります。したがって区間 $I$ 上で $e^{-i\chi(x)}$ は激しく振動するため，問題文の事実より $|\tilde{c}_-(T)| \ll 1$ となります。また規格化条件 $|\tilde c_+(t)|^2+|\tilde c_-(t)|^2=1$ より，
 
-<aside class="rigor-note" markdown>
-本問題のハミルトニアン (2) で $\lambda = t/T$ と時間変化させる模型はランダウ・ツェナー（Landau–Zener）模型と呼ばれます。$t = -\infty$ から $+\infty$ までの厳密な非断熱遷移確率は $P_{\mathrm{LZ}} = \exp\left(-\dfrac{2\pi T V^2}{\hbar\mathcal{E}}\right)$ で与えられることが知られており，条件 $\dfrac{TV^2}{\hbar\mathcal{E}} \gg 1$ のもとで $P_{\mathrm{LZ}}$ が指数関数的に $0$ へ近づくことが問6の定性的評価と整合しています。
-</aside>
+$$
+\begin{aligned}
+|\tilde{c}_+(T)| &= \sqrt{1 - |\tilde{c}_-(T)|^2} \\
+&\simeq 1
+\end{aligned}
+$$
+
+ が保たれます。
+
+

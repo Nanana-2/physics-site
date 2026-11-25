@@ -145,7 +145,7 @@ $$
 $x \in (0, 2\pi L)$ での一般解は $\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr) + C_2\sin\bigl(k(x - \pi L)\bigr)$です。
 
 - **奇対称解**（$C_1 = 0$）：$\psi(x) = C_2\sin\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-)$ は $-C_2\sin(\pi L k) = C_2\sin(\pi L k)$ より $\sin(\pi L k) = 0$，すなわち $k = \dfrac{n}{L}\ (n = 1, 2, 3, \dots)$ です。このとき $\psi(0) = 0$ かつ $\psi'(0+) = \psi'(2\pi L-) = (-1)^n k C_2$ となるため接続条件も自動的に満たされ，ポテンシャル $v$ の影響を受けません。波動関数は $\psi(x) \propto \sin(nx/L)$ です。
-- **偶対称解**（$C_2 = 0$）：$\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-) = C_1\cos(\pi L k)$ は任意の $k$ で満たされます。接続条件 $\psi'(0+) - \psi'(2\pi L-) = v\psi(0)$ を書き下すと，$\psi'(0+) = k C_1\sin(\pi L k),\ \psi'(2\pi L-) = -k C_1\sin(\pi L k)$ より，
+- **偶対称解**（$C_2 = 0$）：$\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-) = C_1\cos(\pi L k)$ は任意の $k$ で満たされます。接続条件 $\psi'(0+) - \psi'(2\pi L-) = v\psi(0)$ を書くと，$\psi'(0+) = k C_1\sin(\pi L k),\ \psi'(2\pi L-) = -k C_1\sin(\pi L k)$ より，
 
 $$
 2k\sin(\pi L k) = v\cos(\pi L k) \implies 2k\tan(\pi L k) = v

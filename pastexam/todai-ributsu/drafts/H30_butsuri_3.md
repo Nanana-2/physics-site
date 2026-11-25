@@ -82,9 +82,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-ローレンツゲージのもとでマクスウェル方程式はスカラーポテンシャルとベクトルポテンシャルに対する独立な非同次波動方程式へ分離され，遅延ポテンシャルとして厳密に積分表示されます。遠方場（$kr \gg 1$）では空間微分が伝搬位相 $e^{-ikr}$ の微分（$-ik\boldsymbol{e}_r$）で近似されるため，放射電磁場は $1/r$ で減衰する横波となり，$\sin^2\theta$ の指向性をもつエネルギー流を運びます。
+時間変化する場では，波源の位置ごとの遅延時刻を含むポテンシャルから電磁場を求めます。遠方で残る項を選ぶときも，波源内の位相差を無視できるかを区別して積分します。
 
-2つの波源からの放射の重ね合わせでは，遠方近似 $R_{1,2} \simeq r \pm (D/2)\sin\varphi$ による光路差が干渉因子 $\cos^2$ を生み，波源間の位相差 $\delta_2 - \delta_1$ を調整することで最大放射方向を自在に制御することができます。
+2つの波源の電場を足し合わせると，距離の差と設定した位相差が同じ位相因子に入ります。和積公式を使うことで，時間の振動と角度による強度の変化を分けることができます。
 </div>
 
 ### (1)
@@ -92,10 +92,10 @@ $$
 
 $$
 \begin{aligned}
-\phi_0(\boldsymbol{r})
-&= \frac{q}{4\pi\varepsilon_0}\left(\frac{1}{|\boldsymbol{r} - \frac{d}{2}\boldsymbol{e}_z|} - \frac{1}{|\boldsymbol{r} + \frac{d}{2}\boldsymbol{e}_z|}\right) \\
+\phi_0(\boldsymbol{r}) &= \frac{q}{4\pi\varepsilon_0}\left(\frac{1}{|\boldsymbol{r} - \frac{d}{2}\boldsymbol{e}_z|} - \frac{1}{|\boldsymbol{r} + \frac{d}{2}\boldsymbol{e}_z|}\right) \\
 &\simeq \frac{q}{4\pi\varepsilon_0 r}\left[\left(1 + \frac{d\cos\theta}{2r}\right) - \left(1 - \frac{d\cos\theta}{2r}\right)\right] \\
-&= \frac{qd\cos\theta}{4\pi\varepsilon_0 r^2} = \frac{\boldsymbol{p}\cdot\boldsymbol{r}}{4\pi\varepsilon_0 r^3}
+&= \frac{qd\cos\theta}{4\pi\varepsilon_0 r^2} \\
+&= \frac{\boldsymbol{p}\cdot\boldsymbol{r}}{4\pi\varepsilon_0 r^3}
 \end{aligned}
 $$
 
@@ -146,10 +146,14 @@ $$
 よって式 (5) および式 (6) が導かれます。
 
 ### (4)
-導線を流れる電流は $+z$ 向きに $I(t) = I_0 e^{i\omega t}$ なので，上の導体球（$z = +d/2$）の電荷 $+q(t)$ について電荷保存則 $\dfrac{\mathrm{d}q}{\mathrm{d}t} = I_0 e^{i\omega t}$ が成り立ちます。定常振動解を $q(t) \propto e^{i\omega t}$ とおいて積分します。
+導線を流れる電流は $+z$ 向きに $I(t) = I_0 e^{i\omega t}$ なので，$z=+d/2$ の上の導体球の電荷 $+q(t)$ について電荷保存則 $\dfrac{\mathrm{d}q}{\mathrm{d}t} = I_0 e^{i\omega t}$ が成り立ちます。定常振動解を $q(t) \propto e^{i\omega t}$ とおいて積分します。
 
 $$
-i\omega q(t) = I_0 e^{i\omega t} \implies q(t) = \frac{I_0}{i\omega}e^{i\omega t} = -\frac{i I_0}{\omega}e^{i\omega t}
+\begin{aligned}
+i\omega q(t) &= I_0 e^{i\omega t} \\
+q(t) &= \frac{I_0}{i\omega}e^{i\omega t} \\
+&= -\frac{i I_0}{\omega}e^{i\omega t}
+\end{aligned}
 $$
 
 したがって，上下の各導体球に蓄えられる電荷は
@@ -159,7 +163,7 @@ $$
 $$
 
 ### (5)
-導線の範囲 $-d/2 \le z' \le d/2$ で $d \ll r$ かつ $kd \ll 1$ なので，$|\boldsymbol{r} - \boldsymbol{r}'| \simeq r$ として式 (7) を積分します。
+問1からの流れのとおり，導線は点とみなすことができる電気双極子として扱います。そのため，導線の長さ $d$ は波長より十分短く，$kd \ll 1$ とします。導線の範囲 $-d/2 \le z' \le d/2$ では $d \ll r$ でもあるので，$|\boldsymbol{r} - \boldsymbol{r}'| \simeq r$ として式 (7) を積分します。
 
 $$
 \begin{aligned}
@@ -231,8 +235,11 @@ $$
 点 $\boldsymbol{r} = (r\cos\varphi, r\sin\varphi, 0)$ と2つの波源 $(0, \mp D/2, 0)$ の距離 $R_1,\ R_2$ を $D \ll r$ で1次まで展開します。
 
 $$
-R_1 = \sqrt{r^2\cos^2\varphi + \left(r\sin\varphi + \frac{D}{2}\right)^2} \simeq r + \frac{D}{2}\sin\varphi,\qquad
+\begin{aligned}
+R_1 &= \sqrt{r^2\cos^2\varphi + \left(r\sin\varphi + \frac{D}{2}\right)^2} \\
+&\simeq r + \frac{D}{2}\sin\varphi \\
 R_2 \simeq r - \frac{D}{2}\sin\varphi
+\end{aligned}
 $$
 
 $E_0(R_1) = E_0(R_2) \equiv E_0$ とし，和積公式を用いて合成電場 $\boldsymbol{E} = \boldsymbol{E}_1 + \boldsymbol{E}_2$ を計算します。
@@ -252,34 +259,57 @@ $$
 \overline{|\boldsymbol{E}|^2} = 2E_0^2\cos^2\left(\frac{kD\sin\varphi - (\delta_2 - \delta_1)}{2}\right)
 $$
 
-$\delta_1 = \delta_2 = 0$ のとき，角度依存性は $\cos^2\left(\dfrac{kD}{2}\sin\varphi\right)$ となり，$\varphi = 0$ で最大値をとります。最大値の $1/2$ となる角度 $\pm\varphi_{1/2}$ は次式で決まります。
+
 
 $$
-\cos^2\left(\frac{kD}{2}\sin\varphi_{1/2}\right) = \frac{1}{2}
-\implies \frac{kD}{2}\sin\varphi_{1/2} = \frac{\pi}{4}
-\implies \sin\varphi_{1/2} = \frac{\pi}{2kD} = \frac{\lambda}{4D}
+\begin{aligned}
+\delta_1 &= \delta_2 \\
+&= 0
+\end{aligned}
 $$
 
-したがって半値全幅 $\Delta\varphi = 2\varphi_{1/2}$ は
+ のとき，角度依存性は $\cos^2\left(\dfrac{kD}{2}\sin\varphi\right)$ となり，$\varphi = 0$ で最大値をとります。最大値の $1/2$ となる角度 $\pm\varphi_{1/2}$ は次式で決まります。
 
 $$
-\Delta\varphi = 2\arcsin\left(\frac{\pi}{2kD}\right)
+\begin{aligned}
+\frac{kD}{2}\sin\varphi_{1/2}&=\frac{\pi}{4}\\
+\sin\varphi_{1/2}&=\frac{\pi}{2kD}\\
+&=\frac{\lambda}{4D}
+\end{aligned}
 $$
 
-です（$kD \gg 1$ のときは $\Delta\varphi \simeq \dfrac{\pi}{kD} = \dfrac{\lambda}{2D}$）。$\Delta\varphi$ を小さくして指向性を鋭くするには，$kD = \dfrac{2\pi D}{\lambda}$ を大きくすればよく，すなわち**波源の間隔 $D$ を広げる**，あるいは**電磁波の波数 $k$（角周波数 $\omega$）を大きくする（波長 $\lambda$ を短くする）**ことが有効です。
-
-最後に，電界強度が $\varphi = \varphi_0$ で最大となる条件は $\cos^2\left(\dfrac{kD\sin\varphi_0 - (\delta_2 - \delta_1)}{2}\right) = 1$，すなわち
+半値点が存在するには $\pi/(2kD)\le1$，すなわち $kD\ge\pi/2$ が必要です。この範囲では，半値全幅は
 
 $$
-\frac{kD\sin\varphi_0 - (\delta_2 - \delta_1)}{2} = m\pi \implies \delta_2 - \delta_1 = kD\sin\varphi_0 + 2m\pi \qquad (m \in \mathbb{Z})
+\finalanswer{\Delta\varphi=2\arcsin\!\left(\frac{\pi}{2kD}\right)\qquad(kD\ge\pi/2)}
 $$
 
-です（主値としては $\delta_2 - \delta_1 = kD\sin\varphi_0$）。したがって，
+です。$0<kD<\pi/2$ では全方向の強度が最大値の半分より大きいため，半値点はありません。$kD\gg1$ なら $\Delta\varphi\simeq\pi/(kD)$ なので，$D$ または $k$ を大きくすると幅を小さくすることができます。ただし，同じ高さの極大が複数現れる場合があります。
+
+最大となる位相条件は，
 
 $$
-\finalanswer{\overline{|\boldsymbol{E}|^2} = 2E_0^2\cos^2\left(\frac{kD}{2}\sin\varphi\right) \ (\delta_n = 0),\qquad \Delta\varphi = 2\arcsin\left(\frac{\pi}{2kD}\right),\qquad \delta_2 - \delta_1 = kD\sin\varphi_0 + 2m\pi \ (m \in \mathbb{Z})}
+\begin{aligned}
+\cos^2\!\left(\frac{kD\sin\varphi_0-(\delta_2-\delta_1)}{2}\right)&=1\\
+kD\sin\varphi_0-(\delta_2-\delta_1)&=2n\pi
+\end{aligned}
 $$
+
+です。整数の符号を取り直すと，
+
+$$
+\finalanswer{\delta_2-\delta_1=kD\sin\varphi_0+2m\pi\qquad(m\in\mathbb Z)}
+$$
+
+が得られます。また，同位相の場合の瞬時値と平均値は
+
+$$
+\finalanswer{|\boldsymbol E|^2=4E_0^2\cos^2\!\left(\frac{kD}{2}\sin\varphi\right)\cos^2(\omega t-kr),\qquad
+\overline{|\boldsymbol E|^2}=2E_0^2\cos^2\!\left(\frac{kD}{2}\sin\varphi\right)\quad(\delta_1=\delta_2=0)}
+$$
+
+です。
 
 <aside class="rigor-note" markdown>
-問7のように複数のアンテナ（波源）の位相差 $\delta_2 - \delta_1$ を電気的に制御してビームの指向方向 $\varphi_0$ を走査する手法はフェーズドアレイと呼ばれ，電波望遠鏡の干渉計やレーダーで広く用いられています。なお，$D > \lambda/2$（$kD > \pi$）とすると主極大のほかにグレーティングローブと呼ばれる副極大も現れます。
+同位相の波源では，極大の条件は $kD\sin\varphi=2m\pi$ です。$m\neq0$ の極大が現れるのは $D\ge\lambda$ の場合です。位相差を変えて全方向へ走査する場合に，別の整数次数の極大を避ける間隔の条件は $D\le\lambda/2$ です。半値幅を狭くすることと，極大方向を1つにすることは区別します。
 </aside>

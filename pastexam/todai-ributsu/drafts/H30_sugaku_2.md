@@ -115,9 +115,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-非線形移流項 $u\partial_x u$ と拡散項 $D\partial_x^2 u$ が釣り合うバーガース方程式は，そのままでは重ね合わせが効きませんが，ポテンシャル $s$ を導入して $u = -\partial_x s$ と書くと非線形項が $(\partial_x s)^2$ の形に整理されます。
+移流方程式は，移動する座標で見ると時間によらない形になります。定常な非線形方程式は，左辺を全微分としてまとめると積分の階数を減らすことができます。
 
-さらに $s = 2D\ln\phi$ という対数変換（コール・ホップ変換）を施すと，$(\partial_x\phi)^2$ に比例する非線形項がちょうど打ち消し合って線形の拡散方程式へ変換され，フーリエ変換で一般解を厳密に構成することができます。
+未知関数を合成関数で表す場合，連鎖律から生じる1階導関数の2乗の項を調べます。この項を打ち消す変換を選ぶと，線形方程式の解から元の解を構成することができます。
 </div>
 
 ### (1)
@@ -140,7 +140,7 @@ $$
 \finalanswer{F = \frac{1}{2}u^2 - \frac{\mathrm{d}u}{\mathrm{d}x}}
 $$
 
-(ii) (i) より $\dfrac{1}{2}u^2 - \dfrac{\mathrm{d}u}{\mathrm{d}x} = C$（$C$ は定数）です。$x \to \pm\infty$ で $u(x) \to \mp W$ かつ $\dfrac{\mathrm{d}u}{\mathrm{d}x} \to 0$ なので，$C = \dfrac{1}{2}W^2$ と決まります。
+(ii) (i) の積分定数を $C$ とすると，$u'=u^2/2-C$ です。$u$ が境界値 $\pm W$ に近づくと，右辺は $W^2/2-C$ に近づきます。この値が0でなければ $u$ は有限値に収束できないので，$C=W^2/2$ です。
 
 $$
 \frac{\mathrm{d}u}{\mathrm{d}x} = \frac{1}{2}\left(u^2 - W^2\right)
@@ -159,12 +159,15 @@ $$
 境界条件 $u(0) = 0$ を代入すると $C_0 = 0$ です。よって
 
 $$
-\frac{W - u}{W + u} = e^{Wx}
-\implies W - u = (W + u)e^{Wx}
-\implies u(x) = W\frac{1 - e^{Wx}}{1 + e^{Wx}} = -W\tanh\left(\frac{Wx}{2}\right)
+\begin{aligned}
+\frac{W - u}{W + u} &= e^{Wx} \\
+W - u &= (W + u)e^{Wx} \\
+u(x) &= W\frac{1 - e^{Wx}}{1 + e^{Wx}} \\
+&= -W\tanh\left(\frac{Wx}{2}\right)
+\end{aligned}
 $$
 
-となります（$x \to \pm\infty$ で $\mp W$ に収束することも満たします）。したがって，
+となり，$x\to\pm\infty$ で $\mp W$ に収束します。したがって，
 
 $$
 \finalanswer{u(x) = -W\tanh\left(\frac{Wx}{2}\right)}
@@ -181,8 +184,10 @@ $$
 両辺に $-1$ を掛けて $u^*(t, x) = -\dfrac{\partial s(t, x)}{\partial x}$ を代入します。
 
 $$
-\frac{\partial u^*}{\partial t} = -u^*\frac{\partial u^*}{\partial x} + D\frac{\partial^2 u^*}{\partial x^2}
-\implies \frac{\partial u^*}{\partial t} + u^*\frac{\partial u^*}{\partial x} = D\frac{\partial^2 u^*}{\partial x^2}
+\begin{aligned}
+\frac{\partial u^*}{\partial t} &= -u^*\frac{\partial u^*}{\partial x} + D\frac{\partial^2 u^*}{\partial x^2} \\
+\frac{\partial u^*}{\partial t} + u^*\frac{\partial u^*}{\partial x} &= D\frac{\partial^2 u^*}{\partial x^2}
+\end{aligned}
 $$
 
 よって $u^*(t, x)$ は式 (2) の解となります。
@@ -216,14 +221,31 @@ $$
 $S'(\phi) \neq 0$ として $p(\phi) = S'(\phi)$ とおくと，$\dfrac{p'}{p^2} = -\dfrac{1}{2D}$ となります。両辺を $\phi$ で積分します。
 
 $$
--\frac{1}{p(\phi)} = -\frac{\phi + C_1}{2D} \implies S'(\phi) = \frac{2D}{\phi + C_1}
+\begin{aligned}
+-\frac{1}{p(\phi)} &= -\frac{\phi + C_1}{2D} \\
+S'(\phi) &= \frac{2D}{\phi + C_1}
+\end{aligned}
 $$
 
-もう一度積分すると，$S(\phi) = 2D\ln|\phi + C_1| + C_2$（$C_1,\ C_2$ は積分定数；また $S'(\phi) \equiv 0$ に対応する定数解 $S(\phi) = C_2$ もあります）となります。したがって（$C_1,\ C_2$ は任意の定数），
+もう一度積分すると，$C_1,C_2$ を任意定数として対数解が得られます。$S'\equiv0$ という定数解もあるため，最終結果は
 
 $$
-\finalanswer{D\frac{\mathrm{d}^2 S}{\mathrm{d}\phi^2} + \frac{1}{2}\left(\frac{\mathrm{d}S}{\mathrm{d}\phi}\right)^2 = 0,\qquad S(\phi) = 2D\ln|\phi + C_1| + C_2}
+\finalanswer{D\frac{\mathrm{d}^2S}{\mathrm{d}\phi^2}+\frac12\left(\frac{\mathrm{d}S}{\mathrm{d}\phi}\right)^2=0}
 $$
+
+です。解は，
+
+$$
+\finalanswer{S(\phi)=2D\ln|\phi+C_1|+C_2\quad(\phi+C_1\ne0)}
+$$
+
+または
+
+$$
+\finalanswer{S(\phi)=C_2}
+$$
+
+となります。対数解は $\phi+C_1$ が0にならない領域で使います。
 
 (iii) フーリエ変換の表式を式 (4) に代入し，積分記号下で微分します。
 
@@ -244,5 +266,15 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-式 (2) は粘性バーガース（Burgers）方程式，式 (3) は KPZ（Kardar–Parisi–Zhang）方程式のノイズのない形，そして問3(i)(ii)の組み合わせ $u = -2D\dfrac{\partial_x\phi}{\phi}$ はコール・ホップ（Cole–Hopf）変換と呼ばれます。問2(ii)で求めた $u(x) = -W\tanh(Wx/2)$ は，非線形による波形の切り立ちと拡散による平滑化が釣り合った定常衝撃波解です。
+設問2の解を微分すると，
+
+$$
+\begin{aligned}
+u'&=-\frac{W^2}{2}\operatorname{sech}^2(Wx/2)\\
+u''&=\frac{W^3}{2}\operatorname{sech}^2(Wx/2)\tanh(Wx/2)\\
+uu'&=\frac{W^3}{2}\operatorname{sech}^2(Wx/2)\tanh(Wx/2)
+\end{aligned}
+$$
+
+となり，元の方程式 $uu'=u''$ を満たします。
 </aside>

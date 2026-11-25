@@ -77,13 +77,22 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-設問1の線形クライン・ゴルドン方程式は変数分離によって分散関係 $\omega = \sqrt{k^2 + \lambda^2}$ をもつ平面波へ分解されます。
+初期分布が単一の波数を持つ場合，変数分離すると時間だけの常微分方程式として扱うことができます。進行方向の区別には，位相を一定に保ったときの位置の変化を使います。
 
-設問2の非線形方程式の静的解は，$x$ を時間とみなした力学系のエネルギー保存則（第1積分）を使うと2つの真空 $u = \pm 1$ を滑らかにつなぐキンク解 $u(x) = \tanh(\lambda x)$ として厳密に求まります。もとの方程式の空間並進対称性から，キンク解の微小シフト $u(x + \delta x) - u(x) \simeq \delta x\,\dfrac{\mathrm{d}u}{\mathrm{d}x}$ は振動数 $\omega = 0$ の線形化方程式の解（並進ゼロモード）を与えます。
+静的な非線形方程式には，未知関数の1階導関数を掛けると全微分にまとめられる形があります。微小な変化の方程式は，静的解の方程式を微分した式と比較して調べることができます。
 </div>
 
 ### (1)
-(i) $y(x, t) = f(t)g(x)$ を式 (1) に代入します。初期条件 $y(x, 0) = f(0)g(x) = \cos kx$ より $g(x) = \cos kx,\ f(0) = 1$ と選ぶことができます。すると $g''(x) = -k^2 g(x)$ なので，式 (1) は
+(i) $y(x, t) = f(t)g(x)$ を式 (1) に代入します。初期条件 
+
+$$
+\begin{aligned}
+y(x, 0) &= f(0)g(x) \\
+&= \cos kx
+\end{aligned}
+$$
+
+ より $g(x) = \cos kx,\ f(0) = 1$ と選ぶことができます。すると $g''(x) = -k^2 g(x)$ なので，式 (1) は
 
 $$
 \bigl[f''(t) + (k^2 + \lambda^2) f(t)\bigr]\cos kx = 0
@@ -126,16 +135,19 @@ $$
 \left(\frac{\mathrm{d}u}{\mathrm{d}x}\right)^2 = \lambda^2\left(u^4 - 2u^2 + A\right)
 $$
 
-両辺の平方根をとると（$\lambda > 0$），式 (4) が得られます。
+$\lambda>0$ なので，両辺の平方根をとると式 (4) が得られます。
 
 $$
 \frac{\mathrm{d}u}{\mathrm{d}x} = \pm\lambda\sqrt{u^4 - 2u^2 + A}
 $$
 
-(ii) 境界条件 (5) より $x \to \pm\infty$ で $u(x) \to \pm 1$ であり，一定値に収束するため $\dfrac{\mathrm{d}u}{\mathrm{d}x} \to 0$ です。これを式 (4) に代入すると，
+(ii) 式 (4) を2乗した式で $u\to1$ とすると，$(u')^2\to\lambda^2(A-1)$ です。$A<1$ では右辺が負になるため，実数解は境界条件を満たしません。$A>1$ では遠方で $|u'|$ が正の定数以上となり，連続な $u'$ の符号も変わらないため，$u$ は有限値に収束できません。したがって，
 
 $$
-0 = \lambda^2(1 - 2 + A) \implies A = 1
+\begin{aligned}
+0 &= \lambda^2(1 - 2 + A) \\
+A &= 1
+\end{aligned}
 $$
 
 となります。したがって，
@@ -163,10 +175,15 @@ $$
 条件 $u(0) = 0$ より $C = 0$ です。よって
 
 $$
-\frac{1 + u}{1 - u} = e^{2\lambda x} \implies u(x) = \frac{e^{2\lambda x} - 1}{e^{2\lambda x} + 1} = \tanh(\lambda x)
+\begin{aligned}
+1+u&=e^{2\lambda x}(1-u)\\
+u(1+e^{2\lambda x})&=e^{2\lambda x}-1\\
+u(x)&=\frac{e^{2\lambda x}-1}{e^{2\lambda x}+1}\\
+&=\tanh(\lambda x)
+\end{aligned}
 $$
 
-となります（$x \to \pm\infty$ で $\pm 1$ に収束することも満たします）。したがって，
+となり，$x\to\pm\infty$ で $\pm1$ に収束します。したがって，
 
 $$
 \finalanswer{u(x) = \tanh(\lambda x)}
@@ -187,7 +204,13 @@ $$
 \finalanswer{\frac{\partial^2 z}{\partial t^2} - \frac{\partial^2 z}{\partial x^2} + 2\lambda^2\left(3u^2 - 1\right)z = 0}
 $$
 
-です（$u(x) = \tanh(\lambda x)$ を代入すれば $\dfrac{\partial^2 z}{\partial t^2} - \dfrac{\partial^2 z}{\partial x^2} + 2\lambda^2\left(2 - 3\operatorname{sech}^2(\lambda x)\right)z = 0$ とも表すことができます）。
+です。$u(x)=\tanh(\lambda x)$ を代入すると，同じ方程式は
+
+$$
+\frac{\partial^2z}{\partial t^2}-\frac{\partial^2z}{\partial x^2}+2\lambda^2\left(2-3\operatorname{sech}^2(\lambda x)\right)z=0
+$$
+
+と表すことができます。
 
 (v) 式 (3) の両辺を $x$ で微分します。
 
@@ -212,5 +235,11 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-式 (2) は1+1次元 $\phi^4$ 理論の運動方程式であり，問2(iii) の $u(x) = \tanh(\lambda x)$ はトポロジカルソリトン（キンク解）と呼ばれます。問2(v) で現れた $\omega = 0$ のモード $z_0 \propto \operatorname{sech}^2(\lambda x)$ は，キンクの中心位置を任意に平行移動しても解であることに由来する南部・ゴールドストーンの並進ゼロモードです。
+静的解の中心を $\delta x$ だけ動かした $u(x+\delta x)$ も解です。1次まで展開すると，
+
+$$
+u(x+\delta x)-u(x)\simeq\delta x\,\frac{\mathrm{d}u}{\mathrm{d}x}
+$$
+
+となるため，時間によらない微小変化は $u'$ に比例します。これは設問 (v) の $\omega=0$ と一致します。
 </aside>

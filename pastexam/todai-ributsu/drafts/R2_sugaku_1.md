@@ -77,13 +77,13 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-移流拡散方程式は空間並進対称な線形偏微分方程式であるため，空間フーリエ変換によって各波数 $k$ ごとに独立な1階常微分方程式へ分解されます。その基本解（グリーン関数）は中心が $ct$ だけ移動し分散が $\lambda t$ で広がるガウス分布となり，任意の初期条件に対する解はグリーン関数との畳み込み積分で与えられます。
+指数関数の級数は，有限区間で項別に積分することで誤差関数の展開に使うことができます。大きな引数では積分の残りの部分を評価し，部分積分後の剰余の大きさを調べます。
 
-階段状の初期分布を畳み込むとガウス積分が誤差関数として自然に現れ，設問1で調べた誤差関数の振る舞いから波面の移流と拡散による広がりを定量的に把握することができます。
+空間微分を含む線形方程式は，フーリエ変換すると波数ごとの常微分方程式になります。初期値が不連続な場合も，基本解との畳み込みで正の時刻の解を表すことができます。
 </div>
 
 ### (1)
-(i) 指数関数 $e^{-\xi^2}$ のマクローリン展開は全実数で一様収束するため，項別積分を行うことができます。
+(i) 指数関数 $e^{-\xi^2}$ のマクローリン展開は，任意の有限区間で一様収束します。したがって，固定した有限の $x$ に対し，$0$ と $x$ を結ぶ区間で項別積分することができます。
 
 $$
 \begin{aligned}
@@ -106,7 +106,7 @@ $$
 \operatorname{erf}(x) = 1 - \frac{2}{\sqrt{\pi}} \int_x^{\infty} e^{-\xi^2}\,\mathrm{d}\xi
 $$
 
-ヒントに従い $\xi^2 = \eta$（$\xi = \sqrt{\eta},\ \mathrm{d}\xi = \dfrac{1}{2}\eta^{-1/2}\,\mathrm{d}\eta$）と変数変換し，部分積分を行います。
+ヒントに従い $\xi^2=\eta$ と変数変換します。$\xi=\sqrt\eta$，$\mathrm{d}\xi=\dfrac12\eta^{-1/2}\mathrm{d}\eta$ を使い，部分積分します。
 
 $$
 \begin{aligned}
@@ -123,7 +123,7 @@ $$
 0 < \frac{1}{4}\int_{x^2}^{\infty} \eta^{-\frac{3}{2}} e^{-\eta}\,\mathrm{d}\eta \le \frac{1}{4x^3}\int_{x^2}^{\infty} e^{-\eta}\,\mathrm{d}\eta = \frac{e^{-x^2}}{4x^3}
 $$
 
-と評価され，$x \to \infty$ で第1項 $\dfrac{e^{-x^2}}{2x}$ に対して高次の微小項（$O(x^{-3}e^{-x^2})$）となります。これを元の式に代入すると，
+と評価され，$x \to \infty$ で第1項 $\dfrac{e^{-x^2}}{2x}$ に対して$O(x^{-3}e^{-x^2})$ の微小項となります。これを元の式に代入すると，
 
 $$
 \operatorname{erf}(x) = 1 - \frac{1}{\sqrt{\pi}\,x} e^{-x^2} + O\left(\frac{e^{-x^2}}{x^3}\right)
@@ -134,7 +134,16 @@ $$
 ### (2)
 (i) $\lambda = 0$ のとき，偏微分方程式は1階の移流方程式 $\dfrac{\partial u}{\partial t} + c\dfrac{\partial u}{\partial x} = 0$ となります。
 
-特性変数 $\xi = x - ct,\ \tau = t$ へ変数変換すると，$\dfrac{\partial}{\partial t} = \dfrac{\partial}{\partial\tau} - c\dfrac{\partial}{\partial\xi}$，$\dfrac{\partial}{\partial x} = \dfrac{\partial}{\partial\xi}$ より方程式は $\dfrac{\partial u}{\partial\tau} = 0$ となります。よって $u$ は $\xi = x - ct$ のみの関数 $u(x, t) = f(x - ct)$ であり，初期条件 $u(x, 0) = f(x) = U(x)$ より $f = U$ と決まります。したがって，
+特性変数 $\xi = x - ct,\ \tau = t$ へ変数変換すると，$\dfrac{\partial}{\partial t} = \dfrac{\partial}{\partial\tau} - c\dfrac{\partial}{\partial\xi}$，$\dfrac{\partial}{\partial x} = \dfrac{\partial}{\partial\xi}$ より方程式は $\dfrac{\partial u}{\partial\tau} = 0$ となります。よって $u$ は $\xi = x - ct$ のみの関数 $u(x, t) = f(x - ct)$ であり，初期条件 
+
+$$
+\begin{aligned}
+u(x, 0) &= f(x) \\
+&= U(x)
+\end{aligned}
+$$
+
+ より $f = U$ と決まります。したがって，
 
 $$
 \finalanswer{u(x, t) = U(x - ct)}
@@ -151,7 +160,10 @@ $$
 (iii) 初期条件 $U(x) = \delta(x)$ に対する $\tilde{G}(k, 0)$ は次のようになります。
 
 $$
-\tilde{G}(k, 0) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} e^{-ikx}\delta(x)\,\mathrm{d}x = \frac{1}{\sqrt{2\pi}}
+\begin{aligned}
+\tilde{G}(k, 0) &= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} e^{-ikx}\delta(x)\,\mathrm{d}x \\
+&= \frac{1}{\sqrt{2\pi}}
+\end{aligned}
 $$
 
 (ii) の微分方程式を $t$ について解くと，
@@ -160,7 +172,7 @@ $$
 \tilde{G}(k, t) = \frac{1}{\sqrt{2\pi}}\exp\left[\left(-ick - \frac{\lambda}{2}k^2\right)t\right]
 $$
 
-となります。これをフーリエ逆変換し，問題文のガウス積分公式（$a = \lambda t > 0,\ p = x - ct$）を用いて $G(x, t)$ を求めます。
+となります。これをフーリエ逆変換し，問題文のガウス積分公式に $a=\lambda t>0$，$p=x-ct$ を代入して $G(x, t)$ を求めます。
 
 $$
 \begin{aligned}
@@ -175,7 +187,7 @@ $$
 したがって，
 
 $$
-\finalanswer{G(x, t) = \frac{1}{\sqrt{2\pi\lambda t}}\exp\left(-\frac{(x - ct)^2}{2\lambda t}\right)}
+\finalanswer{G(x, t) = \frac{1}{\sqrt{2\pi\lambda t}}\exp\left(-\frac{(x - ct)^2}{2\lambda t}\right)\qquad(t>0)}
 $$
 
 (iv) 偏微分方程式の線形性と並進不変性より，任意の初期条件 $U(x)$ に対する解はグリーン関数 $G(x, t)$ との畳み込み積分で与えられます。
@@ -188,7 +200,7 @@ u(x, t)
 \end{aligned}
 $$
 
-ここで積分変数を $\xi = \dfrac{x - x' - ct}{\sqrt{2\lambda t}}$（$\mathrm{d}x' = -\sqrt{2\lambda t}\,\mathrm{d}\xi$）とおきます。$x' = -\infty$ で $\xi = +\infty$，$x' = 0$ で $\xi = \dfrac{x - ct}{\sqrt{2\lambda t}}$ なので，
+積分変数を $\xi=\dfrac{x-x'-ct}{\sqrt{2\lambda t}}$ とおくと，$\mathrm{d}x'=-\sqrt{2\lambda t}\,\mathrm{d}\xi$ です。$x'=-\infty$ では $\xi=+\infty$，$x'=0$ では $\xi=\dfrac{x-ct}{\sqrt{2\lambda t}}$ なので，
 
 $$
 \begin{aligned}
@@ -202,10 +214,10 @@ $$
 したがって，
 
 $$
-\finalanswer{u(x, t) = \frac{1}{2}\left[1 - \operatorname{erf}\left(\frac{x - ct}{\sqrt{2\lambda t}}\right)\right]}
+\finalanswer{u(x, t) = \frac{1}{2}\left[1 - \operatorname{erf}\left(\frac{x - ct}{\sqrt{2\lambda t}}\right)\right]\qquad(t>0)}
 $$
 
-**概形の変化**：初期時刻 $t = 0$ で $x = 0$ にあった階段状の不連続な段差（$x < 0$ で $1$，$x \ge 0$ で $0$）は，$t > 0$ では滑らかな単調減少関数へと変化します。値が $\dfrac{1}{2}$ となる中心位置 $x = ct$ は一定の速さ $c$ で $x$ 軸の正の向きへ移動し，同時に段差が $1$ から $0$ へ変化する遷移領域の幅は拡散によって $\sqrt{2\lambda t}$（すなわち $\sqrt{t}$ に比例）のスケールで次第に広がっていきます。
+**概形の変化**：初期分布は $x<0$ で1，$x\ge0$ で0です。$t>0$ では滑らかな単調減少関数になります。値が $1/2$ となる中心位置 $x=ct$ は速さ $c$ で正の向きに動きます。分布の幅を与える $\sqrt{2\lambda t}$ は $\sqrt t$ に比例して増えるため，遷移領域は時間とともに広がります。
 
 <figure class="problem-figure" markdown>
 ![移流拡散方程式の解 u(x,t) の時間変化](../../../docs/assets/figures/pastexam-todai-ributsu/R2_sugaku_1-s-light.svg#only-light)
@@ -214,5 +226,7 @@ $$
 </figure>
 
 <aside class="rigor-note" markdown>
-設問2の偏微分方程式は，一定の流速 $c$ をもつ媒質中の移流拡散方程式（ドリフト付きフォッカー・プランク方程式）です。拡散係数 $D = \lambda/2$ とおくとグリーン関数の分散は $\sigma^2 = 2Dt = \lambda t$ であり，$\lambda \to +0$ の極限では $G(x, t) \to \delta(x - ct)$ となって設問2(i)の解 $u(x, t) = U(x - ct)$ が回復します。
+$G(x,t)$ の初期条件は分布として $G(x,t)\to\delta(x)$ と解釈します。設問2(iv)の解も，初期関数が連続な $x\ne0$ では $t\to0+$ で $U(x)$ に収束します。$x=0$ での極限は $1/2$ なので，指定された $U(0)=0$ には点ごとには収束しません。初期時刻の値は別に $u(x,0)=U(x)$ と定め，初期条件は分布またはほとんど至る所で満たすものとします。
+
+階段関数は無限遠で0にならないため，設問2(ii)の通常の部分積分の仮定を満たしません。この場合も緩増加分布のフーリエ変換を使うと，同じ微分方程式が成り立ちます。
 </aside>

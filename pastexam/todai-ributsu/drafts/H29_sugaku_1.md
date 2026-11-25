@@ -66,20 +66,20 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-ラプラス変換は時間領域のたたみ込み積分を複素周波数領域の単純な積へ移すため，ボルテラ型積分方程式を $F(s)$ に関する1次代数方程式として解くことができます。
+ラプラス変換では，時間差を含む畳み込みを変換後の関数の積として扱うことができます。積分方程式を変換すると，未知の変換関数についての方程式を解くことができます。
 
-またブロムウィッチ積分による逆ラプラス変換では，左半平面に大きな半円弧を閉じて留数定理を用いることで，極の位数と留数から時間領域の関数 $f(t)$ を直接求めることができます。
+逆変換は，被積分関数の特異点を調べる複素積分です。指数因子の減衰する側へ経路を閉じると，留数から元の関数を求めることができます。
 </div>
 
 ### (1)
-(i) $f(t) = t$ のとき，部分積分を用います。$\operatorname{Re} s > 0$ のとき $t \to \infty$ で $t e^{-st} \to 0,\ e^{-st} \to 0$ となり積分が収束します（$\operatorname{Re} s \le 0$ では被積分関数が $t \to \infty$ で発散します）。
+(i) $f(t) = t$ のとき，部分積分を用います。$\operatorname{Re} s > 0$ のとき $t \to \infty$ で $t e^{-st} \to 0,\ e^{-st} \to 0$ となり積分が収束します。$\operatorname{Re}s\le0$ では積分は収束しません。
 
 $$
 \begin{aligned}
-F(s)
-&= \int_0^{\infty} t e^{-st}\,\mathrm{d}t \\
+F(s) &= \int_0^{\infty} t e^{-st}\,\mathrm{d}t \\
 &= \left[-\frac{t}{s}e^{-st}\right]_0^{\infty} + \frac{1}{s}\int_0^{\infty} e^{-st}\,\mathrm{d}t \\
-&= \frac{1}{s}\left[-\frac{1}{s}e^{-st}\right]_0^{\infty} = \frac{1}{s^2}
+&= \frac{1}{s}\left[-\frac{1}{s}e^{-st}\right]_0^{\infty} \\
+&= \frac{1}{s^2}
 \end{aligned}
 $$
 
@@ -89,14 +89,23 @@ $$
 \finalanswer{F(s) = \frac{1}{s^2} \qquad (\operatorname{Re} s > 0)}
 $$
 
-(ii) $f(t) = \sin\omega t = \dfrac{e^{i\omega t} - e^{-i\omega t}}{2i}$ とおきます。$\operatorname{Re} s > 0$ のとき $\operatorname{Re}(s \mp i\omega) = \operatorname{Re} s > 0$ なので積分が収束します（$\operatorname{Re} s \le 0$ では発散します）。
+(ii) 
 
 $$
 \begin{aligned}
-F(s)
-&= \frac{1}{2i}\int_0^{\infty} \left(e^{-(s - i\omega)t} - e^{-(s + i\omega)t}\right)\mathrm{d}t \\
+f(t) &= \sin\omega t \\
+&= \dfrac{e^{i\omega t} - e^{-i\omega t}}{2i}
+\end{aligned}
+$$
+
+ とおきます。$\operatorname{Re} s > 0$ のとき $\operatorname{Re}(s \mp i\omega) = \operatorname{Re} s > 0$ なので積分が収束します。$\operatorname{Re}s\le0$ では積分は収束しません。
+
+$$
+\begin{aligned}
+F(s) &= \frac{1}{2i}\int_0^{\infty} \left(e^{-(s - i\omega)t} - e^{-(s + i\omega)t}\right)\mathrm{d}t \\
 &= \frac{1}{2i}\left(\frac{1}{s - i\omega} - \frac{1}{s + i\omega}\right) \\
-&= \frac{1}{2i}\cdot\frac{2i\omega}{s^2 + \omega^2} = \frac{\omega}{s^2 + \omega^2}
+&= \frac{1}{2i}\cdot\frac{2i\omega}{s^2 + \omega^2} \\
+&= \frac{\omega}{s^2 + \omega^2}
 \end{aligned}
 $$
 
@@ -106,26 +115,26 @@ $$
 \finalanswer{F(s) = \frac{\omega}{s^2 + \omega^2} \qquad (\operatorname{Re} s > 0)}
 $$
 
-(iii) $f(t) = \sqrt{t}$ のとき，同様に収束条件は $\operatorname{Re} s > 0$ です。まず $s > 0$ の実数に対して $st = u^2$（$t = u^2/s,\ \mathrm{d}t = 2u\,\mathrm{d}u/s$）と変数変換し，ガウス積分 $\displaystyle\int_0^{\infty} e^{-u^2}\,\mathrm{d}u = \dfrac{\sqrt{\pi}}{2}$ と部分積分を用います。
+(iii) $f(t) = \sqrt{t}$ のとき，同様に収束条件は $\operatorname{Re} s > 0$ です。まず実数 $s>0$ に対して $st=u^2$ とおきます。$t=u^2/s$，$\mathrm{d}t=2u\,\mathrm{d}u/s$ なので，ガウス積分 $\displaystyle\int_0^{\infty} e^{-u^2}\,\mathrm{d}u = \dfrac{\sqrt{\pi}}{2}$ と部分積分を用います。
 
 $$
 \begin{aligned}
-F(s)
-&= \int_0^{\infty} \sqrt{t}\,e^{-st}\,\mathrm{d}t \\
+F(s) &= \int_0^{\infty} \sqrt{t}\,e^{-st}\,\mathrm{d}t \\
 &= \frac{2}{s^{3/2}}\int_0^{\infty} u^2 e^{-u^2}\,\mathrm{d}u \\
 &= \frac{2}{s^{3/2}}\left(\left[-\frac{u}{2}e^{-u^2}\right]_0^{\infty} + \frac{1}{2}\int_0^{\infty} e^{-u^2}\,\mathrm{d}u\right) \\
-&= \frac{1}{s^{3/2}}\cdot\frac{\sqrt{\pi}}{2} = \frac{\sqrt{\pi}}{2 s^{3/2}}
+&= \frac{1}{s^{3/2}}\cdot\frac{\sqrt{\pi}}{2} \\
+&= \frac{\sqrt{\pi}}{2 s^{3/2}}
 \end{aligned}
 $$
 
-解析接続により $\operatorname{Re} s > 0$ の複素数 $s$ に対しても同じ表式が成り立ちます（$s^{3/2}$ は $s > 0$ で正となる主値分枝をとります）。したがって，
+解析接続により $\operatorname{Re} s > 0$ の複素数 $s$ に対しても同じ表式が成り立ちます。$s^{3/2}$ は実数 $s>0$ で正となる主値分枝を使います。したがって，
 
 $$
 \finalanswer{F(s) = \frac{\sqrt{\pi}}{2 s^{3/2}} \qquad (\operatorname{Re} s > 0)}
 $$
 
 ### (2)
-(i) たたみ込みのラプラス変換を書き下し，領域 $0 \le t' \le t < \infty$ における二重積分の順序を交換します。
+(i) たたみ込みのラプラス変換を書き，領域 $0 \le t' \le t < \infty$ における二重積分の順序を交換します。
 
 $$
 \begin{aligned}
@@ -135,7 +144,7 @@ L[(f_1 * f_2)(t)]
 \end{aligned}
 $$
 
-内側の積分で $u = t - t'$（$\mathrm{d}t = \mathrm{d}u$，$t = t' \to u = 0$）と変数変換します。
+内側の積分で $u=t-t'$ とおきます。$\mathrm{d}t=\mathrm{d}u$ であり，$t=t'$ は $u=0$ に対応します。
 
 $$
 \begin{aligned}
@@ -148,7 +157,7 @@ $$
 
 よって式 (3) が成り立ちます。
 
-(ii) 式 (2) の右辺第2項は $\sin t$ と $f(t)$ のたたみ込みです。問1(ii)（$\omega = 1$）より $L[\sin t] = \dfrac{1}{s^2 + 1}$ なので，式 (2) の両辺をラプラス変換して式 (3) を用います。
+(ii) 式 (2) の右辺第2項は $\sin t$ と $f(t)$ のたたみ込みです。問1(ii) に $\omega=1$ を代入すると $L[\sin t] = \dfrac{1}{s^2 + 1}$ なので，式 (2) の両辺をラプラス変換して式 (3) を用います。
 
 $$
 \begin{aligned}
@@ -174,25 +183,36 @@ $$
 ### (3)
 $F(s) = \dfrac{s}{(s - 1)^2}$ の特異点は $s = 1$ の2位の極のみなので，$\gamma > 1$ と選びます。
 
-$t > 0$ のとき，直線 $s = \gamma + iy\ (-R \le y \le R)$ とその左側の半径 $R$ の半円弧 $C_R$（$s = \gamma + Re^{i\theta},\ \pi/2 \le \theta \le 3\pi/2$）からなる反時計回りの閉経路を考えます。半円弧 $C_R$ 上では $\operatorname{Re} s = \gamma + R\cos\theta \le \gamma$ かつ $|F(s)| = \mathcal{O}(R^{-1})$ なので，ジョルダンの補題より $R \to \infty$ で $C_R$ 上の積分は $0$ に収束します。
+$t > 0$ のとき，直線 $s = \gamma + iy\ (-R \le y \le R)$ とその左側の半径 $R$ の半円弧 $C_R$ からなる反時計回りの閉経路を考えます。半円弧 $C_R$ 上では $\operatorname{Re} s = \gamma + R\cos\theta \le \gamma$ かつ $|F(s)| = \mathcal{O}(R^{-1})$ なので，ジョルダンの補題より $R \to \infty$ で $C_R$ 上の積分は $0$ に収束します。
 
 よって留数定理により，$f(t)$ は $s = 1$ における $e^{st} F(s)$ の留数に等しくなります。
 
 $$
 \begin{aligned}
-f(t)
-&= \operatorname{Res}_{s = 1}\left[\frac{s e^{st}}{(s - 1)^2}\right] \\
+f(t) &= \operatorname{Res}_{s = 1}\left[\frac{s e^{st}}{(s - 1)^2}\right] \\
 &= \lim_{s \to 1}\frac{\mathrm{d}}{\mathrm{d}s}\left(s e^{st}\right) \\
-&= \lim_{s \to 1}\left(e^{st} + st e^{st}\right) = (1 + t)e^t
+&= \lim_{s \to 1}\left(e^{st} + st e^{st}\right) \\
+&= (1 + t)e^t
 \end{aligned}
 $$
 
-（$t = 0$ でも極限値として $f(0) = 1$ が一致します。また部分分数分解 $F(s) = \dfrac{1}{s - 1} + \dfrac{1}{(s - 1)^2}$ から直接逆変換しても同じ結果になります。）したがって，
+$t=0$ では右側極限から $f(0)=1$ です。したがって，
 
 $$
 \finalanswer{f(t) = (1 + t)e^t}
 $$
 
 <aside class="rigor-note" markdown>
-問2の解 $f(t) = t$ をもとの積分方程式 (2) の右辺に代入して検算すると，$\sin t + \displaystyle\int_0^t \sin(t - t') t'\,\mathrm{d}t' = \sin t + \left[t'\cos(t - t')\right]_0^t - \displaystyle\int_0^t \cos(t - t')\,\mathrm{d}t' = \sin t + t - \sin t = t$ となり，確かに成立します。
+問2の解を元の積分方程式へ代入すると，
+
+$$
+\begin{aligned}
+\sin t+\int_0^t\sin(t-t')t'\,\mathrm{d}t'
+&=\sin t+\left[t'\cos(t-t')\right]_0^t-\int_0^t\cos(t-t')\,\mathrm{d}t'\\
+&=\sin t+t-\sin t\\
+&=t
+\end{aligned}
+$$
+
+となり，等式が成り立ちます。
 </aside>
