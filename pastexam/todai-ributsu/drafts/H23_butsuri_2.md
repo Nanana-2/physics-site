@@ -17,7 +17,7 @@ exam_modified: Web掲載にあたり数式をテキスト化し，図を描き�
 
 ## 問題
 
-温度 $T$ の熱浴中にあるスピン系に，外部から $z$ 方向に磁場 $\boldsymbol{H} = (0, 0, H)$ がかけられている。このスピン系は大きさが $S$ の 3 個の量子スピン $\boldsymbol{S}_1, \boldsymbol{S}_2, \boldsymbol{S}_3$ を 3 角形の 3 つの頂点に配置したもの（図参照）で構成されている。この系のハミルトニアン $\mathcal{H}$ は，$\mu$ をスピンの磁気モーメントとして，次のように与えられるとする。
+温度 $T$ の熱浴中にあるスピン系に，外部から $z$ 方向に磁場 $\boldsymbol{H} = (0, 0, H)$ がかけられている。このスピン系は大きさが $S$ の3個の量子スピン $\boldsymbol{S}_1, \boldsymbol{S}_2, \boldsymbol{S}_3$ を3角形の3つの頂点に配置したもの（図参照）で構成されている。この系のハミルトニアン $\mathcal{H}$ は，$\mu$ をスピンの磁気モーメントとして，次のように与えられるとする。
 
 $$
 \mathcal{H} = -J\boldsymbol{S}_1 \cdot \boldsymbol{S}_2 - J'\boldsymbol{S}_2 \cdot \boldsymbol{S}_3 - J'\boldsymbol{S}_3 \cdot \boldsymbol{S}_1 - \mu\boldsymbol{H}\cdot(\boldsymbol{S}_1 + \boldsymbol{S}_2 + \boldsymbol{S}_3)
@@ -26,7 +26,7 @@ $$
 <figure class="problem-figure" markdown>
 ![三角形の3頂点に配置された3個の量子スピンと交換相互作用J, J'](../../../docs/assets/figures/pastexam-todai-ributsu/H23_butsuri_2-p-light.svg#only-light)
 ![三角形の3頂点に配置された3個の量子スピンと交換相互作用J, J'](../../../docs/assets/figures/pastexam-todai-ributsu/H23_butsuri_2-p-dark.svg#only-dark)
-<figcaption markdown="span">三角形の 3 頂点に配置された量子スピン $1, 2, 3$ と相互作用 $J, J'$。</figcaption>
+<figcaption markdown="span">三角形の3頂点に配置された量子スピン $1, 2, 3$ と相互作用 $J, J'$。</figcaption>
 </figure>
 
 まず，$J = J' = 0$ の場合について，以下の設問に答えよ。
@@ -67,13 +67,15 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-相互作用がないときは 3 個のスピンが独立なので，1 スピンの等比級数和の 3 乗で分配関数が求まり，磁場微分からブリユアン関数で表される磁化が得られます。
+相互作用がないとき，3個のスピンは独立です。そのため，全系の分配関数は1個のスピンの分配関数の3乗になります。1個のスピンの分配関数は，$S_z=-S,\dots,S$ についての等比級数の和として求めます。
 
-ハイゼンベルク型の交換相互作用が加わった場合は，合成スピンの 2 乗を用いて内積 $\boldsymbol{S}_i \cdot \boldsymbol{S}_j$ を書き換えます。ゼーマン項が全スピンの $z$ 成分に比例するため合成スピンの大きさと可換になり，低温 $k_{\mathrm{B}} T \ll |J|$ では基底状態の合成スピン多重項だけを残して磁化を求めることができます。
+交換相互作用 $\boldsymbol{S}_1\cdot\boldsymbol{S}_2$ は，合成スピン $\boldsymbol{S}_{12}=\boldsymbol{S}_1+\boldsymbol{S}_2$ を使うと $\boldsymbol{S}_{12}^2$ と定数で書くことができます。そのため，エネルギー固有値は合成スピンの大きさごとに求めることができます。$J=J'$ のときは，3個のスピンの全スピンで同じように書き直します。
+
+ゼーマン項は全スピンの $z$ 成分に比例するので，合成スピンの大きさを決めた状態の中で磁場の分配関数を作ることができます。$k_{\mathrm{B}}T\ll|J|$ では，ボルツマン因子が大きいのはエネルギーの低い合成スピンの状態だけです。$J$ の符号でどちらの状態が低いかが変わるので，符号ごとにその状態だけを残します。
 </div>
 
 ### (1)
-$J = J' = 0$ のとき，ハミルトニアンは $\mathcal{H} = -\mu H(S_{1z} + S_{2z} + S_{3z})$ であり，3 個のスピンは互いに独立です。1 個のスピンに対する分配関数 $Z_1$ を等比級数の和として計算します。$S_z$ の固有値は $m = -S, -S + 1, \dots, S$ の $2S + 1$ 個です。
+$J = J' = 0$ のとき，ハミルトニアンは $\mathcal{H} = -\mu H(S_{1z} + S_{2z} + S_{3z})$ であり，3個のスピンは互いに独立です。1個のスピンに対する分配関数 $Z_1$ を等比級数の和として計算します。$S_z$ の固有値は $m = -S, -S + 1, \dots, S$ の $2S + 1$ 個です。
 
 $$
 \begin{aligned}
@@ -91,7 +93,7 @@ $$
 $$
 
 ### (2)
-$z$ 方向の磁化 $M$ は $M = \dfrac{1}{\beta}\dfrac{\partial \ln Z}{\partial H}$ で与えられます。設問 1 の結果を代入して微分します。
+$z$ 方向の磁化 $M$ は $M = \dfrac{1}{\beta}\dfrac{\partial \ln Z}{\partial H}$ で与えられます。設問1の結果を代入して微分します。
 
 $$
 \begin{aligned}
@@ -152,12 +154,12 @@ $$
 \end{aligned}
 $$
 
-となります。合成スピンの大きさは $S_{12} = 1$ と $S_{12} = 0$ の 2 通りであり，スピン 3 は相互作用しないため縮重度 $2$ をもちます。したがって $H = 0$ のエネルギー固有値と縮重度は次の 2 つです。
+となります。合成スピンの大きさは $S_{12} = 1$ と $S_{12} = 0$ の2通りであり，スピン3は相互作用しないため縮重度 $2$ をもちます。したがって $H = 0$ のエネルギー固有値と縮重度は次の2つです。
 
 - $S_{12} = 1$ のとき：$E = -\dfrac{J}{4}$，縮重度は $3 \times 2 = 6$。
 - $S_{12} = 0$ のとき：$E = \dfrac{3J}{4}$，縮重度は $1 \times 2 = 2$。
 
-$H \neq 0$ のとき，ハミルトニアンは $\mathcal{H} = -J\boldsymbol{S}_1\cdot\boldsymbol{S}_2 - \mu H S_{12z} - \mu H S_{3z}$ と 2 つの独立な部分に分かれます。$S_{12} = 1$ では $S_{12z} = -1, 0, 1$，$S_{12} = 0$ では $S_{12z} = 0$ なので，対 $(1, 2)$ とスピン 3 の分配関数の積として全系の分配関数 $Z$ が求まります。
+$H \neq 0$ のとき，ハミルトニアンは $\mathcal{H} = -J\boldsymbol{S}_1\cdot\boldsymbol{S}_2 - \mu H S_{12z} - \mu H S_{3z}$ と2つの独立な部分に分かれます。$S_{12} = 1$ では $S_{12z} = -1, 0, 1$，$S_{12} = 0$ では $S_{12z} = 0$ なので，対 $(1, 2)$ とスピン3の分配関数の積として全系の分配関数 $Z$ が求まります。
 
 $$
 \begin{aligned}
@@ -171,22 +173,31 @@ $$
 $$
 
 ### (5)
-設問 4 の $Z$ の対数をとり，$k_{\mathrm{B}} T \ll |J|$ すなわち $\beta|J| \gg 1$ のもとで $J$ の符号ごとに計算します。
+設問4の $Z$ の対数をとり，$k_{\mathrm{B}} T \ll |J|$ すなわち $\beta|J| \gg 1$ のもとで $J$ の符号ごとに計算します。
 
-- $J > 0$ のとき：$e^{-3\beta J/4}$ は $e^{\beta J/4}$ に比べて $e^{-\beta J} \ll 1$ だけ小さいため無視することができます。分配関数は $S_{12} = 1$ の 1 スピンと $S_3 = 1/2$ の 1 スピンの積となるため，それぞれの磁化の和になります。
-  $$
-  \begin{aligned}
-  Z &\simeq 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\cdot e^{\frac{\beta J}{4}}\frac{\sinh\!\left(\dfrac{3}{2}\beta\mu H\right)}{\sinh\!\left(\dfrac{1}{2}\beta\mu H\right)} \\
-  M &\simeq \mu B_1(\beta\mu H) + \frac{1}{2}\mu B_{1/2}\!\left(\frac{1}{2}\beta\mu H\right)
-  \end{aligned}
-  $$
-- $J < 0$ のとき：$e^{\beta J/4}$ は $e^{-3\beta J/4}$ に比べて $e^{-\beta|J|} \ll 1$ だけ小さいため無視することができます。対 $(1, 2)$ は $S_{12} = 0$ の状態に固定され，スピン 3 のみが磁化に寄与します。
-  $$
-  \begin{aligned}
-  Z &\simeq 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\,e^{-\frac{3\beta J}{4}} \\
-  M &\simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{1}{2}\beta\mu H\right)
-  \end{aligned}
-  $$
+$J > 0$ のとき，$e^{-3\beta J/4}$ は $e^{\beta J/4}$ の $e^{-\beta J} \ll 1$ 倍なので，無視することができます。$1 + 2\cosh(\beta\mu H)$ を $\sinh$ の比で書き直すと，分配関数は大きさ $1$ のスピンと大きさ $1/2$ のスピンの分配関数の積になります。
+
+$$
+\begin{aligned}
+Z &\simeq 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\cdot e^{\frac{\beta J}{4}}\bigl(1 + 2\cosh(\beta\mu H)\bigr) \\
+&= 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\cdot e^{\frac{\beta J}{4}}\frac{\sinh\!\left(\dfrac{3}{2}\beta\mu H\right)}{\sinh\!\left(\dfrac{1}{2}\beta\mu H\right)}
+\end{aligned}
+$$
+
+磁化は，2つのスピンの磁化の和になります。設問2から，大きさ $S$ のスピン1個の磁化は $\mu S B_S(\beta\mu S H)$ です。$S = 1$ と $S = 1/2$ の磁化を足すと，次のようになります。
+
+$$
+M \simeq \mu B_1(\beta\mu H) + \frac{1}{2}\mu B_{1/2}\!\left(\frac{1}{2}\beta\mu H\right)
+$$
+
+$J < 0$ のとき，$e^{\beta J/4}$ は $e^{-3\beta J/4}$ の $e^{-\beta|J|} \ll 1$ 倍なので，無視することができます。対 $(1, 2)$ は $S_{12} = 0$ の状態に限られ，磁化にはスピン3だけが寄与します。
+
+$$
+\begin{aligned}
+Z &\simeq 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\,e^{-\frac{3\beta J}{4}} \\
+M &\simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{1}{2}\beta\mu H\right)
+\end{aligned}
+$$
 
 $$
 \finalanswer{M \simeq \mu B_1(\beta\mu H) + \frac{1}{2}\mu B_{1/2}\!\left(\frac{\beta\mu H}{2}\right) \quad (J > 0), \qquad M \simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{\beta\mu H}{2}\right) \quad (J < 0)}
@@ -202,12 +213,12 @@ $$
 \end{aligned}
 $$
 
-3 個の $S = 1/2$ スピンを合成すると，全状態数 $2^3 = 8$ は $S_{\mathrm{tot}} = 3/2$ が 1 組と $S_{\mathrm{tot}} = 1/2$ が 2 組に分かれます。したがって $H = 0$ のエネルギー固有値と縮重度は次の 2 つです。
+3個の $S = 1/2$ スピンを合成すると，全状態数 $2^3 = 8$ は $S_{\mathrm{tot}} = 3/2$ が1組と $S_{\mathrm{tot}} = 1/2$ が2組に分かれます。したがって $H = 0$ のエネルギー固有値と縮重度は次の2つです。
 
 - $S_{\mathrm{tot}} = 3/2$ のとき：$E = -\dfrac{J}{2}\left(\dfrac{15}{4} - \dfrac{9}{4}\right) = -\dfrac{3J}{4}$，縮重度は $4$。
 - $S_{\mathrm{tot}} = 1/2$ のとき：$E = -\dfrac{J}{2}\left(\dfrac{3}{4} - \dfrac{9}{4}\right) = \dfrac{3J}{4}$，縮重度は $2 \times 2 = 4$。
 
-$H \neq 0$ のとき，全系の分配関数は $S_{\mathrm{tot}} = 3/2$ の 1 組と $S_{\mathrm{tot}} = 1/2$ の 2 組の和になります。
+$H \neq 0$ のとき，全系の分配関数は $S_{\mathrm{tot}} = 3/2$ の1組と $S_{\mathrm{tot}} = 1/2$ の2組の和になります。
 
 $$
 Z = e^{\frac{3\beta J}{4}}\frac{\sinh(2\beta\mu H)}{\sinh\!\left(\dfrac{1}{2}\beta\mu H\right)} + 2 e^{-\frac{3\beta J}{4}}\cdot 2\cosh\!\left(\frac{1}{2}\beta\mu H\right)
@@ -215,8 +226,8 @@ $$
 
 $k_{\mathrm{B}} T \ll |J|$ すなわち $\beta|J| \gg 1$ のもとで $J$ の符号ごとに計算します。
 
-- $J > 0$ のとき：第 2 項は第 1 項に比べて $e^{-3\beta J/2} \ll 1$ だけ小さいため無視することができ，系は大きさ $3/2$ の単一スピンとして振る舞います。よって $M \simeq \dfrac{3}{2}\mu B_{3/2}\!\left(\dfrac{3}{2}\beta\mu H\right)$ です。
-- $J < 0$ のとき：第 1 項は第 2 項に比べて $e^{-3\beta |J|/2} \ll 1$ だけ小さいため無視することができます。分配関数に掛かる縮重度の因子 $2$ は $\ln Z$ の $H$ 微分で消えるため，磁化は大きさ $1/2$ の単一スピンと同じ $M \simeq \dfrac{1}{2}\mu B_{1/2}\!\left(\dfrac{1}{2}\beta\mu H\right)$ になります。
+- $J > 0$ のとき：第2項は第1項に比べて $e^{-3\beta J/2} \ll 1$ だけ小さいため無視することができ，系は大きさ $3/2$ の単一スピンとして振る舞います。よって $M \simeq \dfrac{3}{2}\mu B_{3/2}\!\left(\dfrac{3}{2}\beta\mu H\right)$ です。
+- $J < 0$ のとき：第1項は第2項に比べて $e^{-3\beta |J|/2} \ll 1$ だけ小さいため無視することができます。分配関数に掛かる縮重度の因子 $2$ は $\ln Z$ の $H$ 微分で消えるため，磁化は大きさ $1/2$ の単一スピンと同じ $M \simeq \dfrac{1}{2}\mu B_{1/2}\!\left(\dfrac{1}{2}\beta\mu H\right)$ になります。
 
 $$
 \finalanswer{M \simeq \frac{3}{2}\mu B_{3/2}\!\left(\frac{3\beta\mu H}{2}\right)\quad (J > 0), \qquad M \simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{\beta\mu H}{2}\right)\quad (J < 0)}
