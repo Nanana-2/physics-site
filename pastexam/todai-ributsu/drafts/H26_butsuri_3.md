@@ -19,12 +19,19 @@ exam_modified: Web掲載にあたり数式をテキスト化し，小問番号�
 媒質中の Maxwell 方程式は以下のように表される。
 
 $$
-\begin{aligned}
-\nabla \cdot \boldsymbol{D} &= \rho \tag{1} \\
-\nabla \cdot \boldsymbol{B} &= 0 \tag{2} \\
-\nabla \times \boldsymbol{E} &= -\frac{\partial \boldsymbol{B}}{\partial t} \tag{3} \\
-\nabla \times \boldsymbol{H} &= \boldsymbol{j} + \frac{\partial \boldsymbol{D}}{\partial t} \tag{4}
-\end{aligned}
+\nabla \cdot \boldsymbol{D} = \rho \tag{1}
+$$
+
+$$
+\nabla \cdot \boldsymbol{B} = 0 \tag{2}
+$$
+
+$$
+\nabla \times \boldsymbol{E} = -\frac{\partial \boldsymbol{B}}{\partial t} \tag{3}
+$$
+
+$$
+\nabla \times \boldsymbol{H} = \boldsymbol{j} + \frac{\partial \boldsymbol{D}}{\partial t} \tag{4}
 $$
 
 ここで $\rho$ および $\boldsymbol{j}$ は真電荷密度および真電流密度であり，原子や分子に束縛された電荷の寄与や変位電流は含まない。以下では線形応答する一様で等方的な媒質中の電磁場を考える。その場合，スカラー定数 $\epsilon$（誘電率），$\mu$（透磁率），および $\sigma$（電気伝導度）を用いて，$\boldsymbol{D} = \epsilon \boldsymbol{E}$，$\boldsymbol{H} = \boldsymbol{B} / \mu$，$\boldsymbol{j} = \sigma \boldsymbol{E}$ と書ける。誘電体中では $\epsilon = \epsilon_{\mathrm{d}}$（実数），$\sigma = 0$ とし，導体中では $\epsilon = \epsilon_{\mathrm{m}}$（実数），$\sigma = \sigma_{\mathrm{m}}$（実数）とする。透磁率はいずれの媒質中でも $\mu_0$（実数）とする。必要であれば，任意のベクトル $\boldsymbol{V}$ についての公式 $\nabla \times (\nabla \times \boldsymbol{V}) = \nabla(\nabla \cdot \boldsymbol{V}) - \nabla^2 \boldsymbol{V}$ を使ってよい。
