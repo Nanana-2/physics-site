@@ -130,9 +130,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-ハミルトニアンをエルミート演算子の2乗で表すと，エネルギーと状態のノルムを結び付けることができます。スピンを反転する演算子を使うことで，異なるスピン成分の状態を比較することができます。
+ハミルトニアンがエルミート演算子 $D$ の2乗で $H=D^2/(2m)$ と書けると，エネルギーの期待値は $D|\Psi\rangle$ のノルムの2乗になります。そのため，固有値は負にならず，$E=0$ の状態は $D|\Psi\rangle=0$ を満たす状態に限られます。
 
-エネルギーが0の条件は，2階の方程式よりも低い階数の方程式で調べることができます。ベクトルポテンシャルを微分で表すと，波動関数の遠方での減衰と多項式の次数を分けて扱うことができます。
+$D|\Psi\rangle=0$ は1階の微分方程式なので，2階のシュレーディンガー方程式より解きやすくなります。ベクトルポテンシャルをスカラー関数の微分で書くと，解は指数関数の因子と正則な関数の積になり，規格化することができる正則な関数の次数から，$E=0$ の状態の数を数えます。
 </div>
 
 ### (1)
@@ -305,7 +305,7 @@ $$
 \finalanswer{\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right)f_\uparrow(x, y) = 0,\qquad \left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)f_\downarrow(x, y) = 0}
 $$
 
-**正則性の説明**：$w = x + iy,\ \bar{w} = x - iy$ に対するウィルティンガー微分は $\dfrac{\partial}{\partial\bar{w}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$，$\dfrac{\partial}{\partial w} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right)$ です。上の方程式はそれぞれ $\dfrac{\partial f_\uparrow}{\partial\bar{w}} = 0$ および $\dfrac{\partial f_\downarrow}{\partial w} = 0$ であるため，$f_\uparrow(x, y)$ は $w$ の正則関数，$f_\downarrow(x, y)$ は $\bar{w}$ の正則関数です。 これらは実部と虚部に対するコーシー・リーマン関係式です。
+最後に，正則性を確かめます。$w = x + iy,\ \bar{w} = x - iy$ に対するウィルティンガー微分は $\dfrac{\partial}{\partial\bar{w}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$，$\dfrac{\partial}{\partial w} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right)$ です。上の方程式はそれぞれ $\dfrac{\partial f_\uparrow}{\partial\bar{w}} = 0$ および $\dfrac{\partial f_\downarrow}{\partial w} = 0$ であるため，$f_\uparrow(x, y)$ は $w$ の正則関数，$f_\downarrow(x, y)$ は $\bar{w}$ の正則関数です。 これらは実部と虚部に対するコーシー・リーマン関係式です。
 
 ### (6)
 $r \ge R$ において式 (13) より
@@ -316,7 +316,7 @@ $$
 
 となります。ここで $\Phi=\pi R^2b$ は全磁束です。
 
-**スピン上向き**：$\psi_\uparrow$ を調べます。$f_\uparrow(w)$ は $w$ の多項式なので，$f_\uparrow \not\equiv 0$ ならば最高次の次数を $k\ (\ge 0)$ として $r \to \infty$ で $|f_\uparrow(w)| \sim |c_k| r^k$ となります。したがって $|\psi_\uparrow(x, y)|^2 \propto r^{2(k + N_\Phi)}$ となり，$k + N_\Phi > 0$ より2次元積分
+まず，スピン上向きの $\psi_\uparrow$ を調べます。$f_\uparrow(w)$ は $w$ の多項式なので，$f_\uparrow \not\equiv 0$ ならば最高次の次数を $k\ (\ge 0)$ として $r \to \infty$ で $|f_\uparrow(w)| \sim |c_k| r^k$ となります。したがって $|\psi_\uparrow(x, y)|^2 \propto r^{2(k + N_\Phi)}$ となり，$k + N_\Phi > 0$ より2次元積分
 
 $$
 \int_R^{\infty} |\psi_\uparrow|^2\,r\,\mathrm{d}r \propto \int_R^{\infty} r^{2k + 2N_\Phi + 1}\,\mathrm{d}r = \infty
@@ -324,7 +324,7 @@ $$
 
 が発散します。ゆえに規格化可能なスピン上向きの $E = 0$ 束縛状態は存在しません。
 
-**スピン下向き**：$\psi_\downarrow$ を調べます。単項式基底 $f_\downarrow(\bar{w}) = \bar{w}^k\ (k = 0, 1, 2, \dots)$ を考えます。原点付近 $r < R$ では滑らかで有界なので，規格化可能性は $r \to \infty$ の積分収束条件のみで決まります。
+次に，スピン下向きの $\psi_\downarrow$ を調べます。単項式基底 $f_\downarrow(\bar{w}) = \bar{w}^k\ (k = 0, 1, 2, \dots)$ を考えます。原点付近 $r < R$ では滑らかで有界なので，規格化可能性は $r \to \infty$ の積分収束条件のみで決まります。
 
 $$
 \int_R^{\infty} |\psi_\downarrow|^2\,r\,\mathrm{d}r \propto \int_R^{\infty} r^{2k - 2N_\Phi + 1}\,\mathrm{d}r

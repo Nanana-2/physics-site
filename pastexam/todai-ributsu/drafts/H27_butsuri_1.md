@@ -53,9 +53,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-デルタ関数ポテンシャルの影響は，原点での波動関数の接続条件にまとめることができます。原点以外では自由粒子の方程式なので，周期性と接続条件から固有値を調べることができます。
+デルタ関数のポテンシャルは原点にしかないので，原点以外では自由粒子の解になります。原点では，波動関数は連続で，微分は $v\psi(0)$ だけとびます。円周を1周すると元に戻ることとこの2つの条件から，波数やエネルギーが満たす方程式が求まります。
 
-左右反転に対する対称性を使うと，原点で波動関数が消える状態を区別することができます。ポテンシャルの影響の有無を分けて考えることで，縮退がどのように変わるかを見通すことができます。
+原点について左右対称な解と反対称な解に分けると，反対称な解は原点で $0$ になるので，デルタ関数の影響を受けません。そのため，$v=0$ で縮退していた2つの状態のうち，対称な解のエネルギーだけが変わり，縮退が解けます。
 </div>
 
 ### (1)
@@ -133,7 +133,7 @@ $$
 \finalanswer{A = e^{2\pi L\kappa},\qquad -v = 2\kappa\tanh(\pi L\kappa)}
 $$
 
-**解の一意性**：関数 $y = 2\kappa\tanh(\pi L\kappa)$ は $\kappa > 0$ で連続かつ狭義単調増加であり，$\kappa \to 0+$ で $y \to 0$，$\kappa \to \infty$ で $y \to \infty$ です。したがって，任意の $v < 0$ に対する水平線 $y = -v\ (> 0)$ とちょうど1点 $\kappa = \kappa_0 > 0$ で交わり，負エネルギー状態が唯一つ定まります。
+最後に，解が1つだけであることを確かめます。関数 $y = 2\kappa\tanh(\pi L\kappa)$ は $\kappa > 0$ で連続かつ狭義単調増加であり，$\kappa \to 0+$ で $y \to 0$，$\kappa \to \infty$ で $y \to \infty$ です。したがって，任意の $v < 0$ に対する水平線 $y = -v\ (> 0)$ とちょうど1点 $\kappa = \kappa_0 > 0$ で交わり，負エネルギー状態が唯一つ定まります。
 
 <figure class="problem-figure" markdown>
 ![y=2kappa tanh(pi L kappa)とy=-vの交点](../../../docs/assets/figures/pastexam-todai-ributsu/H27_butsuri_1-s-light.svg#only-light)
@@ -144,8 +144,9 @@ $$
 ### (4)
 $x \in (0, 2\pi L)$ での一般解は $\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr) + C_2\sin\bigl(k(x - \pi L)\bigr)$ です。
 
-- **奇対称解**（$C_1 = 0$）：$\psi(x) = C_2\sin\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-)$ は $-C_2\sin(\pi L k) = C_2\sin(\pi L k)$ より $\sin(\pi L k) = 0$，すなわち $k = \dfrac{n}{L}\ (n = 1, 2, 3, \dots)$ です。このとき $\psi(0) = 0$ かつ $\psi'(0+) = \psi'(2\pi L-) = (-1)^n k C_2$ となるため接続条件も自動的に満たされ，ポテンシャル $v$ の影響を受けません。波動関数は $\psi(x) \propto \sin(nx/L)$ です。
-- **偶対称解**（$C_2 = 0$）：$\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-) = C_1\cos(\pi L k)$ は任意の $k$ で満たされます。接続条件 $\psi'(0+) - \psi'(2\pi L-) = v\psi(0)$ を書くと，$\psi'(0+) = k C_1\sin(\pi L k),\ \psi'(2\pi L-) = -k C_1\sin(\pi L k)$ より，
+まず，$C_1 = 0$ の奇対称解 $\psi(x) = C_2\sin\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-)$ は $-C_2\sin(\pi L k) = C_2\sin(\pi L k)$ より $\sin(\pi L k) = 0$，すなわち $k = \dfrac{n}{L}\ (n = 1, 2, 3, \dots)$ です。このとき $\psi(0) = 0$ かつ $\psi'(0+) = \psi'(2\pi L-) = (-1)^n k C_2$ となるため接続条件も自動的に満たされ，ポテンシャル $v$ の影響を受けません。波動関数は $\psi(x) \propto \sin(nx/L)$ です。
+
+次に，$C_2 = 0$ の偶対称解 $\psi(x) = C_1\cos\bigl(k(x - \pi L)\bigr)$。連続条件 $\psi(0+) = \psi(2\pi L-) = C_1\cos(\pi L k)$ は任意の $k$ で満たされます。接続条件 $\psi'(0+) - \psi'(2\pi L-) = v\psi(0)$ を書くと，$\psi'(0+) = k C_1\sin(\pi L k),\ \psi'(2\pi L-) = -k C_1\sin(\pi L k)$ より，
 
 $$
 2k\sin(\pi L k) = v\cos(\pi L k) \implies 2k\tan(\pi L k) = v
@@ -160,8 +161,9 @@ $$
 ### (5)
 まず，$v = 0$ のとき $k_n^{(0)} = \dfrac{n}{L}\ (n = 1, 2, \dots)$ であった2重縮退準位の補正を調べます。
 
-- **奇対称解**：問4より $k = \dfrac{n}{L}$ は変化しないため，エネルギーの補正は $0$ です。
-- **偶対称解**：$k_n = \dfrac{n}{L} + \delta k_n$ とおきます。$|\pi L\delta k_n| \ll 1$ のもとで量子化条件を $v$ の1次まで展開すると，
+奇対称解では，問4より $k = \dfrac{n}{L}$ は変化しないので，エネルギーの補正は $0$ です。
+
+偶対称解では，$k_n = \dfrac{n}{L} + \delta k_n$ とおきます。$|\pi L\delta k_n| \ll 1$ のもとで量子化条件を $v$ の1次まで展開すると，
 
 $$
 \begin{aligned}

@@ -57,13 +57,13 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-媒質ごとの波動方程式から，波の伝わり方と減衰の仕方を調べることができます。境界で電場と磁場の接線成分をつなぐと，入射振幅に対する反射振幅と導体内の振幅が求められます。
+誘電体と導体のそれぞれで，マクスウェル方程式から電場の波動方程式を作ると，波数 $k$ と振動数 $\omega$ の関係が求まります。導体では電流の項があるので $k$ は複素数になり，電場は導体の中で減衰します。
 
-良導体では電場が表面付近で減衰するため，深さに沿ってジュール熱を積分すると失われる電力を調べることができます。複素振幅の時間平均を使うことで，反射電力と抵抗損失を同じ基準で比較することができます。
+境界面では電場と磁場の接線成分が連続なので，この2つの条件から反射波と導体の中の波の振幅を求めます。導体の中で失われる電力は，ジュール熱 $\boldsymbol{j}\cdot\boldsymbol{E}$ の時間平均を深さ方向に積分して求め，入射電力から反射電力を引いたものと比べます。
 </div>
 
 ### (1)
-誘電体中（$\epsilon = \epsilon_{\mathrm{d}}$，$\sigma = 0$，$\mu = \mu_0$，真電荷 $\rho = 0$）では，(1) 式より $\nabla \cdot \boldsymbol{E} = 0$ です。(3) 式の回転をとり，(4) 式 $\nabla \times \boldsymbol{B} = \mu_0 \epsilon_{\mathrm{d}}\dfrac{\partial \boldsymbol{E}}{\partial t}$ を代入すると，次式が得られます。
+誘電体中では $\epsilon = \epsilon_{\mathrm{d}}$，$\sigma = 0$，$\mu = \mu_0$ で，真電荷は $\rho = 0$ です。そのため，(1) 式より $\nabla \cdot \boldsymbol{E} = 0$ です。(3) 式の回転をとり，(4) 式 $\nabla \times \boldsymbol{B} = \mu_0 \epsilon_{\mathrm{d}}\dfrac{\partial \boldsymbol{E}}{\partial t}$ を代入すると，次式が得られます。
 
 $$
 \begin{aligned}
@@ -155,7 +155,7 @@ $$
 
 が得られます。平方根をとると $k_{\mathrm{m}} = \pm(1 + i)\sqrt{\dfrac{\omega \mu_0 \sigma_{\mathrm{m}}}{2}}$ となります。
 
-$z > 0$ の領域で $z \to +\infty$ において電場が発散せずエネルギー保存則を満たすためには，$\operatorname{Im}(k_{\mathrm{m}}) > 0$（減衰解）を選ばなければなりません。したがって，正符号をとって
+$z > 0$ の領域で $z \to +\infty$ において電場が発散せずエネルギー保存則を満たすためには，$\operatorname{Im}(k_{\mathrm{m}}) > 0$ の減衰する解を選ばなければなりません。したがって，正符号をとって
 
 $$
 k_{\mathrm{m}} = (1 + i)\sqrt{\frac{\omega \mu_0 \sigma_{\mathrm{m}}}{2}}
@@ -264,5 +264,5 @@ $$
 <aside class="rigor-note" markdown>
 微小量 $\eta=\sqrt{\dfrac{\omega\epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ を使うと，(5)，(6) は $R+\dfrac{P_{\mathrm{loss}}}{P_{\mathrm{i}}}=1+O(\eta^2)$ を満たします。求めた近似の範囲で，入射電力と反射電力の差が抵抗損失に一致します。
 
-低周波領域における近似式 $R\simeq1-2\sqrt{\dfrac{2\omega\epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ を**ハーゲン・ルーベンスの関係式**といいます。金属の低周波反射率を表す関係です。
+低周波領域における近似式 $R\simeq1-2\sqrt{\dfrac{2\omega\epsilon_{\mathrm{d}}}{\sigma_{\mathrm{m}}}}$ を**ハーゲン・ルーベンスの関係式**といいます。
 </aside>

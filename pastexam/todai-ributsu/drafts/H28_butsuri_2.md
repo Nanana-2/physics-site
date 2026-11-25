@@ -92,9 +92,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-独立な振動子では，1個の分配関数から粒子当たりの熱力学量を求めることができます。位置の平均と分散も，平衡位置からの変位を使うと計算しやすくなります。
+バネにつながれた振動子が独立なら，分配関数は1個の振動子の分配関数の $N$ 乗です。古典系では，位置と運動量についての積分がそれぞれガウス積分になるので，比熱や位置の分散は温度によらない定数か温度に比例する量になります。
 
-結合した質点の変位を基準振動の座標へ変換すると，振動数が異なる独立な振動子として扱うことができます。各振動数のモードが比熱に寄与するため，低温では低い振動数のモードを調べます。
+質点どうしをバネで結ぶと，変位は互いに独立ではありません。そこで変位を基準振動の座標に変換し，振動数の異なる独立な振動子の集まりとして扱います。低温では振動数の低いモードだけが励起されるので，振動数が $0$ に近いモードの数え方から比熱の温度依存性を求めます。
 </div>
 
 ### (1)
@@ -187,10 +187,9 @@ $$
 \finalanswer{U_{\mathrm{Q}} = \hbar\omega\left(\frac{1}{2} + \frac{1}{e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}} - 1}\right),\qquad C_{\mathrm{Q}} = k_{\mathrm{B}}\left(\frac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2\frac{e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}}}{\left(e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}} - 1\right)^2},\qquad \langle x_1 \rangle = a,\qquad \langle x_1^2 \rangle - \langle x_1 \rangle^2 = \frac{\hbar}{2m\omega}\coth\left(\frac{\hbar\omega}{2k_{\mathrm{B}}T}\right)}
 $$
 
-**古典結果 $C = k_{\mathrm{B}}$ との比較**：
+古典論の結果 $C = k_{\mathrm{B}}$ と比べます。$k_{\mathrm{B}}T \gg \hbar\omega$ の高温では，$e^{\hbar\omega/(k_{\mathrm{B}}T)} - 1 \simeq \dfrac{\hbar\omega}{k_{\mathrm{B}}T}$ なので，$C_{\mathrm{Q}} \to k_{\mathrm{B}}$ となり，古典論の結果と一致します。
 
-- **高温極限**（$k_{\mathrm{B}}T \gg \hbar\omega$）：$e^{\hbar\omega/(k_{\mathrm{B}}T)} - 1 \simeq \dfrac{\hbar\omega}{k_{\mathrm{B}}T}$ より $C_{\mathrm{Q}} \to k_{\mathrm{B}} = C$ となり，古典論の結果に一致します。
-- **低温極限**（$k_{\mathrm{B}}T \ll \hbar\omega$）：$C_{\mathrm{Q}} \simeq k_{\mathrm{B}}\left(\dfrac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2 e^{-\hbar\omega/(k_{\mathrm{B}}T)} \to 0$ と指数関数的に $0$ へ近づき，温度によらず一定値 $k_{\mathrm{B}}$ を保つ古典論と大きく異なります。
+$k_{\mathrm{B}}T \ll \hbar\omega$ の低温では，$C_{\mathrm{Q}} \simeq k_{\mathrm{B}}\left(\dfrac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2 e^{-\hbar\omega/(k_{\mathrm{B}}T)}$ となり，$C_{\mathrm{Q}}$ は指数関数的に $0$ に近づきます。古典論の比熱は温度によらず $k_{\mathrm{B}}$ なので，低温では2つの結果は大きく異なります。
 
 ### (3)
 平衡位置からの変位を $u_j = x_j - ja\ (j = 1, 2, \dots, N)$ とおき，固定端条件を $u_0 = u_{N+1} = 0$ で表します。ハミルトニアン (5) は次のように書かれます。
