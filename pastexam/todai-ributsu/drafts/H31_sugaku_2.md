@@ -110,9 +110,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-微分方程式の一般解に境界条件を課すことで，固有値を選ぶ条件を得ることができます。境界値を与える関数のゼロ点として固有値を見ると，固有値についての和を留数で表すことができます。
+$x=0$ の条件だけを満たす解 $g_\alpha(x;\lambda)$ を作ると，固有値は $g_\alpha(\pi;\lambda)=0$ となる $\lambda$ です。そのため，固有値についての和は，$\ln g_\alpha(\pi;\lambda)$ を $\lambda$ で微分した関数の極での留数の和として，複素積分で書くことができます。
 
-積の対数は和になるため，まず対数を求めます。複素べきの切断線をまたいだ位相の変化と積分の向きを区別することで，微分したときの符号を確認します。
+固有値の積 $D$ は，対数をとると固有値の対数の和になり，ゼータ関数 $Z(s)$ の $s=0$ での微分で表されます。複素積分の経路を $\lambda^{-s}$ の切断線に沿って変形すると，$s=0$ の近くでも収束する積分になるので，$Z'(0)$ を求めることができます。
 </div>
 
 ### (1)
@@ -215,7 +215,7 @@ $$
 \finalanswer{A = \frac{1}{2\pi i}}
 $$
 
-(v) $\lambda$ が正の実軸上で $\arg\lambda = 0$ となるように単価分枝をとると，ブランチカットが $\arg\lambda = \theta\ (0 < \theta < \pi)$ にあるため，偏角の範囲は $\theta - 2\pi < \arg\lambda < \theta$ です。
+(v) $\lambda$ が正の実軸上で $\arg\lambda = 0$ となるように1価の分枝をとると，ブランチカットが $\arg\lambda = \theta\ (0 < \theta < \pi)$ にあるため，偏角の範囲は $\theta - 2\pi < \arg\lambda < \theta$ です。
 
 - 経路 $C_{\mathrm{in}}$ はブランチカットの下側です。$r = \infty \to 0$ で積分します。$\lambda = r e^{i\theta}$ より $\lambda^{-s} = r^{-s} e^{-i\theta s}$。
 - 経路 $C_{\mathrm{out}}$ はブランチカットの上側です。$r = 0 \to \infty$ で積分します。$\lambda = r e^{i(\theta - 2\pi)}$ より $\lambda^{-s} = r^{-s} e^{-i\theta s} e^{2\pi i s}$。
