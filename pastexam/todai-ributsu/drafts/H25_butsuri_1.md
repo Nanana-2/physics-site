@@ -61,9 +61,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-位置 $\hat{x}$ と運動量 $\hat{p}$ から消滅演算子 $\hat{a}$ と生成演算子 $\hat{a}^{\dagger}$ を組むと，交換関係 $[\hat{a}, \hat{a}^{\dagger}] = 1$ からハミルトニアンが個数演算子 $\hat{a}^{\dagger}\hat{a}$ の1次式になります。このため，エネルギー固有値，固有状態，および $\hat{x}^2$ や $\hat{p}^2$ の期待値を微分方程式を解かずに代数計算だけで求めることができます。
+位置 $\hat{x}$ と運動量 $\hat{p}$ から消滅演算子 $\hat{a}$ と生成演算子 $\hat{a}^{\dagger}$ を作ると，ハミルトニアンは個数演算子 $\hat{a}^{\dagger}\hat{a}$ の1次式になります。そのため，エネルギー固有値や $\hat{x}^2$，$\hat{p}^2$ の期待値は，微分方程式を解かずに交換関係だけで計算することができます。
 
-エネルギー固有値が等間隔なので，消滅演算子の固有状態 $|\alpha\rangle$ に時間発展演算子を作用させても，全体の位相因子を除いてパラメータ $\alpha$ が $\alpha e^{-i\omega t}$ と回転するだけで再び固有状態の形を保ちます。
+エネルギー固有値は等間隔に並んでいます。そのため，$\hat{a}$ の固有状態 $|\alpha\rangle$ を時間発展させると，各成分の位相がそろって回り，状態は全体の位相を除いて $\hat{a}$ の固有状態のままになります。
 </div>
 
 ### (1)
@@ -113,7 +113,7 @@ $$
 
 基底状態 $|\phi_0\rangle$ は $\hat{a}|\phi_0\rangle = 0$ を満たすので，$\mathcal{H}|\phi_0\rangle = \dfrac{1}{2}\hbar\omega|\phi_0\rangle$ より $E_0 = \dfrac{1}{2}\hbar\omega$ です。
 
-次に $|\phi_n\rangle$ が $\hat{a}^{\dagger}\hat{a}|\phi_n\rangle = n|\phi_n\rangle$ を満たす規格化状態であるとします。$\hat{a}^{\dagger}|\phi_n\rangle$ のノルムの 2 乗を計算します。
+次に $|\phi_n\rangle$ が $\hat{a}^{\dagger}\hat{a}|\phi_n\rangle = n|\phi_n\rangle$ を満たす規格化状態であるとします。$\hat{a}^{\dagger}|\phi_n\rangle$ のノルムの2乗を計算します。
 
 $$
 \begin{aligned}
@@ -204,7 +204,7 @@ $$
 
 ここで $m = n - 1$ とおきました。したがって，$|\alpha\rangle$ は固有値 $\alpha$ に属する $\hat{a}$ の固有状態です。
 
-また，$|\alpha\rangle$ のノルムの 2 乗は次のように $1$ になります。
+また，$|\alpha\rangle$ のノルムの2乗は次のように $1$ になります。
 
 $$
 \begin{aligned}
@@ -239,7 +239,7 @@ $$
 $$
 
 ### (5)
-初期状態 $|\psi(0)\rangle = |\alpha = r_0\rangle$ の展開係数は $c_n(0) = e^{-r_0^2/2}\dfrac{r_0^n}{\sqrt{n!}}$ です。設問 2 の結果を用いると，時刻 $t$ における状態 $|\psi(t)\rangle$ は次のようになります。
+初期状態 $|\psi(0)\rangle = |\alpha = r_0\rangle$ の展開係数は $c_n(0) = e^{-r_0^2/2}\dfrac{r_0^n}{\sqrt{n!}}$ です。設問2の結果を用いると，時刻 $t$ における状態 $|\psi(t)\rangle$ は次のようになります。
 
 $$
 \begin{aligned}
@@ -249,7 +249,7 @@ $$
 \end{aligned}
 $$
 
-状態 $|\psi(t)\rangle$ は全体の位相因子 $e^{-i\omega t/2}$ を除いて，$r = r_0$，$\theta = -\omega t$ とした固有状態 $|\alpha\rangle$ に一致します。設問 4 の結果を用いて $\hat{X}$ と $\hat{P}$ の期待値を求めます。
+状態 $|\psi(t)\rangle$ は全体の位相因子 $e^{-i\omega t/2}$ を除いて，$r = r_0$，$\theta = -\omega t$ とした固有状態 $|\alpha\rangle$ に一致します。設問4の結果を用いて $\hat{X}$ と $\hat{P}$ の期待値を求めます。
 
 $$
 \begin{aligned}

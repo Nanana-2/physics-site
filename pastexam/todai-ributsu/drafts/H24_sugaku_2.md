@@ -77,9 +77,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-空間微分の係数行列を対角化する基底へ移ると，連立偏微分方程式は互いに独立な 2 本の 1 変数型の方程式に分離します。
+連立の偏微分方程式は，空間微分の係数行列を対角化する基底に変えると，互いに独立な2つの方程式に分かれます。
 
-設問 1 では 1 階の移流方程式 2 本に分かれるため特性曲線に沿って初期波形を平行移動するだけで解くことができ，設問 2 では 1 次元拡散方程式 2 本に分かれるためガウス型の初期条件に対してフーリエ変換で陽に解を求めることができます。
+問1では，分かれた方程式は1階の移流方程式なので，それぞれの成分は初期の形を保ったまま一定の速さで動きます。問2では，分かれた方程式は拡散方程式なので，フーリエ変換して解きます。
 </div>
 
 ### (1)(i)
@@ -117,7 +117,7 @@ P^{-1}\frac{\partial\boldsymbol{u}}{\partial t} + P^{-1} A P \frac{\partial\bold
 \end{aligned}
 $$
 
-成分ごとに書くと次の 2 式になります。
+成分ごとに書くと次の2式になります。
 
 $$
 \finalanswer{\frac{\partial s_1}{\partial t} + 2\frac{\partial s_1}{\partial x} = 0, \qquad \frac{\partial s_2}{\partial t} - 2\frac{\partial s_2}{\partial x} = 0}
@@ -154,7 +154,7 @@ $$
 \end{aligned}
 $$
 
-$t = 1$ のとき，$u_1(x, 1)$ は $x = \pm 2$ に高さ $1/2$ の 2 つの正のガウス型の山をもち，$u_2(x, 1)$ は $x = 2$ に高さ $1/4$ の正の山，$x = -2$ に深さ $-1/4$ の負の谷をもちます。概形は次の図のとおりです。
+$t = 1$ のとき，$u_1(x, 1)$ は $x = \pm 2$ に高さ $1/2$ の2つの正のガウス型の山をもち，$u_2(x, 1)$ は $x = 2$ に高さ $1/4$ の正の山，$x = -2$ に深さ $-1/4$ の負の谷をもちます。概形は次の図のとおりです。
 
 <figure class="problem-figure" markdown>
 ![t=1におけるu_1(x,1)とu_2(x,1)の概形](../../../docs/assets/figures/pastexam-todai-ributsu/H24_sugaku_2-s-light.svg#only-light)
@@ -185,7 +185,7 @@ $$
 
 固有値は $\mu_1 = 1$，$\mu_2 = 2$ です。対応する固有ベクトルはそれぞれ $\boldsymbol{v}_1 = \begin{pmatrix} 3 \\ 1 \end{pmatrix}$，$\boldsymbol{v}_2 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$ です。これらを並べた行列 $Q = \begin{pmatrix} 3 & 2 \\ 1 & 1 \end{pmatrix}$ の逆行列は $Q^{-1} = \begin{pmatrix} 1 & -2 \\ -1 & 3 \end{pmatrix}$ です。
 
-$\boldsymbol{g} = {}^t(g_1, g_2) = Q^{-1}\boldsymbol{f}$ と変換すると，方程式は独立な 2 本の拡散方程式に分かれます。
+$\boldsymbol{g} = {}^t(g_1, g_2) = Q^{-1}\boldsymbol{f}$ と変換すると，方程式は独立な2本の拡散方程式に分かれます。
 
 $$
 \frac{\partial g_1}{\partial t} = \frac{\partial^2 g_1}{\partial x^2}, \qquad \frac{\partial g_2}{\partial t} = 2\frac{\partial^2 g_2}{\partial x^2}

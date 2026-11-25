@@ -68,9 +68,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-単位ベクトル $\boldsymbol{n}$ に対して $S(\boldsymbol{n})^2 = I$ が成り立つため，行列の指数関数 $e^{-i\theta S(\boldsymbol{n})}$ のべき級数は偶数次と奇数次に分かれて $\cos\theta\,I - i\sin\theta\,S(\boldsymbol{n})$ と有限の和にまとまります。これを用いると $X(\boldsymbol{n}, \theta) S(\boldsymbol{v}) X(\boldsymbol{n}, -\theta)$ が 3 次元空間の回転を表すことが積の公式だけから計算することができます。
+単位ベクトル $\boldsymbol{n}$ に対して $S(\boldsymbol{n})^2 = I$ が成り立つので，$e^{-i\theta S(\boldsymbol{n})}$ のべき級数は，偶数次の項が $\cos\theta\,I$ に，奇数次の項が $-i\sin\theta\,S(\boldsymbol{n})$ にまとまります。この形を使うと，$X(\boldsymbol{n}, \theta) S(\boldsymbol{v}) X(\boldsymbol{n}, -\theta)$ は行列の積を計算するだけで求まります。
 
-後半の真偽判定では，エルミート共役の性質 $(AB)^{\dagger} = B^{\dagger} A^{\dagger}$ や 2 次正方行列のケーリー・ハミルトンの定理を用いると証明と反例の構成が短くまとまります。
+後半の真偽を判定する問題では，正しい命題はエルミート共役の性質 $(AB)^{\dagger} = B^{\dagger} A^{\dagger}$ やケイリー・ハミルトンの定理から示します。正しくない命題は，2行2列の簡単な行列で反例を作ります。
 </div>
 
 ### (1)(i)
@@ -92,7 +92,7 @@ $$
 \end{aligned}
 $$
 
-クロネッカーのデルタ $\delta_{jk}$ とレビ・チビタ記号 $\epsilon_{jk\ell}$ を用いると，次のように 1 つの式にまとめられます。
+クロネッカーのデルタ $\delta_{jk}$ とレビ・チビタ記号 $\epsilon_{jk\ell}$ を用いると，次のように1つの式にまとめられます。
 
 $$
 \finalanswer{\sigma_j \sigma_k = \delta_{jk} I + i\sum_{\ell=1}^3 \epsilon_{jk\ell}\sigma_\ell \qquad (j, k = 1, 2, 3)}
@@ -142,7 +142,7 @@ X(\boldsymbol{n}, \theta) S(\boldsymbol{v}) X(\boldsymbol{n}, -\theta) &= \bigl(
 \end{aligned}
 $$
 
-右辺第 2 項の交換子と第 3 項を，設問 (1)(ii) の公式 $S(\boldsymbol{a}) S(\boldsymbol{b}) = (\boldsymbol{a}\cdot\boldsymbol{b})I + i S(\boldsymbol{a}\times\boldsymbol{b})$ を用いて計算します。
+右辺第2項の交換子と第3項を，設問 (1)(ii) の公式 $S(\boldsymbol{a}) S(\boldsymbol{b}) = (\boldsymbol{a}\cdot\boldsymbol{b})I + i S(\boldsymbol{a}\times\boldsymbol{b})$ を用いて計算します。
 
 $$
 \begin{aligned}
@@ -182,7 +182,7 @@ $$
 \boldsymbol{v}' = \cos(2\theta)\,\boldsymbol{v} + \sin(2\theta)\,(\boldsymbol{n}\times\boldsymbol{v})
 $$
 
-$\boldsymbol{v}$ と $\boldsymbol{n}\times\boldsymbol{v}$ は互いに直交し，同じ大きさ $|\boldsymbol{v}|$ をもちます。したがって $\boldsymbol{v}'$ は，$\boldsymbol{n}$ に垂直な平面内で長さを $|\boldsymbol{v}|$ に保ったまま，$\boldsymbol{n}$ を回転軸として右ねじの向きに角 $2\theta$ だけ回転したベクトルです。$\theta$ が $0$ から $2\pi$ まで変化すると回転角 $2\theta$ は $0$ から $4\pi$ まで変化するため，$\boldsymbol{v}'$ は $\boldsymbol{n}$ の周りを右ねじの向きにちょうど 2 周します。
+$\boldsymbol{v}$ と $\boldsymbol{n}\times\boldsymbol{v}$ は互いに直交し，同じ大きさ $|\boldsymbol{v}|$ をもちます。したがって $\boldsymbol{v}'$ は，$\boldsymbol{n}$ に垂直な平面内で長さを $|\boldsymbol{v}|$ に保ったまま，$\boldsymbol{n}$ を回転軸として右ねじの向きに角 $2\theta$ だけ回転したベクトルです。$\theta$ が $0$ から $2\pi$ まで変化すると回転角 $2\theta$ は $0$ から $4\pi$ まで変化するため，$\boldsymbol{v}'$ は $\boldsymbol{n}$ の周りを右ねじの向きにちょうど2周します。
 
 ### (2)(a)
 **真**です。$A, B \in U$ より $A^{\dagger} A = A A^{\dagger} = I$，$B^{\dagger} B = B B^{\dagger} = I$ が成り立ちます。積 $AB$ について $(AB)^{\dagger} = B^{\dagger} A^{\dagger}$ を用いて計算します。
@@ -232,9 +232,9 @@ $$
 となります。
 
 ### (2)(f)
-**真**です。$X$ の 2 つの固有値を $\lambda_1, \lambda_2$ とします。固有値 $\lambda_j$ に対する固有ベクトル $\boldsymbol{v} \neq \boldsymbol{0}$ に $X^3 = O$ を作用させると $\lambda_j^3 \boldsymbol{v} = \boldsymbol{0}$ より $\lambda_j^3 = 0$，すなわち $\lambda_1 = \lambda_2 = 0$ です。
+**真**です。$X$ の2つの固有値を $\lambda_1, \lambda_2$ とします。固有値 $\lambda_j$ に対する固有ベクトル $\boldsymbol{v} \neq \boldsymbol{0}$ に $X^3 = O$ を作用させると $\lambda_j^3 \boldsymbol{v} = \boldsymbol{0}$ より $\lambda_j^3 = 0$，すなわち $\lambda_1 = \lambda_2 = 0$ です。
 
-よって $\operatorname{tr} X = \lambda_1 + \lambda_2 = 0$ かつ $\det X = \lambda_1 \lambda_2 = 0$ です。2 次正方行列 $X$ に対するケーリー・ハミルトンの定理より，
+よって $\operatorname{tr} X = \lambda_1 + \lambda_2 = 0$ かつ $\det X = \lambda_1 \lambda_2 = 0$ です。2次正方行列 $X$ に対するケーリー・ハミルトンの定理より，
 
 $$
 \begin{aligned}
