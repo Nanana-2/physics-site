@@ -83,16 +83,7 @@ $$
 </div>
 
 ### (1)
-(i) $y(x, t) = f(t)g(x)$ を式 (1) に代入します。初期条件 
-
-$$
-\begin{aligned}
-y(x, 0) &= f(0)g(x) \\
-&= \cos kx
-\end{aligned}
-$$
-
- より $g(x) = \cos kx,\ f(0) = 1$ と選ぶことができます。すると $g''(x) = -k^2 g(x)$ なので，式 (1) は
+(i) $y(x, t) = f(t)g(x)$ を式 (1) に代入します。初期条件 $y(x, 0) = f(0)g(x) = \cos kx$ より $g(x) = \cos kx,\ f(0) = 1$ と選ぶことができます。すると $g''(x) = -k^2 g(x)$ なので，式 (1) は
 
 $$
 \bigl[f''(t) + (k^2 + \lambda^2) f(t)\bigr]\cos kx = 0

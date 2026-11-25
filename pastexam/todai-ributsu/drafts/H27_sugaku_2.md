@@ -155,14 +155,16 @@ $$
 
 です。被積分関数の極は $\omega = i\lambda k^2$ であり，$k \neq 0$ かつ $\lambda > 0$ より複素 $\omega$ 平面の**上半平面**（$\operatorname{Im}\omega > 0$）にあります。 $k=0$ は $k\to0$ の極限で扱い，実軸上の極には $\omega-i0^+$ の処方を用います。
 
-- **$t < t'$ のとき**：$t - t' < 0$ より，下半平面の大きな半円弧（$\operatorname{Im}\omega < 0$）上で $\left|e^{i\omega(t - t')}\right| = e^{-\operatorname{Im}\omega(t - t')} \to 0$ となるため，下半平面に閉経路をとります。閉経路内に極は存在しないのでコーシーの積分定理より $I_\omega = 0$ です。
-- **$t > t'$ のとき**：$t - t' > 0$ より，上半平面の大きな半円弧（$\operatorname{Im}\omega > 0$）上で $\left|e^{i\omega(t - t')}\right| \to 0$ となるため，上半平面に反時計回りの閉経路をとります。極 $\omega = i\lambda k^2$ が内部に含まれるので留数定理より，
-  $$
+$t < t'$ のときを考えます。下半平面の大きな半円弧の上では，$\left|e^{i\omega(t - t')}\right| = e^{-\operatorname{Im}\omega(t - t')} \to 0$ となります。そのため，閉経路は下半平面にとります。閉経路の中に極はないので，コーシーの積分定理より $I_\omega = 0$ です。
+
+$t > t'$ のときは，上半平面の大きな半円弧の上で $\left|e^{i\omega(t - t')}\right| \to 0$ となります。そのため，閉経路は上半平面に反時計回りにとります。極 $\omega = i\lambda k^2$ が閉経路の中にあるので，留数定理を用います。
+
+$$
 \begin{aligned}
 I_\omega(t - t', k) &= (-i)\cdot\frac{2\pi i}{2\pi}\,e^{i(i\lambda k^2)(t - t')} \\
 &= e^{-\lambda k^2(t - t')}
 \end{aligned}
-  $$
+$$
 
 したがって，$\omega$ についての積分結果は
 

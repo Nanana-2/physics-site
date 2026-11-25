@@ -123,7 +123,7 @@ $$
 0 < \frac{1}{4}\int_{x^2}^{\infty} \eta^{-\frac{3}{2}} e^{-\eta}\,\mathrm{d}\eta \le \frac{1}{4x^3}\int_{x^2}^{\infty} e^{-\eta}\,\mathrm{d}\eta = \frac{e^{-x^2}}{4x^3}
 $$
 
-と評価され，$x \to \infty$ で第1項 $\dfrac{e^{-x^2}}{2x}$ に対して$O(x^{-3}e^{-x^2})$ の微小項となります。これを元の式に代入すると，
+と評価され，$x \to \infty$ で第1項 $\dfrac{e^{-x^2}}{2x}$ に対して $O(x^{-3}e^{-x^2})$ の微小項となります。これを元の式に代入すると，
 
 $$
 \operatorname{erf}(x) = 1 - \frac{1}{\sqrt{\pi}\,x} e^{-x^2} + O\left(\frac{e^{-x^2}}{x^3}\right)
@@ -134,16 +134,7 @@ $$
 ### (2)
 (i) $\lambda = 0$ のとき，偏微分方程式は1階の移流方程式 $\dfrac{\partial u}{\partial t} + c\dfrac{\partial u}{\partial x} = 0$ となります。
 
-特性変数 $\xi = x - ct,\ \tau = t$ へ変数変換すると，$\dfrac{\partial}{\partial t} = \dfrac{\partial}{\partial\tau} - c\dfrac{\partial}{\partial\xi}$，$\dfrac{\partial}{\partial x} = \dfrac{\partial}{\partial\xi}$ より方程式は $\dfrac{\partial u}{\partial\tau} = 0$ となります。よって $u$ は $\xi = x - ct$ のみの関数 $u(x, t) = f(x - ct)$ であり，初期条件 
-
-$$
-\begin{aligned}
-u(x, 0) &= f(x) \\
-&= U(x)
-\end{aligned}
-$$
-
- より $f = U$ と決まります。したがって，
+特性変数 $\xi = x - ct,\ \tau = t$ へ変数変換すると，$\dfrac{\partial}{\partial t} = \dfrac{\partial}{\partial\tau} - c\dfrac{\partial}{\partial\xi}$，$\dfrac{\partial}{\partial x} = \dfrac{\partial}{\partial\xi}$ より方程式は $\dfrac{\partial u}{\partial\tau} = 0$ となります。よって $u$ は $\xi = x - ct$ のみの関数 $u(x, t) = f(x - ct)$ であり，初期条件 $u(x, 0) = f(x) = U(x)$ より $f = U$ と決まります。したがって，
 
 $$
 \finalanswer{u(x, t) = U(x - ct)}

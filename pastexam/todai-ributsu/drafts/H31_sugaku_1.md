@@ -108,7 +108,7 @@ $$
 
 となります。よって $U$ はユニタリー行列です。
 
-(iii) エルミート行列 $A$ は$V^\dagger V=I$ を満たすユニタリー行列 $V$ と実対角行列 $D = \operatorname{diag}(d_1, d_2, \dots, d_n)$ を用いて $A = V^\dagger D V$ と対角化されます。任意の非負整数 $k$ に対して $A^k = V^\dagger D^k V$ なので，
+(iii) エルミート行列 $A$ は $V^\dagger V=I$ を満たすユニタリー行列 $V$ と実対角行列 $D = \operatorname{diag}(d_1, d_2, \dots, d_n)$ を用いて $A = V^\dagger D V$ と対角化されます。任意の非負整数 $k$ に対して $A^k = V^\dagger D^k V$ なので，
 
 $$
 \begin{aligned}
@@ -118,17 +118,7 @@ U &= e^{iA} \\
 \end{aligned}
 $$
 
-となります。ここで $e^{iD} = \operatorname{diag}(e^{id_1}, e^{id_2}, \dots, e^{id_n})$ です。行列式の積の公式と 
-
-$$
-\begin{aligned}
-\det(V^\dagger)\det(V) &= \det(V^\dagger V) \\
-&= \det I \\
-&= 1
-\end{aligned}
-$$
-
- を用いると，
+となります。ここで $e^{iD} = \operatorname{diag}(e^{id_1}, e^{id_2}, \dots, e^{id_n})$ です。行列式の積の公式と $\det(V^\dagger)\det(V) = \det(V^\dagger V) = \det I = 1$ を用いると，
 
 $$
 \begin{aligned}
@@ -139,7 +129,7 @@ $$
 \end{aligned}
 $$
 
-さらに 
+さらに
 
 $$
 \begin{aligned}
@@ -150,16 +140,7 @@ $$
 \end{aligned}
 $$
 
- なので，
-
-$$
-\begin{aligned}
-\det U &= e^0 \\
-&= 1
-\end{aligned}
-$$
-
- が成り立ちます。
+なので，$\det U = e^0 = 1$ が成り立ちます。
 
 ### (2)
 与えられた $T = \displaystyle\sum_{a=1}^{8} \alpha_a T_a$ の各成分から $\alpha_1,\ \alpha_2,\ \alpha_7$ の係数を取り出します。したがって，
@@ -207,34 +188,7 @@ $$
 $$
 
 ### (4)
-(i) 
-
-$$
-\begin{aligned}
-U &= e^{i\theta T} \\
-&= I + i\theta T + \mathcal{O}(\theta^2)
-\end{aligned}
-$$
-
-，および 
-
-$$
-\begin{aligned}
-U^\dagger &= e^{-i\theta T} \\
-&= I - i\theta T + \mathcal{O}(\theta^2)
-\end{aligned}
-$$
-
- を 
-
-$$
-\begin{aligned}
-G_a' &= \mathbf{x}'^\dagger T_a \mathbf{y}' \\
-&= \mathbf{x}^\dagger U^\dagger T_a U \mathbf{y}
-\end{aligned}
-$$
-
- に代入し，$\theta$ の1次まで展開します。
+(i) $U = e^{i\theta T} = I + i\theta T + \mathcal{O}(\theta^2)$，および $U^\dagger = e^{-i\theta T} = I - i\theta T + \mathcal{O}(\theta^2)$ を $G_a' = \mathbf{x}'^\dagger T_a \mathbf{y}' = \mathbf{x}^\dagger U^\dagger T_a U \mathbf{y}$ に代入し，$\theta$ の1次まで展開します。
 
 $$
 \begin{aligned}

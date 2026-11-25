@@ -199,16 +199,7 @@ $$
 \finalanswer{\frac{\langle N(T_1)\rangle}{\langle N(T_2)\rangle} = \left(\frac{T_1}{T_2}\right)^{\frac{3}{2}}\exp\left[\frac{\mu}{k_{\mathrm{B}}}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)\right]}
 $$
 
-(ii) グランドポテンシャル 
-
-$$
-\begin{aligned}
-J &= -PV \\
-&= -k_{\mathrm{B}}T\ln\Xi
-\end{aligned}
-$$
-
- より，
+(ii) グランドポテンシャル $J = -PV = -k_{\mathrm{B}}T\ln\Xi$ より，
 
 $$
 \begin{aligned}
@@ -238,16 +229,7 @@ $$
 \end{aligned}
 $$
 
-基底状態では，すべての粒子が $(1,1,1)$ の準位を占有します。第一励起状態では，1粒子が $(1,1,2)$ の準位を占有します。粒子を区別しないので，両状態とも縮退はありません。エネルギー差を 
-
-$$
-\begin{aligned}
-\Delta\epsilon &= \epsilon_1-\epsilon_0 \\
-&= \dfrac{3\pi^2\hbar^2}{8mL^2}
-\end{aligned}
-$$
-
- とおくと，
+基底状態では，すべての粒子が $(1,1,1)$ の準位を占有します。第一励起状態では，1粒子が $(1,1,2)$ の準位を占有します。粒子を区別しないので，両状態とも縮退はありません。エネルギー差を $\Delta\epsilon = \epsilon_1-\epsilon_0 = \dfrac{3\pi^2\hbar^2}{8mL^2}$ とおくと，
 
 $$
 \begin{aligned}
@@ -264,16 +246,7 @@ $$
 \finalanswer{E_0 = \frac{9N\pi^2\hbar^2}{8mL^2},\qquad E_1 = \frac{(9N + 3)\pi^2\hbar^2}{8mL^2}}
 $$
 
-(ii) 
-
-$$
-\begin{aligned}
-k_{\mathrm{B}}T \ll \Delta\epsilon &= E_1 - E_0 \\
-&= \dfrac{3\pi^2\hbar^2}{8mL^2}
-\end{aligned}
-$$
-
- のとき，第二励起状態以上のボルツマン因子は無視するほど小さいため，基底状態と第一励起状態のみを残して分配関数を近似することができます。
+(ii) $k_{\mathrm{B}}T \ll \Delta\epsilon = E_1 - E_0 = \dfrac{3\pi^2\hbar^2}{8mL^2}$ のとき，第二励起状態以上のボルツマン因子は無視するほど小さいため，基底状態と第一励起状態のみを残して分配関数を近似することができます。
 
 $$
 \begin{aligned}

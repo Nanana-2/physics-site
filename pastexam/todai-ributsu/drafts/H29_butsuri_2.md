@@ -204,16 +204,7 @@ $$
 \langle\sigma_{\mathrm{B}}\rangle = \tanh\left(-\frac{4J\langle\sigma_{\mathrm{A}}\rangle + 4J'\langle\sigma_{\mathrm{B}}\rangle}{k_{\mathrm{B}}T}\right)
 $$
 
-ここに反強磁性秩序解 
-
-$$
-\begin{aligned}
-\langle\sigma_{\mathrm{A}}\rangle &= -\langle\sigma_{\mathrm{B}}\rangle \\
-&= m\ (\neq 0)
-\end{aligned}
-$$
-
- を代入します。
+ここに反強磁性秩序解 $\langle\sigma_{\mathrm{A}}\rangle = -\langle\sigma_{\mathrm{B}}\rangle = m\ (\neq 0)$ を代入します。
 
 $$
 m = \tanh\left(\frac{4(J - J')m}{k_{\mathrm{B}}T}\right)

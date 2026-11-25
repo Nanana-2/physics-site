@@ -208,21 +208,25 @@ $\lambda = 0$ のとき，各 $k$ に対する 2 つの固有値は $\mu_{k, \pm
 
 $0<\lambda\ll t$ のときの変化量 $\Delta\mu_{k,\pm}\equiv\mu_{k,\pm}(\lambda)-\mu_{k,\pm}(0)$ を調べます。同じ波数 $k$ の2準位が一致するかどうか，すなわち $\cos\theta_k=0$ かどうかで，変化の最低次数が異なります。
 
-- **$\cos\theta_k\neq0$ のとき**：$\lambda \ll t|\cos\theta_k|$ のもとで平方根をテイラー展開します。
-  $$
-  \begin{aligned}
-  \mu_{k, \pm}(\lambda)
-  &= 3t\cos\theta_k \pm t|\cos\theta_k|\sqrt{1 + \frac{\lambda^2}{t^2\cos^2\theta_k}} \\
-  &\simeq 3t\cos\theta_k \pm t|\cos\theta_k| \pm \frac{\lambda^2}{2t|\cos\theta_k|}
-  \end{aligned}
-  $$
-  よって変化量 $\Delta\mu_{k, \pm} \simeq \pm \dfrac{\lambda^2}{2t|\cos\theta_k|}$ は $\lambda$ の **2 乗**に比例します。
+まず，$\cos\theta_k\neq0$ の場合を考えます。$\lambda \ll t|\cos\theta_k|$ のもとで，平方根をテイラー展開します。
 
-- **$\cos\theta_k = 0$ のとき（縮退）**：$n$ が 4 の倍数のときに限り，$k = \dfrac{n}{4}, \dfrac{3n}{4}$（$\theta_k = \dfrac{\pi}{2}, \dfrac{3\pi}{2}$）で $\cos\theta_k = 0$ となり，$\lambda = 0$ の固有値はともに $0$ に縮退しています。このとき
-  $$
-  \mu_{k, \pm}(\lambda) = \pm \lambda
-  $$
-  となるため，変化量 $\Delta\mu_{k, \pm} = \pm \lambda$ は $\lambda$ の **1 乗**に比例します。
+$$
+\begin{aligned}
+\mu_{k, \pm}(\lambda)
+&= 3t\cos\theta_k \pm t|\cos\theta_k|\sqrt{1 + \frac{\lambda^2}{t^2\cos^2\theta_k}} \\
+&\simeq 3t\cos\theta_k \pm t|\cos\theta_k| \pm \frac{\lambda^2}{2t|\cos\theta_k|}
+\end{aligned}
+$$
+
+よって，変化量 $\Delta\mu_{k, \pm} \simeq \pm \dfrac{\lambda^2}{2t|\cos\theta_k|}$ は $\lambda^2$ に比例します。
+
+次に，$\cos\theta_k = 0$ の場合を考えます。これは $n$ が4の倍数のときだけ起こり，$k = \dfrac{n}{4}$ と $k = \dfrac{3n}{4}$ が当てはまります。このとき $\lambda = 0$ の2つの固有値は，ともに $0$ に縮退しています。$\lambda>0$ では
+
+$$
+\mu_{k, \pm}(\lambda) = \pm \lambda
+$$
+
+となるため，変化量 $\Delta\mu_{k, \pm} = \pm \lambda$ は $\lambda$ に比例します。
 
 $$
 \finalanswer{\Delta\mu_{k, \pm} \propto \lambda^2 \quad \left(\cos\frac{2\pi k}{n} \neq 0\right), \qquad \Delta\mu_{k, \pm} \propto \lambda \quad \left(4 \mid n,\; \cos\frac{2\pi k}{n} = 0\right)}

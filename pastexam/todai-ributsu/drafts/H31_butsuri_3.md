@@ -227,16 +227,7 @@ $$
 P_{\mathrm{c}} = P_0\left(\frac{3}{8A}\frac{P_0}{\tau_{\mathrm{GW}}}\right)^{3/5}
 $$
 
-与えられた数値 $P_0 \approx 0.06\ \mathrm{sec},\ \tau_{\mathrm{GW}} \approx 0.15\ \mathrm{sec},\ A \approx 2500$ を代入します。
-
-$$
-\begin{aligned}
-\dfrac{P_0}{\tau_{\mathrm{GW}}} &= \dfrac{0.06}{0.15} \\
-&= \dfrac{2}{5}
-\end{aligned}
-$$
-
- より，
+与えられた数値 $P_0 \approx 0.06\ \mathrm{sec},\ \tau_{\mathrm{GW}} \approx 0.15\ \mathrm{sec},\ A \approx 2500$ を代入します。 $\dfrac{P_0}{\tau_{\mathrm{GW}}} = \dfrac{0.06}{0.15} = \dfrac{2}{5}$ より，
 
 $$
 \begin{aligned}
@@ -250,16 +241,7 @@ P_{\mathrm{c}} &\approx \left(6\times 10^{-2}\ \mathrm{sec}\right)\left(6\times 
 \end{aligned}
 $$
 
-一方，等質量 
-
-$$
-\begin{aligned}
-m_1 &= m_2 \\
-&= m
-\end{aligned}
-$$
-
- のとき $M = 2m,\ \mu = \dfrac{m}{2}$ なので，問6の $P_{\mathrm{c}}$ は次のようになります。
+一方，等質量 $m_1 = m_2 = m$ のとき $M = 2m,\ \mu = \dfrac{m}{2}$ なので，問6の $P_{\mathrm{c}}$ は次のようになります。
 
 $$
 \begin{aligned}

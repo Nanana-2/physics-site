@@ -120,7 +120,7 @@ E_0 &= \frac{1}{2}\hbar\omega_x + \frac{1}{2}\hbar\omega_y \\
 \end{aligned}
 $$
 
-座標変換 $(x_1, x_2) \mapsto (x, y)$ のヤコビアンは 
+座標変換 $(x_1, x_2) \mapsto (x, y)$ のヤコビアンは
 
 $$
 \begin{aligned}
@@ -129,7 +129,7 @@ $$
 \end{aligned}
 $$
 
- なので，$\mathrm{d}x_1\,\mathrm{d}x_2 = \mathrm{d}x\,\mathrm{d}y$ です。1次元調和振動子の基底波動関数のパラメータはそれぞれ質量と角振動数の積を $\hbar$ で割った量なので，
+なので，$\mathrm{d}x_1\,\mathrm{d}x_2 = \mathrm{d}x\,\mathrm{d}y$ です。1次元調和振動子の基底波動関数のパラメータはそれぞれ質量と角振動数の積を $\hbar$ で割った量なので，
 
 $$
 \begin{aligned}
@@ -181,16 +181,7 @@ $$
 $$
 
 ### (5)
-$t > 0$ では 
-
-$$
-\begin{aligned}
-\alpha &= \alpha_0 \\
-&= -1
-\end{aligned}
-$$
-
- なので，ハミルトニアンは
+$t > 0$ では $\alpha = \alpha_0 = -1$ なので，ハミルトニアンは
 
 $$
 H = H_x + H_y^{\mathrm{free}},\qquad H_x = -\frac{\hbar^2}{4m}\frac{\partial^2}{\partial x^2} + m\omega^2 x^2,\qquad H_y^{\mathrm{free}} = -\frac{\hbar^2}{m}\frac{\partial^2}{\partial y^2}

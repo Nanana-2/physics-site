@@ -140,15 +140,26 @@ $k^2 L$ を一定に保って $L \to \infty$ とすると $L k^4 = (k^2 L)^2 / L
 
 $|\cos k|$ は $k=0,\pm\pi$ で最大値 $1$ をとります。そのため，逆フーリエ積分では $k=0$ 付近に加えて，区間の両端付近からの寄与も調べます。
 
-- $k \approx 0$ の寄与：積分範囲を $(-\infty, \infty)$ に広げてガウス積分公式を用いると，
-  $$
-  \begin{aligned}
-  \frac{2^L}{2\pi}\int_{-\infty}^{\infty}e^{ikx-Lk^2/2}\,\mathrm{d}k
-  &= \frac{2^L}{2\pi}\sqrt{\frac{2\pi}{L}}\exp\left(-\frac{x^2}{2L}\right) \\
-  &= \frac{2^L}{\sqrt{2\pi L}}\exp\left(-\frac{x^2}{2L}\right)
-  \end{aligned}
-  $$
-- $k \approx \pm\pi$ の寄与：$k = \pi + q$ とおくと $\cos(\pi + q) = -\cos q$ なので $\tilde{C}(\pi + q, L) \simeq (-1)^L 2^L e^{-Lq^2/2}$，$e^{i(\pi + q)x} = (-1)^x e^{iqx}$ となり，同様に $(-1)^{L + x}\dfrac{2^L}{\sqrt{2\pi L}}\exp\left(-\dfrac{x^2}{2L}\right)$ を与えます。
+まず，$k \approx 0$ からの寄与を求めます。積分範囲を $(-\infty, \infty)$ に広げ，ガウス積分の公式を用います。
+
+$$
+\begin{aligned}
+\frac{2^L}{2\pi}\int_{-\infty}^{\infty}e^{ikx-Lk^2/2}\,\mathrm{d}k
+&= \frac{2^L}{2\pi}\sqrt{\frac{2\pi}{L}}\exp\left(-\frac{x^2}{2L}\right) \\
+&= \frac{2^L}{\sqrt{2\pi L}}\exp\left(-\frac{x^2}{2L}\right)
+\end{aligned}
+$$
+
+次に，$k \approx \pm\pi$ からの寄与を求めます。$k = \pi + q$ とおくと，$\cos(\pi + q) = -\cos q$ と $e^{i(\pi + q)x} = (-1)^x e^{iqx}$ が成り立ちます。
+
+$$
+\begin{aligned}
+\tilde{C}(\pi + q, L) &\simeq (-1)^L 2^L e^{-Lq^2/2} \\
+\tilde{C}(\pi + q, L)\,e^{i(\pi + q)x} &\simeq (-1)^{L + x} 2^L e^{-Lq^2/2} e^{iqx}
+\end{aligned}
+$$
+
+そのため，$k \approx 0$ と同じ積分から，寄与は $(-1)^{L + x}\dfrac{2^L}{\sqrt{2\pi L}}\exp\left(-\dfrac{x^2}{2L}\right)$ になります。
 
 両者を合わせると，$L+x$ が奇数のときは $0$，偶数のときは2倍になります。$x$ は2刻みで値をとるため，連続密度に格子間隔 $2$ を掛けた値に一致します。したがって，$L+x$ が偶数のとき
 

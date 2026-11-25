@@ -261,14 +261,7 @@ $$
 
 
 
-$$
-\begin{aligned}
-\delta_1 &= \delta_2 \\
-&= 0
-\end{aligned}
-$$
-
- のとき，角度依存性は $\cos^2\left(\dfrac{kD}{2}\sin\varphi\right)$ となり，$\varphi = 0$ で最大値をとります。最大値の $1/2$ となる角度 $\pm\varphi_{1/2}$ は次式で決まります。
+$\delta_1 = \delta_2 = 0$ のとき，角度依存性は $\cos^2\left(\dfrac{kD}{2}\sin\varphi\right)$ となり，$\varphi = 0$ で最大値をとります。最大値の $1/2$ となる角度 $\pm\varphi_{1/2}$ は次式で決まります。
 
 $$
 \begin{aligned}

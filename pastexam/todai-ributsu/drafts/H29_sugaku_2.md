@@ -144,7 +144,7 @@ $$
 任意の $\vec{x}$ に対して成り立つので，$P(\vec{a})^2 = P(\vec{a})$ です。
 
 ### (4)
-略記として $J = J(\vec{a}),\ P = P(\vec{a})$ とおきます。定義より $J^2 = -P$ です。また任意の $\vec{x}$ に対し 
+略記として $J = J(\vec{a}),\ P = P(\vec{a})$ とおきます。定義より $J^2 = -P$ です。また任意の $\vec{x}$ に対し
 
 $$
 \begin{aligned}
@@ -154,7 +154,7 @@ J(\vec{a})P(\vec{a})\vec{x} &= \vec{a}\times\bigl(\vec{x} - (\vec{a}\cdot\vec{x}
 \end{aligned}
 $$
 
- なので，$JP = J$ が成り立ちます。
+なので，$JP = J$ が成り立ちます。
 
 さらに問3(iii)の $P^2 = P$ と $J^2 = -P$ より，
 
@@ -193,7 +193,7 @@ $$
 $$
 
 ### (5)
-
+問4の結果から，回転を表す行列を $R$ とおきます。
 
 $$
 \begin{aligned}
@@ -202,39 +202,26 @@ R &= \exp(\theta J(\vec{a})) \\
 \end{aligned}
 $$
 
- とおきます。問3の (i), (ii) および $\vec{a}\times\vec{b} = \vec{c},\ \vec{a}\times\vec{c} = -\vec{b}$ を用いて各基底への作用を計算します。
+問3の (i)，(ii) と，$\vec{a}\times\vec{b} = \vec{c}$，$\vec{a}\times\vec{c} = -\vec{b}$ を用いて，$R$ を各基底に掛けます。
 
-- $\vec{a}$ への作用：$P(\vec{a})\vec{a} = \vec{0}$ より，
-  $$
-  R\vec{a} = \vec{a}
-  $$
-- $\vec{b}$ への作用：$P(\vec{a})\vec{b} = \vec{b}$，
+まず $\vec{a}$ に掛けます。$P(\vec{a})\vec{a} = \vec{0}$ なので，次のようになります。
 
 $$
-\begin{aligned}
-J(\vec{a})\vec{b} &= \vec{a}\times\vec{b} \\
-&= \vec{c}
-\end{aligned}
+R\vec{a} = \vec{a}
 $$
 
- より，
-  $$
+次に $\vec{b}$ に掛けます。$\vec{b}$ は $\vec{a}$ と直交するので，$P(\vec{a})\vec{b} = \vec{b}$ です。また，$J(\vec{a})\vec{b} = \vec{a}\times\vec{b} = \vec{c}$ です。
+
+$$
 \begin{aligned}
 R\vec{b} &= \vec{b} + (\cos\theta - 1)\vec{b} + \sin\theta\,\vec{c} \\
 &= \cos\theta\,\vec{b} + \sin\theta\,\vec{c}
 \end{aligned}
 $$
-- $\vec{c}$ への作用：$\vec{c} \perp \vec{a}$ なので $P(\vec{a})\vec{c} = \vec{c}$，
+
+最後に $\vec{c}$ に掛けます。$\vec{c}$ も $\vec{a}$ と直交するので，$P(\vec{a})\vec{c} = \vec{c}$ です。また，$J(\vec{a})\vec{c} = \vec{a}\times\vec{c} = -\vec{b}$ です。
 
 $$
-\begin{aligned}
-J(\vec{a})\vec{c} &= \vec{a}\times\vec{c} \\
-&= -\vec{b}
-\end{aligned}
-$$
-
- より，
-  $$
 \begin{aligned}
 R\vec{c} &= \vec{c} + (\cos\theta - 1)\vec{c} + \sin\theta(-\vec{b}) \\
 &= -\sin\theta\,\vec{b} + \cos\theta\,\vec{c}

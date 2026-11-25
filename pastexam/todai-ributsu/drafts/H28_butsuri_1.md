@@ -166,25 +166,7 @@ $$
 
 となり，式 (8) が成り立ちます。
 
-次に $D^2$ を展開します。
-
-$$
-\begin{aligned}
-\sigma_x^2 &= \sigma_y^2 \\
-&= \mathbf{1}_{2\times 2}
-\end{aligned}
-$$
-
- および 
-
-$$
-\begin{aligned}
-\sigma_x\sigma_y &= -\sigma_y\sigma_x \\
-&= i\sigma_z
-\end{aligned}
-$$
-
- を用います。
+次に $D^2$ を展開します。 $\sigma_x^2 = \sigma_y^2 = \mathbf{1}_{2\times 2}$ および $\sigma_x\sigma_y = -\sigma_y\sigma_x = i\sigma_z$ を用います。
 
 $$
 \begin{aligned}
@@ -273,16 +255,7 @@ $$
 となります。よって $|\Phi_n\rangle$ はエネルギー $E_n$，$\sigma_z$ の固有値 $-1$ の同時固有状態です。
 
 ### (5)
-$E = 0$ の固有束縛状態 $|\Psi\rangle$ に対して式 (10) を用いると 
-
-$$
-\begin{aligned}
-\|D|\Psi\rangle\|^2 &= 2m\cdot 0\cdot\langle\Psi|\Psi\rangle \\
-&= 0
-\end{aligned}
-$$
-
- なので，$D|\Psi\rangle = 0$ です。
+$E = 0$ の固有束縛状態 $|\Psi\rangle$ に対して式 (10) を用いると $\|D|\Psi\rangle\|^2 = 2m\cdot 0\cdot\langle\Psi|\Psi\rangle = 0$ なので，$D|\Psi\rangle = 0$ です。
 
 
 
@@ -293,7 +266,7 @@ D &= p_x\sigma_x + p_y\sigma_y \\
 \end{aligned}
 $$
 
- より，$D|\Psi\rangle = 0$ は次の2つの1階偏微分方程式に分離されます。
+より，$D|\Psi\rangle = 0$ は次の2つの1階偏微分方程式に分離されます。
 
 $$
 (p_x + ip_y)\psi_\uparrow = 0,\qquad (p_x - ip_y)\psi_\downarrow = 0
@@ -332,7 +305,7 @@ $$
 \finalanswer{\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right)f_\uparrow(x, y) = 0,\qquad \left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)f_\downarrow(x, y) = 0}
 $$
 
-**正則性の説明**：$w = x + iy,\ \bar{w} = x - iy$ に対するウィルティンガー微分は $\dfrac{\partial}{\partial\bar{w}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$，$\dfrac{\partial}{\partial w} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right)$ です。上の方程式はそれぞれ $\dfrac{\partial f_\uparrow}{\partial\bar{w}} = 0$および $\dfrac{\partial f_\downarrow}{\partial w} = 0$であるため，$f_\uparrow(x, y)$ は $w$ の正則関数，$f_\downarrow(x, y)$ は $\bar{w}$ の正則関数です。 これらは実部と虚部に対するコーシー・リーマン関係式です。
+**正則性の説明**：$w = x + iy,\ \bar{w} = x - iy$ に対するウィルティンガー微分は $\dfrac{\partial}{\partial\bar{w}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$，$\dfrac{\partial}{\partial w} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right)$ です。上の方程式はそれぞれ $\dfrac{\partial f_\uparrow}{\partial\bar{w}} = 0$ および $\dfrac{\partial f_\downarrow}{\partial w} = 0$ であるため，$f_\uparrow(x, y)$ は $w$ の正則関数，$f_\downarrow(x, y)$ は $\bar{w}$ の正則関数です。 これらは実部と虚部に対するコーシー・リーマン関係式です。
 
 ### (6)
 $r \ge R$ において式 (13) より

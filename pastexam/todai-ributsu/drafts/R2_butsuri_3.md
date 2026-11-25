@@ -34,7 +34,9 @@ $$
 
 $$
 \nabla\cdot\boldsymbol E=0\tag{4}
-$$に従う。ここで $\boldsymbol{E}$ は電場，$\boldsymbol{B}$ は磁束密度である。以下，図1に示す円筒座標系 $(r, \theta, z)$ で考えることとする。任意の関数 $f$，ベクトル $\boldsymbol{A}$ に対する円筒座標系での勾配，発散，回転はそれぞれ
+$$
+
+に従う。ここで $\boldsymbol{E}$ は電場，$\boldsymbol{B}$ は磁束密度である。以下，図1に示す円筒座標系 $(r, \theta, z)$ で考えることとする。任意の関数 $f$，ベクトル $\boldsymbol{A}$ に対する円筒座標系での勾配，発散，回転はそれぞれ
 
 $$
 \begin{aligned}
@@ -123,16 +125,7 @@ r E_\theta &= g(z, t)
 \end{aligned}
 $$
 
-となります。完全導体表面では電場の接線成分が $0$ であることから $r = a$ で $E_\theta = 0$ なので，
-
-$$
-\begin{aligned}
-g(z, t) &= a E_\theta(a, z, t) \\
-&= 0
-\end{aligned}
-$$
-
- となり，すべての $r\ (a < r < b)$ で $E_\theta = 0$ が成り立ちます。
+となります。完全導体表面では電場の接線成分が $0$ であることから $r = a$ で $E_\theta = 0$ なので， $g(z, t) = a E_\theta(a, z, t) = 0$ となり，すべての $r\ (a < r < b)$ で $E_\theta = 0$ が成り立ちます。
 
 ### (2)
 問1より，0でない電磁場成分は $E_r(r, z, t)$ と $B_\theta(r, z, t)$ のみです。式 (1) の $\theta$ 成分と式 (2) の $r$ 成分を円筒座標系で書きます。
@@ -157,16 +150,7 @@ $$
 $$
 
 ### (3)
-式 (4) $\nabla\cdot\boldsymbol{E} = 0$ を円筒座標系で書きます。
-
-$$
-\begin{aligned}
-E_\theta &= E_z \\
-&= 0
-\end{aligned}
-$$
-
- です。
+式 (4) $\nabla\cdot\boldsymbol{E} = 0$ を円筒座標系で書きます。 $E_\theta = E_z = 0$ です。
 
 $$
 \frac{1}{r}\frac{\partial}{\partial r}(r E_r) = 0
@@ -223,7 +207,7 @@ $$
 \end{aligned}
 $$
 
-これを同軸ケーブルの断面（$a \le r \le b,\ 0 \le \theta < 2\pi$）にわたって積分し，単位時間あたりの通過エネルギーの時間平均$\overline{P}$ を求めます。
+これを同軸ケーブルの断面（$a \le r \le b,\ 0 \le \theta < 2\pi$）にわたって積分し，単位時間あたりの通過エネルギーの時間平均 $\overline{P}$ を求めます。
 
 $$
 \begin{aligned}

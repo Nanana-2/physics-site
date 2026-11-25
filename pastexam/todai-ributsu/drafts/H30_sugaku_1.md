@@ -64,26 +64,8 @@ $$
 
 よって固有値は $\lambda_1 = a^2 + b^2$ と $\lambda_2 = 0$ です。それぞれの固有ベクトル $\boldsymbol{u} = \begin{pmatrix} x \\ y \end{pmatrix}$ を求めます。
 
-- $\lambda_1 = a^2 + b^2$ のとき：
-
-$$
-\begin{aligned}
--b^2 x + ab y &= 0 \\
-bx &= ay
-\end{aligned}
-$$
-
- より，$\boldsymbol{u}_1 = k_1\begin{pmatrix} a \\ b \end{pmatrix}$（$k_1 \neq 0$）。
-- $\lambda_2 = 0$ のとき：
-
-$$
-\begin{aligned}
-a^2 x + ab y &= 0 \\
-ax + by &= 0
-\end{aligned}
-$$
-
- より，$\boldsymbol{u}_2 = k_2\begin{pmatrix} -b \\ a \end{pmatrix}$（$k_2 \neq 0$）。
+- $\lambda_1 = a^2 + b^2$ のとき： $-b^2 x + ab y = 0 bx = ay$ より，$\boldsymbol{u}_1 = k_1\begin{pmatrix} a \\ b \end{pmatrix}$（$k_1 \neq 0$）。
+- $\lambda_2 = 0$ のとき： $a^2 x + ab y = 0 ax + by = 0$ より，$\boldsymbol{u}_2 = k_2\begin{pmatrix} -b \\ a \end{pmatrix}$（$k_2 \neq 0$）。
 
 したがって，固有値と固有ベクトルはそれぞれ
 
@@ -92,28 +74,9 @@ $$
 $$
 
 ### (2)
-$V$ が実直交行列で $VV^T=I$ を満たすので，
+$V$ が実直交行列で $VV^T=I$ を満たすので， $A A^T = B V V^T B^T = B B^T$ より $a^2 + b^2 = c^2$ です。$c > 0$ より $c = \sqrt{a^2 + b^2}$ となります。
 
-$$
-\begin{aligned}
-A A^T &= B V V^T B^T \\
-&= B B^T
-\end{aligned}
-$$
-
- より $a^2 + b^2 = c^2$ です。$c > 0$ より $c = \sqrt{a^2 + b^2}$ となります。
-
-$V = \begin{pmatrix} v_{11} & v_{12} \\ v_{21} & v_{22} \end{pmatrix}$ とおくと，
-
-$$
-\begin{aligned}
-A &= BV \\
-&= (c v_{11}, c v_{12}) \\
-&= (a, b)
-\end{aligned}
-$$
-
- より，
+$V = \begin{pmatrix} v_{11} & v_{12} \\ v_{21} & v_{22} \end{pmatrix}$ とおくと， $A = BV = (c v_{11}, c v_{12}) = (a, b)$ より，
 
 $$
 v_{11} = \frac{a}{\sqrt{a^2 + b^2}},\qquad v_{12} = \frac{b}{\sqrt{a^2 + b^2}}
@@ -135,16 +98,7 @@ $$
 $$
 
 ### (3)
-$\tilde{B} = \begin{pmatrix} x \\ y \end{pmatrix}$ とおきます。条件 
-
-$$
-\begin{aligned}
-B\tilde{B} &= cx \\
-&= 1
-\end{aligned}
-$$
-
- より $x = \dfrac{1}{c}$ です。
+$\tilde{B} = \begin{pmatrix} x \\ y \end{pmatrix}$ とおきます。条件 $B\tilde{B} = cx = 1$ より $x = \dfrac{1}{c}$ です。
 
 $$
 \begin{aligned}
@@ -179,16 +133,7 @@ $$
 \end{aligned}
 $$
 
-よって 
-
-$$
-\begin{aligned}
-\tilde{A} &= V^T\tilde{B} \\
-&= V\tilde{B}
-\end{aligned}
-$$
-
- は両方の条件を満たします。一意性よりこれが求める $\tilde{A}$ です。したがって，
+よって $\tilde{A} = V^T\tilde{B} = V\tilde{B}$ は両方の条件を満たします。一意性よりこれが求める $\tilde{A}$ です。したがって，
 
 $$
 \finalanswer{\tilde{A} = V^T\tilde{B} = V\tilde{B}}
@@ -205,16 +150,7 @@ v^2 &= \left(A_n X\right)^2 \\
 \end{aligned}
 $$
 
-よって $\|X\|^2 \ge \dfrac{v^2}{\sum_{i=1}^{n} a_i^2}$ であり，等号が成り立つのは $X$ が $A_n^T$ の実数倍 $X_0 = k A_n^T$ となるときに限ります。条件 
-
-$$
-\begin{aligned}
-A_n X_0 &= k\left(\sum_{i=1}^{n} a_i^2\right) \\
-&= v
-\end{aligned}
-$$
-
- より $k = \dfrac{v}{\sum_{i=1}^{n} a_i^2}$ なので，
+よって $\|X\|^2 \ge \dfrac{v^2}{\sum_{i=1}^{n} a_i^2}$ であり，等号が成り立つのは $X$ が $A_n^T$ の実数倍 $X_0 = k A_n^T$ となるときに限ります。条件 $A_n X_0 = k\left(\sum_{i=1}^{n} a_i^2\right) = v$ より $k = \dfrac{v}{\sum_{i=1}^{n} a_i^2}$ なので，
 
 $$
 \begin{aligned}
@@ -250,16 +186,7 @@ $$
 $$
 
 ### (6)
-$\lambda \neq 0$ を $M^T M$ の固有値，対応する固有ベクトルを $\boldsymbol{u} \neq \mathbf{0}$ とします。固有方程式は $M^TM\boldsymbol u=\lambda\boldsymbol u$ です。もし $M\boldsymbol{u} = \mathbf{0}$ ならば 
-
-$$
-\begin{aligned}
-\lambda\boldsymbol{u} &= M^T(M\boldsymbol{u}) \\
-&= \mathbf{0}
-\end{aligned}
-$$
-
- となり $\lambda \neq 0,\ \boldsymbol{u} \neq \mathbf{0}$ に矛盾するため，$M\boldsymbol{u} \neq \mathbf{0}$ です。
+$\lambda \neq 0$ を $M^T M$ の固有値，対応する固有ベクトルを $\boldsymbol{u} \neq \mathbf{0}$ とします。固有方程式は $M^TM\boldsymbol u=\lambda\boldsymbol u$ です。もし $M\boldsymbol{u} = \mathbf{0}$ ならば $\lambda\boldsymbol{u} = M^T(M\boldsymbol{u}) = \mathbf{0}$ となり $\lambda \neq 0,\ \boldsymbol{u} \neq \mathbf{0}$ に矛盾するため，$M\boldsymbol{u} \neq \mathbf{0}$ です。
 
 もとの固有方程式に左から $M$ を掛けると，
 

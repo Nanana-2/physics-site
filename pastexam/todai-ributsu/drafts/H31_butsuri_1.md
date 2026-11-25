@@ -137,16 +137,7 @@ $$
 
 もし $\nu$ が非負整数でないと仮定すると，任意の非負整数 $k$ に対して $\nu - k \neq 0$ なので，(i) より $\|a(a^k|\psi\rangle)\|^2 = (\nu - k)\|a^k|\psi\rangle\|^2 \neq 0$ となって $a^k|\psi\rangle$ は決して $0$ になりません。すると $k > \nu$ なる整数 $k$ に対して負の固有値 $\nu - k < 0$ が存在することになり，(i) の非負性に矛盾します。
 
-したがって，ある非負整数 $n$ に対して $a^n|\psi\rangle \neq 0$ かつ $a^{n+1}|\psi\rangle = 0$ でなければなりません。このとき 
-
-$$
-\begin{aligned}
-N(a^n|\psi\rangle) &= a^\dagger a(a^n|\psi\rangle) \\
-&= 0
-\end{aligned}
-$$
-
- である一方，$N(a^n|\psi\rangle) = (\nu - n)(a^n|\psi\rangle)$ なので，$\nu = n$ となります。よって $N$ の固有値は非負の整数です。
+したがって，ある非負整数 $n$ に対して $a^n|\psi\rangle \neq 0$ かつ $a^{n+1}|\psi\rangle = 0$ でなければなりません。このとき $N(a^n|\psi\rangle) = a^\dagger a(a^n|\psi\rangle) = 0$ である一方，$N(a^n|\psi\rangle) = (\nu - n)(a^n|\psi\rangle)$ なので，$\nu = n$ となります。よって $N$ の固有値は非負の整数です。
 
 ### (3)
 問2より $N$ の固有値は非負整数であり，最小の固有値は $a|0\rangle = 0$ を満たす基底状態 $|0\rangle$ の固有値 $0$ です。また $[N, a^\dagger] = a^\dagger$ より $N(a^\dagger|n\rangle) = (n + 1)(a^\dagger|n\rangle)$ であり，そのノルムの2乗は
@@ -182,17 +173,7 @@ E_n = E_n^{(0)} + \epsilon E_n^{(1)} + \epsilon^2 E_n^{(2)} + \dots,\qquad
 |\psi_n\rangle = |n\rangle + \epsilon|\psi_n^{(1)}\rangle + \epsilon^2|\psi_n^{(2)}\rangle + \dots
 $$
 
-と展開し，中間規格化条件 
-
-$$
-\begin{aligned}
-\langle n|\psi_n^{(1)}\rangle &= \langle n|\psi_n^{(2)}\rangle \\
-&= \dots \\
-&= 0
-\end{aligned}
-$$
-
- を課します。$\epsilon$ の1次および2次の項を比較すると，
+と展開し，中間規格化条件 $\langle n|\psi_n^{(1)}\rangle = \langle n|\psi_n^{(2)}\rangle = \dots = 0$ を課します。$\epsilon$ の1次および2次の項を比較すると，
 
 $$
 \begin{aligned}
@@ -201,16 +182,7 @@ $$
 \end{aligned}
 $$
 
-となります。第1式に左から $\langle n|$ を掛けると 
-
-$$
-\begin{aligned}
-E_n^{(1)} &= \langle n|V|n\rangle \\
-&= V_{nn}
-\end{aligned}
-$$
-
- を得ます。また $k \neq n$ に対して左から $\langle k|$ を掛けると $\left(E_k^{(0)} - E_n^{(0)}\right)\langle k|\psi_n^{(1)}\rangle = -V_{kn}$ より，
+となります。第1式に左から $\langle n|$ を掛けると $E_n^{(1)} = \langle n|V|n\rangle = V_{nn}$ を得ます。また $k \neq n$ に対して左から $\langle k|$ を掛けると $\left(E_k^{(0)} - E_n^{(0)}\right)\langle k|\psi_n^{(1)}\rangle = -V_{kn}$ より，
 
 $$
 |\psi_n^{(1)}\rangle = \sum_{k \neq n} \frac{V_{kn}}{E_n^{(0)} - E_k^{(0)}}|k\rangle
@@ -285,7 +257,7 @@ $$
 \end{aligned}
 $$
 
-ここで $C = 4\sqrt{2m}\,\lambda^{-1/4}\displaystyle\int_0^1 \sqrt{1 - u^4}\,\mathrm{d}u$ は $E_n$ によらない正の定数です。量子化条件 
+ここで $C = 4\sqrt{2m}\,\lambda^{-1/4}\displaystyle\int_0^1 \sqrt{1 - u^4}\,\mathrm{d}u$ は $E_n$ によらない正の定数です。量子化条件
 
 $$
 \begin{aligned}
