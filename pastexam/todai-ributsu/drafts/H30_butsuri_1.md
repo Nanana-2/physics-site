@@ -125,9 +125,14 @@ $$
 $$
 \begin{aligned}
 (E_1 - E)(E_2 - E) - V^2 &= 0 \\
-E^2 - (E_1 + E_2)E + E_1 E_2 - V^2 &= 0 \\
-E_\pm &= \frac{E_1 + E_2}{2} \pm \sqrt{\left(\frac{E_1 - E_2}{2}\right)^2 + V^2}
+E^2 - (E_1 + E_2)E + E_1 E_2 - V^2 &= 0
 \end{aligned}
+$$
+
+2次方程式の解の公式から，$E$ は次のようになります。
+
+$$
+E_\pm = \frac{E_1 + E_2}{2} \pm \sqrt{\left(\frac{E_1 - E_2}{2}\right)^2 + V^2}
 $$
 
 $V > 0$ より $E_- < E_+$ です。固有方程式 $(H - E_\pm\mathbf{1})|\psi_\pm\rangle = 0$ の第1行より $(E_1 - E_\pm)\langle 1|\psi_\pm\rangle + V\langle 2|\psi_\pm\rangle = 0$ となるため，係数の比は次のようになります。

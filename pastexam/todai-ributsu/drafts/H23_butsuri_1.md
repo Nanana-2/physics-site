@@ -137,10 +137,13 @@ $$
 運動量表示のシュレーディンガー方程式に $E = -\dfrac{\nu^2}{2m}$ と設問2の結果を代入します。
 
 $$
-\begin{aligned}
-\frac{\boldsymbol{p}^2}{2m}\langle\boldsymbol{p}|\psi\rangle - \frac{1}{(2\pi)^3}\frac{\lambda}{2m} h(\boldsymbol{p})\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle &= -\frac{\nu^2}{2m}\langle\boldsymbol{p}|\psi\rangle \\
-\frac{\boldsymbol{p}^2 + \nu^2}{2m}\langle\boldsymbol{p}|\psi\rangle &= \frac{1}{(2\pi)^3}\frac{\lambda}{2m} h(\boldsymbol{p})\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle
-\end{aligned}
+\frac{\boldsymbol{p}^2}{2m}\langle\boldsymbol{p}|\psi\rangle - \frac{1}{(2\pi)^3}\frac{\lambda}{2m} h(\boldsymbol{p})\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle = -\frac{\nu^2}{2m}\langle\boldsymbol{p}|\psi\rangle
+$$
+
+$\nu^2$ の項を左辺に，積分の項を右辺に移します。
+
+$$
+\frac{\boldsymbol{p}^2 + \nu^2}{2m}\langle\boldsymbol{p}|\psi\rangle = \frac{1}{(2\pi)^3}\frac{\lambda}{2m} h(\boldsymbol{p})\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle
 $$
 
 右辺の積分は $\boldsymbol{p}$ によらない定数なので，$C \equiv \dfrac{\lambda}{(2\pi)^3}\displaystyle\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle$ とおきます。両辺に $2m$ を掛けて $\boldsymbol{p}^2 + \nu^2 > 0$ で割ると，次式が得られます。
