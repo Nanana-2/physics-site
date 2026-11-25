@@ -31,9 +31,9 @@ $A, B$ は $n$ 行 $n$ 列の複素行列であり，$A^2 = B^2 = E$，$AB + BA 
 
 (ii) ベクトル $\boldsymbol{p}, \boldsymbol{q}$ は互いに線型独立であることを証明せよ。
 
-(5) 以下では $n = 2$ とし，設問 (4) で定義した $\boldsymbol{p}, \boldsymbol{q}$ が 2 次元縦ベクトルとなる場合を考える。
+(5) 以下では $n = 2$ とし，設問 (4) で定義した $\boldsymbol{p}, \boldsymbol{q}$ が2次元縦ベクトルとなる場合を考える。
 
-(i) $\boldsymbol{p}, \boldsymbol{q}$ を並べて作った 2 次元正方行列 $P = (\boldsymbol{p}\ \boldsymbol{q})$ は正則であることを，設問 (4) の結果を用いることによって示せ。
+(i) $\boldsymbol{p}, \boldsymbol{q}$ を並べて作った2次元正方行列 $P = (\boldsymbol{p}\ \boldsymbol{q})$ は正則であることを，設問 (4) の結果を用いることによって示せ。
 
 (ii) 行列 $P^{-1} C P$ を計算せよ。
 
@@ -48,9 +48,9 @@ $A, B$ は $n$ 行 $n$ 列の複素行列であり，$A^2 = B^2 = E$，$AB + BA 
 ## 解答・解説
 
 <div class="approach" markdown>
-関係式 $A^2 = B^2 = E$ と $AB + BA = O$ から，$A, B, C = -iAB$ は互いに反交換し 2 乗が $E$ になる 3 つ組を作ります。また $D = A + iB$ が零でないのに $D^2 = O$ になる性質から，$D\boldsymbol{p} = \boldsymbol{0}$ を満たす零でないベクトル $\boldsymbol{p}$ が存在します。
+$A^2=E$ の行列では，固有ベクトルに $A$ を2回掛けると固有値の2乗が出てくるので，固有値の候補を絞ることができます。$AB+BA=O$ を使うと，$A$ と $B$ の積の順序を入れ替えるたびに符号が変わります。そのため，$C$ や $D$ を含む積は，$A^2=B^2=E$ と順序の入れ替えだけで計算することができます。
 
-この $\boldsymbol{p}$ と $\boldsymbol{q} = \dfrac{1}{2}(A - iB)\boldsymbol{p}$ は行列 $C$ の異なる固有値に属する固有ベクトルになるため，$n = 2$ では両者を並べた行列 $P$ が正則となり，相似変換 $P^{-1}(\cdot)P$ によって $A, B, C$ の行列成分が一意に定まります。
+$D^2=O$ かつ $D\neq O$ の行列には，$D$ を掛けると $\boldsymbol{0}$ になる $\boldsymbol{0}$ でないベクトルがあります。このベクトル $\boldsymbol{p}$ と $\boldsymbol{q}$ を基底に選ぶと，$A$，$B$，$C$ を掛けたベクトルを $\boldsymbol{p}$ と $\boldsymbol{q}$ の組合せで書くことができます。$P^{-1}XP$ は，その組合せの係数を並べた行列になります。
 </div>
 
 ### (1)
@@ -66,7 +66,7 @@ $$
 
 $\boldsymbol{v} \neq \boldsymbol{0}$ なので $\lambda^2 = 1$，すなわち $\lambda = 1$ または $\lambda = -1$ です。
 
-さらに，$1$ と $-1$ がともに実際に固有値となることを確かめます。$B^2 = E$ より $B$ は正則なので $B\boldsymbol{v} \neq \boldsymbol{0}$ です。$AB = -BA$ を用いて $A(B\boldsymbol{v})$ を計算します。
+さらに，$1$ と $-1$ がともに実際に固有値となることを示します。$B^2 = E$ より $B$ は正則なので $B\boldsymbol{v} \neq \boldsymbol{0}$ です。$AB = -BA$ を用いて $A(B\boldsymbol{v})$ を計算します。
 
 $$
 \begin{aligned}
@@ -119,7 +119,7 @@ $$
 以上より，$C^2 = E$ および $BC + CB = CA + AC = O$ が成り立ちます。
 
 ### (3)
-$D = A + iB$ の 2 乗を展開します。
+$D = A + iB$ の2乗を展開します。
 
 $$
 \begin{aligned}
@@ -130,7 +130,7 @@ D^2 &= (A + iB)(A + iB) \\
 \end{aligned}
 $$
 
-次に $D \neq O$ であることを背理法で示します。仮に $D = O$ であるとすると，$A = -iB$ が成り立ちます。両辺を 2 乗すると次式になります。
+次に $D \neq O$ であることを背理法で示します。仮に $D = O$ であるとすると，$A = -iB$ が成り立ちます。両辺を2乗すると次式になります。
 
 $$
 \begin{aligned}
@@ -184,10 +184,10 @@ c_1\boldsymbol{p} - c_2\boldsymbol{q} &= \boldsymbol{0}
 \end{aligned}
 $$
 
-2 式の和と差をとると $2c_1\boldsymbol{p} = \boldsymbol{0}$，$2c_2\boldsymbol{q} = \boldsymbol{0}$ が得られます。$\boldsymbol{p} \neq \boldsymbol{0}$，$\boldsymbol{q} \neq \boldsymbol{0}$ なので $c_1 = c_2 = 0$ です。したがって $\boldsymbol{p}, \boldsymbol{q}$ は互いに線型独立です。
+2式の和と差をとると $2c_1\boldsymbol{p} = \boldsymbol{0}$，$2c_2\boldsymbol{q} = \boldsymbol{0}$ が得られます。$\boldsymbol{p} \neq \boldsymbol{0}$，$\boldsymbol{q} \neq \boldsymbol{0}$ なので $c_1 = c_2 = 0$ です。したがって $\boldsymbol{p}, \boldsymbol{q}$ は互いに線型独立です。
 
 ### (5)(i)
-$n = 2$ のとき，$\boldsymbol{p}, \boldsymbol{q}$ は設問 (4)(ii) より互いに線型独立な 2 次元縦ベクトルです。2 次元正方行列 $P = (\boldsymbol{p}\ \boldsymbol{q})$ の列ベクトルが線型独立なので，$\operatorname{rank} P = 2$ であり $P$ は正則です。
+$n = 2$ のとき，$\boldsymbol{p}, \boldsymbol{q}$ は設問 (4)(ii) より互いに線型独立な2次元縦ベクトルです。2次元正方行列 $P = (\boldsymbol{p}\ \boldsymbol{q})$ の列ベクトルが線型独立なので，$\operatorname{rank} P = 2$ であり $P$ は正則です。
 
 ### (5)(ii)
 設問 (4)(i) より $CP$ は次のように計算されます。
@@ -241,7 +241,7 @@ $$
 P^{-1}(A - iB)P = \begin{pmatrix} 0 & 0 \\ 2 & 0 \end{pmatrix}
 $$
 
-これら 2 式の和と差から $P^{-1} A P$ と $P^{-1} B P$ を求めます。
+これら2式の和と差から $P^{-1} A P$ と $P^{-1} B P$ を求めます。
 
 $$
 \begin{aligned}

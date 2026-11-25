@@ -64,7 +64,7 @@ $$
 g(\boldsymbol{x}) = \frac{\exp(-\mu|\boldsymbol{x}|)}{4\pi|\boldsymbol{x}|} \qquad (\mu > 0)
 $$
 
-このとき，設問 2 の $h(\boldsymbol{p})$ は
+このとき，設問2の $h(\boldsymbol{p})$ は
 
 $$
 h(\boldsymbol{p}) = \frac{1}{\boldsymbol{p}^2 + \mu^2}
@@ -72,13 +72,13 @@ $$
 
 となることを計算の詳細も記して示せ。
 
-(5) 設問 4 で与えられた $h(\boldsymbol{p})$ の場合に，$|\nu|$ を $\lambda$ と $\mu$ を用いて表し，束縛状態が存在するために $\lambda$ が満たすべき条件を求めよ。必要なら，次の公式を用いてもよい。
+(5) 設問4で与えられた $h(\boldsymbol{p})$ の場合に，$|\nu|$ を $\lambda$ と $\mu$ を用いて表し，束縛状態が存在するために $\lambda$ が満たすべき条件を求めよ。必要なら，次の公式を用いてもよい。
 
 $$
 \int \mathrm{d}^3 p\,\frac{1}{(\boldsymbol{p}^2 + \nu^2)(\boldsymbol{p}^2 + \mu^2)^2} = \frac{\pi^2}{|\mu|(|\mu| + |\nu|)^2}
 $$
 
-(6) 設問 4 で与えられた $h(\boldsymbol{p})$ の場合に，座標表示での束縛状態の波動関数 $\langle\boldsymbol{x}|\psi\rangle$ を求めよ。ただし，規格化はしなくてもよい。また，その概略を図示せよ。
+(6) 設問4で与えられた $h(\boldsymbol{p})$ の場合に，座標表示での束縛状態の波動関数 $\langle\boldsymbol{x}|\psi\rangle$ を求めよ。ただし，規格化はしなくてもよい。また，その概略を図示せよ。
 
 > 出典：東京大学大学院理学系研究科物理学専攻 平成23年度修士課程入学試験 物理学 第1問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，解答に図を追加して小問番号の表記を整えています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
 
@@ -87,9 +87,11 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-分離型ポテンシャルは運動量表示でも 2 つの因子の積に分かれるため，運動量表示のシュレーディンガー方程式の積分項が $\boldsymbol{p}$ によらない定数と $h(\boldsymbol{p})$ の積になります。これにより波動関数の形が決まり，その自己無撞着条件から束縛エネルギーの代数方程式が得られます。
+分離型ポテンシャルでは，$\langle\boldsymbol{x}|\hat{V}|\boldsymbol{x}'\rangle$ が $\boldsymbol{x}$ だけの因子と $\boldsymbol{x}'$ だけの因子の積になっています。運動量表示でもこの積の形が保たれるので，シュレーディンガー方程式の積分項は，$h(\boldsymbol{p})$ と $\boldsymbol{p}$ によらない積分との積になります。そのため，積分方程式を解かずに，波動関数の $\boldsymbol{p}$ 依存性を求めることができます。
 
-座標表示の波動関数は逆フーリエ変換で与えられます。分母の積を部分分数に分解すると，設問 4 で示した湯川型のフーリエ変換の組をそのまま逆に用いることができます。
+$\boldsymbol{p}$ によらない積分は定数 $C$ を含みます。求めた波動関数をこの積分にもう一度代入すると，$C$ を $C$ 自身で表す式ができます。束縛状態では $C\neq0$ なので，この式から $\nu$ と $\lambda$，$\mu$ の関係式を作ります。
+
+座標表示の波動関数は，運動量表示の波動関数を逆フーリエ変換して求めます。$\dfrac{1}{(\boldsymbol{p}^2+\nu^2)(\boldsymbol{p}^2+\mu^2)}$ を部分分数に分けると，(4) と同じ形のフーリエ変換を逆向きに使うことができます。
 </div>
 
 ### (1)
@@ -113,10 +115,10 @@ $$
 \end{aligned}
 $$
 
-以上より，2 つの関係式が成り立ちます。
+以上より，2つの関係式が成り立ちます。
 
 ### (2)
-設問 1 の第 2 式に $\langle\boldsymbol{x}|\hat{V}|\boldsymbol{x}'\rangle = -\dfrac{\lambda}{2m} g(\boldsymbol{x}) g(\boldsymbol{x}')$ を代入します。
+設問1の第2式に $\langle\boldsymbol{x}|\hat{V}|\boldsymbol{x}'\rangle = -\dfrac{\lambda}{2m} g(\boldsymbol{x}) g(\boldsymbol{x}')$ を代入します。
 
 $$
 \begin{aligned}
@@ -132,7 +134,7 @@ $$
 $$
 
 ### (3)
-運動量表示のシュレーディンガー方程式に $E = -\dfrac{\nu^2}{2m}$ と設問 2 の結果を代入します。
+運動量表示のシュレーディンガー方程式に $E = -\dfrac{\nu^2}{2m}$ と設問2の結果を代入します。
 
 $$
 \begin{aligned}
@@ -166,7 +168,7 @@ $$
 ここで $t = \cos\theta$ と置換しました。また $p = 0$ のときも $\mu > 0$ より $h(\boldsymbol{0}) = \displaystyle\int_0^{\infty} r e^{-\mu r}\,\mathrm{d}r = \dfrac{1}{\mu^2}$ となり同じ式に一致します。
 
 ### (5)
-設問 4 より $h(-\boldsymbol{p}') = h(\boldsymbol{p}') = \dfrac{1}{(\boldsymbol{p}')^2 + \mu^2}$ です。設問 3 の波動関数を定数 $C$ の定義式に代入します。
+設問4より $h(-\boldsymbol{p}') = h(\boldsymbol{p}') = \dfrac{1}{(\boldsymbol{p}')^2 + \mu^2}$ です。設問3の波動関数を定数 $C$ の定義式に代入します。
 
 $$
 \begin{aligned}
@@ -200,7 +202,7 @@ $$
 $$
 
 ### (6)
-運動量固有状態の完全性関係 $\displaystyle\int \mathrm{d}^3 p\,|\boldsymbol{p}\rangle\langle\boldsymbol{p}| = 1$ を用いて座標表示へ戻します。
+運動量固有状態の完全性関係 $\displaystyle\int \mathrm{d}^3 p\,|\boldsymbol{p}\rangle\langle\boldsymbol{p}| = 1$ を用いて，座標表示の波動関数を求めます。
 
 $$
 \begin{aligned}
@@ -209,7 +211,7 @@ $$
 \end{aligned}
 $$
 
-設問 4 の結果を逆フーリエ変換すると，任意の正定数 $\alpha > 0$ に対して
+設問4の結果を逆フーリエ変換すると，任意の正定数 $\alpha > 0$ に対して
 
 $$
 \int \frac{\mathrm{d}^3 p}{(2\pi)^3}\frac{e^{i\boldsymbol{p}\cdot\boldsymbol{x}}}{\boldsymbol{p}^2 + \alpha^2} = \frac{e^{-\alpha r}}{4\pi r}

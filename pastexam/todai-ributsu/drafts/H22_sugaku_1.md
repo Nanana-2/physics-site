@@ -44,9 +44,11 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-すべての固有値が正の実対称行列 $A$ に対しては，2 次形式 $f(\boldsymbol{x})$ を解 $\bar{\boldsymbol{x}}$ の周りで平方完成すると $\|\boldsymbol{x} - \bar{\boldsymbol{x}}\|_A^2$ の形になり，方程式 $A\boldsymbol{x} = \boldsymbol{b}$ を解く問題が $f(\boldsymbol{x})$ の最小化問題と等価になります。
+$A$ が対称で固有値がすべて正のとき，$\boldsymbol{y}^{\mathrm{t}}A\boldsymbol{y}$ は $\boldsymbol{y}\neq\boldsymbol{0}$ で正になります。そのため，$f(\boldsymbol{x})$ を $\bar{\boldsymbol{x}}$ のまわりで平方完成すると，$A\boldsymbol{x}=\boldsymbol{b}$ を解く問題を $f$ の最小値を探す問題に置き換えることができます。
 
-負勾配方向 $\boldsymbol{r}$ に沿った最適な歩幅 $\alpha$ を選ぶと，各ステップでの誤差ノルム $\|\delta\boldsymbol{x}^{(m)}\|_A$ の減少率が $A$ の固有値と展開係数で表されます。2 次元では相加・相乗平均の不等式から減少率が $1$ より小さい定数 $(1 - p)/(1 + p)$ で上から抑えられ，幾何級数的な収束が保証されます。
+1回のステップでは，$f(\boldsymbol{x}^{(m)}+\alpha\boldsymbol{r})$ を $\alpha$ の2次関数とみて，その最小を与える $\alpha$ を選びます。ズレ $\delta\boldsymbol{x}^{(m)}$ を $A$ の固有ベクトルで展開すると，$A$ を掛ける操作は各成分に固有値を掛けることになります。そのため，ノルムの比 $R$ を固有値と展開係数で書くことができます。
+
+2行2列では展開係数が $\rho_1$ と $\rho_2$ の2つだけになります。$R^2$ の分母に相加平均と相乗平均の不等式を用いると，$\rho_1$，$\rho_2$ によらない上限を作ることができます。
 </div>
 
 ### (1)
@@ -95,7 +97,7 @@ f(\boldsymbol{x}^{(m)} + \alpha\boldsymbol{r}) &= \frac{1}{2}(\boldsymbol{x}^{(m
 \end{aligned}
 $$
 
-$\boldsymbol{r} \neq \boldsymbol{0}$ のとき $\|\boldsymbol{r}\|_A^2 > 0$ なので，この $\alpha$ の 2 次関数は微分が $0$ になる点で最小値をとります。
+$\boldsymbol{r} \neq \boldsymbol{0}$ のとき $\|\boldsymbol{r}\|_A^2 > 0$ なので，この $\alpha$ の2次関数は微分が $0$ になる点で最小値をとります。
 
 $$
 \begin{aligned}
@@ -109,7 +111,7 @@ $$
 $$
 
 ### (4)
-$\delta\boldsymbol{x}^{(m+1)} = \boldsymbol{x}^{(m+1)} - \bar{\boldsymbol{x}} = \delta\boldsymbol{x}^{(m)} + \alpha\boldsymbol{r}$ の $A$ ノルムの 2 乗を展開します。設問 (2) より $A\delta\boldsymbol{x}^{(m)} = -\boldsymbol{r}$ であり，$\alpha = \dfrac{\|\boldsymbol{r}\|^2}{\|\boldsymbol{r}\|_A^2}$ を代入します。
+$\delta\boldsymbol{x}^{(m+1)} = \boldsymbol{x}^{(m+1)} - \bar{\boldsymbol{x}} = \delta\boldsymbol{x}^{(m)} + \alpha\boldsymbol{r}$ の $A$ ノルムの2乗を展開します。設問 (2) より $A\delta\boldsymbol{x}^{(m)} = -\boldsymbol{r}$ であり，$\alpha = \dfrac{\|\boldsymbol{r}\|^2}{\|\boldsymbol{r}\|_A^2}$ を代入します。
 
 $$
 \begin{aligned}
@@ -128,7 +130,7 @@ $$
 $$
 
 ### (5)
-$\delta\boldsymbol{x}^{(m)} = \sum_{i=1}^n \rho_i \boldsymbol{a}_i$ と $A\boldsymbol{a}_i = \lambda_i \boldsymbol{a}_i$，および正規直交性 $\boldsymbol{a}_i^{\mathrm{t}}\boldsymbol{a}_j = \delta_{ij}$ を用いて各ノルムの 2 乗を計算します。まず $\boldsymbol{r} = -A\delta\boldsymbol{x}^{(m)} = -\sum_{i=1}^n \lambda_i \rho_i \boldsymbol{a}_i$ なので，
+$\delta\boldsymbol{x}^{(m)} = \sum_{i=1}^n \rho_i \boldsymbol{a}_i$ と $A\boldsymbol{a}_i = \lambda_i \boldsymbol{a}_i$，および正規直交性 $\boldsymbol{a}_i^{\mathrm{t}}\boldsymbol{a}_j = \delta_{ij}$ を用いて各ノルムの2乗を計算します。まず $\boldsymbol{r} = -A\delta\boldsymbol{x}^{(m)} = -\sum_{i=1}^n \lambda_i \rho_i \boldsymbol{a}_i$ なので，
 
 $$
 \begin{aligned}
