@@ -102,13 +102,13 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-古典理想気体では相空間が連続であるため，温度を半分にすると運動量空間の等エネルギー面の面積が常に同じ比率で縮小し，温度 $T_0$ によらずエントロピー差が一定値 $\dfrac{3}{2}Nk_{\mathrm{B}}\ln 2$ を保ちます。
+古典系では，位置と運動量についての積分を分けることができます。粒子が出入りする場合も，粒子数について和をとった分配関数を使えば，平均粒子数と圧力を求めることができます。
 
-一方，有限体積の箱に閉じ込められた量子ボース粒子系では1粒子準位が離散的になり，基底状態と第1励起状態の間に有限のエネルギーギャップ $\Delta\epsilon$ が生じます。そのため $k_{\mathrm{B}}T \ll \Delta\epsilon$ では熱励起が指数関数的に抑えられ，系は唯一の基底状態へ落ちて熱力学第三法則が自然に成り立ちます。
+有限の箱に入れた量子系では，低温の分配関数を低いエネルギー状態から評価します。同じ1粒子準位に入る粒子を区別しないことに注意して，励起状態の数を数えます。
 </div>
 
 ### (1)
-逆温度を $\beta = \dfrac{1}{k_{\mathrm{B}}T}$ とし，古典系の分配関数 $Z(T, V, N)$ を式 (2) を用いて計算します（$h = 2\pi\hbar$）。
+逆温度を $\beta = \dfrac{1}{k_{\mathrm{B}}T}$ とし，古典系の分配関数 $Z(T, V, N)$ を式 (2) を用いて計算します。ここで $h=2\pi\hbar$ です。
 
 $$
 \begin{aligned}
@@ -122,8 +122,13 @@ $$
 (i) 内部エネルギー $U = -\dfrac{\partial\ln Z}{\partial\beta}$ と定積熱容量 $C_V = \left(\dfrac{\partial U}{\partial T}\right)_{V, N}$ を求めます。
 
 $$
-U = -\frac{\partial}{\partial\beta}\left(-\frac{3N}{2}\ln\beta\right) = \frac{3N}{2\beta} = \frac{3}{2}Nk_{\mathrm{B}}T,\qquad
-C_V = \left(\frac{\partial U}{\partial T}\right)_{V, N} = \frac{3}{2}Nk_{\mathrm{B}}
+\begin{aligned}
+U &= -\frac{\partial}{\partial\beta}\left(-\frac{3N}{2}\ln\beta\right) \\
+&= \frac{3N}{2\beta} \\
+&= \frac{3}{2}Nk_{\mathrm{B}}T \\
+C_V &= \left(\frac{\partial U}{\partial T}\right)_{V, N} \\
+&= \frac{3}{2}Nk_{\mathrm{B}}
+\end{aligned}
 $$
 
 したがって，
@@ -135,7 +140,11 @@ $$
 (ii) ヘルムホルツの自由エネルギー $F = -k_{\mathrm{B}}T\ln Z$ より圧力 $P = -\left(\dfrac{\partial F}{\partial V}\right)_{T, N}$ を求めます。
 
 $$
-P = k_{\mathrm{B}}T\left(\frac{\partial\ln Z}{\partial V}\right)_{T, N} = k_{\mathrm{B}}T\cdot\frac{N}{V} = \frac{Nk_{\mathrm{B}}T}{V}
+\begin{aligned}
+P &= k_{\mathrm{B}}T\left(\frac{\partial\ln Z}{\partial V}\right)_{T, N} \\
+&= k_{\mathrm{B}}T\cdot\frac{N}{V} \\
+&= \frac{Nk_{\mathrm{B}}T}{V}
+\end{aligned}
 $$
 
 したがって，
@@ -147,7 +156,11 @@ $$
 (iii) 式 (3) に $C_V(T') = \dfrac{3}{2}Nk_{\mathrm{B}}$ を代入します。
 
 $$
-\Delta S(T_0, T_0/2) = \int_{T_0/2}^{T_0} \frac{3Nk_{\mathrm{B}}}{2T'}\,\mathrm{d}T' = \frac{3}{2}Nk_{\mathrm{B}}\ln\frac{T_0}{T_0/2} = \frac{3}{2}Nk_{\mathrm{B}}\ln 2
+\begin{aligned}
+\Delta S(T_0, T_0/2) &= \int_{T_0/2}^{T_0} \frac{3Nk_{\mathrm{B}}}{2T'}\,\mathrm{d}T' \\
+&= \frac{3}{2}Nk_{\mathrm{B}}\ln\frac{T_0}{T_0/2} \\
+&= \frac{3}{2}Nk_{\mathrm{B}}\ln 2
+\end{aligned}
 $$
 
 したがって，
@@ -186,10 +199,23 @@ $$
 \finalanswer{\frac{\langle N(T_1)\rangle}{\langle N(T_2)\rangle} = \left(\frac{T_1}{T_2}\right)^{\frac{3}{2}}\exp\left[\frac{\mu}{k_{\mathrm{B}}}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)\right]}
 $$
 
-(ii) グランドポテンシャル $J = -PV = -k_{\mathrm{B}}T\ln\Xi$ より，
+(ii) グランドポテンシャル 
 
 $$
-PV = k_{\mathrm{B}}T\ln\Xi = k_{\mathrm{B}}T\,\langle N(T)\rangle \implies P = \frac{\langle N(T)\rangle}{V}\,k_{\mathrm{B}}T
+\begin{aligned}
+J &= -PV \\
+&= -k_{\mathrm{B}}T\ln\Xi
+\end{aligned}
+$$
+
+ より，
+
+$$
+\begin{aligned}
+PV &= k_{\mathrm{B}}T\ln\Xi \\
+&= k_{\mathrm{B}}T\,\langle N(T)\rangle \\
+P &= \frac{\langle N(T)\rangle}{V}\,k_{\mathrm{B}}T
+\end{aligned}
 $$
 
 となります。したがって，
@@ -203,16 +229,33 @@ $$
 
 $$
 \begin{aligned}
-\epsilon_0 &= E(1, 1, 1) = \frac{\pi^2\hbar^2}{2mL^2}\left(1 + 1 + \frac{1}{4}\right) = \frac{9\pi^2\hbar^2}{8mL^2} \\
-\epsilon_1 &= E(1, 1, 2) = \frac{\pi^2\hbar^2}{2mL^2}\left(1 + 1 + 1\right) = \frac{3\pi^2\hbar^2}{2mL^2}
+\epsilon_0 &= E(1, 1, 1) \\
+&= \frac{\pi^2\hbar^2}{2mL^2}\left(1 + 1 + \frac{1}{4}\right) \\
+&= \frac{9\pi^2\hbar^2}{8mL^2} \\
+\epsilon_1 &= E(1, 1, 2) \\
+&= \frac{\pi^2\hbar^2}{2mL^2}\left(1 + 1 + 1\right) \\
+&= \frac{3\pi^2\hbar^2}{2mL^2}
 \end{aligned}
 $$
 
-ボース粒子は同一状態に何個でも入ることができるため，$N$ 粒子系の基底状態は $N$ 個すべてが $(1, 1, 1)$ にある状態（縮退なし），第一励起状態は $N - 1$ 個が $(1, 1, 1)$ にあり $1$ 個だけが $(1, 1, 2)$ にある状態（粒子は区別できないのでやはり縮退なし）です。エネルギー差を $\Delta\epsilon = \epsilon_1 - \epsilon_0 = \dfrac{3\pi^2\hbar^2}{8mL^2}$ とおくと，
+基底状態では，すべての粒子が $(1,1,1)$ の準位を占有します。第一励起状態では，1粒子が $(1,1,2)$ の準位を占有します。粒子を区別しないので，両状態とも縮退はありません。エネルギー差を 
 
 $$
-E_0 = N\epsilon_0 = \frac{9N\pi^2\hbar^2}{8mL^2},\qquad
-E_1 = (N - 1)\epsilon_0 + \epsilon_1 = \frac{(9N + 3)\pi^2\hbar^2}{8mL^2}
+\begin{aligned}
+\Delta\epsilon &= \epsilon_1-\epsilon_0 \\
+&= \dfrac{3\pi^2\hbar^2}{8mL^2}
+\end{aligned}
+$$
+
+ とおくと，
+
+$$
+\begin{aligned}
+E_0 &= N\epsilon_0 \\
+&= \frac{9N\pi^2\hbar^2}{8mL^2} \\
+E_1 &= (N - 1)\epsilon_0 + \epsilon_1 \\
+&= \frac{(9N + 3)\pi^2\hbar^2}{8mL^2}
+\end{aligned}
 $$
 
 となります。したがって，
@@ -221,20 +264,31 @@ $$
 \finalanswer{E_0 = \frac{9N\pi^2\hbar^2}{8mL^2},\qquad E_1 = \frac{(9N + 3)\pi^2\hbar^2}{8mL^2}}
 $$
 
-(ii) $k_{\mathrm{B}}T \ll \Delta\epsilon = E_1 - E_0 = \dfrac{3\pi^2\hbar^2}{8mL^2}$ のとき，第二励起状態以上のボルツマン因子は無視するほど小さいため，基底状態と第一励起状態のみを残して分配関数を近似することができます。
+(ii) 
 
 $$
-Z(T) \simeq e^{-\beta E_0} + e^{-\beta E_1} = e^{-\beta E_0}\left(1 + e^{-\beta\Delta\epsilon}\right)
+\begin{aligned}
+k_{\mathrm{B}}T \ll \Delta\epsilon &= E_1 - E_0 \\
+&= \dfrac{3\pi^2\hbar^2}{8mL^2}
+\end{aligned}
+$$
+
+ のとき，第二励起状態以上のボルツマン因子は無視するほど小さいため，基底状態と第一励起状態のみを残して分配関数を近似することができます。
+
+$$
+\begin{aligned}
+Z(T) &\simeq e^{-\beta E_0} + e^{-\beta E_1} \\
+&= e^{-\beta E_0}\left(1 + e^{-\beta\Delta\epsilon}\right)
+\end{aligned}
 $$
 
 内部エネルギー $U(T) = -\dfrac{\partial\ln Z}{\partial\beta}$ を計算します。
 
 $$
 \begin{aligned}
-U(T)
-&\simeq E_0 + \frac{\Delta\epsilon\,e^{-\beta\Delta\epsilon}}{1 + e^{-\beta\Delta\epsilon}} \\
-&\simeq E_0 + \Delta\epsilon\,e^{-\frac{\Delta\epsilon}{k_{\mathrm{B}}T}}
-= \frac{9N\pi^2\hbar^2}{8mL^2} + \frac{3\pi^2\hbar^2}{8mL^2}\exp\left(-\frac{3\pi^2\hbar^2}{8mL^2 k_{\mathrm{B}}T}\right)
+U(T) &\simeq E_0 + \frac{\Delta\epsilon\,e^{-\beta\Delta\epsilon}}{1 + e^{-\beta\Delta\epsilon}} \\
+&\simeq E_0 + \Delta\epsilon\,e^{-\frac{\Delta\epsilon}{k_{\mathrm{B}}T}} \\
+&= \frac{9N\pi^2\hbar^2}{8mL^2} + \frac{3\pi^2\hbar^2}{8mL^2}\exp\left(-\frac{3\pi^2\hbar^2}{8mL^2 k_{\mathrm{B}}T}\right)
 \end{aligned}
 $$
 
@@ -244,12 +298,15 @@ $$
 \finalanswer{U(T) \simeq E_0 + \Delta\epsilon\,e^{-\frac{\Delta\epsilon}{k_{\mathrm{B}}T}} \qquad \left(E_0 = \frac{9N\pi^2\hbar^2}{8mL^2},\ \Delta\epsilon = \frac{3\pi^2\hbar^2}{8mL^2}\right)}
 $$
 
-**設問1との比較**：古典論の設問1では内部エネルギーは $U = \dfrac{3}{2}Nk_{\mathrm{B}}T$ と温度 $T$ に比例して $T \to 0$ で $0$ になります。これに対し量子論では，不確定性関係に由来する有限の基底エネルギー（零点エネルギー）$E_0 > 0$ をもち，温度上昇に伴う増加分も $T$ に比例せず指数関数 $e^{-\Delta\epsilon/(k_{\mathrm{B}}T)}$ で極めて緩やかに立ち上がります。
+**設問1との比較**：古典論では $U=\dfrac32Nk_{\mathrm B}T$ であり，$T\to0$ で $0$ になります。量子論では有限の基底エネルギー $E_0>0$ が残ります。温度による増加分は $T$ に比例せず，$e^{-\Delta\epsilon/(k_{\mathrm B}T)}$ に比例して小さくなります。
 
 (iii) (ii) の $U(T)$ を $T$ で微分して定積熱容量を求め，$T \to 0$ の極限をとります。
 
 $$
-C_V(T) = \left(\frac{\partial U}{\partial T}\right)_{V, N} \simeq k_{\mathrm{B}}\left(\frac{\Delta\epsilon}{k_{\mathrm{B}}T}\right)^2 e^{-\frac{\Delta\epsilon}{k_{\mathrm{B}}T}} \xrightarrow{T \to 0} 0
+\begin{aligned}
+C_V(T) &= \left(\frac{\partial U}{\partial T}\right)_{V, N} \\
+&\simeq k_{\mathrm{B}}\left(\frac{\Delta\epsilon}{k_{\mathrm{B}}T}\right)^2 e^{-\frac{\Delta\epsilon}{k_{\mathrm{B}}T}} \xrightarrow{T \to 0} 0
+\end{aligned}
 $$
 
 したがって，
@@ -275,11 +332,30 @@ $$
 \finalanswer{\lim_{T_0 \to 0} \Delta S(T_0, T_0/2) = 0}
 $$
 
-(v) ボルツマンの原理 $S = k_{\mathrm{B}}\ln W$（$W$ は微視的状態数）の観点から両者を比較します。
+(v) 微視的状態数を $W$ とすると，ボルツマンの原理は $S=k_{\mathrm B}\ln W$ です。この関係から両者を比較します。
 
-- **古典系（設問1(iii)）**：エネルギー $U$ をもつ等エネルギー面は，$3N$ 次元運動量空間において半径 $p = \sqrt{2mU}$ の $3N$ 次元超球面です。その表面積は $a_{3N} p^{3N - 1} \propto U^{(3N - 1)/2}$ であり，微小幅 $\delta U$ の状態数 $W_{\mathrm{cl}}(U) \propto V^N p^{3N - 1}\dfrac{\mathrm{d}p}{\mathrm{d}U}\delta U \propto U^{3N/2 - 1} \simeq U^{3N/2}$（運動量空間の体積で評価しても $\propto p^{3N} \propto U^{3N/2}$）となります。$U = \dfrac{3}{2}Nk_{\mathrm{B}}T$ より，温度を $T_0$ から $T_0/2$ に下げると，どんな低温でも状態数の比は $W_{\mathrm{cl}}(T_0)/W_{\mathrm{cl}}(T_0/2) = 2^{3N/2}$ と一定の比を保ちます。そのためエントロピー差 $\Delta S = k_{\mathrm{B}}\ln\left(W_{\mathrm{cl}}(T_0)/W_{\mathrm{cl}}(T_0/2)\right) = \dfrac{3}{2}Nk_{\mathrm{B}}\ln 2$ は $T_0 \to 0$ でも $0$ にならず（$S \to -\infty$ へ発散），熱力学第三法則を満たしません。
-- **量子系（設問3(iv)）**：有限の箱の中ではエネルギー準位が離散的であり，基底状態と第一励起状態の間に有限のエネルギーギャップ $\Delta\epsilon > 0$ が存在します。$k_{\mathrm{B}}T_0 \ll \Delta\epsilon$ の低温極限では励起状態への遷移が凍結し，系は縮退のない唯一の基底状態（状態数 $W = 1$）をとるため，$S(T_0) \to k_{\mathrm{B}}\ln 1 = 0$ となり，$\Delta S(T_0, T_0/2) \to 0$ となります。
+- **古典系**：$3N$ 次元の運動量空間で，エネルギーが $U$ 以下となる領域は半径 $p_U=\sqrt{2mU}$ の球の内部です。与えられた表面積を半径について積分すると，
+
+$$
+\begin{aligned}
+\Omega_{\mathrm{cl}}(U)&\propto V^N\int_0^{p_U}a_{3N}p^{3N-1}\,\mathrm{d}p\\
+&\propto V^Np_U^{3N}\\
+&\propto U^{3N/2}
+\end{aligned}
+$$
+
+となります。温度の変化に伴う運動量のスケールは $\sqrt T$ に比例するため，状態数に相当する位相空間の体積の比は $2^{3N/2}$ です。ボルツマンの原理から，
+
+$$
+\begin{aligned}
+\Delta S&=k_{\mathrm B}\ln\frac{\Omega_{\mathrm{cl}}(U(T_0))}{\Omega_{\mathrm{cl}}(U(T_0/2))}\\
+&=\frac32Nk_{\mathrm B}\ln2
+\end{aligned}
+$$
+
+となります。有限の $N$ でも，古典論の連続な状態数では低温でこの差が $0$ になりません。
+- **量子系**：有限の箱ではエネルギー準位が離散的で，基底状態と第一励起状態の差は $\Delta\epsilon>0$ です。$k_{\mathrm B}T_0\ll\Delta\epsilon$ では励起状態の寄与が小さくなります。基底状態は1つなので，$S(T_0)\to k_{\mathrm B}\ln1=0$，$\Delta S(T_0,T_0/2)\to0$ となります。
 
 <aside class="rigor-note" markdown>
-本問では $L, N$ を有限に固定して $T_0 \to 0$ の極限をとったため，有限サイズギャップ $\Delta\epsilon \propto L^{-2}$ によって $C_V$ や $S$ が指数関数的に $0$ へ収束しました。熱力学極限（$N, V \to \infty$ を先に $N/V$ 一定でとる極限）では3次元理想ボース気体はボース・アインシュタイン凝縮を起こし，低温では $C_V \propto T^{3/2},\ S \propto T^{3/2}$ のべき乗則で $0$ に収束します。
+$L,N$ を有限に固定すると，基底状態と第一励起状態の差 $\Delta\epsilon$ は正の値です。低温の評価は $k_{\mathrm B}T\ll\Delta\epsilon$ の範囲で行っています。箱の大きさを変える極限とは区別します。
 </aside>

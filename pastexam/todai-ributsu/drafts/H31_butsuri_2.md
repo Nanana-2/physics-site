@@ -67,13 +67,31 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-開放端の1次元鎖では，右端のスピン $\mathbf{S}_L$ に関する和が隣り合う $\mathbf{S}_{L-1}$ の向きによらず同じ因子 $e^{\beta J} + 1$ を与えるため，分配関数が漸化式で厳密に求まります。
+原子を端に1つ加えるときのエネルギー変化は，隣り合う2つのスピンだけで決まります。この性質を使うと，長さの異なる鎖の分配関数や端点の確率を結び付けることができます。
 
-両端スピンの同時確率も $2\times 2$ の確率遷移行列 $Q$ のべき乗で書き下すことができ，$Q$ の2つの固有値（$1$ と $\tanh(\beta J / 2)$）の比からスピン相関の指数減衰と相関長 $\xi$ が決まります。
+端点の確率を行列としてまとめると，原子を加える操作を行列の積で表すことができます。固有値を調べることで，距離とともに確率が変わる様子を求めます。
 </div>
 
 ### (1)
-$\hat{x}\cdot\hat{x} = \hat{y}\cdot\hat{y} = 1$，$\hat{x}\cdot\hat{y} = \hat{y}\cdot\hat{x} = 0$ です。$L = 2$ の可能なスピン配置は $2^2 = 4$ 通りあり，それぞれのエネルギー $E(\mathbf{S}_1, \mathbf{S}_2) = -J\,\mathbf{S}_1\cdot\mathbf{S}_2$ は次のとおりです。
+
+
+$$
+\begin{aligned}
+\hat{x}\cdot\hat{x} &= \hat{y}\cdot\hat{y} \\
+&= 1
+\end{aligned}
+$$
+
+，
+
+$$
+\begin{aligned}
+\hat{x}\cdot\hat{y} &= \hat{y}\cdot\hat{x} \\
+&= 0
+\end{aligned}
+$$
+
+ です。$L = 2$ の可能なスピン配置は $2^2 = 4$ 通りあり，それぞれのエネルギー $E(\mathbf{S}_1, \mathbf{S}_2) = -J\,\mathbf{S}_1\cdot\mathbf{S}_2$ は次のとおりです。
 
 - $(\hat{x}, \hat{x})$：$E = -J$
 - $(\hat{x}, \hat{y})$：$E = 0$
@@ -83,7 +101,10 @@ $\hat{x}\cdot\hat{x} = \hat{y}\cdot\hat{y} = 1$，$\hat{x}\cdot\hat{y} = \hat{y}
 よって分配関数 $Z_2(\beta)$ は次のように求まります。
 
 $$
-Z_2(\beta) = e^{\beta J} + 1 + 1 + e^{\beta J} = 2\left(e^{\beta J} + 1\right)
+\begin{aligned}
+Z_2(\beta) &= e^{\beta J} + 1 + 1 + e^{\beta J} \\
+&= 2\left(e^{\beta J} + 1\right)
+\end{aligned}
 $$
 
 したがって，
@@ -95,14 +116,17 @@ $$
 ### (2)
 $L = 3$ の可能なスピン配置は $2^3 = 8$ 通りあり，それぞれのエネルギー $E(\mathbf{S}_1, \mathbf{S}_2, \mathbf{S}_3) = -J(\mathbf{S}_1\cdot\mathbf{S}_2 + \mathbf{S}_2\cdot\mathbf{S}_3)$ は次のとおりです。
 
-- $(\hat{x}, \hat{x}, \hat{x})$，$(\hat{y}, \hat{y}, \hat{y})$：$E = -2J$（計2通り）
-- $(\hat{x}, \hat{x}, \hat{y})$，$(\hat{x}, \hat{y}, \hat{y})$，$(\hat{y}, \hat{x}, \hat{x})$，$(\hat{y}, \hat{y}, \hat{x})$：$E = -J$（計4通り）
-- $(\hat{x}, \hat{y}, \hat{x})$，$(\hat{y}, \hat{x}, \hat{y})$：$E = 0$（計2通り）
+- $(\hat{x}, \hat{x}, \hat{x})$，$(\hat{y}, \hat{y}, \hat{y})$：$E=-2J$ です。計2通りあります。
+- $(\hat{x}, \hat{x}, \hat{y})$，$(\hat{x}, \hat{y}, \hat{y})$，$(\hat{y}, \hat{x}, \hat{x})$，$(\hat{y}, \hat{y}, \hat{x})$：$E=-J$ です。計4通りあります。
+- $(\hat{x}, \hat{y}, \hat{x})$，$(\hat{y}, \hat{x}, \hat{y})$：$E=0$ です。計2通りあります。
 
 よって分配関数 $Z_3(\beta)$ は次のように求まります。
 
 $$
-Z_3(\beta) = 2e^{2\beta J} + 4e^{\beta J} + 2 = 2\left(e^{\beta J} + 1\right)^2
+\begin{aligned}
+Z_3(\beta) &= 2e^{2\beta J} + 4e^{\beta J} + 2 \\
+&= 2\left(e^{\beta J} + 1\right)^2
+\end{aligned}
 $$
 
 したがって，
@@ -146,16 +170,19 @@ $$
 
 $$
 \begin{aligned}
-U_L(\beta)
-&= -\frac{\partial}{\partial\beta}\Bigl[\ln 2 + (L - 1)\ln\left(e^{\beta J} + 1\right)\Bigr] \\
-&= -(L - 1)\frac{J e^{\beta J}}{e^{\beta J} + 1} = -(L - 1)\frac{J}{1 + e^{-\beta J}}
+U_L(\beta) &= -\frac{\partial}{\partial\beta}\Bigl[\ln 2 + (L - 1)\ln\left(e^{\beta J} + 1\right)\Bigr] \\
+&= -(L - 1)\frac{J e^{\beta J}}{e^{\beta J} + 1} \\
+&= -(L - 1)\frac{J}{1 + e^{-\beta J}}
 \end{aligned}
 $$
 
 $L$ が十分大きい極限でスピン1個あたりの内部エネルギー $u(\beta) = \displaystyle\lim_{L\to\infty}\dfrac{U_L(\beta)}{L}$ を求めます。
 
 $$
-u(\beta) = -\frac{J e^{\beta J}}{e^{\beta J} + 1} = -\frac{J}{1 + e^{-\beta J}}
+\begin{aligned}
+u(\beta) &= -\frac{J e^{\beta J}}{e^{\beta J} + 1} \\
+&= -\frac{J}{1 + e^{-\beta J}}
+\end{aligned}
 $$
 
 したがって，
@@ -166,7 +193,7 @@ $$
 
 **高温極限と低温極限の解釈**：
 
-- **高温極限**（$\beta J \to 0$）：$u(\beta) \to -\dfrac{J}{2}$ となります。熱ゆらぎが相互作用より十分大きく，すべての $2^L$ 通りのスピン配置が等確率で出現するため，隣り合うスピンの組が同じ向き（エネルギー $-J$）をとる確率と直交する向き（エネルギー $0$）をとる確率がともに $\dfrac{1}{2}$ となり，ボンド1本あたりの平均エネルギーが $-\dfrac{J}{2}$ になります。
+- **高温極限**（$\beta J\to0$）：$u(\beta)\to-J/2$ です。すべての $2^L$ 通りの配置が等確率で出現し，隣り合うスピンが同じ向きをとる確率と直交する向きをとる確率はともに $1/2$ です。前者のエネルギーは $-J$，後者は $0$ なので，ボンド1本あたりの平均エネルギーは $-J/2$ になります。
 - **低温極限**（$\beta J \to \infty$）：$u(\beta) \to -J$ となります。エネルギーが最小となる基底状態，すなわちすべてのスピンが $\hat{x}$ に揃った配置とすべて $\hat{y}$ に揃った配置の2状態のみがそれぞれ確率 $\dfrac{1}{2}$ で出現するため，すべてのボンドのエネルギーが $-J$ になります。
 
 ### (6)
@@ -191,34 +218,55 @@ $$
 行列 $P_L = \begin{pmatrix} P_L(\hat{x}, \hat{x}) & P_L(\hat{x}, \hat{y}) \\ P_L(\hat{y}, \hat{x}) & P_L(\hat{y}, \hat{y}) \end{pmatrix}$，$Q = \begin{pmatrix} Q(\hat{x}, \hat{x}) & Q(\hat{x}, \hat{y}) \\ Q(\hat{y}, \hat{x}) & Q(\hat{y}, \hat{y}) \end{pmatrix}$ とおきます。問1より $L = 2$ の同時確率行列は
 
 $$
-P_2 = \frac{1}{2\left(e^{\beta J} + 1\right)}\begin{pmatrix} e^{\beta J} & 1 \\ 1 & e^{\beta J} \end{pmatrix} = \frac{1}{2} Q
+\begin{aligned}
+P_2 &= \frac{1}{2\left(e^{\beta J} + 1\right)}\begin{pmatrix} e^{\beta J} & 1 \\ 1 & e^{\beta J} \end{pmatrix} \\
+&= \frac{1}{2} Q
+\end{aligned}
 $$
 
-なので，式 (2) を繰り返し用いると $P_L = P_2 Q^{L - 2} = \dfrac{1}{2} Q^{L - 1}$ となります。
-
-実対称行列 $Q$ の固有値と正規直交固有ベクトルを求めます。
-
-$$
-\lambda_+ = Q(\hat{x}, \hat{x}) + Q(\hat{x}, \hat{y}) = 1,\qquad
-\lambda_- = Q(\hat{x}, \hat{x}) - Q(\hat{x}, \hat{y}) = \frac{e^{\beta J} - 1}{e^{\beta J} + 1} = \tanh\left(\frac{\beta J}{2}\right)
-$$
-
-内積の期待値 $\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ は，$\hat{x}\cdot\hat{x} = \hat{y}\cdot\hat{y} = 1,\ \hat{x}\cdot\hat{y} = 0$ より $P_L$ のトレースに等しくなります。
+なので，式 (2) を繰り返し用いると 
 
 $$
 \begin{aligned}
-\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle
-&= P_L(\hat{x}, \hat{x}) + P_L(\hat{y}, \hat{y}) = \operatorname{Tr}(P_L) \\
-&= \frac{1}{2}\operatorname{Tr}\left(Q^{L - 1}\right) = \frac{1}{2}\left(\lambda_+^{L - 1} + \lambda_-^{L - 1}\right) \\
-&= \frac{1}{2} + \frac{1}{2}\left(\frac{e^{\beta J} - 1}{e^{\beta J} + 1}\right)^{L - 1}
-= \frac{1}{2} + \frac{1}{2}\left[\tanh\left(\frac{\beta J}{2}\right)\right]^{L - 1}
+P_L &= P_2 Q^{L - 2} \\
+&= \dfrac{1}{2} Q^{L - 1}
+\end{aligned}
+$$
+
+ となります。
+
+実対称行列 $Q$ の固有値を求めます。
+
+$$
+\begin{aligned}
+\lambda_+ &= Q(\hat{x}, \hat{x}) + Q(\hat{x}, \hat{y}) \\
+&= 1 \\
+\lambda_- &= Q(\hat{x}, \hat{x}) - Q(\hat{x}, \hat{y}) \\
+&= \frac{e^{\beta J} - 1}{e^{\beta J} + 1} \\
+&= \tanh\left(\frac{\beta J}{2}\right)
+\end{aligned}
+$$
+
+内積の期待値 $\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle$ は，$\hat{x}\cdot\hat{x}=1$，$\hat{y}\cdot\hat{y}=1$，$\hat{x}\cdot\hat{y}=0$ より $P_L$ のトレースに等しくなります。
+
+$$
+\begin{aligned}
+\langle \mathbf{S}_1 \cdot \mathbf{S}_L \rangle &= P_L(\hat{x}, \hat{x}) + P_L(\hat{y}, \hat{y}) \\
+&= \operatorname{Tr}(P_L) \\
+&= \frac{1}{2}\operatorname{Tr}\left(Q^{L - 1}\right) \\
+&= \frac{1}{2}\left(\lambda_+^{L - 1} + \lambda_-^{L - 1}\right) \\
+&= \frac{1}{2} + \frac{1}{2}\left(\frac{e^{\beta J} - 1}{e^{\beta J} + 1}\right)^{L - 1} \\
+&= \frac{1}{2} + \frac{1}{2}\left[\tanh\left(\frac{\beta J}{2}\right)\right]^{L - 1}
 \end{aligned}
 $$
 
 式 (3) と比較すると，$A = \dfrac{1}{2},\ B = \dfrac{1}{2}$ であり，$J > 0$ より $0 < \tanh\left(\dfrac{\beta J}{2}\right) < 1$ なので，相関長 $\xi$ は次のように表されます。
 
 $$
-\xi = -\frac{1}{\ln\tanh\left(\dfrac{\beta J}{2}\right)} = \frac{1}{\ln\left(\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1}\right)}
+\begin{aligned}
+\xi &= -\frac{1}{\ln\tanh\left(\dfrac{\beta J}{2}\right)} \\
+&= \frac{1}{\ln\left(\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1}\right)}
+\end{aligned}
 $$
 
 それぞれの極限を評価します。
@@ -226,10 +274,22 @@ $$
 - **高温極限**（$\beta J \ll 1$）：$\tanh\left(\dfrac{\beta J}{2}\right) \simeq \dfrac{\beta J}{2}$ より，
 
 $$
-\xi \simeq -\frac{1}{\ln\left(\dfrac{\beta J}{2}\right)} = \frac{1}{\ln\left(\dfrac{2}{\beta J}\right)}
+\begin{aligned}
+\xi &\simeq -\frac{1}{\ln\left(\dfrac{\beta J}{2}\right)} \\
+&= \frac{1}{\ln\left(\dfrac{2}{\beta J}\right)}
+\end{aligned}
 $$
 
-- **低温極限**（$\beta J \gg 1$）：$\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1} = \dfrac{1 + e^{-\beta J}}{1 - e^{-\beta J}} \simeq 1 + 2e^{-\beta J}$ より $\ln\left(\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1}\right) \simeq 2e^{-\beta J}$ なので，
+- **低温極限**（$\beta J \gg 1$）：
+
+$$
+\begin{aligned}
+\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1} &= \dfrac{1 + e^{-\beta J}}{1 - e^{-\beta J}} \\
+&\simeq 1 + 2e^{-\beta J}
+\end{aligned}
+$$
+
+ より $\ln\left(\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1}\right) \simeq 2e^{-\beta J}$ なので，
 
 $$
 \xi \simeq \frac{1}{2}e^{\beta J}
@@ -242,5 +302,15 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-本問題の模型は $q = 2$ の1次元ポッツ模型であり，$\sigma_i = +1\ (\mathbf{S}_i = \hat{x}),\ -1\ (\mathbf{S}_i = \hat{y})$ とおくと $\mathbf{S}_i \cdot \mathbf{S}_{i+1} = \dfrac{1 + \sigma_i\sigma_{i+1}}{2}$ となるため，結合定数 $J_{\mathrm{Ising}} = J/2$ の1次元イジング模型に厳密に対応します。$\langle\mathbf{S}_1\cdot\mathbf{S}_L\rangle \to \dfrac{1}{2}\ (L \to \infty)$ の定数項 $A = \dfrac{1}{2}$ はスピンが直交する2方向 $\hat{x}, \hat{y}$ に限られていることによる無相関時の平均値 $\langle\mathbf{S}_1\rangle\cdot\langle\mathbf{S}_L\rangle = \left(\dfrac{\hat{x}+\hat{y}}{2}\right)^2 = \dfrac{1}{2}$ です。低温極限で $\xi \simeq \dfrac{1}{2}e^{\beta J}$ と指数関数的に増大するものの有限温度 $T > 0$ では常に有限であり，1次元短距離相互作用系に相転移がないことと整合しています。
+有限の温度では $0<\tanh(\beta J/2)<1$ なので，$L\to\infty$ で相関は $1/2$ に近づきます。無相関の平均値を確認すると，
+
+$$
+\begin{aligned}
+\langle\boldsymbol S_1\rangle\cdot\langle\boldsymbol S_L\rangle
+&=\frac{\hat x+\hat y}{2}\cdot\frac{\hat x+\hat y}{2}\\
+&=\frac12
+\end{aligned}
+$$
+
+です。距離とともに0へ減衰するのは，この定数を引いた相関です。
 </aside>

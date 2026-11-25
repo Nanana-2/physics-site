@@ -92,32 +92,43 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-独立な調和振動子（アインシュタイン模型）では単一の振動数 $\omega$ のギャップがあるため低温比熱が指数関数的に $0$ へ落ちますが，質点どうしをバネで結んだ1次元格子鎖では基準振動の分散関係が長波長極限で音速に比例して $0$ へ近づく（ギャップレスな音響フォノン）ため，低温比熱が温度のべき乗則 $C_{1\mathrm{Q}} \propto T$ に従います。
+独立な振動子では，1個の分配関数から粒子当たりの熱力学量を求めることができます。位置の平均と分散も，平衡位置からの変位を使うと計算しやすくなります。
 
-古典論では基準振動への直交変換後もエネルギー等分配則により各モードが同じ熱容量 $k_{\mathrm{B}}$ をもつため比熱は結合の有無によらず一定ですが，量子論では低エネルギー状態密度の振る舞いが低温比熱のべき指数を直接決定します。
+結合した質点の変位を基準振動の座標へ変換すると，振動数が異なる独立な振動子として扱うことができます。各振動数のモードが比熱に寄与するため，低温では低い振動数のモードを調べます。
 </div>
 
 ### (1)
-$N$ 個の振動子は独立なので，1個の振動子（$X = x_1 - a,\ p = p_1$）の古典分配関数 $Z_1$ を式 (2) を用いて計算します（$\beta = 1/(k_{\mathrm{B}}T)$）。
+$\beta=\dfrac{1}{k_{\mathrm B}T}$ とおきます。振動子は互いに独立なので，座標 $X=x_1-a$，運動量 $p=p_1$ の1個の分配関数を式 (2) から計算します。
 
 $$
 \begin{aligned}
-Z_1
-&= \frac{1}{h}\int_{-\infty}^{\infty} e^{-\frac{\beta p^2}{2m}}\,\mathrm{d}p \int_{-\infty}^{\infty} e^{-\frac{\beta m\omega^2}{2}X^2}\,\mathrm{d}X \\
-&= \frac{1}{h}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}} = \frac{2\pi}{h\beta\omega}
+Z_1 &= \frac{1}{h}\int_{-\infty}^{\infty} e^{-\frac{\beta p^2}{2m}}\,\mathrm{d}p \int_{-\infty}^{\infty} e^{-\frac{\beta m\omega^2}{2}X^2}\,\mathrm{d}X \\
+&= \frac{1}{h}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}} \\
+&= \frac{2\pi}{h\beta\omega}
 \end{aligned}
 $$
 
 これより1質点あたりの内部エネルギー $U$ と比熱 $C$ は次のようになります。
 
 $$
-U = -\frac{\partial\ln Z_1}{\partial\beta} = \frac{1}{\beta} = k_{\mathrm{B}}T,\qquad C = \frac{\partial U}{\partial T} = k_{\mathrm{B}}
+\begin{aligned}
+U&=-\frac{\partial\ln Z_1}{\partial\beta}\\
+&=\frac{1}{\beta}\\
+&=k_{\mathrm B}T\\
+C&=\frac{\partial U}{\partial T}\\
+&=k_{\mathrm B}
+\end{aligned}
 $$
 
-また $X = x_1 - a$ の分布は偶関数なので $\langle X \rangle = 0$，すなわち $\langle x_1 \rangle = a$ です。位置の分散 $\langle x_1^2 \rangle - \langle x_1 \rangle^2 = \langle X^2 \rangle$ を式 (2)（$\alpha = \dfrac{\beta m\omega^2}{2}$）で計算します。
+また $X = x_1 - a$ の分布は偶関数なので $\langle X \rangle = 0$，すなわち $\langle x_1 \rangle = a$ です。$\alpha=\dfrac{\beta m\omega^2}{2}$ とおき，式 (2) から位置の分散 $\langle X^2\rangle$ を求めます。
 
 $$
-\langle X^2 \rangle = \frac{\int_{-\infty}^{\infty} X^2 e^{-\alpha X^2}\,\mathrm{d}X}{\int_{-\infty}^{\infty} e^{-\alpha X^2}\,\mathrm{d}X} = \frac{1}{2\alpha} = \frac{1}{\beta m\omega^2} = \frac{k_{\mathrm{B}}T}{m\omega^2}
+\begin{aligned}
+\langle X^2 \rangle &= \frac{\int_{-\infty}^{\infty} X^2 e^{-\alpha X^2}\,\mathrm{d}X}{\int_{-\infty}^{\infty} e^{-\alpha X^2}\,\mathrm{d}X} \\
+&= \frac{1}{2\alpha} \\
+&= \frac{1}{\beta m\omega^2} \\
+&= \frac{k_{\mathrm{B}}T}{m\omega^2}
+\end{aligned}
 $$
 
 したがって，
@@ -130,30 +141,43 @@ $$
 1個の量子調和振動子の分配関数 $Z_{1\mathrm{Q}}$ を式 (3) より計算します。
 
 $$
-Z_{1\mathrm{Q}} = \sum_{n=0}^{\infty} e^{-\beta\hbar\omega\left(n + \frac{1}{2}\right)} = \frac{e^{-\frac{\beta\hbar\omega}{2}}}{1 - e^{-\beta\hbar\omega}} = \frac{1}{2\sinh\left(\dfrac{\beta\hbar\omega}{2}\right)}
+\begin{aligned}
+Z_{1\mathrm{Q}} &= \sum_{n=0}^{\infty} e^{-\beta\hbar\omega\left(n + \frac{1}{2}\right)} \\
+&= \frac{e^{-\frac{\beta\hbar\omega}{2}}}{1 - e^{-\beta\hbar\omega}} \\
+&= \frac{1}{2\sinh\left(\dfrac{\beta\hbar\omega}{2}\right)}
+\end{aligned}
 $$
 
 これより1質点あたりの内部エネルギー $U_{\mathrm{Q}}$ と比熱 $C_{\mathrm{Q}}$ を求めます。
 
 $$
 \begin{aligned}
-U_{\mathrm{Q}}
-&= -\frac{\partial\ln Z_{1\mathrm{Q}}}{\partial\beta}
-= \hbar\omega\left(\frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}\right)
-= \frac{\hbar\omega}{2}\coth\left(\frac{\beta\hbar\omega}{2}\right) \\
-C_{\mathrm{Q}}
-&= \frac{\partial U_{\mathrm{Q}}}{\partial T}
-= k_{\mathrm{B}}\left(\frac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2\frac{e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}}}{\left(e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}} - 1\right)^2}
+U_{\mathrm{Q}} &= -\frac{\partial\ln Z_{1\mathrm{Q}}}{\partial\beta} \\
+&= \hbar\omega\left(\frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}\right) \\
+&= \frac{\hbar\omega}{2}\coth\left(\frac{\beta\hbar\omega}{2}\right) \\
+C_{\mathrm{Q}} &= \frac{\partial U_{\mathrm{Q}}}{\partial T} \\
+&= k_{\mathrm{B}}\left(\frac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2\frac{e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}}}{\left(e^{\frac{\hbar\omega}{k_{\mathrm{B}}T}} - 1\right)^2}
 \end{aligned}
 $$
 
-次に位置の平均と分散を求めます。$X = x_1 - a$ に対し，式 (4) よりすべての $n$ で $\langle n|X|n\rangle = 0$ なので $\langle X \rangle = 0$，すなわち $\langle x_1 \rangle = a$ です。また $\langle n|X^2|n\rangle = \|X|n\rangle\|^2 = \dfrac{\hbar}{2m\omega}(n + n + 1) = \dfrac{\hbar}{m\omega}\left(n + \dfrac{1}{2}\right)$ なので，
+次に位置の平均と分散を求めます。$X=x_1-a$ とすると，式 (4) から $\langle n|X|n\rangle=0$ なので，$\langle x_1\rangle=a$ です。各固有状態の分散は，
 
 $$
 \begin{aligned}
-\langle x_1^2 \rangle - \langle x_1 \rangle^2
-&= \langle X^2 \rangle = \frac{1}{Z_{1\mathrm{Q}}}\sum_{n=0}^{\infty} \langle n|X^2|n\rangle e^{-\beta\hbar\omega\left(n + \frac{1}{2}\right)} \\
-&= \frac{1}{m\omega^2} U_{\mathrm{Q}} = \frac{\hbar}{2m\omega}\coth\left(\frac{\hbar\omega}{2k_{\mathrm{B}}T}\right)
+\langle n|X^2|n\rangle&=\|X|n\rangle\|^2\\
+&=\frac{\hbar}{2m\omega}\bigl(n+n+1\bigr)\\
+&=\frac{\hbar}{m\omega}\left(n+\frac12\right)
+\end{aligned}
+$$
+
+です。エネルギー固有値の熱平均を使うと，
+
+$$
+\begin{aligned}
+\langle x_1^2 \rangle - \langle x_1 \rangle^2 &= \langle X^2 \rangle \\
+&= \frac{1}{Z_{1\mathrm{Q}}}\sum_{n=0}^{\infty} \langle n|X^2|n\rangle e^{-\beta\hbar\omega\left(n + \frac{1}{2}\right)} \\
+&= \frac{1}{m\omega^2} U_{\mathrm{Q}} \\
+&= \frac{\hbar}{2m\omega}\coth\left(\frac{\hbar\omega}{2k_{\mathrm{B}}T}\right)
 \end{aligned}
 $$
 
@@ -169,22 +193,49 @@ $$
 - **低温極限**（$k_{\mathrm{B}}T \ll \hbar\omega$）：$C_{\mathrm{Q}} \simeq k_{\mathrm{B}}\left(\dfrac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2 e^{-\hbar\omega/(k_{\mathrm{B}}T)} \to 0$ と指数関数的に $0$ へ近づき，温度によらず一定値 $k_{\mathrm{B}}$ を保つ古典論と大きく異なります。
 
 ### (3)
-平衡位置からの変位を $u_j = x_j - ja\ (j = 1, 2, \dots, N)$ とおき，固定端条件を $u_0 = u_{N+1} = 0$ で表します。ハミルトニアン (5) は次のように書かれます。
+平衡位置からの変位を $u_j = x_j - ja\ (j = 1, 2, \dots, N)$ とおき，固定端条件を 
+
+$$
+\begin{aligned}
+u_0 &= u_{N+1} \\
+&= 0
+\end{aligned}
+$$
+
+ で表します。ハミルトニアン (5) は次のように書かれます。
 
 $$
 H = \sum_{j=1}^{N} \frac{p_j^2}{2m} + \frac{m\omega^2}{2}\sum_{j=0}^{N} \left(u_{j+1} - u_j\right)^2
 $$
 
-直交変換（離散サイン変換）により基準座標 $Q_\ell$ と基準運動量 $P_\ell\ (\ell = 1, 2, \dots, N)$ を定義します。
+離散サイン変換という直交変換により基準座標 $Q_\ell$ と基準運動量 $P_\ell\ (\ell = 1, 2, \dots, N)$ を定義します。
 
 $$
 u_j = \sqrt{\frac{2}{N + 1}}\sum_{\ell=1}^{N} Q_\ell \sin\left(\frac{\ell j\pi}{N + 1}\right),\qquad
 p_j = \sqrt{\frac{2}{N + 1}}\sum_{\ell=1}^{N} P_\ell \sin\left(\frac{\ell j\pi}{N + 1}\right)
 $$
 
-（$j = 0,\ N + 1$ で自動的に $u_0 = u_{N+1} = 0$ を満たします。）直交性 $\dfrac{2}{N + 1}\displaystyle\sum_{j=1}^{N}\sin\left(\dfrac{\ell j\pi}{N + 1}\right)\sin\left(\dfrac{\ell' j\pi}{N + 1}\right) = \delta_{\ell\ell'}$ より運動エネルギーは $\displaystyle\sum_{j=1}^{N}\dfrac{p_j^2}{2m} = \sum_{\ell=1}^{N}\dfrac{P_\ell^2}{2m}$ です。
+$j=0,N+1$ では 
 
-一方，ポテンシャルエネルギーは $u_0 = u_{N+1} = 0$ を用いて部分和をとると
+$$
+\begin{aligned}
+u_0 &= u_{N+1} \\
+&= 0
+\end{aligned}
+$$
+
+ を満たします。直交性 $\dfrac{2}{N + 1}\displaystyle\sum_{j=1}^{N}\sin\left(\dfrac{\ell j\pi}{N + 1}\right)\sin\left(\dfrac{\ell' j\pi}{N + 1}\right) = \delta_{\ell\ell'}$ より運動エネルギーは $\displaystyle\sum_{j=1}^{N}\dfrac{p_j^2}{2m} = \sum_{\ell=1}^{N}\dfrac{P_\ell^2}{2m}$ です。
+
+一方，ポテンシャルエネルギーは 
+
+$$
+\begin{aligned}
+u_0 &= u_{N+1} \\
+&= 0
+\end{aligned}
+$$
+
+ を用いて部分和をとると
 
 $$
 \sum_{j=0}^{N} (u_{j+1} - u_j)^2 = \sum_{j=1}^{N} u_j\left(2u_j - u_{j-1} - u_{j+1}\right)
@@ -220,16 +271,25 @@ $$
 C_{1\mathrm{Q}} = \frac{1}{N}\sum_{\ell=1}^{N} k_{\mathrm{B}}\left(\frac{\beta\hbar\omega_\ell}{1}\right)^2\frac{e^{\beta\hbar\omega_\ell}}{\left(e^{\beta\hbar\omega_\ell} - 1\right)^2}
 $$
 
-式 (6) は $\omega_\ell = 2\omega\sin\left(\dfrac{\ell\pi}{2(N + 1)}\right)$ と表されます。$N \gg 1$ かつ低温（$k_{\mathrm{B}}T \ll \hbar\omega$）の極限では，$\beta\hbar\omega_\ell \lesssim 1$ となる低振動数モード（$\ell \ll N$）のみが和に寄与するため，$\omega_\ell \simeq \dfrac{\pi\omega}{N + 1}\ell \simeq \dfrac{\pi\omega}{N}\ell$ と線形近似し，和を $\ell$ についての積分へ置き換え，上限を $\infty$ に伸ばすことができます。
-
-変数変換 $x = \dfrac{\beta\hbar\pi\omega}{N}\ell$（$\mathrm{d}\ell = \dfrac{N k_{\mathrm{B}}T}{\pi\hbar\omega}\,\mathrm{d}x$）を行い，式 (7) の $\displaystyle\int_0^{\infty}\dfrac{x^2 e^x}{(e^x - 1)^2}\,\mathrm{d}x = \dfrac{\pi^2}{3}$ を用います。
+式 (6) の振動数は $\omega_\ell=2\omega\sin\!\left(\dfrac{\ell\pi}{2(N+1)}\right)$ です。低温 $k_{\mathrm B}T\ll\hbar\omega$ では，$\beta\hbar\omega_\ell\lesssim1$ となる低振動数のモードを考えます。$\ell\ll N$ に対して，
 
 $$
 \begin{aligned}
-C_{1\mathrm{Q}}
-&\simeq \frac{k_{\mathrm{B}}}{N}\int_0^{\infty} \frac{\left(\frac{\beta\hbar\pi\omega}{N}\ell\right)^2 e^{\frac{\beta\hbar\pi\omega}{N}\ell}}{\left(e^{\frac{\beta\hbar\pi\omega}{N}\ell} - 1\right)^2}\,\mathrm{d}\ell \\
+\omega_\ell&\simeq\frac{\pi\omega}{N+1}\ell\\
+&\simeq\frac{\pi\omega}{N}\ell
+\end{aligned}
+$$
+
+と近似します。多くのモードが熱励起される大きな $N$ を考え，和を $\ell$ の積分に置き換えて上限を $\infty$ に伸ばします。
+
+積分変数を $x=\dfrac{\beta\hbar\pi\omega}{N}\ell$ とすると，$\mathrm{d}\ell=\dfrac{Nk_{\mathrm B}T}{\pi\hbar\omega}\mathrm{d}x$ です。式 (7) の積分を用います。
+
+$$
+\begin{aligned}
+C_{1\mathrm{Q}} &\simeq \frac{k_{\mathrm{B}}}{N}\int_0^{\infty} \frac{\left(\frac{\beta\hbar\pi\omega}{N}\ell\right)^2 e^{\frac{\beta\hbar\pi\omega}{N}\ell}}{\left(e^{\frac{\beta\hbar\pi\omega}{N}\ell} - 1\right)^2}\,\mathrm{d}\ell \\
 &= \frac{k_{\mathrm{B}}}{N}\cdot\frac{N k_{\mathrm{B}}T}{\pi\hbar\omega}\int_0^{\infty}\frac{x^2 e^x}{(e^x - 1)^2}\,\mathrm{d}x \\
-&= \frac{k_{\mathrm{B}}^2 T}{\pi\hbar\omega}\cdot\frac{\pi^2}{3} = \frac{\pi k_{\mathrm{B}}^2}{3\hbar\omega} T
+&= \frac{k_{\mathrm{B}}^2 T}{\pi\hbar\omega}\cdot\frac{\pi^2}{3} \\
+&= \frac{\pi k_{\mathrm{B}}^2}{3\hbar\omega} T
 \end{aligned}
 $$
 
@@ -240,5 +300,5 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-設問1・2の独立調和振動子系は固体のアインシュタイン模型，設問3〜5の1次元連成振動子鎖は1次元デバイ模型に対応します。一般に $d$ 次元格子における音響フォノンの低温比熱は $T^d$ に比例し（3次元ではデバイの $T^3$ 則），本問の $d = 1$ では $T^1$ に比例します。
+有限の $N$ では最低振動数が $\omega_1\simeq\pi\omega/(N+1)$ なので，低温で常に $T$ に比例するわけではありません。和を連続積分にするには，$\hbar\omega_1\ll k_{\mathrm B}T\ll\hbar\omega$ の範囲が必要です。$N\to\infty$ を先にとった低温極限で，設問5のべき則が得られます。
 </aside>

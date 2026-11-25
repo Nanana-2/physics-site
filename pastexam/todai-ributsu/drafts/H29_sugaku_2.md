@@ -56,17 +56,19 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-単位ベクトル $\vec{a}$ との外積を表す反対称行列 $J(\vec{a})$ は，$P(\vec{a}) = -J(\vec{a})^2$ が $\vec{a}$ に直交する平面への射影行列となるため，$J^3 = -J$ という簡潔な最小多項式を満たします。
+単位ベクトルとの二重の外積は，平行成分と直交成分に分けると計算しやすくなります。行列の高いべき乗を低いべき乗で表すことができれば，指数関数の級数をまとめることができます。
 
-これにより無限級数 $\exp(\theta J(\vec{a}))$ は有限個の行列 $I,\ P(\vec{a}),\ J(\vec{a})$ の線形結合（ロドリゲスの回転公式）へ閉じ，さらに回転の相似変換は回転軸ベクトル自身を回転させる操作にほかならないことが幾何学的にも代数的にも直接導かれます。
+回転行列の共役は，任意のベクトルに作用させて比較します。回転が外積を保つ性質を使うと，行列の関係を軸ベクトルの関係として調べることができます。
 </div>
 
 ### (1)
 $\vec{x} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ とおくと，外積 $\vec{a}\times\vec{x}$ の各成分は
 
 $$
-\vec{a}\times\vec{x} = \begin{pmatrix} a_2 x_3 - a_3 x_2 \\ a_3 x_1 - a_1 x_3 \\ a_1 x_2 - a_2 x_1 \end{pmatrix}
-= \begin{pmatrix} 0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+\begin{aligned}
+\vec{a}\times\vec{x} &= \begin{pmatrix} a_2 x_3 - a_3 x_2 \\ a_3 x_1 - a_1 x_3 \\ a_1 x_2 - a_2 x_1 \end{pmatrix} \\
+&= \begin{pmatrix} 0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+\end{aligned}
 $$
 
 となります。したがって，
@@ -80,10 +82,10 @@ $$
 
 $$
 \begin{aligned}
-\det\begin{pmatrix} -\lambda & -a_3 & a_2 \\ a_3 & -\lambda & -a_1 \\ -a_2 & a_1 & -\lambda \end{pmatrix}
-&= -\lambda^3 - a_1 a_2 a_3 + a_1 a_2 a_3 - a_2^2\lambda - a_1^2\lambda - a_3^2\lambda \\
+\det\begin{pmatrix} -\lambda & -a_3 & a_2 \\ a_3 & -\lambda & -a_1 \\ -a_2 & a_1 & -\lambda \end{pmatrix} &= -\lambda^3 - a_1 a_2 a_3 + a_1 a_2 a_3 - a_2^2\lambda - a_1^2\lambda - a_3^2\lambda \\
 &= -\lambda\left(\lambda^2 + a_1^2 + a_2^2 + a_3^2\right) \\
-&= -\lambda\left(\lambda^2 + 1\right) = 0
+&= -\lambda\left(\lambda^2 + 1\right) \\
+&= 0
 \end{aligned}
 $$
 
@@ -97,13 +99,22 @@ $$
 任意の3次元ベクトル $\vec{x}$ に対して，ベクトル三重積の公式と $|\vec{a}|^2 = 1$ を用いて $P(\vec{a})\vec{x}$ を計算します。
 
 $$
-P(\vec{a})\vec{x} = -J(\vec{a})^2\vec{x} = -\vec{a}\times(\vec{a}\times\vec{x}) = -\left[(\vec{a}\cdot\vec{x})\vec{a} - (\vec{a}\cdot\vec{a})\vec{x}\right] = \vec{x} - (\vec{a}\cdot\vec{x})\vec{a}
+\begin{aligned}
+P(\vec{a})\vec{x} &= -J(\vec{a})^2\vec{x} \\
+&= -\vec{a}\times(\vec{a}\times\vec{x}) \\
+&= -\left[(\vec{a}\cdot\vec{x})\vec{a} - (\vec{a}\cdot\vec{a})\vec{x}\right] \\
+&= \vec{x} - (\vec{a}\cdot\vec{x})\vec{a}
+\end{aligned}
 $$
 
 (i) $\vec{x} = \vec{a}$ を代入すると，$|\vec{a}|^2 = 1$ より
 
 $$
-P(\vec{a})\vec{a} = \vec{a} - (\vec{a}\cdot\vec{a})\vec{a} = \vec{a} - \vec{a} = \vec{0}
+\begin{aligned}
+P(\vec{a})\vec{a} &= \vec{a} - (\vec{a}\cdot\vec{a})\vec{a} \\
+&= \vec{a} - \vec{a} \\
+&= \vec{0}
+\end{aligned}
 $$
 
 が成り立ちます。
@@ -111,7 +122,10 @@ $$
 (ii) $\vec{a}\cdot\vec{b} = 0$ を満たす任意のベクトル $\vec{b}$ を代入すると，
 
 $$
-P(\vec{a})\vec{b} = \vec{b} - (\vec{a}\cdot\vec{b})\vec{a} = \vec{b}
+\begin{aligned}
+P(\vec{a})\vec{b} &= \vec{b} - (\vec{a}\cdot\vec{b})\vec{a} \\
+&= \vec{b}
+\end{aligned}
 $$
 
 が成り立ちます。
@@ -130,12 +144,29 @@ $$
 任意の $\vec{x}$ に対して成り立つので，$P(\vec{a})^2 = P(\vec{a})$ です。
 
 ### (4)
-略記として $J = J(\vec{a}),\ P = P(\vec{a})$ とおきます。定義より $J^2 = -P$ です。また任意の $\vec{x}$ に対し $J(\vec{a})P(\vec{a})\vec{x} = \vec{a}\times\bigl(\vec{x} - (\vec{a}\cdot\vec{x})\vec{a}\bigr) = \vec{a}\times\vec{x} = J(\vec{a})\vec{x}$ なので，$JP = J$ が成り立ちます。
+略記として $J = J(\vec{a}),\ P = P(\vec{a})$ とおきます。定義より $J^2 = -P$ です。また任意の $\vec{x}$ に対し 
+
+$$
+\begin{aligned}
+J(\vec{a})P(\vec{a})\vec{x} &= \vec{a}\times\bigl(\vec{x} - (\vec{a}\cdot\vec{x})\vec{a}\bigr) \\
+&= \vec{a}\times\vec{x} \\
+&= J(\vec{a})\vec{x}
+\end{aligned}
+$$
+
+ なので，$JP = J$ が成り立ちます。
 
 さらに問3(iii)の $P^2 = P$ と $J^2 = -P$ より，
 
 $$
-J^3 = J(-P) = -JP = -J,\qquad J^4 = (-P)^2 = P^2 = P
+\begin{aligned}
+J^3 &= J(-P) \\
+&= -JP \\
+&= -J \\
+J^4 &= (-P)^2 \\
+&= P^2 \\
+&= P
+\end{aligned}
 $$
 
 となるため，帰納的に任意の整数 $k \ge 1$ に対して次式が成り立ちます。
@@ -144,7 +175,7 @@ $$
 J^{2k} = (-1)^k P,\qquad J^{2k - 1} = (-1)^{k - 1} JP
 $$
 
-これを指数関数の級数展開に代入し，偶数次（$n = 2k$）と奇数次（$n = 2k - 1$）に分けてまとめます。
+これを指数関数の級数展開に代入し，$n=2k$ の偶数次と $n=2k-1$ の奇数次に分けてまとめます。
 
 $$
 \begin{aligned}
@@ -162,34 +193,73 @@ $$
 $$
 
 ### (5)
-$R = \exp(\theta J(\vec{a})) = I + (\cos\theta - 1)P(\vec{a}) + \sin\theta\,J(\vec{a})P(\vec{a})$ とおきます。問3の (i), (ii) および $\vec{a}\times\vec{b} = \vec{c},\ \vec{a}\times\vec{c} = -\vec{b}$ を用いて各基底への作用を計算します。
+
+
+$$
+\begin{aligned}
+R &= \exp(\theta J(\vec{a})) \\
+&= I + (\cos\theta - 1)P(\vec{a}) + \sin\theta\,J(\vec{a})P(\vec{a})
+\end{aligned}
+$$
+
+ とおきます。問3の (i), (ii) および $\vec{a}\times\vec{b} = \vec{c},\ \vec{a}\times\vec{c} = -\vec{b}$ を用いて各基底への作用を計算します。
 
 - $\vec{a}$ への作用：$P(\vec{a})\vec{a} = \vec{0}$ より，
   $$
   R\vec{a} = \vec{a}
   $$
-- $\vec{b}$ への作用：$P(\vec{a})\vec{b} = \vec{b}$，$J(\vec{a})\vec{b} = \vec{a}\times\vec{b} = \vec{c}$ より，
-  $$
-  R\vec{b} = \vec{b} + (\cos\theta - 1)\vec{b} + \sin\theta\,\vec{c} = \cos\theta\,\vec{b} + \sin\theta\,\vec{c}
-  $$
-- $\vec{c}$ への作用：$\vec{c} \perp \vec{a}$ なので $P(\vec{a})\vec{c} = \vec{c}$，$J(\vec{a})\vec{c} = \vec{a}\times\vec{c} = -\vec{b}$ より，
-  $$
-  R\vec{c} = \vec{c} + (\cos\theta - 1)\vec{c} + \sin\theta(-\vec{b}) = -\sin\theta\,\vec{b} + \cos\theta\,\vec{c}
-  $$
+- $\vec{b}$ への作用：$P(\vec{a})\vec{b} = \vec{b}$，
 
-よって $R$ は $\vec{a}$ 方向を不変に保ち，$\vec{a}$ に直交する右手系平面（基底 $\vec{b}, \vec{c}$）内でベクトルを角度 $\theta$ だけ回転させるため，$\vec{a}$ を軸とした角度 $\theta$ の回転を表します。
+$$
+\begin{aligned}
+J(\vec{a})\vec{b} &= \vec{a}\times\vec{b} \\
+&= \vec{c}
+\end{aligned}
+$$
+
+ より，
+  $$
+\begin{aligned}
+R\vec{b} &= \vec{b} + (\cos\theta - 1)\vec{b} + \sin\theta\,\vec{c} \\
+&= \cos\theta\,\vec{b} + \sin\theta\,\vec{c}
+\end{aligned}
+$$
+- $\vec{c}$ への作用：$\vec{c} \perp \vec{a}$ なので $P(\vec{a})\vec{c} = \vec{c}$，
+
+$$
+\begin{aligned}
+J(\vec{a})\vec{c} &= \vec{a}\times\vec{c} \\
+&= -\vec{b}
+\end{aligned}
+$$
+
+ より，
+  $$
+\begin{aligned}
+R\vec{c} &= \vec{c} + (\cos\theta - 1)\vec{c} + \sin\theta(-\vec{b}) \\
+&= -\sin\theta\,\vec{b} + \cos\theta\,\vec{c}
+\end{aligned}
+$$
+
+以上より，基底への作用は
+
+$$
+\finalanswer{R\vec a=\vec a,\qquad R\vec b=\cos\theta\,\vec b+\sin\theta\,\vec c,\qquad R\vec c=-\sin\theta\,\vec b+\cos\theta\,\vec c}
+$$
+
+です。$R$ は $\vec a$ 方向を不変に保ちます。右手系の基底 $\vec b,\vec c$ が張る平面では角度 $\theta$ の回転になるため，$\vec a$ を軸とする回転を表します。
 
 ### (6)
-$R = \exp(\theta J(\vec{a}))$ とおくと $R^{-1} = \exp(-\theta J(\vec{a}))$ です。問5より $R$ は3次元回転行列（$\det R = 1,\ R^{\mathrm{T}}R = I$）なので，任意の2つのベクトル $\vec{u}, \vec{v}$ に対して外積を保ちます（$R(\vec{u}\times\vec{v}) = (R\vec{u})\times(R\vec{v})$）。
+$R=\exp(\theta J(\vec a))$ とおくと，$R^{-1}=\exp(-\theta J(\vec a))$ です。問5から $R$ は3次元回転行列なので，$\det R=1$，$R^{\mathrm T}R=I$ です。回転は外積を保つため，$R(\vec u\times\vec v)=(R\vec u)\times(R\vec v)$ が成り立ちます。
 
 したがって任意のベクトル $\vec{x}$ に対して次式が成り立ちます。
 
 $$
 \begin{aligned}
-\left(R J(\vec{b}) R^{-1}\right)\vec{x}
-&= R\left(\vec{b}\times(R^{-1}\vec{x})\right) \\
+\left(R J(\vec{b}) R^{-1}\right)\vec{x} &= R\left(\vec{b}\times(R^{-1}\vec{x})\right) \\
 &= (R\vec{b})\times(R R^{-1}\vec{x}) \\
-&= (R\vec{b})\times\vec{x} = J(R\vec{b})\vec{x}
+&= (R\vec{b})\times\vec{x} \\
+&= J(R\vec{b})\vec{x}
 \end{aligned}
 $$
 
@@ -197,18 +267,16 @@ $$
 
 $$
 \begin{aligned}
-R\exp(\varphi J(\vec{b})) R^{-1}
-&= \sum_{n=0}^{\infty}\frac{\varphi^n}{n!} R J(\vec{b})^n R^{-1} \\
-&= \sum_{n=0}^{\infty}\frac{\varphi^n}{n!} J(R\vec{b})^n = \exp\bigl(\varphi J(R\vec{b})\bigr)
+R\exp(\varphi J(\vec{b})) R^{-1} &= \sum_{n=0}^{\infty}\frac{\varphi^n}{n!} R J(\vec{b})^n R^{-1} \\
+&= \sum_{n=0}^{\infty}\frac{\varphi^n}{n!} J(R\vec{b})^n \\
+&= \exp\bigl(\varphi J(R\vec{b})\bigr)
 \end{aligned}
 $$
 
-問5より $R\vec{b} = \cos\theta\,\vec{b} + \sin\theta\,\vec{c}$ は単位ベクトルです。よって $\vec{e} = \cos\theta\,\vec{b} + \sin\theta\,\vec{c}$，$\chi = \varphi$ と選べます（また符号を同時に反転した $\vec{e} = -(\cos\theta\,\vec{b} + \sin\theta\,\vec{c}),\ \chi = -\varphi$ も同じく成り立ちます）。したがって，
+問5から，$R\vec b=\cos\theta\,\vec b+\sin\theta\,\vec c$ は単位ベクトルです。このベクトルを回転軸に選び，角度を $\varphi$ とします。したがって，
 
 $$
 \finalanswer{\vec{e} = \cos\theta\,\vec{b} + \sin\theta\,\vec{c},\qquad \chi = \varphi}
 $$
 
-<aside class="rigor-note" markdown>
-問4の公式 $\exp(\theta J(\vec{a})) = I + (\cos\theta - 1)P(\vec{a}) + \sin\theta\,J(\vec{a}) = I + \sin\theta\,J(\vec{a}) + (1 - \cos\theta)J(\vec{a})^2$ はロドリゲス（Rodrigues）の回転公式と呼ばれ，3次元回転群 $\mathrm{SO}(3)$ のリー代数 $\mathfrak{so}(3)$ からの指数写像を陽に与える基本公式です。
-</aside>
+

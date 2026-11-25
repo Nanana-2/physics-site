@@ -61,9 +61,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-2乗型の閉じ込めと2乗型の粒子間相互作用をもつ2粒子系は，重心座標 $x$ と相対座標 $y$ へ変換すると2つの独立な1次元調和振動子に完全に分離されます。
+相互作用が粒子間距離の2乗で書かれているため，重心と相対座標を使うとポテンシャルを分けることができます。運動エネルギーも同じ座標で分離できるので，2つの1次元の運動として扱うことができます。
 
-特に $\alpha = \alpha_0 = -1$ の臨界点では相対運動の復元力がちょうど打ち消し合って自由粒子となるため，クエンチ後の時間発展は重心運動が基底状態のまま位相回転する一方，相対座標のガウス波束がフーリエ変換を通じて自由拡散する解析解として厳密に求めることができます。
+ハミルトニアンを突然変えた直後も，波動関数は変化する前の値を保ちます。変化後の固有状態で展開すると，各成分にエネルギーに応じた時間の位相を掛けて時間発展を調べることができます。
 </div>
 
 ### (1)
@@ -83,7 +83,10 @@ $$
 よって運動エネルギー $K$ は $K = -\dfrac{\hbar^2}{4m}\dfrac{\partial^2}{\partial x^2} - \dfrac{\hbar^2}{m}\dfrac{\partial^2}{\partial y^2}$ です。また $x_1^2 + x_2^2 = 2x^2 + \dfrac{1}{2}y^2$ をポテンシャル $V$ に代入します。
 
 $$
-V = \frac{m\omega^2}{2}\left(2x^2 + \frac{1}{2}y^2\right) + \frac{m\omega^2\alpha}{4}y^2 = m\omega^2 x^2 + \frac{m\omega^2(1 + \alpha)}{4}y^2
+\begin{aligned}
+V &= \frac{m\omega^2}{2}\left(2x^2 + \frac{1}{2}y^2\right) + \frac{m\omega^2\alpha}{4}y^2 \\
+&= m\omega^2 x^2 + \frac{m\omega^2(1 + \alpha)}{4}y^2
+\end{aligned}
 $$
 
 したがって，
@@ -93,14 +96,14 @@ $$
 $$
 
 ### (2)
-ポテンシャル $V$ が下に有界で束縛状態（安定な系）をもつための必要十分条件は，$y^2$ の係数が正であること，すなわち $1 + \alpha > 0$（$\alpha > -1$）です。したがって，
+規格化できる束縛状態を持つには，相対座標 $y$ の2次の係数が正である必要があります。$1+\alpha>0$，すなわち $\alpha>-1$ が条件です。したがって，
 
 $$
 \finalanswer{\alpha_0 = -1}
 $$
 
 ### (3)
-問1の結果より，ハミルトニアンは重心運動 $H_x$（質量 $M = 2m$，角振動数 $\omega_x = \omega$）と相対運動 $H_y$（換算質量 $\mu = m/2$，角振動数 $\omega_y = \omega\sqrt{1 + \alpha}$）の和に分離されます。
+重心運動の質量と角振動数を $M=2m$，$\omega_x=\omega$ とします。相対運動の換算質量と角振動数を $\mu=m/2$，$\omega_y=\omega\sqrt{1+\alpha}$ とすると，ハミルトニアンは次の和に分離されます。
 
 $$
 H = H_x + H_y,\qquad
@@ -111,14 +114,30 @@ $$
 基底状態のエネルギーは両者の零点エネルギーの和です。
 
 $$
-E_0 = \frac{1}{2}\hbar\omega_x + \frac{1}{2}\hbar\omega_y = \frac{1}{2}\hbar\omega\left(1 + \sqrt{1 + \alpha}\right)
+\begin{aligned}
+E_0 &= \frac{1}{2}\hbar\omega_x + \frac{1}{2}\hbar\omega_y \\
+&= \frac{1}{2}\hbar\omega\left(1 + \sqrt{1 + \alpha}\right)
+\end{aligned}
 $$
 
-座標変換 $(x_1, x_2) \mapsto (x, y)$ のヤコビアンは $\left|\dfrac{\partial(x_1, x_2)}{\partial(x, y)}\right| = \left|\begin{matrix} 1 & 1/2 \\ 1 & -1/2 \end{matrix}\right| = 1$ なので，$\mathrm{d}x_1\,\mathrm{d}x_2 = \mathrm{d}x\,\mathrm{d}y$ です。1次元調和振動子の基底波動関数のパラメータはそれぞれ質量と角振動数の積を $\hbar$ で割った量なので，
+座標変換 $(x_1, x_2) \mapsto (x, y)$ のヤコビアンは 
 
 $$
-c_x = \frac{M\omega_x}{\hbar} = \frac{2m\omega}{\hbar},\qquad
-c_y = \frac{\mu\omega_y}{\hbar} = \frac{m\omega\sqrt{1 + \alpha}}{2\hbar}
+\begin{aligned}
+\left|\dfrac{\partial(x_1, x_2)}{\partial(x, y)}\right| &= \left|\begin{matrix} 1 & 1/2 \\ 1 & -1/2 \end{matrix}\right| \\
+&= 1
+\end{aligned}
+$$
+
+ なので，$\mathrm{d}x_1\,\mathrm{d}x_2 = \mathrm{d}x\,\mathrm{d}y$ です。1次元調和振動子の基底波動関数のパラメータはそれぞれ質量と角振動数の積を $\hbar$ で割った量なので，
+
+$$
+\begin{aligned}
+c_x &= \frac{M\omega_x}{\hbar} \\
+&= \frac{2m\omega}{\hbar} \\
+c_y &= \frac{\mu\omega_y}{\hbar} \\
+&= \frac{m\omega\sqrt{1 + \alpha}}{2\hbar}
+\end{aligned}
 $$
 
 となります。両者の積をとると規格化された基底状態波動関数 $\Psi_0(x, y)$ が得られます。
@@ -162,13 +181,26 @@ $$
 $$
 
 ### (5)
-$t > 0$ では $\alpha = \alpha_0 = -1$ なので，ハミルトニアンは
+$t > 0$ では 
+
+$$
+\begin{aligned}
+\alpha &= \alpha_0 \\
+&= -1
+\end{aligned}
+$$
+
+ なので，ハミルトニアンは
 
 $$
 H = H_x + H_y^{\mathrm{free}},\qquad H_x = -\frac{\hbar^2}{4m}\frac{\partial^2}{\partial x^2} + m\omega^2 x^2,\qquad H_y^{\mathrm{free}} = -\frac{\hbar^2}{m}\frac{\partial^2}{\partial y^2}
 $$
 
-となります。重心部分 $e^{-m\omega x^2/\hbar}$ は $H_x$ の基底固有状態（固有値 $\dfrac{1}{2}\hbar\omega$）のままであり，相対運動の平面波 $e^{iky}$ は $H_y^{\mathrm{free}}$ の固有状態（固有値 $\dfrac{\hbar^2 k^2}{m}$）です。よって各フーリエ成分に時間発展因子 $\exp\left(-\dfrac{i}{\hbar}\left(\dfrac{1}{2}\hbar\omega + \dfrac{\hbar^2 k^2}{m}\right)t\right)$ が掛かります。
+となります。重心部分は $H_x$ の基底状態で，固有値は $\hbar\omega/2$ です。相対運動の平面波 $e^{iky}$ の固有値は $\hbar^2k^2/m$ なので，各フーリエ成分に次の時間発展因子が掛かります。
+
+$$
+\exp\left[-\frac{i}{\hbar}\left(\frac{\hbar\omega}{2}+\frac{\hbar^2k^2}{m}\right)t\right]
+$$
 
 $$
 \begin{aligned}
@@ -194,8 +226,14 @@ $$
 \finalanswer{\Psi(x, y; t) = \left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{2}}\frac{e^{-\frac{i}{2}\omega t}}{\sqrt{1 + i\omega t}}\exp\left(-\frac{m\omega}{\hbar}x^2 - \frac{m\omega}{4\hbar(1 + i\omega t)}y^2\right)}
 $$
 
-（ここで $\sqrt{1 + i\omega t}$ は $\operatorname{Re}\sqrt{1 + i\omega t} > 0$ の主値分枝をとります。）
+$\sqrt{1+i\omega t}$ は実部が正の主値分枝を使います。
 
 <aside class="rigor-note" markdown>
-問5の相対座標の確率密度は $|\psi_y(y; t)|^2 \propto \dfrac{1}{\sqrt{1 + \omega^2 t^2}}\exp\left(-\dfrac{m\omega}{2\hbar(1 + \omega^2 t^2)}y^2\right)$ となり，相対距離の標準偏差が $\Delta y(t) = \sqrt{\dfrac{\hbar}{m\omega}(1 + \omega^2 t^2)}$ と時間とともに広がります。閉じ込めポテンシャル（$+\dfrac{1}{4}m\omega^2 y^2$）と斥力相互作用（$-\dfrac{1}{4}m\omega^2 y^2$）がちょうど打ち消し合った結果，重心は閉じ込められたまま相対距離だけが自由波束として拡散します。
+相対座標の確率密度は，
+
+$$
+|\psi_y(y;t)|^2\propto\frac{1}{\sqrt{1+\omega^2t^2}}\exp\left[-\frac{m\omega y^2}{2\hbar(1+\omega^2t^2)}\right]
+$$
+
+です。したがって，標準偏差は $\Delta y(t)=\sqrt{\dfrac{\hbar}{m\omega}(1+\omega^2t^2)}$ となります。これは，相対座標の閉じ込めがなくなった後の自由波束の広がりを表します。
 </aside>

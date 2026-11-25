@@ -21,7 +21,7 @@ exam_modified: Web掲載にあたり数式をテキスト化し，図を描き�
 <figure class="problem-figure" markdown>
 ![二重振り子の座標と角度](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_3-p-light.svg#only-light)
 ![二重振り子の座標と角度](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_3-p-dark.svg#only-dark)
-<figcaption markdown="span">図1：二重振り子。</figcaption>
+<figcaption markdown="span">図1：二重振り子</figcaption>
 </figure>
 
 (1) この系のラグランジアンを，$m_1,\ m_2$ とデカルト座標系における質点の座標 $(x_1, y_1),\ (x_2, y_2)$，およびそれらの時間微分 $\dot{x}_1,\ \dot{y}_1,\ \dot{x}_2,\ \dot{y}_2$ を用いて表せ。
@@ -54,9 +54,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-微小振動の二重振り子は2自由度の連成調和振動子であり，$g/\omega^2$ を変数にとると固有方程式が $\ell_1 + \ell_2$ と $\ell_1 - \ell_2$ で対称な2次方程式に整理されます。
+微小な振動では，ラグランジアンを座標と速度の2次式として扱うことができます。正弦的な解を代入すると，固有振動数を行列式の条件から求めることができます。
 
-$m_1 \gg m_2$ では2つの単振り子モードが弱く結合しており，$\ell_1 = \ell_2$ 付近に幅 $\sqrt{m_2/m_1}$ の擬交差が生じます。全長一定のまま $\ell_1$ を断熱的に短くすると，系は低振動数側の分枝（$g/(\omega^2\ell)$ の上側）に沿って連続的に移動し，質点1の振動エネルギーがすべて質点2へ移り変わります。
+糸の長さを変える場合は，振動数だけでなく固有モードの振幅比も調べます。異なるモードが接近する領域でも，有限の質量比で固有値を追うことで，離れた領域の振動を結び付けることができます。
 </div>
 
 ### (1)
@@ -67,7 +67,7 @@ $$
 $$
 
 ### (2)
-図1の幾何学的配置より，各質点の座標は次のとおりです。したがって，
+図1から，各質点の座標は次のようになります。
 
 $$
 \finalanswer{x_1 = \ell_1\sin\theta_1,\qquad y_1 = \ell_1\cos\theta_1,\qquad x_2 = \ell_1\sin\theta_1 + \ell_2\sin\theta_2,\qquad y_2 = \ell_1\cos\theta_1 + \ell_2\cos\theta_2}
@@ -98,7 +98,7 @@ $$
 定数項 $(m_1 + m_2)g\ell_1 + m_2 g\ell_2$ を除くと，問題文のラグランジアンが得られます。
 
 ### (4)
-設問3のラグランジアンに対して $\theta_1,\ \theta_2$ のオイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial\dot{\theta}_i}\right) - \dfrac{\partial L}{\partial\theta_i} = 0$ を書き下します。
+設問3のラグランジアンに対して $\theta_1,\ \theta_2$ のオイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial\dot{\theta}_i}\right) - \dfrac{\partial L}{\partial\theta_i} = 0$ を用います。
 
 $$
 \begin{aligned}
@@ -107,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-共通因子（$\ell_1$ および $m_2\ell_2$）で割って整理します。したがって，
+第1式を $\ell_1$，第2式を $m_2\ell_2$ で割ります。したがって，
 
 $$
 \finalanswer{(m_1 + m_2)\ell_1\ddot{\theta}_1 + m_2\ell_2\ddot{\theta}_2 + (m_1 + m_2)g\theta_1 = 0,\qquad \ell_1\ddot{\theta}_1 + \ell_2\ddot{\theta}_2 + g\theta_2 = 0}
@@ -150,11 +150,13 @@ $$
 $$
 
 ### (6)
-問5の2次方程式の両辺を $(m_1 + m_2)\omega^4$ で割り，$X = \dfrac{g}{\omega^2}$ についての2次方程式に書き直すと見通しがよくなります。
+問5の2次方程式の両辺を $(m_1 + m_2)\omega^4$ で割り，$X = \dfrac{g}{\omega^2}$ についての2次方程式に書き直します。
 
 $$
-X^2 - (\ell_1 + \ell_2)X + \frac{m_1}{m_1 + m_2}\ell_1\ell_2 = 0
-\implies X = \frac{1}{2}\left[\ell_1 + \ell_2 \pm \sqrt{(\ell_1 - \ell_2)^2 + \frac{4m_2}{m_1 + m_2}\ell_1\ell_2}\right]
+\begin{aligned}
+X^2 - (\ell_1 + \ell_2)X + \frac{m_1}{m_1 + m_2}\ell_1\ell_2 &= 0 \\
+X &= \frac{1}{2}\left[\ell_1 + \ell_2 \pm \sqrt{(\ell_1 - \ell_2)^2 + \frac{4m_2}{m_1 + m_2}\ell_1\ell_2}\right]
+\end{aligned}
 $$
 
 ここで $4\ell_1\ell_2 \le (\ell_1 + \ell_2)^2$ であり，条件 $|\ell_1 - \ell_2| \gg \sqrt{\dfrac{m_2}{m_1}}(\ell_1 + \ell_2)$ より根号内の第2項は第1項に比べて十分小さいため省略することができます。すると $X = \ell_1$ または $X = \ell_2$，すなわち
@@ -163,18 +165,24 @@ $$
 \omega_1 = \sqrt{\frac{g}{\ell_1}},\qquad \omega_2 = \sqrt{\frac{g}{\ell_2}}
 $$
 
-となります。対応する固有モード $(a_1, a_2)$ を問5の連立方程式から求めます（$k$ は $0$ でない任意定数）。
+となります。$k$ を $0$ でない任意定数として，対応する固有モード $(a_1,a_2)$ を問5の連立方程式から求めます。
 
 - **$\omega_1 = \sqrt{\dfrac{g}{\ell_1}}$ のとき**：第2式 $-\ell_1\omega_1^2 a_1 + (g - \ell_2\omega_1^2)a_2 = 0$ に $\omega_1^2 = g/\ell_1$ を代入すると，
   $$
-  -g a_1 + g\left(1 - \frac{\ell_2}{\ell_1}\right)a_2 = 0 \implies \frac{a_2}{a_1} = \frac{\ell_1}{\ell_1 - \ell_2}
-  $$
+\begin{aligned}
+-g a_1 + g\left(1 - \frac{\ell_2}{\ell_1}\right)a_2 &= 0 \\
+\frac{a_2}{a_1} &= \frac{\ell_1}{\ell_1 - \ell_2}
+\end{aligned}
+$$
   よって $(a_1, a_2) = k(\ell_1 - \ell_2,\ \ell_1)$ です。
 - **$\omega_2 = \sqrt{\dfrac{g}{\ell_2}}$ のとき**：第1式 $(m_1 + m_2)(g - \ell_1\omega_2^2)a_1 = m_2\ell_2\omega_2^2 a_2$ に $\omega_2^2 = g/\ell_2$ を代入すると，
   $$
-  \frac{a_1}{a_2} = \frac{m_2}{m_1 + m_2}\frac{\ell_2}{\ell_2 - \ell_1} \simeq 0
-  $$
-  （$m_1 \gg m_2$ かつ $|\ell_1 - \ell_2| \gg \sqrt{m_2/m_1}\,(\ell_1 + \ell_2)$ より $|a_1/a_2| \ll \sqrt{m_2/m_1} \ll 1$）。よって $(a_1, a_2) = k(0, 1)$ です。
+\begin{aligned}
+\frac{a_1}{a_2} &= \frac{m_2}{m_1 + m_2}\frac{\ell_2}{\ell_2 - \ell_1} \\
+&\simeq 0
+\end{aligned}
+$$
+  $m_1\gg m_2$ と長さの条件から，$|a_1/a_2|\ll\sqrt{m_2/m_1}\ll1$ です。よって $(a_1, a_2) = k(0, 1)$ です。
 
 したがって，
 
@@ -189,7 +197,7 @@ $$
 \frac{g}{\omega_\mp^2 \ell} = \frac{1}{2}\left[1 \pm \sqrt{(1 - 2u)^2 + \frac{4m_2}{m_1 + m_2}u(1 - u)}\right]
 $$
 
-$m_1 \gg m_2$ のとき，2本の曲線は $u = \dfrac{1}{2}$ から離れた領域では直線 $y = 1 - u$（$\omega^2 = g/\ell_1$）と $y = u$（$\omega^2 = g/\ell_2$）に漸近しますが，$u = \dfrac{1}{2}$（$\ell_1 = \ell_2$）では交差せず，最小間隔 $\sqrt{\dfrac{m_2}{m_1 + m_2}} \simeq \sqrt{\dfrac{m_2}{m_1}}$ の擬交差を作ります。
+$u=1/2$ から離れた領域では，2本の曲線は $y=1-u$ と $y=u$ に近づきます。それぞれ $\omega^2=g/\ell_1$ と $\omega^2=g/\ell_2$ の振動です。$u=1/2$ では $\ell_1=\ell_2$ ですが，2本の曲線は交差しません。最小間隔は $\sqrt{\dfrac{m_2}{m_1+m_2}}\simeq\sqrt{\dfrac{m_2}{m_1}}$ です。
 
 <figure class="problem-figure" markdown>
 ![l2/lに対するg/(omega^2 l)の変化と擬交差](../../../docs/assets/figures/pastexam-todai-ributsu/H29_butsuri_3-s-light.svg#only-light)
@@ -197,12 +205,23 @@ $m_1 \gg m_2$ のとき，2本の曲線は $u = \dfrac{1}{2}$ から離れた領
 <figcaption markdown="span">$\ell_2/\ell$ に対する $g/(\omega^2\ell)$ の変化。$m_1 \gg m_2$ のもとで $\ell_2/\ell = 1/2$ に擬交差が現れ，初期状態は上側の分枝（$\omega_-$，矢印）に沿って断熱的に変化する。</figcaption>
 </figure>
 
-**最終的に質点1が止まり質点2のみが振動する理由**：
+**最終的な振動の理由**
 
-1. はじめ $\ell_1 \gg \ell_2$（$u \ll 1$）では，問6より $\omega_1 = \sqrt{g/\ell_1}$（グラフの上側分枝 $\omega_-$）の固有モードは $\dfrac{a_2}{a_1} = \dfrac{\ell_1}{\ell_1 - \ell_2} \simeq 1$（すなわち $\theta_1 = \theta_2$）です。したがって初期条件 $\theta_1 = \theta_2,\ \dot{\theta}_1 = \dot{\theta}_2 = 0$ は，上側の単一の固有モード（$\omega_-$）のみを励起しています。
-2. 固有角振動数に比べて非常にゆっくりと $\ell_1$ を短くしていく（$u = \ell_2/\ell$ を増やす）と，断熱不変量（各基準モードの作用変数 $E_i/\omega_i$）が保存されるため，他のモード（$\omega_+$）への遷移は起こらず，系は常に上側の分枝 $\omega_-$ に留まり続けます。
-3. $\ell_1 = \ell_2$ の擬交差を通過して最終的に $\ell_2 \gg \ell_1$（$u \to 1$）に達すると，上側の分枝 $\omega_-$ は $\omega_2 = \sqrt{g/\ell_2}$ のモードへと連続的につながっています。問6のとおりこのモードの振幅比は $(a_1, a_2) \propto (0, 1)$ であるため，質点1はほぼ静止し，質点2のみが振動する状態になります。
+はじめの $\ell_1\gg\ell_2$ では，低振動数の固有モードは
+
+$$
+\begin{aligned}
+\frac{a_2}{a_1} &\simeq \frac{\ell_1}{\ell_1-\ell_2} \\
+&\simeq 1
+\end{aligned}
+$$
+
+です。したがって，指定された初期条件はこのモードを近似的に励起します。有限の長さ比では振幅比が厳密には1と異なるため，他方のモードもわずかに含まれます。
+
+有限の質量比では2つの固有振動数は交差しません。固有モードの変化を表す混合角を $\eta$ と書くと，$|\dot\eta|\ll|\omega_+-\omega_-|$ を満たすほどゆっくり長さを変える場合，モード間の移行は無視できます。初めに励起した振動は，グラフの上側の分枝に沿って変化します。
+
+最後の $\ell_2\gg\ell_1$ では，上側の分枝は $\sqrt{g/\ell_2}$ の振動へつながります。設問6の振幅比が $(a_1,a_2)\propto(0,1)$ となるため，近似の範囲で質点1は静止し，質点2が振動します。
 
 <aside class="rigor-note" markdown>
-問7の現象は，古典力学における断熱定理と擬交差によるモード変換の典型例であり，量子力学におけるランダウ・ツェナー断熱通過（平成30年度物理学第1問）と数学的に同じ構造をもっています。エネルギー保存の観点からは，軽い質点2（$m_2 \ll m_1$）へエネルギーが集中するため，質点2の振幅は初期の質点1の振幅に比べて $\sqrt{m_1/m_2}$ 倍程度に増幅されます。
+糸の長さを変える操作は系に仕事をするため，振動エネルギーが途中で一定とは限りません。断熱的に保たれる量は各モードの作用変数 $E_i/\omega_i$ です。端点の振動数と長い糸の長さがほぼ同じ場合には，質量による振幅比を比較することができます。
 </aside>

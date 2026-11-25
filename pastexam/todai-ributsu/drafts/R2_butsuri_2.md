@@ -108,13 +108,13 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-古典理想気体の分配関数は運動量と位置の積分に完全に分離され，状態方程式やザックール・テトローデのエントロピーをそのまま与えますが，古典論では $T \to 0$ でエントロピーが $-\infty$ へ発散し熱力学第三法則と矛盾します。
+相互作用がないので，古典系の位相空間の積分は粒子ごと，成分ごとに分けることができます。分配関数の対数を微分すれば，同じ関数から圧力やエントロピーを求めることができます。
 
-同じ無相互作用系をフェルミ粒子として大分配関数で扱うと，高温極限では化学ポテンシャルを通じて古典結果と一致する一方，低温極限ではパウリの排他原理により $C_V = \gamma T$ から $S = \gamma T \to 0$ となり，古典統計力学の破綻が量子統計によって解消される構造が見えます。
+フェルミ系では各1粒子状態の占有数が制限されています。大分配関数を使うと，粒子数を求めてから，指定された温度領域でその和を評価することができます。
 </div>
 
 ### (1)
-位置座標の積分は各粒子につき体積 $V$ を与え，運動量の各成分の積分はガウス積分公式 (4)（$a = \dfrac{\beta}{2m}$）より $\sqrt{\dfrac{2\pi m}{\beta}} = \sqrt{2\pi m k_{\mathrm{B}} T}$ となります。よって分配関数 $Z(T, V, N)$ は次のようになります。
+位置座標の積分は各粒子につき体積 $V$ を与え，運動量の各成分の積分はガウス積分公式 (4) に $a=\dfrac{\beta}{2m}$ を代入すると $\sqrt{\dfrac{2\pi m}{\beta}} = \sqrt{2\pi m k_{\mathrm{B}} T}$ となります。よって分配関数 $Z(T, V, N)$ は次のようになります。
 
 $$
 \begin{aligned}
@@ -129,9 +129,9 @@ $$
 
 $$
 \begin{aligned}
-P(T, V, N)
-&= k_{\mathrm{B}} T \left(\frac{\partial \ln Z}{\partial V}\right)_{T,N} \\
-&= k_{\mathrm{B}} T \frac{\partial}{\partial V}(N\ln V) = \frac{N k_{\mathrm{B}} T}{V}
+P(T, V, N) &= k_{\mathrm{B}} T \left(\frac{\partial \ln Z}{\partial V}\right)_{T,N} \\
+&= k_{\mathrm{B}} T \frac{\partial}{\partial V}(N\ln V) \\
+&= \frac{N k_{\mathrm{B}} T}{V}
 \end{aligned}
 $$
 
@@ -148,13 +148,13 @@ $$
 F'(T, V, N) = -N k_{\mathrm{B}} T \left[\ln V + \frac{3}{2}\ln\left(\frac{2\pi m k_{\mathrm{B}} T}{h^2}\right)\right]
 $$
 
-ここで体積と粒子数をともに $\alpha$ 倍（$V \to \alpha V,\ N \to \alpha N$）すると，
+ここで体積と粒子数をともに $\alpha$ 倍すると，
 
 $$
 F'(T, \alpha V, \alpha N) = \alpha F'(T, V, N) - \alpha N k_{\mathrm{B}} T \ln\alpha \neq \alpha F'(T, V, N)
 $$
 
-となり，自由エネルギーが**示量性**（系の大きさに比例する性質）を満たさなくなります。因子 $1/N!$ は同種粒子の不可弁別性に由来し，自由エネルギーの示量性を保証する役割をもちます。
+となり，自由エネルギーが系の大きさに比例する性質である示量性を満たさなくなります。因子 $1/N!$ は同種粒子の不可弁別性に由来し，自由エネルギーの示量性を保証する役割をもちます。
 
 ### (3)
 $N$ が十分大きいとしてスターリングの公式 $\ln N! \approx N\ln N - N$ を用いると，自由エネルギーは次のようになります。
@@ -189,7 +189,10 @@ $$
 定積熱容量は $C_V = T\left(\dfrac{\partial S}{\partial T}\right)_{V,N}$ で与えられます。問3の結果を $T$ で偏微分します。
 
 $$
-C_V(T, V, N) = T \cdot N k_{\mathrm{B}} \cdot \frac{3}{2T} = \frac{3}{2} N k_{\mathrm{B}}
+\begin{aligned}
+C_V(T, V, N) &= T \cdot N k_{\mathrm{B}} \cdot \frac{3}{2T} \\
+&= \frac{3}{2} N k_{\mathrm{B}}
+\end{aligned}
 $$
 
 したがって，
@@ -199,7 +202,17 @@ $$
 $$
 
 ### (5)
-一辺の長さ $L$ の立方体における自由粒子の平面波波動関数 $\psi_{\boldsymbol{k}}(\boldsymbol{r}) = \dfrac{1}{\sqrt{V}}e^{i\boldsymbol{k}\cdot\boldsymbol{r}}$ に周期境界条件 $\psi(x + L, y, z) = \psi(x, y, z)$（$y, z$ 方向も同様）を課すと，$e^{i k_x L} = e^{i k_y L} = e^{i k_z L} = 1$ となります。よって各成分は $\dfrac{2\pi}{L}$ の整数倍です。したがって，
+一辺の長さ $L$ の立方体における自由粒子の平面波波動関数 $\psi_{\boldsymbol{k}}(\boldsymbol{r}) = \dfrac{1}{\sqrt{V}}e^{i\boldsymbol{k}\cdot\boldsymbol{r}}$ に周期境界条件 $\psi(x + L, y, z) = \psi(x, y, z)$ を3方向それぞれにを課すと，
+
+$$
+\begin{aligned}
+e^{i k_x L} &= e^{i k_y L} \\
+&= e^{i k_z L} \\
+&= 1
+\end{aligned}
+$$
+
+ となります。よって各成分は $\dfrac{2\pi}{L}$ の整数倍です。したがって，
 
 $$
 \finalanswer{\boldsymbol{k} = \frac{2\pi}{L}(n_x, n_y, n_z) \qquad (n_x, n_y, n_z = 0, \pm 1, \pm 2, \dots)}
@@ -216,9 +229,9 @@ $$
 
 $$
 \begin{aligned}
-\overline{N}
-&= \frac{1}{\beta}\sum_{\boldsymbol{k}} \frac{\beta e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}}{1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}} \\
-&= \sum_{\boldsymbol{k}} \frac{1}{e^{\beta(\varepsilon_{\boldsymbol{k}} - \mu)} + 1} = \sum_{\boldsymbol{k}} f(\varepsilon_{\boldsymbol{k}})
+\overline{N} &= \frac{1}{\beta}\sum_{\boldsymbol{k}} \frac{\beta e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}}{1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}} \\
+&= \sum_{\boldsymbol{k}} \frac{1}{e^{\beta(\varepsilon_{\boldsymbol{k}} - \mu)} + 1} \\
+&= \sum_{\boldsymbol{k}} f(\varepsilon_{\boldsymbol{k}})
 \end{aligned}
 $$
 
@@ -255,7 +268,11 @@ $$
 高温領域（$|\mu| \gg k_{\mathrm{B}} T,\ \mu < 0$）ではすべての $\boldsymbol{k}$ について $e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)} \ll 1$ なので，$\ln\left(1 + e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}\right) \approx e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)}$ と近似することができます。問7の積分結果を用いると，
 
 $$
-\ln\Xi(T, V, \mu) \approx \sum_{\boldsymbol{k}} e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)} \approx V e^{\frac{\mu}{k_{\mathrm{B}} T}}\left(\frac{2\pi m k_{\mathrm{B}} T}{h^2}\right)^{\frac{3}{2}} = N
+\begin{aligned}
+\ln\Xi(T, V, \mu) &\approx \sum_{\boldsymbol{k}} e^{-\beta(\varepsilon_{\boldsymbol{k}} - \mu)} \\
+&\approx V e^{\frac{\mu}{k_{\mathrm{B}} T}}\left(\frac{2\pi m k_{\mathrm{B}} T}{h^2}\right)^{\frac{3}{2}} \\
+&= N
+\end{aligned}
 $$
 
 となります。よって $J = -k_{\mathrm{B}} T \ln\Xi$ を $V, \mu$ 一定のもとで $T$ について偏微分します。
@@ -282,12 +299,16 @@ $$
 縮退温度 $T_{\mathrm{F}}$ より十分低い温度（$T \ll T_{\mathrm{F}}$）では，$C_V = \gamma T$ と熱力学第三法則 $S(T \to 0) = 0$ より，
 
 $$
-S(T) = \int_0^T \frac{C_V(T')}{T'}\,\mathrm{d}T' = \int_0^T \gamma\,\mathrm{d}T' = \gamma T
+\begin{aligned}
+S(T) &= \int_0^T \frac{C_V(T')}{T'}\,\mathrm{d}T' \\
+&= \int_0^T \gamma\,\mathrm{d}T' \\
+&= \gamma T
+\end{aligned}
 $$
 
 となり，エントロピーは原点 $(0, 0)$ から傾き $\gamma$ で線形に立ち上がります。一方，高温領域（$T \gg T_{\mathrm{F}}$）では，問7の $\mu$ を問8の式 $S = -\dfrac{\mu}{T} N + \dfrac{5}{2} N k_{\mathrm{B}}$ に代入すると問3の古典理想気体の結果 $S_{\mathrm{cl}}(T)$ に一致し，対数的に緩やかに増加します。
 
-以上をまとめたグラフは次のとおりです（実線がフェルミ粒子系のエントロピー $S_{\mathrm{F}}$，破線が古典理想気体のエントロピー $S_{\mathrm{cl}}$）。
+次のグラフでは，実線がフェルミ粒子系のエントロピー $S_{\mathrm F}$，破線が古典理想気体のエントロピー $S_{\mathrm{cl}}$ です。
 
 <figure class="problem-figure" markdown>
 ![フェルミ粒子系と古典理想気体のエントロピーの温度依存性](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_2-s-light.svg#only-light)
@@ -295,6 +316,4 @@ $$
 <figcaption markdown="span">自由フェルミ粒子系のエントロピー $S_{\mathrm{F}}$（実線）と古典理想気体のエントロピー $S_{\mathrm{cl}}$（破線）の温度依存性。$T \ll T_{\mathrm{F}}$ では $S_{\mathrm{F}} \simeq \gamma T \to 0$ となり，$T \gg T_{\mathrm{F}}$ では古典結果に漸近する。</figcaption>
 </figure>
 
-<aside class="rigor-note" markdown>
-問3で導いた古典理想気体のエントロピーはザックール・テトローデの式と呼ばれます。問7の化学ポテンシャルを問8の精密な表式 $S = -\dfrac{\mu}{T}N + \dfrac{5}{2}Nk_{\mathrm{B}}$ に代入すると，定数項 $\dfrac{5}{2}Nk_{\mathrm{B}}$ も含めてザックール・テトローデの式に完全に一致します。量子統計から古典極限をとることで，古典論では手で導入した $1/h^{3N}$ と $1/N!$ の因子が自然に再現されます。
-</aside>
+

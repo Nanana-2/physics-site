@@ -55,7 +55,7 @@ $$
 <figure class="problem-figure" markdown>
 ![複合系を準備し部分系AとBをそれぞれ別の場所で測定する模式図](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_1-p-light.svg#only-light)
 ![複合系を準備し部分系AとBをそれぞれ別の場所で測定する模式図](../../../docs/assets/figures/pastexam-todai-ributsu/R2_butsuri_1-p-dark.svg#only-dark)
-<figcaption markdown="span">模式図：$S$ で複合系を準備し，離れた場所にある $A$ で部分系 $A$ を測定，$B$ で部分系 $B$ を測定する。</figcaption>
+<figcaption markdown="span">模式図：</figcaption>
 </figure>
 
 この設定の下で，次の実験を考える。
@@ -112,16 +112,19 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-スピン一重項状態 $|\Psi\rangle$ は，$xz$ 平面内の任意の角度 $\theta$ による基底の回転に対して形を変えません。そのため，同じ軸 $\theta$ に沿って部分系 $A$ と $B$ を測定すると必ず反対の符号が観測され，異なる軸 $\theta, \varphi$ を選ぶと相関は角度差 $\theta - \varphi$ のみに依存する $-\cos(\theta - \varphi)$ となります。
+測定値の候補は演算子の固有値ですが，その値が実際に現れるかは状態との重なりで判断します。複合系では，選んだ2つの観測量の固有基底に状態を展開して，各結果の確率を求めます。
 
-$120^\circ$ 間隔の3方向を選ぶと，量子力学では相関の期待値がちょうど $0$ になる一方，あらかじめ3方向の測定値が定まっているとする決定論的仮説では，3つの符号 $\pm 1$ の和が $0$ にならないために期待値が必ず負となり，局所実在論との矛盾が簡潔に現れます。
+測定方向をランダムに選ぶ場合，方向を固定した期待値をその選択確率で平均します。値があらかじめ定まるという仮説も，同じ方向の選び方で平均して比較します。
 </div>
 
 ### (1)
 $|\uparrow\rangle$ は $\sigma_z$ の固有値 $+1$ に属する固有状態です。
 
 $$
-\sigma_z|\uparrow\rangle = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} = (+1)|\uparrow\rangle
+\begin{aligned}
+\sigma_z|\uparrow\rangle &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+&= (+1)|\uparrow\rangle
+\end{aligned}
 $$
 
 よって測定結果は確率 $1$ で $+1$ となり，期待値も $+1$ です。したがって，
@@ -138,7 +141,7 @@ $$
 |-_x\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix}
 $$
 
-です（$\sigma_x|\pm_x\rangle = \pm|\pm_x\rangle$）。状態 $|\uparrow\rangle$ をこの固有基底で展開します。
+です。$\sigma_x|\pm_x\rangle=\pm|\pm_x\rangle$ を満たします。状態 $|\uparrow\rangle$ をこの固有基底で展開します。
 
 $$
 |\uparrow\rangle = \frac{1}{\sqrt{2}}\left(|+_x\rangle + |-_x\rangle\right)
@@ -147,7 +150,11 @@ $$
 よって $s_x = +1$ と $s_x = -1$ がそれぞれ確率 $\left|\dfrac{1}{\sqrt{2}}\right|^2 = \dfrac{1}{2}$ で得られます。期待値は次のようになります。
 
 $$
-\langle s_x \rangle = \langle\uparrow|\sigma_x|\uparrow\rangle = \frac{1}{2}(+1) + \frac{1}{2}(-1) = 0
+\begin{aligned}
+\langle s_x \rangle &= \langle\uparrow|\sigma_x|\uparrow\rangle \\
+&= \frac{1}{2}(+1) + \frac{1}{2}(-1) \\
+&= 0
+\end{aligned}
 $$
 
 したがって，
@@ -163,7 +170,16 @@ $$
 \sigma(\theta) = \begin{pmatrix} \cos\theta & \sin\theta \\ \sin\theta & -\cos\theta \end{pmatrix}
 $$
 
-$\sigma(\theta)^2 = (\cos^2\theta + \sin^2\theta)I = I$ なので，$\sigma(\theta)$ の固有値は $\pm 1$ です。それぞれに対応する規格化固有状態は
+
+
+$$
+\begin{aligned}
+\sigma(\theta)^2 &= (\cos^2\theta + \sin^2\theta)I \\
+&= I
+\end{aligned}
+$$
+
+ なので，$\sigma(\theta)$ の固有値は $\pm 1$ です。それぞれに対応する規格化固有状態は
 
 $$
 |+\theta\rangle = \begin{pmatrix} \cos\dfrac{\theta}{2} \\ \sin\dfrac{\theta}{2} \end{pmatrix},\qquad
@@ -176,7 +192,7 @@ $$
 |\uparrow\rangle = \cos\frac{\theta}{2}\,|+\theta\rangle - \sin\frac{\theta}{2}\,|-\theta\rangle
 $$
 
-したがって，$s_\theta = +1$ を得る確率は $\cos^2\dfrac{\theta}{2}$，$s_\theta = -1$ を得る確率は $\sin^2\dfrac{\theta}{2}$ です。$\theta$ の値によって確率が $0$ になる場合を分けると，取りうる値 $s_\theta$ は次のようになります（$n$ は整数）。
+したがって，$s_\theta = +1$ を得る確率は $\cos^2\dfrac{\theta}{2}$，$s_\theta = -1$ を得る確率は $\sin^2\dfrac{\theta}{2}$ です。$\theta$ の値によって確率が $0$ になる場合を分けると，取りうる値 $s_\theta$ は次のようになります。ここで $n$ は整数です。
 
 - $\theta = 2n\pi$ のとき：$s_\theta = +1$ のみ
 - $\theta = (2n + 1)\pi$ のとき：$s_\theta = -1$ のみ
@@ -187,17 +203,18 @@ $$
 $$
 \begin{aligned}
 \langle s_\theta \rangle &= \langle\uparrow|\sigma(\theta)|\uparrow\rangle \\
-&= (+1)\cos^2\frac{\theta}{2} + (-1)\sin^2\frac{\theta}{2} = \cos\theta
+&= (+1)\cos^2\frac{\theta}{2} + (-1)\sin^2\frac{\theta}{2} \\
+&= \cos\theta
 \end{aligned}
 $$
 
 したがって，
 
 $$
-\finalanswer{\langle s_\theta \rangle = \cos\theta}
+\finalanswer{\langle s_\theta\rangle=\cos\theta,\qquad s_\theta\in\begin{cases}\{+1\}&\theta=2n\pi\\\{-1\}&\theta=(2n+1)\pi\\\{+1,-1\}&\theta\notin\pi\mathbb Z\end{cases}\quad(n\in\mathbb Z)}
 $$
 
-（取りうる値 $s_\theta$ は上記のとおり，$\theta = 2n\pi$ で $+1$，$\theta = (2n + 1)\pi$ で $-1$，それ以外の $\theta$ で $\pm 1$ です。）
+
 
 ### (4)
 状態 $|\Psi\rangle = \dfrac{1}{\sqrt{2}}\left(|\uparrow\rangle_A|\downarrow\rangle_B - |\downarrow\rangle_A|\uparrow\rangle_B\right)$ は，すでに $\sigma_z^A$ と $\sigma_z^B$ の同時固有基底で展開されています。
@@ -243,7 +260,7 @@ $$
 \end{aligned}
 $$
 
-よって $\sigma^A(\theta),\ \sigma^B(\theta)$ の測定で得られる組は $(+1, -1)$ と $(-1, +1)$（各確率 $\dfrac{1}{2}$）のみであり，必ず $s_\theta^A = -s_\theta^B = \pm 1$ が成り立ちます。
+よって $\sigma^A(\theta),\ \sigma^B(\theta)$ の測定で得られる組は $(+1, -1)$ と $(-1, +1)$で，確率はそれぞれ $\dfrac12$ です。取りうる組はこの2通りのみであり，必ず $s_\theta^A=\pm1$，$s_\theta^B=\mp1$ が成り立ちます。
 
 ### (7)
 問6で示した $|\Psi\rangle = \dfrac{1}{\sqrt{2}}\left(|+\theta\rangle_A|-\theta\rangle_B - |-\theta\rangle_A|+\theta\rangle_B\right)$ に対して，部分系 $B$ の状態を $\sigma^B(\varphi)$ の固有基底 $|+\varphi\rangle_B,\ |-\varphi\rangle_B$ で展開します。
@@ -273,12 +290,14 @@ $$
 
 $$
 \begin{aligned}
-P(+1, +1) = P(-1, -1) &= \frac{1}{2}\sin^2\frac{\theta-\varphi}{2} \\
-P(+1, -1) = P(-1, +1) &= \frac{1}{2}\cos^2\frac{\theta-\varphi}{2}
+P(+1, +1) &= P(-1, -1) & \\
+&= \frac{1}{2}\sin^2\frac{\theta-\varphi}{2} \\
+P(+1, -1) &= P(-1, +1) & \\
+&= \frac{1}{2}\cos^2\frac{\theta-\varphi}{2}
 \end{aligned}
 $$
 
-これより，取りうる組 $(s_\theta^A, s_\varphi^B)$ は角度差 $\theta - \varphi$ に応じて次のようになります（$n$ は整数）。
+これより，取りうる組 $(s_\theta^A, s_\varphi^B)$ は角度差 $\theta - \varphi$ に応じて次のようになります。ここで $n$ は整数です。
 
 - $\theta - \varphi = 2n\pi$ のとき：$(+1, -1),\ (-1, +1)$
 - $\theta - \varphi = (2n + 1)\pi$ のとき：$(+1, +1),\ (-1, -1)$
@@ -297,33 +316,63 @@ $$
 したがって，
 
 $$
-\finalanswer{\langle s_\theta^A s_\varphi^B \rangle = -\cos(\theta - \varphi)}
+\finalanswer{\langle s_\theta^As_\varphi^B\rangle=-\cos(\theta-\varphi)}
 $$
 
-（取りうる組は上記のとおり，一般には $(+1,+1),\ (+1,-1),\ (-1,+1),\ (-1,-1)$ の4通り，$\theta - \varphi = 2n\pi$ では $(+1,-1),\ (-1,+1)$ のみ，$\theta - \varphi = (2n+1)\pi$ では $(+1,+1),\ (-1,-1)$ のみです。）
+$\Delta=\theta-\varphi$ とおくと，取りうる組は
+
+$$
+\finalanswer{(s_\theta^A,s_\varphi^B)\in\begin{cases}\{(+1,-1),(-1,+1)\}&\Delta=2n\pi\\\{(+1,+1),(-1,-1)\}&\Delta=(2n+1)\pi\\\{+1,-1\}^2&\Delta\notin\pi\mathbb Z\end{cases}\quad(n\in\mathbb Z)}
+$$
+
+
 
 ### (8)
-角度の組 $(\theta, \varphi)$ は $\{0^\circ, 120^\circ, 240^\circ\}^2$ の全 $9$ 通りがそれぞれ確率 $\dfrac{1}{9}$ で選ばれます。このうち $\theta \neq \varphi$ の組（$|\theta - \varphi| = 120^\circ$ または $240^\circ$）では $\sin^2\dfrac{\theta-\varphi}{2} = \dfrac{3}{4} > 0$ かつ $\cos^2\dfrac{\theta-\varphi}{2} = \dfrac{1}{4} > 0$ となるため，$(s^A, s^B)$ は $(+1, +1),\ (+1, -1),\ (-1, +1),\ (-1, -1)$ の4通りすべてを取りえます。
+角度の組 $(\theta,\varphi)$ は $\{0^\circ,120^\circ,240^\circ\}^2$ の9通りがそれぞれ確率 $1/9$ で選ばれます。異なる方向を選んだ場合，同符号と異符号の結果がいずれも正の確率を持ちます。したがって，取りうる組は
+
+$$
+\finalanswer{(s^A,s^B)\in\{(+1,+1),(+1,-1),(-1,+1),(-1,-1)\}}
+$$
+
+です。
 
 積 $s^A s^B$ の期待値は，9通りの角度組に対する問7の結果の平均です。
 
 - $\theta = \varphi$ となる組は $(0^\circ, 0^\circ),\ (120^\circ, 120^\circ),\ (240^\circ, 240^\circ)$ の $3$ 通りあり，いずれも $-\cos(0^\circ) = -1$。
-- $\theta \neq \varphi$ となる組は残りの $6$ 通りあり，いずれも $|\theta - \varphi| = 120^\circ$ または $240^\circ$ なので $-\cos(\theta - \varphi) = -\left(-\dfrac{1}{2}\right) = \dfrac{1}{2}$。
+- $\theta \neq \varphi$ となる組は残りの $6$ 通りあり，いずれも $|\theta - \varphi| = 120^\circ$ または $240^\circ$ なので 
+
+$$
+\begin{aligned}
+-\cos(\theta - \varphi) &= -\left(-\dfrac{1}{2}\right) \\
+&= \dfrac{1}{2}
+\end{aligned}
+$$
+
+。
 
 よって，
 
 $$
 \begin{aligned}
-\langle s^A s^B \rangle
-&= \frac{1}{9}\left[3\times(-1) + 6\times\frac{1}{2}\right] \\
-&= \frac{-3 + 3}{9} = 0
+\langle s^A s^B \rangle &= \frac{1}{9}\left[3\times(-1) + 6\times\frac{1}{2}\right] \\
+&= \frac{-3 + 3}{9} \\
+&= 0
 \end{aligned}
 $$
 
 となり，期待値が $0$ になることが確かめられます。
 
 ### (9)
-仮説の式 (5) より $s_\varphi^B = -s_\varphi^A$ なので，角度の組 $(\theta, \varphi)$ を選んだときの積は $s^A s^B = s_\theta^A s_\varphi^B = -s_\theta^A s_\varphi^A$ です。$9$ 通りの組 $(\theta, \varphi)$ が等確率 $\dfrac{1}{9}$ で選ばれるため，与えられた $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A)$ に対する期待値は次の式で求めることができます。
+仮説の式 (5) より $s_\varphi^B = -s_\varphi^A$ なので，角度の組 $(\theta, \varphi)$ を選んだときの積は 
+
+$$
+\begin{aligned}
+s^A s^B &= s_\theta^A s_\varphi^B \\
+&= -s_\theta^A s_\varphi^A
+\end{aligned}
+$$
+
+ です。$9$ 通りの組 $(\theta, \varphi)$ が等確率 $\dfrac{1}{9}$ で選ばれるため，与えられた $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A)$ に対する期待値は次の式で求めることができます。
 
 $$
 \begin{aligned}
@@ -336,25 +385,31 @@ $$
 (i) $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A) = (+1, +1, +1)$ のとき，$9$ 通りのすべての組で $s^A s^B = -1$ となります。
 
 $$
-\langle s^A s^B \rangle = -\frac{1}{9}(1 + 1 + 1)^2 = -1
+\begin{aligned}
+\langle s^A s^B \rangle &= -\frac{1}{9}(1 + 1 + 1)^2 \\
+&= -1
+\end{aligned}
 $$
 
 したがって，
 
 $$
-\finalanswer{-1}
+\finalanswer{\langle s^As^B\rangle=-1}
 $$
 
 (ii) $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A) = (+1, +1, -1)$ のとき，$9$ 通りの組のうち $s_\theta^A s_\varphi^A = +1$ となる組が $5$ 通り，$s_\theta^A s_\varphi^A = -1$ となる組が $4$ 通りなので，
 
 $$
-\langle s^A s^B \rangle = -\frac{1}{9}(1 + 1 - 1)^2 = -\frac{1}{9}
+\begin{aligned}
+\langle s^A s^B \rangle &= -\frac{1}{9}(1 + 1 - 1)^2 \\
+&= -\frac{1}{9}
+\end{aligned}
 $$
 
 したがって，
 
 $$
-\finalanswer{-\frac{1}{9}}
+\finalanswer{\langle s^As^B\rangle=-\frac19}
 $$
 
 (iii) 八通りの組合せ $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A) \in \{+1, -1\}^3$ について，3つの値の和 $S = s_{0^\circ}^A + s_{120^\circ}^A + s_{240^\circ}^A$ が取りうる値は，3つとも同符号のときの $\pm 3$ と，2つが同符号で1つが異符号のときの $\pm 1$ のみであり，$S = 0$ になることはありません。
@@ -364,11 +419,12 @@ $$
 八通りが任意の確率分布 $\{p_k\}$（$p_k \ge 0,\ \sum_{k=1}^8 p_k = 1$）で生起するとき，全体の期待値は
 
 $$
-\langle s^A s^B \rangle = \sum_{k=1}^{8} p_k E_k \le -\frac{1}{9}\sum_{k=1}^{8} p_k = -\frac{1}{9} < 0
+\begin{aligned}
+\langle s^A s^B \rangle &= \sum_{k=1}^{8} p_k E_k \le -\frac{1}{9}\sum_{k=1}^{8} p_k \\
+&= -\frac{1}{9} < 0
+\end{aligned}
 $$
 
 となり，常に負であることが確かめられます。
 
-<aside class="rigor-note" markdown>
-問9で導かれた不等式 $\langle s^A s^B \rangle \le -\dfrac{1}{9}$ は，局所実在論（決定論的隠れた変数理論）が満たすべきベルの不等式の一種です。量子力学が予言する $\langle s^A s^B \rangle = 0$ はこの上限 $-\dfrac{1}{9}$ を明確に破っています。なお，問2・問3の括弧内にある固有値の注記は，行列表示の記法を明示するための補足です。
-</aside>
+

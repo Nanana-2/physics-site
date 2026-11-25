@@ -89,7 +89,16 @@ $$
 
 (4) エネルギー $E_n \neq 0$ の固有束縛状態 $|\Psi_n\rangle$ を考える。このとき，$E_n > 0$ であることを示せ。また，$|\Psi_n\rangle$ がエネルギー $E_n > 0$，$\sigma_z$ の固有値 $1$ の同時固有状態ならば，$|\Phi_n\rangle = D|\Psi_n\rangle$ が同じエネルギー $E_n$ で，$\sigma_z$ の固有値 $-1$ の同時固有状態であることを，式 (8) と (9) を用いて示せ。
 
-(5) エネルギー $E = 0$ の固有束縛状態 $|\Psi\rangle$ を考える。まず，$D|\Psi\rangle = 0$ を示せ。次に，ある関数 $\rho(x, y)$ を用いて，ベクトルポテンシャルを
+(5) エネルギー $E=0$ の固有束縛状態には，式 (10) から
+
+$$
+\begin{aligned}
+\|D|\Psi\rangle\|^2&=2m\cdot0\cdot\langle\Psi|\Psi\rangle\\
+&=0
+\end{aligned}
+$$
+
+が成り立ちます。ノルムが0なので $D|\Psi\rangle=0$ です。
 
 $$
 A_x(x, y) = -\frac{\partial\rho(x, y)}{\partial y},\qquad A_y(x, y) = +\frac{\partial\rho(x, y)}{\partial x} \tag{11}
@@ -121,16 +130,21 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-磁気モーメントの $g$ 因子がちょうど $2$ である2次元パウリ電子のハミルトニアンは，ディラック型演算子 $D = p_x\sigma_x + p_y\sigma_y$ の2乗 $H = D^2/(2m)$ として因数分解され（超対称量子力学の構造），すべてのエネルギー固有値が非負になるとともに，$E > 0$ の状態はスピン上向き・下向きで完全に対をなします。
+ハミルトニアンをエルミート演算子の2乗で表すと，エネルギーと状態のノルムを結び付けることができます。スピンを反転する演算子を使うことで，異なるスピン成分の状態を比較することができます。
 
-一方，$E = 0$ の状態は1階の微分方程式 $D|\Psi\rangle = 0$ に従い，ベクトルポテンシャルをスカラーポテンシャル $\rho$ で表すと正則・反正則関数の問題へ整理されるため，遠方での規格化条件だけからゼロエネルギー束縛状態の個数が全磁束のみで決まること（アハラノフ・カッシャーの定理）が導かれます。
+エネルギーが0の条件は，2階の方程式よりも低い階数の方程式で調べることができます。ベクトルポテンシャルを微分で表すと，波動関数の遠方での減衰と多項式の次数を分けて扱うことができます。
 </div>
 
 ### (1)
 パウリ行列の積 $\sigma_x\sigma_y = i\sigma_z,\ \sigma_y\sigma_x = -i\sigma_z$ より，
 
 $$
-[S_x, S_y] = \frac{\hbar^2}{4}\left(\sigma_x\sigma_y - \sigma_y\sigma_x\right) = \frac{\hbar^2}{4}(2i\sigma_z) = i\hbar\left(\frac{\hbar}{2}\sigma_z\right) = i\hbar S_z
+\begin{aligned}
+[S_x, S_y] &= \frac{\hbar^2}{4}\left(\sigma_x\sigma_y - \sigma_y\sigma_x\right) \\
+&= \frac{\hbar^2}{4}(2i\sigma_z) \\
+&= i\hbar\left(\frac{\hbar}{2}\sigma_z\right) \\
+&= i\hbar S_z
+\end{aligned}
 $$
 
 です。また式 (3) の $H$ は $\mathbf{1}_{2\times 2}$ と $\sigma_z$ のみを含み，空間演算子 $p_x, p_y, B_z(x, y)$ はスピン行列 $S_z = \dfrac{\hbar}{2}\sigma_z$ とすべて可換なので，$[H, S_z] = 0$ です。したがって，
@@ -143,12 +157,34 @@ $$
 まずパウリ行列の反交換関係 $\sigma_x\sigma_z = -\sigma_z\sigma_x,\ \sigma_y\sigma_z = -\sigma_z\sigma_y$ より，
 
 $$
-D\sigma_z = (p_x\sigma_x + p_y\sigma_y)\sigma_z = -\sigma_z(p_x\sigma_x + p_y\sigma_y) = -\sigma_z D
+\begin{aligned}
+D\sigma_z &= (p_x\sigma_x + p_y\sigma_y)\sigma_z \\
+&= -\sigma_z(p_x\sigma_x + p_y\sigma_y) \\
+&= -\sigma_z D
+\end{aligned}
 $$
 
 となり，式 (8) が成り立ちます。
 
-次に $D^2$ を展開します。$\sigma_x^2 = \sigma_y^2 = \mathbf{1}_{2\times 2}$ および $\sigma_x\sigma_y = -\sigma_y\sigma_x = i\sigma_z$ を用います。
+次に $D^2$ を展開します。
+
+$$
+\begin{aligned}
+\sigma_x^2 &= \sigma_y^2 \\
+&= \mathbf{1}_{2\times 2}
+\end{aligned}
+$$
+
+ および 
+
+$$
+\begin{aligned}
+\sigma_x\sigma_y &= -\sigma_y\sigma_x \\
+&= i\sigma_z
+\end{aligned}
+$$
+
+ を用います。
 
 $$
 \begin{aligned}
@@ -163,17 +199,19 @@ $$
 
 $$
 \begin{aligned}
-[p_x, p_y]\psi
-&= \left(-i\hbar\frac{\partial}{\partial x} + eA_x\right)\left(-i\hbar\frac{\partial\psi}{\partial y} + eA_y\psi\right)
- - \left(-i\hbar\frac{\partial}{\partial y} + eA_y\right)\left(-i\hbar\frac{\partial\psi}{\partial x} + eA_x\psi\right) \\
-&= -i\hbar e\left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right)\psi = -i\hbar e B_z(x, y)\psi
+[p_x, p_y]\psi &= \left(-i\hbar\frac{\partial}{\partial x} + eA_x\right)\left(-i\hbar\frac{\partial\psi}{\partial y} + eA_y\psi\right)  - \left(-i\hbar\frac{\partial}{\partial y} + eA_y\right)\left(-i\hbar\frac{\partial\psi}{\partial x} + eA_x\psi\right) \\
+&= -i\hbar e\left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right)\psi \\
+&= -i\hbar e B_z(x, y)\psi
 \end{aligned}
 $$
 
 よって $i[p_x, p_y] = \hbar e B_z(x, y)$ となり，
 
 $$
-D^2 = \left(p_x^2 + p_y^2\right)\mathbf{1}_{2\times 2} + \hbar e B_z(x, y)\sigma_z = 2m H
+\begin{aligned}
+D^2 &= \left(p_x^2 + p_y^2\right)\mathbf{1}_{2\times 2} + \hbar e B_z(x, y)\sigma_z \\
+&= 2m H
+\end{aligned}
 $$
 
 すなわち式 (9) $H = \dfrac{1}{2m}D^2$ が成り立ちます。
@@ -183,10 +221,10 @@ $D = D^\dagger$ と式 (9) $D^2 = 2mH$，および $H|\Psi_n\rangle = E_n|\Psi_n
 
 $$
 \begin{aligned}
-\langle\Phi_n|\Phi_n\rangle
-&= \langle\Psi_n|D^\dagger D|\Psi_n\rangle \\
+\langle\Phi_n|\Phi_n\rangle &= \langle\Psi_n|D^\dagger D|\Psi_n\rangle \\
 &= \langle\Psi_n|D^2|\Psi_n\rangle \\
-&= 2m\langle\Psi_n|H|\Psi_n\rangle = 2m E_n \langle\Psi_n|\Psi_n\rangle
+&= 2m\langle\Psi_n|H|\Psi_n\rangle \\
+&= 2m E_n \langle\Psi_n|\Psi_n\rangle
 \end{aligned}
 $$
 
@@ -195,24 +233,67 @@ $$
 ### (4)
 束縛状態 $|\Psi_n\rangle$ は零ベクトルではないので $\langle\Psi_n|\Psi_n\rangle > 0$ であり，またノルムの非負性より $\langle\Phi_n|\Phi_n\rangle \ge 0$ です。式 (10) より $E_n = \dfrac{\langle\Phi_n|\Phi_n\rangle}{2m\langle\Psi_n|\Psi_n\rangle} \ge 0$ であり，仮定 $E_n \neq 0$ から $E_n > 0$ です。
 
-さらに $E_n > 0$ より $\langle\Phi_n|\Phi_n\rangle = 2m E_n\langle\Psi_n|\Psi_n\rangle > 0$ なので，$|\Phi_n\rangle = D|\Psi_n\rangle$ は零でない状態ベクトルです。式 (9) より $H$ と $D$ は可換（$HD = \dfrac{1}{2m}D^3 = DH$）なので，
+$E_n>0$ より，
 
 $$
-H|\Phi_n\rangle = HD|\Psi_n\rangle = DH|\Psi_n\rangle = E_n D|\Psi_n\rangle = E_n|\Phi_n\rangle
+\langle\Phi_n|\Phi_n\rangle=2mE_n\langle\Psi_n|\Psi_n\rangle>0
+$$
+
+なので，$|\Phi_n\rangle$ は $0$ でない状態です。また，
+
+$$
+\begin{aligned}
+HD&=\frac{1}{2m}D^3\\
+DH&=\frac{1}{2m}D^3
+\end{aligned}
+$$
+
+から $H$ と $D$ は可換です。したがって，
+
+$$
+\begin{aligned}
+H|\Phi_n\rangle &= HD|\Psi_n\rangle \\
+&= DH|\Psi_n\rangle \\
+&= E_n D|\Psi_n\rangle \\
+&= E_n|\Phi_n\rangle
+\end{aligned}
 $$
 
 となり，また式 (8) と $\sigma_z|\Psi_n\rangle = (+1)|\Psi_n\rangle$ より，
 
 $$
-\sigma_z|\Phi_n\rangle = \sigma_z D|\Psi_n\rangle = -D\sigma_z|\Psi_n\rangle = -D|\Psi_n\rangle = -|\Phi_n\rangle
+\begin{aligned}
+\sigma_z|\Phi_n\rangle &= \sigma_z D|\Psi_n\rangle \\
+&= -D\sigma_z|\Psi_n\rangle \\
+&= -D|\Psi_n\rangle \\
+&= -|\Phi_n\rangle
+\end{aligned}
 $$
 
 となります。よって $|\Phi_n\rangle$ はエネルギー $E_n$，$\sigma_z$ の固有値 $-1$ の同時固有状態です。
 
 ### (5)
-$E = 0$ の固有束縛状態 $|\Psi\rangle$ に対して式 (10) を用いると $\|D|\Psi\rangle\|^2 = 2m\cdot 0\cdot\langle\Psi|\Psi\rangle = 0$ なので，$D|\Psi\rangle = 0$ です。
+$E = 0$ の固有束縛状態 $|\Psi\rangle$ に対して式 (10) を用いると 
 
-$D = p_x\sigma_x + p_y\sigma_y = \begin{pmatrix} 0 & p_x - ip_y \\ p_x + ip_y & 0 \end{pmatrix}$ より，$D|\Psi\rangle = 0$ は次の2つの1階偏微分方程式に分離されます。
+$$
+\begin{aligned}
+\|D|\Psi\rangle\|^2 &= 2m\cdot 0\cdot\langle\Psi|\Psi\rangle \\
+&= 0
+\end{aligned}
+$$
+
+ なので，$D|\Psi\rangle = 0$ です。
+
+
+
+$$
+\begin{aligned}
+D &= p_x\sigma_x + p_y\sigma_y \\
+&= \begin{pmatrix} 0 & p_x - ip_y \\ p_x + ip_y & 0 \end{pmatrix}
+\end{aligned}
+$$
+
+ より，$D|\Psi\rangle = 0$ は次の2つの1階偏微分方程式に分離されます。
 
 $$
 (p_x + ip_y)\psi_\uparrow = 0,\qquad (p_x - ip_y)\psi_\downarrow = 0
@@ -231,17 +312,17 @@ $$
 
 $$
 \begin{aligned}
-(p_x + ip_y)\psi_\uparrow
-&= -i\hbar\left[\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right) - \frac{e}{\hbar}\left(\frac{\partial\rho}{\partial x} + i\frac{\partial\rho}{\partial y}\right)\right]\left(f_\uparrow e^{\frac{e}{\hbar}\rho}\right) \\
-&= -i\hbar\,e^{\frac{e}{\hbar}\rho}\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right)f_\uparrow = 0
+(p_x + ip_y)\psi_\uparrow &= -i\hbar\left[\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right) - \frac{e}{\hbar}\left(\frac{\partial\rho}{\partial x} + i\frac{\partial\rho}{\partial y}\right)\right]\left(f_\uparrow e^{\frac{e}{\hbar}\rho}\right) \\
+&= -i\hbar\,e^{\frac{e}{\hbar}\rho}\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right)f_\uparrow \\
+&= 0
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-(p_x - ip_y)\psi_\downarrow
-&= -i\hbar\left[\left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right) + \frac{e}{\hbar}\left(\frac{\partial\rho}{\partial x} - i\frac{\partial\rho}{\partial y}\right)\right]\left(f_\downarrow e^{-\frac{e}{\hbar}\rho}\right) \\
-&= -i\hbar\,e^{-\frac{e}{\hbar}\rho}\left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)f_\downarrow = 0
+(p_x - ip_y)\psi_\downarrow &= -i\hbar\left[\left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right) + \frac{e}{\hbar}\left(\frac{\partial\rho}{\partial x} - i\frac{\partial\rho}{\partial y}\right)\right]\left(f_\downarrow e^{-\frac{e}{\hbar}\rho}\right) \\
+&= -i\hbar\,e^{-\frac{e}{\hbar}\rho}\left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)f_\downarrow \\
+&= 0
 \end{aligned}
 $$
 
@@ -251,7 +332,7 @@ $$
 \finalanswer{\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right)f_\uparrow(x, y) = 0,\qquad \left(\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)f_\downarrow(x, y) = 0}
 $$
 
-**正則性の説明**：$w = x + iy,\ \bar{w} = x - iy$ に対するウィルティンガー微分は $\dfrac{\partial}{\partial\bar{w}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$，$\dfrac{\partial}{\partial w} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right)$ です。上の方程式はそれぞれ $\dfrac{\partial f_\uparrow}{\partial\bar{w}} = 0$（実部・虚部について $w$ のコーシー・リーマン関係式）および $\dfrac{\partial f_\downarrow}{\partial w} = 0$（$\bar{w}$ のコーシー・リーマン関係式）であるため，$f_\uparrow(x, y)$ は $w$ の正則関数，$f_\downarrow(x, y)$ は $\bar{w}$ の正則関数です。
+**正則性の説明**：$w = x + iy,\ \bar{w} = x - iy$ に対するウィルティンガー微分は $\dfrac{\partial}{\partial\bar{w}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$，$\dfrac{\partial}{\partial w} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right)$ です。上の方程式はそれぞれ $\dfrac{\partial f_\uparrow}{\partial\bar{w}} = 0$および $\dfrac{\partial f_\downarrow}{\partial w} = 0$であるため，$f_\uparrow(x, y)$ は $w$ の正則関数，$f_\downarrow(x, y)$ は $\bar{w}$ の正則関数です。 これらは実部と虚部に対するコーシー・リーマン関係式です。
 
 ### (6)
 $r \ge R$ において式 (13) より
@@ -260,9 +341,9 @@ $$
 \exp\left[\pm\frac{e}{\hbar}\rho(x, y)\right] = \exp\left(\pm\frac{ebR^2}{4\hbar}\right)\left(\frac{r}{R}\right)^{\pm N_\Phi},\qquad N_\Phi \equiv \frac{ebR^2}{2\hbar} = \frac{e\Phi}{2\pi\hbar} > 0
 $$
 
-となります（ここで $\Phi = \pi R^2 b$ は全磁束です）。
+となります。ここで $\Phi=\pi R^2b$ は全磁束です。
 
-**スピン上向き（$\psi_\uparrow$）**：$f_\uparrow(w)$ は $w$ の多項式なので，$f_\uparrow \not\equiv 0$ ならば最高次の次数を $k\ (\ge 0)$ として $r \to \infty$ で $|f_\uparrow(w)| \sim |c_k| r^k$ となります。したがって $|\psi_\uparrow(x, y)|^2 \propto r^{2(k + N_\Phi)}$ となり，$k + N_\Phi > 0$ より2次元積分
+**スピン上向き**：$\psi_\uparrow$ を調べます。$f_\uparrow(w)$ は $w$ の多項式なので，$f_\uparrow \not\equiv 0$ ならば最高次の次数を $k\ (\ge 0)$ として $r \to \infty$ で $|f_\uparrow(w)| \sim |c_k| r^k$ となります。したがって $|\psi_\uparrow(x, y)|^2 \propto r^{2(k + N_\Phi)}$ となり，$k + N_\Phi > 0$ より2次元積分
 
 $$
 \int_R^{\infty} |\psi_\uparrow|^2\,r\,\mathrm{d}r \propto \int_R^{\infty} r^{2k + 2N_\Phi + 1}\,\mathrm{d}r = \infty
@@ -270,7 +351,7 @@ $$
 
 が発散します。ゆえに規格化可能なスピン上向きの $E = 0$ 束縛状態は存在しません。
 
-**スピン下向き（$\psi_\downarrow$）**：単項式基底 $f_\downarrow(\bar{w}) = \bar{w}^k\ (k = 0, 1, 2, \dots)$ を考えます。原点付近 $r < R$ では滑らかで有界なので，規格化可能性は $r \to \infty$ の積分収束条件のみで決まります。
+**スピン下向き**：$\psi_\downarrow$ を調べます。単項式基底 $f_\downarrow(\bar{w}) = \bar{w}^k\ (k = 0, 1, 2, \dots)$ を考えます。原点付近 $r < R$ では滑らかで有界なので，規格化可能性は $r \to \infty$ の積分収束条件のみで決まります。
 
 $$
 \int_R^{\infty} |\psi_\downarrow|^2\,r\,\mathrm{d}r \propto \int_R^{\infty} r^{2k - 2N_\Phi + 1}\,\mathrm{d}r
@@ -285,17 +366,15 @@ $$
 $k$ は非負整数（$k = 0, 1, 2, \dots$）なので，この不等式を満たす $k$ の個数は $N_\Phi = \dfrac{ebR^2}{2\hbar}$ に応じて次のようになります。
 
 - $N_\Phi \le 1$ のとき：$0$ 個
-- $N_\Phi > 1$ で $N_\Phi$ が非整数のとき：$k = 0, 1, \dots, \lfloor N_\Phi \rfloor - 1$ の計 $\lfloor N_\Phi \rfloor$ 個（ここで $\lfloor x \rfloor$ は $x$ を超えない最大の整数）
+- $N_\Phi > 1$ で $N_\Phi$ が非整数のとき：$k = 0, 1, \dots, \lfloor N_\Phi \rfloor - 1$ の計 $\lfloor N_\Phi \rfloor$ 個です。ここで $\lfloor x\rfloor$ は $x$ を超えない最大の整数です。
 - $N_\Phi > 1$ で $N_\Phi$ が整数のとき：$k = 0, 1, \dots, N_\Phi - 2$ の計 $N_\Phi - 1$ 個
 
-これらをまとめて，天井関数 $\lceil x \rceil$（$x$ 以上の最小の整数）を用いて $\max\bigl(0,\ \lceil N_\Phi \rceil - 1\bigr)$ 個と表すことができます。したがって，一次独立な状態の個数 $M$ は
+これらをまとめて，$x$ 以上の最小の整数を表す天井関数 $\lceil x\rceil$ を用いて $\max\bigl(0,\ \lceil N_\Phi \rceil - 1\bigr)$ 個と表すことができます。したがって，一次独立な状態の個数 $M$ は
 
 $$
 \finalanswer{M = \max\left(0,\ \left\lceil \frac{ebR^2}{2\hbar} \right\rceil - 1\right)}
 $$
 
-です（$N_\Phi = \dfrac{ebR^2}{2\hbar}$ が $1$ 以下のときは $0$ 個，$N_\Phi > 1$ のときは $N_\Phi$ より真に小さい最大の整数個です）。
+です。
 
-<aside class="rigor-note" markdown>
-問6の結果はアハラノフ・カッシャー（Aharonov–Casher）の定理として知られています。全磁束 $\Phi = \pi R^2 b$ を磁束量子 $\Phi_0 = h/e = 2\pi\hbar/e$ で割った無次元量 $N_\Phi = \Phi/\Phi_0$ だけでゼロエネルギー束縛状態の縮退度が決まり，磁場分布の細かな形には依存しません（トポロジカル不変量である指数定理の具体例です）。
-</aside>
+

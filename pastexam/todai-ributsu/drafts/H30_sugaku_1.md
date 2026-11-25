@@ -46,9 +46,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-行ベクトル $A$ は階数 $1$ の行列であり，$A = BV$ の直交変換によって $A$ の方向を第1座標軸に揃えることで，最小ノルム解を与える擬似逆行列 $\tilde{A}$ の構造が見通しよく決まります。
+行ベクトルの方向と直交する方向を分けると，行列の作用を調べることができます。直交変換を使うことで，列ベクトルに課される条件を成分ごとの条件として扱うことができます。
 
-一般の $n$ 次元では，$A_n X = v$ の最小ノルム解はコーシー・シュワルツの不等式の等号条件から $A_n^T$ に比例するベクトルとして定まり，また $A_n^T A_n$ は実対称行列であるため重複固有値 $0$ をもっても必ず直交対角化可能となります。
+線形な制約のもとでノルムを最小にするには，コーシー・シュワルツの不等式の等号条件を使います。行列の対称性も確認することで，固有値が重なる場合の対角化を判断します。
 </div>
 
 ### (1)
@@ -64,8 +64,26 @@ $$
 
 よって固有値は $\lambda_1 = a^2 + b^2$ と $\lambda_2 = 0$ です。それぞれの固有ベクトル $\boldsymbol{u} = \begin{pmatrix} x \\ y \end{pmatrix}$ を求めます。
 
-- $\lambda_1 = a^2 + b^2$ のとき：$-b^2 x + ab y = 0 \implies bx = ay$ より，$\boldsymbol{u}_1 = k_1\begin{pmatrix} a \\ b \end{pmatrix}$（$k_1 \neq 0$）。
-- $\lambda_2 = 0$ のとき：$a^2 x + ab y = 0 \implies ax + by = 0$ より，$\boldsymbol{u}_2 = k_2\begin{pmatrix} -b \\ a \end{pmatrix}$（$k_2 \neq 0$）。
+- $\lambda_1 = a^2 + b^2$ のとき：
+
+$$
+\begin{aligned}
+-b^2 x + ab y &= 0 \\
+bx &= ay
+\end{aligned}
+$$
+
+ より，$\boldsymbol{u}_1 = k_1\begin{pmatrix} a \\ b \end{pmatrix}$（$k_1 \neq 0$）。
+- $\lambda_2 = 0$ のとき：
+
+$$
+\begin{aligned}
+a^2 x + ab y &= 0 \\
+ax + by &= 0
+\end{aligned}
+$$
+
+ より，$\boldsymbol{u}_2 = k_2\begin{pmatrix} -b \\ a \end{pmatrix}$（$k_2 \neq 0$）。
 
 したがって，固有値と固有ベクトルはそれぞれ
 
@@ -74,31 +92,65 @@ $$
 $$
 
 ### (2)
-$V$ が実直交行列（$V V^T = I$）なので，$A A^T = B V V^T B^T = B B^T$ より $a^2 + b^2 = c^2$ です。$c > 0$ より $c = \sqrt{a^2 + b^2}$ となります。
+$V$ が実直交行列で $VV^T=I$ を満たすので，
 
-$V = \begin{pmatrix} v_{11} & v_{12} \\ v_{21} & v_{22} \end{pmatrix}$ とおくと，$A = BV = (c v_{11}, c v_{12}) = (a, b)$ より，
+$$
+\begin{aligned}
+A A^T &= B V V^T B^T \\
+&= B B^T
+\end{aligned}
+$$
+
+ より $a^2 + b^2 = c^2$ です。$c > 0$ より $c = \sqrt{a^2 + b^2}$ となります。
+
+$V = \begin{pmatrix} v_{11} & v_{12} \\ v_{21} & v_{22} \end{pmatrix}$ とおくと，
+
+$$
+\begin{aligned}
+A &= BV \\
+&= (c v_{11}, c v_{12}) \\
+&= (a, b)
+\end{aligned}
+$$
+
+ より，
 
 $$
 v_{11} = \frac{a}{\sqrt{a^2 + b^2}},\qquad v_{12} = \frac{b}{\sqrt{a^2 + b^2}}
 $$
 
-です。さらに $V$ が実対称（$v_{21} = v_{12}$）かつ直交行列である条件より，第1行と第2行の内積が $0$ となる必要があります。
+です。さらに $V$ が実対称なので $v_{21}=v_{12}$ です。また直交行列なので，第1行と第2行の内積が $0$ となる必要があります。
 
 $$
-v_{11} v_{21} + v_{12} v_{22} = \frac{ab}{a^2 + b^2} + \frac{b}{\sqrt{a^2 + b^2}} v_{22} = 0
+\begin{aligned}
+v_{11} v_{21} + v_{12} v_{22} &= \frac{ab}{a^2 + b^2} + \frac{b}{\sqrt{a^2 + b^2}} v_{22} \\
+&= 0
+\end{aligned}
 $$
 
-$b \neq 0$ より $v_{22} = -\dfrac{a}{\sqrt{a^2 + b^2}}$ が一意に決まります（$v_{21}^2 + v_{22}^2 = 1$ も満たします）。したがって，
+$b \neq 0$ より $v_{22} = -\dfrac{a}{\sqrt{a^2 + b^2}}$ が一意に定まります。$v_{21}^2+v_{22}^2=1$ も満たします。したがって，
 
 $$
 \finalanswer{c = \sqrt{a^2 + b^2},\qquad V = \frac{1}{\sqrt{a^2 + b^2}}\begin{pmatrix} a & b \\ b & -a \end{pmatrix}}
 $$
 
 ### (3)
-$\tilde{B} = \begin{pmatrix} x \\ y \end{pmatrix}$ とおきます。条件 $B\tilde{B} = cx = 1$ より $x = \dfrac{1}{c}$ です。
+$\tilde{B} = \begin{pmatrix} x \\ y \end{pmatrix}$ とおきます。条件 
 
 $$
-\tilde{B}B = \begin{pmatrix} 1/c \\ y \end{pmatrix}(c, 0) = \begin{pmatrix} 1 & 0 \\ cy & 0 \end{pmatrix}
+\begin{aligned}
+B\tilde{B} &= cx \\
+&= 1
+\end{aligned}
+$$
+
+ より $x = \dfrac{1}{c}$ です。
+
+$$
+\begin{aligned}
+\tilde{B}B &= \begin{pmatrix} 1/c \\ y \end{pmatrix}(c, 0) \\
+&= \begin{pmatrix} 1 & 0 \\ cy & 0 \end{pmatrix}
+\end{aligned}
 $$
 
 これが実対称行列となる条件は $cy = 0$，すなわち $y = 0$ です。したがって，
@@ -108,17 +160,35 @@ $$
 $$
 
 ### (4)
-$\tilde{A} = V^T \tilde{B}$（$V$ は実対称なので $V\tilde{B}$ に等しい）とおきます。$V V^T = I$ を用いて2つの条件を確認します。
+$\tilde A=V^T\tilde B$ とおきます。$V$ は実対称なので，$V^T\tilde B=V\tilde B$ です。$VV^T=I$ を使って条件を確認します。
 
 $$
-A\tilde{A} = (BV)(V^T\tilde{B}) = B\tilde{B} = 1
+\begin{aligned}
+A\tilde{A} &= (BV)(V^T\tilde{B}) \\
+&= B\tilde{B} \\
+&= 1
+\end{aligned}
 $$
 
 $$
-(\tilde{A}A)^T = (V^T \tilde{B} B V)^T = V^T (\tilde{B}B)^T V = V^T (\tilde{B}B) V = \tilde{A}A
+\begin{aligned}
+(\tilde{A}A)^T &= (V^T \tilde{B} B V)^T \\
+&= V^T (\tilde{B}B)^T V \\
+&= V^T (\tilde{B}B) V \\
+&= \tilde{A}A
+\end{aligned}
 $$
 
-よって $\tilde{A} = V^T\tilde{B} = V\tilde{B}$ は両方の条件を満たします。一意性よりこれが求める $\tilde{A}$ です。したがって，
+よって 
+
+$$
+\begin{aligned}
+\tilde{A} &= V^T\tilde{B} \\
+&= V\tilde{B}
+\end{aligned}
+$$
+
+ は両方の条件を満たします。一意性よりこれが求める $\tilde{A}$ です。したがって，
 
 $$
 \finalanswer{\tilde{A} = V^T\tilde{B} = V\tilde{B}}
@@ -128,23 +198,49 @@ $$
 コーシー・シュワルツの不等式より，$A_n X = v$ を満たす任意の列ベクトル $X$ に対して次式が成り立ちます。
 
 $$
-v^2 = \left(A_n X\right)^2 = \left(\sum_{i=1}^{n} a_i X_i\right)^2 \le \left(\sum_{i=1}^{n} a_i^2\right)\left(\sum_{i=1}^{n} X_i^2\right) = \left(A_n A_n^T\right)\|X\|^2
+\begin{aligned}
+v^2 &= \left(A_n X\right)^2 \\
+&= \left(\sum_{i=1}^{n} a_i X_i\right)^2 \le \left(\sum_{i=1}^{n} a_i^2\right)\left(\sum_{i=1}^{n} X_i^2\right) \\
+&= \left(A_n A_n^T\right)\|X\|^2
+\end{aligned}
 $$
 
-よって $\|X\|^2 \ge \dfrac{v^2}{\sum_{i=1}^{n} a_i^2}$ であり，等号が成り立つのは $X$ が $A_n^T$ の実数倍 $X_0 = k A_n^T$ となるときに限ります。条件 $A_n X_0 = k\left(\sum_{i=1}^{n} a_i^2\right) = v$ より $k = \dfrac{v}{\sum_{i=1}^{n} a_i^2}$ なので，
+よって $\|X\|^2 \ge \dfrac{v^2}{\sum_{i=1}^{n} a_i^2}$ であり，等号が成り立つのは $X$ が $A_n^T$ の実数倍 $X_0 = k A_n^T$ となるときに限ります。条件 
 
 $$
-X_0 = \frac{v}{\sum_{i=1}^{n} a_i^2} A_n^T = v\tilde{A}_n,\qquad \tilde{A}_n = \frac{1}{\sum_{i=1}^{n} a_i^2} A_n^T
+\begin{aligned}
+A_n X_0 &= k\left(\sum_{i=1}^{n} a_i^2\right) \\
+&= v
+\end{aligned}
+$$
+
+ より $k = \dfrac{v}{\sum_{i=1}^{n} a_i^2}$ なので，
+
+$$
+\begin{aligned}
+X_0 &= \frac{v}{\sum_{i=1}^{n} a_i^2} A_n^T \\
+&= v\tilde{A}_n \\
+\tilde{A}_n = \frac{1}{\sum_{i=1}^{n} a_i^2} A_n^T
+\end{aligned}
 $$
 
 となります。この $\tilde{A}_n$ について2つの性質を確認します。
 
 $$
-A_n\tilde{A}_n = \frac{A_n A_n^T}{\sum_{i=1}^{n} a_i^2} = \frac{\sum_{i=1}^{n} a_i^2}{\sum_{i=1}^{n} a_i^2} = 1
+\begin{aligned}
+A_n\tilde{A}_n &= \frac{A_n A_n^T}{\sum_{i=1}^{n} a_i^2} \\
+&= \frac{\sum_{i=1}^{n} a_i^2}{\sum_{i=1}^{n} a_i^2} \\
+&= 1
+\end{aligned}
 $$
 
 $$
-\left(\tilde{A}_n A_n\right)^T = \left(\frac{A_n^T A_n}{\sum_{i=1}^{n} a_i^2}\right)^T = \frac{A_n^T (A_n^T)^T}{\sum_{i=1}^{n} a_i^2} = \frac{A_n^T A_n}{\sum_{i=1}^{n} a_i^2} = \tilde{A}_n A_n
+\begin{aligned}
+\left(\tilde{A}_n A_n\right)^T &= \left(\frac{A_n^T A_n}{\sum_{i=1}^{n} a_i^2}\right)^T \\
+&= \frac{A_n^T (A_n^T)^T}{\sum_{i=1}^{n} a_i^2} \\
+&= \frac{A_n^T A_n}{\sum_{i=1}^{n} a_i^2} \\
+&= \tilde{A}_n A_n
+\end{aligned}
 $$
 
 よって $A_n\tilde{A}_n = 1$ が成り立ち，$\tilde{A}_n A_n$ は実対称行列です。したがって，
@@ -154,25 +250,44 @@ $$
 $$
 
 ### (6)
-$\lambda \neq 0$ を $M^T M$ の固有値，対応する固有ベクトルを $\boldsymbol{u} \neq \mathbf{0}$ とします（$M^T M \boldsymbol{u} = \lambda\boldsymbol{u}$）。もし $M\boldsymbol{u} = \mathbf{0}$ ならば $\lambda\boldsymbol{u} = M^T(M\boldsymbol{u}) = \mathbf{0}$ となり $\lambda \neq 0,\ \boldsymbol{u} \neq \mathbf{0}$ に矛盾するため，$M\boldsymbol{u} \neq \mathbf{0}$ です。
+$\lambda \neq 0$ を $M^T M$ の固有値，対応する固有ベクトルを $\boldsymbol{u} \neq \mathbf{0}$ とします。固有方程式は $M^TM\boldsymbol u=\lambda\boldsymbol u$ です。もし $M\boldsymbol{u} = \mathbf{0}$ ならば 
+
+$$
+\begin{aligned}
+\lambda\boldsymbol{u} &= M^T(M\boldsymbol{u}) \\
+&= \mathbf{0}
+\end{aligned}
+$$
+
+ となり $\lambda \neq 0,\ \boldsymbol{u} \neq \mathbf{0}$ に矛盾するため，$M\boldsymbol{u} \neq \mathbf{0}$ です。
 
 もとの固有方程式に左から $M$ を掛けると，
 
 $$
-(M M^T)(M\boldsymbol{u}) = M(M^T M\boldsymbol{u}) = \lambda(M\boldsymbol{u})
+\begin{aligned}
+(M M^T)(M\boldsymbol{u}) &= M(M^T M\boldsymbol{u}) \\
+&= \lambda(M\boldsymbol{u})
+\end{aligned}
 $$
 
-となるため，$\lambda$ は $M M^T$ の固有値（固有ベクトル $M\boldsymbol{u}$）です。
+となるため，$\lambda$ は $M M^T$ の固有値であり，$M\boldsymbol u$ が対応する固有ベクトルです。
 
-これを $M = A_n$ に用います。$A_n A_n^T = \left(\sum_{i=1}^{n} a_i^2\right)$ は $1\times 1$ 行列であり，その唯一の固有値は $\sum_{i=1}^{n} a_i^2$ です。また $\operatorname{rank}(A_n^T A_n) = 1$ なので $0$ でない固有値は重複度 $1$ の $\sum_{i=1}^{n} a_i^2$ のみであり，残りの $n - 1$ 個の固有値はすべて $0$ です（$\operatorname{tr}(A_n^T A_n) = \sum_{i=1}^{n} a_i^2$ とも一致します）。したがって，固有値は $\displaystyle\sum_{i=1}^{n} a_i^2$（重複度 $1$）と $0$（重複度 $n - 1$）です。
+$M=A_n$ とすると，$A_nA_n^T$ は成分が $\sum_{i=1}^na_i^2$ の $1\times1$ 行列です。$A_n^TA_n$ の固有ベクトル $A_n^T$ に対応する固有値は $\sum_{i=1}^na_i^2$ です。階数が1の実対称行列なので，残りの $n-1$ 個の固有値はすべて $0$ になります。したがって，
 
 $$
-\finalanswer{\lambda = \sum_{i=1}^{n} a_i^2,\ 0}
+\finalanswer{\lambda_1=\sum_{i=1}^n a_i^2,\qquad\lambda_j=0\quad(j=2,\ldots,n)}
 $$
 
 ### (7)
-$A_n^T A_n$ は実対称行列です（$(A_n^T A_n)^T = A_n^T (A_n^T)^T = A_n^T A_n$）。任意の実対称行列は，重複する固有値をもつ場合でも必ず直交行列によって対角化することができます（実対称行列のスペクトル定理）。したがって，$A_n^T A_n$ は**対角化可能**です。
+$A_n^TA_n$ の転置を計算すると，
 
-<aside class="rigor-note" markdown>
-本問の $\tilde{A},\ \tilde{A}_n$ はムーア・ペンローズ（Moore–Penrose）擬似逆行列 $A^+$ であり，問2の分解 $A = BV$ は特異値分解（SVD）の特別な場合です。なお問2では問題文が「実対称直交行列」と指定しているため，$V$ の符号の自由度まで含めて一意に定まります（鏡映行列にあたります）。
-</aside>
+$$
+\begin{aligned}
+(A_n^TA_n)^T&=A_n^T(A_n^T)^T\\
+&=A_n^TA_n
+\end{aligned}
+$$
+
+なので，実対称行列です。実対称行列は，固有値が重なる場合でも直交行列で対角化することができます。したがって $A_n^TA_n$ は対角化可能です。
+
+

@@ -110,9 +110,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-無限個の固有値の積 $D$ を直接扱う代わりに，スペクトルゼータ関数の差 $Z(s)$ を導入して $D = e^{-Z'(0)}$ と表します。境界条件を満たす固有値は特性関数 $\tilde{g}_\alpha(\lambda)$ の1位の零点なので，その対数微分と $\lambda^{-s}$ の周回積分から留数定理によって $Z(s)$ の積分表示が得られます。
+微分方程式の一般解に境界条件を課すことで，固有値を選ぶ条件を得ることができます。境界値を与える関数のゼロ点として固有値を見ると，固有値についての和を留数で表すことができます。
 
-積分経路をブランチカットの両岸 $C_{\mathrm{in}},\ C_{\mathrm{out}}$ へ変形すると，$\lambda^{-s}$ の多価性から $(e^{2\pi i s} - 1)$ の因子が前に出て，$s = 0$ での微分が端点 $\lambda = 0$ の値だけで決まる全微分積分として直接計算することができます。
+積の対数は和になるため，まず対数を求めます。複素べきの切断線をまたいだ位相の変化と積分の向きを区別することで，微分したときの符号を確認します。
 </div>
 
 ### (1)
@@ -125,10 +125,46 @@ $$
 $\lambda + m_\alpha^2$ の符号で場合分けして調べます。
 
 - $\lambda + m_\alpha^2 = 0$ のとき：一般解は $f_\alpha(x) = c_1 + c_2 x$。$f_\alpha'(0) = 0$ より $c_2 = 0$，$f_\alpha(\pi) = 0$ より $c_1 = 0$ となり，$f_\alpha(x) \equiv 0$ 以外の解はありません。
-- $\lambda + m_\alpha^2 = -\mu^2 < 0\ (\mu > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cosh(\mu x) + c_2\sinh(\mu x)$。$f_\alpha'(0) = 0$ より $c_2 = 0$，$f_\alpha(\pi) = c_1\cosh(\mu\pi) = 0$ より $c_1 = 0$ となり，$f_\alpha(x) \equiv 0$ 以外の解はありません。
-- $\lambda + m_\alpha^2 = \kappa^2 > 0\ (\kappa > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cos(\kappa x) + c_2\sin(\kappa x)$。$f_\alpha'(0) = \kappa c_2 = 0$ より $c_2 = 0$，$f_\alpha(\pi) = c_1\cos(\kappa\pi) = 0$ より $c_1 \neq 0$ となる条件は $\cos(\kappa\pi) = 0$，すなわち $\kappa = n - \dfrac{1}{2}\ (n = 1, 2, 3, \dots)$ です。
+- $\lambda + m_\alpha^2 = -\mu^2 < 0\ (\mu > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cosh(\mu x) + c_2\sinh(\mu x)$。$f_\alpha'(0) = 0$ より $c_2 = 0$，
 
-よって $\lambda_\alpha^{(n)} = \kappa^2 - m_\alpha^2 = \left(n - \dfrac{1}{2}\right)^2 - m_\alpha^2$，対応する固有関数は $f_\alpha^{(n)}(x) = \cos\left[\left(n - \dfrac{1}{2}\right)x\right]$（非ゼロ定数倍の任意性あり）です。したがって，
+$$
+\begin{aligned}
+f_\alpha(\pi) &= c_1\cosh(\mu\pi) \\
+&= 0
+\end{aligned}
+$$
+
+ より $c_1 = 0$ となり，$f_\alpha(x) \equiv 0$ 以外の解はありません。
+- $\lambda + m_\alpha^2 = \kappa^2 > 0\ (\kappa > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cos(\kappa x) + c_2\sin(\kappa x)$。
+
+$$
+\begin{aligned}
+f_\alpha'(0) &= \kappa c_2 \\
+&= 0
+\end{aligned}
+$$
+
+ より $c_2 = 0$，
+
+$$
+\begin{aligned}
+f_\alpha(\pi) &= c_1\cos(\kappa\pi) \\
+&= 0
+\end{aligned}
+$$
+
+ より $c_1 \neq 0$ となる条件は $\cos(\kappa\pi) = 0$，すなわち $\kappa = n - \dfrac{1}{2}\ (n = 1, 2, 3, \dots)$ です。
+
+よって 
+
+$$
+\begin{aligned}
+\lambda_\alpha^{(n)} &= \kappa^2 - m_\alpha^2 \\
+&= \left(n - \dfrac{1}{2}\right)^2 - m_\alpha^2
+\end{aligned}
+$$
+
+，対応する固有関数は $f_\alpha^{(n)}(x) = \cos\left[\left(n - \dfrac{1}{2}\right)x\right]$です。固有関数には，ゼロでない定数倍の任意性があります。したがって，
 
 $$
 \finalanswer{\lambda_\alpha^{(n)} = \left(n - \frac{1}{2}\right)^2 - m_\alpha^2,\qquad f_\alpha^{(n)}(x) = \cos\left[\left(n - \frac{1}{2}\right)x\right] \qquad (n = 1, 2, 3, \dots)}
@@ -138,13 +174,16 @@ $$
 (i) $\lambda^{-s} = e^{-s\ln\lambda}$ を $s$ で微分します。
 
 $$
-\frac{\mathrm{d}}{\mathrm{d}s}\lambda^{-s} = \frac{\mathrm{d}}{\mathrm{d}s}e^{-s\ln\lambda} = -\lambda^{-s}\ln\lambda
+\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}s}\lambda^{-s} &= \frac{\mathrm{d}}{\mathrm{d}s}e^{-s\ln\lambda} \\
+&= -\lambda^{-s}\ln\lambda
+\end{aligned}
 $$
 
 したがって，
 
 $$
-\finalanswer{-\lambda^{-s}\ln\lambda}
+\finalanswer{\frac{\mathrm{d}}{\mathrm{d}s}\lambda^{-s}=-\lambda^{-s}\ln\lambda}
 $$
 
 (ii) (i) の結果を用いて $Z(s)$ を $s$ で微分します。
@@ -153,10 +192,14 @@ $$
 Z'(s) = -\sum_{n=1}^{\infty} \left[\left(\lambda_2^{(n)}\right)^{-s}\ln\lambda_2^{(n)} - \left(\lambda_1^{(n)}\right)^{-s}\ln\lambda_1^{(n)}\right]
 $$
 
-$s = 0$ での値は（解析接続された $Z(s)$ に対して）次のように $D$ の対数と結び付きます。
+解析接続された $Z(s)$ の $s=0$ での微分は，次のように $D$ の対数と結び付きます。
 
 $$
-Z'(0) = -\sum_{n=1}^{\infty} \left(\ln\lambda_2^{(n)} - \ln\lambda_1^{(n)}\right) = -\ln\left(\prod_{n=1}^{\infty}\frac{\lambda_2^{(n)}}{\lambda_1^{(n)}}\right) = -\ln D
+\begin{aligned}
+Z'(0) &= -\sum_{n=1}^{\infty} \left(\ln\lambda_2^{(n)} - \ln\lambda_1^{(n)}\right) \\
+&= -\ln\left(\prod_{n=1}^{\infty}\frac{\lambda_2^{(n)}}{\lambda_1^{(n)}}\right) \\
+&= -\ln D
+\end{aligned}
 $$
 
 よって $D = e^{-Z'(0)}$ です。したがって，
@@ -167,27 +210,48 @@ $$
 
 (iii) $\lambda > -m_\alpha^2$ より $\kappa = \sqrt{\lambda + m_\alpha^2} > 0$ とおくと，微分方程式は $\dfrac{\partial^2 g_\alpha}{\partial x^2} + \kappa^2 g_\alpha = 0$ です。一般解は $g_\alpha(x; \lambda) = c_1\cos(\kappa x) + c_2\sin(\kappa x)$ となります。
 
-境界条件 $\left.\dfrac{\partial g_\alpha}{\partial x}\right|_{x=0} = \kappa c_2 = 0$ より $c_2 = 0$，$g_\alpha(0; \lambda) = c_1 = 1$ です。したがって，
+境界条件 
+
+$$
+\begin{aligned}
+\left.\dfrac{\partial g_\alpha}{\partial x}\right|_{x=0} &= \kappa c_2 \\
+&= 0
+\end{aligned}
+$$
+
+ より $c_2 = 0$，
+
+$$
+\begin{aligned}
+g_\alpha(0; \lambda) &= c_1 \\
+&= 1
+\end{aligned}
+$$
+
+ です。したがって，
 
 $$
 \finalanswer{g_\alpha(x; \lambda) = \cos\left(\sqrt{\lambda + m_\alpha^2}\,x\right)}
 $$
 
-(iv) $\tilde{g}_\alpha(\lambda) = \cos\left(\pi\sqrt{\lambda + m_\alpha^2}\right)$ は $\lambda$ の整関数です（$\cos(\pi\sqrt{z})$ のべき級数は $z$ の整数乗のみを含むため分岐点はありません）。
+(iv) $\tilde{g}_\alpha(\lambda) = \cos\left(\pi\sqrt{\lambda + m_\alpha^2}\right)$ は $\lambda$ の整関数です。$\cos(\pi\sqrt z)$ のべき級数は $z$ の整数乗のみを含むため，分岐点はありません。
 
 零点 $\lambda = \lambda_\alpha^{(n)}$ の近傍で $\tilde{g}_\alpha(\lambda) = k_\alpha^{(n)}\left(\lambda - \lambda_\alpha^{(n)}\right) + \mathcal{O}\!\left[\left(\lambda - \lambda_\alpha^{(n)}\right)^2\right]$ なので，その対数微分は $\lambda = \lambda_\alpha^{(n)}$ に留数 $1$ の1位の極をもちます。
 
 $$
-\frac{1}{\tilde{g}_\alpha(\lambda)}\frac{\mathrm{d}\tilde{g}_\alpha(\lambda)}{\mathrm{d}\lambda}
-= \frac{k_\alpha^{(n)} + \mathcal{O}\!\left(\lambda - \lambda_\alpha^{(n)}\right)}{k_\alpha^{(n)}\left(\lambda - \lambda_\alpha^{(n)}\right) + \mathcal{O}\!\left[\left(\lambda - \lambda_\alpha^{(n)}\right)^2\right]}
-= \frac{1}{\lambda - \lambda_\alpha^{(n)}} + \mathcal{O}(1)
+\begin{aligned}
+\frac{1}{\tilde{g}_\alpha(\lambda)}\frac{\mathrm{d}\tilde{g}_\alpha(\lambda)}{\mathrm{d}\lambda} &= \frac{k_\alpha^{(n)} + \mathcal{O}\!\left(\lambda - \lambda_\alpha^{(n)}\right)}{k_\alpha^{(n)}\left(\lambda - \lambda_\alpha^{(n)}\right) + \mathcal{O}\!\left[\left(\lambda - \lambda_\alpha^{(n)}\right)^2\right]} \\
+&= \frac{1}{\lambda - \lambda_\alpha^{(n)}} + \mathcal{O}(1)
+\end{aligned}
 $$
 
-ここで $0 < m_\alpha < \dfrac{1}{2}$ よりすべての固有値 $\lambda_\alpha^{(n)}$ は正の実数であり，経路 $C$ はこれらを反時計回りに囲み，ブランチカットとは交わりません。$\lambda^{-s}$ は正の実軸上で正則なので，各極での留数は $\left(\lambda_2^{(n)}\right)^{-s}$ および $-\left(\lambda_1^{(n)}\right)^{-s}$ です。留数定理（$\displaystyle\int_{C_0}\dfrac{\mathrm{d}z}{z} = 2\pi i$）より，
+ここで $0 < m_\alpha < \dfrac{1}{2}$ よりすべての固有値 $\lambda_\alpha^{(n)}$ は正の実数であり，経路 $C$ はこれらを反時計回りに囲み，ブランチカットとは交わりません。$\lambda^{-s}$ は正の実軸上で正則なので，各極での留数は $\left(\lambda_2^{(n)}\right)^{-s}$ および $-\left(\lambda_1^{(n)}\right)^{-s}$ です。留数定理より，
 
 $$
-\int_C \lambda^{-s} \left[\frac{1}{\tilde{g}_2(\lambda)}\frac{\mathrm{d}\tilde{g}_2(\lambda)}{\mathrm{d}\lambda} - \frac{1}{\tilde{g}_1(\lambda)}\frac{\mathrm{d}\tilde{g}_1(\lambda)}{\mathrm{d}\lambda}\right]\mathrm{d}\lambda
-= 2\pi i \sum_{n=1}^{\infty} \left[\left(\lambda_2^{(n)}\right)^{-s} - \left(\lambda_1^{(n)}\right)^{-s}\right] = 2\pi i\,Z(s)
+\begin{aligned}
+\int_C \lambda^{-s} \left[\frac{1}{\tilde{g}_2(\lambda)}\frac{\mathrm{d}\tilde{g}_2(\lambda)}{\mathrm{d}\lambda} - \frac{1}{\tilde{g}_1(\lambda)}\frac{\mathrm{d}\tilde{g}_1(\lambda)}{\mathrm{d}\lambda}\right]\mathrm{d}\lambda &= 2\pi i \sum_{n=1}^{\infty} \left[\left(\lambda_2^{(n)}\right)^{-s} - \left(\lambda_1^{(n)}\right)^{-s}\right] \\
+&= 2\pi i\,Z(s)
+\end{aligned}
 $$
 
 が成り立ちます。よって $A = \dfrac{1}{2\pi i}$ です。したがって，
@@ -198,10 +262,10 @@ $$
 
 (v) $\lambda$ が正の実軸上で $\arg\lambda = 0$ となるように単価分枝をとると，ブランチカットが $\arg\lambda = \theta\ (0 < \theta < \pi)$ にあるため，偏角の範囲は $\theta - 2\pi < \arg\lambda < \theta$ です。
 
-- 経路 $C_{\mathrm{in}}$（ブランチカットの下側，$r = \infty \to 0$）：$\lambda = r e^{i\theta}$ より $\lambda^{-s} = r^{-s} e^{-i\theta s}$。
-- 経路 $C_{\mathrm{out}}$（ブランチカットの上側，$r = 0 \to \infty$）：$\lambda = r e^{i(\theta - 2\pi)}$ より $\lambda^{-s} = r^{-s} e^{-i\theta s} e^{2\pi i s}$。
+- 経路 $C_{\mathrm{in}}$ はブランチカットの下側です。$r = \infty \to 0$ で積分します。$\lambda = r e^{i\theta}$ より $\lambda^{-s} = r^{-s} e^{-i\theta s}$。
+- 経路 $C_{\mathrm{out}}$ はブランチカットの上側です。$r = 0 \to \infty$ で積分します。$\lambda = r e^{i(\theta - 2\pi)}$ より $\lambda^{-s} = r^{-s} e^{-i\theta s} e^{2\pi i s}$。
 
-被積分関数の大括弧内は $\dfrac{\mathrm{d}}{\mathrm{d}\lambda}\ln\dfrac{\tilde{g}_2(\lambda)}{\tilde{g}_1(\lambda)}$ であり，ブランチカットをまたいでも1価正則なので，経路を $C_{\mathrm{in}} + C_{\mathrm{out}}$ に変形すると次のようになります（原点周りの微小円の寄与は $\operatorname{Re} s < 1$ へ解析接続する際に $0$ になります）。
+被積分関数の大括弧内は $\dfrac{\mathrm{d}}{\mathrm{d}\lambda}\ln\dfrac{\tilde{g}_2(\lambda)}{\tilde{g}_1(\lambda)}$ であり，ブランチカットをまたいでも1価正則なので，経路を $C_{\mathrm{in}} + C_{\mathrm{out}}$ に変形すると次のようになります。原点周りの微小円の寄与は $\operatorname{Re}s<1$ の範囲で $0$ になります。
 
 $$
 \begin{aligned}
@@ -222,14 +286,23 @@ $$
 
 となり，$\ln\dfrac{\tilde{g}_2(re^{i\theta})}{\tilde{g}_1(re^{i\theta})} = \mathcal{O}(r^{-1/2}) \to 0$ です。したがって上の積分は $s = 0$ の近傍（$-1/2 < \operatorname{Re} s < 1$）で絶対収束し，$Z(s)$ の解析接続を与えます。
 
-係数 $F(s) = \dfrac{e^{-i\theta s}(e^{2\pi i s} - 1)}{2\pi i}$ は $F(0) = 0$ かつ $F'(0) = \dfrac{2\pi i}{2\pi i} = 1$ を満たすため，$Z(s)$ を $s$ で微分して $s = 0$ を代入すると次式が得られます。
+係数 $F(s) = \dfrac{e^{-i\theta s}(e^{2\pi i s} - 1)}{2\pi i}$ は $F(0) = 0$ かつ 
 
 $$
 \begin{aligned}
-Z'(0)
-&= F'(0)\int_0^\infty \frac{\mathrm{d}}{\mathrm{d}r}\ln\frac{\tilde{g}_2(re^{i\theta})}{\tilde{g}_1(re^{i\theta})}\,\mathrm{d}r \\
+F'(0) &= \dfrac{2\pi i}{2\pi i} \\
+&= 1
+\end{aligned}
+$$
+
+ を満たすため，$Z(s)$ を $s$ で微分して $s = 0$ を代入すると次式が得られます。
+
+$$
+\begin{aligned}
+Z'(0) &= F'(0)\int_0^\infty \frac{\mathrm{d}}{\mathrm{d}r}\ln\frac{\tilde{g}_2(re^{i\theta})}{\tilde{g}_1(re^{i\theta})}\,\mathrm{d}r \\
 &= \left[\ln\frac{\tilde{g}_2(re^{i\theta})}{\tilde{g}_1(re^{i\theta})}\right]_0^\infty \\
-&= 0 - \ln\frac{\tilde{g}_2(0)}{\tilde{g}_1(0)} = \ln\frac{\tilde{g}_1(0)}{\tilde{g}_2(0)}
+&= 0 - \ln\frac{\tilde{g}_2(0)}{\tilde{g}_1(0)} \\
+&= \ln\frac{\tilde{g}_1(0)}{\tilde{g}_2(0)}
 \end{aligned}
 $$
 
@@ -245,10 +318,14 @@ $$
 \tilde{g}_\alpha(0) = \cos(\pi m_\alpha)
 $$
 
-となります（$0 < m_\alpha < \dfrac{1}{2}$ より $\cos(\pi m_\alpha) > 0$）。これを (ii) と (v) の結果に代入します。
+となります。$0<m_\alpha<1/2$ より $\cos(\pi m_\alpha)>0$ です。これを (ii) と (v) の結果に代入します。
 
 $$
-D = e^{-Z'(0)} = \frac{\tilde{g}_2(0)}{\tilde{g}_1(0)} = \frac{\cos(\pi m_2)}{\cos(\pi m_1)}
+\begin{aligned}
+D &= e^{-Z'(0)} \\
+&= \frac{\tilde{g}_2(0)}{\tilde{g}_1(0)} \\
+&= \frac{\cos(\pi m_2)}{\cos(\pi m_1)}
+\end{aligned}
 $$
 
 したがって，
@@ -258,5 +335,15 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-本問の手法は場の量子論や経路積分で汎関数行列式の比を計算する際に用いられるゼータ関数正則化とゲルファント・ヤグロム（Gel'fand–Yaglom）の定理の具体例です。余弦関数の無限積公式 $\cos(\pi m) = \displaystyle\prod_{n=1}^{\infty}\left(1 - \dfrac{m^2}{(n - 1/2)^2}\right)$ を用いると，$\dfrac{\cos(\pi m_2)}{\cos(\pi m_1)} = \displaystyle\prod_{n=1}^{\infty}\dfrac{(n - 1/2)^2 - m_2^2}{(n - 1/2)^2 - m_1^2} = D$ となり，問2(vi)の結果を直接検算することができます。
+余弦関数の無限積公式から結果を検算することができます。
+
+$$
+\begin{aligned}
+\cos(\pi m)&=\prod_{n=1}^\infty\left(1-\frac{m^2}{(n-1/2)^2}\right)\\
+\frac{\cos(\pi m_2)}{\cos(\pi m_1)}&=\prod_{n=1}^\infty\frac{(n-1/2)^2-m_2^2}{(n-1/2)^2-m_1^2}\\
+&=D
+\end{aligned}
+$$
+
+$0<m_\alpha<1/2$ では各因子が正で，因子の対数は $n\to\infty$ で $\mathcal O(n^{-2})$ です。この比の積自体は絶対収束します。
 </aside>

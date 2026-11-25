@@ -84,25 +84,62 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-設問1では，行列式 $1$ の $2\times 2$ 行列（$\mathrm{SL}(2)$）がケイリー・ハミルトンの定理から $M + M^{-1} = (\operatorname{Tr} M)E$ を満たすことを使うと，行列の積の漸化式がトレースだけの3項非線形漸化式（トレース写像）と保存量 $I_n$ へ整理されます。
+2次行列では，ケイリー・ハミルトンの定理を使うと逆行列と元の行列を結び付けることができます。行列の積の関係にこの恒等式を使うことで，トレースだけの式を調べることができます。
 
-設問2の三重対角実対称行列では，副対角成分 $b_i > 0$ の連鎖によって固有ベクトルの全成分が第1成分 $v_1$ から一意に決まるため，各固有値の幾何的重複度が $1$ となり，実対称行列の対角化可能性と合わせて固有値の非縮退性が導かれます。
+三重対角行列の固有方程式は，隣り合う成分を結ぶ漸化式になります。端から成分を順に調べることで，固有ベクトルを独立に選べる範囲を調べることができます。
 </div>
 
 ### (1)
 (i)
-(a) $\det M_0 = \det B = \dfrac{1}{4}(3 + 1) = 1$，$\det M_1 = \det A = \dfrac{1}{2}(1 + 1) = 1$ です。$n \ge 2$ に対して $\det M_k = 1\ (k < n)$ を仮定すると，式 (2) より
+(a) 
 
 $$
-\det M_n = \det(M_{n-1} M_{n-2}) = (\det M_{n-1})(\det M_{n-2}) = 1\cdot 1 = 1
+\begin{aligned}
+\det M_0 &= \det B \\
+&= \dfrac{1}{4}(3 + 1) \\
+&= 1
+\end{aligned}
+$$
+
+，
+
+$$
+\begin{aligned}
+\det M_1 &= \det A \\
+&= \dfrac{1}{2}(1 + 1) \\
+&= 1
+\end{aligned}
+$$
+
+ です。$n \ge 2$ に対して $\det M_k = 1\ (k < n)$ を仮定すると，式 (2) より
+
+$$
+\begin{aligned}
+\det M_n &= \det(M_{n-1} M_{n-2}) \\
+&= (\det M_{n-1})(\det M_{n-2}) \\
+&= 1\cdot 1 \\
+&= 1
+\end{aligned}
 $$
 
 となるため，数学的帰納法によりすべての $n \ge 0$ で $\det M_n = 1$ が成り立ちます。
 
-(b) $M_n = \begin{pmatrix} p & q \\ r & s \end{pmatrix}$ とおくと，(a) より $\det M_n = ps - qr = 1$ なので逆行列は $(M_n)^{-1} = \begin{pmatrix} s & -q \\ -r & p \end{pmatrix}$ です。よって
+(b) $M_n = \begin{pmatrix} p & q \\ r & s \end{pmatrix}$ とおくと，(a) より 
 
 $$
-\operatorname{Tr}(M_n)^{-1} = s + p = \operatorname{Tr} M_n
+\begin{aligned}
+\det M_n &= ps - qr \\
+&= 1
+\end{aligned}
+$$
+
+ なので逆行列は $(M_n)^{-1} = \begin{pmatrix} s & -q \\ -r & p \end{pmatrix}$ です。よって
+
+$$
+\begin{aligned}
+\operatorname{Tr}(M_n)^{-1} &= s + p \\
+&= \operatorname{Tr} M_n
+\end{aligned}
 $$
 
 が成り立ちます。
@@ -138,10 +175,22 @@ $$
 \finalanswer{M_{n+1} + (M_{n-2})^{-1} = (\operatorname{Tr} M_n) M_{n-1}}
 $$
 
-この両辺のトレースをとり，(i)(b) の $\operatorname{Tr}(M_{n-2})^{-1} = \operatorname{Tr} M_{n-2} = x_{n-2}$ を用いると，
+この両辺のトレースをとり，(i)(b) の 
 
 $$
-x_{n+1} + x_{n-2} = x_n x_{n-1} \implies x_{n+1} = x_n x_{n-1} - x_{n-2}
+\begin{aligned}
+\operatorname{Tr}(M_{n-2})^{-1} &= \operatorname{Tr} M_{n-2} \\
+&= x_{n-2}
+\end{aligned}
+$$
+
+ を用いると，
+
+$$
+\begin{aligned}
+x_{n+1} + x_{n-2} &= x_n x_{n-1} \\
+x_{n+1} &= x_n x_{n-1} - x_{n-2}
+\end{aligned}
 $$
 
 となり，式 (3) が成り立ちます。
@@ -163,21 +212,39 @@ $$
 初期値 $x_0, x_1, x_2$ を計算します。
 
 $$
-x_0 = \operatorname{Tr} B = \sqrt{3},\qquad x_1 = \operatorname{Tr} A = \sqrt{2}
+\begin{aligned}
+x_0 &= \operatorname{Tr} B \\
+&= \sqrt{3} \\
+x_1 &= \operatorname{Tr} A \\
+&= \sqrt{2}
+\end{aligned}
 $$
-
-$$
-M_2 = AB = \frac{1}{2\sqrt{2}}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} \sqrt{3} & -1 \\ 1 & \sqrt{3} \end{pmatrix} = \frac{1}{2\sqrt{2}}\begin{pmatrix} \sqrt{3} - 1 & -1 - \sqrt{3} \\ \sqrt{3} + 1 & \sqrt{3} - 1 \end{pmatrix}
-$$
-
-より $x_2 = \operatorname{Tr} M_2 = \dfrac{\sqrt{3} - 1}{\sqrt{2}}$ です。これらを $I_0$ に代入します。
 
 $$
 \begin{aligned}
-I_0
-&= x_2^2 + x_1^2 + x_0^2 - x_2 x_1 x_0 \\
+M_2 &= AB \\
+&= \frac{1}{2\sqrt{2}}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} \sqrt{3} & -1 \\ 1 & \sqrt{3} \end{pmatrix} \\
+&= \frac{1}{2\sqrt{2}}\begin{pmatrix} \sqrt{3} - 1 & -1 - \sqrt{3} \\ \sqrt{3} + 1 & \sqrt{3} - 1 \end{pmatrix}
+\end{aligned}
+$$
+
+より 
+
+$$
+\begin{aligned}
+x_2 &= \operatorname{Tr} M_2 \\
+&= \dfrac{\sqrt{3} - 1}{\sqrt{2}}
+\end{aligned}
+$$
+
+ です。これらを $I_0$ に代入します。
+
+$$
+\begin{aligned}
+I_0 &= x_2^2 + x_1^2 + x_0^2 - x_2 x_1 x_0 \\
 &= \frac{4 - 2\sqrt{3}}{2} + 2 + 3 - \frac{\sqrt{3} - 1}{\sqrt{2}}\cdot\sqrt{2}\cdot\sqrt{3} \\
-&= (2 - \sqrt{3}) + 5 - (3 - \sqrt{3}) = 4
+&= (2 - \sqrt{3}) + 5 - (3 - \sqrt{3}) \\
+&= 4
 \end{aligned}
 $$
 
@@ -192,9 +259,9 @@ $$
 
 $$
 \begin{aligned}
-\det\begin{pmatrix} -\lambda & b_1 & 0 \\ b_1 & -\lambda & b_2 \\ 0 & b_2 & -\lambda \end{pmatrix}
-&= -\lambda\left(\lambda^2 - b_2^2\right) - b_1(-b_1\lambda) \\
-&= -\lambda\left(\lambda^2 - b_1^2 - b_2^2\right) = 0
+\det\begin{pmatrix} -\lambda & b_1 & 0 \\ b_1 & -\lambda & b_2 \\ 0 & b_2 & -\lambda \end{pmatrix} &= -\lambda\left(\lambda^2 - b_2^2\right) - b_1(-b_1\lambda) \\
+&= -\lambda\left(\lambda^2 - b_1^2 - b_2^2\right) \\
+&= 0
 \end{aligned}
 $$
 
@@ -214,7 +281,38 @@ b_{N-1} v_{N-1} &= \lambda v_N
 \end{aligned}
 $$
 
-背理法で示します。もし $v_1 = 0$ であると仮定すると，第1式より $b_1 v_2 = 0$ となり，$b_1 > 0$ より $v_2 = 0$ です。次に $v_1 = v_2 = \dots = v_i = 0$ を仮定すると，$i$ 番目の式より $b_i v_{i+1} = \lambda v_i - b_{i-1} v_{i-1} = 0$ となり，$b_i > 0$ より $v_{i+1} = 0$ です。帰納的に $v_1 = v_2 = \dots = v_N = 0$，すなわち $\boldsymbol{v} = \mathbf{0}$ となって固有ベクトルであることに矛盾します。よって $v_1 \neq 0$ です。
+背理法で示します。もし $v_1 = 0$ であると仮定すると，第1式より $b_1 v_2 = 0$ となり，$b_1 > 0$ より $v_2 = 0$ です。次に 
+
+$$
+\begin{aligned}
+v_1 &= v_2 \\
+&= \dots \\
+&= v_i \\
+&= 0
+\end{aligned}
+$$
+
+ を仮定すると，$i$ 番目の式より 
+
+$$
+\begin{aligned}
+b_i v_{i+1} &= \lambda v_i - b_{i-1} v_{i-1} \\
+&= 0
+\end{aligned}
+$$
+
+ となり，$b_i > 0$ より $v_{i+1} = 0$ です。帰納的に 
+
+$$
+\begin{aligned}
+v_1 &= v_2 \\
+&= \dots \\
+&= v_N \\
+&= 0
+\end{aligned}
+$$
+
+，すなわち $\boldsymbol{v} = \mathbf{0}$ となって固有ベクトルであることに矛盾します。よって $v_1 \neq 0$ です。
 
 (iii) ある固有値 $\lambda$ に対して2つの線形独立な固有ベクトル $\boldsymbol{u} = (u_1, \dots, u_N)^{\mathrm{T}},\ \boldsymbol{w} = (w_1, \dots, w_N)^{\mathrm{T}}$ が存在すると仮定します。(ii) より $u_1 \neq 0,\ w_1 \neq 0$ なので，線形結合
 
@@ -222,10 +320,17 @@ $$
 \boldsymbol{v} = w_1\boldsymbol{u} - u_1\boldsymbol{w}
 $$
 
-を作ると，$\boldsymbol{u}, \boldsymbol{w}$ の線形独立性より $\boldsymbol{v} \neq \mathbf{0}$ かつ $C\boldsymbol{v} = \lambda\boldsymbol{v}$ なので，$\boldsymbol{v}$ は固有値 $\lambda$ の固有ベクトルです。ところが $\boldsymbol{v}$ の第1成分は $v_1 = w_1 u_1 - u_1 w_1 = 0$ となり，(ii) の結果に矛盾します。
+を作ると，$\boldsymbol{u}, \boldsymbol{w}$ の線形独立性より $\boldsymbol{v} \neq \mathbf{0}$ かつ $C\boldsymbol{v} = \lambda\boldsymbol{v}$ なので，$\boldsymbol{v}$ は固有値 $\lambda$ の固有ベクトルです。ところが $\boldsymbol{v}$ の第1成分は 
 
-したがって，すべての固有値の固有空間の次元（幾何的重複度）は $1$ です。一方，$C$ は実対称行列（$C^{\mathrm{T}} = C$）なので直交行列によって対角化可能であり，各固有値の代数的重複度と幾何的重複度は一致します。よって $C$ の $N$ 個の固有値はすべて互いに異なります。
+$$
+\begin{aligned}
+v_1 &= w_1 u_1 - u_1 w_1 \\
+&= 0
+\end{aligned}
+$$
 
-<aside class="rigor-note" markdown>
-問1のトレース漸化式 (3) と不変量 $I_n$ は，フィボナッチ準結晶の転送行列の解析で現れるコールモト・カダノフ・タン（Kohmoto–Kadanoff–Tang）のトレース写像とフリッケ・クライン（Fricke–Klein）不変量です。本問では $A, B$ がともに2次元回転行列なので互いに可換であり，$I_n = 2 + \operatorname{Tr}(ABA^{-1}B^{-1}) = 2 + \operatorname{Tr}(E) = 4$ となります。
-</aside>
+ となり，(ii) の結果に矛盾します。
+
+したがって，すべての固有値の固有空間の次元は $1$ です。一方，$C$ は実対称行列なので直交行列によって対角化可能であり，固有値の特性多項式での重複度は，固有空間の次元と一致します。よって $C$ の $N$ 個の固有値はすべて互いに異なります。
+
+

@@ -55,9 +55,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-エルミートかつトレースレスな行列 $A$ の指数関数 $e^{iA}$ は行列式 $1$ のユニタリー行列（特殊ユニタリー群 $\mathrm{SU}(n)$）をなし，その生成元どうしの交換関係は再び同じ空間内に閉じてリー代数を形成します。
+エルミート共役とトレースの性質を使うと，積と交換子が満たす条件を調べることができます。行列の指数関数は，べき級数または対角化によって扱います。
 
-$n = 3$ の基本表現ベクトル $\mathbf{x}, \mathbf{y}$ から作られる双線形量 $G_a = \mathbf{x}^\dagger T_a \mathbf{y}$ の無限小変換は構造定数 $A_{ab, c}$ で決まる随伴表現に従い，反対称積 $\mathbf{z} = \mathbf{x} \times \mathbf{y}$ は $\operatorname{tr} T = 0$ を通じて $-T^{\mathrm{T}}$ を生成元とする反基本表現として変換されます。
+ベクトルの変換を積で作った量に代入すると，変換の1次の項には生成元がそれぞれの因子に作用した項が現れます。交換子や反対称テンソルの縮約を使い，元の量を係数としてまとめます。
 </div>
 
 ### (1)
@@ -65,17 +65,21 @@ $n = 3$ の基本表現ベクトル $\mathbf{x}, \mathbf{y}$ から作られる�
 
 $$
 \begin{aligned}
-\bigl(i[A, B]\bigr)^\dagger
-&= (-i)(AB - BA)^\dagger \\
+\bigl(i[A, B]\bigr)^\dagger &= (-i)(AB - BA)^\dagger \\
 &= -i\left(B^\dagger A^\dagger - A^\dagger B^\dagger\right) \\
-&= -i(BA - AB) = i(AB - BA) = i[A, B]
+&= -i(BA - AB) \\
+&= i(AB - BA) \\
+&= i[A, B]
 \end{aligned}
 $$
 
 よって $i[A, B]$ はエルミートです。またトレースの巡回性 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$ より，
 
 $$
-\operatorname{tr}\bigl(i[A, B]\bigr) = i\bigl(\operatorname{tr}(AB) - \operatorname{tr}(BA)\bigr) = 0
+\begin{aligned}
+\operatorname{tr}\bigl(i[A, B]\bigr) &= i\bigl(\operatorname{tr}(AB) - \operatorname{tr}(BA)\bigr) \\
+&= 0
+\end{aligned}
 $$
 
 となるため，トレースレスでもあります。
@@ -83,35 +87,79 @@ $$
 (ii) $A^\dagger = A$ より，$U = e^{iA}$ のエルミート共役は次のようになります。
 
 $$
-U^\dagger = \left(\sum_{k=0}^{\infty} \frac{(iA)^k}{k!}\right)^\dagger = \sum_{k=0}^{\infty} \frac{(-i)^k (A^\dagger)^k}{k!} = \sum_{k=0}^{\infty} \frac{(-iA)^k}{k!} = e^{-iA}
+\begin{aligned}
+U^\dagger &= \left(\sum_{k=0}^{\infty} \frac{(iA)^k}{k!}\right)^\dagger \\
+&= \sum_{k=0}^{\infty} \frac{(-i)^k (A^\dagger)^k}{k!} \\
+&= \sum_{k=0}^{\infty} \frac{(-iA)^k}{k!} \\
+&= e^{-iA}
+\end{aligned}
 $$
 
 $iA$ と $-iA$ は可換なので指数法則 $e^{X}e^{Y} = e^{X+Y}$ が成り立ち，
 
 $$
-U^\dagger U = e^{-iA} e^{iA} = e^{-iA + iA} = e^0 = I
+\begin{aligned}
+U^\dagger U &= e^{-iA} e^{iA} \\
+&= e^{-iA + iA} \\
+&= e^0 \\
+&= I
+\end{aligned}
 $$
 
 となります。よって $U$ はユニタリー行列です。
 
-(iii) エルミート行列 $A$ はユニタリー行列 $V$（$V^\dagger V = I$）と実対角行列 $D = \operatorname{diag}(d_1, d_2, \dots, d_n)$ を用いて $A = V^\dagger D V$ と対角化されます。任意の非負整数 $k$ に対して $A^k = V^\dagger D^k V$ なので，
-
-$$
-U = e^{iA} = \sum_{k=0}^{\infty} \frac{i^k}{k!} V^\dagger D^k V = V^\dagger e^{iD} V
-$$
-
-となります。ここで $e^{iD} = \operatorname{diag}(e^{id_1}, e^{id_2}, \dots, e^{id_n})$ です。行列式の積の公式と $\det(V^\dagger)\det(V) = \det(V^\dagger V) = \det I = 1$ を用いると，
+(iii) エルミート行列 $A$ は$V^\dagger V=I$ を満たすユニタリー行列 $V$ と実対角行列 $D = \operatorname{diag}(d_1, d_2, \dots, d_n)$ を用いて $A = V^\dagger D V$ と対角化されます。任意の非負整数 $k$ に対して $A^k = V^\dagger D^k V$ なので，
 
 $$
 \begin{aligned}
-\det U
-&= \det(V^\dagger)\det(e^{iD})\det(V) \\
-&= \det(V^\dagger V)\prod_{j=1}^{n} e^{id_j} \\
-&= \exp\left(i\sum_{j=1}^{n} d_j\right) = e^{i\operatorname{tr} D}
+U &= e^{iA} \\
+&= \sum_{k=0}^{\infty} \frac{i^k}{k!} V^\dagger D^k V \\
+&= V^\dagger e^{iD} V
 \end{aligned}
 $$
 
-さらに $\operatorname{tr} D = \operatorname{tr}(V A V^\dagger) = \operatorname{tr}(A V^\dagger V) = \operatorname{tr} A = 0$ なので，$\det U = e^0 = 1$ が成り立ちます。
+となります。ここで $e^{iD} = \operatorname{diag}(e^{id_1}, e^{id_2}, \dots, e^{id_n})$ です。行列式の積の公式と 
+
+$$
+\begin{aligned}
+\det(V^\dagger)\det(V) &= \det(V^\dagger V) \\
+&= \det I \\
+&= 1
+\end{aligned}
+$$
+
+ を用いると，
+
+$$
+\begin{aligned}
+\det U &= \det(V^\dagger)\det(e^{iD})\det(V) \\
+&= \det(V^\dagger V)\prod_{j=1}^{n} e^{id_j} \\
+&= \exp\left(i\sum_{j=1}^{n} d_j\right) \\
+&= e^{i\operatorname{tr} D}
+\end{aligned}
+$$
+
+さらに 
+
+$$
+\begin{aligned}
+\operatorname{tr} D &= \operatorname{tr}(V A V^\dagger) \\
+&= \operatorname{tr}(A V^\dagger V) \\
+&= \operatorname{tr} A \\
+&= 0
+\end{aligned}
+$$
+
+ なので，
+
+$$
+\begin{aligned}
+\det U &= e^0 \\
+&= 1
+\end{aligned}
+$$
+
+ が成り立ちます。
 
 ### (2)
 与えられた $T = \displaystyle\sum_{a=1}^{8} \alpha_a T_a$ の各成分から $\alpha_1,\ \alpha_2,\ \alpha_7$ の係数を取り出します。したがって，
@@ -127,18 +175,16 @@ $$
 
 $$
 \begin{aligned}
-[T_7, T_1]
-&= \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix}\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
- - \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix} \\
-&= \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
- - \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
- = \begin{pmatrix} 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} = i T_2
+[T_7, T_1] &= \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix}\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}  - \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix} \\
+&= \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}  - \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} \\
+&= \begin{pmatrix} 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} \\
+&= i T_2
 \end{aligned}
 $$
 
 定義 $[T_7, T_1] = i\displaystyle\sum_{c=1}^{8} A_{71, c} T_c$ と比較すると $A_{71, 2} = 1$ です。
 
-次に $T_5,\ T_6,\ T_8$ を書き下し，$[T_5, T_6]$ を計算します。
+次に $T_5,\ T_6,\ T_8$ を書き，$[T_5, T_6]$ を計算します。
 
 $$
 T_5 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix},\qquad
@@ -148,10 +194,9 @@ $$
 
 $$
 \begin{aligned}
-[T_5, T_6]
-&= \begin{pmatrix} 0 & 0 & 0 \\ 0 & i & 0 \\ 0 & 0 & -i \end{pmatrix}
- - \begin{pmatrix} 0 & 0 & 0 \\ 0 & -i & 0 \\ 0 & 0 & i \end{pmatrix} \\
-&= \begin{pmatrix} 0 & 0 & 0 \\ 0 & 2i & 0 \\ 0 & 0 & -2i \end{pmatrix} = 2i T_8
+[T_5, T_6] &= \begin{pmatrix} 0 & 0 & 0 \\ 0 & i & 0 \\ 0 & 0 & -i \end{pmatrix}  - \begin{pmatrix} 0 & 0 & 0 \\ 0 & -i & 0 \\ 0 & 0 & i \end{pmatrix} \\
+&= \begin{pmatrix} 0 & 0 & 0 \\ 0 & 2i & 0 \\ 0 & 0 & -2i \end{pmatrix} \\
+&= 2i T_8
 \end{aligned}
 $$
 
@@ -162,7 +207,34 @@ $$
 $$
 
 ### (4)
-(i) $U = e^{i\theta T} = I + i\theta T + \mathcal{O}(\theta^2)$，および $U^\dagger = e^{-i\theta T} = I - i\theta T + \mathcal{O}(\theta^2)$ を $G_a' = \mathbf{x}'^\dagger T_a \mathbf{y}' = \mathbf{x}^\dagger U^\dagger T_a U \mathbf{y}$ に代入し，$\theta$ の1次まで展開します。
+(i) 
+
+$$
+\begin{aligned}
+U &= e^{i\theta T} \\
+&= I + i\theta T + \mathcal{O}(\theta^2)
+\end{aligned}
+$$
+
+，および 
+
+$$
+\begin{aligned}
+U^\dagger &= e^{-i\theta T} \\
+&= I - i\theta T + \mathcal{O}(\theta^2)
+\end{aligned}
+$$
+
+ を 
+
+$$
+\begin{aligned}
+G_a' &= \mathbf{x}'^\dagger T_a \mathbf{y}' \\
+&= \mathbf{x}^\dagger U^\dagger T_a U \mathbf{y}
+\end{aligned}
+$$
+
+ に代入し，$\theta$ の1次まで展開します。
 
 $$
 \begin{aligned}
@@ -206,7 +278,10 @@ $$
 となります。ここで $z_m = \displaystyle\sum_{r, s = 1}^{3} \varepsilon_{mrs} x_r y_s$ と与えられた公式 $\displaystyle\sum_{m=1}^{3} \varepsilon_{mpk}\varepsilon_{mrs} = \delta_{pr}\delta_{ks} - \delta_{ps}\delta_{kr}$ を用いると，
 
 $$
-\sum_{m=1}^{3} \varepsilon_{mpk} z_m = \sum_{r, s = 1}^{3} \left(\delta_{pr}\delta_{ks} - \delta_{ps}\delta_{kr}\right) x_r y_s = x_p y_k - x_k y_p
+\begin{aligned}
+\sum_{m=1}^{3} \varepsilon_{mpk} z_m &= \sum_{r, s = 1}^{3} \left(\delta_{pr}\delta_{ks} - \delta_{ps}\delta_{kr}\right) x_r y_s \\
+&= x_p y_k - x_k y_p
+\end{aligned}
 $$
 
 が成り立ちます。これを上の式に代入し，再び $\displaystyle\sum_{k=1}^{3} \varepsilon_{ijk}\varepsilon_{mpk} = \delta_{im}\delta_{jp} - \delta_{ip}\delta_{jm}$ と $\operatorname{tr} T = 0$ を用います。
@@ -222,12 +297,10 @@ $$
 \end{aligned}
 $$
 
-よって $\mathbf{z}' = \left(I + i\theta(-T^{\mathrm{T}})\right)\mathbf{z} + \mathcal{O}(\theta^2)$ となります（$T$ はエルミートなので $-T^{\mathrm{T}} = -T^*$ とも表すことができます）。したがって，
+よって $\mathbf z'=(I-i\theta T^{\mathrm T})\mathbf z+\mathcal O(\theta^2)$ となります。$T$ はエルミートなので $T^{\mathrm T}=T^*$ です。したがって，
 
 $$
 \finalanswer{M = -T^{\mathrm{T}} = -T^*}
 $$
 
-<aside class="rigor-note" markdown>
-本問題の8個の行列 $T_1, \dots, T_8$ はリー代数 $\mathfrak{su}(3)$ の基底をなします（ゲルマン行列の線形結合で表されます）。設問4(ii)の変換は，有限変換では $\det U = 1$ と $U^{-1} = U^\dagger$ より $\mathbf{z}' = (U\mathbf{x})\times(U\mathbf{y}) = (\det U)(U^{-1})^{\mathrm{T}}\mathbf{z} = U^*\mathbf{z} = e^{-i\theta T^*}\mathbf{z}$ となり，基本表現 $\mathbf{3}$ の反対称テンソル積が反基本表現 $\bar{\mathbf{3}}$ に変換されることに対応しています。
-</aside>
+
