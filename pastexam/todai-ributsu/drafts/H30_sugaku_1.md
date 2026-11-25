@@ -155,12 +155,17 @@ $$
 $$
 \begin{aligned}
 X_0 &= \frac{v}{\sum_{i=1}^{n} a_i^2} A_n^T \\
-&= v\tilde{A}_n \\
-\tilde{A}_n = \frac{1}{\sum_{i=1}^{n} a_i^2} A_n^T
+&= v\tilde{A}_n
 \end{aligned}
 $$
 
-となります。この $\tilde{A}_n$ について2つの性質を確認します。
+となります。ここで，$\tilde{A}_n$ は次のようにおきました。
+
+$$
+\tilde{A}_n = \frac{1}{\sum_{i=1}^{n} a_i^2} A_n^T
+$$
+
+この $\tilde{A}_n$ について2つの性質を確認します。
 
 $$
 \begin{aligned}

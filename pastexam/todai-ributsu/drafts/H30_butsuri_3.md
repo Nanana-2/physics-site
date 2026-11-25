@@ -245,9 +245,14 @@ $$
 $$
 \begin{aligned}
 R_1 &= \sqrt{r^2\cos^2\varphi + \left(r\sin\varphi + \frac{D}{2}\right)^2} \\
-&\simeq r + \frac{D}{2}\sin\varphi \\
-R_2 \simeq r - \frac{D}{2}\sin\varphi
+&\simeq r + \frac{D}{2}\sin\varphi
 \end{aligned}
+$$
+
+$R_2$ は，$R_1$ の式の $D$ を $-D$ に置き換えて求めます。
+
+$$
+R_2 \simeq r - \frac{D}{2}\sin\varphi
 $$
 
 $E_0(R_1) = E_0(R_2) \equiv E_0$ とし，和積公式を用いて合成電場 $\boldsymbol{E} = \boldsymbol{E}_1 + \boldsymbol{E}_2$ を計算します。
