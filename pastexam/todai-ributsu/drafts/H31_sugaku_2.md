@@ -137,7 +137,7 @@ $$
 \end{aligned}
 $$
 
-となります。対応する固有関数は $f_\alpha^{(n)}(x) = \cos\left[\left(n - \dfrac{1}{2}\right)x\right]$ です。固有関数には，0 でない定数倍の任意性があります。したがって，
+となります。対応する固有関数は $f_\alpha^{(n)}(x) = \cos\left[\left(n - \dfrac{1}{2}\right)x\right]$ です。固有関数には，$0$ でない定数倍の任意性があります。したがって，
 
 $$
 \finalanswer{\lambda_\alpha^{(n)} = \left(n - \frac{1}{2}\right)^2 - m_\alpha^2,\qquad f_\alpha^{(n)}(x) = \cos\left[\left(n - \frac{1}{2}\right)x\right] \qquad (n = 1, 2, 3, \dots)}
