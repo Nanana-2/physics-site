@@ -95,8 +95,11 @@
       // ?keyword= / ?subject= / ?difficulty= で条件を引き継ぐ（右上の検索や難易度タグから来たとき）
       const params = new URLSearchParams(window.location.search);
       keyword.value = params.get("keyword") || "";
-      if (subjects.querySelector(`[data-subject="${params.get("subject")}"]`)) state.subject = params.get("subject");
-      if (params.get("difficulty") in LEVELS) state.level = params.get("difficulty");
+      // URL の値はセレクタに埋め込まず，ボタンの値と比べる（引用符などで querySelector が失敗しないように）
+      const requestedSubject = params.get("subject");
+      if ([...subjects.querySelectorAll("[data-subject]")].some((b) => b.dataset.subject === requestedSubject)) state.subject = requestedSubject;
+      const requestedLevel = params.get("difficulty");
+      if (Object.prototype.hasOwnProperty.call(LEVELS, requestedLevel)) state.level = requestedLevel;
       select(subjects, "[data-subject]", "subject", state.subject);
       select(levels, "[data-level]", "level", state.level);
       render();

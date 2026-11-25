@@ -1,0 +1,31 @@
+{#-
+  Material の google.html を上書きする。
+  検索語や印刷のタイトルなど，URL の ? 以降に入る自由入力を解析に送らないように，
+  page_location と page_referrer から query と hash を外す。
+-#}
+{% if config.extra.analytics %}
+  {% set property = config.extra.analytics.property | d("", true) %}
+{% endif %}
+<script id="__analytics">
+  function __md_analytics() {
+    function gtag() { dataLayer.push(arguments) }
+    function stripQuery(url) {
+      try {
+        var u = new URL(url)
+        return u.origin + u.pathname
+      } catch (e) {
+        return ""
+      }
+    }
+    window.dataLayer = window.dataLayer || []
+    gtag("js", new Date)
+    gtag("config", "{{ property }}", {
+      page_location: location.origin + location.pathname,
+      page_referrer: document.referrer ? stripQuery(document.referrer) : ""
+    })
+    var script = document.createElement("script")
+    script.async = true
+    script.src = "https://www.googletagmanager.com/gtag/js?id={{ property }}"
+    document.getElementById("__analytics").insertAdjacentElement("afterEnd", script)
+  }
+</script>
