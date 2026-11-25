@@ -70,9 +70,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-速度に比例する項 $q\dot{\boldsymbol{r}}\cdot\boldsymbol{A}$ をオイラー・ラグランジュ方程式へ入れると，$\boldsymbol{A}(\boldsymbol{r}, t)$ の時間全微分から空間微分と速度の積が現れ，ローレンツ力の磁場項 $q\dot{\boldsymbol{r}} \times (\nabla \times \boldsymbol{A})$ が導かれます。
+ラグランジアンの $q\dot{\boldsymbol{r}}\cdot\boldsymbol{A}$ の項をオイラー・ラグランジュ方程式に入れると，$\boldsymbol{A}(\boldsymbol{r}, t)$ を時間で全微分した項から，空間微分と速度の積が出てきます。この項を整理すると，ローレンツ力の磁場の項 $q\dot{\boldsymbol{r}} \times (\nabla \times \boldsymbol{A})$ になります。
 
-後半の四重極電場と一様磁場の組み合わせでは，$z$ 方向と $xy$ 面内の運動が分離します。$x$ と $y$ の連立方程式は複素変数 $\zeta = x + iy$ にまとめると定数係数の 2 階線形常微分方程式になり，固有振動数を 2 次方程式から直接求めることができます。
+四重極の電場と一様な磁場の中では，$z$ 方向の運動と $xy$ 面内の運動が分かれます。$x$ と $y$ の連立方程式は，複素数 $\zeta = x + iy$ にまとめると係数が定数の2階線形微分方程式になるので，解を $e^{i\Omega t}$ とおいて振動数の2次方程式を解きます。
 </div>
 
 ### (1)
@@ -92,7 +92,7 @@ $$
 $$
 
 ### (2)
-設問 1 の方程式で $A_i(\boldsymbol{r}(t), t)$ の時間全微分を連鎖律で展開します。
+設問1の方程式で $A_i(\boldsymbol{r}(t), t)$ の時間全微分を連鎖律で展開します。
 
 $$
 \begin{aligned}
@@ -100,7 +100,7 @@ $$
 \end{aligned}
 $$
 
-これを設問 1 の方程式に代入して $m\ddot{x}_i$ について整理します。
+これを設問1の方程式に代入して $m\ddot{x}_i$ について整理します。
 
 $$
 \begin{aligned}
@@ -109,7 +109,7 @@ m\ddot{x}_i &= q\left(-\frac{\partial \varphi}{\partial x_i} - \frac{\partial A_
 \end{aligned}
 $$
 
-右辺第 2 項を $i = 1$ の成分について書き出します。
+右辺第2項を $i = 1$ の成分について書き出します。
 
 $$
 \begin{aligned}
@@ -126,7 +126,7 @@ $$
 $$
 
 ### (3)
-式 (3) のゲージ変換のもとで変換後の電場 $\boldsymbol{E}'$ と磁場 $\boldsymbol{B}'$ を計算します。任意の滑らかなスカラー関数 $\Lambda$ に対して $\nabla \times (\nabla\Lambda) = \boldsymbol{0}$ であり，空間微分と時間微分の順序は交換できます。
+式 (3) のゲージ変換のもとで変換後の電場 $\boldsymbol{E}'$ と磁場 $\boldsymbol{B}'$ を計算します。任意の滑らかなスカラー関数 $\Lambda$ に対して $\nabla \times (\nabla\Lambda) = \boldsymbol{0}$ であり，空間微分と時間微分の順序は入れ替えることができます。
 
 $$
 \begin{aligned}
@@ -183,7 +183,7 @@ $$
 $$
 
 ### (5)
-設問 4 の結果を式 (2) の $z$ 成分に代入します。$(\dot{\boldsymbol{r}} \times \boldsymbol{B})_z = 0$ なので，次式が得られます。
+設問4の結果を式 (2) の $z$ 成分に代入します。$(\dot{\boldsymbol{r}} \times \boldsymbol{B})_z = 0$ なので，次式が得られます。
 
 $$
 m\frac{\mathrm{d}^2 z}{\mathrm{d}t^2} = -2q\alpha z
@@ -196,7 +196,7 @@ $$
 $$
 
 ### (6)
-設問 4 の結果を式 (2) の $x$ 成分と $y$ 成分に代入します。
+設問4の結果を式 (2) の $x$ 成分と $y$ 成分に代入します。
 
 $$
 \begin{aligned}
@@ -205,7 +205,7 @@ m\frac{\mathrm{d}^2 y}{\mathrm{d}t^2} &= q\alpha y - qB\frac{\mathrm{d}x}{\mathr
 \end{aligned}
 $$
 
-複素変数 $\zeta(t) = x(t) + i y(t)$ を導入し，第 1 式に第 2 式の $i$ 倍を加えます。
+複素変数 $\zeta(t) = x(t) + i y(t)$ を導入し，第1式に第2式の $i$ 倍を加えます。
 
 $$
 \begin{aligned}
@@ -233,7 +233,7 @@ $$
 \zeta(t) = C_+ e^{-i\Omega_+ t} + C_- e^{-i\Omega_- t}
 $$
 
-と書かれます。したがって，$xy$ 平面上に射影した運動は，異なる 2 つの角振動数 $\Omega_+$ と $\Omega_-$ をもつ同方向の等速円運動の重ね合わせであり，粒子は原点の周りの有界な領域にとどまります。
+と書かれます。したがって，$xy$ 平面上に射影した運動は，異なる2つの角振動数 $\Omega_+$ と $\Omega_-$ をもつ同方向の等速円運動の重ね合わせであり，粒子は原点の周りの有界な領域にとどまります。
 
 $$
 \finalanswer{m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = q\alpha x + qB\frac{\mathrm{d}y}{\mathrm{d}t}, \qquad m\frac{\mathrm{d}^2 y}{\mathrm{d}t^2} = q\alpha y - qB\frac{\mathrm{d}x}{\mathrm{d}t}}

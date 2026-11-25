@@ -58,9 +58,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-束縛電子を復元力 $-m\omega_0^2 \boldsymbol{r}$ を受ける調和振動子として扱うと，電場 $\boldsymbol{E}_0 \cos\omega t$ に対する定常解の変位と電流密度が $\omega_0^2 - \omega^2$ を分母にもつ形で求まります。これをアンペール・マクスウェルの法則の電流密度に入れると，変位電流と同じ $\sin\omega t$ に比例するため，実効的な誘電率と屈折率 $n(\omega)$ が得られます。
+物質の中の電子を，復元力 $-m\omega_0^2 \boldsymbol{r}$ を受ける調和振動子として扱います。光の電場で揺すられた電子の変位から電流密度を求め，マクスウェル方程式に入れると，電子の運動は誘電率を変える効果として表されます。
 
-分散式 $n^2(\omega) = 1 + \omega_{\mathrm{p}}^2 / (\omega_0^2 - \omega^2)$ は $\omega = \omega_0$ の両側で符号が反転するため，固有角振動数 $\omega_0$ が可視光領域より高いか領域内にあるかによって，プリズムでの色の並び順が変わります。
+この誘電率から求めた屈折率 $n(\omega)$ は，$\omega$ が $\omega_0$ をまたぐと振る舞いが変わります。そこで，$\omega_0$ が可視光より高い場合と，可視光の範囲にある場合に分けて，プリズムで曲がる角度の大小を色ごとに比べます。
 </div>
 
 ### (1)
@@ -71,7 +71,7 @@ $$
 $$
 
 ### (2)
-$\boldsymbol{r} = \boldsymbol{R}\cos\omega t$ を設問 1 の運動方程式に代入します。$\dfrac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2} = -\omega^2 \boldsymbol{R}\cos\omega t$ なので，次式が得られます。
+$\boldsymbol{r} = \boldsymbol{R}\cos\omega t$ を設問1の運動方程式に代入します。$\dfrac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2} = -\omega^2 \boldsymbol{R}\cos\omega t$ なので，次式が得られます。
 
 $$
 \begin{aligned}
@@ -116,7 +116,7 @@ $$
 これは電荷保存則そのものであり，式 (1) は電荷保存則と矛盾しません。
 
 ### (4)
-式 (1) に $\boldsymbol{E} = \boldsymbol{E}_0 \cos\omega t$ と設問 2 の $\boldsymbol{i} = \boldsymbol{i}_{\mathrm{d}}$ を代入し，両辺に $\mu_0$ を掛けます。
+式 (1) に $\boldsymbol{E} = \boldsymbol{E}_0 \cos\omega t$ と設問2の $\boldsymbol{i} = \boldsymbol{i}_{\mathrm{d}}$ を代入し，両辺に $\mu_0$ を掛けます。
 
 $$
 \begin{aligned}
@@ -132,7 +132,7 @@ $$
 $$
 
 ### (5)
-設問 4 で求めた $C = \varepsilon\mu$ を $\varepsilon_0 \mu_0$ で割り，$\omega_{\mathrm{p}}^2 = \dfrac{N e^2}{m\varepsilon_0}$ を代入します。
+設問4で求めた $C = \varepsilon\mu$ を $\varepsilon_0 \mu_0$ で割り，$\omega_{\mathrm{p}}^2 = \dfrac{N e^2}{m\varepsilon_0}$ を代入します。
 
 $$
 \begin{aligned}
@@ -152,8 +152,8 @@ $$
 ### (6)
 プリズムによる光の屈折角は屈折率 $n(\omega)$ が大きいほど大きくなります。
 
-- **石英**：可視光領域で $n(\omega) > 1$ であり，振動数が高い紫から低い赤の順に並んでいるので，可視光領域全体で $n(\omega)$ は $\omega$ とともに単調増加しています。式 $n^2(\omega) = 1 + \dfrac{\omega_{\mathrm{p}}^2}{\omega_0^2 - \omega^2}$ がこの振る舞いを示すのは，$\omega_0$ が可視光領域より高い紫外領域にあるときです。
-- **物質 F**：緑の光が吸収されて見えず，屈折角が大きい順に黄，橙，赤，紫，藍，青と並んでいます。$\omega_0$ が可視光領域内の緑の位置にあると，$\omega < \omega_0$ の側では $n^2(\omega) > 1$ かつ $\omega$ が $\omega_0$ に近づくほど $n(\omega)$ が大きくなるため黄 $>$ 橙 $>$ 赤 $> 1$ となります。一方，$\omega > \omega_0$ の側では $n^2(\omega) < 1$ かつ $\omega$ が大きいほど $n^2(\omega)$ が $1$ に近づくため $1 >$ 紫 $>$ 藍 $>$ 青となります。したがって全体の屈折率の大きさは黄 $>$ 橙 $>$ 赤 $>$ 紫 $>$ 藍 $>$ 青の順になり，観測結果と一致します。
+- 石英：可視光領域で $n(\omega) > 1$ であり，振動数が高い紫から低い赤の順に並んでいるので，可視光領域全体で $n(\omega)$ は $\omega$ とともに単調増加しています。式 $n^2(\omega) = 1 + \dfrac{\omega_{\mathrm{p}}^2}{\omega_0^2 - \omega^2}$ がこの振る舞いを示すのは，$\omega_0$ が可視光領域より高い紫外領域にあるときです。
+- 物質 F：緑の光が吸収されて見えず，屈折角が大きい順に黄，橙，赤，紫，藍，青と並んでいます。$\omega_0$ が可視光領域内の緑の位置にあると，$\omega < \omega_0$ の側では $n^2(\omega) > 1$ かつ $\omega$ が $\omega_0$ に近づくほど $n(\omega)$ が大きくなるため黄 $>$ 橙 $>$ 赤 $> 1$ となります。一方，$\omega > \omega_0$ の側では $n^2(\omega) < 1$ かつ $\omega$ が大きいほど $n^2(\omega)$ が $1$ に近づくため $1 >$ 紫 $>$ 藍 $>$ 青となります。したがって全体の屈折率の大きさは黄 $>$ 橙 $>$ 赤 $>$ 紫 $>$ 藍 $>$ 青の順になり，観測結果と一致します。
 
 以上より，石英と物質 F の分散曲線の概略は次の図のようになります。
 

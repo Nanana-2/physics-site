@@ -100,9 +100,9 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-2 階微分の係数行列 $A = \{a_{i, j}\}$ は実対称行列なので，直交行列による対角化と各座標軸の定数倍を組み合わせることで，固有値の符号に応じた 3 種類の標準形へ変換できます。
+2階微分の係数行列 $A$ は実対称行列なので，直交行列で対角化することができます。さらに座標を固有値の大きさに応じて伸び縮みさせると，2階微分の部分は，固有値の符号によって3種類の形のどれかになります。
 
-さらに指数関数因子 $e^{\lambda_1 \xi_1 + \lambda_2 \xi_2}$ をくくり出すと，2 階微分から 1 階微分の項が生じるため，係数 $\lambda_1, \lambda_2$ の選び方によって 1 階微分の項を消去できます。
+残る1階微分の項は，$\psi$ を $e^{\lambda_1 \xi_1 + \lambda_2 \xi_2}\phi$ とおいて消します。指数関数を微分すると1階微分の項が新しく出てくるので，これがもとの1階微分の項と打ち消し合うように $\lambda_1$，$\lambda_2$ を選びます。
 </div>
 
 ### (1)
@@ -136,7 +136,7 @@ $$
 $$
 
 ### (2)
-$\nabla_x = {}^t\!\left(\dfrac{\partial}{\partial x_1}, \dfrac{\partial}{\partial x_2}\right)$，$\nabla_\xi = {}^t\!\left(\dfrac{\partial}{\partial \xi_1}, \dfrac{\partial}{\partial \xi_2}\right)$ とおくと，設問 1 の結果は $\nabla_x = {}^t C \nabla_\xi$ と書かれます。2 階微分の項 $\mathcal{L}_2$ を行列 $A = \{a_{i, j}\}$ を用いて書き換えます。
+$\nabla_x = {}^t\!\left(\dfrac{\partial}{\partial x_1}, \dfrac{\partial}{\partial x_2}\right)$，$\nabla_\xi = {}^t\!\left(\dfrac{\partial}{\partial \xi_1}, \dfrac{\partial}{\partial \xi_2}\right)$ とおくと，設問1の結果は $\nabla_x = {}^t C \nabla_\xi$ と書かれます。2階微分の項 $\mathcal{L}_2$ を行列 $A = \{a_{i, j}\}$ を用いて書き換えます。
 
 $$
 \begin{aligned}
@@ -146,47 +146,40 @@ $$
 \end{aligned}
 $$
 
-$A$ は実対称行列なので，実直交行列 $R$ を選んで対角化できます。その実固有値を $\mu_1, \mu_2$ とすると，$R A {}^t R = \operatorname{diag}(\mu_1, \mu_2)$ かつ $D = \det A = \mu_1 \mu_2$ です。対角行列 $S = \operatorname{diag}(s_1, s_2)$ を用いて $C = S R$ とおくと，$\det C = s_1 s_2 \det R$ かつ $C A {}^t C = \operatorname{diag}(s_1^2 \mu_1, s_2^2 \mu_2)$ となります。$D$ の符号で場合分けします。
+$A$ は実対称行列なので，実直交行列 $R$ を選んで対角化することができます。その実固有値を $\mu_1, \mu_2$ とすると，$R A {}^t R = \operatorname{diag}(\mu_1, \mu_2)$ かつ $D = \det A = \mu_1 \mu_2$ です。対角行列 $S = \operatorname{diag}(s_1, s_2)$ を用いて $C = S R$ とおくと，$\det C = s_1 s_2 \det R$ かつ $C A {}^t C = \operatorname{diag}(s_1^2 \mu_1, s_2^2 \mu_2)$ となります。$D$ の符号で場合分けします。
 
-- $D > 0$ のとき：$\mu_1 \mu_2 > 0$ より $\mu_1, \mu_2$ は同符号です。$s_1 = |\mu_1|^{-1/2}$，$s_2 = |\mu_2|^{-1/2}$ と選ぶと $\det C \neq 0$ かつ $C A {}^t C = \operatorname{diag}(\pm 1, \pm 1)$ となり，$\mathcal{L}_2 = \pm\left(\dfrac{\partial^2}{\partial \xi_1^2} + \dfrac{\partial^2}{\partial \xi_2^2}\right)$ です。
-- $D = 0$ のとき：$A$ の成分のうち少なくとも 1 つは $0$ でないので，$\mu_1, \mu_2$ の一方は $0$，他方は $0$ でありません。$R$ の行を入れ替えて $\mu_1 = 0, \mu_2 \neq 0$ とし，$s_1 = 1$，$s_2 = |\mu_2|^{-1/2}$ と選ぶと $\det C \neq 0$ かつ $C A {}^t C = \operatorname{diag}(0, \pm 1)$ となり，$\mathcal{L}_2 = \pm\dfrac{\partial^2}{\partial \xi_2^2}$ です。
-- $D < 0$ のとき：$\mu_1 \mu_2 < 0$ より $\mu_1, \mu_2$ は異符号です。$R$ の行を入れ替えて $\mu_1 > 0, \mu_2 < 0$ とし，$s_1 = \mu_1^{-1/2}$，$s_2 = (-\mu_2)^{-1/2}$ と選ぶと $\det C \neq 0$ かつ $C A {}^t C = \operatorname{diag}(1, -1)$ となり，$\mathcal{L}_2 = \dfrac{\partial^2}{\partial \xi_1^2} - \dfrac{\partial^2}{\partial \xi_2^2}$ です。
-
-### (3)
-設問 2 の変換後，$\mathcal{L}$ の 1 階微分の項は新たな実定数 $\tilde{b}_1, \tilde{b}_2$ を用いて $\tilde{b}_1 \dfrac{\partial}{\partial \xi_1} + \tilde{b}_2 \dfrac{\partial}{\partial \xi_2}$ と書かれます。$\psi(\xi_1, \xi_2) = e^{\lambda_1 \xi_1 + \lambda_2 \xi_2}\phi(\xi_1, \xi_2)$ を微分すると，各 $i = 1, 2$ に対して次式が成り立ちます。
+まず，$D > 0$ の場合を考えます。2階微分の符号を $\sigma \in \{+1, -1\}$ とすると，次式になります。
 
 $$
 \begin{aligned}
-\frac{\partial\psi}{\partial \xi_i} &= e^{\lambda_1 \xi_1 + \lambda_2 \xi_2}\left(\frac{\partial\phi}{\partial \xi_i} + \lambda_i\phi\right) \\
-\frac{\partial^2\psi}{\partial \xi_i^2} &= e^{\lambda_1 \xi_1 + \lambda_2 \xi_2}\left(\frac{\partial^2\phi}{\partial \xi_i^2} + 2\lambda_i\frac{\partial\phi}{\partial \xi_i} + \lambda_i^2\phi\right)
+&\sigma\left(\frac{\partial^2\phi}{\partial\xi_1^2} + \frac{\partial^2\phi}{\partial\xi_2^2}\right) + (2\sigma\lambda_1 + \tilde{b}_1)\frac{\partial\phi}{\partial\xi_1} + (2\sigma\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} \\
+&\quad + \bigl(\sigma\lambda_1^2 + \sigma\lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi = E\phi
 \end{aligned}
 $$
 
-これらを $\mathcal{L}\psi = E\psi$ に代入し，両辺を $e^{\lambda_1 \xi_1 + \lambda_2 \xi_2} \neq 0$ で割って各場合を調べます。
+ここで $\lambda_1 = -\dfrac{\sigma\tilde{b}_1}{2}$，$\lambda_2 = -\dfrac{\sigma\tilde{b}_2}{2}$ と選び，両辺に $\sigma$ を掛けます。すると1階微分の項が消え，定数 $F$ を用いて式 (2) の形になります。
 
-- $D > 0$ のとき：2 階微分の符号を $\sigma \in \{+1, -1\}$ とすると，次式になります。
-  $$
-  \begin{aligned}
-  \sigma\left(\frac{\partial^2\phi}{\partial\xi_1^2} + \frac{\partial^2\phi}{\partial\xi_2^2}\right) + (2\sigma\lambda_1 + \tilde{b}_1)\frac{\partial\phi}{\partial\xi_1} + (2\sigma\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} + \bigl(\sigma\lambda_1^2 + \sigma\lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi &= E\phi
-  \end{aligned}
-  $$
-  ここで $\lambda_1 = -\dfrac{\sigma\tilde{b}_1}{2}$，$\lambda_2 = -\dfrac{\sigma\tilde{b}_2}{2}$ と選んで両辺に $\sigma$ を掛けると 1 階微分の項が消え，定数 $F$ を用いて式 (2) の形になります。
+次に，$D = 0$ の場合を考えます。2階微分の符号を $\sigma \in \{+1, -1\}$ とすると，次式になります。
 
-- $D = 0$ のとき：2 階微分の符号を $\sigma \in \{+1, -1\}$ とすると，次式になります。
-  $$
-  \begin{aligned}
-  \sigma\frac{\partial^2\phi}{\partial\xi_2^2} + \tilde{b}_1\frac{\partial\phi}{\partial\xi_1} + (2\sigma\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} + \bigl(\sigma\lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi &= E\phi
-  \end{aligned}
-  $$
-  ここで $\lambda_2 = -\dfrac{\sigma\tilde{b}_2}{2}$，$\lambda_1 = 0$ と選んで両辺に $-\sigma$ を掛けると $\dfrac{\partial\phi}{\partial\xi_2}$ の項が消え，定数 $\beta = -\sigma\tilde{b}_1$ と定数 $F$ を用いて式 (3) の形になります。
+$$
+\begin{aligned}
+&\sigma\frac{\partial^2\phi}{\partial\xi_2^2} + \tilde{b}_1\frac{\partial\phi}{\partial\xi_1} + (2\sigma\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} \\
+&\quad + \bigl(\sigma\lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi = E\phi
+\end{aligned}
+$$
 
-- $D < 0$ のとき：次式になります。
-  $$
-  \begin{aligned}
-  \left(\frac{\partial^2\phi}{\partial\xi_1^2} - \frac{\partial^2\phi}{\partial\xi_2^2}\right) + (2\lambda_1 + \tilde{b}_1)\frac{\partial\phi}{\partial\xi_1} + (-2\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} + \bigl(\lambda_1^2 - \lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi &= E\phi
-  \end{aligned}
-  $$
-  ここで $\lambda_1 = -\dfrac{\tilde{b}_1}{2}$，$\lambda_2 = \dfrac{\tilde{b}_2}{2}$ と選ぶと 1 階微分の項がともに消え，定数 $F$ を用いて式 (4) の形になります。
+ここで $\lambda_2 = -\dfrac{\sigma\tilde{b}_2}{2}$，$\lambda_1 = 0$ と選び，両辺に $-\sigma$ を掛けます。すると $\dfrac{\partial\phi}{\partial\xi_2}$ の項が消え，定数 $\beta = -\sigma\tilde{b}_1$ と定数 $F$ を用いて式 (3) の形になります。
+
+最後に，$D < 0$ の場合を考えます。代入すると，次式になります。
+
+$$
+\begin{aligned}
+&\left(\frac{\partial^2\phi}{\partial\xi_1^2} - \frac{\partial^2\phi}{\partial\xi_2^2}\right) + (2\lambda_1 + \tilde{b}_1)\frac{\partial\phi}{\partial\xi_1} + (-2\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} \\
+&\quad + \bigl(\lambda_1^2 - \lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi = E\phi
+\end{aligned}
+$$
+
+ここで $\lambda_1 = -\dfrac{\tilde{b}_1}{2}$，$\lambda_2 = \dfrac{\tilde{b}_2}{2}$ と選ぶと，1階微分の項がともに消え，定数 $F$ を用いて式 (4) の形になります。
 
 ### (4)(i)
 $\xi_1 > 0$ のもとで，積分記号下の微分を行います。
@@ -238,7 +231,7 @@ $$
 $$
 
 ### (5)
-$u = \xi_1 - \xi_2$，$v = \xi_1 + \xi_2$ とおくと，$\phi(\xi_1, \xi_2) = G_1(u) + G_2(v)$ です。合成関数の微分法を用いて $\xi_1$ と $\xi_2$ による 2 階偏微分を計算します。
+$u = \xi_1 - \xi_2$，$v = \xi_1 + \xi_2$ とおくと，$\phi(\xi_1, \xi_2) = G_1(u) + G_2(v)$ です。合成関数の微分法を用いて $\xi_1$ と $\xi_2$ による2階偏微分を計算します。
 
 $$
 \begin{aligned}
