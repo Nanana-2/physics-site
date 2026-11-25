@@ -50,6 +50,8 @@
 
 ## ドラフト作成の規則
 
+解答・解説の書き方は，悪い例とよい例を並べて `.agents/rules/pastexam-writing.md` にまとめてある。Antigravity はこのファイルを自動で読む。
+
 ### 置き場所とファイル名
 - Markdown 原稿は `pastexam/<大学>/drafts/<年度>_<大問番号>.md`（例：`pastexam/todai-ributsu/drafts/R8_1.md`）に置く。令和2年度以前は科目を入れて `R2_butsuri_1.md`，`R2_sugaku_1.md` とする。平成8〜12年度の一般教育科目は `H12_ippan_sugaku_1.md`，`H12_ippan_butsuri_1.md` とし，題名は `東大理物 平成12年度 一般教育科目 物理学 第1問：〜` とする。`docs/` の外に置き，サイトへの組み込みはデザイン担当が行う。
 - TikZ 原稿は `figures/src/pastexam-<大学>/<年度>_<大問番号>-p.tex`（複数あるときは `-p1.tex`，`-p2.tex`）に置く。`python3 tools/figures/build.py` でライト用・ダーク用の SVG を `docs/assets/figures/pastexam-<大学>/` に生成し，PNG 化して文字の重なりがないか目視確認する。
