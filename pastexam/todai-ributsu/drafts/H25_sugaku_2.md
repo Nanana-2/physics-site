@@ -136,50 +136,118 @@ $$
 $$
 
 ### (2)
-$\nabla_x = {}^t\!\left(\dfrac{\partial}{\partial x_1}, \dfrac{\partial}{\partial x_2}\right)$，$\nabla_\xi = {}^t\!\left(\dfrac{\partial}{\partial \xi_1}, \dfrac{\partial}{\partial \xi_2}\right)$ とおくと，設問1の結果は $\nabla_x = {}^t C \nabla_\xi$ と書かれます。2階微分の項 $\mathcal{L}_2$ を行列 $A = \{a_{i, j}\}$ を用いて書き換えます。
+$\nabla_x={}^t\!\left(\dfrac{\partial}{\partial x_1},\dfrac{\partial}{\partial x_2}\right)$，$\nabla_\xi={}^t\!\left(\dfrac{\partial}{\partial\xi_1},\dfrac{\partial}{\partial\xi_2}\right)$ とおきます。設問1の $\nabla_x={}^tC\nabla_\xi$ を用いると，主部は
 
 $$
 \begin{aligned}
-\mathcal{L}_2 &= {}^t\nabla_x A \nabla_x \\
-&= {}^t({}^t C \nabla_\xi) A ({}^t C \nabla_\xi) \\
-&= {}^t\nabla_\xi \left(C A {}^t C\right) \nabla_\xi
+\mathcal L_2&={}^t\nabla_xA\nabla_x\\
+&={}^t\nabla_\xi(CA{}^tC)\nabla_\xi
 \end{aligned}
 $$
 
-$A$ は実対称行列なので，実直交行列 $R$ を選んで対角化することができます。その実固有値を $\mu_1, \mu_2$ とすると，$R A {}^t R = \operatorname{diag}(\mu_1, \mu_2)$ かつ $D = \det A = \mu_1 \mu_2$ です。対角行列 $S = \operatorname{diag}(s_1, s_2)$ を用いて $C = S R$ とおくと，$\det C = s_1 s_2 \det R$ かつ $C A {}^t C = \operatorname{diag}(s_1^2 \mu_1, s_2^2 \mu_2)$ となります。$D$ の符号で場合分けします。
+です。実直交行列 $R$ を選び，$RA{}^tR=\operatorname{diag}(\mu_1,\mu_2)$ とします。$D=\mu_1\mu_2$ です。$S=\operatorname{diag}(s_1,s_2)$ と $C=SR$ を用いると，
 
-まず，$D > 0$ の場合を考えます。2階微分の符号を $\sigma \in \{+1, -1\}$ とすると，次式になります。
+$$
+CA{}^tC=\operatorname{diag}(s_1^2\mu_1,s_2^2\mu_2)
+$$
+
+となります。
+
+$D>0$ では両固有値が同符号です。その符号を $\sigma\in\{1,-1\}$ とし，$s_i=|\mu_i|^{-1/2}$ と選びます。
 
 $$
 \begin{aligned}
-&\sigma\left(\frac{\partial^2\phi}{\partial\xi_1^2} + \frac{\partial^2\phi}{\partial\xi_2^2}\right) + (2\sigma\lambda_1 + \tilde{b}_1)\frac{\partial\phi}{\partial\xi_1} + (2\sigma\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} \\
-&\quad + \bigl(\sigma\lambda_1^2 + \sigma\lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi = E\phi
+s_i^2\mu_i&=\frac{\mu_i}{|\mu_i|}\\
+&=\sigma\\
+\mathcal L_2&=\sigma\left(\frac{\partial^2}{\partial\xi_1^2}+\frac{\partial^2}{\partial\xi_2^2}\right)
 \end{aligned}
 $$
 
-ここで $\lambda_1 = -\dfrac{\sigma\tilde{b}_1}{2}$，$\lambda_2 = -\dfrac{\sigma\tilde{b}_2}{2}$ と選び，両辺に $\sigma$ を掛けます。すると1階微分の項が消え，定数 $F$ を用いて式 (2) の形になります。
-
-次に，$D = 0$ の場合を考えます。2階微分の符号を $\sigma \in \{+1, -1\}$ とすると，次式になります。
+$D=0$ では，$A\ne O$ なので一方の固有値だけが0です。軸を入れ替えて $\mu_1=0$，$\mu_2\ne0$ とし，$s_1=1$，$s_2=|\mu_2|^{-1/2}$ を選びます。
 
 $$
 \begin{aligned}
-&\sigma\frac{\partial^2\phi}{\partial\xi_2^2} + \tilde{b}_1\frac{\partial\phi}{\partial\xi_1} + (2\sigma\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} \\
-&\quad + \bigl(\sigma\lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi = E\phi
+CA{}^tC&=\operatorname{diag}(0,\operatorname{sgn}\mu_2)\\
+\mathcal L_2&=\sigma\frac{\partial^2}{\partial\xi_2^2}
 \end{aligned}
 $$
 
-ここで $\lambda_2 = -\dfrac{\sigma\tilde{b}_2}{2}$，$\lambda_1 = 0$ と選び，両辺に $-\sigma$ を掛けます。すると $\dfrac{\partial\phi}{\partial\xi_2}$ の項が消え，定数 $\beta = -\sigma\tilde{b}_1$ と定数 $F$ を用いて式 (3) の形になります。
+ここで $\sigma=\operatorname{sgn}\mu_2$ です。
 
-最後に，$D < 0$ の場合を考えます。代入すると，次式になります。
+$D<0$ では両固有値が異符号です。$\mu_1>0$，$\mu_2<0$ の順に軸を選び，$s_i=|\mu_i|^{-1/2}$ とします。
 
 $$
 \begin{aligned}
-&\left(\frac{\partial^2\phi}{\partial\xi_1^2} - \frac{\partial^2\phi}{\partial\xi_2^2}\right) + (2\lambda_1 + \tilde{b}_1)\frac{\partial\phi}{\partial\xi_1} + (-2\lambda_2 + \tilde{b}_2)\frac{\partial\phi}{\partial\xi_2} \\
-&\quad + \bigl(\lambda_1^2 - \lambda_2^2 + \tilde{b}_1\lambda_1 + \tilde{b}_2\lambda_2\bigr)\phi = E\phi
+CA{}^tC&=\operatorname{diag}(1,-1)\\
+\mathcal L_2&=\frac{\partial^2}{\partial\xi_1^2}-\frac{\partial^2}{\partial\xi_2^2}
 \end{aligned}
 $$
 
-ここで $\lambda_1 = -\dfrac{\tilde{b}_1}{2}$，$\lambda_2 = \dfrac{\tilde{b}_2}{2}$ と選ぶと，1階微分の項がともに消え，定数 $F$ を用いて式 (4) の形になります。
+いずれも $s_1,s_2$ は0でなく，$\det C=s_1s_2\det R\ne0$ です。
+
+### (3)
+$\boldsymbol b={}^t(b_1,b_2)$ とします。1階微分の係数は，
+
+$$
+\begin{aligned}
+{}^t\boldsymbol b\nabla_x&={}^t\boldsymbol b\,{}^tC\nabla_\xi\\
+&={}^t(C\boldsymbol b)\nabla_\xi
+\end{aligned}
+$$
+
+なので，$\tilde{\boldsymbol b}=C\boldsymbol b$ と定義します。
+
+$\psi=e^{\lambda_1\xi_1+\lambda_2\xi_2}\phi$ の微分は，
+
+$$
+\begin{aligned}
+\partial_i\psi&=e^{\lambda_1\xi_1+\lambda_2\xi_2}(\partial_i\phi+\lambda_i\phi)\\
+\partial_i^2\psi&=e^{\lambda_1\xi_1+\lambda_2\xi_2}(\partial_i^2\phi+2\lambda_i\partial_i\phi+\lambda_i^2\phi)
+\end{aligned}
+$$
+
+です。ここで $\partial_i=\partial/\partial\xi_i$ と書きました。
+
+$D>0$ では，指数関数を割ると，
+
+$$
+\begin{aligned}
+\sigma(\partial_1^2+\partial_2^2)\phi
+&+(2\sigma\lambda_1+\tilde b_1)\partial_1\phi
+ +(2\sigma\lambda_2+\tilde b_2)\partial_2\phi\\
+&+\left[\sigma(\lambda_1^2+\lambda_2^2)+\tilde b_1\lambda_1+\tilde b_2\lambda_2\right]\phi=E\phi
+\end{aligned}
+$$
+
+となります。$\lambda_i=-\sigma\tilde b_i/2$ と選び，両辺に $\sigma$ を掛けます。
+
+$$
+(\partial_1^2+\partial_2^2)\phi=\left(\sigma E+\frac{\tilde b_1^2+\tilde b_2^2}{4}\right)\phi
+$$
+
+右辺の括弧を $F$ とおけば式 (2) です。
+
+$D=0$ では，$\lambda_1=0$，$\lambda_2=-\sigma\tilde b_2/2$ を選びます。$\partial_2\phi$ の係数は0になりますが，$\partial_1\phi$ の項は残ります。
+
+$$
+\sigma\partial_2^2\phi+\tilde b_1\partial_1\phi=\left(E+\frac{\sigma\tilde b_2^2}{4}\right)\phi
+$$
+
+両辺に $-\sigma$ を掛けると，
+
+$$
+(-\sigma\tilde b_1\partial_1-\partial_2^2)\phi=\left(-\sigma E-\frac{\tilde b_2^2}{4}\right)\phi
+$$
+
+です。$\beta=-\sigma\tilde b_1$ とおき，右辺の括弧を $F$ とすれば式 (3) になります。
+
+$D<0$ では，$\lambda_1=-\tilde b_1/2$，$\lambda_2=\tilde b_2/2$ と選ぶと，両方向の1階微分の項が0になります。
+
+$$
+(\partial_1^2-\partial_2^2)\phi=\left(E+\frac{\tilde b_1^2-\tilde b_2^2}{4}\right)\phi
+$$
+
+右辺の括弧を $F$ とすれば式 (4) です。
 
 ### (4)(i)
 $\xi_1 > 0$ のもとで，積分記号下の微分を行います。
@@ -202,10 +270,19 @@ $$
 $\xi_1 = 0$ の条件を設問 (4)(i) の表式に代入します。
 
 $$
-\phi(0, \xi_2) = \int_{-\infty}^{\infty} f(y) e^{i y \xi_2}\,\mathrm{d}y = \delta(\xi_2)
+\begin{aligned}
+\phi(0, \xi_2) &= \int_{-\infty}^{\infty} f(y) e^{i y \xi_2}\,\mathrm{d}y \\
+&= \delta(\xi_2)
+\end{aligned}
 $$
 
-デルタ関数のフーリエ積分表示 $\delta(\xi_2) = \dfrac{1}{2\pi}\displaystyle\int_{-\infty}^{\infty} e^{i y \xi_2}\,\mathrm{d}y$ と比較すると，$f(y) = \dfrac{1}{2\pi}$ です。
+初期条件は分布として解釈します。デルタ関数のフーリエ表示は
+
+$$
+\delta(\xi_2)=\frac1{2\pi}\int_{\mathbb R}e^{iy\xi_2}\,\mathrm{d}y
+$$
+
+なので，係数は $f(y)=\dfrac1{2\pi}$ です。$\xi_1=0$ での積分は通常の収束積分ではなく，$\xi_1\downarrow0$ での分布の極限です。
 
 これを $\xi_1 > 0$ の積分へ代入し，指数部分を $y$ について平方完成します。
 
@@ -216,7 +293,18 @@ $$
 \end{aligned}
 $$
 
-ガウス積分 $\displaystyle\int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x = \sqrt{\pi}$ を用いて積分を計算します。
+平方完成後の積分路は実軸から平行移動しています。$a=\xi_1>0$，$b=\xi_2/(2\xi_1)$ とおくと，被積分関数 $e^{-a(z-ib)^2}$ は整関数です。実軸と $\operatorname{Im}z=b$ を結ぶ長方形では，縦辺の絶対値は定数倍の $e^{-aR^2}$ で抑えられ，$R\to\infty$ で0になります。そのため積分路を平行移動して，
+
+$$
+\begin{aligned}
+\int_{\mathbb R}e^{-a(y-ib)^2}\,\mathrm{d}y
+&=\int_{\mathbb R+ib}e^{-a(z-ib)^2}\,\mathrm{d}z\\
+&=\int_{\mathbb R}e^{-au^2}\,\mathrm{d}u\\
+&=\sqrt{\frac\pi a}
+\end{aligned}
+$$
+
+です。この結果を用いると，
 
 $$
 \begin{aligned}
@@ -231,7 +319,9 @@ $$
 $$
 
 ### (5)
-$u = \xi_1 - \xi_2$，$v = \xi_1 + \xi_2$ とおくと，$\phi(\xi_1, \xi_2) = G_1(u) + G_2(v)$ です。合成関数の微分法を用いて $\xi_1$ と $\xi_2$ による2階偏微分を計算します。
+通常の2階偏微分で式 (4) を確かめるため，以下では $G_1,G_2$ が2階微分可能な場合を計算します。原本の「微分可能」を1回だけと読む場合には，2階微分を分布として解釈する必要があります。
+
+$u=\xi_1-\xi_2$，$v=\xi_1+\xi_2$ とおくと，$\phi=G_1(u)+G_2(v)$ です。合成関数の微分法で各偏微分を求めます。
 
 $$
 \begin{aligned}

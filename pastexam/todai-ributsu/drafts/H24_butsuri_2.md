@@ -29,7 +29,7 @@ $$
 <figure class="problem-figure" markdown>
 ![2原子分子の向きを表す極角thetaと方位角phi](../../../docs/assets/figures/pastexam-todai-ributsu/H24_butsuri_2-p-light.svg#only-light)
 ![2原子分子の向きを表す極角thetaと方位角phi](../../../docs/assets/figures/pastexam-todai-ributsu/H24_butsuri_2-p-dark.svg#only-dark)
-<figcaption markdown="span">剛体回転子としての 2 原子分子の向き $(\theta, \varphi)$。</figcaption>
+
 </figure>
 
 (2) 次に量子論的に扱うと，エネルギー準位は以下で与えられる。
@@ -104,7 +104,7 @@ C &= \frac{\partial U}{\partial T} \\
 $$
 
 $$
-\finalanswer{Z = \frac{8\pi^2 I k_{\mathrm{B}} T}{h^2} = \frac{2I k_{\mathrm{B}} T}{\hbar^2}, \qquad C = k_{\mathrm{B}}}
+\finalanswer{Z=\frac{2Ik_{\mathrm B}T}{\hbar^2},\qquad C=k_{\mathrm B}}
 $$
 
 ### (2)
@@ -143,7 +143,7 @@ $$
 $$
 \begin{aligned}
 U &= -\frac{\partial \ln Z}{\partial \beta} \\
-&\simeq \frac{3\dfrac{\hbar^2}{I}\exp\!\left(-\dfrac{\beta\hbar^2}{I}\right)}{1 + 3\exp\!\left(-\dfrac{\beta\hbar^2}{I}\right)} \\
+&\simeq \frac{3\frac{\hbar^2}{I}\exp\!\left(-\frac{\beta\hbar^2}{I}\right)}{1 + 3\exp\!\left(-\frac{\beta\hbar^2}{I}\right)} \\
 &\simeq 3\frac{\hbar^2}{I}\exp\!\left(-\frac{\hbar^2}{I k_{\mathrm{B}} T}\right)
 \end{aligned}
 $$
@@ -165,8 +165,21 @@ $$
 ### (4)
 水素原子核である陽子はスピン $1/2$ のフェルミ粒子なので，2つの陽子の入れ換えに対して核の全波動関数は反対称でなければなりません。全波動関数は核スピン部分の波動関数と回転の軌道部分の波動関数の積で表されます。
 
-- オルソ水素は合成核スピン $S = 1$ の三重項状態であり，核スピン部分は陽子の入れ換えに対して対称です。したがって軌道部分は反対称である必要があり，$\ell$ は**奇数**（$\ell = 1, 3, 5, \dots$）のみが許されます。
-- パラ水素は合成核スピン $S = 0$ の一重項状態であり，核スピン部分は陽子の入れ換えに対して反対称です。したがって軌道部分は対称である必要があり，$\ell$ は**偶数**（$\ell = 0, 2, 4, \dots$）のみが許されます。
+オルソ水素の核スピンは $S=1$ の三重項で，陽子交換に対して対称です。軌道部分は反対称でなければならないので，許される値は，
+
+$$
+\finalanswer{\ell=1,3,5,\ldots}
+$$
+
+です。
+
+パラ水素の核スピンは $S=0$ の一重項で，陽子交換に対して反対称です。軌道部分は対称でなければならないので，許される値は，
+
+$$
+\finalanswer{\ell=0,2,4,\ldots}
+$$
+
+です。
 
 ### (5)
 オルソ水素の核スピン状態の縮退度は $2S + 1 = 3$，パラ水素の核スピン状態の縮退度は $2S + 1 = 1$ です。それぞれの分配関数 $Z_{\mathrm{o}}, Z_{\mathrm{p}}$ は次式で与えられます。
@@ -181,7 +194,10 @@ $$
 十分高温では，奇数 $\ell$ についての和と偶数 $\ell$ についての和は，いずれもすべての $\ell$ についての和のちょうど半分に近づきます。
 
 $$
-\sum_{\ell = 1, 3, 5, \dots} (2\ell + 1) e^{-\beta E_\ell} \simeq \sum_{\ell = 0, 2, 4, \dots} (2\ell + 1) e^{-\beta E_\ell} \simeq \frac{I k_{\mathrm{B}} T}{\hbar^2}
+\begin{aligned}
+\sum_{\ell = 1, 3, 5, \dots} (2\ell + 1) e^{-\beta E_\ell} &\simeq \sum_{\ell = 0, 2, 4, \dots} (2\ell + 1) e^{-\beta E_\ell} \\
+&\simeq \frac{I k_{\mathrm{B}} T}{\hbar^2}
+\end{aligned}
 $$
 
 存在比 $N_{\mathrm{o}} / N_{\mathrm{p}}$ は分配関数の比 $Z_{\mathrm{o}} / Z_{\mathrm{p}}$ に等しいので，核スピンの縮退度の比そのままになります。
@@ -191,10 +207,53 @@ $$
 $$
 
 ### (6)
-急冷後の温度は $T = 30\ \mathrm{K}$ であり，$\Theta \simeq 90\ \mathrm{K}$ なので $\dfrac{\Theta}{T} = 3$ です。各準位のエネルギーは $\beta E_\ell = \dfrac{\Theta}{T}\ell(\ell + 1) = 3\ell(\ell + 1)$ です。
+急冷後の温度は $T = 30\ \mathrm{K}$ であり，$\Theta \simeq 90\ \mathrm{K}$ なので $\dfrac{\Theta}{T} = 3$ です。各準位のエネルギーは 
 
-- パラ水素は $\ell = 0, 2, 4, \dots$ の準位をとります。$\ell = 0$ のエネルギーは $E_0 = 0$，次の $\ell = 2$ は $\beta E_2 = 3 \times 6 = 18$ なので，ボルツマン因子は $e^{-18} \approx 1.5 \times 10^{-8}$ です。したがって $30\ \mathrm{K}$ ではパラ水素は実質的にすべて $\ell = 0$ にあり，1分子あたりの内部エネルギーは $U_{\mathrm{p}} / k_{\mathrm{B}} \simeq 0\ \mathrm{K}$ です。
-- オルソ水素は $\ell = 1, 3, 5, \dots$ の準位をとります。最低準位 $\ell = 1$ のエネルギーは $E_1 / k_{\mathrm{B}} = 2\Theta = 180\ \mathrm{K}$ であり，次の $\ell = 3$ とのエネルギー差は $\beta(E_3 - E_1) = 3 \times (12 - 2) = 30$ なので，相対的なボルツマン因子は $e^{-30} \approx 9.4 \times 10^{-14}$ です。したがって $30\ \mathrm{K}$ ではオルソ水素は実質的にすべて $\ell = 1$ にあり，1分子あたりの内部エネルギーは $U_{\mathrm{o}} / k_{\mathrm{B}} \simeq 180\ \mathrm{K}$ です。
+$$
+\begin{aligned}
+\beta E_\ell &= \frac{\Theta}{T}\ell(\ell + 1) \\
+&= 3\ell(\ell + 1)
+\end{aligned}
+$$
+
+ です。
+
+パラ水素の最低準位は $\ell=0$ で $E_0=0$ です。次の準位は $\ell=2$ なので，
+
+$$
+\begin{aligned}
+\beta E_2&=\frac\Theta T\,2(2+1)\\
+&=3\times6\\
+&=18\\
+e^{-\beta E_2}&=e^{-18}\\
+&\approx1.5\times10^{-8}
+\end{aligned}
+$$
+
+です。この寄与を無視すると，$U_{\mathrm p}/k_{\mathrm B}\simeq0\,\mathrm K$ です。
+
+オルソ水素の最低準位は $\ell=1$ で，
+
+$$
+\begin{aligned}
+\frac{E_1}{k_{\mathrm B}}&=2\Theta\\
+&=180\,\mathrm K
+\end{aligned}
+$$
+
+です。次の $\ell=3$ との間隔は，
+
+$$
+\begin{aligned}
+\beta(E_3-E_1)&=\frac\Theta T\,[3(3+1)-1(1+1)]\\
+&=3(12-2)\\
+&=30\\
+e^{-\beta(E_3-E_1)}&=e^{-30}\\
+&\approx9.4\times10^{-14}
+\end{aligned}
+$$
+
+です。励起準位の寄与を無視すると，$U_{\mathrm o}/k_{\mathrm B}\simeq180\,\mathrm K$ です。
 
 急冷後も存在比 $N_{\mathrm{o}} : N_{\mathrm{p}} = 3 : 1$ が保たれているので，オルソ水素の割合は $3/4$，パラ水素の割合は $1/4$ です。平均の内部エネルギーに対する回転運動の寄与 $U / k_{\mathrm{B}}$ を計算します。
 
@@ -213,5 +272,14 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-設問1では2個の原子の区別を意識せず位相空間全体を積分しました。同種2原子分子を古典的に扱う場合は回転の対称性因子 $1/2$ が分配関数に掛かりますが，対数の微分で定数因子が落ちるため内部エネルギー $U$ と比熱 $C$ は変わりません。
+設問1では向きの全領域を積分しました。同種の2原子分子の回転を古典的に数える場合には，対称性因子 $1/2$ が分配関数に掛かります。$Z'=Z/2$ とすると，
+
+$$
+\begin{aligned}
+\ln Z'&=\ln Z-\ln2\\
+-\frac{\partial\ln Z'}{\partial\beta}&=-\frac{\partial\ln Z}{\partial\beta}
+\end{aligned}
+$$
+
+なので，内部エネルギー $U$ と比熱 $C$ は変わりません。
 </aside>

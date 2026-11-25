@@ -76,7 +76,16 @@ $$
 </div>
 
 ### (1)
-$\boldsymbol{r} = (x_1, x_2, x_3) = (x, y, z)$，$\dot{x}_i = \dfrac{\mathrm{d}x_i}{\mathrm{d}t}$ と書きます。式 (1) のラグランジアンを $\dot{x}_i$ と $x_i$ で偏微分します。
+
+
+$$
+\begin{aligned}
+\boldsymbol{r} &= (x_1, x_2, x_3) \\
+&= (x, y, z)
+\end{aligned}
+$$
+
+，$\dot{x}_i = \dfrac{\mathrm{d}x_i}{\mathrm{d}t}$ と書きます。式 (1) のラグランジアンを $\dot{x}_i$ と $x_i$ で偏微分します。
 
 $$
 \begin{aligned}
@@ -88,7 +97,7 @@ $$
 オイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial \dot{x}_i}\right) - \dfrac{\partial L}{\partial x_i} = 0$ に代入すると，各成分 $i = 1, 2, 3$ について次式が得られます。
 
 $$
-\finalanswer{\frac{\mathrm{d}}{\mathrm{d}t}\left(m\frac{\mathrm{d}x_i}{\mathrm{d}t} + q A_i\right) - q\sum_{j=1}^3 \frac{\mathrm{d}x_j}{\mathrm{d}t}\frac{\partial A_j}{\mathrm{d}x_i} + q\frac{\partial \varphi}{\partial x_i} = 0 \qquad (i = 1, 2, 3)}
+\finalanswer{\frac{\mathrm{d}}{\mathrm{d}t}\left(m\frac{\mathrm{d}x_i}{\mathrm{d}t} + q A_i\right) - q\sum_{j=1}^3 \frac{\mathrm{d}x_j}{\mathrm{d}t}\frac{\partial A_j}{\partial x_i} + q\frac{\partial \varphi}{\partial x_i} = 0 \qquad (i = 1, 2, 3)}
 $$
 
 ### (2)
@@ -157,24 +166,43 @@ L' - L &= q\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}t}\cdot\nabla\Lambda + q\fr
 \end{aligned}
 $$
 
-$L'$ と $L$ の差は座標と時刻の関数 $q\Lambda(\boldsymbol{r}, t)$ の時間全微分になります。作用積分 $S' = \displaystyle\int_{t_1}^{t_2} L'\,\mathrm{d}t$ と $S = \displaystyle\int_{t_1}^{t_2} L\,\mathrm{d}t$ の差は両端の時刻 $t_1, t_2$ での値 $[q\Lambda(\boldsymbol{r}, t)]_{t_1}^{t_2}$ だけになります。変分をとるとき両端の座標は固定されるので $\delta S' = \delta S$ となり，$L'$ は $L$ と同じオイラー・ラグランジュ方程式を与えます。
+$L'$ と $L$ の差は座標と時刻の関数 $q\Lambda(\boldsymbol{r}, t)$ の時間全微分になります。作用積分 
+
+$$
+S' = \int_{t_1}^{t_2} L'\,\mathrm{d}t
+$$
+
+ と 
+
+$$
+S = \int_{t_1}^{t_2} L\,\mathrm{d}t
+$$
+
+ の差は両端の時刻 $t_1, t_2$ での値 $[q\Lambda(\boldsymbol{r}, t)]_{t_1}^{t_2}$ だけになります。変分をとるとき両端の座標は固定されるので $\delta S' = \delta S$ となり，$L'$ は $L$ と同じオイラー・ラグランジュ方程式を与えます。
 
 ### (4)
 式 (4) と式 (5) は時間によらないので，$\boldsymbol{B} = \nabla \times \boldsymbol{A}$，$\boldsymbol{E} = -\nabla\varphi$ を計算します。
 
 $$
 \begin{aligned}
-B_x &= \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} = 0 \\
-B_y &= \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} = 0 \\
-B_z &= \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} = \frac{B}{2} - \left(-\frac{B}{2}\right) = B
+B_x &= \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\
+&= 0 \\
+B_y &= \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\
+&= 0 \\
+B_z &= \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \\
+&= \frac{B}{2} - \left(-\frac{B}{2}\right) \\
+&= B
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-E_x &= -\frac{\partial\varphi}{\partial x} = \alpha x \\
-E_y &= -\frac{\partial\varphi}{\partial y} = \alpha y \\
-E_z &= -\frac{\partial\varphi}{\partial z} = -2\alpha z
+E_x &= -\frac{\partial\varphi}{\partial x} \\
+&= \alpha x \\
+E_y &= -\frac{\partial\varphi}{\partial y} \\
+&= \alpha y \\
+E_z &= -\frac{\partial\varphi}{\partial z} \\
+&= -2\alpha z
 \end{aligned}
 $$
 
@@ -221,11 +249,30 @@ $$
 \begin{aligned}
 -\Omega^2 + \omega_{\mathrm{c}}\Omega - \frac{q\alpha}{m} &= 0 \\
 \Omega^2 - \omega_{\mathrm{c}}\Omega + \frac{q\alpha}{m} &= 0 \\
-\Omega_{\pm} &= \frac{\omega_{\mathrm{c}} \pm \sqrt{\omega_{\mathrm{c}}^2 - \dfrac{4q\alpha}{m}}}{2}
+\Omega_{\pm} &= \frac{\omega_{\mathrm{c}} \pm \sqrt{\omega_{\mathrm{c}}^2 - \frac{4q\alpha}{m}}}{2}
 \end{aligned}
 $$
 
-条件 $0 < \alpha < \dfrac{qB^2}{4m}$ より $\omega_{\mathrm{c}}^2 - \dfrac{4q\alpha}{m} = \dfrac{4q}{m}\left(\dfrac{qB^2}{4m} - \alpha\right) > 0$ が成り立ちます。また $\Omega_+ \Omega_- = \dfrac{q\alpha}{m} > 0$ なので，$\Omega_+$ と $\Omega_-$ はともに $\omega_{\mathrm{c}}$ と同符号の異なる実数です。
+条件 $0<\alpha<\dfrac{qB^2}{4m}$ から，
+
+$$
+\begin{aligned}
+\omega_{\mathrm c}^2-\frac{4q\alpha}{m}
+&=\frac{4q}{m}\left(\frac{qB^2}{4m}-\alpha\right)\\
+&>0
+\end{aligned}
+$$
+
+です。2根の和と積は，
+
+$$
+\begin{aligned}
+\Omega_++\Omega_-&=\omega_{\mathrm c}\\
+\Omega_+\Omega_-&=\frac{q\alpha}{m}>0
+\end{aligned}
+$$
+
+なので，2根は同符号です。その符号は和 $\omega_{\mathrm c}$ の符号と一致します。
 
 一般解は複素定数 $C_+, C_-$ を用いて
 

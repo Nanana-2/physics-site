@@ -93,22 +93,52 @@ $$
 
 $$
 \begin{aligned}
-\det(A - \lambda I) &= \lambda^2 - 4 = 0 \\
-\lambda_1 &= 2, \qquad \lambda_2 = -2
+\det(A - \lambda I) &= \lambda^2 - 4 \\
+&= 0 \\
+\lambda_1 &= 2 \\
+\lambda_2 &= -2
 \end{aligned}
 $$
 
 各固有値に対応する固有ベクトル $\boldsymbol{q}_1, \boldsymbol{q}_2$ を求めます。
 
-- $\lambda_1 = 2$ のとき：$\begin{pmatrix} -2 & 4 \\ 1 & -2 \end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}$ より $x = 2y$ なので，$\boldsymbol{q}_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$ ととることができます。
-- $\lambda_2 = -2$ のとき：$\begin{pmatrix} 2 & 4 \\ 1 & 2 \end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}$ より $x = -2y$ なので，$\boldsymbol{q}_2 = \begin{pmatrix} -2 \\ 1 \end{pmatrix}$ ととることができます。
+$\lambda_1=2$ では，固有方程式の2行目は $x-2y=0$ です。
+
+$$
+\begin{aligned}
+x&=2y\\
+\begin{pmatrix}x\\y\end{pmatrix}&=y\begin{pmatrix}2\\1\end{pmatrix}
+\end{aligned}
+$$
+
+$y=1$ を選び，$\boldsymbol q_1={}^t(2,1)$ とします。
+
+$\lambda_2=-2$ では，2行目は $x+2y=0$ です。
+
+$$
+\begin{aligned}
+x&=-2y\\
+\begin{pmatrix}x\\y\end{pmatrix}&=y\begin{pmatrix}-2\\1\end{pmatrix}
+\end{aligned}
+$$
+
+$y=1$ を選び，$\boldsymbol q_2={}^t(-2,1)$ とします。
 
 $$
 \finalanswer{\lambda_1 = 2,\; \boldsymbol{q}_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \qquad \lambda_2 = -2,\; \boldsymbol{q}_2 = \begin{pmatrix} -2 \\ 1 \end{pmatrix}}
 $$
 
 ### (1)(ii)
-$\boldsymbol{s} = {}^t(s_1, s_2) = P^{-1}\boldsymbol{u}$ より $\boldsymbol{u} = P\boldsymbol{s}$ です。式 (1) の左から $P^{-1}$ を掛けます。
+
+
+$$
+\begin{aligned}
+\boldsymbol{s} &= {}^t(s_1, s_2) \\
+&= P^{-1}\boldsymbol{u}
+\end{aligned}
+$$
+
+ より $\boldsymbol{u} = P\boldsymbol{s}$ です。式 (1) の左から $P^{-1}$ を掛けます。
 
 $$
 \begin{aligned}
@@ -124,7 +154,13 @@ $$
 $$
 
 ### (1)(iii)
-$P = \begin{pmatrix} 2 & -2 \\ 1 & 1 \end{pmatrix}$ の行列式は $\det P = 4$ なので，逆行列は
+
+
+$$
+P = \begin{pmatrix} 2 & -2 \\ 1 & 1 \end{pmatrix}
+$$
+
+ の行列式は $\det P = 4$ なので，逆行列は
 
 $$
 P^{-1} = \frac{1}{4}\begin{pmatrix} 1 & 2 \\ -1 & 2 \end{pmatrix}
@@ -135,7 +171,7 @@ $$
 $$
 \begin{aligned}
 \begin{pmatrix} s_1(x, 0) \\ s_2(x, 0) \end{pmatrix} &= \frac{1}{4}\begin{pmatrix} 1 & 2 \\ -1 & 2 \end{pmatrix}\begin{pmatrix} e^{-x^2} \\ 0 \end{pmatrix} \\
-&= \begin{pmatrix} \dfrac{1}{4}e^{-x^2} \\ -\dfrac{1}{4}e^{-x^2} \end{pmatrix}
+&= \begin{pmatrix} \frac{1}{4}e^{-x^2} \\ -\frac{1}{4}e^{-x^2} \end{pmatrix}
 \end{aligned}
 $$
 
@@ -149,12 +185,12 @@ $$
 
 $$
 \begin{aligned}
-\begin{pmatrix} u_1(x, t) \\ u_2(x, t) \end{pmatrix} &= \begin{pmatrix} 2 & -2 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} \dfrac{1}{4}e^{-(x - 2t)^2} \\ -\dfrac{1}{4}e^{-(x + 2t)^2} \end{pmatrix} \\
-&= \begin{pmatrix} \dfrac{1}{2}\left(e^{-(x - 2t)^2} + e^{-(x + 2t)^2}\right) \\ \dfrac{1}{4}\left(e^{-(x - 2t)^2} - e^{-(x + 2t)^2}\right) \end{pmatrix}
+\begin{pmatrix} u_1(x, t) \\ u_2(x, t) \end{pmatrix} &= \begin{pmatrix} 2 & -2 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} \frac{1}{4}e^{-(x - 2t)^2} \\ -\frac{1}{4}e^{-(x + 2t)^2} \end{pmatrix} \\
+&= \begin{pmatrix} \frac{1}{2}\left(e^{-(x - 2t)^2} + e^{-(x + 2t)^2}\right) \\ \frac{1}{4}\left(e^{-(x - 2t)^2} - e^{-(x + 2t)^2}\right) \end{pmatrix}
 \end{aligned}
 $$
 
-$t = 1$ のとき，$u_1(x, 1)$ は $x = \pm 2$ に高さ $1/2$ の2つの正のガウス型の山をもち，$u_2(x, 1)$ は $x = 2$ に高さ $1/4$ の正の山，$x = -2$ に深さ $-1/4$ の負の谷をもちます。概形は次の図のとおりです。
+$t=1$ では，$u_1$ は $x=\pm2$ 付近に高さがほぼ $1/2$ の2つの山をもちます。$u_2$ は $x=2$ 付近に高さがほぼ $1/4$ の山，$x=-2$ 付近に深さがほぼ $-1/4$ の谷をもちます。両側のガウス関数の裾が重なるため，極値の位置と値はこれらからわずかにずれます。概形を下図に示します。
 
 <figure class="problem-figure" markdown>
 ![t=1におけるu_1(x,1)とu_2(x,1)の概形](../../../docs/assets/figures/pastexam-todai-ributsu/H24_sugaku_2-s-light.svg#only-light)
@@ -179,13 +215,47 @@ $$
 \begin{aligned}
 \det(M - \mu I) &= (-1 - \mu)(4 - \mu) + 6 \\
 &= \mu^2 - 3\mu + 2 \\
-&= (\mu - 1)(\mu - 2) = 0
+&= (\mu - 1)(\mu - 2) \\
+&= 0
 \end{aligned}
 $$
 
-固有値は $\mu_1 = 1$，$\mu_2 = 2$ です。対応する固有ベクトルはそれぞれ $\boldsymbol{v}_1 = \begin{pmatrix} 3 \\ 1 \end{pmatrix}$，$\boldsymbol{v}_2 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$ です。これらを並べた行列 $Q = \begin{pmatrix} 3 & 2 \\ 1 & 1 \end{pmatrix}$ の逆行列は $Q^{-1} = \begin{pmatrix} 1 & -2 \\ -1 & 3 \end{pmatrix}$ です。
+固有値は $\mu_1 = 1$，$\mu_2 = 2$ です。対応する固有ベクトルはそれぞれ 
 
-$\boldsymbol{g} = {}^t(g_1, g_2) = Q^{-1}\boldsymbol{f}$ と変換すると，方程式は独立な2本の拡散方程式に分かれます。
+$$
+\boldsymbol{v}_1 = \begin{pmatrix} 3 \\ 1 \end{pmatrix}
+$$
+
+，
+
+$$
+\boldsymbol{v}_2 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}
+$$
+
+ です。これらを並べた行列 
+
+$$
+Q = \begin{pmatrix} 3 & 2 \\ 1 & 1 \end{pmatrix}
+$$
+
+ の逆行列は 
+
+$$
+Q^{-1} = \begin{pmatrix} 1 & -2 \\ -1 & 3 \end{pmatrix}
+$$
+
+ です。
+
+
+
+$$
+\begin{aligned}
+\boldsymbol{g} &= {}^t(g_1, g_2) \\
+&= Q^{-1}\boldsymbol{f}
+\end{aligned}
+$$
+
+ と変換すると，方程式は独立な2本の拡散方程式に分かれます。
 
 $$
 \frac{\partial g_1}{\partial t} = \frac{\partial^2 g_1}{\partial x^2}, \qquad \frac{\partial g_2}{\partial t} = 2\frac{\partial^2 g_2}{\partial x^2}
@@ -200,7 +270,13 @@ $$
 \end{aligned}
 $$
 
-ここで一般の正定数 $D > 0$ に対し，拡散方程式 $\dfrac{\partial h}{\partial t} = D\dfrac{\partial^2 h}{\partial x^2}$ を初期条件 $h(x, 0) = e^{-x^2}$ のもとでフーリエ変換を用いて解きます。$\hat{h}(k, t) = \displaystyle\int_{-\infty}^{\infty} h(x, t) e^{-ikx}\,\mathrm{d}x$ とおくと，$\dfrac{\partial\hat{h}}{\partial t} = -D k^2 \hat{h}$ および初期条件
+ここで一般の正定数 $D > 0$ に対し，拡散方程式 $\dfrac{\partial h}{\partial t} = D\dfrac{\partial^2 h}{\partial x^2}$ を初期条件 $h(x, 0) = e^{-x^2}$ のもとでフーリエ変換を用いて解きます。
+
+$$
+\hat{h}(k, t) = \int_{-\infty}^{\infty} h(x, t) e^{-ikx}\,\mathrm{d}x
+$$
+
+ とおくと，$\dfrac{\partial\hat{h}}{\partial t} = -D k^2 \hat{h}$ および初期条件
 
 $$
 \begin{aligned}
@@ -210,12 +286,24 @@ $$
 \end{aligned}
 $$
 
-より $\hat{h}(k, t) = \sqrt{\pi}\,e^{-(1/4 + Dt)k^2}$ が得られます。逆フーリエ変換を計算します。
+平方完成で移動した積分路は，元の実軸へ平行移動することができます。被積分関数は整関数であり，実部が $\pm R$ の縦辺の積分は定数倍の $e^{-aR^2}$ で抑えられるため，$R\to\infty$ で0になるからです。ここで $a>0$ はガウスの2次の係数です。逆変換の積分にも同じ理由を用います。
+
+時間の方程式と初期値から，
+
+$$
+\begin{aligned}
+\hat h(k,t)&=\hat h(k,0)e^{-Dk^2t}\\
+&=\sqrt\pi\,e^{-k^2/4}e^{-Dk^2t}\\
+&=\sqrt\pi\,e^{-(1/4+Dt)k^2}
+\end{aligned}
+$$
+
+です。逆フーリエ変換を計算します。
 
 $$
 \begin{aligned}
 h(x, t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty} \sqrt{\pi}\,e^{-\left(\frac{1}{4} + Dt\right)k^2 + ikx}\,\mathrm{d}k \\
-&= \frac{\sqrt{\pi}}{2\pi}\sqrt{\frac{\pi}{\dfrac{1}{4} + Dt}}\exp\!\left(-\frac{x^2}{4\left(\dfrac{1}{4} + Dt\right)}\right) \\
+&= \frac{\sqrt{\pi}}{2\pi}\sqrt{\frac{\pi}{\frac{1}{4} + Dt}}\exp\!\left(-\frac{x^2}{4\left(\frac{1}{4} + Dt\right)}\right) \\
 &= \frac{1}{\sqrt{1 + 4Dt}}\exp\!\left(-\frac{x^2}{1 + 4Dt}\right)
 \end{aligned}
 $$

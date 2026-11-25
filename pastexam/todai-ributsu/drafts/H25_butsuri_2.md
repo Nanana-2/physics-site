@@ -116,10 +116,19 @@ $$
 以上より，式 (2) が成り立ちます。
 
 ### (2)
-転移温度以下で，巨視的な数のボース粒子が最低エネルギーの一粒子状態に集まる現象。
+低温で，巨視的な数のボース粒子が最低エネルギーの一粒子状態を占める現象です。
 
 ### (3)
-$T = T_{\mathrm{c}}$ のとき $\rho' = \rho$ かつ $\mu = 0$ なので，式 (4) において $x = \beta_{\mathrm{c}}\epsilon = \dfrac{\epsilon}{k_{\mathrm{B}} T_{\mathrm{c}}}$ と変数変換します。
+$T = T_{\mathrm{c}}$ のとき $\rho' = \rho$ かつ $\mu = 0$ なので，式 (4) において 
+
+$$
+\begin{aligned}
+x &= \beta_{\mathrm{c}}\epsilon \\
+&= \frac{\epsilon}{k_{\mathrm{B}} T_{\mathrm{c}}}
+\end{aligned}
+$$
+
+ と変数変換します。
 
 $$
 \begin{aligned}
@@ -128,7 +137,13 @@ $$
 \end{aligned}
 $$
 
-ここで $I_{1/2} \equiv \displaystyle\int_0^{\infty} \mathrm{d}x\,\dfrac{x^{1/2}}{e^x - 1}$ とおきます。問題文の仮定より $I_{1/2}$ は収束する正の無次元定数です。式 (3) の $A = \dfrac{m^{3/2}}{2^{1/2}\pi^2 \hbar^3}$ と $\lambda_{T_{\mathrm{c}}} = \left(\dfrac{2\pi\hbar^2}{m k_{\mathrm{B}} T_{\mathrm{c}}}\right)^{1/2}$ を用いて $\rho\lambda_{T_{\mathrm{c}}}^3$ を計算します。
+ここで 
+
+$$
+I_{1/2} \equiv \int_0^{\infty} \mathrm{d}x\,\frac{x^{1/2}}{e^x - 1}
+$$
+
+ とおきます。問題文の仮定より $I_{1/2}$ は収束する正の無次元定数です。式 (3) の $A = \dfrac{m^{3/2}}{2^{1/2}\pi^2 \hbar^3}$ と $\lambda_{T_{\mathrm{c}}} = \left(\dfrac{2\pi\hbar^2}{m k_{\mathrm{B}} T_{\mathrm{c}}}\right)^{1/2}$ を用いて $\rho\lambda_{T_{\mathrm{c}}}^3$ を計算します。
 
 $$
 \begin{aligned}
@@ -159,7 +174,13 @@ E &= A\int_0^{\infty} \mathrm{d}\epsilon\,\frac{\epsilon^{\frac{3}{2}}}{e^{\epsi
 \end{aligned}
 $$
 
-ここで $I_{3/2} \equiv \displaystyle\int_0^{\infty} \mathrm{d}x\,\dfrac{x^{3/2}}{e^x - 1}$ は収束する正の定数です。よって $E = A I_{3/2} k_{\mathrm{B}}^{5/2} T^{5/2}$ となり，これを $T$ で偏微分すると定積熱容量 $C_V$ が得られます。
+ここで 
+
+$$
+I_{3/2} \equiv \int_0^{\infty} \mathrm{d}x\,\frac{x^{3/2}}{e^x - 1}
+$$
+
+ は収束する正の定数です。よって $E = A I_{3/2} k_{\mathrm{B}}^{5/2} T^{5/2}$ となり，これを $T$ で偏微分すると定積熱容量 $C_V$ が得られます。
 
 $$
 \begin{aligned}
@@ -198,8 +219,27 @@ $$
 
 始状態の温度を $T_1$，終状態の温度を $T_2$ とします。スピン $0$ の理想ボース気体の $T < T_{\mathrm{c}}$ における単位体積あたりのエントロピーを $S_0(T) = c T^{3/2}$ とおきます。ここで $c = \dfrac{5}{3} A I_{3/2} k_{\mathrm{B}}^{5/2} > 0$ です。
 
-- 始状態では $\epsilon_{\mathrm{Z},1} \ll k_{\mathrm{B}} T_1$ なので，3つのスピン成分のエネルギー差は熱エネルギーに比べて無視することができ，$\tilde{D}(\epsilon) \simeq 3 D(\epsilon + \epsilon_{\mathrm{Z},1})$ となります。よって3成分すべてが等しくエントロピーに寄与し，始状態のエントロピー $S_1$ はおよそ $3 S_0(T_1) = 3 c T_1^{3/2}$ です。
-- 終状態では $\epsilon_{\mathrm{Z},2} \gg k_{\mathrm{B}} T_2$ なので，上側の2つのスピン成分の分布関数 $f(\epsilon)$ は $e^{-\epsilon_{\mathrm{Z},2}/(k_{\mathrm{B}} T_2)}$ や $e^{-2\epsilon_{\mathrm{Z},2}/(k_{\mathrm{B}} T_2)}$ の因子で強く抑えられ，エントロピーへの寄与は無視することができます。よって最低のスピン成分のみが寄与し，終状態のエントロピー $S_2$ はおよそ $S_0(T_2) = c T_2^{3/2}$ です。
+始状態では $\epsilon_{\mathrm Z,1}\ll k_{\mathrm B}T_1$ なので，熱エネルギーに比べてスピン成分の間隔を無視することができます。3成分のエントロピーを加えると，
+
+$$
+\begin{aligned}
+S_1&\simeq3S_0(T_1)\\
+&=3cT_1^{3/2}
+\end{aligned}
+$$
+
+です。
+
+終状態では $\epsilon_{\mathrm Z,2}\gg k_{\mathrm B}T_2$ です。上の2成分の分布には $e^{-\epsilon_{\mathrm Z,2}/(k_{\mathrm B}T_2)}$ または $e^{-2\epsilon_{\mathrm Z,2}/(k_{\mathrm B}T_2)}$ が掛かるので，その寄与を無視します。
+
+$$
+\begin{aligned}
+S_2&\simeq S_0(T_2)\\
+&=cT_2^{3/2}
+\end{aligned}
+$$
+
+となります。
 
 断熱変化ではエントロピーが減少しません。特に準静的な断熱変化では $S_2 = S_1$ が成り立つので，次式が得られます。
 
@@ -210,4 +250,4 @@ T_2 &\simeq 3^{\frac{2}{3}} T_1 > T_1
 \end{aligned}
 $$
 
-非可逆な断熱変化であっても $S_2 \ge S_1$ なので $T_2$ はさらに高くなります。したがって，終状態の温度は始状態の温度より**高い**です。
+非可逆な断熱変化であっても $S_2 \ge S_1$ なので $T_2$ はさらに高くなります。したがって，終状態の温度は始状態の温度より高いです。
