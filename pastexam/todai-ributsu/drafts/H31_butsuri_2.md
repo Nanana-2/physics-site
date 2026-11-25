@@ -75,23 +75,7 @@ $$
 ### (1)
 
 
-$$
-\begin{aligned}
-\hat{x}\cdot\hat{x} &= \hat{y}\cdot\hat{y} \\
-&= 1
-\end{aligned}
-$$
-
-，
-
-$$
-\begin{aligned}
-\hat{x}\cdot\hat{y} &= \hat{y}\cdot\hat{x} \\
-&= 0
-\end{aligned}
-$$
-
- です。$L = 2$ の可能なスピン配置は $2^2 = 4$ 通りあり，それぞれのエネルギー $E(\mathbf{S}_1, \mathbf{S}_2) = -J\,\mathbf{S}_1\cdot\mathbf{S}_2$ は次のとおりです。
+$\hat{x}\cdot\hat{x} = \hat{y}\cdot\hat{y} = 1$， $\hat{x}\cdot\hat{y} = \hat{y}\cdot\hat{x} = 0$ です。$L = 2$ の可能なスピン配置は $2^2 = 4$ 通りあり，それぞれのエネルギー $E(\mathbf{S}_1, \mathbf{S}_2) = -J\,\mathbf{S}_1\cdot\mathbf{S}_2$ は次のとおりです。
 
 - $(\hat{x}, \hat{x})$：$E = -J$
 - $(\hat{x}, \hat{y})$：$E = 0$
@@ -224,16 +208,7 @@ P_2 &= \frac{1}{2\left(e^{\beta J} + 1\right)}\begin{pmatrix} e^{\beta J} & 1 \\
 \end{aligned}
 $$
 
-なので，式 (2) を繰り返し用いると 
-
-$$
-\begin{aligned}
-P_L &= P_2 Q^{L - 2} \\
-&= \dfrac{1}{2} Q^{L - 1}
-\end{aligned}
-$$
-
- となります。
+なので，式 (2) を繰り返し用いると $P_L = P_2 Q^{L - 2} = \dfrac{1}{2} Q^{L - 1}$ となります。
 
 実対称行列 $Q$ の固有値を求めます。
 
@@ -289,7 +264,7 @@ $$
 \end{aligned}
 $$
 
- より $\ln\left(\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1}\right) \simeq 2e^{-\beta J}$ なので，
+より $\ln\left(\dfrac{e^{\beta J} + 1}{e^{\beta J} - 1}\right) \simeq 2e^{-\beta J}$ なので，
 
 $$
 \xi \simeq \frac{1}{2}e^{\beta J}

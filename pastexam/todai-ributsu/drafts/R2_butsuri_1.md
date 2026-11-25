@@ -19,9 +19,12 @@ exam_modified: Web掲載にあたり数式をテキスト化し，図を描き�
 量子力学的二状態系を考えよう。この場合，観測量は $2\times 2$ のエルミート行列で表される演算子に対応する。以下では次の行列表記をもつ観測量
 
 $$
-\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix},\qquad
-\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\qquad
-\sigma(\theta) = (\cos\theta)\sigma_z + (\sin\theta)\sigma_x \tag{1}
+\begin{aligned}
+&\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix},\qquad
+\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\\
+&\sigma(\theta) = (\cos\theta)\sigma_z + (\sin\theta)\sigma_x
+\end{aligned}
+\tag{1}
 $$
 
 を考え，状態ベクトルを
@@ -172,14 +175,7 @@ $$
 
 
 
-$$
-\begin{aligned}
-\sigma(\theta)^2 &= (\cos^2\theta + \sin^2\theta)I \\
-&= I
-\end{aligned}
-$$
-
- なので，$\sigma(\theta)$ の固有値は $\pm 1$ です。それぞれに対応する規格化固有状態は
+$\sigma(\theta)^2 = (\cos^2\theta + \sin^2\theta)I = I$ なので，$\sigma(\theta)$ の固有値は $\pm 1$ です。それぞれに対応する規格化固有状態は
 
 $$
 |+\theta\rangle = \begin{pmatrix} \cos\dfrac{\theta}{2} \\ \sin\dfrac{\theta}{2} \end{pmatrix},\qquad
@@ -260,7 +256,7 @@ $$
 \end{aligned}
 $$
 
-よって $\sigma^A(\theta),\ \sigma^B(\theta)$ の測定で得られる組は $(+1, -1)$ と $(-1, +1)$で，確率はそれぞれ $\dfrac12$ です。取りうる組はこの2通りのみであり，必ず $s_\theta^A=\pm1$，$s_\theta^B=\mp1$ が成り立ちます。
+よって $\sigma^A(\theta),\ \sigma^B(\theta)$ の測定で得られる組は $(+1, -1)$ と $(-1, +1)$ で，確率はそれぞれ $\dfrac12$ です。取りうる組はこの2通りのみであり，必ず $s_\theta^A=\pm1$，$s_\theta^B=\mp1$ が成り立ちます。
 
 ### (7)
 問6で示した $|\Psi\rangle = \dfrac{1}{\sqrt{2}}\left(|+\theta\rangle_A|-\theta\rangle_B - |-\theta\rangle_A|+\theta\rangle_B\right)$ に対して，部分系 $B$ の状態を $\sigma^B(\varphi)$ の固有基底 $|+\varphi\rangle_B,\ |-\varphi\rangle_B$ で展開します。
@@ -339,16 +335,7 @@ $$
 積 $s^A s^B$ の期待値は，9通りの角度組に対する問7の結果の平均です。
 
 - $\theta = \varphi$ となる組は $(0^\circ, 0^\circ),\ (120^\circ, 120^\circ),\ (240^\circ, 240^\circ)$ の $3$ 通りあり，いずれも $-\cos(0^\circ) = -1$。
-- $\theta \neq \varphi$ となる組は残りの $6$ 通りあり，いずれも $|\theta - \varphi| = 120^\circ$ または $240^\circ$ なので 
-
-$$
-\begin{aligned}
--\cos(\theta - \varphi) &= -\left(-\dfrac{1}{2}\right) \\
-&= \dfrac{1}{2}
-\end{aligned}
-$$
-
-。
+- $\theta \neq \varphi$ となる組は残りの $6$ 通りあり，いずれも $|\theta - \varphi| = 120^\circ$ または $240^\circ$ なので $-\cos(\theta - \varphi) = -\left(-\dfrac{1}{2}\right) = \dfrac{1}{2}$。
 
 よって，
 
@@ -363,16 +350,7 @@ $$
 となり，期待値が $0$ になることが確かめられます。
 
 ### (9)
-仮説の式 (5) より $s_\varphi^B = -s_\varphi^A$ なので，角度の組 $(\theta, \varphi)$ を選んだときの積は 
-
-$$
-\begin{aligned}
-s^A s^B &= s_\theta^A s_\varphi^B \\
-&= -s_\theta^A s_\varphi^A
-\end{aligned}
-$$
-
- です。$9$ 通りの組 $(\theta, \varphi)$ が等確率 $\dfrac{1}{9}$ で選ばれるため，与えられた $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A)$ に対する期待値は次の式で求めることができます。
+仮説の式 (5) より $s_\varphi^B = -s_\varphi^A$ なので，角度の組 $(\theta, \varphi)$ を選んだときの積は $s^A s^B = s_\theta^A s_\varphi^B = -s_\theta^A s_\varphi^A$ です。$9$ 通りの組 $(\theta, \varphi)$ が等確率 $\dfrac{1}{9}$ で選ばれるため，与えられた $(s_{0^\circ}^A, s_{120^\circ}^A, s_{240^\circ}^A)$ に対する期待値は次の式で求めることができます。
 
 $$
 \begin{aligned}

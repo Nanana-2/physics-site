@@ -125,37 +125,10 @@ $$
 $\lambda + m_\alpha^2$ の符号で場合分けして調べます。
 
 - $\lambda + m_\alpha^2 = 0$ のとき：一般解は $f_\alpha(x) = c_1 + c_2 x$。$f_\alpha'(0) = 0$ より $c_2 = 0$，$f_\alpha(\pi) = 0$ より $c_1 = 0$ となり，$f_\alpha(x) \equiv 0$ 以外の解はありません。
-- $\lambda + m_\alpha^2 = -\mu^2 < 0\ (\mu > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cosh(\mu x) + c_2\sinh(\mu x)$。$f_\alpha'(0) = 0$ より $c_2 = 0$，
+- $\lambda + m_\alpha^2 = -\mu^2 < 0\ (\mu > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cosh(\mu x) + c_2\sinh(\mu x)$。$f_\alpha'(0) = 0$ より $c_2 = 0$， $f_\alpha(\pi) = c_1\cosh(\mu\pi) = 0$ より $c_1 = 0$ となり，$f_\alpha(x) \equiv 0$ 以外の解はありません。
+- $\lambda + m_\alpha^2 = \kappa^2 > 0\ (\kappa > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cos(\kappa x) + c_2\sin(\kappa x)$。 $f_\alpha'(0) = \kappa c_2 = 0$ より $c_2 = 0$， $f_\alpha(\pi) = c_1\cos(\kappa\pi) = 0$ より $c_1 \neq 0$ となる条件は $\cos(\kappa\pi) = 0$，すなわち $\kappa = n - \dfrac{1}{2}\ (n = 1, 2, 3, \dots)$ です。
 
-$$
-\begin{aligned}
-f_\alpha(\pi) &= c_1\cosh(\mu\pi) \\
-&= 0
-\end{aligned}
-$$
-
- より $c_1 = 0$ となり，$f_\alpha(x) \equiv 0$ 以外の解はありません。
-- $\lambda + m_\alpha^2 = \kappa^2 > 0\ (\kappa > 0)$ のとき：一般解は $f_\alpha(x) = c_1\cos(\kappa x) + c_2\sin(\kappa x)$。
-
-$$
-\begin{aligned}
-f_\alpha'(0) &= \kappa c_2 \\
-&= 0
-\end{aligned}
-$$
-
- より $c_2 = 0$，
-
-$$
-\begin{aligned}
-f_\alpha(\pi) &= c_1\cos(\kappa\pi) \\
-&= 0
-\end{aligned}
-$$
-
- より $c_1 \neq 0$ となる条件は $\cos(\kappa\pi) = 0$，すなわち $\kappa = n - \dfrac{1}{2}\ (n = 1, 2, 3, \dots)$ です。
-
-よって 
+よって
 
 $$
 \begin{aligned}
@@ -164,7 +137,7 @@ $$
 \end{aligned}
 $$
 
-，対応する固有関数は $f_\alpha^{(n)}(x) = \cos\left[\left(n - \dfrac{1}{2}\right)x\right]$です。固有関数には，ゼロでない定数倍の任意性があります。したがって，
+となります。対応する固有関数は $f_\alpha^{(n)}(x) = \cos\left[\left(n - \dfrac{1}{2}\right)x\right]$ です。固有関数には，0 でない定数倍の任意性があります。したがって，
 
 $$
 \finalanswer{\lambda_\alpha^{(n)} = \left(n - \frac{1}{2}\right)^2 - m_\alpha^2,\qquad f_\alpha^{(n)}(x) = \cos\left[\left(n - \frac{1}{2}\right)x\right] \qquad (n = 1, 2, 3, \dots)}
@@ -210,25 +183,7 @@ $$
 
 (iii) $\lambda > -m_\alpha^2$ より $\kappa = \sqrt{\lambda + m_\alpha^2} > 0$ とおくと，微分方程式は $\dfrac{\partial^2 g_\alpha}{\partial x^2} + \kappa^2 g_\alpha = 0$ です。一般解は $g_\alpha(x; \lambda) = c_1\cos(\kappa x) + c_2\sin(\kappa x)$ となります。
 
-境界条件 
-
-$$
-\begin{aligned}
-\left.\dfrac{\partial g_\alpha}{\partial x}\right|_{x=0} &= \kappa c_2 \\
-&= 0
-\end{aligned}
-$$
-
- より $c_2 = 0$，
-
-$$
-\begin{aligned}
-g_\alpha(0; \lambda) &= c_1 \\
-&= 1
-\end{aligned}
-$$
-
- です。したがって，
+境界条件 $\left.\dfrac{\partial g_\alpha}{\partial x}\right|_{x=0} = \kappa c_2 = 0$ より $c_2 = 0$， $g_\alpha(0; \lambda) = c_1 = 1$ です。したがって，
 
 $$
 \finalanswer{g_\alpha(x; \lambda) = \cos\left(\sqrt{\lambda + m_\alpha^2}\,x\right)}
@@ -286,16 +241,7 @@ $$
 
 となり，$\ln\dfrac{\tilde{g}_2(re^{i\theta})}{\tilde{g}_1(re^{i\theta})} = \mathcal{O}(r^{-1/2}) \to 0$ です。したがって上の積分は $s = 0$ の近傍（$-1/2 < \operatorname{Re} s < 1$）で絶対収束し，$Z(s)$ の解析接続を与えます。
 
-係数 $F(s) = \dfrac{e^{-i\theta s}(e^{2\pi i s} - 1)}{2\pi i}$ は $F(0) = 0$ かつ 
-
-$$
-\begin{aligned}
-F'(0) &= \dfrac{2\pi i}{2\pi i} \\
-&= 1
-\end{aligned}
-$$
-
- を満たすため，$Z(s)$ を $s$ で微分して $s = 0$ を代入すると次式が得られます。
+係数 $F(s) = \dfrac{e^{-i\theta s}(e^{2\pi i s} - 1)}{2\pi i}$ は $F(0) = 0$ かつ $F'(0) = \dfrac{2\pi i}{2\pi i} = 1$ を満たすため，$Z(s)$ を $s$ で微分して $s = 0$ を代入すると次式が得られます。
 
 $$
 \begin{aligned}

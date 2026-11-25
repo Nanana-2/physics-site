@@ -194,16 +194,7 @@ $$
 |\psi_-^{(\lambda)}\rangle = -\sin\theta(\lambda)|1\rangle + \cos\theta(\lambda)|2\rangle
 $$
 
-ととることができます。時刻 $t$ に対する時間微分を 
-
-$$
-\begin{aligned}
-\dot{\theta}(t) &= \dfrac{\mathrm{d}}{\mathrm{d}t}\theta(t/T) \\
-&= \dfrac{1}{T}\theta'(t/T)
-\end{aligned}
-$$
-
- とおくと，基底ベクトルの時間微分は次のようになります。
+ととることができます。時刻 $t$ に対する時間微分を $\dot{\theta}(t) = \dfrac{\mathrm{d}}{\mathrm{d}t}\theta(t/T) = \dfrac{1}{T}\theta'(t/T)$ とおくと，基底ベクトルの時間微分は次のようになります。
 
 $$
 \frac{\partial}{\partial t}|\psi_+^{(t/T)}\rangle = \dot{\theta}(t)\,|\psi_-^{(t/T)}\rangle,\qquad
@@ -265,15 +256,6 @@ $$
 \end{aligned}
 $$
 
-となります。したがって区間 $I$ 上で $e^{-i\chi(x)}$ は激しく振動するため，問題文の事実より $|\tilde{c}_-(T)| \ll 1$ となります。また規格化条件 $|\tilde c_+(t)|^2+|\tilde c_-(t)|^2=1$ より，
-
-$$
-\begin{aligned}
-|\tilde{c}_+(T)| &= \sqrt{1 - |\tilde{c}_-(T)|^2} \\
-&\simeq 1
-\end{aligned}
-$$
-
- が保たれます。
+となります。したがって区間 $I$ 上で $e^{-i\chi(x)}$ は激しく振動するため，問題文の事実より $|\tilde{c}_-(T)| \ll 1$ となります。また規格化条件 $|\tilde c_+(t)|^2+|\tilde c_-(t)|^2=1$ より， $|\tilde{c}_+(T)| = \sqrt{1 - |\tilde{c}_-(T)|^2} \simeq 1$ が保たれます。
 
 

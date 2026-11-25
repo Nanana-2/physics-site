@@ -167,22 +167,27 @@ $$
 
 となります。$k$ を $0$ でない任意定数として，対応する固有モード $(a_1,a_2)$ を問5の連立方程式から求めます。
 
-- **$\omega_1 = \sqrt{\dfrac{g}{\ell_1}}$ のとき**：第2式 $-\ell_1\omega_1^2 a_1 + (g - \ell_2\omega_1^2)a_2 = 0$ に $\omega_1^2 = g/\ell_1$ を代入すると，
-  $$
+$\omega_1 = \sqrt{\dfrac{g}{\ell_1}}$ のモードは，第2式 $-\ell_1\omega_1^2 a_1 + (g - \ell_2\omega_1^2)a_2 = 0$ から求めます。$\omega_1^2 = g/\ell_1$ を代入します。
+
+$$
 \begin{aligned}
 -g a_1 + g\left(1 - \frac{\ell_2}{\ell_1}\right)a_2 &= 0 \\
 \frac{a_2}{a_1} &= \frac{\ell_1}{\ell_1 - \ell_2}
 \end{aligned}
 $$
-  よって $(a_1, a_2) = k(\ell_1 - \ell_2,\ \ell_1)$ です。
-- **$\omega_2 = \sqrt{\dfrac{g}{\ell_2}}$ のとき**：第1式 $(m_1 + m_2)(g - \ell_1\omega_2^2)a_1 = m_2\ell_2\omega_2^2 a_2$ に $\omega_2^2 = g/\ell_2$ を代入すると，
-  $$
+
+よって，$(a_1, a_2) = k(\ell_1 - \ell_2,\ \ell_1)$ です。
+
+$\omega_2 = \sqrt{\dfrac{g}{\ell_2}}$ のモードは，第1式 $(m_1 + m_2)(g - \ell_1\omega_2^2)a_1 = m_2\ell_2\omega_2^2 a_2$ から求めます。$\omega_2^2 = g/\ell_2$ を代入します。
+
+$$
 \begin{aligned}
 \frac{a_1}{a_2} &= \frac{m_2}{m_1 + m_2}\frac{\ell_2}{\ell_2 - \ell_1} \\
 &\simeq 0
 \end{aligned}
 $$
-  $m_1\gg m_2$ と長さの条件から，$|a_1/a_2|\ll\sqrt{m_2/m_1}\ll1$ です。よって $(a_1, a_2) = k(0, 1)$ です。
+
+$m_1\gg m_2$ と長さの条件から，$|a_1/a_2|\ll\sqrt{m_2/m_1}\ll1$ です。よって，$(a_1, a_2) = k(0, 1)$ となります。
 
 したがって，
 

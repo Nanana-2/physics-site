@@ -202,17 +202,7 @@ $$
 $$
 
 ### (5)
-一辺の長さ $L$ の立方体における自由粒子の平面波波動関数 $\psi_{\boldsymbol{k}}(\boldsymbol{r}) = \dfrac{1}{\sqrt{V}}e^{i\boldsymbol{k}\cdot\boldsymbol{r}}$ に周期境界条件 $\psi(x + L, y, z) = \psi(x, y, z)$ を3方向それぞれにを課すと，
-
-$$
-\begin{aligned}
-e^{i k_x L} &= e^{i k_y L} \\
-&= e^{i k_z L} \\
-&= 1
-\end{aligned}
-$$
-
- となります。よって各成分は $\dfrac{2\pi}{L}$ の整数倍です。したがって，
+一辺の長さ $L$ の立方体における自由粒子の平面波波動関数 $\psi_{\boldsymbol{k}}(\boldsymbol{r}) = \dfrac{1}{\sqrt{V}}e^{i\boldsymbol{k}\cdot\boldsymbol{r}}$ に周期境界条件 $\psi(x + L, y, z) = \psi(x, y, z)$ を3方向それぞれにを課すと， $e^{i k_x L} = e^{i k_y L} = e^{i k_z L} = 1$ となります。よって各成分は $\dfrac{2\pi}{L}$ の整数倍です。したがって，
 
 $$
 \finalanswer{\boldsymbol{k} = \frac{2\pi}{L}(n_x, n_y, n_z) \qquad (n_x, n_y, n_z = 0, \pm 1, \pm 2, \dots)}

@@ -89,16 +89,7 @@ $$
 \finalanswer{F(s) = \frac{1}{s^2} \qquad (\operatorname{Re} s > 0)}
 $$
 
-(ii) 
-
-$$
-\begin{aligned}
-f(t) &= \sin\omega t \\
-&= \dfrac{e^{i\omega t} - e^{-i\omega t}}{2i}
-\end{aligned}
-$$
-
- とおきます。$\operatorname{Re} s > 0$ のとき $\operatorname{Re}(s \mp i\omega) = \operatorname{Re} s > 0$ なので積分が収束します。$\operatorname{Re}s\le0$ では積分は収束しません。
+(ii) $f(t) = \sin\omega t = \dfrac{e^{i\omega t} - e^{-i\omega t}}{2i}$ とおきます。$\operatorname{Re} s > 0$ のとき $\operatorname{Re}(s \mp i\omega) = \operatorname{Re} s > 0$ なので積分が収束します。$\operatorname{Re}s\le0$ では積分は収束しません。
 
 $$
 \begin{aligned}

@@ -193,16 +193,7 @@ $$
 - **低温極限**（$k_{\mathrm{B}}T \ll \hbar\omega$）：$C_{\mathrm{Q}} \simeq k_{\mathrm{B}}\left(\dfrac{\hbar\omega}{k_{\mathrm{B}}T}\right)^2 e^{-\hbar\omega/(k_{\mathrm{B}}T)} \to 0$ と指数関数的に $0$ へ近づき，温度によらず一定値 $k_{\mathrm{B}}$ を保つ古典論と大きく異なります。
 
 ### (3)
-平衡位置からの変位を $u_j = x_j - ja\ (j = 1, 2, \dots, N)$ とおき，固定端条件を 
-
-$$
-\begin{aligned}
-u_0 &= u_{N+1} \\
-&= 0
-\end{aligned}
-$$
-
- で表します。ハミルトニアン (5) は次のように書かれます。
+平衡位置からの変位を $u_j = x_j - ja\ (j = 1, 2, \dots, N)$ とおき，固定端条件を $u_0 = u_{N+1} = 0$ で表します。ハミルトニアン (5) は次のように書かれます。
 
 $$
 H = \sum_{j=1}^{N} \frac{p_j^2}{2m} + \frac{m\omega^2}{2}\sum_{j=0}^{N} \left(u_{j+1} - u_j\right)^2
@@ -215,27 +206,9 @@ u_j = \sqrt{\frac{2}{N + 1}}\sum_{\ell=1}^{N} Q_\ell \sin\left(\frac{\ell j\pi}{
 p_j = \sqrt{\frac{2}{N + 1}}\sum_{\ell=1}^{N} P_\ell \sin\left(\frac{\ell j\pi}{N + 1}\right)
 $$
 
-$j=0,N+1$ では 
+$j=0,N+1$ では $u_0 = u_{N+1} = 0$ を満たします。直交性 $\dfrac{2}{N + 1}\displaystyle\sum_{j=1}^{N}\sin\left(\dfrac{\ell j\pi}{N + 1}\right)\sin\left(\dfrac{\ell' j\pi}{N + 1}\right) = \delta_{\ell\ell'}$ より運動エネルギーは $\displaystyle\sum_{j=1}^{N}\dfrac{p_j^2}{2m} = \sum_{\ell=1}^{N}\dfrac{P_\ell^2}{2m}$ です。
 
-$$
-\begin{aligned}
-u_0 &= u_{N+1} \\
-&= 0
-\end{aligned}
-$$
-
- を満たします。直交性 $\dfrac{2}{N + 1}\displaystyle\sum_{j=1}^{N}\sin\left(\dfrac{\ell j\pi}{N + 1}\right)\sin\left(\dfrac{\ell' j\pi}{N + 1}\right) = \delta_{\ell\ell'}$ より運動エネルギーは $\displaystyle\sum_{j=1}^{N}\dfrac{p_j^2}{2m} = \sum_{\ell=1}^{N}\dfrac{P_\ell^2}{2m}$ です。
-
-一方，ポテンシャルエネルギーは 
-
-$$
-\begin{aligned}
-u_0 &= u_{N+1} \\
-&= 0
-\end{aligned}
-$$
-
- を用いて部分和をとると
+一方，ポテンシャルエネルギーは $u_0 = u_{N+1} = 0$ を用いて部分和をとると
 
 $$
 \sum_{j=0}^{N} (u_{j+1} - u_j)^2 = \sum_{j=1}^{N} u_j\left(2u_j - u_{j-1} - u_{j+1}\right)
