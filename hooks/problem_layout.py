@@ -122,6 +122,10 @@ def on_page_content(html, page, config, files):
         return _books(html)
     if page.is_homepage:
         return _home(html, page, config)
+    if page.file.src_uri == "physmath.md":
+        return _physmath(html, config)
+    if page.file.src_uri == "pastexam/index.md":
+        return html + _exam_top(page, config)
     if re.fullmatch(r"pastexam/[^/]+/index\.md", page.file.src_uri):
         return html + _exam_years(page, config)
     if not page.file.src_uri.startswith(SUBJECT_DIRS) and not page.meta.get("exam_number"):
@@ -364,8 +368,8 @@ def _front_matter(md_path: Path) -> dict:
         return {}
 
 
-def _exam_years(page, config) -> str:
-    base = Path(config["docs_dir"]) / Path(page.file.src_uri).parent
+def _exam_rows(base: Path) -> dict:
+    """大学のフォルダのページを年度ごとにまとめる。{年度: {"name": 令和8年度, "rows": [...]}}"""
     years = {}
     for md in base.glob("*.md"):
         if md.stem == "index":
@@ -378,34 +382,72 @@ def _exam_years(page, config) -> str:
         years.setdefault(parts[0], {"name": meta.get("exam_year", parts[0]), "rows": []})["rows"].append(
             (group, int(parts[-1]), title, md.stem, _exam_level(meta))
         )
+    return years
+
+
+def _year_order(year: str):
+    return (0 if year[0] == "R" else 1, -int(year[1:]))
+
+
+def _exam_section(year: str, data: dict, href_prefix: str = "") -> str:
+    body, last = "", None
+    for group, number, title, stem, level in sorted(data["rows"]):
+        if group and group != last:
+            body += f'<p class="toc-group">{EXAM_SUBJECTS.get(group, group)}</p>'
+        last = group
+        body += (
+            f'<a class="toc-row" href="{href_prefix}{stem}/"><span class="toc-row__num">第{number}問</span>'
+            f'<span class="toc-row__title">{title}</span>'
+            f'{_stars_html(level, "toc-row__stars toc-row__stars--exam", "†", "†")}</a>'
+        )
+    if "note" in data:
+        body += f'<p class="toc-note">{data["note"]}</p>'
+    return (
+        f'<section class="toc-chapter" id="{year}"><h2 class="toc-chapter__head">'
+        f'<span class="toc-chapter__title">{data["name"]}</span></h2>{body}</section>'
+    )
+
+
+def _exam_years(page, config) -> str:
+    base = Path(config["docs_dir"]) / Path(page.file.src_uri).parent
+    years = _exam_rows(base)
     if not years:
         return ""
     for year, (name, note) in EXAM_GAPS.get(base.name, {}).items():
         years.setdefault(year, {"name": name, "rows": [], "note": note})
-    index, sections = "", ""
-    for year in sorted(years, key=lambda y: (0 if y[0] == "R" else 1, -int(y[1:]))):
-        name = years[year]["name"]
-        index += f'<a class="toc-index__link" href="#{year}">{name.replace("年度", "")}</a>'
-        body, last = "", None
-        for group, number, title, stem, level in sorted(years[year]["rows"]):
-            if group and group != last:
-                body += f'<p class="toc-group">{EXAM_SUBJECTS.get(group, group)}</p>'
-            last = group
-            body += (
-                f'<a class="toc-row" href="{stem}/"><span class="toc-row__num">第{number}問</span>'
-                f'<span class="toc-row__title">{title}</span>'
-                f'{_stars_html(level, "toc-row__stars toc-row__stars--exam", "†", "†")}</a>'
-            )
-        if "note" in years[year]:
-            body += f'<p class="toc-note">{years[year]["note"]}</p>'
-        sections += (
-            f'<section class="toc-chapter" id="{year}"><h2 class="toc-chapter__head">'
-            f'<span class="toc-chapter__title">{name}</span></h2>{body}</section>'
-        )
+    order = sorted(years, key=_year_order)
+    index = "".join(f'<a class="toc-index__link" href="#{y}">{years[y]["name"].replace("年度", "")}</a>' for y in order)
+    sections = "".join(_exam_section(y, years[y]) for y in order)
     return (
         f'<nav class="toc-index toc-index--years" aria-label="年度の一覧">{index}</nav>'
         f'<div class="toc toc--exam">{sections}</div>'
     )
+
+
+def _exam_top(page, config) -> str:
+    """院試過去問の最初のページ：大学のタイル（問題数と年度の範囲）と，各大学の最新の年度の問題。"""
+    root = Path(config["docs_dir"]) / "pastexam"
+    tiles, latest = "", ""
+    for univ in sorted(d for d in root.iterdir() if (d / "index.md").is_file()):
+        years = _exam_rows(univ)
+        if not years:
+            continue
+        order = sorted(years, key=_year_order)
+        name = str(_front_matter(univ / "index.md").get("title", univ.name)).removesuffix("の過去問")
+        count = sum(len(v["rows"]) for v in years.values())
+        tiles += (
+            f'<a class="home-tile" href="{univ.name}/"><span class="home-tile__body">'
+            f'<span class="home-tile__name">{name}<span class="home-tile__count">{count}問</span></span>'
+            f'<span class="home-tile__desc">{years[order[-1]]["name"]}から{years[order[0]]["name"]}まで</span></span></a>'
+        )
+        newest = dict(years[order[0]], name=f"{name} {years[order[0]]['name']}")
+        latest += _exam_section(order[0], newest, f"{univ.name}/")
+    if not tiles:
+        return ""
+    # 大学が1つのうちは，タイルを本文の幅いっぱいにする
+    single = " home-tiles--single" if tiles.count('class="home-tile"') == 1 else ""
+    return f'<div class="home-tiles{single}">{tiles}</div><div class="toc toc--exam toc--latest">{latest}</div>'
+
 
 
 # ---- 参考文献一覧：分野の見出しを帯にする（科目のアイコンは付けない），冒頭の「このページは何？」を薄いグレーの面で囲む ----
@@ -491,6 +533,41 @@ def _home_heading(title: str, id_: str = "") -> str:
     return f'<h2{id_attr} class="home-head">{title}</h2>'
 
 
+def _subject_tiles(subjects, counts, prefix: str = "") -> str:
+    """分野のタイル（名前・問題数・難易度の割合のバー・説明）。トップと物理数学の一覧で使う。"""
+    out = ""
+    for slug, name, _icon_name, desc in subjects:
+        c = counts[slug]
+        bar = "".join(
+            f'<span class="home-bar__seg home-bar__seg--{i}" style="flex:{c[k]}" title="{k} {c[k]}問"></span>'
+            for i, k in enumerate(LEVELS, 1)
+        )
+        out += (
+            f'<a class="home-tile" href="{prefix}{slug}/">'
+            f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
+            f'<span class="home-bar">{bar}</span><span class="home-tile__desc">{desc}</span></span></a>'
+        )
+    return out
+
+
+def _level_legend() -> str:
+    return '<p class="home-legend">' + "".join(
+        f'<span class="home-bar__seg home-bar__seg--{i}"></span>{"★" * i} {k}' for i, k in enumerate(LEVELS, 1)
+    ) + "</p>"
+
+
+def _physmath(html: str, config) -> str:
+    """物理数学の一覧：カードを，トップの物理数学の欄と同じタイルに置き換える。"""
+    grid = CARD_GRID.search(html)
+    if not grid:
+        return html
+    docs = Path(config["docs_dir"])
+    subjects = [m for m in MATH_SUBJECTS if (docs / m[0]).is_dir()]
+    counts = {slug: _level_counts(docs, slug) for slug, *_ in subjects}
+    tiles = f'<div class="home-tiles">{_subject_tiles(subjects, counts, "../")}</div>' + _level_legend()
+    return html[: grid.start()] + tiles + html[grid.end() :]
+
+
 def _home(html: str, page, config) -> str:
     docs = Path(config["docs_dir"])
     math_subjects = [m for m in MATH_SUBJECTS if (docs / m[0]).is_dir()]
@@ -501,26 +578,9 @@ def _home(html: str, page, config) -> str:
     for m in re.finditer(r'<h2 id="[^"]+">(.*?)</h2>(.*?)(?=<h2 |\Z)', html, re.DOTALL):
         sections[re.sub(r"<[^>]+>", "", m.group(1)).strip()] = m.group(2)
 
-    def _tiles(subjects):
-        out = ""
-        for slug, name, _icon_name, desc in subjects:
-            c = counts[slug]
-            bar = "".join(
-                f'<span class="home-bar__seg home-bar__seg--{i}" style="flex:{c[k]}" title="{k} {c[k]}問"></span>'
-                for i, k in enumerate(LEVELS, 1)
-            )
-            out += (
-                f'<a class="home-tile" href="{slug}/">'
-                f'<span class="home-tile__body"><span class="home-tile__name">{name}<span class="home-tile__count">{sum(c.values())}問</span></span>'
-                f'<span class="home-bar">{bar}</span><span class="home-tile__desc">{desc}</span></span></a>'
-            )
-        return out
-
-    tiles = _tiles(HOME_SUBJECTS)
-    math_tiles = _tiles(math_subjects)
-    legend = '<p class="home-legend">' + "".join(
-        f'<span class="home-bar__seg home-bar__seg--{i}"></span>{"★" * i} {k}' for i, k in enumerate(LEVELS, 1)
-    ) + "</p>"
+    tiles = _subject_tiles(HOME_SUBJECTS, counts)
+    math_tiles = _subject_tiles(math_subjects, counts)
+    legend = _level_legend()
 
     levels = ""
     for i, (name, desc) in enumerate(HOME_LEVELS, 1):
