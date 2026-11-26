@@ -2035,8 +2035,6 @@ html { scroll-behavior: smooth; }
 .md-typeset p.toc-group,
 .md-typeset p.toc-note { margin: 1em 0 0; padding: 0 .2rem .3rem; color: var(--md-default-fg-color--light); font-size: var(--fs-80); }
 .md-typeset p.toc-note { margin-top: .4em; }
-/* 院試過去問の最初のページ：大学のタイルの下に置く，各大学の最新の年度 */
-.md-typeset .toc--latest .toc-chapter:first-child h2.toc-chapter__head { margin-top: 2.4rem; }
 /* 右のサイドバー：平成の年度の「物理学」「数学」。大きさは問題の行と同じで，色だけを本文の色にする */
 .side-chapter__group { padding: .5rem .6rem .1rem; color: var(--md-typeset-color); list-style: none; }
 /* † は★より細いので，少し大きくして字間を詰める */

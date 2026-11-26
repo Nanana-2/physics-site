@@ -425,29 +425,28 @@ def _exam_years(page, config) -> str:
 
 
 def _exam_top(page, config) -> str:
-    """院試過去問の最初のページ：大学のタイル（問題数と年度の範囲）と，各大学の最新の年度の問題。"""
+    """院試過去問の最初のページ：大学のタイル（正式な名前と年度の範囲）。"""
     root = Path(config["docs_dir"]) / "pastexam"
-    tiles, latest = "", ""
+    tiles = ""
     for univ in sorted(d for d in root.iterdir() if (d / "index.md").is_file()):
         years = _exam_rows(univ)
         if not years:
             continue
         order = sorted(years, key=_year_order)
-        name = str(_front_matter(univ / "index.md").get("title", univ.name)).removesuffix("の過去問")
-        count = sum(len(v["rows"]) for v in years.values())
+        # タイルの名前は略称（東大理物）でなく，ページのフロントマターの exam_university
+        first = next(md for md in sorted(univ.glob("*.md")) if md.stem != "index")
+        name = _front_matter(first).get("exam_university") or univ.name
         tiles += (
             f'<a class="home-tile" href="{univ.name}/"><span class="home-tile__body">'
-            f'<span class="home-tile__name">{name}<span class="home-tile__count">{count}問</span></span>'
+            # 問題数は出さない。過去問は年度でまとまっているので，量は年度の範囲で示す
+            f'<span class="home-tile__name">{name}</span>'
             f'<span class="home-tile__desc">{years[order[-1]]["name"]}から{years[order[0]]["name"]}まで</span></span></a>'
         )
-        newest = dict(years[order[0]], name=f"{name} {years[order[0]]['name']}")
-        latest += _exam_section(order[0], newest, f"{univ.name}/")
     if not tiles:
         return ""
     # 大学が1つのうちは，タイルを本文の幅いっぱいにする
     single = " home-tiles--single" if tiles.count('class="home-tile"') == 1 else ""
-    return f'<div class="home-tiles{single}">{tiles}</div><div class="toc toc--exam toc--latest">{latest}</div>'
-
+    return f'<div class="home-tiles{single}">{tiles}</div>'
 
 
 # ---- 参考文献一覧：分野の見出しを帯にする（科目のアイコンは付けない），冒頭の「このページは何？」を薄いグレーの面で囲む ----
