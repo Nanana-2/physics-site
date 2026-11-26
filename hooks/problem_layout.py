@@ -351,7 +351,9 @@ def _subject_index(html, page, config):
 
 # ---- 過去問の大学のページ：年度ごとに大問を並べる（年度の目次を先に置く）。中身は同じフォルダのページのフロントマターから作る ----
 
-EXAM_SUBJECTS = {"butsuri": "物理", "sugaku": "数学"}
+EXAM_SUBJECTS = {"butsuri": "物理学", "sugaku": "数学"}
+# 問題のない年度：年度の一覧に欄だけ置く
+EXAM_GAPS = {"todai-ributsu": {"R3": ("令和3年度", "筆記試験は行われませんでした。")}}
 
 
 def _front_matter(md_path: Path) -> dict:
@@ -364,40 +366,45 @@ def _front_matter(md_path: Path) -> dict:
 
 def _exam_years(page, config) -> str:
     base = Path(config["docs_dir"]) / Path(page.file.src_uri).parent
-    fields = {name for _, name, _, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
     years = {}
     for md in base.glob("*.md"):
         if md.stem == "index":
             continue
         meta = _front_matter(md)
         parts = md.stem.split("_")
-        year = parts[0]
-        # 平成の年度は「物理1」「数学2」，令和4年度からは「第1問」
-        label = f"{EXAM_SUBJECTS.get(parts[1], parts[1])}{parts[-1]}" if len(parts) == 3 else f"第{parts[-1]}問"
-        order = (parts[1] if len(parts) == 3 else "", int(parts[-1]))
+        # 平成の年度は物理学と数学に分ける（H30_butsuri_2）。令和4年度からは専門科目の1つ（R8_2）
+        group = parts[1] if len(parts) == 3 else ""
         title = str(meta.get("title", md.stem)).split("：", 1)[-1]
-        tags = "，".join(t for t in meta.get("tags") or [] if t in fields)
-        years.setdefault(year, {"name": meta.get("exam_year", year), "rows": []})["rows"].append((order, label, title, tags, md.stem, _exam_level(meta)))
+        years.setdefault(parts[0], {"name": meta.get("exam_year", parts[0]), "rows": []})["rows"].append(
+            (group, int(parts[-1]), title, md.stem, _exam_level(meta))
+        )
     if not years:
         return ""
-    order = sorted(years, key=lambda y: (0 if y[0] == "R" else 1, -int(y[1:])))
+    for year, (name, note) in EXAM_GAPS.get(base.name, {}).items():
+        years.setdefault(year, {"name": name, "rows": [], "note": note})
     index, sections = "", ""
-    for year in order:
+    for year in sorted(years, key=lambda y: (0 if y[0] == "R" else 1, -int(y[1:]))):
         name = years[year]["name"]
         index += f'<a class="toc-index__link" href="#{year}">{name.replace("年度", "")}</a>'
-        rows = "".join(
-            f'<a class="toc-row" href="{stem}/"><span class="toc-row__num">{label}</span>'
-            f'<span class="toc-row__title">{title}<span class="toc-row__field">{tags}</span></span>'
-            f'{_stars_html(level, "toc-row__stars toc-row__stars--exam", "†", "†")}</a>'
-            for _, label, title, tags, stem, level in sorted(years[year]["rows"])
-        )
+        body, last = "", None
+        for group, number, title, stem, level in sorted(years[year]["rows"]):
+            if group and group != last:
+                body += f'<p class="toc-group">{EXAM_SUBJECTS.get(group, group)}</p>'
+            last = group
+            body += (
+                f'<a class="toc-row" href="{stem}/"><span class="toc-row__num">第{number}問</span>'
+                f'<span class="toc-row__title">{title}</span>'
+                f'{_stars_html(level, "toc-row__stars toc-row__stars--exam", "†", "†")}</a>'
+            )
+        if "note" in years[year]:
+            body += f'<p class="toc-note">{years[year]["note"]}</p>'
         sections += (
             f'<section class="toc-chapter" id="{year}"><h2 class="toc-chapter__head">'
-            f'<span class="toc-chapter__title">{name}</span></h2>{rows}</section>'
+            f'<span class="toc-chapter__title">{name}</span></h2>{body}</section>'
         )
     return (
         f'<nav class="toc-index toc-index--years" aria-label="年度の一覧">{index}</nav>'
-        f'<div class="toc">{sections}</div>'
+        f'<div class="toc toc--exam">{sections}</div>'
     )
 
 
