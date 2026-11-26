@@ -4,7 +4,8 @@
 -#}
 {% set subject = page.ancestors | last if page.ancestors else none %}
 {#- 物理数学のタブは「物理数学 → 分野 → 章」の3段なので，分野の段を使う -#}
-{% if subject and subject.title == '物理数学' %}
+{#- 院試過去問のタブは「院試過去問 → 大学 → 年度」の3段なので，大学の段を使う -#}
+{% if subject and subject.title in ('物理数学', '院試過去問') %}
   {% set subject = page.ancestors[-2] if page.ancestors | length > 1 else none %}
 {% endif %}
 {% if subject and subject.children %}
@@ -15,10 +16,21 @@
         <details class="side-chapter"{% if chapter.active %} open{% endif %}>
           <summary class="side-chapter__head">{{ chapter.title }}</summary>
           <ol class="side-chapter__list">
+            {% set group = namespace(last='') %}
             {% for item in chapter.children %}
+              {% set stem_parts = item.file.src_uri.split('/')[-1].split('_') if item.file else [] %}
+              {% if item.meta and item.meta.exam_number and stem_parts | length == 3 and stem_parts[1] != group.last %}
+                {% set group.last = stem_parts[1] %}
+                <li class="side-chapter__group">{{ '物理学' if stem_parts[1] == 'butsuri' else '数学' }}</li>
+              {% endif %}
               <li>
                 <a class="side-chapter__link{% if item.active %} is-current{% endif %}" href="{{ item.url | url }}"{% if item.active %} aria-current="page"{% endif %}>
+                  {%- if item.meta and item.meta.exam_number %}
+                    {#- 過去問：番号は「第1問」，題名は「：」より後ろ -#}
+                    <span class="side-chapter__num">第{{ item.file.src_uri.split('_')[-1][:-3] }}問</span>{{ item.title.split('：')[-1] }}
+                  {%- else %}
                   <span class="side-chapter__num">{{ number }}-{{ loop.index }}</span>{{ item.title }}
+                  {%- endif %}
                 </a>
               </li>
             {% endfor %}

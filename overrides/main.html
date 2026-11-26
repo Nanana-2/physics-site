@@ -309,6 +309,35 @@
           <span class="page-links__arrow" aria-hidden="true">→</span>
         </a>
       </nav>
+    {% elif path_parts | length == 3 and path_parts[0] == 'pastexam' and path_parts[2] != 'index.md' %}
+      {#- 過去問：同じ大学の前後の大問（年度をまたいで続く）と，年度の一覧へ。参考文献一覧（紹介リンクがある）と問題用紙へのボタンは置かない -#}
+      {% macro exam_side(target, label, cls) %}
+        {% set parts = target.file.src_uri.split('/') if target and target.file else [] %}
+        {% if parts | length == 3 and parts[1] == path_parts[1] and parts[2] != 'index.md' %}
+          {% set level = (target.meta.exam_level or 0) | int %}
+          <a class="page-nav__side {{ cls }}" href="{{ target.url | url }}">
+            {% if 'next' in cls %}
+              <span class="page-nav__dir"><span class="page-nav__arrow page-nav__arrow--in" aria-hidden="true">→</span>次の問題<span class="page-nav__arrow page-nav__arrow--out" aria-hidden="true">→</span></span>
+            {% else %}
+              <span class="page-nav__dir">{{ label }}</span>
+            {% endif %}
+            <span class="page-nav__title">{{ target.title }}</span>
+            {% if 1 <= level <= 3 %}
+              <span class="page-nav__stars page-nav__stars--exam" aria-label="難易度 {{ level }}/3"><span class="on">{{ '†' * level }}</span><span class="off">{{ '†' * (3 - level) }}</span></span>
+            {% endif %}
+          </a>
+        {% else %}
+          <span class="page-nav__side page-nav__side--empty {{ cls }}"></span>
+        {% endif %}
+      {% endmacro %}
+      <nav class="page-nav" aria-label="前後の問題">
+        {{ exam_side(page.previous_page, '← 前の問題', '') }}
+        <div class="page-nav__hub">
+          <a class="page-nav__home" href="{{ '' | url }}"><span>トップへ</span></a>
+          <a class="page-nav__list" href="{{ ('pastexam/' ~ path_parts[1] ~ '/') | url }}"><span>年度の一覧へ</span></a>
+        </div>
+        {{ exam_side(page.next_page, '次の問題 →', 'page-nav__side--next') }}
+      </nav>
     {% endif %}
 
     {% if not page.meta.hide_share %}
