@@ -1,5 +1,8 @@
 ---
 title: 東大理物の過去問
+hero_image: assets/images/index.jpg   # 画像はあとで差し替える
+hide:
+  - toc
 ---
 
 # 東大理物の過去問
