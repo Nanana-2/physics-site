@@ -3,7 +3,7 @@ title: 東大理物 平成19年度 数学 第2問：コーシー・リーマン�
 tags:
   - 院試過去問
   - 東大理物
-  - 複素解析
+  - 複素関数
 exam_university: 東京大学大学院理学系研究科物理学専攻
 exam_year: 平成19年度
 exam_subject: 数学
