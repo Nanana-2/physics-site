@@ -63,9 +63,10 @@ PDF 原稿（`private/pdf-books/`），これまでの図の TikZ ソース（`o
 
 ### サイトの構成（東大理物）
 
-- ページは `docs/pastexam/todai-ributsu/<年度>_<番号>.md`（例：`R8_1.md`，`H31_butsuri_2.md`）。大問1つで1ページ。原稿は `pastexam/todai-ributsu/drafts/` から移す。移すときは，図のパス `../../../docs/assets/` を `../../assets/` に直す。
+- ページは `docs/pastexam/todai-ributsu/<年度>_<番号>.md`（例：`R8_1.md`，`H31_butsuri_2.md`）。大問1つで1ページ。原稿は `pastexam/todai-ributsu/drafts/` で直し，`python3 tools/pastexam/publish.py <年度>...`（全部なら `--all`）でサイトに写す。図のパスの書き換えと，年度ごとのメニュー（`.pages`）の作り直しも，このコマンドが行う。`docs/pastexam/` の問題のページを直接直さない。
+- 初めて公開するときだけ，`docs/.pages` の nav の `books.md` の前に `- pastexam` を足す。院試過去問の最初のページと大学のページのもとは `tools/pastexam/pages/` にある。
 - 上のメニューに「院試過去問」のタブを置く。タブの最初のページは大学の一覧，大学のページは年度ごとに大問の題名を並べた一覧にする。
-- 帯には題名の「：」より前（`東大理物 令和8年度 第1問`）が出る（`hooks/problem_layout.py` が `exam_number` を見て行う）。難易度の星は出さない。
+- 帯には題名の「：」より前（`東大理物 令和8年度 第1問`）が出る（`hooks/problem_layout.py` が `exam_number` を見て行う）。難易度は，フロントマターの `exam_level`（1〜3）を本編の星と同じ形の † で出す。付けていなければ何も出さない。
 - 「問題を探す」と「問題を印刷する」には，ひとまず入れない。
 - ほかの大学の原稿はクラウドでは扱わない。
 

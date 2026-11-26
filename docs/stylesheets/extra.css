@@ -2023,3 +2023,15 @@ html { scroll-behavior: smooth; }
 @media screen and (max-width: 600px) {
   .md-typeset a.page-nav__home, .md-typeset .page-nav__hub .page-nav__list { flex-direction: column; gap: .3em; }
 }
+
+/* ==========================================
+   過去問：大学のページの年度の一覧と，難易度の †
+   ========================================== */
+/* 年度の目次は行にせず，年度の名前を横に並べる */
+.md-typeset .toc-index--years { display: flex; flex-wrap: wrap; gap: 0 1.1rem; }
+.md-typeset .toc-index--years a.toc-index__link { padding: .3rem .1rem; }
+.md-typeset .toc-row__field { display: block; margin-top: .1em; color: var(--md-default-fg-color--light); font-size: var(--fs-65); }
+/* † は★より細いので，少し大きくして字間を詰める */
+.md-typeset .problem-stars--exam,
+.md-typeset .toc-row__stars--exam,
+.md-typeset .page-nav__stars--exam { font-size: var(--fs-90); letter-spacing: 0; }

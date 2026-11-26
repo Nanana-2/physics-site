@@ -49,23 +49,34 @@ def _level_from_tags(tags) -> int:
     return next((LEVELS[tag] for tag in tags or [] if tag in LEVELS), 0)
 
 
-def _stars_html(level: int, cls: str) -> str:
+def _stars_html(level: int, cls: str, on: str = "★", off: str = "☆") -> str:
     if not level:
         return ""
     return (
         f'<span class="{cls}" aria-label="難易度 {level}/3">'
-        f'<span class="on">{"★" * level}</span><span class="off">{"☆" * (3 - level)}</span></span>'
+        f'<span class="on">{on * level}</span><span class="off">{off * (3 - level)}</span></span>'
     )
 
 
+def _exam_level(meta) -> int:
+    # 過去問の難易度はフロントマターの exam_level（1〜3）。本編の★と区別するため † で出す
+    try:
+        level = int(meta.get("exam_level") or 0)
+    except (TypeError, ValueError):
+        return 0
+    return level if 1 <= level <= 3 else 0
+
+
 def _stars(meta) -> str:
-    level = _level_from_tags(meta.get("tags"))
+    exam = bool(meta.get("exam_number"))
+    level = _exam_level(meta) if exam else _level_from_tags(meta.get("tags"))
     if not level:
         return ""
+    on, off = ("†", "†") if exam else ("★", "☆")
     return (
-        f'<span class="problem-stars" aria-label="難易度 {level}/3">'
-        f'<span class="problem-stars__on">{"★" * level}</span>'
-        f'<span class="problem-stars__off">{"☆" * (3 - level)}</span></span>'
+        f'<span class="problem-stars{" problem-stars--exam" if exam else ""}" aria-label="難易度 {level}/3">'
+        f'<span class="problem-stars__on">{on * level}</span>'
+        f'<span class="problem-stars__off">{off * (3 - level)}</span></span>'
     )
 
 
@@ -111,6 +122,8 @@ def on_page_content(html, page, config, files):
         return _books(html)
     if page.is_homepage:
         return _home(html, page, config)
+    if re.fullmatch(r"pastexam/[^/]+/index\.md", page.file.src_uri):
+        return html + _exam_years(page, config)
     if not page.file.src_uri.startswith(SUBJECT_DIRS) and not page.meta.get("exam_number"):
         return html
     if page.file.src_uri.endswith("/index.md"):
@@ -295,12 +308,7 @@ CARD_GRID = re.compile(r'<div class="grid cards">.*?</div>', re.DOTALL)
 
 
 def _level(md_path: Path) -> int:
-    try:
-        text = md_path.read_text(encoding="utf-8")
-        meta = yaml.safe_load(re.match(r"---\s*\n(.*?)\n---", text, re.DOTALL).group(1)) or {}
-    except (OSError, AttributeError, yaml.YAMLError):
-        return 0
-    return _level_from_tags(meta.get("tags"))
+    return _level_from_tags(_front_matter(md_path).get("tags"))
 
 
 def _subject_index(html, page, config):
@@ -339,6 +347,58 @@ def _subject_index(html, page, config):
         '<span class="page-links__label">参考文献一覧</span><span class="page-links__arrow" aria-hidden="true">→</span></a></nav>'
     )
     return html[: grid.start()] + nav + '<div class="toc">' + "".join(sections) + "</div>" + exam + html[grid.end() :]
+
+
+# ---- 過去問の大学のページ：年度ごとに大問を並べる（年度の目次を先に置く）。中身は同じフォルダのページのフロントマターから作る ----
+
+EXAM_SUBJECTS = {"butsuri": "物理", "sugaku": "数学"}
+
+
+def _front_matter(md_path: Path) -> dict:
+    try:
+        text = md_path.read_text(encoding="utf-8")
+        return yaml.safe_load(re.match(r"---\s*\n(.*?)\n---", text, re.DOTALL).group(1)) or {}
+    except (OSError, AttributeError, yaml.YAMLError):
+        return {}
+
+
+def _exam_years(page, config) -> str:
+    base = Path(config["docs_dir"]) / Path(page.file.src_uri).parent
+    fields = {name for _, name, _, _ in (*HOME_SUBJECTS, *MATH_SUBJECTS)}
+    years = {}
+    for md in base.glob("*.md"):
+        if md.stem == "index":
+            continue
+        meta = _front_matter(md)
+        parts = md.stem.split("_")
+        year = parts[0]
+        # 平成の年度は「物理1」「数学2」，令和4年度からは「第1問」
+        label = f"{EXAM_SUBJECTS.get(parts[1], parts[1])}{parts[-1]}" if len(parts) == 3 else f"第{parts[-1]}問"
+        order = (parts[1] if len(parts) == 3 else "", int(parts[-1]))
+        title = str(meta.get("title", md.stem)).split("：", 1)[-1]
+        tags = "，".join(t for t in meta.get("tags") or [] if t in fields)
+        years.setdefault(year, {"name": meta.get("exam_year", year), "rows": []})["rows"].append((order, label, title, tags, md.stem, _exam_level(meta)))
+    if not years:
+        return ""
+    order = sorted(years, key=lambda y: (0 if y[0] == "R" else 1, -int(y[1:])))
+    index, sections = "", ""
+    for year in order:
+        name = years[year]["name"]
+        index += f'<a class="toc-index__link" href="#{year}">{name.replace("年度", "")}</a>'
+        rows = "".join(
+            f'<a class="toc-row" href="{stem}/"><span class="toc-row__num">{label}</span>'
+            f'<span class="toc-row__title">{title}<span class="toc-row__field">{tags}</span></span>'
+            f'{_stars_html(level, "toc-row__stars toc-row__stars--exam", "†", "†")}</a>'
+            for _, label, title, tags, stem, level in sorted(years[year]["rows"])
+        )
+        sections += (
+            f'<section class="toc-chapter" id="{year}"><h2 class="toc-chapter__head">'
+            f'<span class="toc-chapter__title">{name}</span></h2>{rows}</section>'
+        )
+    return (
+        f'<nav class="toc-index toc-index--years" aria-label="年度の一覧">{index}</nav>'
+        f'<div class="toc">{sections}</div>'
+    )
 
 
 # ---- 参考文献一覧：分野の見出しを帯にする（科目のアイコンは付けない），冒頭の「このページは何？」を薄いグレーの面で囲む ----
