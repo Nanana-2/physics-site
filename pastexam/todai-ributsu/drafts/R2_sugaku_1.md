@@ -3,7 +3,7 @@ title: 東大理物 令和2年度 数学 第1問：誤差関数と移流拡散�
 tags:
   - 院試過去問
   - 東大理物
-  - 物理数学
+  - 微分方程式
 exam_university: 東京大学大学院理学系研究科物理学専攻
 exam_year: 令和2年度
 exam_subject: 数学

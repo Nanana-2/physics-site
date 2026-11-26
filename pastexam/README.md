@@ -57,7 +57,7 @@
 - TikZ 原稿は `figures/src/pastexam-<大学>/<年度>_<大問番号>-p.tex`（複数あるときは `-p1.tex`，`-p2.tex`）に置く。`python3 tools/figures/build.py` でライト用・ダーク用の SVG を `docs/assets/figures/pastexam-<大学>/` に生成し，PNG 化して文字の重なりがないか目視確認する。
 
 ### フロントマターと見出し
-- YAML フロントマターに `title`，`tags`（`院試過去問`・大学名・分野タグ），`exam_university`，`exam_year`，`exam_subject`，`exam_number`，`exam_source_url`，`exam_modified` を必ず入れる。
+- YAML フロントマターに `title`，`tags`（`院試過去問`・大学名・分野タグ。分野タグは本編の14分野の名前から選ぶ），`exam_university`，`exam_year`，`exam_subject`，`exam_number`，`exam_source_url`，`exam_modified` を必ず入れる。
 - `title` と `#` 見出しは `東大理物 令和8年度 第1問：<短い題名>` の形にそろえる（問題ボックスの帯見出しに `過去問` ではなく `東大理物・令和8年度 第1問` をそのまま出せるようにするため）。
 - 出典・引用元 URL・改変の明示と，解答・解説が大学の公表したものでないことの注記は，`## 問題` の末尾に1つの引用ブロック（`> 出典：〜`）にまとめて置く。`## 解答・解説` の直下には注記を置かない。
 
