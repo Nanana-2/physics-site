@@ -78,17 +78,32 @@ $$
 
 $$
 \begin{aligned}
-\sigma_1^2 &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I \\
-\sigma_2^2 &= \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I \\
-\sigma_3^2 &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I
+\sigma_1^2 &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+&= \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \\
+&= I \\
+\sigma_2^2 &= \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \\
+&= \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \\
+&= I \\
+\sigma_3^2 &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \\
+&= \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \\
+&= I
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-\sigma_1 \sigma_2 &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} = \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} = i\sigma_3, \qquad \sigma_2 \sigma_1 = -i\sigma_3 \\
-\sigma_2 \sigma_3 &= \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} = \begin{pmatrix} 0 & i \\ i & 0 \end{pmatrix} = i\sigma_1, \qquad \sigma_3 \sigma_2 = -i\sigma_1 \\
-\sigma_3 \sigma_1 &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} = i\sigma_2, \qquad \sigma_1 \sigma_3 = -i\sigma_2
+\sigma_1 \sigma_2 &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \\
+&= \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} \\
+&= i\sigma_3 \\
+\sigma_2 \sigma_1 &= -i\sigma_3 \\
+\sigma_2 \sigma_3 &= \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \\
+&= \begin{pmatrix} 0 & i \\ i & 0 \end{pmatrix} \\
+&= i\sigma_1 \\
+\sigma_3 \sigma_2 &= -i\sigma_1 \\
+\sigma_3 \sigma_1 &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+&= \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \\
+&= i\sigma_2 \\
+\sigma_1 \sigma_3 &= -i\sigma_2
 \end{aligned}
 $$
 
@@ -160,7 +175,16 @@ S(\boldsymbol{n}) S(\boldsymbol{v}) S(\boldsymbol{n}) &= \bigl((\boldsymbol{n}\c
 \end{aligned}
 $$
 
-ここでベクトル三重積の公式 $(\boldsymbol{n}\times\boldsymbol{v})\times\boldsymbol{n} = (\boldsymbol{n}\cdot\boldsymbol{n})\boldsymbol{v} - (\boldsymbol{n}\cdot\boldsymbol{v})\boldsymbol{n} = \boldsymbol{v} - (\boldsymbol{n}\cdot\boldsymbol{v})\boldsymbol{n}$ を用いました。これらを元の式に代入してまとめます。
+ここでベクトル三重積の公式 
+
+$$
+\begin{aligned}
+(\boldsymbol{n}\times\boldsymbol{v})\times\boldsymbol{n} &= (\boldsymbol{n}\cdot\boldsymbol{n})\boldsymbol{v} - (\boldsymbol{n}\cdot\boldsymbol{v})\boldsymbol{n} \\
+&= \boldsymbol{v} - (\boldsymbol{n}\cdot\boldsymbol{v})\boldsymbol{n}
+\end{aligned}
+$$
+
+ を用いました。これらを元の式に代入してまとめます。
 
 $$
 \begin{aligned}
@@ -182,10 +206,28 @@ $$
 \boldsymbol{v}' = \cos(2\theta)\,\boldsymbol{v} + \sin(2\theta)\,(\boldsymbol{n}\times\boldsymbol{v})
 $$
 
-$\boldsymbol{v}$ と $\boldsymbol{n}\times\boldsymbol{v}$ は互いに直交し，同じ大きさ $|\boldsymbol{v}|$ をもちます。したがって $\boldsymbol{v}'$ は，$\boldsymbol{n}$ に垂直な平面内で長さを $|\boldsymbol{v}|$ に保ったまま，$\boldsymbol{n}$ を回転軸として右ねじの向きに角 $2\theta$ だけ回転したベクトルです。$\theta$ が $0$ から $2\pi$ まで変化すると回転角 $2\theta$ は $0$ から $4\pi$ まで変化するため，$\boldsymbol{v}'$ は $\boldsymbol{n}$ の周りを右ねじの向きにちょうど2周します。
+$\boldsymbol v\ne\boldsymbol0$ では，$\boldsymbol v$ と $\boldsymbol n\times\boldsymbol v$ は直交し，どちらの長さも $|\boldsymbol v|$ です。したがって，$\boldsymbol v'$ は $\boldsymbol n$ に垂直な平面内で長さを保ち，右ねじの向きに角 $2\theta$ だけ回転します。$\theta$ が0から $2\pi$ へ変化すると2周します。$\boldsymbol v=\boldsymbol0$ の場合は，すべての $\theta$ で $\boldsymbol v'=\boldsymbol0$ です。
 
 ### (2)(a)
-**真**です。$A, B \in U$ より $A^{\dagger} A = A A^{\dagger} = I$，$B^{\dagger} B = B B^{\dagger} = I$ が成り立ちます。積 $AB$ について $(AB)^{\dagger} = B^{\dagger} A^{\dagger}$ を用いて計算します。
+真です。$A, B \in U$ より 
+
+$$
+\begin{aligned}
+A^{\dagger} A &= A A^{\dagger} \\
+&= I
+\end{aligned}
+$$
+
+，
+
+$$
+\begin{aligned}
+B^{\dagger} B &= B B^{\dagger} \\
+&= I
+\end{aligned}
+$$
+
+ が成り立ちます。積 $AB$ について $(AB)^{\dagger} = B^{\dagger} A^{\dagger}$ を用いて計算します。
 
 $$
 \begin{aligned}
@@ -208,33 +250,77 @@ $$
 よって $AB \in U$ です。
 
 ### (2)(b)
-**偽**です。反例として $A = \sigma_1$，$B = \sigma_2$ をとります。$A^{\dagger} = A$，$B^{\dagger} = B$ なので $A, B \in H$ です。しかし $AB = \sigma_1 \sigma_2 = i\sigma_3$ であり，
+偽です。$A=\sigma_1$，$B=\sigma_2$ をとると，$A^\dagger=A$，$B^\dagger=B$ なので $A,B\in H$ です。一方，
 
 $$
-(AB)^{\dagger} = -i\sigma_3 \neq i\sigma_3 = AB
+\begin{aligned}
+AB&=\sigma_1\sigma_2\\
+&=i\sigma_3\\
+(AB)^\dagger&=-i\sigma_3
+\end{aligned}
 $$
 
-なので $AB \notin H$ です。
+となります。$(AB)^\dagger\ne AB$ なので，$AB\notin H$ です。
 
 ### (2)(c)
-**偽**です。反例として零行列 $A = O$ をとります。$O^{\dagger} = O$ より $O \in H$ ですが，$O^{\dagger} O = O \neq I$ なので $O \notin U$ です。
+偽です。反例として零行列 $A = O$ をとります。$O^{\dagger} = O$ より $O \in H$ ですが，$O^{\dagger} O = O \neq I$ なので $O \notin U$ です。
 
 ### (2)(d)
-**偽**です。反例として $A = -I$ をとります。$(-I)^{\dagger} = -I$ かつ $(-I)^{\dagger}(-I) = (-I)(-I)^{\dagger} = I$ より $A \in H$ かつ $A \in U$ ですが，$A \neq I$ です。
-
-### (2)(e)
-**偽**です。反例として $X = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ をとります。$X \neq O$ ですが，
+偽です。反例として $A = -I$ をとります。$(-I)^{\dagger} = -I$ かつ 
 
 $$
-X^2 = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} = O
+\begin{aligned}
+(-I)^{\dagger}(-I) &= (-I)(-I)^{\dagger} \\
+&= I
+\end{aligned}
+$$
+
+ より $A \in H$ かつ $A \in U$ ですが，$A \neq I$ です。
+
+### (2)(e)
+偽です。反例として 
+
+$$
+X = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+$$
+
+ をとります。$X \neq O$ ですが，
+
+$$
+\begin{aligned}
+X^2 &= \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \\
+&= \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} \\
+&= O
+\end{aligned}
 $$
 
 となります。
 
 ### (2)(f)
-**真**です。$X$ の2つの固有値を $\lambda_1, \lambda_2$ とします。固有値 $\lambda_j$ に対する固有ベクトル $\boldsymbol{v} \neq \boldsymbol{0}$ に $X^3 = O$ を作用させると $\lambda_j^3 \boldsymbol{v} = \boldsymbol{0}$ より $\lambda_j^3 = 0$，すなわち $\lambda_1 = \lambda_2 = 0$ です。
+真です。$X$ の固有値を $\lambda_1,\lambda_2$ とし，対応する固有ベクトルを $\boldsymbol v_j\ne\boldsymbol0$ とします。
 
-よって $\operatorname{tr} X = \lambda_1 + \lambda_2 = 0$ かつ $\det X = \lambda_1 \lambda_2 = 0$ です。2次正方行列 $X$ に対するケーリー・ハミルトンの定理より，
+$$
+\begin{aligned}
+X\boldsymbol v_j&=\lambda_j\boldsymbol v_j\\
+X^3\boldsymbol v_j&=\lambda_j^3\boldsymbol v_j\\
+\boldsymbol0&=\lambda_j^3\boldsymbol v_j
+\end{aligned}
+$$
+
+$\boldsymbol v_j\ne\boldsymbol0$ なので，$\lambda_j^3=0$，したがって $\lambda_j=0$ です。両固有値が0になるので，
+
+両固有値が0なので，
+
+$$
+\begin{aligned}
+\operatorname{tr}X&=\lambda_1+\lambda_2\\
+&=0\\
+\det X&=\lambda_1\lambda_2\\
+&=0
+\end{aligned}
+$$
+
+です。2次正方行列に対するケイリー・ハミルトンの定理を用いると，
 
 $$
 \begin{aligned}

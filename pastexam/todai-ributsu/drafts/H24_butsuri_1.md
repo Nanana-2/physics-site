@@ -68,11 +68,21 @@ $$
 <div class="approach" markdown>
 スピンの演算子は2行2列の行列なので，静磁場の中の時間発展は，初期状態をハミルトニアンの固有ベクトルで展開し，それぞれに位相因子を掛けて求めます。
 
-回転する磁場が加わると，ハミルトニアンは時間によります。そこで，$\mathcal{H}_1 = -a S_z$ を使ったユニタリー変換で，磁場と同じ角速度で回る表示に変えます。共鳴条件 $\omega = a$ のもとでは，この表示のハミルトニアンは時間によらなくなるので，静磁場のときと同じ方法で解くことができます。
+回転する磁場が加わると，ハミルトニアンは時間によります。そこで，$\mathcal{H}_1 = -a S_z$ を使ったユニタリー変換で，$z$ 軸のまわりに角速度 $a$ で回る表示に変えます。共鳴条件 $\omega = a$ のもとでは，この表示の回る角速度と磁場の角速度が等しくなります。そのため，この表示のハミルトニアンは時間によらなくなり，静磁場のときと同じ方法で解くことができます。
 </div>
 
 ### (1)
-軌道角運動量の各成分は $L_x = y p_z - z p_y$，$L_y = z p_x - x p_z$，$L_z = x p_y - y p_x$ です。交換関係 $[x, p_x] = [y, p_y] = [z, p_z] = i\hbar$ と異なる成分同士の可換性を用いて $[L_x, L_y]$ を計算します。
+軌道角運動量の各成分は $L_x = y p_z - z p_y$，$L_y = z p_x - x p_z$，$L_z = x p_y - y p_x$ です。交換関係 
+
+$$
+\begin{aligned}
+[x, p_x] &= [y, p_y] \\
+&= [z, p_z] \\
+&= i\hbar
+\end{aligned}
+$$
+
+ と異なる成分同士の可換性を用いて $[L_x, L_y]$ を計算します。
 
 $$
 \begin{aligned}
@@ -119,29 +129,59 @@ $$
 $\hbar = 1$，$\boldsymbol{H} = (H, 0, 0)$ のとき，ハミルトニアン (1) の行列表示は次式になります。
 
 $$
-\mathcal{H} = -\mu H S_x = -\frac{\mu H}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\begin{aligned}
+\mathcal{H} &= -\mu H S_x \\
+&= -\frac{\mu H}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\end{aligned}
 $$
 
 固有方程式を解いて固有値 $\lambda_j$ を求めます。
 
 $$
 \begin{aligned}
-\det(\mathcal{H} - \lambda I) &= \lambda^2 - \left(\frac{\mu H}{2}\right)^2 = 0 \\
-\lambda_1 &= -\frac{\mu H}{2}, \qquad \lambda_2 = \frac{\mu H}{2}
+\det(\mathcal{H} - \lambda I) &= \lambda^2 - \left(\frac{\mu H}{2}\right)^2 \\
+&= 0 \\
+\lambda_1 &= -\frac{\mu H}{2} \\
+\lambda_2 &= \frac{\mu H}{2}
 \end{aligned}
 $$
 
 それぞれの固有値に対する規格化された固有ベクトル $|\lambda_j\rangle$ を求めます。
 
-- $\lambda_1 = -\dfrac{\mu H}{2}$ のとき：$\begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix}\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}$ より $c_1 = c_2$ なので，$|\lambda_1\rangle = \dfrac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}$ です。
-- $\lambda_2 = \dfrac{\mu H}{2}$ のとき：$\begin{pmatrix} -1 & -1 \\ -1 & -1 \end{pmatrix}\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}$ より $c_1 = -c_2$ なので，$|\lambda_2\rangle = \dfrac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix}$ です。
+$\mu H\ne0$ とします。$\lambda_1=-\mu H/2$ の固有方程式から，
+
+$$
+\begin{aligned}
+c_1-c_2&=0\\
+\begin{pmatrix}c_1\\c_2\end{pmatrix}&=c_1\begin{pmatrix}1\\1\end{pmatrix}
+\end{aligned}
+$$
+
+です。$2|c_1|^2=1$ なので，$c_1=1/\sqrt2$ を選びます。
+
+$\lambda_2=\mu H/2$ の固有方程式から，
+
+$$
+\begin{aligned}
+c_1+c_2&=0\\
+\begin{pmatrix}c_1\\c_2\end{pmatrix}&=c_1\begin{pmatrix}1\\-1\end{pmatrix}
+\end{aligned}
+$$
+
+です。同じ規格化で $c_1=1/\sqrt2$ を選びます。$\mu H=0$ ではハミルトニアンが零行列になり，任意の0でないベクトルが固有ベクトルです。その場合も，ここで選んだ2本を直交基底として使うことができます。
 
 $$
 \finalanswer{\mathcal{H} = -\frac{\mu H}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \lambda_1 = -\frac{\mu H}{2},\; |\lambda_1\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}, \qquad \lambda_2 = \frac{\mu H}{2},\; |\lambda_2\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix}}
 $$
 
 ### (4)
-$t = 0$ でスピンが $z$ 方向を向いているので，初期状態は $S_z$ の固有値 $1/2$ の固有ベクトル $|\phi(0)\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ です。これを設問3の固有ベクトルで展開すると，
+$t = 0$ でスピンが $z$ 方向を向いているので，初期状態は $S_z$ の固有値 $1/2$ の固有ベクトル 
+
+$$
+|\phi(0)\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+$$
+
+ です。これを設問3の固有ベクトルで展開すると，
 
 $$
 |\phi(0)\rangle = \frac{1}{\sqrt{2}}|\lambda_1\rangle + \frac{1}{\sqrt{2}}|\lambda_2\rangle
@@ -153,7 +193,7 @@ $$
 \begin{aligned}
 |\phi(t)\rangle &= \frac{1}{\sqrt{2}}e^{-i\lambda_1 t}|\lambda_1\rangle + \frac{1}{\sqrt{2}}e^{-i\lambda_2 t}|\lambda_2\rangle \\
 &= \frac{1}{2}e^{i\frac{\mu H}{2}t}\begin{pmatrix} 1 \\ 1 \end{pmatrix} + \frac{1}{2}e^{-i\frac{\mu H}{2}t}\begin{pmatrix} 1 \\ -1 \end{pmatrix} \\
-&= \begin{pmatrix} \cos\!\left(\dfrac{\mu H t}{2}\right) \\ i\sin\!\left(\dfrac{\mu H t}{2}\right) \end{pmatrix}
+&= \begin{pmatrix} \cos\!\left(\frac{\mu H t}{2}\right) \\ i\sin\!\left(\frac{\mu H t}{2}\right) \end{pmatrix}
 \end{aligned}
 $$
 
@@ -185,7 +225,7 @@ $$
 $$
 
 $$
-\finalanswer{|\phi(t)\rangle = \begin{pmatrix} \cos\!\left(\dfrac{\mu H t}{2}\right) \\ i\sin\!\left(\dfrac{\mu H t}{2}\right) \end{pmatrix}, \qquad \bigl(\langle S_x \rangle, \langle S_y \rangle, \langle S_z \rangle\bigr) = \left(0,\; \frac{1}{2}\sin(\mu H t),\; \frac{1}{2}\cos(\mu H t)\right)}
+\finalanswer{|\phi(t)\rangle = \begin{pmatrix} \cos\!\left(\frac{\mu H t}{2}\right) \\ i\sin\!\left(\frac{\mu H t}{2}\right) \end{pmatrix}, \qquad \bigl(\langle S_x \rangle, \langle S_y \rangle, \langle S_z \rangle\bigr) = \left(0,\; \frac{1}{2}\sin(\mu H t),\; \frac{1}{2}\cos(\mu H t)\right)}
 $$
 
 ### (5)
@@ -199,7 +239,16 @@ i\frac{\mathrm{d}}{\mathrm{d}t}|\psi(t)\rangle &= -\mathcal{H}_1 e^{i\mathcal{H}
 \end{aligned}
 $$
 
-ここで $\mathcal{H}_1 = -a S_z = \begin{pmatrix} -a/2 & 0 \\ 0 & a/2 \end{pmatrix}$ より $e^{i\mathcal{H}_1 t} = \begin{pmatrix} e^{-iat/2} & 0 \\ 0 & e^{iat/2} \end{pmatrix}$ です。また $\mathcal{H}_2$ を行列で表すと次式になります。
+$\mathcal H_1=-aS_z$ は対角行列なので，指数関数は各対角成分の指数になります。
+
+$$
+\begin{aligned}
+\mathcal H_1&=\begin{pmatrix}-a/2&0\\0&a/2\end{pmatrix}\\
+e^{i\mathcal H_1t}&=\begin{pmatrix}e^{-iat/2}&0\\0&e^{iat/2}\end{pmatrix}
+\end{aligned}
+$$
+
+また，$\mathcal H_2$ を行列で表すと，
 
 $$
 \begin{aligned}
@@ -231,10 +280,19 @@ $$
 i\frac{\mathrm{d}}{\mathrm{d}t}|\psi(t)\rangle = -a_0 S_x|\psi(t)\rangle
 $$
 
-初期条件は $|\psi(0)\rangle = |\varphi(0)\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ です。この方程式と初期条件は，設問4において $\mu H$ を $a_0$ に置き換えたものと完全に一致します。したがって，時刻 $t$ における $|\psi(t)\rangle$ は
+初期条件は 
 
 $$
-|\psi(t)\rangle = \begin{pmatrix} \cos\!\left(\dfrac{a_0 t}{2}\right) \\ i\sin\!\left(\dfrac{a_0 t}{2}\right) \end{pmatrix}
+\begin{aligned}
+|\psi(0)\rangle &= |\varphi(0)\rangle \\
+&= \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+\end{aligned}
+$$
+
+ です。この方程式と初期条件は，設問4において $\mu H$ を $a_0$ に置き換えたものと一致します。したがって，時刻 $t$ における $|\psi(t)\rangle$ は
+
+$$
+|\psi(t)\rangle = \begin{pmatrix} \cos\!\left(\frac{a_0 t}{2}\right) \\ i\sin\!\left(\frac{a_0 t}{2}\right) \end{pmatrix}
 $$
 
 であり，$\langle\psi(t)|S_z|\psi(t)\rangle = \dfrac{1}{2}\cos(a_0 t)$ です。

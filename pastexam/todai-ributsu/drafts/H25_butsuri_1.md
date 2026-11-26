@@ -111,7 +111,16 @@ $$
 \end{aligned}
 $$
 
-基底状態 $|\phi_0\rangle$ は $\hat{a}|\phi_0\rangle = 0$ を満たすので，$\mathcal{H}|\phi_0\rangle = \dfrac{1}{2}\hbar\omega|\phi_0\rangle$ より $E_0 = \dfrac{1}{2}\hbar\omega$ です。
+基底状態は $\hat{a}|\phi_0\rangle=0$ を満たします。ハミルトニアンを作用させると，
+
+$$
+\begin{aligned}
+\mathcal{H}|\phi_0\rangle&=\hbar\omega\left(\hat{a}^{\dagger}\hat{a}+\frac12\right)|\phi_0\rangle\\
+&=\frac12\hbar\omega|\phi_0\rangle
+\end{aligned}
+$$
+
+となり，$E_0=\dfrac12\hbar\omega$ です。
 
 次に $|\phi_n\rangle$ が $\hat{a}^{\dagger}\hat{a}|\phi_n\rangle = n|\phi_n\rangle$ を満たす規格化状態であるとします。$\hat{a}^{\dagger}|\phi_n\rangle$ のノルムの2乗を計算します。
 
@@ -123,18 +132,67 @@ $$
 \end{aligned}
 $$
 
-位相を正の実数に選ぶと $|\phi_{n+1}\rangle = \dfrac{1}{\sqrt{n+1}}\hat{a}^{\dagger}|\phi_n\rangle$ です。また $[\hat{a}^{\dagger}\hat{a}, \hat{a}^{\dagger}] = \hat{a}^{\dagger}$ より $\hat{a}^{\dagger}\hat{a}|\phi_n\rangle = n|\phi_n\rangle$ が帰納的に成り立つので，$E_n = \hbar\omega\left(n + \dfrac{1}{2}\right)$ となります。
+係数が正の実数になるように位相を選ぶと，$|\phi_{n+1}\rangle=\dfrac1{\sqrt{n+1}}\hat{a}^{\dagger}|\phi_n\rangle$ です。交換関係 $[\hat{a}^{\dagger}\hat{a},\hat{a}^{\dagger}]=\hat{a}^{\dagger}$ から，
+
+$$
+\begin{aligned}
+\hat{a}^{\dagger}\hat{a}\bigl(\hat{a}^{\dagger}|\phi_n\rangle\bigr)
+&=\hat{a}^{\dagger}\bigl(\hat{a}^{\dagger}\hat{a}+1\bigr)|\phi_n\rangle\\
+&=(n+1)\hat{a}^{\dagger}|\phi_n\rangle
+\end{aligned}
+$$
+
+となります。基底状態から繰り返すと，$\hat{a}^{\dagger}\hat{a}|\phi_n\rangle=n|\phi_n\rangle$ なので，$E_n=\hbar\omega\left(n+\dfrac12\right)$ です。
 
 以上より，空欄に当てはまる数式は次のとおりです。
 
-- ア：$\sqrt{\dfrac{m\omega}{2\hbar}}\,\hat{x} - \dfrac{i}{\sqrt{2m\hbar\omega}}\,\hat{p}$
-- イ：$1$
-- ウ：$\sqrt{\dfrac{\hbar}{2m\omega}}\left(\hat{a} + \hat{a}^{\dagger}\right)$
-- エ：$-i\sqrt{\dfrac{m\hbar\omega}{2}}\left(\hat{a} - \hat{a}^{\dagger}\right)$
-- オ：$\hbar\omega\left(\hat{a}^{\dagger}\hat{a} + \dfrac{1}{2}\right)$
-- カ：$\dfrac{1}{2}\hbar\omega$
-- キ：$\dfrac{1}{\sqrt{n+1}}$
-- ク：$\hbar\omega\left(n + \dfrac{1}{2}\right)$
+ア：
+
+$$
+\finalanswer{\sqrt{\frac{m\omega}{2\hbar}}\,\hat{x}-\frac{i}{\sqrt{2m\hbar\omega}}\,\hat{p}}
+$$
+
+イ：
+
+$$
+\finalanswer{1}
+$$
+
+ウ：
+
+$$
+\finalanswer{\sqrt{\frac{\hbar}{2m\omega}}(\hat{a}+\hat{a}^{\dagger})}
+$$
+
+エ：
+
+$$
+\finalanswer{-i\sqrt{\frac{m\hbar\omega}{2}}(\hat{a}-\hat{a}^{\dagger})}
+$$
+
+オ：
+
+$$
+\finalanswer{\hbar\omega\left(\hat{a}^{\dagger}\hat{a}+\frac12\right)}
+$$
+
+カ：
+
+$$
+\finalanswer{\frac12\hbar\omega}
+$$
+
+キ：
+
+$$
+\finalanswer{\frac1{\sqrt{n+1}}}
+$$
+
+ク：
+
+$$
+\finalanswer{\hbar\omega\left(n+\frac12\right)}
+$$
 
 ### (2)
 ハミルトニアン $\mathcal{H}$ は時間に依存しないので，時刻 $t$ の状態は時間発展演算子 $e^{-i\mathcal{H}t/\hbar}$ を初期状態 $|\psi(0)\rangle$ に作用させて得られます。
@@ -148,7 +206,13 @@ $$
 \end{aligned}
 $$
 
-これと $|\psi(t)\rangle = \sum_{n=0}^{\infty} c_n(t)\,|\phi_n\rangle$ の係数を比較して，$c_n(t)$ が求まります。
+これと 
+
+$$
+|\psi(t)\rangle = \sum_{n=0}^{\infty} c_n(t)\,|\phi_n\rangle
+$$
+
+ の係数を比較して，$c_n(t)$ が求まります。
 
 $$
 \finalanswer{c_n(t) = c_n(0)\,e^{-i\left(n + \frac{1}{2}\right)\omega t}}
@@ -239,7 +303,16 @@ $$
 $$
 
 ### (5)
-初期状態 $|\psi(0)\rangle = |\alpha = r_0\rangle$ の展開係数は $c_n(0) = e^{-r_0^2/2}\dfrac{r_0^n}{\sqrt{n!}}$ です。設問2の結果を用いると，時刻 $t$ における状態 $|\psi(t)\rangle$ は次のようになります。
+初期状態 
+
+$$
+\begin{aligned}
+|\psi(0)\rangle &= |\alpha \\
+&= r_0\rangle
+\end{aligned}
+$$
+
+ の展開係数は $c_n(0) = e^{-r_0^2/2}\dfrac{r_0^n}{\sqrt{n!}}$ です。設問2の結果を用いると，時刻 $t$ における状態 $|\psi(t)\rangle$ は次のようになります。
 
 $$
 \begin{aligned}
@@ -267,7 +340,17 @@ $$
 \end{aligned}
 $$
 
-これらより，$\langle\psi(t)|\hat{X}|\psi(t)\rangle^2 + \langle\psi(t)|\hat{P}|\psi(t)\rangle^2 = 2r_0^2$ が成り立ちます。したがって，期待値の組 $\bigl(\langle\hat{X}\rangle, \langle\hat{P}\rangle\bigr)$ は，時刻 $t = 0$ に点 $(\sqrt{2}\,r_0, 0)$ から出発し，原点を中心とする半径 $\sqrt{2}\,r_0$ の円周上を角速度 $\omega$ で時計回りに等速円運動します。これは古典的な一次元調和振動子の位相空間上の軌道と同じ振る舞いです。
+2つの期待値の2乗和を計算すると，
+
+$$
+\begin{aligned}
+\langle\hat{X}\rangle^2+\langle\hat{P}\rangle^2
+&=2r_0^2(\cos^2\omega t+\sin^2\omega t)\\
+&=2r_0^2
+\end{aligned}
+$$
+
+です。$r_0>0$ では，期待値の組 $\bigl(\langle\hat{X}\rangle,\langle\hat{P}\rangle\bigr)$ は点 $(\sqrt2r_0,0)$ から出発し，半径 $\sqrt2r_0$ の円周を角速度 $\omega$ で時計回りに進みます。$r_0=0$ では両期待値が常に0で，原点に静止します。いずれも古典的な調和振動子の位相空間の運動に対応します。
 
 $$
 \finalanswer{|\psi(t)\rangle = e^{-\frac{i\omega t}{2}}\left|r_0 e^{-i\omega t}\right\rangle, \qquad \langle\psi(t)|\hat{X}|\psi(t)\rangle = \sqrt{2}\,r_0 \cos\omega t, \qquad \langle\psi(t)|\hat{P}|\psi(t)\rangle = -\sqrt{2}\,r_0 \sin\omega t}

@@ -48,7 +48,7 @@ $$
 <figure class="problem-figure" markdown>
 ![石英の分散曲線と物質Fの分散曲線の枠図](../../../docs/assets/figures/pastexam-todai-ributsu/H24_butsuri_3-p-light.svg#only-light)
 ![石英の分散曲線と物質Fの分散曲線の枠図](../../../docs/assets/figures/pastexam-todai-ributsu/H24_butsuri_3-p-dark.svg#only-dark)
-<figcaption markdown="span">図 1（左）：石英の分散曲線，図 2（右）：物質 F の分散曲線。網掛け領域（$\omega_{\mathrm{R}}$ から $\omega_{\mathrm{V}}$）が赤・橙・黄・緑・青・藍・紫の可視光領域を表す。</figcaption>
+<figcaption markdown="span">図1：石英の分散曲線，図2：物質 F の分散曲線</figcaption>
 </figure>
 
 > 出典：東京大学大学院理学系研究科物理学専攻 平成24年度修士課程入学試験 物理学 第3問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，図を描き直して小問番号の表記を整えています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
@@ -71,7 +71,7 @@ $$
 $$
 
 ### (2)
-$\boldsymbol{r} = \boldsymbol{R}\cos\omega t$ を設問1の運動方程式に代入します。$\dfrac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2} = -\omega^2 \boldsymbol{R}\cos\omega t$ なので，次式が得られます。
+以下では $\omega\ne\omega_0$ の周期的な特解を求めます。$\boldsymbol r=\boldsymbol R\cos\omega t$ を代入し，$\ddot{\boldsymbol r}=-\omega^2\boldsymbol R\cos\omega t$ を用います。$\omega=\omega_0$ で $\boldsymbol E_0\ne0$ の場合，有限の一定振幅 $\boldsymbol R$ をもつこの形の特解はありません。
 
 $$
 \begin{aligned}
@@ -81,7 +81,16 @@ m(\omega_0^2 - \omega^2)\boldsymbol{R} &= e\boldsymbol{E}_0 \\
 \end{aligned}
 $$
 
-速度は $\boldsymbol{v} = \dfrac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}t} = -\omega\boldsymbol{R}\sin\omega t$ です。これを用いて電流密度 $\boldsymbol{i}_{\mathrm{d}} = N e \boldsymbol{v}$ を求めます。
+速度は 
+
+$$
+\begin{aligned}
+\boldsymbol{v} &= \frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}t} \\
+&= -\omega\boldsymbol{R}\sin\omega t
+\end{aligned}
+$$
+
+ です。これを用いて電流密度 $\boldsymbol{i}_{\mathrm{d}} = N e \boldsymbol{v}$ を求めます。
 
 $$
 \begin{aligned}
@@ -152,8 +161,13 @@ $$
 ### (6)
 プリズムによる光の屈折角は屈折率 $n(\omega)$ が大きいほど大きくなります。
 
-- 石英：可視光領域で $n(\omega) > 1$ であり，振動数が高い紫から低い赤の順に並んでいるので，可視光領域全体で $n(\omega)$ は $\omega$ とともに単調増加しています。式 $n^2(\omega) = 1 + \dfrac{\omega_{\mathrm{p}}^2}{\omega_0^2 - \omega^2}$ がこの振る舞いを示すのは，$\omega_0$ が可視光領域より高い紫外領域にあるときです。
-- 物質 F：緑の光が吸収されて見えず，屈折角が大きい順に黄，橙，赤，紫，藍，青と並んでいます。$\omega_0$ が可視光領域内の緑の位置にあると，$\omega < \omega_0$ の側では $n^2(\omega) > 1$ かつ $\omega$ が $\omega_0$ に近づくほど $n(\omega)$ が大きくなるため黄 $>$ 橙 $>$ 赤 $> 1$ となります。一方，$\omega > \omega_0$ の側では $n^2(\omega) < 1$ かつ $\omega$ が大きいほど $n^2(\omega)$ が $1$ に近づくため $1 >$ 紫 $>$ 藍 $>$ 青となります。したがって全体の屈折率の大きさは黄 $>$ 橙 $>$ 赤 $>$ 紫 $>$ 藍 $>$ 青の順になり，観測結果と一致します。
+石英では，可視光領域で $n(\omega) > 1$ です。屈折の大きい順に，振動数が高い紫から低い赤まで並んでいるので，可視光領域全体で $n(\omega)$ は $\omega$ とともに単調増加しています。式 $n^2(\omega) = 1 + \dfrac{\omega_{\mathrm{p}}^2}{\omega_0^2 - \omega^2}$ がこのように振る舞うのは，$\omega_0$ が可視光領域より高い紫外領域にあるときです。
+
+物質 F では，共鳴の位置を緑の付近とします。低周波数側の赤・橙・黄では $n^2>1$ で，$n$ は $\omega$ とともに増えるため，屈折率の大きい順は黄，橙，赤です。
+
+高周波数側では $n^2<1$ です。ただし，実数の屈折率で透過光を扱うには $n^2>0$ も必要です。$\omega_{\mathrm L}=\sqrt{\omega_0^2+\omega_{\mathrm p}^2}$ とおくと，このモデルで $n^2>0$ となるのは $\omega>\omega_{\mathrm L}$ の範囲です。
+
+青・藍・紫がこの範囲にあるとします。このとき $0<n<1$ で，$n$ は $\omega$ とともに増えるため，屈折率の大きい順は紫，藍，青です。両側を合わせると，黄，橙，赤，紫，藍，青となります。$\omega_0<\omega<\omega_{\mathrm L}$ では $n^2<0$ なので，実数の屈折率では扱うことができません。
 
 以上より，石英と物質 F の分散曲線の概略は次の図のようになります。
 
@@ -164,5 +178,26 @@ $$
 </figure>
 
 <aside class="rigor-note" markdown>
-実際の物質では電子の運動に減衰項が働くため，$\omega = \omega_0$ で $n^2(\omega)$ は無限大に発散せず有限の極大・極小を経て連続的に変化します。このとき $\omega \approx \omega_0$ で光の吸収が強く起きるため，物質 F のスペクトルでは緑の光が欠けて観測されます。
+減衰率 $\gamma>0$ を含め，電場を $e^{-i\omega t}$ の実部で表すと，運動方程式は
+
+$$
+m\ddot{\boldsymbol r}+m\gamma\dot{\boldsymbol r}+m\omega_0^2\boldsymbol r=e\boldsymbol E
+$$
+
+です。同じ振動数の特解から，
+
+$$
+n^2(\omega)=1+\frac{\omega_{\mathrm p}^2}{\omega_0^2-\omega^2-i\gamma\omega}
+$$
+
+となり，$n^2$ は複素数になります。実部・虚部は，$\Delta=\omega_0^2-\omega^2$ とおくと，
+
+$$
+\begin{aligned}
+\operatorname{Re}n^2&=1+\frac{\omega_{\mathrm p}^2\Delta}{\Delta^2+\gamma^2\omega^2}\\
+\operatorname{Im}n^2&=\frac{\omega_{\mathrm p}^2\gamma\omega}{\Delta^2+\gamma^2\omega^2}
+\end{aligned}
+$$
+
+です。有限の減衰があれば，共鳴付近の実部の変化と吸収を表す虚部は有限になります。極大・極小を述べるときは，複素数の $n^2$ そのものではなく実部を指定します。減衰のない式だけでは，緑の吸収の幅や強さは求めることができません。
 </aside>
