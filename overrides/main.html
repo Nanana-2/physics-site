@@ -189,16 +189,24 @@
         margin-top: 0;
       }
 
+      /* タブレットとスマホでは，メニューが画面の端から並ぶので，見出しの左端は本文の左端にそろえる。
+         本文と同じく幅 35rem の箱を中央に置き，内側に 1.5rem の余白をとる */
+      @media screen and (max-width: 76.234375em) {
+        .page-hero__inner {
+          max-width: 35rem;
+        }
+
+        .page-hero__text {
+          padding: 0 1.5rem;
+        }
+      }
+
       @media screen and (max-width: 45em) {
         .page-hero {
           min-height: 0;
           padding: calc(4.8rem + 1.3rem) .8rem 1.3rem;
         }
 
-        /* スマホでは，見出しの左端を本文の左端（外側 .8rem ＋内側 1.5rem）にそろえる */
-        .page-hero__text {
-          padding: 0 1.5rem;
-        }
 
         /* 写真の下の余白を詰め，最初の画面に章の目次が入るようにする */
         .md-main__inner { margin-top: 0; }
