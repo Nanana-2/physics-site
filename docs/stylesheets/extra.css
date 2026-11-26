@@ -1869,8 +1869,7 @@ html { scroll-behavior: smooth; }
 .md-typeset .home-sec:first-child h2.home-head { margin-top: 2rem; }
 @media (max-width: 600px) { .md-typeset h2.home-head { font-size: 1.3rem; } }
 @media (min-width: 1100px) {
-  .home-motion .md-grid { max-width: min(94vw, 72rem); }
-  .home-motion .md-content__inner { max-width: none; margin-left: 1.6rem; margin-right: 1.6rem; }
+  .home-motion .md-content__inner { max-width: none; margin-left: 0; margin-right: 0; padding-left: .7rem; padding-right: .7rem; }
   .md-typeset .home-dark .home-sec { display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 3rem; align-items: start; margin-top: 4.5rem; }
   .md-typeset .home-sec:first-child { margin-top: 2rem; }
   .md-typeset .home-dark .home-sec > h2.home-head { position: sticky; top: 8.5rem; margin: 0; }
@@ -1881,7 +1880,8 @@ html { scroll-behavior: smooth; }
   .md-typeset .home-sheet .home-sec__body { max-width: 40rem; }
   /* 題名と検索窓は左に寄せ，見出しの列と左端をそろえる */
   .home-motion .home-hero { padding-left: 0; padding-right: 0; }
-  .home-motion .home-hero__inner { max-width: min(94vw, 72rem); margin: 0 auto; padding: 0 1.5rem; text-align: left; box-sizing: border-box; }
+  /* ヘッダーとメニューはほかのページと同じ幅 61rem。題名の左端は最初のタブ（力学）の文字の左端にそろえる */
+  .home-motion .home-hero__inner { max-width: 61rem; margin: 0 auto; padding: 0 .7rem; text-align: left; box-sizing: border-box; }
   .home-motion .home-hero__title { font-size: 2rem; line-height: 1.35; }
   .home-motion .home-hero__facts { margin-bottom: 2rem; }
   .home-motion .home-search { max-width: 38rem; }
