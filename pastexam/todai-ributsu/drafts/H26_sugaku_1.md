@@ -224,7 +224,7 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-(5) の解の存在区間は，初期値 $A$ と平衡点 $1/\beta$ の大小関係に依存します。$0<A<1/\beta$ では分母が全実数 $x$ で正なので，解は全実数軸上で存在します。$x\to+\infty$ で $0$，$x\to-\infty$ で $1/\beta$ に漸近します。$A=1/\beta$ では，常に $y(x)=1/\beta$ です。
+(5) の解の存在区間は，初期値 $A$ と平衡点 $1/\beta$ の大小関係に依存します。$0 < A < 1/\beta$ では分母が全実数 $x$ で正なので，解は全実数軸上で存在します。$x\to+\infty$ で $0$，$x\to-\infty$ で $1/\beta$ に漸近します。$A=1/\beta$ では，常に $y(x)=1/\beta$ です。
 
-$A>1/\beta$ では $x_*=\dfrac{1}{\alpha}\ln\!\left(\dfrac{A\beta}{A\beta-1}\right)>0$ で分母が $0$ になります。初期値 $x=0$ を含む解の存在区間は $x<x_*$ です。
+$A>1/\beta$ では $x_*=\dfrac{1}{\alpha}\ln\!\left(\dfrac{A\beta}{A\beta-1}\right)>0$ で分母が $0$ になります。初期値 $x=0$ を含む解の存在区間は $x < x_*$ です。
 </aside>
