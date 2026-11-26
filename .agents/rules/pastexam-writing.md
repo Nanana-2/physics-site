@@ -208,3 +208,4 @@
 7. 数字の前後の半角の空白と，箇条書きの中の `$$` がないこと。
 8. `python3 tools/checks/aligned_check.py pastexam` が何も出さないこと。`aligned` の中で `&` を書き忘れた行があると，その行だけ位置がずれる。
 9. 分野のタグが，9節の14個の名前だけであること。
+10. `python3 tools/checks/lt_check.py pastexam` が何も出さないこと。考え方や補足の中で `$0<x<L$` と書くと，`<x` が HTML のタグと読まれてページが崩れる。`$0 < x < L$` と書く。
