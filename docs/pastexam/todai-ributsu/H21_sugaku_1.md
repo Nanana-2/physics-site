@@ -223,7 +223,7 @@ $$
 
 です。これを自然数 $n$ に関する数学的帰納法で示します。
 
-$n = 1$ のときは両辺ともに $\sum_{i=1}^{N} \lambda_i$ なので等号で成り立ちます。ある自然数 $k \ge 1$ で $\left(\sum_{i=1}^{N} \lambda_i\right)^k \ge \sum_{i=1}^{N} \lambda_i^k$ が成り立つと仮定します。$\sum_{i=1}^{N}\lambda_i \ge 0$ なので，両辺に $\sum_{j=1}^{N}\lambda_j$ を掛けても不等号の向きは変わりません。
+$n = 1$ のときは両辺ともに $\displaystyle \sum_{i=1}^{N} \lambda_i$ なので等号で成り立ちます。ある自然数 $k \ge 1$ で $\displaystyle \left(\sum_{i=1}^{N} \lambda_i\right)^k \ge \sum_{i=1}^{N} \lambda_i^k$ が成り立つと仮定します。$\displaystyle \sum_{i=1}^{N}\lambda_i \ge 0$ なので，両辺に $\displaystyle \sum_{j=1}^{N}\lambda_j$ を掛けても不等号の向きは変わりません。
 
 $$
 \begin{aligned}
@@ -232,7 +232,7 @@ $$
 \end{aligned}
 $$
 
-すべての $i, j$ で $\lambda_i \ge 0$ なので，$\sum_{i \neq j} \lambda_i^k \lambda_j \ge 0$ です。よって次式が成り立ちます。
+すべての $i, j$ で $\lambda_i \ge 0$ なので，$\displaystyle \sum_{i \neq j} \lambda_i^k \lambda_j \ge 0$ です。よって次式が成り立ちます。
 
 $$
 \left(\sum_{i=1}^{N} \lambda_i\right)^{k+1} \ge \sum_{i=1}^{N} \lambda_i^{k+1}
@@ -240,10 +240,27 @@ $$
 
 以上より，すべての自然数 $n$ に対して $(\mathrm{Tr}\,X)^n \ge \mathrm{Tr}\,(X^n)$ が成り立ちます。
 
-(ii) $n \ge 2$ とします。(i) の帰納法で用いた式を $k = 1$ から $n - 1$ まで順にたどると，等号が成り立つための必要十分条件は，すべての $k = 1, \dots, n - 1$ について非負の交差項の和 $\sum_{i \neq j} \lambda_i^k \lambda_j$ が $0$ になることです。
+(ii) $n \ge 2$ とします。(i) の帰納法で用いた式を $k = 1$ から $n - 1$ まで順にたどると，等号が成り立つための必要十分条件は，すべての $k = 1, \dots, n - 1$ について非負の交差項の和 $\displaystyle \sum_{i \neq j} \lambda_i^k \lambda_j$ が $0$ になることです。
 
-$\lambda_i \ge 0$ より各項は非負なので，$\sum_{i \neq j}\lambda_i^k \lambda_j = 0$ が成り立つのは，すべての $i \neq j$ に対して $\lambda_i^k \lambda_j = 0$ となるときに限られます。これは，すべての $i \neq j$ に対して $\lambda_i = 0$ または $\lambda_j = 0$ が成り立つことと同値です。
+$\lambda_i\ge0$ より，次の和の各項は非負です。
+
+$$
+\sum_{i\ne j}\lambda_i^k\lambda_j
+$$
+
+したがって，和が $0$ になる条件は，各項がすべて $0$ になることです。
+
+$$
+\lambda_i^k\lambda_j=0\quad(i\ne j)
+$$
+
+$k\ge1$ なので，この条件は各 $i\ne j$ で $\lambda_i=0$ または $\lambda_j=0$ となることと同値です。
 
 すなわち，正の固有値が2個以上存在してはなりません。逆に，0でない固有値が高々1個であれば，すべての交差項が $0$ となって等号 $(\mathrm{Tr}\,X)^n = \mathrm{Tr}\,(X^n)$ が成り立ちます。
 
-したがって，等号が成立するのは，すべての固有値が $0$ であるか，1個の固有値だけが正で残りの $N - 1$ 個の固有値がすべて $0$ である場合に限られます。
+したがって，すべての固有値が $0$ の場合と，正の固有値が1個だけの場合に限り，等号が成立します。
+
+
+$$
+\finalanswer{\operatorname{rank}X\le1}
+$$

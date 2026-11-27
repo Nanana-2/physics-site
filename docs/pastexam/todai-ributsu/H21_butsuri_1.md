@@ -85,12 +85,12 @@ $$
 <div class="approach" markdown>
 状態のノルムは必ず $0$ 以上です。この性質を実数 $x$ を含む状態 $(\Delta P + ix\Delta Q)|\psi\rangle$ に用いると，$x$ の2次式が常に $0$ 以上になる条件が得られ，判別式から交換関係で定まる不確定性関係を導くことができます。
 
-スピン $1/2$ の演算子は2行2列のパウリ行列で表されるため，任意方向の固有状態は2次方程式から直接求めることができます。2粒子系でも，粒子 $\mathrm{A}$ と粒子 $\mathrm{B}$ の演算子は別々の空間に作用して互いに可換なため，各1粒子状態の直積として整理することができます。
+スピン $1/2$ の演算子は2行2列のパウリ行列で表されるため，任意方向の固有状態は2次方程式から直接求めることができます。2粒子系では，粒子 $\mathrm{A}$ と粒子 $\mathrm{B}$ の演算子が別々の空間に作用して互いに可換なので，両演算子の共通固有状態を1粒子の固有状態の直積に選びます。一般の2粒子状態は，これらの直積状態の線形結合で表します。
 </div>
 
 ### (1)
 
-(i) 交換関係 $[P, Q] = PQ - QP = iR$ の両辺のエルミート共役をとります。$(XY)^\dagger = Y^\dagger X^\dagger$ と $P^\dagger = P$，$Q^\dagger = Q$ を用います。
+(i) 交換関係を $PQ-QP=iR$ と書き，両辺のエルミート共役をとります。積の共役の順序が逆になることと，$P$，$Q$ の自己共役性を用います。
 
 $$
 \begin{aligned}
@@ -136,13 +136,18 @@ $$
 
 任意の $|\phi\rangle$ に対して $\langle\phi|\phi\rangle \ge 0$ です。$A = \langle\psi|(\Delta Q)^2|\psi\rangle \ge 0$，$B = \langle\psi|R|\psi\rangle$，$C = \langle\psi|(\Delta P)^2|\psi\rangle \ge 0$ とおきます。$R$ は自己共役なので $B$ は実数です。
 
-$A = 0$ のとき，任意の実数 $x$ に対して $-Bx + C \ge 0$ が成り立つためには $B = 0$ である必要があり，$AC = 0 = \dfrac{1}{4}B^2$ となって式 (1) が成り立ちます。$A > 0$ のときは，$x$ の2次関数 $Ax^2 - Bx + C$ がすべての実数 $x$ で $0$ 以上になる条件から，判別式が $0$ 以下となります。
+$A=0$ のとき，全実数 $x$ で $-Bx+C\ge0$ となるには $B=0$ が必要です。したがって $AC$ と $B^2/4$ はともに $0$ となり，式(1)が成り立ちます。
+
+$A>0$ のときは，2次関数 $Ax^2-Bx+C$ が全実数で非負となる条件を用います。判別式は次の条件を満たします。
 
 $$
-\begin{aligned}
-B^2 - 4AC &\le 0 \\
-AC &\ge \frac{1}{4}B^2
-\end{aligned}
+B^2-4AC\le0
+$$
+
+$AC$ の項を右辺に移して4で割ると，次の不等式になります。
+
+$$
+AC\ge\frac14B^2
 $$
 
 $A, B, C$ を元に戻すと，次式が成り立ちます。
@@ -166,13 +171,24 @@ $$
 固有値を $\lambda$ として固有方程式を解きます。
 
 $$
-\begin{aligned}
-\det\bigl(s(\boldsymbol{n}) - \lambda I\bigr) &= 0 \\
-\left(\frac{\hbar}{2}\cos\theta - \lambda\right)\left(-\frac{\hbar}{2}\cos\theta - \lambda\right) - \frac{\hbar^2}{4}\sin^2\theta &= 0 \\
-\lambda^2 - \frac{\hbar^2}{4}(\cos^2\theta + \sin^2\theta) &= 0 \\
-\lambda^2 &= \frac{\hbar^2}{4}
-\end{aligned}
+\det\bigl(s(\boldsymbol{n})-\lambda I\bigr)=0
 $$
+
+2行2列の行列式を展開します。
+
+$$
+\left(\frac{\hbar}{2}\cos\theta-\lambda\right)
+\left(-\frac{\hbar}{2}\cos\theta-\lambda\right)
+-\frac{\hbar^2}{4}\sin^2\theta=0
+$$
+
+交差項を消し，$\sin^2\theta+\cos^2\theta=1$ を使います。
+
+$$
+\lambda^2-\frac{\hbar^2}{4}=0
+$$
+
+したがって $\lambda^2=\hbar^2/4$ です。
 
 よって固有値は $\lambda = \pm\dfrac{\hbar}{2}$ です。次に各固有値に対する規格化された固有状態 $\begin{pmatrix} \xi \\ \eta \end{pmatrix}$ を求めます。
 
@@ -185,7 +201,7 @@ $$
 \end{aligned}
 $$
 
-これより $\xi : \eta = \cos\dfrac{\theta}{2} : \sin\dfrac{\theta}{2}$ です。$|\xi|^2 + |\eta|^2 = 1$ を満たすように規格化すると，任意の全体位相 $e^{i\alpha}$（$\alpha$ は実数）を除いて $\begin{pmatrix} \cos\dfrac{\theta}{2} \\ \sin\dfrac{\theta}{2} \end{pmatrix}$ となります。この表示は $\sin\dfrac{\theta}{2} = 0$ や $\cos\dfrac{\theta}{2} = 0$ の場合にも固有値方程式を満たします。
+これより $\xi : \eta = \cos\dfrac{\theta}{2} : \sin\dfrac{\theta}{2}$ です。$|\xi|^2 + |\eta|^2 = 1$ を満たすように規格化すると，実数 $\alpha$ に対する任意の全体位相 $e^{i\alpha}$ を除いて $\begin{pmatrix} \cos\dfrac{\theta}{2} \\ \sin\dfrac{\theta}{2} \end{pmatrix}$ となります。この表示は $\sin\dfrac{\theta}{2} = 0$ や $\cos\dfrac{\theta}{2} = 0$ の場合にも固有値方程式を満たします。
 
 次に $\lambda = -\dfrac{\hbar}{2}$ のとき，固有値方程式の1行目は次式になります。
 
@@ -243,7 +259,16 @@ $$
 
 非可換な自己共役演算子の例として $P = s_x$，$Q = s_y$ を選びます。交換関係 $[s_x, s_y] = i\hbar s_z$ より，$R = \hbar s_z$ です。
 
-状態 $|\psi\rangle = \dfrac{1}{2}\begin{pmatrix} \sqrt{3} \\ 1 \end{pmatrix}$ は $\langle\psi|\psi\rangle = \dfrac{3 + 1}{4} = 1$ と規格化されています。各スピン成分の期待値を計算します。
+状態のノルムは次のようになります。
+
+$$
+\begin{aligned}
+\langle\psi|\psi\rangle&=\frac{3+1}{4}\\
+&=1
+\end{aligned}
+$$
+
+規格化された状態で，各スピン成分の期待値を計算します。
 
 $$
 \begin{aligned}
@@ -269,7 +294,7 @@ $$
 \end{aligned}
 $$
 
-パウリ行列の性質 $\sigma_x^2 = \sigma_y^2 = I$ より，$s_x^2 = s_y^2 = \dfrac{\hbar^2}{4}I$ です。よって，ゆらぎの2乗平均は次式になります。
+パウリ行列の性質 $\sigma_x^2=I$，$\sigma_y^2=I$ より，$s_x^2=\dfrac{\hbar^2}{4}I$，$s_y^2=\dfrac{\hbar^2}{4}I$ です。よって，ゆらぎの2乗平均は次式になります。
 
 $$
 \begin{aligned}
@@ -304,7 +329,7 @@ $$
 \end{aligned}
 $$
 
-左辺と右辺はいずれも $\dfrac{\hbar^4}{64}$ であり，式 (1) が等号付きで成り立っていることを確認することができます。
+左辺と右辺はいずれも $\dfrac{\hbar^4}{64}$ なので，式(1)は等号で成り立ちます。
 
 ### (5)
 
@@ -318,7 +343,7 @@ $$
 \end{aligned}
 $$
 
-等号が成り立ち期待値が最大値 $\hbar$ をとるのは，$|\Phi\rangle$ が $s_{\mathrm{A}}(\boldsymbol{a})$ の固有値 $+\dfrac{\hbar}{2}$ の固有状態であり，かつ $s_{\mathrm{B}}(\boldsymbol{b})$ の固有値 $+\dfrac{\hbar}{2}$ の固有状態であるときに限られます。すなわち，設問2で求めた各粒子の固有状態の直積です。
+$|\Phi\rangle$ が両演算子の固有値 $+\hbar/2$ の共通固有状態であるとき，期待値は上限の $\hbar$ に等しくなります。各最大固有値は非縮重なので，最大化する状態は設問2で求めた1粒子固有状態の直積に全体位相を掛けたものに限られます。
 
 $$
 \begin{aligned}
@@ -350,8 +375,10 @@ $$
 
 $$
 \begin{aligned}
-s_{\mathrm{A}x}s_{\mathrm{B}x}|\psi\rangle &= \frac{1}{\sqrt{2}}\frac{\hbar^2}{4}\bigl(|\downarrow, \uparrow\rangle - |\uparrow, \downarrow\rangle\bigr) = -\frac{\hbar^2}{4}|\psi\rangle \\
-s_{\mathrm{A}z}s_{\mathrm{B}z}|\psi\rangle &= \frac{1}{\sqrt{2}}\frac{\hbar^2}{4}\bigl(-|\uparrow, \downarrow\rangle + |\downarrow, \uparrow\rangle\bigr) = -\frac{\hbar^2}{4}|\psi\rangle \\
+s_{\mathrm{A}x}s_{\mathrm{B}x}|\psi\rangle &= \frac{1}{\sqrt{2}}\frac{\hbar^2}{4}\bigl(|\downarrow, \uparrow\rangle - |\uparrow, \downarrow\rangle\bigr) \\
+&= -\frac{\hbar^2}{4}|\psi\rangle \\
+s_{\mathrm{A}z}s_{\mathrm{B}z}|\psi\rangle &= \frac{1}{\sqrt{2}}\frac{\hbar^2}{4}\bigl(-|\uparrow, \downarrow\rangle + |\downarrow, \uparrow\rangle\bigr) \\
+&= -\frac{\hbar^2}{4}|\psi\rangle \\
 s_{\mathrm{A}x}s_{\mathrm{B}z}|\psi\rangle &= \frac{1}{\sqrt{2}}\frac{\hbar^2}{4}\bigl(-|\downarrow, \downarrow\rangle - |\uparrow, \uparrow\rangle\bigr) \\
 s_{\mathrm{A}z}s_{\mathrm{B}x}|\psi\rangle &= \frac{1}{\sqrt{2}}\frac{\hbar^2}{4}\bigl(|\uparrow, \uparrow\rangle + |\downarrow, \downarrow\rangle\bigr)
 \end{aligned}

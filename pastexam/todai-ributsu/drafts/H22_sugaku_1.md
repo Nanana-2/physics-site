@@ -65,7 +65,7 @@ $$
 $A$ の固有値はすべて正なので，任意の $\boldsymbol{y}$ に対して $\|\boldsymbol{y}\|_A^2 = \boldsymbol{y}^{\mathrm{t}} A \boldsymbol{y} \ge 0$ であり，等号が成り立つのは $\boldsymbol{y} = \boldsymbol{0}$ のときに限ります。したがって $f(\boldsymbol{x})$ は $\boldsymbol{x} = \bar{\boldsymbol{x}}$ で唯一の最小値 $-\dfrac{1}{2}\|\bar{\boldsymbol{x}}\|_A^2$ をとります。
 
 ### (2)
-$f(\boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^n \sum_{k=1}^n x_j A_{jk} x_k - \sum_{j=1}^n b_j x_j$ を $x_i$ で偏微分し，対称性 $A_{ji} = A_{ij}$ を用います。
+$\displaystyle f(\boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^n \sum_{k=1}^n x_j A_{jk} x_k - \sum_{j=1}^n b_j x_j$ を $x_i$ で偏微分し，対称性 $A_{ji} = A_{ij}$ を用います。
 
 $$
 \begin{aligned}
@@ -96,13 +96,17 @@ f(\boldsymbol{x}^{(m)} + \alpha\boldsymbol{r}) &= \frac{1}{2}(\boldsymbol{x}^{(m
 \end{aligned}
 $$
 
-$\boldsymbol{r} \neq \boldsymbol{0}$ のとき $\|\boldsymbol{r}\|_A^2 > 0$ なので，この $\alpha$ の2次関数は微分が $0$ になる点で最小値をとります。
+残差 $\boldsymbol{r}=\boldsymbol{0}$ なら，すでに解に達しているので反復を終了します。以下では $\boldsymbol{r}\ne\boldsymbol{0}$ とします。$\boldsymbol{r} \neq \boldsymbol{0}$ のとき $\|\boldsymbol{r}\|_A^2 > 0$ なので，この $\alpha$ の2次関数は微分が $0$ になる点で最小値をとります。
 
 $$
-\begin{aligned}
-\frac{\mathrm{d}}{\mathrm{d}\alpha}f(\boldsymbol{x}^{(m)} + \alpha\boldsymbol{r}) &= -\|\boldsymbol{r}\|^2 + \alpha\|\boldsymbol{r}\|_A^2 = 0 \\
-\alpha &= \frac{\|\boldsymbol{r}\|^2}{\|\boldsymbol{r}\|_A^2}
-\end{aligned}
+\frac{\mathrm{d}}{\mathrm{d}\alpha}f(\boldsymbol{x}^{(m)}+\alpha\boldsymbol{r})
+=-\|\boldsymbol{r}\|^2+\alpha\|\boldsymbol{r}\|_A^2
+$$
+
+微分を $0$ とおき，$\alpha$ について解きます。
+
+$$
+-\|\boldsymbol{r}\|^2+\alpha\|\boldsymbol{r}\|_A^2=0
 $$
 
 $$
@@ -110,7 +114,16 @@ $$
 $$
 
 ### (4)
-$\delta\boldsymbol{x}^{(m+1)} = \boldsymbol{x}^{(m+1)} - \bar{\boldsymbol{x}} = \delta\boldsymbol{x}^{(m)} + \alpha\boldsymbol{r}$ の $A$ ノルムの2乗を展開します。設問 (2) より $A\delta\boldsymbol{x}^{(m)} = -\boldsymbol{r}$ であり，$\alpha = \dfrac{\|\boldsymbol{r}\|^2}{\|\boldsymbol{r}\|_A^2}$ を代入します。
+更新後のずれは次のようになります。
+
+$$
+\begin{aligned}
+\delta\boldsymbol{x}^{(m+1)}&=\boldsymbol{x}^{(m+1)}-\bar{\boldsymbol{x}}\\
+&=\delta\boldsymbol{x}^{(m)}+\alpha\boldsymbol{r}
+\end{aligned}
+$$
+
+右辺の $A$ ノルムの2乗を展開します。$A\delta\boldsymbol{x}^{(m)}=-\boldsymbol{r}$ と最適な $\alpha$ の式を用います。
 
 $$
 \begin{aligned}
@@ -129,13 +142,27 @@ $$
 $$
 
 ### (5)
-$\delta\boldsymbol{x}^{(m)} = \sum_{i=1}^n \rho_i \boldsymbol{a}_i$ と $A\boldsymbol{a}_i = \lambda_i \boldsymbol{a}_i$，および正規直交性 $\boldsymbol{a}_i^{\mathrm{t}}\boldsymbol{a}_j = \delta_{ij}$ を用いて各ノルムの2乗を計算します。まず $\boldsymbol{r} = -A\delta\boldsymbol{x}^{(m)} = -\sum_{i=1}^n \lambda_i \rho_i \boldsymbol{a}_i$ なので，
+以下の比 $R$ は，まだ解に達していない $\delta\boldsymbol{x}^{(m)}\ne\boldsymbol{0}$ の段階で定義します。$\displaystyle \delta\boldsymbol{x}^{(m)} = \sum_{i=1}^n \rho_i \boldsymbol{a}_i$ と $A\boldsymbol{a}_i = \lambda_i \boldsymbol{a}_i$，および正規直交性 $\boldsymbol{a}_i^{\mathrm{t}}\boldsymbol{a}_j = \delta_{ij}$ を用いて各ノルムの2乗を計算します。まず 
 
 $$
 \begin{aligned}
-\|\delta\boldsymbol{x}^{(m)}\|_A^2 &= \sum_{i=1}^n \lambda_i \rho_i^2 \\
-\|\boldsymbol{r}\|^2 &= \sum_{i=1}^n \lambda_i^2 \rho_i^2 \\
-\|\boldsymbol{r}\|_A^2 &= \sum_{i=1}^n \lambda_i^3 \rho_i^2
+\boldsymbol{r}&=-A\delta\boldsymbol{x}^{(m)}\\
+&=-\sum_{i=1}^n\lambda_i\rho_i\boldsymbol{a}_i
+\end{aligned}
+$$
+
+なので，
+
+$$
+\|\delta\boldsymbol{x}^{(m)}\|_A^2=\sum_{i=1}^n\lambda_i\rho_i^2
+$$
+
+残差の通常のノルムと $A$ ノルムは，それぞれ次のようになります。
+
+$$
+\begin{aligned}
+\|\boldsymbol{r}\|^2&=\sum_{i=1}^n\lambda_i^2\rho_i^2,\\
+\|\boldsymbol{r}\|_A^2&=\sum_{i=1}^n\lambda_i^3\rho_i^2
 \end{aligned}
 $$
 

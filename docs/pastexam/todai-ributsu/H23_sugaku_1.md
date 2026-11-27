@@ -57,11 +57,18 @@ $D^2=O$ かつ $D\neq O$ の行列には，$D$ を掛けると $\boldsymbol{0}$ 
 
 $$
 \begin{aligned}
-A^2 \boldsymbol{v} &= \lambda A\boldsymbol{v} \\
-\boldsymbol{v} &= \lambda^2 \boldsymbol{v} \\
-(\lambda^2 - 1)\boldsymbol{v} &= \boldsymbol{0}
+A^2\boldsymbol{v}&=\lambda A\boldsymbol{v}\\
+&=\lambda^2\boldsymbol{v}
 \end{aligned}
 $$
+
+$A^2=E$ より，次の関係が得られます。
+
+$$
+\boldsymbol{v}=\lambda^2\boldsymbol{v}
+$$
+
+左辺へ移すと $(\lambda^2-1)\boldsymbol{v}=\boldsymbol{0}$ です。
 
 $\boldsymbol{v} \neq \boldsymbol{0}$ なので $\lambda^2 = 1$，すなわち $\lambda = 1$ または $\lambda = -1$ です。
 
@@ -115,7 +122,7 @@ CA + AC &= (-iAB)A + A(-iAB) \\
 \end{aligned}
 $$
 
-以上より，$C^2 = E$ および $BC + CB = CA + AC = O$ が成り立ちます。
+
 
 ### (3)
 $D = A + iB$ の2乗を展開します。
@@ -142,7 +149,13 @@ $$
 これは矛盾するので，$D \neq O$ です。
 
 ### (4)(i)
-$D\boldsymbol{p} = (A + iB)\boldsymbol{p} = \boldsymbol{0}$ より $A\boldsymbol{p} = -iB\boldsymbol{p}$ です。まず $C\boldsymbol{p}$ を計算します。
+$D\boldsymbol{p}=\boldsymbol{0}$ と $D=A+iB$ より，次の関係が得られます。
+
+$$
+(A+iB)\boldsymbol{p}=\boldsymbol{0}
+$$
+
+したがって $A\boldsymbol{p}=-iB\boldsymbol{p}$ です。この関係を使って $C\boldsymbol{p}$ を計算します。
 
 $$
 \begin{aligned}
@@ -156,7 +169,17 @@ $$
 
 $\boldsymbol{p} \neq \boldsymbol{0}$ なので，$\boldsymbol{p}$ は $C$ の固有値 $1$ に属する固有ベクトルです。
 
-次に $\boldsymbol{q} = \dfrac{1}{2}(A - iB)\boldsymbol{p}$ について，$-iB\boldsymbol{p} = A\boldsymbol{p}$ を用いると $\boldsymbol{q} = \dfrac{1}{2}(A\boldsymbol{p} + A\boldsymbol{p}) = A\boldsymbol{p}$ となります。$A^2 = E$ より $A$ は正則であり $\boldsymbol{p} \neq \boldsymbol{0}$ なので，$\boldsymbol{q} = A\boldsymbol{p} \neq \boldsymbol{0}$ です。設問 (2) の $CA = -AC$，$CB = -BC$ を用いて $C\boldsymbol{q}$ を計算します。
+次に $\boldsymbol{q}$ の定義に $-iB\boldsymbol{p}=A\boldsymbol{p}$ を代入します。
+
+$$
+\begin{aligned}
+\boldsymbol{q}&=\frac12(A-iB)\boldsymbol{p}\\
+&=\frac12(A\boldsymbol{p}+A\boldsymbol{p})\\
+&=A\boldsymbol{p}
+\end{aligned}
+$$
+
+$A$ は正則で $\boldsymbol{p}\ne\boldsymbol{0}$ なので，$\boldsymbol{q}\ne\boldsymbol{0}$ です。設問(2)の反交換関係から $C\boldsymbol{q}$ を計算します。
 
 $$
 \begin{aligned}
@@ -170,7 +193,7 @@ $$
 よって $\boldsymbol{q}$ は $C$ の固有値 $-1$ に属する固有ベクトルです。
 
 $$
-\finalanswer{C\boldsymbol{p} = \boldsymbol{p}, \qquad C\boldsymbol{q} = -\boldsymbol{q}}
+\finalanswer{\lambda_{\boldsymbol{p}}=1,\qquad\lambda_{\boldsymbol{q}}=-1}
 $$
 
 ### (4)(ii)
@@ -183,7 +206,7 @@ c_1\boldsymbol{p} - c_2\boldsymbol{q} &= \boldsymbol{0}
 \end{aligned}
 $$
 
-2式の和と差をとると $2c_1\boldsymbol{p} = \boldsymbol{0}$，$2c_2\boldsymbol{q} = \boldsymbol{0}$ が得られます。$\boldsymbol{p} \neq \boldsymbol{0}$，$\boldsymbol{q} \neq \boldsymbol{0}$ なので $c_1 = c_2 = 0$ です。したがって $\boldsymbol{p}, \boldsymbol{q}$ は互いに線型独立です。
+2式の和と差をとると $2c_1\boldsymbol{p} = \boldsymbol{0}$，$2c_2\boldsymbol{q} = \boldsymbol{0}$ が得られます。$\boldsymbol{p} \neq \boldsymbol{0}$，$\boldsymbol{q} \neq \boldsymbol{0}$ なので $c_1=0$，$c_2=0$ です。したがって $\boldsymbol{p}, \boldsymbol{q}$ は互いに線型独立です。
 
 ### (5)(i)
 $n = 2$ のとき，$\boldsymbol{p}, \boldsymbol{q}$ は設問 (4)(ii) より互いに線型独立な2次元縦ベクトルです。2次元正方行列 $P = (\boldsymbol{p}\ \boldsymbol{q})$ の列ベクトルが線型独立なので，$\operatorname{rank} P = 2$ であり $P$ は正則です。
@@ -207,7 +230,16 @@ $$
 $$
 
 ### (5)(iii)
-まず $(A + iB)$ を $\boldsymbol{p}$ と $\boldsymbol{q}$ に作用させます。$(A + iB)\boldsymbol{p} = D\boldsymbol{p} = \boldsymbol{0}$ です。$\boldsymbol{q}$ への作用は次のように計算します。
+まず $(A + iB)$ を $\boldsymbol{p}$ と $\boldsymbol{q}$ に作用させます。
+
+$$
+\begin{aligned}
+(A + iB)\boldsymbol{p} &= D\boldsymbol{p} \\
+&= \boldsymbol{0}
+\end{aligned}
+$$
+
+ です。$\boldsymbol{q}$ への作用は次のように計算します。
 
 $$
 \begin{aligned}
@@ -219,13 +251,31 @@ $$
 \end{aligned}
 $$
 
-よって $(A + iB)P = (\boldsymbol{0}\quad 2\boldsymbol{p}) = P\begin{pmatrix} 0 & 2 \\ 0 & 0 \end{pmatrix}$ となり，次式が得られます。
+よって，列ベクトルを並べると次の式になります。
+
+$$
+\begin{aligned}
+(A+iB)P&=(\boldsymbol{0}\quad2\boldsymbol{p})\\
+&=P\begin{pmatrix}0&2\\0&0\end{pmatrix}
+\end{aligned}
+$$
+
+左から $P^{-1}$ を掛けると，次式が得られます。
 
 $$
 P^{-1}(A + iB)P = \begin{pmatrix} 0 & 2 \\ 0 & 0 \end{pmatrix}
 $$
 
-次に $(A - iB)$ を $\boldsymbol{p}$ と $\boldsymbol{q}$ に作用させます。定義より $(A - iB)\boldsymbol{p} = 2\boldsymbol{q}$ です。また $(A - iB)^2 = A^2 - i(AB + BA) - B^2 = O$ なので，
+次に $(A - iB)$ を $\boldsymbol{p}$ と $\boldsymbol{q}$ に作用させます。定義より $(A - iB)\boldsymbol{p} = 2\boldsymbol{q}$ です。また 
+
+$$
+\begin{aligned}
+(A - iB)^2 &= A^2 - i(AB + BA) - B^2 \\
+&= O
+\end{aligned}
+$$
+
+ なので，
 
 $$
 \begin{aligned}
@@ -234,7 +284,16 @@ $$
 \end{aligned}
 $$
 
-です。よって $(A - iB)P = (2\boldsymbol{q}\quad \boldsymbol{0}) = P\begin{pmatrix} 0 & 0 \\ 2 & 0 \end{pmatrix}$ となり，次式が得られます。
+です。よって，列ベクトルを並べると次の式になります。
+
+$$
+\begin{aligned}
+(A-iB)P&=(2\boldsymbol{q}\quad\boldsymbol{0})\\
+&=P\begin{pmatrix}0&0\\2&0\end{pmatrix}
+\end{aligned}
+$$
+
+左から $P^{-1}$ を掛けると，次式が得られます。
 
 $$
 P^{-1}(A - iB)P = \begin{pmatrix} 0 & 0 \\ 2 & 0 \end{pmatrix}
