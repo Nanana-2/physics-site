@@ -95,7 +95,21 @@ $\boldsymbol{p}$ によらない積分は定数 $C$ を含みます。求めた�
 </div>
 
 ### (1)
-座標固有状態の完全性関係 $\displaystyle\int \mathrm{d}^3 x\,|\boldsymbol{x}\rangle\langle\boldsymbol{x}| = 1$ と $\langle\boldsymbol{p}|\boldsymbol{x}\rangle = \langle\boldsymbol{x}|\boldsymbol{p}\rangle^* = \dfrac{1}{(2\pi)^{3/2}} e^{-i\boldsymbol{p}\cdot\boldsymbol{x}}$ を用います。
+座標固有状態の完全性関係は次のとおりです。
+
+$$
+\int\mathrm{d}^3x\,|\boldsymbol{x}\rangle\langle\boldsymbol{x}|=1
+$$
+
+座標状態と運動量状態の内積は，問題文の関係の複素共役をとります。
+
+$$
+\begin{aligned}
+\langle\boldsymbol{p}|\boldsymbol{x}\rangle
+&=\langle\boldsymbol{x}|\boldsymbol{p}\rangle^*\\
+&=\frac{1}{(2\pi)^{3/2}}e^{-i\boldsymbol{p}\cdot\boldsymbol{x}}
+\end{aligned}
+$$
 
 まず $\langle\boldsymbol{p}|\psi\rangle$ に完全性関係を挿入します。
 
@@ -115,7 +129,7 @@ $$
 \end{aligned}
 $$
 
-以上より，2つの関係式が成り立ちます。
+
 
 ### (2)
 設問1の第2式に $\langle\boldsymbol{x}|\hat{V}|\boldsymbol{x}'\rangle = -\dfrac{\lambda}{2m} g(\boldsymbol{x}) g(\boldsymbol{x}')$ を代入します。
@@ -127,7 +141,13 @@ $$
 \end{aligned}
 $$
 
-ここで $h(\boldsymbol{p}) \equiv \displaystyle\int \mathrm{d}^3 x\, e^{-i\boldsymbol{p}\cdot\boldsymbol{x}} g(\boldsymbol{x})$ と定義すれば，次式が得られます。
+ここで 
+
+$$
+h(\boldsymbol{p}) \equiv \int \mathrm{d}^3 x\, e^{-i\boldsymbol{p}\cdot\boldsymbol{x}} g(\boldsymbol{x})
+$$
+
+ と定義すれば，次式が得られます。
 
 $$
 \langle\boldsymbol{p}|\hat{V}|\boldsymbol{p}'\rangle = -\frac{1}{(2\pi)^3}\frac{\lambda}{2m} h(\boldsymbol{p}) h(-\boldsymbol{p}')
@@ -146,7 +166,13 @@ $$
 \frac{\boldsymbol{p}^2 + \nu^2}{2m}\langle\boldsymbol{p}|\psi\rangle = \frac{1}{(2\pi)^3}\frac{\lambda}{2m} h(\boldsymbol{p})\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle
 $$
 
-右辺の積分は $\boldsymbol{p}$ によらない定数なので，$C \equiv \dfrac{\lambda}{(2\pi)^3}\displaystyle\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle$ とおきます。両辺に $2m$ を掛けて $\boldsymbol{p}^2 + \nu^2 > 0$ で割ると，次式が得られます。
+右辺の積分は $\boldsymbol{p}$ によらない定数なので，
+
+$$
+C \equiv \frac{\lambda}{(2\pi)^3}\int \mathrm{d}^3 p'\, h(-\boldsymbol{p}')\langle\boldsymbol{p}'|\psi\rangle
+$$
+
+ とおきます。両辺に $2m$ を掛けて $\boldsymbol{p}^2 + \nu^2 > 0$ で割ると，次式が得られます。
 
 $$
 \langle\boldsymbol{p}|\psi\rangle = C\frac{h(\boldsymbol{p})}{\boldsymbol{p}^2 + \nu^2}
@@ -168,10 +194,28 @@ h(\boldsymbol{p}) &= \int \mathrm{d}^3 x\, e^{-i\boldsymbol{p}\cdot\boldsymbol{x
 \end{aligned}
 $$
 
-ここで $t = \cos\theta$ と置換しました。また $p = 0$ のときも $\mu > 0$ より $h(\boldsymbol{0}) = \displaystyle\int_0^{\infty} r e^{-\mu r}\,\mathrm{d}r = \dfrac{1}{\mu^2}$ となり同じ式に一致します。
+ここで $t=\cos\theta$ と置換しました。$p=0$ では角度積分を先に行うと，次の式になります。
+
+$$
+\begin{aligned}
+h(\boldsymbol{0})&=\int_0^\infty re^{-\mu r}\,\mathrm{d}r\\
+&=\frac1{\mu^2}
+\end{aligned}
+$$
+
+したがって $p=0$ でも同じ式に一致します。
 
 ### (5)
-設問4より $h(-\boldsymbol{p}') = h(\boldsymbol{p}') = \dfrac{1}{(\boldsymbol{p}')^2 + \mu^2}$ です。設問3の波動関数を定数 $C$ の定義式に代入します。
+設問4より 
+
+$$
+\begin{aligned}
+h(-\boldsymbol{p}') &= h(\boldsymbol{p}') \\
+&= \dfrac{1}{(\boldsymbol{p}')^2 + \mu^2}
+\end{aligned}
+$$
+
+ です。設問3の波動関数を定数 $C$ の定義式に代入します。
 
 $$
 \begin{aligned}
@@ -183,21 +227,35 @@ $$
 束縛状態が存在するには $C \neq 0$ である必要があるため，両辺を $C$ で割り，与えられた積分公式と $\mu > 0$ を用います。
 
 $$
-\begin{aligned}
-1 &= \frac{\lambda}{8\pi^3}\cdot\frac{\pi^2}{\mu(\mu + |\nu|)^2} \\
-(\mu + |\nu|)^2 &= \frac{\lambda}{8\pi\mu} \\
-\mu + |\nu| &= \sqrt{\frac{\lambda}{8\pi\mu}} \\
-|\nu| &= \sqrt{\frac{\lambda}{8\pi\mu}} - \mu
-\end{aligned}
+1=\frac{\lambda}{8\pi\mu(\mu+|\nu|)^2}
+$$
+
+$\mu+|\nu|>0$ なので，正の平方根をとります。
+
+$$
+(\mu+|\nu|)^2=\frac{\lambda}{8\pi\mu},
+$$
+
+$$
+\mu+|\nu|=\sqrt{\frac{\lambda}{8\pi\mu}}
+$$
+
+$|\nu|$ について解くと，次の式になります。
+
+$$
+|\nu|=\sqrt{\frac{\lambda}{8\pi\mu}}-\mu
 $$
 
 束縛状態が存在するためには $E = -\dfrac{\nu^2}{2m} < 0$ すなわち $|\nu| > 0$ が必要です。
 
 $$
-\begin{aligned}
-\sqrt{\frac{\lambda}{8\pi\mu}} &> \mu \\
-\lambda &> 8\pi\mu^3
-\end{aligned}
+\sqrt{\frac{\lambda}{8\pi\mu}}>\mu
+$$
+
+$\lambda$ に対する条件は次のとおりです。
+
+$$
+\lambda>8\pi\mu^3
 $$
 
 $$
@@ -231,7 +289,25 @@ $$
 
 $|\nu| = \mu$ のときは $|\nu| \to \mu$ の極限をとることで $\langle\boldsymbol{x}|\psi\rangle = \dfrac{(2\pi)^{3/2} C}{8\pi\mu} e^{-\mu r}$ となります。
 
-規格化定数を省いて $\psi(r) = \dfrac{e^{-|\nu| r} - e^{-\mu r}}{r}$ とすると，$r \to 0$ で有限値 $\psi(0) = \mu - |\nu|$ に近づき，$r > 0$ で単調に減少して $r \to \infty$ で $0$ に収束します。概略は次の図のとおりです。
+波動関数の全体の定数を選び，$a=|\nu|$ とおいて，形を表す関数を次のように定めます。
+
+$$
+f(r)=\begin{cases}
+\dfrac{e^{-ar}-e^{-\mu r}}{(\mu-a)r} & (a\ne\mu),\\
+e^{-\mu r} & (a=\mu)
+\end{cases}
+$$
+
+どちらの場合も $f(0)=1$ です。次の積分表示から，$r>0$ で正の値をとり，単調に減少して $0$ に近づくことが分かります。
+
+$$
+\begin{aligned}
+f(r)&=\int_0^1 e^{-[a+(\mu-a)s]r}\,\mathrm{d}s,\\
+f'(r)&=-\int_0^1 [a+(\mu-a)s]e^{-[a+(\mu-a)s]r}\,\mathrm{d}s<0
+\end{aligned}
+$$
+
+この符号と定数の選択での概略を次の図に示します。
 
 <figure class="problem-figure" markdown>
 ![座標表示での束縛状態の波動関数psi(r)の概略](../../assets/figures/pastexam-todai-ributsu/H23_butsuri_1-s-light.svg#only-light)

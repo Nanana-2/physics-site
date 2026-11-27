@@ -71,7 +71,7 @@ $$
 
 交換相互作用 $\boldsymbol{S}_1\cdot\boldsymbol{S}_2$ は，合成スピン $\boldsymbol{S}_{12}=\boldsymbol{S}_1+\boldsymbol{S}_2$ を使うと $\boldsymbol{S}_{12}^2$ と定数で書くことができます。そのため，エネルギー固有値は合成スピンの大きさごとに求めることができます。$J=J'$ のときは，3個のスピンの全スピンで同じように書き直します。
 
-ゼーマン項は全スピンの $z$ 成分に比例するので，合成スピンの大きさを決めた状態の中で磁場の分配関数を作ることができます。$k_{\mathrm{B}}T\ll|J|$ では，ボルツマン因子が大きいのはエネルギーの低い合成スピンの状態だけです。$J$ の符号でどちらの状態が低いかが変わるので，符号ごとにその状態だけを残します。
+ゼーマン項は全スピンの $z$ 成分に比例するので，合成スピンの大きさを決めた状態の中で磁場の分配関数を作ることができます。低温で残る状態は，交換相互作用とゼーマン項を合わせたエネルギーで決まります。$J<0$ では磁場によって異なる合成スピンの準位が交差するため，磁場の大きさも比較し，交差付近では両方の状態の熱的な重みを残します。
 </div>
 
 ### (1)
@@ -120,7 +120,25 @@ $$
 $$
 
 ### (3)
-内部エネルギー $U$ は $U = \langle\mathcal{H}\rangle = -H M$ です。$x = \beta\mu S H = \dfrac{\mu S H}{k_{\mathrm{B}} T}$ とおくと，$U = -3\mu S H B_S(x)$ です。これを磁場一定のもとで温度 $T$ について微分し，比熱 $C_v$ を求めます。
+内部エネルギー $U$ は 
+
+$$
+\begin{aligned}
+U &= \langle\mathcal{H}\rangle \\
+&= -H M
+\end{aligned}
+$$
+
+ です。
+
+$$
+\begin{aligned}
+x &= \beta\mu S H \\
+&= \dfrac{\mu S H}{k_{\mathrm{B}} T}
+\end{aligned}
+$$
+
+ とおくと，$U = -3\mu S H B_S(x)$ です。これを磁場一定のもとで温度 $T$ について微分し，比熱 $C_v$ を求めます。
 
 $$
 \begin{aligned}
@@ -145,7 +163,7 @@ $$
 $$
 
 ### (4)
-$S = 1/2$，$J \neq 0, J' = 0$ のとき，合成スピン $\boldsymbol{S}_{12} = \boldsymbol{S}_1 + \boldsymbol{S}_2$ を導入します。$\boldsymbol{S}_1^2 = \boldsymbol{S}_2^2 = \dfrac{3}{4}$ より，
+$S = 1/2$，$J \neq 0, J' = 0$ のとき，合成スピン $\boldsymbol{S}_{12} = \boldsymbol{S}_1 + \boldsymbol{S}_2$ を導入します。$\boldsymbol{S}_1^2=3/4$，$\boldsymbol{S}_2^2=3/4$ より，
 
 $$
 \begin{aligned}
@@ -156,8 +174,14 @@ $$
 
 となります。合成スピンの大きさは $S_{12} = 1$ と $S_{12} = 0$ の2通りであり，スピン3は相互作用しないため縮重度 $2$ をもちます。したがって $H = 0$ のエネルギー固有値と縮重度は次の2つです。
 
-- $S_{12} = 1$ のとき：$E = -\dfrac{J}{4}$，縮重度は $3 \times 2 = 6$。
-- $S_{12} = 0$ のとき：$E = \dfrac{3J}{4}$，縮重度は $1 \times 2 = 2$。
+縮重度を $g$ とおくと，エネルギー固有値と縮重度は次のとおりです。
+
+$$
+\finalanswer{\begin{aligned}
+(E,g)&=\left(-\frac{J}{4},6\right)\quad(S_{12}=1),\\
+(E,g)&=\left(\frac{3J}{4},2\right)\quad(S_{12}=0)
+\end{aligned}}
+$$
 
 $H \neq 0$ のとき，ハミルトニアンは $\mathcal{H} = -J\boldsymbol{S}_1\cdot\boldsymbol{S}_2 - \mu H S_{12z} - \mu H S_{3z}$ と2つの独立な部分に分かれます。$S_{12} = 1$ では $S_{12z} = -1, 0, 1$，$S_{12} = 0$ では $S_{12z} = 0$ なので，対 $(1, 2)$ とスピン3の分配関数の積として全系の分配関数 $Z$ が求まります。
 
@@ -173,35 +197,51 @@ $$
 $$
 
 ### (5)
-設問4の $Z$ の対数をとり，$k_{\mathrm{B}} T \ll |J|$ すなわち $\beta|J| \gg 1$ のもとで $J$ の符号ごとに計算します。
-
-$J > 0$ のとき，$e^{-3\beta J/4}$ は $e^{\beta J/4}$ の $e^{-\beta J} \ll 1$ 倍なので，無視することができます。$1 + 2\cosh(\beta\mu H)$ を $\sinh$ の比で書き直すと，分配関数は大きさ $1$ のスピンと大きさ $1/2$ のスピンの分配関数の積になります。
+$x=\beta\mu H$ とし，$z_1(x)=1+2\cosh x$ とおきます。設問4の分配関数を，スピン3と対 $(1,2)$ の部分に分けます。
 
 $$
-\begin{aligned}
-Z &\simeq 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\cdot e^{\frac{\beta J}{4}}\bigl(1 + 2\cosh(\beta\mu H)\bigr) \\
-&= 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\cdot e^{\frac{\beta J}{4}}\frac{\sinh\!\left(\dfrac{3}{2}\beta\mu H\right)}{\sinh\!\left(\dfrac{1}{2}\beta\mu H\right)}
-\end{aligned}
+Z=2\cosh\!\left(\frac{x}{2}\right)
+\left[e^{\beta J/4}z_1(x)+e^{-3\beta J/4}\right]
 $$
 
-磁化は，2つのスピンの磁化の和になります。設問2から，大きさ $S$ のスピン1個の磁化は $\mu S B_S(\beta\mu S H)$ です。$S = 1$ と $S = 1/2$ の磁化を足すと，次のようになります。
-
-$$
-M \simeq \mu B_1(\beta\mu H) + \frac{1}{2}\mu B_{1/2}\!\left(\frac{1}{2}\beta\mu H\right)
-$$
-
-$J < 0$ のとき，$e^{\beta J/4}$ は $e^{-3\beta J/4}$ の $e^{-\beta|J|} \ll 1$ 倍なので，無視することができます。対 $(1, 2)$ は $S_{12} = 0$ の状態に限られ，磁化にはスピン3だけが寄与します。
+対が三重項にいる確率を $w_{\mathrm{t}}$ とおくと，次の式になります。
 
 $$
 \begin{aligned}
-Z &\simeq 2\cosh\!\left(\frac{\beta\mu H}{2}\right)\,e^{-\frac{3\beta J}{4}} \\
-M &\simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{1}{2}\beta\mu H\right)
+w_{\mathrm{t}}
+&=\frac{e^{\beta J/4}z_1(x)}{e^{\beta J/4}z_1(x)+e^{-3\beta J/4}}\\
+&=\frac{z_1(x)}{z_1(x)+e^{-\beta J}}
 \end{aligned}
 $$
 
+磁化は $M=\beta^{-1}\partial_H\ln Z$ です。スピン3の寄与に，三重項の磁化をその確率で重み付けして足します。一重項の磁化は $0$ です。
+
 $$
-\finalanswer{M \simeq \mu B_1(\beta\mu H) + \frac{1}{2}\mu B_{1/2}\!\left(\frac{\beta\mu H}{2}\right) \quad (J > 0), \qquad M \simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{\beta\mu H}{2}\right) \quad (J < 0)}
+\finalanswer{M=\frac{\mu}{2}B_{1/2}\!\left(\frac{x}{2}\right)
++w_{\mathrm{t}}\mu B_1(x),\qquad
+w_{\mathrm{t}}=\frac{1+2\cosh x}{1+2\cosh x+e^{-\beta J}}}
 $$
+
+$J>0$ では $\beta J\gg1$ のもとで $w_{\mathrm{t}}\simeq1$ なので，低温磁化は次のようになります。
+
+$$
+\finalanswer{M\simeq\mu B_1(x)+\frac{\mu}{2}B_{1/2}\!\left(\frac{x}{2}\right)\quad(J>0)}
+$$
+
+$J<0$ では $K=|J|$ とおきます。一重項と三重項の最低エネルギー差は $K-|\mu H|$ です。したがって，次の条件を満たす磁場では一重項だけを残すことができます。
+
+$$
+|\mu H|<K,\qquad k_{\mathrm{B}}T\ll K-|\mu H|
+$$
+
+この範囲では $w_{\mathrm{t}}\simeq0$ なので，磁化はスピン3の寄与になります。
+
+$$
+\finalanswer{M\simeq\frac{\mu}{2}B_{1/2}\!\left(\frac{x}{2}\right)
+\quad\left(J<0,\ k_{\mathrm{B}}T\ll |J|-|\mu H|\right)}
+$$
+
+一方，$|\mu H|-K\gg k_{\mathrm{B}}T$ では三重項が残り，$w_{\mathrm{t}}\simeq1$ です。正の強磁場では $M\to3\mu/2$ となります。$|\mu H|=K$ 付近では，最初の重み付きの式を用います。
 
 ### (6)
 $J = J' \neq 0$ のとき，全スピン $\boldsymbol{S}_{\mathrm{tot}} = \boldsymbol{S}_1 + \boldsymbol{S}_2 + \boldsymbol{S}_3$ を導入します。$\boldsymbol{S}_1^2 = \boldsymbol{S}_2^2 = \boldsymbol{S}_3^2 = \dfrac{3}{4}$ より，交換相互作用の和は次のように書かれます。
@@ -213,22 +253,70 @@ $$
 \end{aligned}
 $$
 
-3個の $S = 1/2$ スピンを合成すると，全状態数 $2^3 = 8$ は $S_{\mathrm{tot}} = 3/2$ が1組と $S_{\mathrm{tot}} = 1/2$ が2組に分かれます。したがって $H = 0$ のエネルギー固有値と縮重度は次の2つです。
-
-- $S_{\mathrm{tot}} = 3/2$ のとき：$E = -\dfrac{J}{2}\left(\dfrac{15}{4} - \dfrac{9}{4}\right) = -\dfrac{3J}{4}$，縮重度は $4$。
-- $S_{\mathrm{tot}} = 1/2$ のとき：$E = -\dfrac{J}{2}\left(\dfrac{3}{4} - \dfrac{9}{4}\right) = \dfrac{3J}{4}$，縮重度は $2 \times 2 = 4$。
-
-$H \neq 0$ のとき，全系の分配関数は $S_{\mathrm{tot}} = 3/2$ の1組と $S_{\mathrm{tot}} = 1/2$ の2組の和になります。
+3個の $S = 1/2$ スピンを合成すると，全状態数 $2^3 = 8$ は $S_{\mathrm{tot}} = 3/2$ が1組と $S_{\mathrm{tot}} = 1/2$ が2組に分かれます。$H = 0$ のエネルギーは，それぞれ次のようになります。
 
 $$
-Z = e^{\frac{3\beta J}{4}}\frac{\sinh(2\beta\mu H)}{\sinh\!\left(\dfrac{1}{2}\beta\mu H\right)} + 2 e^{-\frac{3\beta J}{4}}\cdot 2\cosh\!\left(\frac{1}{2}\beta\mu H\right)
+\begin{aligned}
+E_{3/2} &= -\frac{J}{2}\left(\frac{15}{4} - \frac{9}{4}\right) = -\frac{3J}{4} \\
+E_{1/2} &= -\frac{J}{2}\left(\frac{3}{4} - \frac{9}{4}\right) = \frac{3J}{4}
+\end{aligned}
 $$
 
-$k_{\mathrm{B}} T \ll |J|$ すなわち $\beta|J| \gg 1$ のもとで $J$ の符号ごとに計算します。
-
-- $J > 0$ のとき：第2項は第1項に比べて $e^{-3\beta J/2} \ll 1$ だけ小さいため無視することができ，系は大きさ $3/2$ の単一スピンとして振る舞います。よって $M \simeq \dfrac{3}{2}\mu B_{3/2}\!\left(\dfrac{3}{2}\beta\mu H\right)$ です。
-- $J < 0$ のとき：第1項は第2項に比べて $e^{-3\beta |J|/2} \ll 1$ だけ小さいため無視することができます。分配関数に掛かる縮重度の因子 $2$ は $\ln Z$ の $H$ 微分で消えるため，磁化は大きさ $1/2$ の単一スピンと同じ $M \simeq \dfrac{1}{2}\mu B_{1/2}\!\left(\dfrac{1}{2}\beta\mu H\right)$ になります。
+縮重度を $g$ とします。$S_{\mathrm{tot}} = 3/2$ は $2S_{\mathrm{tot}}+1 = 4$ 重です。$S_{\mathrm{tot}} = 1/2$ は2重の組が2つあるので，$2\times2 = 4$ 重です。
 
 $$
-\finalanswer{M \simeq \frac{3}{2}\mu B_{3/2}\!\left(\frac{3\beta\mu H}{2}\right)\quad (J > 0), \qquad M \simeq \frac{1}{2}\mu B_{1/2}\!\left(\frac{\beta\mu H}{2}\right)\quad (J < 0)}
+\finalanswer{\begin{aligned}
+(E,g)&=\left(-\frac{3J}{4},4\right)\quad(S_{\mathrm{tot}}=3/2)\\
+(E,g)&=\left(\frac{3J}{4},4\right)\quad(S_{\mathrm{tot}}=1/2)
+\end{aligned}}
 $$
+
+$x=\beta\mu H$ とし，磁場中の各多重項の分配関数を次のようにおきます。
+
+$$
+\begin{aligned}
+z_{3/2}(x)&=2\cosh\!\left(\frac{3x}{2}\right)+2\cosh\!\left(\frac{x}{2}\right),\\
+z_{1/2}(x)&=2\cosh\!\left(\frac{x}{2}\right)
+\end{aligned}
+$$
+
+全系の分配関数は，各多重項の寄与の和です。
+
+$$
+Z=e^{3\beta J/4}z_{3/2}(x)+2e^{-3\beta J/4}z_{1/2}(x)
+$$
+
+四重項にいる確率 $w_{\mathrm{q}}$ を導入します。
+
+$$
+w_{\mathrm{q}}=\frac{z_{3/2}(x)}{z_{3/2}(x)+2e^{-3\beta J/2}z_{1/2}(x)}
+$$
+
+$M=\beta^{-1}\partial_H\ln Z$ を計算すると，各多重項の磁化を確率で重み付けした式になります。
+
+$$
+\finalanswer{M=w_{\mathrm{q}}\frac{3\mu}{2}B_{3/2}\!\left(\frac{3x}{2}\right)
++(1-w_{\mathrm{q}})\frac{\mu}{2}B_{1/2}\!\left(\frac{x}{2}\right)}
+$$
+
+$J>0$ では低温で $w_{\mathrm{q}}\simeq1$ なので，次の近似が成り立ちます。
+
+$$
+\finalanswer{M\simeq\frac{3\mu}{2}B_{3/2}\!\left(\frac{3x}{2}\right)\quad(J>0)}
+$$
+
+$J<0$ では四重項と二重項の最低エネルギー差は $3|J|/2-|\mu H|$ です。二重項だけを残すには，磁場についても次の条件が必要です。
+
+$$
+|\mu H|<\frac{3|J|}{2},\qquad
+k_{\mathrm{B}}T\ll\frac{3|J|}{2}-|\mu H|
+$$
+
+この範囲での答えは次のとおりです。
+
+$$
+\finalanswer{M\simeq\frac{\mu}{2}B_{1/2}\!\left(\frac{x}{2}\right)
+\quad\left(J<0,\ k_{\mathrm{B}}T\ll\frac{3|J|}{2}-|\mu H|\right)}
+$$
+
+$|\mu H|-3|J|/2\gg k_{\mathrm{B}}T$ では四重項が残り，正の強磁場で $M\to3\mu/2$ となります。交差付近では両多重項の重みを保った式を使います。二重項が2組あるため，$w_{\mathrm{q}}$ の分母の係数 $2$ は交差付近でも残す必要があります。

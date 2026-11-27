@@ -78,7 +78,7 @@ $$
 </div>
 
 ### (1)
-すべての場に $e^{-i\omega t}$ の時間依存性を代入すると，$\dfrac{\partial}{\partial t}$ が $-i\omega$ に置き換わります。共通の因子 $e^{-i\omega t} \neq 0$ を除くと，複素振幅の Maxwell 方程式は次の4式になります。
+すべての場に $e^{-i\omega t}$ の時間依存性を代入すると，$\dfrac{\partial}{\partial t}$ が $-i\omega$ に置き換わります。共通の因子 $e^{-i\omega t} \neq 0$ を除くと，複素振幅のマクスウェル方程式は次の4式になります。
 
 $$
 \finalanswer{\begin{aligned}
@@ -129,36 +129,64 @@ $\rho = 0$ より $\nabla \cdot \boldsymbol{E} = 0$ および $\nabla \cdot \bol
 
 $$
 \begin{aligned}
-ik(\boldsymbol{s} \cdot \boldsymbol{E}_0) e^{ikz} &= 0 \implies \boldsymbol{s} \cdot \boldsymbol{E}_0 = 0 \\
-ik(\boldsymbol{s} \cdot \boldsymbol{H}_0) e^{ikz} &= 0 \implies \boldsymbol{s} \cdot \boldsymbol{H}_0 = 0
+ik(\boldsymbol{s}\cdot\boldsymbol{E}_0)e^{ikz}&=0,\\
+ik(\boldsymbol{s}\cdot\boldsymbol{H}_0)e^{ikz}&=0
+\end{aligned}
+$$
+
+$k\ne0$ なので，共通因子を除きます。
+
+$$
+\begin{aligned}
+\boldsymbol{s}\cdot\boldsymbol{E}_0&=0,\\
+\boldsymbol{s}\cdot\boldsymbol{H}_0&=0
 \end{aligned}
 $$
 
 よって $\boldsymbol{E}_0 \perp \boldsymbol{s}$ かつ $\boldsymbol{H}_0 \perp \boldsymbol{s}$ です。さらに $\nabla \times \boldsymbol{E} = i\omega\mu\boldsymbol{H}$ に代入すると，
 
 $$
+ik(\boldsymbol{s}\times\boldsymbol{E}_0)e^{ikz}=i\omega\mu\boldsymbol{H}_0e^{ikz}
+$$
+
+共通因子を除いて $\boldsymbol{H}_0$ について解きます。
+
+$$
+\boldsymbol{H}_0=\frac{k}{\omega\mu}(\boldsymbol{s}\times\boldsymbol{E}_0)
+$$
+
+となります。ここで点積を，複素共役を取らない成分の積の和とします。外積の反対称性により，次式が成り立ちます。
+
+$$
 \begin{aligned}
-ik(\boldsymbol{s} \times \boldsymbol{E}_0) e^{ikz} &= i\omega\mu\boldsymbol{H}_0 e^{ikz} \\
-\boldsymbol{H}_0 &= \frac{k}{\omega\mu}(\boldsymbol{s} \times \boldsymbol{E}_0)
+\boldsymbol{E}_0\cdot\boldsymbol{H}_0
+&=\frac{k}{\omega\mu}\boldsymbol{E}_0\cdot(\boldsymbol{s}\times\boldsymbol{E}_0)\\
+&=0
 \end{aligned}
 $$
 
-となります。両辺と $\boldsymbol{E}_0$ の内積をとると，$\boldsymbol{E}_0 \cdot (\boldsymbol{s} \times \boldsymbol{E}_0) = 0$ より $\boldsymbol{E}_0 \cdot \boldsymbol{H}_0 = 0$ です。したがって $\boldsymbol{E}_0 \perp \boldsymbol{H}_0$ が成り立ちます。
+設問の $\boldsymbol{E}_0\perp\boldsymbol{H}_0$ はこの点積の意味で成り立ちます。一般の複素偏光では，複素共役を含む内積が $0$ になるとは限りません。
 
 ### (4)
 設問2の $\boldsymbol{E}$ の方程式に $\rho = 0$，$\boldsymbol{J} = \sigma\boldsymbol{E}$，$\boldsymbol{E}(z) = \boldsymbol{E}_0 e^{ikz}$ を代入します。
 
 $$
-\begin{aligned}
-\left(-k^2 + \varepsilon\mu\omega^2 + i\omega\mu\sigma\right)\boldsymbol{E}_0 &= \boldsymbol{0} \\
-k^2 &= \varepsilon\mu\omega^2 + i\omega\mu\sigma
-\end{aligned}
+\left(-k^2+\varepsilon\mu\omega^2+i\omega\mu\sigma\right)\boldsymbol{E}_0=\boldsymbol{0}
+$$
+
+$\boldsymbol{E}_0\ne\boldsymbol{0}$ の波では，次の分散関係が成り立ちます。
+
+$$
+k^2=\varepsilon\mu\omega^2+i\omega\mu\sigma
 $$
 
 $\sigma = 0$ のとき，$+z$ 方向へ伝搬する波の波数は $k = \omega\sqrt{\varepsilon\mu}$ であり，位相速度 $v_{\mathrm{p}}$ は次式になります。
 
 $$
-v_{\mathrm{p}} = \frac{\omega}{k} = \frac{1}{\sqrt{\varepsilon\mu}}
+\begin{aligned}
+v_{\mathrm{p}} &= \frac{\omega}{k} \\
+&= \frac{1}{\sqrt{\varepsilon\mu}}
+\end{aligned}
 $$
 
 また設問3の $\boldsymbol{H}_0 = \dfrac{k}{\omega\mu}(\boldsymbol{s} \times \boldsymbol{E}_0)$ と $\boldsymbol{E}_0 \perp \boldsymbol{s}$ より，$|\boldsymbol{H}_0| = \dfrac{k}{\omega\mu}|\boldsymbol{E}_0|$ です。よって振幅の比 $|\boldsymbol{E}| / |\boldsymbol{H}|$ は次のとおりです。
@@ -182,9 +210,14 @@ $$
 $$
 
 ### (5)
-完全導体の内部および導体外では電場・磁場が $0$ です。導体板の表面 $y = 0$ および $y = b$ における境界条件より，導体表面に平行な電場成分と垂直な磁場成分は連続なので，$E_x = E_z = 0$ かつ $H_y = 0$ です。
+完全導体の内部および導体外では電場・磁場が $0$ です。導体板の表面 $y = 0$ および $y = b$ における境界条件より，導体表面に平行な電場成分と垂直な磁束密度成分は連続なので，$E_x = E_z = 0$ かつ $H_y = 0$ です。
 
-設問3の横波の条件 $\boldsymbol{E}_0 \perp \boldsymbol{s}$ と $E_x = 0$ より，導体間の電場は $y$ 方向を向きます。また $\boldsymbol{H}_0 = \dfrac{k}{\omega\mu_0}(\boldsymbol{s} \times \boldsymbol{E}_0)$ より，$\boldsymbol{E}$ が $+y$ 方向を向くとき $\boldsymbol{H}$ は $-x$ 方向を向きます。したがって，電場は $y$ 軸に平行，磁場は $x$ 軸に平行です。
+設問3の横波の条件 $\boldsymbol{E}_0 \perp \boldsymbol{s}$ と $E_x = 0$ より，導体間の電場は $y$ 方向を向きます。また $\boldsymbol{H}_0 = \dfrac{k}{\omega\mu_0}(\boldsymbol{s} \times \boldsymbol{E}_0)$ より，$\boldsymbol{E}$ が $+y$ 方向を向くとき $\boldsymbol{H}$ は $-x$ 方向を向きます。したがって，電場は $y$ 軸に平行，磁場は $x$ 軸に平行です。$+z$ 向きに進む波について，$E_y$ を複素振幅の $y$ 成分とすると，次のように表されます。
+
+$$
+\finalanswer{\boldsymbol{E}=E_y\hat{\boldsymbol{y}},\qquad
+\boldsymbol{H}=-\sqrt{\frac{\varepsilon_0}{\mu_0}}E_y\hat{\boldsymbol{x}}}
+$$
 
 ### (6)
 導体板の内部では磁場が $0$，導体間では $\boldsymbol{H}(z, t) = H_x(z, t)\hat{\boldsymbol{x}}$ が存在するため，アンペールの法則の境界条件より導体表面には表面電流密度 $\boldsymbol{K} = \boldsymbol{n} \times \boldsymbol{H}$ が流れます。ここで $\boldsymbol{n}$ は導体から真空側へ向く単位法線ベクトルです。
@@ -193,8 +226,10 @@ $y$ 軸は下向きにとっています。上側の導体板 $y = 0$ では $\b
 
 $$
 \begin{aligned}
-\boldsymbol{K}_{\mathrm{top}} &= \hat{\boldsymbol{y}} \times (H_x \hat{\boldsymbol{x}}) = -H_x \hat{\boldsymbol{z}} \\
-\boldsymbol{K}_{\mathrm{bot}} &= -\hat{\boldsymbol{y}} \times (H_x \hat{\boldsymbol{x}}) = +H_x \hat{\boldsymbol{z}}
+\boldsymbol{K}_{\mathrm{top}} &= \hat{\boldsymbol{y}} \times (H_x \hat{\boldsymbol{x}}) \\
+&= -H_x \hat{\boldsymbol{z}} \\
+\boldsymbol{K}_{\mathrm{bot}} &= -\hat{\boldsymbol{y}} \times (H_x \hat{\boldsymbol{x}}) \\
+&= +H_x \hat{\boldsymbol{z}}
 \end{aligned}
 $$
 
