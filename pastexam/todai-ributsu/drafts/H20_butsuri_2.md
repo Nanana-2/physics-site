@@ -54,7 +54,7 @@ $$
 <div class="approach" markdown>
 $N$ 個の分子が互いに独立なため，系全体の分配関数は1分子の分配関数の $N$ 乗になります。そのため，内部エネルギーやエントロピーなどの熱力学量はすべて1分子の分配関数の対数微分から求めることができます。
 
-エネルギー $\varepsilon$ の状態にある分子数 $N_\varepsilon$ は二項分布に従います。二項展開の公式をパラメータで微分すると，平均値や分散だけでなく，エネルギー $\varepsilon$ を変化させたときの応答関数と分散の比例関係も直接導くことができます。
+各分子がエネルギー $\varepsilon$ の状態にいるかどうかは独立な2通りの選択なので，その状態にいる分子数は二項展開で数えます。二項展開の公式をパラメータで微分すると，平均値や分散だけでなく，エネルギー $\varepsilon$ を変化させたときの応答関数と分散の比例関係も直接導くことができます。
 </div>
 
 ### (1)
@@ -62,13 +62,19 @@ $N$ 個の分子が互いに独立なため，系全体の分配関数は1分子
 ボルツマン定数を $k_{\mathrm{B}}$ とし，$\beta = \dfrac{1}{k_{\mathrm{B}}T}$ とおきます。1個の分子はエネルギー $0$ の状態を2つ，エネルギー $\varepsilon$ の状態を1つとるので，1分子の分配関数 $Z_1$ は次式になります。
 
 $$
-Z_1 = 2e^{-\beta\cdot 0} + e^{-\beta\varepsilon} = 2 + e^{-\beta\varepsilon}
+\begin{aligned}
+Z_1 &= 2e^{-\beta\cdot 0} + e^{-\beta\varepsilon} \\
+&= 2 + e^{-\beta\varepsilon}
+\end{aligned}
 $$
 
 $N$ 個の分子は互いに独立なので，系全体の分配関数 $Z$ は $Z_1$ の $N$ 乗です。
 
 $$
-Z = Z_1^N = \bigl(2 + e^{-\beta\varepsilon}\bigr)^N
+\begin{aligned}
+Z &= Z_1^N \\
+&= \bigl(2 + e^{-\beta\varepsilon}\bigr)^N
+\end{aligned}
 $$
 
 内部エネルギー $U$ は $U = -\dfrac{\partial\ln Z}{\partial\beta}$ から計算します。
@@ -90,7 +96,16 @@ $$
 
 ### (2)
 
-ヘルムホルツの自由エネルギーは $F = -k_{\mathrm{B}}T\ln Z = -Nk_{\mathrm{B}}T\ln\bigl(2 + e^{-\beta\varepsilon}\bigr)$ です。エントロピー $S$ は $F = U - TS$ すなわち $S = \dfrac{U - F}{T}$ から求めます。
+ヘルムホルツの自由エネルギーは 
+
+$$
+\begin{aligned}
+F &= -k_{\mathrm{B}}T\ln Z \\
+&= -Nk_{\mathrm{B}}T\ln\bigl(2 + e^{-\beta\varepsilon}\bigr)
+\end{aligned}
+$$
+
+です。エントロピー $S$ は $F = U - TS$ すなわち $S = \dfrac{U - F}{T}$ から求めます。
 
 $$
 \begin{aligned}
@@ -134,7 +149,7 @@ S &= Nk_{\mathrm{B}}\bigl(-\beta\varepsilon + \ln(1 + 2e^{\beta\varepsilon})\big
 \end{aligned}
 $$
 
-$T \to 0$ で $e^{\beta\varepsilon} \to 0$ かつ $\beta\varepsilon e^{\beta\varepsilon} \to 0$ なので，$\lim_{T \to 0} S = 0$ です。
+$T \to 0$ で $e^{\beta\varepsilon} \to 0$ かつ $\beta\varepsilon e^{\beta\varepsilon} \to 0$ なので，$\displaystyle \lim_{T \to 0} S = 0$ です。
 
 $$
 \finalanswer{\varepsilon > 0:\ S = Nk_{\mathrm{B}}\ln 2, \qquad \varepsilon = 0:\ S = Nk_{\mathrm{B}}\ln 3, \qquad \varepsilon < 0:\ S = 0}
@@ -163,7 +178,7 @@ $$
 
 ### (4)
 
-二項分布の公式 $(x + y)^N = \sum_{m=0}^{N} {}_N C_m x^{N-m} y^m$ の両辺を $y$ で微分し，さらに $y$ を掛けます。
+二項分布の公式 $\displaystyle (x + y)^N = \sum_{m=0}^{N} {}_N C_m x^{N-m} y^m$ の両辺を $y$ で微分し，さらに $y$ を掛けます。
 
 $$
 \begin{aligned}
@@ -206,7 +221,7 @@ $\langle N_\varepsilon \rangle$ の $\varepsilon$ に対する振る舞いを調
 
 ### (5)
 
-設問4で得た恒等式 $\sum_{m=0}^{N} m\,{}_N C_m x^{N-m} y^m = Ny(x + y)^{N-1}$ の両辺を再び $y$ で微分し，さらに $y$ を掛けます。
+設問4で得た恒等式 $\displaystyle \sum_{m=0}^{N} m\,{}_N C_m x^{N-m} y^m = Ny(x + y)^{N-1}$ の両辺を再び $y$ で微分し，さらに $y$ を掛けます。
 
 $$
 \begin{aligned}
@@ -262,5 +277,8 @@ $$
 したがって，応答関数 $\chi$ と分散を用いた表式は次式となります。
 
 $$
-\finalanswer{\chi = -\frac{2N e^{\varepsilon/(k_{\mathrm{B}}T)}}{k_{\mathrm{B}}T\bigl(2e^{\varepsilon/(k_{\mathrm{B}}T)} + 1\bigr)^2} = -\frac{1}{k_{\mathrm{B}}T}\bigl(\langle N_\varepsilon^2 \rangle - \langle N_\varepsilon \rangle^2\bigr)}
+\finalanswer{\begin{aligned}
+\chi&=-\frac{2Ne^{\varepsilon/(k_{\mathrm B}T)}}{k_{\mathrm B}T\bigl(2e^{\varepsilon/(k_{\mathrm B}T)}+1\bigr)^2}\\
+&=-\frac{1}{k_{\mathrm B}T}\bigl(\langle N_\varepsilon^2\rangle-\langle N_\varepsilon\rangle^2\bigr)
+\end{aligned}}
 $$

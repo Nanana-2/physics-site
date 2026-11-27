@@ -69,14 +69,23 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-エルミート行列の正規直交固有ベクトルから作る行列 $P(a) = \boldsymbol{u}_a\boldsymbol{u}_a^\dagger$ は，任意のベクトルから固有値 $a$ の成分だけを取り出す射影行列です。異なる固有値の射影行列同士を掛けると $0$ になり，同じものを掛けると元に戻るという性質によって，行列の関数 $f(A)$ の作用を各固有値の成分ごとに独立に計算することができます。
+エルミート行列の正規直交固有ベクトルから作る行列 $P(a) = \boldsymbol{u}_a\boldsymbol{u}_a^\dagger$ は，任意のベクトルから固有値 $a$ の成分だけを取り出す射影行列です。射影行列の積では，中央に現れる固有ベクトル同士の内積を先に計算します。正規直交性を使うと，行列積の計算を固有成分ごとのスカラーの計算に分けることができます。
 
 行列指数関数 $e^{-At}$ をベクトルに作用させると，各固有成分に重み $e^{-at}$ が掛かります。最小固有値 $a_0$ の因子 $e^{-a_0 t}$ をくくり出すと，他の固有値の成分はすべて $t \to \infty$ で指数関数的に減衰するため，最小固有値に対応する固有ベクトルを取り出すことができます。
 </div>
 
 ### (i)
 
-行列の積の結合法則と正規直交性 $\boldsymbol{u}_a^\dagger \boldsymbol{u}_{a'} = (\boldsymbol{u}_a, \boldsymbol{u}_{a'}) = \delta_{a, a'}$ を用いて計算します。
+行列の積の結合法則と正規直交性 
+
+$$
+\begin{aligned}
+\boldsymbol{u}_a^\dagger \boldsymbol{u}_{a'} &= (\boldsymbol{u}_a, \boldsymbol{u}_{a'}) \\
+&= \delta_{a, a'}
+\end{aligned}
+$$
+
+を用いて計算します。
 
 $$
 \begin{aligned}
@@ -108,7 +117,7 @@ $P(a)\boldsymbol{x} \neq \boldsymbol{0}$ であることから，$P(a)\boldsymbo
 
 ### (iii)
 
-$\{\boldsymbol{u}_a\}$ は $\mathbb{C}^n$ の正規直交完全系なので，任意のベクトル $\boldsymbol{x} \in \mathbb{C}^n$ は複素係数 $c_a$ を用いて $\boldsymbol{x} = \sum_a c_a\boldsymbol{u}_a$ と一意に展開することができます。この両辺と $\boldsymbol{u}_{a'}$ の内積をとります。
+$\{\boldsymbol{u}_a\}$ は $\mathbb{C}^n$ の正規直交完全系なので，任意のベクトル $\boldsymbol{x} \in \mathbb{C}^n$ は複素係数 $c_a$ を用いて $\displaystyle \boldsymbol{x} = \sum_a c_a\boldsymbol{u}_a$ と一意に展開することができます。この両辺と $\boldsymbol{u}_{a'}$ の内積をとります。
 
 $$
 \begin{aligned}
@@ -119,7 +128,16 @@ $$
 \end{aligned}
 $$
 
-よって $c_a = (\boldsymbol{u}_a, \boldsymbol{x}) = \boldsymbol{u}_a^\dagger\boldsymbol{x}$ であり，任意の $\boldsymbol{x}$ は次のように表されます。
+よって 
+
+$$
+\begin{aligned}
+c_a &= (\boldsymbol{u}_a, \boldsymbol{x}) \\
+&= \boldsymbol{u}_a^\dagger\boldsymbol{x}
+\end{aligned}
+$$
+
+であり，任意の $\boldsymbol{x}$ は次のように表されます。
 
 $$
 \begin{aligned}
@@ -139,11 +157,11 @@ A\boldsymbol{x} &= A\left(\sum_a P(a)\boldsymbol{x}\right) \\
 \end{aligned}
 $$
 
-これが任意の $\boldsymbol{x} \in \mathbb{C}^n$ について成り立つので，$A = \sum_a a P(a)$ です。
+これが任意の $\boldsymbol{x} \in \mathbb{C}^n$ について成り立つので，$\displaystyle A = \sum_a a P(a)$ です。
 
 ### (iv)
 
-任意の固有値 $a'$ に対応する固有ベクトル $\boldsymbol{u}_{a'}$ に $f(A) = \sum_a f(a)P(a)$ を作用させます。正規直交性 $\boldsymbol{u}_a^\dagger\boldsymbol{u}_{a'} = \delta_{a, a'}$ を用います。
+任意の固有値 $a'$ に対応する固有ベクトル $\boldsymbol{u}_{a'}$ に $\displaystyle f(A) = \sum_a f(a)P(a)$ を作用させます。正規直交性 $\boldsymbol{u}_a^\dagger\boldsymbol{u}_{a'} = \delta_{a, a'}$ を用います。
 
 $$
 \begin{aligned}
@@ -160,7 +178,7 @@ $\boldsymbol{u}_{a'}$ はノルムが $1$ でゼロベクトルではないた�
 
 ### (v)
 
-定義より $e^{-At}\boldsymbol{x} = \sum_a e^{-at}P(a)\boldsymbol{x}$ です。最小固有値 $a_0$ の項を分けて $e^{-a_0 t}$ をくくり出します。
+定義より $\displaystyle e^{-At}\boldsymbol{x} = \sum_a e^{-at}P(a)\boldsymbol{x}$ です。最小固有値 $a_0$ の項を分けて $e^{-a_0 t}$ をくくり出します。
 
 $$
 \begin{aligned}

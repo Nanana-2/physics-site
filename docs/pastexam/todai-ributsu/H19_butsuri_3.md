@@ -33,7 +33,7 @@ $$
 <figure class="problem-figure" markdown>
 ![慣性系 S と回転系 S' の座標関係](../../assets/figures/pastexam-todai-ributsu/H19_butsuri_3-p1-light.svg#only-light)
 ![慣性系 S と回転系 S' の座標関係](../../assets/figures/pastexam-todai-ributsu/H19_butsuri_3-p1-dark.svg#only-dark)
-<figcaption markdown="span">図1：慣性系 $S$ と回転系 $S'$。</figcaption>
+<figcaption markdown="span">図1：</figcaption>
 </figure>
 
 (1) この平面上の任意の点を $P$ としたとき，$S$ 系における $P$ の成分 $(\xi, \eta)$ を $S'$ 系での成分 $(x, y)$ で表せ。
@@ -79,7 +79,7 @@ $$
 <figure class="problem-figure" markdown>
 ![x 軸上のラグランジュ点の配置](../../assets/figures/pastexam-todai-ributsu/H19_butsuri_3-p2-light.svg#only-light)
 ![x 軸上のラグランジュ点の配置](../../assets/figures/pastexam-todai-ributsu/H19_butsuri_3-p2-dark.svg#only-dark)
-<figcaption markdown="span">図2：$x$ 軸上にあるラグランジュ点 $L_1, L_2, L_3$。</figcaption>
+<figcaption markdown="span">図2：</figcaption>
 </figure>
 
 (6) 式 (7) から，$\mu_2/\mu_1 \ll 1$ の場合 $u \ll 1$ となることがわかる。この場合，$L_2$ 点の位置 $u$ を $\mu_2/\mu_1$ の最低次で求めよ。特に，太陽と地球の系（$\mu_2/\mu_1 \approx 3\times 10^{-6}$，$a = 1.5\times 10^{11}\,\mathrm{m}$）の場合，地球と $L_2$ 点までの距離の値を近似的に求めよ。
@@ -146,7 +146,7 @@ $$
 \mathcal{L} = \frac{m}{2}(\dot{x}^2 + \dot{y}^2) + \frac{m\omega^2}{2}(x^2 + y^2) + m\omega(x\dot{y} - \dot{x}y) + Gm\left(\frac{m_1}{r_1} + \frac{m_2}{r_2}\right)
 $$
 
-これにより式 (3) が導かれます。
+
 
 ### (3)
 
@@ -163,11 +163,19 @@ $$
 まず $x$ 成分についてラグランジアン $\mathcal{L}$ の各偏微分を計算します。
 
 $$
-\begin{aligned}
-\frac{\partial\mathcal{L}}{\partial\dot{x}} &= m\dot{x} - m\omega y \\
-\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial\mathcal{L}}{\partial\dot{x}}\right) &= m\ddot{x} - m\omega\dot{y} \\
-\frac{\partial\mathcal{L}}{\partial x} &= m\omega^2 x + m\omega\dot{y} - Gm\left(\frac{m_1(x + \mu_2 a)}{r_1^3} + \frac{m_2(x - \mu_1 a)}{r_2^3}\right)
-\end{aligned}
+\frac{\partial\mathcal{L}}{\partial\dot{x}} = m\dot{x} - m\omega y
+$$
+
+速度による偏微分を時間で微分します。
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial\mathcal{L}}{\partial\dot{x}}\right) = m\ddot{x} - m\omega\dot{y}
+$$
+
+座標 $x$ による偏微分も計算します。
+
+$$
+\frac{\partial\mathcal{L}}{\partial x} = m\omega^2 x + m\omega\dot{y} - Gm\left(\frac{m_1(x + \mu_2 a)}{r_1^3} + \frac{m_2(x - \mu_1 a)}{r_2^3}\right)
 $$
 
 オイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\dfrac{\partial\mathcal{L}}{\partial\dot{x}} - \dfrac{\partial\mathcal{L}}{\partial x} = 0$ に代入し，両辺を $m$ で割ります。
@@ -179,11 +187,19 @@ $$
 次に $y$ 成分について同様に計算します。
 
 $$
-\begin{aligned}
-\frac{\partial\mathcal{L}}{\partial\dot{y}} &= m\dot{y} + m\omega x \\
-\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial\mathcal{L}}{\partial\dot{y}}\right) &= m\ddot{y} + m\omega\dot{x} \\
-\frac{\partial\mathcal{L}}{\partial y} &= m\omega^2 y - m\omega\dot{x} - Gm\left(\frac{m_1}{r_1^3} + \frac{m_2}{r_2^3}\right)y
-\end{aligned}
+\frac{\partial\mathcal{L}}{\partial\dot{y}} = m\dot{y} + m\omega x
+$$
+
+速度による偏微分を時間で微分します。
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial\mathcal{L}}{\partial\dot{y}}\right) = m\ddot{y} + m\omega\dot{x}
+$$
+
+座標 $y$ による偏微分も計算します。
+
+$$
+\frac{\partial\mathcal{L}}{\partial y} = m\omega^2 y - m\omega\dot{x} - Gm\left(\frac{m_1}{r_1^3} + \frac{m_2}{r_2^3}\right)y
 $$
 
 オイラー・ラグランジュ方程式 $\dfrac{\mathrm{d}}{\mathrm{d}t}\dfrac{\partial\mathcal{L}}{\partial\dot{y}} - \dfrac{\partial\mathcal{L}}{\partial y} = 0$ に代入し，両辺を $m$ で割ります。
@@ -205,13 +221,22 @@ $$
 
 ### (4)
 
-ラグランジュ点では $\ddot{x} = \ddot{y} = \dot{x} = \dot{y} = 0$ です。これを設問3の運動方程式の $y$ 成分に代入します。
+ラグランジュ点では $\ddot{x}=0$，$\ddot{y}=0$，$\dot{x}=0$，$\dot{y}=0$ です。これを設問3の運動方程式の $y$ 成分に代入します。
 
 $$
 \left(\omega^2 - G\frac{m_1}{r_1^3} - G\frac{m_2}{r_2^3}\right)y = 0
 $$
 
-式 (1) と式 (2) より，$Gm_1 = \mu_1 G(m_1 + m_2) = \mu_1 \omega^2 a^3$，および $Gm_2 = \mu_2 \omega^2 a^3$ です。これらを代入して $\omega^2$ をくくり出します。
+式 (1) と式 (2) より，
+
+$$
+\begin{aligned}
+Gm_1 &= \mu_1 G(m_1 + m_2) \\
+&= \mu_1 \omega^2 a^3
+\end{aligned}
+$$
+
+，および $Gm_2 = \mu_2 \omega^2 a^3$ です。これらを代入して $\omega^2$ をくくり出します。
 
 $$
 \begin{aligned}
@@ -232,19 +257,33 @@ $L_2$ 点は $y = 0$ かつ $P_2(\mu_1 a, 0)$ より外側，すなわち $x > \
 
 $$
 \begin{aligned}
-x &= \mu_1 a + r_2 = (\mu_1 + u)a \\
-x - \mu_1 a &= r_2 = u a \\
-x + \mu_2 a &= r_1 = (\mu_1 + \mu_2 + u)a = (1 + u)a
+x &= \mu_1 a + r_2 \\
+&= (\mu_1 + u)a
 \end{aligned}
 $$
 
-設問3の運動方程式の $x$ 成分に $\ddot{x} = \dot{y} = 0$ と $Gm_1 = \mu_1\omega^2 a^3$，$Gm_2 = \mu_2\omega^2 a^3$ を代入します。
+$P_1$，$P_2$ からの座標の差を表します。
 
 $$
 \begin{aligned}
-\omega^2 x &= G\frac{m_1(x + \mu_2 a)}{r_1^3} + G\frac{m_2(x - \mu_1 a)}{r_2^3} \\
-\omega^2(\mu_1 + u)a &= \mu_1\omega^2 a^3 \frac{1}{r_1^2} + \mu_2\omega^2 a^3 \frac{1}{r_2^2}
+x - \mu_1 a &= r_2 \\
+&= u a \\
+x + \mu_2 a &= r_1 \\
+&= (\mu_1 + \mu_2 + u)a \\
+&= (1 + u)a
 \end{aligned}
+$$
+
+設問3の運動方程式の $x$ 成分に $\ddot{x}=0$，$\dot{y}=0$ と $Gm_1 = \mu_1\omega^2 a^3$，$Gm_2 = \mu_2\omega^2 a^3$ を代入します。
+
+$$
+\omega^2 x = G\frac{m_1(x + \mu_2 a)}{r_1^3} + G\frac{m_2(x - \mu_1 a)}{r_2^3}
+$$
+
+$L_2$ での座標と距離を代入します。
+
+$$
+\omega^2(\mu_1 + u)a = \mu_1\omega^2 a^3 \frac{1}{r_1^2} + \mu_2\omega^2 a^3 \frac{1}{r_2^2}
 $$
 
 両辺を $\omega^2 a$ で割り，$r_1 = (1 + u)a$，$r_2 = u a$ を代入します。
@@ -256,10 +295,13 @@ $$
 ここで $\mu_1 + \mu_2 = 1$ を用いて左辺の $u$ を $u(\mu_1 + \mu_2)$ に書き換え，$\mu_1$ の項を左辺に，$\mu_2$ の項を右辺に集めます。
 
 $$
-\begin{aligned}
-\mu_1 + (\mu_1 + \mu_2)u &= \frac{\mu_1}{(1 + u)^2} + \frac{\mu_2}{u^2} \\
-\mu_1\left(1 + u - \frac{1}{(1 + u)^2}\right) &= \mu_2\left(\frac{1}{u^2} - u\right)
-\end{aligned}
+\mu_1 + (\mu_1 + \mu_2)u = \frac{\mu_1}{(1 + u)^2} + \frac{\mu_2}{u^2}
+$$
+
+$\mu_1$ と $\mu_2$ の項を分けて左右に集めます。
+
+$$
+\mu_1\left(1 + u - \frac{1}{(1 + u)^2}\right) = \mu_2\left(\frac{1}{u^2} - u\right)
 $$
 
 両辺の括弧内をそれぞれ通分します。
@@ -285,17 +327,20 @@ $$
 \end{aligned}
 $$
 
-これにより式 (7) が導かれます。
+
 
 ### (6)
 
 $u \ll 1$ のとき，式 (7) の右辺で $u$ の高次の項を無視すると $(1 + u)^2 \simeq 1$，$1 + u + u^2/3 \simeq 1$，$1 - u^3 \simeq 1$ となります。したがって最低次では次式が成り立ちます。
 
 $$
-\begin{aligned}
-\frac{\mu_2}{\mu_1} &\simeq 3u^3 \\
-u &\simeq \left(\frac{\mu_2}{3\mu_1}\right)^{1/3}
-\end{aligned}
+\frac{\mu_2}{\mu_1} \simeq 3u^3
+$$
+
+正の立方根をとり，$u$ について解きます。
+
+$$
+u \simeq \left(\frac{\mu_2}{3\mu_1}\right)^{1/3}
 $$
 
 太陽と地球の系では $\dfrac{\mu_2}{\mu_1} \approx 3\times 10^{-6}$，$a = 1.5\times 10^{11}\,\mathrm{m}$ なので，$u$ と地球から $L_2$ 点までの距離 $r_2 = u a$ は次のように求めることができます。

@@ -94,7 +94,7 @@ $$
 
 ### (1)
 
-まず交換関係 $[a_k, a_l^\dagger]$ を正準交換関係 $[x_k, p_l] = i\hbar\delta_{kl}$，$[x_k, x_l] = [p_k, p_l] = 0$ から計算します。
+まず交換関係 $[a_k, a_l^\dagger]$ を正準交換関係 $[x_k, p_l] = i\hbar\delta_{kl}$，$[x_k, x_l]=0$，$[p_k, p_l]=0$ から計算します。
 
 $$
 \begin{aligned}
@@ -116,7 +116,7 @@ $$
 \end{aligned}
 $$
 
-エルミート共役をとると，$[a_k^\dagger, a_l^\dagger] = -[a_k, a_l]^\dagger = 0$ も得られます。
+エルミート共役をとると，$[a_k^\dagger, a_l^\dagger]=0$，$-[a_k, a_l]^\dagger=0$ も得られます。
 
 次に $a_k^\dagger a_k$ を展開します。
 
@@ -148,23 +148,47 @@ $$
 座標表示では $p_k = -i\hbar\dfrac{\partial}{\partial x_k}$ です。これを消滅演算子 $a_k$ の定義式に代入し，条件 $a_k|0\rangle = 0$ を波動関数 $\psi_0(x_1, x_2)$ に対する微分方程式に書き換えます。
 
 $$
-\begin{aligned}
-\frac{1}{\sqrt{2\hbar}}\left(\sqrt{m\omega}x_k + \frac{i}{\sqrt{m\omega}}\left(-i\hbar\frac{\partial}{\partial x_k}\right)\right)\psi_0 &= 0 \\
-\left(m\omega x_k + \hbar\frac{\partial}{\partial x_k}\right)\psi_0 &= 0 \\
-\frac{\partial\psi_0}{\partial x_k} &= -\frac{m\omega}{\hbar}x_k\psi_0
-\end{aligned}
+\frac{1}{\sqrt{2\hbar}}\left(\sqrt{m\omega}x_k+
+\frac{\hbar}{\sqrt{m\omega}}\frac{\partial}{\partial x_k}\right)\psi_0=0
+$$
+
+正の共通因子を除きます。
+
+$$
+\left(m\omega x_k+\hbar\frac{\partial}{\partial x_k}\right)\psi_0=0
+$$
+
+微分の項を残して解くと，次の条件になります。
+
+$$
+\frac{\partial\psi_0}{\partial x_k}=-\frac{m\omega}{\hbar}x_k\psi_0
 $$
 
 $k = 1, 2$ について変数分離で積分します。まず $k = 1$ の式から次式が得られます。
 
 $$
-\begin{aligned}
-\frac{1}{\psi_0}\frac{\partial\psi_0}{\partial x_1} &= -\frac{m\omega}{\hbar}x_1 \\
-\psi_0(x_1, x_2) &= g(x_2)\exp\!\left(-\frac{m\omega}{2\hbar}x_1^2\right)
-\end{aligned}
+\frac{1}{\psi_0}\frac{\partial\psi_0}{\partial x_1}=-\frac{m\omega}{\hbar}x_1
 $$
 
-これを $k = 2$ の式に代入すると，$g'(x_2) = -\dfrac{m\omega}{\hbar}x_2 g(x_2)$ となり，$g(x_2) = C\exp\!\left(-\dfrac{m\omega}{2\hbar}x_2^2\right)$（$C$ は $0$ でない任意定数）が得られます。よって $r = \sqrt{x_1^2 + x_2^2}$ を用いて書くと次式になります。
+$x_2$ を固定して積分します。積分定数に相当する関数を $g(x_2)$ とおくと，次の式になります。
+
+$$
+\psi_0(x_1,x_2)=g(x_2)\exp\!\left(-\frac{m\omega}{2\hbar}x_1^2\right)
+$$
+
+これを $k=2$ の式に代入すると，$g$ は次の微分方程式を満たします。
+
+$$
+g'(x_2)=-\frac{m\omega}{\hbar}x_2g(x_2)
+$$
+
+変数を分離して積分します。$C$ は $0$ でない任意定数です。
+
+$$
+g(x_2)=C\exp\!\left(-\frac{m\omega}{2\hbar}x_2^2\right)
+$$
+
+したがって，$r=\sqrt{x_1^2+x_2^2}$ を用いると次の式になります。
 
 $$
 \begin{aligned}
@@ -198,7 +222,7 @@ $$
 \end{aligned}
 $$
 
-逆に，任意の固有状態に消滅演算子 $a_1, a_2$ を繰り返し作用させると固有値が $\hbar\omega$ ずつ下がりますが，$N_k = a_k^\dagger a_k$ の固有値は $0$ 以上なので，有限回で $a_1|\psi\rangle = a_2|\psi\rangle = 0$ となる基底状態 $|0\rangle$ に達します。設問2より基底状態は定数倍を除いて一意なので，すべての固有状態は $|n_1, n_2\rangle$ の線形結合で尽くされます。
+逆に，任意の固有状態に消滅演算子 $a_1, a_2$ を繰り返し作用させると固有値が $\hbar\omega$ ずつ下がりますが，$N_k = a_k^\dagger a_k$ の固有値は $0$ 以上なので，有限回で $a_1|\psi\rangle=0$，$a_2|\psi\rangle=0$ となる基底状態 $|0\rangle$ に達します。設問2より基底状態は定数倍を除いて一意なので，すべての固有状態は $|n_1, n_2\rangle$ の線形結合で尽くされます。
 
 $N = n_1 + n_2$（$N = 0, 1, 2, \dots$）とおくと，エネルギー固有値は $E_N = \hbar\omega(N + 1)$ です。与えられた $N$ に対して $n_1 + n_2 = N$ を満たす非負整数の組 $(n_1, n_2)$ は $(N, 0), (N - 1, 1), \dots, (0, N)$ の $N + 1$ 通りあり，これらに対応する固有状態は互いに直交します。よって固有値 $E_N = \hbar\omega(N + 1)$ の縮退度は $N + 1$ です。
 
@@ -208,22 +232,28 @@ $$
 
 ### (4)
 
-$\hbar = m = \omega = 1$ のとき，座標表示のシュレーディンガー方程式は次の通りです。
+$\hbar=1$，$m=1$，$\omega=1$ のとき，座標表示のシュレーディンガー方程式は次の通りです。
 
 $$
-\begin{aligned}
-\left(-\frac{1}{2}\left(\frac{\partial^2}{\partial x_1^2} + \frac{\partial^2}{\partial x_2^2}\right) + \frac{1}{2}(x_1^2 + x_2^2)\right)\psi &= E\psi \\
-\left(\frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial^2}{\partial\theta^2} + 2E - r^2\right)\psi &= 0
-\end{aligned}
+\left(-\frac{1}{2}\left(\frac{\partial^2}{\partial x_1^2} + \frac{\partial^2}{\partial x_2^2}\right) + \frac{1}{2}(x_1^2 + x_2^2)\right)\psi = E\psi
+$$
+
+両辺に $-2$ を掛け，ラプラシアンを極座標で表します。
+
+$$
+\left(\frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial^2}{\partial\theta^2} + 2E - r^2\right)\psi = 0
 $$
 
 $\psi(r, \theta) = R(r)\Theta(\theta)$ を代入し，両辺を $R(r)\Theta(\theta)$ で割ってから $r^2$ を掛けます。
 
 $$
-\begin{aligned}
-\frac{r^2}{R}\left(\frac{\mathrm{d}^2 R}{\mathrm{d}r^2} + \frac{1}{r}\frac{\mathrm{d}R}{\mathrm{d}r} + (2E - r^2)R\right) + \frac{1}{\Theta}\frac{\mathrm{d}^2\Theta}{\mathrm{d}\theta^2} &= 0 \\
-\frac{r^2}{R}\left(\frac{\mathrm{d}^2 R}{\mathrm{d}r^2} + \frac{1}{r}\frac{\mathrm{d}R}{\mathrm{d}r} + (2E - r^2)R\right) &= -\frac{1}{\Theta}\frac{\mathrm{d}^2\Theta}{\mathrm{d}\theta^2}
-\end{aligned}
+\frac{r^2}{R}\left(\frac{\mathrm{d}^2 R}{\mathrm{d}r^2} + \frac{1}{r}\frac{\mathrm{d}R}{\mathrm{d}r} + (2E - r^2)R\right) + \frac{1}{\Theta}\frac{\mathrm{d}^2\Theta}{\mathrm{d}\theta^2} = 0
+$$
+
+角度に関する項を右辺へ移します。
+
+$$
+\frac{r^2}{R}\left(\frac{\mathrm{d}^2 R}{\mathrm{d}r^2} + \frac{1}{r}\frac{\mathrm{d}R}{\mathrm{d}r} + (2E - r^2)R\right) = -\frac{1}{\Theta}\frac{\mathrm{d}^2\Theta}{\mathrm{d}\theta^2}
 $$
 
 左辺は $r$ のみの関数，右辺は $\theta$ のみの関数なので，両辺は定数に等しくなります。その分離定数を $n^2$ とおくと，$\theta$ に関する方程式は
@@ -240,11 +270,15 @@ $$
 \frac{\mathrm{d}^2 R}{\mathrm{d}r^2} + \frac{1}{r}\frac{\mathrm{d}R}{\mathrm{d}r} + \left(2E - r^2 - \frac{n^2}{r^2}\right)R = 0
 $$
 
-したがって，$n$ は波動関数の1価性 $\Theta(\theta + 2\pi) = \Theta(\theta)$ より任意の整数 $n = 0, \pm 1, \pm 2, \dots$ をとります。
+波動関数の1価性から，角度方向の量子数は整数です。
+
+$$
+\finalanswer{n\in\mathbb{Z}}
+$$
 
 ### (5)
 
-$f(r) = \sum_{s=0}^{\infty} f_s r^{s+\alpha}$ を微分します。
+$\displaystyle f(r) = \sum_{s=0}^{\infty} f_s r^{s+\alpha}$ を微分します。
 
 $$
 \begin{aligned}
@@ -270,7 +304,7 @@ $$
 
 $f_0 = 1 \neq 0$ なので，$\alpha^2 = n^2$ すなわち $\alpha = |n|$ または $\alpha = -|n|$ です。
 
-ここで $r \to 0$ のとき $f(r) \sim r^\alpha$ です。$\alpha = -|n|$ で $n \neq 0$ のときは $r \to 0$ で $f(r)$ が発散します。また $n = 0$ のときは $\alpha = |n| = -|n| = 0$ です。したがって，$f(r)$ が原点 $r = 0$ で発散しない条件から，$\alpha$ は次式となります。
+ここで $r \to 0$ のとき $f(r) \sim r^\alpha$ です。$\alpha = -|n|$ で $n \neq 0$ のときは $r \to 0$ で $f(r)$ が発散します。また $n = 0$ のときは $\alpha=0$，$|n|=0$，$-|n|=0$ です。したがって，$f(r)$ が原点 $r = 0$ で発散しない条件から，$\alpha$ は次式となります。
 
 $$
 \finalanswer{\alpha = |n|}
@@ -283,7 +317,10 @@ $$
 まず $s = 1$ の項である $r^{|n| - 1}$ の係数は次式になります。
 
 $$
-\bigl((|n| + 1)^2 - n^2\bigr)f_1 = (2|n| + 1)f_1 = 0
+\begin{aligned}
+\bigl((|n| + 1)^2 - n^2\bigr)f_1 &= (2|n| + 1)f_1 \\
+&= 0
+\end{aligned}
 $$
 
 $|n| \ge 0$ より $2|n| + 1 \neq 0$ なので，$f_1 = 0$ です。
@@ -305,13 +342,16 @@ $f_1 = 0$ とこの漸化式より，すべての奇数 $s = 1, 3, 5, \dots$ に
 べき級数が有限個の項からなるとき，ある非負整数 $k$ に対して $f_{2k} \neq 0$ かつ $f_{2k+2} = 0$ となります。漸化式に $s = 2k + 2$ を代入すると，$f_{2k+2} = 0$ かつ $f_{2k} \neq 0$ であるための条件は右辺の係数が $0$ になることです。
 
 $$
-\begin{aligned}
-(2k + 2) + |n| - 1 - E &= 0 \\
-E &= 2k + |n| + 1
-\end{aligned}
+(2k+2)+|n|-1-E=0
 $$
 
-ここで $k = 0, 1, 2, \dots$，$n = 0, \pm 1, \pm 2, \dots$ なので，$N = 2k + |n|$ とおくと，$N$ はすべての非負整数 $0, 1, 2, \dots$ をとります。したがって，固有値は $E = N + 1$ となり，設問3で求めた固有値 $E_N = \hbar\omega(N + 1)$ において $\hbar = m = \omega = 1$ とおいたものと一致します。
+$E$ について解くと，次の固有値になります。
+
+$$
+E=2k+|n|+1
+$$
+
+ここで $k = 0, 1, 2, \dots$，$n = 0, \pm 1, \pm 2, \dots$ なので，$N = 2k + |n|$ とおくと，$N$ はすべての非負整数 $0, 1, 2, \dots$ をとります。したがって，固有値は $E = N + 1$ となり，設問3で求めた固有値 $E_N = \hbar\omega(N + 1)$ において $\hbar=1$，$m=1$，$\omega=1$ とおいたものと一致します。
 
 $$
 \finalanswer{E = 2k + |n| + 1 \quad (k = 0, 1, 2, \dots,\ n = 0, \pm 1, \pm 2, \dots)}

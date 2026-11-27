@@ -73,7 +73,7 @@ $$
 <div class="approach" markdown>
 真空中のマクスウェル方程式は電場 $\vec{E}$ と磁束密度 $\vec{B}$ の1階偏微分方程式ですが，回転をもう一度とってベクトル公式を用いると，それぞれが単独で満たす2階の波動方程式に分かれます。
 
-平面波の形を代入すると，空間微分 $\nabla$ は波数ベクトル $\vec{k}$ の掛け算に，時間微分 $\partial/\partial t$ は $-\omega$ の掛け算に置き換わります。そのため，発散や回転の微分方程式がすべて定数ベクトル同士の代数関係に変わり，横波性や直交性，位相速度を直接導くことができます。
+正弦の平面波を微分すると，空間微分では波数ベクトル $\vec{k}$，時間微分では $-\omega$ が係数として現れ，正弦は余弦に変わります。共通の振動因子を比較することで，係数ベクトルの関係を求めます。そのため，発散や回転の微分方程式がすべて定数ベクトル同士の代数関係に変わり，横波性や直交性，位相速度を直接導くことができます。
 </div>
 
 ### (1)
@@ -103,22 +103,43 @@ $x, y, z$ の巡回置換によって $y$ 成分と $z$ 成分についても同
 式 (4) の両辺の回転をとり，設問1の公式と式 (1)，式 (2) を用います。
 
 $$
-\begin{aligned}
-\nabla\times(\nabla\times\vec{E}) &= -\frac{\partial}{\partial t}(\nabla\times\vec{B}) \\
-\nabla(\nabla\cdot\vec{E}) - \nabla^2\vec{E} &= -\epsilon_0\mu_0\frac{\partial^2\vec{E}}{\partial t^2} \\
--\nabla^2\vec{E} &= -\epsilon_0\mu_0\frac{\partial^2\vec{E}}{\partial t^2} \\
-\left(\nabla^2 - \epsilon_0\mu_0\frac{\partial^2}{\partial t^2}\right)\vec{E} &= \vec{0}
-\end{aligned}
+\nabla\times(\nabla\times\vec{E}) = -\frac{\partial}{\partial t}(\nabla\times\vec{B})
+$$
+
+回転の恒等式を用います。
+
+$$
+\nabla(\nabla\cdot\vec{E}) - \nabla^2\vec{E} = -\epsilon_0\mu_0\frac{\partial^2\vec{E}}{\partial t^2}
+$$
+
+電場の発散は $0$ です。
+
+$$
+-\nabla^2\vec{E} = -\epsilon_0\mu_0\frac{\partial^2\vec{E}}{\partial t^2}
+$$
+
+時間微分の項を左辺へ移します。
+
+$$
+\left(\nabla^2 - \epsilon_0\mu_0\frac{\partial^2}{\partial t^2}\right)\vec{E} = \vec{0}
 $$
 
 同様に，式 (2) の両辺の回転をとり，設問1の公式と式 (3)，式 (4) を用います。
 
 $$
-\begin{aligned}
-\nabla\times(\nabla\times\vec{B}) &= \epsilon_0\mu_0\frac{\partial}{\partial t}(\nabla\times\vec{E}) \\
-\nabla(\nabla\cdot\vec{B}) - \nabla^2\vec{B} &= -\epsilon_0\mu_0\frac{\partial^2\vec{B}}{\partial t^2} \\
-\left(\nabla^2 - \epsilon_0\mu_0\frac{\partial^2}{\partial t^2}\right)\vec{B} &= \vec{0}
-\end{aligned}
+\nabla\times(\nabla\times\vec{B}) = \epsilon_0\mu_0\frac{\partial}{\partial t}(\nabla\times\vec{E})
+$$
+
+回転の恒等式と電場の回転の式を用います。
+
+$$
+\nabla(\nabla\cdot\vec{B}) - \nabla^2\vec{B} = -\epsilon_0\mu_0\frac{\partial^2\vec{B}}{\partial t^2}
+$$
+
+磁束密度の発散を $0$ として，時間微分の項を移します。
+
+$$
+\left(\nabla^2 - \epsilon_0\mu_0\frac{\partial^2}{\partial t^2}\right)\vec{B} = \vec{0}
 $$
 
 したがって，$\vec{E}$ と $\vec{B}$ に対する波動方程式は次式となります。
@@ -129,7 +150,7 @@ $$
 
 ### (3)
 
-$\vec{E}_0 \neq \vec{0}$，$\vec{B}_0 \neq \vec{0}$ とします。式 (5) に対して $\nabla^2\vec{E}$ と $\dfrac{\partial^2\vec{E}}{\partial t^2}$ を計算します。
+以下では，零場や一様な静場を除いた伝搬波を考え，$\vec{E}_0\ne\vec{0}$，$\vec{B}_0\ne\vec{0}$ とします。角振動数は正の値を用いる約束で $\omega>0$，$\omega'>0$ とします。この約束を置かない場合，波数・周波数と振幅の符号を反転して同じ実電磁場を表すことができ，設問5の一致は表示の取り方まで一意にはなりません。まず式(5)のラプラシアンと時間の2階微分を計算します。
 
 $$
 \begin{aligned}
@@ -166,16 +187,29 @@ $$
 \begin{aligned}
 \nabla\cdot\vec{E} &= \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z} \\
 &= (k_x E_{0x} + k_y E_{0y} + k_z E_{0z})\cos(\vec{k}\cdot\vec{r} - \omega t + \alpha) \\
-&= (\vec{k}\cdot\vec{E}_0)\cos(\vec{k}\cdot\vec{r} - \omega t + \alpha) = 0
+&= (\vec{k}\cdot\vec{E}_0)\cos(\vec{k}\cdot\vec{r} - \omega t + \alpha) \\
+&= 0
 \end{aligned}
 $$
 
-この等式がすべての $\vec{r}, t$ について成り立つためには $\vec{k}\cdot\vec{E}_0 = 0$ が必要です。よって $\vec{k}\cdot\vec{E} = (\vec{k}\cdot\vec{E}_0)\sin(\vec{k}\cdot\vec{r} - \omega t + \alpha) = 0$ となり，$\vec{E}$ は波数ベクトル $\vec{k}$ に垂直です。
+この等式がすべての $\vec{r}, t$ について成り立つためには $\vec{k}\cdot\vec{E}_0 = 0$ が必要です。よって 
+
+$$
+\begin{aligned}
+\vec{k}\cdot\vec{E} &= (\vec{k}\cdot\vec{E}_0)\sin(\vec{k}\cdot\vec{r} - \omega t + \alpha) \\
+&= 0
+\end{aligned}
+$$
+
+となり，$\vec{E}$ は波数ベクトル $\vec{k}$ に垂直です。
 
 同様に式 (6) を式 (3) に代入すると，次式が得られます。
 
 $$
-\nabla\cdot\vec{B} = (\vec{k}'\cdot\vec{B}_0)\cos(\vec{k}'\cdot\vec{r} - \omega' t + \alpha') = 0
+\begin{aligned}
+\nabla\cdot\vec{B} &= (\vec{k}'\cdot\vec{B}_0)\cos(\vec{k}'\cdot\vec{r} - \omega' t + \alpha') \\
+&= 0
+\end{aligned}
 $$
 
 よって $\vec{k}'\cdot\vec{B}_0 = 0$ となり，$\vec{k}'\cdot\vec{B} = 0$ です。したがって，$\vec{E}$ と $\vec{B}$ はそれぞれの波数ベクトルに垂直であり，横波です。
@@ -220,7 +254,16 @@ $$
 \end{aligned}
 $$
 
-よって $\vec{E}\cdot\vec{B} = (\vec{E}_0\cdot\vec{B}_0)\sin^2(\vec{k}\cdot\vec{r} - \omega t + \alpha) = 0$ となり，$\vec{E}$ と $\vec{B}$ は互いに直交しています。
+よって 
+
+$$
+\begin{aligned}
+\vec{E}\cdot\vec{B} &= (\vec{E}_0\cdot\vec{B}_0)\sin^2(\vec{k}\cdot\vec{r} - \omega t + \alpha) \\
+&= 0
+\end{aligned}
+$$
+
+となり，$\vec{E}$ と $\vec{B}$ は互いに直交しています。
 
 ### (7)
 
@@ -263,7 +306,7 @@ $$
 
 これは真空の誘電率と透磁率だけで決まる定数なので，常に一定です。
 
-次にこの比の次元を調べます。電場の単位は単位長さあたりの電圧 $\mathrm{V/m}$ であり，アンペールの法則 $\oint \vec{H}\cdot\mathrm{d}\vec{l} = I$ より磁場の単位は単位長さあたりの電流 $\mathrm{A/m}$ です。したがって，比 $|\vec{E}|/|\vec{H}|$ の単位は次のようになります。
+次に比の次元を調べます。電場の単位は $\mathrm{V/m}$ です。磁場 $\vec H$ の単位は，静磁場におけるアンペールの法則から $\mathrm{A/m}$ です。したがって，比の単位は次のようになります。
 
 $$
 \begin{aligned}

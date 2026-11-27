@@ -91,8 +91,13 @@ $$
 次に磁化率 $\chi = \dfrac{\partial M}{\partial H}$ を求め，$H \to 0$ の極限をとります。
 
 $$
+\frac{\partial M}{\partial H} = \frac{N\beta\mu^2}{\cosh^2(\beta\mu H)}
+$$
+
+零磁場の極限をとり，$\chi$ と表します。
+
+$$
 \begin{aligned}
-\frac{\partial M}{\partial H} &= \frac{N\beta\mu^2}{\cosh^2(\beta\mu H)} \\
 \chi &= \lim_{H \to 0}\frac{N\beta\mu^2}{\cosh^2(\beta\mu H)} \\
 &= N\beta\mu^2 \\
 &= \frac{N\mu^2}{k_{\mathrm{B}}T}
@@ -102,12 +107,26 @@ $$
 したがって，磁化 $M$ と $H \to 0$ での磁化率 $\chi$ は次式となります。
 
 $$
-\finalanswer{M = N\mu\tanh(\beta\mu H), \qquad \chi = N\beta\mu^2 = \frac{N\mu^2}{k_{\mathrm{B}}T}}
+\finalanswer{\begin{aligned}
+M&=N\mu\tanh(\beta\mu H),\\
+\chi&=N\beta\mu^2\\
+&=\frac{N\mu^2}{k_{\mathrm B}T}
+\end{aligned}}
 $$
 
 ### (3)
 
-ゼーマン項 $-2\mu(s_{1z} + s_{2z})H$ が1粒子あたり $\mp\mu H$ のエネルギーを与えることから，ここでは $s_{1z}, s_{2z}$ の固有値を $\pm\dfrac{1}{2}$ とした無次元のスピン演算子を用います。このとき $\boldsymbol{s}_1^2 = \boldsymbol{s}_2^2 = \dfrac{1}{2}\left(\dfrac{1}{2} + 1\right) = \dfrac{3}{4}$ です。
+ゼーマン項 $-2\mu(s_{1z} + s_{2z})H$ が1粒子あたり $\mp\mu H$ のエネルギーを与えることから，ここでは $s_{1z}, s_{2z}$ の固有値を $\pm\dfrac{1}{2}$ とした無次元のスピン演算子を用います。このとき 
+
+$$
+\begin{aligned}
+\boldsymbol{s}_1^2 &= \boldsymbol{s}_2^2 \\
+&= \frac{1}{2}\left(\frac{1}{2} + 1\right) \\
+&= \frac{3}{4}
+\end{aligned}
+$$
+
+です。
 
 全スピン演算子 $\boldsymbol{S} = \boldsymbol{s}_1 + \boldsymbol{s}_2$ を導入します。$\boldsymbol{S}^2 = \boldsymbol{s}_1^2 + \boldsymbol{s}_2^2 + 2\boldsymbol{s}_1\cdot\boldsymbol{s}_2$ より，内積 $\boldsymbol{s}_1\cdot\boldsymbol{s}_2$ を $\boldsymbol{S}^2$ で書き換えます。
 
@@ -202,7 +221,11 @@ $$
 したがって，磁化 $M$ と $H \to 0$ での磁化率 $\chi$ は次式となります。
 
 $$
-\finalanswer{M = \frac{2N\mu\sinh(2\beta\mu H)}{e^{\beta V} + 1 + 2\cosh(2\beta\mu H)}, \qquad \chi = \frac{4N\beta\mu^2}{e^{\beta V} + 3} = \frac{4N\mu^2}{k_{\mathrm{B}}T\bigl(e^{V/(k_{\mathrm{B}}T)} + 3\bigr)}}
+\finalanswer{\begin{aligned}
+M&=\frac{2N\mu\sinh(2\beta\mu H)}{e^{\beta V}+1+2\cosh(2\beta\mu H)},\\
+\chi&=\frac{4N\beta\mu^2}{e^{\beta V}+3}\\
+&=\frac{4N\mu^2}{k_{\mathrm B}T\bigl(e^{V/(k_{\mathrm B}T)}+3\bigr)}
+\end{aligned}}
 $$
 
 ### (6)
@@ -227,4 +250,15 @@ $$
 \end{aligned}
 $$
 
-このように振る舞いが定性的に異なる理由は，相互作用の符号によって1対の基底状態が変わるためです。$V > 0$ の反強磁性的相互作用では，基底状態は全スピン $S = 0$ の非磁性な一重項状態になり，磁場に応答できる三重項状態との間にエネルギー差 $V$ が存在します。そのため低温では三重項への熱励起が $e^{-V/(k_{\mathrm{B}}T)}$ で抑えられ，磁化率は指数関数的に $0$ へ近づきます。一方，$V < 0$ の強磁性的相互作用では，基底状態は全スピン $S = 1$ の三重項状態になります。低温では各対が大きさ $S = 1$ の1個の自由スピンのように常磁性的に振る舞うため，磁化率は $1/T$ に比例して発散します。
+低温の磁化率をまとめると，次のようになります。
+
+$$
+\finalanswer{\chi\simeq\begin{cases}
+\frac{4N\mu^2}{k_{\mathrm B}T}e^{-V/(k_{\mathrm B}T)} &(V>0),\\
+\frac{4N\mu^2}{3k_{\mathrm B}T} &(V<0)
+\end{cases}}
+$$
+
+$V>0$ では基底状態は全スピン $S=0$ の非磁性な一重項です。磁場に応答する三重項とのエネルギー差は $V$ なので，熱励起が $e^{-V/(k_{\mathrm B}T)}$ で抑えられ，磁化率は $0$ に近づきます。
+
+$V<0$ では基底状態は全スピン $S=1$ の三重項です。低温の各対は大きさ $S=1$ の自由スピンとして振る舞い，磁化率は $1/T$ に比例して発散します。
