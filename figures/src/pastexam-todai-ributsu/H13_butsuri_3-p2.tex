@@ -1,0 +1,20 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[>=stealth, thick, scale=1.0]
+  % Sphere of radius r = 1.65
+  \draw[line width=0.7pt] (0, 0) circle (1.65);
+
+  % Coordinate axes (x down-left, y right, z up)
+  \draw[->, line width=0.65pt] (0, 0) -- (0, 2.45) node[left] {$z$};
+  \draw[->, line width=0.65pt] (0, 0) -- (2.35, 0) node[below] {$y$};
+  \draw[->, line width=0.65pt] (0, 0) -- (-1.85, -1.50) node[right] {$x$};
+
+  % Circular orbit of radius b in xy-plane (projected ellipse)
+  \draw[line width=1.6pt] (0, 0) ellipse (0.50 and 0.19);
+  \node[below right] at (0.44, -0.06) {$b$};
+
+  % Radius label r on z-axis at sphere intersection
+  \node[above right] at (0.02, 1.68) {$r$};
+\end{tikzpicture}
+\end{document}
