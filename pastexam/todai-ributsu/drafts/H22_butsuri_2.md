@@ -100,7 +100,7 @@ $$
 s(\epsilon) = -k_{\mathrm{B}}\left[\frac{-\epsilon - fb}{f(a - b)}\log\frac{-\epsilon - fb}{f(a - b)} + \frac{\epsilon + fa}{f(a - b)}\log\frac{\epsilon + fa}{f(a - b)}\right] \qquad (-fa \le \epsilon \le -fb)
 $$
 
-$s(\epsilon)$ は $\epsilon = -fa$ と $\epsilon = -fb$ で $0$ となり，中点 $\epsilon = -\dfrac{f(a + b)}{2}$ に関して対称で，中点で最大値 $k_{\mathrm{B}}\log 2$ をとる上に凸の曲線です。両端での傾きは発散します。グラフの概形は次の図のとおりです。
+式の両端では $0\log0=0$ を極限の意味で用います。$s(\epsilon)$ は $\epsilon = -fa$ と $\epsilon = -fb$ で $0$ となり，中点 $\epsilon = -\dfrac{f(a + b)}{2}$ に関して対称で，中点で最大値 $k_{\mathrm{B}}\log 2$ をとる上に凸の曲線です。両端での傾きは発散します。グラフの概形は次の図のとおりです。
 
 <figure class="problem-figure" markdown>
 ![単量体1個あたりのエントロピーs(epsilon)のグラフ](../../../docs/assets/figures/pastexam-todai-ributsu/H22_butsuri_2-s-light.svg#only-light)

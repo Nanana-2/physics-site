@@ -59,8 +59,10 @@ $\xi = x + vt$，$\eta = x - vt$ より，合成関数の微分法を用いて $
 
 $$
 \begin{aligned}
-\frac{\partial}{\partial x} &= \frac{\partial\xi}{\partial x}\frac{\partial}{\partial\xi} + \frac{\partial\eta}{\partial x}\frac{\partial}{\partial\eta} = \frac{\partial}{\partial\xi} + \frac{\partial}{\partial\eta} \\
-\frac{\partial}{\partial t} &= \frac{\partial\xi}{\partial t}\frac{\partial}{\partial\xi} + \frac{\partial\eta}{\partial t}\frac{\partial}{\partial\eta} = v\left(\frac{\partial}{\partial\xi} - \frac{\partial}{\partial\eta}\right)
+\frac{\partial}{\partial x} &= \frac{\partial\xi}{\partial x}\frac{\partial}{\partial\xi} + \frac{\partial\eta}{\partial x}\frac{\partial}{\partial\eta} \\
+&= \frac{\partial}{\partial\xi} + \frac{\partial}{\partial\eta} \\
+\frac{\partial}{\partial t} &= \frac{\partial\xi}{\partial t}\frac{\partial}{\partial\xi} + \frac{\partial\eta}{\partial t}\frac{\partial}{\partial\eta} \\
+&= v\left(\frac{\partial}{\partial\xi} - \frac{\partial}{\partial\eta}\right)
 \end{aligned}
 $$
 
@@ -69,7 +71,8 @@ $$
 $$
 \begin{aligned}
 \frac{1}{v^2}\frac{\partial^2 u}{\partial t^2} - \frac{\partial^2 u}{\partial x^2} &= \left(\frac{\partial}{\partial\xi} - \frac{\partial}{\partial\eta}\right)^2 u - \left(\frac{\partial}{\partial\xi} + \frac{\partial}{\partial\eta}\right)^2 u \\
-&= -4\frac{\partial^2 u}{\partial\xi\partial\eta} = 0
+&= -4\frac{\partial^2 u}{\partial\xi\partial\eta} \\
+&= 0
 \end{aligned}
 $$
 
@@ -95,21 +98,39 @@ u(x, t) &= f(x + vt) + g(x - vt)
 \end{aligned}
 $$
 
-以上より，式 (1) の一般解は $u(x, t) = f(x + vt) + g(x - vt)$ と表されます。
+
 
 ### (3)
-積分 $I$ を時刻 $t$ で微分し，式 (1) の関係 $\dfrac{1}{v^2}\dfrac{\partial^2 u}{\partial t^2} = \dfrac{\partial^2 u}{\partial x^2}$ を用いて整理します。
+設問(2)の一般解を用い，$F=f'$，$G=g'$ とおきます。時間微分と空間微分は次のとおりです。
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}I}{\mathrm{d}t} &= \int_{-\infty}^{+\infty}\left(\frac{1}{v^2}\frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} + \frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial t\partial x}\right)\mathrm{d}x \\
-&= \int_{-\infty}^{+\infty}\left(\frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} + \frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial x\partial t}\right)\mathrm{d}x \\
-&= \int_{-\infty}^{+\infty}\frac{\partial}{\partial x}\left(\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right)\mathrm{d}x \\
-&= \left[\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right]_{x \to -\infty}^{x \to +\infty}
+\frac1v\frac{\partial u}{\partial t}&=F(x+vt)-G(x-vt),\\
+\frac{\partial u}{\partial x}&=F(x+vt)+G(x-vt)
 \end{aligned}
 $$
 
-仮定より $x \to \pm\infty$ で $\dfrac{\partial u}{\partial x} \to 0$ であり，また $I$ が発散しないことから $\dfrac{\partial u}{\partial t}$ も有界なので，右辺は $0$ です。したがって $\dfrac{\mathrm{d}I}{\mathrm{d}t} = 0$ となり，$I$ は $t$ に依存しません。
+2乗して加えると交差項が消えます。
+
+$$
+\frac12\left[\frac1{v^2}\left(\frac{\partial u}{\partial t}\right)^2
++\left(\frac{\partial u}{\partial x}\right)^2\right]
+=F(x+vt)^2+G(x-vt)^2
+$$
+
+したがって，それぞれの積分で変数を平行移動すると，次のようになります。
+
+$$
+\begin{aligned}
+I(t)&=\int_{-\infty}^{\infty}F(x+vt)^2\,\mathrm{d}x
++\int_{-\infty}^{\infty}G(x-vt)^2\,\mathrm{d}x\\
+&=\int_{-\infty}^{\infty}F(\xi)^2\,\mathrm{d}\xi
++\int_{-\infty}^{\infty}G(\eta)^2\,\mathrm{d}\eta\\
+&=I(0)
+\end{aligned}
+$$
+
+仮定より積分は有限であり，右辺は $t$ に依存しません。
 
 ### (4)
 設問 (2) の一般解 $u(x, t) = f(x + vt) + g(x - vt)$ に $t = 0$ の初期条件を代入します。
@@ -165,11 +186,17 @@ $$
 $$
 
 ### (6)
-$t > 0$ を固定して $b \to 0+$ の極限をとります。実数 $X \neq 0$ に対して $X > 0$ なら $\lim_{b \to 0+}\arctan(X / b) = \dfrac{\pi}{2}$，$X < 0$ なら $\lim_{b \to 0+}\arctan(X / b) = -\dfrac{\pi}{2}$ なので，$x$ の範囲によって次のように場合分けされます。
+$t > 0$ を固定して $b \to 0+$ の極限をとります。実数 $X \neq 0$ に対して $X > 0$ なら $\displaystyle \lim_{b \to 0+}\arctan(X / b) = \dfrac{\pi}{2}$，$X < 0$ なら $\displaystyle \lim_{b \to 0+}\arctan(X / b) = -\dfrac{\pi}{2}$ なので，$x$ の範囲によって次のように場合分けされます。
 
-- $x < a - vt$ のとき：$x + vt - a < 0$ かつ $x - vt - a < 0$ なので，$u(x, t) \to \dfrac{v}{2\pi}\left(-\dfrac{\pi}{2} + \dfrac{\pi}{2}\right) = 0$ です。
-- $a - vt < x < a + vt$ のとき：$x + vt - a > 0$ かつ $x - vt - a < 0$ なので，$u(x, t) \to \dfrac{v}{2\pi}\left(\dfrac{\pi}{2} + \dfrac{\pi}{2}\right) = \dfrac{v}{2}$ です。
-- $x > a + vt$ のとき：$x + vt - a > 0$ かつ $x - vt - a > 0$ なので，$u(x, t) \to \dfrac{v}{2\pi}\left(\dfrac{\pi}{2} - \dfrac{\pi}{2}\right) = 0$ です。
+$x<a-vt$ では，2つの逆正接はいずれも $-\pi/2$ に近づきます。$a-vt<x<a+vt$ ではそれぞれ $\pi/2$，$-\pi/2$ に近づき，$x>a+vt$ ではいずれも $\pi/2$ に近づきます。波面 $x=a\pm vt$ では一方の逆正接の引数が $0$ です。したがって，点ごとの極限は次のとおりです。
+
+$$
+\lim_{b\to0+}u(x,t)=\begin{cases}
+0 &(x<a-vt\ \text{or}\ x>a+vt),\\
+\dfrac v4 &(x=a\pm vt),\\
+\dfrac v2 &(a-vt<x<a+vt)
+\end{cases}
+$$
 
 したがって $b \to 0$ の極限では，$x = a$ を中心として区間 $a - vt < x < a + vt$ に高さ $v/2$ をもつ矩形波になります。図示すると次のとおりです。
 

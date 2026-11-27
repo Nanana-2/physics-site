@@ -95,12 +95,18 @@ $$
 同様に散乱後についても $m_1\boldsymbol{v}'_1 + m_2\boldsymbol{v}'_2 = \boldsymbol{0}$ が成り立つため，$v_1 = \dfrac{m_2}{m_1}v_2$，$v'_1 = \dfrac{m_2}{m_1}v'_2$ です。弾性散乱では散乱前後で運動エネルギーの和が保存されるので，次式が成り立ちます。
 
 $$
-\begin{aligned}
-\frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 &= \frac{1}{2}m_1 {v'_1}^2 + \frac{1}{2}m_2 {v'_2}^2 \\
-\frac{1}{2}m_2\left(\frac{m_2}{m_1} + 1\right)v_2^2 &= \frac{1}{2}m_2\left(\frac{m_2}{m_1} + 1\right){v'_2}^2 \\
-v_2^2 &= {v'_2}^2
-\end{aligned}
+\frac12m_1v_1^2+\frac12m_2v_2^2
+=\frac12m_1{v'_1}^2+\frac12m_2{v'_2}^2
 $$
+
+運動量から得た速さの比を代入します。
+
+$$
+\frac12m_2\left(\frac{m_2}{m_1}+1\right)v_2^2
+=\frac12m_2\left(\frac{m_2}{m_1}+1\right){v'_2}^2
+$$
+
+正の共通係数を除くと，$v_2^2={v'_2}^2$ です。
 
 速さは非負なので，$v'_2 = v_2$ です。
 
@@ -113,10 +119,22 @@ $$
 実験室系における散乱前の粒子1の速度ベクトルを $\boldsymbol{V}_1$ とします。粒子2は散乱前に静止しているので，重心の速度ベクトル $\boldsymbol{V}_{\mathrm{G}}$ は次式になります。
 
 $$
-\boldsymbol{V}_{\mathrm{G}} = \frac{m_1\boldsymbol{V}_1 + m_2\cdot\boldsymbol{0}}{m_1 + m_2} = \frac{m_1}{m_1 + m_2}\boldsymbol{V}_1
+\begin{aligned}
+\boldsymbol{V}_{\mathrm{G}} &= \frac{m_1\boldsymbol{V}_1 + m_2\cdot\boldsymbol{0}}{m_1 + m_2} \\
+&= \frac{m_1}{m_1 + m_2}\boldsymbol{V}_1
+\end{aligned}
 $$
 
-重心系における散乱前の粒子2の速度ベクトルは $\boldsymbol{v}_2 = \boldsymbol{0} - \boldsymbol{V}_{\mathrm{G}} = -\boldsymbol{V}_{\mathrm{G}}$ です。設問1より，$v'_2 = v_2 = V_{\mathrm{G}}$ です。また重心系では $\boldsymbol{v}_2$ は $\boldsymbol{v}_1$ と反対向きであり，$\boldsymbol{v}'_2$ は $\boldsymbol{v}'_1$ と反対向きなので，$\boldsymbol{v}_2$ と $\boldsymbol{v}'_2$ のなす角も $\psi$ になります。したがって，$\boldsymbol{v}'_2$ と $\boldsymbol{V}_{\mathrm{G}} = -\boldsymbol{v}_2$ のなす角は $\pi - \psi$ です。
+重心系における散乱前の粒子2の速度ベクトルを求めます。
+
+$$
+\begin{aligned}
+\boldsymbol{v}_2&=\boldsymbol{0}-\boldsymbol{V}_{\mathrm{G}}\\
+&=-\boldsymbol{V}_{\mathrm{G}}
+\end{aligned}
+$$
+
+したがって，設問1と合わせて $v'_2=V_{\mathrm{G}}$ です。散乱前後とも粒子2の速度は粒子1の速度と反対向きなので，$\boldsymbol{v}_2$ と $\boldsymbol{v}'_2$ のなす角も $\psi$ です。$\boldsymbol{V}_{\mathrm{G}}=-\boldsymbol{v}_2$ より，$\boldsymbol{v}'_2$ と $\boldsymbol{V}_{\mathrm{G}}$ のなす角は $\pi-\psi$ です。
 
 実験室系での散乱後の粒子2の速度ベクトルは $\boldsymbol{V}'_2 = \boldsymbol{v}'_2 + \boldsymbol{V}_{\mathrm{G}}$ です。この大きさの2乗を計算します。
 
@@ -165,7 +183,16 @@ T &= \frac{1}{2}m_1\dot{\boldsymbol{r}}_1^2 + \frac{1}{2}m_2\dot{\boldsymbol{r}}
 \end{aligned}
 $$
 
-ここで $m = \dfrac{1}{1/m_1 + 1/m_2} = \dfrac{m_1 m_2}{m_1 + m_2}$ です。平面極座標 $(r, \phi)$ では $x = r\cos\phi$，$y = r\sin\phi$ より $\dot{x} = \dot{r}\cos\phi - r\dot{\phi}\sin\phi$，$\dot{y} = \dot{r}\sin\phi + r\dot{\phi}\cos\phi$ なので，$\dot{\boldsymbol{r}}^2$ は次式になります。
+ここで 
+
+$$
+\begin{aligned}
+m &= \dfrac{1}{1/m_1 + 1/m_2} \\
+&= \dfrac{m_1 m_2}{m_1 + m_2}
+\end{aligned}
+$$
+
+ です。平面極座標 $(r, \phi)$ では $x = r\cos\phi$，$y = r\sin\phi$ より $\dot{x} = \dot{r}\cos\phi - r\dot{\phi}\sin\phi$，$\dot{y} = \dot{r}\sin\phi + r\dot{\phi}\cos\phi$ なので，$\dot{\boldsymbol{r}}^2$ は次式になります。
 
 $$
 \begin{aligned}
@@ -186,42 +213,66 @@ $$
 ラグランジアン $L = \dfrac{1}{2}m(\dot{r}^2 + r^2\dot{\phi}^2) - U(r)$ は角度 $\phi$ を陽に含まないため，$\dfrac{\partial L}{\partial \phi} = 0$ です。また，$\dot{\phi}$ による偏微分は $\dfrac{\partial L}{\partial \dot{\phi}} = mr^2\dot{\phi}$ です。これらを $\phi$ に関するオイラー・ラグランジュ方程式に代入します。
 
 $$
-\begin{aligned}
-\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial \dot{\phi}}\right) - \frac{\partial L}{\partial \phi} &= 0 \\
-\frac{\mathrm{d}}{\mathrm{d}t}\bigl(mr^2\dot{\phi}\bigr) &= 0
-\end{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial\dot\phi}\right)
+-\frac{\partial L}{\partial\phi}=0
+$$
+
+上の偏微分を代入します。
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}t}(mr^2\dot\phi)=0
 $$
 
 時間微分が $0$ なので，$mr^2\dot{\phi}$ は時間によらず一定です。
 
 ### (5)
 
-散乱前の相対速度は $\boldsymbol{v} = \dot{\boldsymbol{r}} = \boldsymbol{v}_1 - \boldsymbol{v}_2 = \boldsymbol{V}_1$ なので，入射時の相対速さは $v = V_1$ であり，全エネルギーは $E = \dfrac{1}{2}mV_1^2$ です。また，$r > r_0$ と $r < r_0$ の各領域ではポテンシャルが一定なので力がはたらかず，相対位置ベクトル $\boldsymbol{r}$ の軌跡は直線になります。
+散乱前の相対速度を重心系の2速度で表します。
+
+$$
+\begin{aligned}
+\boldsymbol{v}&=\dot{\boldsymbol{r}}\\
+&=\boldsymbol{v}_1-\boldsymbol{v}_2\\
+&=\boldsymbol{V}_1
+\end{aligned}
+$$
+
+したがって入射時の相対速さは $V_1$，全エネルギーは $E=mV_1^2/2$ です。球面の内側と外側ではそれぞれポテンシャルが一定なので力が働かず，軌跡は直線です。
 
 境界 $r = r_0$ での運動を調べます。半径 $r_0$ の球面ではポテンシャルが半径方向にのみ変化するので，接線方向の速度成分は連続であり，角運動量 $L_z = mr^2\dot{\phi}$ が保存されます。入射時の角運動量の大きさは $mV_1 b = mV_1 r_0\sin\theta$ です。
 
 まず粒子が領域 $r < r_0$ に入る場合を考えます。領域 $r < r_0$ での速さを $v_{\mathrm{in}}$ とすると，エネルギー保存則から次式が得られます。
 
 $$
+\frac12mv_{\mathrm{in}}^2+U_0=\frac12mV_1^2
+$$
+
+速さの2乗について解きます。
+
+$$
 \begin{aligned}
-\frac{1}{2}m v_{\mathrm{in}}^2 + U_0 &= \frac{1}{2}m V_1^2 \\
-v_{\mathrm{in}}^2 &= V_1^2\left(1 - \frac{2U_0}{mV_1^2}\right) \\
-v_{\mathrm{in}} &= n V_1
+v_{\mathrm{in}}^2&=V_1^2\left(1-\frac{2U_0}{mV_1^2}\right)\\
+&=n^2V_1^2
 \end{aligned}
 $$
+
+速さは正なので，$v_{\mathrm{in}}=nV_1$ です。
 
 ここで $0 < U_0 < \dfrac{m}{2}V_1^2$ より $0 < n < 1$ です。境界 $r = r_0$ での法線と内部の軌跡がなす屈折角を $\theta'$（$0 \le \theta' < \pi/2$）とすると，角運動量保存則から次式が成り立ちます。
 
 $$
-\begin{aligned}
-m V_1 r_0 \sin\theta &= m v_{\mathrm{in}} r_0 \sin\theta' \\
-\sin\theta &= n\sin\theta'
-\end{aligned}
+mV_1r_0\sin\theta=mv_{\mathrm{in}}r_0\sin\theta'
+$$
+
+$v_{\mathrm{in}}=nV_1$ を代入し，共通因子を除きます。
+
+$$
+\sin\theta=n\sin\theta'
 $$
 
 したがって，$\sin\theta < n$ のときと $\sin\theta \ge n$ のときで散乱の様子が質的に異なります。
 
-まず $\sin\theta < n$ の場合を考えます。このとき $\sin\theta' = \dfrac{\sin\theta}{n} < 1$ となる実角 $\theta'$ が存在し，粒子は領域 $r < r_0$ に入って屈折角 $\theta'$ で直進します。次に境界 $r = r_0$ に再び到達すると，対称性から入射角 $\theta'$ で外へ出て出射角が $\theta$ になります。$0 < n < 1$ より $\theta' > \theta$ なので，入口と出口で進行方向はそれぞれ同じ向きに $\theta' - \theta$ ずつ曲がります。よって重心系での散乱角 $\psi$ は次式になります。
+まず $\sin\theta < n$ の場合を考えます。このとき $\sin\theta' = \dfrac{\sin\theta}{n} < 1$ となる実角 $\theta'$ が存在し，粒子は領域 $r < r_0$ に入って屈折角 $\theta'$ で直進します。次に境界 $r = r_0$ に再び到達すると，対称性から入射角 $\theta'$ で外へ出て出射角が $\theta$ になります。$0<n<1$ より，$\theta>0$ では $\theta'>\theta$ なので，入口と出口で進行方向はそれぞれ同じ向きに $\theta'-\theta$ ずつ曲がります。$\theta=0$ では $\theta'=0$ となり，直進します。よって重心系での散乱角 $\psi$ は次式になります。
 
 $$
 \psi = 2(\theta' - \theta)

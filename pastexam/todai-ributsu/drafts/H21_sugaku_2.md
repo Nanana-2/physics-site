@@ -89,7 +89,7 @@ $$
 
 ### (2)
 
-$A(t) = \int_0^t a(\tau)\,\mathrm{d}\tau$，$C(t) = \int_0^t c(\tau)\,\mathrm{d}\tau$ とおくと，$f_1(t) = e^{-iA(t)}\tilde{f}_1(t)$，$f_2(t) = e^{-iC(t)}\tilde{f}_2(t)$ です。これらを $t$ で微分して $i$ を掛けます。
+$\displaystyle A(t) = \int_0^t a(\tau)\,\mathrm{d}\tau$，$\displaystyle C(t) = \int_0^t c(\tau)\,\mathrm{d}\tau$ とおくと，$f_1(t) = e^{-iA(t)}\tilde{f}_1(t)$，$f_2(t) = e^{-iC(t)}\tilde{f}_2(t)$ です。これらを $t$ で微分して $i$ を掛けます。
 
 $$
 \begin{aligned}
@@ -190,12 +190,14 @@ $$
 \end{aligned}
 $$
 
-$b(t)$ は $t \to -\infty$ で十分はやく減衰するため，積分 $\Phi(t) = \int_{-\infty}^{t} b(\tau)\,\mathrm{d}\tau$ が収束します。各微分方程式を $-\infty$ から $t$ まで積分します。
+$b(t)$ は $t \to -\infty$ で十分はやく減衰するため，積分 $\displaystyle \Phi(t) = \int_{-\infty}^{t} b(\tau)\,\mathrm{d}\tau$ が収束します。各微分方程式を $-\infty$ から $t$ まで積分します。
 
 $$
 \begin{aligned}
-g_+(t) &= g_+(-\infty)e^{-i\Phi(t)} = \bigl(f_1(-\infty) + f_2(-\infty)\bigr)e^{-i\Phi(t)} \\
-g_-(t) &= g_-(-\infty)e^{i\Phi(t)} = \bigl(f_1(-\infty) - f_2(-\infty)\bigr)e^{i\Phi(t)}
+g_+(t) &= g_+(-\infty)e^{-i\Phi(t)} \\
+&= \bigl(f_1(-\infty) + f_2(-\infty)\bigr)e^{-i\Phi(t)} \\
+g_-(t) &= g_-(-\infty)e^{i\Phi(t)} \\
+&= \bigl(f_1(-\infty) - f_2(-\infty)\bigr)e^{i\Phi(t)}
 \end{aligned}
 $$
 
@@ -217,7 +219,20 @@ $$
 
 ### (5)
 
-$f_1(-\infty) = 1$，$f_2(-\infty) = 0$ を設問4の結果に代入すると，$f_1(t) = \cos\Phi(t)$ です。また設問1より $|f_1(t)|^2 + |f_2(t)|^2 = |f_1(-\infty)|^2 + |f_2(-\infty)|^2 = 1$ なので，$|f_2(t)|^2 = 1 - |f_1(t)|^2 = \sin^2\Phi(t)$ となります。
+設問4に初期値を代入すると，$f_1(t)=\cos\Phi(t)$ です。設問1のノルム保存から，次の式が成り立ちます。
+
+$$
+|f_1(t)|^2+|f_2(t)|^2=1
+$$
+
+したがって，第2成分の確率は次のようになります。
+
+$$
+\begin{aligned}
+|f_2(t)|^2&=1-|f_1(t)|^2\\
+&=\sin^2\Phi(t)
+\end{aligned}
+$$
 
 ここで $\Phi(+\infty)$ を求めます。
 

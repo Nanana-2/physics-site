@@ -94,12 +94,16 @@ $$
 $u(x)$ は $x = y$ で連続なので，$c_1 y = c_2(1 - y)$ が成り立ちます。次に微分方程式の両辺を $y - \epsilon$ から $y + \epsilon$ まで積分し，$\epsilon \to 0+$ の極限をとります。
 
 $$
-\begin{aligned}
-\lim_{\epsilon \to 0+}\bigl(u'(y + \epsilon) - u'(y - \epsilon)\bigr) &= -1 \\
--c_2 - c_1 &= -1 \\
-c_1 + c_2 &= 1
-\end{aligned}
+\lim_{\epsilon\to0+}\bigl(u'(y+\epsilon)-u'(y-\epsilon)\bigr)=-1
 $$
+
+両側の傾きを代入します。
+
+$$
+-c_2-c_1=-1
+$$
+
+したがって $c_1+c_2=1$ です。
 
 $c_1 y = c_2(1 - y)$ と $c_1 + c_2 = 1$ を連立して解くと，$c_1 = 1 - y$，$c_2 = y$ です。したがって求める解は次のとおりです。
 
@@ -108,7 +112,7 @@ $$
 $$
 
 ### (1)(ii)
-$G(x, y)$ は $\dfrac{\partial^2 G(x, y)}{\partial x^2} = -\delta(x - y)$ および $G(0, y) = G(1, y) = 0$ を満たします。符号に注意して
+$G(x, y)$ は $\dfrac{\partial^2 G(x, y)}{\partial x^2} = -\delta(x - y)$ および $G(0,y)=0$，$G(1,y)=0$ を満たします。符号に注意して
 
 $$
 v(x) = -\int_0^1 G(x, y)\rho(y)\,\mathrm{d}y
@@ -158,7 +162,16 @@ $$
 \end{aligned}
 $$
 
-よって $u_n(x, y)$ はラプラス方程式の解です。また極座標で表すと $z = r e^{i\theta}$，$\bar{z} = r e^{-i\theta}$ より $u_n(x, y) = r^n(e^{in\theta} + e^{-in\theta}) = 2r^n \cos(n\theta)$ なので，境界 $r = 1$ での値は次のとおりです。
+よって $u_n(x, y)$ はラプラス方程式の解です。また極座標で表すと $z = r e^{i\theta}$，$\bar{z} = r e^{-i\theta}$ より 
+
+$$
+\begin{aligned}
+u_n(x, y) &= r^n(e^{in\theta} + e^{-in\theta}) \\
+&= 2r^n \cos(n\theta)
+\end{aligned}
+$$
+
+ なので，境界 $r = 1$ での値は次のとおりです。
 
 $$
 \finalanswer{\left.u_n(x, y)\right|_{r=1} = 2\cos(n\theta)}
@@ -208,21 +221,38 @@ $$
 
 $$
 \begin{aligned}
-\int_V \mathrm{d}^d x\,\nabla \cdot \nabla u(\boldsymbol{x}) &= \int_V \mathrm{d}^d x\left(-\prod_{a=1}^d \delta(x_a)\right) \\
-\int_{\partial V} \mathrm{d}S\,\boldsymbol{n}\cdot\nabla u &= -1 \\
-u'(R)\,S_d R^{d-1} &= -1 \\
-u'(R) &= -\frac{1}{S_d} R^{1 - d}
+\int_V\mathrm{d}^d x\,\nabla\cdot\nabla u(\boldsymbol{x})
+&=-\int_V\mathrm{d}^d x\prod_{a=1}^d\delta(x_a)\\
+&=-1
 \end{aligned}
 $$
 
-$d \ge 3$ なので $2 - d < 0$ であり，$\lim_{r \to \infty} u(r) = 0$ を用いて $r$ から $\infty$ まで積分します。
+発散定理により，球面上の流束も $-1$ です。
+
+$$
+\int_{\partial V}\mathrm{d}S\,\boldsymbol{n}\cdot\nabla u=-1
+$$
+
+球面上では $\boldsymbol{n}\cdot\nabla u=u'(R)$ なので，面積を掛けると次の式になります。
+
+$$
+u'(R)S_dR^{d-1}=-1
+$$
+
+したがって動径微分は次のとおりです。
+
+$$
+u'(R)=-\frac{R^{1-d}}{S_d}
+$$
+
+$d \ge 3$ なので $2 - d < 0$ であり，$\displaystyle \lim_{r \to \infty} u(r) = 0$ を用いて $r$ から $\infty$ まで積分します。
 
 $$
 \begin{aligned}
-u(\infty) - u(r) &= -\frac{1}{S_d}\int_r^{\infty} R^{1 - d}\,\mathrm{d}R \\
--u(r) &= -\frac{1}{S_d}\left[\frac{R^{2 - d}}{2 - d}\right]_r^{\infty} \\
-u(r) &= \frac{1}{(d - 2) S_d}\,\frac{1}{r^{d - 2}} \\
-&= \frac{\Gamma(d/2)}{2(d - 2)\pi^{d/2}}\,\frac{1}{|\boldsymbol{x}|^{d - 2}}
+u(r)&=\frac{1}{S_d}\int_r^\infty R^{1-d}\,\mathrm{d}R\\
+&=\frac{1}{S_d}\left[\frac{R^{2-d}}{2-d}\right]_r^\infty\\
+&=\frac{1}{(d-2)S_d r^{d-2}}\\
+&=\frac{\Gamma(d/2)}{2(d-2)\pi^{d/2}|\boldsymbol{x}|^{d-2}}
 \end{aligned}
 $$
 

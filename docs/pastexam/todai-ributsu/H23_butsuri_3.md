@@ -96,7 +96,10 @@ $$
 軌道が原点を中心とする円運動になるための条件は，中心の $x$ 座標 $a + \dfrac{v_0}{\omega}$ が $0$ になることです。よって
 
 $$
-v_0 = -\omega a = -\frac{qB}{m} a
+\begin{aligned}
+v_0 &= -\omega a \\
+&= -\frac{qB}{m} a
+\end{aligned}
 $$
 
 が得られます。これを代入すると，位置と速度は次のようになります。
@@ -125,19 +128,26 @@ $$
 となり，$z$ 成分は $v_z(t) = 0$，$z(t) = 0$ のままです。$u = v_x + i v_y$ についてまとめると次式になります。
 
 $$
-\begin{aligned}
-\frac{\mathrm{d}u}{\mathrm{d}t} &= \frac{qE}{m} - i\omega u \\
-\frac{\mathrm{d}}{\mathrm{d}t}\left(u + i\frac{E}{B}\right) &= -i\omega\left(u + i\frac{E}{B}\right)
-\end{aligned}
+\frac{\mathrm{d}u}{\mathrm{d}t}=\frac{qE}{m}-i\omega u
+$$
+
+$\omega=qB/m$ を使って定数項を吸収します。
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}t}\left(u+i\frac EB\right)
+=-i\omega\left(u+i\frac EB\right)
 $$
 
 初期条件 $u(0) = i v_0$ を用いてこの微分方程式を解きます。
 
 $$
-\begin{aligned}
-u(t) + i\frac{E}{B} &= i\left(v_0 + \frac{E}{B}\right) e^{-i\omega t} \\
-u(t) &= -i\frac{E}{B} + i\left(v_0 + \frac{E}{B}\right)\bigl(\cos(\omega t) - i\sin(\omega t)\bigr)
-\end{aligned}
+u(t)+i\frac EB=i\left(v_0+\frac EB\right)e^{-i\omega t}
+$$
+
+$u(t)$ について解き，指数関数を実部と虚部に分けます。
+
+$$
+u(t)=-i\frac EB+i\left(v_0+\frac EB\right)\bigl(\cos(\omega t)-i\sin(\omega t)\bigr)
 $$
 
 実部と虚部から速度 $\boldsymbol{v}(t)$ が求まります。
@@ -198,14 +208,18 @@ $$
 
 $$
 \begin{aligned}
-\langle f_x \rangle &= -\frac{1}{2}q a^2 \omega_0 B'(0) = -\frac{m v_0^2}{2 B(0)} B'(0) \\
+\langle f_x \rangle &= -\frac{1}{2}q a^2 \omega_0 B'(0) \\
+&= -\frac{m v_0^2}{2 B(0)} B'(0) \\
 \langle f_y \rangle &= 0 \\
 \langle f_z \rangle &= 0
 \end{aligned}
 $$
 
 $$
-\finalanswer{\langle\boldsymbol{f}\rangle = \left(-\frac{1}{2}q a^2 \omega_0 B'(0),\; 0,\; 0\right) = \left(-\frac{m v_0^2}{2 B(0)} B'(0),\; 0,\; 0\right)}
+\finalanswer{\begin{aligned}
+\langle\boldsymbol{f}\rangle &= \left(-\frac{1}{2}q a^2 \omega_0 B'(0),\; 0,\; 0\right) \\
+&= \left(-\frac{m v_0^2}{2 B(0)} B'(0),\; 0,\; 0\right)
+\end{aligned}}
 $$
 
 ### (5)
@@ -214,13 +228,20 @@ $$
 設問4で求めた平均の力 $\langle\boldsymbol{f}\rangle$ は，実効的な一様電場
 
 $$
-\boldsymbol{E}_{\mathrm{eff}} = \frac{\langle\boldsymbol{f}\rangle}{q} = \left(-\frac{1}{2} a^2 \omega_0 B'(0),\; 0,\; 0\right)
+\begin{aligned}
+\boldsymbol{E}_{\mathrm{eff}} &= \frac{\langle\boldsymbol{f}\rangle}{q} \\
+&= \left(-\frac{1}{2} a^2 \omega_0 B'(0),\; 0,\; 0\right)
+\end{aligned}
 $$
 
 が働いていることと同等です。したがって，磁束密度の非一様性によって円運動の中心は磁場および磁場勾配の両方に垂直な $y$ 軸方向に一定のドリフト速度
 
 $$
-\boldsymbol{v}_{\nabla B} = \left(0,\; -\frac{E_{\mathrm{eff}, x}}{B(0)},\; 0\right) = \left(0,\; \frac{a^2 \omega_0 B'(0)}{2 B(0)},\; 0\right) = \left(0,\; \frac{m v_0^2 B'(0)}{2 q B(0)^2},\; 0\right)
+\begin{aligned}
+\boldsymbol{v}_{\nabla B} &= \left(0,\; -\frac{E_{\mathrm{eff}, x}}{B(0)},\; 0\right) \\
+&= \left(0,\; \frac{a^2 \omega_0 B'(0)}{2 B(0)},\; 0\right) \\
+&= \left(0,\; \frac{m v_0^2 B'(0)}{2 q B(0)^2},\; 0\right)
+\end{aligned}
 $$
 
 で移動します。$B'(0) > 0$ のときは $+y$ 方向，$B'(0) < 0$ のときは $-y$ 方向へドリフトします。

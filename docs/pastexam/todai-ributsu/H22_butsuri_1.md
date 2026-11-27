@@ -49,7 +49,7 @@ $$
 
 デルタ関数 $V_1\delta(x)$ は，波動関数の原点での値を通してだけエネルギーに効きます。そこで，偶関数と奇関数のそれぞれについて原点での値に注目します。$V_1$ が小さいときは，無摂動の波動関数で $V_1\delta(x)$ の期待値をとる1次の摂動論を用います。
 
-$V_1\to\infty$ では原点に無限に高い壁が立ち，井戸は幅 $L$ の2つの井戸に分かれます。$V_1$ を増やしたときのエネルギーの変化は，$V_1=0$ と $V_1\to\infty$ の2つの端から描きます。
+$V_1$ が大きい極限は，デルタ関数を含む方程式を原点の前後で積分し，傾きの跳びと原点での波動関数の値を結び付けて扱います。$V_1$ を増やしたときのエネルギーの変化は，$V_1=0$ と $V_1\to\infty$ の2つの端から描きます。
 </div>
 
 ### (1)
@@ -62,7 +62,7 @@ $$
 \end{aligned}
 $$
 
-一般解は $\psi(x) = A\cos(kx) + B\sin(kx)$ です。境界条件 $\psi(-L) = \psi(L) = 0$ を課します。
+一般解は $\psi(x) = A\cos(kx) + B\sin(kx)$ です。境界条件 $\psi(-L)=0$，$\psi(L)=0$ を課します。
 
 $$
 \begin{aligned}
@@ -76,13 +76,31 @@ $$
 - $B = 0$ かつ $\cos(kL) = 0$ のとき：$kL = \dfrac{n\pi}{2}$（$n = 1, 3, 5, \dots$）となり，$\psi_n(x) = A\cos\!\left(\dfrac{n\pi x}{2L}\right)$ です。
 - $A = 0$ かつ $\sin(kL) = 0$ のとき：$kL = \dfrac{n\pi}{2}$（$n = 2, 4, 6, \dots$）となり，$\psi_n(x) = B\sin\!\left(\dfrac{n\pi x}{2L}\right)$ です。
 
-規格化条件 $\displaystyle\int_{-L}^{L} |\psi_n(x)|^2\,\mathrm{d}x = 1$ より $|A|^2 L = 1$，$|B|^2 L = 1$ なので，位相を実数正に選ぶと $A = B = \dfrac{1}{\sqrt{L}}$ です。また $E_n = \dfrac{\hbar^2 k_n^2}{2m}$ よりエネルギー固有値はすべての自然数 $n$ に対して統一的に求まります。
+規格化条件を課すと，偶関数の余弦の係数と奇関数の正弦の係数は，それぞれ絶対値が $1/\sqrt L$ となります。
+
+$$
+\int_{-L}^L\cos^2\!\left(\frac{n\pi x}{2L}\right)\mathrm{d}x=L\quad(n=1,3,5,\dots),
+$$
+
+$$
+\int_{-L}^L\sin^2\!\left(\frac{n\pi x}{2L}\right)\mathrm{d}x=L\quad(n=2,4,6,\dots)
+$$
+
+各状態の残る係数を実数正に選びます。エネルギーは，$E_n=\hbar^2k_n^2/(2m)$ に $k_n=n\pi/(2L)$ を代入して求めます。
 
 $$
 \finalanswer{E_n = \frac{\pi^2 \hbar^2 n^2}{8m L^2} \quad (n = 1, 2, 3, \dots)}
 $$
 
-対応する規格化波動関数は $|x| \ge L$ で $\psi_n(x) = 0$，$|x| < L$ で奇数 $n$ に対して $\psi_n(x) = \dfrac{1}{\sqrt{L}}\cos\!\left(\dfrac{n\pi x}{2L}\right)$，偶数 $n$ に対して $\psi_n(x) = \dfrac{1}{\sqrt{L}}\sin\!\left(\dfrac{n\pi x}{2L}\right)$ です。
+対応する規格化波動関数は次のとおりです。
+
+$$
+\finalanswer{\psi_n(x)=\begin{cases}
+0 &( |x|\ge L),\\
+\dfrac{1}{\sqrt L}\cos\!\left(\dfrac{n\pi x}{2L}\right)&(|x|<L,\ n=1,3,5,\dots),\\
+\dfrac{1}{\sqrt L}\sin\!\left(\dfrac{n\pi x}{2L}\right)&(|x|<L,\ n=2,4,6,\dots)
+\end{cases}}
+$$
 
 ### (2)
 粒子は幅 $2L$ の有限領域に閉じ込められているため，位置の不確定さ $\Delta x$ は最大でも $L$ の程度に制限されます。ハイゼンベルクの不確定性関係 $\Delta x \cdot \Delta p \ge \dfrac{\hbar}{2}$ より，運動量の不確定さ $\Delta p$ は $0$ にならず $\Delta p \gtrsim \dfrac{\hbar}{2L} > 0$ を満たします。したがって運動量の2乗の期待値 $\langle p^2 \rangle \ge (\Delta p)^2 > 0$ となり，運動エネルギー $\dfrac{\langle p^2 \rangle}{2m}$ が $0$ より大きい値をとります。
@@ -108,7 +126,10 @@ $$
 無摂動の第1励起状態は奇関数 $\psi_2^{(0)}(x) = \dfrac{1}{\sqrt{L}}\sin\!\left(\dfrac{\pi x}{L}\right)$ であり，原点で $\psi_2^{(0)}(0) = 0$ となります。したがって任意の $V_1 > 0$ に対して
 
 $$
-V_1\delta(x)\psi_2^{(0)}(x) = V_1\psi_2^{(0)}(0)\delta(x) = 0
+\begin{aligned}
+V_1\delta(x)\psi_2^{(0)}(x) &= V_1\psi_2^{(0)}(0)\delta(x) \\
+&= 0
+\end{aligned}
 $$
 
 が成り立ちます。この式は摂動の次数によらないので，$\psi_2^{(0)}(x)$ はそのまま摂動後のハミルトニアンの固有状態になります。
@@ -126,7 +147,7 @@ $$
 \psi_1'(0+) - \psi_1'(0-) = \frac{2m V_1}{\hbar^2}\psi_1(0) > 0
 $$
 
-が得られます。よって $\psi_1(x)$ は $x = 0$ で下向きに折れ曲がったくぼみをもち，左右対称な2つの山になります。一方，第1励起状態の波動関数 $\psi_2(x)$ は $V_1 = 0$ のときと同じ $\dfrac{1}{\sqrt{L}}\sin\!\left(\dfrac{\pi x}{L}\right)$ のままです。それぞれの概略を次の図に示します。
+が得られます。基底状態の符号を正に選ぶと，原点で傾きが負から正に跳び，中央にくぼみのある左右対称な2つの山になります。一方，第1励起状態の波動関数 $\psi_2(x)$ は $V_1 = 0$ のときと同じ $\dfrac{1}{\sqrt{L}}\sin\!\left(\dfrac{\pi x}{L}\right)$ のままです。それぞれの概略を次の図に示します。
 
 <figure class="problem-figure" markdown>
 ![基底状態と第1励起状態の波動関数の概略](../../assets/figures/pastexam-todai-ributsu/H22_butsuri_1-s1-light.svg#only-light)

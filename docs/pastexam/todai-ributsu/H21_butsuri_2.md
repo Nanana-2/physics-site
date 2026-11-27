@@ -72,31 +72,54 @@ $$
 
 ### (1)
 
-半整数スピンをもつフェルミオンの例は電子であり，整数スピンをもつボソンの例は光子です。ほかにもフェルミオンには陽子や中性子や ${}^3\mathrm{He}$ 原子があり，ボソンには ${}^4\mathrm{He}$ 原子やパイ中間子があります。
+半整数スピンをもつフェルミオンの例は電子であり，整数スピンをもつボソンの例は光子です。
 
 - フェルミオンの例：電子
 - ボソンの例：光子
 
 ### (2)
+同種粒子では，位置とスピンを同時に交換したとき，全波動関数はフェルミオンなら反対称，ボソンなら対称でなければなりません。
 
-同種粒子の2粒子波動関数 $\Psi(1, 2)$ には，粒子1と粒子2の座標とスピンを同時に入れ替える交換操作に対して，フェルミオンでは反対称 $\Psi(2, 1) = -\Psi(1, 2)$，ボソンでは対称 $\Psi(2, 1) = +\Psi(1, 2)$ であることが要請されます。
+軌道部分を次のようにおきます。
 
-まずフェルミオン2個の場合を考えます。軌道部分とスピン部分の積で波動関数を作ると，一方が対称でもう一方が反対称のときに全体が反対称になります。2つの軌道 $\varphi_a, \varphi_b$ から作られる対称な軌道波動関数は3通り，反対称な軌道波動関数は1通りです。また，スピン $1/2$ の2粒子から作られる対称なスピン状態は3通り，反対称なスピン状態は1通りです。したがって，可能な2粒子波動関数は次の6通りです。
+$$
+\begin{aligned}
+\Phi_{aa}&=\varphi_a(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2),\\
+\Phi_{bb}&=\varphi_b(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2),\\
+\Phi_{+}&=\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2)
++\varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2),\\
+\Phi_{-}&=\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2)
+-\varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)
+\end{aligned}
+$$
 
-- 軌道が対称でスピンが反対称の3通り：
-  - $\varphi_a(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)(\alpha_1\beta_2 - \beta_1\alpha_2)$
-  - $\varphi_b(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2)(\alpha_1\beta_2 - \beta_1\alpha_2)$
-  - $\bigl(\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2) + \varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)\bigr)(\alpha_1\beta_2 - \beta_1\alpha_2)$
-- 軌道が反対称でスピンが対称の3通り：
-  - $\bigl(\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2) - \varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)\bigr)\alpha_1\alpha_2$
-  - $\bigl(\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2) - \varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)\bigr)\beta_1\beta_2$
-  - $\bigl(\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2) - \varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)\bigr)(\alpha_1\beta_2 + \beta_1\alpha_2)$
+最初の3つは対称，$\Phi_-$ は反対称です。スピン部分は，反対称な1状態と対称な3状態に分かれます。
 
-次にボソン2個の場合を考えます。スピンの大きさは $0$ なのでスピン自由度はなく，軌道波動関数そのものが粒子交換に対して対称でなければなりません。可能な2粒子波動関数は次の3通りです。
+$$
+\begin{aligned}
+\chi_-&=\alpha_1\beta_2-\beta_1\alpha_2,\\
+\chi_{+1}&=\alpha_1\alpha_2,\\
+\chi_0&=\alpha_1\beta_2+\beta_1\alpha_2,\\
+\chi_{-1}&=\beta_1\beta_2
+\end{aligned}
+$$
 
-- $\varphi_a(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)$
-- $\varphi_b(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2)$
-- $\varphi_a(\boldsymbol{r}_1)\varphi_b(\boldsymbol{r}_2) + \varphi_b(\boldsymbol{r}_1)\varphi_a(\boldsymbol{r}_2)$
+フェルミオンでは軌道部分とスピン部分の一方を対称，もう一方を反対称にします。したがって，次の6状態が基底になります。規格化は省きます。
+
+$$
+\finalanswer{\Phi_{aa}\chi_-,\quad\Phi_{bb}\chi_-,\quad\Phi_+\chi_-,\quad
+\Phi_-\chi_{+1},\quad\Phi_-\chi_0,\quad\Phi_-\chi_{-1}}
+$$
+
+可能な一般の状態は，この6状態の線形結合です。
+
+ボソンはスピン $0$ なので軌道部分が対称です。次の3状態が基底になります。
+
+$$
+\finalanswer{\Phi_{aa},\quad\Phi_{bb},\quad\Phi_+}
+$$
+
+可能な一般の状態は，この3状態の線形結合です。
 
 ### (3)
 
@@ -109,7 +132,16 @@ $$
 これに対応する規格化された1粒子の固有状態と固有エネルギーは次式になります。
 
 $$
-\varphi_{\boldsymbol{k}}(\boldsymbol{r}) = \frac{1}{L^{3/2}}e^{i\boldsymbol{k}\cdot\boldsymbol{r}}, \qquad E_{\boldsymbol{k}} = \frac{\hbar^2 \boldsymbol{k}^2}{2m} = \frac{2\pi^2\hbar^2}{mL^2}(n_x^2 + n_y^2 + n_z^2)
+\varphi_{\boldsymbol{k}}(\boldsymbol{r})=\frac{1}{L^{3/2}}e^{i\boldsymbol{k}\cdot\boldsymbol{r}}
+$$
+
+対応する固有エネルギーに，離散化された波数を代入します。
+
+$$
+\begin{aligned}
+E_{\boldsymbol{k}}&=\frac{\hbar^2\boldsymbol{k}^2}{2m}\\
+&=\frac{2\pi^2\hbar^2}{mL^2}(n_x^2+n_y^2+n_z^2)
+\end{aligned}
 $$
 
 次に状態密度 $D(E)$ を求めます。波数空間において1つの1粒子状態が占める体積は $\left(\dfrac{2\pi}{L}\right)^3$ です。スピンは無視しているので縮退因子は $1$ となります。$L$ が十分大きいとき，エネルギーが $E$ 以下，すなわち波数の大きさ $k$ が $k(E) = \sqrt{\dfrac{2mE}{\hbar^2}}$ 以下である状態の総数 $\Omega(E)$ は，波数空間での半径 $k(E)$ の球の体積を1状態あたりの体積で割って求めることができます。
@@ -177,7 +209,7 @@ $$
 
 ### (5)
 
-微視的状態は占有数の組 $\{n_1, n_2, \dots\}$ で指定され，全粒子数と全エネルギーは $N = \sum_i n_i$，$E_j = \sum_i n_i\varepsilon_i$ です。大分配関数では全粒子数 $N$ についても和をとるため，各 $n_i$ を互いに独立に許されるすべての値にわたって足し上げることができます。
+微視的状態は占有数の組 $\{n_1, n_2, \dots\}$ で指定され，全粒子数と全エネルギーは $\displaystyle N = \sum_i n_i$，$\displaystyle E_j = \sum_i n_i\varepsilon_i$ です。大分配関数では全粒子数 $N$ についても和をとるため，各 $n_i$ を互いに独立に許されるすべての値にわたって足し上げることができます。
 
 $$
 \begin{aligned}
@@ -230,7 +262,23 @@ $$
 \end{aligned}
 $$
 
-理想ボース気体では $n = 0, 1, 2, \dots$ の和をとります。$0 < x < 1$ のもとで $\sum_{n=0}^{\infty} x^n = \dfrac{1}{1 - x}$ を $x$ で微分すると，$\sum_{n=0}^{\infty} n x^{n-1} = \dfrac{1}{(1 - x)^2}$ となります。両辺に $x$ を掛けて $\sum_{n=0}^{\infty} n x^n = \dfrac{x}{(1 - x)^2}$ を得ます。
+理想ボース気体では $n=0,1,2,\dots$ の和をとります。$0<x<1$ で収束する等比級数を微分します。
+
+$$
+\sum_{n=0}^\infty x^n=\frac1{1-x}
+$$
+
+両辺の $x$ 微分は次のとおりです。
+
+$$
+\sum_{n=0}^\infty nx^{n-1}=\frac1{(1-x)^2}
+$$
+
+両辺に $x$ を掛けます。
+
+$$
+\sum_{n=0}^\infty nx^n=\frac{x}{(1-x)^2}
+$$
 
 $$
 \begin{aligned}
@@ -286,14 +334,27 @@ $$
 なので，これを $\mu$ について解きます。
 
 $$
+e^{-\beta\mu}=1+\frac1{N_0}
+$$
+
+対数をとって $\mu$ について解きます。
+
+$$
+\mu=-k_{\mathrm{B}}T\log\!\left(1+\frac1{N_0}\right)
+$$
+
+凝縮している熱力学極限では，粒子数 $N$ と体積 $L^3$ を密度 $N/L^3$ を保って大きくし，$N_0$ も体積に比例して増えます。したがって，次の極限になります。
+
+$$
 \begin{aligned}
-e^{-\beta\mu} &= 1 + \frac{1}{N_0} \\
-\mu &= -k_{\mathrm{B}}T\ln\!\left(1 + \frac{1}{N_0}\right)
+\mu&=-k_{\mathrm{B}}T\log\!\left(1+\frac1{N_0}\right)\\
+&\simeq-\frac{k_{\mathrm{B}}T}{N_0}\\
+&\longrightarrow0^-
 \end{aligned}
 $$
 
-ボース・アインシュタイン凝縮では $N_0$ が $N$ と同程度の巨視的な数になるため，$N \to \infty$ の極限で $\mu \simeq -\dfrac{k_{\mathrm{B}}T}{N_0} \to 0$ となります。したがって，ボース・アインシュタイン凝縮している場合，$\mu = 0$ となります。
+有限系では $\mu<0$ です。凝縮相で $\mu=0$ とするのは，密度 $N/L^3$ を一定に保ったまま $N,\ L^3\to\infty$ とした熱力学極限での値です。
 
 $$
-\finalanswer{\mu = 0}
+\finalanswer{\mu\longrightarrow0^-}
 $$
