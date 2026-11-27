@@ -34,10 +34,13 @@ def year_key(year: str):
     return (0 if year[0] == "R" else 1, -int(year[1:]))
 
 
+GROUPS = ("", "butsuri", "sugaku", "ippan_butsuri", "ippan_sugaku")
+
+
 def problem_key(stem: str):
-    # 平成の年度は物理学，数学の順。番号は小さい順
+    # 令和2年度以前は物理学，数学，一般教育科目の物理学，数学の順。番号は小さい順
     parts = stem.split("_")
-    return (parts[1] if len(parts) == 3 else "", int(parts[-1]))
+    return (GROUPS.index("_".join(parts[1:-1])), int(parts[-1]))
 
 
 def write_pages():

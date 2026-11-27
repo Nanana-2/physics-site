@@ -158,6 +158,6 @@ $$
 \finalanswer{\lim_{\lambda \to +0} y(x) = \frac{\sin\omega x}{\omega} \qquad (x \ge 0)}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 $\lambda \to +0$ の極限では，幅 $\lambda$・高さ $1/\lambda$ の矩形パルス $f(x)$ は原点でのディラックのデルタ関数 $\delta(x)$ に近づきます。したがって得られた極限 $y(x) = \dfrac{\sin\omega x}{\omega}$（$x \ge 0$）は，初期条件 $y(0) = 0, y'(0^+) = 1$ を満たす因果グリーン関数に他なりません。
-</div>
+</aside>

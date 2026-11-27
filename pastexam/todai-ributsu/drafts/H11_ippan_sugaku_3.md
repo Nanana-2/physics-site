@@ -216,7 +216,7 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}x} H_n(x) = n H_{n-1}(x)
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 上の部分積分を $m = n - 1$ に対して行うと，$2x H_{n-1}(x) - H_{n-1}'(x)$ の最高次項は $2 x^n$ なので，
 $$
 \begin{aligned}
@@ -225,4 +225,4 @@ n \langle H_{n-1}, H_{n-1} \rangle &= \langle H_n', H_{n-1} \rangle \\
 \end{aligned}
 $$
 が成り立ちます。一方 $x H_{n-1}(x) = H_n(x) + a_{n-1}H_{n-2}(x)$ より $\langle H_n, x H_{n-1} \rangle = \langle H_n, H_n \rangle$ となるため，第1の漸化式の係数は具体的に $a_n = \dfrac{n}{2}$ と決定されます。
-</div>
+</aside>

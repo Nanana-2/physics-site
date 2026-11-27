@@ -161,6 +161,6 @@ $$
 \finalanswer{Q' = \varepsilon_0 (\rho_2 - \rho_1)I}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 各導体の誘電率が $\varepsilon_1, \varepsilon_2$ として区別されている場合は，ガウスの法則は電束密度 $\mathbf{D} = \varepsilon\mathbf{E}$ に対して用いられるため，自由電荷は $Q = \varepsilon_1 \rho_1 I$，$Q' = (\varepsilon_2 \rho_2 - \varepsilon_1 \rho_1)I$ となります。本問では誘電率の指定がないため，標準的に両導体とも真空の誘電率 $\varepsilon_0$ として求めました。
-</div>
+</aside>

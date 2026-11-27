@@ -213,9 +213,9 @@ $$
 
 全体を描きます。
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 この微分方程式 (1) は，上半平面 $y > 0$ にリーマン計量 $\mathrm{d}\ell^2 = \dfrac{\mathrm{d}x^2 + \mathrm{d}y^2}{y^2}$ を入れた双曲幾何学のポアンカレ上半平面モデルにおける測地線方程式であり，条件 $X^2 + Y^2 = 1$ はパラメータ $s$ が双曲弧長であることを表します。
-</div>
+</aside>
 
 $$
 \finalanswer{X = 0:\ x = x_0\ (y > 0),\qquad X \neq 0:\ (x - x_0)^2 + y^2 = R^2\ (y > 0,\ R > 0)}

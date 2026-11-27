@@ -16,6 +16,7 @@ nav:
     - 11complex_analysis
     - 12special_functions
     - 13probability_statistics
+  - pastexam
   - books.md
   - tags.md
   - exam.md

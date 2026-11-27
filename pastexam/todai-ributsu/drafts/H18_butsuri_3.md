@@ -19,12 +19,19 @@ exam_modified: Web掲載にあたり数式をテキスト化し，小問番号�
 以下に示す真空中での Maxwell の方程式を出発点として平面電磁波の性質を導き出したい。ここで，$\vec{E}$ と $\vec{B}$ はそれぞれ電場と磁束密度，$\epsilon_0$ と $\mu_0$ はそれぞれ真空の誘電率と透磁率である。また，$t$ は時間であり，$\nabla$ は空間座標 $\vec{r} = (x, y, z)$ についてのベクトル微分演算子である。電荷や電流の存在しない場合を考える。
 
 $$
-\begin{aligned}
-\nabla\cdot\vec{E} &= 0 \tag{1} \\
-\nabla\times\vec{B} &= \epsilon_0\mu_0\frac{\partial\vec{E}}{\partial t} \tag{2} \\
-\nabla\cdot\vec{B} &= 0 \tag{3} \\
-\nabla\times\vec{E} &= -\frac{\partial\vec{B}}{\partial t} \tag{4}
-\end{aligned}
+\nabla\cdot\vec{E} = 0 \tag{1}
+$$
+
+$$
+\nabla\times\vec{B} = \epsilon_0\mu_0\frac{\partial\vec{E}}{\partial t} \tag{2}
+$$
+
+$$
+\nabla\cdot\vec{B} = 0 \tag{3}
+$$
+
+$$
+\nabla\times\vec{E} = -\frac{\partial\vec{B}}{\partial t} \tag{4}
 $$
 
 以下の設問に答えよ。
@@ -40,10 +47,11 @@ $$
 (3) 次の式で表される $\vec{E}$ および $\vec{B}$，すなわち平面波が前問で求めた波動方程式の解であるための条件を求めよ。ただし，$\vec{E}_0, \vec{B}_0, \vec{k}, \vec{k}'$ は定数ベクトル，$\omega, \omega', \alpha, \alpha'$ はそれぞれ定数で，$0 \le \alpha < \pi,\ 0 \le \alpha' < \pi$ である。
 
 $$
-\begin{aligned}
-\vec{E} &= \vec{E}_0\sin(\vec{k}\cdot\vec{r} - \omega t + \alpha) \tag{5} \\
-\vec{B} &= \vec{B}_0\sin(\vec{k}'\cdot\vec{r} - \omega' t + \alpha') \tag{6}
-\end{aligned}
+\vec{E} = \vec{E}_0\sin(\vec{k}\cdot\vec{r} - \omega t + \alpha) \tag{5}
+$$
+
+$$
+\vec{B} = \vec{B}_0\sin(\vec{k}'\cdot\vec{r} - \omega' t + \alpha') \tag{6}
 $$
 
 (4) 式 (5) と式 (6) で表される $\vec{E}$ および $\vec{B}$ がそれぞれの波数ベクトルに垂直であること，すなわち横波であることを示せ。

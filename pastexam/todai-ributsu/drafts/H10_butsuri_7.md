@@ -100,9 +100,9 @@ $$
 \finalanswer{(k^2 + \lambda^2)\hat{\phi}(k) = e^{-ika},\qquad \hat{\phi}(k) = \frac{e^{-ika}}{k^2 + \lambda^2}}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 フーリエ変換に $\dfrac{1}{\sqrt{2\pi}}$ の対称係数をつける流儀をとった場合は，方程式は $(k^2 + \lambda^2)\hat{\phi}(k) = \dfrac{e^{-ika}}{\sqrt{2\pi}}$，解は $\hat{\phi}(k) = \dfrac{e^{-ika}}{\sqrt{2\pi}(k^2 + \lambda^2)}$ となりますが，逆変換で得られる $\phi(x)$ は定義の流儀によらず同一です。
-</div>
+</aside>
 
 ### (1)(b)
 

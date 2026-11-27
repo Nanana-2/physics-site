@@ -87,9 +87,9 @@ P &= \frac{n}{V}RT \\
 \end{aligned}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 SI単位系で厳密に書く場合，分子量 $M$ は無次元量でありモル質量は $M_{\mathrm{mol}} = M \times 10^{-3}\,\mathrm{kg/mol}$ ですが，本問では $1\,\mathrm{mol}$ 当たりの質量をそのまま $M$ と記す慣用表記が用いられています。
-</div>
+</aside>
 
 ### (2)
 

@@ -117,7 +117,7 @@ $$
 
 以上より，$P, Q, R$ の3つの等式がすべて成り立つことが証明されます。
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 複素数体上の重複度込みの3つの固有値 $\lambda_1, \lambda_2, \lambda_3$ と解と係数の関係を用いて示すこともできます。$F(\lambda) = -(\lambda - \lambda_1)(\lambda - \lambda_2)(\lambda - \lambda_3)$ を展開すると，$P$ は $\sum_i \lambda_i$ すなわち $\operatorname{Tr} A$ となり，$R$ は $\lambda_1\lambda_2\lambda_3$ すなわち $\det A$ となります。同様に $Q$ についても次式が成り立ちます。
 
 $$
@@ -127,7 +127,7 @@ Q &= -(\lambda_1\lambda_2 + \lambda_2\lambda_3 + \lambda_3\lambda_1) \\
 &= \frac{1}{2}\bigl(\operatorname{Tr} A^2 - (\operatorname{Tr} A)^2\bigr)
 \end{aligned}
 $$
-</div>
+</aside>
 
 ### (2)
 

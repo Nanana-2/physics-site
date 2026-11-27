@@ -355,7 +355,9 @@ def _subject_index(html, page, config):
 
 # ---- 過去問の大学のページ：年度ごとに大問を並べる（年度の目次を先に置く）。中身は同じフォルダのページのフロントマターから作る ----
 
-EXAM_SUBJECTS = {"butsuri": "物理学", "sugaku": "数学"}
+# 令和2年度以前の科目（ファイル名の年度と番号の間）。この順に並べる。平成8〜12年度は一般教育科目もある
+EXAM_SUBJECTS = {"butsuri": "物理学", "sugaku": "数学", "ippan_butsuri": "一般教育科目 物理学", "ippan_sugaku": "一般教育科目 数学"}
+EXAM_GROUP_ORDER = {key: i for i, key in enumerate(EXAM_SUBJECTS)}
 # 問題のない年度：年度の一覧に欄だけ置く
 EXAM_GAPS = {"todai-ributsu": {"R3": ("令和3年度", "筆記試験は行われませんでした。")}}
 
@@ -376,8 +378,8 @@ def _exam_rows(base: Path) -> dict:
             continue
         meta = _front_matter(md)
         parts = md.stem.split("_")
-        # 平成の年度は物理学と数学に分ける（H30_butsuri_2）。令和4年度からは専門科目の1つ（R8_2）
-        group = parts[1] if len(parts) == 3 else ""
+        # 令和2年度以前は科目に分ける（H30_butsuri_2，H10_ippan_sugaku_1）。令和4年度からは専門科目の1つ（R8_2）
+        group = "_".join(parts[1:-1])
         title = str(meta.get("title", md.stem)).split("：", 1)[-1]
         years.setdefault(parts[0], {"name": meta.get("exam_year", parts[0]), "rows": []})["rows"].append(
             (group, int(parts[-1]), title, md.stem, _exam_level(meta))
@@ -391,7 +393,7 @@ def _year_order(year: str):
 
 def _exam_section(year: str, data: dict, href_prefix: str = "") -> str:
     body, last = "", None
-    for group, number, title, stem, level in sorted(data["rows"]):
+    for group, number, title, stem, level in sorted(data["rows"], key=lambda r: (EXAM_GROUP_ORDER.get(r[0], 9), r[1])):
         if group and group != last:
             body += f'<p class="toc-group">{EXAM_SUBJECTS.get(group, group)}</p>'
         last = group

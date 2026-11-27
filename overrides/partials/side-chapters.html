@@ -18,10 +18,12 @@
           <ol class="side-chapter__list">
             {% set group = namespace(last='') %}
             {% for item in chapter.children %}
+              {#- 令和2年度以前は科目の見出しを置く（H30_butsuri_2.md，H10_ippan_sugaku_1.md） -#}
               {% set stem_parts = item.file.src_uri.split('/')[-1].split('_') if item.file else [] %}
-              {% if item.meta and item.meta.exam_number and stem_parts | length == 3 and stem_parts[1] != group.last %}
-                {% set group.last = stem_parts[1] %}
-                <li class="side-chapter__group">{{ '物理学' if stem_parts[1] == 'butsuri' else '数学' }}</li>
+              {% set item_group = stem_parts[1:-1] | join('_') %}
+              {% if item.meta and item.meta.exam_number and item_group and item_group != group.last %}
+                {% set group.last = item_group %}
+                <li class="side-chapter__group">{{ {'butsuri': '物理学', 'sugaku': '数学', 'ippan_butsuri': '一般教育科目 物理学', 'ippan_sugaku': '一般教育科目 数学'}[item_group] }}</li>
               {% endif %}
               <li>
                 <a class="side-chapter__link{% if item.active %} is-current{% endif %}" href="{{ item.url | url }}"{% if item.active %} aria-current="page"{% endif %}>
