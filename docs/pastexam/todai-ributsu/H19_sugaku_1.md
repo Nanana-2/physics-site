@@ -73,7 +73,16 @@ $$
 
 ### (1)
 
-$\theta$ は実数なので，$B$ の成分はすべて実数です。よって $B^* = {}^t B = \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix}$ となります。積 $B^* B$ と $B B^*$ を計算します。
+$\theta$ は実数なので，$B$ の成分はすべて実数です。よって 
+
+$$
+\begin{aligned}
+B^* &= {}^t B \\
+&= \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix}
+\end{aligned}
+$$
+
+となります。積 $B^* B$ と $B B^*$ を計算します。
 
 $$
 \begin{aligned}
@@ -91,7 +100,7 @@ B B^* &= \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \en
 \end{aligned}
 $$
 
-$B$ は実行列であり，$B^* B = B B^* = I$ を満たすため，実ユニタリ行列すなわち直交行列です。
+$B$ は実行列であり，$B^* B=I$，$B B^*=I$ を満たすため，実ユニタリ行列すなわち直交行列です。
 
 ### (2)
 
@@ -99,7 +108,9 @@ $J = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ とおくと $A = \theta J$ 
 
 $$
 \begin{aligned}
-J^2 &= \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -I \\
+J^2 &= \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \\
+&= \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} \\
+&= -I \\
 J^3 &= -J \\
 J^4 &= I
 \end{aligned}
@@ -125,8 +136,16 @@ $$
 \begin{aligned}
 \det(B - \lambda I) &= 0 \\
 (\cos\theta - \lambda)^2 + \sin^2\theta &= 0 \\
-\lambda^2 - 2\lambda\cos\theta + 1 &= 0 \\
-\lambda &= \cos\theta \pm i\sin\theta = e^{\pm i\theta}
+\lambda^2 - 2\lambda\cos\theta + 1 &= 0
+\end{aligned}
+$$
+
+2次方程式を解くと，固有値は次のとおりです。
+
+$$
+\begin{aligned}
+\lambda &= \cos\theta \pm i\sin\theta \\
+&= e^{\pm i\theta}
 \end{aligned}
 $$
 
@@ -149,7 +168,16 @@ $$
 U = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ -i & i \end{pmatrix}
 $$
 
-はユニタリ行列であり，$U^{-1} = U^* = \dfrac{1}{\sqrt{2}}\begin{pmatrix} 1 & i \\ 1 & -i \end{pmatrix}$ です。実際に $U^{-1}BU$ を計算します。
+はユニタリ行列であり，
+
+$$
+\begin{aligned}
+U^{-1} &= U^* \\
+&= \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & i \\ 1 & -i \end{pmatrix}
+\end{aligned}
+$$
+
+です。実際に $U^{-1}BU$ を計算します。
 
 $$
 \begin{aligned}
@@ -167,12 +195,15 @@ $$
 
 ### (4)
 
-$n$ 次の行列 $C$ の行列式を $D_n(x_1, \dots, x_n) = |C|$ とおき，数学的帰納法によって $D_n(x_1, \dots, x_n) = \prod_{1 \le i < j \le n}(x_j - x_i)$ が成り立つことを示します。
+$n$ 次の行列 $C$ の行列式を $D_n(x_1, \dots, x_n) = |C|$ とおき，数学的帰納法によって $\displaystyle D_n(x_1, \dots, x_n) = \prod_{1 \le i < j \le n}(x_j - x_i)$ が成り立つことを示します。
 
-$n = 2$ のときは直接計算すると次式になります。
+$n=1$ なら $C=(1)$ で行列式は $1$ です。空積を $1$ とする約束により，差積の式も成り立ちます。$n=2$ の場合は，次のように直接計算します。
 
 $$
-D_2(x_1, x_2) = \begin{vmatrix} 1 & 1 \\ x_1 & x_2 \end{vmatrix} = x_2 - x_1
+\begin{aligned}
+D_2(x_1, x_2) &= \begin{vmatrix} 1 & 1 \\ x_1 & x_2 \end{vmatrix} \\
+&= x_2 - x_1
+\end{aligned}
 $$
 
 次に $n - 1$ 次で成り立つと仮定し，$n$ 次の行列式 $D_n$ を変形します。下の行から順に，第 $k$ 行（$k = n, n - 1, \dots, 2$）から第 $k - 1$ 行の $x_1$ 倍を引きます。この行基本変形で行列式の値は変わりません。第 $k$ 行の第 $j$ 成分は $x_j^{k-1} - x_1 x_j^{k-2} = (x_j - x_1)x_j^{k-2}$ となります。
@@ -209,7 +240,7 @@ x_2^{n-2} & \dots & x_n^{n-2}
 \end{aligned}
 $$
 
-帰納法の仮定 $D_{n-1}(x_2, \dots, x_n) = \prod_{2 \le i < j \le n}(x_j - x_i)$ を代入すると，次式が得られます。
+帰納法の仮定 $\displaystyle D_{n-1}(x_2, \dots, x_n) = \prod_{2 \le i < j \le n}(x_j - x_i)$ を代入すると，次式が得られます。
 
 $$
 \begin{aligned}
@@ -218,10 +249,14 @@ D_n(x_1, \dots, x_n) &= \left(\prod_{j=2}^{n}(x_j - x_1)\right)\left(\prod_{2 \l
 \end{aligned}
 $$
 
-以上より，任意の $n \ge 2$ に対して $|C| = \prod_{i < j}(x_j - x_i)$ となり，特に $|C| \propto \prod_{i < j}(x_j - x_i)$ が成り立ちます。
+以上より，任意の $n \ge 2$ に対して $\displaystyle |C| = \prod_{i < j}(x_j - x_i)$ となり，特に $\displaystyle |C| \propto \prod_{i < j}(x_j - x_i)$ が成り立ちます。
 
 ### (5)
 
-正方行列 $C$ が正則であるための必要十分条件は $|C| \neq 0$ です。設問4より $|C| = \prod_{i < j}(x_j - x_i)$ なので，$|C| \neq 0$ であることは，すべての組 $i < j$ に対して $x_j - x_i \neq 0$ となることと同値です。
+正方行列 $C$ が正則であるための必要十分条件は $|C| \neq 0$ です。設問4より $\displaystyle |C| = \prod_{i < j}(x_j - x_i)$ なので，$|C| \neq 0$ であることは，すべての組 $i < j$ に対して $x_j - x_i \neq 0$ となることと同値です。
 
-したがって，行列 $C$ が正則であるのは，$x_1, x_2, \dots, x_n$ の値が互いにすべて異なるときです。
+$x_1,\dots,x_n$ がすべて互いに異なる場合に限り，行列 $C$ は正則です。
+
+$$
+\finalanswer{x_i\ne x_j\quad(i\ne j)}
+$$

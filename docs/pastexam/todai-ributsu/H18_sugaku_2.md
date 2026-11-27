@@ -54,7 +54,9 @@ $$
 
 ### (i)
 
-端点が固定されているので，微小変分 $\delta y(x)$ は境界条件 $\delta y(x_0) = \delta y(x_1) = 0$ を満たします。$y(x)$ を $y(x) + \delta y(x)$ に変えたときの $S$ の1次変分 $\delta S$ を計算します。$\delta y'(x) = \dfrac{\mathrm{d}}{\mathrm{d}x}\delta y(x)$ を用いて第2項を部分積分します。
+原本では十分条件とありますが，1次変分から導くオイラー・ラグランジュ方程式は，一般には極値の必要条件です。方程式を満たす曲線では1次変分が $0$ になりますが，極小か極大かの判定には高次の変分の確認が必要です。
+
+端点固定の変分は，$\delta y(x_0)=0$，$\delta y(x_1)=0$ を満たします。$\delta y'=\mathrm{d}(\delta y)/\mathrm{d}x$ を用い，第2項を部分積分して1次変分を計算します。
 
 $$
 \begin{aligned}
@@ -64,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-ここで境界条件 $\delta y(x_0) = \delta y(x_1) = 0$ より境界項が $0$ になります。任意の微小変分 $\delta y(x)$ に対して停留条件 $\delta S = 0$ が成り立つためには，変分法の基本補題より被積分関数の中括弧内が恒等的に $0$ でなければなりません。
+ここで境界条件 $\delta y(x_0)=0$，$\delta y(x_1)=0$ より境界項が $0$ になります。任意の微小変分 $\delta y(x)$ に対して停留条件 $\delta S = 0$ が成り立つためには，変分法の基本補題より被積分関数の中括弧内が恒等的に $0$ でなければなりません。
 
 $$
 \finalanswer{\frac{\partial F}{\partial y} - \frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\partial F}{\partial y'}\right) = 0}
@@ -90,74 +92,83 @@ $$
 したがって，$x$ によらない定数 $C$ を用いて $F - y'\dfrac{\partial F}{\partial y'} = C$ と変形することができます。
 
 ### (iii)
-
-曲線 $y = y(x)$ 上の微小弧長 $\mathrm{d}s$ は $\mathrm{d}s = \sqrt{(\mathrm{d}x)^2 + (\mathrm{d}y)^2} = \sqrt{1 + y'(x)^2}\,\mathrm{d}x$ です。この微小線分を $x$ 軸のまわりに $360^\circ$ 回転してできる帯の半径は $y(x)$ なので，その微小表面積 $\mathrm{d}S$ は $2\pi y(x)\,\mathrm{d}s$ です。
-
-これを $x_0$ から $x_1$ まで積分すると，回転面の表面積 $S$ は式 (1) の形で次のように表されます。
+曲線の弧長要素は次のとおりです。
 
 $$
-\finalanswer{S = 2\pi\int_{x_0}^{x_1} y(x)\sqrt{1 + y'(x)^2}\,\mathrm{d}x}
+\mathrm{d}s=\sqrt{1+y'(x)^2}\,\mathrm{d}x
 $$
+
+回転の半径は $|y(x)|$ なので，一般の回転面の面積は次の式です。
+
+$$
+\finalanswer{S=2\pi\int_{x_0}^{x_1}|y(x)|\sqrt{1+y'(x)^2}\,\mathrm{d}x}
+$$
+
+端点で $y_0,y_1>0$ という条件だけでは，途中でも $y>0$ とは限りません。以下では，軸を横切らない正の半径関数 $y(x)>0$ を考え，$|y|=y$ として停留曲線を求めます。
 
 ### (iv)
-
-設問 (iii) より被積分関数は $F(y, y') = 2\pi y\sqrt{1 + y'^2}$ です。$y'$ による偏微分を計算します。
-
-$$
-\frac{\partial F}{\partial y'} = \frac{2\pi y y'}{\sqrt{1 + y'^2}}
-$$
-
-これらを設問 (ii) の関係式 $F - y'\dfrac{\partial F}{\partial y'} = C$ に代入します。
+正の半径関数について，$F=2\pi y\sqrt{1+y'^2}$ です。偏微分は次のようになります。
 
 $$
 \begin{aligned}
-2\pi y\sqrt{1 + y'^2} - y'\cdot\frac{2\pi y y'}{\sqrt{1 + y'^2}} &= C \\
-2\pi y\frac{(1 + y'^2) - y'^2}{\sqrt{1 + y'^2}} &= C \\
-\frac{2\pi y}{\sqrt{1 + y'^2}} &= C
+\frac{\partial F}{\partial y}&=2\pi\sqrt{1+y'^2},\\
+\frac{\partial F}{\partial y'}&=\frac{2\pi yy'}{\sqrt{1+y'^2}}
 \end{aligned}
 $$
 
-$c = \dfrac{C}{2\pi}$ とおきます。$y > 0$ より $c > 0$ です。両辺を2乗して $y'$ について整理します。
+オイラー・ラグランジュ方程式に代入します。
 
 $$
 \begin{aligned}
-\frac{y^2}{1 + y'^2} &= c^2 \\
-1 + y'^2 &= \frac{y^2}{c^2} \\
-\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 &= \frac{y^2}{c^2} - 1
+0&=\frac{\partial F}{\partial y}-\frac{\mathrm{d}}{\mathrm{d}x}\frac{\partial F}{\partial y'}\\
+&=\frac{2\pi}{(1+y'^2)^{3/2}}\bigl(1+y'^2-yy''\bigr)
 \end{aligned}
 $$
 
-したがって，求める曲線が満たす微分方程式は正の定数 $c$ を用いて次式となります。
+したがって，面積を最小にする滑らかな正の曲線は，次の必要条件を満たします。
 
 $$
-\finalanswer{\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 = \frac{y^2}{c^2} - 1}
+\finalanswer{yy''=1+y'^2}
 $$
+
+設問(ii)の保存量を使うと，さらに次の関係が得られます。
+
+$$
+\begin{aligned}
+F-y'\frac{\partial F}{\partial y'}
+&=2\pi y\sqrt{1+y'^2}-\frac{2\pi yy'^2}{\sqrt{1+y'^2}}\\
+&=\frac{2\pi y}{\sqrt{1+y'^2}}\\
+&=C
+\end{aligned}
+$$
+
+$c=C/(2\pi)>0$ とおくと，次の1階の式になります。
+
+$$
+y'^2=\frac{y^2}{c^2}-1
+$$
+
+ただし，1階の式だけでは定数関数 $y\equiv c$ も解になります。定数関数は元の式 $yy''=1+y'^2$ を満たさないので，停留曲線から除きます。
 
 ### (v)
-
-設問 (iv) の微分方程式を変数分離して解きます。
-
-$$
-\frac{\mathrm{d}y}{\mathrm{d}x} = \pm\frac{\sqrt{y^2 - c^2}}{c}
-$$
-
-$y = c\cosh t$ と置換します。$\mathrm{d}y = c\sinh t\,\mathrm{d}t$ であり，$\sqrt{y^2 - c^2} = c|\sinh t|$ です。$t$ の符号の取り方で $\pm$ を含めることができるため，次式になります。
+$y>c$ の区間で1階の式を変数分離します。
 
 $$
-\begin{aligned}
-\frac{c\sinh t\,\mathrm{d}t}{c\sinh t} &= \pm\frac{\mathrm{d}x}{c} \\
-\mathrm{d}t &= \pm\frac{\mathrm{d}x}{c}
-\end{aligned}
+\frac{\mathrm{d}y}{\sqrt{y^2-c^2}}=\pm\frac{\mathrm{d}x}{c}
 $$
 
-両辺を積分すると，積分定数 $b$ を用いて $t = \pm\dfrac{x - b}{c}$ が得られます。$\cosh$ は偶関数なので $\pm$ の符号によらず同じ関数になります。
+$y=c\cosh t$ とおくと，積分して $t=\pm(x-b)/c$ です。$\cosh$ は偶関数なので，両方の符号から同じ関数が得られます。$y=c$ の折り返し点では元の2階方程式から $y''=1/c$ となり，次の関数で滑らかにつながります。
 
 $$
-y(x) = c\cosh\!\left(\frac{x - b}{c}\right)
+\finalanswer{y(x)=c\cosh\!\left(\frac{x-b}{c}\right),\qquad c>0}
 $$
 
-したがって，求める曲線は積分定数 $c > 0$ および $b$ を用いて次式となります。定数 $c, b$ は端点条件 $y(x_0) = y_0$，$y(x_1) = y_1$ から定まります。
+これは面積が停留する曲線です。$c,b$ は端点条件を満たすものから選びますが，任意の端点条件で解が存在し，一意に定まるわけではありません。複数の解がある場合は，2次変分や面積の比較による最小性の判定が必要です。
+
+例えば両端の半径が同じ $R$，端点間の距離が $d=x_1-x_0$ なら，$b=(x_0+x_1)/2$ であり，次の条件が必要です。
 
 $$
-\finalanswer{y(x) = c\cosh\!\left(\frac{x - b}{c}\right)}
+R=c\cosh\!\left(\frac{d}{2c}\right)
 $$
+
+$q=d/(2c)$ とおくと $d/(2R)=q/\cosh q$ です。右辺の最大値は $q\tanh q=1$ を満たす点で約 $0.6627$ なので，$d/R>1.3255$ なら正の滑らかな停留曲線は存在しません。したがって，得た懸垂線を端点条件によらず最小曲線と断定することはできません。

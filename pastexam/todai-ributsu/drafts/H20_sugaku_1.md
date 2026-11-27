@@ -69,33 +69,47 @@ $$
 ## 解答・解説
 
 <div class="approach" markdown>
-3次元空間の回転はベクトルの長さと向きを保つ線形変換であり，行列式が $+1$ の実直交行列と1対1に対応します。任意の軸の周りの回転は座標軸の回転による相似変換で $z$ 軸周りの回転へ移すことができるため，固有値は回転軸の向きによりません。
+3次元空間の回転はベクトルの長さとベクトル間の角度を保ち，右手系を右手系に移す線形変換です。そのため，行列式が $+1$ の実直交行列と1対1に対応します。任意の軸の周りの回転は座標軸の回転による相似変換で $z$ 軸周りの回転へ移すことができるため，固有値は回転軸の向きによりません。
 
 また，回転角を微小量 $\Delta\theta$ だけ増やしたときのベクトルの変化は回転軸ベクトルとの外積で表され，線形常微分方程式になります。外積の作用を行列で書くと3次元実交代行列と1対1に対応するため，回転行列を行列指数関数で表すことができます。
 </div>
 
 ### (i)
+回転行列は直交行列であり，行列式は $+1$ です。
 
-3次元空間回転を表す行列の集合 $R$ は，${}^t X X = X {}^t X = I$ かつ $\det X = 1$ を満たす3次元実正方行列の集合です。各命題の真偽を確かめます。
-
-- (a) **○**：$X, Y \in R$ のとき，${}^t(XY)(XY) = {}^t Y ({}^t X X) Y = {}^t Y Y = I$，かつ $\det(XY) = (\det X)(\det Y) = 1\cdot 1 = 1$ なので，$XY \in R$ です。
-- (b) **×**：3次元空間の回転は一般に非可換です。たとえば $x$ 軸周りの $\dfrac{\pi}{2}$ 回転 $R_x$ と $y$ 軸周りの $\dfrac{\pi}{2}$ 回転 $R_y$ の積を計算します。
+(a) は○です。2つの回転の積について計算します。
 
 $$
-R_x = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{pmatrix}, \qquad R_y = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \end{pmatrix}
+\begin{aligned}
+{}^t(XY)(XY)&={}^tY({}^tXX)Y\\
+&={}^tYY\\
+&=I
+\end{aligned}
 $$
 
+行列式も $\det(XY)=1$，$(\det X)(\det Y)=1$ なので，積は回転行列です。
+
+(b) は×です。$x$ 軸と $y$ 軸の周りの $\pi/2$ 回転を用います。
+
 $$
-R_x R_y = \begin{pmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix}, \qquad R_y R_x = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix}
+R_x=\begin{pmatrix}1&0&0\\0&0&-1\\0&1&0\end{pmatrix},\qquad
+R_y=\begin{pmatrix}0&0&1\\0&1&0\\-1&0&0\end{pmatrix}
 $$
 
-$R_x R_y \neq R_y R_x$ なので偽です。
+積の順序を変えると，次のようになります。
 
-- (c) **○**：回転は任意の2つのベクトルの内積を保つ変換なので，$X \in R$ は直交行列であり ${}^t X X = X {}^t X = I$ を満たします。
-- (d) **×**：${}^t X X = I$ の両辺の行列式をとると $(\det X)^2 = 1$ より $\det X = \pm 1$ となります。たとえば反転 $X = -I$ は ${}^t X X = X {}^t X = I$ を満たしますが，$\det(-I) = -1$ なので回転ではなく $X \notin R$ です。
-- (e) **○**：$X$ は実行列かつ直交行列なので，$X^\dagger = {}^t X = X^{-1}$ です。よって $X^\dagger X = X X^\dagger = I$ となり $X$ は正規行列です。正規行列はユニタリ行列 $U$ によって対角化することができるため，$U^\dagger X U$ が対角行列となるユニタリ行列 $U$ が存在します。
+$$
+R_xR_y=\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix},\qquad
+R_yR_x=\begin{pmatrix}0&1&0\\0&0&-1\\-1&0&0\end{pmatrix}
+$$
 
-したがって，各命題の真偽は (a) ○，(b) ×，(c) ○，(d) ×，(e) ○ となります。
+両者は等しくありません。
+
+(c) は○です。回転は任意の2ベクトルの内積を保つので，${}^tXX=I$ です。正方行列では $X^{-1}={}^tX$ となり，$X{}^tX=I$ も成り立ちます。
+
+(d) は×です。例えば $X=-I$ は直交行列ですが，$\det X=-1$ なので回転行列ではありません。
+
+(e) は○です。実直交行列については，$X^\dagger={}^tX$ です。したがって，$X^\dagger X=I$，$XX^\dagger=I$ なので正規行列です。正規行列はユニタリ行列によって対角化することができます。
 
 ### (ii) (1)
 
@@ -160,18 +174,18 @@ $$
 
 $$
 \begin{aligned}
-|\Delta\boldsymbol{v}| &= |\boldsymbol{v}(\theta)|\sin\alpha \cdot |\Delta\theta| \\
-&= |\boldsymbol{n}||\boldsymbol{v}(\theta)|\sin\alpha \cdot |\Delta\theta| \\
-&= |\boldsymbol{n}\times\boldsymbol{v}(\theta)|\,|\Delta\theta|
+|\Delta\boldsymbol{v}|&=2|\boldsymbol{v}(\theta)|\sin\alpha\left|\sin\frac{\Delta\theta}{2}\right|\\
+&=|\boldsymbol{n}\times\boldsymbol{v}(\theta)|\,|\Delta\theta|+O(|\Delta\theta|^3)
 \end{aligned}
 $$
 
-ここで $|\boldsymbol{n}| = 1$ を用いました。また，$\Delta\theta > 0$ のとき，終点は $\boldsymbol{n}$ 方向に右ねじを進める向きに回転するため，$\Delta\boldsymbol{v}$ は $\boldsymbol{n}$ と $\boldsymbol{v}(\theta)$ の両方に垂直で，右ねじの向きすなわち外積 $\boldsymbol{n}\times\boldsymbol{v}(\theta)$ の向きに一致します。$\Delta\theta < 0$ のときは逆向きになり，$\Delta\theta$ の符号を含めて一致します。
+ここで $|\boldsymbol{n}|=1$ を用いました。$\Delta\theta>0$ のとき，円軌道の接線は $\boldsymbol{n}\times\boldsymbol{v}(\theta)$ の向きです。有限の移動ベクトルは弦の向きですが，1次の項では接線の向きと一致します。$\Delta\theta<0$ では逆向きになります。
 
-以上より，$\Delta\theta$ が十分小さいとき次式が成り立ちます。
+したがって，設問の等式は $\Delta\theta$ の1次までの関係です。誤差も含めると次のようになります。
 
 $$
-\boldsymbol{v}(\theta + \Delta\theta) - \boldsymbol{v}(\theta) = \boldsymbol{n}\times\boldsymbol{v}(\theta)\,\Delta\theta
+\boldsymbol{v}(\theta+\Delta\theta)-\boldsymbol{v}(\theta)
+=\boldsymbol{n}\times\boldsymbol{v}(\theta)\,\Delta\theta+O((\Delta\theta)^2)
 $$
 
 ### (ii) (4)
@@ -191,7 +205,16 @@ $$
 e^{\theta A(\boldsymbol{n})} = \sum_{k=0}^{\infty} \frac{\theta^k}{k!} A(\boldsymbol{n})^k
 $$
 
-$\tilde{\boldsymbol{v}}(\theta) = e^{\theta A(\boldsymbol{n})}\boldsymbol{v}_0$ とおくと，$\tilde{\boldsymbol{v}}(0) = I\boldsymbol{v}_0 = \boldsymbol{v}_0$ であり，項別微分を行うと次式を満たします。
+$\tilde{\boldsymbol{v}}(\theta) = e^{\theta A(\boldsymbol{n})}\boldsymbol{v}_0$ とおくと，
+
+$$
+\begin{aligned}
+\tilde{\boldsymbol{v}}(0) &= I\boldsymbol{v}_0 \\
+&= \boldsymbol{v}_0
+\end{aligned}
+$$
+
+であり，項別微分を行うと次式を満たします。
 
 $$
 \begin{aligned}
@@ -235,17 +258,47 @@ a_3 &= x_{21}, & -a_2 &= x_{31}, & a_1 &= x_{32}
 \end{aligned}
 $$
 
-$x_{ij} = -x_{ji}$ なので上下の式は矛盾なく一致し，$a_1 = -x_{23} = x_{32}$，$a_2 = x_{13} = -x_{31}$，$a_3 = -x_{12} = x_{21}$ が得られます。したがって，求めるベクトル $\boldsymbol{a}_0$ は次式となります。
+$x_{ij} = -x_{ji}$ なので上下の式は矛盾なく一致し，
 
 $$
-\finalanswer{\boldsymbol{a}_0 = \begin{pmatrix} -x_{23} \\ x_{13} \\ -x_{12} \end{pmatrix} = \begin{pmatrix} x_{32} \\ x_{13} \\ x_{21} \end{pmatrix}}
+\begin{aligned}
+a_1 &= -x_{23} \\
+&= x_{32}
+\end{aligned}
+$$
+
+，
+
+$$
+\begin{aligned}
+a_2 &= x_{13} \\
+&= -x_{31}
+\end{aligned}
+$$
+
+，
+
+$$
+\begin{aligned}
+a_3 &= -x_{12} \\
+&= x_{21}
+\end{aligned}
+$$
+
+が得られます。したがって，求めるベクトル $\boldsymbol{a}_0$ は次式となります。
+
+$$
+\finalanswer{\begin{aligned}
+\boldsymbol{a}_0 &= \begin{pmatrix} -x_{23} \\ x_{13} \\ -x_{12} \end{pmatrix} \\
+&= \begin{pmatrix} x_{32} \\ x_{13} \\ x_{21} \end{pmatrix}
+\end{aligned}}
 $$
 
 ### (ii) (6)
 
 $X$ は3次元実交代行列なので，設問 (5) より $X = A(\boldsymbol{a}_0)$ を満たす3次元実ベクトル $\boldsymbol{a}_0$ が存在します。
 
-まず $\boldsymbol{a}_0 = \boldsymbol{0}$，すなわち $X = O$ のときは $Y = e^O = I$ です。単位行列 $I$ は回転角 $0$ の回転を表すので $Y \in R$ です。
+まず $\boldsymbol{a}_0 = \boldsymbol{0}$，すなわち $X = O$ のときは $Y=I$，$e^O=I$ です。単位行列 $I$ は回転角 $0$ の回転を表すので $Y \in R$ です。
 
 次に $\boldsymbol{a}_0 \neq \boldsymbol{0}$ のときは，$\theta = |\boldsymbol{a}_0| > 0$，単位ベクトル $\boldsymbol{n} = \dfrac{\boldsymbol{a}_0}{|\boldsymbol{a}_0|}$ とおきます。任意のベクトル $\boldsymbol{u}$ に対して
 
@@ -257,7 +310,16 @@ A(\boldsymbol{a}_0)\boldsymbol{u} &= (\theta\boldsymbol{n})\times\boldsymbol{u} 
 \end{aligned}
 $$
 
-が成り立つので，$X = A(\boldsymbol{a}_0) = \theta A(\boldsymbol{n})$ です。したがって，設問 (4) の結果から次式が得られます。
+が成り立つので，
+
+$$
+\begin{aligned}
+X &= A(\boldsymbol{a}_0) \\
+&= \theta A(\boldsymbol{n})
+\end{aligned}
+$$
+
+です。したがって，設問 (4) の結果から次式が得られます。
 
 $$
 \begin{aligned}

@@ -64,7 +64,10 @@ $$
 したがって，分配関数は次式となります。
 
 $$
-\finalanswer{Z = \frac{e^{-\hbar\omega/(2k_{\mathrm{B}}T)}}{1 - e^{-\hbar\omega/(k_{\mathrm{B}}T)}} = \frac{1}{2\sinh\!\left(\dfrac{\hbar\omega}{2k_{\mathrm{B}}T}\right)}}
+\finalanswer{\begin{aligned}
+Z &= \frac{e^{-\hbar\omega/(2k_{\mathrm{B}}T)}}{1 - e^{-\hbar\omega/(k_{\mathrm{B}}T)}} \\
+&= \frac{1}{2\sinh\!\left(\frac{\hbar\omega}{2k_{\mathrm{B}}T}\right)}
+\end{aligned}}
 $$
 
 ### (2)
@@ -107,7 +110,9 @@ $$
 
 ### (3)
 
-立方体の箱を $0 \le x, y, z \le L$ の領域にとります。各方向の壁 $x = 0, L$，$y = 0, L$，$z = 0, L$ で節を作る定在波は $\sin(k_x x)\sin(k_y y)\sin(k_z z)$ の形をとるため，境界条件は $\sin(k_x L) = \sin(k_y L) = \sin(k_z L) = 0$ です。$k_x, k_y, k_z$ の符号を変えても同じ定在波を表すため，独立な定在波の波数は正の整数 $n_x, n_y, n_z$ を用いて次のように表されます。
+立方体の箱を $0 \le x, y, z \le L$ の領域にとります。各方向の壁 $x = 0, L$，$y = 0, L$，$z = 0, L$ で節を作る定在波は $\sin(k_x x)\sin(k_y y)\sin(k_z z)$ の形をとるため，境界条件は $\sin(k_x L)=0$，$\sin(k_y L)=0$，$\sin(k_z L)=0$ です。$k_x, k_y, k_z$ の符号を変えても同じ定在波を表すため，独立な定在波の波数は正の整数 $n_x, n_y, n_z$ を用いて次のように表されます。
+
+ここでは設問の壁で節を作るという条件を，スカラーの定在波に対する条件として扱っています。完全導体箱の電磁場を厳密に扱う場合は成分ごとに節と腹が異なり，波数成分の1つが $0$ のモードもあります。後の $L^3$ に比例するモード密度では，この境界上のモードの寄与は体積項に比べて小さくなります。
 
 $$
 \finalanswer{\vec{k} = \left(\frac{\pi}{L}n_x,\ \frac{\pi}{L}n_y,\ \frac{\pi}{L}n_z\right) \qquad (n_x, n_y, n_z = 1, 2, 3, \dots)}
@@ -150,7 +155,7 @@ E &= \frac{L^3 \hbar c}{\pi^2}\int_{0}^{\infty} \left(\frac{k_{\mathrm{B}}T}{\hb
 \end{aligned}
 $$
 
-定積分 $\int_{0}^{\infty} \dfrac{x^3}{e^x - 1}\,\mathrm{d}x$ は温度 $T$ によらない正の定数です。したがって，全エネルギー $E$ は絶対温度 $T$ の4乗に比例します。
+定積分 $\displaystyle \int_{0}^{\infty} \dfrac{x^3}{e^x - 1}\,\mathrm{d}x$ は温度 $T$ によらない正の定数です。したがって，全エネルギー $E$ は絶対温度 $T$ の4乗に比例します。
 
 $$
 \finalanswer{E \propto T^4}
@@ -158,7 +163,7 @@ $$
 
 ### (6)
 
-非常に低温の場合には $e^{\hbar ck/(k_{\mathrm{B}}T)} \gg 1$ となるため，分母の $-1$ を無視して $\varepsilon(k)$ を次のように近似することができます。
+問題文の「非常に低温の場合」は，分母の $-1$ を無視して $e^{\hbar ck/(k_{\mathrm{B}}T)}$ だけを残す近似を使うという指定と読みます。この近似をウィーン近似といいます。$\varepsilon(k)$ は次のように近似されます。
 
 $$
 \varepsilon(k) \simeq \frac{L^3 \hbar c}{\pi^2} k^3 e^{-\hbar ck/(k_{\mathrm{B}}T)}
@@ -197,5 +202,5 @@ $$
 $$
 
 <aside class="rigor-note" markdown>
-分母の $-1$ を無視せずに $\varepsilon(k)$ を直接微分すると，無次元変数 $x = \dfrac{\hbar c k_{\max}}{k_{\mathrm{B}}T}$ に対する方程式 $3 - x = 3e^{-x}$ が得られます。この正の解は数値的に $x \simeq 2.821$ であり，近似値 $x = 3$ との差は約 $6\%$ です。厳密解と問題文の定数を用いると波長は $\lambda \simeq 1.8\times 10^{-3}\,\mathrm{m}$ となります。
+ピークでの $x = \dfrac{\hbar c k_{\max}}{k_{\mathrm{B}}T}$ は温度によらず一定なので，温度を下げてもウィーン近似の誤差は小さくなりません。分母の $-1$ を無視せずに $\varepsilon(k)$ を直接微分すると，無次元変数 $x = \dfrac{\hbar c k_{\max}}{k_{\mathrm{B}}T}$ に対する方程式 $3 - x = 3e^{-x}$ が得られます。この正の解は数値的に $x \simeq 2.821$ であり，近似値 $x = 3$ との差は約 $6\%$ です。厳密解と問題文の定数を用いると波長は $\lambda \simeq 1.8\times 10^{-3}\,\mathrm{m}$ となります。
 </aside>

@@ -66,7 +66,7 @@ $$
 <figure class="problem-figure" markdown>
 ![複素平面上の積分経路 C](../../assets/figures/pastexam-todai-ributsu/H20_sugaku_2-p-light.svg#only-light)
 ![複素平面上の積分経路 C](../../assets/figures/pastexam-todai-ributsu/H20_sugaku_2-p-dark.svg#only-dark)
-<figcaption markdown="span">図1：積分経路 $C$（$\omega$ の複素平面）。</figcaption>
+<figcaption markdown="span">図1：積分経路 $C$。</figcaption>
 </figure>
 
 (v) 設問 (iv) で得られた関数 $e^{-t^2 - 2zt}$ は，
@@ -75,7 +75,7 @@ $$
 \frac{\partial^2}{\partial z^2}e^{-t^2 - 2zt} - 2z\frac{\partial}{\partial z}e^{-t^2 - 2zt} = -2t\frac{\partial}{\partial t}e^{-t^2 - 2zt}
 $$
 
-という式を満たす。このことを用いて，関数 $f_n(z)$ が
+という式を満たす。このことを用いて，関数 $f_n(x)$ が
 
 $$
 \frac{\mathrm{d}^2}{\mathrm{d}z^2}f_n(z) - 2z\frac{\mathrm{d}}{\mathrm{d}z}f_n(z) + \lambda f_n(z) = 0
@@ -108,9 +108,23 @@ $$
 
 両辺に $e^{x^2}$ を掛けると，漸化式 $f_{n+1}(x) = f_n'(x) - 2x f_n(x)$ が得られます。
 
-これを用いて，$f_n(x)$ が最高次項 $(-2)^n x^n$ をもつ $n$ 次多項式であることを数学的帰納法で確かめます。$n = 0$ のときは $f_0(x) = e^{x^2}e^{-x^2} = 1 = (-2)^0 x^0$ なので $0$ 次多項式です。$f_n(x)$ が最高次項 $(-2)^n x^n$ をもつ $n$ 次多項式であると仮定すると，$f_n'(x)$ は高々 $n - 1$ 次であり，$-2x f_n(x)$ は最高次項 $(-2)^{n+1}x^{n+1}$ をもつ $n + 1$ 次多項式となります。よって $f_{n+1}(x) = f_n'(x) - 2x f_n(x)$ も最高次項 $(-2)^{n+1}x^{n+1}$ をもつ $n + 1$ 次多項式です。
+これを用いて，$f_n(x)$ が最高次項 $(-2)^n x^n$ をもつ $n$ 次多項式であることを数学的帰納法で確かめます。$n = 0$ のときは 
 
-したがって，$f_n(x)$ は $x$ の $n$ 次の多項式です。
+$$
+\begin{aligned}
+f_0(x) &= e^{x^2}e^{-x^2} \\
+&= 1 \\
+&= (-2)^0 x^0
+\end{aligned}
+$$
+
+なので $0$ 次多項式です。$f_n(x)$ が最高次項 $(-2)^n x^n$ をもつ $n$ 次多項式であると仮定すると，$f_n'(x)$ は高々 $n - 1$ 次であり，$-2x f_n(x)$ は最高次項 $(-2)^{n+1}x^{n+1}$ をもつ $n + 1$ 次多項式となります。よって $f_{n+1}(x) = f_n'(x) - 2x f_n(x)$ も最高次項 $(-2)^{n+1}x^{n+1}$ をもつ $n + 1$ 次多項式です。
+
+したがって，$f_n(x)$ の次数は次のとおりです。
+
+$$
+\finalanswer{\deg f_n=n}
+$$
 
 ### (ii)
 
@@ -135,9 +149,9 @@ $$
 
 ### (iii)
 
-$n = 0$ のときは $f_0(x) = 1$ なので，積分は $\int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x = \sqrt{\pi}$ です。
+$n = 0$ のときは $f_0(x) = 1$ なので，積分は $\displaystyle \int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x = \sqrt{\pi}$ です。
 
-$n \ge 1$ のとき，$I_n = \int_{-\infty}^{\infty} x^n \dfrac{\mathrm{d}^n}{\mathrm{d}x^n}(e^{-x^2})\,\mathrm{d}x$ に対して部分積分を繰り返します。任意の非負整数 $j, k$ に対して $x^j \dfrac{\mathrm{d}^k}{\mathrm{d}x^k}(e^{-x^2}) = x^j f_k(x)e^{-x^2}$ は $x \to \pm\infty$ で $0$ になるため，各段階の境界項はすべて $0$ になります。
+$n \ge 1$ のとき，$\displaystyle I_n = \int_{-\infty}^{\infty} x^n \dfrac{\mathrm{d}^n}{\mathrm{d}x^n}(e^{-x^2})\,\mathrm{d}x$ に対して部分積分を繰り返します。任意の非負整数 $j, k$ に対して $x^j \dfrac{\mathrm{d}^k}{\mathrm{d}x^k}(e^{-x^2}) = x^j f_k(x)e^{-x^2}$ は $x \to \pm\infty$ で $0$ になるため，各段階の境界項はすべて $0$ になります。
 
 $$
 \begin{aligned}
@@ -165,7 +179,7 @@ $$
 e^{-z^2} = \frac{1}{2\pi i}\oint_C \frac{e^{-\omega^2}}{\omega - z}\,\mathrm{d}\omega
 $$
 
-の両辺を $z$ で $n$ 回微分します。$\dfrac{\mathrm{d}^n}{\mathrm{d}z^n}(\omega - z)^{-1} = \dfrac{n!}{(\omega - z)^{n+1}}$ より，次式が得られます。
+微分する点の近傍でも，同じ固定した円周を用いてコーシーの積分公式が成り立ちます。その円周を固定して，両辺を $z$ で $n$ 回微分します。$\dfrac{\mathrm{d}^n}{\mathrm{d}z^n}(\omega - z)^{-1} = \dfrac{n!}{(\omega - z)^{n+1}}$ より，次式が得られます。
 
 $$
 \frac{\mathrm{d}^n}{\mathrm{d}z^n}\left(e^{-z^2}\right) = \frac{n!}{2\pi i}\oint_C \frac{e^{-\omega^2}}{(\omega - z)^{n+1}}\,\mathrm{d}\omega
@@ -211,11 +225,11 @@ $$
 \end{aligned}
 $$
 
-以上より，与えられた等式が成り立ちます。
+
 
 ### (v)
 
-設問 (iv) より $|t| < 1$ で $e^{-t^2 - 2zt} = \sum_{n=0}^{\infty} \dfrac{t^n}{n!}f_n(z)$ が成り立ちます。この級数を $z$ および $t$ について項別微分します。
+設問 (iv) より $|t| < 1$ で $\displaystyle e^{-t^2 - 2zt} = \sum_{n=0}^{\infty} \dfrac{t^n}{n!}f_n(z)$ が成り立ちます。この級数を $z$ および $t$ について項別微分します。
 
 $$
 \begin{aligned}
@@ -229,10 +243,13 @@ $$
 これらを与えられた偏微分方程式に代入し，左辺へ移項します。
 
 $$
-\begin{aligned}
-\sum_{n=0}^{\infty} \frac{t^n}{n!}\left(\frac{\mathrm{d}^2 f_n(z)}{\mathrm{d}z^2} - 2z\frac{\mathrm{d}f_n(z)}{\mathrm{d}z}\right) &= \sum_{n=0}^{\infty} \frac{t^n}{n!}\bigl(-2n f_n(z)\bigr) \\
-\sum_{n=0}^{\infty} \frac{t^n}{n!}\left(\frac{\mathrm{d}^2 f_n(z)}{\mathrm{d}z^2} - 2z\frac{\mathrm{d}f_n(z)}{\mathrm{d}z} + 2n f_n(z)\right) &= 0
-\end{aligned}
+\sum_{n=0}^{\infty} \frac{t^n}{n!}\left(\frac{\mathrm{d}^2 f_n(z)}{\mathrm{d}z^2} - 2z\frac{\mathrm{d}f_n(z)}{\mathrm{d}z}\right) = \sum_{n=0}^{\infty} \frac{t^n}{n!}\bigl(-2n f_n(z)\bigr)
+$$
+
+右辺の和を左辺へ移します。
+
+$$
+\sum_{n=0}^{\infty} \frac{t^n}{n!}\left(\frac{\mathrm{d}^2 f_n(z)}{\mathrm{d}z^2} - 2z\frac{\mathrm{d}f_n(z)}{\mathrm{d}z} + 2n f_n(z)\right) = 0
 $$
 
 この等式は $|t| < 1$ のすべての $t$ に対して恒等的に成り立つので，べき級数展開の一意性より各 $t^n$ の係数はすべて $0$ になります。

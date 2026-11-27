@@ -98,7 +98,7 @@ $$
 \end{aligned}
 $$
 
-以上より，式 (2) が成り立ちます。
+
 
 ### (2)
 
@@ -143,7 +143,7 @@ $$
 \end{aligned}
 $$
 
-以上より，式 (4) の二式が成り立ちます。
+
 
 ### (3)
 
@@ -206,7 +206,7 @@ $$
 
 ### (5)
 
-求める積分 $I(p) = \int_{-\infty}^{\infty} e^{-x^2}\cos(2px)\,\mathrm{d}x$ は $p$ の偶関数であり，$p = 0$ のときは式 (7) より $I(0) = \sqrt{\pi}$ です。そこで以下では $p > 0$ の場合を考えます。
+求める積分 $\displaystyle I(p) = \int_{-\infty}^{\infty} e^{-x^2}\cos(2px)\,\mathrm{d}x$ は $p$ の偶関数であり，$p = 0$ のときは式 (7) より $I(0) = \sqrt{\pi}$ です。そこで以下では $p > 0$ の場合を考えます。
 
 $R > 0$ とし，複素平面上の4点 $-R,\ R,\ R + ip,\ -R + ip$ をこの順に反時計回りに結ぶ長方形の閉経路 $C$ をとります。
 
@@ -247,10 +247,13 @@ $$
 左辺は式 (7) より $\sqrt{\pi}$ です。両辺の実部をとって $e^{p^2}$ で割ります。
 
 $$
-\begin{aligned}
-\sqrt{\pi} &= e^{p^2}\int_{-\infty}^{\infty} e^{-x^2}\cos(2px)\,\mathrm{d}x \\
-\int_{-\infty}^{\infty} e^{-x^2}\cos(2px)\,\mathrm{d}x &= \sqrt{\pi}\,e^{-p^2}
-\end{aligned}
+\sqrt{\pi}=e^{p^2}\int_{-\infty}^{\infty}e^{-x^2}\cos(2px)\,\mathrm{d}x
+$$
+
+正の因子 $e^{p^2}$ で割ると，次の式になります。
+
+$$
+\int_{-\infty}^{\infty}e^{-x^2}\cos(2px)\,\mathrm{d}x=\sqrt{\pi}e^{-p^2}
 $$
 
 偶関数性より，この式は $p < 0$ および $p = 0$ を含むすべての実数 $p$ に対して成り立ちます。したがって，求める定積分は次式となります。
