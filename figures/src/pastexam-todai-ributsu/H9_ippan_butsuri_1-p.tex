@@ -1,0 +1,30 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[>=stealth, thick, scale=1.0]
+  % Axes
+  \draw[->, line width=0.65pt] (-2.8, 0) -- (2.5, 0) node[right] {$x$};
+  \draw[->, line width=0.65pt] (0, -2.1) -- (0, 2.2) node[above] {$y$};
+
+  % Rigid massless rod from B(0, -1.3) to A(0, 1.3)
+  \draw[line width=1.4pt] (0, -1.3) -- (0, 1.3);
+
+  % Masses A and B
+  \fill (0, 1.3) circle (3.6pt);
+  \fill (0, -1.3) circle (3.6pt);
+  \node[right] at (0.14, 1.3) {$\mathrm{A}$};
+  \node[above left, font=\small] at (-0.1, 1.36) {$M$};
+  \node[right] at (0.14, -1.3) {$\mathrm{B}$};
+  \node[left, font=\small] at (-0.14, -1.3) {$M$};
+
+  % Incoming mass C along y = a
+  \fill (-1.9, 1.3) circle (3.2pt);
+  \node[above] at (-1.9, 1.42) {$\mathrm{C}$};
+  \node[below, font=\small] at (-1.9, 1.15) {$m$};
+  \draw[->, line width=0.95pt] (-1.65, 1.3) -- (-0.65, 1.3) node[midway, above, font=\small] {$v$};
+
+  % Length markers y = +- a
+  \draw[dashed, line width=0.5pt] (-2.3, 1.3) -- (-1.9, 1.3);
+  \node[left, font=\small] at (-2.3, 1.3) {$y = a$};
+\end{tikzpicture}
+\end{document}

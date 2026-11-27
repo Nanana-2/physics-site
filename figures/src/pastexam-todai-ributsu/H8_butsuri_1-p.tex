@@ -1,0 +1,15 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[>=stealth, thick, scale=1.0]
+  % Axes
+  \draw[->, line width=0.65pt] (0, 0) -- (4.2, 0) node[right] {$r$};
+  \draw[->, line width=0.65pt] (0, -2.5) -- (0, 0.9) node[left] {$V(r)$};
+  \node[left] at (-0.06, 0) {$0$};
+
+  % Spherical square well: -V_0 for 0 <= r <= a, 0 for r > a
+  \draw[line width=1.2pt] (0, -1.7) -- (1.6, -1.7) -- (1.6, 0) -- (3.85, 0);
+  \node[left] at (-0.06, -1.7) {$-V_0$};
+  \node[above] at (1.6, 0.06) {$a$};
+\end{tikzpicture}
+\end{document}
