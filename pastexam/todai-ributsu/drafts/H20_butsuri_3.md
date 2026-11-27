@@ -47,10 +47,11 @@ $$
 (2) このとき，$k$ と $\omega$ で表されるある $\gamma$ を用いると，$\boldsymbol{E}(x, y),\ \boldsymbol{B}(x, y)$ の $z$ 成分 $E_z, B_z$ が
 
 $$
-\begin{aligned}
-\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \gamma^2\right)E_z &= 0, \tag{1} \\
-\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \gamma^2\right)B_z &= 0 \tag{2}
-\end{aligned}
+\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \gamma^2\right)E_z = 0, \tag{1}
+$$
+
+$$
+\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \gamma^2\right)B_z = 0 \tag{2}
 $$
 
 という形の方程式を満たすことを示し，そのときの $\gamma^2$ を具体的に書き表せ。

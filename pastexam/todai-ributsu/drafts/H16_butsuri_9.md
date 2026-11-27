@@ -4,7 +4,7 @@ tags:
   - 院試過去問
   - 東大理物
   - 量子力学
-  - 物性物理
+  - 物性物理学
 exam_university: 東京大学大学院理学系研究科物理学専攻
 exam_year: 平成16年度
 exam_subject: 物理学

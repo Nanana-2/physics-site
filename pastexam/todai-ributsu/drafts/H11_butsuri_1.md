@@ -261,9 +261,9 @@ $$
 \finalanswer{\Delta E_0 = -\frac{9f\hbar^2}{16a}}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 スピン演算子 $\vec{s}_i$ を $\hbar$ を含まない無次元演算子（$\vec{s}_i^2 = \dfrac{3}{4}$）として定義する流儀を採用した場合は，$\Delta E_0 = -\dfrac{9f}{16a}$ となります。解答では角運動量としての次元をもつ標準的な定義（$\vec{s}_i = \dfrac{\hbar}{2}\vec{\sigma}_i$）に従いました。
-</div>
+</aside>
 
 ### (6)
 

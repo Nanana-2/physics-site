@@ -418,6 +418,6 @@ $$
 \finalanswer{\bar{E}_0 = \varepsilon_0 - \frac{m^*}{m}\cdot\frac{\hbar^2}{2m\lambda_0^2} = -\frac{\hbar^2}{2m\lambda^2}\left(1 + 4e^{-a/\lambda}\right) - \frac{\hbar^2\lambda^2 e^{a/\lambda}}{4m a^2 \lambda_0^2}}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 (3)(ii) で用いた有効質量近似は本来，格子定数 $a$ に比べて緩やかに変化する不純物ポテンシャルに対する近似であり，かつ不純物準位の束縛エネルギーがバンド幅 $\dfrac{4\hbar^2}{m\lambda^2}e^{-a/\lambda}$ に比べて小さい条件 $\lambda_0 \gg \lambda e^{a/\lambda}$ を必要とします。デルタ関数 $\Delta V(x) = -\dfrac{\hbar^2}{m\lambda_0}\delta(x)$ を $x = 0$ の格子点上で厳密に解くと，$\cosh(qa) = \cosh(\kappa a) - \dfrac{\sinh(\kappa a)}{\kappa\lambda}$ のもとで束縛条件は $\kappa\dfrac{\sinh(qa)}{\sinh(\kappa a)} = \dfrac{1}{\lambda_0}$ となります。$\lambda_0 \gg \lambda e^{a/\lambda}$ の極限ではブロッホ関数が $x = 0$ のイオン位置に集中している効果で行列要素が $\dfrac{a}{\lambda}$ 倍になるため，厳密解のバンド底からのずれは $-\dfrac{\hbar^2 e^{a/\lambda}}{4m\lambda_0^2}$ と上の有効質量近似より $\left(\dfrac{a}{\lambda}\right)^2$ 倍大きくなります。逆に $a \ll \lambda_0 \ll \lambda e^{a/\lambda}$ では不純物ポテンシャルがバンド幅より大きくなるため，(3)(i) と同じく $\bar{E}_0 \simeq -\dfrac{\hbar^2}{2m}\left(\dfrac{1}{\lambda} + \dfrac{1}{\lambda_0}\right)^2$ に近づきます。
-</div>
+</aside>

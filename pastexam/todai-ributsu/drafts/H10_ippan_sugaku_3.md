@@ -53,9 +53,9 @@ $$
 \finalanswer{x_N = \frac{1}{3}x_{N-1} + \frac{2}{9}x_{N-2} \qquad (N \ge 2)}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 $N$ 回目の勝敗から後ろ向きに場合分けしても同じ漸化式が得られます。$N$ 回目に負けて継続する確率は $q x_{N-1}$，$(N - 1)$ 回目に負けて $N$ 回目に勝って継続する確率は $q p x_{N-2}$ となるため，$x_N = \dfrac{1}{3}x_{N-1} + \dfrac{2}{9}x_{N-2}$ です。
-</div>
+</aside>
 
 ### (b)
 
@@ -131,10 +131,10 @@ $$
 \finalanswer{\frac{15}{4}}
 $$
 
-<div class="rigor-note" markdown>
+<aside class="rigor-note" markdown>
 期待値の線形性を用いた検算も可能です。求める期待回数を $E$ とし，1回目の結果で場合分けすると，1回目に負けた場合（確率 $1/3$）は最初からやり直しで期待回数 $1 + E$，1回目に勝って2回目に負けた場合（確率 $2/9$）は期待回数 $2 + E$，2連勝した場合（確率 $4/9$）は回数 $2$ となります。したがって
 $$
 E = \frac{1}{3}(1 + E) + \frac{2}{9}(2 + E) + \frac{4}{9}\cdot 2
 $$
 を解くと $\dfrac{4}{9}E = \dfrac{15}{9}$，すなわち $E = \dfrac{15}{4}$ が確認できます。
-</div>
+</aside>
