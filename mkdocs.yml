@@ -54,7 +54,7 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261128
+  - javascripts/mathjax.js?v=20261128b
   - javascripts/problem-filter.js?v=20261031c
   - javascripts/share.js?v=20261022b
   - javascripts/tabs.js?v=20261022b
@@ -82,4 +82,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261128
+  - stylesheets/extra.css?v=20261128b
