@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://practice-physics.com/sitemap.xml
+Sitemap: https://practice-physics.com/sitemap-index.xml

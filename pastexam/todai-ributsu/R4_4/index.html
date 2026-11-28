@@ -1,0 +1,5191 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="東京大学大学院理学系研究科物理学専攻の令和4年度（2022年度）院試、専門科目 第4問「クラマース・クローニッヒ関係式とランク1摂動行列」の問題と独自の解答・解説です。">
+      
+      
+      
+        <link rel="canonical" href="https://practice-physics.com/pastexam/todai-ributsu/R4_4/">
+      
+      
+        <link rel="prev" href="../R4_3/">
+      
+      
+        <link rel="next" href="../R2_butsuri_1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列 - 大学物理の問題集</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css?v=20261128p">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">
+  function __md_analytics() {
+    function gtag() { dataLayer.push(arguments) }
+    function stripQuery(url) {
+      try {
+        var u = new URL(url)
+        return u.origin + u.pathname
+      } catch (e) {
+        return ""
+      }
+    }
+    window.dataLayer = window.dataLayer || []
+    gtag("js", new Date)
+    gtag("config", "G-FDK0HJQRC9", {
+      page_location: location.origin + location.pathname,
+      page_referrer: document.referrer ? stripQuery(document.referrer) : ""
+    })
+    var script = document.createElement("script")
+    script.async = true
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-FDK0HJQRC9"
+    document.getElementById("__analytics").insertAdjacentElement("afterEnd", script)
+  }
+</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&text=%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%86&display=swap">
+  <link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+  <meta name="google-site-verification" content="jie4wQ2XdRy1mia55f4j85EhJrJZECMTF-P9B286dB8" />
+    
+    
+      
+    
+    <meta property="og:image" content="https://practice-physics.com/assets/og/default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="https://practice-physics.com/assets/og/default.png" />
+  
+  
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="大学物理の問題集" />
+    <meta property="og:title" content="東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列" />
+    <meta property="og:description" content="東京大学大学院理学系研究科物理学専攻の令和4年度（2022年度）院試、専門科目 第4問「クラマース・クローニッヒ関係式とランク1摂動行列」の問題と独自の解答・解説です。" />
+    <meta property="og:url" content="https://practice-physics.com/pastexam/todai-ributsu/R4_4/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列" />
+    <meta name="twitter:description" content="東京大学大学院理学系研究科物理学専攻の令和4年度（2022年度）院試、専門科目 第4問「クラマース・クローニッヒ関係式とランク1摂動行列」の問題と独自の解答・解説です。" />
+  
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-41" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../.." title="大学物理の問題集" class="md-header__button md-logo" aria-label="大学物理の問題集" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon site-burger" for="__drawer" aria-label="メニュー">
+      <span class="site-burger__line"></span><span class="site-burger__line"></span><span class="site-burger__line"></span>
+    </label>
+    <a href="../../.." class="md-header__title header-home-link" title="大学物理の問題集（トップページへ）" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            大学物理の問題集
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列
+            
+          </span>
+        </div>
+      </div>
+    </a>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ダークモードに切り替え"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替え" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ライトモードに切り替え"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替え" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    <a class="md-header__button md-icon site-search__mobile" href="../../../tags/" aria-label="問題を探す">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </a>
+    <form class="site-search" action="../../../tags/" method="get" role="search" data-site-search data-index-url="../../../problem-index.json">
+      <span class="site-search__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg></span>
+      <input class="site-search__input" type="search" name="keyword" placeholder="問題を検索" autocomplete="off" aria-label="問題を検索" aria-autocomplete="list" aria-controls="site-search-results">
+      <div class="site-search__results" id="site-search-results" role="listbox" hidden></div>
+    </form>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../01mechanics/" class="md-tabs__link">
+          
+  
+  力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../02electromagnetism/" class="md-tabs__link">
+          
+  
+  電磁気学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../03thermodynamics/" class="md-tabs__link">
+          
+  
+  熱力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../04quantum_mechanics/" class="md-tabs__link">
+          
+  
+  量子力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../05statistical_mechanics/" class="md-tabs__link">
+          
+  
+  統計力学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../06solid_state/" class="md-tabs__link">
+          
+  
+  物性物理学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+  
+    <li class="md-tabs__item md-tabs__item--menu">
+      <button type="button" class="md-tabs__link md-tabs__menu-toggle" aria-expanded="false" aria-controls="tabs-menu-physmath">
+        
+  
+  物理数学
+
+        <span class="md-tabs__caret" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
+      </button>
+      <div class="md-tabs__menu" id="tabs-menu-physmath" hidden>
+        <ul class="md-tabs__menu-list">
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../14calculus/" class="md-tabs__menu-link">
+                微積分
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../07linear_algebra/" class="md-tabs__menu-link">
+                線形代数
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../08differential_equations/" class="md-tabs__menu-link">
+                微分方程式
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../09vector_analysis/" class="md-tabs__menu-link">
+                ベクトル解析
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../10integral_transforms/" class="md-tabs__menu-link">
+                積分変換
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../11complex_analysis/" class="md-tabs__menu-link">
+                複素関数
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../12special_functions/" class="md-tabs__menu-link">
+                特殊関数・変分法
+              </a>
+            </li>
+          
+            
+            <li class="md-tabs__menu-item">
+              <a href="../../../13probability_statistics/" class="md-tabs__menu-link">
+                確率・統計
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  院試過去問
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--tool">
+      <a href="../../../books/" class="md-tabs__link">
+        
+  
+  参考文献一覧
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--tool">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+  問題を探す
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--tool">
+      <a href="../../../exam/" class="md-tabs__link">
+        
+  
+  問題を印刷する
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+  
+        
+      
+  
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="メニュー" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="大学物理の問題集" class="md-nav__button md-logo" aria-label="大学物理の問題集">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    大学物理の問題集
+  </label>
+  <div class="drawer">
+    
+  
+
+
+  <nav class="side-chapters" aria-label="東大理物の章">
+    
+      <a class="side-chapters__index" href="../">
+          <span class="side-chapters__label">東大理物の過去問</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和8年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_1/"><span class="side-chapter__num">第1問</span>1次元周期ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_2/"><span class="side-chapter__num">第2問</span>1次元高分子と1次元イジング模型
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_3/"><span class="side-chapter__num">第3問</span>磁場中の回転する管・傾く管の2質点の運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_4/"><span class="side-chapter__num">第4問</span>冪零行列と1階準線形偏微分方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和7年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_1/"><span class="side-chapter__num">第1問</span>振動摂動と2光子遷移
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_2/"><span class="side-chapter__num">第2問</span>調和振動子中の理想ボース気体とBEC
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_3/"><span class="side-chapter__num">第3問</span>ポアソン方程式の一意性と導体前の電気双極子
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_4/"><span class="side-chapter__num">第4問</span>パウリ行列と回転・直交多項式・真偽判定
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和6年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_1/"><span class="side-chapter__num">第1問</span>倒立調和振動子とスクイーズド状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_2/"><span class="side-chapter__num">第2問</span>古典理想気体とラングミュア吸着
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_3/"><span class="side-chapter__num">第3問</span>レイリー散乱と光ピンセット
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_4/"><span class="side-chapter__num">第4問</span>フーリエ変換・積分方程式と複素3次対称行列
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和5年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_1/"><span class="side-chapter__num">第1問</span>2次元調和振動子と角運動量
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_2/"><span class="side-chapter__num">第2問</span>ワイル半金属の統計力学と低温比熱
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_3/"><span class="side-chapter__num">第3問</span>電気双極子・電気四極子とその静電エネルギー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_4/"><span class="side-chapter__num">第4問</span>三角関数の複素積分と行列指数関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter" open>
+          <summary class="side-chapter__head">令和4年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R4_1/"><span class="side-chapter__num">第1問</span>不確定性関係と最小不確定状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R4_2/"><span class="side-chapter__num">第2問</span>理想ボース気体のBECとスピン・磁場効果
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R4_3/"><span class="side-chapter__num">第3問</span>誘電体境界面での電磁波の透過・反射・全反射
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link is-current" href="./" aria-current="page"><span class="side-chapter__num">第4問</span>クラマース・クローニッヒ関係式とランク1摂動行列
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和2年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_butsuri_1/"><span class="side-chapter__num">第1問</span>二状態系とベルの不等式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_butsuri_2/"><span class="side-chapter__num">第2問</span>古典理想気体と自由フェルミ気体
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_butsuri_3/"><span class="side-chapter__num">第3問</span>同軸ケーブル中の電磁波とTEMモード
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_sugaku_1/"><span class="side-chapter__num">第1問</span>誤差関数と移流拡散方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_sugaku_2/"><span class="side-chapter__num">第2問</span>一般化パウリ行列と同時対角化・相互不偏基底
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成31年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元調和振動子と4次非調和摂動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_butsuri_2/"><span class="side-chapter__num">第2問</span>1次元2状態古典スピン鎖の分配関数と相関長
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_butsuri_3/"><span class="side-chapter__num">第3問</span>連星系の重力波放射と軌道減衰
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_sugaku_1/"><span class="side-chapter__num">第1問</span>SU(3) リー代数と行列の無限小変換
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_sugaku_2/"><span class="side-chapter__num">第2問</span>微分演算子の固有値積とゼータ関数正則化
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成30年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_butsuri_1/"><span class="side-chapter__num">第1問</span>二準位系の時間発展と断熱定理
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_butsuri_2/"><span class="side-chapter__num">第2問</span>古典理想気体と箱中ボース粒子の低温エントロピー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_butsuri_3/"><span class="side-chapter__num">第3問</span>電気双極子放射と二波源の干渉
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_sugaku_1/"><span class="side-chapter__num">第1問</span>特異値分解とムーア・ペンローズ擬似逆行列
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_sugaku_2/"><span class="side-chapter__num">第2問</span>バーガース方程式とコール・ホップ変換
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成29年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_butsuri_1/"><span class="side-chapter__num">第1問</span>放物型ポテンシャル中の相互作用二粒子とクエンチ後の時間発展
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_butsuri_2/"><span class="side-chapter__num">第2問</span>正方格子反強磁性イジング模型の平均場近似とフラストレーション
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_butsuri_3/"><span class="side-chapter__num">第3問</span>二重振り子の基準振動と断熱的パラメータ変化
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_sugaku_1/"><span class="side-chapter__num">第1問</span>ラプラス変換とたたみ込み積分方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_sugaku_2/"><span class="side-chapter__num">第2問</span>外積行列とロドリゲスの回転公式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成28年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_butsuri_1/"><span class="side-chapter__num">第1問</span>磁場中の2次元パウリ電子とゼロエネルギー束縛状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_butsuri_2/"><span class="side-chapter__num">第2問</span>独立調和振動子と1次元連成振動子鎖の比熱
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_sugaku_1/"><span class="side-chapter__num">第1問</span>2次行列のトレース漸化式と三重対角対称行列の固有値
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_sugaku_2/"><span class="side-chapter__num">第2問</span>クライン・ゴルドン方程式と非線形キンク解・ゼロモード
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成27年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_butsuri_1/"><span class="side-chapter__num">第1問</span>円周上のデルタ関数ポテンシャルと束縛・散乱状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_butsuri_2/"><span class="side-chapter__num">第2問</span>高分子鎖のランダムウォークと揺動散逸関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_butsuri_3/"><span class="side-chapter__num">第3問</span>等速運動する荷電粒子がつくる電磁場とローレンツ変換
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_sugaku_1/"><span class="side-chapter__num">第1問</span>第2種チェビシェフ多項式とスツルム・リウヴィル固有値問題
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_sugaku_2/"><span class="side-chapter__num">第2問</span>拡散方程式の遅延グリーン関数と複素積分
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成26年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_butsuri_1/"><span class="side-chapter__num">第1問</span>水素原子基底状態と磁場中の荷電粒子
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_butsuri_2/"><span class="side-chapter__num">第2問</span>2次元フェルミ粒子系と2バンド模型
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_butsuri_3/"><span class="side-chapter__num">第3問</span>誘電体・導体境界面での電磁波の反射と抵抗損失
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_sugaku_1/"><span class="side-chapter__num">第1問</span>常微分方程式・連立微分方程式・熱伝導方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_sugaku_2/"><span class="side-chapter__num">第2問</span>巡回行列の対角化と結合2バンド行列の固有値
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成25年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_butsuri_1/"><span class="side-chapter__num">第1問</span>一次元調和振動子とコヒーレント状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_butsuri_2/"><span class="side-chapter__num">第2問</span>理想ボース気体とボース・アインシュタイン凝縮
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_butsuri_3/"><span class="side-chapter__num">第3問</span>電磁場中の荷電粒子のラグランジアンと運動
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_sugaku_1/"><span class="side-chapter__num">第1問</span>ファンデルモンド行列式と複素積分
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_sugaku_2/"><span class="side-chapter__num">第2問</span>2変数2階線形偏微分方程式の標準形と解
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成24年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_butsuri_1/"><span class="side-chapter__num">第1問</span>磁場中および回転磁場中の電子スピンの運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_butsuri_2/"><span class="side-chapter__num">第2問</span>2原子分子の回転分配関数とオルソ・パラ水素
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_butsuri_3/"><span class="side-chapter__num">第3問</span>誘電体による光の分散と異常分散
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_sugaku_1/"><span class="side-chapter__num">第1問</span>パウリ行列の指数関数と2次正方行列の性質
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_sugaku_2/"><span class="side-chapter__num">第2問</span>連立偏微分方程式の対角化による解法
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成23年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_butsuri_1/"><span class="side-chapter__num">第1問</span>3次元分離型ポテンシャルの束縛状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_butsuri_2/"><span class="side-chapter__num">第2問</span>3スピン三角形モデルの磁化と比熱
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_butsuri_3/"><span class="side-chapter__num">第3問</span>電磁場中および非一様磁場中の荷電粒子の運動
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_sugaku_1/"><span class="side-chapter__num">第1問</span>反交換関係を満たす複素行列とパウリ行列表現
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_sugaku_2/"><span class="side-chapter__num">第2問</span>1次元・2次元・d次元のポアソン方程式とラプラス方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成22年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_butsuri_1/"><span class="side-chapter__num">第1問</span>無限井戸型ポテンシャルと中央のデルタ関数ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_butsuri_2/"><span class="side-chapter__num">第2問</span>2状態単量体からなる鎖状分子の統計力学
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_butsuri_3/"><span class="side-chapter__num">第3問</span>複素振幅のマクスウェル方程式と平行平板線路
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_sugaku_1/"><span class="side-chapter__num">第1問</span>正定値対称行列に対する最急降下法の収束性
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_sugaku_2/"><span class="side-chapter__num">第2問</span>1次元波動方程式のダランベールの公式とエネルギー保存
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成21年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_butsuri_1/"><span class="side-chapter__num">第1問</span>不確定性関係とスピン1/2の相関
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_butsuri_2/"><span class="side-chapter__num">第2問</span>理想フェルミ気体と理想ボース気体
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_butsuri_3/"><span class="side-chapter__num">第3問</span>2粒子の弾性散乱と球状ポテンシャル障壁
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_sugaku_1/"><span class="side-chapter__num">第1問</span>実対称行列の固有値とトレース不等式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_sugaku_2/"><span class="side-chapter__num">第2問</span>2準位系の連立1階常微分方程式と遷移確率
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成20年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_butsuri_1/"><span class="side-chapter__num">第1問</span>2次元調和振動子の代数解法と極座標解法
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_butsuri_2/"><span class="side-chapter__num">第2問</span>3状態独立分子系の統計力学とゆらぎ応答関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_butsuri_3/"><span class="side-chapter__num">第3問</span>長方形導波管内の電磁波伝搬
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_sugaku_1/"><span class="side-chapter__num">第1問</span>3次元回転行列と実交代行列の指数関数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_sugaku_2/"><span class="side-chapter__num">第2問</span>エルミート多項式の母関数と微分方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成19年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_butsuri_1/"><span class="side-chapter__num">第1問</span>角運動量の交換関係と固有値の量子化
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_butsuri_2/"><span class="side-chapter__num">第2問</span>常磁性スピン系とスピン対の磁化率
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_butsuri_3/"><span class="side-chapter__num">第3問</span>回転座標系での三体問題とラグランジュ点
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_sugaku_1/"><span class="side-chapter__num">第1問</span>回転行列の指数関数・対角化とファンデルモンド行列式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_sugaku_2/"><span class="side-chapter__num">第2問</span>コーシー・リーマンの関係式とガウス型フーリエ積分
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成18年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元無限井戸型ポテンシャルの摂動論とパリティ
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_butsuri_2/"><span class="side-chapter__num">第2問</span>黒体輻射のプランク分布とウィーンの変位則
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_butsuri_3/"><span class="side-chapter__num">第3問</span>真空中の平面電磁波の性質
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_sugaku_1/"><span class="side-chapter__num">第1問</span>エルミート行列の射影演算子とスペクトル分解
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_sugaku_2/"><span class="side-chapter__num">第2問</span>変分法・ベルトラミの恒等式と最小回転面
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成17年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元井戸型ポテンシャルの散乱と共鳴透過
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_butsuri_2/"><span class="side-chapter__num">第2問</span>金属の自由電子気体と熱電子放出
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_butsuri_3/"><span class="side-chapter__num">第3問</span>単色平面波中の自由電子の運動とポンデロモーティブエネルギー
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_sugaku_1/"><span class="side-chapter__num">第1問</span>2次形式の直交対角化と勾配系の漸近安定性
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_sugaku_2/"><span class="side-chapter__num">第2問</span>フォッカー・プランク方程式のガウス解と定常分布への緩和
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成16年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元調和振動子のハイゼンベルグ表示とコヒーレント状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_2/"><span class="side-chapter__num">第2問</span>2状態単量体鎖状分子の統計力学と張力・長さ関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_3/"><span class="side-chapter__num">第3問</span>一様磁場と周期電場による荷電粒子の加速
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_4/"><span class="side-chapter__num">第4問</span>中心力場の散乱とスイングバイ加速の原理
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_9/"><span class="side-chapter__num">第9問</span>1次元周期ポテンシャル障壁の転送行列とバンド構造
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_sugaku_1/"><span class="side-chapter__num">第1問</span>多項式空間の線形写像の表現行列・固有値と反復合成
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_sugaku_2/"><span class="side-chapter__num">第2問</span>1次元熱伝導方程式のフーリエ変換解法と誤差関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成15年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元井戸型ポテンシャルの急膨張と断熱定理
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_2/"><span class="side-chapter__num">第2問</span>2元合金の平均場近似と相分離
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_3/"><span class="side-chapter__num">第3問</span>円筒導体内の偏心直線導線がつくる電磁場と鏡像法
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_4/"><span class="side-chapter__num">第4問</span>剛体球の慣性モーメントと平面・斜面上の転がり運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_9/"><span class="side-chapter__num">第9問</span>2原子分子の回転比熱と核スピンの影響
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_sugaku_1/"><span class="side-chapter__num">第1問</span>外積による線形微分方程式と実直交変換
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_sugaku_2/"><span class="side-chapter__num">第2問</span>球対称波動方程式の初期値問題とフーリエ変換
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成14年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元調和振動子とコヒーレント状態の不確定性関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_2/"><span class="side-chapter__num">第2問</span>荷電鎖状分子のエントロピー弾性と一様電場下の伸び
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_3/"><span class="side-chapter__num">第3問</span>誘電体境界面での斜め入射電磁波の反射・屈折とブルースター角
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_4/"><span class="side-chapter__num">第4問</span>逆さ円錐漏斗面上の質点の運動と有効ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_sugaku_1/"><span class="side-chapter__num">第1問</span>2次実対称行列の対角化と円周上の線形変形
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_sugaku_2/"><span class="side-chapter__num">第2問</span>球座標3次元ラプラス方程式と球面調和関数展開
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成13年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元井戸型ポテンシャルの束縛状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_butsuri_2/"><span class="side-chapter__num">第2問</span>1次元イジング模型の分配関数と自由エネルギー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_butsuri_3/"><span class="side-chapter__num">第3問</span>遅延ポテンシャルと加速点粒子の電磁波放射
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_sugaku_1/"><span class="side-chapter__num">第1問</span>4次元空間の部分空間と共通部分の次元
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_sugaku_2/"><span class="side-chapter__num">第2問</span>円形膜の波動方程式とベッセル関数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_sugaku_3/"><span class="side-chapter__num">第3問</span>減衰調和振動子のフーリエ変換とグリーン関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成12年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元二重井戸ポテンシャルとトンネル分裂
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_2/"><span class="side-chapter__num">第2問</span>電離層プラズマ中の電磁波伝播
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_3/"><span class="side-chapter__num">第3問</span>スピン1/2磁性体の断熱消磁
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_6/"><span class="side-chapter__num">第6問</span>2次元電子の状態密度と周期ポテンシャルの摂動
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>ロケットの垂直打ち上げと脱出速度
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>直線導線内の電流によるローレンツ力と電荷密度の変化
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>ヤングの干渉実験とレンズ結像の分解能
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>2次元保存ベクトル場とスカラーポテンシャル
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>実対称行列の対角化とユニタリ不変量
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>1次元熱伝導方程式のグリーン関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成11年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元無限井戸型ポテンシャル中の2電子系とスピン依存接触相互作用
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_butsuri_2/"><span class="side-chapter__num">第2問</span>3次元立方格子イジング模型と平均場近似
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_butsuri_3/"><span class="side-chapter__num">第3問</span>マクスウェル方程式・静電遮蔽・電磁波と電磁ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>クーロン力による荷電粒子の散乱と最近接距離
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>一様帯電球の電場・静電ポテンシャルと静電エネルギー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>理想気体中の音波の伝播・気柱共鳴と屈折
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>ディリクレ積分の複素積分による評価とフーリエ級数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>3次実行列の固有多項式と複素固有値条件
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>モニックエルミート多項式の構成と漸化式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成10年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_1/"><span class="side-chapter__num">第1問</span>球対称井戸型ポテンシャルと逆2乗ポテンシャルにおける中心への落下
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_2/"><span class="side-chapter__num">第2問</span>電磁波の境界条件・完全導体反射と誘電体板の透過強度
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_3/"><span class="side-chapter__num">第3問</span>反強磁性ハイゼンベルク2スピン系・4スピン系の固有状態と帯磁率
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_7/"><span class="side-chapter__num">第7問</span>1次元ヘルムホルツ方程式のグリーン関数・無限弦の波動方程式と2次元ラプラス方程式
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>斜面を転がり落ちる剛体の運動と石球・トロッコの衝突判定
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>定常電流と2層同心球殻導体の抵抗および境界面蓄積電荷
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>理想気体のマイヤーの関係・ポアソンの法則とディーゼル機関の断熱圧縮
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>ジョルダン標準形・行列のべき乗と線形漸化式の収束条件
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>定数変化法による非同次2階線形常微分方程式とデルタ関数極限
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>2連勝で終了するゲームの継続確率の漸化式と期待回数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成9年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_1/"><span class="side-chapter__num">第1問</span>励起子の束縛エネルギー・デルタ関数摂動と重ね合わせ状態の測定統計
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_2/"><span class="side-chapter__num">第2問</span>1次元結晶とデルタ関数型不純物ポテンシャルによる電子の束縛
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_5/"><span class="side-chapter__num">第5問</span>局在電子相と縮退フェルミ気体相の1次相転移と臨界点
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_6/"><span class="side-chapter__num">第6問</span>非圧縮液滴の4重極表面振動と量子コヒーレント状態
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>剛体棒で結ばれた2質点と質点の完全弾性衝突
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>静磁場と回転電場中の荷電粒子のサイクロトロン共鳴
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>実在気体のエントロピー変化と状態方程式の決定
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>3変数2次形式の直交対角化と回転行列の位数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>上半平面の測地線方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>原始ピタゴラス数の生成公式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成8年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_1/"><span class="side-chapter__num">第1問</span>球対称井戸型ポテンシャルの浅い束縛状態とs波散乱の位相のずれ
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_2/"><span class="side-chapter__num">第2問</span>軸対称磁場中の導体リング振り子の電磁誘導減衰と自己インダクタンス効果
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_3/"><span class="side-chapter__num">第3問</span>1次元自由電子系の古典統計とフェルミ統計における常磁性
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_5/"><span class="side-chapter__num">第5問</span>円筒面上の自由電子の状態密度と環状原子鎖のタイトバインディング模型
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>同軸導体円筒の電場・静電容量と逆向き電流による磁場・磁気圧
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>水平線と鉛直線に拘束された一様な棒の運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>水飲み鳥の作動機構と熱力学的解釈
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>非線形振動子の摂動展開と永年項の出現
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>3行2列実行列の特異値分解
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>長い針に対するビュフォンの針の問題
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+  </nav>
+
+    <p class="drawer__heading side-heading"><span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m50.7-186.9-144.3 55.5c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31l-55.5 144.3c-3.2 8.5-9.9 15.1-18.4 18.4M288 256a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg></span>分野・ページ</p>
+    <ul class="drawer__links">
+      
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../01mechanics/">
+              力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../02electromagnetism/">
+              電磁気学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../03thermodynamics/">
+              熱力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../04quantum_mechanics/">
+              量子力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../05statistical_mechanics/">
+              統計力学
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../06solid_state/">
+              物性物理学
+            </a>
+          </li>
+        
+      
+        <li>
+            <details class="drawer__group">
+              <summary class="drawer__link drawer__toggle">
+                物理数学
+                <span class="drawer__caret" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
+              </summary>
+              <ul class="drawer__sublinks">
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../14calculus/">
+                      微積分
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../07linear_algebra/">
+                      線形代数
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../08differential_equations/">
+                      微分方程式
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../09vector_analysis/">
+                      ベクトル解析
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../10integral_transforms/">
+                      積分変換
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../11complex_analysis/">
+                      複素関数
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../12special_functions/">
+                      特殊関数・変分法
+                    </a>
+                  </li>
+                
+                  
+                  <li>
+                    <a class="drawer__link drawer__sublink" href="../../../13probability_statistics/">
+                      確率・統計
+                    </a>
+                  </li>
+                
+              </ul>
+            </details>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link is-current" href="../../">
+              院試過去問
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../books/">
+              参考文献一覧
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../tags/">
+              問題を探す
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a class="drawer__link" href="../../../exam/">
+              問題を印刷する
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title side-heading" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span class="side-heading__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v416c0 11.5 6.2 22.2 16.2 27.8s22.3 5.5 32.2-.4L192 421.3l143.5 86.1c9.9 5.9 22.2 6.1 32.2.4S384 491.5 384 480V64c0-35.3-28.7-64-64-64z"/></svg></span>このページ
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        
+<li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="toc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M128.1 0c-35.3 0-64 28.7-64 64v384c0 35.3 28.7 64 64 64h146.2l10.9-54.5c4.3-21.7 15-41.6 30.6-57.2L448 268.1v-97.5c0-17-6.7-33.3-18.7-45.3L322.8 18.7C310.8 6.7 294.5 0 277.6 0zm261.5 176h-93.5c-13.3 0-24-10.7-24-24V58.5zm-57.3 290.9-11.9 59.6c-.2.9-.3 1.9-.3 2.9 0 8 6.5 14.6 14.6 14.6 1 0 1.9-.1 2.9-.3l59.6-11.9c12.4-2.5 23.8-8.6 32.7-17.5l118.9-118.9-80-80-118.9 118.9c-8.9 8.9-15 20.3-17.5 32.7zm267.8-123c22.1-22.1 22.1-57.9 0-80s-57.9-22.1-80 0l-28.8 28.8 80 80z"/></svg></span>
+      
+        問題
+      
+    </span>
+  </a>
+  
+</li>
+      
+        
+<li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="toc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m118-366.3c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8l135.9-187c7.8-10.7 5.4-25.7-5.3-33.5"/></svg></span>
+      
+        解答・解説
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解答・解説">
+      <ul class="md-nav__list">
+        
+          
+<li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (1)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(1)">
+      <ul class="md-nav__list">
+        
+          
+<li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (i)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (ii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (iii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(2)">
+      <ul class="md-nav__list">
+        
+          
+<li class="md-nav__item">
+  <a href="#i_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (i)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#ii_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (ii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#iii_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (iii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (iv)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (v)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (vi)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          
+<li class="md-nav__item">
+  <a href="#vii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+      
+        (vii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+  
+  
+
+
+  <nav class="side-chapters" aria-label="東大理物の章">
+    
+      <a class="side-chapters__index" href="../">
+          <span class="side-chapters__label">東大理物の過去問</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和8年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_1/"><span class="side-chapter__num">第1問</span>1次元周期ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_2/"><span class="side-chapter__num">第2問</span>1次元高分子と1次元イジング模型
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_3/"><span class="side-chapter__num">第3問</span>磁場中の回転する管・傾く管の2質点の運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R8_4/"><span class="side-chapter__num">第4問</span>冪零行列と1階準線形偏微分方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和7年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_1/"><span class="side-chapter__num">第1問</span>振動摂動と2光子遷移
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_2/"><span class="side-chapter__num">第2問</span>調和振動子中の理想ボース気体とBEC
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_3/"><span class="side-chapter__num">第3問</span>ポアソン方程式の一意性と導体前の電気双極子
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R7_4/"><span class="side-chapter__num">第4問</span>パウリ行列と回転・直交多項式・真偽判定
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和6年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_1/"><span class="side-chapter__num">第1問</span>倒立調和振動子とスクイーズド状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_2/"><span class="side-chapter__num">第2問</span>古典理想気体とラングミュア吸着
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_3/"><span class="side-chapter__num">第3問</span>レイリー散乱と光ピンセット
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R6_4/"><span class="side-chapter__num">第4問</span>フーリエ変換・積分方程式と複素3次対称行列
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和5年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_1/"><span class="side-chapter__num">第1問</span>2次元調和振動子と角運動量
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_2/"><span class="side-chapter__num">第2問</span>ワイル半金属の統計力学と低温比熱
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_3/"><span class="side-chapter__num">第3問</span>電気双極子・電気四極子とその静電エネルギー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R5_4/"><span class="side-chapter__num">第4問</span>三角関数の複素積分と行列指数関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter" open>
+          <summary class="side-chapter__head">令和4年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R4_1/"><span class="side-chapter__num">第1問</span>不確定性関係と最小不確定状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R4_2/"><span class="side-chapter__num">第2問</span>理想ボース気体のBECとスピン・磁場効果
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R4_3/"><span class="side-chapter__num">第3問</span>誘電体境界面での電磁波の透過・反射・全反射
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link is-current" href="./" aria-current="page"><span class="side-chapter__num">第4問</span>クラマース・クローニッヒ関係式とランク1摂動行列
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">令和2年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_butsuri_1/"><span class="side-chapter__num">第1問</span>二状態系とベルの不等式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_butsuri_2/"><span class="side-chapter__num">第2問</span>古典理想気体と自由フェルミ気体
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_butsuri_3/"><span class="side-chapter__num">第3問</span>同軸ケーブル中の電磁波とTEMモード
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_sugaku_1/"><span class="side-chapter__num">第1問</span>誤差関数と移流拡散方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../R2_sugaku_2/"><span class="side-chapter__num">第2問</span>一般化パウリ行列と同時対角化・相互不偏基底
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成31年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元調和振動子と4次非調和摂動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_butsuri_2/"><span class="side-chapter__num">第2問</span>1次元2状態古典スピン鎖の分配関数と相関長
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_butsuri_3/"><span class="side-chapter__num">第3問</span>連星系の重力波放射と軌道減衰
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_sugaku_1/"><span class="side-chapter__num">第1問</span>SU(3) リー代数と行列の無限小変換
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H31_sugaku_2/"><span class="side-chapter__num">第2問</span>微分演算子の固有値積とゼータ関数正則化
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成30年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_butsuri_1/"><span class="side-chapter__num">第1問</span>二準位系の時間発展と断熱定理
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_butsuri_2/"><span class="side-chapter__num">第2問</span>古典理想気体と箱中ボース粒子の低温エントロピー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_butsuri_3/"><span class="side-chapter__num">第3問</span>電気双極子放射と二波源の干渉
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_sugaku_1/"><span class="side-chapter__num">第1問</span>特異値分解とムーア・ペンローズ擬似逆行列
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H30_sugaku_2/"><span class="side-chapter__num">第2問</span>バーガース方程式とコール・ホップ変換
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成29年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_butsuri_1/"><span class="side-chapter__num">第1問</span>放物型ポテンシャル中の相互作用二粒子とクエンチ後の時間発展
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_butsuri_2/"><span class="side-chapter__num">第2問</span>正方格子反強磁性イジング模型の平均場近似とフラストレーション
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_butsuri_3/"><span class="side-chapter__num">第3問</span>二重振り子の基準振動と断熱的パラメータ変化
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_sugaku_1/"><span class="side-chapter__num">第1問</span>ラプラス変換とたたみ込み積分方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H29_sugaku_2/"><span class="side-chapter__num">第2問</span>外積行列とロドリゲスの回転公式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成28年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_butsuri_1/"><span class="side-chapter__num">第1問</span>磁場中の2次元パウリ電子とゼロエネルギー束縛状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_butsuri_2/"><span class="side-chapter__num">第2問</span>独立調和振動子と1次元連成振動子鎖の比熱
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_sugaku_1/"><span class="side-chapter__num">第1問</span>2次行列のトレース漸化式と三重対角対称行列の固有値
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H28_sugaku_2/"><span class="side-chapter__num">第2問</span>クライン・ゴルドン方程式と非線形キンク解・ゼロモード
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成27年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_butsuri_1/"><span class="side-chapter__num">第1問</span>円周上のデルタ関数ポテンシャルと束縛・散乱状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_butsuri_2/"><span class="side-chapter__num">第2問</span>高分子鎖のランダムウォークと揺動散逸関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_butsuri_3/"><span class="side-chapter__num">第3問</span>等速運動する荷電粒子がつくる電磁場とローレンツ変換
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_sugaku_1/"><span class="side-chapter__num">第1問</span>第2種チェビシェフ多項式とスツルム・リウヴィル固有値問題
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H27_sugaku_2/"><span class="side-chapter__num">第2問</span>拡散方程式の遅延グリーン関数と複素積分
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成26年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_butsuri_1/"><span class="side-chapter__num">第1問</span>水素原子基底状態と磁場中の荷電粒子
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_butsuri_2/"><span class="side-chapter__num">第2問</span>2次元フェルミ粒子系と2バンド模型
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_butsuri_3/"><span class="side-chapter__num">第3問</span>誘電体・導体境界面での電磁波の反射と抵抗損失
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_sugaku_1/"><span class="side-chapter__num">第1問</span>常微分方程式・連立微分方程式・熱伝導方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H26_sugaku_2/"><span class="side-chapter__num">第2問</span>巡回行列の対角化と結合2バンド行列の固有値
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成25年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_butsuri_1/"><span class="side-chapter__num">第1問</span>一次元調和振動子とコヒーレント状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_butsuri_2/"><span class="side-chapter__num">第2問</span>理想ボース気体とボース・アインシュタイン凝縮
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_butsuri_3/"><span class="side-chapter__num">第3問</span>電磁場中の荷電粒子のラグランジアンと運動
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_sugaku_1/"><span class="side-chapter__num">第1問</span>ファンデルモンド行列式と複素積分
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H25_sugaku_2/"><span class="side-chapter__num">第2問</span>2変数2階線形偏微分方程式の標準形と解
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成24年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_butsuri_1/"><span class="side-chapter__num">第1問</span>磁場中および回転磁場中の電子スピンの運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_butsuri_2/"><span class="side-chapter__num">第2問</span>2原子分子の回転分配関数とオルソ・パラ水素
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_butsuri_3/"><span class="side-chapter__num">第3問</span>誘電体による光の分散と異常分散
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_sugaku_1/"><span class="side-chapter__num">第1問</span>パウリ行列の指数関数と2次正方行列の性質
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H24_sugaku_2/"><span class="side-chapter__num">第2問</span>連立偏微分方程式の対角化による解法
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成23年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_butsuri_1/"><span class="side-chapter__num">第1問</span>3次元分離型ポテンシャルの束縛状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_butsuri_2/"><span class="side-chapter__num">第2問</span>3スピン三角形モデルの磁化と比熱
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_butsuri_3/"><span class="side-chapter__num">第3問</span>電磁場中および非一様磁場中の荷電粒子の運動
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_sugaku_1/"><span class="side-chapter__num">第1問</span>反交換関係を満たす複素行列とパウリ行列表現
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H23_sugaku_2/"><span class="side-chapter__num">第2問</span>1次元・2次元・d次元のポアソン方程式とラプラス方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成22年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_butsuri_1/"><span class="side-chapter__num">第1問</span>無限井戸型ポテンシャルと中央のデルタ関数ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_butsuri_2/"><span class="side-chapter__num">第2問</span>2状態単量体からなる鎖状分子の統計力学
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_butsuri_3/"><span class="side-chapter__num">第3問</span>複素振幅のマクスウェル方程式と平行平板線路
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_sugaku_1/"><span class="side-chapter__num">第1問</span>正定値対称行列に対する最急降下法の収束性
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H22_sugaku_2/"><span class="side-chapter__num">第2問</span>1次元波動方程式のダランベールの公式とエネルギー保存
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成21年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_butsuri_1/"><span class="side-chapter__num">第1問</span>不確定性関係とスピン1/2の相関
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_butsuri_2/"><span class="side-chapter__num">第2問</span>理想フェルミ気体と理想ボース気体
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_butsuri_3/"><span class="side-chapter__num">第3問</span>2粒子の弾性散乱と球状ポテンシャル障壁
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_sugaku_1/"><span class="side-chapter__num">第1問</span>実対称行列の固有値とトレース不等式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H21_sugaku_2/"><span class="side-chapter__num">第2問</span>2準位系の連立1階常微分方程式と遷移確率
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成20年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_butsuri_1/"><span class="side-chapter__num">第1問</span>2次元調和振動子の代数解法と極座標解法
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_butsuri_2/"><span class="side-chapter__num">第2問</span>3状態独立分子系の統計力学とゆらぎ応答関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_butsuri_3/"><span class="side-chapter__num">第3問</span>長方形導波管内の電磁波伝搬
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_sugaku_1/"><span class="side-chapter__num">第1問</span>3次元回転行列と実交代行列の指数関数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H20_sugaku_2/"><span class="side-chapter__num">第2問</span>エルミート多項式の母関数と微分方程式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成19年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_butsuri_1/"><span class="side-chapter__num">第1問</span>角運動量の交換関係と固有値の量子化
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_butsuri_2/"><span class="side-chapter__num">第2問</span>常磁性スピン系とスピン対の磁化率
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_butsuri_3/"><span class="side-chapter__num">第3問</span>回転座標系での三体問題とラグランジュ点
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_sugaku_1/"><span class="side-chapter__num">第1問</span>回転行列の指数関数・対角化とファンデルモンド行列式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H19_sugaku_2/"><span class="side-chapter__num">第2問</span>コーシー・リーマンの関係式とガウス型フーリエ積分
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成18年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元無限井戸型ポテンシャルの摂動論とパリティ
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_butsuri_2/"><span class="side-chapter__num">第2問</span>黒体輻射のプランク分布とウィーンの変位則
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_butsuri_3/"><span class="side-chapter__num">第3問</span>真空中の平面電磁波の性質
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_sugaku_1/"><span class="side-chapter__num">第1問</span>エルミート行列の射影演算子とスペクトル分解
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H18_sugaku_2/"><span class="side-chapter__num">第2問</span>変分法・ベルトラミの恒等式と最小回転面
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成17年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元井戸型ポテンシャルの散乱と共鳴透過
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_butsuri_2/"><span class="side-chapter__num">第2問</span>金属の自由電子気体と熱電子放出
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_butsuri_3/"><span class="side-chapter__num">第3問</span>単色平面波中の自由電子の運動とポンデロモーティブエネルギー
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_sugaku_1/"><span class="side-chapter__num">第1問</span>2次形式の直交対角化と勾配系の漸近安定性
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H17_sugaku_2/"><span class="side-chapter__num">第2問</span>フォッカー・プランク方程式のガウス解と定常分布への緩和
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成16年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元調和振動子のハイゼンベルグ表示とコヒーレント状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_2/"><span class="side-chapter__num">第2問</span>2状態単量体鎖状分子の統計力学と張力・長さ関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_3/"><span class="side-chapter__num">第3問</span>一様磁場と周期電場による荷電粒子の加速
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_4/"><span class="side-chapter__num">第4問</span>中心力場の散乱とスイングバイ加速の原理
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_butsuri_9/"><span class="side-chapter__num">第9問</span>1次元周期ポテンシャル障壁の転送行列とバンド構造
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_sugaku_1/"><span class="side-chapter__num">第1問</span>多項式空間の線形写像の表現行列・固有値と反復合成
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H16_sugaku_2/"><span class="side-chapter__num">第2問</span>1次元熱伝導方程式のフーリエ変換解法と誤差関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成15年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元井戸型ポテンシャルの急膨張と断熱定理
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_2/"><span class="side-chapter__num">第2問</span>2元合金の平均場近似と相分離
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_3/"><span class="side-chapter__num">第3問</span>円筒導体内の偏心直線導線がつくる電磁場と鏡像法
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_4/"><span class="side-chapter__num">第4問</span>剛体球の慣性モーメントと平面・斜面上の転がり運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_butsuri_9/"><span class="side-chapter__num">第9問</span>2原子分子の回転比熱と核スピンの影響
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_sugaku_1/"><span class="side-chapter__num">第1問</span>外積による線形微分方程式と実直交変換
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H15_sugaku_2/"><span class="side-chapter__num">第2問</span>球対称波動方程式の初期値問題とフーリエ変換
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成14年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元調和振動子とコヒーレント状態の不確定性関係
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_2/"><span class="side-chapter__num">第2問</span>荷電鎖状分子のエントロピー弾性と一様電場下の伸び
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_3/"><span class="side-chapter__num">第3問</span>誘電体境界面での斜め入射電磁波の反射・屈折とブルースター角
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_butsuri_4/"><span class="side-chapter__num">第4問</span>逆さ円錐漏斗面上の質点の運動と有効ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_sugaku_1/"><span class="side-chapter__num">第1問</span>2次実対称行列の対角化と円周上の線形変形
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H14_sugaku_2/"><span class="side-chapter__num">第2問</span>球座標3次元ラプラス方程式と球面調和関数展開
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成13年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元井戸型ポテンシャルの束縛状態
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_butsuri_2/"><span class="side-chapter__num">第2問</span>1次元イジング模型の分配関数と自由エネルギー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_butsuri_3/"><span class="side-chapter__num">第3問</span>遅延ポテンシャルと加速点粒子の電磁波放射
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_sugaku_1/"><span class="side-chapter__num">第1問</span>4次元空間の部分空間と共通部分の次元
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_sugaku_2/"><span class="side-chapter__num">第2問</span>円形膜の波動方程式とベッセル関数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H13_sugaku_3/"><span class="side-chapter__num">第3問</span>減衰調和振動子のフーリエ変換とグリーン関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成12年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元二重井戸ポテンシャルとトンネル分裂
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_2/"><span class="side-chapter__num">第2問</span>電離層プラズマ中の電磁波伝播
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_3/"><span class="side-chapter__num">第3問</span>スピン1/2磁性体の断熱消磁
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_butsuri_6/"><span class="side-chapter__num">第6問</span>2次元電子の状態密度と周期ポテンシャルの摂動
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>ロケットの垂直打ち上げと脱出速度
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>直線導線内の電流によるローレンツ力と電荷密度の変化
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>ヤングの干渉実験とレンズ結像の分解能
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>2次元保存ベクトル場とスカラーポテンシャル
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>実対称行列の対角化とユニタリ不変量
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H12_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>1次元熱伝導方程式のグリーン関数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成11年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_butsuri_1/"><span class="side-chapter__num">第1問</span>1次元無限井戸型ポテンシャル中の2電子系とスピン依存接触相互作用
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_butsuri_2/"><span class="side-chapter__num">第2問</span>3次元立方格子イジング模型と平均場近似
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_butsuri_3/"><span class="side-chapter__num">第3問</span>マクスウェル方程式・静電遮蔽・電磁波と電磁ポテンシャル
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>クーロン力による荷電粒子の散乱と最近接距離
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>一様帯電球の電場・静電ポテンシャルと静電エネルギー
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>理想気体中の音波の伝播・気柱共鳴と屈折
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>ディリクレ積分の複素積分による評価とフーリエ級数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>3次実行列の固有多項式と複素固有値条件
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H11_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>モニックエルミート多項式の構成と漸化式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成10年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_1/"><span class="side-chapter__num">第1問</span>球対称井戸型ポテンシャルと逆2乗ポテンシャルにおける中心への落下
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_2/"><span class="side-chapter__num">第2問</span>電磁波の境界条件・完全導体反射と誘電体板の透過強度
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_3/"><span class="side-chapter__num">第3問</span>反強磁性ハイゼンベルク2スピン系・4スピン系の固有状態と帯磁率
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_butsuri_7/"><span class="side-chapter__num">第7問</span>1次元ヘルムホルツ方程式のグリーン関数・無限弦の波動方程式と2次元ラプラス方程式
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>斜面を転がり落ちる剛体の運動と石球・トロッコの衝突判定
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>定常電流と2層同心球殻導体の抵抗および境界面蓄積電荷
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>理想気体のマイヤーの関係・ポアソンの法則とディーゼル機関の断熱圧縮
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>ジョルダン標準形・行列のべき乗と線形漸化式の収束条件
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>定数変化法による非同次2階線形常微分方程式とデルタ関数極限
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H10_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>2連勝で終了するゲームの継続確率の漸化式と期待回数
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成9年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_1/"><span class="side-chapter__num">第1問</span>励起子の束縛エネルギー・デルタ関数摂動と重ね合わせ状態の測定統計
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_2/"><span class="side-chapter__num">第2問</span>1次元結晶とデルタ関数型不純物ポテンシャルによる電子の束縛
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_5/"><span class="side-chapter__num">第5問</span>局在電子相と縮退フェルミ気体相の1次相転移と臨界点
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_butsuri_6/"><span class="side-chapter__num">第6問</span>非圧縮液滴の4重極表面振動と量子コヒーレント状態
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>剛体棒で結ばれた2質点と質点の完全弾性衝突
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>静磁場と回転電場中の荷電粒子のサイクロトロン共鳴
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>実在気体のエントロピー変化と状態方程式の決定
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>3変数2次形式の直交対角化と回転行列の位数
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>上半平面の測地線方程式
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H9_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>原始ピタゴラス数の生成公式
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+      
+        
+        <details class="side-chapter">
+          <summary class="side-chapter__head">平成8年度</summary>
+          <ol class="side-chapter__list">
+            
+            
+              
+              
+                
+                <li class="side-chapter__group">物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_1/"><span class="side-chapter__num">第1問</span>球対称井戸型ポテンシャルの浅い束縛状態とs波散乱の位相のずれ
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_2/"><span class="side-chapter__num">第2問</span>軸対称磁場中の導体リング振り子の電磁誘導減衰と自己インダクタンス効果
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_3/"><span class="side-chapter__num">第3問</span>1次元自由電子系の古典統計とフェルミ統計における常磁性
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_butsuri_5/"><span class="side-chapter__num">第5問</span>円筒面上の自由電子の状態密度と環状原子鎖のタイトバインディング模型
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 物理学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_butsuri_1/"><span class="side-chapter__num">第1問</span>同軸導体円筒の電場・静電容量と逆向き電流による磁場・磁気圧
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_butsuri_2/"><span class="side-chapter__num">第2問</span>水平線と鉛直線に拘束された一様な棒の運動
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_butsuri_3/"><span class="side-chapter__num">第3問</span>水飲み鳥の作動機構と熱力学的解釈
+                </a>
+              </li>
+            
+              
+              
+                
+                <li class="side-chapter__group">一般教育科目 数学</li>
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_sugaku_1/"><span class="side-chapter__num">第1問</span>非線形振動子の摂動展開と永年項の出現
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_sugaku_2/"><span class="side-chapter__num">第2問</span>3行2列実行列の特異値分解
+                </a>
+              </li>
+            
+              
+              
+              <li>
+                <a class="side-chapter__link" href="../H8_ippan_sugaku_3/"><span class="side-chapter__num">第3問</span>長い針に対するビュフォンの針の問題
+                </a>
+              </li>
+            
+          </ol>
+        </details>
+      
+    
+  </nav>
+
+
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../tag-index/#tag:微分方程式" class="md-tag">微分方程式</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tag-index/#tag:東大理物" class="md-tag">東大理物</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tag-index/#tag:線形代数" class="md-tag">線形代数</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tag-index/#tag:複素関数" class="md-tag">複素関数</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tag-index/#tag:院試過去問" class="md-tag">院試過去問</a>
+      
+    
+  </nav>
+
+
+
+<h1 class="problem-title" id="4-41">東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列</h1><nav class="md-path" aria-label="ナビゲーション" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link" aria-label="トップページ">
+        
+  <span class="md-ellipsis">
+    ホーム
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    院試過去問
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    東大理物
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../R4_1/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    令和4年度
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              
+<div class="page-tools"><button type="button" class="page-tools__copy" data-copy-markdown hidden><span class="page-tools__icon" aria-hidden="true"></span><span data-copy-label>Markdownでコピー</span></button></div><script type="text/markdown" id="page-markdown"># 東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列
+
+## 問題
+
+以下の設問1および2に答えよ。
+
+(1) $f(z)$ を，実軸上を含む複素上半平面で正則な関数とする。複素上半平面で $|z| \to \infty$ としたとき，$f(z)$ は $0$ に収束する。また，$x_0$ は実数である。
+
+(i) 経路 $C_-$ と $C_+$ を，$z = x_0$ を下半平面及び上半平面に迂回した，$z = -\infty$ から $z = \infty$ までの，実軸上の経路とする（図1）。以下の積分 $I_-$ と $I_+$ を求めよ。
+
+$$
+I_- = \int_{C_-} dz\,\frac{f(z)}{z - x_0},\qquad I_+ = \int_{C_+} dz\,\frac{f(z)}{z - x_0}
+$$
+
+ただし，$f(z)$ は $C_-$ 上および $C_-$ の複素上半平面側においても正則とする。解答は $f(x_0)$ を用いて表してよい。
+
+(ii) $\theta_n\ (n = 1, 2)$ を $0 < \theta_n < \pi$ を満たす実数，また，$z_n = x_0 + a e^{i\theta_n}$（$a$ は正の実数）とする。$C_{12}$ を，$z_1$ を始点とし $z_1$ と $z_2$ をつなぐ線分で与えられる経路とする（図1）。以下の量を $\theta_1,\ \theta_2,\ f(x_0)$ を用いて表せ。
+
+$$
+\lim_{a \to +0}\int_{C_{12}} dz\,\frac{f(z)}{z - x_0}
+$$
+
+(iii) $A$ をある定数として以下の関係式が成り立つことを示すとともに，定数 $A$ を求めよ。
+
+$$
+\mathrm{Re}\,f(x_0) = A \lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon} dx\,\frac{\mathrm{Im}\,f(x)}{x - x_0} + \int_{x_0 + \epsilon}^{\infty} dx\,\frac{\mathrm{Im}\,f(x)}{x - x_0}\right]
+$$
+
+ただし上式で，$x$ に関する積分は実軸上の積分である。また，$\mathrm{Re}\,f(z)$ と $\mathrm{Im}\,f(z)$ はそれぞれ関数 $f(z)$ の実部と虚部を表す。
+
+（図は省略）
+
+(2) $n$ を $n \ge 2$ の自然数として，$I$ を $n$ 次元単位行列，$\vec{v}$ を $n$ 次元実単位ベクトルとする（$\vec{v}^{\,T}\vec{v} = 1$，ただし $\vec{v}^{\,T}$ は $\vec{v}$ の転置ベクトル）。そして，$n \times n$ 実行列 $C$ を以下のように与える。
+
+$$
+C = pI - q\vec{v}\vec{v}^{\,T}
+$$
+
+ただし $p$ と $q$ は正の実数である。
+
+(i) $\vec{v}$ は $C$ の固有ベクトルである。対応する固有値を求めよ。
+
+(ii) $\vec{w}$ を $\vec{v}$ と直交するベクトルとすると，$\vec{w}$ は $C$ の固有ベクトルである。対応する固有値を求めよ。
+
+(iii) 行列式 $\det C$ を求めよ。
+
+次に，$A$ を $n \times n$ の実対称行列とし，
+{: .problem-lead }
+
+$$
+B = CA
+$$
+
+とする。$A$ の固有値は $0$ を含まない。行列 $B$ は，$q = q_0$ で $\det B = 0$ となるとする。
+{: .problem-lead }
+
+(iv) $q_0$ を $p$ を用いて表せ。
+
+(v) 行列 $B$ が実行列であることに注意して，$\beta$ が $B$ の固有値であればその複素共役 $\beta^*$ も $B$ の固有値であることを示せ。
+
+さらに，$n$ 次元実ベクトル $\vec{g}(t)$ は以下の微分方程式に従うとする。
+{: .problem-lead }
+
+$$
+\frac{d}{dt}\vec{g} = -B\vec{g} \tag{1}
+$$
+
+(vi) $A$ の固有値が全て正の場合を考える。$q > q_0$ のとき，任意の $n$ 次元実単位ベクトル $\vec{v}$ に対して $\displaystyle\lim_{t \to \infty}\|\vec{g}(t)\| = \infty$ となるような微分方程式 (1) の解が存在することを示せ。ただし，$\|\vec{g}\| \equiv \sqrt{\vec{g}^{\,T}\vec{g}}$ である。
+
+(vii) $A$ が一つだけ負の固有値を持つ場合を考える。$q > q_0$ のとき，$\vec{v}$ をうまく選ぶと微分方程式 (1) の任意の解が $\displaystyle\lim_{t \to \infty}\|\vec{g}(t)\| = 0$ となる。このような $\vec{v}$ が存在することを示せ。
+
+> 出典：東京大学大学院理学系研究科物理学専攻 令和4年度修士課程入学試験 専門科目 第4問（引用元：<https://www.phys.s.u-tokyo.ac.jp/>）。Web掲載にあたり数式をテキスト化し，図を描き直しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。
+
+---
+
+## 解答・解説
+
+考え方：実軸上の積分は，上半平面の大きな半円で経路を閉じると，閉じた経路の積分として計算することができます。$f$ は上半平面で正則なので，閉じた経路の中にある極は $z=x_0$ だけです。経路が $x_0$ を上と下のどちらに迂回するかで，この極が経路の中に入るかどうかが変わります。
+
+行列 $C$ は，$\vec{v}$ 方向のベクトルを $p-q$ 倍し，$\vec{v}$ に直交するベクトルを $p$ 倍します。そのため，$C$ の固有値と行列式は，成分を書かずに求めることができます。
+
+微分方程式 (1) の解は，$B$ の負の固有値の固有ベクトルの方向に増え，正の固有値の方向に減ります。そこで，$\det B$ の符号と，$B$ の実数でない固有値が複素共役の組で現れることから，負の固有値があるかどうかを調べます。
+
+### (1)
+
+#### (i)
+経路 $C_+$ と $C_-$ のそれぞれに，反時計回りの上半円弧 $\Gamma_R$ を加えます。$M_R=\sup_{z\in\Gamma_R}|f(z)|$ とおくと，$M_R\to0$ です。$R>|x_0|$ では，
+
+$$
+\left|\int_{\Gamma_R}\frac{f(z)}{z-x_0}\,\mathrm{d}z\right|\le\frac{\pi R}{R-|x_0|}M_R
+$$
+
+なので，円弧の積分は0に収束します。
+
+$C_+ + \Gamma_R$ の内部には，被積分関数 $\dfrac{f(z)}{z - x_0}$ の特異点はありません。そのため，コーシーの積分定理より $I_+ = 0$ です。
+
+一方，$C_- + \Gamma_R$ の内部には，1位の極 $z = x_0$ が1つだけあります。そのため，留数定理より $I_- = 2\pi i\,\mathrm{Res}_{z=x_0}\dfrac{f(z)}{z - x_0} = 2\pi i f(x_0)$ です。
+
+したがって，
+
+$$
+\finalanswer{I_- = 2\pi i f(x_0),\qquad I_+ = 0}
+$$
+
+#### (ii)
+$0 < \theta_1, \theta_2 < \pi$ より，線分 $C_{12}$ と，$x_0$ を中心とする半径 $a$ の円弧 $\gamma_{12}:z=x_0+ae^{i\theta}$ は，$\theta$ を $\theta_1$ から $\theta_2$ まで動かすと，ともに上半平面内の正則領域にあり，両者で囲まれた領域に極 $z = x_0$ を含みません。
+
+したがってコーシーの積分定理より，線分 $C_{12}$ 上の積分は円弧 $\gamma_{12}$ 上の積分に等しくなります。$\mathrm{d}z = i a e^{i\theta}\,\mathrm{d}\theta$ を代入して $a \to +0$ の極限をとります。
+
+$$
+\begin{aligned}
+\lim_{a \to +0}\int_{C_{12}} \frac{f(z)}{z - x_0}\,\mathrm{d}z
+&= \lim_{a \to +0}\int_{\theta_1}^{\theta_2} \frac{f(x_0 + a e^{i\theta})}{a e^{i\theta}}\,i a e^{i\theta}\,\mathrm{d}\theta \\
+&= i\lim_{a \to +0}\int_{\theta_1}^{\theta_2} f(x_0 + a e^{i\theta})\,\mathrm{d}\theta \\
+&= i(\theta_2 - \theta_1)f(x_0)
+\end{aligned}
+$$
+
+したがって，
+
+$$
+\finalanswer{\lim_{a\to+0}\int_{C_{12}}\frac{f(z)}{z-x_0}\,\mathrm{d}z=i(\theta_2-\theta_1)f(x_0)}
+$$
+
+#### (iii)
+(i) で求めた $I_+ = 0$ の経路 $C_+$ を，実軸上の区間 $(-\infty, x_0 - \epsilon]$，$x_0$ を中心とする半径 $\epsilon$ の上半円弧 $\gamma_\epsilon$，および実軸上の区間 $[x_0 + \epsilon, \infty)$ の3つに分けます。
+
+$\epsilon \to +0$ の極限をとると，(ii) で $\theta_1 \to \pi,\ \theta_2 \to 0$ としたのと同じ計算から，上半円弧 $\gamma_\epsilon$ 上の積分は $-i\pi f(x_0)$ に収束します。よって $I_+ = 0$ は次式になります。
+
+$$
+\lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon}\frac{f(x)}{x - x_0}\,\mathrm{d}x + \int_{x_0 + \epsilon}^{\infty}\frac{f(x)}{x - x_0}\,\mathrm{d}x\right] - i\pi f(x_0) = 0
+$$
+
+これを $f(x_0)$ について解き，$f(x) = \mathrm{Re}\,f(x) + i\,\mathrm{Im}\,f(x)$ を代入します。
+
+$$
+\begin{aligned}
+f(x_0) &= \frac{1}{i\pi}\lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon}\frac{\mathrm{Re}\,f(x) + i\,\mathrm{Im}\,f(x)}{x - x_0}\,\mathrm{d}x + \int_{x_0 + \epsilon}^{\infty}\frac{\mathrm{Re}\,f(x) + i\,\mathrm{Im}\,f(x)}{x - x_0}\,\mathrm{d}x\right] \\
+&= \frac{1}{\pi}\lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon}\frac{\mathrm{Im}\,f(x) - i\,\mathrm{Re}\,f(x)}{x - x_0}\,\mathrm{d}x + \int_{x_0 + \epsilon}^{\infty}\frac{\mathrm{Im}\,f(x) - i\,\mathrm{Re}\,f(x)}{x - x_0}\,\mathrm{d}x\right]
+\end{aligned}
+$$
+
+両辺の実部をとると，問題文の関係式が成り立つことがわかり，定数 $A$ は次のようになります。したがって，
+
+$$
+\finalanswer{A = \frac{1}{\pi}}
+$$
+
+### (2)
+
+#### (i)
+$\vec{v}^{\,T}\vec{v} = 1$ を用いて $C\vec{v}$ を計算します。
+
+$$
+\begin{aligned}
+C\vec{v} &= (pI - q\vec{v}\vec{v}^{\,T})\vec{v} \\
+&= p\vec{v} - q\vec{v}(\vec{v}^{\,T}\vec{v}) \\
+&= (p - q)\vec{v}
+\end{aligned}
+$$
+
+したがって，対応する固有値は次のようになります。
+
+$$
+\finalanswer{\lambda_{\parallel}=p-q}
+$$
+
+#### (ii)
+$\vec{w}$ は $\vec{v}$ と直交するため $\vec{v}^{\,T}\vec{w} = 0$ です。$C\vec{w}$ を計算します。
+
+$$
+\begin{aligned}
+C\vec{w} &= (pI - q\vec{v}\vec{v}^{\,T})\vec{w} \\
+&= p\vec{w} - q\vec{v}(\vec{v}^{\,T}\vec{w}) \\
+&= p\vec{w}
+\end{aligned}
+$$
+
+したがって，対応する固有値は次のようになります。
+
+$$
+\finalanswer{\lambda_{\perp}=p}
+$$
+
+#### (iii)
+$n$ 次元空間において $\vec{v}$ に直交する部分空間の次元は $n - 1$ なので，(i) と (ii) より $C$ の固有値は $p-q$ が1個，$p$ が $n-1$ 個です。行列式はすべての固有値の積に等しいため，次のようになります。したがって，
+
+$$
+\finalanswer{\det C = (p - q)p^{n-1}}
+$$
+
+#### (iv)
+
+$\det B = \det(CA) = (\det C)(\det A) = (p - q)p^{n-1}\det A$ です。$p > 0$ であり，$A$ の固有値は $0$ を含まないため $\det A \neq 0$ です。したがって $\det B = 0$ となるのは $p - q_0 = 0$ のときです。よって，
+
+$$
+\finalanswer{q_0 = p}
+$$
+
+#### (v)
+$\beta$ が $B$ の固有値であるとき，$B\vec{x} = \beta\vec{x}$ を満たす $0$ でない複素ベクトル $\vec{x}$ が存在します。この両辺の複素共役をとります。$B$ は実行列なので $B^* = B$ です。
+
+$$
+\begin{aligned}
+B\vec{x}^* &= (B\vec{x})^* \\
+&= (\beta\vec{x})^* \\
+&= \beta^*\vec{x}^*
+\end{aligned}
+$$
+
+$\vec{x} \neq \vec{0}$ より $\vec{x}^* \neq \vec{0}$ なので，$\beta^*$ も $B$ の固有値です。
+
+#### (vi)
+$A$ の固有値はすべて正なので $\det A > 0$ です。また $q > q_0 = p$ および $p > 0$ より，
+
+$$
+\det B = (p - q)p^{n-1}\det A < 0
+$$
+
+となります。$\det B$ は行列 $B$ の重複度を含めた全ての固有値の積に等しくなります。
+
+(v) より，$B$ の非実数の固有値は必ず複素共役ペア $(\beta, \beta^*)$ で現れ，その積は $\beta\beta^* = |\beta|^2 > 0$ と正になります。したがって，すべての固有値の積 $\det B$ が負であるためには，$B$ は少なくとも1つの負の実固有値 $\beta_1 < 0$ をもたなければなりません。
+
+$\beta_1$ は実固有値なので，対応する $0$ でない実固有ベクトル $\vec u_1\in\mathbb R^n$ をとることができます。$B\vec u_1=\beta_1\vec u_1$ を満たします。初期値 $\vec{g}(0) = \vec{u}_1$ に対する微分方程式 (1) の解は
+
+$$
+\vec{g}(t) = e^{-\beta_1 t}\vec{u}_1
+$$
+
+であり，$-\beta_1 > 0$ より
+
+$$
+\begin{aligned}
+\lim_{t \to \infty}\|\vec{g}(t)\| &= \lim_{t \to \infty} e^{-\beta_1 t}\|\vec{u}_1\| \\
+&= \infty
+\end{aligned}
+$$
+
+となります。よって題意を満たす解が存在します。
+
+#### (vii)
+$A$ は実対称行列なので，正規直交固有基底 $\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n \in \mathbb{R}^n$ と対応する実固有値 $\lambda_1, \lambda_2, \dots, \lambda_n$ をもちます。仮定より1つだけ負の固有値をもつので，$\lambda_1 < 0 < \lambda_2 \le \dots \le \lambda_n$ とします。
+
+ここで実単位ベクトルとして $\vec{v} = \vec{e}_1$ を選びます。すると (i)，(ii) より，各 $\vec{e}_j$ に対して $B = CA$ を作用させると次のようになります。
+
+$$
+\begin{aligned}
+B\vec{e}_1 &= CA\vec{e}_1 \\
+&= \lambda_1 C\vec{e}_1 \\
+&= \lambda_1(p - q)\vec{e}_1 \\
+B\vec{e}_j &= CA\vec{e}_j \\
+&= \lambda_j C\vec{e}_j \\
+&= p\lambda_j\vec{e}_j \qquad (j = 2, 3, \dots, n)
+\end{aligned}
+$$
+
+すなわち，$B$ は基底 $\{\vec{e}_1, \dots, \vec{e}_n\}$ で対角化され，固有値は $\beta_1 = \lambda_1(p - q)$ および $\beta_j = p\lambda_j\ (j = 2, \dots, n)$ です。
+
+$q > q_0 = p$ より $p - q < 0$ であり，$\lambda_1 < 0$ なので $\beta_1 = \lambda_1(p - q) > 0$ となります。また $p > 0,\ \lambda_j > 0$ より $\beta_j > 0\ (j = 2, \dots, n)$ であり，すべての固有値が正です。
+
+任意の初期値 $\vec{g}(0) = \displaystyle\sum_{j=1}^{n} c_j\vec{e}_j$ に対する微分方程式 (1) の解は
+
+$$
+\vec{g}(t) = \sum_{j=1}^{n} c_j e^{-\beta_j t}\vec{e}_j
+$$
+
+となり，すべての $\beta_j > 0$ より $\displaystyle\lim_{t \to \infty}\|\vec{g}(t)\| = 0$ が成り立ちます。よって，このような $\vec{v} = \vec{e}_1$ が存在します。</script><div class="problem-box"><h2 id="_1"><span>東大理物 令和4年度 第4問</span></h2><div class="problem-box__body">
+<p>以下の設問1および2に答えよ。</p>
+<p class="subq"><span class="subq__number">(1)</span><span><span class="arithmatex">\(f(z)\)</span> を，実軸上を含む複素上半平面で正則な関数とする。複素上半平面で <span class="arithmatex">\(|z| \to \infty\)</span> としたとき，<span class="arithmatex">\(f(z)\)</span> は <span class="arithmatex">\(0\)</span> に収束する。また，<span class="arithmatex">\(x_0\)</span> は実数である。</span></p><div class="subq__cont">
+<p class="subq subq--sub"><span class="subq__number">(i)</span><span>経路 <span class="arithmatex">\(C_-\)</span> と <span class="arithmatex">\(C_+\)</span> を，<span class="arithmatex">\(z = x_0\)</span> を下半平面及び上半平面に迂回した，<span class="arithmatex">\(z = -\infty\)</span> から <span class="arithmatex">\(z = \infty\)</span> までの，実軸上の経路とする（図1）。以下の積分 <span class="arithmatex">\(I_-\)</span> と <span class="arithmatex">\(I_+\)</span> を求めよ。</span></p><div class="subq__cont">
+<div class="arithmatex">\[
+I_- = \int_{C_-} dz\,\frac{f(z)}{z - x_0},\qquad I_+ = \int_{C_+} dz\,\frac{f(z)}{z - x_0}
+\]</div>
+<p>ただし，<span class="arithmatex">\(f(z)\)</span> は <span class="arithmatex">\(C_-\)</span> 上および <span class="arithmatex">\(C_-\)</span> の複素上半平面側においても正則とする。解答は <span class="arithmatex">\(f(x_0)\)</span> を用いて表してよい。</p>
+</div><p class="subq subq--sub"><span class="subq__number">(ii)</span><span><span class="arithmatex">\(\theta_n\ (n = 1, 2)\)</span> を <span class="arithmatex">\(0 &lt; \theta_n &lt; \pi\)</span> を満たす実数，また，<span class="arithmatex">\(z_n = x_0 + a e^{i\theta_n}\)</span>（<span class="arithmatex">\(a\)</span> は正の実数）とする。<span class="arithmatex">\(C_{12}\)</span> を，<span class="arithmatex">\(z_1\)</span> を始点とし <span class="arithmatex">\(z_1\)</span> と <span class="arithmatex">\(z_2\)</span> をつなぐ線分で与えられる経路とする（図1）。以下の量を <span class="arithmatex">\(\theta_1,\ \theta_2,\ f(x_0)\)</span> を用いて表せ。</span></p><div class="subq__cont">
+<div class="arithmatex">\[
+\lim_{a \to +0}\int_{C_{12}} dz\,\frac{f(z)}{z - x_0}
+\]</div>
+</div><p class="subq subq--sub"><span class="subq__number">(iii)</span><span><span class="arithmatex">\(A\)</span> をある定数として以下の関係式が成り立つことを示すとともに，定数 <span class="arithmatex">\(A\)</span> を求めよ。</span></p><div class="subq__cont">
+<div class="arithmatex">\[
+\mathrm{Re}\,f(x_0) = A \lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon} dx\,\frac{\mathrm{Im}\,f(x)}{x - x_0} + \int_{x_0 + \epsilon}^{\infty} dx\,\frac{\mathrm{Im}\,f(x)}{x - x_0}\right]
+\]</div>
+<p>ただし上式で，<span class="arithmatex">\(x\)</span> に関する積分は実軸上の積分である。また，<span class="arithmatex">\(\mathrm{Re}\,f(z)\)</span> と <span class="arithmatex">\(\mathrm{Im}\,f(z)\)</span> はそれぞれ関数 <span class="arithmatex">\(f(z)\)</span> の実部と虚部を表す。</p>
+<figure class="problem-figure">
+<p><img alt="図1：積分経路 C_-, C_+, C_12" src="../../../assets/figures/pastexam-todai-ributsu/R4_4-p-light.svg#only-light" />
+<img alt="図1：積分経路 C_-, C_+, C_12" src="../../../assets/figures/pastexam-todai-ributsu/R4_4-p-dark.svg#only-dark" /></p>
+<figcaption>図1：積分経路。ただし，経路 <span class="arithmatex">\(C_-\)</span> と <span class="arithmatex">\(C_+\)</span> は実軸上からずらして表示している。</figcaption>
+</figure>
+</div></div><p class="subq"><span class="subq__number">(2)</span><span><span class="arithmatex">\(n\)</span> を <span class="arithmatex">\(n \ge 2\)</span> の自然数として，<span class="arithmatex">\(I\)</span> を <span class="arithmatex">\(n\)</span> 次元単位行列，<span class="arithmatex">\(\vec{v}\)</span> を <span class="arithmatex">\(n\)</span> 次元実単位ベクトルとする（<span class="arithmatex">\(\vec{v}^{\,T}\vec{v} = 1\)</span>，ただし <span class="arithmatex">\(\vec{v}^{\,T}\)</span> は <span class="arithmatex">\(\vec{v}\)</span> の転置ベクトル）。そして，<span class="arithmatex">\(n \times n\)</span> 実行列 <span class="arithmatex">\(C\)</span> を以下のように与える。</span></p><div class="subq__cont">
+<div class="arithmatex">\[
+C = pI - q\vec{v}\vec{v}^{\,T}
+\]</div>
+<p>ただし <span class="arithmatex">\(p\)</span> と <span class="arithmatex">\(q\)</span> は正の実数である。</p>
+<p class="subq subq--sub"><span class="subq__number">(i)</span><span><span class="arithmatex">\(\vec{v}\)</span> は <span class="arithmatex">\(C\)</span> の固有ベクトルである。対応する固有値を求めよ。</span></p>
+<p class="subq subq--sub"><span class="subq__number">(ii)</span><span><span class="arithmatex">\(\vec{w}\)</span> を <span class="arithmatex">\(\vec{v}\)</span> と直交するベクトルとすると，<span class="arithmatex">\(\vec{w}\)</span> は <span class="arithmatex">\(C\)</span> の固有ベクトルである。対応する固有値を求めよ。</span></p>
+<p class="subq subq--sub"><span class="subq__number">(iii)</span><span>行列式 <span class="arithmatex">\(\det C\)</span> を求めよ。</span></p>
+<p class="problem-lead">次に，<span class="arithmatex">\(A\)</span> を <span class="arithmatex">\(n \times n\)</span> の実対称行列とし，</p>
+<div class="arithmatex">\[
+B = CA
+\]</div>
+<p class="problem-lead">とする。<span class="arithmatex">\(A\)</span> の固有値は <span class="arithmatex">\(0\)</span> を含まない。行列 <span class="arithmatex">\(B\)</span> は，<span class="arithmatex">\(q = q_0\)</span> で <span class="arithmatex">\(\det B = 0\)</span> となるとする。</p>
+<p class="subq subq--sub"><span class="subq__number">(iv)</span><span><span class="arithmatex">\(q_0\)</span> を <span class="arithmatex">\(p\)</span> を用いて表せ。</span></p>
+<p class="subq subq--sub"><span class="subq__number">(v)</span><span>行列 <span class="arithmatex">\(B\)</span> が実行列であることに注意して，<span class="arithmatex">\(\beta\)</span> が <span class="arithmatex">\(B\)</span> の固有値であればその複素共役 <span class="arithmatex">\(\beta^*\)</span> も <span class="arithmatex">\(B\)</span> の固有値であることを示せ。</span></p>
+<p class="problem-lead">さらに，<span class="arithmatex">\(n\)</span> 次元実ベクトル <span class="arithmatex">\(\vec{g}(t)\)</span> は以下の微分方程式に従うとする。</p>
+<div class="arithmatex">\[
+\frac{d}{dt}\vec{g} = -B\vec{g} \tag{1}
+\]</div>
+<p class="subq subq--sub"><span class="subq__number">(vi)</span><span><span class="arithmatex">\(A\)</span> の固有値が全て正の場合を考える。<span class="arithmatex">\(q &gt; q_0\)</span> のとき，任意の <span class="arithmatex">\(n\)</span> 次元実単位ベクトル <span class="arithmatex">\(\vec{v}\)</span> に対して <span class="arithmatex">\(\displaystyle\lim_{t \to \infty}\|\vec{g}(t)\| = \infty\)</span> となるような微分方程式 (1) の解が存在することを示せ。ただし，<span class="arithmatex">\(\|\vec{g}\| \equiv \sqrt{\vec{g}^{\,T}\vec{g}}\)</span> である。</span></p>
+<p class="subq subq--sub"><span class="subq__number">(vii)</span><span><span class="arithmatex">\(A\)</span> が一つだけ負の固有値を持つ場合を考える。<span class="arithmatex">\(q &gt; q_0\)</span> のとき，<span class="arithmatex">\(\vec{v}\)</span> をうまく選ぶと微分方程式 (1) の任意の解が <span class="arithmatex">\(\displaystyle\lim_{t \to \infty}\|\vec{g}(t)\| = 0\)</span> となる。このような <span class="arithmatex">\(\vec{v}\)</span> が存在することを示せ。</span></p>
+</div><p class="problem-source">出典：東京大学大学院理学系研究科物理学専攻 令和4年度修士課程入学試験 専門科目 第4問（引用元：<a href="https://www.phys.s.u-tokyo.ac.jp/">https://www.phys.s.u-tokyo.ac.jp/</a>）。Web掲載にあたり数式をテキスト化し，図を描き直しています。解答・解説は当サイトが独自に作成したもので，東京大学が公表したものではありません。</p>
+</div></div>
+<h2 id="_2" class="solution-heading">解答・解説</h2>
+<div class="approach">
+<p>実軸上の積分は，上半平面の大きな半円で経路を閉じると，閉じた経路の積分として計算することができます。<span class="arithmatex">\(f\)</span> は上半平面で正則なので，閉じた経路の中にある極は <span class="arithmatex">\(z=x_0\)</span> だけです。経路が <span class="arithmatex">\(x_0\)</span> を上と下のどちらに迂回するかで，この極が経路の中に入るかどうかが変わります。</p>
+<p>行列 <span class="arithmatex">\(C\)</span> は，<span class="arithmatex">\(\vec{v}\)</span> 方向のベクトルを <span class="arithmatex">\(p-q\)</span> 倍し，<span class="arithmatex">\(\vec{v}\)</span> に直交するベクトルを <span class="arithmatex">\(p\)</span> 倍します。そのため，<span class="arithmatex">\(C\)</span> の固有値と行列式は，成分を書かずに求めることができます。</p>
+<p>微分方程式 (1) の解は，<span class="arithmatex">\(B\)</span> の負の固有値の固有ベクトルの方向に増え，正の固有値の方向に減ります。そこで，<span class="arithmatex">\(\det B\)</span> の符号と，<span class="arithmatex">\(B\)</span> の実数でない固有値が複素共役の組で現れることから，負の固有値があるかどうかを調べます。</p>
+</div>
+<h3 id="1" class="solution-part">(1)</h3><button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button><div class="answer"><div class="answer__inner">
+<h4 id="i">(i)</h4>
+<p>経路 <span class="arithmatex">\(C_+\)</span> と <span class="arithmatex">\(C_-\)</span> のそれぞれに，反時計回りの上半円弧 <span class="arithmatex">\(\Gamma_R\)</span> を加えます。<span class="arithmatex">\(M_R=\sup_{z\in\Gamma_R}|f(z)|\)</span> とおくと，<span class="arithmatex">\(M_R\to0\)</span> です。<span class="arithmatex">\(R&gt;|x_0|\)</span> では，</p>
+<div class="arithmatex">\[
+\left|\int_{\Gamma_R}\frac{f(z)}{z-x_0}\,\mathrm{d}z\right|\le\frac{\pi R}{R-|x_0|}M_R
+\]</div>
+<p>なので，円弧の積分は0に収束します。</p>
+<p><span class="arithmatex">\(C_+ + \Gamma_R\)</span> の内部には，被積分関数 <span class="arithmatex">\(\dfrac{f(z)}{z - x_0}\)</span> の特異点はありません。そのため，コーシーの積分定理より <span class="arithmatex">\(I_+ = 0\)</span> です。</p>
+<p>一方，<span class="arithmatex">\(C_- + \Gamma_R\)</span> の内部には，1位の極 <span class="arithmatex">\(z = x_0\)</span> が1つだけあります。そのため，留数定理より <span class="arithmatex">\(I_- = 2\pi i\,\mathrm{Res}_{z=x_0}\dfrac{f(z)}{z - x_0} = 2\pi i f(x_0)\)</span> です。</p>
+<p>したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{I_- = 2\pi i f(x_0),\qquad I_+ = 0}
+\]</div>
+<h4 id="ii">(ii)</h4>
+<p><span class="arithmatex">\(0 &lt; \theta_1, \theta_2 &lt; \pi\)</span> より，線分 <span class="arithmatex">\(C_{12}\)</span> と，<span class="arithmatex">\(x_0\)</span> を中心とする半径 <span class="arithmatex">\(a\)</span> の円弧 <span class="arithmatex">\(\gamma_{12}:z=x_0+ae^{i\theta}\)</span> は，<span class="arithmatex">\(\theta\)</span> を <span class="arithmatex">\(\theta_1\)</span> から <span class="arithmatex">\(\theta_2\)</span> まで動かすと，ともに上半平面内の正則領域にあり，両者で囲まれた領域に極 <span class="arithmatex">\(z = x_0\)</span> を含みません。</p>
+<p>したがってコーシーの積分定理より，線分 <span class="arithmatex">\(C_{12}\)</span> 上の積分は円弧 <span class="arithmatex">\(\gamma_{12}\)</span> 上の積分に等しくなります。<span class="arithmatex">\(\mathrm{d}z = i a e^{i\theta}\,\mathrm{d}\theta\)</span> を代入して <span class="arithmatex">\(a \to +0\)</span> の極限をとります。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lim_{a \to +0}\int_{C_{12}} \frac{f(z)}{z - x_0}\,\mathrm{d}z
+&amp;= \lim_{a \to +0}\int_{\theta_1}^{\theta_2} \frac{f(x_0 + a e^{i\theta})}{a e^{i\theta}}\,i a e^{i\theta}\,\mathrm{d}\theta \\
+&amp;= i\lim_{a \to +0}\int_{\theta_1}^{\theta_2} f(x_0 + a e^{i\theta})\,\mathrm{d}\theta \\
+&amp;= i(\theta_2 - \theta_1)f(x_0)
+\end{aligned}
+\]</div>
+<p>したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{\lim_{a\to+0}\int_{C_{12}}\frac{f(z)}{z-x_0}\,\mathrm{d}z=i(\theta_2-\theta_1)f(x_0)}
+\]</div>
+<h4 id="iii">(iii)</h4>
+<p>(i) で求めた <span class="arithmatex">\(I_+ = 0\)</span> の経路 <span class="arithmatex">\(C_+\)</span> を，実軸上の区間 <span class="arithmatex">\((-\infty, x_0 - \epsilon]\)</span>，<span class="arithmatex">\(x_0\)</span> を中心とする半径 <span class="arithmatex">\(\epsilon\)</span> の上半円弧 <span class="arithmatex">\(\gamma_\epsilon\)</span>，および実軸上の区間 <span class="arithmatex">\([x_0 + \epsilon, \infty)\)</span> の3つに分けます。</p>
+<p><span class="arithmatex">\(\epsilon \to +0\)</span> の極限をとると，(ii) で <span class="arithmatex">\(\theta_1 \to \pi,\ \theta_2 \to 0\)</span> としたのと同じ計算から，上半円弧 <span class="arithmatex">\(\gamma_\epsilon\)</span> 上の積分は <span class="arithmatex">\(-i\pi f(x_0)\)</span> に収束します。よって <span class="arithmatex">\(I_+ = 0\)</span> は次式になります。</p>
+<div class="arithmatex">\[
+\lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon}\frac{f(x)}{x - x_0}\,\mathrm{d}x + \int_{x_0 + \epsilon}^{\infty}\frac{f(x)}{x - x_0}\,\mathrm{d}x\right] - i\pi f(x_0) = 0
+\]</div>
+<p>これを <span class="arithmatex">\(f(x_0)\)</span> について解き，<span class="arithmatex">\(f(x) = \mathrm{Re}\,f(x) + i\,\mathrm{Im}\,f(x)\)</span> を代入します。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(x_0) &amp;= \frac{1}{i\pi}\lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon}\frac{\mathrm{Re}\,f(x) + i\,\mathrm{Im}\,f(x)}{x - x_0}\,\mathrm{d}x + \int_{x_0 + \epsilon}^{\infty}\frac{\mathrm{Re}\,f(x) + i\,\mathrm{Im}\,f(x)}{x - x_0}\,\mathrm{d}x\right] \\
+&amp;= \frac{1}{\pi}\lim_{\epsilon \to +0}\left[\int_{-\infty}^{x_0 - \epsilon}\frac{\mathrm{Im}\,f(x) - i\,\mathrm{Re}\,f(x)}{x - x_0}\,\mathrm{d}x + \int_{x_0 + \epsilon}^{\infty}\frac{\mathrm{Im}\,f(x) - i\,\mathrm{Re}\,f(x)}{x - x_0}\,\mathrm{d}x\right]
+\end{aligned}
+\]</div>
+<p>両辺の実部をとると，問題文の関係式が成り立つことがわかり，定数 <span class="arithmatex">\(A\)</span> は次のようになります。したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{A = \frac{1}{\pi}}
+\]</div>
+</div></div><h3 id="2" class="solution-part">(2)</h3><button type="button" class="answer-toggle" data-answer-toggle hidden>解答を見る</button><div class="answer"><div class="answer__inner">
+<h4 id="i_1">(i)</h4>
+<p><span class="arithmatex">\(\vec{v}^{\,T}\vec{v} = 1\)</span> を用いて <span class="arithmatex">\(C\vec{v}\)</span> を計算します。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+C\vec{v} &amp;= (pI - q\vec{v}\vec{v}^{\,T})\vec{v} \\
+&amp;= p\vec{v} - q\vec{v}(\vec{v}^{\,T}\vec{v}) \\
+&amp;= (p - q)\vec{v}
+\end{aligned}
+\]</div>
+<p>したがって，対応する固有値は次のようになります。</p>
+<div class="arithmatex">\[
+\finalanswer{\lambda_{\parallel}=p-q}
+\]</div>
+<h4 id="ii_1">(ii)</h4>
+<p><span class="arithmatex">\(\vec{w}\)</span> は <span class="arithmatex">\(\vec{v}\)</span> と直交するため <span class="arithmatex">\(\vec{v}^{\,T}\vec{w} = 0\)</span> です。<span class="arithmatex">\(C\vec{w}\)</span> を計算します。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+C\vec{w} &amp;= (pI - q\vec{v}\vec{v}^{\,T})\vec{w} \\
+&amp;= p\vec{w} - q\vec{v}(\vec{v}^{\,T}\vec{w}) \\
+&amp;= p\vec{w}
+\end{aligned}
+\]</div>
+<p>したがって，対応する固有値は次のようになります。</p>
+<div class="arithmatex">\[
+\finalanswer{\lambda_{\perp}=p}
+\]</div>
+<h4 id="iii_1">(iii)</h4>
+<p><span class="arithmatex">\(n\)</span> 次元空間において <span class="arithmatex">\(\vec{v}\)</span> に直交する部分空間の次元は <span class="arithmatex">\(n - 1\)</span> なので，(i) と (ii) より <span class="arithmatex">\(C\)</span> の固有値は <span class="arithmatex">\(p-q\)</span> が1個，<span class="arithmatex">\(p\)</span> が <span class="arithmatex">\(n-1\)</span> 個です。行列式はすべての固有値の積に等しいため，次のようになります。したがって，</p>
+<div class="arithmatex">\[
+\finalanswer{\det C = (p - q)p^{n-1}}
+\]</div>
+<h4 id="iv">(iv)</h4>
+<p><span class="arithmatex">\(\det B = \det(CA) = (\det C)(\det A) = (p - q)p^{n-1}\det A\)</span> です。<span class="arithmatex">\(p &gt; 0\)</span> であり，<span class="arithmatex">\(A\)</span> の固有値は <span class="arithmatex">\(0\)</span> を含まないため <span class="arithmatex">\(\det A \neq 0\)</span> です。したがって <span class="arithmatex">\(\det B = 0\)</span> となるのは <span class="arithmatex">\(p - q_0 = 0\)</span> のときです。よって，</p>
+<div class="arithmatex">\[
+\finalanswer{q_0 = p}
+\]</div>
+<h4 id="v">(v)</h4>
+<p><span class="arithmatex">\(\beta\)</span> が <span class="arithmatex">\(B\)</span> の固有値であるとき，<span class="arithmatex">\(B\vec{x} = \beta\vec{x}\)</span> を満たす <span class="arithmatex">\(0\)</span> でない複素ベクトル <span class="arithmatex">\(\vec{x}\)</span> が存在します。この両辺の複素共役をとります。<span class="arithmatex">\(B\)</span> は実行列なので <span class="arithmatex">\(B^* = B\)</span> です。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+B\vec{x}^* &amp;= (B\vec{x})^* \\
+&amp;= (\beta\vec{x})^* \\
+&amp;= \beta^*\vec{x}^*
+\end{aligned}
+\]</div>
+<p><span class="arithmatex">\(\vec{x} \neq \vec{0}\)</span> より <span class="arithmatex">\(\vec{x}^* \neq \vec{0}\)</span> なので，<span class="arithmatex">\(\beta^*\)</span> も <span class="arithmatex">\(B\)</span> の固有値です。</p>
+<h4 id="vi">(vi)</h4>
+<p><span class="arithmatex">\(A\)</span> の固有値はすべて正なので <span class="arithmatex">\(\det A &gt; 0\)</span> です。また <span class="arithmatex">\(q &gt; q_0 = p\)</span> および <span class="arithmatex">\(p &gt; 0\)</span> より，</p>
+<div class="arithmatex">\[
+\det B = (p - q)p^{n-1}\det A &lt; 0
+\]</div>
+<p>となります。<span class="arithmatex">\(\det B\)</span> は行列 <span class="arithmatex">\(B\)</span> の重複度を含めた全ての固有値の積に等しくなります。</p>
+<p>(v) より，<span class="arithmatex">\(B\)</span> の非実数の固有値は必ず複素共役ペア <span class="arithmatex">\((\beta, \beta^*)\)</span> で現れ，その積は <span class="arithmatex">\(\beta\beta^* = |\beta|^2 &gt; 0\)</span> と正になります。したがって，すべての固有値の積 <span class="arithmatex">\(\det B\)</span> が負であるためには，<span class="arithmatex">\(B\)</span> は少なくとも1つの負の実固有値 <span class="arithmatex">\(\beta_1 &lt; 0\)</span> をもたなければなりません。</p>
+<p><span class="arithmatex">\(\beta_1\)</span> は実固有値なので，対応する <span class="arithmatex">\(0\)</span> でない実固有ベクトル <span class="arithmatex">\(\vec u_1\in\mathbb R^n\)</span> をとることができます。<span class="arithmatex">\(B\vec u_1=\beta_1\vec u_1\)</span> を満たします。初期値 <span class="arithmatex">\(\vec{g}(0) = \vec{u}_1\)</span> に対する微分方程式 (1) の解は</p>
+<div class="arithmatex">\[
+\vec{g}(t) = e^{-\beta_1 t}\vec{u}_1
+\]</div>
+<p>であり，<span class="arithmatex">\(-\beta_1 &gt; 0\)</span> より</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lim_{t \to \infty}\|\vec{g}(t)\| &amp;= \lim_{t \to \infty} e^{-\beta_1 t}\|\vec{u}_1\| \\
+&amp;= \infty
+\end{aligned}
+\]</div>
+<p>となります。よって題意を満たす解が存在します。</p>
+<h4 id="vii">(vii)</h4>
+<p><span class="arithmatex">\(A\)</span> は実対称行列なので，正規直交固有基底 <span class="arithmatex">\(\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n \in \mathbb{R}^n\)</span> と対応する実固有値 <span class="arithmatex">\(\lambda_1, \lambda_2, \dots, \lambda_n\)</span> をもちます。仮定より1つだけ負の固有値をもつので，<span class="arithmatex">\(\lambda_1 &lt; 0 &lt; \lambda_2 \le \dots \le \lambda_n\)</span> とします。</p>
+<p>ここで実単位ベクトルとして <span class="arithmatex">\(\vec{v} = \vec{e}_1\)</span> を選びます。すると (i)，(ii) より，各 <span class="arithmatex">\(\vec{e}_j\)</span> に対して <span class="arithmatex">\(B = CA\)</span> を作用させると次のようになります。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+B\vec{e}_1 &amp;= CA\vec{e}_1 \\
+&amp;= \lambda_1 C\vec{e}_1 \\
+&amp;= \lambda_1(p - q)\vec{e}_1 \\
+B\vec{e}_j &amp;= CA\vec{e}_j \\
+&amp;= \lambda_j C\vec{e}_j \\
+&amp;= p\lambda_j\vec{e}_j \qquad (j = 2, 3, \dots, n)
+\end{aligned}
+\]</div>
+<p>すなわち，<span class="arithmatex">\(B\)</span> は基底 <span class="arithmatex">\(\{\vec{e}_1, \dots, \vec{e}_n\}\)</span> で対角化され，固有値は <span class="arithmatex">\(\beta_1 = \lambda_1(p - q)\)</span> および <span class="arithmatex">\(\beta_j = p\lambda_j\ (j = 2, \dots, n)\)</span> です。</p>
+<p><span class="arithmatex">\(q &gt; q_0 = p\)</span> より <span class="arithmatex">\(p - q &lt; 0\)</span> であり，<span class="arithmatex">\(\lambda_1 &lt; 0\)</span> なので <span class="arithmatex">\(\beta_1 = \lambda_1(p - q) &gt; 0\)</span> となります。また <span class="arithmatex">\(p &gt; 0,\ \lambda_j &gt; 0\)</span> より <span class="arithmatex">\(\beta_j &gt; 0\ (j = 2, \dots, n)\)</span> であり，すべての固有値が正です。</p>
+<p>任意の初期値 <span class="arithmatex">\(\vec{g}(0) = \displaystyle\sum_{j=1}^{n} c_j\vec{e}_j\)</span> に対する微分方程式 (1) の解は</p>
+<div class="arithmatex">\[
+\vec{g}(t) = \sum_{j=1}^{n} c_j e^{-\beta_j t}\vec{e}_j
+\]</div>
+<p>となり，すべての <span class="arithmatex">\(\beta_j &gt; 0\)</span> より <span class="arithmatex">\(\displaystyle\lim_{t \to \infty}\|\vec{g}(t)\| = 0\)</span> が成り立ちます。よって，このような <span class="arithmatex">\(\vec{v} = \vec{e}_1\)</span> が存在します。</p></div></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+
+  
+    
+    
+    
+
+    
+      <nav class="page-nav" aria-label="前後の問題">
+        
+        
+        
+          
+          <a class="page-nav__side " href="../R4_3/">
+            
+              <span class="page-nav__dir">← 前の問題</span>
+            
+            <span class="page-nav__title">東大理物 令和4年度 第3問：誘電体境界面での電磁波の透過・反射・全反射</span>
+            
+          </a>
+        
+      
+        <div class="page-nav__hub">
+          <a class="page-nav__home" href="../../.."><span>トップへ</span></a>
+          <a class="page-nav__list" href="../"><span>年度の一覧へ</span></a>
+        </div>
+        
+        
+        
+          
+          <a class="page-nav__side page-nav__side--next" href="../R2_butsuri_1/">
+            
+              <span class="page-nav__dir"><span class="page-nav__arrow page-nav__arrow--in" aria-hidden="true">→</span>次の問題<span class="page-nav__arrow page-nav__arrow--out" aria-hidden="true">→</span></span>
+            
+            <span class="page-nav__title">東大理物 令和2年度 物理学 第1問：二状態系とベルの不等式</span>
+            
+          </a>
+        
+      
+      </nav>
+    
+
+    
+      
+        
+      
+      <section class="page-share" aria-label="このページを共有" data-page-share data-share-title="東大理物 令和4年度 第4問：クラマース・クローニッヒ関係式とランク1摂動行列｜大学物理の問題集">
+        <p class="page-share__label">＼ よかったらシェアしてね！ ／</p>
+        <div class="page-share__buttons">
+          <a class="page-share__button" data-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg></span>
+            <span>X</span>
+          </a>
+          <a class="page-share__button" data-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebookでシェア">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"/></svg></span>
+            <span>Facebook</span>
+          </a>
+          <a class="page-share__button" data-share-line href="#" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5L254 230v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7v-81.3c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4.6 3 1.6l37.3 50.3v-48.2c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7v-81.3c0-1.9-1.6-3.7-3.7-3.7m-31.4 68.1h-35.6v-64.4c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5.7.6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1h-52.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344v-13.6h35.5c2.1 0 3.7-1.6 3.7-3.7v-13.1c0-2.1-1.6-3.7-3.7-3.7H344v-13.7h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4v326c-.1 51.2-42.1 92.7-93.4 92.6h-326C41.4 511.9-.1 469.8 0 418.6v-326C.1 41.4 42.2-.1 93.4 0h326c51.2.1 92.7 42.1 92.6 93.4m-70.4 140.1c0-83.4-83.7-151.3-186.4-151.3S68.8 150.1 68.8 233.5c0 74.7 66.3 137.4 155.9 149.3 21.8 4.7 19.3 12.7 14.4 42.1-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"/></svg></span>
+            <span>LINE</span>
+          </a>
+          <button class="page-share__button" type="button" data-share-copy aria-label="リンクをコピー">
+            <span class="page-share__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span>
+            <span data-share-copy-label>リンクコピー</span>
+          </button>
+        </div>
+        <p class="page-share__status" data-share-status role="status" aria-live="polite"></p>
+      </section>
+    <aside class="owner" aria-label="運営者情報">
+      <p class="owner__heading"><span class="owner__heading-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240m-29.7 56C95.8 304 16 383.8 16 482.3c0 16.4 13.3 29.7 29.7 29.7h356.6c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3z"/></svg></span>運営者情報</p>
+      <div class="owner__card">
+        <img class="owner__avatar" src="../../../assets/owner.png" alt="" width="64" height="64" loading="lazy">
+        <div class="owner__body">
+          <p class="owner__name">ななな２</p>
+          <p class="owner__text">なななつとか呼ばれます。物性物理が好きな院生です。超伝導や情報統計力学に興味があります。</p>
+          <p class="owner__links">
+            <a class="owner__link" href="https://twitter.com/nanana_UTM1" target="_blank" rel="noopener"><span class="owner__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg></span>X</a>
+            <a class="owner__link" href="https://note.com/john_doenote" target="_blank" rel="noopener"><span class="owner__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/></svg></span>note</a>
+          </p>
+        </div>
+      </div>
+    </aside>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+<div class="site-footer">
+  <div class="site-footer__brand">
+    <img src="../../../assets/logo.svg" alt="" class="site-footer__logo" width="52" height="52">
+    <div>
+      <p class="site-footer__name">大学物理の問題集</p>
+      <p class="site-footer__by">運営：ななな２</p>
+    </div>
+  </div>
+  <nav class="site-footer__col" aria-label="分野">
+    <p class="site-footer__head">分野</p>
+    <ul>
+      
+        <li><a href="../../../01mechanics/">力学</a></li>
+      
+        <li><a href="../../../02electromagnetism/">電磁気学</a></li>
+      
+        <li><a href="../../../03thermodynamics/">熱力学</a></li>
+      
+        <li><a href="../../../04quantum_mechanics/">量子力学</a></li>
+      
+        <li><a href="../../../05statistical_mechanics/">統計力学</a></li>
+      
+        <li><a href="../../../06solid_state/">物性物理学</a></li>
+      
+        <li><a href="../../../physmath/">物理数学</a></li>
+      
+    </ul>
+  </nav>
+  <nav class="site-footer__col" aria-label="探す">
+    <p class="site-footer__head">探す</p>
+    <ul>
+      <li><a href="../../../tags/">問題を探す</a></li>
+      <li><a href="../../../books/">参考文献一覧</a></li>
+      <li><a href="../../../exam/">問題を印刷する</a></li>
+    </ul>
+  </nav>
+  <nav class="site-footer__col" aria-label="このサイト">
+    <p class="site-footer__head">このサイト</p>
+    <ul>
+      <li><a href="../../../privacy/">プライバシーポリシー</a></li>
+      <li><a href="../../../terms/">このサイトの利用について</a></li>
+    </ul>
+  </nav>
+  <p class="site-footer__bottom">
+    © 2026 ななな２
+    
+      <span aria-hidden="true">・</span>Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>
+    
+  </p>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js?v=20261128b"></script>
+      
+        <script src="../../../javascripts/problem-filter.js?v=20261031c"></script>
+      
+        <script src="../../../javascripts/share.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/tabs.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/site-search.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/answers.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/copy-markdown.js?v=20261022b"></script>
+      
+        <script src="../../../javascripts/exam.js?v=20261122b"></script>
+      
+        <script src="../../../javascripts/home-motion.js?v=20261122a"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
