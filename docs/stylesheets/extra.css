@@ -291,6 +291,17 @@ span.arithmatex mjx-mfrac {
 .md-typeset .problem-box__body p.problem-source { margin: 1.6em 0 0; padding-top: .8em; border-top: 1px solid var(--md-default-fg-color--lightest); color: var(--md-default-fg-color--light); }
 /* (1) の中の (a)，(b)：番号を1段下げ，間隔を詰める */
 .md-typeset .problem-box__body p.subq--sub { margin: .6em 0; }
+/* スマホ：問題のページは本文の左右の余白をテーマの .8rem だけにし，問題の枠の中の余白も詰める。
+   小問は番号の幅のぶら下げをやめ，番号を行頭に置いて2行目以降を1字だけ下げる */
+@media screen and (max-width: 600px) {
+  .md-content__inner:has(.problem-box) { padding-left: 0; padding-right: 0; }
+  .md-typeset .problem-box > h2 { padding-left: .8rem; padding-right: .8rem; }
+  .md-typeset .problem-box__body { padding-left: .8rem; padding-right: .8rem; }
+  .md-typeset .problem-box__body p.subq { display: block; padding-left: 1em; text-indent: -1em; }
+  .md-typeset .problem-box__body p.subq mjx-container { text-indent: 0; }
+  .md-typeset .problem-box__body p.subq .subq__number { margin-right: .5em; }
+  .md-typeset .problem-box__body .subq__cont { margin-left: 1em; }
+}
 
 /* 解説の小見出し (1)：右に細い線を伸ばす */
 .md-typeset h3.solution-part {
@@ -424,6 +435,8 @@ span.arithmatex mjx-mfrac {
 .md-typeset p {
   margin-bottom: 1.2rem;
 }
+/* 「ー」や小さい「ァ」「ッ」などを行頭に置かない */
+.md-typeset { line-break: strict; }
 
 .md-typeset ol li, 
 .md-typeset ul li {

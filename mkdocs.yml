@@ -54,7 +54,7 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js?v=20261022b
+  - javascripts/mathjax.js?v=20261128
   - javascripts/problem-filter.js?v=20261031c
   - javascripts/share.js?v=20261022b
   - javascripts/tabs.js?v=20261022b
@@ -63,7 +63,7 @@ extra_javascript:
   - javascripts/copy-markdown.js?v=20261022b
   - javascripts/exam.js?v=20261122b
   - javascripts/home-motion.js?v=20261122a
-  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mathjax@4.1.1/tex-mml-chtml.js
 
 hooks:
   - hooks/problem_layout.py
@@ -82,4 +82,4 @@ plugins:
 
 
 extra_css:
-  - stylesheets/extra.css?v=20261126b
+  - stylesheets/extra.css?v=20261128
