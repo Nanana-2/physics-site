@@ -60,7 +60,7 @@ hide:
   </section>
 
   <div class="exam-builder__actions">
-    <a class="exam-builder__open" data-exam-open href="print/">印刷用のページを開く</a>
+    <a class="exam-builder__open" data-exam-open href="print/" target="_blank" rel="noopener">印刷用のページを開く</a>
     <button type="button" class="exam-builder__chip" data-exam-share>このセットのリンクをコピー</button>
     <span class="exam-builder__status" data-exam-status role="status" aria-live="polite"></span>
   </div>
