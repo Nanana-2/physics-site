@@ -8,10 +8,10 @@ window.MathJax = {
       finalanswer: ['\\class{fa}{#1}', 1]
     }
   },
-  // 字体は MathJax 3 と同じものにする。画面の幅を超える数式は，文中の数式も別行の数式も改行する
+  // 字体は MathJax 3 と同じものにする。画面の幅を超える文中の数式は改行する。
+  // 別行の数式は改行せず，横にスクロールして見る（テーマの div.arithmatex が受け持つ）
   output: {
     font: 'mathjax-tex',
-    displayOverflow: 'linebreak',
     linebreaks: { inline: true, width: '100%' }
   },
   // 数式の大きさは固定（周りの日本語フォントに合わせる自動拡大は，数式が大きくなりすぎる）

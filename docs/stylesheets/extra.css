@@ -291,10 +291,11 @@ span.arithmatex mjx-mfrac {
 .md-typeset .problem-box__body p.problem-source { margin: 1.6em 0 0; padding-top: .8em; border-top: 1px solid var(--md-default-fg-color--lightest); color: var(--md-default-fg-color--light); }
 /* (1) の中の (a)，(b)：番号を1段下げ，間隔を詰める */
 .md-typeset .problem-box__body p.subq--sub { margin: .6em 0; }
-/* スマホ：問題のページは本文の左右の余白をテーマの .8rem だけにし，問題の枠の中の余白も詰める。
+/* スマホ：問題のページは，解説の文の左端を問題の枠の中の文の左端（画面の端から 1.6rem）にそろえ，問題の枠は外へ広げる。
    小問は番号の幅のぶら下げをやめ，番号を行頭に置いて2行目以降を1字だけ下げる */
 @media screen and (max-width: 600px) {
-  .md-content__inner:has(.problem-box) { padding-left: 0; padding-right: 0; }
+  .md-content__inner:has(.problem-box) { padding-left: .8rem; padding-right: .8rem; }
+  .md-typeset .problem-box { margin-left: -.8rem; margin-right: -.8rem; }
   .md-typeset .problem-box > h2 { padding-left: .8rem; padding-right: .8rem; }
   .md-typeset .problem-box__body { padding-left: .8rem; padding-right: .8rem; }
   .md-typeset .problem-box__body p.subq { display: block; padding-left: 1em; text-indent: -1em; }
@@ -918,8 +919,8 @@ body, input {
   /* 左右にだけ広げる（上下に広げると複数行の式で上下の行と重なる） */
   box-shadow: .25em 0 0 var(--site-answer-bg), -.25em 0 0 var(--site-answer-bg);
 }
-/* 複数行の式（aligned など）の行間をわずかに開ける */
-.md-typeset mjx-container[display="true"] mjx-mtable mjx-mtd { padding-top: .12em !important; padding-bottom: .12em !important; }
+/* 複数行の式（aligned など）の行間を開ける */
+.md-typeset mjx-container[display="true"] mjx-mtable mjx-mtd { padding-top: .3em !important; padding-bottom: .3em !important; }
 
 /* 左右のサイドバーを出さないページ（問題を探す など）は，本文を中央に置く */
 .md-sidebar--primary[hidden] ~ .md-content > .md-content__inner { margin-left: auto; margin-right: auto; }
