@@ -291,13 +291,11 @@ span.arithmatex mjx-mfrac {
 .md-typeset .problem-box__body p.problem-source { margin: 1.6em 0 0; padding-top: .8em; border-top: 1px solid var(--md-default-fg-color--lightest); color: var(--md-default-fg-color--light); }
 /* (1) の中の (a)，(b)：番号を1段下げ，間隔を詰める */
 .md-typeset .problem-box__body p.subq--sub { margin: .6em 0; }
-/* スマホ：問題のページは，解説の文の左端を問題の枠の中の文の左端（画面の端から 1.6rem）にそろえ，問題の枠は外へ広げる。
-   小問は番号の幅のぶら下げをやめ，番号を行頭に置いて2行目以降を1字だけ下げる */
+/* スマホ：問題のページは本文の左右の余白を 1.6rem（テーマの .8rem＋.8rem）にし，問題の枠と題名の下線の端をそろえる。
+   題名の文字は小さくする。小問は番号の幅のぶら下げをやめ，番号を行頭に置いて2行目以降を1字だけ下げる */
 @media screen and (max-width: 600px) {
   .md-content__inner:has(.problem-box) { padding-left: .8rem; padding-right: .8rem; }
-  .md-typeset .problem-box { margin-left: -.8rem; margin-right: -.8rem; }
-  .md-typeset .problem-box > h2 { padding-left: .8rem; padding-right: .8rem; }
-  .md-typeset .problem-box__body { padding-left: .8rem; padding-right: .8rem; }
+  .md-typeset h1.problem-title { font-size: 1.3rem; }
   .md-typeset .problem-box__body p.subq { display: block; padding-left: 1em; text-indent: -1em; }
   .md-typeset .problem-box__body p.subq mjx-container { text-indent: 0; }
   .md-typeset .problem-box__body p.subq .subq__number { margin-right: .5em; }
