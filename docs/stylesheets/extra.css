@@ -215,6 +215,7 @@ span.arithmatex mjx-mfrac {
 /* 問題のタイトル：左に薄いグレーの丸に鉛筆，下に同じグレーの細い線 */
 .md-typeset h1.problem-title {
   position: relative;
+  font-size: 1.3rem;
   margin-bottom: .3em;
   padding: 0 0 .35em 1.75em;
   border-bottom: 1px solid #ececec;
@@ -294,10 +295,9 @@ span.arithmatex mjx-mfrac {
 /* (1) の中の (a)，(b)：番号を1段下げ，間隔を詰める */
 .md-typeset .problem-box__body p.subq--sub { margin: .6em 0; }
 /* スマホ：問題のページは本文の左右の余白を 1.6rem（テーマの .8rem＋.8rem）にし，問題の枠と題名の下線の端をそろえる。
-   題名の文字は小さくする。小問は番号の幅のぶら下げをやめ，番号を行頭に置いて2行目以降を1字だけ下げる */
+  小問は番号の幅のぶら下げをやめ，番号を行頭に置いて2行目以降を1字だけ下げる */
 @media screen and (max-width: 600px) {
   .md-content__inner:has(.problem-box) { padding-left: .8rem; padding-right: .8rem; }
-  .md-typeset h1.problem-title { font-size: 1.3rem; }
   .md-typeset .problem-box__body p.subq { display: block; padding-left: 1em; text-indent: -1em; }
   .md-typeset .problem-box__body p.subq mjx-container { text-indent: 0; }
   .md-typeset .problem-box__body p.subq .subq__number { margin-right: .5em; }
