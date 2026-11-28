@@ -45,7 +45,13 @@ $$
 \langle\phi(0)|S_x|\phi(0)\rangle = \langle\phi(0)|S_y|\phi(0)\rangle = 0, \qquad \langle\phi(0)|S_z|\phi(0)\rangle = \frac{1}{2}
 $$
 
-である。その後の状態ベクトル $|\phi(t)\rangle$ を $t$ の関数として求めよ。また，時刻 $t$ でのスピンの期待値 $\bigl(\langle\phi(t)|S_x|\phi(t)\rangle, \langle\phi(t)|S_y|\phi(t)\rangle, \langle\phi(t)|S_z|\phi(t)\rangle\bigr)$ を求めよ。
+である。その後の状態ベクトル $|\phi(t)\rangle$ を $t$ の関数として求めよ。また，時刻 $t$ でのスピンの期待値
+
+$$
+\bigl(\langle\phi(t)|S_x|\phi(t)\rangle,\ \langle\phi(t)|S_y|\phi(t)\rangle,\ \langle\phi(t)|S_z|\phi(t)\rangle\bigr)
+$$
+
+を求めよ。
 
 次に，ハミルトニアン (1) において，磁場が回転磁場 $\boldsymbol{H} = (H_0 \cos\omega t, -H_0 \sin\omega t, H)$ で与えられる場合を考える。以下では，$a \equiv \mu H$，$a_0 \equiv \mu H_0$ とおく。
 
