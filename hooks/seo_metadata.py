@@ -37,6 +37,8 @@ PAGE_DESCRIPTIONS = {
     "tag-index.md": "大学物理の問題集で使用している基本・標準・発展の難易度タグを確認できます。",
     "books.md": "大学物理の学習と演習問題の作成で参考にした教科書・参考書を、分野別に紹介します。",
     "privacy.md": "大学物理の問題集におけるアクセス解析、広告・アフィリエイト、Cookieなどの取り扱いを説明します。",
+    "pastexam/index.md": "大学院入試（院試）の物理学・数学の過去問に、独自の解答・解説を付けて掲載しています。",
+    "pastexam/todai-ributsu/index.md": "東京大学大学院理学系研究科物理学専攻（東大理物）の院試過去問を年度別に掲載し、独自の解答・解説を付けています。",
     "terms.md": "大学物理の問題集の利用条件、著作権、免責事項、生成AIの利用方針について説明します。",
 }
 
@@ -51,6 +53,31 @@ def _pages_title(directory: Path, fallback: str) -> str:
         return fallback
     title = str(data.get("title", fallback)).strip()
     return re.sub(r"^\d+[.．]\s*", "", title)
+
+
+def _western_year(era_year: str) -> str:
+    """「令和8年度」→「2026年度」。和暦でなければ空文字を返す。"""
+    match = re.match(r"(令和|平成)(\d+|元)年度", era_year)
+    if not match:
+        return ""
+    number = 1 if match.group(2) == "元" else int(match.group(2))
+    base = 2018 if match.group(1) == "令和" else 1988
+    return f"{base + number}年度"
+
+
+def _exam_description(meta) -> str:
+    title = str(meta.get("title", ""))
+    topic = title.split("：", 1)[1].strip() if "：" in title else ""
+    year = str(meta.get("exam_year", ""))
+    western = _western_year(year)
+    year_text = f"{year}（{western}）" if western else year
+    subject = str(meta.get("exam_subject", ""))
+    number = str(meta.get("exam_number", ""))
+    university = str(meta.get("exam_university", ""))
+    head = f"{university}の{year_text}院試、{subject} {number}"
+    if topic:
+        head += f"「{topic}」"
+    return head + "の問題と独自の解答・解説です。"
 
 
 def _heading(markdown: str, fallback: str) -> str:
@@ -68,6 +95,10 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
 
     if source.as_posix() in PAGE_DESCRIPTIONS:
         page.meta["description"] = PAGE_DESCRIPTIONS[source.as_posix()]
+        return markdown
+
+    if page.meta.get("exam_number") and page.meta.get("exam_university"):
+        page.meta["description"] = _exam_description(page.meta)
         return markdown
 
     if len(parts) == 2 and parts[0] in SUBJECT_NAMES and parts[1] == "index.md":
