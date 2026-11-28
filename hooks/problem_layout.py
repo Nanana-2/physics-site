@@ -426,24 +426,34 @@ def _exam_years(page, config) -> str:
     )
 
 
-def _exam_top(page, config) -> str:
-    """院試過去問の最初のページ：大学のタイル（正式な名前と年度の範囲）。"""
-    root = Path(config["docs_dir"]) / "pastexam"
+def _exam_tiles(root: Path, prefix: str = "", short: bool = False) -> str:
+    """大学のタイル（名前と年度の範囲）。院試過去問の最初のページとトップで使う。
+    short のときは名前を略称（年度の一覧の .pages の title，例：東大理物）にする。"""
     tiles = ""
     for univ in sorted(d for d in root.iterdir() if (d / "index.md").is_file()):
         years = _exam_rows(univ)
         if not years:
             continue
         order = sorted(years, key=_year_order)
-        # タイルの名前は略称（東大理物）でなく，ページのフロントマターの exam_university
+        # 院試過去問のページでは，タイルの名前は略称（東大理物）でなく，ページのフロントマターの exam_university
         first = next(md for md in sorted(univ.glob("*.md")) if md.stem != "index")
         name = _front_matter(first).get("exam_university") or univ.name
+        if short:
+            pages = univ / ".pages"
+            m = re.search(r"^title:\s*(.+)$", pages.read_text(encoding="utf-8"), re.MULTILINE) if pages.is_file() else None
+            name = m.group(1).strip() if m else name
         tiles += (
-            f'<a class="home-tile" href="{univ.name}/"><span class="home-tile__body">'
-            # 問題数は出さない。過去問は年度でまとまっているので，量は年度の範囲で示す
+            f'<a class="home-tile" href="{prefix}{univ.name}/"><span class="home-tile__body">'
+            # 問題数は出さない。過去問は年度でまとまっているので，量は年度の範囲で示す（新しい年度から遡る順に書く）
             f'<span class="home-tile__name">{name}</span>'
-            f'<span class="home-tile__desc">{years[order[-1]]["name"]}から{years[order[0]]["name"]}まで</span></span></a>'
+            f'<span class="home-tile__desc">{years[order[0]]["name"]}から{years[order[-1]]["name"]}まで</span></span></a>'
         )
+    return tiles
+
+
+def _exam_top(page, config) -> str:
+    """院試過去問の最初のページ：大学のタイル（正式な名前と年度の範囲）。"""
+    tiles = _exam_tiles(Path(config["docs_dir"]) / "pastexam")
     if not tiles:
         return ""
     # 大学が1つのうちは，タイルを本文の幅いっぱいにする
@@ -608,11 +618,15 @@ def _home(html: str, page, config) -> str:
     )
 
     news = sections.get("更新履歴", "")
+    exam_root = docs / "pastexam"
+    exam_tiles = _exam_tiles(exam_root, "pastexam/", short=True) if exam_root.is_dir() else ""
     return (
         _home_heading("分野から選ぶ", "fields")
         + f'<h3 class="home-subhead">物理</h3><div class="home-tiles">{tiles}</div>'
         + (f'<h3 class="home-subhead">物理数学</h3><div class="home-tiles">{math_tiles}</div>' if math_tiles else "")
         + legend
+        # 院試過去問の入口：大学ごとのタイル（略称と年度の範囲）
+        + (_home_heading("院試に挑戦", "pastexam") + f'<div class="home-tiles">{exam_tiles}</div>' if exam_tiles else "")
         + _home_heading("何のサイト？", "about")
         + sections.get("何のサイト？", "")
         # 背景の帯をもう一度見せる欄：問題を探す・問題用紙をつくる・参考文献一覧への入口（「何のサイト？」を読んだ人がそのまま次へ進めるよう，すぐ後に置く）
