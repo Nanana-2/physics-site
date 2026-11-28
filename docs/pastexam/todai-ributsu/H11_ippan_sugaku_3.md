@@ -24,7 +24,6 @@ H_n(x) &= x^n + (\text{$n$ より低次の多項式}) \\
 \int_{-\infty}^{\infty} \mathrm{d}x\, e^{-x^2} H_n(x) H_m(x) &= 0 \qquad (n \neq m)
 \end{aligned}
 $$
-{: .problem-lead }
 
 (1) $n = 1, 2, 3$ について $H_n(x)$ を具体的に構成せよ。ただし次の積分公式を用いて良い。
 

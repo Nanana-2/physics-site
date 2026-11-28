@@ -94,6 +94,8 @@
    1. 数式まわり
    ========================================== */
 /* 別行の数式が画面の幅を超えたときの横スクロールは，テーマ（.md-typeset div.arithmatex）が受け持つ */
+/* 縦には数 px はみ出すだけなので，縦のスクロールバーは出さない（MathJax 4 では，はみ出しが出て PC で縦のバーが付いた） */
+.md-typeset div.arithmatex { overflow-y: hidden; }
 /* インライン数式の分数が本文中で潰れすぎないよう、わずかに拡大する */
 span.arithmatex mjx-mfrac {
   font-size: 1.08em;
